@@ -1,0 +1,3146 @@
+{
+  "banner": "SYNTHETIC DATA - NOT REAL PATIENTS. Proof of concept; payer rules are placeholders. Nothing is submitted to any payer.",
+  "as_of": "2026-09-28",
+  "generated_at": "2026-10-04T07:49:05",
+  "counts": {
+    "patients": 40,
+    "visits": 842,
+    "auths": 46,
+    "worklist": 26,
+    "p1": 11,
+    "p2": 15,
+    "p3": 0,
+    "uncovered_scheduled": 194,
+    "unauthorized_done": 2
+  },
+  "worklist": [
+    {
+      "patient_id": "SYN-1014",
+      "patient_name": "Test Taylor N.",
+      "clinic": "Clinic North (synthetic)",
+      "payer_id": "PAY-MA",
+      "payer_name": "Medicare Advantage Plan (placeholder)",
+      "auth_no": "AUTH-70039",
+      "priority": "P1",
+      "reasons": [
+        "UNCOVERED_VISIT",
+        "REAUTH_BY_VISITS"
+      ],
+      "detail": [
+        "8 scheduled visit(s) outside any approved auth, first 2026-10-04 (V1271, V1272, V1273, V1274 ...)",
+        "1 of 7 visits left (payer threshold 4)"
+      ],
+      "visits_used": 6,
+      "visits_authorized": 7,
+      "visits_remaining": 1,
+      "scheduled_in_window": 1,
+      "auth_end": "2026-11-27",
+      "days_left": 60,
+      "next_visit": "2026-09-30",
+      "submit_by": "2026-09-23",
+      "checklist": [
+        "Plan of care certification",
+        "Progress report (every 10th visit)",
+        "Medical necessity statement",
+        "Functional limitation reporting",
+        "Utilization-management vendor form"
+      ],
+      "evidence": [
+        "schedule.csv:row272",
+        "schedule.csv:row273",
+        "schedule.csv:row274",
+        "schedule.csv:row275",
+        "schedule.csv:row276",
+        "schedule.csv:row277",
+        "schedule.csv:row278",
+        "schedule.csv:row279",
+        "authorizations.csv:row18"
+      ],
+      "key": "SYN-1014|PAY-MA|AUTH-70039"
+    },
+    {
+      "patient_id": "SYN-1038",
+      "patient_name": "Test Indy L.",
+      "clinic": "Clinic North (synthetic)",
+      "payer_id": "PAY-COMM1",
+      "payer_name": "Commercial Plan A (placeholder)",
+      "auth_no": "AUTH-70111",
+      "priority": "P1",
+      "reasons": [
+        "UNCOVERED_VISIT",
+        "REAUTH_BY_DATE"
+      ],
+      "detail": [
+        "9 scheduled visit(s) outside any approved auth, first 2026-10-03 (V1777, V1778, V1779, V1780 ...)",
+        "auth ends 2026-10-01 (3 days); 11 visit(s) still scheduled"
+      ],
+      "visits_used": 6,
+      "visits_authorized": 28,
+      "visits_remaining": 22,
+      "scheduled_in_window": 2,
+      "auth_end": "2026-10-01",
+      "days_left": 3,
+      "next_visit": "2026-09-29",
+      "submit_by": "2026-09-26",
+      "checklist": [
+        "Current plan of care signed by referring provider",
+        "Progress note within last 30 days",
+        "Objective measures (ROM, strength, functional score)",
+        "Updated goals",
+        "Payer portal request form"
+      ],
+      "evidence": [
+        "schedule.csv:row778",
+        "schedule.csv:row779",
+        "schedule.csv:row780",
+        "schedule.csv:row781",
+        "schedule.csv:row782",
+        "schedule.csv:row783",
+        "schedule.csv:row784",
+        "schedule.csv:row785",
+        "schedule.csv:row786",
+        "authorizations.csv:row44"
+      ],
+      "key": "SYN-1038|PAY-COMM1|AUTH-70111"
+    },
+    {
+      "patient_id": "SYN-1037",
+      "patient_name": "Test Casey K.",
+      "clinic": "Clinic Lake (synthetic)",
+      "payer_id": "PAY-COMM2",
+      "payer_name": "Commercial Plan B (placeholder)",
+      "auth_no": "AUTH-70108",
+      "priority": "P1",
+      "reasons": [
+        "UNCOVERED_VISIT",
+        "REAUTH_BY_VISITS"
+      ],
+      "detail": [
+        "8 scheduled visit(s) outside any approved auth, first 2026-10-03 (V1760, V1761, V1762, V1763 ...)",
+        "2 of 18 visits left (payer threshold 2)"
+      ],
+      "visits_used": 16,
+      "visits_authorized": 18,
+      "visits_remaining": 2,
+      "scheduled_in_window": 2,
+      "auth_end": "2026-11-27",
+      "days_left": 60,
+      "next_visit": "2026-09-28",
+      "submit_by": "2026-09-27",
+      "checklist": [
+        "Progress note",
+        "Functional outcome score (e.g., LEFS/ODI)",
+        "Visit history",
+        "Portal submission"
+      ],
+      "evidence": [
+        "schedule.csv:row761",
+        "schedule.csv:row762",
+        "schedule.csv:row763",
+        "schedule.csv:row764",
+        "schedule.csv:row765",
+        "schedule.csv:row766",
+        "schedule.csv:row767",
+        "schedule.csv:row768",
+        "authorizations.csv:row43"
+      ],
+      "key": "SYN-1037|PAY-COMM2|AUTH-70108"
+    },
+    {
+      "patient_id": "SYN-1026",
+      "patient_name": "Test Harper Z.",
+      "clinic": "Clinic North (synthetic)",
+      "payer_id": "PAY-COMM1",
+      "payer_name": "Commercial Plan A (placeholder)",
+      "auth_no": "AUTH-70075",
+      "priority": "P1",
+      "reasons": [
+        "UNCOVERED_VISIT",
+        "REAUTH_BY_VISITS"
+      ],
+      "detail": [
+        "9 scheduled visit(s) outside any approved auth, first 2026-10-05 (V1517, V1518, V1519, V1520 ...)",
+        "2 of 17 visits left (payer threshold 3)"
+      ],
+      "visits_used": 15,
+      "visits_authorized": 17,
+      "visits_remaining": 2,
+      "scheduled_in_window": 2,
+      "auth_end": "2026-11-27",
+      "days_left": 60,
+      "next_visit": "2026-09-29",
+      "submit_by": "2026-09-27",
+      "checklist": [
+        "Current plan of care signed by referring provider",
+        "Progress note within last 30 days",
+        "Objective measures (ROM, strength, functional score)",
+        "Updated goals",
+        "Payer portal request form"
+      ],
+      "evidence": [
+        "schedule.csv:row518",
+        "schedule.csv:row519",
+        "schedule.csv:row520",
+        "schedule.csv:row521",
+        "schedule.csv:row522",
+        "schedule.csv:row523",
+        "schedule.csv:row524",
+        "schedule.csv:row525",
+        "schedule.csv:row526",
+        "authorizations.csv:row30"
+      ],
+      "key": "SYN-1026|PAY-COMM1|AUTH-70075"
+    },
+    {
+      "patient_id": "SYN-1023",
+      "patient_name": "Test Kai W.",
+      "clinic": "Clinic North (synthetic)",
+      "payer_id": "PAY-COMM1",
+      "payer_name": "Commercial Plan A (placeholder)",
+      "auth_no": "AUTH-70066",
+      "priority": "P1",
+      "reasons": [
+        "UNCOVERED_VISIT",
+        "REAUTH_BY_DATE"
+      ],
+      "detail": [
+        "9 scheduled visit(s) outside any approved auth, first 2026-10-04 (V1451, V1452, V1453, V1454 ...)",
+        "auth ends 2026-10-03 (5 days); 10 visit(s) still scheduled"
+      ],
+      "visits_used": 17,
+      "visits_authorized": 40,
+      "visits_remaining": 23,
+      "scheduled_in_window": 1,
+      "auth_end": "2026-10-03",
+      "days_left": 5,
+      "next_visit": "2026-09-30",
+      "submit_by": "2026-09-28",
+      "checklist": [
+        "Current plan of care signed by referring provider",
+        "Progress note within last 30 days",
+        "Objective measures (ROM, strength, functional score)",
+        "Updated goals",
+        "Payer portal request form"
+      ],
+      "evidence": [
+        "schedule.csv:row452",
+        "schedule.csv:row453",
+        "schedule.csv:row454",
+        "schedule.csv:row455",
+        "schedule.csv:row456",
+        "schedule.csv:row457",
+        "schedule.csv:row458",
+        "schedule.csv:row459",
+        "schedule.csv:row460",
+        "authorizations.csv:row27"
+      ],
+      "key": "SYN-1023|PAY-COMM1|AUTH-70066"
+    },
+    {
+      "patient_id": "SYN-1025",
+      "patient_name": "Test Casey Y.",
+      "clinic": "Clinic North (synthetic)",
+      "payer_id": "PAY-COMM2",
+      "payer_name": "Commercial Plan B (placeholder)",
+      "auth_no": "AUTH-70072",
+      "priority": "P1",
+      "reasons": [
+        "UNCOVERED_VISIT",
+        "REAUTH_BY_DATE"
+      ],
+      "detail": [
+        "8 scheduled visit(s) outside any approved auth, first 2026-10-04 (V1491, V1492, V1493, V1494 ...)",
+        "auth ends 2026-10-02 (4 days); 10 visit(s) still scheduled"
+      ],
+      "visits_used": 16,
+      "visits_authorized": 36,
+      "visits_remaining": 20,
+      "scheduled_in_window": 2,
+      "auth_end": "2026-10-02",
+      "days_left": 4,
+      "next_visit": "2026-09-28",
+      "submit_by": "2026-09-29",
+      "checklist": [
+        "Progress note",
+        "Functional outcome score (e.g., LEFS/ODI)",
+        "Visit history",
+        "Portal submission"
+      ],
+      "evidence": [
+        "schedule.csv:row492",
+        "schedule.csv:row493",
+        "schedule.csv:row494",
+        "schedule.csv:row495",
+        "schedule.csv:row496",
+        "schedule.csv:row497",
+        "schedule.csv:row498",
+        "schedule.csv:row499",
+        "authorizations.csv:row29"
+      ],
+      "key": "SYN-1025|PAY-COMM2|AUTH-70072"
+    },
+    {
+      "patient_id": "SYN-1027",
+      "patient_name": "Test Indy A.",
+      "clinic": "Clinic Lake (synthetic)",
+      "payer_id": "PAY-COMM1",
+      "payer_name": "Commercial Plan A (placeholder)",
+      "auth_no": "AUTH-70078",
+      "priority": "P1",
+      "reasons": [
+        "UNCOVERED_VISIT",
+        "REAUTH_BY_DATE"
+      ],
+      "detail": [
+        "8 scheduled visit(s) outside any approved auth, first 2026-10-05 (V1545, V1546, V1547, V1548 ...)",
+        "auth ends 2026-10-04 (6 days); 10 visit(s) still scheduled"
+      ],
+      "visits_used": 16,
+      "visits_authorized": 37,
+      "visits_remaining": 21,
+      "scheduled_in_window": 2,
+      "auth_end": "2026-10-04",
+      "days_left": 6,
+      "next_visit": "2026-09-29",
+      "submit_by": "2026-09-29",
+      "checklist": [
+        "Current plan of care signed by referring provider",
+        "Progress note within last 30 days",
+        "Objective measures (ROM, strength, functional score)",
+        "Updated goals",
+        "Payer portal request form"
+      ],
+      "evidence": [
+        "schedule.csv:row546",
+        "schedule.csv:row547",
+        "schedule.csv:row548",
+        "schedule.csv:row549",
+        "schedule.csv:row550",
+        "schedule.csv:row551",
+        "schedule.csv:row552",
+        "schedule.csv:row553",
+        "authorizations.csv:row31"
+      ],
+      "key": "SYN-1027|PAY-COMM1|AUTH-70078"
+    },
+    {
+      "patient_id": "SYN-1028",
+      "patient_name": "Test Devon B.",
+      "clinic": "Clinic North (synthetic)",
+      "payer_id": "PAY-COMM2",
+      "payer_name": "Commercial Plan B (placeholder)",
+      "auth_no": "AUTH-70081",
+      "priority": "P1",
+      "reasons": [
+        "UNCOVERED_VISIT",
+        "REAUTH_BY_VISITS"
+      ],
+      "detail": [
+        "8 scheduled visit(s) outside any approved auth, first 2026-10-05 (V1568, V1569, V1570, V1571 ...)",
+        "2 of 15 visits left (payer threshold 2)"
+      ],
+      "visits_used": 13,
+      "visits_authorized": 15,
+      "visits_remaining": 2,
+      "scheduled_in_window": 2,
+      "auth_end": "2026-11-27",
+      "days_left": 60,
+      "next_visit": "2026-09-30",
+      "submit_by": "2026-09-29",
+      "checklist": [
+        "Progress note",
+        "Functional outcome score (e.g., LEFS/ODI)",
+        "Visit history",
+        "Portal submission"
+      ],
+      "evidence": [
+        "schedule.csv:row569",
+        "schedule.csv:row570",
+        "schedule.csv:row571",
+        "schedule.csv:row572",
+        "schedule.csv:row573",
+        "schedule.csv:row574",
+        "schedule.csv:row575",
+        "schedule.csv:row576",
+        "authorizations.csv:row32"
+      ],
+      "key": "SYN-1028|PAY-COMM2|AUTH-70081"
+    },
+    {
+      "patient_id": "SYN-1030",
+      "patient_name": "Test Noel D.",
+      "clinic": "Clinic West (synthetic)",
+      "payer_id": "PAY-COMM2",
+      "payer_name": "Commercial Plan B (placeholder)",
+      "auth_no": "AUTH-70087",
+      "priority": "P1",
+      "reasons": [
+        "UNCOVERED_VISIT",
+        "REAUTH_BY_DATE"
+      ],
+      "detail": [
+        "8 scheduled visit(s) outside any approved auth, first 2026-10-05 (V1613, V1614, V1615, V1616 ...)",
+        "auth ends 2026-10-03 (5 days); 10 visit(s) still scheduled"
+      ],
+      "visits_used": 10,
+      "visits_authorized": 31,
+      "visits_remaining": 21,
+      "scheduled_in_window": 2,
+      "auth_end": "2026-10-03",
+      "days_left": 5,
+      "next_visit": "2026-09-28",
+      "submit_by": "2026-09-30",
+      "checklist": [
+        "Progress note",
+        "Functional outcome score (e.g., LEFS/ODI)",
+        "Visit history",
+        "Portal submission"
+      ],
+      "evidence": [
+        "schedule.csv:row614",
+        "schedule.csv:row615",
+        "schedule.csv:row616",
+        "schedule.csv:row617",
+        "schedule.csv:row618",
+        "schedule.csv:row619",
+        "schedule.csv:row620",
+        "schedule.csv:row621",
+        "authorizations.csv:row35"
+      ],
+      "key": "SYN-1030|PAY-COMM2|AUTH-70087"
+    },
+    {
+      "patient_id": "SYN-1024",
+      "patient_name": "Test Jordan X.",
+      "clinic": "Clinic West (synthetic)",
+      "payer_id": "PAY-WC",
+      "payer_name": "Workers Comp Carrier (placeholder)",
+      "auth_no": "AUTH-70069",
+      "priority": "P1",
+      "reasons": [
+        "UNCOVERED_VISIT",
+        "REAUTH_BY_VISITS"
+      ],
+      "detail": [
+        "9 scheduled visit(s) outside any approved auth, first 2026-09-28 (V1464, V1465, V1466, V1467 ...)",
+        "0 of 4 visits left (payer threshold 2)"
+      ],
+      "visits_used": 4,
+      "visits_authorized": 4,
+      "visits_remaining": 0,
+      "scheduled_in_window": 0,
+      "auth_end": "2026-11-27",
+      "days_left": 60,
+      "next_visit": "2026-09-28",
+      "submit_by": "2026-11-17",
+      "checklist": [
+        "Adjuster approval request",
+        "Work status report",
+        "Progress note",
+        "Physician referral / Rx"
+      ],
+      "evidence": [
+        "schedule.csv:row465",
+        "schedule.csv:row466",
+        "schedule.csv:row467",
+        "schedule.csv:row468",
+        "schedule.csv:row469",
+        "schedule.csv:row470",
+        "schedule.csv:row471",
+        "schedule.csv:row472",
+        "schedule.csv:row473",
+        "authorizations.csv:row28"
+      ],
+      "key": "SYN-1024|PAY-WC|AUTH-70069"
+    },
+    {
+      "patient_id": "SYN-1005",
+      "patient_name": "Test Gray E.",
+      "clinic": "Clinic West (synthetic)",
+      "payer_id": "PAY-COMM1",
+      "payer_name": "Commercial Plan A (placeholder)",
+      "auth_no": "AUTH-70012",
+      "priority": "P1",
+      "reasons": [
+        "UNAUTHORIZED_DONE",
+        "UNCOVERED_VISIT"
+      ],
+      "detail": [
+        "8 scheduled visit(s) outside any approved auth, first 2026-09-29 (V1088, V1089, V1090, V1091 ...)",
+        "completed visit 2026-09-23 (V1086) had no covering approved auth",
+        "completed visit 2026-09-27 (V1087) had no covering approved auth"
+      ],
+      "visits_used": 2,
+      "visits_authorized": 40,
+      "visits_remaining": 38,
+      "scheduled_in_window": 0,
+      "auth_end": "2026-09-22",
+      "days_left": -6,
+      "next_visit": "2026-09-29",
+      "submit_by": null,
+      "checklist": [
+        "Current plan of care signed by referring provider",
+        "Progress note within last 30 days",
+        "Objective measures (ROM, strength, functional score)",
+        "Updated goals",
+        "Payer portal request form"
+      ],
+      "evidence": [
+        "schedule.csv:row87",
+        "schedule.csv:row88",
+        "schedule.csv:row89",
+        "schedule.csv:row90",
+        "schedule.csv:row91",
+        "schedule.csv:row92",
+        "schedule.csv:row93",
+        "schedule.csv:row94",
+        "schedule.csv:row95",
+        "schedule.csv:row96"
+      ],
+      "key": "SYN-1005|PAY-COMM1|AUTH-70012"
+    },
+    {
+      "patient_id": "SYN-1017",
+      "patient_name": "Test Oakley Q.",
+      "clinic": "Clinic Lake (synthetic)",
+      "payer_id": "PAY-MA",
+      "payer_name": "Medicare Advantage Plan (placeholder)",
+      "auth_no": "AUTH-70048",
+      "priority": "P2",
+      "reasons": [
+        "UNCOVERED_VISIT",
+        "REAUTH_BY_DATE"
+      ],
+      "detail": [
+        "6 scheduled visit(s) outside any approved auth, first 2026-10-10 (V1321, V1322, V1323, V1324 ...)",
+        "auth ends 2026-10-06 (8 days); 10 visit(s) still scheduled"
+      ],
+      "visits_used": 7,
+      "visits_authorized": 27,
+      "visits_remaining": 20,
+      "scheduled_in_window": 4,
+      "auth_end": "2026-10-06",
+      "days_left": 8,
+      "next_visit": "2026-09-28",
+      "submit_by": "2026-09-29",
+      "checklist": [
+        "Plan of care certification",
+        "Progress report (every 10th visit)",
+        "Medical necessity statement",
+        "Functional limitation reporting",
+        "Utilization-management vendor form"
+      ],
+      "evidence": [
+        "schedule.csv:row322",
+        "schedule.csv:row323",
+        "schedule.csv:row324",
+        "schedule.csv:row325",
+        "schedule.csv:row326",
+        "schedule.csv:row327",
+        "authorizations.csv:row21"
+      ],
+      "key": "SYN-1017|PAY-MA|AUTH-70048"
+    },
+    {
+      "patient_id": "SYN-1020",
+      "patient_name": "Test Finley T.",
+      "clinic": "Clinic North (synthetic)",
+      "payer_id": "PAY-COMM1",
+      "payer_name": "Commercial Plan A (placeholder)",
+      "auth_no": "AUTH-70057",
+      "priority": "P2",
+      "reasons": [
+        "UNCOVERED_VISIT",
+        "REAUTH_BY_DATE"
+      ],
+      "detail": [
+        "7 scheduled visit(s) outside any approved auth, first 2026-10-06 (V1384, V1385, V1386, V1387 ...)",
+        "auth ends 2026-10-04 (6 days); 10 visit(s) still scheduled"
+      ],
+      "visits_used": 10,
+      "visits_authorized": 32,
+      "visits_remaining": 22,
+      "scheduled_in_window": 3,
+      "auth_end": "2026-10-04",
+      "days_left": 6,
+      "next_visit": "2026-09-29",
+      "submit_by": "2026-09-29",
+      "checklist": [
+        "Current plan of care signed by referring provider",
+        "Progress note within last 30 days",
+        "Objective measures (ROM, strength, functional score)",
+        "Updated goals",
+        "Payer portal request form"
+      ],
+      "evidence": [
+        "schedule.csv:row385",
+        "schedule.csv:row386",
+        "schedule.csv:row387",
+        "schedule.csv:row388",
+        "schedule.csv:row389",
+        "schedule.csv:row390",
+        "schedule.csv:row391",
+        "authorizations.csv:row24"
+      ],
+      "key": "SYN-1020|PAY-COMM1|AUTH-70057"
+    },
+    {
+      "patient_id": "SYN-1002",
+      "patient_name": "Test Morgan B.",
+      "clinic": "Clinic West (synthetic)",
+      "payer_id": "PAY-COMM1",
+      "payer_name": "Commercial Plan A (placeholder)",
+      "auth_no": "AUTH-70003",
+      "priority": "P2",
+      "reasons": [
+        "UNCOVERED_VISIT",
+        "REAUTH_BY_VISITS"
+      ],
+      "detail": [
+        "6 scheduled visit(s) outside any approved auth, first 2026-10-06 (V1034, V1035, V1036, V1037 ...)",
+        "2 of 8 visits left (payer threshold 3)"
+      ],
+      "visits_used": 6,
+      "visits_authorized": 8,
+      "visits_remaining": 2,
+      "scheduled_in_window": 2,
+      "auth_end": "2026-12-07",
+      "days_left": 70,
+      "next_visit": "2026-09-30",
+      "submit_by": "2026-09-29",
+      "checklist": [
+        "Current plan of care signed by referring provider",
+        "Progress note within last 30 days",
+        "Objective measures (ROM, strength, functional score)",
+        "Updated goals",
+        "Payer portal request form"
+      ],
+      "evidence": [
+        "schedule.csv:row35",
+        "schedule.csv:row36",
+        "schedule.csv:row37",
+        "schedule.csv:row38",
+        "schedule.csv:row39",
+        "schedule.csv:row40",
+        "authorizations.csv:row3"
+      ],
+      "key": "SYN-1002|PAY-COMM1|AUTH-70003"
+    },
+    {
+      "patient_id": "SYN-1012",
+      "patient_name": "Test Alex L.",
+      "clinic": "Clinic Lake (synthetic)",
+      "payer_id": "PAY-COMM1",
+      "payer_name": "Commercial Plan A (placeholder)",
+      "auth_no": "AUTH-70033",
+      "priority": "P2",
+      "reasons": [
+        "UNCOVERED_VISIT",
+        "REAUTH_BY_DATE"
+      ],
+      "detail": [
+        "6 scheduled visit(s) outside any approved auth, first 2026-10-10 (V1230, V1231, V1232, V1233 ...)",
+        "auth ends 2026-10-06 (8 days); 9 visit(s) still scheduled"
+      ],
+      "visits_used": 12,
+      "visits_authorized": 32,
+      "visits_remaining": 20,
+      "scheduled_in_window": 3,
+      "auth_end": "2026-10-06",
+      "days_left": 8,
+      "next_visit": "2026-09-29",
+      "submit_by": "2026-10-01",
+      "checklist": [
+        "Current plan of care signed by referring provider",
+        "Progress note within last 30 days",
+        "Objective measures (ROM, strength, functional score)",
+        "Updated goals",
+        "Payer portal request form"
+      ],
+      "evidence": [
+        "schedule.csv:row231",
+        "schedule.csv:row232",
+        "schedule.csv:row233",
+        "schedule.csv:row234",
+        "schedule.csv:row235",
+        "schedule.csv:row236",
+        "authorizations.csv:row15"
+      ],
+      "key": "SYN-1012|PAY-COMM1|AUTH-70033"
+    },
+    {
+      "patient_id": "SYN-1021",
+      "patient_name": "Test Jordan U.",
+      "clinic": "Clinic Lake (synthetic)",
+      "payer_id": "PAY-COMM2",
+      "payer_name": "Commercial Plan B (placeholder)",
+      "auth_no": "AUTH-70060",
+      "priority": "P2",
+      "reasons": [
+        "UNCOVERED_VISIT",
+        "REAUTH_BY_DATE"
+      ],
+      "detail": [
+        "7 scheduled visit(s) outside any approved auth, first 2026-10-06 (V1403, V1404, V1405, V1406 ...)",
+        "auth ends 2026-10-04 (6 days); 10 visit(s) still scheduled"
+      ],
+      "visits_used": 8,
+      "visits_authorized": 29,
+      "visits_remaining": 21,
+      "scheduled_in_window": 3,
+      "auth_end": "2026-10-04",
+      "days_left": 6,
+      "next_visit": "2026-09-29",
+      "submit_by": "2026-10-01",
+      "checklist": [
+        "Progress note",
+        "Functional outcome score (e.g., LEFS/ODI)",
+        "Visit history",
+        "Portal submission"
+      ],
+      "evidence": [
+        "schedule.csv:row404",
+        "schedule.csv:row405",
+        "schedule.csv:row406",
+        "schedule.csv:row407",
+        "schedule.csv:row408",
+        "schedule.csv:row409",
+        "schedule.csv:row410",
+        "authorizations.csv:row25"
+      ],
+      "key": "SYN-1021|PAY-COMM2|AUTH-70060"
+    },
+    {
+      "patient_id": "SYN-1004",
+      "patient_name": "Test Morgan D.",
+      "clinic": "Clinic North (synthetic)",
+      "payer_id": "PAY-COMM1",
+      "payer_name": "Commercial Plan A (placeholder)",
+      "auth_no": "AUTH-70009",
+      "priority": "P2",
+      "reasons": [
+        "UNCOVERED_VISIT",
+        "REAUTH_BY_DATE"
+      ],
+      "detail": [
+        "7 scheduled visit(s) outside any approved auth, first 2026-10-09 (V1076, V1077, V1078, V1079 ...)",
+        "auth ends 2026-10-07 (9 days); 11 visit(s) still scheduled"
+      ],
+      "visits_used": 11,
+      "visits_authorized": 33,
+      "visits_remaining": 22,
+      "scheduled_in_window": 4,
+      "auth_end": "2026-10-07",
+      "days_left": 9,
+      "next_visit": "2026-09-28",
+      "submit_by": "2026-10-02",
+      "checklist": [
+        "Current plan of care signed by referring provider",
+        "Progress note within last 30 days",
+        "Objective measures (ROM, strength, functional score)",
+        "Updated goals",
+        "Payer portal request form"
+      ],
+      "evidence": [
+        "schedule.csv:row77",
+        "schedule.csv:row78",
+        "schedule.csv:row79",
+        "schedule.csv:row80",
+        "schedule.csv:row81",
+        "schedule.csv:row82",
+        "schedule.csv:row83",
+        "authorizations.csv:row5"
+      ],
+      "key": "SYN-1004|PAY-COMM1|AUTH-70009"
+    },
+    {
+      "patient_id": "SYN-1032",
+      "patient_name": "Test Gray F.",
+      "clinic": "Clinic West (synthetic)",
+      "payer_id": "PAY-MA",
+      "payer_name": "Medicare Advantage Plan (placeholder)",
+      "auth_no": "AUTH-70093",
+      "priority": "P2",
+      "reasons": [
+        "UNCOVERED_VISIT",
+        "REAUTH_BY_DATE"
+      ],
+      "detail": [
+        "6 scheduled visit(s) outside any approved auth, first 2026-10-11 (V1651, V1652, V1653, V1654 ...)",
+        "auth ends 2026-10-10 (12 days); 10 visit(s) still scheduled"
+      ],
+      "visits_used": 9,
+      "visits_authorized": 29,
+      "visits_remaining": 20,
+      "scheduled_in_window": 4,
+      "auth_end": "2026-10-10",
+      "days_left": 12,
+      "next_visit": "2026-09-29",
+      "submit_by": "2026-10-03",
+      "checklist": [
+        "Plan of care certification",
+        "Progress report (every 10th visit)",
+        "Medical necessity statement",
+        "Functional limitation reporting",
+        "Utilization-management vendor form"
+      ],
+      "evidence": [
+        "schedule.csv:row652",
+        "schedule.csv:row653",
+        "schedule.csv:row654",
+        "schedule.csv:row655",
+        "schedule.csv:row656",
+        "schedule.csv:row657",
+        "authorizations.csv:row38"
+      ],
+      "key": "SYN-1032|PAY-MA|AUTH-70093"
+    },
+    {
+      "patient_id": "SYN-1003",
+      "patient_name": "Test Logan C.",
+      "clinic": "Clinic West (synthetic)",
+      "payer_id": "PAY-MA",
+      "payer_name": "Medicare Advantage Plan (placeholder)",
+      "auth_no": "AUTH-70006",
+      "priority": "P2",
+      "reasons": [
+        "UNCOVERED_VISIT",
+        "REAUTH_BY_DATE"
+      ],
+      "detail": [
+        "6 scheduled visit(s) outside any approved auth, first 2026-10-12 (V1054, V1055, V1056, V1057 ...)",
+        "auth ends 2026-10-10 (12 days); 11 visit(s) still scheduled"
+      ],
+      "visits_used": 8,
+      "visits_authorized": 30,
+      "visits_remaining": 22,
+      "scheduled_in_window": 5,
+      "auth_end": "2026-10-10",
+      "days_left": 12,
+      "next_visit": "2026-09-30",
+      "submit_by": "2026-10-03",
+      "checklist": [
+        "Plan of care certification",
+        "Progress report (every 10th visit)",
+        "Medical necessity statement",
+        "Functional limitation reporting",
+        "Utilization-management vendor form"
+      ],
+      "evidence": [
+        "schedule.csv:row55",
+        "schedule.csv:row56",
+        "schedule.csv:row57",
+        "schedule.csv:row58",
+        "schedule.csv:row59",
+        "schedule.csv:row60",
+        "authorizations.csv:row4"
+      ],
+      "key": "SYN-1003|PAY-MA|AUTH-70006"
+    },
+    {
+      "patient_id": "SYN-1006",
+      "patient_name": "Test Blair F.",
+      "clinic": "Clinic West (synthetic)",
+      "payer_id": "PAY-COMM1",
+      "payer_name": "Commercial Plan A (placeholder)",
+      "auth_no": "AUTH-70016",
+      "priority": "P2",
+      "reasons": [
+        "PENDING_FOLLOWUP"
+      ],
+      "detail": [
+        "visit 2026-10-02 relies on PENDING auth AUTH-70016; follow up with payer",
+        "visit 2026-10-06 relies on PENDING auth AUTH-70016; follow up with payer",
+        "visit 2026-10-10 relies on PENDING auth AUTH-70016; follow up with payer",
+        "visit 2026-10-12 relies on PENDING auth AUTH-70016; follow up with payer",
+        "visit 2026-10-14 relies on PENDING auth AUTH-70016; follow up with payer",
+        "visit 2026-10-17 relies on PENDING auth AUTH-70016; follow up with payer",
+        "visit 2026-10-19 relies on PENDING auth AUTH-70016; follow up with payer",
+        "visit 2026-10-22 relies on PENDING auth AUTH-70016; follow up with payer",
+        "visit 2026-10-25 relies on PENDING auth AUTH-70016; follow up with payer"
+      ],
+      "visits_used": null,
+      "visits_authorized": null,
+      "visits_remaining": null,
+      "scheduled_in_window": null,
+      "auth_end": null,
+      "days_left": null,
+      "next_visit": "2026-09-29",
+      "submit_by": null,
+      "checklist": [
+        "Current plan of care signed by referring provider",
+        "Progress note within last 30 days",
+        "Objective measures (ROM, strength, functional score)",
+        "Updated goals",
+        "Payer portal request form"
+      ],
+      "evidence": [
+        "schedule.csv:row114",
+        "schedule.csv:row115",
+        "schedule.csv:row116",
+        "schedule.csv:row117",
+        "schedule.csv:row118",
+        "schedule.csv:row119",
+        "schedule.csv:row120",
+        "schedule.csv:row121",
+        "schedule.csv:row122"
+      ],
+      "key": "SYN-1006|PAY-COMM1|AUTH-70016"
+    },
+    {
+      "patient_id": "SYN-1010",
+      "patient_name": "Test Morgan J.",
+      "clinic": "Clinic Lake (synthetic)",
+      "payer_id": "PAY-MA",
+      "payer_name": "Medicare Advantage Plan (placeholder)",
+      "auth_no": "AUTH-70028",
+      "priority": "P2",
+      "reasons": [
+        "PENDING_FOLLOWUP"
+      ],
+      "detail": [
+        "visit 2026-10-03 relies on PENDING auth AUTH-70028; follow up with payer",
+        "visit 2026-10-06 relies on PENDING auth AUTH-70028; follow up with payer",
+        "visit 2026-10-10 relies on PENDING auth AUTH-70028; follow up with payer",
+        "visit 2026-10-12 relies on PENDING auth AUTH-70028; follow up with payer",
+        "visit 2026-10-14 relies on PENDING auth AUTH-70028; follow up with payer",
+        "visit 2026-10-17 relies on PENDING auth AUTH-70028; follow up with payer",
+        "visit 2026-10-21 relies on PENDING auth AUTH-70028; follow up with payer",
+        "visit 2026-10-23 relies on PENDING auth AUTH-70028; follow up with payer"
+      ],
+      "visits_used": null,
+      "visits_authorized": null,
+      "visits_remaining": null,
+      "scheduled_in_window": null,
+      "auth_end": null,
+      "days_left": null,
+      "next_visit": "2026-09-29",
+      "submit_by": null,
+      "checklist": [
+        "Plan of care certification",
+        "Progress report (every 10th visit)",
+        "Medical necessity statement",
+        "Functional limitation reporting",
+        "Utilization-management vendor form"
+      ],
+      "evidence": [
+        "schedule.csv:row185",
+        "schedule.csv:row186",
+        "schedule.csv:row187",
+        "schedule.csv:row188",
+        "schedule.csv:row189",
+        "schedule.csv:row190",
+        "schedule.csv:row191",
+        "schedule.csv:row192"
+      ],
+      "key": "SYN-1010|PAY-MA|AUTH-70028"
+    },
+    {
+      "patient_id": "SYN-1022",
+      "patient_name": "Test Harper V.",
+      "clinic": "Clinic West (synthetic)",
+      "payer_id": "PAY-WC",
+      "payer_name": "Workers Comp Carrier (placeholder)",
+      "auth_no": "AUTH-70063",
+      "priority": "P2",
+      "reasons": [
+        "UNCOVERED_VISIT"
+      ],
+      "detail": [
+        "6 scheduled visit(s) outside any approved auth, first 2026-10-09 (V1424, V1425, V1426, V1427 ...)"
+      ],
+      "visits_used": 10,
+      "visits_authorized": 13,
+      "visits_remaining": 3,
+      "scheduled_in_window": 3,
+      "auth_end": "2026-11-27",
+      "days_left": 60,
+      "next_visit": "2026-09-29",
+      "submit_by": null,
+      "checklist": [
+        "Adjuster approval request",
+        "Work status report",
+        "Progress note",
+        "Physician referral / Rx"
+      ],
+      "evidence": [
+        "schedule.csv:row425",
+        "schedule.csv:row426",
+        "schedule.csv:row427",
+        "schedule.csv:row428",
+        "schedule.csv:row429",
+        "schedule.csv:row430"
+      ],
+      "key": "SYN-1022|PAY-WC|AUTH-70063"
+    },
+    {
+      "patient_id": "SYN-1031",
+      "patient_name": "Test Blair E.",
+      "clinic": "Clinic North (synthetic)",
+      "payer_id": "PAY-COMM1",
+      "payer_name": "Commercial Plan A (placeholder)",
+      "auth_no": "AUTH-70091",
+      "priority": "P2",
+      "reasons": [
+        "PENDING_FOLLOWUP"
+      ],
+      "detail": [
+        "visit 2026-10-03 relies on PENDING auth AUTH-70091; follow up with payer",
+        "visit 2026-10-06 relies on PENDING auth AUTH-70091; follow up with payer",
+        "visit 2026-10-10 relies on PENDING auth AUTH-70091; follow up with payer",
+        "visit 2026-10-13 relies on PENDING auth AUTH-70091; follow up with payer",
+        "visit 2026-10-15 relies on PENDING auth AUTH-70091; follow up with payer",
+        "visit 2026-10-17 relies on PENDING auth AUTH-70091; follow up with payer",
+        "visit 2026-10-20 relies on PENDING auth AUTH-70091; follow up with payer",
+        "visit 2026-10-23 relies on PENDING auth AUTH-70091; follow up with payer"
+      ],
+      "visits_used": null,
+      "visits_authorized": null,
+      "visits_remaining": null,
+      "scheduled_in_window": null,
+      "auth_end": null,
+      "days_left": null,
+      "next_visit": "2026-09-29",
+      "submit_by": null,
+      "checklist": [
+        "Current plan of care signed by referring provider",
+        "Progress note within last 30 days",
+        "Objective measures (ROM, strength, functional score)",
+        "Updated goals",
+        "Payer portal request form"
+      ],
+      "evidence": [
+        "schedule.csv:row631",
+        "schedule.csv:row632",
+        "schedule.csv:row633",
+        "schedule.csv:row634",
+        "schedule.csv:row635",
+        "schedule.csv:row636",
+        "schedule.csv:row637",
+        "schedule.csv:row638"
+      ],
+      "key": "SYN-1031|PAY-COMM1|AUTH-70091"
+    },
+    {
+      "patient_id": "SYN-1013",
+      "patient_name": "Test Harper M.",
+      "clinic": "Clinic North (synthetic)",
+      "payer_id": "PAY-COMM2",
+      "payer_name": "Commercial Plan B (placeholder)",
+      "auth_no": "AUTH-70037",
+      "priority": "P2",
+      "reasons": [
+        "PENDING_FOLLOWUP"
+      ],
+      "detail": [
+        "visit 2026-10-04 relies on PENDING auth AUTH-70037; follow up with payer",
+        "visit 2026-10-07 relies on PENDING auth AUTH-70037; follow up with payer",
+        "visit 2026-10-11 relies on PENDING auth AUTH-70037; follow up with payer",
+        "visit 2026-10-13 relies on PENDING auth AUTH-70037; follow up with payer",
+        "visit 2026-10-16 relies on PENDING auth AUTH-70037; follow up with payer",
+        "visit 2026-10-19 relies on PENDING auth AUTH-70037; follow up with payer",
+        "visit 2026-10-22 relies on PENDING auth AUTH-70037; follow up with payer",
+        "visit 2026-10-26 relies on PENDING auth AUTH-70037; follow up with payer"
+      ],
+      "visits_used": null,
+      "visits_authorized": null,
+      "visits_remaining": null,
+      "scheduled_in_window": null,
+      "auth_end": null,
+      "days_left": null,
+      "next_visit": "2026-09-30",
+      "submit_by": null,
+      "checklist": [
+        "Progress note",
+        "Functional outcome score (e.g., LEFS/ODI)",
+        "Visit history",
+        "Portal submission"
+      ],
+      "evidence": [
+        "schedule.csv:row257",
+        "schedule.csv:row258",
+        "schedule.csv:row259",
+        "schedule.csv:row260",
+        "schedule.csv:row261",
+        "schedule.csv:row262",
+        "schedule.csv:row263",
+        "schedule.csv:row264"
+      ],
+      "key": "SYN-1013|PAY-COMM2|AUTH-70037"
+    },
+    {
+      "patient_id": "SYN-1036",
+      "patient_name": "Test Oakley J.",
+      "clinic": "Clinic Lake (synthetic)",
+      "payer_id": "PAY-WC",
+      "payer_name": "Workers Comp Carrier (placeholder)",
+      "auth_no": "AUTH-70105",
+      "priority": "P2",
+      "reasons": [
+        "UNCOVERED_VISIT"
+      ],
+      "detail": [
+        "5 scheduled visit(s) outside any approved auth, first 2026-10-10 (V1736, V1737, V1738, V1739 ...)"
+      ],
+      "visits_used": 16,
+      "visits_authorized": 19,
+      "visits_remaining": 3,
+      "scheduled_in_window": 3,
+      "auth_end": "2026-11-27",
+      "days_left": 60,
+      "next_visit": "2026-09-30",
+      "submit_by": null,
+      "checklist": [
+        "Adjuster approval request",
+        "Work status report",
+        "Progress note",
+        "Physician referral / Rx"
+      ],
+      "evidence": [
+        "schedule.csv:row737",
+        "schedule.csv:row738",
+        "schedule.csv:row739",
+        "schedule.csv:row740",
+        "schedule.csv:row741"
+      ],
+      "key": "SYN-1036|PAY-WC|AUTH-70105"
+    },
+    {
+      "patient_id": "SYN-1039",
+      "patient_name": "Test Morgan M.",
+      "clinic": "Clinic West (synthetic)",
+      "payer_id": "PAY-MA",
+      "payer_name": "Medicare Advantage Plan (placeholder)",
+      "auth_no": "AUTH-70115",
+      "priority": "P2",
+      "reasons": [
+        "PENDING_FOLLOWUP"
+      ],
+      "detail": [
+        "visit 2026-10-07 relies on PENDING auth AUTH-70115; follow up with payer",
+        "visit 2026-10-10 relies on PENDING auth AUTH-70115; follow up with payer",
+        "visit 2026-10-12 relies on PENDING auth AUTH-70115; follow up with payer",
+        "visit 2026-10-15 relies on PENDING auth AUTH-70115; follow up with payer",
+        "visit 2026-10-18 relies on PENDING auth AUTH-70115; follow up with payer",
+        "visit 2026-10-22 relies on PENDING auth AUTH-70115; follow up with payer",
+        "visit 2026-10-24 relies on PENDING auth AUTH-70115; follow up with payer"
+      ],
+      "visits_used": null,
+      "visits_authorized": null,
+      "visits_remaining": null,
+      "scheduled_in_window": null,
+      "auth_end": null,
+      "days_left": null,
+      "next_visit": "2026-09-30",
+      "submit_by": null,
+      "checklist": [
+        "Plan of care certification",
+        "Progress report (every 10th visit)",
+        "Medical necessity statement",
+        "Functional limitation reporting",
+        "Utilization-management vendor form"
+      ],
+      "evidence": [
+        "schedule.csv:row810",
+        "schedule.csv:row811",
+        "schedule.csv:row812",
+        "schedule.csv:row813",
+        "schedule.csv:row814",
+        "schedule.csv:row815",
+        "schedule.csv:row816"
+      ],
+      "key": "SYN-1039|PAY-MA|AUTH-70115"
+    }
+  ],
+  "ledger": [
+    {
+      "auth_no": "AUTH-70000",
+      "patient_id": "SYN-1001",
+      "patient_name": "Test Finley A.",
+      "payer_id": "PAY-MA",
+      "start": "2026-08-19",
+      "end": "2026-11-12",
+      "authorized": 30,
+      "used": 14,
+      "scheduled": 9,
+      "remaining": 16,
+      "remaining_after_scheduled": 7,
+      "days_left": 45,
+      "status": "active"
+    },
+    {
+      "auth_no": "AUTH-70003",
+      "patient_id": "SYN-1002",
+      "patient_name": "Test Morgan B.",
+      "payer_id": "PAY-COMM1",
+      "start": "2026-09-08",
+      "end": "2026-12-07",
+      "authorized": 8,
+      "used": 6,
+      "scheduled": 2,
+      "remaining": 2,
+      "remaining_after_scheduled": 0,
+      "days_left": 70,
+      "status": "active"
+    },
+    {
+      "auth_no": "AUTH-70006",
+      "patient_id": "SYN-1003",
+      "patient_name": "Test Logan C.",
+      "payer_id": "PAY-MA",
+      "start": "2026-09-03",
+      "end": "2026-10-10",
+      "authorized": 30,
+      "used": 8,
+      "scheduled": 5,
+      "remaining": 22,
+      "remaining_after_scheduled": 17,
+      "days_left": 12,
+      "status": "active"
+    },
+    {
+      "auth_no": "AUTH-70009",
+      "patient_id": "SYN-1004",
+      "patient_name": "Test Morgan D.",
+      "payer_id": "PAY-COMM1",
+      "start": "2026-08-24",
+      "end": "2026-10-07",
+      "authorized": 33,
+      "used": 11,
+      "scheduled": 4,
+      "remaining": 22,
+      "remaining_after_scheduled": 18,
+      "days_left": 9,
+      "status": "active"
+    },
+    {
+      "auth_no": "AUTH-70012",
+      "patient_id": "SYN-1005",
+      "patient_name": "Test Gray E.",
+      "payer_id": "PAY-COMM1",
+      "start": "2026-09-12",
+      "end": "2026-09-22",
+      "authorized": 40,
+      "used": 2,
+      "scheduled": 0,
+      "remaining": 38,
+      "remaining_after_scheduled": 38,
+      "days_left": -6,
+      "status": "expired"
+    },
+    {
+      "auth_no": "AUTH-70015",
+      "patient_id": "SYN-1006",
+      "patient_name": "Test Blair F.",
+      "payer_id": "PAY-COMM1",
+      "start": "2026-08-04",
+      "end": "2026-10-01",
+      "authorized": 36,
+      "used": 15,
+      "scheduled": 1,
+      "remaining": 21,
+      "remaining_after_scheduled": 20,
+      "days_left": 3,
+      "status": "active"
+    },
+    {
+      "auth_no": "AUTH-70018",
+      "patient_id": "SYN-1007",
+      "patient_name": "Test Blair G.",
+      "payer_id": "PAY-WC",
+      "start": "2026-09-17",
+      "end": "2026-09-30",
+      "authorized": 25,
+      "used": 4,
+      "scheduled": 1,
+      "remaining": 21,
+      "remaining_after_scheduled": 20,
+      "days_left": 2,
+      "status": "active"
+    },
+    {
+      "auth_no": "AUTH-70019",
+      "patient_id": "SYN-1007",
+      "patient_name": "Test Blair G.",
+      "payer_id": "PAY-WC",
+      "start": "2026-10-01",
+      "end": "2026-11-30",
+      "authorized": 12,
+      "used": 0,
+      "scheduled": 10,
+      "remaining": 12,
+      "remaining_after_scheduled": 2,
+      "days_left": 63,
+      "status": "active"
+    },
+    {
+      "auth_no": "AUTH-70024",
+      "patient_id": "SYN-1009",
+      "patient_name": "Test Harper I.",
+      "payer_id": "PAY-MA",
+      "start": "2026-09-06",
+      "end": "2026-12-05",
+      "authorized": 22,
+      "used": 7,
+      "scheduled": 8,
+      "remaining": 15,
+      "remaining_after_scheduled": 7,
+      "days_left": 68,
+      "status": "active"
+    },
+    {
+      "auth_no": "AUTH-70027",
+      "patient_id": "SYN-1010",
+      "patient_name": "Test Morgan J.",
+      "payer_id": "PAY-MA",
+      "start": "2026-08-15",
+      "end": "2026-10-01",
+      "authorized": 34,
+      "used": 14,
+      "scheduled": 1,
+      "remaining": 20,
+      "remaining_after_scheduled": 19,
+      "days_left": 3,
+      "status": "active"
+    },
+    {
+      "auth_no": "AUTH-70030",
+      "patient_id": "SYN-1011",
+      "patient_name": "Test Oakley K.",
+      "payer_id": "PAY-COMM2",
+      "start": "2026-08-19",
+      "end": "2026-11-17",
+      "authorized": 26,
+      "used": 13,
+      "scheduled": 9,
+      "remaining": 13,
+      "remaining_after_scheduled": 4,
+      "days_left": 50,
+      "status": "active"
+    },
+    {
+      "auth_no": "AUTH-70033",
+      "patient_id": "SYN-1012",
+      "patient_name": "Test Alex L.",
+      "payer_id": "PAY-COMM1",
+      "start": "2026-08-18",
+      "end": "2026-10-06",
+      "authorized": 32,
+      "used": 12,
+      "scheduled": 3,
+      "remaining": 20,
+      "remaining_after_scheduled": 17,
+      "days_left": 8,
+      "status": "active"
+    },
+    {
+      "auth_no": "AUTH-70036",
+      "patient_id": "SYN-1013",
+      "patient_name": "Test Harper M.",
+      "payer_id": "PAY-COMM2",
+      "start": "2026-08-05",
+      "end": "2026-10-02",
+      "authorized": 38,
+      "used": 18,
+      "scheduled": 1,
+      "remaining": 20,
+      "remaining_after_scheduled": 19,
+      "days_left": 4,
+      "status": "active"
+    },
+    {
+      "auth_no": "AUTH-70039",
+      "patient_id": "SYN-1014",
+      "patient_name": "Test Taylor N.",
+      "payer_id": "PAY-MA",
+      "start": "2026-09-09",
+      "end": "2026-11-27",
+      "authorized": 7,
+      "used": 6,
+      "scheduled": 1,
+      "remaining": 1,
+      "remaining_after_scheduled": 0,
+      "days_left": 60,
+      "status": "active"
+    },
+    {
+      "auth_no": "AUTH-70042",
+      "patient_id": "SYN-1015",
+      "patient_name": "Test Jordan O.",
+      "payer_id": "PAY-MA",
+      "start": "2026-09-10",
+      "end": "2026-12-09",
+      "authorized": 23,
+      "used": 7,
+      "scheduled": 9,
+      "remaining": 16,
+      "remaining_after_scheduled": 7,
+      "days_left": 72,
+      "status": "active"
+    },
+    {
+      "auth_no": "AUTH-70045",
+      "patient_id": "SYN-1016",
+      "patient_name": "Test Logan P.",
+      "payer_id": "PAY-COMM1",
+      "start": "2026-09-16",
+      "end": "2026-11-09",
+      "authorized": 19,
+      "used": 2,
+      "scheduled": 11,
+      "remaining": 17,
+      "remaining_after_scheduled": 6,
+      "days_left": 42,
+      "status": "active"
+    },
+    {
+      "auth_no": "AUTH-70048",
+      "patient_id": "SYN-1017",
+      "patient_name": "Test Oakley Q.",
+      "payer_id": "PAY-MA",
+      "start": "2026-09-07",
+      "end": "2026-10-06",
+      "authorized": 27,
+      "used": 7,
+      "scheduled": 4,
+      "remaining": 20,
+      "remaining_after_scheduled": 16,
+      "days_left": 8,
+      "status": "active"
+    },
+    {
+      "auth_no": "AUTH-70051",
+      "patient_id": "SYN-1018",
+      "patient_name": "Test Morgan R.",
+      "payer_id": "PAY-MA",
+      "start": "2026-08-15",
+      "end": "2026-11-13",
+      "authorized": 29,
+      "used": 15,
+      "scheduled": 8,
+      "remaining": 14,
+      "remaining_after_scheduled": 6,
+      "days_left": 46,
+      "status": "active"
+    },
+    {
+      "auth_no": "AUTH-70054",
+      "patient_id": "SYN-1019",
+      "patient_name": "Test Finley S.",
+      "payer_id": "PAY-COMM1",
+      "start": "2026-08-25",
+      "end": "2026-11-08",
+      "authorized": 24,
+      "used": 9,
+      "scheduled": 9,
+      "remaining": 15,
+      "remaining_after_scheduled": 6,
+      "days_left": 41,
+      "status": "active"
+    },
+    {
+      "auth_no": "AUTH-70057",
+      "patient_id": "SYN-1020",
+      "patient_name": "Test Finley T.",
+      "payer_id": "PAY-COMM1",
+      "start": "2026-08-25",
+      "end": "2026-10-04",
+      "authorized": 32,
+      "used": 10,
+      "scheduled": 3,
+      "remaining": 22,
+      "remaining_after_scheduled": 19,
+      "days_left": 6,
+      "status": "active"
+    },
+    {
+      "auth_no": "AUTH-70060",
+      "patient_id": "SYN-1021",
+      "patient_name": "Test Jordan U.",
+      "payer_id": "PAY-COMM2",
+      "start": "2026-09-01",
+      "end": "2026-10-04",
+      "authorized": 29,
+      "used": 8,
+      "scheduled": 3,
+      "remaining": 21,
+      "remaining_after_scheduled": 18,
+      "days_left": 6,
+      "status": "active"
+    },
+    {
+      "auth_no": "AUTH-70063",
+      "patient_id": "SYN-1022",
+      "patient_name": "Test Harper V.",
+      "payer_id": "PAY-WC",
+      "start": "2026-08-27",
+      "end": "2026-11-27",
+      "authorized": 13,
+      "used": 10,
+      "scheduled": 3,
+      "remaining": 3,
+      "remaining_after_scheduled": 0,
+      "days_left": 60,
+      "status": "active"
+    },
+    {
+      "auth_no": "AUTH-70066",
+      "patient_id": "SYN-1023",
+      "patient_name": "Test Kai W.",
+      "payer_id": "PAY-COMM1",
+      "start": "2026-08-04",
+      "end": "2026-10-03",
+      "authorized": 40,
+      "used": 17,
+      "scheduled": 1,
+      "remaining": 23,
+      "remaining_after_scheduled": 22,
+      "days_left": 5,
+      "status": "active"
+    },
+    {
+      "auth_no": "AUTH-70069",
+      "patient_id": "SYN-1024",
+      "patient_name": "Test Jordan X.",
+      "payer_id": "PAY-WC",
+      "start": "2026-09-14",
+      "end": "2026-11-27",
+      "authorized": 4,
+      "used": 4,
+      "scheduled": 0,
+      "remaining": 0,
+      "remaining_after_scheduled": 0,
+      "days_left": 60,
+      "status": "active"
+    },
+    {
+      "auth_no": "AUTH-70072",
+      "patient_id": "SYN-1025",
+      "patient_name": "Test Casey Y.",
+      "payer_id": "PAY-COMM2",
+      "start": "2026-08-10",
+      "end": "2026-10-02",
+      "authorized": 36,
+      "used": 16,
+      "scheduled": 2,
+      "remaining": 20,
+      "remaining_after_scheduled": 18,
+      "days_left": 4,
+      "status": "active"
+    },
+    {
+      "auth_no": "AUTH-70075",
+      "patient_id": "SYN-1026",
+      "patient_name": "Test Harper Z.",
+      "payer_id": "PAY-COMM1",
+      "start": "2026-08-09",
+      "end": "2026-11-27",
+      "authorized": 17,
+      "used": 15,
+      "scheduled": 2,
+      "remaining": 2,
+      "remaining_after_scheduled": 0,
+      "days_left": 60,
+      "status": "active"
+    },
+    {
+      "auth_no": "AUTH-70078",
+      "patient_id": "SYN-1027",
+      "patient_name": "Test Indy A.",
+      "payer_id": "PAY-COMM1",
+      "start": "2026-08-10",
+      "end": "2026-10-04",
+      "authorized": 37,
+      "used": 16,
+      "scheduled": 2,
+      "remaining": 21,
+      "remaining_after_scheduled": 19,
+      "days_left": 6,
+      "status": "active"
+    },
+    {
+      "auth_no": "AUTH-70081",
+      "patient_id": "SYN-1028",
+      "patient_name": "Test Devon B.",
+      "payer_id": "PAY-COMM2",
+      "start": "2026-08-21",
+      "end": "2026-11-27",
+      "authorized": 15,
+      "used": 13,
+      "scheduled": 2,
+      "remaining": 2,
+      "remaining_after_scheduled": 0,
+      "days_left": 60,
+      "status": "active"
+    },
+    {
+      "auth_no": "AUTH-70084",
+      "patient_id": "SYN-1029",
+      "patient_name": "Test Jordan C.",
+      "payer_id": "PAY-WC",
+      "start": "2026-08-22",
+      "end": "2026-10-03",
+      "authorized": 34,
+      "used": 11,
+      "scheduled": 3,
+      "remaining": 23,
+      "remaining_after_scheduled": 20,
+      "days_left": 5,
+      "status": "active"
+    },
+    {
+      "auth_no": "AUTH-70085",
+      "patient_id": "SYN-1029",
+      "patient_name": "Test Jordan C.",
+      "payer_id": "PAY-WC",
+      "start": "2026-10-04",
+      "end": "2026-12-03",
+      "authorized": 12,
+      "used": 0,
+      "scheduled": 8,
+      "remaining": 12,
+      "remaining_after_scheduled": 4,
+      "days_left": 66,
+      "status": "active"
+    },
+    {
+      "auth_no": "AUTH-70087",
+      "patient_id": "SYN-1030",
+      "patient_name": "Test Noel D.",
+      "payer_id": "PAY-COMM2",
+      "start": "2026-08-19",
+      "end": "2026-10-03",
+      "authorized": 31,
+      "used": 10,
+      "scheduled": 2,
+      "remaining": 21,
+      "remaining_after_scheduled": 19,
+      "days_left": 5,
+      "status": "active"
+    },
+    {
+      "auth_no": "AUTH-70090",
+      "patient_id": "SYN-1031",
+      "patient_name": "Test Blair E.",
+      "payer_id": "PAY-COMM1",
+      "start": "2026-09-13",
+      "end": "2026-10-02",
+      "authorized": 27,
+      "used": 5,
+      "scheduled": 2,
+      "remaining": 22,
+      "remaining_after_scheduled": 20,
+      "days_left": 4,
+      "status": "active"
+    },
+    {
+      "auth_no": "AUTH-70093",
+      "patient_id": "SYN-1032",
+      "patient_name": "Test Gray F.",
+      "payer_id": "PAY-MA",
+      "start": "2026-09-06",
+      "end": "2026-10-10",
+      "authorized": 29,
+      "used": 9,
+      "scheduled": 4,
+      "remaining": 20,
+      "remaining_after_scheduled": 16,
+      "days_left": 12,
+      "status": "active"
+    },
+    {
+      "auth_no": "AUTH-70099",
+      "patient_id": "SYN-1034",
+      "patient_name": "Test Sage H.",
+      "payer_id": "PAY-MA",
+      "start": "2026-08-27",
+      "end": "2026-10-01",
+      "authorized": 31,
+      "used": 10,
+      "scheduled": 1,
+      "remaining": 21,
+      "remaining_after_scheduled": 20,
+      "days_left": 3,
+      "status": "active"
+    },
+    {
+      "auth_no": "AUTH-70100",
+      "patient_id": "SYN-1034",
+      "patient_name": "Test Sage H.",
+      "payer_id": "PAY-MA",
+      "start": "2026-10-02",
+      "end": "2026-12-01",
+      "authorized": 12,
+      "used": 0,
+      "scheduled": 9,
+      "remaining": 12,
+      "remaining_after_scheduled": 3,
+      "days_left": 64,
+      "status": "active"
+    },
+    {
+      "auth_no": "AUTH-70102",
+      "patient_id": "SYN-1035",
+      "patient_name": "Test Kai I.",
+      "payer_id": "PAY-COMM2",
+      "start": "2026-08-23",
+      "end": "2026-11-21",
+      "authorized": 25,
+      "used": 11,
+      "scheduled": 9,
+      "remaining": 14,
+      "remaining_after_scheduled": 5,
+      "days_left": 54,
+      "status": "active"
+    },
+    {
+      "auth_no": "AUTH-70105",
+      "patient_id": "SYN-1036",
+      "patient_name": "Test Oakley J.",
+      "payer_id": "PAY-WC",
+      "start": "2026-08-12",
+      "end": "2026-11-27",
+      "authorized": 19,
+      "used": 16,
+      "scheduled": 3,
+      "remaining": 3,
+      "remaining_after_scheduled": 0,
+      "days_left": 60,
+      "status": "active"
+    },
+    {
+      "auth_no": "AUTH-70108",
+      "patient_id": "SYN-1037",
+      "patient_name": "Test Casey K.",
+      "payer_id": "PAY-COMM2",
+      "start": "2026-08-09",
+      "end": "2026-11-27",
+      "authorized": 18,
+      "used": 16,
+      "scheduled": 2,
+      "remaining": 2,
+      "remaining_after_scheduled": 0,
+      "days_left": 60,
+      "status": "active"
+    },
+    {
+      "auth_no": "AUTH-70111",
+      "patient_id": "SYN-1038",
+      "patient_name": "Test Indy L.",
+      "payer_id": "PAY-COMM1",
+      "start": "2026-09-05",
+      "end": "2026-10-01",
+      "authorized": 28,
+      "used": 6,
+      "scheduled": 2,
+      "remaining": 22,
+      "remaining_after_scheduled": 20,
+      "days_left": 3,
+      "status": "active"
+    },
+    {
+      "auth_no": "AUTH-70114",
+      "patient_id": "SYN-1039",
+      "patient_name": "Test Morgan M.",
+      "payer_id": "PAY-MA",
+      "start": "2026-08-04",
+      "end": "2026-10-04",
+      "authorized": 40,
+      "used": 19,
+      "scheduled": 3,
+      "remaining": 21,
+      "remaining_after_scheduled": 18,
+      "days_left": 6,
+      "status": "active"
+    },
+    {
+      "auth_no": "AUTH-70117",
+      "patient_id": "SYN-1040",
+      "patient_name": "Test Alex N.",
+      "payer_id": "PAY-MA",
+      "start": "2026-08-04",
+      "end": "2026-11-12",
+      "authorized": 33,
+      "used": 18,
+      "scheduled": 9,
+      "remaining": 15,
+      "remaining_after_scheduled": 6,
+      "days_left": 45,
+      "status": "active"
+    }
+  ],
+  "uncovered": [
+    {
+      "visit_id": "V1086",
+      "patient_id": "SYN-1005",
+      "date": "2026-09-23",
+      "status": "completed",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1087",
+      "patient_id": "SYN-1005",
+      "date": "2026-09-27",
+      "status": "completed",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1464",
+      "patient_id": "SYN-1024",
+      "date": "2026-09-28",
+      "status": "scheduled",
+      "payer_id": "PAY-WC"
+    },
+    {
+      "visit_id": "V1088",
+      "patient_id": "SYN-1005",
+      "date": "2026-09-29",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1465",
+      "patient_id": "SYN-1024",
+      "date": "2026-09-30",
+      "status": "scheduled",
+      "payer_id": "PAY-WC"
+    },
+    {
+      "visit_id": "V1113",
+      "patient_id": "SYN-1006",
+      "date": "2026-10-02",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1089",
+      "patient_id": "SYN-1005",
+      "date": "2026-10-03",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1184",
+      "patient_id": "SYN-1010",
+      "date": "2026-10-03",
+      "status": "scheduled",
+      "payer_id": "PAY-MA"
+    },
+    {
+      "visit_id": "V1630",
+      "patient_id": "SYN-1031",
+      "date": "2026-10-03",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1760",
+      "patient_id": "SYN-1037",
+      "date": "2026-10-03",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM2"
+    },
+    {
+      "visit_id": "V1777",
+      "patient_id": "SYN-1038",
+      "date": "2026-10-03",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1256",
+      "patient_id": "SYN-1013",
+      "date": "2026-10-04",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM2"
+    },
+    {
+      "visit_id": "V1271",
+      "patient_id": "SYN-1014",
+      "date": "2026-10-04",
+      "status": "scheduled",
+      "payer_id": "PAY-MA"
+    },
+    {
+      "visit_id": "V1451",
+      "patient_id": "SYN-1023",
+      "date": "2026-10-04",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1466",
+      "patient_id": "SYN-1024",
+      "date": "2026-10-04",
+      "status": "scheduled",
+      "payer_id": "PAY-WC"
+    },
+    {
+      "visit_id": "V1491",
+      "patient_id": "SYN-1025",
+      "date": "2026-10-04",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM2"
+    },
+    {
+      "visit_id": "V1517",
+      "patient_id": "SYN-1026",
+      "date": "2026-10-05",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1545",
+      "patient_id": "SYN-1027",
+      "date": "2026-10-05",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1568",
+      "patient_id": "SYN-1028",
+      "date": "2026-10-05",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM2"
+    },
+    {
+      "visit_id": "V1613",
+      "patient_id": "SYN-1030",
+      "date": "2026-10-05",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM2"
+    },
+    {
+      "visit_id": "V1761",
+      "patient_id": "SYN-1037",
+      "date": "2026-10-05",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM2"
+    },
+    {
+      "visit_id": "V1034",
+      "patient_id": "SYN-1002",
+      "date": "2026-10-06",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1114",
+      "patient_id": "SYN-1006",
+      "date": "2026-10-06",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1185",
+      "patient_id": "SYN-1010",
+      "date": "2026-10-06",
+      "status": "scheduled",
+      "payer_id": "PAY-MA"
+    },
+    {
+      "visit_id": "V1272",
+      "patient_id": "SYN-1014",
+      "date": "2026-10-06",
+      "status": "scheduled",
+      "payer_id": "PAY-MA"
+    },
+    {
+      "visit_id": "V1384",
+      "patient_id": "SYN-1020",
+      "date": "2026-10-06",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1403",
+      "patient_id": "SYN-1021",
+      "date": "2026-10-06",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM2"
+    },
+    {
+      "visit_id": "V1452",
+      "patient_id": "SYN-1023",
+      "date": "2026-10-06",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1631",
+      "patient_id": "SYN-1031",
+      "date": "2026-10-06",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1778",
+      "patient_id": "SYN-1038",
+      "date": "2026-10-06",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1090",
+      "patient_id": "SYN-1005",
+      "date": "2026-10-07",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1257",
+      "patient_id": "SYN-1013",
+      "date": "2026-10-07",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM2"
+    },
+    {
+      "visit_id": "V1467",
+      "patient_id": "SYN-1024",
+      "date": "2026-10-07",
+      "status": "scheduled",
+      "payer_id": "PAY-WC"
+    },
+    {
+      "visit_id": "V1518",
+      "patient_id": "SYN-1026",
+      "date": "2026-10-07",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1809",
+      "patient_id": "SYN-1039",
+      "date": "2026-10-07",
+      "status": "scheduled",
+      "payer_id": "PAY-MA"
+    },
+    {
+      "visit_id": "V1273",
+      "patient_id": "SYN-1014",
+      "date": "2026-10-08",
+      "status": "scheduled",
+      "payer_id": "PAY-MA"
+    },
+    {
+      "visit_id": "V1385",
+      "patient_id": "SYN-1020",
+      "date": "2026-10-08",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1404",
+      "patient_id": "SYN-1021",
+      "date": "2026-10-08",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM2"
+    },
+    {
+      "visit_id": "V1453",
+      "patient_id": "SYN-1023",
+      "date": "2026-10-08",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1492",
+      "patient_id": "SYN-1025",
+      "date": "2026-10-08",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM2"
+    },
+    {
+      "visit_id": "V1076",
+      "patient_id": "SYN-1004",
+      "date": "2026-10-09",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1424",
+      "patient_id": "SYN-1022",
+      "date": "2026-10-09",
+      "status": "scheduled",
+      "payer_id": "PAY-WC"
+    },
+    {
+      "visit_id": "V1546",
+      "patient_id": "SYN-1027",
+      "date": "2026-10-09",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1569",
+      "patient_id": "SYN-1028",
+      "date": "2026-10-09",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM2"
+    },
+    {
+      "visit_id": "V1614",
+      "patient_id": "SYN-1030",
+      "date": "2026-10-09",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM2"
+    },
+    {
+      "visit_id": "V1762",
+      "patient_id": "SYN-1037",
+      "date": "2026-10-09",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM2"
+    },
+    {
+      "visit_id": "V1035",
+      "patient_id": "SYN-1002",
+      "date": "2026-10-10",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1115",
+      "patient_id": "SYN-1006",
+      "date": "2026-10-10",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1186",
+      "patient_id": "SYN-1010",
+      "date": "2026-10-10",
+      "status": "scheduled",
+      "payer_id": "PAY-MA"
+    },
+    {
+      "visit_id": "V1230",
+      "patient_id": "SYN-1012",
+      "date": "2026-10-10",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1274",
+      "patient_id": "SYN-1014",
+      "date": "2026-10-10",
+      "status": "scheduled",
+      "payer_id": "PAY-MA"
+    },
+    {
+      "visit_id": "V1321",
+      "patient_id": "SYN-1017",
+      "date": "2026-10-10",
+      "status": "scheduled",
+      "payer_id": "PAY-MA"
+    },
+    {
+      "visit_id": "V1468",
+      "patient_id": "SYN-1024",
+      "date": "2026-10-10",
+      "status": "scheduled",
+      "payer_id": "PAY-WC"
+    },
+    {
+      "visit_id": "V1519",
+      "patient_id": "SYN-1026",
+      "date": "2026-10-10",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1632",
+      "patient_id": "SYN-1031",
+      "date": "2026-10-10",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1736",
+      "patient_id": "SYN-1036",
+      "date": "2026-10-10",
+      "status": "scheduled",
+      "payer_id": "PAY-WC"
+    },
+    {
+      "visit_id": "V1779",
+      "patient_id": "SYN-1038",
+      "date": "2026-10-10",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1810",
+      "patient_id": "SYN-1039",
+      "date": "2026-10-10",
+      "status": "scheduled",
+      "payer_id": "PAY-MA"
+    },
+    {
+      "visit_id": "V1077",
+      "patient_id": "SYN-1004",
+      "date": "2026-10-11",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1091",
+      "patient_id": "SYN-1005",
+      "date": "2026-10-11",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1258",
+      "patient_id": "SYN-1013",
+      "date": "2026-10-11",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM2"
+    },
+    {
+      "visit_id": "V1386",
+      "patient_id": "SYN-1020",
+      "date": "2026-10-11",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1454",
+      "patient_id": "SYN-1023",
+      "date": "2026-10-11",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1570",
+      "patient_id": "SYN-1028",
+      "date": "2026-10-11",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM2"
+    },
+    {
+      "visit_id": "V1651",
+      "patient_id": "SYN-1032",
+      "date": "2026-10-11",
+      "status": "scheduled",
+      "payer_id": "PAY-MA"
+    },
+    {
+      "visit_id": "V1054",
+      "patient_id": "SYN-1003",
+      "date": "2026-10-12",
+      "status": "scheduled",
+      "payer_id": "PAY-MA"
+    },
+    {
+      "visit_id": "V1116",
+      "patient_id": "SYN-1006",
+      "date": "2026-10-12",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1187",
+      "patient_id": "SYN-1010",
+      "date": "2026-10-12",
+      "status": "scheduled",
+      "payer_id": "PAY-MA"
+    },
+    {
+      "visit_id": "V1322",
+      "patient_id": "SYN-1017",
+      "date": "2026-10-12",
+      "status": "scheduled",
+      "payer_id": "PAY-MA"
+    },
+    {
+      "visit_id": "V1405",
+      "patient_id": "SYN-1021",
+      "date": "2026-10-12",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM2"
+    },
+    {
+      "visit_id": "V1493",
+      "patient_id": "SYN-1025",
+      "date": "2026-10-12",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM2"
+    },
+    {
+      "visit_id": "V1520",
+      "patient_id": "SYN-1026",
+      "date": "2026-10-12",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1811",
+      "patient_id": "SYN-1039",
+      "date": "2026-10-12",
+      "status": "scheduled",
+      "payer_id": "PAY-MA"
+    },
+    {
+      "visit_id": "V1078",
+      "patient_id": "SYN-1004",
+      "date": "2026-10-13",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1259",
+      "patient_id": "SYN-1013",
+      "date": "2026-10-13",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM2"
+    },
+    {
+      "visit_id": "V1425",
+      "patient_id": "SYN-1022",
+      "date": "2026-10-13",
+      "status": "scheduled",
+      "payer_id": "PAY-WC"
+    },
+    {
+      "visit_id": "V1547",
+      "patient_id": "SYN-1027",
+      "date": "2026-10-13",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1615",
+      "patient_id": "SYN-1030",
+      "date": "2026-10-13",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM2"
+    },
+    {
+      "visit_id": "V1633",
+      "patient_id": "SYN-1031",
+      "date": "2026-10-13",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1737",
+      "patient_id": "SYN-1036",
+      "date": "2026-10-13",
+      "status": "scheduled",
+      "payer_id": "PAY-WC"
+    },
+    {
+      "visit_id": "V1763",
+      "patient_id": "SYN-1037",
+      "date": "2026-10-13",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM2"
+    },
+    {
+      "visit_id": "V1780",
+      "patient_id": "SYN-1038",
+      "date": "2026-10-13",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1036",
+      "patient_id": "SYN-1002",
+      "date": "2026-10-14",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1092",
+      "patient_id": "SYN-1005",
+      "date": "2026-10-14",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1117",
+      "patient_id": "SYN-1006",
+      "date": "2026-10-14",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1188",
+      "patient_id": "SYN-1010",
+      "date": "2026-10-14",
+      "status": "scheduled",
+      "payer_id": "PAY-MA"
+    },
+    {
+      "visit_id": "V1231",
+      "patient_id": "SYN-1012",
+      "date": "2026-10-14",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1275",
+      "patient_id": "SYN-1014",
+      "date": "2026-10-14",
+      "status": "scheduled",
+      "payer_id": "PAY-MA"
+    },
+    {
+      "visit_id": "V1455",
+      "patient_id": "SYN-1023",
+      "date": "2026-10-14",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1469",
+      "patient_id": "SYN-1024",
+      "date": "2026-10-14",
+      "status": "scheduled",
+      "payer_id": "PAY-WC"
+    },
+    {
+      "visit_id": "V1494",
+      "patient_id": "SYN-1025",
+      "date": "2026-10-14",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM2"
+    },
+    {
+      "visit_id": "V1521",
+      "patient_id": "SYN-1026",
+      "date": "2026-10-14",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1652",
+      "patient_id": "SYN-1032",
+      "date": "2026-10-14",
+      "status": "scheduled",
+      "payer_id": "PAY-MA"
+    },
+    {
+      "visit_id": "V1055",
+      "patient_id": "SYN-1003",
+      "date": "2026-10-15",
+      "status": "scheduled",
+      "payer_id": "PAY-MA"
+    },
+    {
+      "visit_id": "V1387",
+      "patient_id": "SYN-1020",
+      "date": "2026-10-15",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1548",
+      "patient_id": "SYN-1027",
+      "date": "2026-10-15",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1571",
+      "patient_id": "SYN-1028",
+      "date": "2026-10-15",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM2"
+    },
+    {
+      "visit_id": "V1634",
+      "patient_id": "SYN-1031",
+      "date": "2026-10-15",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1738",
+      "patient_id": "SYN-1036",
+      "date": "2026-10-15",
+      "status": "scheduled",
+      "payer_id": "PAY-WC"
+    },
+    {
+      "visit_id": "V1764",
+      "patient_id": "SYN-1037",
+      "date": "2026-10-15",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM2"
+    },
+    {
+      "visit_id": "V1812",
+      "patient_id": "SYN-1039",
+      "date": "2026-10-15",
+      "status": "scheduled",
+      "payer_id": "PAY-MA"
+    },
+    {
+      "visit_id": "V1079",
+      "patient_id": "SYN-1004",
+      "date": "2026-10-16",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1232",
+      "patient_id": "SYN-1012",
+      "date": "2026-10-16",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1260",
+      "patient_id": "SYN-1013",
+      "date": "2026-10-16",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM2"
+    },
+    {
+      "visit_id": "V1323",
+      "patient_id": "SYN-1017",
+      "date": "2026-10-16",
+      "status": "scheduled",
+      "payer_id": "PAY-MA"
+    },
+    {
+      "visit_id": "V1406",
+      "patient_id": "SYN-1021",
+      "date": "2026-10-16",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM2"
+    },
+    {
+      "visit_id": "V1426",
+      "patient_id": "SYN-1022",
+      "date": "2026-10-16",
+      "status": "scheduled",
+      "payer_id": "PAY-WC"
+    },
+    {
+      "visit_id": "V1495",
+      "patient_id": "SYN-1025",
+      "date": "2026-10-16",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM2"
+    },
+    {
+      "visit_id": "V1616",
+      "patient_id": "SYN-1030",
+      "date": "2026-10-16",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM2"
+    },
+    {
+      "visit_id": "V1781",
+      "patient_id": "SYN-1038",
+      "date": "2026-10-16",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1037",
+      "patient_id": "SYN-1002",
+      "date": "2026-10-17",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1056",
+      "patient_id": "SYN-1003",
+      "date": "2026-10-17",
+      "status": "scheduled",
+      "payer_id": "PAY-MA"
+    },
+    {
+      "visit_id": "V1093",
+      "patient_id": "SYN-1005",
+      "date": "2026-10-17",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1118",
+      "patient_id": "SYN-1006",
+      "date": "2026-10-17",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1189",
+      "patient_id": "SYN-1010",
+      "date": "2026-10-17",
+      "status": "scheduled",
+      "payer_id": "PAY-MA"
+    },
+    {
+      "visit_id": "V1276",
+      "patient_id": "SYN-1014",
+      "date": "2026-10-17",
+      "status": "scheduled",
+      "payer_id": "PAY-MA"
+    },
+    {
+      "visit_id": "V1456",
+      "patient_id": "SYN-1023",
+      "date": "2026-10-17",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1470",
+      "patient_id": "SYN-1024",
+      "date": "2026-10-17",
+      "status": "scheduled",
+      "payer_id": "PAY-WC"
+    },
+    {
+      "visit_id": "V1522",
+      "patient_id": "SYN-1026",
+      "date": "2026-10-17",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1549",
+      "patient_id": "SYN-1027",
+      "date": "2026-10-17",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1572",
+      "patient_id": "SYN-1028",
+      "date": "2026-10-17",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM2"
+    },
+    {
+      "visit_id": "V1635",
+      "patient_id": "SYN-1031",
+      "date": "2026-10-17",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1080",
+      "patient_id": "SYN-1004",
+      "date": "2026-10-18",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1324",
+      "patient_id": "SYN-1017",
+      "date": "2026-10-18",
+      "status": "scheduled",
+      "payer_id": "PAY-MA"
+    },
+    {
+      "visit_id": "V1388",
+      "patient_id": "SYN-1020",
+      "date": "2026-10-18",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1407",
+      "patient_id": "SYN-1021",
+      "date": "2026-10-18",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM2"
+    },
+    {
+      "visit_id": "V1496",
+      "patient_id": "SYN-1025",
+      "date": "2026-10-18",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM2"
+    },
+    {
+      "visit_id": "V1617",
+      "patient_id": "SYN-1030",
+      "date": "2026-10-18",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM2"
+    },
+    {
+      "visit_id": "V1653",
+      "patient_id": "SYN-1032",
+      "date": "2026-10-18",
+      "status": "scheduled",
+      "payer_id": "PAY-MA"
+    },
+    {
+      "visit_id": "V1782",
+      "patient_id": "SYN-1038",
+      "date": "2026-10-18",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1813",
+      "patient_id": "SYN-1039",
+      "date": "2026-10-18",
+      "status": "scheduled",
+      "payer_id": "PAY-MA"
+    },
+    {
+      "visit_id": "V1119",
+      "patient_id": "SYN-1006",
+      "date": "2026-10-19",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1233",
+      "patient_id": "SYN-1012",
+      "date": "2026-10-19",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1261",
+      "patient_id": "SYN-1013",
+      "date": "2026-10-19",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM2"
+    },
+    {
+      "visit_id": "V1457",
+      "patient_id": "SYN-1023",
+      "date": "2026-10-19",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1471",
+      "patient_id": "SYN-1024",
+      "date": "2026-10-19",
+      "status": "scheduled",
+      "payer_id": "PAY-WC"
+    },
+    {
+      "visit_id": "V1550",
+      "patient_id": "SYN-1027",
+      "date": "2026-10-19",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1573",
+      "patient_id": "SYN-1028",
+      "date": "2026-10-19",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM2"
+    },
+    {
+      "visit_id": "V1739",
+      "patient_id": "SYN-1036",
+      "date": "2026-10-19",
+      "status": "scheduled",
+      "payer_id": "PAY-WC"
+    },
+    {
+      "visit_id": "V1765",
+      "patient_id": "SYN-1037",
+      "date": "2026-10-19",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM2"
+    },
+    {
+      "visit_id": "V1057",
+      "patient_id": "SYN-1003",
+      "date": "2026-10-20",
+      "status": "scheduled",
+      "payer_id": "PAY-MA"
+    },
+    {
+      "visit_id": "V1277",
+      "patient_id": "SYN-1014",
+      "date": "2026-10-20",
+      "status": "scheduled",
+      "payer_id": "PAY-MA"
+    },
+    {
+      "visit_id": "V1408",
+      "patient_id": "SYN-1021",
+      "date": "2026-10-20",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM2"
+    },
+    {
+      "visit_id": "V1427",
+      "patient_id": "SYN-1022",
+      "date": "2026-10-20",
+      "status": "scheduled",
+      "payer_id": "PAY-WC"
+    },
+    {
+      "visit_id": "V1497",
+      "patient_id": "SYN-1025",
+      "date": "2026-10-20",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM2"
+    },
+    {
+      "visit_id": "V1618",
+      "patient_id": "SYN-1030",
+      "date": "2026-10-20",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM2"
+    },
+    {
+      "visit_id": "V1636",
+      "patient_id": "SYN-1031",
+      "date": "2026-10-20",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1654",
+      "patient_id": "SYN-1032",
+      "date": "2026-10-20",
+      "status": "scheduled",
+      "payer_id": "PAY-MA"
+    },
+    {
+      "visit_id": "V1783",
+      "patient_id": "SYN-1038",
+      "date": "2026-10-20",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1038",
+      "patient_id": "SYN-1002",
+      "date": "2026-10-21",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1094",
+      "patient_id": "SYN-1005",
+      "date": "2026-10-21",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1190",
+      "patient_id": "SYN-1010",
+      "date": "2026-10-21",
+      "status": "scheduled",
+      "payer_id": "PAY-MA"
+    },
+    {
+      "visit_id": "V1234",
+      "patient_id": "SYN-1012",
+      "date": "2026-10-21",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1325",
+      "patient_id": "SYN-1017",
+      "date": "2026-10-21",
+      "status": "scheduled",
+      "payer_id": "PAY-MA"
+    },
+    {
+      "visit_id": "V1458",
+      "patient_id": "SYN-1023",
+      "date": "2026-10-21",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1523",
+      "patient_id": "SYN-1026",
+      "date": "2026-10-21",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1551",
+      "patient_id": "SYN-1027",
+      "date": "2026-10-21",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1766",
+      "patient_id": "SYN-1037",
+      "date": "2026-10-21",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM2"
+    },
+    {
+      "visit_id": "V1081",
+      "patient_id": "SYN-1004",
+      "date": "2026-10-22",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1120",
+      "patient_id": "SYN-1006",
+      "date": "2026-10-22",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1262",
+      "patient_id": "SYN-1013",
+      "date": "2026-10-22",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM2"
+    },
+    {
+      "visit_id": "V1389",
+      "patient_id": "SYN-1020",
+      "date": "2026-10-22",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1428",
+      "patient_id": "SYN-1022",
+      "date": "2026-10-22",
+      "status": "scheduled",
+      "payer_id": "PAY-WC"
+    },
+    {
+      "visit_id": "V1619",
+      "patient_id": "SYN-1030",
+      "date": "2026-10-22",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM2"
+    },
+    {
+      "visit_id": "V1655",
+      "patient_id": "SYN-1032",
+      "date": "2026-10-22",
+      "status": "scheduled",
+      "payer_id": "PAY-MA"
+    },
+    {
+      "visit_id": "V1814",
+      "patient_id": "SYN-1039",
+      "date": "2026-10-22",
+      "status": "scheduled",
+      "payer_id": "PAY-MA"
+    },
+    {
+      "visit_id": "V1191",
+      "patient_id": "SYN-1010",
+      "date": "2026-10-23",
+      "status": "scheduled",
+      "payer_id": "PAY-MA"
+    },
+    {
+      "visit_id": "V1235",
+      "patient_id": "SYN-1012",
+      "date": "2026-10-23",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1409",
+      "patient_id": "SYN-1021",
+      "date": "2026-10-23",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM2"
+    },
+    {
+      "visit_id": "V1459",
+      "patient_id": "SYN-1023",
+      "date": "2026-10-23",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1472",
+      "patient_id": "SYN-1024",
+      "date": "2026-10-23",
+      "status": "scheduled",
+      "payer_id": "PAY-WC"
+    },
+    {
+      "visit_id": "V1574",
+      "patient_id": "SYN-1028",
+      "date": "2026-10-23",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM2"
+    },
+    {
+      "visit_id": "V1637",
+      "patient_id": "SYN-1031",
+      "date": "2026-10-23",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1740",
+      "patient_id": "SYN-1036",
+      "date": "2026-10-23",
+      "status": "scheduled",
+      "payer_id": "PAY-WC"
+    },
+    {
+      "visit_id": "V1784",
+      "patient_id": "SYN-1038",
+      "date": "2026-10-23",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1058",
+      "patient_id": "SYN-1003",
+      "date": "2026-10-24",
+      "status": "scheduled",
+      "payer_id": "PAY-MA"
+    },
+    {
+      "visit_id": "V1278",
+      "patient_id": "SYN-1014",
+      "date": "2026-10-24",
+      "status": "scheduled",
+      "payer_id": "PAY-MA"
+    },
+    {
+      "visit_id": "V1498",
+      "patient_id": "SYN-1025",
+      "date": "2026-10-24",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM2"
+    },
+    {
+      "visit_id": "V1524",
+      "patient_id": "SYN-1026",
+      "date": "2026-10-24",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1815",
+      "patient_id": "SYN-1039",
+      "date": "2026-10-24",
+      "status": "scheduled",
+      "payer_id": "PAY-MA"
+    },
+    {
+      "visit_id": "V1039",
+      "patient_id": "SYN-1002",
+      "date": "2026-10-25",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1095",
+      "patient_id": "SYN-1005",
+      "date": "2026-10-25",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1121",
+      "patient_id": "SYN-1006",
+      "date": "2026-10-25",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1326",
+      "patient_id": "SYN-1017",
+      "date": "2026-10-25",
+      "status": "scheduled",
+      "payer_id": "PAY-MA"
+    },
+    {
+      "visit_id": "V1390",
+      "patient_id": "SYN-1020",
+      "date": "2026-10-25",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1552",
+      "patient_id": "SYN-1027",
+      "date": "2026-10-25",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1575",
+      "patient_id": "SYN-1028",
+      "date": "2026-10-25",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM2"
+    },
+    {
+      "visit_id": "V1656",
+      "patient_id": "SYN-1032",
+      "date": "2026-10-25",
+      "status": "scheduled",
+      "payer_id": "PAY-MA"
+    },
+    {
+      "visit_id": "V1767",
+      "patient_id": "SYN-1037",
+      "date": "2026-10-25",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM2"
+    },
+    {
+      "visit_id": "V1059",
+      "patient_id": "SYN-1003",
+      "date": "2026-10-26",
+      "status": "scheduled",
+      "payer_id": "PAY-MA"
+    },
+    {
+      "visit_id": "V1082",
+      "patient_id": "SYN-1004",
+      "date": "2026-10-26",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1263",
+      "patient_id": "SYN-1013",
+      "date": "2026-10-26",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM2"
+    },
+    {
+      "visit_id": "V1429",
+      "patient_id": "SYN-1022",
+      "date": "2026-10-26",
+      "status": "scheduled",
+      "payer_id": "PAY-WC"
+    },
+    {
+      "visit_id": "V1525",
+      "patient_id": "SYN-1026",
+      "date": "2026-10-26",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    },
+    {
+      "visit_id": "V1620",
+      "patient_id": "SYN-1030",
+      "date": "2026-10-26",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM2"
+    },
+    {
+      "visit_id": "V1785",
+      "patient_id": "SYN-1038",
+      "date": "2026-10-26",
+      "status": "scheduled",
+      "payer_id": "PAY-COMM1"
+    }
+  ]
+}

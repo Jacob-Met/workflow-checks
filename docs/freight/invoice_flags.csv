@@ -1,0 +1,13 @@
+invoice_no,load_id,carrier,flag,detail,invoiced,expected,variance,evidence
+CAL-7101,LD260907,Caliche Carriers LLC,LINEHAUL_MISMATCH,"linehaul: invoiced $1,532.00 vs rate-con $1,382.00","$1,532.00","$1,382.00",$150.00,carrier_invoices.csv:row6;RC-48001.txt
+CAL-7104,LD260928,Caliche Carriers LLC,FUEL_MISMATCH,fuel surcharge: invoiced $656.77 vs rate-con $614.02,$656.77,$614.02,$42.75,carrier_invoices.csv:row17;RC-48004.txt
+CAL-7107,LD260949,Caliche Carriers LLC,DETENTION_UNSUPPORTED,detention invoiced $200.00 but telematics supports $75.00,$200.00,$75.00,$125.00,carrier_invoices.csv:row25;RC-48007.txt
+CAL-7110,LD260970,Caliche Carriers LLC,ACCESSORIAL_NOT_ON_RATECON,TONU $250.00 billed but not on rate-con,$250.00,$0.00,$250.00,carrier_invoices.csv:row35;RC-48010.txt
+CAL-7113,LD260991,Caliche Carriers LLC,ACCESSORIAL_OVER_RATECON,LUMPER: invoiced $255.00 vs agreed $175.00,$255.00,$175.00,$80.00,carrier_invoices.csv:row44;RC-48013.txt
+CAL-7116,LD261012,Caliche Carriers LLC,TOTAL_MISMATCH,"header total $1,883.64 != line sum $1,783.64","$1,883.64","$1,783.64",$100.00,carrier_invoices.csv:row53
+CAL-7119,LD261026,Caliche Carriers LLC,DETENTION_UNSUPPORTED,detention invoiced $206.25 but telematics supports $0.00,$206.25,$0.00,$206.25,carrier_invoices.csv:row64;RC-48018.txt
+CAL-7119,LD261026,Caliche Carriers LLC,DUPLICATE_INVOICE,invoice #CAL-7119 also billed on load(s) LD261033,"$1,361.59",$0.00,"$1,361.59",carrier_invoices.csv:row61;carrier_invoices.csv:row64
+CAL-7119,LD261026,Caliche Carriers LLC,FUEL_MISMATCH,fuel surcharge: invoiced $208.34 vs rate-con $377.75,$208.34,$377.75,-$169.41,carrier_invoices.csv:row64;RC-48018.txt
+CAL-7119,LD261026,Caliche Carriers LLC,LINEHAUL_MISMATCH,"linehaul: invoiced $947.00 vs rate-con $1,511.00",$947.00,"$1,511.00",-$564.00,carrier_invoices.csv:row64;RC-48018.txt
+CAL-7119,LD261033,Caliche Carriers LLC,DUPLICATE_INVOICE,invoice #CAL-7119 also billed on load(s) LD261026,"$1,361.59",$0.00,"$1,361.59",carrier_invoices.csv:row61;carrier_invoices.csv:row64
+CAL-7122,LD261054,Caliche Carriers LLC,MISSING_POD,no POD on file; hold payment until POD received,-,-,-,carrier_invoices.csv:row72;loads.csv:row24

@@ -1,0 +1,26 @@
+invoice_no,load_id,carrier,invoiced,approved,fines,net_payable,status,hold_reasons,notes,evidence
+BLU-7100,LD260900,Blue Mesa Transport (asset),"$2,499.22","$2,499.22",$0.00,"$2,499.22",READY,,,carrier_invoices.csv:row2;RC-48000.txt
+CAL-7101,LD260907,Caliche Carriers LLC,"$2,221.25","$2,071.25",$50.00,"$2,021.25",READY,,short-pay vs invoice: see invoice flags,carrier_invoices.csv:row6;RC-48001.txt
+PEC-7102,LD260914,Pecos Freightways Inc,"$2,322.06","$2,322.06",$50.00,"$2,272.06",READY,,,carrier_invoices.csv:row10;RC-48002.txt
+BLU-7103,LD260921,Blue Mesa Transport (asset),"$3,005.70","$3,005.70",$0.00,"$3,005.70",READY,,,carrier_invoices.csv:row13;RC-48003.txt
+CAL-7104,LD260928,Caliche Carriers LLC,"$3,492.77","$3,450.02",$0.00,"$3,450.02",READY,,LATE_POD FINE-D6198BB6B7 disputed in window: not deducted; short-pay vs invoice: see invoice flags,carrier_invoices.csv:row17;RC-48004.txt
+PEC-7105,LD260935,Pecos Freightways Inc,"$1,884.99","$1,884.99",$50.00,"$1,834.99",READY,,,carrier_invoices.csv:row20;RC-48005.txt
+BLU-7106,LD260942,Blue Mesa Transport (asset),"$2,966.52","$2,966.52",$0.00,"$2,966.52",READY,,,carrier_invoices.csv:row23;RC-48006.txt
+CAL-7107,LD260949,Caliche Carriers LLC,"$3,255.38","$3,130.38",$50.00,"$3,080.38",READY,,short-pay vs invoice: see invoice flags,carrier_invoices.csv:row25;RC-48007.txt
+PEC-7108,LD260956,Pecos Freightways Inc,"$1,847.92","$1,847.92",$150.00,"$1,697.92",READY,,LATE_DELIVERY FINE-BBA9C7E764 disputed in window: not deducted,carrier_invoices.csv:row29;RC-48008.txt
+BLU-7109,LD260963,Blue Mesa Transport (asset),"$2,157.04","$2,157.04",$0.00,"$2,157.04",READY,,,carrier_invoices.csv:row33;RC-48009.txt
+CAL-7110,LD260970,Caliche Carriers LLC,"$3,845.00","$3,595.00",$150.00,"$3,445.00",READY,,MISSING_DELIVERY_PHOTOS FINE-BB11CD693E disputed in window: not deducted; short-pay vs invoice: see invoice flags,carrier_invoices.csv:row35;RC-48010.txt
+PEC-7111,LD260977,Pecos Freightways Inc,"$3,680.00","$3,680.00",$0.00,"$3,680.00",READY,,LATE_POD FINE-3F89497CF6 disputed in window: not deducted,carrier_invoices.csv:row38;RC-48011.txt
+BLU-7112,LD260984,Blue Mesa Transport (asset),"$1,968.40","$1,968.40",$0.00,"$1,968.40",READY,,,carrier_invoices.csv:row41;RC-48012.txt
+CAL-7113,LD260991,Caliche Carriers LLC,"$2,123.75","$2,043.75",$0.00,"$2,043.75",READY,,short-pay vs invoice: see invoice flags,carrier_invoices.csv:row44;RC-48013.txt
+PEC-7114,LD260998,Pecos Freightways Inc,"$3,768.92","$3,768.92",$150.00,"$3,618.92",READY,,,carrier_invoices.csv:row48;RC-48014.txt
+BLU-7115,LD261005,Blue Mesa Transport (asset),"$3,887.46","$3,887.46",$0.00,"$3,887.46",READY,,,carrier_invoices.csv:row50;RC-48015.txt
+CAL-7116,LD261012,Caliche Carriers LLC,"$1,783.64","$1,783.64",$50.00,"$1,733.64",READY,,header total differs from line sum; settled on lines,carrier_invoices.csv:row53;RC-48016.txt
+PEC-7117,LD261019,Pecos Freightways Inc,"$3,614.16","$3,614.16",$0.00,"$3,614.16",READY,,,carrier_invoices.csv:row55;RC-48017.txt
+BLU-7118,LD261026,Blue Mesa Transport (asset),"$1,888.75","$1,888.75",$0.00,"$1,888.75",READY,,,carrier_invoices.csv:row59;RC-48018.txt
+CAL-7119,LD261026,Caliche Carriers LLC,"$1,361.59",$0.00,$0.00,$0.00,HOLD,DUPLICATE_INVOICE,,carrier_invoices.csv:row64;RC-48018.txt
+CAL-7119,LD261033,Caliche Carriers LLC,"$1,361.59",$0.00,$0.00,$0.00,HOLD,DUPLICATE_INVOICE;DETENTION_PENDING_REVIEW,,carrier_invoices.csv:row61;RC-48019.txt
+PEC-7120,LD261040,Pecos Freightways Inc,"$3,685.00","$3,685.00",$0.00,"$3,685.00",READY,,,carrier_invoices.csv:row67;RC-48020.txt
+BLU-7121,LD261047,Blue Mesa Transport (asset),"$2,276.58","$2,276.58",$0.00,"$2,276.58",READY,,,carrier_invoices.csv:row69;RC-48021.txt
+CAL-7122,LD261054,Caliche Carriers LLC,"$2,653.00","$2,653.00",$50.00,"$2,603.00",HOLD,MISSING_POD,,carrier_invoices.csv:row72;RC-48022.txt
+PEC-7123,LD261061,Pecos Freightways Inc,"$3,786.25","$3,786.25",$0.00,"$3,786.25",READY,,,carrier_invoices.csv:row75;RC-48023.txt

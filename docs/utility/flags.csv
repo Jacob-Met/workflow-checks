@@ -1,0 +1,13 @@
+key,property,utility,account_no,code,detail,evidence
+B50087,Bayou Flats (synthetic),electric,SYN-7005,LATE_FEE_OR_PAST_DUE,"late fee $179.02, prior balance $3,222.36 on the bill",bills.csv:88
+B50125,Bayou Flats (synthetic),water,SYN-7007,PAYMENT_MISMATCH,"owed $4,232.12; 2 payment(s) totalling $8,464.24",bills.csv:126 payments.csv:120 payments.csv:121
+B50142,Bayou Flats (synthetic),trash,SYN-7008,PAYMENT_MISMATCH,"owed $1,258.66; 1 payment(s) totalling $1,108.66",bills.csv:143 payments.csv:137
+B50107,Bayou Flats (synthetic),gas,SYN-7006,PERIOD_OVERLAP,service period 2026-06-22..2026-07-31 overlaps prior bill B50106 (2026-06-01..2026-06-30); 9 days may be billed twice,bills.csv:108 bills.csv:107
+B50242,Bayou Flats (synthetic),water,SYN-7021,VACANT_UNIT_USAGE,unit 201 vacant; 0.360 kgal/day vs standby ceiling 0.05 (possible leak or running equipment),bills.csv:243 occupancy.csv:5
+B50243,Bayou Flats (synthetic),water,SYN-7021,VACANT_UNIT_USAGE,unit 201 vacant; 0.360 kgal/day vs standby ceiling 0.05 (possible leak or running equipment),bills.csv:244 occupancy.csv:5
+B50068,Cypress Court (synthetic),trash,SYN-7004,RATE_CHANGE,$123.7817/pull vs trailing median $92.0173 (x1.35); check tariff/rate plan,bills.csv:69
+B50032,Cypress Court (synthetic),gas,SYN-7002,USAGE_SPIKE,92.7 therm/day vs 49.4 same month last year (x1.88),bills.csv:33 bills.csv:21
+B50050,Cypress Court (synthetic),water,SYN-7003,USAGE_SPIKE,17.9 kgal/day vs 10.0 same month last year (x1.79),bills.csv:51 bills.csv:39
+B50213,Gaylord Ridge (synthetic),trash,SYN-7012,DUPLICATE_BILL,"same invoice number as B50212 (HAUL-50212); hold, do not pay twice",bills.csv:214 bills.csv:213
+SYN-7009:2026-04-01,Gaylord Ridge (synthetic),electric,SYN-7009,MISSING_BILL,no bill for service month 2026-04; check vendor portal / mail before a late fee lands,accounts.csv:10
+B50178,Gaylord Ridge (synthetic),gas,SYN-7010,UNPAID_PAST_DUE,"due 2026-09-06, no payment on file",bills.csv:179
