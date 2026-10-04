@@ -1,0 +1,11 @@
+CARRIER LOAD CONFIRMATION
+Confirmation # RC-48003          Order # LD260921
+Shipper/Customer: Bluebonnet Grocers
+Carrier: Blue Mesa Transport (asset)
+PU - Permian Pipe & Valve; Appointment: 09/02/2026 08:00
+DEL - Alamo Paper Converting; Appointment: 09/02/2026 18:00
+Base Rate: 2,185.00
+FSC: 480.70
+Lumper reimbursement: $175.00
+Free time of 120 minutes per stop. Detention pay $60.00 per hour thereafter,
+15 min increments, maximum $500 per stop. 30 min late grace.

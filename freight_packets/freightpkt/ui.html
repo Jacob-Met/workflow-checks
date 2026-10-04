@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Detention &amp; Chargeback Packet Builder (PoC)</title>
+<style>
+:root{--ink:#1b1f24;--mut:#5b6573;--line:#d7dce3;--bg:#f6f7f9;--ok:#0c5a1a;--okb:#dff5e1;--bad:#8a1111;--badb:#fde2e1;--warn:#6b5200;--warnb:#fff4ce;--acc:#1f5eff}
+*{box-sizing:border-box}body{margin:0;font:14px/1.45 system-ui,Segoe UI,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+header{background:#111827;color:#fff;padding:12px 20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+header h1{font-size:17px;margin:0}header .syn{background:#fbbf24;color:#111;font-weight:700;font-size:12px;padding:2px 8px;border-radius:10px}
+header .sp{flex:1}button{font:inherit;border:1px solid var(--line);background:#fff;border-radius:6px;padding:5px 11px;cursor:pointer}
+button.pri{background:var(--acc);color:#fff;border-color:var(--acc)}button:disabled{opacity:.5}
+main{padding:16px 20px;max-width:1300px;margin:0 auto}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:14px}
+.card{background:#fff;border:1px solid var(--line);border-radius:8px;padding:10px 12px}.card b{display:block;font-size:22px}.card span{color:var(--mut);font-size:12px}
+.tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);margin-bottom:10px}
+.tabs button{border:none;border-bottom:3px solid transparent;border-radius:0;background:none;padding:8px 12px}
+.tabs button.on{border-bottom-color:var(--acc);font-weight:600}
+table{border-collapse:collapse;width:100%;background:#fff;border:1px solid var(--line)}th,td{padding:6px 8px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:#eef1f5;font-size:12px;text-transform:uppercase;letter-spacing:.03em;color:var(--mut);position:sticky;top:0}
+td.n{text-align:right;font-variant-numeric:tabular-nums}tr.sel{background:#eef4ff}tr.click{cursor:pointer}tr.click:hover{background:#f3f6fb}
+.tag{display:inline-block;padding:1px 7px;border-radius:10px;font-size:12px;font-weight:600}
+.detention,.approve{background:var(--okb);color:var(--ok)}.late_arrival,.reject{background:var(--badb);color:var(--bad)}
+.exception,.adjust{background:var(--warnb);color:var(--warn)}.ok{background:#eef1f5;color:#333}
+.split{display:grid;grid-template-columns:minmax(360px,1fr) 1.4fr;gap:14px}
+iframe{width:100%;height:72vh;border:1px solid var(--line);border-radius:8px;background:#fff}
+.bar{display:flex;gap:6px;align-items:center;margin:8px 0;flex-wrap:wrap}input[type=text]{flex:1;min-width:160px;padding:5px 8px;border:1px solid var(--line);border-radius:6px}
+small{color:var(--mut)}.hidden{display:none}a{color:var(--acc)}
+@media(max-width:900px){.split{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header>
+  <h1>Detention &amp; Chargeback Packet Builder</h1><span class="syn">SYNTHETIC DATA &middot; PROOF OF CONCEPT</span>
+  <span class="sp"></span>
+  <label style="font-size:12px">seed <input id="seed" type="number" value="7" style="width:60px"></label>
+  <button id="gen">Regenerate sample</button><button id="run" class="pri">Re-run pipeline</button>
+</header>
+<main>
+  <div class="cards" id="cards"></div>
+  <div class="tabs" id="tabs">
+    <button data-t="packets" class="on">Packets</button><button data-t="flags">Invoice flags</button>
+    <button data-t="fines">Carrier fines</button><button data-t="settle">Settlement</button>
+    <button data-t="exceptions">Exception queue</button><button data-t="stops">All stops</button>
+    <button data-t="files">Downloads</button>
+  </div>
+  <section id="t-packets"></section>
+  <section id="t-flags" class="hidden"></section>
+  <section id="t-fines" class="hidden"></section>
+  <section id="t-settle" class="hidden"></section>
+  <section id="t-exceptions" class="hidden"></section>
+  <section id="t-stops" class="hidden"></section>
+  <section id="t-files" class="hidden"></section>
+</main>
+<script>
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const money = c => c == null ? "-" : (c < 0 ? "-" : "") + "$" + (Math.abs(c) / 100).toLocaleString("en-US", {minimumFractionDigits: 2});
+const t = s => s ? s.replace("T", " ").slice(0, 16) : "-";
+let S = null, selected = null;
+
+async function api(path, body) {
+  const r = await fetch(path, body === undefined ? {} : {method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify(body)});
+  const j = await r.json();
+  if (!r.ok) throw new Error(j.error || r.status);
+  return j;
+}
+async function load(p) { S = await p; render(); }
+
+function render() {
+  const c = S.counts, d = S.decisions || {};
+  const approved = S.packets.filter(p => (d[p.load_id] || {}).decision === "approve").reduce((a, p) => a + p.detention_cents, 0);
+  $("#cards").innerHTML = [
+    [c.loads, "loads"], [c.events, "geofence events"], [money(S.detention_total_cents), "detention supported"],
+    [money(approved), "approved by reviewer"], [c.packets, "draft packets"], [c.invoice_flags, "invoice flags"],
+    [c.exceptions, "exceptions (human)"], [c.late_arrivals, "late arrivals"],
+    ...(S.settlements && S.settlements.length ? [[money(S.fines_total_cents), "carrier fines deducted"],
+      [`${c.settlement_ready} / ${c.settlement_hold}`, "settlement ready / hold"],
+      [money(S.net_payable_ready_cents), "net payable (ready)"]] : []),
+  ].map(([v, l]) => `<div class="card"><b>${esc(v)}</b><span>${esc(l)}</span></div>`).join("");
+
+  // packets
+  if (!selected && S.packets.length) selected = S.packets[0].load_id;
+  const rows = S.packets.map(p => {
+    const dec = d[p.load_id];
+    return `<tr class="click ${p.load_id === selected ? "sel" : ""}" data-l="${esc(p.load_id)}"><td><b>${esc(p.load_id)}</b></td>
+      <td class="n">${money(p.detention_cents)}</td><td>${p.late_stops.length ? '<span class="tag late_arrival">late</span>' : ""}</td>
+      <td>${dec ? `<span class="tag ${dec.decision}">${esc(dec.decision)}</span>` : '<small>pending</small>'}</td></tr>`;
+  }).join("");
+  const dec = d[selected] || {};
+  $("#t-packets").innerHTML = `<div class="split"><div><table><tr><th>Load</th><th>Detention</th><th>Late</th><th>Review</th></tr>${rows}</table></div>
+    <div>${selected ? `<div class="bar"><b>${esc(selected)}</b>
+      <input type="text" id="note" placeholder="reviewer note (optional)" value="${esc(dec.note || "")}">
+      <button data-d="approve">Approve</button><button data-d="adjust">Needs adjust</button><button data-d="reject">Reject</button><button data-d="clear">Clear</button>
+      <a href="/out/packets/${encodeURIComponent(selected)}.html" target="_blank">open</a></div>
+      <iframe src="/out/packets/${encodeURIComponent(selected)}.html"></iframe>
+      <small>Decisions are recorded locally (decisions.json + audit.jsonl). Nothing is sent.</small>` : "<p>No packets.</p>"}</div></div>`;
+  document.querySelectorAll("#t-packets tr[data-l]").forEach(tr => tr.onclick = () => { selected = tr.dataset.l; render(); });
+  document.querySelectorAll("#t-packets button[data-d]").forEach(b => b.onclick = async () => {
+    S.decisions = await api("/api/decision", {load_id: selected, decision: b.dataset.d, note: $("#note").value});
+    render();
+  });
+
+  $("#t-flags").innerHTML = `<table><tr><th>Load</th><th>Invoice</th><th>Carrier</th><th>Flag</th><th>Detail</th><th>Variance</th><th>Evidence</th></tr>${
+    S.flags.map(f => `<tr><td>${esc(f.load_id)}</td><td>${esc(f.invoice_no)}</td><td>${esc(f.carrier)}</td><td><span class="tag exception">${esc(f.code)}</span></td>
+      <td>${esc(f.detail)}</td><td class="n">${money(f.variance_cents)}</td><td><small>${esc(f.evidence.join(" | "))}</small></td></tr>`).join("")}</table>`;
+
+  const F = S.fines || [], ST = S.settlements || [];
+  $("#t-fines").innerHTML = F.length ? `<p><small>Assessed only from evidence on file (tracking export, documents log, late arrivals) against the fines schedule. Brokered loads only. A dispute received inside the 7-day window holds the fine (not deducted).</small></p>
+    <table><tr><th>Load</th><th>Carrier</th><th>Fine</th><th>Amount</th><th>Detail</th><th>Dispute by</th><th>Status</th><th>Evidence</th></tr>${
+    F.map(f => `<tr><td>${esc(f.load_id)}</td><td>${esc(f.carrier)}</td><td><span class="tag exception">${esc(f.code)}</span><br><small>${esc(f.fine_id)}</small></td>
+      <td class="n">${money(f.amount_cents)}</td><td>${esc(f.detail)}</td><td>${esc(f.dispute_deadline)}</td>
+      <td><span class="tag ${f.status === "assessed" ? "late_arrival" : f.status === "disputed_in_window" ? "adjust" : "reject"}">${esc(f.status.replace(/_/g, " "))}</span><br><small>${esc(f.dispute_note)}</small></td>
+      <td><small>${esc(f.evidence.join(" | "))}</small></td></tr>`).join("")}</table>` : "<p>No fines schedule supplied (add fines_schedule.csv) or no fines assessed.</p>";
+  $("#t-settle").innerHTML = ST.length ? `<p><small>Per carrier invoice: approved = invoice lines capped at rate-con terms and telematics-supported detention; minus fines not under timely dispute. HOLD items do not go to finance/factoring until a person clears them. Nothing is paid or submitted.</small></p>
+    <table><tr><th>Load</th><th>Invoice</th><th>Carrier</th><th>Invoiced</th><th>Approved</th><th>Fines</th><th>Net payable</th><th>Status</th><th>Notes</th></tr>${
+    ST.map(s => `<tr><td>${esc(s.load_id)}</td><td>${esc(s.invoice_no)}</td><td>${esc(s.carrier)}</td><td class="n">${money(s.invoiced_cents)}</td>
+      <td class="n">${money(s.approved_cents)}</td><td class="n">${money(s.fines_cents)}</td><td class="n"><b>${money(s.net_cents)}</b></td>
+      <td><span class="tag ${s.status === "READY" ? "approve" : "exception"}">${esc(s.status)}</span> <small>${esc(s.hold_reasons.join(", "))}</small></td>
+      <td><small>${esc(s.notes.join("; "))}</small></td></tr>`).join("")}</table>` : "<p>No settlement worksheet (needs fines_schedule.csv and carrier invoices).</p>";
+
+  $("#t-exceptions").innerHTML = S.exceptions.length ? `<p><small>These are never claimed automatically. A person must resolve each one (missing geofence exit, rate-con parse warnings, missing rate-con).</small></p>
+    <table><tr><th>Load</th><th>Stop</th><th>Reason</th><th>Evidence</th></tr>${
+    S.exceptions.map(x => `<tr><td>${esc(x.load_id)}</td><td>${esc(x.stop)}</td><td>${esc(x.reason)}</td><td><small>${esc(x.evidence)}</small></td></tr>`).join("")}</table>` : "<p>Exception queue is empty.</p>";
+
+  $("#t-stops").innerHTML = `<table><tr><th>Load</th><th>#</th><th>Facility</th><th>Appt</th><th>In</th><th>Out</th><th>Dwell (min)</th><th>Billable (min)</th><th>Amount</th><th>Status</th></tr>${
+    S.stops.map(s => `<tr><td>${esc(s.load_id)}</td><td>${s.stop_index}</td><td>${esc(s.facility)}</td><td>${t(s.appointment)}</td><td>${t(s.arrival)}</td><td>${t(s.departure)}</td>
+      <td class="n">${s.dwell_minutes ?? "-"}</td><td class="n">${s.billable_minutes}</td><td class="n">${money(s.amount_cents)}</td>
+      <td><span class="tag ${s.status}">${esc(s.status.replace("_", " "))}</span> <small>${esc(s.notes.join("; "))}</small></td></tr>`).join("")}</table>`;
+
+  $("#t-files").innerHTML = `<ul>${["detention_claims.csv", "invoice_flags.csv", "fines.csv", "settlement.csv", "exceptions.csv", "summary.json", "audit.jsonl"]
+    .map(f => `<li><a href="/out/${f}" download>${f}</a></li>`).join("")}</ul><p><small>Generated ${esc(S.generated_at)} from ${esc(S.data_dir)}</small></p>`;
+}
+
+document.querySelectorAll("#tabs button").forEach(b => b.onclick = () => {
+  document.querySelectorAll("#tabs button").forEach(x => x.classList.toggle("on", x === b));
+  document.querySelectorAll("main > section").forEach(s => s.classList.toggle("hidden", s.id !== "t-" + b.dataset.t));
+});
+async function busy(btn, fn) { btn.disabled = true; try { await fn(); } catch (e) { alert(e.message); } btn.disabled = false; }
+$("#run").onclick = e => busy(e.target, () => load(api("/api/run", {})));
+$("#gen").onclick = e => busy(e.target, () => { selected = null; return load(api("/api/generate", {seed: +$("#seed").value || 7})); });
+load(api("/api/summary"));
+</script>
+</body>
+</html>

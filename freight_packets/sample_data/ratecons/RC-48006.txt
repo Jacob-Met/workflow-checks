@@ -1,0 +1,16 @@
+RATE CONFIRMATION
+Rate Con #: RC-48006
+Load #: LD260942
+Customer: Texan Home Supply
+Carrier: Blue Mesa Transport (asset)
+
+Stop 1 - PICKUP: Rio Grande Produce Co | Appt: 2026-09-04 14:00
+Stop 2 - DELIVERY: Alamo Paper Converting | Appt: 2026-09-04 22:00
+
+CHARGES
+Linehaul: $2,514.00
+Fuel Surcharge: $452.52
+
+ACCESSORIAL TERMS
+Detention: $60.00/hr after 3 hours free at each stop, billed in 30-minute increments.
+Late arrival: 60-minute grace period after appointment; later arrivals forfeit detention.

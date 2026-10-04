@@ -1,0 +1,16 @@
+RATE CONFIRMATION
+Rate Con #: RC-48008
+Load #: LD260956
+Customer: Texan Home Supply
+Carrier: Pecos Freightways Inc
+
+Stop 1 - PICKUP: Hill Country Beverage | Appt: 2026-09-05 14:00
+Stop 2 - DELIVERY: Lone Star Foods DC | Appt: 2026-09-06 04:00
+
+CHARGES
+Linehaul: $994.00
+Fuel Surcharge: $178.92
+Lumper reimbursement: $175.00
+ACCESSORIAL TERMS
+Detention: $75.00/hr after 2 hours free at each stop, billed in 15-minute increments, maximum $500 per stop.
+Late arrival: 30-minute grace period after appointment; later arrivals forfeit detention.

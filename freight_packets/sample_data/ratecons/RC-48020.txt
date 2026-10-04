@@ -1,0 +1,16 @@
+RATE CONFIRMATION
+Rate Con #: RC-48020
+Load #: LD261040
+Customer: Bluebonnet Grocers
+Carrier: Pecos Freightways Inc
+
+Stop 1 - PICKUP: Lone Star Foods DC | Appt: 2026-09-11 07:00
+Stop 2 - DELIVERY: Alamo Paper Converting | Appt: 2026-09-11 21:00
+
+CHARGES
+Linehaul: $2,948.00
+Fuel Surcharge: $737.00
+
+ACCESSORIAL TERMS
+Detention: $75.00/hr after 2 hours free at each stop, billed in 30-minute increments.
+Late arrival: 60-minute grace period after appointment; later arrivals forfeit detention.

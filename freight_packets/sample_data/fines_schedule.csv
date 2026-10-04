@@ -1,0 +1,7 @@
+code,description,amount,applies_to
+MISSING_PICKUP_PHOTOS,Required pickup compliance photos not uploaded,50.00,brokered
+MISSING_DELIVERY_PHOTOS,Required delivery compliance photos not uploaded,50.00,brokered
+LATE_POD,POD not received within 48h of final departure,100.00,brokered
+TRACKING_GAP,Tracking not maintained through the stop (arrival without departure),150.00,brokered
+LATE_PICKUP,Arrived at pickup after appointment + grace,100.00,brokered
+LATE_DELIVERY,Arrived at delivery after appointment + grace,150.00,brokered

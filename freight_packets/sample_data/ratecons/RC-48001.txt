@@ -1,0 +1,11 @@
+CARRIER LOAD CONFIRMATION
+Confirmation # RC-48001          Order # LD260907
+Shipper/Customer: Mesquite Beverage Dist.
+Carrier: Caliche Carriers LLC
+PU - Permian Pipe & Valve; Appointment: 09/01/2026 07:00
+DEL - Lone Star Foods DC; Appointment: 09/01/2026 15:00
+Base Rate: 1,382.00
+FSC: 345.50
+Lumper reimbursement: $175.00
+Free time of 120 minutes per stop. Detention pay $75.00 per hour thereafter,
+15 min increments. 30 min late grace.

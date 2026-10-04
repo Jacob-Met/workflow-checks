@@ -1,0 +1,16 @@
+RATE CONFIRMATION
+Rate Con #: RC-48012
+Load #: LD260984
+Customer: Mesquite Beverage Dist.
+Carrier: Blue Mesa Transport (asset)
+
+Stop 1 - PICKUP: Rio Grande Produce Co | Appt: 2026-09-07 12:00
+Stop 2 - DELIVERY: Alamo Paper Converting | Appt: 2026-09-07 22:00
+
+CHARGES
+Linehaul: $1,470.00
+Fuel Surcharge: $323.40
+Lumper reimbursement: $175.00
+ACCESSORIAL TERMS
+Detention: $50.00/hr after 2 hours free at each stop, billed in 30-minute increments, maximum $500 per stop.
+Late arrival: 30-minute grace period after appointment; later arrivals forfeit detention.

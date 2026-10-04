@@ -1,0 +1,16 @@
+RATE CONFIRMATION
+Rate Con #: RC-48016
+Load #: LD261012
+Customer: Bluebonnet Grocers
+Carrier: Caliche Carriers LLC
+
+Stop 1 - PICKUP: Brazos Building Supply | Appt: 2026-09-09 06:00
+Stop 2 - DELIVERY: Permian Pipe & Valve | Appt: 2026-09-09 16:00
+
+CHARGES
+Linehaul: $1,462.00
+Fuel Surcharge: $321.64
+
+ACCESSORIAL TERMS
+Detention: $75.00/hr after 3 hours free at each stop, billed in 30-minute increments.
+Late arrival: 30-minute grace period after appointment; later arrivals forfeit detention.

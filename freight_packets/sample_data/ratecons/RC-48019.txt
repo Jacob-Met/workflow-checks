@@ -1,0 +1,11 @@
+CARRIER LOAD CONFIRMATION
+Confirmation # RC-48019          Order # LD261033
+Shipper/Customer: Bluebonnet Grocers
+Carrier: Caliche Carriers LLC
+PU - Alamo Paper Converting; Appointment: 09/10/2026 08:00
+DEL - Permian Pipe & Valve; Appointment: 09/10/2026 16:00
+Base Rate: 947.00
+FSC: 208.34
+
+Free time of 120 minutes per stop. Detention pay $75.00 per hour thereafter,
+15 min increments. 30 min late grace.

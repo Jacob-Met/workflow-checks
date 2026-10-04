@@ -1,0 +1,32 @@
+Vehicle Name,Driver Name,Address Name,Event,Time,Latitude,Longitude
+T410,K. Nguyen,Alamo Paper Converting,Entry,09/01/2026 10:51,29.3668,-98.5361
+T410,K. Nguyen,Alamo Paper Converting,Exit,09/01/2026 11:03,29.3668,-98.5361
+T410,K. Nguyen,Rio Grande Produce Co,Entry,09/01/2026 13:51,26.2034,-98.23
+T410,K. Nguyen,Rio Grande Produce Co,Exit,09/01/2026 19:05,26.2034,-98.23
+T413,J. Okafor,Permian Pipe & Valve,Entry,09/02/2026 08:09,31.9973,-102.0779
+T413,J. Okafor,Permian Pipe & Valve,Exit,09/02/2026 13:06,31.9973,-102.0779
+T413,J. Okafor,Metroplex Retail DC,Entry,09/02/2026 14:52,32.8998,-97.0403
+T413,J. Okafor,Metroplex Retail DC,Exit,09/02/2026 15:04,32.8998,-97.0403
+T416,J. Okafor,Permian Pipe & Valve,Entry,09/04/2026 19:04,31.9973,-102.0779
+T416,J. Okafor,Permian Pipe & Valve,Exit,09/04/2026 19:16,31.9973,-102.0779
+T416,J. Okafor,Alamo Paper Converting,Entry,09/04/2026 22:04,29.3668,-98.5361
+T410,K. Nguyen,Metroplex Retail DC,Entry,09/05/2026 17:48,32.8998,-97.0403
+T410,K. Nguyen,Metroplex Retail DC,Exit,09/05/2026 18:00,32.8998,-97.0403
+T410,K. Nguyen,Permian Pipe & Valve,Entry,09/05/2026 20:48,31.9973,-102.0779
+T410,K. Nguyen,Permian Pipe & Valve,Exit,09/05/2026 22:33,31.9973,-102.0779
+T413,M. Flores,Rio Grande Produce Co,Entry,09/07/2026 11:56,26.2034,-98.23
+T413,M. Flores,Alamo Paper Converting,Entry,09/07/2026 21:46,29.3668,-98.5361
+T413,M. Flores,Alamo Paper Converting,Exit,09/07/2026 23:08,29.3668,-98.5361
+T416,J. Okafor,Alamo Paper Converting,Entry,09/09/2026 00:54,29.3668,-98.5361
+T416,J. Okafor,Alamo Paper Converting,Exit,09/09/2026 01:06,29.3668,-98.5361
+T416,J. Okafor,Rio Grande Produce Co,Entry,09/09/2026 03:54,26.2034,-98.23
+T416,J. Okafor,Rio Grande Produce Co,Exit,09/09/2026 05:19,26.2034,-98.23
+T410,D. Ramirez,Lone Star Foods DC,Entry,09/10/2026 13:02,29.4889,-98.3987
+T410,D. Ramirez,Lone Star Foods DC,Exit,09/10/2026 13:14,29.4889,-98.3987
+T410,D. Ramirez,Hill Country Beverage,Entry,09/10/2026 16:02,29.6011,-98.2821
+T410,D. Ramirez,Hill Country Beverage,Exit,09/10/2026 17:10,29.6011,-98.2821
+T413,K. Nguyen,Metroplex Retail DC,Entry,09/11/2026 13:54,32.8998,-97.0403
+T413,K. Nguyen,Metroplex Retail DC,Exit,09/11/2026 15:19,32.8998,-97.0403
+T413,K. Nguyen,Permian Pipe & Valve,Entry,09/12/2026 06:54,31.9973,-102.0779
+T413,K. Nguyen,Permian Pipe & Valve,Exit,09/12/2026 07:06,31.9973,-102.0779
+T413,K. Nguyen,Lone Star Foods DC,Entry,09/12/2026 09:54,29.4889,-98.3987

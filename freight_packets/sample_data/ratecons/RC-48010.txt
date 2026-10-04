@@ -1,0 +1,16 @@
+RATE CONFIRMATION
+Rate Con #: RC-48010
+Load #: LD260970
+Customer: Texan Home Supply
+Carrier: Caliche Carriers LLC
+
+Stop 1 - PICKUP: Rio Grande Produce Co | Appt: 2026-09-06 06:00
+Stop 2 - DELIVERY: Hill Country Beverage | Appt: 2026-09-06 16:00
+
+CHARGES
+Linehaul: $2,876.00
+Fuel Surcharge: $719.00
+
+ACCESSORIAL TERMS
+Detention: $50.00/hr after 2 hours free at each stop, billed in 15-minute increments.
+Late arrival: 60-minute grace period after appointment; later arrivals forfeit detention.

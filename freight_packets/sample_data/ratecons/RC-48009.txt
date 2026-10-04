@@ -1,0 +1,11 @@
+CARRIER LOAD CONFIRMATION
+Confirmation # RC-48009          Order # LD260963
+Shipper/Customer: Texan Home Supply
+Carrier: Blue Mesa Transport (asset)
+PU - Rio Grande Produce Co; Appointment: 09/05/2026 07:00
+DEL - Permian Pipe & Valve; Appointment: 09/05/2026 21:00
+Base Rate: 1,828.00
+FSC: 329.04
+
+Free time of 120 minutes per stop. Detention pay $75.00 per hour thereafter,
+30 min increments. 30 min late grace.

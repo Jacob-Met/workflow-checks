@@ -1,0 +1,376 @@
+{
+  "stops": {
+    "LD260900#1": {
+      "status": "ok",
+      "amount_cents": 0
+    },
+    "LD260900#2": {
+      "status": "detention",
+      "amount_cents": 22500
+    },
+    "LD260907#1": {
+      "status": "ok",
+      "amount_cents": 0
+    },
+    "LD260907#2": {
+      "status": "detention",
+      "amount_cents": 16875
+    },
+    "LD260914#1": {
+      "status": "detention",
+      "amount_cents": 6000
+    },
+    "LD260914#2": {
+      "status": "ok",
+      "amount_cents": 0
+    },
+    "LD260921#1": {
+      "status": "detention",
+      "amount_cents": 16500
+    },
+    "LD260921#2": {
+      "status": "ok",
+      "amount_cents": 0
+    },
+    "LD260928#1": {
+      "status": "ok",
+      "amount_cents": 0
+    },
+    "LD260928#2": {
+      "status": "detention",
+      "amount_cents": 4500
+    },
+    "LD260935#1": {
+      "status": "ok",
+      "amount_cents": 0
+    },
+    "LD260935#2": {
+      "status": "detention",
+      "amount_cents": 9375
+    },
+    "LD260942#1": {
+      "status": "ok",
+      "amount_cents": 0
+    },
+    "LD260942#2": {
+      "status": "exception",
+      "amount_cents": 0
+    },
+    "LD260949#1": {
+      "status": "detention",
+      "amount_cents": 7500
+    },
+    "LD260949#2": {
+      "status": "ok",
+      "amount_cents": 0
+    },
+    "LD260956#1": {
+      "status": "detention",
+      "amount_cents": 50000
+    },
+    "LD260956#2": {
+      "status": "late",
+      "amount_cents": 0
+    },
+    "LD260963#1": {
+      "status": "ok",
+      "amount_cents": 0
+    },
+    "LD260963#2": {
+      "status": "ok",
+      "amount_cents": 0
+    },
+    "LD260970#1": {
+      "status": "exception",
+      "amount_cents": 0
+    },
+    "LD260970#2": {
+      "status": "ok",
+      "amount_cents": 0
+    },
+    "LD260977#1": {
+      "status": "detention",
+      "amount_cents": 50000
+    },
+    "LD260977#2": {
+      "status": "ok",
+      "amount_cents": 0
+    },
+    "LD260984#1": {
+      "status": "exception",
+      "amount_cents": 0
+    },
+    "LD260984#2": {
+      "status": "ok",
+      "amount_cents": 0
+    },
+    "LD260991#1": {
+      "status": "ok",
+      "amount_cents": 0
+    },
+    "LD260991#2": {
+      "status": "detention",
+      "amount_cents": 7500
+    },
+    "LD260998#1": {
+      "status": "ok",
+      "amount_cents": 0
+    },
+    "LD260998#2": {
+      "status": "ok",
+      "amount_cents": 0
+    },
+    "LD261005#1": {
+      "status": "late",
+      "amount_cents": 0
+    },
+    "LD261005#2": {
+      "status": "ok",
+      "amount_cents": 0
+    },
+    "LD261012#1": {
+      "status": "ok",
+      "amount_cents": 0
+    },
+    "LD261012#2": {
+      "status": "ok",
+      "amount_cents": 0
+    },
+    "LD261019#1": {
+      "status": "detention",
+      "amount_cents": 5000
+    },
+    "LD261019#2": {
+      "status": "ok",
+      "amount_cents": 0
+    },
+    "LD261026#1": {
+      "status": "late",
+      "amount_cents": 0
+    },
+    "LD261026#2": {
+      "status": "ok",
+      "amount_cents": 0
+    },
+    "LD261033#1": {
+      "status": "exception",
+      "amount_cents": 0
+    },
+    "LD261033#2": {
+      "status": "detention",
+      "amount_cents": 20625
+    },
+    "LD261040#1": {
+      "status": "ok",
+      "amount_cents": 0
+    },
+    "LD261040#2": {
+      "status": "ok",
+      "amount_cents": 0
+    },
+    "LD261047#1": {
+      "status": "ok",
+      "amount_cents": 0
+    },
+    "LD261047#2": {
+      "status": "exception",
+      "amount_cents": 0
+    },
+    "LD261054#1": {
+      "status": "ok",
+      "amount_cents": 0
+    },
+    "LD261054#2": {
+      "status": "ok",
+      "amount_cents": 0
+    },
+    "LD261061#1": {
+      "status": "ok",
+      "amount_cents": 0
+    },
+    "LD261061#2": {
+      "status": "detention",
+      "amount_cents": 8750
+    }
+  },
+  "detention_total_cents": 225125,
+  "invoice_defects": [
+    {
+      "load_id": "LD260907",
+      "code": "LINEHAUL_MISMATCH"
+    },
+    {
+      "load_id": "LD260928",
+      "code": "FUEL_MISMATCH"
+    },
+    {
+      "load_id": "LD260949",
+      "code": "DETENTION_UNSUPPORTED"
+    },
+    {
+      "load_id": "LD260970",
+      "code": "ACCESSORIAL_NOT_ON_RATECON"
+    },
+    {
+      "load_id": "LD260991",
+      "code": "ACCESSORIAL_OVER_RATECON"
+    },
+    {
+      "load_id": "LD261012",
+      "code": "TOTAL_MISMATCH"
+    },
+    {
+      "load_id": "LD261033",
+      "code": "DUPLICATE_INVOICE"
+    },
+    {
+      "load_id": "LD261054",
+      "code": "MISSING_POD"
+    }
+  ],
+  "late_stops": [
+    "LD260956#2",
+    "LD261005#1",
+    "LD261026#1"
+  ],
+  "exception_stops": [
+    "LD260942#2",
+    "LD260970#1",
+    "LD260984#1",
+    "LD261033#1",
+    "LD261047#2"
+  ],
+  "fines": [
+    {
+      "load_id": "LD260907",
+      "code": "MISSING_DELIVERY_PHOTOS",
+      "amount_cents": 5000,
+      "status": "assessed"
+    },
+    {
+      "load_id": "LD260914",
+      "code": "MISSING_DELIVERY_PHOTOS",
+      "amount_cents": 5000,
+      "status": "assessed"
+    },
+    {
+      "load_id": "LD260928",
+      "code": "LATE_POD",
+      "amount_cents": 10000,
+      "status": "disputed_in_window"
+    },
+    {
+      "load_id": "LD260935",
+      "code": "MISSING_DELIVERY_PHOTOS",
+      "amount_cents": 5000,
+      "status": "assessed"
+    },
+    {
+      "load_id": "LD260949",
+      "code": "MISSING_DELIVERY_PHOTOS",
+      "amount_cents": 5000,
+      "status": "assessed"
+    },
+    {
+      "load_id": "LD260956",
+      "code": "LATE_DELIVERY",
+      "amount_cents": 15000,
+      "status": "disputed_in_window"
+    },
+    {
+      "load_id": "LD260956",
+      "code": "MISSING_PICKUP_PHOTOS",
+      "amount_cents": 5000,
+      "status": "dispute_late"
+    },
+    {
+      "load_id": "LD260956",
+      "code": "LATE_POD",
+      "amount_cents": 10000,
+      "status": "assessed"
+    },
+    {
+      "load_id": "LD260970",
+      "code": "TRACKING_GAP",
+      "amount_cents": 15000,
+      "status": "assessed"
+    },
+    {
+      "load_id": "LD260970",
+      "code": "MISSING_DELIVERY_PHOTOS",
+      "amount_cents": 5000,
+      "status": "disputed_in_window"
+    },
+    {
+      "load_id": "LD260977",
+      "code": "LATE_POD",
+      "amount_cents": 10000,
+      "status": "disputed_in_window"
+    },
+    {
+      "load_id": "LD260998",
+      "code": "MISSING_DELIVERY_PHOTOS",
+      "amount_cents": 5000,
+      "status": "assessed"
+    },
+    {
+      "load_id": "LD260998",
+      "code": "LATE_POD",
+      "amount_cents": 10000,
+      "status": "assessed"
+    },
+    {
+      "load_id": "LD261012",
+      "code": "MISSING_DELIVERY_PHOTOS",
+      "amount_cents": 5000,
+      "status": "assessed"
+    },
+    {
+      "load_id": "LD261033",
+      "code": "TRACKING_GAP",
+      "amount_cents": 15000,
+      "status": "assessed"
+    },
+    {
+      "load_id": "LD261033",
+      "code": "MISSING_PICKUP_PHOTOS",
+      "amount_cents": 5000,
+      "status": "assessed"
+    },
+    {
+      "load_id": "LD261033",
+      "code": "LATE_POD",
+      "amount_cents": 10000,
+      "status": "assessed"
+    },
+    {
+      "load_id": "LD261054",
+      "code": "MISSING_PICKUP_PHOTOS",
+      "amount_cents": 5000,
+      "status": "dispute_late"
+    }
+  ],
+  "fine_exceptions": [],
+  "settlement_holds": [
+    {
+      "invoice_no": "CAL-7119",
+      "load_id": "LD261026",
+      "reason": "DUPLICATE_INVOICE"
+    },
+    {
+      "invoice_no": "CAL-7119",
+      "load_id": "LD261033",
+      "reason": "DUPLICATE_INVOICE"
+    },
+    {
+      "invoice_no": "CAL-7119",
+      "load_id": "LD261033",
+      "reason": "DETENTION_PENDING_REVIEW"
+    },
+    {
+      "invoice_no": "CAL-7122",
+      "load_id": "LD261054",
+      "reason": "MISSING_POD"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+CARRIER LOAD CONFIRMATION
+Confirmation # RC-48007          Order # LD260949
+Shipper/Customer: Bluebonnet Grocers
+Carrier: Caliche Carriers LLC
+PU - Lone Star Foods DC; Appointment: 09/04/2026 07:00
+DEL - Brazos Building Supply; Appointment: 09/04/2026 15:00
+Base Rate: 2,441.00
+FSC: 439.38
+Lumper reimbursement: $175.00
+Free time of 180 minutes per stop. Detention pay $60.00 per hour thereafter,
+15 min increments. 30 min late grace.

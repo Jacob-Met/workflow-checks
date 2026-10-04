@@ -1,0 +1,11 @@
+CARRIER LOAD CONFIRMATION
+Confirmation # RC-48015          Order # LD261005
+Shipper/Customer: Texan Home Supply
+Carrier: Blue Mesa Transport (asset)
+PU - Gulf Coast Cold Storage; Appointment: 09/08/2026 08:00
+DEL - Rio Grande Produce Co; Appointment: 09/09/2026 04:00
+Base Rate: 3,043.00
+FSC: 669.46
+Lumper reimbursement: $175.00
+Free time of 180 minutes per stop. Detention pay $75.00 per hour thereafter,
+15 min increments, maximum $500 per stop. 30 min late grace.

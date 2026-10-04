@@ -1,0 +1,11 @@
+CARRIER LOAD CONFIRMATION
+Confirmation # RC-48023          Order # LD261061
+Shipper/Customer: Bluebonnet Grocers
+Carrier: Pecos Freightways Inc
+PU - Brazos Building Supply; Appointment: 09/12/2026 08:00
+DEL - Alamo Paper Converting; Appointment: 09/12/2026 18:00
+Base Rate: 2,959.00
+FSC: 739.75
+
+Free time of 120 minutes per stop. Detention pay $50.00 per hour thereafter,
+15 min increments. 60 min late grace.

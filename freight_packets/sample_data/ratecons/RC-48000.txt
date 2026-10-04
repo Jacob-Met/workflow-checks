@@ -1,0 +1,16 @@
+RATE CONFIRMATION
+Rate Con #: RC-48000
+Load #: LD260900
+Customer: Texan Home Supply
+Carrier: Blue Mesa Transport (asset)
+
+Stop 1 - PICKUP: Permian Pipe & Valve | Appt: 2026-09-01 06:00
+Stop 2 - DELIVERY: Rio Grande Produce Co | Appt: 2026-09-01 14:00
+
+CHARGES
+Linehaul: $1,779.00
+Fuel Surcharge: $320.22
+Lumper reimbursement: $175.00
+ACCESSORIAL TERMS
+Detention: $75.00/hr after 2 hours free at each stop, billed in 15-minute increments, maximum $500 per stop.
+Late arrival: 30-minute grace period after appointment; later arrivals forfeit detention.

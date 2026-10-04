@@ -1,0 +1,16 @@
+RATE CONFIRMATION
+Rate Con #: RC-48014
+Load #: LD260998
+Customer: Bluebonnet Grocers
+Carrier: Pecos Freightways Inc
+
+Stop 1 - PICKUP: Alamo Paper Converting | Appt: 2026-09-08 06:00
+Stop 2 - DELIVERY: Brazos Building Supply | Appt: 2026-09-08 20:00
+
+CHARGES
+Linehaul: $3,194.00
+Fuel Surcharge: $574.92
+
+ACCESSORIAL TERMS
+Detention: $75.00/hr after 3 hours free at each stop, billed in 30-minute increments, maximum $500 per stop.
+Late arrival: 60-minute grace period after appointment; later arrivals forfeit detention.

@@ -1,0 +1,16 @@
+RATE CONFIRMATION
+Rate Con #: RC-48002
+Load #: LD260914
+Customer: Bluebonnet Grocers
+Carrier: Pecos Freightways Inc
+
+Stop 1 - PICKUP: Gulf Coast Cold Storage | Appt: 2026-09-02 14:00
+Stop 2 - DELIVERY: Metroplex Retail DC | Appt: 2026-09-03 10:00
+
+CHARGES
+Linehaul: $1,917.00
+Fuel Surcharge: $345.06
+
+ACCESSORIAL TERMS
+Detention: $60.00/hr after 2 hours free at each stop, billed in 30-minute increments.
+Late arrival: 60-minute grace period after appointment; later arrivals forfeit detention.

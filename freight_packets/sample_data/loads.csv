@@ -1,0 +1,25 @@
+load_id,customer,carrier,tractor,trailer,pod_received,ratecon_file,mode
+LD260900,Texan Home Supply,Blue Mesa Transport (asset),T410,TR53-5100,Y,RC-48000.txt,asset
+LD260907,Mesquite Beverage Dist.,Caliche Carriers LLC,T411,TR53-5101,Y,RC-48001.txt,brokered
+LD260914,Bluebonnet Grocers,Pecos Freightways Inc,T412,TR53-5102,Y,RC-48002.txt,brokered
+LD260921,Bluebonnet Grocers,Blue Mesa Transport (asset),T413,TR53-5103,Y,RC-48003.txt,asset
+LD260928,Mesquite Beverage Dist.,Caliche Carriers LLC,T414,TR53-5104,Y,RC-48004.txt,brokered
+LD260935,Texan Home Supply,Pecos Freightways Inc,T415,TR53-5105,Y,RC-48005.txt,brokered
+LD260942,Texan Home Supply,Blue Mesa Transport (asset),T416,TR53-5106,Y,RC-48006.txt,asset
+LD260949,Bluebonnet Grocers,Caliche Carriers LLC,T417,TR53-5107,Y,RC-48007.txt,brokered
+LD260956,Texan Home Supply,Pecos Freightways Inc,T418,TR53-5108,Y,RC-48008.txt,brokered
+LD260963,Texan Home Supply,Blue Mesa Transport (asset),T410,TR53-5109,Y,RC-48009.txt,asset
+LD260970,Texan Home Supply,Caliche Carriers LLC,T411,TR53-5110,Y,RC-48010.txt,brokered
+LD260977,Bluebonnet Grocers,Pecos Freightways Inc,T412,TR53-5111,Y,RC-48011.txt,brokered
+LD260984,Mesquite Beverage Dist.,Blue Mesa Transport (asset),T413,TR53-5112,Y,RC-48012.txt,asset
+LD260991,Texan Home Supply,Caliche Carriers LLC,T414,TR53-5113,Y,RC-48013.txt,brokered
+LD260998,Bluebonnet Grocers,Pecos Freightways Inc,T415,TR53-5114,Y,RC-48014.txt,brokered
+LD261005,Texan Home Supply,Blue Mesa Transport (asset),T416,TR53-5115,Y,RC-48015.txt,asset
+LD261012,Bluebonnet Grocers,Caliche Carriers LLC,T417,TR53-5116,Y,RC-48016.txt,brokered
+LD261019,Texan Home Supply,Pecos Freightways Inc,T418,TR53-5117,Y,RC-48017.txt,brokered
+LD261026,Bluebonnet Grocers,Blue Mesa Transport (asset),T410,TR53-5118,Y,RC-48018.txt,asset
+LD261033,Bluebonnet Grocers,Caliche Carriers LLC,T411,TR53-5119,Y,RC-48019.txt,brokered
+LD261040,Bluebonnet Grocers,Pecos Freightways Inc,T412,TR53-5120,Y,RC-48020.txt,brokered
+LD261047,Texan Home Supply,Blue Mesa Transport (asset),T413,TR53-5121,Y,RC-48021.txt,asset
+LD261054,Texan Home Supply,Caliche Carriers LLC,T414,TR53-5122,N,RC-48022.txt,brokered
+LD261061,Bluebonnet Grocers,Pecos Freightways Inc,T415,TR53-5123,Y,RC-48023.txt,brokered

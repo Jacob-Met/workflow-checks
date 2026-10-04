@@ -1,0 +1,73 @@
+{
+ "as_of": "2026-09-28",
+ "eval_from": "2026-03-01",
+ "flags": [
+  [
+   "B50032",
+   "USAGE_SPIKE"
+  ],
+  [
+   "B50050",
+   "USAGE_SPIKE"
+  ],
+  [
+   "B50068",
+   "RATE_CHANGE"
+  ],
+  [
+   "B50087",
+   "LATE_FEE_OR_PAST_DUE"
+  ],
+  [
+   "B50107",
+   "PERIOD_OVERLAP"
+  ],
+  [
+   "B50125",
+   "PAYMENT_MISMATCH"
+  ],
+  [
+   "B50142",
+   "PAYMENT_MISMATCH"
+  ],
+  [
+   "B50178",
+   "UNPAID_PAST_DUE"
+  ],
+  [
+   "B50213",
+   "DUPLICATE_BILL"
+  ],
+  [
+   "B50242",
+   "VACANT_UNIT_USAGE"
+  ],
+  [
+   "B50243",
+   "VACANT_UNIT_USAGE"
+  ],
+  [
+   "SYN-7009:2026-04-01",
+   "MISSING_BILL"
+  ]
+ ],
+ "decoys": [
+  "B50016",
+  "B50017",
+  "B50018",
+  "B50088",
+  "B50089",
+  "B50090",
+  "B50159",
+  "B50160",
+  "B50161"
+ ],
+ "insufficient_history": [
+  "B50273",
+  "B50274"
+ ],
+ "leak_unit": [
+  "Bayou Flats (synthetic)",
+  "201"
+ ]
+}

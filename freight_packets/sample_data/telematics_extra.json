@@ -1,0 +1,211 @@
+{
+  "data": [
+    {
+      "vehicle": {
+        "name": "T410"
+      },
+      "driver": {
+        "name": "K. Nguyen"
+      },
+      "address": {
+        "name": "Permian Pipe & Valve"
+      },
+      "eventType": "GeofenceEntry",
+      "time": "2026-09-01T05:53:00Z",
+      "location": {
+        "latitude": 31.9973,
+        "longitude": -102.0779
+      }
+    },
+    {
+      "vehicle": {
+        "name": "T410"
+      },
+      "driver": {
+        "name": "K. Nguyen"
+      },
+      "address": {
+        "name": "Permian Pipe & Valve"
+      },
+      "eventType": "GeofenceExit",
+      "time": "2026-09-01T06:46:00Z",
+      "location": {
+        "latitude": 31.9973,
+        "longitude": -102.0779
+      }
+    },
+    {
+      "vehicle": {
+        "name": "T413"
+      },
+      "driver": {
+        "name": "J. Okafor"
+      },
+      "address": {
+        "name": "Alamo Paper Converting"
+      },
+      "eventType": "GeofenceEntry",
+      "time": "2026-09-02T17:52:00Z",
+      "location": {
+        "latitude": 29.3668,
+        "longitude": -98.5361
+      }
+    },
+    {
+      "vehicle": {
+        "name": "T413"
+      },
+      "driver": {
+        "name": "J. Okafor"
+      },
+      "address": {
+        "name": "Alamo Paper Converting"
+      },
+      "eventType": "GeofenceExit",
+      "time": "2026-09-02T19:09:00Z",
+      "location": {
+        "latitude": 29.3668,
+        "longitude": -98.5361
+      }
+    },
+    {
+      "vehicle": {
+        "name": "T416"
+      },
+      "driver": {
+        "name": "J. Okafor"
+      },
+      "address": {
+        "name": "Rio Grande Produce Co"
+      },
+      "eventType": "GeofenceEntry",
+      "time": "2026-09-04T14:02:00Z",
+      "location": {
+        "latitude": 26.2034,
+        "longitude": -98.23
+      }
+    },
+    {
+      "vehicle": {
+        "name": "T416"
+      },
+      "driver": {
+        "name": "J. Okafor"
+      },
+      "address": {
+        "name": "Rio Grande Produce Co"
+      },
+      "eventType": "GeofenceExit",
+      "time": "2026-09-04T15:05:00Z",
+      "location": {
+        "latitude": 26.2034,
+        "longitude": -98.23
+      }
+    },
+    {
+      "vehicle": {
+        "name": "T410"
+      },
+      "driver": {
+        "name": "K. Nguyen"
+      },
+      "address": {
+        "name": "Rio Grande Produce Co"
+      },
+      "eventType": "GeofenceEntry",
+      "time": "2026-09-05T07:01:00Z",
+      "location": {
+        "latitude": 26.2034,
+        "longitude": -98.23
+      }
+    },
+    {
+      "vehicle": {
+        "name": "T410"
+      },
+      "driver": {
+        "name": "K. Nguyen"
+      },
+      "address": {
+        "name": "Rio Grande Produce Co"
+      },
+      "eventType": "GeofenceExit",
+      "time": "2026-09-05T08:47:00Z",
+      "location": {
+        "latitude": 26.2034,
+        "longitude": -98.23
+      }
+    },
+    {
+      "vehicle": {
+        "name": "T416"
+      },
+      "driver": {
+        "name": "J. Okafor"
+      },
+      "address": {
+        "name": "Gulf Coast Cold Storage"
+      },
+      "eventType": "GeofenceEntry",
+      "time": "2026-09-08T09:40:00Z",
+      "location": {
+        "latitude": 29.755,
+        "longitude": -95.324
+      }
+    },
+    {
+      "vehicle": {
+        "name": "T416"
+      },
+      "driver": {
+        "name": "J. Okafor"
+      },
+      "address": {
+        "name": "Gulf Coast Cold Storage"
+      },
+      "eventType": "GeofenceExit",
+      "time": "2026-09-08T14:04:00Z",
+      "location": {
+        "latitude": 29.755,
+        "longitude": -95.324
+      }
+    },
+    {
+      "vehicle": {
+        "name": "T410"
+      },
+      "driver": {
+        "name": "D. Ramirez"
+      },
+      "address": {
+        "name": "Brazos Building Supply"
+      },
+      "eventType": "GeofenceEntry",
+      "time": "2026-09-10T08:18:00Z",
+      "location": {
+        "latitude": 30.628,
+        "longitude": -96.3344
+      }
+    },
+    {
+      "vehicle": {
+        "name": "T410"
+      },
+      "driver": {
+        "name": "D. Ramirez"
+      },
+      "address": {
+        "name": "Brazos Building Supply"
+      },
+      "eventType": "GeofenceExit",
+      "time": "2026-09-10T12:11:00Z",
+      "location": {
+        "latitude": 30.628,
+        "longitude": -96.3344
+      }
+    }
+  ],
+  "pagination": {
+    "hasNextPage": false
+  }
+}

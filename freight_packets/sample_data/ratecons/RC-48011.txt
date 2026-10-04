@@ -1,0 +1,11 @@
+CARRIER LOAD CONFIRMATION
+Confirmation # RC-48011          Order # LD260977
+Shipper/Customer: Bluebonnet Grocers
+Carrier: Pecos Freightways Inc
+PU - Gulf Coast Cold Storage; Appointment: 09/06/2026 07:00
+DEL - Metroplex Retail DC; Appointment: 09/07/2026 03:00
+Base Rate: 2,544.00
+FSC: 636.00
+
+Free time of 120 minutes per stop. Detention pay $75.00 per hour thereafter,
+15 min increments, maximum $500 per stop. 60 min late grace.

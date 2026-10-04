@@ -1,0 +1,11 @@
+CARRIER LOAD CONFIRMATION
+Confirmation # RC-48021          Order # LD261047
+Shipper/Customer: Texan Home Supply
+Carrier: Blue Mesa Transport (asset)
+PU - Metroplex Retail DC; Appointment: 09/11/2026 14:00
+DEL - Lone Star Foods DC; Appointment: 09/12/2026 10:00
+Base Rate: 1,781.00
+FSC: 320.58
+Lumper reimbursement: $175.00
+Free time of 120 minutes per stop. Detention pay $75.00 per hour thereafter,
+30 min increments. 60 min late grace.

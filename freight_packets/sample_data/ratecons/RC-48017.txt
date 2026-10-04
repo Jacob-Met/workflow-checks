@@ -1,0 +1,11 @@
+CARRIER LOAD CONFIRMATION
+Confirmation # RC-48017          Order # LD261019
+Shipper/Customer: Texan Home Supply
+Carrier: Pecos Freightways Inc
+PU - Permian Pipe & Valve; Appointment: 09/09/2026 08:00
+DEL - Alamo Paper Converting; Appointment: 09/09/2026 22:00
+Base Rate: 2,778.00
+FSC: 611.16
+Lumper reimbursement: $175.00
+Free time of 180 minutes per stop. Detention pay $50.00 per hour thereafter,
+15 min increments. 60 min late grace.

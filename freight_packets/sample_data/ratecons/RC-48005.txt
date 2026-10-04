@@ -1,0 +1,11 @@
+CARRIER LOAD CONFIRMATION
+Confirmation # RC-48005          Order # LD260935
+Shipper/Customer: Texan Home Supply
+Carrier: Pecos Freightways Inc
+PU - Brazos Building Supply; Appointment: 09/03/2026 09:00
+DEL - Alamo Paper Converting; Appointment: 09/03/2026 23:00
+Base Rate: 1,518.00
+FSC: 273.24
+
+Free time of 120 minutes per stop. Detention pay $75.00 per hour thereafter,
+15 min increments, maximum $500 per stop. 60 min late grace.
