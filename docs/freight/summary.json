@@ -1,0 +1,2190 @@
+{
+  "generated_at": "2026-10-04T07:49:05",
+  "data_dir": "sample_data",
+  "counts": {
+    "events": 105,
+    "loads": 24,
+    "stops": 48,
+    "detention_stops": 13,
+    "late_arrivals": 3,
+    "exceptions": 5,
+    "invoices": 25,
+    "invoice_flags": 12,
+    "packets": 15,
+    "fines": 18,
+    "settlement_ready": 22,
+    "settlement_hold": 3
+  },
+  "fines_total_cents": 105000,
+  "net_payable_ready_cents": 6061301,
+  "fines": [
+    {
+      "load_id": "LD260907",
+      "carrier": "Caliche Carriers LLC",
+      "code": "MISSING_DELIVERY_PHOTOS",
+      "amount_cents": 5000,
+      "detail": "no delivery photos on file",
+      "notice_date": "2026-09-03",
+      "dispute_deadline": "2026-09-10",
+      "status": "assessed",
+      "dispute_note": "",
+      "evidence": [
+        "documents.csv (no DELIVERY_PHOTOS row)",
+        "fines_schedule.csv:row3"
+      ],
+      "fine_id": "FINE-560112C4CD",
+      "deducted_cents": 5000
+    },
+    {
+      "load_id": "LD260914",
+      "carrier": "Pecos Freightways Inc",
+      "code": "MISSING_DELIVERY_PHOTOS",
+      "amount_cents": 5000,
+      "detail": "no delivery photos on file",
+      "notice_date": "2026-09-05",
+      "dispute_deadline": "2026-09-12",
+      "status": "assessed",
+      "dispute_note": "",
+      "evidence": [
+        "documents.csv (no DELIVERY_PHOTOS row)",
+        "fines_schedule.csv:row3"
+      ],
+      "fine_id": "FINE-81962849AB",
+      "deducted_cents": 5000
+    },
+    {
+      "load_id": "LD260928",
+      "carrier": "Caliche Carriers LLC",
+      "code": "LATE_POD",
+      "amount_cents": 10000,
+      "detail": "POD received 2026-09-06 23:47, 60h after final departure (limit 48h)",
+      "notice_date": "2026-09-06",
+      "dispute_deadline": "2026-09-13",
+      "status": "disputed_in_window",
+      "dispute_note": "disputed 2026-09-08 (inside window): ELD outage; held pending review",
+      "evidence": [
+        "documents.csv:row14",
+        "tracking_stops.csv:row7",
+        "fines_schedule.csv:row4",
+        "disputes.csv:row2"
+      ],
+      "fine_id": "FINE-D6198BB6B7",
+      "deducted_cents": 0
+    },
+    {
+      "load_id": "LD260935",
+      "carrier": "Pecos Freightways Inc",
+      "code": "MISSING_DELIVERY_PHOTOS",
+      "amount_cents": 5000,
+      "detail": "no delivery photos on file",
+      "notice_date": "2026-09-05",
+      "dispute_deadline": "2026-09-12",
+      "status": "assessed",
+      "dispute_note": "",
+      "evidence": [
+        "documents.csv (no DELIVERY_PHOTOS row)",
+        "fines_schedule.csv:row3"
+      ],
+      "fine_id": "FINE-84ED7AF976",
+      "deducted_cents": 5000
+    },
+    {
+      "load_id": "LD260949",
+      "carrier": "Caliche Carriers LLC",
+      "code": "MISSING_DELIVERY_PHOTOS",
+      "amount_cents": 5000,
+      "detail": "no delivery photos on file",
+      "notice_date": "2026-09-06",
+      "dispute_deadline": "2026-09-13",
+      "status": "assessed",
+      "dispute_note": "",
+      "evidence": [
+        "documents.csv (no DELIVERY_PHOTOS row)",
+        "fines_schedule.csv:row3"
+      ],
+      "fine_id": "FINE-3DE0EE2F26",
+      "deducted_cents": 5000
+    },
+    {
+      "load_id": "LD260956",
+      "carrier": "Pecos Freightways Inc",
+      "code": "LATE_DELIVERY",
+      "amount_cents": 15000,
+      "detail": "stop 2 Lone Star Foods DC: appointment 2026-09-06 04:00, arrived 2026-09-06 05:53",
+      "notice_date": "2026-09-08",
+      "dispute_deadline": "2026-09-15",
+      "status": "disputed_in_window",
+      "dispute_note": "disputed 2026-09-10 (inside window): ELD outage; held pending review",
+      "evidence": [
+        "tracking_stops.csv:row13",
+        "fines_schedule.csv:row7",
+        "disputes.csv:row3"
+      ],
+      "fine_id": "FINE-BBA9C7E764",
+      "deducted_cents": 0
+    },
+    {
+      "load_id": "LD260956",
+      "carrier": "Pecos Freightways Inc",
+      "code": "LATE_POD",
+      "amount_cents": 10000,
+      "detail": "POD received 2026-09-08 20:46, 60h after final departure (limit 48h)",
+      "notice_date": "2026-09-08",
+      "dispute_deadline": "2026-09-15",
+      "status": "assessed",
+      "dispute_note": "",
+      "evidence": [
+        "documents.csv:row23",
+        "tracking_stops.csv:row13",
+        "fines_schedule.csv:row4"
+      ],
+      "fine_id": "FINE-75BAF3D3B0",
+      "deducted_cents": 10000
+    },
+    {
+      "load_id": "LD260956",
+      "carrier": "Pecos Freightways Inc",
+      "code": "MISSING_PICKUP_PHOTOS",
+      "amount_cents": 5000,
+      "detail": "no pickup photos on file",
+      "notice_date": "2026-09-08",
+      "dispute_deadline": "2026-09-15",
+      "status": "dispute_late",
+      "dispute_note": "disputed 2026-09-17 after window closed 2026-09-15: ELD outage",
+      "evidence": [
+        "documents.csv (no PICKUP_PHOTOS row)",
+        "fines_schedule.csv:row2",
+        "disputes.csv:row4"
+      ],
+      "fine_id": "FINE-804A18EB66",
+      "deducted_cents": 5000
+    },
+    {
+      "load_id": "LD260970",
+      "carrier": "Caliche Carriers LLC",
+      "code": "MISSING_DELIVERY_PHOTOS",
+      "amount_cents": 5000,
+      "detail": "no delivery photos on file",
+      "notice_date": "2026-09-08",
+      "dispute_deadline": "2026-09-15",
+      "status": "disputed_in_window",
+      "dispute_note": "disputed 2026-09-10 (inside window): receiver delayed check-in; held pending review",
+      "evidence": [
+        "documents.csv (no DELIVERY_PHOTOS row)",
+        "fines_schedule.csv:row3",
+        "disputes.csv:row5"
+      ],
+      "fine_id": "FINE-BB11CD693E",
+      "deducted_cents": 0
+    },
+    {
+      "load_id": "LD260970",
+      "carrier": "Caliche Carriers LLC",
+      "code": "TRACKING_GAP",
+      "amount_cents": 15000,
+      "detail": "stop 1 Rio Grande Produce Co: tracking shows arrival but no departure (tracking not maintained)",
+      "notice_date": "2026-09-08",
+      "dispute_deadline": "2026-09-15",
+      "status": "assessed",
+      "dispute_note": "",
+      "evidence": [
+        "tracking_stops.csv:row14",
+        "fines_schedule.csv:row5"
+      ],
+      "fine_id": "FINE-C9C1D2D7AB",
+      "deducted_cents": 15000
+    },
+    {
+      "load_id": "LD260977",
+      "carrier": "Pecos Freightways Inc",
+      "code": "LATE_POD",
+      "amount_cents": 10000,
+      "detail": "POD received 2026-09-10 22:42, 90h after final departure (limit 48h)",
+      "notice_date": "2026-09-09",
+      "dispute_deadline": "2026-09-16",
+      "status": "disputed_in_window",
+      "dispute_note": "disputed 2026-09-11 (inside window): ELD outage; held pending review",
+      "evidence": [
+        "documents.csv:row31",
+        "tracking_stops.csv:row17",
+        "fines_schedule.csv:row4",
+        "disputes.csv:row6"
+      ],
+      "fine_id": "FINE-3F89497CF6",
+      "deducted_cents": 0
+    },
+    {
+      "load_id": "LD260998",
+      "carrier": "Pecos Freightways Inc",
+      "code": "LATE_POD",
+      "amount_cents": 10000,
+      "detail": "POD received 2026-09-12 15:38, 90h after final departure (limit 48h)",
+      "notice_date": "2026-09-10",
+      "dispute_deadline": "2026-09-17",
+      "status": "assessed",
+      "dispute_note": "",
+      "evidence": [
+        "documents.csv:row38",
+        "tracking_stops.csv:row21",
+        "fines_schedule.csv:row4"
+      ],
+      "fine_id": "FINE-1D85169DF3",
+      "deducted_cents": 10000
+    },
+    {
+      "load_id": "LD260998",
+      "carrier": "Pecos Freightways Inc",
+      "code": "MISSING_DELIVERY_PHOTOS",
+      "amount_cents": 5000,
+      "detail": "no delivery photos on file",
+      "notice_date": "2026-09-10",
+      "dispute_deadline": "2026-09-17",
+      "status": "assessed",
+      "dispute_note": "",
+      "evidence": [
+        "documents.csv (no DELIVERY_PHOTOS row)",
+        "fines_schedule.csv:row3"
+      ],
+      "fine_id": "FINE-88CDE6399C",
+      "deducted_cents": 5000
+    },
+    {
+      "load_id": "LD261012",
+      "carrier": "Caliche Carriers LLC",
+      "code": "MISSING_DELIVERY_PHOTOS",
+      "amount_cents": 5000,
+      "detail": "no delivery photos on file",
+      "notice_date": "2026-09-11",
+      "dispute_deadline": "2026-09-18",
+      "status": "assessed",
+      "dispute_note": "",
+      "evidence": [
+        "documents.csv (no DELIVERY_PHOTOS row)",
+        "fines_schedule.csv:row3"
+      ],
+      "fine_id": "FINE-63F3CD14F4",
+      "deducted_cents": 5000
+    },
+    {
+      "load_id": "LD261033",
+      "carrier": "Caliche Carriers LLC",
+      "code": "LATE_POD",
+      "amount_cents": 10000,
+      "detail": "POD received 2026-09-14 14:55, 90h after final departure (limit 48h)",
+      "notice_date": "2026-09-12",
+      "dispute_deadline": "2026-09-19",
+      "status": "assessed",
+      "dispute_note": "",
+      "evidence": [
+        "documents.csv:row50",
+        "tracking_stops.csv:row27",
+        "fines_schedule.csv:row4"
+      ],
+      "fine_id": "FINE-A845E24029",
+      "deducted_cents": 10000
+    },
+    {
+      "load_id": "LD261033",
+      "carrier": "Caliche Carriers LLC",
+      "code": "MISSING_PICKUP_PHOTOS",
+      "amount_cents": 5000,
+      "detail": "no pickup photos on file",
+      "notice_date": "2026-09-12",
+      "dispute_deadline": "2026-09-19",
+      "status": "assessed",
+      "dispute_note": "",
+      "evidence": [
+        "documents.csv (no PICKUP_PHOTOS row)",
+        "fines_schedule.csv:row2"
+      ],
+      "fine_id": "FINE-7FA9196FCE",
+      "deducted_cents": 5000
+    },
+    {
+      "load_id": "LD261033",
+      "carrier": "Caliche Carriers LLC",
+      "code": "TRACKING_GAP",
+      "amount_cents": 15000,
+      "detail": "stop 1 Alamo Paper Converting: tracking shows arrival but no departure (tracking not maintained)",
+      "notice_date": "2026-09-12",
+      "dispute_deadline": "2026-09-19",
+      "status": "assessed",
+      "dispute_note": "",
+      "evidence": [
+        "tracking_stops.csv:row26",
+        "fines_schedule.csv:row5"
+      ],
+      "fine_id": "FINE-2CBB819875",
+      "deducted_cents": 15000
+    },
+    {
+      "load_id": "LD261054",
+      "carrier": "Caliche Carriers LLC",
+      "code": "MISSING_PICKUP_PHOTOS",
+      "amount_cents": 5000,
+      "detail": "no pickup photos on file",
+      "notice_date": "2026-09-15",
+      "dispute_deadline": "2026-09-22",
+      "status": "dispute_late",
+      "dispute_note": "disputed 2026-09-24 after window closed 2026-09-22: receiver delayed check-in",
+      "evidence": [
+        "documents.csv (no PICKUP_PHOTOS row)",
+        "fines_schedule.csv:row2",
+        "disputes.csv:row7"
+      ],
+      "fine_id": "FINE-85DF3C2828",
+      "deducted_cents": 5000
+    }
+  ],
+  "settlements": [
+    {
+      "invoice_no": "BLU-7100",
+      "load_id": "LD260900",
+      "carrier": "Blue Mesa Transport (asset)",
+      "invoiced_cents": 249922,
+      "approved_cents": 249922,
+      "fines_cents": 0,
+      "net_cents": 249922,
+      "status": "READY",
+      "hold_reasons": [],
+      "notes": [],
+      "evidence": [
+        "carrier_invoices.csv:row2",
+        "RC-48000.txt"
+      ]
+    },
+    {
+      "invoice_no": "CAL-7101",
+      "load_id": "LD260907",
+      "carrier": "Caliche Carriers LLC",
+      "invoiced_cents": 222125,
+      "approved_cents": 207125,
+      "fines_cents": 5000,
+      "net_cents": 202125,
+      "status": "READY",
+      "hold_reasons": [],
+      "notes": [
+        "short-pay vs invoice: see invoice flags"
+      ],
+      "evidence": [
+        "carrier_invoices.csv:row6",
+        "RC-48001.txt"
+      ]
+    },
+    {
+      "invoice_no": "PEC-7102",
+      "load_id": "LD260914",
+      "carrier": "Pecos Freightways Inc",
+      "invoiced_cents": 232206,
+      "approved_cents": 232206,
+      "fines_cents": 5000,
+      "net_cents": 227206,
+      "status": "READY",
+      "hold_reasons": [],
+      "notes": [],
+      "evidence": [
+        "carrier_invoices.csv:row10",
+        "RC-48002.txt"
+      ]
+    },
+    {
+      "invoice_no": "BLU-7103",
+      "load_id": "LD260921",
+      "carrier": "Blue Mesa Transport (asset)",
+      "invoiced_cents": 300570,
+      "approved_cents": 300570,
+      "fines_cents": 0,
+      "net_cents": 300570,
+      "status": "READY",
+      "hold_reasons": [],
+      "notes": [],
+      "evidence": [
+        "carrier_invoices.csv:row13",
+        "RC-48003.txt"
+      ]
+    },
+    {
+      "invoice_no": "CAL-7104",
+      "load_id": "LD260928",
+      "carrier": "Caliche Carriers LLC",
+      "invoiced_cents": 349277,
+      "approved_cents": 345002,
+      "fines_cents": 0,
+      "net_cents": 345002,
+      "status": "READY",
+      "hold_reasons": [],
+      "notes": [
+        "LATE_POD FINE-D6198BB6B7 disputed in window: not deducted",
+        "short-pay vs invoice: see invoice flags"
+      ],
+      "evidence": [
+        "carrier_invoices.csv:row17",
+        "RC-48004.txt"
+      ]
+    },
+    {
+      "invoice_no": "PEC-7105",
+      "load_id": "LD260935",
+      "carrier": "Pecos Freightways Inc",
+      "invoiced_cents": 188499,
+      "approved_cents": 188499,
+      "fines_cents": 5000,
+      "net_cents": 183499,
+      "status": "READY",
+      "hold_reasons": [],
+      "notes": [],
+      "evidence": [
+        "carrier_invoices.csv:row20",
+        "RC-48005.txt"
+      ]
+    },
+    {
+      "invoice_no": "BLU-7106",
+      "load_id": "LD260942",
+      "carrier": "Blue Mesa Transport (asset)",
+      "invoiced_cents": 296652,
+      "approved_cents": 296652,
+      "fines_cents": 0,
+      "net_cents": 296652,
+      "status": "READY",
+      "hold_reasons": [],
+      "notes": [],
+      "evidence": [
+        "carrier_invoices.csv:row23",
+        "RC-48006.txt"
+      ]
+    },
+    {
+      "invoice_no": "CAL-7107",
+      "load_id": "LD260949",
+      "carrier": "Caliche Carriers LLC",
+      "invoiced_cents": 325538,
+      "approved_cents": 313038,
+      "fines_cents": 5000,
+      "net_cents": 308038,
+      "status": "READY",
+      "hold_reasons": [],
+      "notes": [
+        "short-pay vs invoice: see invoice flags"
+      ],
+      "evidence": [
+        "carrier_invoices.csv:row25",
+        "RC-48007.txt"
+      ]
+    },
+    {
+      "invoice_no": "PEC-7108",
+      "load_id": "LD260956",
+      "carrier": "Pecos Freightways Inc",
+      "invoiced_cents": 184792,
+      "approved_cents": 184792,
+      "fines_cents": 15000,
+      "net_cents": 169792,
+      "status": "READY",
+      "hold_reasons": [],
+      "notes": [
+        "LATE_DELIVERY FINE-BBA9C7E764 disputed in window: not deducted"
+      ],
+      "evidence": [
+        "carrier_invoices.csv:row29",
+        "RC-48008.txt"
+      ]
+    },
+    {
+      "invoice_no": "BLU-7109",
+      "load_id": "LD260963",
+      "carrier": "Blue Mesa Transport (asset)",
+      "invoiced_cents": 215704,
+      "approved_cents": 215704,
+      "fines_cents": 0,
+      "net_cents": 215704,
+      "status": "READY",
+      "hold_reasons": [],
+      "notes": [],
+      "evidence": [
+        "carrier_invoices.csv:row33",
+        "RC-48009.txt"
+      ]
+    },
+    {
+      "invoice_no": "CAL-7110",
+      "load_id": "LD260970",
+      "carrier": "Caliche Carriers LLC",
+      "invoiced_cents": 384500,
+      "approved_cents": 359500,
+      "fines_cents": 15000,
+      "net_cents": 344500,
+      "status": "READY",
+      "hold_reasons": [],
+      "notes": [
+        "MISSING_DELIVERY_PHOTOS FINE-BB11CD693E disputed in window: not deducted",
+        "short-pay vs invoice: see invoice flags"
+      ],
+      "evidence": [
+        "carrier_invoices.csv:row35",
+        "RC-48010.txt"
+      ]
+    },
+    {
+      "invoice_no": "PEC-7111",
+      "load_id": "LD260977",
+      "carrier": "Pecos Freightways Inc",
+      "invoiced_cents": 368000,
+      "approved_cents": 368000,
+      "fines_cents": 0,
+      "net_cents": 368000,
+      "status": "READY",
+      "hold_reasons": [],
+      "notes": [
+        "LATE_POD FINE-3F89497CF6 disputed in window: not deducted"
+      ],
+      "evidence": [
+        "carrier_invoices.csv:row38",
+        "RC-48011.txt"
+      ]
+    },
+    {
+      "invoice_no": "BLU-7112",
+      "load_id": "LD260984",
+      "carrier": "Blue Mesa Transport (asset)",
+      "invoiced_cents": 196840,
+      "approved_cents": 196840,
+      "fines_cents": 0,
+      "net_cents": 196840,
+      "status": "READY",
+      "hold_reasons": [],
+      "notes": [],
+      "evidence": [
+        "carrier_invoices.csv:row41",
+        "RC-48012.txt"
+      ]
+    },
+    {
+      "invoice_no": "CAL-7113",
+      "load_id": "LD260991",
+      "carrier": "Caliche Carriers LLC",
+      "invoiced_cents": 212375,
+      "approved_cents": 204375,
+      "fines_cents": 0,
+      "net_cents": 204375,
+      "status": "READY",
+      "hold_reasons": [],
+      "notes": [
+        "short-pay vs invoice: see invoice flags"
+      ],
+      "evidence": [
+        "carrier_invoices.csv:row44",
+        "RC-48013.txt"
+      ]
+    },
+    {
+      "invoice_no": "PEC-7114",
+      "load_id": "LD260998",
+      "carrier": "Pecos Freightways Inc",
+      "invoiced_cents": 376892,
+      "approved_cents": 376892,
+      "fines_cents": 15000,
+      "net_cents": 361892,
+      "status": "READY",
+      "hold_reasons": [],
+      "notes": [],
+      "evidence": [
+        "carrier_invoices.csv:row48",
+        "RC-48014.txt"
+      ]
+    },
+    {
+      "invoice_no": "BLU-7115",
+      "load_id": "LD261005",
+      "carrier": "Blue Mesa Transport (asset)",
+      "invoiced_cents": 388746,
+      "approved_cents": 388746,
+      "fines_cents": 0,
+      "net_cents": 388746,
+      "status": "READY",
+      "hold_reasons": [],
+      "notes": [],
+      "evidence": [
+        "carrier_invoices.csv:row50",
+        "RC-48015.txt"
+      ]
+    },
+    {
+      "invoice_no": "CAL-7116",
+      "load_id": "LD261012",
+      "carrier": "Caliche Carriers LLC",
+      "invoiced_cents": 178364,
+      "approved_cents": 178364,
+      "fines_cents": 5000,
+      "net_cents": 173364,
+      "status": "READY",
+      "hold_reasons": [],
+      "notes": [
+        "header total differs from line sum; settled on lines"
+      ],
+      "evidence": [
+        "carrier_invoices.csv:row53",
+        "RC-48016.txt"
+      ]
+    },
+    {
+      "invoice_no": "PEC-7117",
+      "load_id": "LD261019",
+      "carrier": "Pecos Freightways Inc",
+      "invoiced_cents": 361416,
+      "approved_cents": 361416,
+      "fines_cents": 0,
+      "net_cents": 361416,
+      "status": "READY",
+      "hold_reasons": [],
+      "notes": [],
+      "evidence": [
+        "carrier_invoices.csv:row55",
+        "RC-48017.txt"
+      ]
+    },
+    {
+      "invoice_no": "BLU-7118",
+      "load_id": "LD261026",
+      "carrier": "Blue Mesa Transport (asset)",
+      "invoiced_cents": 188875,
+      "approved_cents": 188875,
+      "fines_cents": 0,
+      "net_cents": 188875,
+      "status": "READY",
+      "hold_reasons": [],
+      "notes": [],
+      "evidence": [
+        "carrier_invoices.csv:row59",
+        "RC-48018.txt"
+      ]
+    },
+    {
+      "invoice_no": "CAL-7119",
+      "load_id": "LD261026",
+      "carrier": "Caliche Carriers LLC",
+      "invoiced_cents": 136159,
+      "approved_cents": 0,
+      "fines_cents": 0,
+      "net_cents": 0,
+      "status": "HOLD",
+      "hold_reasons": [
+        "DUPLICATE_INVOICE"
+      ],
+      "notes": [],
+      "evidence": [
+        "carrier_invoices.csv:row64",
+        "RC-48018.txt"
+      ]
+    },
+    {
+      "invoice_no": "CAL-7119",
+      "load_id": "LD261033",
+      "carrier": "Caliche Carriers LLC",
+      "invoiced_cents": 136159,
+      "approved_cents": 0,
+      "fines_cents": 0,
+      "net_cents": 0,
+      "status": "HOLD",
+      "hold_reasons": [
+        "DUPLICATE_INVOICE",
+        "DETENTION_PENDING_REVIEW"
+      ],
+      "notes": [],
+      "evidence": [
+        "carrier_invoices.csv:row61",
+        "RC-48019.txt"
+      ]
+    },
+    {
+      "invoice_no": "PEC-7120",
+      "load_id": "LD261040",
+      "carrier": "Pecos Freightways Inc",
+      "invoiced_cents": 368500,
+      "approved_cents": 368500,
+      "fines_cents": 0,
+      "net_cents": 368500,
+      "status": "READY",
+      "hold_reasons": [],
+      "notes": [],
+      "evidence": [
+        "carrier_invoices.csv:row67",
+        "RC-48020.txt"
+      ]
+    },
+    {
+      "invoice_no": "BLU-7121",
+      "load_id": "LD261047",
+      "carrier": "Blue Mesa Transport (asset)",
+      "invoiced_cents": 227658,
+      "approved_cents": 227658,
+      "fines_cents": 0,
+      "net_cents": 227658,
+      "status": "READY",
+      "hold_reasons": [],
+      "notes": [],
+      "evidence": [
+        "carrier_invoices.csv:row69",
+        "RC-48021.txt"
+      ]
+    },
+    {
+      "invoice_no": "CAL-7122",
+      "load_id": "LD261054",
+      "carrier": "Caliche Carriers LLC",
+      "invoiced_cents": 265300,
+      "approved_cents": 265300,
+      "fines_cents": 5000,
+      "net_cents": 260300,
+      "status": "HOLD",
+      "hold_reasons": [
+        "MISSING_POD"
+      ],
+      "notes": [],
+      "evidence": [
+        "carrier_invoices.csv:row72",
+        "RC-48022.txt"
+      ]
+    },
+    {
+      "invoice_no": "PEC-7123",
+      "load_id": "LD261061",
+      "carrier": "Pecos Freightways Inc",
+      "invoiced_cents": 378625,
+      "approved_cents": 378625,
+      "fines_cents": 0,
+      "net_cents": 378625,
+      "status": "READY",
+      "hold_reasons": [],
+      "notes": [],
+      "evidence": [
+        "carrier_invoices.csv:row75",
+        "RC-48023.txt"
+      ]
+    }
+  ],
+  "detention_total_cents": 225125,
+  "detention_total": "$2,251.25",
+  "stops": [
+    {
+      "load_id": "LD260900",
+      "stop_index": 1,
+      "kind": "pickup",
+      "facility": "Permian Pipe & Valve",
+      "appointment": "2026-09-01T06:00:00",
+      "arrival": "2026-09-01T05:53:00",
+      "departure": "2026-09-01T06:46:00",
+      "arrival_src": "telematics_extra.json#data[0]",
+      "departure_src": "telematics_extra.json#data[1]",
+      "dwell_minutes": 53,
+      "clock_start": "2026-09-01T06:00:00",
+      "free_minutes": 120,
+      "over_free_minutes": 0,
+      "billable_minutes": 0,
+      "amount_cents": 0,
+      "capped": false,
+      "status": "ok",
+      "notes": [
+        "arrived 7 min early; free-time clock starts at appointment"
+      ],
+      "claim_id": "DET-91029840C9"
+    },
+    {
+      "load_id": "LD260900",
+      "stop_index": 2,
+      "kind": "delivery",
+      "facility": "Rio Grande Produce Co",
+      "appointment": "2026-09-01T14:00:00",
+      "arrival": "2026-09-01T13:51:00",
+      "departure": "2026-09-01T19:05:00",
+      "arrival_src": "telematics.csv:row4",
+      "departure_src": "telematics.csv:row5",
+      "dwell_minutes": 314,
+      "clock_start": "2026-09-01T14:00:00",
+      "free_minutes": 120,
+      "over_free_minutes": 185,
+      "billable_minutes": 180,
+      "amount_cents": 22500,
+      "capped": false,
+      "status": "detention",
+      "notes": [
+        "arrived 9 min early; free-time clock starts at appointment"
+      ],
+      "claim_id": "DET-FDC41B9FE7"
+    },
+    {
+      "load_id": "LD260907",
+      "stop_index": 1,
+      "kind": "pickup",
+      "facility": "Permian Pipe & Valve",
+      "appointment": "2026-09-01T07:00:00",
+      "arrival": "2026-09-01T07:06:00",
+      "departure": "2026-09-01T08:14:00",
+      "arrival_src": "tracking_stops.csv:row2",
+      "departure_src": "tracking_stops.csv:row2",
+      "dwell_minutes": 68,
+      "clock_start": "2026-09-01T07:06:00",
+      "free_minutes": 120,
+      "over_free_minutes": 0,
+      "billable_minutes": 0,
+      "amount_cents": 0,
+      "capped": false,
+      "status": "ok",
+      "notes": [],
+      "claim_id": "DET-5CB9C8C54A"
+    },
+    {
+      "load_id": "LD260907",
+      "stop_index": 2,
+      "kind": "delivery",
+      "facility": "Lone Star Foods DC",
+      "appointment": "2026-09-01T15:00:00",
+      "arrival": "2026-09-01T14:56:00",
+      "departure": "2026-09-01T19:21:00",
+      "arrival_src": "tracking_stops.csv:row3",
+      "departure_src": "tracking_stops.csv:row3",
+      "dwell_minutes": 265,
+      "clock_start": "2026-09-01T15:00:00",
+      "free_minutes": 120,
+      "over_free_minutes": 141,
+      "billable_minutes": 135,
+      "amount_cents": 16875,
+      "capped": false,
+      "status": "detention",
+      "notes": [
+        "arrived 4 min early; free-time clock starts at appointment"
+      ],
+      "claim_id": "DET-129C1A149C"
+    },
+    {
+      "load_id": "LD260914",
+      "stop_index": 1,
+      "kind": "pickup",
+      "facility": "Gulf Coast Cold Storage",
+      "appointment": "2026-09-02T14:00:00",
+      "arrival": "2026-09-02T13:57:00",
+      "departure": "2026-09-02T17:07:00",
+      "arrival_src": "tracking_stops.csv:row4",
+      "departure_src": "tracking_stops.csv:row4",
+      "dwell_minutes": 190,
+      "clock_start": "2026-09-02T14:00:00",
+      "free_minutes": 120,
+      "over_free_minutes": 67,
+      "billable_minutes": 60,
+      "amount_cents": 6000,
+      "capped": false,
+      "status": "detention",
+      "notes": [
+        "arrived 3 min early; free-time clock starts at appointment"
+      ],
+      "claim_id": "DET-B34A842BB1"
+    },
+    {
+      "load_id": "LD260914",
+      "stop_index": 2,
+      "kind": "delivery",
+      "facility": "Metroplex Retail DC",
+      "appointment": "2026-09-03T10:00:00",
+      "arrival": "2026-09-03T10:00:00",
+      "departure": "2026-09-03T11:46:00",
+      "arrival_src": "tracking_stops.csv:row5",
+      "departure_src": "tracking_stops.csv:row5",
+      "dwell_minutes": 106,
+      "clock_start": "2026-09-03T10:00:00",
+      "free_minutes": 120,
+      "over_free_minutes": 0,
+      "billable_minutes": 0,
+      "amount_cents": 0,
+      "capped": false,
+      "status": "ok",
+      "notes": [],
+      "claim_id": "DET-57073A48B2"
+    },
+    {
+      "load_id": "LD260921",
+      "stop_index": 1,
+      "kind": "pickup",
+      "facility": "Permian Pipe & Valve",
+      "appointment": "2026-09-02T08:00:00",
+      "arrival": "2026-09-02T08:09:00",
+      "departure": "2026-09-02T13:06:00",
+      "arrival_src": "telematics.csv:row6",
+      "departure_src": "telematics.csv:row7",
+      "dwell_minutes": 297,
+      "clock_start": "2026-09-02T08:09:00",
+      "free_minutes": 120,
+      "over_free_minutes": 177,
+      "billable_minutes": 165,
+      "amount_cents": 16500,
+      "capped": false,
+      "status": "detention",
+      "notes": [],
+      "claim_id": "DET-6AA0C0374F"
+    },
+    {
+      "load_id": "LD260921",
+      "stop_index": 2,
+      "kind": "delivery",
+      "facility": "Alamo Paper Converting",
+      "appointment": "2026-09-02T18:00:00",
+      "arrival": "2026-09-02T17:52:00",
+      "departure": "2026-09-02T19:09:00",
+      "arrival_src": "telematics_extra.json#data[2]",
+      "departure_src": "telematics_extra.json#data[3]",
+      "dwell_minutes": 77,
+      "clock_start": "2026-09-02T18:00:00",
+      "free_minutes": 120,
+      "over_free_minutes": 0,
+      "billable_minutes": 0,
+      "amount_cents": 0,
+      "capped": false,
+      "status": "ok",
+      "notes": [
+        "arrived 8 min early; free-time clock starts at appointment"
+      ],
+      "claim_id": "DET-BB658819D5"
+    },
+    {
+      "load_id": "LD260928",
+      "stop_index": 1,
+      "kind": "pickup",
+      "facility": "Brazos Building Supply",
+      "appointment": "2026-09-03T12:00:00",
+      "arrival": "2026-09-03T11:43:00",
+      "departure": "2026-09-03T13:31:00",
+      "arrival_src": "tracking_stops.csv:row6",
+      "departure_src": "tracking_stops.csv:row6",
+      "dwell_minutes": 108,
+      "clock_start": "2026-09-03T12:00:00",
+      "free_minutes": 180,
+      "over_free_minutes": 0,
+      "billable_minutes": 0,
+      "amount_cents": 0,
+      "capped": false,
+      "status": "ok",
+      "notes": [
+        "arrived 17 min early; free-time clock starts at appointment"
+      ],
+      "claim_id": "DET-9DB6B28F3C"
+    },
+    {
+      "load_id": "LD260928",
+      "stop_index": 2,
+      "kind": "delivery",
+      "facility": "Rio Grande Produce Co",
+      "appointment": "2026-09-04T08:00:00",
+      "arrival": "2026-09-04T07:54:00",
+      "departure": "2026-09-04T11:47:00",
+      "arrival_src": "tracking_stops.csv:row7",
+      "departure_src": "tracking_stops.csv:row7",
+      "dwell_minutes": 233,
+      "clock_start": "2026-09-04T08:00:00",
+      "free_minutes": 180,
+      "over_free_minutes": 47,
+      "billable_minutes": 45,
+      "amount_cents": 4500,
+      "capped": false,
+      "status": "detention",
+      "notes": [
+        "arrived 6 min early; free-time clock starts at appointment"
+      ],
+      "claim_id": "DET-70E434F598"
+    },
+    {
+      "load_id": "LD260935",
+      "stop_index": 1,
+      "kind": "pickup",
+      "facility": "Brazos Building Supply",
+      "appointment": "2026-09-03T09:00:00",
+      "arrival": "2026-09-03T08:47:00",
+      "departure": "2026-09-03T10:01:00",
+      "arrival_src": "tracking_stops.csv:row8",
+      "departure_src": "tracking_stops.csv:row8",
+      "dwell_minutes": 74,
+      "clock_start": "2026-09-03T09:00:00",
+      "free_minutes": 120,
+      "over_free_minutes": 0,
+      "billable_minutes": 0,
+      "amount_cents": 0,
+      "capped": false,
+      "status": "ok",
+      "notes": [
+        "arrived 13 min early; free-time clock starts at appointment"
+      ],
+      "claim_id": "DET-DE6B2BE33E"
+    },
+    {
+      "load_id": "LD260935",
+      "stop_index": 2,
+      "kind": "delivery",
+      "facility": "Alamo Paper Converting",
+      "appointment": "2026-09-03T23:00:00",
+      "arrival": "2026-09-03T20:53:00",
+      "departure": "2026-09-04T02:20:00",
+      "arrival_src": "tracking_stops.csv:row9",
+      "departure_src": "tracking_stops.csv:row9",
+      "dwell_minutes": 327,
+      "clock_start": "2026-09-03T23:00:00",
+      "free_minutes": 120,
+      "over_free_minutes": 80,
+      "billable_minutes": 75,
+      "amount_cents": 9375,
+      "capped": false,
+      "status": "detention",
+      "notes": [
+        "arrived 127 min early; free-time clock starts at appointment"
+      ],
+      "claim_id": "DET-6747007A8F"
+    },
+    {
+      "load_id": "LD260942",
+      "stop_index": 1,
+      "kind": "pickup",
+      "facility": "Rio Grande Produce Co",
+      "appointment": "2026-09-04T14:00:00",
+      "arrival": "2026-09-04T14:02:00",
+      "departure": "2026-09-04T15:05:00",
+      "arrival_src": "telematics_extra.json#data[4]",
+      "departure_src": "telematics_extra.json#data[5]",
+      "dwell_minutes": 63,
+      "clock_start": "2026-09-04T14:02:00",
+      "free_minutes": 180,
+      "over_free_minutes": 0,
+      "billable_minutes": 0,
+      "amount_cents": 0,
+      "capped": false,
+      "status": "ok",
+      "notes": [],
+      "claim_id": "DET-D1F00D4F16"
+    },
+    {
+      "load_id": "LD260942",
+      "stop_index": 2,
+      "kind": "delivery",
+      "facility": "Alamo Paper Converting",
+      "appointment": "2026-09-04T22:00:00",
+      "arrival": "2026-09-04T22:04:00",
+      "departure": null,
+      "arrival_src": "telematics.csv:row12",
+      "departure_src": "",
+      "dwell_minutes": null,
+      "clock_start": null,
+      "free_minutes": 180,
+      "over_free_minutes": 0,
+      "billable_minutes": 0,
+      "amount_cents": 0,
+      "capped": false,
+      "status": "exception",
+      "notes": [
+        "geofence entry has no matching exit (export gap or still on site)"
+      ],
+      "claim_id": "DET-06BE71B556"
+    },
+    {
+      "load_id": "LD260949",
+      "stop_index": 1,
+      "kind": "pickup",
+      "facility": "Lone Star Foods DC",
+      "appointment": "2026-09-04T07:00:00",
+      "arrival": "2026-09-04T07:20:00",
+      "departure": "2026-09-04T11:38:00",
+      "arrival_src": "tracking_stops.csv:row10",
+      "departure_src": "tracking_stops.csv:row10",
+      "dwell_minutes": 258,
+      "clock_start": "2026-09-04T07:20:00",
+      "free_minutes": 180,
+      "over_free_minutes": 78,
+      "billable_minutes": 75,
+      "amount_cents": 7500,
+      "capped": false,
+      "status": "detention",
+      "notes": [],
+      "claim_id": "DET-66F6B49517"
+    },
+    {
+      "load_id": "LD260949",
+      "stop_index": 2,
+      "kind": "delivery",
+      "facility": "Brazos Building Supply",
+      "appointment": "2026-09-04T15:00:00",
+      "arrival": "2026-09-04T14:53:00",
+      "departure": "2026-09-04T16:47:00",
+      "arrival_src": "tracking_stops.csv:row11",
+      "departure_src": "tracking_stops.csv:row11",
+      "dwell_minutes": 114,
+      "clock_start": "2026-09-04T15:00:00",
+      "free_minutes": 180,
+      "over_free_minutes": 0,
+      "billable_minutes": 0,
+      "amount_cents": 0,
+      "capped": false,
+      "status": "ok",
+      "notes": [
+        "arrived 7 min early; free-time clock starts at appointment"
+      ],
+      "claim_id": "DET-955D5A7E10"
+    },
+    {
+      "load_id": "LD260956",
+      "stop_index": 1,
+      "kind": "pickup",
+      "facility": "Hill Country Beverage",
+      "appointment": "2026-09-05T14:00:00",
+      "arrival": "2026-09-05T14:06:00",
+      "departure": "2026-09-06T02:04:00",
+      "arrival_src": "tracking_stops.csv:row12",
+      "departure_src": "tracking_stops.csv:row12",
+      "dwell_minutes": 718,
+      "clock_start": "2026-09-05T14:06:00",
+      "free_minutes": 120,
+      "over_free_minutes": 598,
+      "billable_minutes": 585,
+      "amount_cents": 50000,
+      "capped": true,
+      "status": "detention",
+      "notes": [
+        "capped at rate-con per-stop maximum"
+      ],
+      "claim_id": "DET-08C3E0D1BD"
+    },
+    {
+      "load_id": "LD260956",
+      "stop_index": 2,
+      "kind": "delivery",
+      "facility": "Lone Star Foods DC",
+      "appointment": "2026-09-06T04:00:00",
+      "arrival": "2026-09-06T05:53:00",
+      "departure": "2026-09-06T08:46:00",
+      "arrival_src": "tracking_stops.csv:row13",
+      "departure_src": "tracking_stops.csv:row13",
+      "dwell_minutes": 173,
+      "clock_start": null,
+      "free_minutes": 120,
+      "over_free_minutes": 0,
+      "billable_minutes": 0,
+      "amount_cents": 0,
+      "capped": false,
+      "status": "late_arrival",
+      "notes": [
+        "arrived 113 min after appointment (grace 30 min): detention forfeited"
+      ],
+      "claim_id": "DET-7F06A1C586"
+    },
+    {
+      "load_id": "LD260963",
+      "stop_index": 1,
+      "kind": "pickup",
+      "facility": "Rio Grande Produce Co",
+      "appointment": "2026-09-05T07:00:00",
+      "arrival": "2026-09-05T07:01:00",
+      "departure": "2026-09-05T08:47:00",
+      "arrival_src": "telematics_extra.json#data[6]",
+      "departure_src": "telematics_extra.json#data[7]",
+      "dwell_minutes": 106,
+      "clock_start": "2026-09-05T07:01:00",
+      "free_minutes": 120,
+      "over_free_minutes": 0,
+      "billable_minutes": 0,
+      "amount_cents": 0,
+      "capped": false,
+      "status": "ok",
+      "notes": [],
+      "claim_id": "DET-35668718E8"
+    },
+    {
+      "load_id": "LD260963",
+      "stop_index": 2,
+      "kind": "delivery",
+      "facility": "Permian Pipe & Valve",
+      "appointment": "2026-09-05T21:00:00",
+      "arrival": "2026-09-05T20:48:00",
+      "departure": "2026-09-05T22:33:00",
+      "arrival_src": "telematics.csv:row15",
+      "departure_src": "telematics.csv:row16",
+      "dwell_minutes": 105,
+      "clock_start": "2026-09-05T21:00:00",
+      "free_minutes": 120,
+      "over_free_minutes": 0,
+      "billable_minutes": 0,
+      "amount_cents": 0,
+      "capped": false,
+      "status": "ok",
+      "notes": [
+        "arrived 12 min early; free-time clock starts at appointment"
+      ],
+      "claim_id": "DET-70210016CB"
+    },
+    {
+      "load_id": "LD260970",
+      "stop_index": 1,
+      "kind": "pickup",
+      "facility": "Rio Grande Produce Co",
+      "appointment": "2026-09-06T06:00:00",
+      "arrival": "2026-09-06T06:09:00",
+      "departure": null,
+      "arrival_src": "tracking_stops.csv:row14",
+      "departure_src": "",
+      "dwell_minutes": null,
+      "clock_start": null,
+      "free_minutes": 120,
+      "over_free_minutes": 0,
+      "billable_minutes": 0,
+      "amount_cents": 0,
+      "capped": false,
+      "status": "exception",
+      "notes": [
+        "geofence entry has no matching exit (export gap or still on site)"
+      ],
+      "claim_id": "DET-EB315FE997"
+    },
+    {
+      "load_id": "LD260970",
+      "stop_index": 2,
+      "kind": "delivery",
+      "facility": "Hill Country Beverage",
+      "appointment": "2026-09-06T16:00:00",
+      "arrival": "2026-09-06T16:01:00",
+      "departure": "2026-09-06T17:52:00",
+      "arrival_src": "tracking_stops.csv:row15",
+      "departure_src": "tracking_stops.csv:row15",
+      "dwell_minutes": 111,
+      "clock_start": "2026-09-06T16:01:00",
+      "free_minutes": 120,
+      "over_free_minutes": 0,
+      "billable_minutes": 0,
+      "amount_cents": 0,
+      "capped": false,
+      "status": "ok",
+      "notes": [],
+      "claim_id": "DET-BA3029B6BD"
+    },
+    {
+      "load_id": "LD260977",
+      "stop_index": 1,
+      "kind": "pickup",
+      "facility": "Gulf Coast Cold Storage",
+      "appointment": "2026-09-06T07:00:00",
+      "arrival": "2026-09-06T07:00:00",
+      "departure": "2026-09-06T19:01:00",
+      "arrival_src": "tracking_stops.csv:row16",
+      "departure_src": "tracking_stops.csv:row16",
+      "dwell_minutes": 721,
+      "clock_start": "2026-09-06T07:00:00",
+      "free_minutes": 120,
+      "over_free_minutes": 601,
+      "billable_minutes": 600,
+      "amount_cents": 50000,
+      "capped": true,
+      "status": "detention",
+      "notes": [
+        "capped at rate-con per-stop maximum"
+      ],
+      "claim_id": "DET-56AFFF0156"
+    },
+    {
+      "load_id": "LD260977",
+      "stop_index": 2,
+      "kind": "delivery",
+      "facility": "Metroplex Retail DC",
+      "appointment": "2026-09-07T03:00:00",
+      "arrival": "2026-09-07T02:58:00",
+      "departure": "2026-09-07T04:42:00",
+      "arrival_src": "tracking_stops.csv:row17",
+      "departure_src": "tracking_stops.csv:row17",
+      "dwell_minutes": 104,
+      "clock_start": "2026-09-07T03:00:00",
+      "free_minutes": 120,
+      "over_free_minutes": 0,
+      "billable_minutes": 0,
+      "amount_cents": 0,
+      "capped": false,
+      "status": "ok",
+      "notes": [
+        "arrived 2 min early; free-time clock starts at appointment"
+      ],
+      "claim_id": "DET-C6B795CE87"
+    },
+    {
+      "load_id": "LD260984",
+      "stop_index": 1,
+      "kind": "pickup",
+      "facility": "Rio Grande Produce Co",
+      "appointment": "2026-09-07T12:00:00",
+      "arrival": "2026-09-07T11:56:00",
+      "departure": null,
+      "arrival_src": "telematics.csv:row17",
+      "departure_src": "",
+      "dwell_minutes": null,
+      "clock_start": null,
+      "free_minutes": 120,
+      "over_free_minutes": 0,
+      "billable_minutes": 0,
+      "amount_cents": 0,
+      "capped": false,
+      "status": "exception",
+      "notes": [
+        "geofence entry has no matching exit (export gap or still on site)"
+      ],
+      "claim_id": "DET-0F8BA91CBB"
+    },
+    {
+      "load_id": "LD260984",
+      "stop_index": 2,
+      "kind": "delivery",
+      "facility": "Alamo Paper Converting",
+      "appointment": "2026-09-07T22:00:00",
+      "arrival": "2026-09-07T21:46:00",
+      "departure": "2026-09-07T23:08:00",
+      "arrival_src": "telematics.csv:row18",
+      "departure_src": "telematics.csv:row19",
+      "dwell_minutes": 82,
+      "clock_start": "2026-09-07T22:00:00",
+      "free_minutes": 120,
+      "over_free_minutes": 0,
+      "billable_minutes": 0,
+      "amount_cents": 0,
+      "capped": false,
+      "status": "ok",
+      "notes": [
+        "arrived 14 min early; free-time clock starts at appointment"
+      ],
+      "claim_id": "DET-6970DA1659"
+    },
+    {
+      "load_id": "LD260991",
+      "stop_index": 1,
+      "kind": "pickup",
+      "facility": "Permian Pipe & Valve",
+      "appointment": "2026-09-07T07:00:00",
+      "arrival": "2026-09-07T06:56:00",
+      "departure": "2026-09-07T07:43:00",
+      "arrival_src": "tracking_stops.csv:row18",
+      "departure_src": "tracking_stops.csv:row18",
+      "dwell_minutes": 47,
+      "clock_start": "2026-09-07T07:00:00",
+      "free_minutes": 120,
+      "over_free_minutes": 0,
+      "billable_minutes": 0,
+      "amount_cents": 0,
+      "capped": false,
+      "status": "ok",
+      "notes": [
+        "arrived 4 min early; free-time clock starts at appointment"
+      ],
+      "claim_id": "DET-8220425D82"
+    },
+    {
+      "load_id": "LD260991",
+      "stop_index": 2,
+      "kind": "delivery",
+      "facility": "Metroplex Retail DC",
+      "appointment": "2026-09-07T15:00:00",
+      "arrival": "2026-09-07T13:47:00",
+      "departure": "2026-09-07T18:08:00",
+      "arrival_src": "tracking_stops.csv:row19",
+      "departure_src": "tracking_stops.csv:row19",
+      "dwell_minutes": 261,
+      "clock_start": "2026-09-07T15:00:00",
+      "free_minutes": 120,
+      "over_free_minutes": 68,
+      "billable_minutes": 60,
+      "amount_cents": 7500,
+      "capped": false,
+      "status": "detention",
+      "notes": [
+        "arrived 73 min early; free-time clock starts at appointment"
+      ],
+      "claim_id": "DET-9737FA7A98"
+    },
+    {
+      "load_id": "LD260998",
+      "stop_index": 1,
+      "kind": "pickup",
+      "facility": "Alamo Paper Converting",
+      "appointment": "2026-09-08T06:00:00",
+      "arrival": "2026-09-08T05:48:00",
+      "departure": "2026-09-08T06:38:00",
+      "arrival_src": "tracking_stops.csv:row20",
+      "departure_src": "tracking_stops.csv:row20",
+      "dwell_minutes": 50,
+      "clock_start": "2026-09-08T06:00:00",
+      "free_minutes": 180,
+      "over_free_minutes": 0,
+      "billable_minutes": 0,
+      "amount_cents": 0,
+      "capped": false,
+      "status": "ok",
+      "notes": [
+        "arrived 12 min early; free-time clock starts at appointment"
+      ],
+      "claim_id": "DET-7C966E291E"
+    },
+    {
+      "load_id": "LD260998",
+      "stop_index": 2,
+      "kind": "delivery",
+      "facility": "Brazos Building Supply",
+      "appointment": "2026-09-08T20:00:00",
+      "arrival": "2026-09-08T19:50:00",
+      "departure": "2026-09-08T21:38:00",
+      "arrival_src": "tracking_stops.csv:row21",
+      "departure_src": "tracking_stops.csv:row21",
+      "dwell_minutes": 108,
+      "clock_start": "2026-09-08T20:00:00",
+      "free_minutes": 180,
+      "over_free_minutes": 0,
+      "billable_minutes": 0,
+      "amount_cents": 0,
+      "capped": false,
+      "status": "ok",
+      "notes": [
+        "arrived 10 min early; free-time clock starts at appointment"
+      ],
+      "claim_id": "DET-6339DA25CE"
+    },
+    {
+      "load_id": "LD261005",
+      "stop_index": 1,
+      "kind": "pickup",
+      "facility": "Gulf Coast Cold Storage",
+      "appointment": "2026-09-08T08:00:00",
+      "arrival": "2026-09-08T09:40:00",
+      "departure": "2026-09-08T14:04:00",
+      "arrival_src": "telematics_extra.json#data[8]",
+      "departure_src": "telematics_extra.json#data[9]",
+      "dwell_minutes": 264,
+      "clock_start": null,
+      "free_minutes": 180,
+      "over_free_minutes": 0,
+      "billable_minutes": 0,
+      "amount_cents": 0,
+      "capped": false,
+      "status": "late_arrival",
+      "notes": [
+        "arrived 100 min after appointment (grace 30 min): detention forfeited"
+      ],
+      "claim_id": "DET-B368F30FA6"
+    },
+    {
+      "load_id": "LD261005",
+      "stop_index": 2,
+      "kind": "delivery",
+      "facility": "Rio Grande Produce Co",
+      "appointment": "2026-09-09T04:00:00",
+      "arrival": "2026-09-09T03:54:00",
+      "departure": "2026-09-09T05:19:00",
+      "arrival_src": "telematics.csv:row22",
+      "departure_src": "telematics.csv:row23",
+      "dwell_minutes": 85,
+      "clock_start": "2026-09-09T04:00:00",
+      "free_minutes": 180,
+      "over_free_minutes": 0,
+      "billable_minutes": 0,
+      "amount_cents": 0,
+      "capped": false,
+      "status": "ok",
+      "notes": [
+        "arrived 6 min early; free-time clock starts at appointment"
+      ],
+      "claim_id": "DET-0DF78BC09C"
+    },
+    {
+      "load_id": "LD261012",
+      "stop_index": 1,
+      "kind": "pickup",
+      "facility": "Brazos Building Supply",
+      "appointment": "2026-09-09T06:00:00",
+      "arrival": "2026-09-09T06:10:00",
+      "departure": "2026-09-09T07:07:00",
+      "arrival_src": "tracking_stops.csv:row22",
+      "departure_src": "tracking_stops.csv:row22",
+      "dwell_minutes": 57,
+      "clock_start": "2026-09-09T06:10:00",
+      "free_minutes": 180,
+      "over_free_minutes": 0,
+      "billable_minutes": 0,
+      "amount_cents": 0,
+      "capped": false,
+      "status": "ok",
+      "notes": [],
+      "claim_id": "DET-2A55C6FF72"
+    },
+    {
+      "load_id": "LD261012",
+      "stop_index": 2,
+      "kind": "delivery",
+      "facility": "Permian Pipe & Valve",
+      "appointment": "2026-09-09T16:00:00",
+      "arrival": "2026-09-09T15:57:00",
+      "departure": "2026-09-09T17:07:00",
+      "arrival_src": "tracking_stops.csv:row23",
+      "departure_src": "tracking_stops.csv:row23",
+      "dwell_minutes": 70,
+      "clock_start": "2026-09-09T16:00:00",
+      "free_minutes": 180,
+      "over_free_minutes": 0,
+      "billable_minutes": 0,
+      "amount_cents": 0,
+      "capped": false,
+      "status": "ok",
+      "notes": [
+        "arrived 3 min early; free-time clock starts at appointment"
+      ],
+      "claim_id": "DET-8B61BD6AD6"
+    },
+    {
+      "load_id": "LD261019",
+      "stop_index": 1,
+      "kind": "pickup",
+      "facility": "Permian Pipe & Valve",
+      "appointment": "2026-09-09T08:00:00",
+      "arrival": "2026-09-09T08:02:00",
+      "departure": "2026-09-09T12:16:00",
+      "arrival_src": "tracking_stops.csv:row24",
+      "departure_src": "tracking_stops.csv:row24",
+      "dwell_minutes": 254,
+      "clock_start": "2026-09-09T08:02:00",
+      "free_minutes": 180,
+      "over_free_minutes": 74,
+      "billable_minutes": 60,
+      "amount_cents": 5000,
+      "capped": false,
+      "status": "detention",
+      "notes": [],
+      "claim_id": "DET-3EB41103E0"
+    },
+    {
+      "load_id": "LD261019",
+      "stop_index": 2,
+      "kind": "delivery",
+      "facility": "Alamo Paper Converting",
+      "appointment": "2026-09-09T22:00:00",
+      "arrival": "2026-09-09T22:10:00",
+      "departure": "2026-09-09T23:03:00",
+      "arrival_src": "tracking_stops.csv:row25",
+      "departure_src": "tracking_stops.csv:row25",
+      "dwell_minutes": 53,
+      "clock_start": "2026-09-09T22:10:00",
+      "free_minutes": 180,
+      "over_free_minutes": 0,
+      "billable_minutes": 0,
+      "amount_cents": 0,
+      "capped": false,
+      "status": "ok",
+      "notes": [],
+      "claim_id": "DET-7F7F6CD3B8"
+    },
+    {
+      "load_id": "LD261026",
+      "stop_index": 1,
+      "kind": "pickup",
+      "facility": "Brazos Building Supply",
+      "appointment": "2026-09-10T06:00:00",
+      "arrival": "2026-09-10T08:18:00",
+      "departure": "2026-09-10T12:11:00",
+      "arrival_src": "telematics_extra.json#data[10]",
+      "departure_src": "telematics_extra.json#data[11]",
+      "dwell_minutes": 233,
+      "clock_start": null,
+      "free_minutes": 120,
+      "over_free_minutes": 0,
+      "billable_minutes": 0,
+      "amount_cents": 0,
+      "capped": false,
+      "status": "late_arrival",
+      "notes": [
+        "arrived 138 min after appointment (grace 60 min): detention forfeited"
+      ],
+      "claim_id": "DET-8E29D71338"
+    },
+    {
+      "load_id": "LD261026",
+      "stop_index": 2,
+      "kind": "delivery",
+      "facility": "Hill Country Beverage",
+      "appointment": "2026-09-10T16:00:00",
+      "arrival": "2026-09-10T16:02:00",
+      "departure": "2026-09-10T17:10:00",
+      "arrival_src": "telematics.csv:row26",
+      "departure_src": "telematics.csv:row27",
+      "dwell_minutes": 68,
+      "clock_start": "2026-09-10T16:02:00",
+      "free_minutes": 120,
+      "over_free_minutes": 0,
+      "billable_minutes": 0,
+      "amount_cents": 0,
+      "capped": false,
+      "status": "ok",
+      "notes": [],
+      "claim_id": "DET-88CD3EA9B3"
+    },
+    {
+      "load_id": "LD261033",
+      "stop_index": 1,
+      "kind": "pickup",
+      "facility": "Alamo Paper Converting",
+      "appointment": "2026-09-10T08:00:00",
+      "arrival": "2026-09-10T08:03:00",
+      "departure": null,
+      "arrival_src": "tracking_stops.csv:row26",
+      "departure_src": "",
+      "dwell_minutes": null,
+      "clock_start": null,
+      "free_minutes": 120,
+      "over_free_minutes": 0,
+      "billable_minutes": 0,
+      "amount_cents": 0,
+      "capped": false,
+      "status": "exception",
+      "notes": [
+        "geofence entry has no matching exit (export gap or still on site)"
+      ],
+      "claim_id": "DET-9607B156ED"
+    },
+    {
+      "load_id": "LD261033",
+      "stop_index": 2,
+      "kind": "delivery",
+      "facility": "Permian Pipe & Valve",
+      "appointment": "2026-09-10T16:00:00",
+      "arrival": "2026-09-10T15:51:00",
+      "departure": "2026-09-10T20:55:00",
+      "arrival_src": "tracking_stops.csv:row27",
+      "departure_src": "tracking_stops.csv:row27",
+      "dwell_minutes": 304,
+      "clock_start": "2026-09-10T16:00:00",
+      "free_minutes": 120,
+      "over_free_minutes": 175,
+      "billable_minutes": 165,
+      "amount_cents": 20625,
+      "capped": false,
+      "status": "detention",
+      "notes": [
+        "arrived 9 min early; free-time clock starts at appointment"
+      ],
+      "claim_id": "DET-F1AF71C339"
+    },
+    {
+      "load_id": "LD261040",
+      "stop_index": 1,
+      "kind": "pickup",
+      "facility": "Lone Star Foods DC",
+      "appointment": "2026-09-11T07:00:00",
+      "arrival": "2026-09-11T06:51:00",
+      "departure": "2026-09-11T07:38:00",
+      "arrival_src": "tracking_stops.csv:row28",
+      "departure_src": "tracking_stops.csv:row28",
+      "dwell_minutes": 47,
+      "clock_start": "2026-09-11T07:00:00",
+      "free_minutes": 120,
+      "over_free_minutes": 0,
+      "billable_minutes": 0,
+      "amount_cents": 0,
+      "capped": false,
+      "status": "ok",
+      "notes": [
+        "arrived 9 min early; free-time clock starts at appointment"
+      ],
+      "claim_id": "DET-EDAD70117B"
+    },
+    {
+      "load_id": "LD261040",
+      "stop_index": 2,
+      "kind": "delivery",
+      "facility": "Alamo Paper Converting",
+      "appointment": "2026-09-11T21:00:00",
+      "arrival": "2026-09-11T20:40:00",
+      "departure": "2026-09-11T22:29:00",
+      "arrival_src": "tracking_stops.csv:row29",
+      "departure_src": "tracking_stops.csv:row29",
+      "dwell_minutes": 109,
+      "clock_start": "2026-09-11T21:00:00",
+      "free_minutes": 120,
+      "over_free_minutes": 0,
+      "billable_minutes": 0,
+      "amount_cents": 0,
+      "capped": false,
+      "status": "ok",
+      "notes": [
+        "arrived 20 min early; free-time clock starts at appointment"
+      ],
+      "claim_id": "DET-A7E9BDFBE6"
+    },
+    {
+      "load_id": "LD261047",
+      "stop_index": 1,
+      "kind": "pickup",
+      "facility": "Metroplex Retail DC",
+      "appointment": "2026-09-11T14:00:00",
+      "arrival": "2026-09-11T13:54:00",
+      "departure": "2026-09-11T15:19:00",
+      "arrival_src": "telematics.csv:row28",
+      "departure_src": "telematics.csv:row29",
+      "dwell_minutes": 85,
+      "clock_start": "2026-09-11T14:00:00",
+      "free_minutes": 120,
+      "over_free_minutes": 0,
+      "billable_minutes": 0,
+      "amount_cents": 0,
+      "capped": false,
+      "status": "ok",
+      "notes": [
+        "arrived 6 min early; free-time clock starts at appointment"
+      ],
+      "claim_id": "DET-B42A2092A0"
+    },
+    {
+      "load_id": "LD261047",
+      "stop_index": 2,
+      "kind": "delivery",
+      "facility": "Lone Star Foods DC",
+      "appointment": "2026-09-12T10:00:00",
+      "arrival": "2026-09-12T09:54:00",
+      "departure": null,
+      "arrival_src": "telematics.csv:row32",
+      "departure_src": "",
+      "dwell_minutes": null,
+      "clock_start": null,
+      "free_minutes": 120,
+      "over_free_minutes": 0,
+      "billable_minutes": 0,
+      "amount_cents": 0,
+      "capped": false,
+      "status": "exception",
+      "notes": [
+        "geofence entry has no matching exit (export gap or still on site)"
+      ],
+      "claim_id": "DET-6C5CCCE3B1"
+    },
+    {
+      "load_id": "LD261054",
+      "stop_index": 1,
+      "kind": "pickup",
+      "facility": "Hill Country Beverage",
+      "appointment": "2026-09-12T06:00:00",
+      "arrival": "2026-09-12T05:55:00",
+      "departure": "2026-09-12T07:12:00",
+      "arrival_src": "tracking_stops.csv:row30",
+      "departure_src": "tracking_stops.csv:row30",
+      "dwell_minutes": 77,
+      "clock_start": "2026-09-12T06:00:00",
+      "free_minutes": 180,
+      "over_free_minutes": 0,
+      "billable_minutes": 0,
+      "amount_cents": 0,
+      "capped": false,
+      "status": "ok",
+      "notes": [
+        "arrived 5 min early; free-time clock starts at appointment"
+      ],
+      "claim_id": "DET-1E3415A284"
+    },
+    {
+      "load_id": "LD261054",
+      "stop_index": 2,
+      "kind": "delivery",
+      "facility": "Lone Star Foods DC",
+      "appointment": "2026-09-13T02:00:00",
+      "arrival": "2026-09-13T02:10:00",
+      "departure": "2026-09-13T03:37:00",
+      "arrival_src": "tracking_stops.csv:row31",
+      "departure_src": "tracking_stops.csv:row31",
+      "dwell_minutes": 87,
+      "clock_start": "2026-09-13T02:10:00",
+      "free_minutes": 180,
+      "over_free_minutes": 0,
+      "billable_minutes": 0,
+      "amount_cents": 0,
+      "capped": false,
+      "status": "ok",
+      "notes": [],
+      "claim_id": "DET-FBFDC29B76"
+    },
+    {
+      "load_id": "LD261061",
+      "stop_index": 1,
+      "kind": "pickup",
+      "facility": "Brazos Building Supply",
+      "appointment": "2026-09-12T08:00:00",
+      "arrival": "2026-09-12T07:56:00",
+      "departure": "2026-09-12T08:41:00",
+      "arrival_src": "tracking_stops.csv:row32",
+      "departure_src": "tracking_stops.csv:row32",
+      "dwell_minutes": 45,
+      "clock_start": "2026-09-12T08:00:00",
+      "free_minutes": 120,
+      "over_free_minutes": 0,
+      "billable_minutes": 0,
+      "amount_cents": 0,
+      "capped": false,
+      "status": "ok",
+      "notes": [
+        "arrived 4 min early; free-time clock starts at appointment"
+      ],
+      "claim_id": "DET-6D3AB359F5"
+    },
+    {
+      "load_id": "LD261061",
+      "stop_index": 2,
+      "kind": "delivery",
+      "facility": "Alamo Paper Converting",
+      "appointment": "2026-09-12T18:00:00",
+      "arrival": "2026-09-12T15:48:00",
+      "departure": "2026-09-12T21:50:00",
+      "arrival_src": "tracking_stops.csv:row33",
+      "departure_src": "tracking_stops.csv:row33",
+      "dwell_minutes": 362,
+      "clock_start": "2026-09-12T18:00:00",
+      "free_minutes": 120,
+      "over_free_minutes": 110,
+      "billable_minutes": 105,
+      "amount_cents": 8750,
+      "capped": false,
+      "status": "detention",
+      "notes": [
+        "arrived 132 min early; free-time clock starts at appointment"
+      ],
+      "claim_id": "DET-BBF1FC6FE5"
+    }
+  ],
+  "flags": [
+    {
+      "invoice_no": "CAL-7101",
+      "load_id": "LD260907",
+      "carrier": "Caliche Carriers LLC",
+      "code": "LINEHAUL_MISMATCH",
+      "detail": "linehaul: invoiced $1,532.00 vs rate-con $1,382.00",
+      "invoiced_cents": 153200,
+      "expected_cents": 138200,
+      "evidence": [
+        "carrier_invoices.csv:row6",
+        "RC-48001.txt"
+      ],
+      "variance_cents": 15000
+    },
+    {
+      "invoice_no": "CAL-7104",
+      "load_id": "LD260928",
+      "carrier": "Caliche Carriers LLC",
+      "code": "FUEL_MISMATCH",
+      "detail": "fuel surcharge: invoiced $656.77 vs rate-con $614.02",
+      "invoiced_cents": 65677,
+      "expected_cents": 61402,
+      "evidence": [
+        "carrier_invoices.csv:row17",
+        "RC-48004.txt"
+      ],
+      "variance_cents": 4275
+    },
+    {
+      "invoice_no": "CAL-7107",
+      "load_id": "LD260949",
+      "carrier": "Caliche Carriers LLC",
+      "code": "DETENTION_UNSUPPORTED",
+      "detail": "detention invoiced $200.00 but telematics supports $75.00",
+      "invoiced_cents": 20000,
+      "expected_cents": 7500,
+      "evidence": [
+        "carrier_invoices.csv:row25",
+        "RC-48007.txt"
+      ],
+      "variance_cents": 12500
+    },
+    {
+      "invoice_no": "CAL-7110",
+      "load_id": "LD260970",
+      "carrier": "Caliche Carriers LLC",
+      "code": "ACCESSORIAL_NOT_ON_RATECON",
+      "detail": "TONU $250.00 billed but not on rate-con",
+      "invoiced_cents": 25000,
+      "expected_cents": 0,
+      "evidence": [
+        "carrier_invoices.csv:row35",
+        "RC-48010.txt"
+      ],
+      "variance_cents": 25000
+    },
+    {
+      "invoice_no": "CAL-7113",
+      "load_id": "LD260991",
+      "carrier": "Caliche Carriers LLC",
+      "code": "ACCESSORIAL_OVER_RATECON",
+      "detail": "LUMPER: invoiced $255.00 vs agreed $175.00",
+      "invoiced_cents": 25500,
+      "expected_cents": 17500,
+      "evidence": [
+        "carrier_invoices.csv:row44",
+        "RC-48013.txt"
+      ],
+      "variance_cents": 8000
+    },
+    {
+      "invoice_no": "CAL-7116",
+      "load_id": "LD261012",
+      "carrier": "Caliche Carriers LLC",
+      "code": "TOTAL_MISMATCH",
+      "detail": "header total $1,883.64 != line sum $1,783.64",
+      "invoiced_cents": 188364,
+      "expected_cents": 178364,
+      "evidence": [
+        "carrier_invoices.csv:row53"
+      ],
+      "variance_cents": 10000
+    },
+    {
+      "invoice_no": "CAL-7119",
+      "load_id": "LD261026",
+      "carrier": "Caliche Carriers LLC",
+      "code": "DETENTION_UNSUPPORTED",
+      "detail": "detention invoiced $206.25 but telematics supports $0.00",
+      "invoiced_cents": 20625,
+      "expected_cents": 0,
+      "evidence": [
+        "carrier_invoices.csv:row64",
+        "RC-48018.txt"
+      ],
+      "variance_cents": 20625
+    },
+    {
+      "invoice_no": "CAL-7119",
+      "load_id": "LD261026",
+      "carrier": "Caliche Carriers LLC",
+      "code": "DUPLICATE_INVOICE",
+      "detail": "invoice #CAL-7119 also billed on load(s) LD261033",
+      "invoiced_cents": 136159,
+      "expected_cents": 0,
+      "evidence": [
+        "carrier_invoices.csv:row61",
+        "carrier_invoices.csv:row64"
+      ],
+      "variance_cents": 136159
+    },
+    {
+      "invoice_no": "CAL-7119",
+      "load_id": "LD261026",
+      "carrier": "Caliche Carriers LLC",
+      "code": "FUEL_MISMATCH",
+      "detail": "fuel surcharge: invoiced $208.34 vs rate-con $377.75",
+      "invoiced_cents": 20834,
+      "expected_cents": 37775,
+      "evidence": [
+        "carrier_invoices.csv:row64",
+        "RC-48018.txt"
+      ],
+      "variance_cents": -16941
+    },
+    {
+      "invoice_no": "CAL-7119",
+      "load_id": "LD261026",
+      "carrier": "Caliche Carriers LLC",
+      "code": "LINEHAUL_MISMATCH",
+      "detail": "linehaul: invoiced $947.00 vs rate-con $1,511.00",
+      "invoiced_cents": 94700,
+      "expected_cents": 151100,
+      "evidence": [
+        "carrier_invoices.csv:row64",
+        "RC-48018.txt"
+      ],
+      "variance_cents": -56400
+    },
+    {
+      "invoice_no": "CAL-7119",
+      "load_id": "LD261033",
+      "carrier": "Caliche Carriers LLC",
+      "code": "DUPLICATE_INVOICE",
+      "detail": "invoice #CAL-7119 also billed on load(s) LD261026",
+      "invoiced_cents": 136159,
+      "expected_cents": 0,
+      "evidence": [
+        "carrier_invoices.csv:row61",
+        "carrier_invoices.csv:row64"
+      ],
+      "variance_cents": 136159
+    },
+    {
+      "invoice_no": "CAL-7122",
+      "load_id": "LD261054",
+      "carrier": "Caliche Carriers LLC",
+      "code": "MISSING_POD",
+      "detail": "no POD on file; hold payment until POD received",
+      "invoiced_cents": null,
+      "expected_cents": null,
+      "evidence": [
+        "carrier_invoices.csv:row72",
+        "loads.csv:row24"
+      ],
+      "variance_cents": null
+    }
+  ],
+  "exceptions": [
+    {
+      "load_id": "LD260942",
+      "stop": 2,
+      "reason": "geofence entry has no matching exit (export gap or still on site)",
+      "evidence": "telematics.csv:row12;RC-48006.txt"
+    },
+    {
+      "load_id": "LD260970",
+      "stop": 1,
+      "reason": "geofence entry has no matching exit (export gap or still on site)",
+      "evidence": "tracking_stops.csv:row14;RC-48010.txt"
+    },
+    {
+      "load_id": "LD260984",
+      "stop": 1,
+      "reason": "geofence entry has no matching exit (export gap or still on site)",
+      "evidence": "telematics.csv:row17;RC-48012.txt"
+    },
+    {
+      "load_id": "LD261033",
+      "stop": 1,
+      "reason": "geofence entry has no matching exit (export gap or still on site)",
+      "evidence": "tracking_stops.csv:row26;RC-48019.txt"
+    },
+    {
+      "load_id": "LD261047",
+      "stop": 2,
+      "reason": "geofence entry has no matching exit (export gap or still on site)",
+      "evidence": "telematics.csv:row32;RC-48021.txt"
+    }
+  ],
+  "packets": [
+    {
+      "load_id": "LD260900",
+      "file": "packets/LD260900.html",
+      "detention_cents": 22500,
+      "claim_ids": [
+        "DET-FDC41B9FE7"
+      ],
+      "late_stops": []
+    },
+    {
+      "load_id": "LD260907",
+      "file": "packets/LD260907.html",
+      "detention_cents": 16875,
+      "claim_ids": [
+        "DET-129C1A149C"
+      ],
+      "late_stops": []
+    },
+    {
+      "load_id": "LD260914",
+      "file": "packets/LD260914.html",
+      "detention_cents": 6000,
+      "claim_ids": [
+        "DET-B34A842BB1"
+      ],
+      "late_stops": []
+    },
+    {
+      "load_id": "LD260921",
+      "file": "packets/LD260921.html",
+      "detention_cents": 16500,
+      "claim_ids": [
+        "DET-6AA0C0374F"
+      ],
+      "late_stops": []
+    },
+    {
+      "load_id": "LD260928",
+      "file": "packets/LD260928.html",
+      "detention_cents": 4500,
+      "claim_ids": [
+        "DET-70E434F598"
+      ],
+      "late_stops": []
+    },
+    {
+      "load_id": "LD260935",
+      "file": "packets/LD260935.html",
+      "detention_cents": 9375,
+      "claim_ids": [
+        "DET-6747007A8F"
+      ],
+      "late_stops": []
+    },
+    {
+      "load_id": "LD260949",
+      "file": "packets/LD260949.html",
+      "detention_cents": 7500,
+      "claim_ids": [
+        "DET-66F6B49517"
+      ],
+      "late_stops": []
+    },
+    {
+      "load_id": "LD260956",
+      "file": "packets/LD260956.html",
+      "detention_cents": 50000,
+      "claim_ids": [
+        "DET-08C3E0D1BD"
+      ],
+      "late_stops": [
+        2
+      ]
+    },
+    {
+      "load_id": "LD260977",
+      "file": "packets/LD260977.html",
+      "detention_cents": 50000,
+      "claim_ids": [
+        "DET-56AFFF0156"
+      ],
+      "late_stops": []
+    },
+    {
+      "load_id": "LD260991",
+      "file": "packets/LD260991.html",
+      "detention_cents": 7500,
+      "claim_ids": [
+        "DET-9737FA7A98"
+      ],
+      "late_stops": []
+    },
+    {
+      "load_id": "LD261005",
+      "file": "packets/LD261005.html",
+      "detention_cents": 0,
+      "claim_ids": [],
+      "late_stops": [
+        1
+      ]
+    },
+    {
+      "load_id": "LD261019",
+      "file": "packets/LD261019.html",
+      "detention_cents": 5000,
+      "claim_ids": [
+        "DET-3EB41103E0"
+      ],
+      "late_stops": []
+    },
+    {
+      "load_id": "LD261026",
+      "file": "packets/LD261026.html",
+      "detention_cents": 0,
+      "claim_ids": [],
+      "late_stops": [
+        1
+      ]
+    },
+    {
+      "load_id": "LD261033",
+      "file": "packets/LD261033.html",
+      "detention_cents": 20625,
+      "claim_ids": [
+        "DET-F1AF71C339"
+      ],
+      "late_stops": []
+    },
+    {
+      "load_id": "LD261061",
+      "file": "packets/LD261061.html",
+      "detention_cents": 8750,
+      "claim_ids": [
+        "DET-BBF1FC6FE5"
+      ],
+      "late_stops": []
+    }
+  ]
+}

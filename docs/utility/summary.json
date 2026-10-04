@@ -1,0 +1,338 @@
+{
+ "as_of": "2026-09-28",
+ "eval_from": "2026-03-01",
+ "data_mode": "synthetic",
+ "accounts": 31,
+ "bills": 274,
+ "flags": 12,
+ "by_code": {
+  "USAGE_SPIKE": 2,
+  "RATE_CHANGE": 1,
+  "LATE_FEE_OR_PAST_DUE": 1,
+  "PERIOD_OVERLAP": 1,
+  "MISSING_BILL": 1,
+  "DUPLICATE_BILL": 1,
+  "VACANT_UNIT_USAGE": 2,
+  "PAYMENT_MISMATCH": 2,
+  "UNPAID_PAST_DUE": 1
+ },
+ "exceptions": 2,
+ "payment_queue": 12,
+ "payment_queue_total": 39821.07,
+ "naive_trailing3_hits": [
+  "B50016",
+  "B50017",
+  "B50050",
+  "B50088",
+  "B50089"
+ ],
+ "flags_detail": [
+  {
+   "key": "B50032",
+   "account_no": "SYN-7002",
+   "property": "Cypress Court (synthetic)",
+   "utility": "gas",
+   "code": "USAGE_SPIKE",
+   "detail": "92.7 therm/day vs 49.4 same month last year (x1.88)",
+   "evidence": [
+    "bills.csv:33",
+    "bills.csv:21"
+   ]
+  },
+  {
+   "key": "B50050",
+   "account_no": "SYN-7003",
+   "property": "Cypress Court (synthetic)",
+   "utility": "water",
+   "code": "USAGE_SPIKE",
+   "detail": "17.9 kgal/day vs 10.0 same month last year (x1.79)",
+   "evidence": [
+    "bills.csv:51",
+    "bills.csv:39"
+   ]
+  },
+  {
+   "key": "B50068",
+   "account_no": "SYN-7004",
+   "property": "Cypress Court (synthetic)",
+   "utility": "trash",
+   "code": "RATE_CHANGE",
+   "detail": "$123.7817/pull vs trailing median $92.0173 (x1.35); check tariff/rate plan",
+   "evidence": [
+    "bills.csv:69"
+   ]
+  },
+  {
+   "key": "B50087",
+   "account_no": "SYN-7005",
+   "property": "Bayou Flats (synthetic)",
+   "utility": "electric",
+   "code": "LATE_FEE_OR_PAST_DUE",
+   "detail": "late fee $179.02, prior balance $3,222.36 on the bill",
+   "evidence": [
+    "bills.csv:88"
+   ]
+  },
+  {
+   "key": "B50107",
+   "account_no": "SYN-7006",
+   "property": "Bayou Flats (synthetic)",
+   "utility": "gas",
+   "code": "PERIOD_OVERLAP",
+   "detail": "service period 2026-06-22..2026-07-31 overlaps prior bill B50106 (2026-06-01..2026-06-30); 9 days may be billed twice",
+   "evidence": [
+    "bills.csv:108",
+    "bills.csv:107"
+   ]
+  },
+  {
+   "key": "SYN-7009:2026-04-01",
+   "account_no": "SYN-7009",
+   "property": "Gaylord Ridge (synthetic)",
+   "utility": "electric",
+   "code": "MISSING_BILL",
+   "detail": "no bill for service month 2026-04; check vendor portal / mail before a late fee lands",
+   "evidence": [
+    "accounts.csv:10"
+   ]
+  },
+  {
+   "key": "B50213",
+   "account_no": "SYN-7012",
+   "property": "Gaylord Ridge (synthetic)",
+   "utility": "trash",
+   "code": "DUPLICATE_BILL",
+   "detail": "same invoice number as B50212 (HAUL-50212); hold, do not pay twice",
+   "evidence": [
+    "bills.csv:214",
+    "bills.csv:213"
+   ]
+  },
+  {
+   "key": "B50242",
+   "account_no": "SYN-7021",
+   "property": "Bayou Flats (synthetic)",
+   "utility": "water",
+   "code": "VACANT_UNIT_USAGE",
+   "detail": "unit 201 vacant; 0.360 kgal/day vs standby ceiling 0.05 (possible leak or running equipment)",
+   "evidence": [
+    "bills.csv:243",
+    "occupancy.csv:5"
+   ]
+  },
+  {
+   "key": "B50243",
+   "account_no": "SYN-7021",
+   "property": "Bayou Flats (synthetic)",
+   "utility": "water",
+   "code": "VACANT_UNIT_USAGE",
+   "detail": "unit 201 vacant; 0.360 kgal/day vs standby ceiling 0.05 (possible leak or running equipment)",
+   "evidence": [
+    "bills.csv:244",
+    "occupancy.csv:5"
+   ]
+  },
+  {
+   "key": "B50125",
+   "account_no": "SYN-7007",
+   "property": "Bayou Flats (synthetic)",
+   "utility": "water",
+   "code": "PAYMENT_MISMATCH",
+   "detail": "owed $4,232.12; 2 payment(s) totalling $8,464.24",
+   "evidence": [
+    "bills.csv:126",
+    "payments.csv:120",
+    "payments.csv:121"
+   ]
+  },
+  {
+   "key": "B50142",
+   "account_no": "SYN-7008",
+   "property": "Bayou Flats (synthetic)",
+   "utility": "trash",
+   "code": "PAYMENT_MISMATCH",
+   "detail": "owed $1,258.66; 1 payment(s) totalling $1,108.66",
+   "evidence": [
+    "bills.csv:143",
+    "payments.csv:137"
+   ]
+  },
+  {
+   "key": "B50178",
+   "account_no": "SYN-7010",
+   "property": "Gaylord Ridge (synthetic)",
+   "utility": "gas",
+   "code": "UNPAID_PAST_DUE",
+   "detail": "due 2026-09-06, no payment on file",
+   "evidence": [
+    "bills.csv:179"
+   ]
+  }
+ ],
+ "exceptions_detail": [
+  {
+   "key": "B50273",
+   "account_no": "SYN-7013",
+   "reason": "NO_BASELINE",
+   "detail": "no same-month bill last year; usage not judged",
+   "evidence": [
+    "bills.csv:274"
+   ]
+  },
+  {
+   "key": "B50274",
+   "account_no": "SYN-7013",
+   "reason": "NO_BASELINE",
+   "detail": "no same-month bill last year; usage not judged",
+   "evidence": [
+    "bills.csv:275"
+   ]
+  }
+ ],
+ "payment_queue_detail": [
+  {
+   "bill_id": "B50090",
+   "account_no": "SYN-7005",
+   "property": "Bayou Flats (synthetic)",
+   "utility": "electric",
+   "vendor": "Metro Power Co (placeholder)",
+   "invoice": "METR-50090",
+   "amount_due": 5809.56,
+   "due_date": "2026-10-03",
+   "status": "QUEUED_FOR_APPROVAL (not paid)",
+   "evidence": "bills.csv:91"
+  },
+  {
+   "bill_id": "B50018",
+   "account_no": "SYN-7001",
+   "property": "Cypress Court (synthetic)",
+   "utility": "electric",
+   "vendor": "Metro Power Co (placeholder)",
+   "invoice": "METR-50018",
+   "amount_due": 7056.0,
+   "due_date": "2026-10-04",
+   "status": "QUEUED_FOR_APPROVAL (not paid)",
+   "evidence": "bills.csv:19"
+  },
+  {
+   "bill_id": "B50108",
+   "account_no": "SYN-7006",
+   "property": "Bayou Flats (synthetic)",
+   "utility": "gas",
+   "vendor": "Gulf Gas Utility (placeholder)",
+   "invoice": "GULF-50108",
+   "amount_due": 1022.79,
+   "due_date": "2026-10-06",
+   "status": "QUEUED_FOR_APPROVAL (not paid)",
+   "evidence": "bills.csv:109"
+  },
+  {
+   "bill_id": "B50161",
+   "account_no": "SYN-7009",
+   "property": "Gaylord Ridge (synthetic)",
+   "utility": "electric",
+   "vendor": "Metro Power Co (placeholder)",
+   "invoice": "METR-50161",
+   "amount_due": 7504.19,
+   "due_date": "2026-10-06",
+   "status": "QUEUED_FOR_APPROVAL (not paid)",
+   "evidence": "bills.csv:162"
+  },
+  {
+   "bill_id": "B50126",
+   "account_no": "SYN-7007",
+   "property": "Bayou Flats (synthetic)",
+   "utility": "water",
+   "vendor": "City Water Dept (placeholder)",
+   "invoice": "CITY-50126",
+   "amount_due": 4155.1,
+   "due_date": "2026-10-08",
+   "status": "QUEUED_FOR_APPROVAL (not paid)",
+   "evidence": "bills.csv:127"
+  },
+  {
+   "bill_id": "B50197",
+   "account_no": "SYN-7011",
+   "property": "Gaylord Ridge (synthetic)",
+   "utility": "water",
+   "vendor": "City Water Dept (placeholder)",
+   "invoice": "CITY-50197",
+   "amount_due": 4338.24,
+   "due_date": "2026-10-08",
+   "status": "QUEUED_FOR_APPROVAL (not paid)",
+   "evidence": "bills.csv:198"
+  },
+  {
+   "bill_id": "B50036",
+   "account_no": "SYN-7002",
+   "property": "Cypress Court (synthetic)",
+   "utility": "gas",
+   "vendor": "Gulf Gas Utility (placeholder)",
+   "invoice": "GULF-50036",
+   "amount_due": 1015.72,
+   "due_date": "2026-10-09",
+   "status": "QUEUED_FOR_APPROVAL (not paid)",
+   "evidence": "bills.csv:37"
+  },
+  {
+   "bill_id": "B50179",
+   "account_no": "SYN-7010",
+   "property": "Gaylord Ridge (synthetic)",
+   "utility": "gas",
+   "vendor": "Gulf Gas Utility (placeholder)",
+   "invoice": "GULF-50179",
+   "amount_due": 948.34,
+   "due_date": "2026-10-09",
+   "status": "QUEUED_FOR_APPROVAL (not paid)",
+   "evidence": "bills.csv:180"
+  },
+  {
+   "bill_id": "B50054",
+   "account_no": "SYN-7003",
+   "property": "Cypress Court (synthetic)",
+   "utility": "water",
+   "vendor": "City Water Dept (placeholder)",
+   "invoice": "CITY-50054",
+   "amount_due": 4248.69,
+   "due_date": "2026-10-10",
+   "status": "QUEUED_FOR_APPROVAL (not paid)",
+   "evidence": "bills.csv:55"
+  },
+  {
+   "bill_id": "B50144",
+   "account_no": "SYN-7008",
+   "property": "Bayou Flats (synthetic)",
+   "utility": "trash",
+   "vendor": "Haul-Rite Waste (placeholder)",
+   "invoice": "HAUL-50144",
+   "amount_due": 1246.39,
+   "due_date": "2026-10-11",
+   "status": "QUEUED_FOR_APPROVAL (not paid)",
+   "evidence": "bills.csv:145"
+  },
+  {
+   "bill_id": "B50072",
+   "account_no": "SYN-7004",
+   "property": "Cypress Court (synthetic)",
+   "utility": "trash",
+   "vendor": "Haul-Rite Waste (placeholder)",
+   "invoice": "HAUL-50072",
+   "amount_due": 1472.55,
+   "due_date": "2026-10-13",
+   "status": "QUEUED_FOR_APPROVAL (not paid)",
+   "evidence": "bills.csv:73"
+  },
+  {
+   "bill_id": "B50216",
+   "account_no": "SYN-7012",
+   "property": "Gaylord Ridge (synthetic)",
+   "utility": "trash",
+   "vendor": "Haul-Rite Waste (placeholder)",
+   "invoice": "HAUL-50216",
+   "amount_due": 1003.5,
+   "due_date": "2026-10-15",
+   "status": "QUEUED_FOR_APPROVAL (not paid)",
+   "evidence": "bills.csv:217"
+  }
+ ]
+}

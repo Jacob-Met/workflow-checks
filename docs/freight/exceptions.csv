@@ -1,0 +1,6 @@
+load_id,stop,reason,evidence
+LD260942,2,geofence entry has no matching exit (export gap or still on site),telematics.csv:row12;RC-48006.txt
+LD260970,1,geofence entry has no matching exit (export gap or still on site),tracking_stops.csv:row14;RC-48010.txt
+LD260984,1,geofence entry has no matching exit (export gap or still on site),telematics.csv:row17;RC-48012.txt
+LD261033,1,geofence entry has no matching exit (export gap or still on site),tracking_stops.csv:row26;RC-48019.txt
+LD261047,2,geofence entry has no matching exit (export gap or still on site),telematics.csv:row32;RC-48021.txt
