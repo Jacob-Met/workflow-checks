@@ -35,6 +35,19 @@ pip install pytest
 (cd utility_watch && python3 -m pytest -q)
 ```
 
+## What the tests do and do not show
+
+- **They show internal consistency.** Each generator writes the synthetic data and an `expected.json` answer key from the same seed, and the tests check the engine against that key plus hand-written edge cases (see each `HARDENING.md`). A green run means the rules do what the README says on data built to exercise them.
+- **They do not show real-world accuracy, savings or time saved.** No result here was measured on a real company's exports, so none is claimed. Any figure in a demo script (for example a detention total) is a property of the synthetic sample, not a typical or expected result.
+- **A real pilot starts from a baseline.** The per-PoC READMEs list what a pilot needs: the client's own exports, their real rules, and a manual audit to compare against. Claims about a pilot would be limited to what that comparison measured, for that client and period.
+
+## Status, support and contributions
+
+- **Demos, provided as-is.** No warranty, no support commitment and no maintenance schedule. They are not production software and must not be pointed at real patient, financial or personal data as they stand (see `pt_auth/README.md` for the HIPAA gaps).
+- **Not accepting outside contributions** for now. Issues may be read but are not guaranteed a reply.
+- **Built with AI coding assistance**, then checked by the test suites in this repository; CI runs them on every push.
+- **Licensed under the MIT License** (see [`LICENSE`](LICENSE)). The runtime has no third-party dependencies; `pytest` (MIT) is a test-only dependency and is not distributed here.
+
 ## Contact
 
 Interested in a scoped pilot on your own redacted exports? See [jacobmetoyer.com](https://jacobmetoyer.com).
