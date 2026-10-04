@@ -89,7 +89,6 @@ On Windows PowerShell, `.\demo.ps1 freight|pt|utility|test` does the same. `pyth
 
 - **Demos, provided as-is.** No warranty, no support commitment and no maintenance schedule. They are not production software and must not be pointed at real patient, financial or personal data as they stand (see `pt_auth/README.md` for the HIPAA gaps).
 - **Not accepting outside contributions** for now. Issues may be read but are not guaranteed a reply.
-- **Built with AI coding assistance**, then checked by the test suites in this repository; CI runs them on every push.
 - **Licensed under the MIT License** (see [`LICENSE`](LICENSE)). The runtime has no third-party dependencies; `pytest` (MIT) is a test-only dependency and is not distributed here.
 
 ## Contact
