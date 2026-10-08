@@ -1,0 +1,13 @@
+{
+  "schema": "freight-whatif.independent-adoption.v1",
+  "source_root": "/Users/me/workspace/estate/review-freight-whatif-45d4289ccf6c",
+  "destination": "evidence/independent/",
+  "manifest_sha256": "7d1bced65bf0ec7ffb7f8eeb16a2c54bfe0aaa904a15223aa8845ea903609a98",
+  "payload_files": 63,
+  "total_files_including_manifest": 64,
+  "payload_bytes": 1292966,
+  "all_files_read_back_exact": true,
+  "source_manifest_unchanged": true,
+  "independent_verdict": "qualified_for_source_integration_and_standalone_delivery",
+  "final_site_and_zip_match_independent_receiving": true
+}

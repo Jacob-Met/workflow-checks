@@ -1,0 +1,127 @@
+{
+  "viewport": 320,
+  "document": 320,
+  "card": {
+    "left": 15,
+    "right": 305,
+    "top": 1091.859375,
+    "bottom": 1417.828125,
+    "width": 290,
+    "height": 325.96875
+  },
+  "amount": [
+    {
+      "left": 30,
+      "right": 239.6875,
+      "top": 1155.359375,
+      "bottom": 1203.359375,
+      "width": 209.6875,
+      "height": 48
+    }
+  ],
+  "billed": [
+    {
+      "left": 235.375,
+      "right": 290,
+      "top": 1266.40625,
+      "bottom": 1289.40625,
+      "width": 54.625,
+      "height": 23
+    }
+  ],
+  "allText": [
+    {
+      "element": "status-chip",
+      "left": 39,
+      "right": 133.78125,
+      "top": 1115.859375,
+      "bottom": 1126.859375,
+      "width": 94.78125,
+      "height": 11
+    },
+    {
+      "element": "small-label",
+      "left": 177.5625,
+      "right": 290,
+      "top": 1115.859375,
+      "bottom": 1123.859375,
+      "width": 112.4375,
+      "height": 8
+    },
+    {
+      "element": "supported-amount",
+      "left": 30,
+      "right": 239.6875,
+      "top": 1155.359375,
+      "bottom": 1203.359375,
+      "width": 209.6875,
+      "height": 48
+    },
+    {
+      "element": "amount-caption",
+      "left": 30,
+      "right": 141.75,
+      "top": 1213.359375,
+      "bottom": 1226.359375,
+      "width": 111.75,
+      "height": 13
+    },
+    {
+      "element": "",
+      "left": 200.890625,
+      "right": 290,
+      "top": 1248.40625,
+      "bottom": 1260.40625,
+      "width": 89.109375,
+      "height": 12
+    },
+    {
+      "element": "billed-amount",
+      "left": 235.375,
+      "right": 290,
+      "top": 1266.40625,
+      "bottom": 1289.40625,
+      "width": 54.625,
+      "height": 23
+    },
+    {
+      "element": "variance-caption",
+      "left": 134.15625,
+      "right": 290,
+      "top": 1296.40625,
+      "bottom": 1308.40625,
+      "width": 155.84375,
+      "height": 12
+    },
+    {
+      "element": "decision-explanation",
+      "left": 30,
+      "right": 276.8125,
+      "top": 1351.40625,
+      "bottom": 1364.40625,
+      "width": 246.8125,
+      "height": 13
+    },
+    {
+      "element": "decision-explanation",
+      "left": 30,
+      "right": 279.109375,
+      "top": 1369.546875,
+      "bottom": 1382.546875,
+      "width": 249.109375,
+      "height": 13
+    },
+    {
+      "element": "decision-explanation",
+      "left": 30,
+      "right": 194.734375,
+      "top": 1387.6875,
+      "bottom": 1400.6875,
+      "width": 164.734375,
+      "height": 13
+    }
+  ],
+  "clipped": [],
+  "overlaps": false,
+  "controlsOutsideViewport": []
+}

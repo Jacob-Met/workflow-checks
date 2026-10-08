@@ -1,0 +1,144 @@
+{
+  "viewport": 320,
+  "document": 320,
+  "card": {
+    "left": 15,
+    "right": 305,
+    "top": 1091.859375,
+    "bottom": 1438.828125,
+    "width": 290,
+    "height": 346.96875
+  },
+  "amount": [
+    {
+      "left": 30,
+      "right": 213.21875,
+      "top": 1156.359375,
+      "bottom": 1192.359375,
+      "width": 183.21875,
+      "height": 36
+    },
+    {
+      "left": 30,
+      "right": 103.890625,
+      "top": 1188.359375,
+      "bottom": 1224.359375,
+      "width": 73.890625,
+      "height": 36
+    }
+  ],
+  "billed": [
+    {
+      "left": 235.375,
+      "right": 290,
+      "top": 1287.40625,
+      "bottom": 1310.40625,
+      "width": 54.625,
+      "height": 23
+    }
+  ],
+  "allText": [
+    {
+      "element": "status-chip",
+      "left": 39,
+      "right": 143.46875,
+      "top": 1115.859375,
+      "bottom": 1126.859375,
+      "width": 104.46875,
+      "height": 11
+    },
+    {
+      "element": "small-label",
+      "left": 177.5625,
+      "right": 290,
+      "top": 1115.859375,
+      "bottom": 1123.859375,
+      "width": 112.4375,
+      "height": 8
+    },
+    {
+      "element": "supported-amount",
+      "left": 30,
+      "right": 213.21875,
+      "top": 1156.359375,
+      "bottom": 1192.359375,
+      "width": 183.21875,
+      "height": 36
+    },
+    {
+      "element": "supported-amount",
+      "left": 30,
+      "right": 103.890625,
+      "top": 1188.359375,
+      "bottom": 1224.359375,
+      "width": 73.890625,
+      "height": 36
+    },
+    {
+      "element": "amount-caption",
+      "left": 30,
+      "right": 240.328125,
+      "top": 1234.359375,
+      "bottom": 1247.359375,
+      "width": 210.328125,
+      "height": 13
+    },
+    {
+      "element": "",
+      "left": 200.890625,
+      "right": 290,
+      "top": 1269.40625,
+      "bottom": 1281.40625,
+      "width": 89.109375,
+      "height": 12
+    },
+    {
+      "element": "billed-amount",
+      "left": 235.375,
+      "right": 290,
+      "top": 1287.40625,
+      "bottom": 1310.40625,
+      "width": 54.625,
+      "height": 23
+    },
+    {
+      "element": "variance-caption",
+      "left": 134.15625,
+      "right": 290,
+      "top": 1317.40625,
+      "bottom": 1329.40625,
+      "width": 155.84375,
+      "height": 12
+    },
+    {
+      "element": "decision-explanation",
+      "left": 30,
+      "right": 259.5625,
+      "top": 1372.40625,
+      "bottom": 1385.40625,
+      "width": 229.5625,
+      "height": 13
+    },
+    {
+      "element": "decision-explanation",
+      "left": 30,
+      "right": 284.421875,
+      "top": 1390.546875,
+      "bottom": 1403.546875,
+      "width": 254.421875,
+      "height": 13
+    },
+    {
+      "element": "decision-explanation",
+      "left": 30,
+      "right": 268.640625,
+      "top": 1408.6875,
+      "bottom": 1421.6875,
+      "width": 238.640625,
+      "height": 13
+    }
+  ],
+  "clipped": [],
+  "overlaps": false,
+  "controlsOutsideViewport": []
+}

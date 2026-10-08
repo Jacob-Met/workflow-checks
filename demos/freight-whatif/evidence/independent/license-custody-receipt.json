@@ -1,0 +1,82 @@
+{
+  "status": "qualified_non_executing_license_delta_and_final_artifact_custody",
+  "recorded_at_utc": "2026-10-08T10:26:53.242294+00:00",
+  "baseline": "2f1e5f777197eedd69d51a4d81c0da744b65ad88",
+  "previous_layout_css_sha256": "2173b69ce20fd22fa8b92f14305aa9d2fc57fbda5e3e6a3ea19eea0059c215e9",
+  "final_css_sha256": "0709487053ebc7e028577d46b6447847e7bfc4343027b7d1ecfab2c70c692a31",
+  "license_sha256": "f6a3d0f7d08a7590f907c08d6127545ab44eff0d23b6074714ad3fb935b998bb",
+  "license_git_blob_sha1": "edb188254288b40f2895833e3647b7e0be34c962",
+  "appended_bytes": 1078,
+  "canonical_license_exact": true,
+  "closed_comment_only": true,
+  "all_previous_css_rule_bytes_preserved": true,
+  "other_four_site_files_unchanged": true,
+  "source_sha256": {
+    "index.html": "9eb0bf0a05a5df2799f2f3a5ee36cf0df85a3c618d3feb0b86973681311d6a63",
+    "styles.css": "0709487053ebc7e028577d46b6447847e7bfc4343027b7d1ecfab2c70c692a31",
+    "app.mjs": "1555885a0f319407a0dd412599a5b6022ea048eadbad7a0259f3734a6d2e642f",
+    "model.mjs": "88e3d460da6f421e937cf54b21207da95734db3de3d5932235b1ec001be52590",
+    "data.mjs": "c5b8819e50961180208fa8dd4951f6a559b28cc4467c52dd2a68abeeb1b25d81"
+  },
+  "final_installed_root": "/Users/me/workspace/estate/production-freight-whatif-45d4289ccf6c/freight-release-final",
+  "installed_sha256": {
+    "index.html": "9eb0bf0a05a5df2799f2f3a5ee36cf0df85a3c618d3feb0b86973681311d6a63",
+    "styles.css": "0709487053ebc7e028577d46b6447847e7bfc4343027b7d1ecfab2c70c692a31",
+    "app.mjs": "1555885a0f319407a0dd412599a5b6022ea048eadbad7a0259f3734a6d2e642f",
+    "model.mjs": "88e3d460da6f421e937cf54b21207da95734db3de3d5932235b1ec001be52590",
+    "data.mjs": "c5b8819e50961180208fa8dd4951f6a559b28cc4467c52dd2a68abeeb1b25d81"
+  },
+  "zip": {
+    "path": "/Users/me/workspace/estate/production-freight-whatif-45d4289ccf6c/workflow-checks/demos/freight-whatif/dist/freight-whatif.zip",
+    "bytes": 24333,
+    "sha256": "57a0d4d34e8156f7f3bb3f0722882b0902e17ec731503ddd0ef5fdf6ceff6c08",
+    "entries": {
+      "LICENSE": {
+        "bytes": 1070,
+        "sha256": "f6a3d0f7d08a7590f907c08d6127545ab44eff0d23b6074714ad3fb935b998bb"
+      },
+      "README.txt": {
+        "bytes": 2039,
+        "sha256": "5047f7b66a1c1be32da5e4ad7c0522ec6986946e70f6ed6a0d3f0f3352d330d9"
+      },
+      "manifest.json": {
+        "bytes": 1995,
+        "sha256": "3c58a49b8989332ba3ecdcbc9fd47c577ac8db9c068ca9ab2af8bd9b64d670d7"
+      },
+      "site/app.mjs": {
+        "bytes": 16038,
+        "sha256": "1555885a0f319407a0dd412599a5b6022ea048eadbad7a0259f3734a6d2e642f"
+      },
+      "site/data.mjs": {
+        "bytes": 4103,
+        "sha256": "c5b8819e50961180208fa8dd4951f6a559b28cc4467c52dd2a68abeeb1b25d81"
+      },
+      "site/index.html": {
+        "bytes": 11173,
+        "sha256": "9eb0bf0a05a5df2799f2f3a5ee36cf0df85a3c618d3feb0b86973681311d6a63"
+      },
+      "site/model.mjs": {
+        "bytes": 8946,
+        "sha256": "88e3d460da6f421e937cf54b21207da95734db3de3d5932235b1ec001be52590"
+      },
+      "site/styles.css": {
+        "bytes": 20325,
+        "sha256": "0709487053ebc7e028577d46b6447847e7bfc4343027b7d1ecfab2c70c692a31"
+      },
+      "tools/install.py": {
+        "bytes": 4340,
+        "sha256": "4d44a18fc27491a632e7e4f5d525ff80922edbf45546167526b2b34953c68653"
+      },
+      "tools/serve.py": {
+        "bytes": 1029,
+        "sha256": "a8e23a17a7a80024ee33f1b034706e800c287e6537dfe0b6442c91c9fc72e899"
+      }
+    }
+  },
+  "receiving_basis": {
+    "independent_rule_cases": "39/39, model and data unchanged",
+    "full_browser": "15/16 initial; one mobile clipping defect preserved",
+    "corrected_layout": "13/13 against prior CSS2173; receipt ceeb49e202fd286afb3e6bb104c8a009d63c99fe34e0894b6e78ff639f78001b",
+    "final_license_only": "Exact appended comment inspection and source/installed/archive byte equality; no functional rerun claimed"
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "schema": "freight-whatif.independent-browser-receipt.v1",
+  "node": "v26.3.0",
+  "browser_version": "153.0.8010.12",
+  "module_sha256": "a0f5715ea22354f922791a9c53dc012d5d5c067ff9cc4cd35ffb7cd272071a9f",
+  "executable_sha256": "8319963f6625accf51c0dd4f55091ceaf9f09ed39e7a52fed4fae12b2a6b668a",
+  "runner_sha256": "b4bcfd9793f82ba0ef64a7a4a2b507ab737b4071afab010791a221cf886fd7dd",
+  "oracle_sha256": "fa127209f9df296b4ccf6cf4d6ae3b959e17862f89f335e869857a42c34768bc",
+  "site_root": "/Users/me/workspace/estate/production-freight-whatif-45d4289ccf6c/install-receiving/installed-site",
+  "site_sha256": {
+    "index.html": "9eb0bf0a05a5df2799f2f3a5ee36cf0df85a3c618d3feb0b86973681311d6a63",
+    "styles.css": "d9127a6a89c008c2915005409dd6f7a81ecab32e1b9566dfb7f1dc3ffaad5371",
+    "app.mjs": "1555885a0f319407a0dd412599a5b6022ea048eadbad7a0259f3734a6d2e642f",
+    "model.mjs": "88e3d460da6f421e937cf54b21207da95734db3de3d5932235b1ec001be52590",
+    "data.mjs": "c5b8819e50961180208fa8dd4951f6a559b28cc4467c52dd2a68abeeb1b25d81"
+  },
+  "served_sha256": {
+    "index.html": "9eb0bf0a05a5df2799f2f3a5ee36cf0df85a3c618d3feb0b86973681311d6a63",
+    "styles.css": "d9127a6a89c008c2915005409dd6f7a81ecab32e1b9566dfb7f1dc3ffaad5371",
+    "app.mjs": "1555885a0f319407a0dd412599a5b6022ea048eadbad7a0259f3734a6d2e642f",
+    "data.mjs": "c5b8819e50961180208fa8dd4951f6a559b28cc4467c52dd2a68abeeb1b25d81",
+    "model.mjs": "88e3d460da6f421e937cf54b21207da95734db3de3d5932235b1ec001be52590"
+  },
+  "origin": "http://127.0.0.1:54609",
+  "checks": [
+    {
+      "name": "desktop-original-record-and-source-custody",
+      "passed": true
+    },
+    {
+      "name": "desktop-oracle-early-exit-before-appointment",
+      "passed": true
+    },
+    {
+      "name": "desktop-oracle-capped-then-parse-warning",
+      "passed": true
+    },
+    {
+      "name": "desktop-oracle-all-findings-with-underbilled-base-lines",
+      "passed": true
+    },
+    {
+      "name": "desktop-oracle-maximum-independent-lines-automatic-sum",
+      "passed": true
+    },
+    {
+      "name": "desktop-oracle-latest-entry-inclusive",
+      "passed": true
+    },
+    {
+      "name": "desktop-oracle-half-cent-rounds-up-2point5",
+      "passed": true
+    },
+    {
+      "name": "invalid-hidden-term-pauses-export-and-focus-recovers",
+      "passed": true
+    },
+    {
+      "name": "keyboard-case-change-and-refresh-custody",
+      "passed": true
+    },
+    {
+      "name": "mobile-390-maximum-independent-lines-automatic-sum",
+      "passed": true
+    },
+    {
+      "name": "mobile-390-exit-24h-inclusive",
+      "passed": true
+    },
+    {
+      "name": "mobile-390-capped-then-parse-warning",
+      "passed": true
+    },
+    {
+      "name": "mobile-320-maximum-independent-lines-automatic-sum",
+      "passed": true
+    },
+    {
+      "name": "mobile-320-exit-24h-inclusive",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: Decision text clipped: {\"viewport\":320,\"document\":320,\"card\":{\"left\":15,\"right\":305,\"top\":1091.859375,\"bottom\":1369.78125,\"width\":290,\"height\":277.921875},\"amount\":[{\"left\":30,\"right\":239.6875,\"top\":1172.328125,\"bottom\":1220.328125,\"width\":209.6875,\"height\":48}],\"billed\":[{\"left\":259.6875,\"right\":314.3125,\"top\":1188.359375,\"bottom\":1211.359375,\"width\":54.625,\"height\":23}],\"overlaps\":false,\"clipped\":[{\"left\":259.6875,\"right\":314.3125,\"top\":1188.359375,\"bottom\":1211.359375,\"width\":54.625,\"height\":23}],\"controlsOutsideViewport\":[]}\n\n1 !== 0\n\n    at layout (file:///Users/me/workspace/estate/review-freight-whatif-45d4289ccf6c/independent_browser.mjs:121:9)\n    at async file:///Users/me/workspace/estate/review-freight-whatif-45d4289ccf6c/independent_browser.mjs:210:5\n    at async check (file:///Users/me/workspace/estate/review-freight-whatif-45d4289ccf6c/independent_browser.mjs:27:76)\n    at async file:///Users/me/workspace/estate/review-freight-whatif-45d4289ccf6c/independent_browser.mjs:208:4",
+      "actual": 1,
+      "expected": 0
+    },
+    {
+      "name": "mobile-320-capped-then-parse-warning",
+      "passed": true
+    },
+    {
+      "name": "no-runtime-errors-or-external-data-requests",
+      "passed": true
+    }
+  ],
+  "passed": 15,
+  "failed": 1,
+  "page_errors": [],
+  "console_errors": [],
+  "external_requests": [],
+  "requested_paths": [
+    "/",
+    "/app.mjs",
+    "/data.mjs",
+    "/model.mjs",
+    "/styles.css"
+  ],
+  "screenshots": [
+    {
+      "name": "desktop-original.png",
+      "sha256": "57187c66aad63229b958bbbf40e3541cae833f1853c04ec12643e94dda94597f"
+    },
+    {
+      "name": "mobile-390-maximum-independent-lines-automatic-sum.png",
+      "sha256": "f8cf8ff8090d3877b844228344469357d327dee65f24495454cfa43c50dde177"
+    },
+    {
+      "name": "mobile-390-exit-24h-inclusive.png",
+      "sha256": "80e970e9b8037785b9348dea8c6583fcd6872f557314ec917c02a67eafe47b80"
+    },
+    {
+      "name": "mobile-390-capped-then-parse-warning.png",
+      "sha256": "06289fabb91f09a4b0905c4aa4bba8a9c8ff9d4bfeec420d64cf7addbc0734bd"
+    },
+    {
+      "name": "mobile-320-maximum-independent-lines-automatic-sum.png",
+      "sha256": "ce45454e809af995b9f8b1feb7576b722b04386002a133e8967063cfeb0e78c3"
+    },
+    {
+      "name": "mobile-320-exit-24h-inclusive.png",
+      "sha256": "abeecad3ce5ed9ae0adcfa5371cf78b443fbb4cf80c46526dbf8a7a35e854075"
+    },
+    {
+      "name": "mobile-320-capped-then-parse-warning.png",
+      "sha256": "c7ea70f3137e45f9bd669b6696feaa781f732acb911a6e89ba7d9ab573786eb6"
+    }
+  ],
+  "cleanup": {
+    "browser_disconnected": true,
+    "server_closed": true,
+    "loopback_port_closed": true,
+    "owned_temporary_profile_root_removed": true
+  },
+  "limits": "Actual headless Chromium desktop and emulated mobile receiving of the installed static artifact; no physical-device, live-provider, legal, payment or real-world outcome claim."
+}

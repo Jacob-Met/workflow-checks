@@ -1,0 +1,85 @@
+{
+  "schema": "freight-whatif.independent-review.v1",
+  "reviewer": "chatgpt-45d4289ccf6c/github_receiving",
+  "repository": "Jacob-Met/workflow-checks",
+  "coordination": "https://github.com/Jacob-Met/workflow-checks/issues/17",
+  "scope": "Only demos/freight-whatif. Independent source-rule parity and receiving of native_execution's installed product; no competing implementation or shared source mutation.",
+  "verdict": "qualified_for_source_integration_and_standalone_delivery",
+  "baseline_commit": "2f1e5f777197eedd69d51a4d81c0da744b65ad88",
+  "baseline_tree": "86e6201872d2f2400537b84a50f026a1335a8c3d",
+  "final_site_sha256": {
+    "index.html": "9eb0bf0a05a5df2799f2f3a5ee36cf0df85a3c618d3feb0b86973681311d6a63",
+    "styles.css": "0709487053ebc7e028577d46b6447847e7bfc4343027b7d1ecfab2c70c692a31",
+    "app.mjs": "1555885a0f319407a0dd412599a5b6022ea048eadbad7a0259f3734a6d2e642f",
+    "model.mjs": "88e3d460da6f421e937cf54b21207da95734db3de3d5932235b1ec001be52590",
+    "data.mjs": "c5b8819e50961180208fa8dd4951f6a559b28cc4467c52dd2a68abeeb1b25d81"
+  },
+  "final_zip_sha256": "57a0d4d34e8156f7f3bb3f0722882b0902e17ec731503ddd0ef5fdf6ceff6c08",
+  "final_zip_bytes": 24333,
+  "independent_rule_receiving": {
+    "cases": 39,
+    "passed": 39,
+    "failed": 0,
+    "actual_functions": [
+      "freightpkt.detention.evaluate_load",
+      "freightpkt.invoice_match.match_invoices"
+    ],
+    "author_fixture_builder_reused": false,
+    "receipt": "independent-parity-receipt.json",
+    "receipt_sha256": "a15ae7ec4134867ef12ce47cd15664cda964397bb65915f0be646bf7f06b6e96",
+    "oracle_sha256": "fa127209f9df296b4ccf6cf4d6ae3b959e17862f89f335e869857a42c34768bc"
+  },
+  "initial_browser": {
+    "passed": 15,
+    "failed": 1,
+    "receipt": "browser-initial/browser-receipt.json",
+    "receipt_sha256": "a902d773aa923dabcaed98c49b0d6334ea27bc2bd206581229c131e5acc59703",
+    "finding": "At width 320, valid $24,000.00 supported detention clipped the invoiced $0.00 text 9.3125px beyond the card while document width remained 320. Original negative retained."
+  },
+  "corrected_layout": {
+    "passed": 13,
+    "failed": 0,
+    "layout_states": 12,
+    "additional_source_runtime_check": 1,
+    "widths": [
+      1440,
+      390,
+      320
+    ],
+    "receipt": "layout-final/layout-receipt.json",
+    "receipt_sha256": "ceeb49e202fd286afb3e6bb104c8a009d63c99fe34e0894b6e78ff639f78001b",
+    "css_sha256": "2173b69ce20fd22fa8b92f14305aa9d2fc57fbda5e3e6a3ea19eea0059c215e9",
+    "visuals_inspected": [
+      "layout-final/layout-320-exit-24h-inclusive.png",
+      "layout-final/resting-390.png",
+      "layout-final/resting-1440.png"
+    ]
+  },
+  "license_custody": {
+    "receipt": "license-custody-receipt.json",
+    "receipt_sha256": "e11953a23e5384a1e4334ecba154e0222225b0ca50661a253b724ae2056e5c4f",
+    "canonical_license_blob": "edb188254288b40f2895833e3647b7e0be34c962",
+    "appended_closed_comment_bytes": 1078,
+    "preceding_css_and_other_four_files_unchanged": true,
+    "source_installed_and_zip_payload_exact": true,
+    "functional_tests_not_repeated_for_comment": true
+  },
+  "accepted_behaviors": [
+    "Exact cents and zero invoice tolerance; underbilled linehaul/fuel differ, detention/lumper only overcharges, optional TONU omitted at zero.",
+    "Inclusive arrival/exit boundaries, early exit before appointment, odd increments, half-cent rounding, caps and parse-warning precedence match original Python output.",
+    "Evidence exceptions display No automatic claim; raw exported zero is identified as the engine's unresolved supported-amount value.",
+    "Invalid input pauses results/download; focused error navigation opens hidden terms and recovery clears the invalid state.",
+    "Downloads preserve current input/result, original loaded baseline, computed differences and exact source pins.",
+    "Desktop and emulated mobile calculations, monetary text, keyboard control, refresh behavior and local-only requests qualified."
+  ],
+  "unresolved_material_findings": [],
+  "limits": [
+    "One authored brokered stop, same-row tracking pair, known rate confirmation and one invoice; the original documented exclusions remain.",
+    "Actual headless Chromium and mobile viewport emulation, not physical-device qualification.",
+    "No carrier/provider/legal/payment/settlement accuracy or savings outcome was measured or claimed.",
+    "Installation/server/primary 185-case tests were performed by the source owner; this independent review did not relabel them as its own execution.",
+    "No remote source merge, public deployment or live service activation is claimed by this receiving receipt."
+  ],
+  "original_negative_preserved": true,
+  "source_owner_retains_integration": true
+}

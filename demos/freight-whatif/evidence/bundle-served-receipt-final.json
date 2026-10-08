@@ -1,0 +1,48 @@
+{
+  "schema": "freight-whatif.served-receipt.v1",
+  "python": "3.12.8",
+  "site": "/Users/me/workspace/estate/production-freight-whatif-45d4289ccf6c/bundle-receiving-final/site",
+  "origin": "http://127.0.0.1:55389",
+  "passed": 3,
+  "failed": 0,
+  "checks": [
+    "all five installed files served byte-identical over actual loopback HTTP",
+    "browser modules served with a JavaScript MIME type",
+    "owned server exited with zero status and listener closed"
+  ],
+  "received": {
+    "app.mjs": {
+      "sha256": "1555885a0f319407a0dd412599a5b6022ea048eadbad7a0259f3734a6d2e642f",
+      "content_type": "text/javascript",
+      "bytes": 16038
+    },
+    "data.mjs": {
+      "sha256": "c5b8819e50961180208fa8dd4951f6a559b28cc4467c52dd2a68abeeb1b25d81",
+      "content_type": "text/javascript",
+      "bytes": 4103
+    },
+    "index.html": {
+      "sha256": "9eb0bf0a05a5df2799f2f3a5ee36cf0df85a3c618d3feb0b86973681311d6a63",
+      "content_type": "text/html",
+      "bytes": 11173
+    },
+    "model.mjs": {
+      "sha256": "88e3d460da6f421e937cf54b21207da95734db3de3d5932235b1ec001be52590",
+      "content_type": "text/javascript",
+      "bytes": 8946
+    },
+    "styles.css": {
+      "sha256": "0709487053ebc7e028577d46b6447847e7bfc4343027b7d1ecfab2c70c692a31",
+      "content_type": "text/css",
+      "bytes": 20325
+    }
+  },
+  "source_unchanged": true,
+  "server_sha256": "a8e23a17a7a80024ee33f1b034706e800c287e6537dfe0b6442c91c9fc72e899",
+  "runner_sha256": "bf773a39458a90d899d6fa673aa65183820fd3ff4017ac09aa1f9fc42d08a2ed",
+  "cleanup": {
+    "owned_pid": 66022,
+    "exit_code": 0,
+    "loopback_port_closed": true
+  }
+}

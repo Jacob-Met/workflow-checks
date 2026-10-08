@@ -1,0 +1,19 @@
+{
+  "action": "install",
+  "result": {
+    "files": {
+      "app.mjs": "1555885a0f319407a0dd412599a5b6022ea048eadbad7a0259f3734a6d2e642f",
+      "data.mjs": "c5b8819e50961180208fa8dd4951f6a559b28cc4467c52dd2a68abeeb1b25d81",
+      "index.html": "9eb0bf0a05a5df2799f2f3a5ee36cf0df85a3c618d3feb0b86973681311d6a63",
+      "model.mjs": "88e3d460da6f421e937cf54b21207da95734db3de3d5932235b1ec001be52590",
+      "styles.css": "2173b69ce20fd22fa8b92f14305aa9d2fc57fbda5e3e6a3ea19eea0059c215e9"
+    },
+    "schema": "workflow-checks.freight-whatif.install.v1"
+  },
+  "target": "/Users/me/workspace/estate/production-freight-whatif-45d4289ccf6c/freight-release-site",
+  "schema": "freight-whatif.changed-css-install.v1",
+  "previous_css_sha256": "d9127a6a89c008c2915005409dd6f7a81ecab32e1b9566dfb7f1dc3ffaad5371",
+  "final_css_sha256": "2173b69ce20fd22fa8b92f14305aa9d2fc57fbda5e3e6a3ea19eea0059c215e9",
+  "all_five_files_read_back_exact": true,
+  "prior_installed_negative_artifact_retained": true
+}

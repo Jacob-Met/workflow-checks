@@ -1,0 +1,20 @@
+{
+  "schema": "workflow-checks.freight-whatif.bundle-receipt.v1",
+  "archive_name": "freight-whatif.zip",
+  "bytes": 22827,
+  "sha256": "f655f4abf14978a4a84e9bc0ebafe1e985d28ead0a25759e58f67c9d61889c9e",
+  "entries": [
+    "README.txt",
+    "manifest.json",
+    "site/app.mjs",
+    "site/data.mjs",
+    "site/index.html",
+    "site/model.mjs",
+    "site/styles.css",
+    "tools/install.py",
+    "tools/serve.py"
+  ],
+  "all_archive_entries_read_back_exact": true,
+  "manifest_sha256": "76412056aeb9e34bd2b9da7d22d10fe1c2f3062e2d7a6b41a0cd693cce851199",
+  "packager_sha256": "b83fd32478dde1145f4132db65171d9d61b5419fb686347f4696766c86cc4940"
+}

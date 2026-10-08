@@ -1,0 +1,90 @@
+{
+  "actual_final_bundle_server": {
+    "all_final_site_bytes_exact": true,
+    "checks_passed": 3,
+    "cleanup": {
+      "exit_code": 0,
+      "loopback_port_closed": true,
+      "owned_pid": 66022
+    },
+    "failed": 0,
+    "receipt": "bundle-served-receipt-final.json"
+  },
+  "baseline_commit": "2f1e5f777197eedd69d51a4d81c0da744b65ad88",
+  "boundaries": [
+    "No canonical freight source modification",
+    "No shared landing page or site workflow change",
+    "No ThinkPad project writes",
+    "No live customer data or external API/model call",
+    "No native task/lease registration",
+    "No persistent server activation",
+    "No other worker data cleanup"
+  ],
+  "canonical_core_sha256": {
+    "freight_packets/freightpkt/detention.py": "31ca31fd3210ff680bc83291916e39ea19b82580c3a090720556afd4ef0cd76b",
+    "freight_packets/freightpkt/invoice_match.py": "37a9e0801de948c3b558ca7c9846b3d0eb76ec062703ee3e5132df273ff569ab",
+    "freight_packets/freightpkt/models.py": "8a24ed2cca6f45aa8a47d793620b0e2e4d573ec92209954d3f3156795e3f0e05"
+  },
+  "contributor": "chatgpt-45d4289ccf6c/native_execution",
+  "final_bundle": {
+    "all_archive_entries_read_back_exact": true,
+    "archive_name": "freight-whatif.zip",
+    "bytes": 24333,
+    "entries": [
+      "LICENSE",
+      "README.txt",
+      "manifest.json",
+      "site/app.mjs",
+      "site/data.mjs",
+      "site/index.html",
+      "site/model.mjs",
+      "site/styles.css",
+      "tools/install.py",
+      "tools/serve.py"
+    ],
+    "manifest_sha256": "3c58a49b8989332ba3ecdcbc9fd47c577ac8db9c068ca9ab2af8bd9b64d670d7",
+    "packager_sha256": "34fb5dfdc81b68c4f62ac5e9305426d5ff646d8aa2fefeb0c364bc848a667a74",
+    "schema": "workflow-checks.freight-whatif.bundle-receipt.v1",
+    "sha256": "57a0d4d34e8156f7f3bb3f0722882b0902e17ec731503ddd0ef5fdf6ceff6c08"
+  },
+  "final_site_sha256": {
+    "app.mjs": "1555885a0f319407a0dd412599a5b6022ea048eadbad7a0259f3734a6d2e642f",
+    "data.mjs": "c5b8819e50961180208fa8dd4951f6a559b28cc4467c52dd2a68abeeb1b25d81",
+    "index.html": "9eb0bf0a05a5df2799f2f3a5ee36cf0df85a3c618d3feb0b86973681311d6a63",
+    "model.mjs": "88e3d460da6f421e937cf54b21207da95734db3de3d5932235b1ec001be52590",
+    "styles.css": "0709487053ebc7e028577d46b6447847e7bfc4343027b7d1ecfab2c70c692a31"
+  },
+  "installer": {
+    "all_final_bytes_read_back_exact": true,
+    "controls_passed": 6,
+    "failed": 0,
+    "final_site": "/Users/me/workspace/estate/production-freight-whatif-45d4289ccf6c/freight-release-final",
+    "final_site_receipt": "final-install-receipt.json",
+    "receipt": "install-receipt.json"
+  },
+  "issue": "https://github.com/Jacob-Met/workflow-checks/issues/17",
+  "original_goal_disposition": "Historical goal_8c6afc4d23d24dceb103 remains reconciled failed/read-only. This new external contribution did not replay or requeue it.",
+  "primary_browser": {
+    "checks_passed": 11,
+    "cleanup": {
+      "browser_disconnected": true,
+      "loopback_port_closed": true,
+      "server_closed": true,
+      "temporary_profile_removed": true
+    },
+    "failed": 0,
+    "receipt": "browser-initial/browser-receipt.json",
+    "scope": "Initial CSS only; independent receiver subsequently found internal clipping at maximum amount on 320px. That original negative result and the focused correction remain separate."
+  },
+  "primary_model": {
+    "actual_python_oracle_cases": 185,
+    "failed": 0,
+    "node": "v26.3.0",
+    "python": "3.12.8",
+    "receipt": "model-receipt-initial.json",
+    "total_checks_passed": 237
+  },
+  "repository": "Jacob-Met/workflow-checks",
+  "schema": "freight-whatif.primary-receiving.v1",
+  "scope": "New demos/freight-whatif/ only"
+}
