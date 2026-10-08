@@ -1,0 +1,326 @@
+diff --git a/freight_packets/HARDENING.md b/freight_packets/HARDENING.md
+index 48c30b7..b6efb22 100644
+--- a/freight_packets/HARDENING.md
++++ b/freight_packets/HARDENING.md
+@@ -39,3 +39,18 @@ Additional boundary tests cover an appointment crossing midnight, missing arriva
+ - A timestamp with an explicit UTC offset is converted to UTC for calculation and packet display. A timestamp without an offset remains as exported. A feed that mixes offset timestamps with facility-local timestamps can be miscompared; all timestamps for a stop should use explicit offsets if it can cross a time-zone or daylight-saving change.
+ - The parser handles two text rate-con layouts. Scanned PDFs and unfamiliar clauses still need human review; the client's rate confirmations and fine/dispute policy must be mapped before using READY rows for payment.
+ - `pod_received` comes from the TMS load export. A missing `POD` row in `documents.csv` by itself is not treated as proof that the POD is missing. The pilot should reconcile these sources.
++
++
++## Repeated invoice headers
++
++The loader now refuses conflicting carrier, invoice-date or total headers
++within one `(invoice_no, load_id)` group. Previously the first row silently
++won: reversing two authored rows changed the draft payee or dispute deadline,
++and in the date fixture changed the synthetic READY net by 10,000 cents.
++The unchanged monetary parser and string trim define header comparison;
++grouping, duplicate-invoice matching and settlement rules are preserved.
++
++`tests/test_invoice_header_consistency.py` covers each conflicting field in
++both row orders, combined conflicts, nonadjacent source references, valid
++normalized multiline inputs, existing cross-load duplicate matching, and
++actual CLI refusal with byte-preserved prior reports, audit and inputs.
+diff --git a/freight_packets/README.md b/freight_packets/README.md
+index 043d55d..da5f028 100644
+--- a/freight_packets/README.md
++++ b/freight_packets/README.md
+@@ -136,3 +136,20 @@ This was checked on seeds 7 and 11 in the tests, and on 1, 2, 3, 99 and 1234 man
+ - **Carrier invoice feed.** An AP export or an invoices inbox. Also a tolerance policy for mismatches (for example, ±$1).
+ - **Output target.** The packet template the customer or broker accepts (their claim form or email format). Also where approved packets go: a TMS accessorial line, the customer portal, or email drafts. The PoC never sends.
+ - **Access and ops.** Where it runs (their VM or M365 tenant), who approves, retention for the audit log, and a weekly accuracy check against their analyst's manual totals for the first month.
++
++
++## Consistent headers for multiline invoices
++
++Every line with the same trimmed `invoice_no` and `load_id` must repeat the
++same `carrier`, `invoice_date`, and `invoice_total`. Carrier and date strings
++are compared after the loader's existing surrounding-whitespace trim. Totals
++are compared in cents using the existing money parser, so `$1,100.00` and
++`1100` still agree. Carrier aliases, case changes and different date spellings
++are not inferred to be equivalent.
++
++A conflicting repeated header stops the run with a `ValueError` naming the
++fields, invoice/load and first/conflicting CSV record references. Correct
++those source records before running again. The conflict is detected during
++input loading, before any audit append or replacement of existing packet and
++report files. Valid nonadjacent invoice lines still combine, and different
++invoice/load groups retain their existing behavior.
+diff --git a/freight_packets/freightpkt/ingest.py b/freight_packets/freightpkt/ingest.py
+index 9c2baa4..dad18f4 100644
+--- a/freight_packets/freightpkt/ingest.py
++++ b/freight_packets/freightpkt/ingest.py
+@@ -213,24 +213,44 @@ def dollars_to_cents(raw: str) -> int:
+ 
+ 
+ def load_invoices(path: Path) -> list[Invoice]:
+-    """One CSV row per invoice line; rows sharing invoice_no+load_id are grouped
+-    (duplicate invoice numbers on *different* loads stay separate so they can be
+-    flagged)."""
++    """Group invoice lines by invoice_no+load_id, requiring consistent headers.
++
++    Duplicate invoice numbers on different loads remain separate for matching.
++    Repeated headers use the existing string trimming and monetary parsing.
++    """
+     path = Path(path)
+     grouped: dict[tuple[str, str], Invoice] = {}
+     with path.open(newline="", encoding="utf-8-sig") as fh:
+         for i, r in enumerate(csv.DictReader(fh), start=2):
+             key = (r["invoice_no"].strip(), r["load_id"].strip())
++            carrier = r["carrier"].strip()
++            invoice_date = r["invoice_date"].strip()
++            total_cents = dollars_to_cents(r["invoice_total"])
++            source_row = f"{path.name}:row{i}"
+             inv = grouped.get(key)
+             if inv is None:
+                 inv = Invoice(
+                     invoice_no=key[0], load_id=key[1],
+-                    carrier=r["carrier"].strip(),
+-                    invoice_date=r["invoice_date"].strip(),
+-                    total_cents=dollars_to_cents(r["invoice_total"]),
+-                    source_row=f"{path.name}:row{i}",
++                    carrier=carrier,
++                    invoice_date=invoice_date,
++                    total_cents=total_cents,
++                    source_row=source_row,
+                 )
+                 grouped[key] = inv
++            else:
++                conflicts = [
++                    name for name, first, current in (
++                        ("carrier", inv.carrier, carrier),
++                        ("invoice_date", inv.invoice_date, invoice_date),
++                        ("invoice_total", inv.total_cents, total_cents),
++                    ) if first != current
++                ]
++                if conflicts:
++                    raise ValueError(
++                        f"conflicting invoice header {', '.join(conflicts)} "
++                        f"for invoice {key[0]!r} on load {key[1]!r}: "
++                        f"{inv.source_row} and {source_row}"
++                    )
+             inv.lines.append(InvoiceLine(r["line_code"].strip().upper(),
+                                          dollars_to_cents(r["line_amount"])))
+     return list(grouped.values())
+diff --git a/freight_packets/tests/test_invoice_header_consistency.py b/freight_packets/tests/test_invoice_header_consistency.py
+new file mode 100644
+index 0000000..8edd399
+--- /dev/null
++++ b/freight_packets/tests/test_invoice_header_consistency.py
+@@ -0,0 +1,216 @@
++"""Reject contradictory invoice headers before publishing freight reports."""
++from __future__ import annotations
++
++import csv
++import hashlib
++import json
++import os
++from pathlib import Path
++import subprocess
++import sys
++import tempfile
++import unittest
++
++from freightpkt.ingest import load_invoices
++from freightpkt.invoice_match import match_invoices
++
++FIELDS = (
++    "invoice_no", "load_id", "carrier", "invoice_date", "invoice_total",
++    "line_code", "line_amount",
++)
++PACKAGE_ROOT = Path(__file__).resolve().parents[1]
++
++
++def invoice_rows():
++    header = dict(invoice_no="SYN-INV", load_id="SYN-L1",
++                  carrier="Fictional Carrier A", invoice_date="2026-09-01",
++                  invoice_total="1100.00")
++    return [
++        dict(header, line_code="LINEHAUL", line_amount="1000.00"),
++        dict(header, line_code="FUEL", line_amount="100.00"),
++    ]
++
++
++def write_csv(path, fields, rows):
++    with path.open("w", newline="", encoding="utf-8") as stream:
++        writer = csv.DictWriter(stream, fieldnames=fields)
++        writer.writeheader()
++        writer.writerows(rows)
++
++
++def file_hashes(root):
++    return {
++        path.relative_to(root).as_posix(): hashlib.sha256(path.read_bytes()).hexdigest()
++        for path in sorted(root.rglob("*")) if path.is_file()
++    }
++
++
++def write_cli_inputs(data):
++    data.mkdir()
++    (data / "ratecons").mkdir()
++    write_csv(data / "loads.csv",
++              ("load_id", "customer", "carrier", "tractor", "trailer",
++               "pod_received", "ratecon_file", "mode"),
++              [dict(load_id="SYN-L1", customer="Fictional Shipper",
++                    carrier="Fictional Carrier A", tractor="", trailer="",
++                    pod_received="yes", ratecon_file="RC-SYN.txt", mode="brokered")])
++    (data / "ratecons" / "RC-SYN.txt").write_text(
++        "Rate Con # RC-SYN\nLoad # SYN-L1\nCustomer: Fictional Shipper\n"
++        "Carrier: Fictional Carrier A\nLinehaul: $1000.00\nFuel: $100.00\n"
++        "Detention: $50.00 per hour\n2 hours free\n"
++        "billed in 15 minute increments\n15 minute late grace\n"
++        "PICKUP: Fictional Dock | Appt: 2026-09-01 10:00\n", encoding="utf-8")
++    write_csv(data / "tracking.csv",
++              ("load number", "stop name", "actual arrival", "actual departure"),
++              [{"load number": "SYN-L1", "stop name": "Fictional Dock",
++                "actual arrival": "2026-09-01 10:00",
++                "actual departure": "2026-09-01 11:00"}])
++    write_csv(data / "fines_schedule.csv",
++              ("code", "description", "amount", "applies_to"),
++              [dict(code="MISSING_PICKUP_PHOTOS", description="Authored fixture",
++                    amount="100.00", applies_to="brokered")])
++    write_csv(data / "documents.csv", ("load_id", "doc_type", "received_at"), [])
++    write_csv(data / "disputes.csv", ("load_id", "fine_code", "received_at", "reason"),
++              [dict(load_id="SYN-L1", fine_code="MISSING_PICKUP_PHOTOS",
++                    received_at="2026-09-10 12:00", reason="Authored fixture")])
++    write_csv(data / "carrier_invoices.csv", FIELDS, invoice_rows())
++    (data / "README_SYNTHETIC.txt").write_text("All entities and amounts are invented.\n")
++
++
++class InvoiceHeaderConsistencyTests(unittest.TestCase):
++    def setUp(self):
++        self.temporary = tempfile.TemporaryDirectory(prefix="freight-invoice-headers-")
++        self.root = Path(self.temporary.name)
++        self.path = self.root / "carrier_invoices.csv"
++
++    def tearDown(self):
++        self.temporary.cleanup()
++
++    def conflicting_field(self, field, value):
++        for reverse in (False, True):
++            with self.subTest(field=field, reverse=reverse):
++                rows = invoice_rows()
++                rows[1][field] = value
++                if reverse:
++                    rows.reverse()
++                write_csv(self.path, FIELDS, rows)
++                before = self.path.read_bytes()
++                with self.assertRaises(ValueError) as caught:
++                    load_invoices(self.path)
++                self.assertIn(field, str(caught.exception))
++                self.assertIn("SYN-INV", str(caught.exception))
++                self.assertIn("SYN-L1", str(caught.exception))
++                self.assertIn("carrier_invoices.csv:row2", str(caught.exception))
++                self.assertIn("carrier_invoices.csv:row3", str(caught.exception))
++                self.assertEqual(before, self.path.read_bytes())
++
++    def test_conflicting_carrier_is_not_selected_by_row_order(self):
++        self.conflicting_field("carrier", "Fictional Carrier B")
++
++    def test_conflicting_invoice_date_cannot_move_dispute_window(self):
++        self.conflicting_field("invoice_date", "2026-09-10")
++
++    def test_conflicting_invoice_total_is_not_silently_discarded(self):
++        self.conflicting_field("invoice_total", "999.00")
++
++    def test_all_conflicting_fields_and_source_records_are_reported(self):
++        rows = invoice_rows()
++        rows[1].update(carrier="Fictional Carrier B",
++                       invoice_date="2026-09-10", invoice_total="999.00")
++        write_csv(self.path, FIELDS, rows)
++        with self.assertRaises(ValueError) as caught:
++            load_invoices(self.path)
++        for field in ("carrier", "invoice_date", "invoice_total"):
++            self.assertIn(field, str(caught.exception))
++        self.assertIn("carrier_invoices.csv:row2", str(caught.exception))
++        self.assertIn("carrier_invoices.csv:row3", str(caught.exception))
++
++    def test_existing_string_and_money_normalization_remains_valid(self):
++        rows = invoice_rows()
++        rows[0].update(invoice_total="$1,100.00", line_amount="$1,000.00")
++        rows[1].update(invoice_no=" SYN-INV ", load_id=" SYN-L1 ",
++                       carrier=" Fictional Carrier A ", invoice_date=" 2026-09-01 ",
++                       invoice_total=" 1100 ", line_code=" fuel ", line_amount=" 100.00 ")
++        write_csv(self.path, FIELDS, rows)
++        invoices = load_invoices(self.path)
++        self.assertEqual(len(invoices), 1)
++        invoice = invoices[0]
++        self.assertEqual((invoice.invoice_no, invoice.load_id, invoice.carrier,
++                          invoice.invoice_date, invoice.total_cents, invoice.source_row),
++                         ("SYN-INV", "SYN-L1", "Fictional Carrier A",
++                          "2026-09-01", 110000, "carrier_invoices.csv:row2"))
++        self.assertEqual([(line.code, line.amount_cents) for line in invoice.lines],
++                         [("LINEHAUL", 100000), ("FUEL", 10000)])
++
++    def test_nonadjacent_lines_preserve_existing_groups_and_duplicate_check(self):
++        first, last = invoice_rows()
++        other_load = dict(first, load_id="SYN-L2", invoice_date="2026-09-02",
++                          invoice_total="25.00", line_amount="25.00")
++        other_invoice = dict(first, invoice_no="SYN-OTHER", invoice_total="50.00",
++                             line_amount="50.00")
++        write_csv(self.path, FIELDS, [first, other_load, other_invoice, last])
++        invoices = load_invoices(self.path)
++        self.assertEqual([(i.invoice_no, i.load_id, len(i.lines), i.total_cents)
++                          for i in invoices],
++                         [("SYN-INV", "SYN-L1", 2, 110000),
++                          ("SYN-INV", "SYN-L2", 1, 2500),
++                          ("SYN-OTHER", "SYN-L1", 1, 5000)])
++        flags = match_invoices(invoices, {}, {}, {})
++        self.assertEqual([(f.invoice_no, f.load_id) for f in flags
++                          if f.code == "DUPLICATE_INVOICE"],
++                         [("SYN-INV", "SYN-L1"), ("SYN-INV", "SYN-L2")])
++
++    def test_nonadjacent_conflict_identifies_first_and_current_record(self):
++        first, last = invoice_rows()
++        other = dict(first, invoice_no="SYN-OTHER", invoice_total="25.00",
++                     line_amount="25.00")
++        last["invoice_date"] = "2026-09-10"
++        write_csv(self.path, FIELDS, [first, other, last])
++        with self.assertRaises(ValueError) as caught:
++            load_invoices(self.path)
++        self.assertIn("carrier_invoices.csv:row2", str(caught.exception))
++        self.assertIn("carrier_invoices.csv:row4", str(caught.exception))
++
++    def test_cli_refuses_ambiguous_headers_and_preserves_previous_reports(self):
++        data, out = self.root / "data", self.root / "out"
++        write_cli_inputs(data)
++        command = [sys.executable, "-B", "-m", "freightpkt", "run",
++                   "--data", str(data), "--out", str(out)]
++        environment = os.environ.copy()
++        environment.pop("PYTHONPATH", None)
++        environment.pop("PYTHONHOME", None)
++        environment["PYTHONDONTWRITEBYTECODE"] = "1"
++        valid = subprocess.run(command, cwd=PACKAGE_ROOT, env=environment,
++                               capture_output=True, timeout=30)
++        self.assertEqual(valid.returncode, 0, valid.stderr.decode(errors="replace"))
++        summary = json.loads((out / "summary.json").read_text(encoding="utf-8"))
++        settlement = summary["settlements"][0]
++        self.assertEqual((settlement["status"], settlement["carrier"],
++                          settlement["approved_cents"], settlement["fines_cents"],
++                          settlement["net_cents"]),
++                         ("READY", "Fictional Carrier A", 110000, 10000, 100000))
++        prior_outputs = file_hashes(out)
++        self.assertIn("audit.jsonl", prior_outputs)
++        self.assertIn("settlement.csv", prior_outputs)
++        self.assertIn("summary.json", prior_outputs)
++        for field, value in (("carrier", "Fictional Carrier B"),
++                             ("invoice_date", "2026-09-10"),
++                             ("invoice_total", "999.00")):
++            for reverse in (False, True):
++                with self.subTest(field=field, reverse=reverse):
++                    rows = invoice_rows()
++                    rows[1][field] = value
++                    if reverse:
++                        rows.reverse()
++                    write_csv(data / "carrier_invoices.csv", FIELDS, rows)
++                    prior_inputs = file_hashes(data)
++                    invalid = subprocess.run(command, cwd=PACKAGE_ROOT, env=environment,
++                                             capture_output=True, timeout=30)
++                    self.assertNotEqual(invalid.returncode, 0)
++                    self.assertIn(field, invalid.stderr.decode(errors="replace"))
++                    self.assertEqual(file_hashes(data), prior_inputs)
++                    self.assertEqual(file_hashes(out), prior_outputs)
++
++
++if __name__ == "__main__":
++    unittest.main()

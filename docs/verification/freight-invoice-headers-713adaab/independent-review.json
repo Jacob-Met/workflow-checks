@@ -1,0 +1,23 @@
+{
+  "reviewer": "chatgpt:/root",
+  "kind": "independent source and receipt review; no replay",
+  "decision": "approved",
+  "source_sha256": "1179675d011d55781c6de3ae806b905698df2a21fcc621ea788d73c6e29d6276",
+  "test_sha256": "1fda13d4c63ce4e2c311323db1995bd663a660c4637bc93bfded460ee2ae57d8",
+  "four_file_patch_sha256": "f780ac031ca3560438a688a97519e80f1a4d3bfd61c5a366297e2ccb944bc2a9",
+  "readme_sha256": "70fb648343e5893b63d8d48ecfd369920d5edf0deaf7ec20cb103cbee7ee4c95",
+  "acceptance_sha256": "52efe2b0ff58e7ade10453c01a79c97f5eb2c52bcdc3e06c24d13a25d04f3444",
+  "native_windows_report_sha256": "6680fc84b0fef2934f5231bfec2c809a10450a6ef4d068c0837c49ab64f2aea0",
+  "reviewed": [
+    "full maintained regression",
+    "changed loader body and unchanged monetary parser",
+    "exact guide delta",
+    "contract receipt and blank continuation compatibility boundary",
+    "acceptance and packet README",
+    "Windows source/input before-after maps: 28/56",
+    "actual Windows CLI codes: 0/1/1/1/1/1/1",
+    "seven prior output hashes for every refusal",
+    "all retained native stdout/stderr hashes"
+  ],
+  "authorization": "Publish on fresh full main preserving unrelated leaves; required hosted gates then guarded merge. Source author remains sole publication and merge owner."
+}

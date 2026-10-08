@@ -1,0 +1,2 @@
+invoice_no,load_id,carrier,invoiced,approved,fines,net_payable,status,hold_reasons,notes,evidence
+SYN-INV,SYN-L1,Fictional Carrier A,"$1,100.00","$1,100.00",$0.00,"$1,100.00",READY,,MISSING_PICKUP_PHOTOS FINE-3390D2F2AF disputed in window: not deducted,carrier_invoices.csv:row2;RC-SYN.txt

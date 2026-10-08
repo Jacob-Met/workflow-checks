@@ -1,0 +1,16 @@
+{
+  "qualification": "passed",
+  "case_count": 7,
+  "native_process_exits": [
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "report_sha256": "6680fc84b0fef2934f5231bfec2c809a10450a6ef4d068c0837c49ab64f2aea0",
+  "source_sha256": "1179675d011d55781c6de3ae806b905698df2a21fcc621ea788d73c6e29d6276",
+  "qualification_exit_code": 0
+}

@@ -1,0 +1,94 @@
+{
+  "name": "total-first-999",
+  "argv": [
+    "/usr/bin/python3",
+    "-B",
+    "-m",
+    "freightpkt",
+    "run",
+    "--data",
+    "/home/jacob/hamon-estate-discovery-713adaab-20261008/1306-freight-header-baseline/total-first-999/data",
+    "--out",
+    "/home/jacob/hamon-estate-discovery-713adaab-20261008/1306-freight-header-baseline/total-first-999/out"
+  ],
+  "cwd": "/home/jacob/hamon-estate-discovery-713adaab-20261008/1258-freight-closure/source/freight_packets",
+  "started_utc": "2026-10-08T12:59:03.118851+00:00",
+  "returncode": 0,
+  "stdout_sha256": "64c3ffe80577657ecf691b946d9dc255ddb0b2b010b98860cd5b1f062deee18f",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "input_hashes": {
+    "README_SYNTHETIC.txt": "ff78901b0aba6c421c4c280658168d58149ffaab086c92ba58fda31712c6d9e9",
+    "carrier_invoices.csv": "84a610c0b6be3e2e82d8f7b363ac84681928a3eb8f50bf8ec9ec713a7036e831",
+    "disputes.csv": "10c10c79728aabeafaa0da1a4238a9b42d87a77cdc8d6a2fc29a8c3314a4cc2e",
+    "documents.csv": "1ff79a4ed2535d66c0d5346612ffefb3cf9bdae6dbc89f64ab5370640395ee40",
+    "fines_schedule.csv": "13e72bf80b3880b6c3d14a57b597df51c2e274ef1a6ce9dca0191a8d4b290c59",
+    "loads.csv": "a84052a6466eb24adfa5fb753dd1488ba0c4820c810937425bb356c356be664a",
+    "ratecons/RC-SYN.txt": "25a3d0cab9b6e53622adda1fe81ea538a6914558df2e44db98649f1d4b1838e8",
+    "tracking.csv": "df4f49acedd2d8597513f42cd00d2c1816718eb347c9b48536f2832870d40afd"
+  },
+  "input_unchanged": true,
+  "output_hashes": {
+    "audit.jsonl": "ed3cc1caad1529f2bb443573017957a0fe8a3005e4839291bc8ce5b94bae165a",
+    "detention_claims.csv": "071c7ef82ab4249580aa8ca6a9167c5db1140fba70c99b83f1176c824c712ba1",
+    "exceptions.csv": "3d03cb15ec6db6a964ae9a25b71f6566e18f274b725e2d59cb13137a04342eca",
+    "fines.csv": "e88ab98a25991b66cdd876729f35cd63a90c8eabb991f01cd9ab00b77b797424",
+    "invoice_flags.csv": "70a3abd2e9448f591a989fea3f5db824a811f6187e01ef64761870e5deba9a3b",
+    "settlement.csv": "cfff5e2c14296c877a1b81fc7eda46e8426926ee1d4753ad0e72aee6ed39a26c",
+    "summary.json": "6feead8d20980f5b1db2ae4683ef71941113faafc58678cb728cae5a7ffb3090"
+  },
+  "settlements": [
+    {
+      "invoice_no": "SYN-INV",
+      "load_id": "SYN-L1",
+      "carrier": "Fictional Carrier A",
+      "invoiced_cents": 110000,
+      "approved_cents": 110000,
+      "fines_cents": 10000,
+      "net_cents": 100000,
+      "status": "READY",
+      "hold_reasons": [],
+      "notes": [
+        "header total differs from line sum; settled on lines"
+      ],
+      "evidence": [
+        "carrier_invoices.csv:row2",
+        "RC-SYN.txt"
+      ]
+    }
+  ],
+  "fines": [
+    {
+      "load_id": "SYN-L1",
+      "carrier": "Fictional Carrier A",
+      "code": "MISSING_PICKUP_PHOTOS",
+      "amount_cents": 10000,
+      "detail": "no pickup photos on file",
+      "notice_date": "2026-09-01",
+      "dispute_deadline": "2026-09-08",
+      "status": "dispute_late",
+      "dispute_note": "disputed 2026-09-10 after window closed 2026-09-08: Authored fixture only",
+      "evidence": [
+        "documents.csv (no PICKUP_PHOTOS row)",
+        "fines_schedule.csv:row2",
+        "disputes.csv:row2"
+      ],
+      "fine_id": "FINE-3390D2F2AF",
+      "deducted_cents": 10000
+    }
+  ],
+  "flags": [
+    {
+      "invoice_no": "SYN-INV",
+      "load_id": "SYN-L1",
+      "carrier": "Fictional Carrier A",
+      "code": "TOTAL_MISMATCH",
+      "detail": "header total $999.00 != line sum $1,100.00",
+      "invoiced_cents": 99900,
+      "expected_cents": 110000,
+      "evidence": [
+        "carrier_invoices.csv:row2"
+      ],
+      "variance_cents": -10100
+    }
+  ]
+}

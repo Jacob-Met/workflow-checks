@@ -1,0 +1,13 @@
+test_all_conflicting_fields_and_source_records_are_reported (test_invoice_header_consistency.InvoiceHeaderConsistencyTests.test_all_conflicting_fields_and_source_records_are_reported) ... ok
+test_cli_refuses_ambiguous_headers_and_preserves_previous_reports (test_invoice_header_consistency.InvoiceHeaderConsistencyTests.test_cli_refuses_ambiguous_headers_and_preserves_previous_reports) ... ok
+test_conflicting_carrier_is_not_selected_by_row_order (test_invoice_header_consistency.InvoiceHeaderConsistencyTests.test_conflicting_carrier_is_not_selected_by_row_order) ... ok
+test_conflicting_invoice_date_cannot_move_dispute_window (test_invoice_header_consistency.InvoiceHeaderConsistencyTests.test_conflicting_invoice_date_cannot_move_dispute_window) ... ok
+test_conflicting_invoice_total_is_not_silently_discarded (test_invoice_header_consistency.InvoiceHeaderConsistencyTests.test_conflicting_invoice_total_is_not_silently_discarded) ... ok
+test_existing_string_and_money_normalization_remains_valid (test_invoice_header_consistency.InvoiceHeaderConsistencyTests.test_existing_string_and_money_normalization_remains_valid) ... ok
+test_nonadjacent_conflict_identifies_first_and_current_record (test_invoice_header_consistency.InvoiceHeaderConsistencyTests.test_nonadjacent_conflict_identifies_first_and_current_record) ... ok
+test_nonadjacent_lines_preserve_existing_groups_and_duplicate_check (test_invoice_header_consistency.InvoiceHeaderConsistencyTests.test_nonadjacent_lines_preserve_existing_groups_and_duplicate_check) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 1.031s
+
+OK

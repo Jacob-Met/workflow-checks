@@ -1,0 +1,30 @@
+{
+  "namespace": "C:\\Users\\minec\\AppData\\Local\\Temp\\hamon-freight-headers-713adaab-fb3a2ca166494553ba685bb70cf11acb",
+  "native_host": "DESKTOP-LA7CMTA",
+  "filesystem": "NTFS",
+  "source_bundle_bytes": 96301,
+  "source_bundle_sha256": "4332367b24e1fda29ae7955a3439a12cf6b880d526ee59b7d4b13829526260f1",
+  "archive_bytes": 21235,
+  "archive_sha256": "9af189a2abf3102c02ca6d33d44ac494c974fc84d09744af8269e0a34f9ce8b1",
+  "setup_returncode": 0,
+  "upload_returncode": 0,
+  "execution_transport_returncode": 0,
+  "download_returncode": 0,
+  "qualification_exit_code": 0,
+  "native_process_exits": [
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "report_sha256": "6680fc84b0fef2934f5231bfec2c809a10450a6ef4d068c0837c49ab64f2aea0",
+  "source_sha256": "1179675d011d55781c6de3ae806b905698df2a21fcc621ea788d73c6e29d6276",
+  "test_sha256": "1fda13d4c63ce4e2c311323db1995bd663a660c4637bc93bfded460ee2ae57d8",
+  "source_unchanged": true,
+  "inputs_unchanged": true,
+  "all_six_refusals_preserve_reports": true,
+  "finished_utc": "2026-10-08T13:24:20.546783+00:00"
+}

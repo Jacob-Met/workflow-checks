@@ -1,0 +1,54 @@
+{
+  "upstream_source_commit": "9e931fa9f42033bf2368f7149684fb5631345715",
+  "native_partial_import_commit": "a29bd6704c9b67860038ed27d323c57bcdf5d203",
+  "paths": [
+    {
+      "path": "freight_packets/freightpkt/ingest.py",
+      "before": {
+        "bytes": 10103,
+        "sha256": "1d5fb49d5656819c2b857a4d3d45f288b38885e109f0504992786714fe65382b",
+        "git_blob": "9c2baa4377ee5c6564c9bb12c40953b336107201"
+      },
+      "candidate": {
+        "bytes": 11001,
+        "sha256": "1179675d011d55781c6de3ae806b905698df2a21fcc621ea788d73c6e29d6276",
+        "git_blob": "dad18f470035318241a9c432326d1f4bafa26edf"
+      }
+    },
+    {
+      "path": "freight_packets/tests/test_invoice_header_consistency.py",
+      "before": null,
+      "candidate": {
+        "bytes": 10564,
+        "sha256": "1fda13d4c63ce4e2c311323db1995bd663a660c4637bc93bfded460ee2ae57d8",
+        "git_blob": "8edd399bddc85e8e4d349e00d638ccc5272b465e"
+      }
+    },
+    {
+      "path": "freight_packets/README.md",
+      "before": {
+        "bytes": 14786,
+        "sha256": "f6c72c72b4c4aa2c4d07c9a35ac013aa48944c58d2a3d16d8c9e39a23d870f59",
+        "git_blob": "043d55db41231d7b8f9bb1927ed7cf61d6de1592"
+      },
+      "candidate": {
+        "bytes": 15699,
+        "sha256": "a8152465bff0efd8bf52af275a92acffa0ec1300593b9a20620dd155ffe8645b",
+        "git_blob": "da5f0289076248be51bbe8336bdf6837b5f76681"
+      }
+    },
+    {
+      "path": "freight_packets/HARDENING.md",
+      "before": {
+        "bytes": 6033,
+        "sha256": "19fca7d363c79f9b20dec93ec9261fb0bc84dcd54a3dddb77c5ac911ba3ab500",
+        "git_blob": "48c30b731fc3f8bfc8e8a68a3da0c3a5eaa6bf24"
+      },
+      "candidate": {
+        "bytes": 6821,
+        "sha256": "221e184d4e84d60f9827465c8d7910c6e5e1bf19d817bc0af8fc769e1c965226",
+        "git_blob": "b6efb226aeef5c67012676a5a3782bb5a90bb327"
+      }
+    }
+  ]
+}

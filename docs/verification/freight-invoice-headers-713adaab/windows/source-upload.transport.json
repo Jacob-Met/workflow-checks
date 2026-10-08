@@ -1,0 +1,22 @@
+{
+  "argv": [
+    "scp",
+    "-o",
+    "BatchMode=yes",
+    "-o",
+    "StrictHostKeyChecking=yes",
+    "-o",
+    "ConnectTimeout=10",
+    "-o",
+    "LogLevel=ERROR",
+    "-i",
+    "/home/jacob/.ssh/id_ed25519",
+    "/dev/shm/chatgpt-freight-invoice-headers-713adaab/evidence/windows/source-bundle.zip",
+    "minec@100.115.131.125:AppData/Local/Temp/hamon-freight-headers-713adaab-fb3a2ca166494553ba685bb70cf11acb/source-bundle.zip"
+  ],
+  "returncode": 0,
+  "started_utc": "2026-10-08T13:24:14.887144+00:00",
+  "finished_utc": "2026-10-08T13:24:15.853009+00:00",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

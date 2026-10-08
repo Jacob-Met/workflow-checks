@@ -1,0 +1,3 @@
+events=2 loads=1 stops=1
+detention stops=0  total=$0.00  late arrivals=0  exceptions=0
+invoice flags=0  packets=0  -> C:\Users\minec\AppData\Local\Temp\hamon-freight-headers-713adaab-fb3a2ca166494553ba685bb70cf11acb\reports

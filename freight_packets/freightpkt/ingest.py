@@ -213,24 +213,44 @@ def dollars_to_cents(raw: str) -> int:
 
 
 def load_invoices(path: Path) -> list[Invoice]:
-    """One CSV row per invoice line; rows sharing invoice_no+load_id are grouped
-    (duplicate invoice numbers on *different* loads stay separate so they can be
-    flagged)."""
+    """Group invoice lines by invoice_no+load_id, requiring consistent headers.
+
+    Duplicate invoice numbers on different loads remain separate for matching.
+    Repeated headers use the existing string trimming and monetary parsing.
+    """
     path = Path(path)
     grouped: dict[tuple[str, str], Invoice] = {}
     with path.open(newline="", encoding="utf-8-sig") as fh:
         for i, r in enumerate(csv.DictReader(fh), start=2):
             key = (r["invoice_no"].strip(), r["load_id"].strip())
+            carrier = r["carrier"].strip()
+            invoice_date = r["invoice_date"].strip()
+            total_cents = dollars_to_cents(r["invoice_total"])
+            source_row = f"{path.name}:row{i}"
             inv = grouped.get(key)
             if inv is None:
                 inv = Invoice(
                     invoice_no=key[0], load_id=key[1],
-                    carrier=r["carrier"].strip(),
-                    invoice_date=r["invoice_date"].strip(),
-                    total_cents=dollars_to_cents(r["invoice_total"]),
-                    source_row=f"{path.name}:row{i}",
+                    carrier=carrier,
+                    invoice_date=invoice_date,
+                    total_cents=total_cents,
+                    source_row=source_row,
                 )
                 grouped[key] = inv
+            else:
+                conflicts = [
+                    name for name, first, current in (
+                        ("carrier", inv.carrier, carrier),
+                        ("invoice_date", inv.invoice_date, invoice_date),
+                        ("invoice_total", inv.total_cents, total_cents),
+                    ) if first != current
+                ]
+                if conflicts:
+                    raise ValueError(
+                        f"conflicting invoice header {', '.join(conflicts)} "
+                        f"for invoice {key[0]!r} on load {key[1]!r}: "
+                        f"{inv.source_row} and {source_row}"
+                    )
             inv.lines.append(InvoiceLine(r["line_code"].strip().upper(),
                                          dollars_to_cents(r["line_amount"])))
     return list(grouped.values())

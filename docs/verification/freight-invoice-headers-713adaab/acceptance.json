@@ -1,0 +1,81 @@
+{
+  "schema": "workflow-checks.freight-invoice-headers.acceptance.v1",
+  "issue": "https://github.com/Jacob-Met/workflow-checks/issues/28",
+  "candidate_source_sha256": "1179675d011d55781c6de3ae806b905698df2a21fcc621ea788d73c6e29d6276",
+  "test_sha256": "1fda13d4c63ce4e2c311323db1995bd663a660c4637bc93bfded460ee2ae57d8",
+  "native_linux": {
+    "python": "3.14.4",
+    "pytest": "9.0.2",
+    "same_test_bytes": true,
+    "baseline": {
+      "methods": 8,
+      "failing_methods": 6,
+      "passing_controls": 2,
+      "failure_records_including_subtests": 14,
+      "returncode": 1
+    },
+    "candidate": {
+      "methods": 8,
+      "passed": 8,
+      "returncode": 0
+    },
+    "full_freight": {
+      "passed": 79,
+      "subtests_passed": 27,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "returncode": 0
+    }
+  },
+  "native_windows": {
+    "host": "DESKTOP-LA7CMTA",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "filesystem": "NTFS",
+    "python": "3.11.9",
+    "actual_cli_returncodes": [
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "qualification_exit_code": 0,
+    "coherent": {
+      "carrier": "Fictional Carrier A",
+      "status": "READY",
+      "approved_cents": 110000,
+      "fines_cents": 10000,
+      "net_cents": 100000,
+      "invoice_flags": []
+    },
+    "prior_report_files_preserved": 7,
+    "refusals_preserving_reports": 6,
+    "source_files_unchanged": 28,
+    "fixture_input_files_unchanged": 56,
+    "report_sha256": "6680fc84b0fef2934f5231bfec2c809a10450a6ef4d068c0837c49ab64f2aea0"
+  },
+  "scope_limits": {
+    "original_money_parser_unchanged": true,
+    "trim_only_for_carrier_and_date": true,
+    "blank_continuation_inheritance_not_documented_in_original_guides": true,
+    "zero_filesystem_effects_claimed": false,
+    "existing_report_and_audit_bytes_preserved": true,
+    "installed": false,
+    "live_service_or_customer_data_changed": false,
+    "migration_cutover": false,
+    "firmware_action": false,
+    "contention_or_power_loss_qualification": false,
+    "hosted_gate_at_this_native_checkpoint": "not yet run"
+  },
+  "receipt_paths": {
+    "baseline": "baseline/baseline-report.json",
+    "paired_baseline": "newtests-baseline/receipt.json",
+    "paired_candidate": "newtests-candidate/receipt.json",
+    "full_suite": "freight-full-candidate/receipt.json",
+    "windows": "windows/native/evidence/receiving-report.json",
+    "transport": "windows/transport-summary.json"
+  }
+}

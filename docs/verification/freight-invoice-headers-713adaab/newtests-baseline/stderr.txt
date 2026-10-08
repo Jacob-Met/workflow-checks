@@ -1,0 +1,151 @@
+test_all_conflicting_fields_and_source_records_are_reported (test_invoice_header_consistency.InvoiceHeaderConsistencyTests.test_all_conflicting_fields_and_source_records_are_reported) ... FAIL
+test_cli_refuses_ambiguous_headers_and_preserves_previous_reports (test_invoice_header_consistency.InvoiceHeaderConsistencyTests.test_cli_refuses_ambiguous_headers_and_preserves_previous_reports) ... 
+  test_cli_refuses_ambiguous_headers_and_preserves_previous_reports (test_invoice_header_consistency.InvoiceHeaderConsistencyTests.test_cli_refuses_ambiguous_headers_and_preserves_previous_reports) (field='carrier', reverse=False) ... FAIL
+  test_cli_refuses_ambiguous_headers_and_preserves_previous_reports (test_invoice_header_consistency.InvoiceHeaderConsistencyTests.test_cli_refuses_ambiguous_headers_and_preserves_previous_reports) (field='carrier', reverse=True) ... FAIL
+  test_cli_refuses_ambiguous_headers_and_preserves_previous_reports (test_invoice_header_consistency.InvoiceHeaderConsistencyTests.test_cli_refuses_ambiguous_headers_and_preserves_previous_reports) (field='invoice_date', reverse=False) ... FAIL
+  test_cli_refuses_ambiguous_headers_and_preserves_previous_reports (test_invoice_header_consistency.InvoiceHeaderConsistencyTests.test_cli_refuses_ambiguous_headers_and_preserves_previous_reports) (field='invoice_date', reverse=True) ... FAIL
+  test_cli_refuses_ambiguous_headers_and_preserves_previous_reports (test_invoice_header_consistency.InvoiceHeaderConsistencyTests.test_cli_refuses_ambiguous_headers_and_preserves_previous_reports) (field='invoice_total', reverse=False) ... FAIL
+  test_cli_refuses_ambiguous_headers_and_preserves_previous_reports (test_invoice_header_consistency.InvoiceHeaderConsistencyTests.test_cli_refuses_ambiguous_headers_and_preserves_previous_reports) (field='invoice_total', reverse=True) ... FAIL
+test_conflicting_carrier_is_not_selected_by_row_order (test_invoice_header_consistency.InvoiceHeaderConsistencyTests.test_conflicting_carrier_is_not_selected_by_row_order) ... 
+  test_conflicting_carrier_is_not_selected_by_row_order (test_invoice_header_consistency.InvoiceHeaderConsistencyTests.test_conflicting_carrier_is_not_selected_by_row_order) (field='carrier', reverse=False) ... FAIL
+  test_conflicting_carrier_is_not_selected_by_row_order (test_invoice_header_consistency.InvoiceHeaderConsistencyTests.test_conflicting_carrier_is_not_selected_by_row_order) (field='carrier', reverse=True) ... FAIL
+test_conflicting_invoice_date_cannot_move_dispute_window (test_invoice_header_consistency.InvoiceHeaderConsistencyTests.test_conflicting_invoice_date_cannot_move_dispute_window) ... 
+  test_conflicting_invoice_date_cannot_move_dispute_window (test_invoice_header_consistency.InvoiceHeaderConsistencyTests.test_conflicting_invoice_date_cannot_move_dispute_window) (field='invoice_date', reverse=False) ... FAIL
+  test_conflicting_invoice_date_cannot_move_dispute_window (test_invoice_header_consistency.InvoiceHeaderConsistencyTests.test_conflicting_invoice_date_cannot_move_dispute_window) (field='invoice_date', reverse=True) ... FAIL
+test_conflicting_invoice_total_is_not_silently_discarded (test_invoice_header_consistency.InvoiceHeaderConsistencyTests.test_conflicting_invoice_total_is_not_silently_discarded) ... 
+  test_conflicting_invoice_total_is_not_silently_discarded (test_invoice_header_consistency.InvoiceHeaderConsistencyTests.test_conflicting_invoice_total_is_not_silently_discarded) (field='invoice_total', reverse=False) ... FAIL
+  test_conflicting_invoice_total_is_not_silently_discarded (test_invoice_header_consistency.InvoiceHeaderConsistencyTests.test_conflicting_invoice_total_is_not_silently_discarded) (field='invoice_total', reverse=True) ... FAIL
+test_existing_string_and_money_normalization_remains_valid (test_invoice_header_consistency.InvoiceHeaderConsistencyTests.test_existing_string_and_money_normalization_remains_valid) ... ok
+test_nonadjacent_conflict_identifies_first_and_current_record (test_invoice_header_consistency.InvoiceHeaderConsistencyTests.test_nonadjacent_conflict_identifies_first_and_current_record) ... FAIL
+test_nonadjacent_lines_preserve_existing_groups_and_duplicate_check (test_invoice_header_consistency.InvoiceHeaderConsistencyTests.test_nonadjacent_lines_preserve_existing_groups_and_duplicate_check) ... ok
+
+======================================================================
+FAIL: test_all_conflicting_fields_and_source_records_are_reported (test_invoice_header_consistency.InvoiceHeaderConsistencyTests.test_all_conflicting_fields_and_source_records_are_reported)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/dev/shm/chatgpt-freight-invoice-headers-713adaab/baseline-source/freight_packets/tests/test_invoice_header_consistency.py", line 121, in test_all_conflicting_fields_and_source_records_are_reported
+    with self.assertRaises(ValueError) as caught:
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_cli_refuses_ambiguous_headers_and_preserves_previous_reports (test_invoice_header_consistency.InvoiceHeaderConsistencyTests.test_cli_refuses_ambiguous_headers_and_preserves_previous_reports) (field='carrier', reverse=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/dev/shm/chatgpt-freight-invoice-headers-713adaab/baseline-source/freight_packets/tests/test_invoice_header_consistency.py", line 209, in test_cli_refuses_ambiguous_headers_and_preserves_previous_reports
+    self.assertNotEqual(invalid.returncode, 0)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 == 0
+
+======================================================================
+FAIL: test_cli_refuses_ambiguous_headers_and_preserves_previous_reports (test_invoice_header_consistency.InvoiceHeaderConsistencyTests.test_cli_refuses_ambiguous_headers_and_preserves_previous_reports) (field='carrier', reverse=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/dev/shm/chatgpt-freight-invoice-headers-713adaab/baseline-source/freight_packets/tests/test_invoice_header_consistency.py", line 209, in test_cli_refuses_ambiguous_headers_and_preserves_previous_reports
+    self.assertNotEqual(invalid.returncode, 0)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 == 0
+
+======================================================================
+FAIL: test_cli_refuses_ambiguous_headers_and_preserves_previous_reports (test_invoice_header_consistency.InvoiceHeaderConsistencyTests.test_cli_refuses_ambiguous_headers_and_preserves_previous_reports) (field='invoice_date', reverse=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/dev/shm/chatgpt-freight-invoice-headers-713adaab/baseline-source/freight_packets/tests/test_invoice_header_consistency.py", line 209, in test_cli_refuses_ambiguous_headers_and_preserves_previous_reports
+    self.assertNotEqual(invalid.returncode, 0)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 == 0
+
+======================================================================
+FAIL: test_cli_refuses_ambiguous_headers_and_preserves_previous_reports (test_invoice_header_consistency.InvoiceHeaderConsistencyTests.test_cli_refuses_ambiguous_headers_and_preserves_previous_reports) (field='invoice_date', reverse=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/dev/shm/chatgpt-freight-invoice-headers-713adaab/baseline-source/freight_packets/tests/test_invoice_header_consistency.py", line 209, in test_cli_refuses_ambiguous_headers_and_preserves_previous_reports
+    self.assertNotEqual(invalid.returncode, 0)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 == 0
+
+======================================================================
+FAIL: test_cli_refuses_ambiguous_headers_and_preserves_previous_reports (test_invoice_header_consistency.InvoiceHeaderConsistencyTests.test_cli_refuses_ambiguous_headers_and_preserves_previous_reports) (field='invoice_total', reverse=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/dev/shm/chatgpt-freight-invoice-headers-713adaab/baseline-source/freight_packets/tests/test_invoice_header_consistency.py", line 209, in test_cli_refuses_ambiguous_headers_and_preserves_previous_reports
+    self.assertNotEqual(invalid.returncode, 0)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 == 0
+
+======================================================================
+FAIL: test_cli_refuses_ambiguous_headers_and_preserves_previous_reports (test_invoice_header_consistency.InvoiceHeaderConsistencyTests.test_cli_refuses_ambiguous_headers_and_preserves_previous_reports) (field='invoice_total', reverse=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/dev/shm/chatgpt-freight-invoice-headers-713adaab/baseline-source/freight_packets/tests/test_invoice_header_consistency.py", line 209, in test_cli_refuses_ambiguous_headers_and_preserves_previous_reports
+    self.assertNotEqual(invalid.returncode, 0)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 == 0
+
+======================================================================
+FAIL: test_conflicting_carrier_is_not_selected_by_row_order (test_invoice_header_consistency.InvoiceHeaderConsistencyTests.test_conflicting_carrier_is_not_selected_by_row_order) (field='carrier', reverse=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/dev/shm/chatgpt-freight-invoice-headers-713adaab/baseline-source/freight_packets/tests/test_invoice_header_consistency.py", line 98, in conflicting_field
+    with self.assertRaises(ValueError) as caught:
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_conflicting_carrier_is_not_selected_by_row_order (test_invoice_header_consistency.InvoiceHeaderConsistencyTests.test_conflicting_carrier_is_not_selected_by_row_order) (field='carrier', reverse=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/dev/shm/chatgpt-freight-invoice-headers-713adaab/baseline-source/freight_packets/tests/test_invoice_header_consistency.py", line 98, in conflicting_field
+    with self.assertRaises(ValueError) as caught:
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_conflicting_invoice_date_cannot_move_dispute_window (test_invoice_header_consistency.InvoiceHeaderConsistencyTests.test_conflicting_invoice_date_cannot_move_dispute_window) (field='invoice_date', reverse=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/dev/shm/chatgpt-freight-invoice-headers-713adaab/baseline-source/freight_packets/tests/test_invoice_header_consistency.py", line 98, in conflicting_field
+    with self.assertRaises(ValueError) as caught:
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_conflicting_invoice_date_cannot_move_dispute_window (test_invoice_header_consistency.InvoiceHeaderConsistencyTests.test_conflicting_invoice_date_cannot_move_dispute_window) (field='invoice_date', reverse=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/dev/shm/chatgpt-freight-invoice-headers-713adaab/baseline-source/freight_packets/tests/test_invoice_header_consistency.py", line 98, in conflicting_field
+    with self.assertRaises(ValueError) as caught:
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_conflicting_invoice_total_is_not_silently_discarded (test_invoice_header_consistency.InvoiceHeaderConsistencyTests.test_conflicting_invoice_total_is_not_silently_discarded) (field='invoice_total', reverse=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/dev/shm/chatgpt-freight-invoice-headers-713adaab/baseline-source/freight_packets/tests/test_invoice_header_consistency.py", line 98, in conflicting_field
+    with self.assertRaises(ValueError) as caught:
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_conflicting_invoice_total_is_not_silently_discarded (test_invoice_header_consistency.InvoiceHeaderConsistencyTests.test_conflicting_invoice_total_is_not_silently_discarded) (field='invoice_total', reverse=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/dev/shm/chatgpt-freight-invoice-headers-713adaab/baseline-source/freight_packets/tests/test_invoice_header_consistency.py", line 98, in conflicting_field
+    with self.assertRaises(ValueError) as caught:
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_nonadjacent_conflict_identifies_first_and_current_record (test_invoice_header_consistency.InvoiceHeaderConsistencyTests.test_nonadjacent_conflict_identifies_first_and_current_record)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/dev/shm/chatgpt-freight-invoice-headers-713adaab/baseline-source/freight_packets/tests/test_invoice_header_consistency.py", line 169, in test_nonadjacent_conflict_identifies_first_and_current_record
+    with self.assertRaises(ValueError) as caught:
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.605s
+
+FAILED (failures=14)

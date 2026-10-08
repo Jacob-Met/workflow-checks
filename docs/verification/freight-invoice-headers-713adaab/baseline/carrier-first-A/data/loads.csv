@@ -1,0 +1,2 @@
+load_id,customer,carrier,tractor,trailer,pod_received,ratecon_file,mode
+SYN-L1,Fictional Shipper,Fictional Carrier A,,,yes,RC-SYN.txt,brokered

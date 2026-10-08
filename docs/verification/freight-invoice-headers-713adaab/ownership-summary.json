@@ -1,0 +1,27 @@
+{
+  "observed_utc": "2026-10-08T13:04:42.557987+00:00",
+  "root_coord_read_bytes": 885681,
+  "skips": [],
+  "raw_local_record_sha256": "3c368578af3756547e4f4c75bf6571bf99ad857badc91826c086c7d03300eeb6",
+  "exact_scope": "freightpkt.load_invoices repeated carrier, invoice_date, invoice_total headers only",
+  "result": "No competing header claim found in the bounded native/GitHub records inspected before claim registration.",
+  "coverage_limit": "Native overlap included no matching goals; external coverage was explicitly incomplete because some top-level coordination schemas were unsupported. Absence from this query alone is not proof of no owner.",
+  "current_related_public_owners": [
+    {
+      "pull_request": 23,
+      "scope": "Saved-review download; merged; untouched implementation",
+      "completion_comment": 6059964407
+    },
+    {
+      "pull_request": 20,
+      "scope": "Freight what-if demo and CI; integrated; untouched"
+    }
+  ],
+  "private_records_retained": "Original broad coordination records remain in the native evidence/ownership directory and are intentionally excluded from public product evidence.",
+  "claim": {
+    "issue": 28,
+    "conscience_seq": 4113,
+    "event_id": "cev_05df869f8e714caf86456ba6",
+    "actor": "chatgpt:/root/migration_execution"
+  }
+}

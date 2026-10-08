@@ -39,3 +39,18 @@ Additional boundary tests cover an appointment crossing midnight, missing arriva
 - A timestamp with an explicit UTC offset is converted to UTC for calculation and packet display. A timestamp without an offset remains as exported. A feed that mixes offset timestamps with facility-local timestamps can be miscompared; all timestamps for a stop should use explicit offsets if it can cross a time-zone or daylight-saving change.
 - The parser handles two text rate-con layouts. Scanned PDFs and unfamiliar clauses still need human review; the client's rate confirmations and fine/dispute policy must be mapped before using READY rows for payment.
 - `pod_received` comes from the TMS load export. A missing `POD` row in `documents.csv` by itself is not treated as proof that the POD is missing. The pilot should reconcile these sources.
+
+
+## Repeated invoice headers
+
+The loader now refuses conflicting carrier, invoice-date or total headers
+within one `(invoice_no, load_id)` group. Previously the first row silently
+won: reversing two authored rows changed the draft payee or dispute deadline,
+and in the date fixture changed the synthetic READY net by 10,000 cents.
+The unchanged monetary parser and string trim define header comparison;
+grouping, duplicate-invoice matching and settlement rules are preserved.
+
+`tests/test_invoice_header_consistency.py` covers each conflicting field in
+both row orders, combined conflicts, nonadjacent source references, valid
+normalized multiline inputs, existing cross-load duplicate matching, and
+actual CLI refusal with byte-preserved prior reports, audit and inputs.

@@ -1,0 +1,31 @@
+{
+  "schema": "hamon.external_contribution.v1",
+  "worker_id": "chatgpt:/root/migration_execution",
+  "state": "active_isolated_source",
+  "repository": "Jacob-Met/workflow-checks",
+  "issue": "https://github.com/Jacob-Met/workflow-checks/issues/28",
+  "updated_at": "2026-10-08T13:09:52.114241+00:00",
+  "workspace": "/dev/shm/chatgpt-freight-invoice-headers-713adaab",
+  "scopes": [
+    {
+      "owner": "chatgpt:/root/migration_execution",
+      "area": "Reject conflicting repeated carrier/date/total headers inside existing multiline freight invoice groups",
+      "paths": [
+        "freight_packets/freightpkt/ingest.py:load_invoices",
+        "freight_packets/tests/test_invoice_header_consistency.py",
+        "freight_packets/README.md:additive invoice admission section",
+        "freight_packets/HARDENING.md:additive invoice admission section",
+        "docs/verification/freight-invoice-headers-713adaab/"
+      ]
+    }
+  ],
+  "conscience": {
+    "registered": true,
+    "row": {
+      "seq": 4113,
+      "event_id": "cev_05df869f8e714caf86456ba6",
+      "event_hash": "a139d9c4b355518460b2db807fc34c11891b9e16b6823913b97fd6ce91b0f4e2",
+      "actor": "chatgpt:/root/migration_execution"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+Rate Con # RC-SYN
+Load # SYN-L1
+Customer: Fictional Shipper
+Carrier: Fictional Carrier A
+Linehaul: $1000.00
+Fuel: $100.00
+Detention: $50.00 per hour
+2 hours free
+billed in 15 minute increments
+15 minute late grace
+PICKUP: Fictional Dock | Appt: 2026-09-01 10:00
