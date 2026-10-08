@@ -1,0 +1,109 @@
+{
+  "viewport": 1440,
+  "document": 1440,
+  "card": {
+    "left": 498,
+    "right": 1332,
+    "top": 599.0625,
+    "bottom": 817.796875,
+    "width": 834,
+    "height": 218.734375
+  },
+  "amount": [
+    {
+      "left": 524,
+      "right": 699.140625,
+      "top": 663.0625,
+      "bottom": 726.0625,
+      "width": 175.140625,
+      "height": 63
+    }
+  ],
+  "billed": [
+    {
+      "left": 1214.359375,
+      "right": 1306,
+      "top": 694.859375,
+      "bottom": 721.859375,
+      "width": 91.640625,
+      "height": 27
+    }
+  ],
+  "allText": [
+    {
+      "element": "status-chip",
+      "left": 533,
+      "right": 637.015625,
+      "top": 628.0625,
+      "bottom": 640.0625,
+      "width": 104.015625,
+      "height": 12
+    },
+    {
+      "element": "small-label",
+      "left": 1170.40625,
+      "right": 1306,
+      "top": 629.0625,
+      "bottom": 640.0625,
+      "width": 135.59375,
+      "height": 11
+    },
+    {
+      "element": "supported-amount",
+      "left": 524,
+      "right": 699.140625,
+      "top": 663.0625,
+      "bottom": 726.0625,
+      "width": 175.140625,
+      "height": 63
+    },
+    {
+      "element": "amount-caption",
+      "left": 524,
+      "right": 636.40625,
+      "top": 734.0625,
+      "bottom": 749.0625,
+      "width": 112.40625,
+      "height": 15
+    },
+    {
+      "element": "",
+      "left": 1209.140625,
+      "right": 1306,
+      "top": 674.859375,
+      "bottom": 687.859375,
+      "width": 96.859375,
+      "height": 13
+    },
+    {
+      "element": "billed-amount",
+      "left": 1214.359375,
+      "right": 1306,
+      "top": 694.859375,
+      "bottom": 721.859375,
+      "width": 91.640625,
+      "height": 27
+    },
+    {
+      "element": "variance-caption",
+      "left": 1140.796875,
+      "right": 1306,
+      "top": 729.859375,
+      "bottom": 741.859375,
+      "width": 165.203125,
+      "height": 12
+    },
+    {
+      "element": "decision-explanation",
+      "left": 524,
+      "right": 1190.96875,
+      "top": 787.65625,
+      "bottom": 800.65625,
+      "width": 666.96875,
+      "height": 13
+    }
+  ],
+  "clipped": [],
+  "overlaps": false,
+  "controlsOutsideViewport": []
+}

@@ -1,0 +1,520 @@
+{
+  "baseline_commit": "2f1e5f777197eedd69d51a4d81c0da744b65ad88",
+  "contributor": "chatgpt-45d4289ccf6c/native_execution",
+  "files": {
+    "demos/freight-whatif/README.md": {
+      "bytes": 10115,
+      "git_blob": "b04e8197cc08836229aa4e279219cb677337b286",
+      "sha256": "18299adb0bca28ac79fb224ddf85e76c5fcd91436433fa32c8c7278f178c73f1"
+    },
+    "demos/freight-whatif/dist/freight-whatif.zip": {
+      "bytes": 24333,
+      "git_blob": "2a7e2b8f4b4abe5063c65befb7f74b0d6533387b",
+      "sha256": "57a0d4d34e8156f7f3bb3f0722882b0902e17ec731503ddd0ef5fdf6ceff6c08"
+    },
+    "demos/freight-whatif/evidence/browser-initial.log": {
+      "bytes": 944,
+      "git_blob": "94dd53aa2c5cadb1e537b4d03e8b3813a95aa6cb",
+      "sha256": "a0bb078940a1f635ca0abe04faf98615e086649e9d96b3521366545cf7afcf31"
+    },
+    "demos/freight-whatif/evidence/browser-initial/browser-receipt.json": {
+      "bytes": 2122,
+      "git_blob": "33375cadfe0d59cac4efe60915de38674be5e9f1",
+      "sha256": "63bd10cc3e939a9aa0e9ad892f1211c03dc991b724311e1149992cf2224ba1e0"
+    },
+    "demos/freight-whatif/evidence/browser-initial/desktop-default.png": {
+      "bytes": 227267,
+      "git_blob": "4a0ecfe4072de70c5255bb0be3294e4f10610870",
+      "sha256": "26c702ad27b1249ab563f53ed80bd119fae00809d2fd766c37921ed3f2047a47"
+    },
+    "demos/freight-whatif/evidence/browser-initial/download-record.json": {
+      "bytes": 4962,
+      "git_blob": "dbe65ef3e049a5ffcbc2eb9335edb9cf8cad811a",
+      "sha256": "9d228defadf1f7e885f519558197fb82ae534f89be3b99782b6dd6bde01142c4"
+    },
+    "demos/freight-whatif/evidence/browser-initial/mobile-320.png": {
+      "bytes": 233399,
+      "git_blob": "c75bf98234704aac5815f65866b9abf676fab7a8",
+      "sha256": "e1f701f998faa16de5fd542ca4bb5b0add20b9af32aee9dc7ae7320131630c89"
+    },
+    "demos/freight-whatif/evidence/browser-initial/mobile-390.png": {
+      "bytes": 233461,
+      "git_blob": "d56f89fda186b9491c92417c08cbca43bbe0afdc",
+      "sha256": "aba941b0e5655201b05ec59dd70d379b1cd8ac7bcbbbd609d342588aed24c3ae"
+    },
+    "demos/freight-whatif/evidence/bundle-receipt.json": {
+      "bytes": 658,
+      "git_blob": "d67738a72a2dc19bcadcbfc1edfad38c7ca35a86",
+      "sha256": "9e9867b6a304355b9e217415545e8c225970b6436c6826abbca2da80db66c19e"
+    },
+    "demos/freight-whatif/evidence/bundle-served-receipt-final.json": {
+      "bytes": 1631,
+      "git_blob": "74576776f6bfed2064484b10ef81b4c94a35f9b1",
+      "sha256": "7a3fc94765b0c47c7f19eecfd73fcc37118c93e8c3c0002ce5a20813e9ec1fbd"
+    },
+    "demos/freight-whatif/evidence/bundle-served-receipt.json": {
+      "bytes": 1625,
+      "git_blob": "352313b2a4103ec511816bc3261b12758b898ec8",
+      "sha256": "485ab1d80f0de4178514ebd124f6c316e3fca80be40a3c8ab55cfbc1f72b3066"
+    },
+    "demos/freight-whatif/evidence/changed-css-install-receipt.json": {
+      "bytes": 992,
+      "git_blob": "3f82c1003614761e7fd1cdc2c49f37eecdd246cb",
+      "sha256": "e4cefc61e36651823390ef4111ec5aef18f8b744d5429d8a113ef91af13e7202"
+    },
+    "demos/freight-whatif/evidence/final-install-receipt.json": {
+      "bytes": 881,
+      "git_blob": "8065db4690ea6cbd7c89426e8f43ddac885cfece",
+      "sha256": "a99444052c836d924d4c667a6f93b16b49867c86cb0197407082e7f3f80ef06d"
+    },
+    "demos/freight-whatif/evidence/independent-adoption.json": {
+      "bytes": 578,
+      "git_blob": "fdb5cbc01bc658549b2f7dfdbdbb65591385d7c2",
+      "sha256": "a9ba9a00f873042303f1d611f9750b23704d97101b18e5f3afc4fe5c40df86ea"
+    },
+    "demos/freight-whatif/evidence/independent/README.md": {
+      "bytes": 5464,
+      "git_blob": "688b5bc9b206e4c08c0c7ae9639170cb568153ff",
+      "sha256": "45ecb945d21f48e19cb9cd6b88618575b5ecf413feda917d9bf68bec0d3e2744"
+    },
+    "demos/freight-whatif/evidence/independent/browser-initial/browser-receipt.json": {
+      "bytes": 5880,
+      "git_blob": "a907cbf353895d6338446c2c2265d58c1728b743",
+      "sha256": "a902d773aa923dabcaed98c49b0d6334ea27bc2bd206581229c131e5acc59703"
+    },
+    "demos/freight-whatif/evidence/independent/browser-initial/desktop-all-findings-with-underbilled-base-lines.json": {
+      "bytes": 7847,
+      "git_blob": "8c0b30961b1f91a2e04c551b57497464bb204a6b",
+      "sha256": "15847ea86fed72ab4a3684712ef57038cf53faf2e17453c86799358e262cf090"
+    },
+    "demos/freight-whatif/evidence/independent/browser-initial/desktop-capped-then-parse-warning.json": {
+      "bytes": 5010,
+      "git_blob": "d2755f674bd6ed8407ca07abe8819d01d4a25e3e",
+      "sha256": "e608fefbe9e02f719318720989c8269bd799cac905142bfe5f4694e6036b1c9d"
+    },
+    "demos/freight-whatif/evidence/independent/browser-initial/desktop-early-exit-before-appointment.json": {
+      "bytes": 4935,
+      "git_blob": "3fdcc7b80f78d6b10646d928d645599d2d331d53",
+      "sha256": "6a097ed703067158844cbd77cc432719b9de49a0ce4d35c24ff043336667fd98"
+    },
+    "demos/freight-whatif/evidence/independent/browser-initial/desktop-half-cent-rounds-up-2point5.json": {
+      "bytes": 4867,
+      "git_blob": "3f1e96ffe8f6a67c3fc10da5d34aa0ab7facc061",
+      "sha256": "a0509ff4bc56306f02a6312aa0700f14e1d679accb7f264eafd5eb79cc023ddf"
+    },
+    "demos/freight-whatif/evidence/independent/browser-initial/desktop-latest-entry-inclusive.json": {
+      "bytes": 4866,
+      "git_blob": "4d4d241ba3adf74e2fc0f6417325a517f6a894ec",
+      "sha256": "9bc1f399d0c578336eb72e8a1dbe8d455d105b04cb78a0290c1a2e822e7fc350"
+    },
+    "demos/freight-whatif/evidence/independent/browser-initial/desktop-maximum-independent-lines-automatic-sum.json": {
+      "bytes": 7131,
+      "git_blob": "86a77c3f847beff44ad0966bfb9779b1b035afb9",
+      "sha256": "947408b151e01e3ee8972d7aa97ff1b0a5e6a1ae4f893de95fb9404f47b20ff1"
+    },
+    "demos/freight-whatif/evidence/independent/browser-initial/desktop-original-record.json": {
+      "bytes": 5357,
+      "git_blob": "80f46619ccc6aa756056d0e6b73ba607c5007230",
+      "sha256": "bce351d3d84d7c4013e3dba2e40d90f33b31b72749b140d6b57dbcbf7f724275"
+    },
+    "demos/freight-whatif/evidence/independent/browser-initial/desktop-original.png": {
+      "bytes": 126436,
+      "git_blob": "a8231206894cc29e6f56ae3e7a55605fce81bbe7",
+      "sha256": "57187c66aad63229b958bbbf40e3541cae833f1853c04ec12643e94dda94597f"
+    },
+    "demos/freight-whatif/evidence/independent/browser-initial/mobile-320-capped-then-parse-warning-geometry.json": {
+      "bytes": 913,
+      "git_blob": "0e703966102eb56a3f50651f8cccb6801a2a4641",
+      "sha256": "b21dfec7fc8e3ef601080578ffd7826a305a2c7d840ac74f45d07455089de926"
+    },
+    "demos/freight-whatif/evidence/independent/browser-initial/mobile-320-capped-then-parse-warning.png": {
+      "bytes": 23114,
+      "git_blob": "731386a6a0b47fbd313936d0f6c5a1b963a28b83",
+      "sha256": "c7ea70f3137e45f9bd669b6696feaa781f732acb911a6e89ba7d9ab573786eb6"
+    },
+    "demos/freight-whatif/evidence/independent/browser-initial/mobile-320-exit-24h-inclusive-geometry.json": {
+      "bytes": 767,
+      "git_blob": "51fe668d577353fcb5af5e6961edd6c3b9847595",
+      "sha256": "17c14e2223b5ccd071619707a8e0d64d443d88fd52a067196e8065188bb0615b"
+    },
+    "demos/freight-whatif/evidence/independent/browser-initial/mobile-320-exit-24h-inclusive.png": {
+      "bytes": 19808,
+      "git_blob": "1fe81542497e7e8006a0ce2cbb17e203ea4ae5e4",
+      "sha256": "abeecad3ce5ed9ae0adcfa5371cf78b443fbb4cf80c46526dbf8a7a35e854075"
+    },
+    "demos/freight-whatif/evidence/independent/browser-initial/mobile-320-maximum-independent-lines-automatic-sum-geometry.json": {
+      "bytes": 600,
+      "git_blob": "117c451db534f8b72f447ada964f6eefbef7a049",
+      "sha256": "3a4305b6d13069a565ba85b8c9c8a08706d391ef1bcc11b3bb585e0fc9e978ca"
+    },
+    "demos/freight-whatif/evidence/independent/browser-initial/mobile-320-maximum-independent-lines-automatic-sum.png": {
+      "bytes": 20349,
+      "git_blob": "5cd585c2b26dda2276272984270e95c09a777704",
+      "sha256": "ce45454e809af995b9f8b1feb7576b722b04386002a133e8967063cfeb0e78c3"
+    },
+    "demos/freight-whatif/evidence/independent/browser-initial/mobile-390-capped-then-parse-warning-geometry.json": {
+      "bytes": 920,
+      "git_blob": "582ca5b405c0aa620a8a06063abfcc851f632985",
+      "sha256": "3328fc369957863b69c0cec646f8cfba4eeaaff4543b7846cdd957f06d59ad58"
+    },
+    "demos/freight-whatif/evidence/independent/browser-initial/mobile-390-capped-then-parse-warning.png": {
+      "bytes": 24212,
+      "git_blob": "89fd838cdb398c24d4a19c0bfb73140825a78293",
+      "sha256": "06289fabb91f09a4b0905c4aa4bba8a9c8ff9d4bfeec420d64cf7addbc0734bd"
+    },
+    "demos/freight-whatif/evidence/independent/browser-initial/mobile-390-exit-24h-inclusive-geometry.json": {
+      "bytes": 616,
+      "git_blob": "a99f1e9f543b48ca2078c56c5d5cb404c0d1a0d1",
+      "sha256": "e7964b01af374cdd5ab5c2f63652c825751f62e386b74c160ee2e395aa35ff7e"
+    },
+    "demos/freight-whatif/evidence/independent/browser-initial/mobile-390-exit-24h-inclusive.png": {
+      "bytes": 21817,
+      "git_blob": "8ca2bf7200df949d31a6f0c3071a851bf46e07fe",
+      "sha256": "80e970e9b8037785b9348dea8c6583fcd6872f557314ec917c02a67eafe47b80"
+    },
+    "demos/freight-whatif/evidence/independent/browser-initial/mobile-390-maximum-independent-lines-automatic-sum-geometry.json": {
+      "bytes": 609,
+      "git_blob": "dc6f245d60618991ff32c3311b04fc9ce3825539",
+      "sha256": "57ffc601032f62b35ebe043cf702acda0ae89f624823422e0ec8f6f052fbeaef"
+    },
+    "demos/freight-whatif/evidence/independent/browser-initial/mobile-390-maximum-independent-lines-automatic-sum.png": {
+      "bytes": 21734,
+      "git_blob": "91d7c9e690b27dca5c9746148286cd927cfbb6cf",
+      "sha256": "f8cf8ff8090d3877b844228344469357d327dee65f24495454cfa43c50dde177"
+    },
+    "demos/freight-whatif/evidence/independent/candidate-delivery-pins.json": {
+      "bytes": 417,
+      "git_blob": "67c3a1d4b14266c8a9045fb94b77dfb52e35389b",
+      "sha256": "cecf5c2dff2edaab5763c7280c7d5831f7e365f02fe6f505d2b659e2991dc3cf"
+    },
+    "demos/freight-whatif/evidence/independent/candidate-final-pins.json": {
+      "bytes": 417,
+      "git_blob": "80842d601e7cdf47dc981c51b94fdfa46bd952fc",
+      "sha256": "b1606b8ba63fd302421881c414fcd299ff4d730ba6e0f4d6a8fccbe069d73bf7"
+    },
+    "demos/freight-whatif/evidence/independent/candidate-initial-pins.json": {
+      "bytes": 417,
+      "git_blob": "2d28413915aa923d6cec9c250379927dd6d362df",
+      "sha256": "3f5fb3865b260a75dceb1c96f583acf7391c0963bbf7b1cb778b01c921b60932"
+    },
+    "demos/freight-whatif/evidence/independent/independent-model-execution.log": {
+      "bytes": 36,
+      "git_blob": "e7c0a40d9e7d14f2bb8766e910db6bed9766e674",
+      "sha256": "d78f36c067b0ecb2b635869c91046f2f199ce0fdefb91cba330d462eaf34f39b"
+    },
+    "demos/freight-whatif/evidence/independent/independent-model-result.json": {
+      "bytes": 6264,
+      "git_blob": "8029ab7375a3f76c5b2935291594f778971375d6",
+      "sha256": "dd4fcacdb8d4ca3d41ec85247ac6f354d094ef814a7a8e37538108fe2d34adf1"
+    },
+    "demos/freight-whatif/evidence/independent/independent-oracle.json": {
+      "bytes": 66874,
+      "git_blob": "db150c515713b9fd9ada4b5feb37d13f1c47279b",
+      "sha256": "fa127209f9df296b4ccf6cf4d6ae3b959e17862f89f335e869857a42c34768bc"
+    },
+    "demos/freight-whatif/evidence/independent/independent-parity-receipt.json": {
+      "bytes": 8755,
+      "git_blob": "c67bfe3b65c2508c0694b03854f47de064be5a77",
+      "sha256": "a15ae7ec4134867ef12ce47cd15664cda964397bb65915f0be646bf7f06b6e96"
+    },
+    "demos/freight-whatif/evidence/independent/independent-review.json": {
+      "bytes": 4715,
+      "git_blob": "f47ffdb738c7b31b2563e9035b2ab5ea22d7c0d1",
+      "sha256": "0e36bae3562c0f017996bed0c1fe0b1ecaf7994269d426dcdfbe31311bffd20e"
+    },
+    "demos/freight-whatif/evidence/independent/independent_browser.mjs": {
+      "bytes": 16280,
+      "git_blob": "fcdf9df63d90adb2d4d61b3d5ddce50e452041b0",
+      "sha256": "b4bcfd9793f82ba0ef64a7a4a2b507ab737b4071afab010791a221cf886fd7dd"
+    },
+    "demos/freight-whatif/evidence/independent/independent_layout.mjs": {
+      "bytes": 9744,
+      "git_blob": "d1d751b85b9440da5890832d66fa1872e401ac7e",
+      "sha256": "78cbcc5a6141b4fbd188b04f10c0cbf14a221151c7144a3bb3e282131dc3fa59"
+    },
+    "demos/freight-whatif/evidence/independent/independent_parity.py": {
+      "bytes": 9657,
+      "git_blob": "cef4e9e5f8218df9266c629e4ebbf23d51cb63be",
+      "sha256": "8b166d4dcffb86ee0bef9b5b295b4b9c7a1c04094a9dde386a9de88b3b773c28"
+    },
+    "demos/freight-whatif/evidence/independent/layout-final/layout-1440-capped-then-parse-warning-geometry.json": {
+      "bytes": 2098,
+      "git_blob": "54ae7cf02496ac91d78a82279109436f4c20fa31",
+      "sha256": "e960c20fb09fe651be9fe500ea0acb81a4b1e2a7a8f509ab8e5726a3d47b77df"
+    },
+    "demos/freight-whatif/evidence/independent/layout-final/layout-1440-capped-then-parse-warning.png": {
+      "bytes": 23572,
+      "git_blob": "76496099607be6fe3eea6166e5697c269673ea09",
+      "sha256": "f5eb1e87b07c9321c738081aae34617bc4ec8514adaafdd8804f9ad08db684ff"
+    },
+    "demos/freight-whatif/evidence/independent/layout-final/layout-1440-default-geometry.json": {
+      "bytes": 2141,
+      "git_blob": "59003e720f88042b8ae637c5adf83828a8c4e886",
+      "sha256": "3c9e1eb0bac844c840d132d5fc45a765840297b0561e6940edfabf534ae793ee"
+    },
+    "demos/freight-whatif/evidence/independent/layout-final/layout-1440-default.png": {
+      "bytes": 23165,
+      "git_blob": "ffcae582fbb0f4b2795b667e35e02fce998fc966",
+      "sha256": "5b7eb2da9e2bd517cb31ce73d3ff84d823eb320ce44dc19eeabecb35ea1d9604"
+    },
+    "demos/freight-whatif/evidence/independent/layout-final/layout-1440-exit-24h-inclusive-geometry.json": {
+      "bytes": 2084,
+      "git_blob": "9d899df18f6f2eb160bfae78cfbc8d5f209282c5",
+      "sha256": "c27713227cad05c76615c5aec77a76b91c5cacc81a4526dd5cfdcb21c2d5c42f"
+    },
+    "demos/freight-whatif/evidence/independent/layout-final/layout-1440-exit-24h-inclusive.png": {
+      "bytes": 23826,
+      "git_blob": "6e2696796afbea0c2f2109cb717398d6a93abf0b",
+      "sha256": "c114988b1a21027b6b973ce14e10b3613efe1ccd256cab8702d2703c40b25297"
+    },
+    "demos/freight-whatif/evidence/independent/layout-final/layout-1440-maximum-independent-lines-automatic-sum-geometry.json": {
+      "bytes": 2116,
+      "git_blob": "11f157d3eb67f9a0e20cde176eb9a2f9bf53ef13",
+      "sha256": "c535afa5b0582d804d45d835dc31ded501292023f3241e7bdf2c19d005d3daee"
+    },
+    "demos/freight-whatif/evidence/independent/layout-final/layout-1440-maximum-independent-lines-automatic-sum.png": {
+      "bytes": 22773,
+      "git_blob": "e5a6ef6312b0b53242602a8b427c5084cf567bae",
+      "sha256": "b9d61f0f657115de271f7e508b55966bb726bdd979f6466a7eb404caf7db0e0a"
+    },
+    "demos/freight-whatif/evidence/independent/layout-final/layout-320-capped-then-parse-warning-geometry.json": {
+      "bytes": 2882,
+      "git_blob": "9fd2415a8df286d8aedcd25563bb836b85e23920",
+      "sha256": "7640dd2f58572c7a3fff3cb235059708bca1fc9032d41cedd7bc1676f13986c1"
+    },
+    "demos/freight-whatif/evidence/independent/layout-final/layout-320-capped-then-parse-warning.png": {
+      "bytes": 22632,
+      "git_blob": "4a1efc87978b8995c4e15488630029895ab4a969",
+      "sha256": "c74e0d609614cdcdb024ac85c6a5cb5188cc9281bb011199e6de64c6105a91d2"
+    },
+    "demos/freight-whatif/evidence/independent/layout-final/layout-320-default-geometry.json": {
+      "bytes": 2528,
+      "git_blob": "b1a78c341148a8b5c1457556a4d079aa64bee8b9",
+      "sha256": "3c911a5d69fd6bfffa27f9837c9810468cb8fa4dec73dd3cc7f9ed77ec71a7c7"
+    },
+    "demos/freight-whatif/evidence/independent/layout-final/layout-320-default.png": {
+      "bytes": 20602,
+      "git_blob": "a1dc0c6de2091b780439242e5810226faac5a349",
+      "sha256": "31ac94d23fd10ba482de3dba5d6cdff8448e557b2a83285cbc610434907e397f"
+    },
+    "demos/freight-whatif/evidence/independent/layout-final/layout-320-exit-24h-inclusive-geometry.json": {
+      "bytes": 2516,
+      "git_blob": "da9d7406af775124f151b2241ae81ad4110cb1d7",
+      "sha256": "b29c2caefa7d1c74bd64aaf964f27fcfb16d1b1a598dcf31016241947b93660f"
+    },
+    "demos/freight-whatif/evidence/independent/layout-final/layout-320-exit-24h-inclusive.png": {
+      "bytes": 20326,
+      "git_blob": "83654491d68e13d5a54173a7940af7a9e89f2e8c",
+      "sha256": "922dda3ab98a80f9c48b03415a37a359707c2c547a601edb72b487b600c65886"
+    },
+    "demos/freight-whatif/evidence/independent/layout-final/layout-320-maximum-independent-lines-automatic-sum-geometry.json": {
+      "bytes": 2525,
+      "git_blob": "6146628195b2e2e269d64b631143934f188f7727",
+      "sha256": "f0d5b0d2488dd2a3a3b1aaf1b25e021de02cb8fdc78fad002d7b7e8f7181bd3f"
+    },
+    "demos/freight-whatif/evidence/independent/layout-final/layout-320-maximum-independent-lines-automatic-sum.png": {
+      "bytes": 20721,
+      "git_blob": "6f313f16141eae8a9900f591edde4529f02a35cf",
+      "sha256": "b67f1be4778f56173ba35e5d4c7bc49b753f633106bd0d2399c5bd7ff2cd05eb"
+    },
+    "demos/freight-whatif/evidence/independent/layout-final/layout-390-capped-then-parse-warning-geometry.json": {
+      "bytes": 2544,
+      "git_blob": "511922a79db2a2bfff88fb1ff126070909c6aa47",
+      "sha256": "932687ddab8d603a7fa3bdd0be90a3abfa1637e4ebcbd60eda7131ba599219b1"
+    },
+    "demos/freight-whatif/evidence/independent/layout-final/layout-390-capped-then-parse-warning.png": {
+      "bytes": 22931,
+      "git_blob": "cf29e0473410621c6a0be6875dc4c2a233571a7c",
+      "sha256": "d16f5ebcdd4964eb2297831dd6973d5c43408420dc32446011fe290fa62ea433"
+    },
+    "demos/freight-whatif/evidence/independent/layout-final/layout-390-default-geometry.json": {
+      "bytes": 2515,
+      "git_blob": "527d0caf39b366732539857bbd1c8c3258efef1d",
+      "sha256": "1ca9a2ab1e706c720c12841880cf9a42e7cd8e5578a402a57eea4e49fecc771a"
+    },
+    "demos/freight-whatif/evidence/independent/layout-final/layout-390-default.png": {
+      "bytes": 21975,
+      "git_blob": "61fdc0a9df5445abf9d8d5325c683c99bde8fa43",
+      "sha256": "12a7421274dea5a4a76322b718075eabdd2ac581cf2302f6e9b04bdd500998ec"
+    },
+    "demos/freight-whatif/evidence/independent/layout-final/layout-390-exit-24h-inclusive-geometry.json": {
+      "bytes": 2530,
+      "git_blob": "b112128e16a502618c9bd87bfe7c7b9052153b87",
+      "sha256": "6f74d7e3092c875b477d1d71dc7d46fb9257446956df2e30cf45413951a83f2a"
+    },
+    "demos/freight-whatif/evidence/independent/layout-final/layout-390-exit-24h-inclusive.png": {
+      "bytes": 21729,
+      "git_blob": "8edf8f79a95f302c0786f45c1c9e46f78724b885",
+      "sha256": "07f19d2e258076f2de4230b7bb2e9174cf0177ac7a6fc7aa9468b1036d31bb14"
+    },
+    "demos/freight-whatif/evidence/independent/layout-final/layout-390-maximum-independent-lines-automatic-sum-geometry.json": {
+      "bytes": 2538,
+      "git_blob": "68ccd9d0cc306fd70e6d629503de57ed0c58fcb2",
+      "sha256": "dc9fb6849ff5d00a9cde48a035fc70cbe53719341a715dcd484ae6cc3e3f099a"
+    },
+    "demos/freight-whatif/evidence/independent/layout-final/layout-390-maximum-independent-lines-automatic-sum.png": {
+      "bytes": 22206,
+      "git_blob": "de28751bddfb6d2c6f849d42d0e21158df5630e5",
+      "sha256": "3b1c61ff5c4fa6b299e0d075872e92e32fea31827e3b303d5d6f76de5521b734"
+    },
+    "demos/freight-whatif/evidence/independent/layout-final/layout-receipt.json": {
+      "bytes": 5466,
+      "git_blob": "969215a7a29375e49c449e0046d9cf256d03e4d3",
+      "sha256": "ceeb49e202fd286afb3e6bb104c8a009d63c99fe34e0894b6e78ff639f78001b"
+    },
+    "demos/freight-whatif/evidence/independent/layout-final/resting-1440.png": {
+      "bytes": 126428,
+      "git_blob": "5a72c49bbf9137f6c18aad1c11ccb5330c35be41",
+      "sha256": "2f562cc51ef44ec907f2180c61fd2f7bd9c4669d6fe0e03f87a6c719fa90d7fb"
+    },
+    "demos/freight-whatif/evidence/independent/layout-final/resting-320.png": {
+      "bytes": 212748,
+      "git_blob": "55e861084df0147dfd61510678250af5595741f1",
+      "sha256": "433077cda8bc31c12847b9f587405c509d8670252d317abf6cf58e5ac8dd0278"
+    },
+    "demos/freight-whatif/evidence/independent/layout-final/resting-390.png": {
+      "bytes": 211043,
+      "git_blob": "8dcc4ec6913970b7a78b4ab5c263cc6f267cd867",
+      "sha256": "2657e08bdc8f7d31c6a694d3c94ccd42060ff6f441c776d9359ae66caf8c501c"
+    },
+    "demos/freight-whatif/evidence/independent/license-custody-receipt.json": {
+      "bytes": 3884,
+      "git_blob": "14eadf7862189883479bcdc198b4f62050881722",
+      "sha256": "e11953a23e5384a1e4334ecba154e0222225b0ca50661a253b724ae2056e5c4f"
+    },
+    "demos/freight-whatif/evidence/independent/probe_model.mjs": {
+      "bytes": 1094,
+      "git_blob": "157c797a6aecbb9eafef8c2ced670782b40c2e72",
+      "sha256": "3138942728162c3da3abe4ec273c14d699500c57b7bec5290a7fd3761e15d26e"
+    },
+    "demos/freight-whatif/evidence/independent/review-manifest.json": {
+      "bytes": 10989,
+      "git_blob": "d6b9e63b95b8235a745847a9690fc530fa8e50f2",
+      "sha256": "7d1bced65bf0ec7ffb7f8eeb16a2c54bfe0aaa904a15223aa8845ea903609a98"
+    },
+    "demos/freight-whatif/evidence/install-receipt.json": {
+      "bytes": 1406,
+      "git_blob": "6a43357b3d01d48e49dcf4ade46621f047c7d96a",
+      "sha256": "03649fc5f0e52a87606c5e56a261b2564b57554332cdf36076fae7ccc4df7802"
+    },
+    "demos/freight-whatif/evidence/model-receipt-initial.json": {
+      "bytes": 10425,
+      "git_blob": "a1797475467e87680e385a96bc9637aa0a950b54",
+      "sha256": "88e2a5b33d9f5aefbe435521299da14826b1204bf6ee19c59d4dc41a78c94e7a"
+    },
+    "demos/freight-whatif/evidence/pre-license-bundle/bundle-receipt.json": {
+      "bytes": 643,
+      "git_blob": "09b808d1994cae130113616744467bee9306cf6f",
+      "sha256": "dc04c8c96c4d737f02c58213a0050dcd7bae0abfdb1255cb5413fd46d8ee0cb8"
+    },
+    "demos/freight-whatif/evidence/pre-license-bundle/freight-whatif.zip": {
+      "bytes": 22827,
+      "git_blob": "2f29e3cad1ea3fff80b1adf716c8bcb8c69fab3c",
+      "sha256": "f655f4abf14978a4a84e9bc0ebafe1e985d28ead0a25759e58f67c9d61889c9e"
+    },
+    "demos/freight-whatif/evidence/pre-license-bundle/presentation-fix-before-license.patch": {
+      "bytes": 14923,
+      "git_blob": "afe2a73cb07af8a4c7d7e8e07787390becef2d73",
+      "sha256": "fff52767d21f4aed3f9ab3c2f8c60503ca171ce029dcea15aa0958fe369ce50a"
+    },
+    "demos/freight-whatif/evidence/pre-license-bundle/styles.css": {
+      "bytes": 19247,
+      "git_blob": "f42d0902be8fb9d4d157d03f45c2b0fb62bd642b",
+      "sha256": "2173b69ce20fd22fa8b92f14305aa9d2fc57fbda5e3e6a3ea19eea0059c215e9"
+    },
+    "demos/freight-whatif/evidence/presentation-before/styles.css": {
+      "bytes": 19144,
+      "git_blob": "32f2cb8679e304765a11d67f7b545e9add781b9f",
+      "sha256": "d9127a6a89c008c2915005409dd6f7a81ecab32e1b9566dfb7f1dc3ffaad5371"
+    },
+    "demos/freight-whatif/evidence/presentation-fix.patch": {
+      "bytes": 17317,
+      "git_blob": "d1c93868e01dd30d3ab8a042adc9cce14b43b97d",
+      "sha256": "74c624ae7a152ea9a95f56e12ff262b5b72e5e63428c9e63a5c63c44c41afd96"
+    },
+    "demos/freight-whatif/evidence/primary-receiving.json": {
+      "bytes": 3662,
+      "git_blob": "2ec10879fa88240be45498c16a8c8c744470c831",
+      "sha256": "e4a4e784e696e2ffb4d039ac1de2ff28c67f8c24ce5dddf65a4452ec1778956b"
+    },
+    "demos/freight-whatif/evidence/served-receipt-initial.json": {
+      "bytes": 1636,
+      "git_blob": "8619d42d0456a9fc78a4eeff9da5556db823d44e",
+      "sha256": "01c87a5eacb41fe40806b9079b2c6e7a3636ae46c45562544e375fbbd804c983"
+    },
+    "demos/freight-whatif/site/app.mjs": {
+      "bytes": 16038,
+      "git_blob": "6fe0b0409c2d652dbdc6cecda2fe97b4f63e23be",
+      "sha256": "1555885a0f319407a0dd412599a5b6022ea048eadbad7a0259f3734a6d2e642f"
+    },
+    "demos/freight-whatif/site/data.mjs": {
+      "bytes": 4103,
+      "git_blob": "b4ee752139693744b8f05c930865e505e2ddf236",
+      "sha256": "c5b8819e50961180208fa8dd4951f6a559b28cc4467c52dd2a68abeeb1b25d81"
+    },
+    "demos/freight-whatif/site/index.html": {
+      "bytes": 11173,
+      "git_blob": "e6e8d6d757c2d51a666b267946d2544f2564a80a",
+      "sha256": "9eb0bf0a05a5df2799f2f3a5ee36cf0df85a3c618d3feb0b86973681311d6a63"
+    },
+    "demos/freight-whatif/site/model.mjs": {
+      "bytes": 8946,
+      "git_blob": "6b97e2c54e4283707913e13459f47cbd43f81137",
+      "sha256": "88e3d460da6f421e937cf54b21207da95734db3de3d5932235b1ec001be52590"
+    },
+    "demos/freight-whatif/site/styles.css": {
+      "bytes": 20325,
+      "git_blob": "1200d3b98a958a080f0899b91d8975494328401e",
+      "sha256": "0709487053ebc7e028577d46b6447847e7bfc4343027b7d1ecfab2c70c692a31"
+    },
+    "demos/freight-whatif/tests/browser.mjs": {
+      "bytes": 13997,
+      "git_blob": "771edd64107f0f6d957f998b0de1254dd1e0eef2",
+      "sha256": "246714de5a04b449e496b0e9fd550d5d59012b4640335849a7ead4bd7061e11d"
+    },
+    "demos/freight-whatif/tests/install.test.py": {
+      "bytes": 3594,
+      "git_blob": "6bcd5a2c2430a673ded818420a7e46f4706fd29d",
+      "sha256": "de4020dee5dbd845d62d187ebfa55f301f1fc664d33de11d83e7e324d5b513b5"
+    },
+    "demos/freight-whatif/tests/model.test.mjs": {
+      "bytes": 5284,
+      "git_blob": "42c7c584c261e7810cff2c8922987040d67302a6",
+      "sha256": "edf357f6a11bb4bf10b99052dae8bf17e38eea271d902f423075c01c72e36ecf"
+    },
+    "demos/freight-whatif/tests/oracle.json": {
+      "bytes": 377204,
+      "git_blob": "fd7f89ec7344a451d0fbfbc9648278c2ec2b7293",
+      "sha256": "9cd7fe65b24bca122539f5168431b3602b5f5619dd8987352eb989b3bfc23a63"
+    },
+    "demos/freight-whatif/tests/serve.test.py": {
+      "bytes": 3588,
+      "git_blob": "0893113ce5f3adc8325662793d8de7613e367452",
+      "sha256": "bf773a39458a90d899d6fa673aa65183820fd3ff4017ac09aa1f9fc42d08a2ed"
+    },
+    "demos/freight-whatif/tools/build_fixtures.py": {
+      "bytes": 9092,
+      "git_blob": "ec33a2cc365677808af435c968b35d22897d6779",
+      "sha256": "d9e5559c3402ff3a814cc1d605f6bdc46f5ed71854fd2e6f1680772d52a37d07"
+    },
+    "demos/freight-whatif/tools/install.py": {
+      "bytes": 4340,
+      "git_blob": "0ac5d0f5f3fd6bb5a5b3cfb162213b511f74d7dc",
+      "sha256": "4d44a18fc27491a632e7e4f5d525ff80922edbf45546167526b2b34953c68653"
+    },
+    "demos/freight-whatif/tools/package.py": {
+      "bytes": 4565,
+      "git_blob": "88c1e0466e15e96971e5721d1f7e995a7dcefffc",
+      "sha256": "34fb5dfdc81b68c4f62ac5e9305426d5ff646d8aa2fefeb0c364bc848a667a74"
+    },
+    "demos/freight-whatif/tools/serve.py": {
+      "bytes": 1029,
+      "git_blob": "22acd1c3b8058c130ba2615ec2a3243608a925ff",
+      "sha256": "a8e23a17a7a80024ee33f1b034706e800c287e6537dfe0b6442c91c9fc72e899"
+    }
+  },
+  "payload_bytes": 2641431,
+  "payload_files": 102,
+  "schema": "freight-whatif.complete-artifact-manifest.v1",
+  "scope": "demos/freight-whatif/"
+}

@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="Explore a synthetic freight stop. Change arrival times and invoice charges, then inspect the detention calculation and evidence.">
+  <title>Freight what-if · Workflow Checks</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./app.mjs"></script>
+</head>
+<body>
+<a class="skip-link" href="#results-heading">Skip to findings</a>
+<header class="masthead">
+  <a class="brand" href="./" aria-label="Freight what-if home"><span class="brand-mark" aria-hidden="true">w.</span><span>WORKFLOW CHECKS<span class="brand-sub">FREIGHT LAB</span></span></a>
+  <span class="sample-badge"><span aria-hidden="true"></span> Synthetic scenario</span>
+</header>
+<main>
+  <section class="intro" aria-labelledby="page-title">
+    <div><p class="eyebrow">A REVIEWER’S WORKBENCH</p><h1 id="page-title">See what changes<br>the bill.</h1>
+    <p class="lede">Move a timestamp. Adjust a charge. Follow the evidence<br class="desktop-break"> from a fictional stop to the invoice findings.</p></div>
+    <div class="intro-note"><span class="note-number">01</span><p>One stop.<br>One invoice.<br><strong>Every finding explained.</strong></p></div>
+  </section>
+
+  <section class="case-picker" aria-labelledby="case-heading">
+    <div class="case-label"><h2 id="case-heading">Start with a case</h2><p>Each case sets a fresh baseline.</p></div>
+    <div id="presets" class="presets" role="group" aria-label="Synthetic starting cases"></div>
+  </section>
+  <noscript><p class="notice">This interactive demo needs JavaScript. All data is synthetic; calculations run in your browser.</p></noscript>
+
+  <div class="workbench">
+    <aside class="scenario-panel" aria-labelledby="scenario-heading">
+      <div class="panel-heading"><div><p class="eyebrow">YOUR SCENARIO</p><h2 id="scenario-heading">The shipment</h2></div><button class="text-button" id="reset" type="button">Reset case</button></div>
+      <p class="shipment-id">DEMO-104 <span>·</span> Sample receiving dock</p>
+      <form id="scenario-form" novalidate>
+        <fieldset>
+          <legend><span class="section-number">1</span> Stop timing</legend>
+          <p class="field-note">Civil time at one stop. No timezone conversion. Blank tracking times represent missing evidence.</p>
+          <label class="field" for="appointment"><span>Appointment</span><input type="datetime-local" id="appointment" name="appointment" min="1900-01-01T00:00" max="2100-12-31T23:59" step="60" required><small class="field-error" id="appointment-error"></small></label>
+          <label class="field" for="arrival"><span>Arrival <em>optional</em></span><input type="datetime-local" id="arrival" name="arrival" min="1900-01-01T00:00" max="2100-12-31T23:59" step="60"><small class="field-error" id="arrival-error"></small></label>
+          <label class="field" for="departure"><span>Departure <em>optional</em></span><input type="datetime-local" id="departure" name="departure" min="1900-01-01T00:00" max="2100-12-31T23:59" step="60"><small class="field-error" id="departure-error"></small></label>
+        </fieldset>
+        <details class="terms">
+          <summary>Rate confirmation <span id="terms-preview">120 min free · $75/hr</span></summary>
+          <div class="details-body">
+            <p class="field-note">Edit detention terms. Invoice agreements stay fixed: $1,450 linehaul, $245 fuel and $150 lumper.</p>
+            <div class="field-grid">
+              <label class="field" for="free_minutes"><span>Free minutes</span><input type="text" inputmode="numeric" id="free_minutes" name="free_minutes"><small class="field-error" id="free_minutes-error"></small></label>
+              <label class="field" for="late_grace_minutes"><span>Late grace · min</span><input type="text" inputmode="numeric" id="late_grace_minutes" name="late_grace_minutes"><small class="field-error" id="late_grace_minutes-error"></small></label>
+              <label class="field" for="increment_minutes"><span>Increment · min</span><input type="text" inputmode="numeric" id="increment_minutes" name="increment_minutes"><small class="field-error" id="increment_minutes-error"></small></label>
+              <label class="field" for="detention_rate_cents"><span>Hourly rate · USD</span><input type="text" inputmode="decimal" id="detention_rate_cents" name="detention_rate_cents"><small class="field-error" id="detention_rate_cents-error"></small></label>
+            </div>
+            <label class="field" for="detention_cap_cents"><span>Stop cap · USD <em>blank = no cap</em></span><input type="text" inputmode="decimal" id="detention_cap_cents" name="detention_cap_cents"><small class="field-error" id="detention_cap_cents-error"></small></label>
+            <label class="check-field"><input type="checkbox" id="ratecon_complete" name="ratecon_complete"><span>Rate confirmation is complete</span></label>
+          </div>
+        </details>
+        <fieldset class="invoice-fields">
+          <legend><span class="section-number">2</span> Invoice charges <span class="legend-unit">USD</span></legend>
+          <div class="field-grid">
+            <label class="field" for="linehaul_cents"><span>Linehaul</span><input type="text" inputmode="decimal" id="linehaul_cents" name="linehaul_cents"><small class="field-error" id="linehaul_cents-error"></small></label>
+            <label class="field" for="fuel_cents"><span>Fuel surcharge</span><input type="text" inputmode="decimal" id="fuel_cents" name="fuel_cents"><small class="field-error" id="fuel_cents-error"></small></label>
+            <label class="field" for="detention_cents"><span>Detention</span><input type="text" inputmode="decimal" id="detention_cents" name="detention_cents"><small class="field-error" id="detention_cents-error"></small></label>
+            <label class="field" for="lumper_cents"><span>Lumper</span><input type="text" inputmode="decimal" id="lumper_cents" name="lumper_cents"><small class="field-error" id="lumper_cents-error"></small></label>
+          </div>
+          <label class="field" for="tonu_cents"><span>Truck ordered, not used <em>not agreed</em></span><input type="text" inputmode="decimal" id="tonu_cents" name="tonu_cents"><small class="field-error" id="tonu_cents-error"></small></label>
+          <label class="field" for="invoice_total_cents"><span>Invoice header total <em>blank = sum of lines</em></span><input type="text" inputmode="decimal" id="invoice_total_cents" name="invoice_total_cents" placeholder="Automatic"><small class="field-error" id="invoice_total_cents-error"></small></label>
+          <label class="check-field"><input type="checkbox" id="pod_received" name="pod_received"><span>Proof of delivery is on file</span></label>
+        </fieldset>
+      </form>
+      <p class="local-note">Changes stay in this page. Refresh restores the starting case.</p>
+    </aside>
+
+    <section class="results-panel" aria-labelledby="results-heading">
+      <div class="results-header"><div><p class="eyebrow">FOLLOW THE EVIDENCE</p><h2 id="results-heading" tabindex="-1">The review</h2></div><button id="download" class="button secondary" type="button" disabled><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v12m-4-4 4 4 4-4M5 16v5h14v-5" stroke="currentColor" stroke-width="1.7"/></svg>Download record</button></div>
+      <p id="live-status" class="sr-only" aria-live="polite" aria-atomic="true"></p>
+      <div id="invalid-state" class="invalid-state" hidden><span class="status-chip exception">Input needs attention</span><h3>Finish the scenario to see its review.</h3><p id="validation-summary" role="alert"></p><button type="button" class="text-button" id="focus-error">Go to the first field</button></div>
+      <div id="result-content" hidden>
+        <div class="decision-card" id="decision-card">
+          <div class="decision-top"><span id="status-chip" class="status-chip"></span><span class="small-label">SUPPORTED DETENTION</span></div>
+          <div class="decision-main"><div><p class="amount" id="supported-amount"></p><p id="amount-caption"></p></div><div class="decision-aside"><span>Invoiced detention</span><strong id="billed-amount"></strong><span id="variance-caption"></span></div></div>
+          <p class="decision-explanation" id="decision-explanation"></p>
+        </div>
+        <div class="baseline-strip"><span class="baseline-icon" aria-hidden="true">↔</span><div><strong id="baseline-label">Compared with Long dwell</strong><p id="baseline-summary"></p></div><span id="edited-badge" class="edited-badge" hidden>Edited</span></div>
+
+        <section class="evidence-section" aria-labelledby="timeline-heading">
+          <div class="section-heading"><h3 id="timeline-heading">The time behind the charge</h3><span id="dwell-label" class="subtle"></span></div>
+          <div class="timing-bar" id="timing-bar" aria-hidden="true"></div>
+          <div id="timing-key" class="timing-key"></div>
+          <div class="time-grid" id="time-grid"></div>
+          <div class="calculation" id="calculation"></div>
+          <ul class="engine-notes" id="engine-notes"></ul>
+        </section>
+
+        <section class="findings-section" aria-labelledby="findings-heading">
+          <div class="section-heading"><h3 id="findings-heading">Invoice findings <span id="finding-count" class="count"></span></h3><span id="invoice-total" class="subtle"></span></div>
+          <div id="findings"></div>
+          <p class="scope-inline">These are review findings. This view does not approve payment or calculate settlement.</p>
+        </section>
+        <details class="record-details">
+          <summary>Inspect the evidence record</summary>
+          <p>These pointers refer to fields in this authored scenario, not uploaded documents or live tracking.</p>
+          <dl id="evidence-record"></dl>
+        </details>
+      </div>
+    </section>
+  </div>
+
+  <section class="scope-section" aria-labelledby="scope-heading">
+    <div><p class="eyebrow">CLEAR BOUNDARIES</p><h2 id="scope-heading">A small window into the rules.</h2></div>
+    <div><p>This demo checks one synthetic brokered stop, a tracking arrival/departure pair, a known rate confirmation and one invoice. Dollar amounts use integer cents; billable minutes round down to the agreed increment.</p>
+    <p>It does not cover duplicate invoices, missing rate confirmations, multiple stops, facility matching, fines or settlement. All names, times and charges are invented.</p>
+    <details id="provenance"><summary>Rule source and verification</summary><p id="source-summary"></p><ul id="source-links"></ul><p>The download includes the full source pins, loaded baseline, edited inputs and exact results. No external services receive your edits.</p></details></div>
+  </section>
+</main>
+<footer><span>Workflow Checks <span class="footer-divider">/</span> Freight what-if</span><span>Made for careful review.</span></footer>
+</body>
+</html>

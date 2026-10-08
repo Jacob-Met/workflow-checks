@@ -1,0 +1,44 @@
+{
+  "viewport": 320,
+  "document": 320,
+  "card": {
+    "left": 15,
+    "right": 305,
+    "top": 1091.859375,
+    "bottom": 1369.78125,
+    "width": 290,
+    "height": 277.921875
+  },
+  "amount": [
+    {
+      "left": 30,
+      "right": 239.6875,
+      "top": 1172.328125,
+      "bottom": 1220.328125,
+      "width": 209.6875,
+      "height": 48
+    }
+  ],
+  "billed": [
+    {
+      "left": 259.6875,
+      "right": 314.3125,
+      "top": 1188.359375,
+      "bottom": 1211.359375,
+      "width": 54.625,
+      "height": 23
+    }
+  ],
+  "overlaps": false,
+  "clipped": [
+    {
+      "left": 259.6875,
+      "right": 314.3125,
+      "top": 1188.359375,
+      "bottom": 1211.359375,
+      "width": 54.625,
+      "height": 23
+    }
+  ],
+  "controlsOutsideViewport": []
+}

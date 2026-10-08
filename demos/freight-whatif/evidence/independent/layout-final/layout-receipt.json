@@ -1,0 +1,160 @@
+{
+  "schema": "freight-whatif.independent-layout-receipt.v1",
+  "node": "v26.3.0",
+  "browser_version": "153.0.8010.12",
+  "module_sha256": "a0f5715ea22354f922791a9c53dc012d5d5c067ff9cc4cd35ffb7cd272071a9f",
+  "executable_sha256": "8319963f6625accf51c0dd4f55091ceaf9f09ed39e7a52fed4fae12b2a6b668a",
+  "runner_sha256": "78cbcc5a6141b4fbd188b04f10c0cbf14a221151c7144a3bb3e282131dc3fa59",
+  "oracle_sha256": "fa127209f9df296b4ccf6cf4d6ae3b959e17862f89f335e869857a42c34768bc",
+  "site_root": "/Users/me/workspace/estate/production-freight-whatif-45d4289ccf6c/freight-release-site",
+  "site_sha256": {
+    "index.html": "9eb0bf0a05a5df2799f2f3a5ee36cf0df85a3c618d3feb0b86973681311d6a63",
+    "styles.css": "2173b69ce20fd22fa8b92f14305aa9d2fc57fbda5e3e6a3ea19eea0059c215e9",
+    "app.mjs": "1555885a0f319407a0dd412599a5b6022ea048eadbad7a0259f3734a6d2e642f",
+    "model.mjs": "88e3d460da6f421e937cf54b21207da95734db3de3d5932235b1ec001be52590",
+    "data.mjs": "c5b8819e50961180208fa8dd4951f6a559b28cc4467c52dd2a68abeeb1b25d81"
+  },
+  "served_sha256": {
+    "index.html": "9eb0bf0a05a5df2799f2f3a5ee36cf0df85a3c618d3feb0b86973681311d6a63",
+    "styles.css": "2173b69ce20fd22fa8b92f14305aa9d2fc57fbda5e3e6a3ea19eea0059c215e9",
+    "app.mjs": "1555885a0f319407a0dd412599a5b6022ea048eadbad7a0259f3734a6d2e642f",
+    "data.mjs": "c5b8819e50961180208fa8dd4951f6a559b28cc4467c52dd2a68abeeb1b25d81",
+    "model.mjs": "88e3d460da6f421e937cf54b21207da95734db3de3d5932235b1ec001be52590"
+  },
+  "origin": "http://127.0.0.1:55112",
+  "checks": [
+    {
+      "name": "layout-1440-default",
+      "passed": true
+    },
+    {
+      "name": "layout-1440-maximum-independent-lines-automatic-sum",
+      "passed": true
+    },
+    {
+      "name": "layout-1440-exit-24h-inclusive",
+      "passed": true
+    },
+    {
+      "name": "layout-1440-capped-then-parse-warning",
+      "passed": true
+    },
+    {
+      "name": "layout-390-default",
+      "passed": true
+    },
+    {
+      "name": "layout-390-maximum-independent-lines-automatic-sum",
+      "passed": true
+    },
+    {
+      "name": "layout-390-exit-24h-inclusive",
+      "passed": true
+    },
+    {
+      "name": "layout-390-capped-then-parse-warning",
+      "passed": true
+    },
+    {
+      "name": "layout-320-default",
+      "passed": true
+    },
+    {
+      "name": "layout-320-maximum-independent-lines-automatic-sum",
+      "passed": true
+    },
+    {
+      "name": "layout-320-exit-24h-inclusive",
+      "passed": true
+    },
+    {
+      "name": "layout-320-capped-then-parse-warning",
+      "passed": true
+    },
+    {
+      "name": "source-custody-and-no-runtime-or-external-errors",
+      "passed": true
+    }
+  ],
+  "passed": 13,
+  "failed": 0,
+  "page_errors": [],
+  "console_errors": [],
+  "external_requests": [],
+  "requested_paths": [
+    "/",
+    "/app.mjs",
+    "/data.mjs",
+    "/model.mjs",
+    "/styles.css"
+  ],
+  "screenshots": [
+    {
+      "name": "resting-1440.png",
+      "sha256": "2f562cc51ef44ec907f2180c61fd2f7bd9c4669d6fe0e03f87a6c719fa90d7fb"
+    },
+    {
+      "name": "layout-1440-default.png",
+      "sha256": "5b7eb2da9e2bd517cb31ce73d3ff84d823eb320ce44dc19eeabecb35ea1d9604"
+    },
+    {
+      "name": "layout-1440-maximum-independent-lines-automatic-sum.png",
+      "sha256": "b9d61f0f657115de271f7e508b55966bb726bdd979f6466a7eb404caf7db0e0a"
+    },
+    {
+      "name": "layout-1440-exit-24h-inclusive.png",
+      "sha256": "c114988b1a21027b6b973ce14e10b3613efe1ccd256cab8702d2703c40b25297"
+    },
+    {
+      "name": "layout-1440-capped-then-parse-warning.png",
+      "sha256": "f5eb1e87b07c9321c738081aae34617bc4ec8514adaafdd8804f9ad08db684ff"
+    },
+    {
+      "name": "resting-390.png",
+      "sha256": "2657e08bdc8f7d31c6a694d3c94ccd42060ff6f441c776d9359ae66caf8c501c"
+    },
+    {
+      "name": "layout-390-default.png",
+      "sha256": "12a7421274dea5a4a76322b718075eabdd2ac581cf2302f6e9b04bdd500998ec"
+    },
+    {
+      "name": "layout-390-maximum-independent-lines-automatic-sum.png",
+      "sha256": "3b1c61ff5c4fa6b299e0d075872e92e32fea31827e3b303d5d6f76de5521b734"
+    },
+    {
+      "name": "layout-390-exit-24h-inclusive.png",
+      "sha256": "07f19d2e258076f2de4230b7bb2e9174cf0177ac7a6fc7aa9468b1036d31bb14"
+    },
+    {
+      "name": "layout-390-capped-then-parse-warning.png",
+      "sha256": "d16f5ebcdd4964eb2297831dd6973d5c43408420dc32446011fe290fa62ea433"
+    },
+    {
+      "name": "resting-320.png",
+      "sha256": "433077cda8bc31c12847b9f587405c509d8670252d317abf6cf58e5ac8dd0278"
+    },
+    {
+      "name": "layout-320-default.png",
+      "sha256": "31ac94d23fd10ba482de3dba5d6cdff8448e557b2a83285cbc610434907e397f"
+    },
+    {
+      "name": "layout-320-maximum-independent-lines-automatic-sum.png",
+      "sha256": "b67f1be4778f56173ba35e5d4c7bc49b753f633106bd0d2399c5bd7ff2cd05eb"
+    },
+    {
+      "name": "layout-320-exit-24h-inclusive.png",
+      "sha256": "922dda3ab98a80f9c48b03415a37a359707c2c547a601edb72b487b600c65886"
+    },
+    {
+      "name": "layout-320-capped-then-parse-warning.png",
+      "sha256": "c74e0d609614cdcdb024ac85c6a5cb5188cc9281bb011199e6de64c6105a91d2"
+    }
+  ],
+  "cleanup": {
+    "browser_disconnected": true,
+    "server_closed": true,
+    "loopback_port_closed": true,
+    "owned_temporary_profile_root_removed": true
+  },
+  "limits": "Focused changed-CSS receiving in actual headless Chromium desktop/emulated mobile. Earlier direct rule/export/input/keyboard receiving remains bound to unchanged app/model/data/HTML hashes."
+}

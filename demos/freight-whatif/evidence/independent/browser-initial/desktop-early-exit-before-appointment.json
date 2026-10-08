@@ -1,0 +1,156 @@
+{
+  "schema": "workflow-checks.freight-whatif.v1",
+  "synthetic": true,
+  "exported_at": "2026-10-08T10:19:57.211Z",
+  "loaded_preset": {
+    "id": "long-dwell",
+    "title": "Long dwell"
+  },
+  "provenance": {
+    "baseline_commit": "2f1e5f777197eedd69d51a4d81c0da744b65ad88",
+    "source_sha256": {
+      "freight_packets/freightpkt/models.py": "8a24ed2cca6f45aa8a47d793620b0e2e4d573ec92209954d3f3156795e3f0e05",
+      "freight_packets/freightpkt/detention.py": "31ca31fd3210ff680bc83291916e39ea19b82580c3a090720556afd4ef0cd76b",
+      "freight_packets/freightpkt/invoice_match.py": "37a9e0801de948c3b558ca7c9846b3d0eb76ec062703ee3e5132df273ff569ab"
+    },
+    "oracle": "freightpkt.detention.evaluate_load + freightpkt.invoice_match.match_invoices",
+    "scope": "One authored brokered stop, one tracking pair, one known rate confirmation and one invoice. Civil minute times; USD integer cents."
+  },
+  "contract": {
+    "load_id": "DEMO-104",
+    "invoice_no": "DEMO-INV-104",
+    "ratecon_no": "DEMO-RC-104",
+    "customer": "Example Distribution",
+    "carrier": "Example Freight",
+    "facility": "Sample receiving dock",
+    "linehaul_cents": 145000,
+    "fuel_cents": 24500,
+    "lumper_cents": 15000,
+    "warning": "synthetic rate confirmation marked incomplete"
+  },
+  "baseline": {
+    "scenario": {
+      "appointment": "2026-09-07T09:00",
+      "arrival": "2026-09-07T08:45",
+      "departure": "2026-09-07T12:45",
+      "free_minutes": 120,
+      "increment_minutes": 15,
+      "late_grace_minutes": 15,
+      "detention_rate_cents": 7500,
+      "detention_cap_cents": 30000,
+      "linehaul_cents": 145000,
+      "fuel_cents": 24500,
+      "detention_cents": 15000,
+      "lumper_cents": 15000,
+      "tonu_cents": 0,
+      "invoice_total_cents": null,
+      "pod_received": true,
+      "ratecon_complete": true
+    },
+    "result": {
+      "stop": {
+        "load_id": "DEMO-104",
+        "stop_index": 1,
+        "kind": "delivery",
+        "facility": "Sample receiving dock",
+        "appointment": "2026-09-07T09:00:00",
+        "arrival": "2026-09-07T08:45:00",
+        "departure": "2026-09-07T12:45:00",
+        "arrival_src": "scenario:tracking",
+        "departure_src": "scenario:tracking",
+        "dwell_minutes": 240,
+        "clock_start": "2026-09-07T09:00:00",
+        "free_minutes": 120,
+        "over_free_minutes": 105,
+        "billable_minutes": 105,
+        "amount_cents": 13125,
+        "capped": false,
+        "status": "detention",
+        "notes": [
+          "arrived 15 min early; free-time clock starts at appointment"
+        ]
+      },
+      "flags": [
+        {
+          "invoice_no": "DEMO-INV-104",
+          "load_id": "DEMO-104",
+          "carrier": "Example Freight",
+          "code": "DETENTION_UNSUPPORTED",
+          "detail": "detention invoiced $150.00 but telematics supports $131.25",
+          "invoiced_cents": 15000,
+          "expected_cents": 13125,
+          "evidence": [
+            "scenario:invoice",
+            "scenario:ratecon"
+          ]
+        }
+      ],
+      "totals": {
+        "line_sum_cents": 199500,
+        "invoice_total_cents": 199500,
+        "supported_detention_cents": 13125
+      }
+    }
+  },
+  "current": {
+    "scenario": {
+      "appointment": "2026-11-01T01:30",
+      "arrival": "2026-11-01T00:45",
+      "departure": "2026-11-01T01:29",
+      "free_minutes": 61,
+      "increment_minutes": 17,
+      "late_grace_minutes": 15,
+      "detention_rate_cents": 31,
+      "detention_cap_cents": null,
+      "linehaul_cents": 145000,
+      "fuel_cents": 24500,
+      "detention_cents": 0,
+      "lumper_cents": 15000,
+      "tonu_cents": 0,
+      "invoice_total_cents": null,
+      "pod_received": true,
+      "ratecon_complete": true
+    },
+    "result": {
+      "stop": {
+        "load_id": "DEMO-104",
+        "stop_index": 1,
+        "kind": "delivery",
+        "facility": "Sample receiving dock",
+        "appointment": "2026-11-01T01:30:00",
+        "arrival": "2026-11-01T00:45:00",
+        "departure": "2026-11-01T01:29:00",
+        "arrival_src": "scenario:tracking",
+        "departure_src": "scenario:tracking",
+        "dwell_minutes": 44,
+        "clock_start": "2026-11-01T01:30:00",
+        "free_minutes": 61,
+        "over_free_minutes": 0,
+        "billable_minutes": 0,
+        "amount_cents": 0,
+        "capped": false,
+        "status": "ok",
+        "notes": [
+          "arrived 45 min early; free-time clock starts at appointment"
+        ]
+      },
+      "flags": [],
+      "totals": {
+        "line_sum_cents": 184500,
+        "invoice_total_cents": 184500,
+        "supported_detention_cents": 0
+      }
+    }
+  },
+  "comparison": {
+    "status_before": "detention",
+    "status_after": "ok",
+    "supported_detention_delta_cents": -13125,
+    "billable_minutes_delta": -105,
+    "invoice_total_delta_cents": -15000,
+    "added_flags": [],
+    "removed_flags": [
+      "DETENTION_UNSUPPORTED"
+    ]
+  }
+}

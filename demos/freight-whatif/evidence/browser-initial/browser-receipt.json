@@ -1,0 +1,50 @@
+{
+  "schema": "freight-whatif.browser-receipt.v1",
+  "runtime": "v26.3.0",
+  "browser_version": "153.0.8010.12",
+  "browser_module_sha256": "a0f5715ea22354f922791a9c53dc012d5d5c067ff9cc4cd35ffb7cd272071a9f",
+  "browser_executable_sha256": "8319963f6625accf51c0dd4f55091ceaf9f09ed39e7a52fed4fae12b2a6b668a",
+  "site_sha256": {
+    "index.html": "9eb0bf0a05a5df2799f2f3a5ee36cf0df85a3c618d3feb0b86973681311d6a63",
+    "styles.css": "d9127a6a89c008c2915005409dd6f7a81ecab32e1b9566dfb7f1dc3ffaad5371",
+    "app.mjs": "1555885a0f319407a0dd412599a5b6022ea048eadbad7a0259f3734a6d2e642f",
+    "model.mjs": "88e3d460da6f421e937cf54b21207da95734db3de3d5932235b1ec001be52590",
+    "data.mjs": "c5b8819e50961180208fa8dd4951f6a559b28cc4467c52dd2a68abeeb1b25d81"
+  },
+  "runner_sha256": "246714de5a04b449e496b0e9fd550d5d59012b4640335849a7ead4bd7061e11d",
+  "test_timezone": "Pacific/Auckland",
+  "site_root": "/Users/me/workspace/estate/production-freight-whatif-45d4289ccf6c/workflow-checks/demos/freight-whatif/site",
+  "origin": "http://127.0.0.1:53862",
+  "passed": 11,
+  "failed": 0,
+  "checks": [
+    "default exact decision, evidence, baseline",
+    "edit resolves charge and reset restores loaded baseline",
+    "all presets set independent baselines",
+    "invalid cents pause output/download; recovery uses edited value",
+    "empty appointment pauses; missing departure needs human review",
+    "proof of delivery and incomplete rate con update live findings",
+    "manual invoice header mismatch is exact; blank returns automatic",
+    "download freezes current inputs/results and original baseline",
+    "keyboard skip, native details, preset and field navigation",
+    "mobile 390px and 320px have no horizontal overflow",
+    "no runtime errors or external requests"
+  ],
+  "failures": [],
+  "page_errors": [],
+  "console_errors": [],
+  "blocked_requests": [],
+  "requested_paths": [
+    "/",
+    "/app.mjs",
+    "/data.mjs",
+    "/model.mjs",
+    "/styles.css"
+  ],
+  "cleanup": {
+    "browser_disconnected": true,
+    "server_closed": true,
+    "loopback_port_closed": true,
+    "temporary_profile_removed": true
+  }
+}

@@ -1,0 +1,299 @@
+{
+  "node": "v26.3.0",
+  "total": 39,
+  "passed": 39,
+  "failed": 0,
+  "cases": [
+    {
+      "id": "odd-increment-baseline",
+      "passed": true,
+      "status": "detention",
+      "amount_cents": 61,
+      "flags": []
+    },
+    {
+      "id": "early-exit-before-appointment",
+      "passed": true,
+      "status": "ok",
+      "amount_cents": 0,
+      "flags": []
+    },
+    {
+      "id": "early-exit-at-appointment",
+      "passed": true,
+      "status": "ok",
+      "amount_cents": 0,
+      "flags": []
+    },
+    {
+      "id": "earliest-entry-inclusive",
+      "passed": true,
+      "status": "ok",
+      "amount_cents": 0,
+      "flags": []
+    },
+    {
+      "id": "earliest-entry-excluded",
+      "passed": true,
+      "status": "exception",
+      "amount_cents": 0,
+      "flags": []
+    },
+    {
+      "id": "latest-entry-inclusive",
+      "passed": true,
+      "status": "detention",
+      "amount_cents": 1,
+      "flags": []
+    },
+    {
+      "id": "latest-entry-excluded",
+      "passed": true,
+      "status": "exception",
+      "amount_cents": 0,
+      "flags": []
+    },
+    {
+      "id": "exit-24h-inclusive",
+      "passed": true,
+      "status": "detention",
+      "amount_cents": 2400000,
+      "flags": []
+    },
+    {
+      "id": "exit-24h-excluded",
+      "passed": true,
+      "status": "exception",
+      "amount_cents": 0,
+      "flags": []
+    },
+    {
+      "id": "arrival-missing-exit-present",
+      "passed": true,
+      "status": "exception",
+      "amount_cents": 0,
+      "flags": []
+    },
+    {
+      "id": "exit-missing",
+      "passed": true,
+      "status": "exception",
+      "amount_cents": 0,
+      "flags": []
+    },
+    {
+      "id": "both-tracking-values-missing",
+      "passed": true,
+      "status": "exception",
+      "amount_cents": 0,
+      "flags": []
+    },
+    {
+      "id": "zero-length-pair",
+      "passed": true,
+      "status": "exception",
+      "amount_cents": 0,
+      "flags": []
+    },
+    {
+      "id": "reversed-pair",
+      "passed": true,
+      "status": "exception",
+      "amount_cents": 0,
+      "flags": []
+    },
+    {
+      "id": "exact-grace-odd-clock",
+      "passed": true,
+      "status": "detention",
+      "amount_cents": 53,
+      "flags": []
+    },
+    {
+      "id": "past-grace-odd-clock",
+      "passed": true,
+      "status": "late_arrival",
+      "amount_cents": 0,
+      "flags": []
+    },
+    {
+      "id": "past-grace-parse-warning",
+      "passed": true,
+      "status": "exception",
+      "amount_cents": 0,
+      "flags": []
+    },
+    {
+      "id": "capped-then-parse-warning",
+      "passed": true,
+      "status": "exception",
+      "amount_cents": 0,
+      "flags": []
+    },
+    {
+      "id": "zero-cap-positive-calculation",
+      "passed": true,
+      "status": "ok",
+      "amount_cents": 0,
+      "flags": []
+    },
+    {
+      "id": "zero-rate-positive-billable",
+      "passed": true,
+      "status": "ok",
+      "amount_cents": 0,
+      "flags": []
+    },
+    {
+      "id": "exact-free-threshold",
+      "passed": true,
+      "status": "ok",
+      "amount_cents": 0,
+      "flags": []
+    },
+    {
+      "id": "one-minute-after-free",
+      "passed": true,
+      "status": "ok",
+      "amount_cents": 0,
+      "flags": []
+    },
+    {
+      "id": "one-minute-before-increment",
+      "passed": true,
+      "status": "ok",
+      "amount_cents": 0,
+      "flags": []
+    },
+    {
+      "id": "exact-odd-increment",
+      "passed": true,
+      "status": "detention",
+      "amount_cents": 9,
+      "flags": []
+    },
+    {
+      "id": "one-minute-after-increment",
+      "passed": true,
+      "status": "detention",
+      "amount_cents": 9,
+      "flags": []
+    },
+    {
+      "id": "half-cent-rounds-up-2point5",
+      "passed": true,
+      "status": "detention",
+      "amount_cents": 3,
+      "flags": []
+    },
+    {
+      "id": "cap-exact-rounded-amount",
+      "passed": true,
+      "status": "detention",
+      "amount_cents": 3,
+      "flags": []
+    },
+    {
+      "id": "cap-below-rounded-amount",
+      "passed": true,
+      "status": "detention",
+      "amount_cents": 2,
+      "flags": []
+    },
+    {
+      "id": "cap-above-rounded-amount",
+      "passed": true,
+      "status": "detention",
+      "amount_cents": 3,
+      "flags": []
+    },
+    {
+      "id": "all-findings-with-underbilled-base-lines",
+      "passed": true,
+      "status": "detention",
+      "amount_cents": 61,
+      "flags": [
+        "ACCESSORIAL_NOT_ON_RATECON",
+        "ACCESSORIAL_OVER_RATECON",
+        "DETENTION_UNSUPPORTED",
+        "FUEL_MISMATCH",
+        "LINEHAUL_MISMATCH",
+        "MISSING_POD",
+        "TOTAL_MISMATCH"
+      ]
+    },
+    {
+      "id": "underbilled-allowed-accessorial",
+      "passed": true,
+      "status": "detention",
+      "amount_cents": 61,
+      "flags": []
+    },
+    {
+      "id": "header-one-cent-above-sum",
+      "passed": true,
+      "status": "detention",
+      "amount_cents": 61,
+      "flags": [
+        "TOTAL_MISMATCH"
+      ]
+    },
+    {
+      "id": "header-one-cent-below-sum",
+      "passed": true,
+      "status": "detention",
+      "amount_cents": 61,
+      "flags": [
+        "TOTAL_MISMATCH"
+      ]
+    },
+    {
+      "id": "maximum-independent-lines-automatic-sum",
+      "passed": true,
+      "status": "detention",
+      "amount_cents": 61,
+      "flags": [
+        "ACCESSORIAL_NOT_ON_RATECON",
+        "ACCESSORIAL_OVER_RATECON",
+        "DETENTION_UNSUPPORTED",
+        "FUEL_MISMATCH",
+        "LINEHAUL_MISMATCH"
+      ]
+    },
+    {
+      "id": "upper-date-range-missing-exit",
+      "passed": true,
+      "status": "exception",
+      "amount_cents": 0,
+      "flags": []
+    },
+    {
+      "id": "lower-date-range-missing-entry",
+      "passed": true,
+      "status": "exception",
+      "amount_cents": 0,
+      "flags": []
+    },
+    {
+      "id": "leap-day-crosses-month",
+      "passed": true,
+      "status": "detention",
+      "amount_cents": 61,
+      "flags": []
+    },
+    {
+      "id": "spring-civil-time-no-zone-conversion",
+      "passed": true,
+      "status": "detention",
+      "amount_cents": 61,
+      "flags": []
+    },
+    {
+      "id": "parse-warning-with-no-invoice-mismatch",
+      "passed": true,
+      "status": "exception",
+      "amount_cents": 0,
+      "flags": []
+    }
+  ]
+}

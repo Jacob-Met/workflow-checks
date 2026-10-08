@@ -1,0 +1,12 @@
+PASS default exact decision, evidence, baseline
+PASS edit resolves charge and reset restores loaded baseline
+PASS all presets set independent baselines
+PASS invalid cents pause output/download; recovery uses edited value
+PASS empty appointment pauses; missing departure needs human review
+PASS proof of delivery and incomplete rate con update live findings
+PASS manual invoice header mismatch is exact; blank returns automatic
+PASS download freezes current inputs/results and original baseline
+PASS keyboard skip, native details, preset and field navigation
+PASS mobile 390px and 320px have no horizontal overflow
+PASS no runtime errors or external requests
+{"passed":11,"failed":0,"cleanup":{"browser_disconnected":true,"server_closed":true,"loopback_port_closed":true,"temporary_profile_removed":true},"output":"/Users/me/workspace/estate/production-freight-whatif-45d4289ccf6c/workflow-checks/demos/freight-whatif/evidence/browser-initial"}
