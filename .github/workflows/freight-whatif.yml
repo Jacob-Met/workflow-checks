@@ -1,0 +1,59 @@
+name: Freight what-if
+
+"on":
+  pull_request:
+    paths:
+      - ".github/workflows/freight-whatif.yml"
+      - "demos/freight-whatif/**"
+      - "freight_packets/freightpkt/**"
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/freight-whatif.yml"
+      - "demos/freight-whatif/**"
+      - "freight_packets/freightpkt/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: freight-whatif-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    defaults:
+      run:
+        shell: bash
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+      PYTHONUNBUFFERED: "1"
+      TZ: UTC
+    steps:
+      - name: Check out source
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # official v6
+        with:
+          persist-credentials: false
+      - name: Set up Python 3.12
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # official v6
+        with:
+          python-version: "3.12"
+      - name: Set up Node 24 LTS
+        uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # official v6
+        with:
+          node-version: "24"
+          package-manager-cache: false
+      - name: Verify pinned rules and generated fixtures
+        run: python demos/freight-whatif/tools/build_fixtures.py --check
+      - name: Check model parity and input boundaries
+        run: node demos/freight-whatif/tests/model.test.mjs
+      - name: Exercise isolated installation and rollback
+        run: |
+          freight_receiving_root="$(mktemp -d "${RUNNER_TEMP:?}/freight-whatif.XXXXXXXX")"
+          trap 'rm -rf -- "$freight_receiving_root"' EXIT
+          python demos/freight-whatif/tests/install.test.py \
+            --work-root "$freight_receiving_root/receiving" \
+            --output "$freight_receiving_root/install-receipt.json"
