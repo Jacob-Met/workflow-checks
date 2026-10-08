@@ -1,0 +1,48 @@
+{
+  "issue": "https://github.com/Jacob-Met/workflow-checks/issues/30",
+  "original_base": "9e931fa9f42033bf2368f7149684fb5631345715",
+  "composition_base": "a5fd61b0c361c8a9b8a6737b33ecc9efab46e0ad",
+  "runtime": {
+    "review_report.py": "a8d6a5d8b0d071e40474757a7fcca6c74373383584c2551afe78c2e82adc83ff",
+    "cli.py": "e406ec30f156e70fac472b26f70f2ec02988841528d0853b74c56a4ec2ce720b"
+  },
+  "author": {
+    "original_methods": 11,
+    "original_failures": 11,
+    "candidate_passed": 11
+  },
+  "peer": {
+    "methods": 4,
+    "original_failures": 4,
+    "candidate_passed": 4,
+    "test_blob": "aa191f85b6d9e533751041284ea2fad193f380bf"
+  },
+  "current_native": {
+    "base": "a5fd61b0c361c8a9b8a6737b33ecc9efab46e0ad",
+    "python": "3.12.14",
+    "pytest": "9.1.1",
+    "command": "python3 -B -m pytest -q",
+    "tests_passed": 104,
+    "subtests_passed": 8,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "exit": 0,
+    "log_sha256": "07f0d2976b9c65dba56ca35b39e886bdbf33550467b600bd2ad05925c3f392db",
+    "python_files": 15,
+    "source_unchanged": true,
+    "report_source_sha256": "a8d6a5d8b0d071e40474757a7fcca6c74373383584c2551afe78c2e82adc83ff",
+    "cli_sha256": "e406ec30f156e70fac472b26f70f2ec02988841528d0853b74c56a4ec2ce720b"
+  },
+  "browser": {
+    "status": "pending_actual_hosted_receiving",
+    "local_preflight": "explicit missing-browser failure; no skipped or simulated success",
+    "test": "utility_watch/tests/review_report_browser.cjs",
+    "workflow": ".github/workflows/utility-review-report-browser.yml"
+  },
+  "original_archive": {
+    "members": 24,
+    "bytes": 46152,
+    "sha256": "9309fcee9971d2cefc8d01d3556df4fc0014369aae76628365d0e54a8183c6cd"
+  }
+}

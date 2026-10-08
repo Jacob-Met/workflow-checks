@@ -1,0 +1,135 @@
+test_complete_content_is_available_without_javascript (test_review_report.ReviewReportTests.test_complete_content_is_available_without_javascript) ... FAIL
+test_duplicate_finding_refuses_complete_worksheet (test_review_report.ReviewReportTests.test_duplicate_finding_refuses_complete_worksheet) ... FAIL
+test_empty_native_worksheet_is_a_readable_report (test_review_report.ReviewReportTests.test_empty_native_worksheet_is_a_readable_report) ... FAIL
+test_existing_destination_and_worksheet_are_preserved (test_review_report.ReviewReportTests.test_existing_destination_and_worksheet_are_preserved) ... FAIL
+test_incomplete_review_annotation_is_rejected (test_review_report.ReviewReportTests.test_incomplete_review_annotation_is_rejected) ... FAIL
+test_invalid_utf8_has_clean_error_and_no_partial_report (test_review_report.ReviewReportTests.test_invalid_utf8_has_clean_error_and_no_partial_report) ... FAIL
+test_native_reconciled_annotations_stay_with_exact_evidence (test_review_report.ReviewReportTests.test_native_reconciled_annotations_stay_with_exact_evidence) ... FAIL
+test_notes_names_and_filename_are_literal_text (test_review_report.ReviewReportTests.test_notes_names_and_filename_are_literal_text) ... FAIL
+test_protected_finding_change_refuses_before_output (test_review_report.ReviewReportTests.test_protected_finding_change_refuses_before_output) ... FAIL
+test_removed_finding_refuses_complete_worksheet (test_review_report.ReviewReportTests.test_removed_finding_refuses_complete_worksheet) ... FAIL
+test_standalone_snapshot_preserves_sources_and_is_deterministic (test_review_report.ReviewReportTests.test_standalone_snapshot_preserves_sources_and_is_deterministic) ... FAIL
+
+======================================================================
+FAIL: test_complete_content_is_available_without_javascript (test_review_report.ReviewReportTests.test_complete_content_is_available_without_javascript)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e82707f2bc62/utility-review-report/baseline/utility_watch/tests/test_review_report.py", line 224, in test_complete_content_is_available_without_javascript
+    document, _ = self.parsed()
+                  ^^^^^^^^^^^^^
+  File "/workspace/scratch/e82707f2bc62/utility-review-report/baseline/utility_watch/tests/test_review_report.py", line 151, in parsed
+    self.assertEqual(process.returncode, 0, process.stderr)
+AssertionError: 2 != 0 : usage: uwatch [-h] {generate,run,review} ...
+uwatch: error: argument cmd: invalid choice: 'review-report' (choose from generate, run, review)
+
+
+======================================================================
+FAIL: test_duplicate_finding_refuses_complete_worksheet (test_review_report.ReviewReportTests.test_duplicate_finding_refuses_complete_worksheet)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e82707f2bc62/utility-review-report/baseline/utility_watch/tests/test_review_report.py", line 248, in test_duplicate_finding_refuses_complete_worksheet
+    self.refused("invalid or duplicate row identity")
+  File "/workspace/scratch/e82707f2bc62/utility-review-report/baseline/utility_watch/tests/test_review_report.py", line 164, in refused
+    self.assertIn("uwatch: review report error:", process.stderr)
+AssertionError: 'uwatch: review report error:' not found in "usage: uwatch [-h] {generate,run,review} ...\nuwatch: error: argument cmd: invalid choice: 'review-report' (choose from generate, run, review)\n"
+
+======================================================================
+FAIL: test_empty_native_worksheet_is_a_readable_report (test_review_report.ReviewReportTests.test_empty_native_worksheet_is_a_readable_report)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e82707f2bc62/utility-review-report/baseline/utility_watch/tests/test_review_report.py", line 285, in test_empty_native_worksheet_is_a_readable_report
+    self.assertEqual(process.returncode, 0, process.stderr)
+AssertionError: 2 != 0 : usage: uwatch [-h] {generate,run,review} ...
+uwatch: error: argument cmd: invalid choice: 'review-report' (choose from generate, run, review)
+
+
+======================================================================
+FAIL: test_existing_destination_and_worksheet_are_preserved (test_review_report.ReviewReportTests.test_existing_destination_and_worksheet_are_preserved)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e82707f2bc62/utility-review-report/baseline/utility_watch/tests/test_review_report.py", line 263, in test_existing_destination_and_worksheet_are_preserved
+    self.refused("existing files cannot be replaced", out=destination)
+  File "/workspace/scratch/e82707f2bc62/utility-review-report/baseline/utility_watch/tests/test_review_report.py", line 164, in refused
+    self.assertIn("uwatch: review report error:", process.stderr)
+AssertionError: 'uwatch: review report error:' not found in "usage: uwatch [-h] {generate,run,review} ...\nuwatch: error: argument cmd: invalid choice: 'review-report' (choose from generate, run, review)\n"
+
+======================================================================
+FAIL: test_incomplete_review_annotation_is_rejected (test_review_report.ReviewReportTests.test_incomplete_review_annotation_is_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e82707f2bc62/utility-review-report/baseline/utility_watch/tests/test_review_report.py", line 254, in test_incomplete_review_annotation_is_rejected
+    self.refused("a non-open review needs both reviewer and note")
+  File "/workspace/scratch/e82707f2bc62/utility-review-report/baseline/utility_watch/tests/test_review_report.py", line 164, in refused
+    self.assertIn("uwatch: review report error:", process.stderr)
+AssertionError: 'uwatch: review report error:' not found in "usage: uwatch [-h] {generate,run,review} ...\nuwatch: error: argument cmd: invalid choice: 'review-report' (choose from generate, run, review)\n"
+
+======================================================================
+FAIL: test_invalid_utf8_has_clean_error_and_no_partial_report (test_review_report.ReviewReportTests.test_invalid_utf8_has_clean_error_and_no_partial_report)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e82707f2bc62/utility-review-report/baseline/utility_watch/tests/test_review_report.py", line 258, in test_invalid_utf8_has_clean_error_and_no_partial_report
+    self.refused("utf-8")
+  File "/workspace/scratch/e82707f2bc62/utility-review-report/baseline/utility_watch/tests/test_review_report.py", line 164, in refused
+    self.assertIn("uwatch: review report error:", process.stderr)
+AssertionError: 'uwatch: review report error:' not found in "usage: uwatch [-h] {generate,run,review} ...\nuwatch: error: argument cmd: invalid choice: 'review-report' (choose from generate, run, review)\n"
+
+======================================================================
+FAIL: test_native_reconciled_annotations_stay_with_exact_evidence (test_review_report.ReviewReportTests.test_native_reconciled_annotations_stay_with_exact_evidence)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e82707f2bc62/utility-review-report/baseline/utility_watch/tests/test_review_report.py", line 172, in test_native_reconciled_annotations_stay_with_exact_evidence
+    document, _ = self.parsed()
+                  ^^^^^^^^^^^^^
+  File "/workspace/scratch/e82707f2bc62/utility-review-report/baseline/utility_watch/tests/test_review_report.py", line 151, in parsed
+    self.assertEqual(process.returncode, 0, process.stderr)
+AssertionError: 2 != 0 : usage: uwatch [-h] {generate,run,review} ...
+uwatch: error: argument cmd: invalid choice: 'review-report' (choose from generate, run, review)
+
+
+======================================================================
+FAIL: test_notes_names_and_filename_are_literal_text (test_review_report.ReviewReportTests.test_notes_names_and_filename_are_literal_text)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e82707f2bc62/utility-review-report/baseline/utility_watch/tests/test_review_report.py", line 213, in test_notes_names_and_filename_are_literal_text
+    document, _ = self.parsed()
+                  ^^^^^^^^^^^^^
+  File "/workspace/scratch/e82707f2bc62/utility-review-report/baseline/utility_watch/tests/test_review_report.py", line 151, in parsed
+    self.assertEqual(process.returncode, 0, process.stderr)
+AssertionError: 2 != 0 : usage: uwatch [-h] {generate,run,review} ...
+uwatch: error: argument cmd: invalid choice: 'review-report' (choose from generate, run, review)
+
+
+======================================================================
+FAIL: test_protected_finding_change_refuses_before_output (test_review_report.ReviewReportTests.test_protected_finding_change_refuses_before_output)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e82707f2bc62/utility-review-report/baseline/utility_watch/tests/test_review_report.py", line 238, in test_protected_finding_change_refuses_before_output
+    self.refused("protected finding columns changed")
+  File "/workspace/scratch/e82707f2bc62/utility-review-report/baseline/utility_watch/tests/test_review_report.py", line 164, in refused
+    self.assertIn("uwatch: review report error:", process.stderr)
+AssertionError: 'uwatch: review report error:' not found in "usage: uwatch [-h] {generate,run,review} ...\nuwatch: error: argument cmd: invalid choice: 'review-report' (choose from generate, run, review)\n"
+
+======================================================================
+FAIL: test_removed_finding_refuses_complete_worksheet (test_review_report.ReviewReportTests.test_removed_finding_refuses_complete_worksheet)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e82707f2bc62/utility-review-report/baseline/utility_watch/tests/test_review_report.py", line 243, in test_removed_finding_refuses_complete_worksheet
+    self.refused("manifest mismatch")
+  File "/workspace/scratch/e82707f2bc62/utility-review-report/baseline/utility_watch/tests/test_review_report.py", line 164, in refused
+    self.assertIn("uwatch: review report error:", process.stderr)
+AssertionError: 'uwatch: review report error:' not found in "usage: uwatch [-h] {generate,run,review} ...\nuwatch: error: argument cmd: invalid choice: 'review-report' (choose from generate, run, review)\n"
+
+======================================================================
+FAIL: test_standalone_snapshot_preserves_sources_and_is_deterministic (test_review_report.ReviewReportTests.test_standalone_snapshot_preserves_sources_and_is_deterministic)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/e82707f2bc62/utility-review-report/baseline/utility_watch/tests/test_review_report.py", line 198, in test_standalone_snapshot_preserves_sources_and_is_deterministic
+    self.assertEqual(first.returncode, 0, first.stderr)
+AssertionError: 2 != 0 : usage: uwatch [-h] {generate,run,review} ...
+uwatch: error: argument cmd: invalid choice: 'review-report' (choose from generate, run, review)
+
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.923s
+
+FAILED (failures=11)

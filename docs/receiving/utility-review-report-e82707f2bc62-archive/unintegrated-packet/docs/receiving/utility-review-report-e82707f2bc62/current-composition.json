@@ -1,0 +1,37 @@
+{
+  "base": "a5fd61b0c361c8a9b8a6737b33ecc9efab46e0ad",
+  "tree": "5ac515d24c722128f04b7ae343fb7c3e369a06c9",
+  "source_unchanged_from_frozen_candidate": true,
+  "new_current_files": [
+    {
+      "path": "utility_watch/uwatch/engine.py",
+      "blob": "b764a1f45ba718b31f7841e2c2f61d16a7fef5e9"
+    },
+    {
+      "path": "utility_watch/README.md",
+      "blob": "2b29f11cabf4c4967ca59c10178134abbb2843f8"
+    },
+    {
+      "path": "utility_watch/tests/test_account_bill_keys.py",
+      "blob": "00f833a02d17b7a757a7d028846f5c6012cddd17"
+    },
+    {
+      "path": "utility_watch/tests/test_numeric_csv.py",
+      "blob": "2e63820b66001b2cf35590ca8f41270ce84f7500"
+    },
+    {
+      "path": "utility_watch/tests/test_report.py",
+      "blob": "a4480762868831bdafef1bf52e94a1cc68e31e43"
+    },
+    {
+      "path": "utility_watch/tests/test_review.py",
+      "blob": "0308086a88c256bd5ad5fe2a9b2868c118ee52ec"
+    },
+    {
+      "path": "utility_watch/tests/test_uwatch.py",
+      "blob": "1a71129311c88af32bb4abf0d633e5fcc496ab78"
+    }
+  ],
+  "peer_manifest_sha256": "e6c0cc0023a06ae93c04b505a8b44010e4867d46e31297aa4df44f47510ef07e",
+  "combined_readme_sha256": "aa837083d570c9b35a9076ebf7ded59693dcf46cc1db5714fa81d285fb2dba55"
+}

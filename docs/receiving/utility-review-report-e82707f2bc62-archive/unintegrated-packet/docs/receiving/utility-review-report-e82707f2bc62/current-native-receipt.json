@@ -1,0 +1,17 @@
+{
+  "base": "a5fd61b0c361c8a9b8a6737b33ecc9efab46e0ad",
+  "python": "3.12.14",
+  "pytest": "9.1.1",
+  "command": "python3 -B -m pytest -q",
+  "tests_passed": 104,
+  "subtests_passed": 8,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "exit": 0,
+  "log_sha256": "07f0d2976b9c65dba56ca35b39e886bdbf33550467b600bd2ad05925c3f392db",
+  "python_files": 15,
+  "source_unchanged": true,
+  "report_source_sha256": "a8d6a5d8b0d071e40474757a7fcca6c74373383584c2551afe78c2e82adc83ff",
+  "cli_sha256": "e406ec30f156e70fac472b26f70f2ec02988841528d0853b74c56a4ec2ce720b"
+}

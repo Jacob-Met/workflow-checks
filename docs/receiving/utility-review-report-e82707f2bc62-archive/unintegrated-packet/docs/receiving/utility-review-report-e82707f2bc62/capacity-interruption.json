@@ -1,0 +1,25 @@
+{
+  "reason": "tmpfs ENOSPC while writing author test; attempted test logs empty, exit120, no usable test result claimed",
+  "original_root": "/dev/shm/e827-utility-review-report",
+  "new_root": "/workspace/scratch/e82707f2bc62/utility-review-report",
+  "original_files_retained": true,
+  "copied_runtime_files": [
+    "baseline/utility_watch/uwatch/cli.py",
+    "baseline/utility_watch/uwatch/review.py",
+    "baseline/utility_watch/uwatch/report.py",
+    "baseline/utility_watch/uwatch/engine.py",
+    "baseline/utility_watch/uwatch/synth.py",
+    "baseline/utility_watch/uwatch/__init__.py",
+    "baseline/utility_watch/uwatch/__main__.py",
+    "baseline/utility_watch/README.md",
+    "candidate/utility_watch/uwatch/cli.py",
+    "candidate/utility_watch/uwatch/review.py",
+    "candidate/utility_watch/uwatch/report.py",
+    "candidate/utility_watch/uwatch/engine.py",
+    "candidate/utility_watch/uwatch/synth.py",
+    "candidate/utility_watch/uwatch/__init__.py",
+    "candidate/utility_watch/uwatch/__main__.py",
+    "candidate/utility_watch/README.md"
+  ],
+  "candidate_source_sha256": "a8d6a5d8b0d071e40474757a7fcca6c74373383584c2551afe78c2e82adc83ff"
+}

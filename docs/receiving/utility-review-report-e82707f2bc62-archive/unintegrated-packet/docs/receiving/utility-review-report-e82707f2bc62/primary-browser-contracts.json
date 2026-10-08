@@ -1,0 +1,44 @@
+{
+  "runner": {
+    "repository": "actions/runner-images",
+    "commit": "e7c7cb8f4227797c6404a4e98c2ad463c2f70f91",
+    "path": "images/ubuntu/Ubuntu2404-Readme.md",
+    "blob": "c8b160c59b023b388daca03161c20dfff98cc849",
+    "observed": {
+      "image": "20260927.320.1",
+      "node": "22.23.3",
+      "chrome": "154.0.8037.57",
+      "python": "3.12.3"
+    }
+  },
+  "webSocket": {
+    "repository": "nodejs/node",
+    "ref": "v22.4.0",
+    "path": "doc/api/globals.md",
+    "blob": "33cc849745c643eb00b31c6bb66a36bb859e35f8",
+    "contract": "WebSocket stable and no experimental flag required"
+  },
+  "cdp": {
+    "repository": "ChromeDevTools/devtools-protocol",
+    "ref": "master",
+    "files": [
+      {
+        "path": "pdl/domains/Page.pdl",
+        "blob": "9c77ce7203dec2a283b15930e0bba6d7c329b701"
+      },
+      {
+        "path": "pdl/domains/Input.pdl",
+        "blob": "815bf7c4147c4dd89ea6e9c7a0440517cb5a4937"
+      },
+      {
+        "path": "pdl/domains/Emulation.pdl",
+        "blob": "ef487a234288c06e4968ca4283d114eecd6d3983"
+      }
+    ]
+  },
+  "actions": {
+    "checkout": "11d5960a326750d5838078e36cf38b85af677262",
+    "uploadArtifact": "ea165f8d65b6e75b540449e92b4886f43607fa02"
+  },
+  "receiving": "Actual hosted browser/Node/image/checkout observations control final acceptance. No local real browser result claimed."
+}

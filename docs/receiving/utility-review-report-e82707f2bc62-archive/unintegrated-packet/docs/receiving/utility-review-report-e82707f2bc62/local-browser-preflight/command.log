@@ -1,0 +1,20 @@
+{
+  "schema": "uwatch-review-report-browser/1",
+  "accepted": false,
+  "groups": [],
+  "artifacts": [
+    {
+      "name": "chrome-stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "error": {
+    "name": "Error",
+    "message": "No installed Chrome/Chromium executable; real browser receiving is required",
+    "stack": "Error: No installed Chrome/Chromium executable; real browser receiving is required\n    at installedChrome (/workspace/scratch/e82707f2bc62/utility-review-report/current-composition/utility_watch/tests/review_report_browser.cjs:48:9)\n    at main (/workspace/scratch/e82707f2bc62/utility-review-report/current-composition/utility_watch/tests/review_report_browser.cjs:134:22)\n    at Object.<anonymous> (/workspace/scratch/e82707f2bc62/utility-review-report/current-composition/utility_watch/tests/review_report_browser.cjs:311:1)\n    at Module._compile (node:internal/modules/cjs/loader:1872:14)\n    at Object..js (node:internal/modules/cjs/loader:2003:10)\n    at Module.load (node:internal/modules/cjs/loader:1594:32)\n    at Module._load (node:internal/modules/cjs/loader:1396:12)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\n    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)\n    at node:internal/main/run_main_module:33:47"
+  },
+  "pageErrors": [],
+  "externalRequests": [],
+  "protocolCommands": 0
+}

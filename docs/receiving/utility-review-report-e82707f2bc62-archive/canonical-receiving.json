@@ -1,0 +1,107 @@
+{
+  "created_at": "2026-10-08T14:31:53.981536+00:00",
+  "source_commit": "5a70e458ed455d47ef672ed9b5a614ec59812f0c",
+  "source_tree": "86f234b92173176c7f3c8ae4e1e4d5d3c41d36fd",
+  "command": [
+    "python3",
+    "-B",
+    "/workspace/scratch/e82707f2bc62/utility-review-report/canonical-receiving/test_review_report_receiving_canonical.py"
+  ],
+  "exit_code": 0,
+  "test_sha256": "d15aa4f8511ad2e52f5bafcfb960a724dc88a258430c548a623054eb77c61397",
+  "original_test_sha256": "aa29c49faa0b75f9dc25324786c712bb786458730f9790d4ffa0113a60fabf95",
+  "log_sha256": "3b655eed13b9ddf128407657e851c586911aeb31222df36a0ee14027c7b9a7cd",
+  "browser_executed": false,
+  "semantic_adaptation": {
+    "reason": "Canonical renderer has adjacent block closing/opening tags without whitespace; original parser concatenated status and next label, e.g. ReviewedReviewer. Every exact annotation/evidence token was present. Add only block-boundary text separators matching semantic layout.",
+    "original_sha256": "aa29c49faa0b75f9dc25324786c712bb786458730f9790d4ffa0113a60fabf95",
+    "adapted_sha256": "d15aa4f8511ad2e52f5bafcfb960a724dc88a258430c548a623054eb77c61397",
+    "all_other_ast_equal": true,
+    "test_methods_fixtures_assertions_unchanged": true,
+    "production_edited": false
+  },
+  "runtime_files": [
+    {
+      "path": "utility_watch/uwatch/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7074157fb1710370668c2a0ad5217cd10cfe3618",
+      "size": 60,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/7074157fb1710370668c2a0ad5217cd10cfe3618"
+    },
+    {
+      "path": "utility_watch/uwatch/__main__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "823d40a6bf41beb59790ce83476b359f76f4b1ec",
+      "size": 53,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/823d40a6bf41beb59790ce83476b359f76f4b1ec"
+    },
+    {
+      "path": "utility_watch/uwatch/cli.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "27bfe687d071ff045bd5642f6408413c8cc6a805",
+      "size": 4350,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/27bfe687d071ff045bd5642f6408413c8cc6a805"
+    },
+    {
+      "path": "utility_watch/uwatch/engine.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b764a1f45ba718b31f7841e2c2f61d16a7fef5e9",
+      "size": 21280,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/b764a1f45ba718b31f7841e2c2f61d16a7fef5e9"
+    },
+    {
+      "path": "utility_watch/uwatch/report.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ee2fcabd2026b4224c3cdfc51890f71762a9ef0f",
+      "size": 12382,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/ee2fcabd2026b4224c3cdfc51890f71762a9ef0f"
+    },
+    {
+      "path": "utility_watch/uwatch/review.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2475217ce9c073c39756f9fa3926342cd83f7254",
+      "size": 15534,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/2475217ce9c073c39756f9fa3926342cd83f7254"
+    },
+    {
+      "path": "utility_watch/uwatch/review_report.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "be869a940436172253c0a6d5020ba24860f1a7eb",
+      "size": 8457,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/be869a940436172253c0a6d5020ba24860f1a7eb"
+    },
+    {
+      "path": "utility_watch/uwatch/synth.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0d5c8137b3790bd062609ce4725beda63db9e58d",
+      "size": 13194,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/0d5c8137b3790bd062609ce4725beda63db9e58d"
+    }
+  ],
+  "outcome": "Four methods pass; first unchanged replay had two passes and two markup-extractor mismatches, preserved separately. Only block text separators changed in receiver. No production edits.",
+  "archive_member_count": 168,
+  "archive_sha256": "a9767dc3641996b53def7da2539021962d64bbf026c490e953539ee72e4970fa",
+  "original_first_replay": {
+    "created_at": "2026-10-08T14:30:42.420879+00:00",
+    "source_commit": "5a70e458ed455d47ef672ed9b5a614ec59812f0c",
+    "source_tree": "86f234b92173176c7f3c8ae4e1e4d5d3c41d36fd",
+    "command": [
+      "python3",
+      "-B",
+      "/workspace/scratch/e82707f2bc62/utility-review-report/canonical-receiving/test_review_report_receiving.py"
+    ],
+    "exit_code": 1,
+    "test_sha256": "aa29c49faa0b75f9dc25324786c712bb786458730f9790d4ffa0113a60fabf95",
+    "log_sha256": "1056b2ff7a567767130958873275f02feb18e08a5d2b49cc7d23ed30f7d5fba4",
+    "browser_executed": false
+  },
+  "canonical_commit_url": "https://github.com/Jacob-Met/workflow-checks/commit/5a70e458ed455d47ef672ed9b5a614ec59812f0c"
+}

@@ -1,0 +1,114 @@
+{
+  "kind": "independent native CLI and static HTML receiving",
+  "native_issue": "https://github.com/Jacob-Met/workflow-checks/issues/30",
+  "reviewer": "estate-e82707f2bc62/runtime_discovery",
+  "recorded_at_utc": "2026-10-08T13:49:15.656186+00:00",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+  "python": "3.12.14",
+  "test": {
+    "path": "utility_watch/tests/test_review_report_receiving.py",
+    "sha256": "aa29c49faa0b75f9dc25324786c712bb786458730f9790d4ffa0113a60fabf95",
+    "git_blob": "aa191f85b6d9e533751041284ea2fad193f380bf"
+  },
+  "baseline": {
+    "source_commit": "9e931fa9f42033bf2368f7149684fb5631345715",
+    "source_root": "/dev/shm/e827-utility-review-report/baseline/utility_watch",
+    "test_sha256": "aa29c49faa0b75f9dc25324786c712bb786458730f9790d4ffa0113a60fabf95",
+    "returncode": 1,
+    "elapsed_seconds": 1.394,
+    "log_sha256": "e1f62da0c2ca59ece6860b020ba56eb87d7056fb62a1324dd638f0afb5216833",
+    "candidate_read": false,
+    "native_setup_processes": 12,
+    "unsupported_report_processes": 4,
+    "test_result": "four failures solely at unsupported review-report; no fixture/runtime errors"
+  },
+  "candidate": {
+    "native_issue": "https://github.com/Jacob-Met/workflow-checks/issues/30",
+    "baseline_commit": "9e931fa9f42033bf2368f7149684fb5631345715",
+    "source_root": "/workspace/scratch/e82707f2bc62/utility-review-report/candidate/utility_watch",
+    "qualified_source": {
+      "uwatch/review_report.py": {
+        "sha256": "a8d6a5d8b0d071e40474757a7fcca6c74373383584c2551afe78c2e82adc83ff",
+        "git_blob": "b8ce9d487ddb9872fb1a53eedebcb33def9feffc"
+      },
+      "uwatch/cli.py": {
+        "sha256": "e406ec30f156e70fac472b26f70f2ec02988841528d0853b74c56a4ec2ce720b",
+        "git_blob": "48b849d17795c0eb032acb447c0efce48e743b88"
+      }
+    },
+    "unchanged_runtime_files": [
+      "uwatch/review.py",
+      "uwatch/report.py",
+      "uwatch/engine.py",
+      "uwatch/synth.py",
+      "uwatch/__init__.py",
+      "uwatch/__main__.py"
+    ],
+    "test_sha256": "aa29c49faa0b75f9dc25324786c712bb786458730f9790d4ffa0113a60fabf95",
+    "returncode": 0,
+    "elapsed_seconds": 1.467,
+    "log_sha256": "d7f7676a3645f0e1bfe47a248b477133462081d6c12a0f25cd8556d2f2c0f64d",
+    "browser_executed": false
+  },
+  "results": {
+    "methods": 4,
+    "baseline_passed": 0,
+    "baseline_failed": 4,
+    "candidate_passed": 4,
+    "candidate_failed": 0,
+    "candidate_errors": 0,
+    "candidate_skipped": 0,
+    "candidate_native_setup_processes": 12,
+    "candidate_report_success_processes": 2,
+    "candidate_report_refusal_processes": 4
+  },
+  "observations": [
+    "The real source-change/restoration chain produces 6 current, 6 changed and 1 absent finding; each is present exactly once in a semantic article with its account, state/status, detail, exact reviewer/note and source pointers.",
+    "A shared bill key remains distinct across accounts. Unchanged account annotations carry forward; returned evidence receives fresh open annotations while original and intermediate notes stay historical.",
+    "An exception-only saved worksheet with UTF-8 BOM, reversed rows/columns and status whitespace is accepted. Literal script-looking text, quotes, newlines, ampersands and a literal &amp; entity remain visible text.",
+    "Missing manifest, an output hardlinked to the worksheet, a broken output symlink and a file used as the output parent each return 2 without a traceback or source/worksheet/native-report mutation.",
+    "Every test compares all package Python hashes before and after its native subprocesses; all six unchanged runtime source files also match the pinned original Git blobs."
+  ],
+  "rendered_outputs": [
+    {
+      "worksheet_sha256": "46c5d7b862a571773224284c826c10b385c86dac5705b704a2e309acc8cb3730",
+      "html_sha256": "8e6b72508fd5d1a18d25acf43bb6ff0b8da67cb00d527d435a4fb9bbb9352f37",
+      "native_rows": 2,
+      "semantic_articles": 2,
+      "states": {
+        "current": 2,
+        "changed": 0,
+        "absent": 0
+      },
+      "browser_executed": false
+    },
+    {
+      "worksheet_sha256": "34f488fcb6444c74eaab6fa70b5cd118717e6cd113984e7464f91eea8132147a",
+      "html_sha256": "9761682ef94f5d19848019298a47f2ca96ee3e11e11ddec7c3f2c9cdc5f89fff",
+      "native_rows": 13,
+      "semantic_articles": 13,
+      "states": {
+        "current": 6,
+        "changed": 6,
+        "absent": 1
+      },
+      "browser_executed": false
+    }
+  ],
+  "protocol_correction": {
+    "before_candidate_access": true,
+    "original_sha256": "4fa37c4e8ec59d29247699a245fdf1551ff30213b221bcab68d41c0f377ed613",
+    "reason": "Original blind assertion incorrectly rejected inert escaped note text in data attributes. It was narrowed to actual payload markup/event-handler attributes, without changing fixtures or behavior expectations. Both original and final baseline runs/logs remain in the archive."
+  },
+  "limits": [
+    "No installed browser executable was found. HTMLParser checks actual server-rendered content and selected attributes, not browser layout, the CSS cascade, JavaScript filters, print output or download interaction.",
+    "No claim of live client financial data, payment changes, deployment or hosted native CI acceptance. The fixtures are explicitly synthetic.",
+    "Local source acceptance is bound to the two frozen source hashes; the author owns full-repository current-parent composition and existing hosted gates."
+  ],
+  "archive": {
+    "filename": "raw-evidence.zip",
+    "sha256": "1ec8f7e5e98a86da41d4cfe8e85e7e1b311f44485084015438b9b6aee9c3fd17",
+    "bytes": 210903,
+    "regular_files_verified": 231
+  }
+}
