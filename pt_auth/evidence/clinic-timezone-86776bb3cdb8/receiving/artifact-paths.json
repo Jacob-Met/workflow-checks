@@ -1,0 +1,6 @@
+{
+  "renamed": {
+    "test_receiving_timezone.py": "test_receiving_timezone.py.txt"
+  },
+  "reason": "Keep retained source bytes outside pytest collection; the byte-identical independent test is maintained under pt_auth/tests/test_receiving_timezone.py."
+}

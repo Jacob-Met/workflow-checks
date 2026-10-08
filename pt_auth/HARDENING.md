@@ -63,12 +63,13 @@ Guard tests that already passed (kept as regressions): BOM header, ISO / `M/D/YY
 
 Past dates still marked scheduled now have a separate read-only review in the UI, printable digest, CSV and JSON, plus a CLI count. It preserves source-row evidence and shows the actual authorization reservation, including reused authorization periods. Staff correct the source export and rerun; the tracker does not infer attendance or release reserved visits. Authorization approval states cannot hide this review. Reasonless P3 placeholders are omitted after the existing rules finish, preserving their authorization context when an annual-limit alert applies.
 
-The new `tests/test_visit_status_review.py` covers the real CSV/report/CLI boundary, latest-row corrections, date boundaries, exemptions and clearing the review while preserving ledger rules. `tests/browser/visit_status_review.test.cjs` exercises the actual local HTTP app and browser. The original source produced no review output and seven feature tests failed. A separate receiving control caught an early-filter regression that dropped annual-limit authorization context; filtering only after all rules finish preserves it. The corrected source passes all 63 PT tests and four actual Chromium groups.
+The new `tests/test_visit_status_review.py` covers the real CSV/report/CLI boundary, latest-row corrections, date boundaries, exemptions and clearing the review while preserving ledger rules. `tests/browser/visit_status_review.test.cjs` exercises the actual local HTTP app and browser. The original source produced no review output and seven feature tests failed. A separate receiving control caught an early-filter regression that dropped annual-limit authorization context; filtering only after all rules finish preserves it.
+
+The corrected feature passed 63 PT tests and four actual Chromium groups before the concurrent clinic-timezone feature arrived. Their composition passes 97 PT tests, with one optional upstream Python/Playwright browser case skipped, plus five actual Chromium groups through Node/Playwright. Added CLI and actual-browser controls verify that the same timestamp enters this review according to the selected clinic calendar date, with the zone retained on rerun. The timezone source, existing tests and receiving evidence are preserved.
 
 ## Still open (not fixed; decide with the clinic)
 
 - **Duplicate auth numbers** are resolved by a heuristic (overlapping = amendment, later row wins). Nothing tells staff this happened; a "data warnings" panel in the digest/UI would help.
-- **Time zone** has no CLI flag; offset-bearing timestamps use this machine's zone. Naive timestamps keep the date as written.
 - **Day-first dates** (`DD/MM/YYYY`) are rejected, not auto-detected. This is deliberate, because detection is ambiguous.
 - **Numeric ids** drop leading zeros (`001234` = `1234`) to survive Excel. That would merge two genuinely different patients whose ids differ only by leading zeros.
 - **ANNUAL_LIMIT** uses the calendar year (no plan/benefit-year option), counts evals even when `counts_evals = N`, includes stale scheduled rows, and can fire for no-auth payers that have a cap.
@@ -76,4 +77,25 @@ The new `tests/test_visit_status_review.py` covers the real CSV/report/CLI bound
 - **Name mismatches** cannot be detected: the schedule has no name column, and duplicate `patient_id` rows in `patients.csv` resolve last-wins.
 - A patient whose insurance changed mid-episode is correctly shown as uncovered, but the tool doesn't hint that it's a payer mismatch.
 - The status/synonym lists are generic. Map the clinic's EMR vocabulary (WebPT, Raintree, etc.) on the first real de-identified export.
-- Tested on Python 3.14 only; the README claims 3.10+.
+- The original review ran on Python 3.14. The 2026-10-08 clinic-timezone contribution also runs the inherited PT suite on Python 3.12; the configured CI matrix covers 3.10 and 3.12.
+
+## Clinic timezone selection (2026-10-08)
+
+The same authored UTC appointment is uncovered on a UTC host and covered on
+a Pacific host when the authorization ends on the prior calendar day. This
+reproduced through the real CLI on source
+`58d18344b1ba81e704a22096d05ead2f5d5cdddd`; neither report identified its zone.
+
+Named-zone selection now binds visit and authorization timestamp conversion
+to one per-run `ZoneInfo`, without changing the process or module default.
+The selected zone supplies fallback "today" and is recorded in the summary,
+audit, CLI, browser, and printable digest. Cached summaries for another or
+unrecorded zone are rebuilt for their same as-of date. Host-local mode
+refreshes once at server startup because its label alone cannot establish
+which host interpreted the input.
+
+`tests/test_clinic_timezone.py` covers host-independent named-zone decisions,
+historical offsets, date-only/naive compatibility, separate concurrent runs,
+invalid-zone refusal before output changes or startup, and actual local HTTP
+and optional Chromium consumption. These are synthetic software controls;
+they do not establish a real clinic's rules or accuracy.

@@ -1,0 +1,72 @@
+[
+  {
+    "path": "REVIEW.md",
+    "sha256": "8e698cbbe260a714379f418a1d5b6f7ebebd1a442c5806140d82b44dfed1592c",
+    "bytes": 6378
+  },
+  {
+    "path": "test_receiving_timezone.py",
+    "sha256": "99304b0324fe13c62be3bc4685e938b8efb0ffd7cbbb739f7c49bebaa8466ead",
+    "bytes": 11789
+  },
+  {
+    "path": "candidate-source-manifest.json",
+    "sha256": "3ec0ea55f16c11fc6a801dc34917b783e02df5d1be55f626e3dd6d73efb0fb65",
+    "bytes": 22281
+  },
+  {
+    "path": "source-preservation.json",
+    "sha256": "a94cfc10436c69ceacb45f6bb2d70d86aec8c68b7de50fe4e8e1513e3c024857",
+    "bytes": 1648
+  },
+  {
+    "path": "candidate-independent.log",
+    "sha256": "6f6c11e74c311c9bd5050efd758133d8040f8cf24cac656c019d407810e5356e",
+    "bytes": 99
+  },
+  {
+    "path": "candidate-independent-receipt.json",
+    "sha256": "0f8194305fcaab2175feb181e1a1ecdfb57dc96abe6d2e67ed87dee5ed559caa",
+    "bytes": 592
+  },
+  {
+    "path": "baseline-host-drift.json",
+    "sha256": "6faed10831515d44275e7c08ee38c1a1903d6a745e7527271eeaf4770c3b0e8c",
+    "bytes": 2774
+  },
+  {
+    "path": "baseline-cache-control.log",
+    "sha256": "8f5d2329162e479387fb80b2591a1a64dfa6bdb39467d1326bd1b96c682aa9e4",
+    "bytes": 1926
+  },
+  {
+    "path": "baseline-cache-control-receipt.json",
+    "sha256": "5336c287cc606d03b073ccc096fe6c68a0853f6ace1c5881fbf65791c504cb68",
+    "bytes": 624
+  },
+  {
+    "path": "live-main.json",
+    "sha256": "c0f9b79d2af4937c71ac4cac35dd8909b8d0f9c6d0c2a9dd4dee5807e1d46dc5",
+    "bytes": 349
+  },
+  {
+    "path": "baseline-host-drift-inputs/authorizations.csv",
+    "sha256": "0cb56f784fcaecb2a7e6a4b11eeca6dbd5272ec6b11b3b460e3ecc6255b8aa96",
+    "bytes": 121
+  },
+  {
+    "path": "baseline-host-drift-inputs/patients.csv",
+    "sha256": "f1b7f9cdb4840dcc611b436d554b8e1a310b1695ffeef7b7a867ea34f99a3cbd",
+    "bytes": 87
+  },
+  {
+    "path": "baseline-host-drift-inputs/payers.csv",
+    "sha256": "f51ccd856655e80fae682c091cd4d798c8212697106371338c497082c53b9459",
+    "bytes": 174
+  },
+  {
+    "path": "baseline-host-drift-inputs/schedule.csv",
+    "sha256": "0ca5db90521333ab1fded9e85bb33d387063f574611211fbc66a5ccf290d85e1",
+    "bytes": 157
+  }
+]

@@ -38,18 +38,22 @@ def audit(out_dir: Path, action: str, **kw):
         fh.write(json.dumps(rec, default=_j) + "\n")
 
 
-def run(data_dir: Path, out_dir: Path, as_of: date | None = None, run_by: str = "cli") -> dict:
+def run(data_dir: Path, out_dir: Path, as_of: date | None = None, run_by: str = "cli",
+        *, clinic_timezone: str | None = None) -> dict:
+    clinic_tz = data.resolve_clinic_timezone(clinic_timezone)
+    timezone_label = data.clinic_timezone_label(clinic_tz)
     data_dir, out_dir = Path(data_dir), Path(out_dir)
-    out_dir.mkdir(parents=True, exist_ok=True)
     if as_of is None:
         exp = data_dir / "expected.json"
-        as_of = date.fromisoformat(json.loads(exp.read_text())["as_of"]) if exp.exists() else date.today()
-    visits = data.load_visits(data_dir / "schedule.csv")
-    auths = data.load_auths(data_dir / "authorizations.csv")
+        as_of = (date.fromisoformat(json.loads(exp.read_text())["as_of"])
+                 if exp.exists() else datetime.now(clinic_tz).date())
+    visits = data.load_visits(data_dir / "schedule.csv", clinic_tz=clinic_tz)
+    auths = data.load_auths(data_dir / "authorizations.csv", clinic_tz=clinic_tz)
     payers = data.load_payers(data_dir / "payers.csv")
     patients = data.load_patients(data_dir / "patients.csv")
     items, ledgers, uncovered = build_worklist(visits, auths, payers, patients, as_of)
     status_review = [asdict(row) for row in build_visit_status_review(visits, ledgers, payers, patients, as_of)]
+    out_dir.mkdir(parents=True, exist_ok=True)
 
     ledger_rows = []
     for led in sorted(ledgers.values(), key=lambda l: (l.auth.patient_id, l.auth.start)):
@@ -95,13 +99,14 @@ def run(data_dir: Path, out_dir: Path, as_of: date | None = None, run_by: str = 
               "unauthorized_done": sum(1 for v in uncovered if v.status == "completed"),
               "past_scheduled": len(status_review)}
     summary = {"banner": BANNER, "as_of": as_of, "generated_at": datetime.now().isoformat(timespec="seconds"),
+               "clinic_timezone": timezone_label,
                "counts": counts, "worklist": wl, "ledger": ledger_rows,
                "visit_status_review": status_review, "visit_status_review_note": VISIT_STATUS_NOTE,
                "uncovered": [{"visit_id": v.visit_id, "patient_id": v.patient_id, "date": v.visit_date,
                               "status": v.status, "payer_id": v.payer_id} for v in uncovered]}
     (out_dir / "summary.json").write_text(json.dumps(summary, indent=2, default=_j), encoding="utf-8")
     (out_dir / "digest.html").write_text(render_digest(summary), encoding="utf-8")
-    audit(out_dir, "run", run_by=run_by, as_of=as_of, **counts)
+    audit(out_dir, "run", run_by=run_by, as_of=as_of, clinic_timezone=timezone_label, **counts)
     return summary
 
 
@@ -140,6 +145,8 @@ small{{color:#666}}.ck{{border:1px solid #ccd;border-radius:6px;padding:6px 10px
 .ck ul{{margin:4px 0;padding-left:18px;list-style:none}}</style></head><body>
 <div class="banner">{e(s['banner'])}</div>
 <h1>Daily authorization worklist &mdash; {s['as_of']}</h1>
+<p>Clinic time zone: <b>{e(s.get('clinic_timezone', 'unrecorded'))}</b>.
+Dates and times without an offset keep their written calendar date.</p>
 <p>{c['p1']} act-today (P1) &middot; {c['p2']} this week (P2) &middot; {c['p3']} heads-up (P3) &middot;
 {c['uncovered_scheduled']} scheduled visits outside an approved auth &middot; {c['unauthorized_done']} completed visits without auth</p>
 <table><tr><th>Pri</th><th>Patient</th><th>Clinic</th><th>Payer / auth</th><th>Reason</th><th>Used / auth'd</th>

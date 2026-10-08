@@ -1,0 +1,2 @@
+auth_no,patient_id,payer_id,visits_authorized,start_date,end_date,status
+A1,SYN-1,P,10,2026-09-01,2026-09-28,approved

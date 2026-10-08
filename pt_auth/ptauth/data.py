@@ -20,6 +20,7 @@ import re
 from dataclasses import dataclass, field
 from datetime import date, datetime, tzinfo
 from pathlib import Path
+from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 
 # Time zone used to turn offset-bearing timestamps (e.g. "...T01:30:00Z") into a clinic calendar
 # date. None = this machine's local time zone. Naive timestamps keep the date as written.
@@ -28,6 +29,23 @@ CLINIC_TZ: tzinfo | None = None
 
 class InputError(ValueError):
     pass
+
+
+def resolve_clinic_timezone(name: str | None) -> tzinfo | None:
+    """Resolve one report's named zone without changing process or module state."""
+    if name is None:
+        return CLINIC_TZ
+    try:
+        return ZoneInfo(name)
+    except (ZoneInfoNotFoundError, ValueError, TypeError):
+        raise InputError(
+            f"Unknown or unavailable clinic time zone {name!r}. Use an IANA name such as "
+            "America/Los_Angeles; install the tzdata package if this system lacks time-zone data."
+        ) from None
+
+
+def clinic_timezone_label(zone: tzinfo | None) -> str:
+    return str(zone) if zone is not None else "system local"
 
 
 @dataclass
@@ -82,7 +100,7 @@ class Patient:
 _SLASH = re.compile(r"(\d{1,4})/(\d{1,2})/(\d{1,4})(?:[ T]+(\d{1,2}):(\d{2})(?::(\d{2}))?\s*([AaPp][Mm])?)?")
 
 
-def _d(s: str) -> date:
+def _d(s: str, clinic_tz: tzinfo | None = None) -> date:
     s = s.strip()
     if not s:
         raise ValueError("date is blank")
@@ -108,7 +126,7 @@ def _d(s: str) -> date:
     except ValueError:
         raise ValueError(f"unrecognized date {s!r} (use YYYY-MM-DD or M/D/YYYY)") from None
     if dt.tzinfo is not None:
-        dt = dt.astimezone(CLINIC_TZ)
+        dt = dt.astimezone(clinic_tz if clinic_tz is not None else CLINIC_TZ)
     return dt.date()
 
 
@@ -189,12 +207,12 @@ def _visit_type(s: str) -> str:
     return "treatment"
 
 
-def load_visits(path: Path) -> list[Visit]:
+def load_visits(path: Path, *, clinic_tz: tzinfo | None = None) -> list[Visit]:
     name = Path(path).name
     out = []
     for i, f, r in _rows(path):
         out.append(Visit(f("visit_id", _required), f("patient_id", lambda s: _id(_required(s))),
-                         f("visit_date", _d), r.get("clinic", ""), r.get("therapist", ""),
+                         f("visit_date", lambda s: _d(s, clinic_tz)), r.get("clinic", ""), r.get("therapist", ""),
                          f("payer_id", lambda s: _id(_required(s))),
                          f("status", _lookup(VISIT_STATUS, "visit status")),
                          _visit_type(r.get("visit_type", "")), f"{name}:row{i}"))
@@ -210,14 +228,15 @@ def _count(s: str) -> int:
     return int(n)
 
 
-def load_auths(path: Path) -> list[Auth]:
+def load_auths(path: Path, *, clinic_tz: tzinfo | None = None) -> list[Auth]:
     name = Path(path).name
     out = []
     for i, f, r in _rows(path):
         status = f("status", _lookup(AUTH_STATUS, "auth status")) if "status" in r else "approved"
         a = Auth(f("auth_no", lambda s: _required(s).upper()), f("patient_id", lambda s: _id(_required(s))),
                  f("payer_id", lambda s: _id(_required(s))), f("visits_authorized", _count),
-                 f("start_date", _d), f("end_date", _d), status, f"{name}:row{i}")
+                 f("start_date", lambda s: _d(s, clinic_tz)),
+                 f("end_date", lambda s: _d(s, clinic_tz)), status, f"{name}:row{i}")
         if a.end < a.start:
             raise InputError(f"{name} line {i}: end_date {a.end} is before start_date {a.start}")
         out.append(a)

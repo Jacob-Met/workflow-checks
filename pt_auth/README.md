@@ -35,7 +35,10 @@ This was built for multi-clinic outpatient PT groups where an authorization spec
 4. **Shows past appointments needing status reconciliation.** A separate visit-status review lists past dates still marked scheduled, with the visit ID, clinic, source row and actual authorization reservation. Staff correct the source schedule and rerun; authorization calculations continue using the recorded statuses.
 5. **Writes outputs.** It writes `worklist.csv`, `ledger.csv`, `visit_status_review.csv`, `digest.html` (a printable daily digest with checklists and visit-status review), `summary.json`, and `audit.jsonl`.
 
-Only the Python 3.10+ standard library is needed at runtime. Tests use `pytest`.
+The runtime uses the Python 3.10+ standard library. Tests use `pytest`.
+Named clinic time zones use the system's IANA database. On a system without
+that database, such as a typical Windows installation, install Python's
+first-party `tzdata` package to use the named-zone option below.
 
 ## Run it
 
@@ -47,7 +50,47 @@ python -m ptauth serve --data sample_data --out out         # http://127.0.0.1:8
 python -m pytest -q
 ```
 
+### Choose the clinic's calendar time zone
+
+Use an IANA name when importing timestamps with an offset, especially when
+the program runs on a different machine from the clinic:
+
+```powershell
+python -m ptauth run --data sample_data --out out --clinic-timezone America/Los_Angeles
+python -m ptauth serve --data sample_data --out out --clinic-timezone America/Los_Angeles
+# If the named zone is unavailable on this machine:
+python -m pip install tzdata
+```
+
+The same selected zone applies to offset-bearing visit timestamps and
+authorization start/end timestamps before the tracker takes their calendar
+dates. Historical daylight-saving offsets are applied at each timestamp.
+For example, `2026-09-29T01:30:00Z` is a September 28 visit in
+`America/Los_Angeles`, so it can fit an authorization ending September 28.
+An explicitly chosen `UTC` zone makes it a September 29 visit.
+
+Date-only values and timestamps without offsets keep their written calendar
+date. The selected zone also supplies "today" when no `--as-of` or sample
+`expected.json` date is present; those explicit calendar dates keep their
+existing meaning. One zone applies to the complete input batch. Use separate
+runs for exports whose locations require different zones.
+
+The CLI, UI, printable digest, `summary.json`, and run audit record identify
+the zone used. A server started with a different zone, or with a legacy
+summary that has no zone record, rebuilds the report from the CSVs while
+preserving its previous as-of date. Ordinary subsequent reads reuse that
+report. Omitting the flag preserves host-local date conversion and labels it
+`system local`; because this depends on the machine, that mode refreshes a
+cached report once when the server starts. Choose a named zone for consistent
+clinic dates across hosts using the same time-zone rules.
+
+An invalid or unavailable zone stops before report output, synthetic
+generation, or server startup. The error names the zone and explains how to
+supply time-zone data. Python's [zoneinfo documentation](https://docs.python.org/3/library/zoneinfo.html)
+describes its IANA rules and system/`tzdata` data sources.
+
 The UI is a single page with no CDN, bound to 127.0.0.1 only. It has:
+- a visible clinic time zone matching the generated report
 - summary cards
 - a worklist filterable by priority, clinic and search, with visit meters and expandable checklists
 - a per-item status (open / submitted / approved / n/a), saved to `work_state.json` and the audit log
@@ -69,6 +112,20 @@ The same complete list is in `visit_status_review.csv`, `summary.json` and the p
 
 ## Verification
 
+The clinic-zone controls exercise the actual CLI under UTC, Eastern, and
+Pacific host settings, shared visit/auth conversion, seasonal and DST
+boundaries, concurrent reports with different zones, invalid-zone output
+preservation, cached-report refresh, and the local HTTP run/digest path.
+An optional real-browser check verifies the visible zone, visit coverage,
+rerun, and printable digest in a fresh intercepted browser context:
+
+```sh
+PTAUTH_TEST_CHROME=/absolute/path/to/chromium python -B -m pytest -q -s tests/test_clinic_timezone.py
+```
+
+This optional check also needs Playwright installed in the test environment.
+All these inputs are authored synthetic records.
+
 The generator writes `expected.json`, an answer key computed from the seeded auth parameters and not from the engine. The tests assert:
 - **Zero missed uncovered visits.** The set of scheduled visits outside an auth equals the key exactly, and every such patient reaches the worklist.
 - The re-auth-due patient set **equals the manual audit** exactly.
@@ -79,7 +136,7 @@ The generator writes `expected.json`, an answer key computed from the seeded aut
 
 I also checked the answer key manually on 5 more seeds (1, 2, 3, 99 and 1234, with 80 patients each). All matched.
 
-Optional browser receiving uses the actual local Python HTTP app with Node, Playwright and an installed Chromium. From `pt_auth`, run `node --test tests/browser/visit_status_review.test.cjs`; set `PTAUTH_TEST_PYTHON` or `PTAUTH_BROWSER_EXECUTABLE` if those executables are not the defaults. The test downloads no browser. It checks keyboard access at a 390px viewport, source evidence and CSV/printable exports, staff-state independence, corrected-export reruns and older saved summaries. Playwright is a development dependency only; the tracker still needs only Python's standard library at runtime.
+Optional browser receiving uses the actual local Python HTTP app with Node, Playwright and an installed Chromium. From `pt_auth`, run `node --test tests/browser/visit_status_review.test.cjs`; set `PTAUTH_TEST_PYTHON` or `PTAUTH_BROWSER_EXECUTABLE` if those executables are not the defaults. The test downloads no browser. It checks keyboard access at a 390px viewport, source evidence and CSV/printable exports, staff-state independence, corrected-export reruns, older saved summaries and the selected clinic-zone date boundary. These browser checks add no runtime dependency; named clinic zones use the time-zone data described above.
 
 ## 2-minute demo script (screen-record)
 

@@ -175,6 +175,28 @@ def test_real_cli_exports_complete_status_evidence_and_prints_count(clinic):
     assert "SYNTHETIC DATA" in digest
 
 
+@pytest.mark.parametrize("zone,expected_count", [("America/Los_Angeles", 1), ("UTC", 0)])
+def test_real_cli_status_review_uses_the_selected_clinic_date(clinic, zone, expected_count):
+    data, out = clinic
+    write_rows(data, "schedule.csv", [visit("V-MIDNIGHT", "2026-10-08T06:30:00Z")])
+    result = subprocess.run(
+        [sys.executable, "-m", "ptauth", "run", "--data", str(data), "--out", str(out),
+         "--as-of", AS_OF.isoformat(), "--clinic-timezone", zone],
+        cwd=Path(__file__).resolve().parents[1], capture_output=True, text=True, timeout=20,
+    )
+    assert result.returncode == 0, result.stderr
+    s = json.loads((out / "summary.json").read_text())
+    assert s["clinic_timezone"] == zone
+    assert s["counts"]["past_scheduled"] == expected_count
+    assert s["ledger"][0]["scheduled"] == 1
+    if expected_count:
+        [row] = s["visit_status_review"]
+        assert (row["visit_date"], row["days_since"], row["auth_no"]) == ("2026-10-07", 1, "A1")
+        assert row["evidence"] == "schedule.csv:row2"
+    else:
+        assert s["visit_status_review"] == []
+
+
 def test_digest_escapes_status_review_context_without_losing_csv_text(clinic):
     data, out = clinic
     name = 'Test <script>unsafe()</script> & "literal"'

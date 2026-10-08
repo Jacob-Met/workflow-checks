@@ -1,0 +1,2 @@
+payer_id,payer_name,requires_auth,reauth_visits_before,reauth_days_before,turnaround_days,annual_visit_limit,counts_evals,checklist
+P,Plan (placeholder),Y,0,0,0,,Y,Test note

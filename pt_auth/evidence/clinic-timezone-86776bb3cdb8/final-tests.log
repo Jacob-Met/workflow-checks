@@ -1,0 +1,13 @@
+..................{
+  "browser": "153.0.8010.0",
+  "clinic_timezone": "America/Los_Angeles",
+  "uncovered_scheduled": 0,
+  "scheduled_in_auth": 1,
+  "rerun_as_of": "2026-09-28",
+  "digest_contains_clinic_zone": true,
+  "unhandled_requests": [],
+  "boundary": "actual isolated browser, local HTTP handler, CSV loaders, report, UI and printable digest",
+  "data": "authored synthetic clinic; no existing server, profile, patient or payer"
+}
+......................................................................
+88 passed in 4.13s

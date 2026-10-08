@@ -22,7 +22,8 @@ from datetime import date
 from pathlib import Path
 from http.server import ThreadingHTTPServer
 from ptauth.web import App, make_handler
-app = App(Path(sys.argv[1]), Path(sys.argv[2]))
+kwargs = {'clinic_timezone': sys.argv[3]} if len(sys.argv) > 3 and sys.argv[3] else {}
+app = App(Path(sys.argv[1]), Path(sys.argv[2]), **kwargs)
 app.as_of = date(2026, 10, 8)
 app.run()
 server = ThreadingHTTPServer(('127.0.0.1', 0), make_handler(app))
@@ -44,7 +45,7 @@ function visit(id, date, status = 'scheduled') {
   return [id, 'SYN-1', date, 'Visit clinic (synthetic)', 'Test PT', 'P', status, 'treatment'];
 }
 
-async function harness(t, { authorizationItem = false, legacy = false } = {}) {
+async function harness(t, { authorizationItem = false, legacy = false, clinicTimezone = '', coveredDate = '2026-09-20' } = {}) {
   const root = await fs.mkdtemp(path.join(os.tmpdir(), 'ptauth-browser-'));
   const data = path.join(root, 'data'), out = path.join(root, 'out');
   let child, context;
@@ -67,11 +68,11 @@ async function harness(t, { authorizationItem = false, legacy = false } = {}) {
     'authorizations.csv': [['auth_no', 'patient_id', 'payer_id', 'visits_authorized', 'start_date', 'end_date', 'status'],
       ['A1', 'SYN-1', 'P', 10, '2026-09-01', '2026-11-30', 'approved']],
     'schedule.csv': [['visit_id', 'patient_id', 'visit_date', 'clinic', 'therapist', 'payer_id', 'status', 'visit_type'],
-      visit('V-PAST-COVERED', '2026-09-20'), visit('V-PAST-UNCOVERED', '2026-08-20'), visit('V-FUTURE', '2026-10-10'),
+      visit('V-PAST-COVERED', coveredDate), visit('V-PAST-UNCOVERED', '2026-08-20'), visit('V-FUTURE', '2026-10-10'),
       ...(authorizationItem ? [visit('V-AFTER-AUTH', '2026-12-10')] : [])],
   };
   await Promise.all(Object.entries(files).map(([name, rows]) => fs.writeFile(path.join(data, name), csv(rows))));
-  child = spawn(python, ['-u', '-c', serverSource, data, out], { cwd: source, stdio: ['ignore', 'pipe', 'pipe'] });
+  child = spawn(python, ['-u', '-c', serverSource, data, out, clinicTimezone], { cwd: source, stdio: ['ignore', 'pipe', 'pipe'] });
   let stderr = '';
   child.stderr.on('data', (chunk) => { stderr += chunk; });
   const port = await new Promise((resolve, reject) => {
@@ -197,4 +198,25 @@ test('a saved pre-feature summary asks for a rerun and then exposes the actual r
   await h.rerun();
   assert.equal(await h.page.locator('#t-review tbody tr').count(), 2);
   assert.equal(await h.page.getByRole('link', { name: 'Download visit status review CSV' }).count(), 1);
+});
+
+test('the selected clinic zone determines which timestamped appointments need review and survives rerun', async (t) => {
+  for (const [clinicTimezone, count] of [['America/Los_Angeles', 2], ['UTC', 1]]) {
+    const h = await harness(t, { clinicTimezone, coveredDate: '2026-10-08T06:30:00Z' });
+    await h.openReview();
+    assert.equal(await h.page.locator('#timezone').textContent(), `Clinic time zone: ${clinicTimezone}`);
+    assert.equal(await h.page.locator('#t-review tbody tr').count(), count);
+    const current = await (await fetch(`${h.url}/api/summary`)).json();
+    assert.equal(current.ledger[0].scheduled, 2);
+    if (clinicTimezone === 'America/Los_Angeles') {
+      const row = current.visit_status_review.find((r) => r.visit_id === 'V-PAST-COVERED');
+      assert.equal(row.visit_date, '2026-10-07');
+      assert.equal(row.days_since, 1);
+      assert.equal(row.auth_no, 'A1');
+    }
+    await h.page.locator('#asof').fill('2026-10-09');
+    await h.rerun();
+    assert.equal(await h.page.locator('#t-review tbody tr').count(), 2);
+    assert.equal(await h.page.locator('#timezone').textContent(), `Clinic time zone: ${clinicTimezone}`);
+  }
 });
