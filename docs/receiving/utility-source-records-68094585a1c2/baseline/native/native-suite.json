@@ -1,0 +1,22 @@
+{
+  "started": "2026-10-08T17:37:14.640Z",
+  "finished": "2026-10-08T17:37:32.700Z",
+  "parent": "76e6175d91320ac816cee019df969c0f0e1bbfc7",
+  "tree": "256483cd5c7cbb3731e5a6c322a117900ab24b65",
+  "source_pins": 39,
+  "command": [
+    "python3",
+    "-B",
+    "-m",
+    "pytest",
+    "-q",
+    "-p",
+    "no:cacheprovider"
+  ],
+  "status": 0,
+  "signal": null,
+  "stdout_sha256": "49e95244dec9f70c1b52b48f17fe5eced29f86807ed888d0a00c16ad4d3b6236",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_tail": "....................................... [ 26%]\n................................................................ [ 69%]\n..............................................         [100%]\n149 passed, 59 subtests passed in 17.28s\n",
+  "stderr": ""
+}

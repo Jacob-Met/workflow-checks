@@ -85,3 +85,13 @@ code { font-size: .85em; overflow-wrap: anywhere; }
   .identity dd { margin-bottom: .55rem; }
   .finding-panel, .editor-panel { padding: .9rem; }
 }
+
+.source-records { margin: 1rem 0; padding: 1rem 0; border-bottom: 1px solid #d4decd; min-width: 0; }
+.source-records h3 { margin: 0 0 .45rem; font-size: 1rem; }
+.source-record-actions { display: flex; flex-wrap: wrap; gap: .5rem; }
+.source-record-summary { font-weight: 650; overflow-wrap: anywhere; }
+.source-record { margin: .85rem 0; padding: .85rem; background: #f0f3e9; border-radius: .4rem; min-width: 0; }
+.source-record h4 { margin: 0; overflow-wrap: anywhere; }
+.source-record .muted { margin: .25rem 0 .7rem; font-size: .75rem; }
+.source-record-fields { font-size: .8rem; }
+.source-record-fields dd { white-space: pre-wrap; overflow-wrap: anywhere; }

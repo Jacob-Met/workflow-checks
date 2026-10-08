@@ -1,0 +1,10 @@
+{
+  "started": "2026-10-08T17:57:32.124Z",
+  "finished": "2026-10-08T17:57:36.442Z",
+  "status": 0,
+  "signal": null,
+  "source_pins": 42,
+  "contract_sha256": "7d6bc76fc111fb84115e5da90d2d898007008b744f74eff3b5808b198f628d96",
+  "stdout": "............                                       [100%]\n12 passed, 22 subtests passed in 2.70s\n",
+  "stderr": ""
+}

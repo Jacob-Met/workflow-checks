@@ -1,0 +1,4 @@
+key,property,utility,account_no,code,detail,evidence
+SHARED,"Fictional <Courtyard> & ""East""",electric,A,LATE_FEE_OR_PAST_DUE,"late fee $8.00, prior balance $0.00 on the bill",bills.csv:3
+C-2024,Fictional C,electric,C,USAGE_SPIKE,19.4 kWh/day vs 9.7 same month last year (x2.00),bills.csv:7 bills.csv:6
+SHARED,Fictional D,electric,D,LATE_FEE_OR_PAST_DUE,"late fee $5.00, prior balance $0.00 on the bill",bills.csv:9

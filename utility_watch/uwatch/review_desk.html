@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Utility Watch · Review desk</title>
   <link rel="stylesheet" href="/review_desk.css">
-  <script src="/review_desk.js" defer></script>
+  <script src="/review_desk.js" type="module"></script>
 </head>
 <body>
   <header class="masthead">
@@ -78,6 +78,24 @@
               <summary>Recorded evidence and identity</summary>
               <dl id="selected-evidence" class="identity evidence-values"></dl>
             </details>
+            <section class="source-records" aria-labelledby="source-record-title">
+              <h3 id="source-record-title">Source records</h3>
+              <p id="source-record-help" class="muted"></p>
+              <div class="source-record-actions">
+                <button id="inspect-evidence" type="button" disabled>Inspect source records</button>
+                <button id="download-evidence" class="quiet" type="button" disabled>Download evidence JSON</button>
+              </div>
+              <p id="source-record-status" class="notice" role="status" aria-live="polite"></p>
+              <p id="source-record-error" class="error" role="alert" hidden></p>
+              <div id="source-record-result" hidden>
+                <p id="source-record-summary" class="source-record-summary"></p>
+                <div id="source-record-list"></div>
+                <details class="evidence">
+                  <summary>Checked source snapshot</summary>
+                  <dl id="source-record-provenance" class="identity evidence-values"></dl>
+                </details>
+              </div>
+            </section>
             <fieldset id="annotation-fields">
               <legend>Human review</legend>
               <label for="review-status">Review status</label>

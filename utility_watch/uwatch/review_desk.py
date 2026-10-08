@@ -1,4 +1,4 @@
-"""Local editing of current worksheet annotations; no checker or source writes."""
+"""Local worksheet annotation editing and explicit read-only source inspection."""
 from __future__ import annotations
 
 import csv
@@ -11,6 +11,7 @@ from http.server import BaseHTTPRequestHandler, HTTPServer
 from pathlib import Path
 
 from . import review
+from .review_evidence import EvidenceChanged, inspect_evidence
 
 MAX_WORKSHEET_BYTES = 8 * 1024 * 1024
 MAX_REQUEST_BYTES = 4 * 1024 * 1024
@@ -19,6 +20,7 @@ ASSETS = {
     "/": ("review_desk.html", "text/html; charset=utf-8"),
     "/review_desk.js": ("review_desk.js", "text/javascript; charset=utf-8"),
     "/review_desk.css": ("review_desk.css", "text/css; charset=utf-8"),
+    "/review_evidence.js": ("review_evidence.js", "text/javascript; charset=utf-8"),
 }
 
 
@@ -72,7 +74,7 @@ class DeskSnapshot:
             ) from exc
         if current != self.raw:
             raise WorksheetChanged(
-                "The selected worksheet changed on disk. Download refused; your in-page "
+                "The selected worksheet changed on disk. This action is refused; your in-page "
                 "edits remain. Restart the desk with the intended worksheet before editing it."
             )
 
@@ -85,6 +87,21 @@ class DeskSnapshot:
             "metadata": {key: self.manifest[key] for key in ("as_of", "eval_from", "data_mode")},
             "rows": [dict(row) for row in self.rows if row["row_state"] != "manifest"],
         }
+
+    def inspect(self, request: dict, data: Path | None, report: Path | None) -> bytes:
+        self.ensure_unchanged()
+        if not isinstance(request, dict) or set(request) != {"snapshot", "row_id"}:
+            raise ValueError("source inspection needs exactly snapshot and row_id")
+        if request["snapshot"] != self.snapshot:
+            raise WorksheetChanged("This inspection belongs to another worksheet snapshot.")
+        row_id = request["row_id"]
+        if not isinstance(row_id, str) or row_id not in self.current:
+            raise ValueError("Select one current saved finding to inspect its source records.")
+        if data is None or report is None:
+            raise ValueError("Source inspection needs both --data and --report when starting the desk.")
+        raw = inspect_evidence(data, report, self.current[row_id], self.manifest)
+        self.ensure_unchanged()
+        return raw
 
     def download(self, request: dict) -> bytes:
         self.ensure_unchanged()
@@ -125,9 +142,13 @@ class DeskSnapshot:
 class DeskServer(HTTPServer):
     """One loopback listener with a fixed worksheet and fixed asset routes."""
 
-    def __init__(self, worksheet: Path, port: int = 0):
+    def __init__(self, worksheet: Path, port: int = 0, *,
+                 data: Path | None = None, report: Path | None = None):
         if not isinstance(port, int) or isinstance(port, bool) or not 0 <= port <= 65535:
             raise ValueError("port must be between 0 and 65535")
+        if (data is None) != (report is None):
+            raise ValueError("Supply both --data and --report to enable source inspection.")
+        self.data, self.report = data, report
         self.desk = DeskSnapshot(worksheet)
         self.token = secrets.token_urlsafe(32)
         self.assets = {
@@ -201,6 +222,7 @@ class DeskHandler(BaseHTTPRequestHandler):
             try:
                 payload = self.server.desk.view()
                 payload["token"] = self.server.token
+                payload["source_evidence"] = self.server.data is not None
                 self._json(200, payload)
             except WorksheetChanged as exc:
                 self._json(409, {"error": str(exc)})
@@ -210,7 +232,7 @@ class DeskHandler(BaseHTTPRequestHandler):
     def do_POST(self):
         if not self._allowed():
             return
-        if self.path != "/api/download":
+        if self.path not in ("/api/download", "/api/evidence"):
             self._json(404, {"error": "No such review-desk route."})
             return
         token = self.headers.get_all("X-Review-Token")
@@ -237,20 +259,29 @@ class DeskHandler(BaseHTTPRequestHandler):
             if len(body) != length:
                 raise ValueError("the annotation request was incomplete")
             request = review._read_json(body)
-            csv_bytes = self.server.desk.download(request)
-        except WorksheetChanged as exc:
+            if self.path == "/api/evidence":
+                output = self.server.desk.inspect(request, self.server.data, self.server.report)
+            else:
+                output = self.server.desk.download(request)
+        except (WorksheetChanged, EvidenceChanged) as exc:
             self._json(409, {"error": str(exc)})
         except (ValueError, csv.Error, RecursionError) as exc:
             self._json(400, {"error": str(exc)})
         except TimeoutError:
             self._json(408, {"error": "The edit request timed out. Your in-page edits remain."})
+        except OSError as exc:
+            self._json(400, {"error": f"Cannot read the configured source evidence: {exc}"})
         else:
-            self._send(200, csv_bytes, "text/csv; charset=utf-8", download=True)
+            if self.path == "/api/evidence":
+                self._send(200, output, "application/json; charset=utf-8")
+            else:
+                self._send(200, output, "text/csv; charset=utf-8", download=True)
 
 
-def serve(worksheet: Path, port: int = 0) -> None:
+def serve(worksheet: Path, port: int = 0, *,
+          data: Path | None = None, report: Path | None = None) -> None:
     """Serve until Ctrl+C. Inputs are read-only; edited CSV leaves through a download."""
-    with DeskServer(worksheet, port) as server:
+    with DeskServer(worksheet, port, data=data, report=report) as server:
         print(f"Utility Watch review desk: {server.origin}", flush=True)
         print("Open that URL locally. Download a new worksheet to keep edits. Ctrl+C stops the desk.",
               flush=True)

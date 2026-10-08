@@ -1,0 +1,692 @@
+{
+  "recovered_at": "2026-10-08T18:43:56.901Z",
+  "browser_root": "/home/jacob/hamon-utility-evidence-desk-68094585a1c2-browser/utility-review-desk-browser-Be0ewb",
+  "tree_leaf_count": 1171,
+  "changed_source": [
+    "utility_watch/README.md",
+    "utility_watch/docs/review-desk.md",
+    "utility_watch/tests/review_desk_browser.mjs",
+    "utility_watch/tests/review_evidence_fixture.py",
+    "utility_watch/tests/test_review_evidence.py",
+    "utility_watch/uwatch/cli.py",
+    "utility_watch/uwatch/review_desk.css",
+    "utility_watch/uwatch/review_desk.html",
+    "utility_watch/uwatch/review_desk.js",
+    "utility_watch/uwatch/review_desk.py",
+    "utility_watch/uwatch/review_evidence.js",
+    "utility_watch/uwatch/review_evidence.py"
+  ],
+  "original_pins": 39,
+  "candidate_pins": 43,
+  "native_records": [
+    {
+      "name": "syntax",
+      "status": 0,
+      "started": "2026-10-08T18:02:41.117Z",
+      "finished": "2026-10-08T18:02:42.155Z"
+    },
+    {
+      "name": "native",
+      "status": 0,
+      "started": "2026-10-08T18:02:42.171Z",
+      "finished": "2026-10-08T18:03:44.870Z"
+    },
+    {
+      "name": "optimized",
+      "status": 0,
+      "started": "2026-10-08T18:03:44.870Z",
+      "finished": "2026-10-08T18:03:50.922Z"
+    }
+  ],
+  "browser_exit": {
+    "started": "2026-10-08T18:03:50.922Z",
+    "finished": "2026-10-08T18:04:37.081Z",
+    "status": 0,
+    "signal": null
+  },
+  "browser_checks": [
+    "actual native CLI opens the complete current and historical worksheet",
+    "native input retains the selected row outside a changed filter and renders notes literally",
+    "filtered browser download contains both accounts, every protected cell, history and manifest",
+    "actual existing review CLI consumes the browser download and retains exact source-bound annotations",
+    "incomplete human review is retained for correction and a corrected native download succeeds",
+    "real source drift refuses the download without losing edits; exact-source retry succeeds",
+    "no-match recovery, row-local reset and a 320-pixel native viewport preserve the editor",
+    "a native-valid empty worksheet opens and downloads its unchanged manifest",
+    "literal multiline source fields match the native producer and same-byte JSON download; notes and filters remain",
+    "identical bill keys on two accounts keep separate record identity and discard the previous download",
+    "a late response for the former selection cannot replace the current account's records or draft",
+    "a native-valid changed source context refuses without losing draft notes; the exact restored source can be rechecked",
+    "source record values remain readable in the existing 320-pixel desk without horizontal overflow",
+    "no external page requests or JavaScript exceptions; every source byte remains frozen"
+  ],
+  "candidate_source_currently_exact": true,
+  "baseline_source_currently_exact": true,
+  "source_scope": {
+    "authored_as": "estate-68094585a1c2 / production",
+    "continuing_worker": "chatgpt:68094585a1c2",
+    "original_parent": "76e6175d91320ac816cee019df969c0f0e1bbfc7",
+    "original_tree": "256483cd5c7cbb3731e5a6c322a117900ab24b65",
+    "original_full_tree_leaves": 1171,
+    "baseline_materialized": 39,
+    "candidate_materialized": 43,
+    "changed": [
+      {
+        "path": "utility_watch/README.md",
+        "bytes": 14769,
+        "sha256": "55eabfa2a59f3dc8e46fa3eb97f290976785e1d47e67bab2b4bfe43983dcd388",
+        "blob": "da5288186d42fbe3cd4c3366ad475c12695a4fac",
+        "previous_blob": "0887f672611b4bda56eac4373676bfb3748e18a1"
+      },
+      {
+        "path": "utility_watch/docs/review-desk.md",
+        "bytes": 7608,
+        "sha256": "dd8d238be2d9c2c65e7d858fc4488340fb5c6643c05178771707c7ef6a805514",
+        "blob": "07e3545a54953f37203435113afd974c881d0e4d",
+        "previous_blob": "ac74106dc53fe79591d0daf21913ba834124ee27"
+      },
+      {
+        "path": "utility_watch/tests/review_desk_browser.mjs",
+        "bytes": 29308,
+        "sha256": "e0ea0cc84f9d482665c423605949f210bd67d5d97cd93d63015d6d42cd2aa632",
+        "blob": "de7375009702ba6e4a307b048382fc84fe27610b",
+        "previous_blob": "b4cb971eabeff58009db221826cca9385265c0d1"
+      },
+      {
+        "path": "utility_watch/tests/review_evidence_fixture.py",
+        "bytes": 1840,
+        "sha256": "b41d1dc9d5f90977f2e1573d9886b758849da5ce68a56bf872d0879b3796c135",
+        "blob": "5229a488e51b0846de9a6b86831c5d89135eb520",
+        "previous_blob": null
+      },
+      {
+        "path": "utility_watch/tests/test_review_evidence.py",
+        "bytes": 13133,
+        "sha256": "243dc7a21b42cb0fe54950c44312c9bcef998d0fd1025c090330ff23c7519ce0",
+        "blob": "6fc8fbecd0e0c6eb799a3027eea157ce6cdc98ac",
+        "previous_blob": null
+      },
+      {
+        "path": "utility_watch/uwatch/cli.py",
+        "bytes": 6707,
+        "sha256": "951bb90b2515621aaa74482fbe5d335ec58b98d4688f800e4b36c6a776b00989",
+        "blob": "4bbf8b5ec202b3094a1742880313679e9b99d40a",
+        "previous_blob": "c764e1c5ebab01bf1a02c11cd5d1604ff04667c1"
+      },
+      {
+        "path": "utility_watch/uwatch/review_desk.css",
+        "bytes": 6503,
+        "sha256": "4dea1febd3884725306bfa2a76289c3921f8567d89117f716c33b8c64427fde6",
+        "blob": "f1ce53450b17fadb6fcaec55ffd01168e9fd1bbb",
+        "previous_blob": "26b2ca2eec1f266ac8547fc7835984ac6c859975"
+      },
+      {
+        "path": "utility_watch/uwatch/review_desk.html",
+        "bytes": 6723,
+        "sha256": "886b6322f60c84dec85d6fad1870b46d3a8f291956070f6ca1b0467560b09e68",
+        "blob": "bfa77b47403642f2a77df407b222e7785858854e",
+        "previous_blob": "f6e0b60f5df4211a9aaa2e81a1a2b94b0bfa181b"
+      },
+      {
+        "path": "utility_watch/uwatch/review_desk.js",
+        "bytes": 11771,
+        "sha256": "c3079a7b41d117d119e644cd3df5f9fcfa0205dec4524d5bb1be9770d011e563",
+        "blob": "bc5929a2ffd0eae6b347d84db5da9421f97f48ab",
+        "previous_blob": "942140e8e22cca0d27109cb6ccb53280c7673848"
+      },
+      {
+        "path": "utility_watch/uwatch/review_desk.py",
+        "bytes": 13153,
+        "sha256": "f47851b5dfbff10065a727ee40b1c9da6d94b83a286a8537573e4062198a40e9",
+        "blob": "0df1e2a3354f64a4f90a974cf80bda6f4293f8f9",
+        "previous_blob": "873b375de871916cfb597985b78c097e86f44ee3"
+      },
+      {
+        "path": "utility_watch/uwatch/review_evidence.js",
+        "bytes": 5867,
+        "sha256": "3cc2e3ede386e7d14c246492ef55e0fe6db6926fcccdace0f08524d9d4c20af7",
+        "blob": "f755872dca603d51d7d087f0b184de00d4dfedc2",
+        "previous_blob": null
+      },
+      {
+        "path": "utility_watch/uwatch/review_evidence.py",
+        "bytes": 2222,
+        "sha256": "53ab35d375272018615fd02480a48cdb0a7efe18b28fc511465f46c0c66c9ebb",
+        "blob": "37a2c2399a366bf1968474123e6169e2da45e53a",
+        "previous_blob": null
+      }
+    ],
+    "unchanged_protected": [
+      {
+        "path": "utility_watch/uwatch/evidence.py",
+        "bytes": 8570,
+        "sha256": "258338fba6102df9b5a2676a889eb057cfb07109b150022481bf4e13e1dbd2e5",
+        "blob": "9fba5e38b07f13c0db7b69cf5f4c3d4e620a8048"
+      },
+      {
+        "path": "utility_watch/uwatch/review.py",
+        "bytes": 15534,
+        "sha256": "f9f730ca45140436704d9823eafcfb58fb3922c5d0bf93a21a63f31347c947de",
+        "blob": "2475217ce9c073c39756f9fa3926342cd83f7254"
+      },
+      {
+        "path": "utility_watch/uwatch/engine.py",
+        "bytes": 21531,
+        "sha256": "8d61b55e88415275ffe1c5edca6f914f10c4f47f6cfd9d0b56ba76854f6f1180",
+        "blob": "dd1b752972b74232090ed602d11b84759bda19e3"
+      },
+      {
+        "path": "utility_watch/uwatch/worksheet.py",
+        "bytes": 7789,
+        "sha256": "827f7ba7d6eba19d07f18bc202a50b8283bf2b4a6b9b9247046a0441a1d845fa",
+        "blob": "d8880f1f33115c8589ad0a91b87ef5619ae95964"
+      },
+      {
+        "path": "utility_watch/uwatch/review_report.py",
+        "bytes": 8457,
+        "sha256": "4462088141b21c990ce5b949a9c683f68f647ae83bdba0eaa1409730e442f856",
+        "blob": "be869a940436172253c0a6d5020ba24860f1a7eb"
+      },
+      {
+        "path": ".github/workflows/tests.yml",
+        "bytes": 695,
+        "sha256": "521a133de92677bbdd8a9693c4d7fb9e6d14ce2dd19fdf841a41f558f0bddec9",
+        "blob": "d72b89ae3efb2963fbe7386021f467e82a8e1f2e"
+      }
+    ]
+  },
+  "sizes": {
+    "/tmp/hamon-utility-evidence-desk-68094585a1c2": [
+      {
+        "path": "baseline-evidence/behavior-receipt.json",
+        "bytes": 3922
+      },
+      {
+        "path": "baseline-evidence/behavior.stderr.log",
+        "bytes": 0
+      },
+      {
+        "path": "baseline-evidence/behavior.stdout.log",
+        "bytes": 118
+      },
+      {
+        "path": "baseline-evidence/fixture/data/accounts.csv",
+        "bytes": 320
+      },
+      {
+        "path": "baseline-evidence/fixture/data/bills.csv",
+        "bytes": 773
+      },
+      {
+        "path": "baseline-evidence/fixture/data/expected.json",
+        "bytes": 50
+      },
+      {
+        "path": "baseline-evidence/fixture/data/occupancy.csv",
+        "bytes": 30
+      },
+      {
+        "path": "baseline-evidence/fixture/data/payments.csv",
+        "bytes": 58
+      },
+      {
+        "path": "baseline-evidence/fixture/fixture.json",
+        "bytes": 5553
+      },
+      {
+        "path": "baseline-evidence/fixture/original.csv",
+        "bytes": 2489
+      },
+      {
+        "path": "baseline-evidence/fixture/report/audit.jsonl",
+        "bytes": 2137
+      },
+      {
+        "path": "baseline-evidence/fixture/report/exceptions.csv",
+        "bytes": 39
+      },
+      {
+        "path": "baseline-evidence/fixture/report/flags.csv",
+        "bytes": 421
+      },
+      {
+        "path": "baseline-evidence/fixture/report/payment_queue.csv",
+        "bytes": 208
+      },
+      {
+        "path": "baseline-evidence/fixture/report/report.html",
+        "bytes": 10108
+      },
+      {
+        "path": "baseline-evidence/fixture/report/summary.json",
+        "bytes": 1437
+      },
+      {
+        "path": "baseline-evidence/fixture/selected.csv",
+        "bytes": 2906
+      },
+      {
+        "path": "baseline-evidence/native-evidence.json",
+        "bytes": 2921
+      },
+      {
+        "path": "baseline-evidence/native-suite.json",
+        "bytes": 799
+      },
+      {
+        "path": "baseline-evidence/native-suite.stderr.log",
+        "bytes": 0
+      },
+      {
+        "path": "baseline-evidence/native-suite.stdout.log",
+        "bytes": 222
+      },
+      {
+        "path": "baseline-evidence/source-pins.json",
+        "bytes": 9073
+      },
+      {
+        "path": "baseline-source/utility_watch/docs/source-evidence.md",
+        "bytes": 4666
+      },
+      {
+        "path": "baseline-source/utility_watch/tests/test_evidence.py",
+        "bytes": 16407
+      },
+      {
+        "path": "baseline-source/utility_watch/uwatch/evidence.py",
+        "bytes": 8570
+      },
+      {
+        "path": "candidate-source/utility_watch/docs/source-evidence.md",
+        "bytes": 4666
+      },
+      {
+        "path": "candidate-source/utility_watch/tests/review_evidence_fixture.py",
+        "bytes": 1840
+      },
+      {
+        "path": "candidate-source/utility_watch/tests/test_evidence.py",
+        "bytes": 16407
+      },
+      {
+        "path": "candidate-source/utility_watch/tests/test_review_evidence.py",
+        "bytes": 13133
+      },
+      {
+        "path": "candidate-source/utility_watch/uwatch/evidence.py",
+        "bytes": 8570
+      },
+      {
+        "path": "candidate-source/utility_watch/uwatch/review_evidence.js",
+        "bytes": 5867
+      },
+      {
+        "path": "candidate-source/utility_watch/uwatch/review_evidence.py",
+        "bytes": 2222
+      },
+      {
+        "path": "candidate-v1-evidence/focused-receipt.json",
+        "bytes": 360
+      },
+      {
+        "path": "candidate-v1-evidence/focused.stderr.log",
+        "bytes": 0
+      },
+      {
+        "path": "candidate-v1-evidence/focused.stdout.log",
+        "bytes": 97
+      },
+      {
+        "path": "candidate-v1-evidence/source-pins.json",
+        "bytes": 9789
+      },
+      {
+        "path": "candidate-v1-overlay.json",
+        "bytes": 69634
+      },
+      {
+        "path": "candidate-v2-evidence/browser-exit.json",
+        "bytes": 119
+      },
+      {
+        "path": "candidate-v2-evidence/browser.stderr.log",
+        "bytes": 0
+      },
+      {
+        "path": "candidate-v2-evidence/browser.stdout.log",
+        "bytes": 1639
+      },
+      {
+        "path": "candidate-v2-evidence/native-receipt.json",
+        "bytes": 3610
+      },
+      {
+        "path": "candidate-v2-evidence/native.stderr.log",
+        "bytes": 0
+      },
+      {
+        "path": "candidate-v2-evidence/native.stdout.log",
+        "bytes": 274
+      },
+      {
+        "path": "candidate-v2-evidence/optimized.stderr.log",
+        "bytes": 2683
+      },
+      {
+        "path": "candidate-v2-evidence/optimized.stdout.log",
+        "bytes": 0
+      },
+      {
+        "path": "candidate-v2-evidence/source-pins.json",
+        "bytes": 9974
+      },
+      {
+        "path": "candidate-v2-evidence/syntax.stderr.log",
+        "bytes": 0
+      },
+      {
+        "path": "candidate-v2-evidence/syntax.stdout.log",
+        "bytes": 0
+      },
+      {
+        "path": "candidate-v2-overlay.json",
+        "bytes": 125253
+      },
+      {
+        "path": "public-contract.initial-draft.json",
+        "bytes": 2491
+      },
+      {
+        "path": "public-contract.json",
+        "bytes": 2626
+      },
+      {
+        "path": "tmp/pytest-of-jacob/pytest-0/test_every_flag_has_evidence_p0/d11/README_SYNTHETIC.txt",
+        "bytes": 168
+      },
+      {
+        "path": "tmp/pytest-of-jacob/pytest-0/test_every_flag_has_evidence_p0/d11/accounts.csv",
+        "bytes": 2802
+      },
+      {
+        "path": "tmp/pytest-of-jacob/pytest-0/test_every_flag_has_evidence_p0/d11/bills.csv",
+        "bytes": 27296
+      },
+      {
+        "path": "tmp/pytest-of-jacob/pytest-0/test_every_flag_has_evidence_p0/d11/expected.json",
+        "bytes": 827
+      },
+      {
+        "path": "tmp/pytest-of-jacob/pytest-0/test_every_flag_has_evidence_p0/d11/occupancy.csv",
+        "bytes": 564
+      },
+      {
+        "path": "tmp/pytest-of-jacob/pytest-0/test_every_flag_has_evidence_p0/d11/payments.csv",
+        "bytes": 12113
+      },
+      {
+        "path": "tmp/pytest-of-jacob/pytest-0/test_every_flag_has_evidence_p0/o11/audit.jsonl",
+        "bytes": 8221
+      },
+      {
+        "path": "tmp/pytest-of-jacob/pytest-0/test_every_flag_has_evidence_p0/o11/exceptions.csv",
+        "bytes": 219
+      },
+      {
+        "path": "tmp/pytest-of-jacob/pytest-0/test_every_flag_has_evidence_p0/o11/flags.csv",
+        "bytes": 1964
+      },
+      {
+        "path": "tmp/pytest-of-jacob/pytest-0/test_every_flag_has_evidence_p0/o11/payment_queue.csv",
+        "bytes": 1922
+      },
+      {
+        "path": "tmp/pytest-of-jacob/pytest-0/test_every_flag_has_evidence_p0/o11/report.html",
+        "bytes": 22797
+      },
+      {
+        "path": "tmp/pytest-of-jacob/pytest-0/test_every_flag_has_evidence_p0/o11/summary.json",
+        "bytes": 8569
+      },
+      {
+        "path": "tmp/pytest-of-jacob/pytest-1/test_every_flag_has_evidence_p0/d11/README_SYNTHETIC.txt",
+        "bytes": 168
+      },
+      {
+        "path": "tmp/pytest-of-jacob/pytest-1/test_every_flag_has_evidence_p0/d11/accounts.csv",
+        "bytes": 2802
+      },
+      {
+        "path": "tmp/pytest-of-jacob/pytest-1/test_every_flag_has_evidence_p0/d11/bills.csv",
+        "bytes": 27296
+      },
+      {
+        "path": "tmp/pytest-of-jacob/pytest-1/test_every_flag_has_evidence_p0/d11/expected.json",
+        "bytes": 827
+      },
+      {
+        "path": "tmp/pytest-of-jacob/pytest-1/test_every_flag_has_evidence_p0/d11/occupancy.csv",
+        "bytes": 564
+      },
+      {
+        "path": "tmp/pytest-of-jacob/pytest-1/test_every_flag_has_evidence_p0/d11/payments.csv",
+        "bytes": 12113
+      },
+      {
+        "path": "tmp/pytest-of-jacob/pytest-1/test_every_flag_has_evidence_p0/o11/audit.jsonl",
+        "bytes": 8221
+      },
+      {
+        "path": "tmp/pytest-of-jacob/pytest-1/test_every_flag_has_evidence_p0/o11/exceptions.csv",
+        "bytes": 219
+      },
+      {
+        "path": "tmp/pytest-of-jacob/pytest-1/test_every_flag_has_evidence_p0/o11/flags.csv",
+        "bytes": 1964
+      },
+      {
+        "path": "tmp/pytest-of-jacob/pytest-1/test_every_flag_has_evidence_p0/o11/payment_queue.csv",
+        "bytes": 1922
+      },
+      {
+        "path": "tmp/pytest-of-jacob/pytest-1/test_every_flag_has_evidence_p0/o11/report.html",
+        "bytes": 22797
+      },
+      {
+        "path": "tmp/pytest-of-jacob/pytest-1/test_every_flag_has_evidence_p0/o11/summary.json",
+        "bytes": 8569
+      }
+    ],
+    "/home/jacob/hamon-utility-evidence-desk-68094585a1c2-browser/utility-review-desk-browser-Be0ewb": [
+      {
+        "path": "browser-receipt.json",
+        "bytes": 28430
+      },
+      {
+        "path": "browser-stderr.log",
+        "bytes": 3250
+      },
+      {
+        "path": "desktop-initial.png",
+        "bytes": 209683
+      },
+      {
+        "path": "downloads/01-filtered-edits.csv",
+        "bytes": 3000
+      },
+      {
+        "path": "downloads/02-corrected-review.csv",
+        "bytes": 2996
+      },
+      {
+        "path": "downloads/03-source-restored.csv",
+        "bytes": 2989
+      },
+      {
+        "path": "downloads/04-empty-current.csv",
+        "bytes": 546
+      },
+      {
+        "path": "downloads/05-source-A.json",
+        "bytes": 3047
+      },
+      {
+        "path": "downloads/06-source-D.json",
+        "bytes": 2956
+      },
+      {
+        "path": "empty-current.csv",
+        "bytes": 546
+      },
+      {
+        "path": "fixture/data/accounts.csv",
+        "bytes": 320
+      },
+      {
+        "path": "fixture/data/bills.csv",
+        "bytes": 773
+      },
+      {
+        "path": "fixture/data/expected.json",
+        "bytes": 50
+      },
+      {
+        "path": "fixture/data/occupancy.csv",
+        "bytes": 30
+      },
+      {
+        "path": "fixture/data/payments.csv",
+        "bytes": 58
+      },
+      {
+        "path": "fixture/fixture.json",
+        "bytes": 5649
+      },
+      {
+        "path": "fixture/original.csv",
+        "bytes": 2489
+      },
+      {
+        "path": "fixture/report/audit.jsonl",
+        "bytes": 2137
+      },
+      {
+        "path": "fixture/report/exceptions.csv",
+        "bytes": 39
+      },
+      {
+        "path": "fixture/report/flags.csv",
+        "bytes": 421
+      },
+      {
+        "path": "fixture/report/payment_queue.csv",
+        "bytes": 208
+      },
+      {
+        "path": "fixture/report/report.html",
+        "bytes": 10108
+      },
+      {
+        "path": "fixture/report/summary.json",
+        "bytes": 1437
+      },
+      {
+        "path": "fixture/selected.csv",
+        "bytes": 2906
+      },
+      {
+        "path": "narrow-current-editor.png",
+        "bytes": 193806
+      },
+      {
+        "path": "native-children.json",
+        "bytes": 41564
+      },
+      {
+        "path": "reconciled.csv",
+        "bytes": 2993
+      },
+      {
+        "path": "source-fixture/data/accounts.csv",
+        "bytes": 320
+      },
+      {
+        "path": "source-fixture/data/bills.csv",
+        "bytes": 1058
+      },
+      {
+        "path": "source-fixture/data/expected.json",
+        "bytes": 50
+      },
+      {
+        "path": "source-fixture/data/occupancy.csv",
+        "bytes": 30
+      },
+      {
+        "path": "source-fixture/data/payments.csv",
+        "bytes": 58
+      },
+      {
+        "path": "source-fixture/fixture.json",
+        "bytes": 5670
+      },
+      {
+        "path": "source-fixture/native-evidence-A.json",
+        "bytes": 3047
+      },
+      {
+        "path": "source-fixture/native-evidence-D.json",
+        "bytes": 2956
+      },
+      {
+        "path": "source-fixture/original.csv",
+        "bytes": 2489
+      },
+      {
+        "path": "source-fixture/report/audit.jsonl",
+        "bytes": 3241
+      },
+      {
+        "path": "source-fixture/report/exceptions.csv",
+        "bytes": 39
+      },
+      {
+        "path": "source-fixture/report/flags.csv",
+        "bytes": 424
+      },
+      {
+        "path": "source-fixture/report/payment_queue.csv",
+        "bytes": 208
+      },
+      {
+        "path": "source-fixture/report/report.html",
+        "bytes": 10111
+      },
+      {
+        "path": "source-fixture/report/summary.json",
+        "bytes": 1440
+      },
+      {
+        "path": "source-fixture/selected.csv",
+        "bytes": 2906
+      },
+      {
+        "path": "source-fixture/source-fixture.json",
+        "bytes": 8580
+      },
+      {
+        "path": "source-fixture/source-selected.csv",
+        "bytes": 4141
+      },
+      {
+        "path": "source-records-desktop.png",
+        "bytes": 259393
+      },
+      {
+        "path": "source-records-narrow.png",
+        "bytes": 244179
+      }
+    ]
+  }
+}

@@ -1,0 +1,66 @@
+"""Unchanged native producer and desk baseline for source-record inspection."""
+from __future__ import annotations
+import csv, hashlib, io, json, subprocess, sys, threading
+from pathlib import Path
+from urllib.error import HTTPError
+from urllib.request import Request, urlopen
+ROOT = Path("/tmp/hamon-utility-evidence-desk-68094585a1c2")
+SOURCE = ROOT / "baseline-source" / "utility_watch"
+sys.path[:0] = [str(SOURCE), str(SOURCE / "tests")]
+from review_desk_fixture import build
+from uwatch import evidence, review
+from uwatch.review_desk import DeskServer, DeskSnapshot
+out = ROOT / "baseline-evidence"
+fixture = build(out / "fixture")
+worksheet = Path(fixture["worksheet"])
+watched = [p for area in ("data","report") for p in Path(fixture[area]).parent.glob("*")] if False else [
+    *Path(fixture["data"]).glob("*"), *Path(fixture["report"]).parent.glob("*"), worksheet,
+]
+before = {str(p): hashlib.sha256(p.read_bytes()).hexdigest() for p in watched if p.is_file()}
+desk = DeskSnapshot(worksheet)
+row = next(r for r in fixture["rows"] if r["row_state"] == "current" and r["account_no"] == "A")
+target = out / "native-evidence.json"
+command = [sys.executable, "-B", "-m", "uwatch", "evidence", "--data", fixture["data"],
+           "--report", fixture["report"], "--kind", row["kind"], "--account", row["account_no"],
+           "--key", row["finding_key"], "--code", row["code"], "--out", str(target)]
+native = subprocess.run(command, cwd=SOURCE, text=True, capture_output=True, check=False)
+assert native.returncode == 0, native.stderr
+raw = target.read_bytes()
+document = json.loads(raw)
+for field in ("kind","account_no","finding_key","code","property","utility","detail","finding_id","evidence_version"):
+    assert document["finding"][field] == row[field], field
+assert document["finding"]["evidence"] == json.loads(row["evidence"])
+assert document["records"] and all(r["fields"]["account_no"] == "A" for r in document["records"] if "account_no" in r["fields"])
+with DeskServer(worksheet, 0) as server:
+    thread = threading.Thread(target=server.serve_forever, daemon=True)
+    thread.start()
+    try:
+        with urlopen(server.origin + "/api/worksheet", timeout=5) as response:
+            view = json.load(response)
+        assert view["snapshot"] == desk.snapshot
+        headers = {"Content-Type":"application/json","X-Review-Token":view["token"],"Origin":server.origin}
+        request = Request(server.origin + "/api/evidence", data=json.dumps({"snapshot":view["snapshot"],"row_id":row["row_id"]}).encode(), headers=headers)
+        try:
+            urlopen(request, timeout=5)
+            raise AssertionError("baseline unexpectedly has the evidence route")
+        except HTTPError as exc:
+            missing_route = {"status":exc.code,"body":exc.read().decode()}
+            assert exc.code == 404, missing_route
+        edited = desk.download({"snapshot":desk.snapshot,"changes":[]})
+        assert review._previous(edited)
+    finally:
+        server.shutdown()
+        thread.join(5)
+missing_cli = subprocess.run([sys.executable,"-B","-m","uwatch","review-desk","--worksheet",str(worksheet),
+    "--data",fixture["data"],"--report",fixture["report"]], cwd=SOURCE, text=True, capture_output=True, check=False)
+assert missing_cli.returncode == 2 and "unrecognized arguments" in missing_cli.stderr
+assert before == {str(p):hashlib.sha256(p.read_bytes()).hexdigest() for p in watched if p.is_file()}
+receipt = {"parent":"76e6175d91320ac816cee019df969c0f0e1bbfc7","tree":"256483cd5c7cbb3731e5a6c322a117900ab24b65",
+           "native_evidence":{"command":command,"status":native.returncode,"stdout":native.stdout,"stderr":native.stderr,
+                              "bytes":len(raw),"sha256":hashlib.sha256(raw).hexdigest(),"records":len(document["records"]),
+                              "finding_id":row["finding_id"],"evidence_version":row["evidence_version"]},
+           "unchanged_desk":{"snapshot":desk.snapshot,"current":len(desk.current),"history":sum(r["row_state"] in ("changed","absent") for r in fixture["rows"]),"download_valid":True},
+           "missing_browser_route":missing_route,"missing_cli":{"status":missing_cli.returncode,"stderr":missing_cli.stderr},
+           "protected_inputs_unchanged":before}
+(out/"behavior-receipt.json").write_text(json.dumps(receipt,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+print(json.dumps({"native_evidence_status":native.returncode,"records":len(document["records"]),"missing_route":missing_route["status"],"missing_cli":missing_cli.returncode,"protected_inputs_unchanged":len(before)}))

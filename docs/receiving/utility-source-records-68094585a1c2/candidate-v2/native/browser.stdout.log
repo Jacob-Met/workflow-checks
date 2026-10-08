@@ -1,0 +1,15 @@
+{"passed":"actual native CLI opens the complete current and historical worksheet"}
+{"passed":"native input retains the selected row outside a changed filter and renders notes literally"}
+{"passed":"filtered browser download contains both accounts, every protected cell, history and manifest"}
+{"passed":"actual existing review CLI consumes the browser download and retains exact source-bound annotations"}
+{"passed":"incomplete human review is retained for correction and a corrected native download succeeds"}
+{"passed":"real source drift refuses the download without losing edits; exact-source retry succeeds"}
+{"passed":"no-match recovery, row-local reset and a 320-pixel native viewport preserve the editor"}
+{"passed":"a native-valid empty worksheet opens and downloads its unchanged manifest"}
+{"passed":"literal multiline source fields match the native producer and same-byte JSON download; notes and filters remain"}
+{"passed":"identical bill keys on two accounts keep separate record identity and discard the previous download"}
+{"passed":"a late response for the former selection cannot replace the current account's records or draft"}
+{"passed":"a native-valid changed source context refuses without losing draft notes; the exact restored source can be rechecked"}
+{"passed":"source record values remain readable in the existing 320-pixel desk without horizontal overflow"}
+{"passed":"no external page requests or JavaScript exceptions; every source byte remains frozen"}
+{"root":"/home/jacob/hamon-utility-evidence-desk-68094585a1c2-browser/utility-review-desk-browser-Be0ewb","passed":14,"failure":null,"profileCleanup":true}

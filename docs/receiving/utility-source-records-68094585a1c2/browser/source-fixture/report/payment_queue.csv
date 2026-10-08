@@ -1,0 +1,2 @@
+bill_id,account_no,property,utility,vendor,invoice,amount_due,due_date,status,evidence
+B-2024,B,Fictional B,electric,Placeholder vendor,INV-B-2024,60.0,2024-03-01,QUEUED_FOR_APPROVAL (not paid),bills.csv:9

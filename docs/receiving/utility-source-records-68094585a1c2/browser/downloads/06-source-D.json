@@ -1,0 +1,111 @@
+{
+  "schema": "uwatch-evidence-v1",
+  "finding": {
+    "kind": "flag",
+    "account_no": "D",
+    "finding_key": "SHARED",
+    "code": "LATE_FEE_OR_PAST_DUE",
+    "property": "Fictional D",
+    "utility": "electric",
+    "detail": "late fee $5.00, prior balance $0.00 on the bill",
+    "finding_id": "829d1ec43af443968b34bf09e75e58e263729a6f496a17767bb823e5e319b93b",
+    "evidence_version": "fe087af04bfdee82dfe23720f8226c9cd87fd3cc5ffc2e92cef83213c8eca781",
+    "evidence": [
+      "bills.csv:13"
+    ]
+  },
+  "review": {
+    "as_of": "2024-02-05",
+    "eval_from": "2024-01-01",
+    "data_mode": "synthetic"
+  },
+  "source": {
+    "report": {
+      "file": "summary.json",
+      "present": true,
+      "bytes": 1440,
+      "sha256": "9604a3178f98865a3d4b38a5ac585ec3c61fe261b06c49f3446a308e2f9dfc18"
+    },
+    "inputs": [
+      {
+        "file": "accounts.csv",
+        "present": true,
+        "bytes": 320,
+        "sha256": "64c639848182d90e11549e720096fdb9e7ecf98a6d1e06145367a54531a54fb7"
+      },
+      {
+        "file": "bills.csv",
+        "present": true,
+        "bytes": 1058,
+        "sha256": "c2885994b9b3496e64734e8bbde9d8928d42891f26dc15a602048c4e2a33c699"
+      },
+      {
+        "file": "occupancy.csv",
+        "present": true,
+        "bytes": 30,
+        "sha256": "a5d1a56715792e6c974f8999a3b428b6090b5f4369d87d89ecb98e2b55b8450a"
+      },
+      {
+        "file": "payments.csv",
+        "present": true,
+        "bytes": 58,
+        "sha256": "29c7cb3eae40c96c9800e6359acacfb1d1928c3c7a65981c55e01485501f7300"
+      },
+      {
+        "file": "expected.json",
+        "present": true,
+        "bytes": 50,
+        "sha256": "a1769d49272239f40ac57838d8cbbb1f8283a8362829eb4d86af61a1fad0c3fe"
+      }
+    ],
+    "engine_sha256": "8d61b55e88415275ffe1c5edca6f914f10c4f47f6cfd9d0b56ba76854f6f1180",
+    "rules": {
+      "spike_ratio": 1.5,
+      "rate_ratio": 1.2,
+      "rate_min_amount": 100.0,
+      "vacant_standby_per_day": {
+        "water": 0.05,
+        "electric": 5.0
+      },
+      "payment_tolerance": 1.0,
+      "naive_trailing3_ratio": 1.5
+    }
+  },
+  "records": [
+    {
+      "pointer": "bills.csv:13",
+      "file": "bills.csv",
+      "record_end_line": 13,
+      "columns": [
+        "bill_id",
+        "account_no",
+        "vendor_invoice_no",
+        "period_start",
+        "period_end",
+        "usage",
+        "usage_unit",
+        "amount",
+        "late_fee",
+        "prior_balance",
+        "due_date",
+        "received_date",
+        "memo"
+      ],
+      "fields": {
+        "bill_id": "SHARED",
+        "account_no": "D",
+        "vendor_invoice_no": "INV-D-2024",
+        "period_start": "2024-01-01",
+        "period_end": "2024-01-31",
+        "usage": "300",
+        "usage_unit": "kWh",
+        "amount": "60",
+        "late_fee": "5",
+        "prior_balance": "0",
+        "due_date": "2024-03-01",
+        "received_date": "2024-02-01",
+        "memo": "Other account: D"
+      }
+    }
+  ]
+}

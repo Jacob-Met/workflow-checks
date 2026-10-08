@@ -1,0 +1,82 @@
+import fs from "node:fs";
+import path from "node:path";
+import crypto from "node:crypto";
+
+const root = "/tmp/hamon-utility-evidence-desk-68094585a1c2";
+const browser = "/home/jacob/hamon-utility-evidence-desk-68094585a1c2-browser/utility-review-desk-browser-Be0ewb";
+const sha256 = raw => crypto.createHash("sha256").update(raw).digest("hex");
+const blob = raw => crypto.createHash("sha1").update(Buffer.from("blob " + raw.length + "\0")).update(raw).digest("hex");
+const read = p => fs.readFileSync(p);
+const json = p => JSON.parse(read(p));
+const records = [];
+const original = json(path.join(root, "original-inputs.json"));
+const v1 = json(path.join(root, "candidate-v1-overlay.json"));
+const v2 = json(path.join(root, "candidate-v2-overlay.json"));
+const beforePins = json(path.join(root, "baseline-evidence/source-pins.json"));
+const afterPins = json(path.join(root, "candidate-v2-evidence/source-pins.json"));
+const actualSource = [];
+for (const pin of beforePins.entries) {
+  const raw = read(path.join(root, "baseline-source", pin.path));
+  if (raw.length !== pin.bytes || sha256(raw) !== pin.sha256 || blob(raw) !== pin.blob) throw Error("Original source changed: " + pin.path);
+}
+for (const pin of afterPins.entries) {
+  const raw = read(path.join(root, "candidate-source", pin.path));
+  if (raw.length !== pin.bytes || sha256(raw) !== pin.sha256 || blob(raw) !== pin.blob) throw Error("Qualified candidate changed: " + pin.path);
+  actualSource.push({...pin});
+}
+const changed = Object.keys(v2.files).sort();
+for (const item of changed) {
+  const raw = read(path.join(root, "candidate-source", item));
+  if (!Buffer.from(v2.files[item], "utf8").equals(raw)) throw Error("Candidate overlay differs: " + item);
+}
+const originalByPath = new Map(beforePins.entries.map(p => [p.path,p]));
+for (const pin of afterPins.entries) {
+  if (!changed.includes(pin.path)) {
+    const previous = originalByPath.get(pin.path);
+    if (!previous || previous.blob !== pin.blob) throw Error("Unexpected source change: " + pin.path);
+  }
+}
+const native = json(path.join(root,"candidate-v2-evidence/native-receipt.json"));
+if (native.records.some(r=>r.status !== 0)) throw Error("A native qualification failed");
+const browserReceipt = json(path.join(browser,"browser-receipt.json"));
+const browserExit = json(path.join(root,"candidate-v2-evidence/browser-exit.json"));
+if (browserReceipt.failure !== null || browserReceipt.checks.length !== 14 || browserExit.status !== 0) throw Error("Browser qualification incomplete");
+const scope = {
+  authored_as: "estate-68094585a1c2 / production",
+  continuing_worker: "chatgpt:68094585a1c2",
+  original_parent: original.parent,
+  original_tree: original.tree,
+  original_full_tree_leaves: original.full_tree.length,
+  baseline_materialized: beforePins.entries.length,
+  candidate_materialized: afterPins.entries.length,
+  changed: changed.map(item=>({...actualSource.find(p=>p.path===item), previous_blob:originalByPath.get(item)?.blob??null})),
+  unchanged_protected: ["utility_watch/uwatch/evidence.py","utility_watch/uwatch/review.py","utility_watch/uwatch/engine.py","utility_watch/uwatch/worksheet.py","utility_watch/uwatch/review_report.py",".github/workflows/tests.yml"].map(item=>({...actualSource.find(p=>p.path===item)}))
+};
+const measurements = {
+  recovered_at: new Date().toISOString(),
+  browser_root: browser,
+  tree_leaf_count: original.full_tree.length,
+  changed_source: changed,
+  original_pins: beforePins.entries.length,
+  candidate_pins: afterPins.entries.length,
+  native_records: native.records.map(r=>({name:r.name,status:r.status,started:r.started,finished:r.finished})),
+  browser_exit: browserExit,
+  browser_checks: browserReceipt.checks.map(c=>c.name),
+  candidate_source_currently_exact: true,
+  baseline_source_currently_exact: true,
+  source_scope: scope,
+  sizes: Object.fromEntries([root,browser].map(p=>[p,walk(p).filter(f=>!f.includes("/.git/")).map(f=>({path:path.relative(p,f),bytes:fs.statSync(f).size})).filter(f=>p===browser||/evidence|overlay|contract/.test(f.path))]))
+};
+function walk(dir) {
+  const found=[];
+  for (const item of fs.readdirSync(dir,{withFileTypes:true})) {
+    if(item.name === ".git") continue;
+    const f=path.join(dir,item.name);
+    if(item.isDirectory()) found.push(...walk(f)); else if(item.isFile()) found.push(f);
+  }
+  return found;
+}
+const out=path.join(root,"recovery-source-check.json");
+if(fs.existsSync(out)) throw Error("Recovery record already exists; preserve it");
+fs.writeFileSync(out,JSON.stringify(measurements,null,2)+"\n",{flag:"wx"});
+console.log(JSON.stringify({path:out,sha256:sha256(read(out)),changed:changed.length,source_pins:afterPins.entries.length,browser_files:measurements.sizes[browser].length,browser_total_bytes:measurements.sizes[browser].reduce((s,e)=>s+e.bytes,0),browser_checks:browserReceipt.checks.length}));

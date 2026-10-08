@@ -1,0 +1,643 @@
+{
+  "root": "/home/jacob/hamon-utility-evidence-desk-68094585a1c2-browser/utility-review-desk-browser-Be0ewb",
+  "node": "v22.22.1",
+  "platform": "linux",
+  "browserBin": "/usr/bin/chromium-browser",
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/153.0.8010.47",
+    "revision": "@73934a44f61e6b3878d1943064c141a5a820f5f7",
+    "userAgent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+    "jsVersion": "15.3.76.12"
+  },
+  "checks": [
+    {
+      "name": "actual native CLI opens the complete current and historical worksheet",
+      "current": 3,
+      "historical": 2
+    },
+    {
+      "name": "native input retains the selected row outside a changed filter and renders notes literally"
+    },
+    {
+      "name": "filtered browser download contains both accounts, every protected cell, history and manifest",
+      "download": "downloads/01-filtered-edits.csv",
+      "sha256": "7a6ad56ea36804128a852430299b417abeb31e655b2177d8f989327f9aa1ff5c"
+    },
+    {
+      "name": "actual existing review CLI consumes the browser download and retains exact source-bound annotations"
+    },
+    {
+      "name": "incomplete human review is retained for correction and a corrected native download succeeds"
+    },
+    {
+      "name": "real source drift refuses the download without losing edits; exact-source retry succeeds"
+    },
+    {
+      "name": "no-match recovery, row-local reset and a 320-pixel native viewport preserve the editor"
+    },
+    {
+      "name": "a native-valid empty worksheet opens and downloads its unchanged manifest"
+    },
+    {
+      "name": "literal multiline source fields match the native producer and same-byte JSON download; notes and filters remain",
+      "account": "A",
+      "path": "/home/jacob/hamon-utility-evidence-desk-68094585a1c2-browser/utility-review-desk-browser-Be0ewb/downloads/05-source-A.json",
+      "bytes": 3047,
+      "sha256": "52d77140d40d1232fcac09a0877d320986b1375ba01811b92bd8dfd0c3e762c4"
+    },
+    {
+      "name": "identical bill keys on two accounts keep separate record identity and discard the previous download",
+      "account": "D",
+      "path": "/home/jacob/hamon-utility-evidence-desk-68094585a1c2-browser/utility-review-desk-browser-Be0ewb/downloads/06-source-D.json",
+      "bytes": 2956,
+      "sha256": "c7010a6c2f59488d87c33fba522e9d3125894781166b48fca12f7bfc5e8b6af5"
+    },
+    {
+      "name": "a late response for the former selection cannot replace the current account's records or draft"
+    },
+    {
+      "name": "a native-valid changed source context refuses without losing draft notes; the exact restored source can be rechecked"
+    },
+    {
+      "name": "source record values remain readable in the existing 320-pixel desk without horizontal overflow"
+    },
+    {
+      "name": "no external page requests or JavaScript exceptions; every source byte remains frozen"
+    }
+  ],
+  "failure": null,
+  "profileCleanup": true,
+  "requests": [
+    "http://127.0.0.1:40781/",
+    "http://127.0.0.1:40781/review_desk.css",
+    "http://127.0.0.1:40781/review_desk.js",
+    "http://127.0.0.1:40781/review_evidence.js",
+    "http://127.0.0.1:40781/api/worksheet",
+    "http://127.0.0.1:40781/api/download",
+    "http://127.0.0.1:40781/api/download",
+    "http://127.0.0.1:40781/api/download",
+    "http://127.0.0.1:40781/api/download",
+    "http://127.0.0.1:44469/",
+    "http://127.0.0.1:44469/review_desk.css",
+    "http://127.0.0.1:44469/review_desk.js",
+    "http://127.0.0.1:44469/review_evidence.js",
+    "http://127.0.0.1:44469/api/worksheet",
+    "http://127.0.0.1:44469/api/download",
+    "http://127.0.0.1:35877/",
+    "http://127.0.0.1:35877/review_desk.css",
+    "http://127.0.0.1:35877/review_desk.js",
+    "http://127.0.0.1:35877/review_evidence.js",
+    "http://127.0.0.1:35877/api/worksheet",
+    "http://127.0.0.1:35877/api/evidence",
+    "http://127.0.0.1:35877/api/evidence",
+    "http://127.0.0.1:35877/api/evidence",
+    "http://127.0.0.1:35877/api/evidence",
+    "http://127.0.0.1:35877/api/evidence",
+    "http://127.0.0.1:35877/api/evidence"
+  ],
+  "networkResponses": [
+    {
+      "url": "http://127.0.0.1:40781/",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:40781/review_desk.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:40781/review_desk.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:40781/review_evidence.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:40781/api/worksheet",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:40781/api/download",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:40781/api/download",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:40781/api/download",
+      "status": 409
+    },
+    {
+      "url": "http://127.0.0.1:40781/api/download",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:44469/",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:44469/review_desk.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:44469/review_desk.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:44469/review_evidence.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:44469/api/worksheet",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:44469/api/download",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:35877/",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:35877/review_desk.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:35877/review_desk.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:35877/review_evidence.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:35877/api/worksheet",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:35877/api/evidence",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:35877/api/evidence",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:35877/api/evidence",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:35877/api/evidence",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:35877/api/evidence",
+      "status": 409
+    },
+    {
+      "url": "http://127.0.0.1:35877/api/evidence",
+      "status": 200
+    }
+  ],
+  "exceptions": [],
+  "downloadEvents": [
+    {
+      "method": "Browser.downloadWillBegin",
+      "frameId": "2D369B7EC748E9602349483733556E15",
+      "guid": "3f7b779f-f3e0-4caf-a847-c4605c664720",
+      "url": "blob:http://127.0.0.1:40781/9f42112e-f6b8-472d-b0b3-d436e94d06ba",
+      "suggestedFilename": "utility-review-edited.csv"
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "guid": "3f7b779f-f3e0-4caf-a847-c4605c664720",
+      "totalBytes": 3000,
+      "receivedBytes": 0,
+      "state": "inProgress"
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "guid": "3f7b779f-f3e0-4caf-a847-c4605c664720",
+      "totalBytes": 3000,
+      "receivedBytes": 3000,
+      "state": "inProgress"
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "guid": "3f7b779f-f3e0-4caf-a847-c4605c664720",
+      "totalBytes": 3000,
+      "receivedBytes": 3000,
+      "state": "inProgress"
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "guid": "3f7b779f-f3e0-4caf-a847-c4605c664720",
+      "totalBytes": 3000,
+      "receivedBytes": 3000,
+      "state": "inProgress"
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "guid": "3f7b779f-f3e0-4caf-a847-c4605c664720",
+      "totalBytes": 3000,
+      "receivedBytes": 3000,
+      "state": "inProgress"
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "guid": "3f7b779f-f3e0-4caf-a847-c4605c664720",
+      "totalBytes": 3000,
+      "receivedBytes": 3000,
+      "state": "completed",
+      "filePath": "/home/jacob/hamon-utility-evidence-desk-68094585a1c2-browser/utility-review-desk-browser-Be0ewb/downloads/utility-review-edited.csv"
+    },
+    {
+      "method": "Browser.downloadWillBegin",
+      "frameId": "2D369B7EC748E9602349483733556E15",
+      "guid": "944ca3ce-a3ce-4e5e-a0eb-494dbaabbc6b",
+      "url": "blob:http://127.0.0.1:40781/7f40bc42-db73-4055-862a-4b0743859361",
+      "suggestedFilename": "utility-review-edited.csv"
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "guid": "944ca3ce-a3ce-4e5e-a0eb-494dbaabbc6b",
+      "totalBytes": 2996,
+      "receivedBytes": 0,
+      "state": "inProgress"
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "guid": "944ca3ce-a3ce-4e5e-a0eb-494dbaabbc6b",
+      "totalBytes": 2996,
+      "receivedBytes": 2996,
+      "state": "inProgress"
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "guid": "944ca3ce-a3ce-4e5e-a0eb-494dbaabbc6b",
+      "totalBytes": 2996,
+      "receivedBytes": 2996,
+      "state": "inProgress"
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "guid": "944ca3ce-a3ce-4e5e-a0eb-494dbaabbc6b",
+      "totalBytes": 2996,
+      "receivedBytes": 2996,
+      "state": "inProgress"
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "guid": "944ca3ce-a3ce-4e5e-a0eb-494dbaabbc6b",
+      "totalBytes": 2996,
+      "receivedBytes": 2996,
+      "state": "inProgress"
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "guid": "944ca3ce-a3ce-4e5e-a0eb-494dbaabbc6b",
+      "totalBytes": 2996,
+      "receivedBytes": 2996,
+      "state": "completed",
+      "filePath": "/home/jacob/hamon-utility-evidence-desk-68094585a1c2-browser/utility-review-desk-browser-Be0ewb/downloads/utility-review-edited.csv"
+    },
+    {
+      "method": "Browser.downloadWillBegin",
+      "frameId": "2D369B7EC748E9602349483733556E15",
+      "guid": "154b0fac-4c09-46c6-9a04-cefa543ee285",
+      "url": "blob:http://127.0.0.1:40781/17386abe-55dd-4a5c-b7da-656948b8b8cc",
+      "suggestedFilename": "utility-review-edited.csv"
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "guid": "154b0fac-4c09-46c6-9a04-cefa543ee285",
+      "totalBytes": 2989,
+      "receivedBytes": 0,
+      "state": "inProgress"
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "guid": "154b0fac-4c09-46c6-9a04-cefa543ee285",
+      "totalBytes": 2989,
+      "receivedBytes": 2989,
+      "state": "inProgress"
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "guid": "154b0fac-4c09-46c6-9a04-cefa543ee285",
+      "totalBytes": 2989,
+      "receivedBytes": 2989,
+      "state": "inProgress"
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "guid": "154b0fac-4c09-46c6-9a04-cefa543ee285",
+      "totalBytes": 2989,
+      "receivedBytes": 2989,
+      "state": "inProgress"
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "guid": "154b0fac-4c09-46c6-9a04-cefa543ee285",
+      "totalBytes": 2989,
+      "receivedBytes": 2989,
+      "state": "inProgress"
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "guid": "154b0fac-4c09-46c6-9a04-cefa543ee285",
+      "totalBytes": 2989,
+      "receivedBytes": 2989,
+      "state": "completed",
+      "filePath": "/home/jacob/hamon-utility-evidence-desk-68094585a1c2-browser/utility-review-desk-browser-Be0ewb/downloads/utility-review-edited.csv"
+    },
+    {
+      "method": "Browser.downloadWillBegin",
+      "frameId": "B489DD8F7A5E23EFACFE2AA104CF769F",
+      "guid": "08ee8f8a-fc61-48c9-8d79-49fc12b8ec4c",
+      "url": "blob:http://127.0.0.1:44469/750c9c11-8cb4-444d-a9da-e6dd07216222",
+      "suggestedFilename": "utility-review-edited.csv"
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "guid": "08ee8f8a-fc61-48c9-8d79-49fc12b8ec4c",
+      "totalBytes": 546,
+      "receivedBytes": 0,
+      "state": "inProgress"
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "guid": "08ee8f8a-fc61-48c9-8d79-49fc12b8ec4c",
+      "totalBytes": 546,
+      "receivedBytes": 546,
+      "state": "inProgress"
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "guid": "08ee8f8a-fc61-48c9-8d79-49fc12b8ec4c",
+      "totalBytes": 546,
+      "receivedBytes": 546,
+      "state": "inProgress"
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "guid": "08ee8f8a-fc61-48c9-8d79-49fc12b8ec4c",
+      "totalBytes": 546,
+      "receivedBytes": 546,
+      "state": "inProgress"
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "guid": "08ee8f8a-fc61-48c9-8d79-49fc12b8ec4c",
+      "totalBytes": 546,
+      "receivedBytes": 546,
+      "state": "inProgress"
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "guid": "08ee8f8a-fc61-48c9-8d79-49fc12b8ec4c",
+      "totalBytes": 546,
+      "receivedBytes": 546,
+      "state": "completed",
+      "filePath": "/home/jacob/hamon-utility-evidence-desk-68094585a1c2-browser/utility-review-desk-browser-Be0ewb/downloads/utility-review-edited.csv"
+    },
+    {
+      "method": "Browser.downloadWillBegin",
+      "frameId": "2E2B39F728231091B0C536281A26B81B",
+      "guid": "fb59843c-b667-4d5d-8569-1e4196c91241",
+      "url": "blob:http://127.0.0.1:35877/e4a29056-c3c0-4473-b9c9-e506a305f1c5",
+      "suggestedFilename": "utility-source-evidence.json"
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "guid": "fb59843c-b667-4d5d-8569-1e4196c91241",
+      "totalBytes": 3047,
+      "receivedBytes": 0,
+      "state": "inProgress"
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "guid": "fb59843c-b667-4d5d-8569-1e4196c91241",
+      "totalBytes": 3047,
+      "receivedBytes": 3047,
+      "state": "inProgress"
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "guid": "fb59843c-b667-4d5d-8569-1e4196c91241",
+      "totalBytes": 3047,
+      "receivedBytes": 3047,
+      "state": "inProgress"
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "guid": "fb59843c-b667-4d5d-8569-1e4196c91241",
+      "totalBytes": 3047,
+      "receivedBytes": 3047,
+      "state": "inProgress"
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "guid": "fb59843c-b667-4d5d-8569-1e4196c91241",
+      "totalBytes": 3047,
+      "receivedBytes": 3047,
+      "state": "inProgress"
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "guid": "fb59843c-b667-4d5d-8569-1e4196c91241",
+      "totalBytes": 3047,
+      "receivedBytes": 3047,
+      "state": "completed",
+      "filePath": "/home/jacob/hamon-utility-evidence-desk-68094585a1c2-browser/utility-review-desk-browser-Be0ewb/downloads/utility-source-evidence.json"
+    },
+    {
+      "method": "Browser.downloadWillBegin",
+      "frameId": "2E2B39F728231091B0C536281A26B81B",
+      "guid": "45043e6d-492b-4c3b-9680-a43f57b26733",
+      "url": "blob:http://127.0.0.1:35877/dd9dcb5d-e1f3-43bf-92f8-8358746ca6bb",
+      "suggestedFilename": "utility-source-evidence.json"
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "guid": "45043e6d-492b-4c3b-9680-a43f57b26733",
+      "totalBytes": 2956,
+      "receivedBytes": 0,
+      "state": "inProgress"
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "guid": "45043e6d-492b-4c3b-9680-a43f57b26733",
+      "totalBytes": 2956,
+      "receivedBytes": 2956,
+      "state": "inProgress"
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "guid": "45043e6d-492b-4c3b-9680-a43f57b26733",
+      "totalBytes": 2956,
+      "receivedBytes": 2956,
+      "state": "inProgress"
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "guid": "45043e6d-492b-4c3b-9680-a43f57b26733",
+      "totalBytes": 2956,
+      "receivedBytes": 2956,
+      "state": "inProgress"
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "guid": "45043e6d-492b-4c3b-9680-a43f57b26733",
+      "totalBytes": 2956,
+      "receivedBytes": 2956,
+      "state": "inProgress"
+    },
+    {
+      "method": "Browser.downloadProgress",
+      "guid": "45043e6d-492b-4c3b-9680-a43f57b26733",
+      "totalBytes": 2956,
+      "receivedBytes": 2956,
+      "state": "completed",
+      "filePath": "/home/jacob/hamon-utility-evidence-desk-68094585a1c2-browser/utility-review-desk-browser-Be0ewb/downloads/utility-source-evidence.json"
+    }
+  ],
+  "inputPins": {
+    "data/accounts.csv": "64c639848182d90e11549e720096fdb9e7ecf98a6d1e06145367a54531a54fb7",
+    "data/bills.csv": "af01aff34dedd0e3c4a9ed7733830a820dcdb091acbfeb2dd8349cb405839a47",
+    "data/expected.json": "a1769d49272239f40ac57838d8cbbb1f8283a8362829eb4d86af61a1fad0c3fe",
+    "data/occupancy.csv": "a5d1a56715792e6c974f8999a3b428b6090b5f4369d87d89ecb98e2b55b8450a",
+    "data/payments.csv": "29c7cb3eae40c96c9800e6359acacfb1d1928c3c7a65981c55e01485501f7300",
+    "fixture.json": "8093917e281a9e6f9f6497510ecdc761145d1439a8ba1677ae58d4c0303b8008",
+    "original.csv": "6ca7d0b3f6601cca2f3acba726eead7a4c03bbc50c112e415024da17e87bb4bd",
+    "report/audit.jsonl": "720b993e4e07cc96baf74f5ada7927d0aac6c1cb4efb8554ac639df488ac8f63",
+    "report/exceptions.csv": "fcf802f57bd0ccdc25b71b2af3cd9f3afefff5ab67db97eb32fab3fce983d7b5",
+    "report/flags.csv": "180ae7fd6ba4858821c111344de3886a6f82fa829570dd2ddd1c36e4e2bd0c17",
+    "report/payment_queue.csv": "8e67419f6bb1856177906b6164008306b486ace8cd21cdc6884cb178dd22942d",
+    "report/report.html": "bdb19f5c49d99696e86ef048aa0ee986c7603da34db3ee2c46dfb0cb76aab4db",
+    "report/summary.json": "1df44430fbb6d79714ed487c6dd53f96e88f44d98640d842dd0c338e2481b4af",
+    "selected.csv": "a6f1f4e69e7729fe3d956e70a4774c2a4db16f9b2f73487cd794534268e28066"
+  },
+  "sourceBefore": {
+    ".github/workflows/tests.yml": "521a133de92677bbdd8a9693c4d7fb9e6d14ce2dd19fdf841a41f558f0bddec9",
+    "utility_watch/HARDENING.md": "db44c2f8aeb1199aa7ba2036ab5759ae65209d47cfd41d54e765836246fa50f8",
+    "utility_watch/README.md": "55eabfa2a59f3dc8e46fa3eb97f290976785e1d47e67bab2b4bfe43983dcd388",
+    "utility_watch/docs/review-desk.md": "dd8d238be2d9c2c65e7d858fc4488340fb5c6643c05178771707c7ef6a805514",
+    "utility_watch/docs/review-report.md": "8ae387b4401ec2653779b59aeb7d7c44b9bb319f299ab6cf74195ea64aac5d0d",
+    "utility_watch/docs/source-evidence.md": "958baa734af78c83566b96ac3af5b35b2b064f5459a521dbe6c848597b0d745d",
+    "utility_watch/docs/worksheet-cli.md": "b843af2e765f4a9a4cbe10d269e2b86aaf6c1836b158f3abe80b9c5b84578221",
+    "utility_watch/sample_data/README_SYNTHETIC.txt": "ef34519e3f46f3e19bd8554620b07cbc13850c6b5cd6337508bf47cf01d536b4",
+    "utility_watch/sample_data/accounts.csv": "58518376e0a67bf1a31f76e754020307a42330a87d3d7a538e6ccbb947d97958",
+    "utility_watch/sample_data/bills.csv": "1b8f6897703b42723e17e6089867634e04e7c609c0a578f33636fb9dda321e4e",
+    "utility_watch/sample_data/expected.json": "222dd41aa5f5f20be0f08ea31bf7e8ca656cd56720b694b4380ce6f418df445c",
+    "utility_watch/sample_data/occupancy.csv": "0f77598a53f50162ef28059c88be91798f918e57e66eaa0a1f1d79880512cb6e",
+    "utility_watch/sample_data/payments.csv": "86cf78324cd395e86200ec205f49fe73afa2984306ab6ccd2e5cf71261710853",
+    "utility_watch/tests/review_desk_browser.mjs": "e0ea0cc84f9d482665c423605949f210bd67d5d97cd93d63015d6d42cd2aa632",
+    "utility_watch/tests/review_desk_fixture.py": "a280b548cb6f86cd99bba9116aa9c9d75e75c0ad60861a1faa355b37e6012815",
+    "utility_watch/tests/review_evidence_fixture.py": "b41d1dc9d5f90977f2e1573d9886b758849da5ce68a56bf872d0879b3796c135",
+    "utility_watch/tests/test_account_bill_keys.py": "cc15ba0c7fa92f401677403a95a5e73b1788ee976726f36cbe6447b2e20837f3",
+    "utility_watch/tests/test_account_identity.py": "80c00af9c6a9bf2b1f2d5fce941e4a7ca7577ff4a935d006cad2295a1613a1fe",
+    "utility_watch/tests/test_evidence.py": "7e16a92a39204c5b85ce3ad91478132aa9ff852944aa0f7d63ca1d5f470f4aa7",
+    "utility_watch/tests/test_numeric_csv.py": "d6128ec39491994185f9aabfe374caeb80ca13cbdbdc1fabe68b3eba567b65a2",
+    "utility_watch/tests/test_report.py": "affe575fedaa7619520a6b23b63649e76029881a0a5641d6cc7d2900d150bc4f",
+    "utility_watch/tests/test_review.py": "fab91f033bd1bd39dcfee45d5499fb8edf4abcd1623ff13b890745cffa6855d4",
+    "utility_watch/tests/test_review_desk.py": "72284ab0dfb8823d9b7b87045d7d089d31e12739b8f190da4faad2ded7dfa970",
+    "utility_watch/tests/test_review_evidence.py": "243dc7a21b42cb0fe54950c44312c9bcef998d0fd1025c090330ff23c7519ce0",
+    "utility_watch/tests/test_review_report.py": "6d48681bbfd4c4725b4aa6a191f04ed9f2fa4fd6beca0799f5265fb50210d7d5",
+    "utility_watch/tests/test_uwatch.py": "0638976cdfc928d8bd3980fb24fe18c24ef814c7f8c5e7612c8c02fb2b8f339a",
+    "utility_watch/tests/test_worksheet_cli.py": "7f34553faab1a45bcb901bcfc51ea4fe6fd8f474d4061d3c95afba3aa6af88a1",
+    "utility_watch/uwatch/__init__.py": "a0332cb0878fcdfd02d1651f9a46c299ca0279996c6e5723d49311228c597a57",
+    "utility_watch/uwatch/__main__.py": "26c55ee4277631c49b2312533d7514a815ec2c3de08f48b0a9dea8946d8f8933",
+    "utility_watch/uwatch/cli.py": "951bb90b2515621aaa74482fbe5d335ec58b98d4688f800e4b36c6a776b00989",
+    "utility_watch/uwatch/engine.py": "8d61b55e88415275ffe1c5edca6f914f10c4f47f6cfd9d0b56ba76854f6f1180",
+    "utility_watch/uwatch/evidence.py": "258338fba6102df9b5a2676a889eb057cfb07109b150022481bf4e13e1dbd2e5",
+    "utility_watch/uwatch/report.py": "dc43c4fbbef72204a9dc9c5d7e4d3883900e96daf26c725f10fe22d4721540db",
+    "utility_watch/uwatch/review.py": "f9f730ca45140436704d9823eafcfb58fb3922c5d0bf93a21a63f31347c947de",
+    "utility_watch/uwatch/review_desk.css": "4dea1febd3884725306bfa2a76289c3921f8567d89117f716c33b8c64427fde6",
+    "utility_watch/uwatch/review_desk.html": "886b6322f60c84dec85d6fad1870b46d3a8f291956070f6ca1b0467560b09e68",
+    "utility_watch/uwatch/review_desk.js": "c3079a7b41d117d119e644cd3df5f9fcfa0205dec4524d5bb1be9770d011e563",
+    "utility_watch/uwatch/review_desk.py": "f47851b5dfbff10065a727ee40b1c9da6d94b83a286a8537573e4062198a40e9",
+    "utility_watch/uwatch/review_evidence.js": "3cc2e3ede386e7d14c246492ef55e0fe6db6926fcccdace0f08524d9d4c20af7",
+    "utility_watch/uwatch/review_evidence.py": "53ab35d375272018615fd02480a48cdb0a7efe18b28fc511465f46c0c66c9ebb",
+    "utility_watch/uwatch/review_report.py": "4462088141b21c990ce5b949a9c683f68f647ae83bdba0eaa1409730e442f856",
+    "utility_watch/uwatch/synth.py": "8573a65a8c5907ebedda24c47183f60f258e895bae0a2656bb582ada9217209d",
+    "utility_watch/uwatch/worksheet.py": "827f7ba7d6eba19d07f18bc202a50b8283bf2b4a6b9b9247046a0441a1d845fa"
+  },
+  "sourceAfter": {
+    ".github/workflows/tests.yml": "521a133de92677bbdd8a9693c4d7fb9e6d14ce2dd19fdf841a41f558f0bddec9",
+    "utility_watch/HARDENING.md": "db44c2f8aeb1199aa7ba2036ab5759ae65209d47cfd41d54e765836246fa50f8",
+    "utility_watch/README.md": "55eabfa2a59f3dc8e46fa3eb97f290976785e1d47e67bab2b4bfe43983dcd388",
+    "utility_watch/docs/review-desk.md": "dd8d238be2d9c2c65e7d858fc4488340fb5c6643c05178771707c7ef6a805514",
+    "utility_watch/docs/review-report.md": "8ae387b4401ec2653779b59aeb7d7c44b9bb319f299ab6cf74195ea64aac5d0d",
+    "utility_watch/docs/source-evidence.md": "958baa734af78c83566b96ac3af5b35b2b064f5459a521dbe6c848597b0d745d",
+    "utility_watch/docs/worksheet-cli.md": "b843af2e765f4a9a4cbe10d269e2b86aaf6c1836b158f3abe80b9c5b84578221",
+    "utility_watch/sample_data/README_SYNTHETIC.txt": "ef34519e3f46f3e19bd8554620b07cbc13850c6b5cd6337508bf47cf01d536b4",
+    "utility_watch/sample_data/accounts.csv": "58518376e0a67bf1a31f76e754020307a42330a87d3d7a538e6ccbb947d97958",
+    "utility_watch/sample_data/bills.csv": "1b8f6897703b42723e17e6089867634e04e7c609c0a578f33636fb9dda321e4e",
+    "utility_watch/sample_data/expected.json": "222dd41aa5f5f20be0f08ea31bf7e8ca656cd56720b694b4380ce6f418df445c",
+    "utility_watch/sample_data/occupancy.csv": "0f77598a53f50162ef28059c88be91798f918e57e66eaa0a1f1d79880512cb6e",
+    "utility_watch/sample_data/payments.csv": "86cf78324cd395e86200ec205f49fe73afa2984306ab6ccd2e5cf71261710853",
+    "utility_watch/tests/review_desk_browser.mjs": "e0ea0cc84f9d482665c423605949f210bd67d5d97cd93d63015d6d42cd2aa632",
+    "utility_watch/tests/review_desk_fixture.py": "a280b548cb6f86cd99bba9116aa9c9d75e75c0ad60861a1faa355b37e6012815",
+    "utility_watch/tests/review_evidence_fixture.py": "b41d1dc9d5f90977f2e1573d9886b758849da5ce68a56bf872d0879b3796c135",
+    "utility_watch/tests/test_account_bill_keys.py": "cc15ba0c7fa92f401677403a95a5e73b1788ee976726f36cbe6447b2e20837f3",
+    "utility_watch/tests/test_account_identity.py": "80c00af9c6a9bf2b1f2d5fce941e4a7ca7577ff4a935d006cad2295a1613a1fe",
+    "utility_watch/tests/test_evidence.py": "7e16a92a39204c5b85ce3ad91478132aa9ff852944aa0f7d63ca1d5f470f4aa7",
+    "utility_watch/tests/test_numeric_csv.py": "d6128ec39491994185f9aabfe374caeb80ca13cbdbdc1fabe68b3eba567b65a2",
+    "utility_watch/tests/test_report.py": "affe575fedaa7619520a6b23b63649e76029881a0a5641d6cc7d2900d150bc4f",
+    "utility_watch/tests/test_review.py": "fab91f033bd1bd39dcfee45d5499fb8edf4abcd1623ff13b890745cffa6855d4",
+    "utility_watch/tests/test_review_desk.py": "72284ab0dfb8823d9b7b87045d7d089d31e12739b8f190da4faad2ded7dfa970",
+    "utility_watch/tests/test_review_evidence.py": "243dc7a21b42cb0fe54950c44312c9bcef998d0fd1025c090330ff23c7519ce0",
+    "utility_watch/tests/test_review_report.py": "6d48681bbfd4c4725b4aa6a191f04ed9f2fa4fd6beca0799f5265fb50210d7d5",
+    "utility_watch/tests/test_uwatch.py": "0638976cdfc928d8bd3980fb24fe18c24ef814c7f8c5e7612c8c02fb2b8f339a",
+    "utility_watch/tests/test_worksheet_cli.py": "7f34553faab1a45bcb901bcfc51ea4fe6fd8f474d4061d3c95afba3aa6af88a1",
+    "utility_watch/uwatch/__init__.py": "a0332cb0878fcdfd02d1651f9a46c299ca0279996c6e5723d49311228c597a57",
+    "utility_watch/uwatch/__main__.py": "26c55ee4277631c49b2312533d7514a815ec2c3de08f48b0a9dea8946d8f8933",
+    "utility_watch/uwatch/cli.py": "951bb90b2515621aaa74482fbe5d335ec58b98d4688f800e4b36c6a776b00989",
+    "utility_watch/uwatch/engine.py": "8d61b55e88415275ffe1c5edca6f914f10c4f47f6cfd9d0b56ba76854f6f1180",
+    "utility_watch/uwatch/evidence.py": "258338fba6102df9b5a2676a889eb057cfb07109b150022481bf4e13e1dbd2e5",
+    "utility_watch/uwatch/report.py": "dc43c4fbbef72204a9dc9c5d7e4d3883900e96daf26c725f10fe22d4721540db",
+    "utility_watch/uwatch/review.py": "f9f730ca45140436704d9823eafcfb58fb3922c5d0bf93a21a63f31347c947de",
+    "utility_watch/uwatch/review_desk.css": "4dea1febd3884725306bfa2a76289c3921f8567d89117f716c33b8c64427fde6",
+    "utility_watch/uwatch/review_desk.html": "886b6322f60c84dec85d6fad1870b46d3a8f291956070f6ca1b0467560b09e68",
+    "utility_watch/uwatch/review_desk.js": "c3079a7b41d117d119e644cd3df5f9fcfa0205dec4524d5bb1be9770d011e563",
+    "utility_watch/uwatch/review_desk.py": "f47851b5dfbff10065a727ee40b1c9da6d94b83a286a8537573e4062198a40e9",
+    "utility_watch/uwatch/review_evidence.js": "3cc2e3ede386e7d14c246492ef55e0fe6db6926fcccdace0f08524d9d4c20af7",
+    "utility_watch/uwatch/review_evidence.py": "53ab35d375272018615fd02480a48cdb0a7efe18b28fc511465f46c0c66c9ebb",
+    "utility_watch/uwatch/review_report.py": "4462088141b21c990ce5b949a9c683f68f647ae83bdba0eaa1409730e442f856",
+    "utility_watch/uwatch/synth.py": "8573a65a8c5907ebedda24c47183f60f258e895bae0a2656bb582ada9217209d",
+    "utility_watch/uwatch/worksheet.py": "827f7ba7d6eba19d07f18bc202a50b8283bf2b4a6b9b9247046a0441a1d845fa"
+  },
+  "servers": [
+    {
+      "filename": "/home/jacob/hamon-utility-evidence-desk-68094585a1c2-browser/utility-review-desk-browser-Be0ewb/fixture/selected.csv",
+      "origin": "http://127.0.0.1:40781",
+      "stdout": "Utility Watch review desk: http://127.0.0.1:40781\nOpen that URL locally. Download a new worksheet to keep edits. Ctrl+C stops the desk.\n",
+      "stderr": "",
+      "status": 0,
+      "signal": null,
+      "error": null
+    },
+    {
+      "filename": "/home/jacob/hamon-utility-evidence-desk-68094585a1c2-browser/utility-review-desk-browser-Be0ewb/empty-current.csv",
+      "origin": "http://127.0.0.1:44469",
+      "stdout": "Utility Watch review desk: http://127.0.0.1:44469\nOpen that URL locally. Download a new worksheet to keep edits. Ctrl+C stops the desk.\n",
+      "stderr": "",
+      "status": 0,
+      "signal": null,
+      "error": null
+    },
+    {
+      "filename": "/home/jacob/hamon-utility-evidence-desk-68094585a1c2-browser/utility-review-desk-browser-Be0ewb/source-fixture/source-selected.csv",
+      "origin": "http://127.0.0.1:35877",
+      "stdout": "Utility Watch review desk: http://127.0.0.1:35877\nOpen that URL locally. Download a new worksheet to keep edits. Ctrl+C stops the desk.\n",
+      "stderr": "",
+      "status": 0,
+      "signal": null,
+      "error": null
+    }
+  ]
+}

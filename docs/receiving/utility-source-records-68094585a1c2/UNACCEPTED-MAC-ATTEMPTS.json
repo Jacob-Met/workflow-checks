@@ -1,0 +1,14 @@
+{
+  "recorded_at": "2026-10-08T18:48:04.373Z",
+  "source": "Parent conversation report retained during continuation, not recovered native output.",
+  "descriptions": [
+    "Original production reported an unchanged-baseline Mac import attempt that timed out.",
+    "Original production reported a structured write with an unknown outcome."
+  ],
+  "recovered_native_artifact": null,
+  "recovered_native_process_identity": null,
+  "write_outcome": "unknown",
+  "accepted_as_qualification": false,
+  "mac_qualification": false,
+  "action": "No Mac probe, alias, command replay, reconstructed log or inferred success. Preserved ThinkPad artifacts are the receiving authority."
+}

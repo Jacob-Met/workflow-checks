@@ -38,6 +38,41 @@ version of a finding; absent only means it was not present in that saved report.
 Neither means resolved or paid. Reviewer names and checksums do not authenticate
 anyone. A human review never changes a checker flag or payment eligibility.
 
+## Inspect the source records
+
+To connect the matching export and its native report when starting the desk:
+
+    python -m uwatch review-desk --worksheet review-1.csv --data sample_data --report out/summary.json
+
+Supply both optional arguments together. The ordinary worksheet-only command
+still works; its source inspection button explains how to connect an export.
+
+Select a current finding and choose **Inspect source records**. The desk calls
+the existing native evidence command's producer. It checks the configured
+report against a fixed captured export, then verifies the complete finding
+identity, evidence version, source pointers and report dates against the saved
+worksheet. The selected worksheet must remain unchanged during the request.
+
+The resulting record cards show every CSV column in header order. Values remain
+literal text, including whitespace, line breaks, Unicode and formula-like cells.
+**Download evidence JSON** requests a download named utility-source-evidence.json
+with the exact bytes emitted by the native producer. It includes the finding,
+physical record-ending line pointers, source/report hashes and checker identity.
+The displayed records and download describe that checked snapshot; use Inspect
+again to recheck. Neither action changes your note, status, filters or worksheet.
+
+Moving to another finding clears the prior result/download. A late response
+cannot replace records under a new selection. Historical rows cannot be matched
+to a newer source using this action. A different source context, report date,
+changed worksheet or native validation failure refuses inspection and keeps
+in-page notes. Use the existing reconciliation command below when the export has
+changed; inspected records do not supply a current review or clear a finding.
+
+Source evidence is limited to 8 MiB as one complete response; it is never
+truncated. For a larger response, use the existing [source evidence command](source-evidence.md).
+The native writer retains its existing observed-change checks; this interface
+does not claim an atomic filesystem snapshot across all source files.
+
 ## Keep a new CSV
 
 Download edited worksheet validates all submitted annotations with the native
@@ -61,8 +96,10 @@ notes you need before restarting the command with the intended file.
 
 ## Reconcile the next export
 
-The desk does not read source exports or rerun the checker. Its current label
-means current in the selected saved worksheet.
+Opening the desk does not read source exports or rerun the checker. The optional
+Inspect source records action uses the native evidence producer to validate the
+configured source/report for one saved finding. Its current label still means
+current in the selected saved worksheet; inspection does not reconcile it.
 
 After generating a report from the next export, pass your downloaded worksheet
 to the existing native reconciliation command:
@@ -79,8 +116,9 @@ this editor does not replace its output or command.
 ## Local interface boundaries
 
 The desk serves only its own fixed assets and the selected worksheet on
-127.0.0.1. It uses an in-memory session token and exact snapshot/row identities
-for downloads. There are no arbitrary-path, upload, payment or source-edit
+127.0.0.1. Optional inspection reads only the explicitly configured source/report.
+It uses an in-memory session token and exact snapshot/row identities for downloads
+and source inspection. There are no arbitrary-path, upload, payment or source-edit
 routes. Another local program running as the same user is outside this
 isolation boundary.
 
@@ -93,12 +131,14 @@ is not a signed evidence record.
 
 From utility_watch:
 
-    python -m pytest -q tests/test_review_desk.py
+    python -m pytest -q tests/test_review_desk.py tests/test_review_evidence.py
     node tests/review_desk_browser.mjs
 
 The optional browser consumer requires Node 22+ and an already installed
 Chromium. Set BROWSER_BIN and, for a snap-packaged browser,
 REVIEW_DESK_PROFILE_ROOT to an owned directory Chromium can read and write.
 The browser check uses a fictional native worksheet, an exclusive profile and
-actual CSV downloads. Its output directory is printed and retained for review.
+actual CSV and source-evidence JSON downloads, including exact native producer
+bytes, literal source fields, selection interleaving and changed-source refusal.
+Its output directory is printed and retained for review.
 It never opens an installed browser profile or a real source export.
