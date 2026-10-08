@@ -69,6 +69,18 @@ def test_past_appointments_have_source_and_actual_reservation_without_changing_a
     assert s["worklist"] == [], "past status review must not create an empty authorization item"
 
 
+def test_existing_annual_limit_keeps_its_authorization_context(clinic):
+    data, out = clinic
+    write_rows(data, "payers.csv", [["P", "Plan (placeholder)", "Y", 0, 0, 0, 2, "Y", ""]])
+    s = run(data, out, AS_OF)
+    [item] = s["worklist"]
+    assert item["reasons"] == ["ANNUAL_LIMIT"]
+    assert item["key"] == "SYN-1|P|A1" and item["auth_no"] == "A1"
+    assert (item["visits_authorized"], item["scheduled_in_window"]) == (10, 2)
+    assert item["evidence"] == ["schedule.csv:row3"]
+    assert len(s["visit_status_review"]) == 2
+
+
 def test_status_review_uses_last_export_row_and_as_of_boundary(clinic):
     data, out = clinic
     write_rows(data, "schedule.csv", [

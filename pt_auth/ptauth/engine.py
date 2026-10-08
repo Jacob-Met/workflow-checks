@@ -230,8 +230,6 @@ def build_worklist(visits: list[Visit], auths: list[Auth], payers: dict[str, Pay
     # 1) uncovered visits
     unc_by_item: dict[str, list[Visit]] = {}
     for v in uncovered:
-        if v.status == "scheduled" and v.visit_date < as_of:
-            continue  # shown separately in the visit-status review
         pending = next((a for a in auths if a.status == "pending" and a.patient_id == v.patient_id
                         and a.payer_id == v.payer_id and a.covers(v.visit_date)), None)
         # attach to the pending auth, else the patient's most recent approved auth,
@@ -247,6 +245,8 @@ def build_worklist(visits: list[Visit], auths: list[Auth], payers: dict[str, Pay
             it.detail.append(f"completed visit {v.visit_date} ({v.visit_id}) had no covering approved auth")
             bump(it, "P1")
             continue
+        if v.visit_date < as_of:
+            continue  # stale scheduled row in the past; not actionable
         code = "PENDING_FOLLOWUP" if pending else "UNCOVERED_VISIT"
         if code not in it.reasons:
             it.reasons.append(code)
@@ -337,6 +337,9 @@ def build_worklist(visits: list[Visit], auths: list[Auth], payers: dict[str, Pay
             it.detail.append(f"{done} visits used of {lim}/yr payer limit; {sched} more scheduled")
             bump(it, "P2" if done + sched > lim else "P3")
 
-    out = sorted(items.values(), key=lambda x: (PRIO_ORDER[x.priority], x.submit_by or date.max,
-                                                 x.next_visit or date.max, x.patient_id))
+    # Past scheduled rows may anchor annual-limit alerts; keep that context until
+    # all rules finish, then omit any placeholders that still have no reason.
+    out = sorted((it for it in items.values() if it.reasons),
+                 key=lambda x: (PRIO_ORDER[x.priority], x.submit_by or date.max,
+                                x.next_visit or date.max, x.patient_id))
     return out, ledgers, uncovered
