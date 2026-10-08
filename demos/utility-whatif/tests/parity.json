@@ -1,0 +1,2309 @@
+{
+  "schema": "utility-watch.whatif-oracle.v1",
+  "source": {
+    "repository": "Jacob-Met/workflow-checks",
+    "commit": "26d6bb87ee3269930db4ab5885cde2b74e93bf7e",
+    "files": {
+      "utility_watch/uwatch/engine.py": {
+        "gitBlob": "9deb205ad468381ffc91716f0d7ae6ab88d76f2a",
+        "sha256": "48c968584d0494ee5fb0538fc7d4c685c2cc3128a45c33f57c2079234cdb7775"
+      },
+      "utility_watch/sample_data/accounts.csv": {
+        "gitBlob": "8524a01938d9dfa3b9a0d05676a64e31e921ea8e",
+        "sha256": "58518376e0a67bf1a31f76e754020307a42330a87d3d7a538e6ccbb947d97958"
+      },
+      "utility_watch/sample_data/bills.csv": {
+        "gitBlob": "21eca3e9265e3bdeacb668e1ff602121f96edda6",
+        "sha256": "1b8f6897703b42723e17e6089867634e04e7c609c0a578f33636fb9dda321e4e"
+      },
+      "utility_watch/sample_data/occupancy.csv": {
+        "gitBlob": "4396760f366c95f09343ce3e778beb7abd80bea0",
+        "sha256": "0f77598a53f50162ef28059c88be91798f918e57e66eaa0a1f1d79880512cb6e"
+      },
+      "utility_watch/sample_data/payments.csv": {
+        "gitBlob": "7f94d9c67855bc0def8b515b2b55450f9d65631e",
+        "sha256": "86cf78324cd395e86200ec205f49fe73afa2984306ab6ccd2e5cf71261710853"
+      },
+      "utility_watch/sample_data/expected.json": {
+        "gitBlob": "0016cf0754d112b3a55a0ede42e6999aee17a847",
+        "sha256": "222dd41aa5f5f20be0f08ea31bf7e8ca656cd56720b694b4380ce6f418df445c"
+      }
+    }
+  },
+  "cases": [
+    {
+      "name": "as-received",
+      "input": {
+        "usage": 2780.11,
+        "amount": 3058.42,
+        "ps": "2026-04-01",
+        "pe": "2026-04-30"
+      },
+      "expected": {
+        "flags": [
+          {
+            "code": "USAGE_SPIKE",
+            "evidence": [
+              "bills.csv:33",
+              "bills.csv:21"
+            ]
+          }
+        ],
+        "exceptions": [],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 30,
+        "serviceMonth": "2026-04-01",
+        "perDay": 92.67033333333333
+      }
+    },
+    {
+      "name": "usage-threshold-below",
+      "input": {
+        "usage": 2220.965,
+        "amount": 3058.42,
+        "ps": "2026-04-01",
+        "pe": "2026-04-30"
+      },
+      "expected": {
+        "flags": [
+          {
+            "code": "RATE_CHANGE",
+            "evidence": [
+              "bills.csv:33"
+            ]
+          }
+        ],
+        "exceptions": [],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 30,
+        "serviceMonth": "2026-04-01",
+        "perDay": 74.03216666666667
+      }
+    },
+    {
+      "name": "usage-threshold-at",
+      "input": {
+        "usage": 2220.9750000000004,
+        "amount": 3058.42,
+        "ps": "2026-04-01",
+        "pe": "2026-04-30"
+      },
+      "expected": {
+        "flags": [
+          {
+            "code": "USAGE_SPIKE",
+            "evidence": [
+              "bills.csv:33",
+              "bills.csv:21"
+            ]
+          },
+          {
+            "code": "RATE_CHANGE",
+            "evidence": [
+              "bills.csv:33"
+            ]
+          }
+        ],
+        "exceptions": [],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 30,
+        "serviceMonth": "2026-04-01",
+        "perDay": 74.03250000000001
+      }
+    },
+    {
+      "name": "usage-threshold-above",
+      "input": {
+        "usage": 2220.9850000000006,
+        "amount": 3058.42,
+        "ps": "2026-04-01",
+        "pe": "2026-04-30"
+      },
+      "expected": {
+        "flags": [
+          {
+            "code": "USAGE_SPIKE",
+            "evidence": [
+              "bills.csv:33",
+              "bills.csv:21"
+            ]
+          },
+          {
+            "code": "RATE_CHANGE",
+            "evidence": [
+              "bills.csv:33"
+            ]
+          }
+        ],
+        "exceptions": [],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 30,
+        "serviceMonth": "2026-04-01",
+        "perDay": 74.03283333333336
+      }
+    },
+    {
+      "name": "rate-threshold-above-rate",
+      "input": {
+        "usage": 751.4661475461851,
+        "amount": 1000,
+        "ps": "2026-04-01",
+        "pe": "2026-04-30"
+      },
+      "expected": {
+        "flags": [
+          {
+            "code": "RATE_CHANGE",
+            "evidence": [
+              "bills.csv:33"
+            ]
+          }
+        ],
+        "exceptions": [],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 30,
+        "serviceMonth": "2026-04-01",
+        "perDay": 25.048871584872835
+      }
+    },
+    {
+      "name": "rate-threshold-at-rate",
+      "input": {
+        "usage": 751.4662475461851,
+        "amount": 1000,
+        "ps": "2026-04-01",
+        "pe": "2026-04-30"
+      },
+      "expected": {
+        "flags": [],
+        "exceptions": [],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 30,
+        "serviceMonth": "2026-04-01",
+        "perDay": 25.04887491820617
+      }
+    },
+    {
+      "name": "rate-threshold-below-rate",
+      "input": {
+        "usage": 751.466347546185,
+        "amount": 1000,
+        "ps": "2026-04-01",
+        "pe": "2026-04-30"
+      },
+      "expected": {
+        "flags": [],
+        "exceptions": [],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 30,
+        "serviceMonth": "2026-04-01",
+        "perDay": 25.048878251539502
+      }
+    },
+    {
+      "name": "usage-0-amount-0",
+      "input": {
+        "usage": 0,
+        "amount": 0,
+        "ps": "2026-04-01",
+        "pe": "2026-04-30"
+      },
+      "expected": {
+        "flags": [],
+        "exceptions": [
+          {
+            "reason": "CREDIT_OR_NEGATIVE_BILL",
+            "evidence": [
+              "bills.csv:33"
+            ]
+          },
+          {
+            "reason": "ZERO_USAGE",
+            "evidence": [
+              "bills.csv:33"
+            ]
+          }
+        ],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 30,
+        "serviceMonth": "2026-04-01",
+        "perDay": 0.0
+      }
+    },
+    {
+      "name": "usage-0-amount--1",
+      "input": {
+        "usage": 0,
+        "amount": -1,
+        "ps": "2026-04-01",
+        "pe": "2026-04-30"
+      },
+      "expected": {
+        "flags": [],
+        "exceptions": [
+          {
+            "reason": "CREDIT_OR_NEGATIVE_BILL",
+            "evidence": [
+              "bills.csv:33"
+            ]
+          },
+          {
+            "reason": "ZERO_USAGE",
+            "evidence": [
+              "bills.csv:33"
+            ]
+          }
+        ],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 30,
+        "serviceMonth": "2026-04-01",
+        "perDay": 0.0
+      }
+    },
+    {
+      "name": "usage-0-amount-99.99",
+      "input": {
+        "usage": 0,
+        "amount": 99.99,
+        "ps": "2026-04-01",
+        "pe": "2026-04-30"
+      },
+      "expected": {
+        "flags": [],
+        "exceptions": [
+          {
+            "reason": "ZERO_USAGE",
+            "evidence": [
+              "bills.csv:33"
+            ]
+          }
+        ],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 30,
+        "serviceMonth": "2026-04-01",
+        "perDay": 0.0
+      }
+    },
+    {
+      "name": "usage-0-amount-100",
+      "input": {
+        "usage": 0,
+        "amount": 100,
+        "ps": "2026-04-01",
+        "pe": "2026-04-30"
+      },
+      "expected": {
+        "flags": [],
+        "exceptions": [
+          {
+            "reason": "ZERO_USAGE",
+            "evidence": [
+              "bills.csv:33"
+            ]
+          }
+        ],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 30,
+        "serviceMonth": "2026-04-01",
+        "perDay": 0.0
+      }
+    },
+    {
+      "name": "usage-0-amount-1320",
+      "input": {
+        "usage": 0,
+        "amount": 1320,
+        "ps": "2026-04-01",
+        "pe": "2026-04-30"
+      },
+      "expected": {
+        "flags": [],
+        "exceptions": [
+          {
+            "reason": "ZERO_USAGE",
+            "evidence": [
+              "bills.csv:33"
+            ]
+          }
+        ],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 30,
+        "serviceMonth": "2026-04-01",
+        "perDay": 0.0
+      }
+    },
+    {
+      "name": "usage-0-amount-1320.01",
+      "input": {
+        "usage": 0,
+        "amount": 1320.01,
+        "ps": "2026-04-01",
+        "pe": "2026-04-30"
+      },
+      "expected": {
+        "flags": [],
+        "exceptions": [
+          {
+            "reason": "ZERO_USAGE",
+            "evidence": [
+              "bills.csv:33"
+            ]
+          }
+        ],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 30,
+        "serviceMonth": "2026-04-01",
+        "perDay": 0.0
+      }
+    },
+    {
+      "name": "usage-0-amount-3058.42",
+      "input": {
+        "usage": 0,
+        "amount": 3058.42,
+        "ps": "2026-04-01",
+        "pe": "2026-04-30"
+      },
+      "expected": {
+        "flags": [],
+        "exceptions": [
+          {
+            "reason": "ZERO_USAGE",
+            "evidence": [
+              "bills.csv:33"
+            ]
+          }
+        ],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 30,
+        "serviceMonth": "2026-04-01",
+        "perDay": 0.0
+      }
+    },
+    {
+      "name": "usage--1-amount-0",
+      "input": {
+        "usage": -1,
+        "amount": 0,
+        "ps": "2026-04-01",
+        "pe": "2026-04-30"
+      },
+      "expected": {
+        "flags": [],
+        "exceptions": [
+          {
+            "reason": "CREDIT_OR_NEGATIVE_BILL",
+            "evidence": [
+              "bills.csv:33"
+            ]
+          },
+          {
+            "reason": "NEGATIVE_USAGE",
+            "evidence": [
+              "bills.csv:33"
+            ]
+          }
+        ],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 30,
+        "serviceMonth": "2026-04-01",
+        "perDay": -0.03333333333333333
+      }
+    },
+    {
+      "name": "usage--1-amount--1",
+      "input": {
+        "usage": -1,
+        "amount": -1,
+        "ps": "2026-04-01",
+        "pe": "2026-04-30"
+      },
+      "expected": {
+        "flags": [],
+        "exceptions": [
+          {
+            "reason": "CREDIT_OR_NEGATIVE_BILL",
+            "evidence": [
+              "bills.csv:33"
+            ]
+          },
+          {
+            "reason": "NEGATIVE_USAGE",
+            "evidence": [
+              "bills.csv:33"
+            ]
+          }
+        ],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 30,
+        "serviceMonth": "2026-04-01",
+        "perDay": -0.03333333333333333
+      }
+    },
+    {
+      "name": "usage--1-amount-99.99",
+      "input": {
+        "usage": -1,
+        "amount": 99.99,
+        "ps": "2026-04-01",
+        "pe": "2026-04-30"
+      },
+      "expected": {
+        "flags": [],
+        "exceptions": [
+          {
+            "reason": "NEGATIVE_USAGE",
+            "evidence": [
+              "bills.csv:33"
+            ]
+          }
+        ],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 30,
+        "serviceMonth": "2026-04-01",
+        "perDay": -0.03333333333333333
+      }
+    },
+    {
+      "name": "usage--1-amount-100",
+      "input": {
+        "usage": -1,
+        "amount": 100,
+        "ps": "2026-04-01",
+        "pe": "2026-04-30"
+      },
+      "expected": {
+        "flags": [],
+        "exceptions": [
+          {
+            "reason": "NEGATIVE_USAGE",
+            "evidence": [
+              "bills.csv:33"
+            ]
+          }
+        ],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 30,
+        "serviceMonth": "2026-04-01",
+        "perDay": -0.03333333333333333
+      }
+    },
+    {
+      "name": "usage--1-amount-1320",
+      "input": {
+        "usage": -1,
+        "amount": 1320,
+        "ps": "2026-04-01",
+        "pe": "2026-04-30"
+      },
+      "expected": {
+        "flags": [],
+        "exceptions": [
+          {
+            "reason": "NEGATIVE_USAGE",
+            "evidence": [
+              "bills.csv:33"
+            ]
+          }
+        ],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 30,
+        "serviceMonth": "2026-04-01",
+        "perDay": -0.03333333333333333
+      }
+    },
+    {
+      "name": "usage--1-amount-1320.01",
+      "input": {
+        "usage": -1,
+        "amount": 1320.01,
+        "ps": "2026-04-01",
+        "pe": "2026-04-30"
+      },
+      "expected": {
+        "flags": [],
+        "exceptions": [
+          {
+            "reason": "NEGATIVE_USAGE",
+            "evidence": [
+              "bills.csv:33"
+            ]
+          }
+        ],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 30,
+        "serviceMonth": "2026-04-01",
+        "perDay": -0.03333333333333333
+      }
+    },
+    {
+      "name": "usage--1-amount-3058.42",
+      "input": {
+        "usage": -1,
+        "amount": 3058.42,
+        "ps": "2026-04-01",
+        "pe": "2026-04-30"
+      },
+      "expected": {
+        "flags": [],
+        "exceptions": [
+          {
+            "reason": "NEGATIVE_USAGE",
+            "evidence": [
+              "bills.csv:33"
+            ]
+          }
+        ],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 30,
+        "serviceMonth": "2026-04-01",
+        "perDay": -0.03333333333333333
+      }
+    },
+    {
+      "name": "usage-0.01-amount-0",
+      "input": {
+        "usage": 0.01,
+        "amount": 0,
+        "ps": "2026-04-01",
+        "pe": "2026-04-30"
+      },
+      "expected": {
+        "flags": [],
+        "exceptions": [
+          {
+            "reason": "CREDIT_OR_NEGATIVE_BILL",
+            "evidence": [
+              "bills.csv:33"
+            ]
+          }
+        ],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 30,
+        "serviceMonth": "2026-04-01",
+        "perDay": 0.0003333333333333333
+      }
+    },
+    {
+      "name": "usage-0.01-amount--1",
+      "input": {
+        "usage": 0.01,
+        "amount": -1,
+        "ps": "2026-04-01",
+        "pe": "2026-04-30"
+      },
+      "expected": {
+        "flags": [],
+        "exceptions": [
+          {
+            "reason": "CREDIT_OR_NEGATIVE_BILL",
+            "evidence": [
+              "bills.csv:33"
+            ]
+          }
+        ],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 30,
+        "serviceMonth": "2026-04-01",
+        "perDay": 0.0003333333333333333
+      }
+    },
+    {
+      "name": "usage-0.01-amount-99.99",
+      "input": {
+        "usage": 0.01,
+        "amount": 99.99,
+        "ps": "2026-04-01",
+        "pe": "2026-04-30"
+      },
+      "expected": {
+        "flags": [],
+        "exceptions": [],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 30,
+        "serviceMonth": "2026-04-01",
+        "perDay": 0.0003333333333333333
+      }
+    },
+    {
+      "name": "usage-0.01-amount-100",
+      "input": {
+        "usage": 0.01,
+        "amount": 100,
+        "ps": "2026-04-01",
+        "pe": "2026-04-30"
+      },
+      "expected": {
+        "flags": [
+          {
+            "code": "RATE_CHANGE",
+            "evidence": [
+              "bills.csv:33"
+            ]
+          }
+        ],
+        "exceptions": [],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 30,
+        "serviceMonth": "2026-04-01",
+        "perDay": 0.0003333333333333333
+      }
+    },
+    {
+      "name": "usage-0.01-amount-1320",
+      "input": {
+        "usage": 0.01,
+        "amount": 1320,
+        "ps": "2026-04-01",
+        "pe": "2026-04-30"
+      },
+      "expected": {
+        "flags": [
+          {
+            "code": "RATE_CHANGE",
+            "evidence": [
+              "bills.csv:33"
+            ]
+          }
+        ],
+        "exceptions": [],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 30,
+        "serviceMonth": "2026-04-01",
+        "perDay": 0.0003333333333333333
+      }
+    },
+    {
+      "name": "usage-0.01-amount-1320.01",
+      "input": {
+        "usage": 0.01,
+        "amount": 1320.01,
+        "ps": "2026-04-01",
+        "pe": "2026-04-30"
+      },
+      "expected": {
+        "flags": [
+          {
+            "code": "RATE_CHANGE",
+            "evidence": [
+              "bills.csv:33"
+            ]
+          }
+        ],
+        "exceptions": [],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 30,
+        "serviceMonth": "2026-04-01",
+        "perDay": 0.0003333333333333333
+      }
+    },
+    {
+      "name": "usage-0.01-amount-3058.42",
+      "input": {
+        "usage": 0.01,
+        "amount": 3058.42,
+        "ps": "2026-04-01",
+        "pe": "2026-04-30"
+      },
+      "expected": {
+        "flags": [
+          {
+            "code": "RATE_CHANGE",
+            "evidence": [
+              "bills.csv:33"
+            ]
+          }
+        ],
+        "exceptions": [],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 30,
+        "serviceMonth": "2026-04-01",
+        "perDay": 0.0003333333333333333
+      }
+    },
+    {
+      "name": "usage-100-amount-0",
+      "input": {
+        "usage": 100,
+        "amount": 0,
+        "ps": "2026-04-01",
+        "pe": "2026-04-30"
+      },
+      "expected": {
+        "flags": [],
+        "exceptions": [
+          {
+            "reason": "CREDIT_OR_NEGATIVE_BILL",
+            "evidence": [
+              "bills.csv:33"
+            ]
+          }
+        ],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 30,
+        "serviceMonth": "2026-04-01",
+        "perDay": 3.3333333333333335
+      }
+    },
+    {
+      "name": "usage-100-amount--1",
+      "input": {
+        "usage": 100,
+        "amount": -1,
+        "ps": "2026-04-01",
+        "pe": "2026-04-30"
+      },
+      "expected": {
+        "flags": [],
+        "exceptions": [
+          {
+            "reason": "CREDIT_OR_NEGATIVE_BILL",
+            "evidence": [
+              "bills.csv:33"
+            ]
+          }
+        ],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 30,
+        "serviceMonth": "2026-04-01",
+        "perDay": 3.3333333333333335
+      }
+    },
+    {
+      "name": "usage-100-amount-99.99",
+      "input": {
+        "usage": 100,
+        "amount": 99.99,
+        "ps": "2026-04-01",
+        "pe": "2026-04-30"
+      },
+      "expected": {
+        "flags": [],
+        "exceptions": [],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 30,
+        "serviceMonth": "2026-04-01",
+        "perDay": 3.3333333333333335
+      }
+    },
+    {
+      "name": "usage-100-amount-100",
+      "input": {
+        "usage": 100,
+        "amount": 100,
+        "ps": "2026-04-01",
+        "pe": "2026-04-30"
+      },
+      "expected": {
+        "flags": [],
+        "exceptions": [],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 30,
+        "serviceMonth": "2026-04-01",
+        "perDay": 3.3333333333333335
+      }
+    },
+    {
+      "name": "usage-100-amount-1320",
+      "input": {
+        "usage": 100,
+        "amount": 1320,
+        "ps": "2026-04-01",
+        "pe": "2026-04-30"
+      },
+      "expected": {
+        "flags": [
+          {
+            "code": "RATE_CHANGE",
+            "evidence": [
+              "bills.csv:33"
+            ]
+          }
+        ],
+        "exceptions": [],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 30,
+        "serviceMonth": "2026-04-01",
+        "perDay": 3.3333333333333335
+      }
+    },
+    {
+      "name": "usage-100-amount-1320.01",
+      "input": {
+        "usage": 100,
+        "amount": 1320.01,
+        "ps": "2026-04-01",
+        "pe": "2026-04-30"
+      },
+      "expected": {
+        "flags": [
+          {
+            "code": "RATE_CHANGE",
+            "evidence": [
+              "bills.csv:33"
+            ]
+          }
+        ],
+        "exceptions": [],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 30,
+        "serviceMonth": "2026-04-01",
+        "perDay": 3.3333333333333335
+      }
+    },
+    {
+      "name": "usage-100-amount-3058.42",
+      "input": {
+        "usage": 100,
+        "amount": 3058.42,
+        "ps": "2026-04-01",
+        "pe": "2026-04-30"
+      },
+      "expected": {
+        "flags": [
+          {
+            "code": "RATE_CHANGE",
+            "evidence": [
+              "bills.csv:33"
+            ]
+          }
+        ],
+        "exceptions": [],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 30,
+        "serviceMonth": "2026-04-01",
+        "perDay": 3.3333333333333335
+      }
+    },
+    {
+      "name": "usage-1480.65-amount-0",
+      "input": {
+        "usage": 1480.65,
+        "amount": 0,
+        "ps": "2026-04-01",
+        "pe": "2026-04-30"
+      },
+      "expected": {
+        "flags": [],
+        "exceptions": [
+          {
+            "reason": "CREDIT_OR_NEGATIVE_BILL",
+            "evidence": [
+              "bills.csv:33"
+            ]
+          }
+        ],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 30,
+        "serviceMonth": "2026-04-01",
+        "perDay": 49.355000000000004
+      }
+    },
+    {
+      "name": "usage-1480.65-amount--1",
+      "input": {
+        "usage": 1480.65,
+        "amount": -1,
+        "ps": "2026-04-01",
+        "pe": "2026-04-30"
+      },
+      "expected": {
+        "flags": [],
+        "exceptions": [
+          {
+            "reason": "CREDIT_OR_NEGATIVE_BILL",
+            "evidence": [
+              "bills.csv:33"
+            ]
+          }
+        ],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 30,
+        "serviceMonth": "2026-04-01",
+        "perDay": 49.355000000000004
+      }
+    },
+    {
+      "name": "usage-1480.65-amount-99.99",
+      "input": {
+        "usage": 1480.65,
+        "amount": 99.99,
+        "ps": "2026-04-01",
+        "pe": "2026-04-30"
+      },
+      "expected": {
+        "flags": [],
+        "exceptions": [],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 30,
+        "serviceMonth": "2026-04-01",
+        "perDay": 49.355000000000004
+      }
+    },
+    {
+      "name": "usage-1480.65-amount-100",
+      "input": {
+        "usage": 1480.65,
+        "amount": 100,
+        "ps": "2026-04-01",
+        "pe": "2026-04-30"
+      },
+      "expected": {
+        "flags": [],
+        "exceptions": [],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 30,
+        "serviceMonth": "2026-04-01",
+        "perDay": 49.355000000000004
+      }
+    },
+    {
+      "name": "usage-1480.65-amount-1320",
+      "input": {
+        "usage": 1480.65,
+        "amount": 1320,
+        "ps": "2026-04-01",
+        "pe": "2026-04-30"
+      },
+      "expected": {
+        "flags": [],
+        "exceptions": [],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 30,
+        "serviceMonth": "2026-04-01",
+        "perDay": 49.355000000000004
+      }
+    },
+    {
+      "name": "usage-1480.65-amount-1320.01",
+      "input": {
+        "usage": 1480.65,
+        "amount": 1320.01,
+        "ps": "2026-04-01",
+        "pe": "2026-04-30"
+      },
+      "expected": {
+        "flags": [],
+        "exceptions": [],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 30,
+        "serviceMonth": "2026-04-01",
+        "perDay": 49.355000000000004
+      }
+    },
+    {
+      "name": "usage-1480.65-amount-3058.42",
+      "input": {
+        "usage": 1480.65,
+        "amount": 3058.42,
+        "ps": "2026-04-01",
+        "pe": "2026-04-30"
+      },
+      "expected": {
+        "flags": [
+          {
+            "code": "RATE_CHANGE",
+            "evidence": [
+              "bills.csv:33"
+            ]
+          }
+        ],
+        "exceptions": [],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 30,
+        "serviceMonth": "2026-04-01",
+        "perDay": 49.355000000000004
+      }
+    },
+    {
+      "name": "usage-5000-amount-0",
+      "input": {
+        "usage": 5000,
+        "amount": 0,
+        "ps": "2026-04-01",
+        "pe": "2026-04-30"
+      },
+      "expected": {
+        "flags": [
+          {
+            "code": "USAGE_SPIKE",
+            "evidence": [
+              "bills.csv:33",
+              "bills.csv:21"
+            ]
+          }
+        ],
+        "exceptions": [
+          {
+            "reason": "CREDIT_OR_NEGATIVE_BILL",
+            "evidence": [
+              "bills.csv:33"
+            ]
+          }
+        ],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 30,
+        "serviceMonth": "2026-04-01",
+        "perDay": 166.66666666666666
+      }
+    },
+    {
+      "name": "usage-5000-amount--1",
+      "input": {
+        "usage": 5000,
+        "amount": -1,
+        "ps": "2026-04-01",
+        "pe": "2026-04-30"
+      },
+      "expected": {
+        "flags": [
+          {
+            "code": "USAGE_SPIKE",
+            "evidence": [
+              "bills.csv:33",
+              "bills.csv:21"
+            ]
+          }
+        ],
+        "exceptions": [
+          {
+            "reason": "CREDIT_OR_NEGATIVE_BILL",
+            "evidence": [
+              "bills.csv:33"
+            ]
+          }
+        ],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 30,
+        "serviceMonth": "2026-04-01",
+        "perDay": 166.66666666666666
+      }
+    },
+    {
+      "name": "usage-5000-amount-99.99",
+      "input": {
+        "usage": 5000,
+        "amount": 99.99,
+        "ps": "2026-04-01",
+        "pe": "2026-04-30"
+      },
+      "expected": {
+        "flags": [
+          {
+            "code": "USAGE_SPIKE",
+            "evidence": [
+              "bills.csv:33",
+              "bills.csv:21"
+            ]
+          }
+        ],
+        "exceptions": [],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 30,
+        "serviceMonth": "2026-04-01",
+        "perDay": 166.66666666666666
+      }
+    },
+    {
+      "name": "usage-5000-amount-100",
+      "input": {
+        "usage": 5000,
+        "amount": 100,
+        "ps": "2026-04-01",
+        "pe": "2026-04-30"
+      },
+      "expected": {
+        "flags": [
+          {
+            "code": "USAGE_SPIKE",
+            "evidence": [
+              "bills.csv:33",
+              "bills.csv:21"
+            ]
+          }
+        ],
+        "exceptions": [],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 30,
+        "serviceMonth": "2026-04-01",
+        "perDay": 166.66666666666666
+      }
+    },
+    {
+      "name": "usage-5000-amount-1320",
+      "input": {
+        "usage": 5000,
+        "amount": 1320,
+        "ps": "2026-04-01",
+        "pe": "2026-04-30"
+      },
+      "expected": {
+        "flags": [
+          {
+            "code": "USAGE_SPIKE",
+            "evidence": [
+              "bills.csv:33",
+              "bills.csv:21"
+            ]
+          }
+        ],
+        "exceptions": [],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 30,
+        "serviceMonth": "2026-04-01",
+        "perDay": 166.66666666666666
+      }
+    },
+    {
+      "name": "usage-5000-amount-1320.01",
+      "input": {
+        "usage": 5000,
+        "amount": 1320.01,
+        "ps": "2026-04-01",
+        "pe": "2026-04-30"
+      },
+      "expected": {
+        "flags": [
+          {
+            "code": "USAGE_SPIKE",
+            "evidence": [
+              "bills.csv:33",
+              "bills.csv:21"
+            ]
+          }
+        ],
+        "exceptions": [],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 30,
+        "serviceMonth": "2026-04-01",
+        "perDay": 166.66666666666666
+      }
+    },
+    {
+      "name": "usage-5000-amount-3058.42",
+      "input": {
+        "usage": 5000,
+        "amount": 3058.42,
+        "ps": "2026-04-01",
+        "pe": "2026-04-30"
+      },
+      "expected": {
+        "flags": [
+          {
+            "code": "USAGE_SPIKE",
+            "evidence": [
+              "bills.csv:33",
+              "bills.csv:21"
+            ]
+          }
+        ],
+        "exceptions": [],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 30,
+        "serviceMonth": "2026-04-01",
+        "perDay": 166.66666666666666
+      }
+    },
+    {
+      "name": "usage-1000000-amount-0",
+      "input": {
+        "usage": 1000000,
+        "amount": 0,
+        "ps": "2026-04-01",
+        "pe": "2026-04-30"
+      },
+      "expected": {
+        "flags": [
+          {
+            "code": "USAGE_SPIKE",
+            "evidence": [
+              "bills.csv:33",
+              "bills.csv:21"
+            ]
+          }
+        ],
+        "exceptions": [
+          {
+            "reason": "CREDIT_OR_NEGATIVE_BILL",
+            "evidence": [
+              "bills.csv:33"
+            ]
+          }
+        ],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 30,
+        "serviceMonth": "2026-04-01",
+        "perDay": 33333.333333333336
+      }
+    },
+    {
+      "name": "usage-1000000-amount--1",
+      "input": {
+        "usage": 1000000,
+        "amount": -1,
+        "ps": "2026-04-01",
+        "pe": "2026-04-30"
+      },
+      "expected": {
+        "flags": [
+          {
+            "code": "USAGE_SPIKE",
+            "evidence": [
+              "bills.csv:33",
+              "bills.csv:21"
+            ]
+          }
+        ],
+        "exceptions": [
+          {
+            "reason": "CREDIT_OR_NEGATIVE_BILL",
+            "evidence": [
+              "bills.csv:33"
+            ]
+          }
+        ],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 30,
+        "serviceMonth": "2026-04-01",
+        "perDay": 33333.333333333336
+      }
+    },
+    {
+      "name": "usage-1000000-amount-99.99",
+      "input": {
+        "usage": 1000000,
+        "amount": 99.99,
+        "ps": "2026-04-01",
+        "pe": "2026-04-30"
+      },
+      "expected": {
+        "flags": [
+          {
+            "code": "USAGE_SPIKE",
+            "evidence": [
+              "bills.csv:33",
+              "bills.csv:21"
+            ]
+          }
+        ],
+        "exceptions": [],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 30,
+        "serviceMonth": "2026-04-01",
+        "perDay": 33333.333333333336
+      }
+    },
+    {
+      "name": "usage-1000000-amount-100",
+      "input": {
+        "usage": 1000000,
+        "amount": 100,
+        "ps": "2026-04-01",
+        "pe": "2026-04-30"
+      },
+      "expected": {
+        "flags": [
+          {
+            "code": "USAGE_SPIKE",
+            "evidence": [
+              "bills.csv:33",
+              "bills.csv:21"
+            ]
+          }
+        ],
+        "exceptions": [],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 30,
+        "serviceMonth": "2026-04-01",
+        "perDay": 33333.333333333336
+      }
+    },
+    {
+      "name": "usage-1000000-amount-1320",
+      "input": {
+        "usage": 1000000,
+        "amount": 1320,
+        "ps": "2026-04-01",
+        "pe": "2026-04-30"
+      },
+      "expected": {
+        "flags": [
+          {
+            "code": "USAGE_SPIKE",
+            "evidence": [
+              "bills.csv:33",
+              "bills.csv:21"
+            ]
+          }
+        ],
+        "exceptions": [],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 30,
+        "serviceMonth": "2026-04-01",
+        "perDay": 33333.333333333336
+      }
+    },
+    {
+      "name": "usage-1000000-amount-1320.01",
+      "input": {
+        "usage": 1000000,
+        "amount": 1320.01,
+        "ps": "2026-04-01",
+        "pe": "2026-04-30"
+      },
+      "expected": {
+        "flags": [
+          {
+            "code": "USAGE_SPIKE",
+            "evidence": [
+              "bills.csv:33",
+              "bills.csv:21"
+            ]
+          }
+        ],
+        "exceptions": [],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 30,
+        "serviceMonth": "2026-04-01",
+        "perDay": 33333.333333333336
+      }
+    },
+    {
+      "name": "usage-1000000-amount-3058.42",
+      "input": {
+        "usage": 1000000,
+        "amount": 3058.42,
+        "ps": "2026-04-01",
+        "pe": "2026-04-30"
+      },
+      "expected": {
+        "flags": [
+          {
+            "code": "USAGE_SPIKE",
+            "evidence": [
+              "bills.csv:33",
+              "bills.csv:21"
+            ]
+          }
+        ],
+        "exceptions": [],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 30,
+        "serviceMonth": "2026-04-01",
+        "perDay": 33333.333333333336
+      }
+    },
+    {
+      "name": "period-2026-04-01-2026-04-01-usage-0",
+      "input": {
+        "usage": 0,
+        "amount": 3058.42,
+        "ps": "2026-04-01",
+        "pe": "2026-04-01"
+      },
+      "expected": {
+        "flags": [],
+        "exceptions": [
+          {
+            "reason": "ZERO_USAGE",
+            "evidence": [
+              "bills.csv:33"
+            ]
+          }
+        ],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 1,
+        "serviceMonth": "2026-04-01",
+        "perDay": 0.0
+      }
+    },
+    {
+      "name": "period-2026-04-01-2026-04-01-usage-1480.65",
+      "input": {
+        "usage": 1480.65,
+        "amount": 3058.42,
+        "ps": "2026-04-01",
+        "pe": "2026-04-01"
+      },
+      "expected": {
+        "flags": [
+          {
+            "code": "USAGE_SPIKE",
+            "evidence": [
+              "bills.csv:33",
+              "bills.csv:21"
+            ]
+          },
+          {
+            "code": "RATE_CHANGE",
+            "evidence": [
+              "bills.csv:33"
+            ]
+          }
+        ],
+        "exceptions": [],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 1,
+        "serviceMonth": "2026-04-01",
+        "perDay": 1480.65
+      }
+    },
+    {
+      "name": "period-2026-04-01-2026-04-01-usage-3000",
+      "input": {
+        "usage": 3000,
+        "amount": 3058.42,
+        "ps": "2026-04-01",
+        "pe": "2026-04-01"
+      },
+      "expected": {
+        "flags": [
+          {
+            "code": "USAGE_SPIKE",
+            "evidence": [
+              "bills.csv:33",
+              "bills.csv:21"
+            ]
+          }
+        ],
+        "exceptions": [],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 1,
+        "serviceMonth": "2026-04-01",
+        "perDay": 3000.0
+      }
+    },
+    {
+      "name": "period-2026-04-01-2026-04-30-usage-0",
+      "input": {
+        "usage": 0,
+        "amount": 3058.42,
+        "ps": "2026-04-01",
+        "pe": "2026-04-30"
+      },
+      "expected": {
+        "flags": [],
+        "exceptions": [
+          {
+            "reason": "ZERO_USAGE",
+            "evidence": [
+              "bills.csv:33"
+            ]
+          }
+        ],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 30,
+        "serviceMonth": "2026-04-01",
+        "perDay": 0.0
+      }
+    },
+    {
+      "name": "period-2026-04-01-2026-04-30-usage-1480.65",
+      "input": {
+        "usage": 1480.65,
+        "amount": 3058.42,
+        "ps": "2026-04-01",
+        "pe": "2026-04-30"
+      },
+      "expected": {
+        "flags": [
+          {
+            "code": "RATE_CHANGE",
+            "evidence": [
+              "bills.csv:33"
+            ]
+          }
+        ],
+        "exceptions": [],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 30,
+        "serviceMonth": "2026-04-01",
+        "perDay": 49.355000000000004
+      }
+    },
+    {
+      "name": "period-2026-04-01-2026-04-30-usage-3000",
+      "input": {
+        "usage": 3000,
+        "amount": 3058.42,
+        "ps": "2026-04-01",
+        "pe": "2026-04-30"
+      },
+      "expected": {
+        "flags": [
+          {
+            "code": "USAGE_SPIKE",
+            "evidence": [
+              "bills.csv:33",
+              "bills.csv:21"
+            ]
+          }
+        ],
+        "exceptions": [],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 30,
+        "serviceMonth": "2026-04-01",
+        "perDay": 100.0
+      }
+    },
+    {
+      "name": "period-2026-04-16-2026-05-15-usage-0",
+      "input": {
+        "usage": 0,
+        "amount": 3058.42,
+        "ps": "2026-04-16",
+        "pe": "2026-05-15"
+      },
+      "expected": {
+        "flags": [],
+        "exceptions": [
+          {
+            "reason": "ZERO_USAGE",
+            "evidence": [
+              "bills.csv:33"
+            ]
+          }
+        ],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 30,
+        "serviceMonth": "2026-05-01",
+        "perDay": 0.0
+      }
+    },
+    {
+      "name": "period-2026-04-16-2026-05-15-usage-1480.65",
+      "input": {
+        "usage": 1480.65,
+        "amount": 3058.42,
+        "ps": "2026-04-16",
+        "pe": "2026-05-15"
+      },
+      "expected": {
+        "flags": [
+          {
+            "code": "RATE_CHANGE",
+            "evidence": [
+              "bills.csv:33"
+            ]
+          }
+        ],
+        "exceptions": [],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 30,
+        "serviceMonth": "2026-05-01",
+        "perDay": 49.355000000000004
+      }
+    },
+    {
+      "name": "period-2026-04-16-2026-05-15-usage-3000",
+      "input": {
+        "usage": 3000,
+        "amount": 3058.42,
+        "ps": "2026-04-16",
+        "pe": "2026-05-15"
+      },
+      "expected": {
+        "flags": [
+          {
+            "code": "USAGE_SPIKE",
+            "evidence": [
+              "bills.csv:33",
+              "bills.csv:22"
+            ]
+          }
+        ],
+        "exceptions": [],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 30,
+        "serviceMonth": "2026-05-01",
+        "perDay": 100.0
+      }
+    },
+    {
+      "name": "period-2026-03-31-2026-04-30-usage-0",
+      "input": {
+        "usage": 0,
+        "amount": 3058.42,
+        "ps": "2026-03-31",
+        "pe": "2026-04-30"
+      },
+      "expected": {
+        "flags": [],
+        "exceptions": [
+          {
+            "reason": "ZERO_USAGE",
+            "evidence": [
+              "bills.csv:33"
+            ]
+          }
+        ],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 31,
+        "serviceMonth": "2026-04-01",
+        "perDay": 0.0
+      }
+    },
+    {
+      "name": "period-2026-03-31-2026-04-30-usage-1480.65",
+      "input": {
+        "usage": 1480.65,
+        "amount": 3058.42,
+        "ps": "2026-03-31",
+        "pe": "2026-04-30"
+      },
+      "expected": {
+        "flags": [
+          {
+            "code": "RATE_CHANGE",
+            "evidence": [
+              "bills.csv:33"
+            ]
+          }
+        ],
+        "exceptions": [],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 31,
+        "serviceMonth": "2026-04-01",
+        "perDay": 47.762903225806454
+      }
+    },
+    {
+      "name": "period-2026-03-31-2026-04-30-usage-3000",
+      "input": {
+        "usage": 3000,
+        "amount": 3058.42,
+        "ps": "2026-03-31",
+        "pe": "2026-04-30"
+      },
+      "expected": {
+        "flags": [
+          {
+            "code": "USAGE_SPIKE",
+            "evidence": [
+              "bills.csv:33",
+              "bills.csv:21"
+            ]
+          }
+        ],
+        "exceptions": [],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 31,
+        "serviceMonth": "2026-04-01",
+        "perDay": 96.7741935483871
+      }
+    },
+    {
+      "name": "period-2026-04-30-2026-05-01-usage-0",
+      "input": {
+        "usage": 0,
+        "amount": 3058.42,
+        "ps": "2026-04-30",
+        "pe": "2026-05-01"
+      },
+      "expected": {
+        "flags": [],
+        "exceptions": [
+          {
+            "reason": "ZERO_USAGE",
+            "evidence": [
+              "bills.csv:33"
+            ]
+          }
+        ],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 2,
+        "serviceMonth": "2026-05-01",
+        "perDay": 0.0
+      }
+    },
+    {
+      "name": "period-2026-04-30-2026-05-01-usage-1480.65",
+      "input": {
+        "usage": 1480.65,
+        "amount": 3058.42,
+        "ps": "2026-04-30",
+        "pe": "2026-05-01"
+      },
+      "expected": {
+        "flags": [
+          {
+            "code": "USAGE_SPIKE",
+            "evidence": [
+              "bills.csv:33",
+              "bills.csv:22"
+            ]
+          },
+          {
+            "code": "RATE_CHANGE",
+            "evidence": [
+              "bills.csv:33"
+            ]
+          }
+        ],
+        "exceptions": [],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 2,
+        "serviceMonth": "2026-05-01",
+        "perDay": 740.325
+      }
+    },
+    {
+      "name": "period-2026-04-30-2026-05-01-usage-3000",
+      "input": {
+        "usage": 3000,
+        "amount": 3058.42,
+        "ps": "2026-04-30",
+        "pe": "2026-05-01"
+      },
+      "expected": {
+        "flags": [
+          {
+            "code": "USAGE_SPIKE",
+            "evidence": [
+              "bills.csv:33",
+              "bills.csv:22"
+            ]
+          }
+        ],
+        "exceptions": [],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 2,
+        "serviceMonth": "2026-05-01",
+        "perDay": 1500.0
+      }
+    },
+    {
+      "name": "period-2026-02-01-2026-03-01-usage-0",
+      "input": {
+        "usage": 0,
+        "amount": 3058.42,
+        "ps": "2026-02-01",
+        "pe": "2026-03-01"
+      },
+      "expected": {
+        "flags": [],
+        "exceptions": [],
+        "duplicate": false,
+        "inEvaluation": false,
+        "days": 29,
+        "serviceMonth": "2026-02-01",
+        "perDay": 0.0
+      }
+    },
+    {
+      "name": "period-2026-02-01-2026-03-01-usage-1480.65",
+      "input": {
+        "usage": 1480.65,
+        "amount": 3058.42,
+        "ps": "2026-02-01",
+        "pe": "2026-03-01"
+      },
+      "expected": {
+        "flags": [],
+        "exceptions": [],
+        "duplicate": false,
+        "inEvaluation": false,
+        "days": 29,
+        "serviceMonth": "2026-02-01",
+        "perDay": 51.056896551724144
+      }
+    },
+    {
+      "name": "period-2026-02-01-2026-03-01-usage-3000",
+      "input": {
+        "usage": 3000,
+        "amount": 3058.42,
+        "ps": "2026-02-01",
+        "pe": "2026-03-01"
+      },
+      "expected": {
+        "flags": [],
+        "exceptions": [],
+        "duplicate": false,
+        "inEvaluation": false,
+        "days": 29,
+        "serviceMonth": "2026-02-01",
+        "perDay": 103.44827586206897
+      }
+    },
+    {
+      "name": "period-2024-02-01-2024-02-29-usage-0",
+      "input": {
+        "usage": 0,
+        "amount": 3058.42,
+        "ps": "2024-02-01",
+        "pe": "2024-02-29"
+      },
+      "expected": {
+        "flags": [],
+        "exceptions": [],
+        "duplicate": false,
+        "inEvaluation": false,
+        "days": 29,
+        "serviceMonth": "2024-02-01",
+        "perDay": 0.0
+      }
+    },
+    {
+      "name": "period-2024-02-01-2024-02-29-usage-1480.65",
+      "input": {
+        "usage": 1480.65,
+        "amount": 3058.42,
+        "ps": "2024-02-01",
+        "pe": "2024-02-29"
+      },
+      "expected": {
+        "flags": [],
+        "exceptions": [],
+        "duplicate": false,
+        "inEvaluation": false,
+        "days": 29,
+        "serviceMonth": "2024-02-01",
+        "perDay": 51.056896551724144
+      }
+    },
+    {
+      "name": "period-2024-02-01-2024-02-29-usage-3000",
+      "input": {
+        "usage": 3000,
+        "amount": 3058.42,
+        "ps": "2024-02-01",
+        "pe": "2024-02-29"
+      },
+      "expected": {
+        "flags": [],
+        "exceptions": [],
+        "duplicate": false,
+        "inEvaluation": false,
+        "days": 29,
+        "serviceMonth": "2024-02-01",
+        "perDay": 103.44827586206897
+      }
+    },
+    {
+      "name": "period-2026-08-01-2026-08-31-usage-0",
+      "input": {
+        "usage": 0,
+        "amount": 3058.42,
+        "ps": "2026-08-01",
+        "pe": "2026-08-31"
+      },
+      "expected": {
+        "flags": [],
+        "exceptions": [
+          {
+            "reason": "ZERO_USAGE",
+            "evidence": [
+              "bills.csv:33"
+            ]
+          }
+        ],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 31,
+        "serviceMonth": "2026-08-01",
+        "perDay": 0.0
+      }
+    },
+    {
+      "name": "period-2026-08-01-2026-08-31-usage-1480.65",
+      "input": {
+        "usage": 1480.65,
+        "amount": 3058.42,
+        "ps": "2026-08-01",
+        "pe": "2026-08-31"
+      },
+      "expected": {
+        "flags": [
+          {
+            "code": "USAGE_SPIKE",
+            "evidence": [
+              "bills.csv:33",
+              "bills.csv:25"
+            ]
+          },
+          {
+            "code": "RATE_CHANGE",
+            "evidence": [
+              "bills.csv:33"
+            ]
+          }
+        ],
+        "exceptions": [],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 31,
+        "serviceMonth": "2026-08-01",
+        "perDay": 47.762903225806454
+      }
+    },
+    {
+      "name": "period-2026-08-01-2026-08-31-usage-3000",
+      "input": {
+        "usage": 3000,
+        "amount": 3058.42,
+        "ps": "2026-08-01",
+        "pe": "2026-08-31"
+      },
+      "expected": {
+        "flags": [
+          {
+            "code": "USAGE_SPIKE",
+            "evidence": [
+              "bills.csv:33",
+              "bills.csv:25"
+            ]
+          }
+        ],
+        "exceptions": [],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 31,
+        "serviceMonth": "2026-08-01",
+        "perDay": 96.7741935483871
+      }
+    },
+    {
+      "name": "period-2027-04-01-2027-04-30-usage-0",
+      "input": {
+        "usage": 0,
+        "amount": 3058.42,
+        "ps": "2027-04-01",
+        "pe": "2027-04-30"
+      },
+      "expected": {
+        "flags": [],
+        "exceptions": [
+          {
+            "reason": "ZERO_USAGE",
+            "evidence": [
+              "bills.csv:33"
+            ]
+          },
+          {
+            "reason": "NO_BASELINE",
+            "evidence": [
+              "bills.csv:33"
+            ]
+          }
+        ],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 30,
+        "serviceMonth": "2027-04-01",
+        "perDay": 0.0
+      }
+    },
+    {
+      "name": "period-2027-04-01-2027-04-30-usage-1480.65",
+      "input": {
+        "usage": 1480.65,
+        "amount": 3058.42,
+        "ps": "2027-04-01",
+        "pe": "2027-04-30"
+      },
+      "expected": {
+        "flags": [],
+        "exceptions": [
+          {
+            "reason": "NO_BASELINE",
+            "evidence": [
+              "bills.csv:33"
+            ]
+          }
+        ],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 30,
+        "serviceMonth": "2027-04-01",
+        "perDay": 49.355000000000004
+      }
+    },
+    {
+      "name": "period-2027-04-01-2027-04-30-usage-3000",
+      "input": {
+        "usage": 3000,
+        "amount": 3058.42,
+        "ps": "2027-04-01",
+        "pe": "2027-04-30"
+      },
+      "expected": {
+        "flags": [],
+        "exceptions": [
+          {
+            "reason": "NO_BASELINE",
+            "evidence": [
+              "bills.csv:33"
+            ]
+          }
+        ],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 30,
+        "serviceMonth": "2027-04-01",
+        "perDay": 100.0
+      }
+    },
+    {
+      "name": "period-2026-01-01-2026-04-15-usage-0",
+      "input": {
+        "usage": 0,
+        "amount": 3058.42,
+        "ps": "2026-01-01",
+        "pe": "2026-04-15"
+      },
+      "expected": {
+        "flags": [],
+        "exceptions": [
+          {
+            "reason": "ZERO_USAGE",
+            "evidence": [
+              "bills.csv:33"
+            ]
+          }
+        ],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 105,
+        "serviceMonth": "2026-03-01",
+        "perDay": 0.0
+      }
+    },
+    {
+      "name": "period-2026-01-01-2026-04-15-usage-1480.65",
+      "input": {
+        "usage": 1480.65,
+        "amount": 3058.42,
+        "ps": "2026-01-01",
+        "pe": "2026-04-15"
+      },
+      "expected": {
+        "flags": [
+          {
+            "code": "RATE_CHANGE",
+            "evidence": [
+              "bills.csv:33"
+            ]
+          }
+        ],
+        "exceptions": [],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 105,
+        "serviceMonth": "2026-03-01",
+        "perDay": 14.101428571428572
+      }
+    },
+    {
+      "name": "period-2026-01-01-2026-04-15-usage-3000",
+      "input": {
+        "usage": 3000,
+        "amount": 3058.42,
+        "ps": "2026-01-01",
+        "pe": "2026-04-15"
+      },
+      "expected": {
+        "flags": [],
+        "exceptions": [],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 105,
+        "serviceMonth": "2026-03-01",
+        "perDay": 28.571428571428573
+      }
+    },
+    {
+      "name": "duplicate-period-B50031",
+      "input": {
+        "usage": 2780.11,
+        "amount": 2143.45,
+        "ps": "2026-03-01",
+        "pe": "2026-03-31"
+      },
+      "expected": {
+        "flags": [],
+        "exceptions": [],
+        "duplicate": true,
+        "inEvaluation": true,
+        "days": 31,
+        "serviceMonth": "2026-03-01",
+        "perDay": 89.68096774193549
+      }
+    },
+    {
+      "name": "duplicate-period-B50033",
+      "input": {
+        "usage": 2780.11,
+        "amount": 1219.97,
+        "ps": "2026-05-01",
+        "pe": "2026-05-31"
+      },
+      "expected": {
+        "flags": [
+          {
+            "code": "USAGE_SPIKE",
+            "evidence": [
+              "bills.csv:33",
+              "bills.csv:22"
+            ]
+          }
+        ],
+        "exceptions": [],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 31,
+        "serviceMonth": "2026-05-01",
+        "perDay": 89.68096774193549
+      }
+    },
+    {
+      "name": "duplicate-period-B50034",
+      "input": {
+        "usage": 2780.11,
+        "amount": 1026.01,
+        "ps": "2026-06-01",
+        "pe": "2026-06-30"
+      },
+      "expected": {
+        "flags": [
+          {
+            "code": "USAGE_SPIKE",
+            "evidence": [
+              "bills.csv:33",
+              "bills.csv:23"
+            ]
+          }
+        ],
+        "exceptions": [],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 30,
+        "serviceMonth": "2026-06-01",
+        "perDay": 92.67033333333333
+      }
+    },
+    {
+      "name": "duplicate-period-B50035",
+      "input": {
+        "usage": 2780.11,
+        "amount": 1020.82,
+        "ps": "2026-07-01",
+        "pe": "2026-07-31"
+      },
+      "expected": {
+        "flags": [
+          {
+            "code": "USAGE_SPIKE",
+            "evidence": [
+              "bills.csv:33",
+              "bills.csv:24"
+            ]
+          }
+        ],
+        "exceptions": [],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 31,
+        "serviceMonth": "2026-07-01",
+        "perDay": 89.68096774193549
+      }
+    },
+    {
+      "name": "duplicate-period-B50036",
+      "input": {
+        "usage": 2780.11,
+        "amount": 1015.72,
+        "ps": "2026-08-01",
+        "pe": "2026-08-31"
+      },
+      "expected": {
+        "flags": [
+          {
+            "code": "USAGE_SPIKE",
+            "evidence": [
+              "bills.csv:33",
+              "bills.csv:25"
+            ]
+          }
+        ],
+        "exceptions": [],
+        "duplicate": false,
+        "inEvaluation": true,
+        "days": 31,
+        "serviceMonth": "2026-08-01",
+        "perDay": 89.68096774193549
+      }
+    }
+  ]
+}

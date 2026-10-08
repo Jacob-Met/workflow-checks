@@ -1,0 +1,12 @@
+{
+  "schema": "utility-watch.whatif-install.v1",
+  "priorState": "absent",
+  "sourceCommit": "26d6bb87ee3269930db4ab5885cde2b74e93bf7e",
+  "files": {
+    "index.html": "cff868060b38ab007856c883144d47149e4d439eca7a5cb85a0bb3ead59bd46b",
+    "styles.css": "999214aa60374385da911bc5be4efeab42c660f05b653615a6d204eb681fec94",
+    "app.mjs": "d0d8c2c4993893a6604d4f93c3832e3b36de0138fabae612b55f49cfb33ee4cd",
+    "model.mjs": "b6d3c0acdd5a413398174d595a2ad4cd580e308d0a29ca724021e45c50d2fdce",
+    "fixture.json": "cda108e5391e0c396a8d51462bed65525dff89a629bcb695042d9671ce1ae193"
+  }
+}

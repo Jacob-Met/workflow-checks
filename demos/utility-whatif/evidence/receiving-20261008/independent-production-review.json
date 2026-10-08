@@ -1,0 +1,44 @@
+{
+  "schema": "hamon.utility-whatif.independent-source-review.v1",
+  "reviewer": "estate-81ba1ed0179c/estate_production",
+  "at_utc": "2026-10-08T10:09:34.092491+00:00",
+  "accepted": true,
+  "scope": "Standalone static explorer of USAGE_SPIKE and RATE_CHANGE for the shipped immutable synthetic gas account; no core engine, payment flow, shared site or service changes.",
+  "base_commit": "26d6bb87ee3269930db4ab5885cde2b74e93bf7e",
+  "engine_blob": "9deb205ad468381ffc91716f0d7ae6ab88d76f2a",
+  "upstream_blobs_independently_verified_unchanged": 20,
+  "runtime_sha256": {
+    "app.mjs": "d0d8c2c4993893a6604d4f93c3832e3b36de0138fabae612b55f49cfb33ee4cd",
+    "index.html": "cff868060b38ab007856c883144d47149e4d439eca7a5cb85a0bb3ead59bd46b",
+    "model.mjs": "b6d3c0acdd5a413398174d595a2ad4cd580e308d0a29ca724021e45c50d2fdce",
+    "fixture.json": "cda108e5391e0c396a8d51462bed65525dff89a629bcb695042d9671ce1ae193",
+    "styles.css": "999214aa60374385da911bc5be4efeab42c660f05b653615a6d204eb681fec94"
+  },
+  "review_findings": [
+    "Model matches current source ordering, partial duplicate-history visibility, inclusive service days, prior-year unit-matched baseline, trailing-12 median filters and strict thresholds.",
+    "Finite number, cent precision, real-date, date-order and duration bounds are explicit; invalid edits retain visibly stale results.",
+    "Installer targets an absent dedicated directory, snapshots only five static assets, retains a manifest and refuses existing targets or changed/redirected/unexpected content for rollback.",
+    "UI/source text now correctly describes latest tied maximum month; no remaining source blocker."
+  ],
+  "independent_probe": {
+    "input": {
+      "ps": "2026-01-01",
+      "pe": "2026-04-15"
+    },
+    "python_service_month": "2026-03-01",
+    "javascript_service_month": "2026-03-01",
+    "inclusive_days": 105,
+    "finding": "Arithmetic already correct; overly broad ending-month tie wording corrected."
+  },
+  "qualification_evidence_reviewed": {
+    "oracle_cases": 91,
+    "added_cases": "Three exact rate-threshold cases and three long-period tie cases",
+    "browser_groups_passed": 17,
+    "browser_receipt_path": "/tmp/workflow-utility-81ba1ed0179c/evidence/browser-final/receipt.json",
+    "browser_receipt_sha256": "0364e6caae93e5636aaab9c0c39886b5dd8f4a74d219a0b2a135b88eb695e477",
+    "native_installed_runtime": "/Users/me/hamon-mcp-lab/utility-whatif-81ba1ed0179c",
+    "native_receipt_and_five_asset_hashes_independently_read_back": true,
+    "producer_suites_not_repeated": true
+  },
+  "limitations": "The acceptance covers this fixed synthetic account and two advertised rules, not arbitrary portfolio parity, real bill accuracy, public hosting or payment approval."
+}
