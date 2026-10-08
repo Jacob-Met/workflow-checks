@@ -1,4 +1,4 @@
-"""CLI: python -m uwatch <generate|run|review|review-report> ..."""
+"""CLI: python -m uwatch <generate|run|review|review-report|evidence> ..."""
 from __future__ import annotations
 
 import argparse
@@ -29,6 +29,14 @@ def main(argv=None) -> int:
     review_report = sub.add_parser("review-report", help="read or print a saved review worksheet as HTML")
     review_report.add_argument("--worksheet", type=Path, required=True, help="saved uwatch-review-v1 CSV worksheet")
     review_report.add_argument("--out", type=Path, required=True, help="new HTML path in an existing directory; never replaces a file")
+    evidence = sub.add_parser("evidence", help="inspect source CSV records for one validated finding")
+    evidence.add_argument("--data", type=Path, required=True, help="source CSV export used by the report")
+    evidence.add_argument("--report", type=Path, required=True, help="native summary.json from uwatch run")
+    evidence.add_argument("--kind", choices=("flag", "exception"), required=True)
+    evidence.add_argument("--account", required=True, help="exact finding account_no")
+    evidence.add_argument("--key", required=True, help="exact finding key (bill ID or missing-period key)")
+    evidence.add_argument("--code", required=True, help="exact flag code or exception reason")
+    evidence.add_argument("--out", type=Path, required=True, help="new JSON file in an existing directory")
     a = ap.parse_args(argv)
     if a.cmd == "review-report":
         from .review_report import export_html
@@ -57,6 +65,18 @@ def main(argv=None) -> int:
         print(f"review: {result['current']} current findings {result['statuses']}; "
               f"{result['history']} historical rows; annotations do not change payment eligibility")
         print(f"worksheet: {result['worksheet']}")
+        return 0
+    if a.cmd == "evidence":
+        from .evidence import write_evidence
+        try:
+            result = write_evidence(a.data, a.report, a.out, kind=a.kind,
+                                    account=a.account, key=a.key, code=a.code)
+        except (OSError, ValueError, KeyError) as exc:
+            print(f"uwatch: evidence error: {exc}", file=sys.stderr)
+            return 2
+        print(f"evidence: {a.kind} {a.account} {a.key} {a.code}; "
+              f"{len(result['records'])} source records")
+        print(f"output: {a.out}")
         return 0
     from .engine import run
     try:
