@@ -1,0 +1,232 @@
+{
+  "format": "hamon-freight-single-hosted-qualification-contribution/1",
+  "parent": "8e01e3a88aae90eada099419b67cd97816441928",
+  "parent_tree": "e2bafffc2437a47bdb8f82177f2dfe7381f9c6c7",
+  "overlay_paths": [
+    ".github/workflows/freight-pr67-browser-qualification.yml",
+    "demos/freight-whatif/tests/scenario-record-browser.mjs",
+    "demos/freight-whatif/tools/receive_browser_hosted.py",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/README.md",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/hosted/contribution-manifest.json",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/hosted/lead-source-review.json",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/hosted/lifecycle/README.md",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/hosted/lifecycle/artifact-manifest.json",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/hosted/lifecycle/contract-addendum-v1.json",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/hosted/lifecycle/contract-v1.json",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/hosted/lifecycle/packet.tar.gz",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/hosted/lifecycle/process.json",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/hosted/lifecycle/receipt.json",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/hosted/lifecycle/seal.json",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/hosted/lifecycle/stderr.txt",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/hosted/lifecycle/stdout.txt",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/hosted/preparation/final-proposal-manifest-v2.json",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/hosted/preparation/lifecycle-extraction-receipt.json",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/hosted/preparation/lifecycle-extraction.diff",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/hosted/preparation/manifest.json",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/hosted/preparation/proposal-v2.json",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/hosted/preparation/proposal.json",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/hosted/preparation/publication-map-v2.json",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/hosted/preparation/receive_browser_hosted-reviewed-v4.py",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/hosted/preparation/receive_browser_hosted-v1.py",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/hosted/preparation/receive_browser_hosted-v2.py",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/hosted/preparation/receive_browser_hosted.py",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/hosted/preparation/review-corrections-v4-v5.diff",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/hosted/source-review/review-v4.json",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/hosted/source-review/review-v5.json",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/receiving-index-delivery-8e01.md"
+  ],
+  "overlay_count": 31,
+  "modified": [
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/README.md"
+  ],
+  "added_count": 30,
+  "preserved_parent_leaves": 1502,
+  "result_leaves": 1533,
+  "files": [
+    {
+      "path": "demos/freight-whatif/tools/receive_browser_hosted.py",
+      "bytes": 20222,
+      "sha256": "b9735d6efbfcbe62ca9d26d945be2798f91ed1addd08a34f948862fa9d291649",
+      "git_blob": "4089e2451438a7917ea95472704c97c295fb816f"
+    },
+    {
+      "path": "demos/freight-whatif/tests/scenario-record-browser.mjs",
+      "bytes": 29352,
+      "sha256": "d44e2d17eeb3e583d11e856fbda1bb988d9ec8f871bf40e3f33f2b5425d333d8",
+      "git_blob": "1e08bd4be25e149d568f1869c610b20f03fc6ac9"
+    },
+    {
+      "path": ".github/workflows/freight-pr67-browser-qualification.yml",
+      "bytes": 1983,
+      "sha256": "3d319789b34927df84d35130bee9d0d2b34ed816e9e7bcbf7cd0e29d646c6cee",
+      "git_blob": "8ee5c9227d9377228ae1319759d85c1cd238d146"
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/hosted/preparation/receive_browser_hosted-v1.py",
+      "bytes": 17026,
+      "sha256": "48a582549d1e3cbd9b459c27298c3d9a5e62f0d881ac792d4304e857ee73eb4d",
+      "git_blob": "e0784d85ec8eaf2cb3c321281a4439c116a1b279"
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/hosted/preparation/receive_browser_hosted-v2.py",
+      "bytes": 17389,
+      "sha256": "99098a36dc6cd8b3351e4905a65a323bd41f2769b6a0babafdc58adda5810c90",
+      "git_blob": "e5b1789656918688c00f47a340ea4d8293c5fd3c"
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/hosted/preparation/receive_browser_hosted.py",
+      "bytes": 17552,
+      "sha256": "f489ded61d845db1f4374ee9e6f863f5b115e14b8211f586c3d8be5fb250b4ce",
+      "git_blob": "37f94378a0667884f93375eb94d65f603448aaee"
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/hosted/preparation/receive_browser_hosted-reviewed-v4.py",
+      "bytes": 19089,
+      "sha256": "b671cd1a88f6edc9c09fda53c6ccbe2cba6a252c65fa59df73706ad7d03bc2b7",
+      "git_blob": "f48093131fdc3cc9c9838ad9a5451ecd442b3891"
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/hosted/preparation/proposal.json",
+      "bytes": 6071,
+      "sha256": "98e6db63964e781dfeaa52b3e10411d0d553ceb8d2a6eb0a8e50556f6de823b9",
+      "git_blob": "6b09903b4c39dc1eccc3eeefea4f661f4a714839"
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/hosted/preparation/proposal-v2.json",
+      "bytes": 7326,
+      "sha256": "e6180ff21f141489976a5ca6a9c118240bdfb78e65a1982264ba7617aab2f20a",
+      "git_blob": "b4976090894f5307c8c785d1efacf4aa326c70b4"
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/hosted/preparation/manifest.json",
+      "bytes": 1170,
+      "sha256": "29f7bc0bfff19014b965b6d6a2702d92697b543cc0f780270e4c5ab27bc51045",
+      "git_blob": "cd69a96f95e81f76425aaa0ac3a94a8cffd824d3"
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/hosted/preparation/lifecycle-extraction.diff",
+      "bytes": 12685,
+      "sha256": "d4e9b6a793e389eabe6154eb7db8bbea3fdb89b6051bb3d97ae1c8dcbe489ab6",
+      "git_blob": "547dc779d8e574f77ff9581831e7af83cf61195d"
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/hosted/preparation/lifecycle-extraction-receipt.json",
+      "bytes": 1001,
+      "sha256": "e1702953b14470a5e51b3294b9607f7b519a046bba87034d83af5dde6a9aab3d",
+      "git_blob": "23f27c0524d311e8b80c32dc8c37116f429bf4ab"
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/hosted/preparation/review-corrections-v4-v5.diff",
+      "bytes": 5941,
+      "sha256": "5caceca285f03e18b02967599e33f536f89d4ea639f2bd71cefcd2241a377896",
+      "git_blob": "ee843845bcde614fa5704a9fabb2844f9174336b"
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/hosted/preparation/final-proposal-manifest-v2.json",
+      "bytes": 1098,
+      "sha256": "b00754e2316a238dd0f488567ce86fa1631607bb132e205391b83a2a9d6a399e",
+      "git_blob": "01c905a75bbd87ebf44e9569f2fa7aaa9fb032ad"
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/hosted/source-review/review-v4.json",
+      "bytes": 1904,
+      "sha256": "9699bebabca9a66b23e53f3ec1728087c44fdbbc21df2c6339b2c94d716c04ef",
+      "git_blob": "8c6009d0213528671a27a42bb97e46e81cf4df65"
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/hosted/source-review/review-v5.json",
+      "bytes": 2060,
+      "sha256": "96e0afe45de59d26f9d81a51be4c912d64515c0714552cb820312f701f7ee47c",
+      "git_blob": "1cba5cdb0bf05c0ecedf2a1c1c5d09dd46ab32f0"
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/hosted/preparation/publication-map-v2.json",
+      "bytes": 7759,
+      "sha256": "44cf1c3bbf828be3bf17dfbf2730fa5918d7102cb216672040146a0d4273a85b",
+      "git_blob": "4b6f012c0c2c3e5705653b356bb75c578173a36e"
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/hosted/lead-source-review.json",
+      "bytes": 3226,
+      "sha256": "893239f05d4a9958b25cdd4c6fda1f99b768bc499c25a85482127e0c31218696",
+      "git_blob": "a0a26f0e121402a089a45288f3491d95302ba70b"
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/hosted/lifecycle/packet.tar.gz",
+      "bytes": 19005,
+      "sha256": "42224187aa52b77084d9de4d8de8d83060d9a25fcd5dc1f97c15621f19757ef6",
+      "git_blob": "9c314056d5a69f2d3b5aff92a3eba30470629dd8"
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/hosted/lifecycle/artifact-manifest.json",
+      "bytes": 5407,
+      "sha256": "30d1951f42299ebf07627435d1f9643f1fe3a6e78bcd25120af183488039bf49",
+      "git_blob": "8ae7dc62aa82f76d3f54eb882f1cc859bda308b0"
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/hosted/lifecycle/receipt.json",
+      "bytes": 17098,
+      "sha256": "14111b5887321c7850ef4a7557d3ff008916537b69d424ce5dd08d8fa560f921",
+      "git_blob": "7b7939b9a44915ec31760ffadf2a63f525e5213f"
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/hosted/lifecycle/process.json",
+      "bytes": 596,
+      "sha256": "291a8de852628457868fc54cda1b31cd9b0134ff32d809edc475fa1338db40a6",
+      "git_blob": "959d8ec6a47f3659cd95934977a3662f3513270e"
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/hosted/lifecycle/stdout.txt",
+      "bytes": 1113,
+      "sha256": "70d94156b0c70add487d097d5e4628961512a6367e9f23331226ad8083f0c08b",
+      "git_blob": "d2b6d433991cdc29e407a90f472db00804a8cbb4"
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/hosted/lifecycle/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/hosted/lifecycle/README.md",
+      "bytes": 3078,
+      "sha256": "0535a75f7560536d109a13c507d6fe1fec0180d968058f6543b2f8b93e306aba",
+      "git_blob": "7f7bfe5108953d16cbc9174e432191415528a7e4"
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/hosted/lifecycle/seal.json",
+      "bytes": 1012,
+      "sha256": "b548fd0864353d5c3517af629f3baddcd09b04ece6667e569026292132da0d22",
+      "git_blob": "3d9dab56516b40f9db97d8d9ea0891287cec923e"
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/hosted/lifecycle/contract-v1.json",
+      "bytes": 3681,
+      "sha256": "55e7ba213b8916f13f637c97190739a52a2f674c22ece43552742c1ae6dcfc89",
+      "git_blob": "a5345ffd3d28a2a399d976dabaf3fadbe692b352"
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/hosted/lifecycle/contract-addendum-v1.json",
+      "bytes": 851,
+      "sha256": "a6fc5315661fa4e1764db3d083d966984c6290a678ad28814eb6c33a5227c4ef",
+      "git_blob": "e5aefe32114d58aab48c9d0387b0881ac83a0a02"
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/receiving-index-delivery-8e01.md",
+      "bytes": 7295,
+      "sha256": "897679657f39ad46978e2ba2432fc897fb41742167a694b8eb313bdb86932f8e",
+      "git_blob": "dab6f9a08805b27cb031c120b39fb12cacd9e913"
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/README.md",
+      "bytes": 4862,
+      "sha256": "be6faa0ebe8db9c43e1d22b1a6b8db3f36a3fe86bdb9f1e209377c696fd549cb",
+      "git_blob": "dee18378c28538a37a80da71f292bfc09e83d17d"
+    }
+  ],
+  "self_reference": "This manifest is excluded from its own body pins; immutable tree/readback binds its exact body.",
+  "authorization": "One hosted qualification attempt on PR67 only; no automatic repeats, ready or merge.",
+  "scope": "Exact accepted v5 supervisor + unchanged v4 independent receiver + accepted PR67-specific YAML; application/model/importer/oracles unchanged.",
+  "actual_hosted_result": "Pending independent receipt of actual run/check-out/logs/bundle/visuals.",
+  "historical_origin": "Native browser timeout remains failed; lifecycle mocks qualify infrastructure only; original ZIP and previous evidence remain unchanged."
+}

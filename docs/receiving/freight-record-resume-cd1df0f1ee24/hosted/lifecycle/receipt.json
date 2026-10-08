@@ -1,0 +1,564 @@
+{
+  "format": "hamon-freight-independent-lifecycle-result/1",
+  "source": {
+    "bytes": 20222,
+    "sha256": "b9735d6efbfcbe62ca9d26d945be2798f91ed1addd08a34f948862fa9d291649",
+    "git_blob": "4089e2451438a7917ea95472704c97c295fb816f"
+  },
+  "harness": {
+    "bytes": 11436,
+    "sha256": "e4983538802c3ca8481049d4cbb15adf3af29b2b490b6292cb0c3115d4985982",
+    "git_blob": "1b8e22ba91966e023d3864f1169ab825cbef0138"
+  },
+  "mock": {
+    "bytes": 1039,
+    "sha256": "4090ceda3cc9c080e1f34b8fb0d3a79eff82a464ee81dd8917d1c5d722ca3e80",
+    "git_blob": "cb2af910323fa15b5162c306ac696e6eac78822a"
+  },
+  "contract": {
+    "bytes": 3681,
+    "sha256": "55e7ba213b8916f13f637c97190739a52a2f674c22ece43552742c1ae6dcfc89",
+    "git_blob": "a5345ffd3d28a2a399d976dabaf3fadbe692b352"
+  },
+  "addendum": {
+    "bytes": 851,
+    "sha256": "a6fc5315661fa4e1764db3d083d966984c6290a678ad28814eb6c33a5227c4ef",
+    "git_blob": "e5aefe32114d58aab48c9d0387b0881ac83a0a02"
+  },
+  "runtime": "3.14.4 (main, Aug 20 2026, 10:41:58) [GCC 15.2.0]",
+  "controls": [
+    {
+      "id": "registered_group_after_node_exit",
+      "pass": true,
+      "duration_seconds": 2.464710121974349,
+      "registered": [
+        {
+          "pid": 2419036,
+          "ppid": 2418941,
+          "pgid": 2419036,
+          "sid": 2419036,
+          "state": "S",
+          "start_ticks": 86475484,
+          "uid": 1000,
+          "args": [
+            "/usr/bin/python3",
+            "/dev/shm/hamon-freight-lifecycle-receiving-cd1df0f1ee24/mock_process.py",
+            "--role",
+            "node",
+            "--user-data-dir=/dev/shm/hamon-freight-lifecycle-receiving-cd1df0f1ee24/run-v1/registered_group_after_node_exit/node-profile",
+            "--child-profile",
+            "/dev/shm/hamon-freight-lifecycle-receiving-cd1df0f1ee24/run-v1/registered_group_after_node_exit/node-child-profile"
+          ],
+          "profile": "/dev/shm/hamon-freight-lifecycle-receiving-cd1df0f1ee24/run-v1/registered_group_after_node_exit/node-profile"
+        },
+        {
+          "pid": 2419204,
+          "ppid": 2419036,
+          "pgid": 2419204,
+          "sid": 2419204,
+          "state": "R",
+          "start_ticks": 86475552,
+          "uid": 1000,
+          "args": [
+            "/usr/bin/python3",
+            "/dev/shm/hamon-freight-lifecycle-receiving-cd1df0f1ee24/mock_process.py",
+            "--role",
+            "normal",
+            "--user-data-dir=/dev/shm/hamon-freight-lifecycle-receiving-cd1df0f1ee24/run-v1/registered_group_after_node_exit/node-child-profile"
+          ],
+          "profile": "/dev/shm/hamon-freight-lifecycle-receiving-cd1df0f1ee24/run-v1/registered_group_after_node_exit/node-child-profile"
+        }
+      ],
+      "events": [
+        {
+          "kind": "browser-shim-registration",
+          "identity": {
+            "pid": 2419204,
+            "pgid": 2419204,
+            "sid": 2419204,
+            "start_ticks": 86475552,
+            "profile": "/dev/shm/hamon-freight-lifecycle-receiving-cd1df0f1ee24/run-v1/registered_group_after_node_exit/node-child-profile"
+          }
+        },
+        {
+          "kind": "signal",
+          "target": "browser-session",
+          "pgid": 2419204,
+          "signal": "SIGTERM"
+        }
+      ],
+      "signals": [
+        {
+          "target": "browser-session",
+          "signal": "SIGTERM",
+          "pgid": 2419204,
+          "members": [
+            {
+              "pid": 2419204,
+              "ppid": 2418941,
+              "pgid": 2419204,
+              "sid": 2419204,
+              "state": "S",
+              "start_ticks": 86475552,
+              "uid": 1000,
+              "comm": "python3"
+            }
+          ],
+          "delivered": true
+        }
+      ],
+      "syscalls": [
+        {
+          "pgid": 2419204,
+          "signal": 15,
+          "allowed": true
+        }
+      ],
+      "cleanup": []
+    },
+    {
+      "id": "unrelated_sentinel_survives",
+      "pass": true,
+      "duration_seconds": 0.8445244949543849,
+      "registered": [
+        {
+          "pid": 2419312,
+          "ppid": 2418941,
+          "pgid": 2419312,
+          "sid": 2419312,
+          "state": "R",
+          "start_ticks": 86475731,
+          "uid": 1000,
+          "args": [
+            "/usr/bin/python3",
+            "/dev/shm/hamon-freight-lifecycle-receiving-cd1df0f1ee24/mock_process.py",
+            "--role",
+            "normal",
+            "--user-data-dir=/dev/shm/hamon-freight-lifecycle-receiving-cd1df0f1ee24/run-v1/unrelated_sentinel_survives/target-profile"
+          ],
+          "profile": "/dev/shm/hamon-freight-lifecycle-receiving-cd1df0f1ee24/run-v1/unrelated_sentinel_survives/target-profile"
+        },
+        {
+          "pid": 2419319,
+          "ppid": 2418941,
+          "pgid": 2419319,
+          "sid": 2419319,
+          "state": "R",
+          "start_ticks": 86475742,
+          "uid": 1000,
+          "args": [
+            "/usr/bin/python3",
+            "/dev/shm/hamon-freight-lifecycle-receiving-cd1df0f1ee24/mock_process.py",
+            "--role",
+            "normal",
+            "--user-data-dir=/dev/shm/hamon-freight-lifecycle-receiving-cd1df0f1ee24/run-v1/unrelated_sentinel_survives/different-profile-sentinel-profile"
+          ],
+          "profile": "/dev/shm/hamon-freight-lifecycle-receiving-cd1df0f1ee24/run-v1/unrelated_sentinel_survives/different-profile-sentinel-profile"
+        }
+      ],
+      "events": [
+        {
+          "kind": "browser-shim-registration",
+          "identity": {
+            "pid": 2419312,
+            "pgid": 2419312,
+            "sid": 2419312,
+            "start_ticks": 86475731,
+            "profile": "/dev/shm/hamon-freight-lifecycle-receiving-cd1df0f1ee24/run-v1/unrelated_sentinel_survives/target-profile"
+          }
+        },
+        {
+          "kind": "signal",
+          "target": "browser-session",
+          "pgid": 2419312,
+          "signal": "SIGTERM"
+        }
+      ],
+      "signals": [
+        {
+          "target": "browser-session",
+          "signal": "SIGTERM",
+          "pgid": 2419312,
+          "members": [
+            {
+              "pid": 2419312,
+              "ppid": 2418941,
+              "pgid": 2419312,
+              "sid": 2419312,
+              "state": "S",
+              "start_ticks": 86475731,
+              "uid": 1000,
+              "comm": "python3"
+            }
+          ],
+          "delivered": true
+        }
+      ],
+      "syscalls": [
+        {
+          "pgid": 2419312,
+          "signal": 15,
+          "allowed": true
+        }
+      ],
+      "cleanup": [
+        {
+          "pid": 2419319,
+          "start_ticks": 86475742,
+          "own_verified_cleanup": true
+        }
+      ]
+    },
+    {
+      "id": "identity_or_ownership_mismatch_refused",
+      "pass": true,
+      "duration_seconds": 0.3439026419073343,
+      "registered": [
+        {
+          "pid": 2419383,
+          "ppid": 2418941,
+          "pgid": 2419383,
+          "sid": 2419383,
+          "state": "R",
+          "start_ticks": 86475815,
+          "uid": 1000,
+          "args": [
+            "/usr/bin/python3",
+            "/dev/shm/hamon-freight-lifecycle-receiving-cd1df0f1ee24/mock_process.py",
+            "--role",
+            "normal",
+            "--user-data-dir=/dev/shm/hamon-freight-lifecycle-receiving-cd1df0f1ee24/run-v1/identity_or_ownership_mismatch_refused/target-profile"
+          ],
+          "profile": "/dev/shm/hamon-freight-lifecycle-receiving-cd1df0f1ee24/run-v1/identity_or_ownership_mismatch_refused/target-profile"
+        }
+      ],
+      "events": [
+        {
+          "kind": "browser-shim-registration",
+          "identity": {
+            "pid": 2419383,
+            "pgid": 2419383,
+            "sid": 2419383,
+            "start_ticks": 86475816,
+            "profile": "/dev/shm/hamon-freight-lifecycle-receiving-cd1df0f1ee24/run-v1/identity_or_ownership_mismatch_refused/target-profile"
+          }
+        },
+        {
+          "kind": "browser-shim-registration",
+          "identity": {
+            "pid": 2419383,
+            "pgid": 2419383,
+            "sid": 2419383,
+            "start_ticks": 86475815,
+            "profile": "/dev/shm/hamon-freight-lifecycle-receiving-cd1df0f1ee24/run-v1/identity_or_ownership_mismatch_refused/wrong-profile"
+          }
+        }
+      ],
+      "signals": [],
+      "syscalls": [],
+      "cleanup": [
+        {
+          "pid": 2419383,
+          "start_ticks": 86475815,
+          "own_verified_cleanup": true
+        }
+      ]
+    },
+    {
+      "id": "verified_already_exited_group",
+      "pass": true,
+      "duration_seconds": 0.33639388298615813,
+      "registered": [
+        {
+          "pid": 2419393,
+          "ppid": 2418941,
+          "pgid": 2419393,
+          "sid": 2419393,
+          "state": "S",
+          "start_ticks": 86475850,
+          "uid": 1000,
+          "args": [
+            "/usr/bin/python3",
+            "/dev/shm/hamon-freight-lifecycle-receiving-cd1df0f1ee24/mock_process.py",
+            "--role",
+            "pipe",
+            "--user-data-dir=/dev/shm/hamon-freight-lifecycle-receiving-cd1df0f1ee24/run-v1/verified_already_exited_group/target-profile"
+          ],
+          "profile": "/dev/shm/hamon-freight-lifecycle-receiving-cd1df0f1ee24/run-v1/verified_already_exited_group/target-profile"
+        }
+      ],
+      "events": [
+        {
+          "kind": "browser-shim-registration",
+          "identity": {
+            "pid": 2419393,
+            "pgid": 2419393,
+            "sid": 2419393,
+            "start_ticks": 86475850,
+            "profile": "/dev/shm/hamon-freight-lifecycle-receiving-cd1df0f1ee24/run-v1/verified_already_exited_group/target-profile"
+          }
+        }
+      ],
+      "signals": [],
+      "syscalls": [],
+      "cleanup": []
+    },
+    {
+      "id": "disappearance_between_check_and_signal",
+      "pass": true,
+      "duration_seconds": 0.6508348230272532,
+      "registered": [
+        {
+          "pid": 2419414,
+          "ppid": 2418941,
+          "pgid": 2419414,
+          "sid": 2419414,
+          "state": "S",
+          "start_ticks": 86475883,
+          "uid": 1000,
+          "args": [
+            "/usr/bin/python3",
+            "/dev/shm/hamon-freight-lifecycle-receiving-cd1df0f1ee24/mock_process.py",
+            "--role",
+            "pipe",
+            "--user-data-dir=/dev/shm/hamon-freight-lifecycle-receiving-cd1df0f1ee24/run-v1/disappearance_between_check_and_signal/target-profile"
+          ],
+          "profile": "/dev/shm/hamon-freight-lifecycle-receiving-cd1df0f1ee24/run-v1/disappearance_between_check_and_signal/target-profile"
+        }
+      ],
+      "events": [
+        {
+          "kind": "browser-shim-registration",
+          "identity": {
+            "pid": 2419414,
+            "pgid": 2419414,
+            "sid": 2419414,
+            "start_ticks": 86475883,
+            "profile": "/dev/shm/hamon-freight-lifecycle-receiving-cd1df0f1ee24/run-v1/disappearance_between_check_and_signal/target-profile"
+          }
+        },
+        {
+          "kind": "signal-already-exited",
+          "target": "browser-session",
+          "pgid": 2419414
+        }
+      ],
+      "signals": [
+        {
+          "target": "browser-session",
+          "signal": "SIGTERM",
+          "pgid": 2419414,
+          "members": [
+            {
+              "pid": 2419414,
+              "ppid": 2418941,
+              "pgid": 2419414,
+              "sid": 2419414,
+              "state": "S",
+              "start_ticks": 86475883,
+              "uid": 1000,
+              "comm": "python3"
+            }
+          ],
+          "delivered": false,
+          "already_empty": true
+        }
+      ],
+      "syscalls": [
+        {
+          "pgid": 2419414,
+          "signal": 15,
+          "allowed": true
+        }
+      ],
+      "cleanup": []
+    },
+    {
+      "id": "term_ignoring_owned_group",
+      "pass": true,
+      "duration_seconds": 5.847396692959592,
+      "registered": [
+        {
+          "pid": 2419517,
+          "ppid": 2418941,
+          "pgid": 2419517,
+          "sid": 2419517,
+          "state": "S",
+          "start_ticks": 86475949,
+          "uid": 1000,
+          "args": [
+            "/usr/bin/python3",
+            "/dev/shm/hamon-freight-lifecycle-receiving-cd1df0f1ee24/mock_process.py",
+            "--role",
+            "ignore",
+            "--user-data-dir=/dev/shm/hamon-freight-lifecycle-receiving-cd1df0f1ee24/run-v1/term_ignoring_owned_group/target-profile"
+          ],
+          "profile": "/dev/shm/hamon-freight-lifecycle-receiving-cd1df0f1ee24/run-v1/term_ignoring_owned_group/target-profile"
+        }
+      ],
+      "events": [
+        {
+          "kind": "browser-shim-registration",
+          "identity": {
+            "pid": 2419517,
+            "pgid": 2419517,
+            "sid": 2419517,
+            "start_ticks": 86475949,
+            "profile": "/dev/shm/hamon-freight-lifecycle-receiving-cd1df0f1ee24/run-v1/term_ignoring_owned_group/target-profile"
+          }
+        },
+        {
+          "kind": "signal",
+          "target": "browser-session",
+          "pgid": 2419517,
+          "signal": "SIGTERM"
+        },
+        {
+          "kind": "signal",
+          "target": "browser-session",
+          "pgid": 2419517,
+          "signal": "SIGKILL"
+        }
+      ],
+      "signals": [
+        {
+          "target": "browser-session",
+          "signal": "SIGTERM",
+          "pgid": 2419517,
+          "members": [
+            {
+              "pid": 2419517,
+              "ppid": 2418941,
+              "pgid": 2419517,
+              "sid": 2419517,
+              "state": "S",
+              "start_ticks": 86475949,
+              "uid": 1000,
+              "comm": "python3"
+            }
+          ],
+          "delivered": true
+        },
+        {
+          "target": "browser-session",
+          "signal": "SIGKILL",
+          "pgid": 2419517,
+          "members": [
+            {
+              "pid": 2419517,
+              "ppid": 2418941,
+              "pgid": 2419517,
+              "sid": 2419517,
+              "state": "S",
+              "start_ticks": 86475949,
+              "uid": 1000,
+              "comm": "python3"
+            }
+          ],
+          "delivered": true
+        }
+      ],
+      "syscalls": [
+        {
+          "pgid": 2419517,
+          "signal": 15,
+          "allowed": true
+        },
+        {
+          "pgid": 2419517,
+          "signal": 9,
+          "allowed": true
+        }
+      ],
+      "cleanup": []
+    },
+    {
+      "id": "diagnostic_sink_failure_keeps_cleanup",
+      "pass": true,
+      "duration_seconds": 0.5062906310195103,
+      "registered": [
+        {
+          "pid": 2420277,
+          "ppid": 2418941,
+          "pgid": 2420277,
+          "sid": 2420277,
+          "state": "R",
+          "start_ticks": 86476533,
+          "uid": 1000,
+          "args": [
+            "/usr/bin/python3",
+            "/dev/shm/hamon-freight-lifecycle-receiving-cd1df0f1ee24/mock_process.py",
+            "--role",
+            "normal",
+            "--user-data-dir=/dev/shm/hamon-freight-lifecycle-receiving-cd1df0f1ee24/run-v1/diagnostic_sink_failure_keeps_cleanup/target-profile"
+          ],
+          "profile": "/dev/shm/hamon-freight-lifecycle-receiving-cd1df0f1ee24/run-v1/diagnostic_sink_failure_keeps_cleanup/target-profile"
+        }
+      ],
+      "events": [
+        {
+          "kind": "browser-shim-registration",
+          "identity": {
+            "pid": 2420277,
+            "pgid": 2420277,
+            "sid": 2420277,
+            "start_ticks": 86476533,
+            "profile": "/dev/shm/hamon-freight-lifecycle-receiving-cd1df0f1ee24/run-v1/diagnostic_sink_failure_keeps_cleanup/target-profile"
+          }
+        },
+        {
+          "kind": "signal",
+          "target": "browser-session",
+          "pgid": 2420277,
+          "signal": "SIGTERM"
+        }
+      ],
+      "signals": [
+        {
+          "target": "diagnostics",
+          "event": "browser-shim-registration",
+          "diagnostic_error": "OSError('independent injected diagnostic sink failure')",
+          "unix": 1791498744.241336
+        },
+        {
+          "target": "browser-session",
+          "signal": "SIGTERM",
+          "pgid": 2420277,
+          "members": [
+            {
+              "pid": 2420277,
+              "ppid": 2418941,
+              "pgid": 2420277,
+              "sid": 2420277,
+              "state": "S",
+              "start_ticks": 86476533,
+              "uid": 1000,
+              "comm": "python3"
+            }
+          ],
+          "delivered": true
+        },
+        {
+          "target": "diagnostics",
+          "event": "signal",
+          "diagnostic_error": "OSError('independent injected diagnostic sink failure')",
+          "unix": 1791498744.442
+        }
+      ],
+      "syscalls": [
+        {
+          "pgid": 2420277,
+          "signal": 15,
+          "allowed": true
+        }
+      ],
+      "cleanup": []
+    }
+  ],
+  "product_execution": false,
+  "browser_execution": false,
+  "source_unchanged": true,
+  "pass": true,
+  "passed": 7,
+  "failed": 0
+}

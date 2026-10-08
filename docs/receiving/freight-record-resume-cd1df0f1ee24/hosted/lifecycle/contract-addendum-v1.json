@@ -1,0 +1,12 @@
+{
+  "format": "hamon-freight-independent-lifecycle-controls-addendum/1",
+  "basis": "Source review identified diagnostic journal errors could bypass cleanup; added before receiver authoring/execution.",
+  "control": {
+    "id": "diagnostic_sink_failure_keeps_cleanup",
+    "setup": "Create/register an own mock group. Supply an event sink that raises OSError during registration and signal diagnostics.",
+    "expect": "The corrected helper records diagnostic_error; cleanup still closes the verified owned group. No diagnostic failure is relabeled product success."
+  },
+  "original_contract_sha256": "55e7ba213b8916f13f637c97190739a52a2f674c22ece43552742c1ae6dcfc89",
+  "candidate": "reviewed-v5 b9735d6efbfcbe62ca9d26d945be2798f91ed1addd08a34f948862fa9d291649",
+  "scope": "same own bounded Python mocks only; no product/main/browser invocation"
+}

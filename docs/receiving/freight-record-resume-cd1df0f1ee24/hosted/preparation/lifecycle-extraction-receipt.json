@@ -1,0 +1,18 @@
+{
+  "format": "freight-hosted-proposal-correction/1",
+  "executed": false,
+  "syntax": "compile only passed",
+  "receiver_v4_unchanged": true,
+  "oracles_unchanged": 17,
+  "predecessor_sha256": "f489ded61d845db1f4374ee9e6f863f5b115e14b8211f586c3d8be5fb250b4ce",
+  "corrected_sha256": "b671cd1a88f6edc9c09fda53c6ccbe2cba6a252c65fa59df73706ad7d03bc2b7",
+  "corrected_bytes": 19089,
+  "changes": [
+    "Extract exact ownership/observe/cleanup implementation into module-level OwnedBrowserSession and stop_owned_node, both called by main for independent mocks",
+    "Require positive integer registration pid/pgid/sid/start fields before accepting identity",
+    "Record whether a checked signal was delivered; accept ESRCH only after confirming the group is empty; still refuse mismatched/live ownership",
+    "No receiver, fixture, product, workflow or npm/runtime changes"
+  ],
+  "native_body_readback_exact": true,
+  "diff_sha256": "d4e9b6a793e389eabe6154eb7db8bbea3fdb89b6051bb3d97ae1c8dcbe489ab6"
+}

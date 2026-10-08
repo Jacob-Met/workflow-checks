@@ -1,0 +1,29 @@
+{
+  "archive": {
+    "bytes": 19005,
+    "sha256": "42224187aa52b77084d9de4d8de8d83060d9a25fcd5dc1f97c15621f19757ef6",
+    "git_blob": "9c314056d5a69f2d3b5aff92a3eba30470629dd8"
+  },
+  "members": 24,
+  "manifest": {
+    "bytes": 5407,
+    "sha256": "30d1951f42299ebf07627435d1f9643f1fe3a6e78bcd25120af183488039bf49",
+    "git_blob": "8ae7dc62aa82f76d3f54eb882f1cc859bda308b0"
+  },
+  "receipt": {
+    "bytes": 17098,
+    "sha256": "14111b5887321c7850ef4a7557d3ff008916537b69d424ce5dd08d8fa560f921",
+    "git_blob": "7b7939b9a44915ec31760ffadf2a63f525e5213f"
+  },
+  "source": {
+    "bytes": 20222,
+    "sha256": "b9735d6efbfcbe62ca9d26d945be2798f91ed1addd08a34f948862fa9d291649",
+    "git_blob": "4089e2451438a7917ea95472704c97c295fb816f"
+  },
+  "runtime": "3.14.4 (main, Aug 20 2026, 10:41:58) [GCC 15.2.0]",
+  "passed": 7,
+  "failed": 0,
+  "archive_member_readback_exact": true,
+  "original_live_processes_after_receiving": 0,
+  "scope": "mock-process lifecycle infrastructure only; no browser or product run"
+}
