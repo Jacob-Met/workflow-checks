@@ -1,8 +1,8 @@
 {
   "schema": "workflow-checks.freight-whatif.bundle-receipt.v1",
   "archive_name": "freight-whatif.zip",
-  "bytes": 29559,
-  "sha256": "51a97be506fc3900e05b487939171fca8e63d701ccd4cfa070b9e55096f737d6",
+  "bytes": 24333,
+  "sha256": "57a0d4d34e8156f7f3bb3f0722882b0902e17ec731503ddd0ef5fdf6ceff6c08",
   "entries": [
     "LICENSE",
     "README.txt",
@@ -11,12 +11,11 @@
     "site/data.mjs",
     "site/index.html",
     "site/model.mjs",
-    "site/scenario-record.mjs",
     "site/styles.css",
     "tools/install.py",
     "tools/serve.py"
   ],
   "all_archive_entries_read_back_exact": true,
-  "manifest_sha256": "d2c820fe6a15075a57283e1a2e9a16a4a1e7ca5500253c3a58524d0e5df13c49",
-  "packager_sha256": "5ec79e3126c0f5e214b6488bdbbd31bb034f23f3f8a6a7b64c67b9a796a873b7"
+  "manifest_sha256": "3c58a49b8989332ba3ecdcbc9fd47c577ac8db9c068ca9ab2af8bd9b64d670d7",
+  "packager_sha256": "34fb5dfdc81b68c4f62ac5e9305426d5ff646d8aa2fefeb0c364bc848a667a74"
 }

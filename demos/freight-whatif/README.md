@@ -18,8 +18,6 @@ Open **http://127.0.0.1:8765/**. Stop with Ctrl-C. Use `--port 8877` if needed.
 
 The release ZIP under `dist/` is self-contained. Extract it into a new directory and run `python3 tools/serve.py` there. Runtime uses browser modules and the Python standard library; no package installation, external font, API key or network service is needed. A local HTTP server is required because browsers restrict module loading from `file://`.
 
-The currently checked-in ZIP is the historical five-file release and does not include Open saved record; use the source workbench above for this draft feature until a verified replacement ZIP is published.
-
 ## Use the workbench
 
 Choose Long dwell, Within free time, Late arrival or Missing departure. Loading a case establishes a fresh baseline. Change arrival/departure or invoice charges to see the review update; expand Rate confirmation to adjust free time, late grace, increments, hourly rate or cap.

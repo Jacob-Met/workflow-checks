@@ -2,57 +2,49 @@
 
 Issue: [workflow-checks #60](https://github.com/Jacob-Met/workflow-checks/issues/60).
 
-This draft adds an explicit review route for an existing `workflow-checks.freight-whatif.v1` export. Opening checks its source pins, canonical baseline, sixteen inputs and freshly recomputed results. A read-only preview precedes Replace current scenario; cancellation, refusal and retired reads preserve the current draft. The Freight model and data remain unchanged.
+This draft adds Open saved record, a read-only preview of all sixteen inputs, and explicit Replace current scenario. The existing v1 envelope is checked against pinned rules and the canonical starting case; saved results are recomputed through the unchanged model. Cancel, refusals and retired reads preserve the current raw draft.
 
-**Delivery is incomplete.** The native browser attempt's final status and output have not been received after its host went offline. The current release ZIP is deliberately unchanged and therefore does not contain saved-record resume. This draft is not ready for acceptance or merge.
+**The original native six-runtime-file ZIP has now been recovered and independently accepted. Browser receiving remains incomplete, so this is still a draft.** No production or test run was repeated to recover the archive or evidence.
 
-## Source custody
+## Current source and delivered ZIP
 
-- [source-transport-v1.json](source-transport-v1.json): exact original 120,335-byte UTF-8 checkpoint, Git blob `6641513ee86a27c0e9481e6555019bada8e2c38b`, SHA-256 `ec460ed26466d0e1053c9a5f0578711d05898b5589fdd6a5ce86125db90460a3`. Contains all ten original source files (eight changed/new plus protected model/data), the one-step workflow change and explicit evidence boundaries.
-- [source-manifest.json](source-manifest.json): all thirteen proposed product/test/doc/workflow paths. The four hosted mirrors have exactly the same bodies as their source runtime files, including the new sixth module.
-- [readme-historical-clarification.json](readme-historical-clarification.json): two precise documentation-only successors clarify the original contribution's historical attribution and warn in Run it that the current ZIP lacks Open saved record. Both changes are recorded separately; the original README body and hashes remain in the transport.
-- [composition-plan.json](composition-plan.json): exact source parent, complete nontruncated parent-tree boundary, planned overlay and protected delivery objects. The publication readback must verify every parent leaf outside the overlay remains exact.
+The source workbench, hosted mirrors and maintained [release ZIP](../../../demos/freight-whatif/dist/freight-whatif.zip) contain the same six runtime files. The ZIP is the original 29,559-byte native artifact, SHA-256 `51a97be506fc3900e05b487939171fca8e63d701ccd4cfa070b9e55096f737d6`, Git blob `66c8f3cfac37164349f75bcd33fc6b57db83c58e`. Its original [package receipt](native-delivery/package-receipt.json) is also installed at the maintained bundle-receipt path.
 
-The original claim baseline was `39ea75b0da2a7c3463e426dd32ba52860966cae4`. Source staging used `11e159f914617517e2322bdeb89de5e27007dcc5`; all five original Freight runtime files matched the claim baseline. This draft is based on `66030b1f930906d0b42fa46fc0a74c06678ec964`, tree `e38916e0e104a38bda1e225c64ea2a6b1aafc015`. Its incoming PT CSV-header contribution is preserved.
+[Independent ZIP acceptance](independent-zip/acceptance-native-v1.json) checks all eleven exact members, local/central/EOCD structure, modes, README, manifest and six runtime bodies against a [contract](independent-zip/contract-v1.json) frozen before receiving the archive. The [receiver](independent-zip/receive_zip.py) decoded the actual recovered bytes in memory; it did not extract or execute the ZIP. The old maintained receipt is retained [unchanged](history/bundle-receipt-before-resume.json), and all other historical bundle evidence remains intact.
 
-## Completed receiving, with raw evidence still pending recovery
+The temporary Run it warning about the old ZIP was removed only after this acceptance. [That precise README successor](readme-delivery-successor.json) preserves all other text. The earlier two documentation changes remain in [their original record](readme-historical-clarification.json).
 
-These are the already observed outcomes recorded in the source transport, not new runs on the hosted draft:
+## Source and evidence boundaries
 
-| Gate | Observed outcome |
+- [Original source transport](source-transport-v1.json): unchanged 120,335-byte checkpoint, Git `6641513ee86a27c0e9481e6555019bada8e2c38b`, SHA-256 `ec460ed26466d0e1053c9a5f0578711d05898b5589fdd6a5ce86125db90460a3`. Includes original v1 source/test/README bodies and exact protected model/data.
+- [Initial draft source manifest](source-manifest.json) and [initial composition plan](composition-plan.json): unchanged historical records for first draft head `6da2c7c2867e6eeb9d11a097a14d977a2b010b70`. The later README and dist changes are explicitly recorded by the delivery successor manifest.
+- [Delivery successor manifest](delivery-successor-manifest.json): current product/delivery pins, evidence payload and exact parent boundary for this update.
+- [Original-native recovery manifest](native-delivery/recovery-manifest.json): read-only recovery origins, original file hashes, process receipts and explicit separation from the unexecuted hosted fallback.
+- [Independent recovery index](independent-recovery-index.json): exact original admission archive/readable files and ZIP receiving objects. Its prepublication archive-readback status is preserved; publication verifies binary bodies separately.
+
+The original claim baseline was `39ea75b0da2a7c3463e426dd32ba52860966cae4`; source staging used `11e159f914617517e2322bdeb89de5e27007dcc5`. The native production inputs match the corresponding later published PR67 blobs, but the original native runs are not represented as execution of a later Git commit.
+
+## Completed native qualification
+
+| Gate | Recorded result and evidence |
 | --- | --- |
-| Authored importer tests | 9 groups passed; Node 22.22.1, explicit exit 0, empty stderr |
-| Independent importer admission | 131 cases passed: 28 accepted and 103 refused; explicit exit 0, empty stderr |
-| Independent UI-state source review | Frozen app and HTML accepted without correction |
-| Existing installer tests | Six controls passed; explicit exit 0, empty stderr |
-| Actual ZIP packager | Explicit exit 0, empty stderr; every archived entry read back exactly |
-| Source custody | Completed native runs retained identical before/after source pins |
+| Authored importer | [Receipt](author/receipt.json), [raw TAP](author/stdout.txt), [stderr](author/stderr.txt): Node 22.22.1, nine passed, zero failed/skipped, explicit exit 0, source unchanged |
+| Independent admission | [131-case receipt](independent-admission/admission-candidate-v1-receipt.json): 28 accepts and 103 refusals passed, explicit exit 0, empty stderr |
+| Independent source review | [Importer review](independent-admission/module-source-review-v1.json); UI-state review remains separately attributed |
+| Installer | [Original receipt](native-delivery/installer-receipt.json), [stdout](native-delivery/installer.stdout.txt), [stderr](native-delivery/installer.stderr.txt): six controls, exit 0 |
+| ZIP production | [Original receipt](native-delivery/package-receipt.json), [stdout](native-delivery/packager.stdout.txt), [stderr](native-delivery/packager.stderr.txt): exit 0, all archived entries exact |
+| Delivery source preservation | [Combined receipt](native-delivery/receipt.json): Python 3.14.4, source before/after exact, both child exits 0 |
 
-The native author root is `/dev/shm/hamon-freight-source-cd1df0f1ee24` on d55. Its delivery receipt has SHA-256 `0daa91bc2f3adc3dd0a30ab6bf3b427c56df8e08ac07bd28b8ef6dc466987287`. The generated replacement ZIP is 29,559 bytes, SHA-256 `51a97be506fc3900e05b487939171fca8e63d701ccd4cfa070b9e55096f737d6`. Those raw receipts, logs and ZIP bytes are not included here because they have not been recovered from the offline host. No missing evidence body has been reconstructed.
+Original author and delivery runners are retained beside their receipts. Empty stderr files are the recovered originals, not synthesized placeholders. The [independent admission archive](independent-admission/admission-packet-v1.tar.gz) is the unchanged 86,837-byte packet, SHA-256 `256f3f69564e38210227507cfca863f63849df18276b88bb54bc68178c85336b`; its fifteen outer members and complete original preimplementation packet were independently verified after recovery.
 
-The maintained repository ZIP remains Git blob `2a7e2b8f4b4abe5063c65befb7f74b0d6533387b` (24,333 bytes). Keep it unchanged until the replacement's actual bytes can be recovered and verified. Historical evidence ZIPs are also unchanged.
+## Failed browser attempt and remaining gate
 
-## Unresolved browser attempt
+The single original browser receiving attempt was recovered as a **failed execution**: the bounded supervisor timed out, Node exited -9 after 261.798 seconds. No completed group receipt, captures or downloads were found. Stderr includes DevTools listening, so the hang is not classified as a failure to obtain an endpoint. Its cause remains unclassified; there is no claim that no internal browser execution occurred.
 
-[browser-receiver-v4.mjs](browser-receiver-v4.mjs) is the unchanged independent receiver source: 29,352 bytes, Git blob `1e08bd4be25e149d568f1869c610b20f03fc6ac9`, SHA-256 `d44e2d17eeb3e583d11e856fbda1bb988d9ec8f871bf40e3f33f2b5425d333d8`. It retains seventeen frozen browser groups and an independent source-first design. It is preserved as evidence, **not presented as a self-contained runnable maintained suite**.
+[browser-receiver-v4.mjs](browser-receiver-v4.mjs) remains the unchanged seventeen-group receiver source. The [failed-attempt packet](browser-native/packet.tar.gz), [manifest](browser-native/manifest.json), [receipt](browser-native/receipt.json) and [guide](browser-native/README.md) preserve all sixty indexed payloads plus the manifest: preparation, eleven runtime inputs, eight canonical fixtures, raw output, supervisor result and separately authorized cleanup. All sixty-one archive members were read back exactly. This is failed-attempt custody, not browser acceptance. No browser retry was performed for this delivery update.
 
-One attempt was launched on the exact frozen UI. The last successful status read showed a fresh profile; no completed group, final exit, browser receipt or capture was received before d55 went offline. No pass or failure is inferred, and no retry has been run.
+The original five runtime baseline inputs, eight frozen fixtures and caller-local configuration are required for a complete maintained receiver package. A receiver file alone is not advertised as a runnable suite. Any later execution must retain the same independent expectations and distinguish the failed attempt.
 
-Outstanding custody:
-- Driver/config: `/dev/shm/hamon-freight-receiving-cd1df0f1ee24/browser-native/`.
-- Config `config-ui-v1-attempt1.json`: SHA-256 `7d4c33189b8b01f2012e3ad700d3b3d7ef900cff98296cf356646ac7cb04bcfe`.
-- Raw wrapper destination: `attempt1-process/`; wrapper PID 1598266, recorded Node PID 1598733.
-- Browser output/profile: `/home/jacob/hamon-freight-browser-cd1df0f1ee24/attempt1/`.
-- Explicit limits: 45-second launch, 240-second receiver and 255-second owned-process supervisor.
+The hosted ZIP fallback was source-reviewed and checkpointed, but neither its workflow nor producer was published or executed because the original native archive was recovered. It is not the origin of the ZIP delivered here.
 
-For later maintained delivery, recover the eight frozen fixture bodies and index, five original baseline runtime files or explicit immutable offline reconstruction, and caller-local configuration with exact source/fixture pins. Source-root labels alone do not define HTTP routes. The host-specific supervisor belongs in evidence. Linux/Chromium keyboard behavior is the intended runtime boundary; a DOM cancel event is not an OS-picker gesture claim.
-
-## Remaining gates
-
-1. Recover and classify the already launched browser attempt using its actual logs, process result, downloads and captures.
-2. Recover intact author and independent evidence packets and bind them to the published source.
-3. Recover/read back the generated ZIP before replacing the maintained dist deliverable.
-4. Make the browser regression package complete before describing it as runnable.
-5. Verify exact hosted CI checkout and full current-parent preservation; retain draft status until independent source, delivery and browser acceptance are complete.
-
-The original engine, layout and earlier delivery receipts retain their own source and contributor attribution. This packet does not recast those historical results as importer qualification.
+The first draft's hosted source gate passed on synthetic checkout `d4e8c5bfc6500b078ba6b98be128dd3b556aff51`, tree `cdc32c100179ceeedf97ecd89c112c3bb518f3ec`: 237 model checks, nine importer tests and six installer controls, plus the existing Python suites. This later evidence/delivery commit requires its own hosted checkout verification. Keep draft status until browser and final current-source receiving are accepted.

@@ -1,0 +1,11 @@
+{
+  "verified_at": "2026-10-08T20:42:01.617Z",
+  "archive": "/dev/shm/hamon-freight-receiving-cd1df0f1ee24/preimplementation-packet-v1.tar.gz",
+  "bytes": 71329,
+  "sha256": "106a0764ba36b3ee5823c38eff4c95ad820232f1011a062ce06228071acd8d78",
+  "manifestBytes": 24799,
+  "manifestSha256": "4dbb99632f592240e856dfe3ba46ae3ed0050683d6d6847a8c7df867caccfe72",
+  "members": 142,
+  "payloadBytes": 4074046,
+  "rawMembersVerified": 138
+}

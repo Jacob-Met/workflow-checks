@@ -1,0 +1,211 @@
+{
+  "schema": "hamon.freight-independent-evidence-publication-index.v1",
+  "repository": "Jacob-Met/workflow-checks",
+  "owner": "estate-cd1df0f1ee24/estate_coordination",
+  "at": "2026-10-08T21:57:22.987Z",
+  "files": [
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/independent-admission/admission-packet-v1.tar.gz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b78a155e7490b6091d057016c79eb9d17525c12c",
+      "bytes": 86837,
+      "sha256": "256f3f69564e38210227507cfca863f63849df18276b88bb54bc68178c85336b",
+      "full_git_body_readback": false
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/independent-admission/README-admission-v1.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d11e4b8b445958edb8d644b693b2c4129a9c8c35",
+      "bytes": 2472,
+      "sha256": "71ebc348bc8fe94279c43f55b98ed77ababc844a1747133a12a15deec0512051",
+      "full_git_body_readback": true
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/independent-admission/admission-packet-manifest-v1.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5e8d7f23df77cadc10d0bd339adf2490496af9c8",
+      "bytes": 2564,
+      "sha256": "c13015456b8853f08dbf7b896a5ea2b6512410631512c907c2401defbb468aeb",
+      "full_git_body_readback": true
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/independent-admission/admission-candidate-v1-receipt.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "23aa437237b794fb83ac3816bb809d72fbb2efca",
+      "bytes": 47444,
+      "sha256": "a358526c3cdf0917b6fd2e45dc589d356564199a02d2b622ee2750732e921a8f",
+      "full_git_body_readback": true
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/independent-admission/admission-candidate-v1-process.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f9fa5a230df74c99d42672ac3df68fcde77d1180",
+      "bytes": 650,
+      "sha256": "da98bf895a446593bb5db2c2ab04cb6863a55623c8f3ebd5d91d62e92b707456",
+      "full_git_body_readback": true
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/independent-admission/admission-candidate-v1.stdout.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7de0361b9f5987fa3763c5be07899f29a6886186",
+      "bytes": 208,
+      "sha256": "bbcb8b4a1bf5d5d134bcb2de26f4a30f7ff25e486c357ed02ad3deeaeaa9edc8",
+      "full_git_body_readback": true
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/independent-admission/admission-candidate-v1.stderr.log",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "full_git_body_readback": true
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/independent-admission/module-source-review-v1.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e60ae4c71900d617beb624fb82d5b07cbb0ebb21",
+      "bytes": 2620,
+      "sha256": "f67ea1070f3787316731dc51b7baa5930bb9080318e2154bf317184ba42ec649",
+      "full_git_body_readback": true
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/independent-admission/public-api-adapter-v1.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "90a4b2d3869d444ab17757a5721523dfbaebbb6e",
+      "bytes": 2194,
+      "sha256": "2a8423a07f3330133c30368b4e72887823ba9e7956ceff0220b9be57152ca816",
+      "full_git_body_readback": true
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/independent-admission/archive-and-adapter-verification-v1.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f0324e0819757408fb4537d98c30a6085b4a9351",
+      "bytes": 345,
+      "sha256": "18b28aa9b1d3fbd8a3cfed896fad3b3104c45227e19a0803f26db62c42af1499",
+      "full_git_body_readback": true
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/independent-admission/preimplementation-packet-receipt-v1.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e7d947bef8a7ff10ec0da606464201a59529d270",
+      "bytes": 431,
+      "sha256": "929997052d7693136ade97e32aeceaa88dab790bf6ab9bd83f660f417ce1ccd6",
+      "full_git_body_readback": true
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/independent-admission/freeze/preimplementation-packet-manifest-v1.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b26e5a8ceded3eddc7f2434d150e51cda2e8720b",
+      "bytes": 24799,
+      "sha256": "4dbb99632f592240e856dfe3ba46ae3ed0050683d6d6847a8c7df867caccfe72",
+      "full_git_body_readback": true
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/independent-admission/freeze/freeze-manifest-v1.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "07b846912764f677d288ee5e9e0ce915d74677f6",
+      "bytes": 24315,
+      "sha256": "f3b20a7158b177796894b078942d56f023171e75a865aba944b0494c05f5bcb1",
+      "full_git_body_readback": true
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/independent-admission/freeze/contract-v1.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "85a784ec27b8a1322f824617ba80f7bdd583a419",
+      "bytes": 9181,
+      "sha256": "3713b8fb96f560689bdcba78985917bc3bf988fc884209622016fd6bac5f09d2",
+      "full_git_body_readback": true
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/independent-admission/freeze/semantic-receiver-v1.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9016c0fd7b265fa7e2ef7e660fad062b116f0ab2",
+      "bytes": 4125,
+      "sha256": "51e79f1f56d145b874e3d54657f157baab23c5fd305fd3e234b33c193598f4f6",
+      "full_git_body_readback": true
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/independent-admission/admission-packet-receipt-v1.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b219c4f23e9c87b6ff055e036d1bbee74d0d7a35",
+      "bytes": 435,
+      "sha256": "432bf05afba28e95ff40c700e5526b3e95bd678c08e3592abe4e8ad3e945e3a8",
+      "full_git_body_readback": true
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/independent-zip/receive_zip.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c02b139b803ed572a47144dfe5f28dbf5c5f52d5",
+      "bytes": 6621,
+      "sha256": "ea71380bb1bdcf58b32a507660dfaa8cc3443a09c463e744df528aecbe866043",
+      "full_git_body_readback": true
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/independent-zip/contract-v1.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0cd7c8014f10db3fd1d4e5bbeb0b080163e54d9b",
+      "bytes": 10533,
+      "sha256": "77747e9065f28d464179140e203ecda25d7b8378bd9dd4191641756c5bf0b982",
+      "full_git_body_readback": true
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/independent-zip/acceptance-native-v1.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f57c9191c325080161feb8104db9f4d42c72d462",
+      "bytes": 1647,
+      "sha256": "a57c3437d3baacefb8a18857281ddb6758422e992b5b0ed892b075afd2d969fa",
+      "full_git_body_readback": true
+    }
+  ],
+  "custody": {
+    "nativeDevice": "d55b2499-5e82-4805-819a-d0d7ddea1efe",
+    "originalRoot": "/dev/shm/hamon-freight-receiving-cd1df0f1ee24",
+    "recoveryTransport": "/dev/shm/hamon-freight-receiving-cd1df0f1ee24/custody-recovery-20261008/transport-v1.json",
+    "transportSha256": "7d6ac5daf38d90615fe2b3f212cff44c0c68c973fed9ee8eb5fc3c23fa7ec3c5",
+    "originalArchiveUnchanged": true,
+    "outerMembersVerified": 15,
+    "embeddedPreimplementationMembersVerified": 142,
+    "originalFreezeMembersVerified": 138,
+    "all16TransferredBodiesLocallyDecodedAndPinned": true,
+    "gitTextBodiesReadBack": 18,
+    "binaryReadback": "Archive Git object matched submitted exact original bytes; placement-based fetch_file base64 readback remains for the receiving commit owner."
+  },
+  "outcomes": {
+    "originalAdmission": {
+      "passed": 131,
+      "failed": 0,
+      "accepted": 28,
+      "refused": 103,
+      "rerun": false
+    },
+    "originalNativeZip": {
+      "bytes": 29559,
+      "sha256": "51a97be506fc3900e05b487939171fca8e63d701ccd4cfa070b9e55096f737d6",
+      "git_blob": "66c8f3cfac37164349f75bcd33fc6b57db83c58e",
+      "membersVerified": 11,
+      "independentFrozenReceiverExit": 0,
+      "packagerRerun": false
+    },
+    "browser": "Outside this evidence publication. No browser acceptance inferred."
+  },
+  "scope": "Original packets and observed failures/provenance retained byte-for-byte. No admission/model/install/package test was rerun during recovery; only read-only archive custody checks and the frozen in-memory ZIP receiver ran. No refs, branches, PR state or production sources changed by this publisher."
+}

@@ -1,0 +1,164 @@
+{
+  "schema": "hamon.freight-delivery-receipt.v1",
+  "python": "3.14.4",
+  "before": {
+    "demos/freight-whatif/site/app.mjs": {
+      "bytes": 23731,
+      "sha256": "52e047f7c691f15085cfcefd5d01755e9d00382f6e7a5c46b8daa043871190d2",
+      "git_blob": "23d4f67d8ce223e0e478819eb45af2154a8e1e69"
+    },
+    "demos/freight-whatif/site/data.mjs": {
+      "bytes": 4103,
+      "sha256": "c5b8819e50961180208fa8dd4951f6a559b28cc4467c52dd2a68abeeb1b25d81",
+      "git_blob": "b4ee752139693744b8f05c930865e505e2ddf236"
+    },
+    "demos/freight-whatif/site/index.html": {
+      "bytes": 13080,
+      "sha256": "fb22bce7a5154df3b90df0a1cd0d7b4881500f46259472727040ee17c3493f8f",
+      "git_blob": "a63829a9a1f62d7ace0574586866f13a4ede806b"
+    },
+    "demos/freight-whatif/site/model.mjs": {
+      "bytes": 8946,
+      "sha256": "88e3d460da6f421e937cf54b21207da95734db3de3d5932235b1ec001be52590",
+      "git_blob": "6b97e2c54e4283707913e13459f47cbd43f81137"
+    },
+    "demos/freight-whatif/site/scenario-record.mjs": {
+      "bytes": 5698,
+      "sha256": "435d882090273e1315b156b4bca402314553bd80ad35a5592353e1fbddf2c8eb",
+      "git_blob": "89da6193283695d5bbe192131b9372882f3bd4f5"
+    },
+    "demos/freight-whatif/site/styles.css": {
+      "bytes": 22286,
+      "sha256": "c000a502c3167bd9b6f2e6d786eae861e2f61800ade2da5bde863f906df500ae",
+      "git_blob": "1ca01c52bd132274cff1f6ed7abe164a33bf90ca"
+    },
+    "demos/freight-whatif/tools/install.py": {
+      "bytes": 4362,
+      "sha256": "dbc8ee1a675c6fdd4d579eb64c44714e3a598fa272700bc96566c4287b7e5a86",
+      "git_blob": "a95c17cdb613495cf297c093bca2d500223528a9"
+    },
+    "demos/freight-whatif/tools/package.py": {
+      "bytes": 4933,
+      "sha256": "5ec79e3126c0f5e214b6488bdbbd31bb034f23f3f8a6a7b64c67b9a796a873b7",
+      "git_blob": "761d4d84a7166d6fbc0403da598d1140879ea92d"
+    },
+    "demos/freight-whatif/tools/serve.py": {
+      "bytes": 1029,
+      "sha256": "a8e23a17a7a80024ee33f1b034706e800c287e6537dfe0b6442c91c9fc72e899",
+      "git_blob": "22acd1c3b8058c130ba2615ec2a3243608a925ff"
+    },
+    "demos/freight-whatif/tests/install.test.py": {
+      "bytes": 3594,
+      "sha256": "de4020dee5dbd845d62d187ebfa55f301f1fc664d33de11d83e7e324d5b513b5",
+      "git_blob": "6bcd5a2c2430a673ded818420a7e46f4706fd29d"
+    },
+    "LICENSE": {
+      "bytes": 1070,
+      "sha256": "f6a3d0f7d08a7590f907c08d6127545ab44eff0d23b6074714ad3fb935b998bb",
+      "git_blob": "edb188254288b40f2895833e3647b7e0be34c962"
+    }
+  },
+  "after": {
+    "demos/freight-whatif/site/app.mjs": {
+      "bytes": 23731,
+      "sha256": "52e047f7c691f15085cfcefd5d01755e9d00382f6e7a5c46b8daa043871190d2",
+      "git_blob": "23d4f67d8ce223e0e478819eb45af2154a8e1e69"
+    },
+    "demos/freight-whatif/site/data.mjs": {
+      "bytes": 4103,
+      "sha256": "c5b8819e50961180208fa8dd4951f6a559b28cc4467c52dd2a68abeeb1b25d81",
+      "git_blob": "b4ee752139693744b8f05c930865e505e2ddf236"
+    },
+    "demos/freight-whatif/site/index.html": {
+      "bytes": 13080,
+      "sha256": "fb22bce7a5154df3b90df0a1cd0d7b4881500f46259472727040ee17c3493f8f",
+      "git_blob": "a63829a9a1f62d7ace0574586866f13a4ede806b"
+    },
+    "demos/freight-whatif/site/model.mjs": {
+      "bytes": 8946,
+      "sha256": "88e3d460da6f421e937cf54b21207da95734db3de3d5932235b1ec001be52590",
+      "git_blob": "6b97e2c54e4283707913e13459f47cbd43f81137"
+    },
+    "demos/freight-whatif/site/scenario-record.mjs": {
+      "bytes": 5698,
+      "sha256": "435d882090273e1315b156b4bca402314553bd80ad35a5592353e1fbddf2c8eb",
+      "git_blob": "89da6193283695d5bbe192131b9372882f3bd4f5"
+    },
+    "demos/freight-whatif/site/styles.css": {
+      "bytes": 22286,
+      "sha256": "c000a502c3167bd9b6f2e6d786eae861e2f61800ade2da5bde863f906df500ae",
+      "git_blob": "1ca01c52bd132274cff1f6ed7abe164a33bf90ca"
+    },
+    "demos/freight-whatif/tools/install.py": {
+      "bytes": 4362,
+      "sha256": "dbc8ee1a675c6fdd4d579eb64c44714e3a598fa272700bc96566c4287b7e5a86",
+      "git_blob": "a95c17cdb613495cf297c093bca2d500223528a9"
+    },
+    "demos/freight-whatif/tools/package.py": {
+      "bytes": 4933,
+      "sha256": "5ec79e3126c0f5e214b6488bdbbd31bb034f23f3f8a6a7b64c67b9a796a873b7",
+      "git_blob": "761d4d84a7166d6fbc0403da598d1140879ea92d"
+    },
+    "demos/freight-whatif/tools/serve.py": {
+      "bytes": 1029,
+      "sha256": "a8e23a17a7a80024ee33f1b034706e800c287e6537dfe0b6442c91c9fc72e899",
+      "git_blob": "22acd1c3b8058c130ba2615ec2a3243608a925ff"
+    },
+    "demos/freight-whatif/tests/install.test.py": {
+      "bytes": 3594,
+      "sha256": "de4020dee5dbd845d62d187ebfa55f301f1fc664d33de11d83e7e324d5b513b5",
+      "git_blob": "6bcd5a2c2430a673ded818420a7e46f4706fd29d"
+    },
+    "LICENSE": {
+      "bytes": 1070,
+      "sha256": "f6a3d0f7d08a7590f907c08d6127545ab44eff0d23b6074714ad3fb935b998bb",
+      "git_blob": "edb188254288b40f2895833e3647b7e0be34c962"
+    }
+  },
+  "source_unchanged": true,
+  "steps": {
+    "installer": {
+      "command": [
+        "/usr/bin/python3",
+        "/dev/shm/hamon-freight-source-cd1df0f1ee24/candidate/demos/freight-whatif/tests/install.test.py",
+        "--work-root",
+        "/dev/shm/hamon-freight-source-cd1df0f1ee24/evidence/delivery-v1/install-work",
+        "--output",
+        "/dev/shm/hamon-freight-source-cd1df0f1ee24/evidence/delivery-v1/installer-receipt.json"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "bytes": 1414,
+        "sha256": "b6f110c206c9a17d90ed65ab4275dbca19401277fe154fb49e15bd3a06642915",
+        "git_blob": "78a2e4bf8dbe02f7e45af9579db986b758549621"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+      }
+    },
+    "packager": {
+      "command": [
+        "/usr/bin/python3",
+        "/dev/shm/hamon-freight-source-cd1df0f1ee24/candidate/demos/freight-whatif/tools/package.py",
+        "--output",
+        "/dev/shm/hamon-freight-source-cd1df0f1ee24/evidence/delivery-v1/freight-whatif.zip",
+        "--receipt",
+        "/dev/shm/hamon-freight-source-cd1df0f1ee24/evidence/delivery-v1/package-receipt.json"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "bytes": 624,
+        "sha256": "7255b0a2b45d8a2e13ded7af98244614f7dac7a3b2fefce0fdb90e03873432a8",
+        "git_blob": "baf8b33551f23bb8a7a53c1d0932cc56f9b5956e"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+      }
+    }
+  },
+  "scope": "Existing install/verify/rollback checks plus actual deterministic six-runtime-file ZIP packaging; no browser, server or repeated model suite."
+}

@@ -1,0 +1,39 @@
+{
+  "schema": "hamon.freight-native-zip-independent-acceptance.v1",
+  "receivedAt": "2026-10-08T21:46:49.877Z",
+  "repository": "Jacob-Met/workflow-checks",
+  "sourceComparison": {
+    "head": "6da2c7c2867e6eeb9d11a097a14d977a2b010b70",
+    "tree": "cdc32c100179ceeedf97ecd89c112c3bb518f3ec",
+    "all10PackagingInputsMatch": true,
+    "meaning": "Compared published source identity; original native run is not represented as execution of this later commit."
+  },
+  "receiver": {
+    "git_blob": "c02b139b803ed572a47144dfe5f28dbf5c5f52d5",
+    "sha256": "ea71380bb1bdcf58b32a507660dfaa8cc3443a09c463e744df528aecbe866043",
+    "bytes": 6621
+  },
+  "contract": {
+    "git_blob": "0cd7c8014f10db3fd1d4e5bbeb0b080163e54d9b",
+    "sha256": "77747e9065f28d464179140e203ecda25d7b8378bd9dd4191641756c5bf0b982",
+    "bytes": 10533
+  },
+  "archive": {
+    "bytes": 29559,
+    "sha256": "51a97be506fc3900e05b487939171fca8e63d701ccd4cfa070b9e55096f737d6",
+    "git_blob": "66c8f3cfac37164349f75bcd33fc6b57db83c58e"
+  },
+  "membersVerified": 11,
+  "outerBodiesVerified": 8,
+  "completeZipStructureAndContentAccepted": true,
+  "nativeReceipt": {
+    "name": "receipt.json",
+    "bytes": 6757,
+    "sha256": "0daa91bc2f3adc3dd0a30ab6bf3b427c56df8e08ac07bd28b8ef6dc466987287",
+    "git_blob": "06de596ec0b64b9343a1c1607dd1c55e8e3de7fe",
+    "python": "3.14.4",
+    "sourceBeforeAfterExact": true
+  },
+  "errors": [],
+  "scope": "Read-only recovery of original native delivery. Frozen ZIP receiver executed locally in memory only. No package, installer, model or browser rerun; no new hosted production. Freight browser outcome remains outside this acceptance."
+}

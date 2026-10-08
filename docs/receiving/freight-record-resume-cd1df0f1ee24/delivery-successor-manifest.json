@@ -1,0 +1,536 @@
+{
+  "schema": "hamon.freight-native-delivery-successor.v1",
+  "parent": "6da2c7c2867e6eeb9d11a097a14d977a2b010b70",
+  "parent_tree": "cdc32c100179ceeedf97ecd89c112c3bb518f3ec",
+  "parent_tree_nontruncated": true,
+  "parent_leaf_count": 1463,
+  "overlay_path_count": 44,
+  "modified_existing_count": 4,
+  "added_count": 40,
+  "expected_result_leaf_count": 1503,
+  "expected_untouched_parent_leaves": 1459,
+  "overlay_paths": [
+    "demos/freight-whatif/README.md",
+    "demos/freight-whatif/dist/freight-whatif.zip",
+    "demos/freight-whatif/evidence/bundle-receipt.json",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/README.md",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/author/receipt.json",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/author/runner.py",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/author/stderr.txt",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/author/stdout.txt",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/browser-native/README.md",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/browser-native/manifest.json",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/browser-native/packet.tar.gz",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/browser-native/receipt.json",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/delivery-successor-manifest.json",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/history/bundle-receipt-before-resume.json",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/independent-admission/README-admission-v1.md",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/independent-admission/admission-candidate-v1-process.json",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/independent-admission/admission-candidate-v1-receipt.json",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/independent-admission/admission-candidate-v1.stderr.log",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/independent-admission/admission-candidate-v1.stdout.log",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/independent-admission/admission-packet-manifest-v1.json",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/independent-admission/admission-packet-receipt-v1.json",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/independent-admission/admission-packet-v1.tar.gz",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/independent-admission/archive-and-adapter-verification-v1.json",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/independent-admission/freeze/contract-v1.json",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/independent-admission/freeze/freeze-manifest-v1.json",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/independent-admission/freeze/preimplementation-packet-manifest-v1.json",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/independent-admission/freeze/semantic-receiver-v1.mjs",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/independent-admission/module-source-review-v1.json",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/independent-admission/preimplementation-packet-receipt-v1.json",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/independent-admission/public-api-adapter-v1.mjs",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/independent-recovery-index.json",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/independent-zip/acceptance-native-v1.json",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/independent-zip/contract-v1.json",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/independent-zip/receive_zip.py",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/native-delivery/installer-receipt.json",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/native-delivery/installer.stderr.txt",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/native-delivery/installer.stdout.txt",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/native-delivery/package-receipt.json",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/native-delivery/packager.stderr.txt",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/native-delivery/packager.stdout.txt",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/native-delivery/receipt.json",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/native-delivery/recovery-manifest.json",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/native-delivery/runner.py",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/readme-delivery-successor.json"
+  ],
+  "current_product_files": [
+    {
+      "path": "demos/freight-whatif/site/app.mjs",
+      "bytes": 23731,
+      "sha256": "52e047f7c691f15085cfcefd5d01755e9d00382f6e7a5c46b8daa043871190d2",
+      "git_blob": "23d4f67d8ce223e0e478819eb45af2154a8e1e69"
+    },
+    {
+      "path": "demos/freight-whatif/site/index.html",
+      "bytes": 13080,
+      "sha256": "fb22bce7a5154df3b90df0a1cd0d7b4881500f46259472727040ee17c3493f8f",
+      "git_blob": "a63829a9a1f62d7ace0574586866f13a4ede806b"
+    },
+    {
+      "path": "demos/freight-whatif/site/styles.css",
+      "bytes": 22286,
+      "sha256": "c000a502c3167bd9b6f2e6d786eae861e2f61800ade2da5bde863f906df500ae",
+      "git_blob": "1ca01c52bd132274cff1f6ed7abe164a33bf90ca"
+    },
+    {
+      "path": "demos/freight-whatif/site/scenario-record.mjs",
+      "bytes": 5698,
+      "sha256": "435d882090273e1315b156b4bca402314553bd80ad35a5592353e1fbddf2c8eb",
+      "git_blob": "89da6193283695d5bbe192131b9372882f3bd4f5"
+    },
+    {
+      "path": "demos/freight-whatif/tools/install.py",
+      "bytes": 4362,
+      "sha256": "dbc8ee1a675c6fdd4d579eb64c44714e3a598fa272700bc96566c4287b7e5a86",
+      "git_blob": "a95c17cdb613495cf297c093bca2d500223528a9"
+    },
+    {
+      "path": "demos/freight-whatif/tools/package.py",
+      "bytes": 4933,
+      "sha256": "5ec79e3126c0f5e214b6488bdbbd31bb034f23f3f8a6a7b64c67b9a796a873b7",
+      "git_blob": "761d4d84a7166d6fbc0403da598d1140879ea92d"
+    },
+    {
+      "path": "demos/freight-whatif/README.md",
+      "bytes": 13292,
+      "sha256": "3fa8047556701fac24b6724eb9489224429e4b11085a674037c829ac6388b0db",
+      "git_blob": "62e960f29d4e5c7fbef89a0e63085be4d03863d7"
+    },
+    {
+      "path": "demos/freight-whatif/tests/scenario-record.test.mjs",
+      "bytes": 7130,
+      "sha256": "cbcaa54f00f77578c0f743af35f5a12f223d3813ae3d9ac9a1a418e7e4deeae4",
+      "git_blob": "ff9a2b17f3da4701215839a5a333fb3a82dc57f7"
+    },
+    {
+      "path": ".github/workflows/freight-whatif.yml",
+      "bytes": 2001,
+      "sha256": "4793616d39a50c8f286e6571370f0712f6396279d9fcbed8bd65b15dc35949bf",
+      "git_blob": "cfd804a45607f362f430faca5c9b9cd9dfb3ad4f"
+    },
+    {
+      "path": "docs/demos/freight-whatif/app.mjs",
+      "bytes": 23731,
+      "sha256": "52e047f7c691f15085cfcefd5d01755e9d00382f6e7a5c46b8daa043871190d2",
+      "git_blob": "23d4f67d8ce223e0e478819eb45af2154a8e1e69"
+    },
+    {
+      "path": "docs/demos/freight-whatif/index.html",
+      "bytes": 13080,
+      "sha256": "fb22bce7a5154df3b90df0a1cd0d7b4881500f46259472727040ee17c3493f8f",
+      "git_blob": "a63829a9a1f62d7ace0574586866f13a4ede806b"
+    },
+    {
+      "path": "docs/demos/freight-whatif/styles.css",
+      "bytes": 22286,
+      "sha256": "c000a502c3167bd9b6f2e6d786eae861e2f61800ade2da5bde863f906df500ae",
+      "git_blob": "1ca01c52bd132274cff1f6ed7abe164a33bf90ca"
+    },
+    {
+      "path": "docs/demos/freight-whatif/scenario-record.mjs",
+      "bytes": 5698,
+      "sha256": "435d882090273e1315b156b4bca402314553bd80ad35a5592353e1fbddf2c8eb",
+      "git_blob": "89da6193283695d5bbe192131b9372882f3bd4f5"
+    },
+    {
+      "path": "demos/freight-whatif/dist/freight-whatif.zip",
+      "bytes": 29559,
+      "sha256": "51a97be506fc3900e05b487939171fca8e63d701ccd4cfa070b9e55096f737d6",
+      "git_blob": "66c8f3cfac37164349f75bcd33fc6b57db83c58e"
+    },
+    {
+      "path": "demos/freight-whatif/evidence/bundle-receipt.json",
+      "bytes": 690,
+      "sha256": "eef49c97d5ba86c9a60f26f393e458e57e5ede01e597e08c9349b1833c31e460",
+      "git_blob": "9e59a702e3902838badd27cd2b26069dbb9b863f"
+    }
+  ],
+  "body_manifest_scope": "Every update payload body except this manifest itself is pinned below to avoid self-reference. Parent preservation and this manifest's exact body are verified after Git tree creation.",
+  "files": [
+    {
+      "path": "demos/freight-whatif/dist/freight-whatif.zip",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 29559,
+      "sha256": "51a97be506fc3900e05b487939171fca8e63d701ccd4cfa070b9e55096f737d6",
+      "git_blob": "66c8f3cfac37164349f75bcd33fc6b57db83c58e"
+    },
+    {
+      "path": "demos/freight-whatif/evidence/bundle-receipt.json",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 690,
+      "sha256": "eef49c97d5ba86c9a60f26f393e458e57e5ede01e597e08c9349b1833c31e460",
+      "git_blob": "9e59a702e3902838badd27cd2b26069dbb9b863f"
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/history/bundle-receipt-before-resume.json",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 658,
+      "sha256": "9e9867b6a304355b9e217415545e8c225970b6436c6826abbca2da80db66c19e",
+      "git_blob": "d67738a72a2dc19bcadcbfc1edfad38c7ca35a86"
+    },
+    {
+      "path": "demos/freight-whatif/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 13292,
+      "sha256": "3fa8047556701fac24b6724eb9489224429e4b11085a674037c829ac6388b0db",
+      "git_blob": "62e960f29d4e5c7fbef89a0e63085be4d03863d7"
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/native-delivery/package-receipt.json",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 690,
+      "sha256": "eef49c97d5ba86c9a60f26f393e458e57e5ede01e597e08c9349b1833c31e460",
+      "git_blob": "9e59a702e3902838badd27cd2b26069dbb9b863f"
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/native-delivery/receipt.json",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 6757,
+      "sha256": "0daa91bc2f3adc3dd0a30ab6bf3b427c56df8e08ac07bd28b8ef6dc466987287",
+      "git_blob": "06de596ec0b64b9343a1c1607dd1c55e8e3de7fe"
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/native-delivery/packager.stdout.txt",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 624,
+      "sha256": "7255b0a2b45d8a2e13ded7af98244614f7dac7a3b2fefce0fdb90e03873432a8",
+      "git_blob": "baf8b33551f23bb8a7a53c1d0932cc56f9b5956e"
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/native-delivery/packager.stderr.txt",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/native-delivery/installer-receipt.json",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 1494,
+      "sha256": "a6386e8d79acae8af27d2adcbf9d712fb15e8c8d782bb923882018c30f6f677b",
+      "git_blob": "75f077eeacea8cfb46e9dabc5442a6190e0cc587"
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/native-delivery/installer.stdout.txt",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 1414,
+      "sha256": "b6f110c206c9a17d90ed65ab4275dbca19401277fe154fb49e15bd3a06642915",
+      "git_blob": "78a2e4bf8dbe02f7e45af9579db986b758549621"
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/native-delivery/installer.stderr.txt",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/author/receipt.json",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 1200,
+      "sha256": "00438146a3305b1f5c4fef9211ce40a7cff4477d58ff9dd446a4fe7a1512a0de",
+      "git_blob": "a643f3219cc0d783630e23c3721117903a90bbdf"
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/author/stdout.txt",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 2216,
+      "sha256": "bbe674c2993c9555fc32ffe58175192451da8be945631fe9b9e9fcc71f02ab8c",
+      "git_blob": "1f5226456c266f36c68dbe4b43c62f06df0d379c"
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/author/stderr.txt",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/author/runner.py",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 1300,
+      "sha256": "24ffcead6cb8f1911f560409d29ecca2033a6a69946812401978165ac692b704",
+      "git_blob": "ba11a9f07508613dcbb906897579a77aa225a529"
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/native-delivery/runner.py",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 2132,
+      "sha256": "5b8278cc23bd5f693ff13e07f5b228183ee55ee7cbbf5b99ca62e6ea9744ffe1",
+      "git_blob": "91349f47dae5122ab95d4389aa1e6830d980b65e"
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/independent-admission/admission-packet-v1.tar.gz",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 86837,
+      "sha256": "256f3f69564e38210227507cfca863f63849df18276b88bb54bc68178c85336b",
+      "git_blob": "b78a155e7490b6091d057016c79eb9d17525c12c"
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/independent-admission/README-admission-v1.md",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 2472,
+      "sha256": "71ebc348bc8fe94279c43f55b98ed77ababc844a1747133a12a15deec0512051",
+      "git_blob": "d11e4b8b445958edb8d644b693b2c4129a9c8c35"
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/independent-admission/admission-packet-manifest-v1.json",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 2564,
+      "sha256": "c13015456b8853f08dbf7b896a5ea2b6512410631512c907c2401defbb468aeb",
+      "git_blob": "5e8d7f23df77cadc10d0bd339adf2490496af9c8"
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/independent-admission/admission-candidate-v1-receipt.json",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 47444,
+      "sha256": "a358526c3cdf0917b6fd2e45dc589d356564199a02d2b622ee2750732e921a8f",
+      "git_blob": "23aa437237b794fb83ac3816bb809d72fbb2efca"
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/independent-admission/admission-candidate-v1-process.json",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 650,
+      "sha256": "da98bf895a446593bb5db2c2ab04cb6863a55623c8f3ebd5d91d62e92b707456",
+      "git_blob": "f9fa5a230df74c99d42672ac3df68fcde77d1180"
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/independent-admission/admission-candidate-v1.stdout.log",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 208,
+      "sha256": "bbcb8b4a1bf5d5d134bcb2de26f4a30f7ff25e486c357ed02ad3deeaeaa9edc8",
+      "git_blob": "7de0361b9f5987fa3763c5be07899f29a6886186"
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/independent-admission/admission-candidate-v1.stderr.log",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/independent-admission/module-source-review-v1.json",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 2620,
+      "sha256": "f67ea1070f3787316731dc51b7baa5930bb9080318e2154bf317184ba42ec649",
+      "git_blob": "e60ae4c71900d617beb624fb82d5b07cbb0ebb21"
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/independent-admission/public-api-adapter-v1.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 2194,
+      "sha256": "2a8423a07f3330133c30368b4e72887823ba9e7956ceff0220b9be57152ca816",
+      "git_blob": "90a4b2d3869d444ab17757a5721523dfbaebbb6e"
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/independent-admission/archive-and-adapter-verification-v1.json",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 345,
+      "sha256": "18b28aa9b1d3fbd8a3cfed896fad3b3104c45227e19a0803f26db62c42af1499",
+      "git_blob": "f0324e0819757408fb4537d98c30a6085b4a9351"
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/independent-admission/preimplementation-packet-receipt-v1.json",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 431,
+      "sha256": "929997052d7693136ade97e32aeceaa88dab790bf6ab9bd83f660f417ce1ccd6",
+      "git_blob": "e7d947bef8a7ff10ec0da606464201a59529d270"
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/independent-admission/freeze/preimplementation-packet-manifest-v1.json",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 24799,
+      "sha256": "4dbb99632f592240e856dfe3ba46ae3ed0050683d6d6847a8c7df867caccfe72",
+      "git_blob": "b26e5a8ceded3eddc7f2434d150e51cda2e8720b"
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/independent-admission/freeze/freeze-manifest-v1.json",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 24315,
+      "sha256": "f3b20a7158b177796894b078942d56f023171e75a865aba944b0494c05f5bcb1",
+      "git_blob": "07b846912764f677d288ee5e9e0ce915d74677f6"
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/independent-admission/freeze/contract-v1.json",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 9181,
+      "sha256": "3713b8fb96f560689bdcba78985917bc3bf988fc884209622016fd6bac5f09d2",
+      "git_blob": "85a784ec27b8a1322f824617ba80f7bdd583a419"
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/independent-admission/freeze/semantic-receiver-v1.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 4125,
+      "sha256": "51e79f1f56d145b874e3d54657f157baab23c5fd305fd3e234b33c193598f4f6",
+      "git_blob": "9016c0fd7b265fa7e2ef7e660fad062b116f0ab2"
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/independent-admission/admission-packet-receipt-v1.json",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 435,
+      "sha256": "432bf05afba28e95ff40c700e5526b3e95bd678c08e3592abe4e8ad3e945e3a8",
+      "git_blob": "b219c4f23e9c87b6ff055e036d1bbee74d0d7a35"
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/independent-zip/receive_zip.py",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 6621,
+      "sha256": "ea71380bb1bdcf58b32a507660dfaa8cc3443a09c463e744df528aecbe866043",
+      "git_blob": "c02b139b803ed572a47144dfe5f28dbf5c5f52d5"
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/independent-zip/contract-v1.json",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 10533,
+      "sha256": "77747e9065f28d464179140e203ecda25d7b8378bd9dd4191641756c5bf0b982",
+      "git_blob": "0cd7c8014f10db3fd1d4e5bbeb0b080163e54d9b"
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/independent-zip/acceptance-native-v1.json",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 1647,
+      "sha256": "a57c3437d3baacefb8a18857281ddb6758422e992b5b0ed892b075afd2d969fa",
+      "git_blob": "f57c9191c325080161feb8104db9f4d42c72d462"
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/independent-recovery-index.json",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 9027,
+      "sha256": "c5f08003b255d6dbe49d00426a33222d004bc223ef98c3bae2ddfd39542ff6a8",
+      "git_blob": "874072c17db270d3a4da53104b61dd0d96c2fe1d"
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/readme-delivery-successor.json",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 1378,
+      "sha256": "bd705623db3d6e3a150048cb3722f7579ed6239b53ffbd58c65d5a56adf20f16",
+      "git_blob": "f835dba17c984e2afac1dbf8a63699cbb3bed097"
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/native-delivery/recovery-manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 6441,
+      "sha256": "106d6bffb1f310da1cd0a505cf341517659465581c14bd23fcc10fd6d58ba3ef",
+      "git_blob": "35f9fdd3837b4598b64bd497f0757a822af89ceb"
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 7295,
+      "sha256": "897679657f39ad46978e2ba2432fc897fb41742167a694b8eb313bdb86932f8e",
+      "git_blob": "dab6f9a08805b27cb031c120b39fb12cacd9e913"
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/browser-native/manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 13837,
+      "sha256": "955898e1a7766093e0a2c3b1b32a0a52bc80f69ad992e5ad44747c31ba2a263a",
+      "git_blob": "de48f95a85fef75d6084a0b583bd26615fa6d564"
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/browser-native/receipt.json",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 11740,
+      "sha256": "dffa57b8b86f8ad0d0c86a9aff48344458bd41b86f15abe86f31ab6ad9fd230d",
+      "git_blob": "cbbe6c5b1723c5844d1e6ba664ac2c537b2ff153"
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/browser-native/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 1846,
+      "sha256": "974d048e1866b13d65b540972355ea7888b29d7330b19400211a07275b6be464",
+      "git_blob": "31b2121481362aca5e173b1b6f2323f4216085c8"
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/browser-native/packet.tar.gz",
+      "mode": "100644",
+      "type": "blob",
+      "bytes": 99310,
+      "sha256": "b06e59f6bdefd3c9d988cc5a9a883439364aaac7982a2e3a0184be1022a58e21",
+      "git_blob": "048996fd5adb38852d1bd7048992a2c0336c1709"
+    }
+  ],
+  "existing_before_images": [
+    {
+      "path": "demos/freight-whatif/dist/freight-whatif.zip",
+      "mode": "100644",
+      "type": "blob",
+      "git_blob": "2a7e2b8f4b4abe5063c65befb7f74b0d6533387b"
+    },
+    {
+      "path": "demos/freight-whatif/evidence/bundle-receipt.json",
+      "mode": "100644",
+      "type": "blob",
+      "git_blob": "d67738a72a2dc19bcadcbfc1edfad38c7ca35a86"
+    },
+    {
+      "path": "demos/freight-whatif/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "git_blob": "92edc4fb49f82c57c53ffa2b9edeecf78c94c9e2"
+    },
+    {
+      "path": "docs/receiving/freight-record-resume-cd1df0f1ee24/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "git_blob": "6b44f27ee6e1fc4bdf6861ff0cb14e9006251113"
+    }
+  ],
+  "source_runtime_changes": false,
+  "original_native_recovered": true,
+  "product_reruns": false,
+  "hosted_fallback_executed": false,
+  "browser": "Original attempt failed by supervisor timeout/Node-9; no completed receiving groups observed. No product/browser acceptance or zero-internal-execution assertion.",
+  "preserved": [
+    "source-transport-v1.json",
+    "source-manifest.json",
+    "composition-plan.json",
+    "readme-historical-clarification.json",
+    "all unrelated existing source/evidence"
+  ],
+  "historical_dist_receipt_copy": "history/bundle-receipt-before-resume.json"
+}
