@@ -1,0 +1,72 @@
+{
+  "note": "RDC ThinkPad process-output and read-only recovery requests timed out; no candidate qualification replay. Exact Windows report/driver stdout subsequently recovered through known online direct Windows RDC read_file. PowerShell5 ConvertFrom-Json cannot parse legitimate case-distinct load-ID map keys; that read-only parse failure is retained separately from the successful Python3.11 product qualification. A read-only piped Python lookup returned1 without output under the direct RDC context; no product or test was invoked by that lookup.",
+  "direct_windows_initial": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Process started with PID 70088 (shell: powershell.exe)\nInitial output:\nConvertFrom-Json : Cannot convert the JSON string because a dictionary that was converted from the string contains the \r\nduplicated keys 'LD260900' and 'ld260900'.\r\nAt line:1 char:339\r\n+ ... { $r=Get-Content -LiteralPath $report -Raw | ConvertFrom-Json; [pscus ...\r\n+                                                  ~~~~~~~~~~~~~~~~\r\n    + CategoryInfo          : InvalidOperation: (:) [ConvertFrom-Json], InvalidOperationException\r\n    + FullyQualifiedErrorId : DuplicateKeysInJsonString,Microsoft.PowerShell.Commands.ConvertFromJsonCommand\r\n \r\n"
+      },
+      {
+        "type": "text",
+        "text": "\n[executed on device: DESKTOP-LA7CMTA (42ad330c-bb9a-4d2f-bcb4-6efeb4c6583e)]"
+      }
+    ],
+    "isError": false
+  },
+  "direct_windows_python_attempt": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Process started with PID 23404 (shell: powershell.exe)\nInitial output:\n"
+      },
+      {
+        "type": "text",
+        "text": "\n[executed on device: DESKTOP-LA7CMTA (42ad330c-bb9a-4d2f-bcb4-6efeb4c6583e)]"
+      }
+    ],
+    "isError": false
+  },
+  "direct_windows_python_attempt_output": {
+    "content": [
+      {
+        "type": "text",
+        "text": "[Reading 0 new lines (total: 0 lines)]\n\n(No output in requested range)\n\u2705 Process completed with exit code 1 (runtime: 0.28s)"
+      },
+      {
+        "type": "text",
+        "text": "\n[executed on device: DESKTOP-LA7CMTA (42ad330c-bb9a-4d2f-bcb4-6efeb4c6583e)]"
+      }
+    ],
+    "isError": false
+  },
+  "direct_windows_hashes_and_fixture": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Process started with PID 14180 (shell: powershell.exe)\nInitial output:\n{\"host\":null,\"files\":[{\"relative\":\"evidence\\\\report.json\",\"bytes\":113161,\"sha256\":\"d7fdd900f31c210a1946f5e59d4c528383e041ea6dad8759689090d5bf8da1d9\"},{\"relative\":\"candidate-custody.zip\",\"bytes\":152476,\"sha256\":\"d5b24873f4c9107e62514149cfc4a39f854a3392634812ee013bf23e929bf70d\"},{\"relative\":\"candidate-bundle.zip\",\"bytes\":128849,\"sha256\":\"bbc4619911ea9c347d2f75fb31fb9ad6579977327bd965e058c13036b967748f\"}],\"non_emitted_fixture_matches\":1,\"non_emitted_fixture_rows\":[{\"load_id\":\"LD260942\",\"customer\":\"Texan Home Supply\",\"carrier\":\"Blue Mesa Transport (asset)\",\"tractor\":\"T416\",\"trailer\":\"TR53-5106\",\"pod_received\":\"Y\",\"ratecon_file\":\"RC-48006.txt\",\"mode\":\"asset\"}]}\r\n"
+      },
+      {
+        "type": "text",
+        "text": "\n[executed on device: DESKTOP-LA7CMTA (42ad330c-bb9a-4d2f-bcb4-6efeb4c6583e)]"
+      }
+    ],
+    "isError": false
+  },
+  "native_rdc_preferred_offline": {
+    "device_id": "cadafaf3-4d0b-4c4f-a0d3-34a95d2cec90",
+    "no_execution": true
+  },
+  "native_commit_mutation_timeout": {
+    "result": "MCP request timed out",
+    "resolution": "read-only source-commit.json recovered native5f7c0b76, no replay"
+  },
+  "native_after_output_timeout": {
+    "device_id": "d55b2499-5e82-4805-819a-d0d7ddea1efe",
+    "pid": 3369502,
+    "result": "MCP request timed out"
+  },
+  "native_after_read_only_timeout": {
+    "device_id": "d55b2499-5e82-4805-819a-d0d7ddea1efe",
+    "result": "MCP request timed out"
+  }
+}

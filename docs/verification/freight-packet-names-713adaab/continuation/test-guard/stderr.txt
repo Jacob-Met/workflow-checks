@@ -1,0 +1,15 @@
+test_case_distinct_loads_keep_distinct_readable_packets (test_packet_names.PacketFileRetentionTests.test_case_distinct_loads_keep_distinct_readable_packets) ... ok
+test_device_load_id_has_a_retained_packet_and_existing_handoff (test_packet_names.PacketFileRetentionTests.test_device_load_id_has_a_retained_packet_and_existing_handoff) ... ok
+test_nonpacket_load_does_not_rename_an_existing_packet (test_packet_names.PacketFileRetentionTests.test_nonpacket_load_does_not_rename_an_existing_packet) ... ok
+test_ordinary_paths_keep_existing_layout (test_packet_names.PacketFileRetentionTests.test_ordinary_paths_keep_existing_layout) ... ok
+test_case_collisions_are_distinct_and_order_independent (test_packet_names.PacketNameAllocationTests.test_case_collisions_are_distinct_and_order_independent) ... ok
+test_mapped_namespace_cannot_be_used_by_a_plain_load_id (test_packet_names.PacketNameAllocationTests.test_mapped_namespace_cannot_be_used_by_a_plain_load_id) ... ok
+test_ordinary_names_and_component_boundary_are_preserved (test_packet_names.PacketNameAllocationTests.test_ordinary_names_and_component_boundary_are_preserved) ... ok
+test_other_components_are_bounded_ascii_basenames (test_packet_names.PacketNameAllocationTests.test_other_components_are_bounded_ascii_basenames) ... ok
+test_repeated_identity_is_refused_before_allocation (test_packet_names.PacketNameAllocationTests.test_repeated_identity_is_refused_before_allocation) ... ok
+test_windows_device_names_are_not_used_as_stems (test_packet_names.PacketNameAllocationTests.test_windows_device_names_are_not_used_as_stems) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.083s
+
+OK

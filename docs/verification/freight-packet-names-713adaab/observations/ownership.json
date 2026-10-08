@@ -1,0 +1,27 @@
+{
+  "source_repository": "Jacob-Met/workflow-checks",
+  "source_base": "5a70e458ed455d47ef672ed9b5a614ec59812f0c",
+  "claim_issue": 39,
+  "adjacent_issue": 37,
+  "coordination_comment": 6062575134,
+  "adjacent_scope_preserved": [
+    "web.py",
+    "ui.html",
+    "handoff.py",
+    "batch_handoff.py",
+    "review writers",
+    "README"
+  ],
+  "overlap_read": {
+    "returncode": 2,
+    "goal_matches": 0,
+    "external_matching_scopes": 1,
+    "external_matching_scopes_omitted": 0,
+    "external_presentation": "complete",
+    "external_coverage": "incomplete",
+    "files_read": 145,
+    "supported_files": 93,
+    "only_returned_scope": "Existing freight-whatif CI contribution; no filename scope"
+  },
+  "native_claim_leads": "Most recent native freight source claim4178 was our closed header repair; no competing filename claim appeared in the bounded claim-key read. Metadata is advisory and does not establish absence of all ownership."
+}

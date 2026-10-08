@@ -1,0 +1,6 @@
+events=37 loads=8 stops=16
+detention stops=7  total=$832.50  late arrivals=0  exceptions=1
+invoice flags=3  packets=7  -> C:\Users\minec\AppData\Local\Temp\hamon-freight-packet-names-713adaab-e2c62ff09de544df82ce01963ada15a5\case-pair\out
+  [FUEL_MISMATCH] LD260928 inv CAL-7104: fuel surcharge: invoiced $656.77 vs rate-con $614.02
+  [DETENTION_UNSUPPORTED] LD260949 inv CAL-7107: detention invoiced $200.00 but telematics supports $75.00
+  [LINEHAUL_MISMATCH] ld260900 inv CAL-7101: linehaul: invoiced $1,532.00 vs rate-con $1,382.00

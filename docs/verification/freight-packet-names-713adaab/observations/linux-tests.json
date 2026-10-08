@@ -1,0 +1,28 @@
+{
+  "schema": "freight-packet-names.historical-linux-observation.v1",
+  "observation_kind": "Contemporaneous tool-visible final summaries; original raw native files remain unavailable on ThinkPad and are not reconstructed here.",
+  "source_native_commit": "5f7c0b7692563f8ee7c006aeda35a3083c590460",
+  "source_test_sha256": "6e1e4c0b0ebbe98472eddb3a9e656e9f717ec8f9c5306c12eacfd8bc5b63a0bf",
+  "commands": [
+    {
+      "label": "baseline",
+      "returncode": 1,
+      "observed_summary": "2 failed, 3 passed, 20 subtests passed in 0.39s",
+      "interpretation": "Four parent product controls: the case-collision parent fails; one NUL subtest fails while its parent also returns, explaining the pytest parent/subtest count."
+    },
+    {
+      "label": "candidate-paired",
+      "returncode": 0,
+      "observed_summary": "4 passed, 28 subtests passed in 0.38s"
+    },
+    {
+      "label": "candidate-full",
+      "returncode": 0,
+      "observed_summary": "89 passed, 77 subtests passed in 13.70s"
+    }
+  ],
+  "recorded_native_paired_receipt_path": "/dev/shm/chatgpt-freight-packet-names-713adaab/evidence/native/paired-receipt.json",
+  "recorded_native_paired_receipt_sha256": "c0a8ac33ecf6d84f447e61c0e8062ba53cc254294a012b35db44479095ec7ace",
+  "source_maps_unchanged_observed": true,
+  "raw_logs_recovered": false
+}

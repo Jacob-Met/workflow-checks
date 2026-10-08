@@ -1,0 +1,7 @@
+{
+  "actor": "/root",
+  "kind": "independent source and fixture review",
+  "runtime_review": "Parent read the full four-file candidate patch, checked Microsoft filename rules, and found no runtime blocker. Parent independently verified the i*7 generator. Final test-only guard and full Windows receipt review pending.",
+  "scope": "Component allocation, ID preservation, same-source Windows receiving, existing consumer compatibility",
+  "no_deployment": true
+}

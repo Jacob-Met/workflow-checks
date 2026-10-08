@@ -21,6 +21,7 @@ from .detention import StopResult, evaluate_load
 from .invoice_match import Flag, match_invoices
 from .models import money, to_dict
 from .packet import render_packet
+from .packet_names import packet_filenames
 
 
 def audit(out_dir: Path, action: str, **data) -> None:
@@ -93,9 +94,13 @@ def run(data_dir: Path, out_dir: Path, run_by: str = "cli") -> dict:
     by_load = defaultdict(list)
     for r in stop_results:
         by_load[r.load_id].append(r)
+    packet_names = packet_filenames(
+        lid for lid, rs in by_load.items()
+        if any(r.status in ("detention", "late_arrival") for r in rs)
+    )
     packets = []
     for lid, rs in by_load.items():
-        if not any(r.status in ("detention", "late_arrival") for r in rs):
+        if lid not in packet_names:
             continue
         load, rc = loads[lid], ratecons[lid]
         if load.mode == "brokered":
@@ -110,10 +115,10 @@ def run(data_dir: Path, out_dir: Path, run_by: str = "cli") -> dict:
         inv_flags = [f for f in flags if f.load_id == lid]
         html = render_packet(load, rc, rs, timeline, inv_flags,
                              synthetic=(data_dir / "README_SYNTHETIC.txt").exists())
-        path = out_dir / "packets" / f"{lid}.html"
+        path = out_dir / "packets" / packet_names[lid]
         path.write_text(html, encoding="utf-8")
         total = sum(r.amount_cents for r in rs if r.status == "detention")
-        packets.append({"load_id": lid, "file": f"packets/{lid}.html", "detention_cents": total,
+        packets.append({"load_id": lid, "file": f"packets/{packet_names[lid]}", "detention_cents": total,
                         "claim_ids": [r.claim_id for r in rs if r.status == "detention"],
                         "late_stops": [r.stop_index for r in rs if r.status == "late_arrival"]})
         audit(out_dir, "packet_drafted", load_id=lid, file=str(path.name), detention_cents=total,
