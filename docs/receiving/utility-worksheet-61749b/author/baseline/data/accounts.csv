@@ -1,0 +1,32 @@
+account_no,property,utility,vendor,scope,unit,cycle
+SYN-7001,Cypress Court (synthetic),electric,Metro Power Co (placeholder),common,,monthly
+SYN-7002,Cypress Court (synthetic),gas,Gulf Gas Utility (placeholder),common,,monthly
+SYN-7003,Cypress Court (synthetic),water,City Water Dept (placeholder),common,,monthly
+SYN-7004,Cypress Court (synthetic),trash,Haul-Rite Waste (placeholder),common,,monthly
+SYN-7005,Bayou Flats (synthetic),electric,Metro Power Co (placeholder),common,,monthly
+SYN-7006,Bayou Flats (synthetic),gas,Gulf Gas Utility (placeholder),common,,monthly
+SYN-7007,Bayou Flats (synthetic),water,City Water Dept (placeholder),common,,monthly
+SYN-7008,Bayou Flats (synthetic),trash,Haul-Rite Waste (placeholder),common,,monthly
+SYN-7009,Gaylord Ridge (synthetic),electric,Metro Power Co (placeholder),common,,monthly
+SYN-7010,Gaylord Ridge (synthetic),gas,Gulf Gas Utility (placeholder),common,,monthly
+SYN-7011,Gaylord Ridge (synthetic),water,City Water Dept (placeholder),common,,monthly
+SYN-7012,Gaylord Ridge (synthetic),trash,Haul-Rite Waste (placeholder),common,,monthly
+SYN-7013,Gaylord Ridge (synthetic),electric,Metro Power Co (placeholder),common,,monthly
+SYN-7014,Cypress Court (synthetic),electric,Metro Power Co (placeholder),unit,101,monthly
+SYN-7015,Cypress Court (synthetic),water,City Water Dept (placeholder),unit,101,monthly
+SYN-7016,Cypress Court (synthetic),electric,Metro Power Co (placeholder),unit,102,monthly
+SYN-7017,Cypress Court (synthetic),water,City Water Dept (placeholder),unit,102,monthly
+SYN-7018,Cypress Court (synthetic),electric,Metro Power Co (placeholder),unit,103,monthly
+SYN-7019,Cypress Court (synthetic),water,City Water Dept (placeholder),unit,103,monthly
+SYN-7020,Bayou Flats (synthetic),electric,Metro Power Co (placeholder),unit,201,monthly
+SYN-7021,Bayou Flats (synthetic),water,City Water Dept (placeholder),unit,201,monthly
+SYN-7022,Bayou Flats (synthetic),electric,Metro Power Co (placeholder),unit,202,monthly
+SYN-7023,Bayou Flats (synthetic),water,City Water Dept (placeholder),unit,202,monthly
+SYN-7024,Bayou Flats (synthetic),electric,Metro Power Co (placeholder),unit,203,monthly
+SYN-7025,Bayou Flats (synthetic),water,City Water Dept (placeholder),unit,203,monthly
+SYN-7026,Gaylord Ridge (synthetic),electric,Metro Power Co (placeholder),unit,301,monthly
+SYN-7027,Gaylord Ridge (synthetic),water,City Water Dept (placeholder),unit,301,monthly
+SYN-7028,Gaylord Ridge (synthetic),electric,Metro Power Co (placeholder),unit,302,monthly
+SYN-7029,Gaylord Ridge (synthetic),water,City Water Dept (placeholder),unit,302,monthly
+SYN-7030,Gaylord Ridge (synthetic),electric,Metro Power Co (placeholder),unit,303,monthly
+SYN-7031,Gaylord Ridge (synthetic),water,City Water Dept (placeholder),unit,303,monthly

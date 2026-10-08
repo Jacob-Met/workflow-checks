@@ -1,0 +1,52 @@
+{
+  "schema": "utility-worksheet-receiving-v1",
+  "author": {
+    "baseline": {
+      "receipt": "author/baseline/receipt.json",
+      "missing_worksheet_command_reproduced": true,
+      "exit": 2,
+      "existing_files_unchanged": true
+    },
+    "original": {
+      "receipt": "author/candidate-qualification.json",
+      "log": "author/candidate-unittest.log",
+      "unittest_methods": 14,
+      "cli_children": 43
+    },
+    "current": {
+      "receipt": "author/current-qualification.json",
+      "log": "author/current-unittest.log",
+      "unittest_methods": 14,
+      "cli_children": 43,
+      "source_unchanged": true
+    },
+    "capture_limit": "author/current-capture-limitation.json",
+    "shared_existing_source_composition": "author/current-composition.json"
+  },
+  "repository": "Jacob-Met/workflow-checks",
+  "qualified_parent": "a5fd61b0c361c8a9b8a6737b33ecc9efab46e0ad",
+  "qualified_tree": "5ac515d24c722128f04b7ae343fb7c3e369a06c9",
+  "publication_parent": "5b12dcd4c3a2c09d6602b2313e2bb556ac5997f7",
+  "publication_tree": "e16dd0815e252c7e1715545999918f303bc823af",
+  "decision": "native candidate independently accepted; ordinary PR submitted for root custody and gates; not a deployment claim",
+  "independent": {
+    "review": "independent/review.json",
+    "manifest": "independent/manifest.json",
+    "review_sha256": "1fd28786e99f60ab9bff33a317656000157799d75574c63d7749740722bfc973",
+    "manifest_sha256": "8ebb7de2dfe0a42c04e7c0245b521ef5947265ffa629b907a46bd8456164321d",
+    "original_receipt": "independent/original/native/receipt.json",
+    "current_receipt": "independent/native/receipt.json",
+    "current_receipt_sha256": "9a2f03d09421a53b14b67fb72e473ec49f2003bc511be53ff9dd2eb0945a3a93",
+    "each_cli_children": 14,
+    "each_explicit_checks": 16,
+    "mocks": 0
+  },
+  "limits": {
+    "full_pytest_suite_executed": false,
+    "optimized_mode_executed": false,
+    "browser_executed": false,
+    "real_financial_data": false,
+    "live_account_or_service_action": false,
+    "not_adversarial_path_swap_or_editor_lock": true
+  }
+}
