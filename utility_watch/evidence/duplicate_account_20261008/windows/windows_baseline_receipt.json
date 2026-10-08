@@ -1,0 +1,529 @@
+{
+  "base": "125339ec63eeb7c4989c9b240c01202555dce573",
+  "lane": "baseline",
+  "utc": "2026-10-08T15:50:54.069515+00:00",
+  "system": "Windows-10-10.0.19045-SP0",
+  "python": "3.13.15 (tags/v3.13.15:4061bc4, Aug  5 2026, 13:05:39) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "C:\\Users\\minec\\AppData\\Local\\Hamon\\hubtwo\\runtime\\python-3.13.15\\python.exe",
+  "receiver_sha256": "8cb6ebf47ad456bae8a92417892be121ac94058326e09bf3b7bfb7614afb2c9b",
+  "checks": [
+    {
+      "name": "valid: source bytes unchanged",
+      "passed": true
+    },
+    {
+      "name": "valid: CLI success",
+      "passed": true
+    },
+    {
+      "name": "valid: exact report closure",
+      "passed": true
+    },
+    {
+      "name": "shared_bill_id: source bytes unchanged",
+      "passed": true
+    },
+    {
+      "name": "shared_bill_id: CLI success",
+      "passed": true
+    },
+    {
+      "name": "shared_bill_id: exact report closure",
+      "passed": true
+    },
+    {
+      "name": "shared_bill_id: account-scoped shared bill remains payable",
+      "passed": true
+    },
+    {
+      "name": "case_distinct: source bytes unchanged",
+      "passed": true
+    },
+    {
+      "name": "case_distinct: CLI success",
+      "passed": true
+    },
+    {
+      "name": "case_distinct: exact report closure",
+      "passed": true
+    },
+    {
+      "name": "case_distinct: account-scoped shared bill remains payable",
+      "passed": true
+    },
+    {
+      "name": "duplicate_exact: source bytes unchanged",
+      "passed": true
+    },
+    {
+      "name": "duplicate_exact: CLI input refusal",
+      "passed": false
+    },
+    {
+      "name": "duplicate_exact: both physical rows",
+      "passed": false
+    },
+    {
+      "name": "duplicate_exact: duplicate diagnostic",
+      "passed": false
+    },
+    {
+      "name": "duplicate_exact: no report writes",
+      "passed": false
+    },
+    {
+      "name": "duplicate_exact: metadata absent from diagnostic",
+      "passed": true
+    },
+    {
+      "name": "duplicate_exact: fresh output has no report files",
+      "passed": false
+    },
+    {
+      "name": "duplicate_conflict: source bytes unchanged",
+      "passed": true
+    },
+    {
+      "name": "duplicate_conflict: CLI input refusal",
+      "passed": false
+    },
+    {
+      "name": "duplicate_conflict: both physical rows",
+      "passed": false
+    },
+    {
+      "name": "duplicate_conflict: duplicate diagnostic",
+      "passed": false
+    },
+    {
+      "name": "duplicate_conflict: no report writes",
+      "passed": false
+    },
+    {
+      "name": "duplicate_conflict: metadata absent from diagnostic",
+      "passed": true
+    },
+    {
+      "name": "duplicate_conflict: fresh output has no report files",
+      "passed": false
+    },
+    {
+      "name": "duplicate_reverse: source bytes unchanged",
+      "passed": true
+    },
+    {
+      "name": "duplicate_reverse: CLI input refusal",
+      "passed": false
+    },
+    {
+      "name": "duplicate_reverse: both physical rows",
+      "passed": false
+    },
+    {
+      "name": "duplicate_reverse: duplicate diagnostic",
+      "passed": false
+    },
+    {
+      "name": "duplicate_reverse: no report writes",
+      "passed": false
+    },
+    {
+      "name": "duplicate_reverse: metadata absent from diagnostic",
+      "passed": true
+    },
+    {
+      "name": "duplicate_reverse: fresh output has no report files",
+      "passed": false
+    },
+    {
+      "name": "duplicate_whitespace: source bytes unchanged",
+      "passed": true
+    },
+    {
+      "name": "duplicate_whitespace: CLI input refusal",
+      "passed": false
+    },
+    {
+      "name": "duplicate_whitespace: both physical rows",
+      "passed": false
+    },
+    {
+      "name": "duplicate_whitespace: duplicate diagnostic",
+      "passed": false
+    },
+    {
+      "name": "duplicate_whitespace: no report writes",
+      "passed": false
+    },
+    {
+      "name": "duplicate_whitespace: metadata absent from diagnostic",
+      "passed": true
+    },
+    {
+      "name": "duplicate_whitespace: fresh output has no report files",
+      "passed": false
+    },
+    {
+      "name": "duplicate_multiline: source bytes unchanged",
+      "passed": true
+    },
+    {
+      "name": "duplicate_multiline: CLI input refusal",
+      "passed": false
+    },
+    {
+      "name": "duplicate_multiline: both physical rows",
+      "passed": false
+    },
+    {
+      "name": "duplicate_multiline: duplicate diagnostic",
+      "passed": false
+    },
+    {
+      "name": "duplicate_multiline: no report writes",
+      "passed": false
+    },
+    {
+      "name": "duplicate_multiline: metadata absent from diagnostic",
+      "passed": true
+    },
+    {
+      "name": "duplicate_multiline: fresh output has no report files",
+      "passed": false
+    },
+    {
+      "name": "blank_account: source bytes unchanged",
+      "passed": true
+    },
+    {
+      "name": "blank_account: blank-account diagnostic unchanged",
+      "passed": true
+    },
+    {
+      "name": "review: existing duplicate refusal",
+      "passed": true
+    },
+    {
+      "name": "review: no writes",
+      "passed": true
+    }
+  ],
+  "failed_checks": [
+    "duplicate_exact: CLI input refusal",
+    "duplicate_exact: both physical rows",
+    "duplicate_exact: duplicate diagnostic",
+    "duplicate_exact: no report writes",
+    "duplicate_exact: fresh output has no report files",
+    "duplicate_conflict: CLI input refusal",
+    "duplicate_conflict: both physical rows",
+    "duplicate_conflict: duplicate diagnostic",
+    "duplicate_conflict: no report writes",
+    "duplicate_conflict: fresh output has no report files",
+    "duplicate_reverse: CLI input refusal",
+    "duplicate_reverse: both physical rows",
+    "duplicate_reverse: duplicate diagnostic",
+    "duplicate_reverse: no report writes",
+    "duplicate_reverse: fresh output has no report files",
+    "duplicate_whitespace: CLI input refusal",
+    "duplicate_whitespace: both physical rows",
+    "duplicate_whitespace: duplicate diagnostic",
+    "duplicate_whitespace: no report writes",
+    "duplicate_whitespace: fresh output has no report files",
+    "duplicate_multiline: CLI input refusal",
+    "duplicate_multiline: both physical rows",
+    "duplicate_multiline: duplicate diagnostic",
+    "duplicate_multiline: no report writes",
+    "duplicate_multiline: fresh output has no report files"
+  ],
+  "check_count": 50,
+  "original_receipt_sha256": "f1aea62dca4069ec1602d92238a62f6c2b5fd5752fdd64f2edf1fe8fbe641159",
+  "cases": {
+    "valid": {
+      "rc": 0,
+      "stdout": "as_of 2026-02-10: 1 accounts, 2 bills; 0 flags {}; 0 exceptions; 1 bills ($25.00) queued for approval (not paid)\r\nnaive trailing-3 rule would add 0 seasonal false flags\r\nreport: out\\report.html\r\n",
+      "stderr": "",
+      "stdout_sha256": "2a56719d54adfcda0159b351c2c46b9d336f635ed47669697833de8080e84559",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "report_before": {},
+      "report_after": {
+        "audit.jsonl": "aa6986016c27533ad8cf2971fc6bf0fd6f2575b2dd196b003d251b7f8a163aad",
+        "exceptions.csv": "fcf802f57bd0ccdc25b71b2af3cd9f3afefff5ab67db97eb32fab3fce983d7b5",
+        "flags.csv": "8496cbc2a7404e46a0321c2362d81f6212f1ae1ff5b7efc487e8aa92f7ba7dc6",
+        "payment_queue.csv": "f7c8ab0487075d6ff5ef3064b9ee06b4e1834c95cb5d37427fcda5a951f91f27",
+        "report.html": "451bec7431fd7ba0b0ec28012f27a4c83c856476d890da0841a98348a6dd46aa",
+        "summary.json": "b7e925533df71563a0a5ddd6da273c7449a238f222cfd2abab58703f405a3265"
+      },
+      "silently_selected_properties": null,
+      "fresh": null
+    },
+    "shared_bill_id": {
+      "rc": 0,
+      "stdout": "as_of 2026-02-10: 2 accounts, 4 bills; 0 flags {}; 0 exceptions; 2 bills ($50.00) queued for approval (not paid)\r\nnaive trailing-3 rule would add 0 seasonal false flags\r\nreport: out\\report.html\r\n",
+      "stderr": "",
+      "stdout_sha256": "cc9844d9104cdc962a643dde48c68e40e7d7604282ddc822e0b112b4a1efea71",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "report_before": {},
+      "report_after": {
+        "audit.jsonl": "399a61eb5ae0a44693046615623d6b139a73d6fac6d62456c85884271bb09871",
+        "exceptions.csv": "fcf802f57bd0ccdc25b71b2af3cd9f3afefff5ab67db97eb32fab3fce983d7b5",
+        "flags.csv": "8496cbc2a7404e46a0321c2362d81f6212f1ae1ff5b7efc487e8aa92f7ba7dc6",
+        "payment_queue.csv": "5449195f1ca9e96d93ca5b68315d7e116df1883fa453d65d4da3197335e612d8",
+        "report.html": "4e7a43d78c76ccaa35e52359133be84c71ee71cc1d6d1bac49937c59cb246dd3",
+        "summary.json": "e26f409b31be39a4e9250e1cddc80fa6c615ffdd0f2206bb6d0e746ae87cd7d8"
+      },
+      "silently_selected_properties": null,
+      "fresh": null
+    },
+    "case_distinct": {
+      "rc": 0,
+      "stdout": "as_of 2026-02-10: 2 accounts, 4 bills; 0 flags {}; 0 exceptions; 2 bills ($50.00) queued for approval (not paid)\r\nnaive trailing-3 rule would add 0 seasonal false flags\r\nreport: out\\report.html\r\n",
+      "stderr": "",
+      "stdout_sha256": "cc9844d9104cdc962a643dde48c68e40e7d7604282ddc822e0b112b4a1efea71",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "report_before": {},
+      "report_after": {
+        "audit.jsonl": "90631870ec379ddcdee66ba14837dd2378bc42d52783206d327439c67cf1d9ea",
+        "exceptions.csv": "fcf802f57bd0ccdc25b71b2af3cd9f3afefff5ab67db97eb32fab3fce983d7b5",
+        "flags.csv": "8496cbc2a7404e46a0321c2362d81f6212f1ae1ff5b7efc487e8aa92f7ba7dc6",
+        "payment_queue.csv": "b35f7ede3716c4d7a7ccfaed85e2e4506613a9a3358153ee2e1828cfc34969b6",
+        "report.html": "6353f471b9fd50bb8db518558f195d5bb975f1b86ef40806f259324718764605",
+        "summary.json": "eaffba39c1740d7ae827a2b02a26451e02477ec61ae151e85178e2c2a8ab03a5"
+      },
+      "silently_selected_properties": null,
+      "fresh": null
+    },
+    "duplicate_exact": {
+      "rc": 0,
+      "stdout": "as_of 2026-02-10: 1 accounts, 2 bills; 0 flags {}; 0 exceptions; 1 bills ($25.00) queued for approval (not paid)\r\nnaive trailing-3 rule would add 0 seasonal false flags\r\nreport: out\\report.html\r\n",
+      "stderr": "",
+      "stdout_sha256": "2a56719d54adfcda0159b351c2c46b9d336f635ed47669697833de8080e84559",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "report_before": {
+        "audit.jsonl": "d2723d1c74da86b806e9340c3e4373edce3a674b492f3fb7af62750a5d48019d",
+        "exceptions.csv": "f528efa22eaae9a20c7e3bee2f2501d307423af59e5bf3bd905ff3fa2b16d1bc",
+        "flags.csv": "85f3612e9c4fb13738b3e09fbc82cfc756c57b0b43d8fb8e28867578a508e6b3",
+        "payment_queue.csv": "548ccedfef6cdccf9a46ba52b4a7dbbd7f14b14081d3ff55cc0743fc117dd75d",
+        "report.html": "b13f15ae59de4978c15a39bb8f4669286a0cee6b845ec57be02093c874ad3bc9",
+        "summary.json": "c70bbaf09a71350fd045bb39bfb86f0ffe4162a1195b864799234d9c53ea52b8",
+        "unrelated.txt": "242d5af3aaa1e4dfda950f9b6bb6a7a382dafc2cdad633d9ae672b271f6b428c"
+      },
+      "report_after": {
+        "audit.jsonl": "804ffc9d4a183b4b0fba4b18634a45a555c3cf16dbf5ee67288afd0a62941c28",
+        "exceptions.csv": "fcf802f57bd0ccdc25b71b2af3cd9f3afefff5ab67db97eb32fab3fce983d7b5",
+        "flags.csv": "8496cbc2a7404e46a0321c2362d81f6212f1ae1ff5b7efc487e8aa92f7ba7dc6",
+        "payment_queue.csv": "f7c8ab0487075d6ff5ef3064b9ee06b4e1834c95cb5d37427fcda5a951f91f27",
+        "report.html": "451bec7431fd7ba0b0ec28012f27a4c83c856476d890da0841a98348a6dd46aa",
+        "summary.json": "b7e925533df71563a0a5ddd6da273c7449a238f222cfd2abab58703f405a3265",
+        "unrelated.txt": "242d5af3aaa1e4dfda950f9b6bb6a7a382dafc2cdad633d9ae672b271f6b428c"
+      },
+      "silently_selected_properties": [
+        "Original property"
+      ],
+      "fresh": {
+        "rc": 0,
+        "stdout": "as_of 2026-02-10: 1 accounts, 2 bills; 0 flags {}; 0 exceptions; 1 bills ($25.00) queued for approval (not paid)\r\nnaive trailing-3 rule would add 0 seasonal false flags\r\nreport: fresh\\report.html\r\n",
+        "stderr": "",
+        "stdout_sha256": "35eebe7f3602d20a9231b945d60197cb1ea4bc707dc1bad1bdb859d9cfde4e93",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "report_files": {
+          "audit.jsonl": "aa6986016c27533ad8cf2971fc6bf0fd6f2575b2dd196b003d251b7f8a163aad",
+          "exceptions.csv": "fcf802f57bd0ccdc25b71b2af3cd9f3afefff5ab67db97eb32fab3fce983d7b5",
+          "flags.csv": "8496cbc2a7404e46a0321c2362d81f6212f1ae1ff5b7efc487e8aa92f7ba7dc6",
+          "payment_queue.csv": "f7c8ab0487075d6ff5ef3064b9ee06b4e1834c95cb5d37427fcda5a951f91f27",
+          "report.html": "451bec7431fd7ba0b0ec28012f27a4c83c856476d890da0841a98348a6dd46aa",
+          "summary.json": "b7e925533df71563a0a5ddd6da273c7449a238f222cfd2abab58703f405a3265"
+        }
+      }
+    },
+    "duplicate_conflict": {
+      "rc": 0,
+      "stdout": "as_of 2026-02-10: 1 accounts, 2 bills; 0 flags {}; 0 exceptions; 1 bills ($25.00) queued for approval (not paid)\r\nnaive trailing-3 rule would add 0 seasonal false flags\r\nreport: out\\report.html\r\n",
+      "stderr": "",
+      "stdout_sha256": "2a56719d54adfcda0159b351c2c46b9d336f635ed47669697833de8080e84559",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "report_before": {
+        "audit.jsonl": "d2723d1c74da86b806e9340c3e4373edce3a674b492f3fb7af62750a5d48019d",
+        "exceptions.csv": "f528efa22eaae9a20c7e3bee2f2501d307423af59e5bf3bd905ff3fa2b16d1bc",
+        "flags.csv": "85f3612e9c4fb13738b3e09fbc82cfc756c57b0b43d8fb8e28867578a508e6b3",
+        "payment_queue.csv": "548ccedfef6cdccf9a46ba52b4a7dbbd7f14b14081d3ff55cc0743fc117dd75d",
+        "report.html": "b13f15ae59de4978c15a39bb8f4669286a0cee6b845ec57be02093c874ad3bc9",
+        "summary.json": "c70bbaf09a71350fd045bb39bfb86f0ffe4162a1195b864799234d9c53ea52b8",
+        "unrelated.txt": "242d5af3aaa1e4dfda950f9b6bb6a7a382dafc2cdad633d9ae672b271f6b428c"
+      },
+      "report_after": {
+        "audit.jsonl": "dcdcee0508549f7e7ce8651830a64a3d922a74bcd982e241822b438df6fedd30",
+        "exceptions.csv": "fcf802f57bd0ccdc25b71b2af3cd9f3afefff5ab67db97eb32fab3fce983d7b5",
+        "flags.csv": "8496cbc2a7404e46a0321c2362d81f6212f1ae1ff5b7efc487e8aa92f7ba7dc6",
+        "payment_queue.csv": "e80ee7be4cdb5e73c1d7d074da54dd01a4043c663c3c62f54cb447efcbb28e45",
+        "report.html": "b2c0af9c13d5884ef2167f3c377179bcd42b17171127c142fb8fcf82825c61f7",
+        "summary.json": "56b24e9dd4f91e9650ac40971d303375be6ee2727e58840dec581554b2989402",
+        "unrelated.txt": "242d5af3aaa1e4dfda950f9b6bb6a7a382dafc2cdad633d9ae672b271f6b428c"
+      },
+      "silently_selected_properties": [
+        "Replacement property"
+      ],
+      "fresh": {
+        "rc": 0,
+        "stdout": "as_of 2026-02-10: 1 accounts, 2 bills; 0 flags {}; 0 exceptions; 1 bills ($25.00) queued for approval (not paid)\r\nnaive trailing-3 rule would add 0 seasonal false flags\r\nreport: fresh\\report.html\r\n",
+        "stderr": "",
+        "stdout_sha256": "35eebe7f3602d20a9231b945d60197cb1ea4bc707dc1bad1bdb859d9cfde4e93",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "report_files": {
+          "audit.jsonl": "e9167f60e7f9c0d7288afbd231806db267ad202e95dc255910fdb4853b52858a",
+          "exceptions.csv": "fcf802f57bd0ccdc25b71b2af3cd9f3afefff5ab67db97eb32fab3fce983d7b5",
+          "flags.csv": "8496cbc2a7404e46a0321c2362d81f6212f1ae1ff5b7efc487e8aa92f7ba7dc6",
+          "payment_queue.csv": "e80ee7be4cdb5e73c1d7d074da54dd01a4043c663c3c62f54cb447efcbb28e45",
+          "report.html": "b2c0af9c13d5884ef2167f3c377179bcd42b17171127c142fb8fcf82825c61f7",
+          "summary.json": "56b24e9dd4f91e9650ac40971d303375be6ee2727e58840dec581554b2989402"
+        }
+      }
+    },
+    "duplicate_reverse": {
+      "rc": 0,
+      "stdout": "as_of 2026-02-10: 1 accounts, 2 bills; 0 flags {}; 0 exceptions; 1 bills ($25.00) queued for approval (not paid)\r\nnaive trailing-3 rule would add 0 seasonal false flags\r\nreport: out\\report.html\r\n",
+      "stderr": "",
+      "stdout_sha256": "2a56719d54adfcda0159b351c2c46b9d336f635ed47669697833de8080e84559",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "report_before": {
+        "audit.jsonl": "d2723d1c74da86b806e9340c3e4373edce3a674b492f3fb7af62750a5d48019d",
+        "exceptions.csv": "f528efa22eaae9a20c7e3bee2f2501d307423af59e5bf3bd905ff3fa2b16d1bc",
+        "flags.csv": "85f3612e9c4fb13738b3e09fbc82cfc756c57b0b43d8fb8e28867578a508e6b3",
+        "payment_queue.csv": "548ccedfef6cdccf9a46ba52b4a7dbbd7f14b14081d3ff55cc0743fc117dd75d",
+        "report.html": "b13f15ae59de4978c15a39bb8f4669286a0cee6b845ec57be02093c874ad3bc9",
+        "summary.json": "c70bbaf09a71350fd045bb39bfb86f0ffe4162a1195b864799234d9c53ea52b8",
+        "unrelated.txt": "242d5af3aaa1e4dfda950f9b6bb6a7a382dafc2cdad633d9ae672b271f6b428c"
+      },
+      "report_after": {
+        "audit.jsonl": "804ffc9d4a183b4b0fba4b18634a45a555c3cf16dbf5ee67288afd0a62941c28",
+        "exceptions.csv": "fcf802f57bd0ccdc25b71b2af3cd9f3afefff5ab67db97eb32fab3fce983d7b5",
+        "flags.csv": "8496cbc2a7404e46a0321c2362d81f6212f1ae1ff5b7efc487e8aa92f7ba7dc6",
+        "payment_queue.csv": "f7c8ab0487075d6ff5ef3064b9ee06b4e1834c95cb5d37427fcda5a951f91f27",
+        "report.html": "451bec7431fd7ba0b0ec28012f27a4c83c856476d890da0841a98348a6dd46aa",
+        "summary.json": "b7e925533df71563a0a5ddd6da273c7449a238f222cfd2abab58703f405a3265",
+        "unrelated.txt": "242d5af3aaa1e4dfda950f9b6bb6a7a382dafc2cdad633d9ae672b271f6b428c"
+      },
+      "silently_selected_properties": [
+        "Original property"
+      ],
+      "fresh": {
+        "rc": 0,
+        "stdout": "as_of 2026-02-10: 1 accounts, 2 bills; 0 flags {}; 0 exceptions; 1 bills ($25.00) queued for approval (not paid)\r\nnaive trailing-3 rule would add 0 seasonal false flags\r\nreport: fresh\\report.html\r\n",
+        "stderr": "",
+        "stdout_sha256": "35eebe7f3602d20a9231b945d60197cb1ea4bc707dc1bad1bdb859d9cfde4e93",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "report_files": {
+          "audit.jsonl": "aa6986016c27533ad8cf2971fc6bf0fd6f2575b2dd196b003d251b7f8a163aad",
+          "exceptions.csv": "fcf802f57bd0ccdc25b71b2af3cd9f3afefff5ab67db97eb32fab3fce983d7b5",
+          "flags.csv": "8496cbc2a7404e46a0321c2362d81f6212f1ae1ff5b7efc487e8aa92f7ba7dc6",
+          "payment_queue.csv": "f7c8ab0487075d6ff5ef3064b9ee06b4e1834c95cb5d37427fcda5a951f91f27",
+          "report.html": "451bec7431fd7ba0b0ec28012f27a4c83c856476d890da0841a98348a6dd46aa",
+          "summary.json": "b7e925533df71563a0a5ddd6da273c7449a238f222cfd2abab58703f405a3265"
+        }
+      }
+    },
+    "duplicate_whitespace": {
+      "rc": 0,
+      "stdout": "as_of 2026-02-10: 1 accounts, 2 bills; 0 flags {}; 0 exceptions; 1 bills ($25.00) queued for approval (not paid)\r\nnaive trailing-3 rule would add 0 seasonal false flags\r\nreport: out\\report.html\r\n",
+      "stderr": "",
+      "stdout_sha256": "2a56719d54adfcda0159b351c2c46b9d336f635ed47669697833de8080e84559",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "report_before": {
+        "audit.jsonl": "d2723d1c74da86b806e9340c3e4373edce3a674b492f3fb7af62750a5d48019d",
+        "exceptions.csv": "f528efa22eaae9a20c7e3bee2f2501d307423af59e5bf3bd905ff3fa2b16d1bc",
+        "flags.csv": "85f3612e9c4fb13738b3e09fbc82cfc756c57b0b43d8fb8e28867578a508e6b3",
+        "payment_queue.csv": "548ccedfef6cdccf9a46ba52b4a7dbbd7f14b14081d3ff55cc0743fc117dd75d",
+        "report.html": "b13f15ae59de4978c15a39bb8f4669286a0cee6b845ec57be02093c874ad3bc9",
+        "summary.json": "c70bbaf09a71350fd045bb39bfb86f0ffe4162a1195b864799234d9c53ea52b8",
+        "unrelated.txt": "242d5af3aaa1e4dfda950f9b6bb6a7a382dafc2cdad633d9ae672b271f6b428c"
+      },
+      "report_after": {
+        "audit.jsonl": "dcdcee0508549f7e7ce8651830a64a3d922a74bcd982e241822b438df6fedd30",
+        "exceptions.csv": "fcf802f57bd0ccdc25b71b2af3cd9f3afefff5ab67db97eb32fab3fce983d7b5",
+        "flags.csv": "8496cbc2a7404e46a0321c2362d81f6212f1ae1ff5b7efc487e8aa92f7ba7dc6",
+        "payment_queue.csv": "e80ee7be4cdb5e73c1d7d074da54dd01a4043c663c3c62f54cb447efcbb28e45",
+        "report.html": "b2c0af9c13d5884ef2167f3c377179bcd42b17171127c142fb8fcf82825c61f7",
+        "summary.json": "56b24e9dd4f91e9650ac40971d303375be6ee2727e58840dec581554b2989402",
+        "unrelated.txt": "242d5af3aaa1e4dfda950f9b6bb6a7a382dafc2cdad633d9ae672b271f6b428c"
+      },
+      "silently_selected_properties": [
+        "Replacement property"
+      ],
+      "fresh": {
+        "rc": 0,
+        "stdout": "as_of 2026-02-10: 1 accounts, 2 bills; 0 flags {}; 0 exceptions; 1 bills ($25.00) queued for approval (not paid)\r\nnaive trailing-3 rule would add 0 seasonal false flags\r\nreport: fresh\\report.html\r\n",
+        "stderr": "",
+        "stdout_sha256": "35eebe7f3602d20a9231b945d60197cb1ea4bc707dc1bad1bdb859d9cfde4e93",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "report_files": {
+          "audit.jsonl": "e9167f60e7f9c0d7288afbd231806db267ad202e95dc255910fdb4853b52858a",
+          "exceptions.csv": "fcf802f57bd0ccdc25b71b2af3cd9f3afefff5ab67db97eb32fab3fce983d7b5",
+          "flags.csv": "8496cbc2a7404e46a0321c2362d81f6212f1ae1ff5b7efc487e8aa92f7ba7dc6",
+          "payment_queue.csv": "e80ee7be4cdb5e73c1d7d074da54dd01a4043c663c3c62f54cb447efcbb28e45",
+          "report.html": "b2c0af9c13d5884ef2167f3c377179bcd42b17171127c142fb8fcf82825c61f7",
+          "summary.json": "56b24e9dd4f91e9650ac40971d303375be6ee2727e58840dec581554b2989402"
+        }
+      }
+    },
+    "duplicate_multiline": {
+      "rc": 0,
+      "stdout": "as_of 2026-02-10: 1 accounts, 2 bills; 0 flags {}; 0 exceptions; 1 bills ($25.00) queued for approval (not paid)\r\nnaive trailing-3 rule would add 0 seasonal false flags\r\nreport: out\\report.html\r\n",
+      "stderr": "",
+      "stdout_sha256": "2a56719d54adfcda0159b351c2c46b9d336f635ed47669697833de8080e84559",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "report_before": {
+        "audit.jsonl": "d2723d1c74da86b806e9340c3e4373edce3a674b492f3fb7af62750a5d48019d",
+        "exceptions.csv": "f528efa22eaae9a20c7e3bee2f2501d307423af59e5bf3bd905ff3fa2b16d1bc",
+        "flags.csv": "85f3612e9c4fb13738b3e09fbc82cfc756c57b0b43d8fb8e28867578a508e6b3",
+        "payment_queue.csv": "548ccedfef6cdccf9a46ba52b4a7dbbd7f14b14081d3ff55cc0743fc117dd75d",
+        "report.html": "b13f15ae59de4978c15a39bb8f4669286a0cee6b845ec57be02093c874ad3bc9",
+        "summary.json": "c70bbaf09a71350fd045bb39bfb86f0ffe4162a1195b864799234d9c53ea52b8",
+        "unrelated.txt": "242d5af3aaa1e4dfda950f9b6bb6a7a382dafc2cdad633d9ae672b271f6b428c"
+      },
+      "report_after": {
+        "audit.jsonl": "0b93bfd10e93370b4cc475f4623b42fa3ca4c1f00b1264b48add4153f1739251",
+        "exceptions.csv": "fcf802f57bd0ccdc25b71b2af3cd9f3afefff5ab67db97eb32fab3fce983d7b5",
+        "flags.csv": "8496cbc2a7404e46a0321c2362d81f6212f1ae1ff5b7efc487e8aa92f7ba7dc6",
+        "payment_queue.csv": "52e54d9556d235faf37f5af445e7c99e6301ae87f570d6f3d8164c694d34eb19",
+        "report.html": "93aac01a454fb5fbac2e29ee3877341a1e2016932ec7d6be5f9a2a6ca38ee21d",
+        "summary.json": "66886d71c6b0c0b8eaa5a5bf1779b617b1766ceeda2ce4861cded30e1530c8f6",
+        "unrelated.txt": "242d5af3aaa1e4dfda950f9b6bb6a7a382dafc2cdad633d9ae672b271f6b428c"
+      },
+      "silently_selected_properties": [
+        "Replacement\r\nWing"
+      ],
+      "fresh": {
+        "rc": 0,
+        "stdout": "as_of 2026-02-10: 1 accounts, 2 bills; 0 flags {}; 0 exceptions; 1 bills ($25.00) queued for approval (not paid)\r\nnaive trailing-3 rule would add 0 seasonal false flags\r\nreport: fresh\\report.html\r\n",
+        "stderr": "",
+        "stdout_sha256": "35eebe7f3602d20a9231b945d60197cb1ea4bc707dc1bad1bdb859d9cfde4e93",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "report_files": {
+          "audit.jsonl": "6cac26289edddae3fc1f260e1e0212402fa02d0e9e00c1a8be05e694241a6f1d",
+          "exceptions.csv": "fcf802f57bd0ccdc25b71b2af3cd9f3afefff5ab67db97eb32fab3fce983d7b5",
+          "flags.csv": "8496cbc2a7404e46a0321c2362d81f6212f1ae1ff5b7efc487e8aa92f7ba7dc6",
+          "payment_queue.csv": "52e54d9556d235faf37f5af445e7c99e6301ae87f570d6f3d8164c694d34eb19",
+          "report.html": "93aac01a454fb5fbac2e29ee3877341a1e2016932ec7d6be5f9a2a6ca38ee21d",
+          "summary.json": "66886d71c6b0c0b8eaa5a5bf1779b617b1766ceeda2ce4861cded30e1530c8f6"
+        }
+      }
+    },
+    "blank_account": {
+      "rc": 2,
+      "stdout": "",
+      "stderr": "uwatch: input error: accounts.csv:2: account_no is blank\r\n",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "483acec4815099b2c0416d5ee4359a5ddca05b44aad095e235087b0817c28e4a",
+      "report_before": {},
+      "report_after": {},
+      "silently_selected_properties": null,
+      "fresh": null
+    }
+  },
+  "review": {
+    "rc": 2,
+    "stdout": "",
+    "stderr": "uwatch: review error: accounts.csv:3: duplicate account identity is ambiguous for review\r\n",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "8976104983b8de7cb8d2be17c8d9db971601bea32ec96349dc6af1509d339968"
+  }
+}

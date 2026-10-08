@@ -1,0 +1,64 @@
+{
+  "schema": "workflow-checks.duplicate-account.baseline.v1",
+  "as_of": "2026-10-08T15:42:52.126227+00:00",
+  "source_base": "125339ec63eeb7c4989c9b240c01202555dce573",
+  "engine_git_blob": "b764a1f45ba718b31f7841e2c2f61d16a7fef5e9",
+  "engine_sha256": "ff0dc3a473235c55639e4373e3b5a4c786a0cd9ae7badd2be9113f39a4efd3d0",
+  "cases": [
+    {
+      "case": "ordinary",
+      "returncode": 0,
+      "queue_properties": [
+        "Original property"
+      ],
+      "source_csv_unchanged": true,
+      "output_sha256": {
+        "audit.jsonl": "b15854ee75a6477404e61c3e4d16419ba45d0bbe5ad2a129471f9890a0b0d1ff",
+        "exceptions.csv": "fcf802f57bd0ccdc25b71b2af3cd9f3afefff5ab67db97eb32fab3fce983d7b5",
+        "flags.csv": "8496cbc2a7404e46a0321c2362d81f6212f1ae1ff5b7efc487e8aa92f7ba7dc6",
+        "payment_queue.csv": "01bc84e3baf0cada9176f76e9290635f75c128bb652d55737fec51daa8352135",
+        "report.html": "ca9e21ea436ba214d45371c7af19315215af2a700f7f475c3fcba7141a2fcf27",
+        "summary.json": "a918a14fec8265759adff838824c33df933b5c182c48cb4f0253747a076f3189"
+      }
+    },
+    {
+      "case": "conflicting-duplicate",
+      "returncode": 0,
+      "queue_properties": [
+        "Replacement property"
+      ],
+      "source_csv_unchanged": true,
+      "output_sha256": {
+        "audit.jsonl": "5afc1b1e083801b7df255c9dfaec7e4a9377f9cbcd5759d5e943f623d76b51e1",
+        "exceptions.csv": "fcf802f57bd0ccdc25b71b2af3cd9f3afefff5ab67db97eb32fab3fce983d7b5",
+        "flags.csv": "8496cbc2a7404e46a0321c2362d81f6212f1ae1ff5b7efc487e8aa92f7ba7dc6",
+        "payment_queue.csv": "b0a4e5847dd60bbafe3571880c6f2112ce82ad3e0d860161c6f3a37ad74e168b",
+        "report.html": "ece39948986786c7eceabd14a3c5351da2d5cad01f1b5e134912deab52a01cc3",
+        "summary.json": "446d960cc326cf64f7f0d19135d92b433360593a06aaeaae7af215df5d6ff576"
+      }
+    },
+    {
+      "case": "reversed-duplicate",
+      "returncode": 0,
+      "queue_properties": [
+        "Original property"
+      ],
+      "source_csv_unchanged": true,
+      "output_sha256": {
+        "audit.jsonl": "117da6a43be0ff94a468a38da95e53a963f0117bed03166fa9b7219997ebd80f",
+        "exceptions.csv": "fcf802f57bd0ccdc25b71b2af3cd9f3afefff5ab67db97eb32fab3fce983d7b5",
+        "flags.csv": "8496cbc2a7404e46a0321c2362d81f6212f1ae1ff5b7efc487e8aa92f7ba7dc6",
+        "payment_queue.csv": "01bc84e3baf0cada9176f76e9290635f75c128bb652d55737fec51daa8352135",
+        "report.html": "ca9e21ea436ba214d45371c7af19315215af2a700f7f475c3fcba7141a2fcf27",
+        "summary.json": "a918a14fec8265759adff838824c33df933b5c182c48cb4f0253747a076f3189"
+      }
+    }
+  ],
+  "tests_returncode": 1,
+  "tests_tail": [
+    "----------------------------------------------------------------------",
+    "Ran 9 tests in 0.134s",
+    "",
+    "FAILED (failures=4)"
+  ]
+}

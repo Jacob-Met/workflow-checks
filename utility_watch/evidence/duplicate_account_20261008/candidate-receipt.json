@@ -1,0 +1,151 @@
+{
+  "schema": "workflow-checks.duplicate-account.candidate.v1",
+  "as_of": "2026-10-08T15:46:09.638262+00:00",
+  "base": "125339ec63eeb7c4989c9b240c01202555dce573",
+  "base_tree": "e3a3501d60ee8f301f9d45ea15d0d324b814e59a",
+  "device_id": "5f462f1b-490d-4a0d-8caa-51742c9d09b4",
+  "native_python": "3.13.7 (v3.13.7:bcee1c32211, Aug 14 2025, 19:10:51) [Clang 16.0.0 (clang-1600.0.26.6)]",
+  "pytest_interpreter_borrowed_read_only": "/Users/me/hamon-work-ledgerly-566d51f04b31-venv/bin/python",
+  "runs": [
+    {
+      "variant": "baseline",
+      "suite": "inherited",
+      "returncode": 0,
+      "stdout_sha256": "331c293d98c44096117a2e65ff9645720ef25ec61cf39bd9eb040949505e8867",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tail": [
+        ".............................................................................................................. [100%]",
+        "110 passed, 34 subtests passed in 5.11s"
+      ]
+    },
+    {
+      "variant": "candidate",
+      "suite": "new-normal",
+      "returncode": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "c9278abfe783da08cc7ba7c27d51350edfcac3a12757238a137c5278f7514d73",
+      "tail": [
+        "test_whitespace_normalized_duplicate_is_rejected (test_account_identity.AccountIdentityTests.test_whitespace_normalized_duplicate_is_rejected) ... ok",
+        "",
+        "----------------------------------------------------------------------",
+        "Ran 9 tests in 0.158s",
+        "",
+        "OK"
+      ]
+    },
+    {
+      "variant": "candidate",
+      "suite": "new-optimized",
+      "returncode": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "6578c2654cfb0b6d24f72ed06f1c83682480d7abbc4301921b485bb4564e23fe",
+      "tail": [
+        "test_whitespace_normalized_duplicate_is_rejected (test_account_identity.AccountIdentityTests.test_whitespace_normalized_duplicate_is_rejected) ... ok",
+        "",
+        "----------------------------------------------------------------------",
+        "Ran 9 tests in 0.212s",
+        "",
+        "OK"
+      ]
+    },
+    {
+      "variant": "candidate",
+      "suite": "full",
+      "returncode": 0,
+      "stdout_sha256": "abebdb32c24f9731b625e5012279440c4be0faed5f6d8057309b8a43016fca5c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tail": [
+        ".............................................................. [ 52%]",
+        ".........................................................                                                              [100%]",
+        "119 passed, 36 subtests passed in 5.86s"
+      ]
+    }
+  ],
+  "valid_cli_output_parity": [
+    {
+      "path": "flags.csv",
+      "bytes": 54,
+      "sha256": "8496cbc2a7404e46a0321c2362d81f6212f1ae1ff5b7efc487e8aa92f7ba7dc6",
+      "same": true
+    },
+    {
+      "path": "exceptions.csv",
+      "bytes": 39,
+      "sha256": "fcf802f57bd0ccdc25b71b2af3cd9f3afefff5ab67db97eb32fab3fce983d7b5",
+      "same": true
+    },
+    {
+      "path": "summary.json",
+      "bytes": 947,
+      "sha256": "77b2cf331825dbf3c7a8ae934d0ee11011c37c93220cc55a2bcd08e940a71084",
+      "same": true
+    },
+    {
+      "path": "payment_queue.csv",
+      "bytes": 355,
+      "sha256": "fb4cac4395c2646281e931e2365902c1a7d58fd152fac5f1428d475a059efeea",
+      "same": true
+    },
+    {
+      "path": "audit.jsonl",
+      "bytes": 661,
+      "sha256": "641f8aee0cabc71043694c0df6579f1b5c01ff44f0eb483f1ac8460870653052",
+      "same": true
+    },
+    {
+      "path": "report.html",
+      "bytes": 8499,
+      "sha256": "0d549120dba912110eb9432e41606e6347b857f9cdb6ccc3e055dc8c1d275d13",
+      "same": true
+    }
+  ],
+  "preserved_source_paths": [
+    "utility_watch/uwatch/__init__.py",
+    "utility_watch/uwatch/__main__.py",
+    "utility_watch/uwatch/cli.py",
+    "utility_watch/uwatch/report.py",
+    "utility_watch/uwatch/review.py",
+    "utility_watch/uwatch/review_report.py",
+    "utility_watch/uwatch/synth.py",
+    "utility_watch/uwatch/worksheet.py",
+    "utility_watch/tests/test_account_bill_keys.py",
+    "utility_watch/tests/test_uwatch.py",
+    "utility_watch/tests/test_numeric_csv.py",
+    "utility_watch/tests/test_report.py",
+    "utility_watch/tests/test_review_report.py",
+    "utility_watch/tests/test_worksheet_cli.py"
+  ],
+  "modified_existing_paths": [
+    "utility_watch/uwatch/engine.py",
+    "utility_watch/tests/test_review.py",
+    "utility_watch/README.md"
+  ],
+  "engine_changed_definitions": [
+    "load"
+  ],
+  "unchanged_engine_definitions": 9,
+  "manifest": {
+    "utility_watch/uwatch/engine.py": {
+      "bytes": 21531,
+      "sha256": "8d61b55e88415275ffe1c5edca6f914f10c4f47f6cfd9d0b56ba76854f6f1180",
+      "git_blob": "dd1b752972b74232090ed602d11b84759bda19e3"
+    },
+    "utility_watch/tests/test_review.py": {
+      "bytes": 19541,
+      "sha256": "fab91f033bd1bd39dcfee45d5499fb8edf4abcd1623ff13b890745cffa6855d4",
+      "git_blob": "780dee2c6b27767a32a00a08783283c08241a9df"
+    },
+    "utility_watch/README.md": {
+      "bytes": 13554,
+      "sha256": "8bcba3967759944e647cb58712f2833a807073bcb4df37fc6acf654ca3ad7c6d",
+      "git_blob": "d7dbe01e09181e481eab3cf78e47d06c396f4da4"
+    },
+    "utility_watch/tests/test_account_identity.py": {
+      "bytes": 7364,
+      "sha256": "80c00af9c6a9bf2b1f2d5fce941e4a7ca7577ff4a935d006cad2295a1613a1fe",
+      "git_blob": "37da90499693c612f12e43f3477581163c7e143a"
+    }
+  },
+  "shared_service_or_real_data_changes": false,
+  "free_bytes": 974135296
+}

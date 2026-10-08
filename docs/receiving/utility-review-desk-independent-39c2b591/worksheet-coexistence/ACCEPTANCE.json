@@ -1,0 +1,294 @@
+{
+  "accepted": true,
+  "scope": "current worksheet and desk CLI/HTTP interoperability; prior browser and native-suite evidence not repeated",
+  "public_commit": "7a9ac0a8d3ea93bbe7ebc25c6f226924d2357ee8",
+  "public_tree": "4a50b0dff8488c14385d38187e6a45ccddd952a2",
+  "public_parents": [
+    "34c982d33e0c97a39e5ac90d3d2f0cd2003b9206",
+    "4f434591c166fc7d3ea7831e52edafe6c23d8843"
+  ],
+  "candidate_selected_snapshot": "e847764eb2413e16538fa6b5cd6077b96f0514e5",
+  "candidate_selected_tree": "9b0670049a07d5fb4460caab632bdaea0eafe610",
+  "fixture_prepared_commit": "db6700af5a484bf8444d0721a6d53b85b028e175",
+  "fixture_prepared_tree": "7ca4dfcd3ac633e14db48033483aa2a2338e9a4f",
+  "driver": {
+    "bytes": 12006,
+    "sha256": "886887e95fc37d1c36917b2f2d8c618943b082d6964248e1ed503983f4b9d0b8"
+  },
+  "fixture": {
+    "scope": "fixture creation only; current native loader/checker/reconciler used without mocks or product edits",
+    "checks": [
+      {
+        "name": "current original engine produces only two intended same-key account-scoped flags",
+        "passed": true
+      },
+      {
+        "name": "earlier allowed annotations admitted by the original validator",
+        "passed": true
+      },
+      {
+        "name": "changed north evidence creates a fresh open current row and one preserved historical row",
+        "passed": true
+      },
+      {
+        "name": "unchanged south account retains its exact prior identity and annotation",
+        "passed": true
+      },
+      {
+        "name": "complete current worksheet passes the unchanged native validator",
+        "passed": true
+      }
+    ],
+    "passed": true,
+    "native_initial": {
+      "current": 2,
+      "history": 0,
+      "statuses": {
+        "open": 2
+      },
+      "data_mode": "synthetic",
+      "worksheet": "/Users/me/hamon-utility-interop-39c2b591-nw60sufe/fixture-v1/00-original.csv"
+    },
+    "native_current": {
+      "current": 2,
+      "history": 1,
+      "statuses": {
+        "open": 1,
+        "reviewed": 1
+      },
+      "data_mode": "synthetic",
+      "worksheet": "/Users/me/hamon-utility-interop-39c2b591-nw60sufe/fixture-v1/02-current-with-history.csv"
+    },
+    "prepared": {
+      "bytes": 1948,
+      "sha256": "b5af062d34c006b401438ca1f6cc44e9620965e5631795a0c1b0419291b18a31"
+    },
+    "current_ids": {
+      "UW-NORTH-001": "c71720eabeb04baba48b29568617d808",
+      "UW-SOUTH-001": "23c5d2b011b84b6aad1b9491d8be137b"
+    },
+    "historical_id": "dc435cd0690e45989b6d7530a1d77d60"
+  },
+  "groups": [
+    {
+      "name": "current desk exports only the exact North current annotation and preserves all other cells",
+      "passed": true
+    },
+    {
+      "name": "new worksheet list and annotate consume the real desk CSV using exact account/row identity",
+      "passed": true
+    },
+    {
+      "name": "desk reopens the new CLI file, refuses the old snapshot, exports both edits and retains immutable source view",
+      "passed": true
+    },
+    {
+      "name": "existing printable CLI preserves every displayed row identity, historical state and literal annotation",
+      "passed": true
+    },
+    {
+      "name": "current native source reconciliation retains all exact current edits, original history and manifest cells",
+      "passed": true
+    },
+    {
+      "name": "all admitted originals, source/report fixtures, prior exports and executed package bytes remain unchanged",
+      "passed": true
+    }
+  ],
+  "children": [
+    {
+      "name": "04-worksheet-list",
+      "command": [
+        "/usr/local/bin/python3",
+        "-m",
+        "uwatch",
+        "worksheet",
+        "list",
+        "--worksheet",
+        "/Users/me/hamon-utility-interop-39c2b591-nw60sufe/evidence/interop-v1/03-desk-export.csv",
+        "--include-history",
+        "--json"
+      ],
+      "returncode": 0,
+      "stdout": {
+        "bytes": 3196,
+        "sha256": "57ce6ce5520f8477bbba1f283aa6dc2c2def5c08b2b2c6ecc961303f86413844"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "name": "05-worksheet-annotate",
+      "command": [
+        "/usr/local/bin/python3",
+        "-m",
+        "uwatch",
+        "worksheet",
+        "annotate",
+        "--worksheet",
+        "/Users/me/hamon-utility-interop-39c2b591-nw60sufe/evidence/interop-v1/03-desk-export.csv",
+        "--row-id",
+        "23c5d2b011b84b6aad1b9491d8be137b",
+        "--status",
+        "in_progress",
+        "--reviewer",
+        "CLI reviewer 南",
+        "--note",
+        "CLI note, exact South account\r\nLiteral <script>never code</script> & Ω.",
+        "--out",
+        "/Users/me/hamon-utility-interop-39c2b591-nw60sufe/evidence/interop-v1/05-worksheet-annotated.csv"
+      ],
+      "returncode": 0,
+      "stdout": {
+        "bytes": 282,
+        "sha256": "6e31184feec4af442127b0f3af9c7b14688228c810ba80bf17587ea1db9849c6"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "name": "11-printable-command",
+      "command": [
+        "/usr/local/bin/python3",
+        "-m",
+        "uwatch",
+        "review-report",
+        "--worksheet",
+        "/Users/me/hamon-utility-interop-39c2b591-nw60sufe/evidence/interop-v1/09-reopened-desk-export.csv",
+        "--out",
+        "/Users/me/hamon-utility-interop-39c2b591-nw60sufe/evidence/interop-v1/11-review-report.html"
+      ],
+      "returncode": 0,
+      "stdout": {
+        "bytes": 235,
+        "sha256": "e6f7701fa5ee81aa53c4612a4c68d30993103dcea467019f7dc288832cbe0acb"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "name": "12-reconciliation-command",
+      "command": [
+        "/usr/local/bin/python3",
+        "-m",
+        "uwatch",
+        "review",
+        "--data",
+        "/Users/me/hamon-utility-interop-39c2b591-nw60sufe/fixture-v1/source-current",
+        "--report",
+        "/Users/me/hamon-utility-interop-39c2b591-nw60sufe/fixture-v1/report-current/summary.json",
+        "--previous",
+        "/Users/me/hamon-utility-interop-39c2b591-nw60sufe/evidence/interop-v1/09-reopened-desk-export.csv",
+        "--out",
+        "/Users/me/hamon-utility-interop-39c2b591-nw60sufe/evidence/interop-v1/12-reconciled.csv"
+      ],
+      "returncode": 0,
+      "stdout": {
+        "bytes": 226,
+        "sha256": "fe8209acfa901ac4f157e5677e1ada5fc9e1529ee6d897bff7ba2a9fb5964546"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "name": "01-desk-current",
+      "command": [
+        "/usr/local/bin/python3",
+        "-m",
+        "uwatch",
+        "review-desk",
+        "--worksheet",
+        "/Users/me/hamon-utility-interop-39c2b591-nw60sufe/fixture-v1/02-current-with-history.csv",
+        "--port",
+        "0"
+      ],
+      "pid": 8105,
+      "origin": "http://127.0.0.1:56486",
+      "returncode": 0,
+      "stdout": {
+        "bytes": 136,
+        "sha256": "6be8ed19ce8a92a966e90470a7feb168d6e43b7c47c3d9bcf4e8b2ca71edee42"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "name": "06-desk-annotated",
+      "command": [
+        "/usr/local/bin/python3",
+        "-m",
+        "uwatch",
+        "review-desk",
+        "--worksheet",
+        "/Users/me/hamon-utility-interop-39c2b591-nw60sufe/evidence/interop-v1/05-worksheet-annotated.csv",
+        "--port",
+        "0"
+      ],
+      "pid": 8195,
+      "origin": "http://127.0.0.1:56489",
+      "returncode": 0,
+      "stdout": {
+        "bytes": 136,
+        "sha256": "b4cea8530feee77d0a8356dc153c0bdd40a6eec2f2082bb59508407fa2c75d3f"
+      },
+      "stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  ],
+  "http_status_sequence": [
+    200,
+    200,
+    200,
+    409,
+    200,
+    200
+  ],
+  "artifacts": {
+    "03-desk-export.csv": {
+      "bytes": 2027,
+      "sha256": "b2918db1460d7b4b7182b5b6f8570ac78fbd495dc7cf8e302a813c7122a20efa"
+    },
+    "05-worksheet-annotated.csv": {
+      "bytes": 2048,
+      "sha256": "baf01de0acba1c03bf80728495b8ff537f32b3753e9e30fa42a934c7813e719f"
+    },
+    "09-reopened-desk-export.csv": {
+      "bytes": 2088,
+      "sha256": "4ba45f37acd8fe41eeca7575b511b396b37de4e256026f84451193330d6fdfcf"
+    },
+    "11-review-report.html": {
+      "bytes": 7059,
+      "sha256": "40faf9eedea1e7a640651c764a586a02f924186eb474fac3aaabe5a494073066"
+    },
+    "12-reconciled.csv": {
+      "bytes": 2083,
+      "sha256": "2b8cef6674223bbac58c5a7d23063a1ef413826bf7ec54bc622c47dbd628ce5e"
+    }
+  },
+  "all_six_children_returned_zero": true,
+  "all_six_child_stderr_empty": true,
+  "product_changes": 0,
+  "candidate_attempts": 1,
+  "new_browser_runs": 0,
+  "new_native_suite_runs": 0,
+  "native_source_root": "/Users/me/hamon-utility-interop-39c2b591-nw60sufe",
+  "raw_manifest": "RAW_EVIDENCE_MANIFEST.json",
+  "limits": [
+    "Exact selected Utility package only; public full tree reference is not local full-repository execution or public-history custody.",
+    "Printable output checked by HTML parser; no new browser, PDF or physical print run.",
+    "All fixtures are invented. Temporary loopback tokens belong to terminated disposable processes.",
+    "Desk CRLF and worksheet/reconciliation LF serialization differ in bytes; equality claims concern every parsed field."
+  ]
+}

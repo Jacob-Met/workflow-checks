@@ -168,6 +168,12 @@ Required columns (column order does not matter):
 | `occupancy.csv` | `property, unit, status, from, to` |
 | `payments.csv` | `payment_id, account_no, vendor_invoice_no, amount, paid_date` |
 
+Each `accounts.csv` account number must appear once. Surrounding whitespace
+is trimmed before comparison; letter case remains significant. Repeated account
+numbers are refused even when their property/vendor fields match. The error
+identifies the repeated CSV row and its first declaration so you can correct
+the export. This refusal preserves existing report and audit files.
+
 Bill identifiers are scoped to `account_no`. Reusing a `bill_id` in another account
 does not transfer a flag, exception, duplicate hold or historical-baseline exclusion
 to that account. Within one account, repeated invoices or duplicate periods/amounts
