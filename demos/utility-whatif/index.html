@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore usage and rate exceptions in one synthetic utility bill, with the evidence behind each comparison.">
+  <title>Utility Watch · Bill explorer</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="app.mjs"></script>
+</head>
+<body>
+  <header class="masthead"><a class="brand" href="./">Utility<span>Watch</span></a><span class="synthetic">Synthetic scenario</span></header>
+  <main>
+    <section class="intro">
+      <p class="eyebrow">A closer look at one bill</p>
+      <h1>What changed<br>in this bill?</h1>
+      <p class="lede">Adjust an invented gas bill. See which changes cross the usage and rate rules, with the comparison behind each result.</p>
+    </section>
+    <div id="loading" role="status">Loading the checked sample…</div>
+    <section id="explorer" hidden>
+      <div class="account-strip"><div><span>Property / account</span><strong id="account"></strong></div><div><span>Original bill</span><strong id="bill-id"></strong></div><div><span>Fixed review date</span><strong id="as-of"></strong></div></div>
+      <div class="workspace">
+        <section class="input-panel panel" aria-labelledby="edit-title">
+          <div class="section-heading"><span class="step">01</span><h2 id="edit-title">Try a change</h2></div>
+          <p class="muted">The original sample stays intact. Changes affect only this on-screen copy.</p>
+          <div class="presets" aria-label="Synthetic scenarios">
+            <button type="button" data-preset="original">As received</button>
+            <button type="button" data-preset="typical">Typical usage</button>
+            <button type="button" data-preset="rate">Higher rate</button>
+            <button type="button" data-preset="period">Cross-month period</button>
+          </div>
+          <form id="bill-form" novalidate>
+            <div class="field-pair">
+              <label>Consumption <span>therm</span><input id="usage" name="usage" type="number" step="any" inputmode="decimal" required></label>
+              <label>Bill amount <span>USD</span><input id="amount" name="amount" type="number" step="0.01" inputmode="decimal" required></label>
+            </div>
+            <p class="field-help">Effective rate = bill amount ÷ consumption.</p>
+            <fieldset><legend>Service period</legend><div class="field-pair">
+              <label>Start date<input id="ps" name="ps" type="date" min="1900-01-01" max="2100-12-31" required></label>
+              <label>End date<input id="pe" name="pe" type="date" min="1900-01-01" max="2100-12-31" required></label>
+            </div></fieldset>
+            <p class="field-help">Both dates count. Up to 366 days; the month with the most service days is used. The latest month wins a tie for the most days.</p>
+            <p id="input-error" class="error" role="alert"></p>
+            <button class="primary" type="submit">Recheck bill <span aria-hidden="true">↗</span></button>
+          </form>
+          <p class="scope-note">Two checks, no payment action. Duplicate, late-fee, vacancy and payment review remain part of the full checker.</p>
+        </section>
+        <section class="results" aria-labelledby="result-title">
+          <div class="result-heading"><div><p class="eyebrow">02 / Usage & rate review</p><h2 id="result-title"></h2></div><span id="result-count" class="count"></span></div>
+          <p id="freshness" class="freshness" aria-live="polite"></p>
+          <p id="period-summary" class="period-summary"></p>
+          <div id="review-notes" class="review-notes" hidden></div>
+          <article class="check-card" id="usage-card">
+            <div class="check-heading"><h3>Consumption per day</h3><span id="usage-status" class="status"></span></div>
+            <p id="usage-value" class="large-number"></p><p id="usage-description" class="description"></p>
+            <div id="usage-comparison" class="bar-comparison" hidden><div><span>Last year</span><i id="baseline-bar"></i></div><div><span>This copy</span><i id="current-bar"></i></div></div>
+            <p id="usage-rule" class="rule"></p>
+          </article>
+          <article class="check-card" id="rate-card">
+            <div class="check-heading"><h3>Effective unit rate</h3><span id="rate-status" class="status"></span></div>
+            <p id="rate-value" class="large-number"></p><p id="rate-description" class="description"></p><p id="rate-rule" class="rule"></p>
+          </article>
+          <details class="evidence" open><summary>Trace the comparison <span>Source rows & assumptions</span></summary><div id="evidence-body"></div></details>
+        </section>
+      </div>
+    </section>
+    <footer>Invented data only. These checks explain the sample rules; they do not approve a bill, pay money or establish accuracy on a real portfolio.</footer>
+  </main>
+</body>
+</html>

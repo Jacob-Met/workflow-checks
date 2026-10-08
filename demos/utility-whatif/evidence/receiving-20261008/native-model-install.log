@@ -1,0 +1,31 @@
+[Reading 26 new lines (total: 26 lines)]
+
+{"verifiedFiles":32,"root":"/tmp/workflow-utility-81ba1ed0179c/source","base":"26d6bb87ee3269930db4ab5885cde2b74e93bf7e"}
+{"fixture": "B50032", "accountBills": 18, "actualPythonOracleCases": 85, "mode": "checked", "engineBlob": "9deb205ad468381ffc91716f0d7ae6ab88d76f2a"}
+✔ all 85 native Python engine cases match browser decisions and exact evidence (18.5995ms)
+✔ a check keeps the immutable source bill history intact (0.350667ms)
+✔ invalid or unsupported values refuse the calculation (0.251334ms)
+✔ calendar arithmetic is inclusive, leap-aware and assigns ties to the ending month (0.081041ms)
+✔ mixed or unsupported source versions fail closed (0.078125ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 96.336333
+....
+----------------------------------------------------------------------
+Ran 4 tests in 0.378s
+
+OK
+{"action": "install", "exists": true, "manifest": {"files": {"app.mjs": "bd882755eb02e0ada3ddc30cf3b095af564387e26ddd55fa47de6e180810a15c", "fixture.json": "cda108e5391e0c396a8d51462bed65525dff89a629bcb695042d9671ce1ae193", "index.html": "bec057bed7dff541721c3300703b3e96d880c87c0e57c8d626084b3c60c499c1", "model.mjs": "b6d3c0acdd5a413398174d595a2ad4cd580e308d0a29ca724021e45c50d2fdce", "styles.css": "999214aa60374385da911bc5be4efeab42c660f05b653615a6d204eb681fec94"}, "priorState": "absent", "schema": "utility-watch.whatif-install.v1", "sourceCommit": "26d6bb87ee3269930db4ab5885cde2b74e93bf7e"}, "target": "/tmp/workflow-utility-81ba1ed0179c/installed"}
+{"action": "readback", "exists": true, "manifest": {"files": {"app.mjs": "bd882755eb02e0ada3ddc30cf3b095af564387e26ddd55fa47de6e180810a15c", "fixture.json": "cda108e5391e0c396a8d51462bed65525dff89a629bcb695042d9671ce1ae193", "index.html": "bec057bed7dff541721c3300703b3e96d880c87c0e57c8d626084b3c60c499c1", "model.mjs": "b6d3c0acdd5a413398174d595a2ad4cd580e308d0a29ca724021e45c50d2fdce", "styles.css": "999214aa60374385da911bc5be4efeab42c660f05b653615a6d204eb681fec94"}, "priorState": "absent", "schema": "utility-watch.whatif-install.v1", "sourceCommit": "26d6bb87ee3269930db4ab5885cde2b74e93bf7e"}, "target": "/tmp/workflow-utility-81ba1ed0179c/installed"}
+{"action": "rollback", "exists": false, "manifest": {"files": {"app.mjs": "bd882755eb02e0ada3ddc30cf3b095af564387e26ddd55fa47de6e180810a15c", "fixture.json": "cda108e5391e0c396a8d51462bed65525dff89a629bcb695042d9671ce1ae193", "index.html": "bec057bed7dff541721c3300703b3e96d880c87c0e57c8d626084b3c60c499c1", "model.mjs": "b6d3c0acdd5a413398174d595a2ad4cd580e308d0a29ca724021e45c50d2fdce", "styles.css": "999214aa60374385da911bc5be4efeab42c660f05b653615a6d204eb681fec94"}, "priorState": "absent", "schema": "utility-watch.whatif-install.v1", "sourceCommit": "26d6bb87ee3269930db4ab5885cde2b74e93bf7e"}, "target": "/tmp/workflow-utility-81ba1ed0179c/installed"}
+{"action": "install", "exists": true, "manifest": {"files": {"app.mjs": "bd882755eb02e0ada3ddc30cf3b095af564387e26ddd55fa47de6e180810a15c", "fixture.json": "cda108e5391e0c396a8d51462bed65525dff89a629bcb695042d9671ce1ae193", "index.html": "bec057bed7dff541721c3300703b3e96d880c87c0e57c8d626084b3c60c499c1", "model.mjs": "b6d3c0acdd5a413398174d595a2ad4cd580e308d0a29ca724021e45c50d2fdce", "styles.css": "999214aa60374385da911bc5be4efeab42c660f05b653615a6d204eb681fec94"}, "priorState": "absent", "schema": "utility-watch.whatif-install.v1", "sourceCommit": "26d6bb87ee3269930db4ab5885cde2b74e93bf7e"}, "target": "/tmp/workflow-utility-81ba1ed0179c/installed"}
+{"action": "readback", "exists": true, "manifest": {"files": {"app.mjs": "bd882755eb02e0ada3ddc30cf3b095af564387e26ddd55fa47de6e180810a15c", "fixture.json": "cda108e5391e0c396a8d51462bed65525dff89a629bcb695042d9671ce1ae193", "index.html": "bec057bed7dff541721c3300703b3e96d880c87c0e57c8d626084b3c60c499c1", "model.mjs": "b6d3c0acdd5a413398174d595a2ad4cd580e308d0a29ca724021e45c50d2fdce", "styles.css": "999214aa60374385da911bc5be4efeab42c660f05b653615a6d204eb681fec94"}, "priorState": "absent", "schema": "utility-watch.whatif-install.v1", "sourceCommit": "26d6bb87ee3269930db4ab5885cde2b74e93bf7e"}, "target": "/tmp/workflow-utility-81ba1ed0179c/installed"}
+
+✅ Process completed with exit code 0 (runtime: 2.21s)
+
+[executed on device: Mac.lan (0e3d582f-e25b-44b2-8418-9639fc4e4e33)]

@@ -1,0 +1,280 @@
+{
+  "schema": "hamon.utility-whatif.source-receiving.v1",
+  "worker_id": "estate-81ba1ed0179c/estate_integration",
+  "repository": "Jacob-Met/workflow-checks",
+  "authority_source": "Jacob's attached HAMON UNIVERSAL AUTONOMOUS EXECUTION WORKER mandate, upload/01-Pasted-markdown.md",
+  "coordination_issue": "https://github.com/Jacob-Met/workflow-checks/issues/15",
+  "source_scope": {
+    "repository": "Jacob-Met/workflow-checks",
+    "baseCommit": "26d6bb87ee3269930db4ab5885cde2b74e93bf7e",
+    "baseTree": "0b4057fdc757450d7a1eb283c88967da1ed6c7ec",
+    "partialScope": "utility_watch plus root reference files",
+    "verifiedBlobs": [
+      {
+        "path": ".gitignore",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6fbdfae076d57b6d7b7c188e22e20fa147a2f2b3",
+        "size": 123
+      },
+      {
+        "path": "LICENSE",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "edb188254288b40f2895833e3647b7e0be34c962",
+        "size": 1070
+      },
+      {
+        "path": "README.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d13a764020918c215f91263d97d6c949a827d385",
+        "size": 6883
+      },
+      {
+        "path": "utility_watch/HARDENING.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2033a69d8ae5daf24e68e017ed20c6a4dd863397",
+        "size": 3894
+      },
+      {
+        "path": "utility_watch/README.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "bdae68b2590e37331d9f63d389101cc739c243b5",
+        "size": 7046
+      },
+      {
+        "path": "utility_watch/sample_data/README_SYNTHETIC.txt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "237579a904d7b7b605f78ed122c97140c6f06003",
+        "size": 170
+      },
+      {
+        "path": "utility_watch/sample_data/accounts.csv",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8524a01938d9dfa3b9a0d05676a64e31e921ea8e",
+        "size": 2802
+      },
+      {
+        "path": "utility_watch/sample_data/bills.csv",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "21eca3e9265e3bdeacb668e1ff602121f96edda6",
+        "size": 27296
+      },
+      {
+        "path": "utility_watch/sample_data/expected.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0016cf0754d112b3a55a0ede42e6999aee17a847",
+        "size": 899
+      },
+      {
+        "path": "utility_watch/sample_data/occupancy.csv",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4396760f366c95f09343ce3e778beb7abd80bea0",
+        "size": 564
+      },
+      {
+        "path": "utility_watch/sample_data/payments.csv",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7f94d9c67855bc0def8b515b2b55450f9d65631e",
+        "size": 12113
+      },
+      {
+        "path": "utility_watch/tests/test_numeric_csv.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2e63820b66001b2cf35590ca8f41270ce84f7500",
+        "size": 3424
+      },
+      {
+        "path": "utility_watch/tests/test_report.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a4480762868831bdafef1bf52e94a1cc68e31e43",
+        "size": 7083
+      },
+      {
+        "path": "utility_watch/tests/test_uwatch.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1a71129311c88af32bb4abf0d633e5fcc496ab78",
+        "size": 15469
+      },
+      {
+        "path": "utility_watch/uwatch/__init__.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7074157fb1710370668c2a0ad5217cd10cfe3618",
+        "size": 60
+      },
+      {
+        "path": "utility_watch/uwatch/__main__.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "823d40a6bf41beb59790ce83476b359f76f4b1ec",
+        "size": 53
+      },
+      {
+        "path": "utility_watch/uwatch/cli.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "150c80c4d7aa8043a5095143101e3a8311c3068d",
+        "size": 2348
+      },
+      {
+        "path": "utility_watch/uwatch/engine.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9deb205ad468381ffc91716f0d7ae6ab88d76f2a",
+        "size": 21072
+      },
+      {
+        "path": "utility_watch/uwatch/report.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ee2fcabd2026b4224c3cdfc51890f71762a9ef0f",
+        "size": 12382
+      },
+      {
+        "path": "utility_watch/uwatch/synth.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0d5c8137b3790bd062609ce4725beda63db9e58d",
+        "size": 13194
+      }
+    ]
+  },
+  "new_source_scope": "demos/utility-whatif/ only; full repository publication must preserve every original base leaf",
+  "native_objective": {
+    "item_id": "build-demo-utility-whatif",
+    "goal_id": "goal_a181ba826d504f53bb78",
+    "observed_goal_state": "failed",
+    "observed_item_state": "ended_unverified",
+    "native_goal_mutated": false,
+    "native_attempt_replayed": false
+  },
+  "qualification": {
+    "actual_python_oracle_cases": 91,
+    "node_test_methods": 5,
+    "installer_unittest_methods": 4,
+    "browser_groups_passed": 17,
+    "page_errors": 0,
+    "external_requests": 0,
+    "broader_local_pytest_suite": "unavailable: No module named pytest; no pass claimed"
+  },
+  "runtime_assets": [
+    {
+      "path": "app.mjs",
+      "bytes": 8948,
+      "git_blob": "2aa1a2a756163c916bb1353491005ac4ea97cf43",
+      "sha256": "d0d8c2c4993893a6604d4f93c3832e3b36de0138fabae612b55f49cfb33ee4cd"
+    },
+    {
+      "path": "fixture.json",
+      "bytes": 8510,
+      "git_blob": "aa51d7bf73a427ba50af76208fe3ee6a85c472dc",
+      "sha256": "cda108e5391e0c396a8d51462bed65525dff89a629bcb695042d9671ce1ae193"
+    },
+    {
+      "path": "index.html",
+      "bytes": 4999,
+      "git_blob": "a252d1944a8bca296c05d70b840f2e893dc74e60",
+      "sha256": "cff868060b38ab007856c883144d47149e4d439eca7a5cb85a0bb3ead59bd46b"
+    },
+    {
+      "path": "model.mjs",
+      "bytes": 7260,
+      "git_blob": "13d56980ae3ec80b0944e76f628d5632e27acc93",
+      "sha256": "b6d3c0acdd5a413398174d595a2ad4cd580e308d0a29ca724021e45c50d2fdce"
+    },
+    {
+      "path": "styles.css",
+      "bytes": 7998,
+      "git_blob": "0723d8bd400849c963d459494f6a5d1a409091d0",
+      "sha256": "999214aa60374385da911bc5be4efeab42c660f05b653615a6d204eb681fec94"
+    }
+  ],
+  "receiving_artifacts": [
+    {
+      "path": "evidence/receiving-20261008/README.md",
+      "bytes": 4893,
+      "git_blob": "51a07e3308d69533943484a73c49782e4973e176",
+      "sha256": "e321fd0711d140703a990a6f95a29b037719e1a294b10acf0cb54de4822c2566"
+    },
+    {
+      "path": "evidence/receiving-20261008/browser-corrected.json",
+      "bytes": 2840,
+      "git_blob": "81356ae125bd85dbfb545256a77f9681c05d3e5d",
+      "sha256": "dd73f235579b127bafe34d60a8c16febc3d589f029650c4a806bfa83b287ad98"
+    },
+    {
+      "path": "evidence/receiving-20261008/browser-final.json",
+      "bytes": 2847,
+      "git_blob": "d7a03edf6db3310eb6e015c664f4afdc980e5362",
+      "sha256": "0364e6caae93e5636aaab9c0c39886b5dd8f4a74d219a0b2a135b88eb695e477"
+    },
+    {
+      "path": "evidence/receiving-20261008/browser-first-harness.mjs",
+      "bytes": 11234,
+      "git_blob": "2b338d2d0ff38b573e812e62806c1e79210fa9a8",
+      "sha256": "a7379ea36e95f26fd841464f16fa6091591c6f1374812d25848f2320f99ca064"
+    },
+    {
+      "path": "evidence/receiving-20261008/browser-first.json",
+      "bytes": 6688,
+      "git_blob": "3960af682aa1fb91cb3cec09a08437b34b20980a",
+      "sha256": "aafaf157b76088bf97488d021d143bdb33720006065b02413ff4783767226fa3"
+    },
+    {
+      "path": "evidence/receiving-20261008/desktop.png",
+      "bytes": 211507,
+      "git_blob": "f7598a23c9ca5d89b6bf57e9abb1c3cac0ba7c18",
+      "sha256": "31b03843f1396de252c6ba4f774c3a37439b038365c28aa4b05b03d15cc43b5d"
+    },
+    {
+      "path": "evidence/receiving-20261008/independent-production-review.json",
+      "bytes": 2747,
+      "git_blob": "d87dc4048075ab89cd1442c3b9b10f006ba97a5f",
+      "sha256": "814a2ff17ba83e9d4f78bba8dbdcb98a98462adfc26f458a894ce18eb11c76a6"
+    },
+    {
+      "path": "evidence/receiving-20261008/installed-manifest.json",
+      "bytes": 583,
+      "git_blob": "6bcb66c79043e775fa32e3918a464ea071b74911",
+      "sha256": "927304b341e44b257631214deb154097163c2b80dad5f205262b04903bd0c276"
+    },
+    {
+      "path": "evidence/receiving-20261008/native-final.log",
+      "bytes": 4639,
+      "git_blob": "ce23c26cdd7c4bc175d8cacb349f26d74cc0b4ca",
+      "sha256": "c19fa36c9d612ccf9d767c8cc88e7217af414b6299fcd4c0cddb7ea4af912686"
+    },
+    {
+      "path": "evidence/receiving-20261008/native-model-install.log",
+      "bytes": 4350,
+      "git_blob": "17246c7805b19024356c4d839a6be53bfa75e864",
+      "sha256": "6cb9cc08d1b6b7aee7d1a7d1018a3fc736a47731942e72b291727a119b01ba78"
+    },
+    {
+      "path": "evidence/receiving-20261008/phone.png",
+      "bytes": 187008,
+      "git_blob": "759884465cb1c34c47a1842d456433c962526568",
+      "sha256": "5f518f0ba9f0602ded3596a3b65db06ea33799c7b52cb5a3ccd2794eba860268"
+    }
+  ],
+  "native_runtime": "/Users/me/hamon-mcp-lab/utility-whatif-81ba1ed0179c",
+  "publication_state_at_receipt": "qualified locally and installed on native Mac; no remote commit or public deployment claimed in this source receipt",
+  "limitations": [
+    "Fixed synthetic account and two advertised rules only",
+    "No live utility integration or real bill accuracy claim",
+    "No shared site, service, core engine or native goal changes"
+  ]
+}
