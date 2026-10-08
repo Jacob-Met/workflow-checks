@@ -1,0 +1,285 @@
+{
+  "phase": "frozen before candidate projection/template read",
+  "source_pin": "055c863a9484adb1f6f39f54bf6cce90825bf0ad",
+  "unchanged_baseline_pin": "8fe2c9270f487729af9e88f40894e1c4530f2c20",
+  "baseline_module_pins": {
+    "pt_auth/ptauth/data.py": "19a2a1b79eff6d2753507eebf3bf78011ddaaa87",
+    "pt_auth/ptauth/engine.py": "39c97f35d61ff949b5c2381f0ad60d7af8d74226",
+    "pt_auth/ptauth/cli.py": "559c0a76effa2204041e9318e9869a6c7389f50d"
+  },
+  "as_of": "2026-10-08",
+  "raw_visits": 19,
+  "allocated_visits": 13,
+  "used": 6,
+  "scheduled": 7,
+  "manual_ledger": [
+    {
+      "auth_no": "AUTH-REPEAT (2026-10-01..2026-10-15)",
+      "auth_row": "authorizations.csv:row2",
+      "used": [
+        "P1-EARLY",
+        "DUP-1"
+      ],
+      "scheduled": [
+        "P1-NEXT",
+        "P1-EXTRA"
+      ]
+    },
+    {
+      "auth_no": "AUTH-REPEAT (2026-10-16..2026-10-31)",
+      "auth_row": "authorizations.csv:row3",
+      "used": [
+        "P1-LATE-DONE"
+      ],
+      "scheduled": [
+        "P1-LATE"
+      ]
+    },
+    {
+      "auth_no": "AUTH-AMEND",
+      "auth_row": "authorizations.csv:row5",
+      "used": [
+        "P2-DONE"
+      ],
+      "scheduled": [
+        "P2-NEXT",
+        "P2-TWIN"
+      ]
+    },
+    {
+      "auth_no": "AUTH-MARKUP",
+      "auth_row": "authorizations.csv:row6",
+      "used": [
+        "<img src=x onerror=\"window.__allocatedInjected=1\">-FICTION"
+      ],
+      "scheduled": [
+        "P3-NEXT"
+      ]
+    },
+    {
+      "auth_no": "AUTH-NO-VISITS",
+      "auth_row": "authorizations.csv:row7",
+      "used": [],
+      "scheduled": []
+    },
+    {
+      "auth_no": "AUTH-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "auth_row": "authorizations.csv:row9",
+      "used": [
+        "P6-LONG-RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR"
+      ],
+      "scheduled": [
+        "P6-NEXT"
+      ]
+    }
+  ],
+  "expected_records": [
+    {
+      "allocation": "used",
+      "auth_no": "AUTH-REPEAT (2026-10-01..2026-10-15)",
+      "auth_source_row": "authorizations.csv:row2",
+      "visit_id": "P1-EARLY",
+      "visit_date": "2026-10-03",
+      "patient_id": "P1",
+      "payer_id": "PAY1",
+      "clinic": "Clinic A.*B",
+      "visit_status": "completed",
+      "visit_type": "treatment",
+      "visit_source_row": "schedule.csv:row3"
+    },
+    {
+      "allocation": "used",
+      "auth_no": "AUTH-REPEAT (2026-10-01..2026-10-15)",
+      "auth_source_row": "authorizations.csv:row2",
+      "visit_id": "DUP-1",
+      "visit_date": "2026-10-05",
+      "patient_id": "P1",
+      "payer_id": "PAY1",
+      "clinic": "Clinic A.*B",
+      "visit_status": "completed",
+      "visit_type": "treatment",
+      "visit_source_row": "schedule.csv:row18"
+    },
+    {
+      "allocation": "scheduled",
+      "auth_no": "AUTH-REPEAT (2026-10-01..2026-10-15)",
+      "auth_source_row": "authorizations.csv:row2",
+      "visit_id": "P1-NEXT",
+      "visit_date": "2026-10-10",
+      "patient_id": "P1",
+      "payer_id": "PAY1",
+      "clinic": "Clinic Z",
+      "visit_status": "scheduled",
+      "visit_type": "treatment",
+      "visit_source_row": "schedule.csv:row4"
+    },
+    {
+      "allocation": "scheduled",
+      "auth_no": "AUTH-REPEAT (2026-10-01..2026-10-15)",
+      "auth_source_row": "authorizations.csv:row2",
+      "visit_id": "P1-EXTRA",
+      "visit_date": "2026-10-11",
+      "patient_id": "P1",
+      "payer_id": "PAY1",
+      "clinic": "Clinic A.*B",
+      "visit_status": "scheduled",
+      "visit_type": "treatment",
+      "visit_source_row": "schedule.csv:row20"
+    },
+    {
+      "allocation": "used",
+      "auth_no": "AUTH-REPEAT (2026-10-16..2026-10-31)",
+      "auth_source_row": "authorizations.csv:row3",
+      "visit_id": "P1-LATE-DONE",
+      "visit_date": "2026-10-21",
+      "patient_id": "P1",
+      "payer_id": "PAY1",
+      "clinic": "Clinic Z",
+      "visit_status": "completed",
+      "visit_type": "treatment",
+      "visit_source_row": "schedule.csv:row6"
+    },
+    {
+      "allocation": "scheduled",
+      "auth_no": "AUTH-REPEAT (2026-10-16..2026-10-31)",
+      "auth_source_row": "authorizations.csv:row3",
+      "visit_id": "P1-LATE",
+      "visit_date": "2026-10-20",
+      "patient_id": "P1",
+      "payer_id": "PAY1",
+      "clinic": "Clinic A.*B",
+      "visit_status": "scheduled",
+      "visit_type": "treatment",
+      "visit_source_row": "schedule.csv:row5"
+    },
+    {
+      "allocation": "used",
+      "auth_no": "AUTH-AMEND",
+      "auth_source_row": "authorizations.csv:row5",
+      "visit_id": "P2-DONE",
+      "visit_date": "2026-10-04",
+      "patient_id": "P2",
+      "payer_id": "PAY1",
+      "clinic": "Visit South",
+      "visit_status": "completed",
+      "visit_type": "treatment",
+      "visit_source_row": "schedule.csv:row7"
+    },
+    {
+      "allocation": "scheduled",
+      "auth_no": "AUTH-AMEND",
+      "auth_source_row": "authorizations.csv:row5",
+      "visit_id": "P2-NEXT",
+      "visit_date": "2026-10-12",
+      "patient_id": "P2",
+      "payer_id": "PAY1",
+      "clinic": "Visit North",
+      "visit_status": "scheduled",
+      "visit_type": "treatment",
+      "visit_source_row": "schedule.csv:row8"
+    },
+    {
+      "allocation": "scheduled",
+      "auth_no": "AUTH-AMEND",
+      "auth_source_row": "authorizations.csv:row5",
+      "visit_id": "P2-TWIN",
+      "visit_date": "2026-10-12",
+      "patient_id": "P2",
+      "payer_id": "PAY1",
+      "clinic": "Visit North",
+      "visit_status": "scheduled",
+      "visit_type": "treatment",
+      "visit_source_row": "schedule.csv:row9"
+    },
+    {
+      "allocation": "used",
+      "auth_no": "AUTH-MARKUP",
+      "auth_source_row": "authorizations.csv:row6",
+      "visit_id": "<img src=x onerror=\"window.__allocatedInjected=1\">-FICTION",
+      "visit_date": "2026-10-06",
+      "patient_id": "P3",
+      "payer_id": "PAY2",
+      "clinic": "Clinic HTML",
+      "visit_status": "completed",
+      "visit_type": "treatment",
+      "visit_source_row": "schedule.csv:row11"
+    },
+    {
+      "allocation": "scheduled",
+      "auth_no": "AUTH-MARKUP",
+      "auth_source_row": "authorizations.csv:row6",
+      "visit_id": "P3-NEXT",
+      "visit_date": "2026-10-12",
+      "patient_id": "P3",
+      "payer_id": "PAY2",
+      "clinic": "Clinic HTML",
+      "visit_status": "scheduled",
+      "visit_type": "treatment",
+      "visit_source_row": "schedule.csv:row12"
+    },
+    {
+      "allocation": "used",
+      "auth_no": "AUTH-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "auth_source_row": "authorizations.csv:row9",
+      "visit_id": "P6-LONG-RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR",
+      "visit_date": "2026-10-07",
+      "patient_id": "P6",
+      "payer_id": "PAY1",
+      "clinic": "Clinic-ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ",
+      "visit_status": "completed",
+      "visit_type": "treatment",
+      "visit_source_row": "schedule.csv:row16"
+    },
+    {
+      "allocation": "scheduled",
+      "auth_no": "AUTH-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "auth_source_row": "authorizations.csv:row9",
+      "visit_id": "P6-NEXT",
+      "visit_date": "2026-10-18",
+      "patient_id": "P6",
+      "payer_id": "PAY1",
+      "clinic": "Clinic-ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ",
+      "visit_status": "scheduled",
+      "visit_type": "treatment",
+      "visit_source_row": "schedule.csv:row17"
+    }
+  ],
+  "expected_uncovered_ids": [
+    "NO-AUTH",
+    "P1-OUTSIDE"
+  ],
+  "explicit_exclusions": [
+    "old DUP-1 row2",
+    "P3-EVAL",
+    "CANCEL",
+    "NO-SHOW",
+    "NO-AUTH",
+    "P1-OUTSIDE"
+  ],
+  "fixture_text": {
+    "long_visit": "P6-LONG-RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR",
+    "long_auth": "AUTH-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "long_clinic": "Clinic-ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ",
+    "markup_visit": "<img src=x onerror=\"window.__allocatedInjected=1\">-FICTION"
+  },
+  "inputs": {
+    "authorizations.csv": {
+      "bytes": 695,
+      "sha256": "04ab7281d364c9fb6c7f2f7b9e0c2fbaaa048013c55fa8bc44a783c75b10fb3e"
+    },
+    "patients.csv": {
+      "bytes": 291,
+      "sha256": "494472221b3ec09d3b658012251fd9c79fc143840b4e8a422997b56c387869e5"
+    },
+    "payers.csv": {
+      "bytes": 281,
+      "sha256": "b91f68bd1857dcbf1e818cb9b300f97091e4a74b7ad4f0df22e9828b1836dea4"
+    },
+    "schedule.csv": {
+      "bytes": 2070,
+      "sha256": "7893c6d4f9402ecb92c8c28b4bb135c4107755a2d684996f9e3ac7688f8de9eb"
+    }
+  },
+  "baseline_engine_matches_manual": true,
+  "receiver_sha256": "bd296fb397276d07ea228861b014e6bf7543e51cefbc1b49abf11bf1cdccfdc5"
+}

@@ -1,0 +1,180 @@
+{
+  "source_head": "055c863a9484adb1f6f39f54bf6cce90825bf0ad",
+  "started_at": 1791489365.6602554,
+  "status": "complete",
+  "requests": [
+    {
+      "fixture": "normal",
+      "method": "GET",
+      "path": "/"
+    },
+    {
+      "fixture": "normal",
+      "method": "GET",
+      "path": "/calendar_ui.js"
+    },
+    {
+      "fixture": "normal",
+      "method": "GET",
+      "path": "/api/summary"
+    },
+    {
+      "fixture": "normal",
+      "method": "GET",
+      "path": "/out/allocated_visits.csv"
+    },
+    {
+      "fixture": "normal",
+      "method": "GET",
+      "path": "/out/digest.html"
+    },
+    {
+      "fixture": "normal",
+      "method": "GET",
+      "path": "/out/allocated_visits.csv"
+    },
+    {
+      "fixture": "legacy",
+      "method": "GET",
+      "path": "/"
+    },
+    {
+      "fixture": "legacy",
+      "method": "GET",
+      "path": "/calendar_ui.js"
+    },
+    {
+      "fixture": "legacy",
+      "method": "GET",
+      "path": "/api/summary"
+    },
+    {
+      "fixture": "empty",
+      "method": "GET",
+      "path": "/"
+    },
+    {
+      "fixture": "empty",
+      "method": "GET",
+      "path": "/calendar_ui.js"
+    },
+    {
+      "fixture": "empty",
+      "method": "GET",
+      "path": "/api/summary"
+    },
+    {
+      "fixture": "empty",
+      "method": "GET",
+      "path": "/out/allocated_visits.csv"
+    }
+  ],
+  "ports": {
+    "normal": 44277,
+    "legacy": 33345,
+    "empty": 38191
+  },
+  "browser_returncode": 1,
+  "pdf_processes": [
+    {
+      "command": [
+        "pdftotext",
+        "-layout",
+        "/dev/shm/hamon-b890f0b1bfcd-pt-receiving/receiving-v1/browser/complete-digest.pdf",
+        "/dev/shm/hamon-b890f0b1bfcd-pt-receiving/receiving-v1/browser/complete-digest.txt"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "pdfinfo",
+        "/dev/shm/hamon-b890f0b1bfcd-pt-receiving/receiving-v1/browser/complete-digest.pdf"
+      ],
+      "returncode": 0,
+      "stdout": "Title:           Auth worklist 2026-10-08\nCreator:         Mozilla/5.0 (X11; Ubuntu; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36\nProducer:        Skia/PDF m153\nCreationDate:    Thu Oct  8 19:56:54 2026 UTC\nModDate:         Thu Oct  8 19:56:54 2026 UTC\nCustom Metadata: no\nMetadata Stream: no\nTagged:          no\nUserProperties:  no\nSuspects:        no\nForm:            none\nJavaScript:      no\nPages:           3\nEncrypted:       no\nPage size:       595.92 x 842.88 pts (A4)\nPage rot:        0\nFile size:       42936 bytes\nOptimized:       no\nPDF version:     1.4\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "pdftoppm",
+        "-f",
+        "1",
+        "-singlefile",
+        "-scale-to",
+        "1400",
+        "-png",
+        "/dev/shm/hamon-b890f0b1bfcd-pt-receiving/receiving-v1/browser/complete-digest.pdf",
+        "/dev/shm/hamon-b890f0b1bfcd-pt-receiving/receiving-v1/browser/complete-digest-page1"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "pdf_record_text": [
+    {
+      "visit_id": "P1-EARLY",
+      "text_present": true
+    },
+    {
+      "visit_id": "DUP-1",
+      "text_present": true
+    },
+    {
+      "visit_id": "P1-NEXT",
+      "text_present": true
+    },
+    {
+      "visit_id": "P1-EXTRA",
+      "text_present": true
+    },
+    {
+      "visit_id": "P1-LATE-DONE",
+      "text_present": true
+    },
+    {
+      "visit_id": "P1-LATE",
+      "text_present": true
+    },
+    {
+      "visit_id": "P2-DONE",
+      "text_present": true
+    },
+    {
+      "visit_id": "P2-NEXT",
+      "text_present": true
+    },
+    {
+      "visit_id": "P2-TWIN",
+      "text_present": true
+    },
+    {
+      "visit_id": "<img src=x onerror=\"window.__allocatedInjected=1\">-FICTION",
+      "text_present": false
+    },
+    {
+      "visit_id": "P3-NEXT",
+      "text_present": true
+    },
+    {
+      "visit_id": "P6-LONG-RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR",
+      "text_present": false
+    },
+    {
+      "visit_id": "P6-NEXT",
+      "text_present": true
+    }
+  ],
+  "pdf_all_thirteen_present": false,
+  "watched_files": 58,
+  "changed_files": [],
+  "missing_files": [],
+  "source_status": "",
+  "baseline_status": "",
+  "all_watched_inputs_outputs_unchanged": true,
+  "all_requests_get": true,
+  "all_private_servers_closed": true,
+  "completed_at": 1791489496.9458501
+}

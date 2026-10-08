@@ -1,0 +1,86 @@
+{
+  "started_at": 1791488366.8958335,
+  "shm_available_before": 5885186048,
+  "prior_tmp_admission": {
+    "status": "refused_before_mkdir_or_clone",
+    "available_bytes": 1097302016,
+    "required_bytes": 1258291200,
+    "pid": 881057
+  },
+  "intended_head": "055c863a9484adb1f6f39f54bf6cce90825bf0ad",
+  "commands": [
+    {
+      "command": [
+        "git",
+        "init",
+        "--quiet"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "config",
+        "core.autocrlf",
+        "false"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "remote",
+        "add",
+        "origin",
+        "https://github.com/Jacob-Met/workflow-checks.git"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "fetch",
+        "--depth=1",
+        "origin",
+        "055c863a9484adb1f6f39f54bf6cce90825bf0ad"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "From https://github.com/Jacob-Met/workflow-checks\n * branch            055c863a9484adb1f6f39f54bf6cce90825bf0ad -> FETCH_HEAD\n"
+    },
+    {
+      "command": [
+        "git",
+        "checkout",
+        "--detach",
+        "055c863a9484adb1f6f39f54bf6cce90825bf0ad"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "HEAD is now at 055c863 Preserve allocated-visit view and exact partial receiving sources\n"
+    },
+    {
+      "command": [
+        "git",
+        "fetch",
+        "--depth=1",
+        "origin",
+        "8fe2c9270f487729af9e88f40894e1c4530f2c20"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "From https://github.com/Jacob-Met/workflow-checks\n * branch            8fe2c9270f487729af9e88f40894e1c4530f2c20 -> FETCH_HEAD\n"
+    }
+  ],
+  "head": "055c863a9484adb1f6f39f54bf6cce90825bf0ad",
+  "tree": "1987ba3b41d4780dcbed19dc8ba9ee1c46dee529",
+  "status": "complete",
+  "shm_available_after": 5819113472,
+  "completed_at": 1791488380.8403194
+}

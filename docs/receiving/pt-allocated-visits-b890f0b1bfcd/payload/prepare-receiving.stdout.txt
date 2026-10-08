@@ -1,0 +1,1 @@
+{"status": "pass", "manual_records": 13, "cli_processes": 3, "watched_files": 58, "receipt": "/dev/shm/hamon-b890f0b1bfcd-pt-receiving/receiving-v1/native-preparation.json", "sha256": "172bceb53112345e65d4cd5f0bcb96d308b045d6f81a86da364dbfca8fd1aeb9"}

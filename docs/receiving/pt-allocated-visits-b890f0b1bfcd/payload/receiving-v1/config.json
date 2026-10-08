@@ -1,0 +1,14 @@
+{
+  "root": "/dev/shm/hamon-b890f0b1bfcd-pt-receiving",
+  "source": "/dev/shm/hamon-b890f0b1bfcd-pt-receiving/source",
+  "evidence": "/dev/shm/hamon-b890f0b1bfcd-pt-receiving/receiving-v1",
+  "inputs": "/dev/shm/hamon-b890f0b1bfcd-pt-receiving/fixture-freeze/inputs",
+  "empty_inputs": "/dev/shm/hamon-b890f0b1bfcd-pt-receiving/receiving-v1/empty-inputs",
+  "outputs": {
+    "normal": "/dev/shm/hamon-b890f0b1bfcd-pt-receiving/receiving-v1/normal-out",
+    "legacy": "/dev/shm/hamon-b890f0b1bfcd-pt-receiving/receiving-v1/legacy-out",
+    "empty": "/dev/shm/hamon-b890f0b1bfcd-pt-receiving/receiving-v1/empty-out"
+  },
+  "expect_path": "/dev/shm/hamon-b890f0b1bfcd-pt-receiving/fixture-freeze/expected-da5f0b3dcfcc3b2d80bcbf84a3edaa17e917ef4a6e4864f80506332bee9ca53b.json",
+  "native_summary_sha256": "88bfcded2966a1a9a144737987936853a27ca0281a740ec4f3ca1e2254699879"
+}

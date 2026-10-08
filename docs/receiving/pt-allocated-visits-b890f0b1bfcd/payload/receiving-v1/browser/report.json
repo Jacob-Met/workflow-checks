@@ -1,0 +1,339 @@
+{
+  "source_pin": "055c863a9484adb1f6f39f54bf6cce90825bf0ad",
+  "driver_sha256": "c5815d0567a5fadd671419cbb23c3356790a578243cc3e9987010e91835194a7",
+  "contract_sha256": "1bd70cbf71076e9621d0453aef0890b147034d8e91352fbcefd4e207cfba2630",
+  "fixture_sha256": "da5f0b3dcfcc3b2d80bcbf84a3edaa17e917ef4a6e4864f80506332bee9ca53b",
+  "groups": [
+    {
+      "name": "all-thirteen-exact-visible-records",
+      "status": "pass",
+      "value": {
+        "records": 13,
+        "cells": 104,
+        "primary_and_detail_comparisons": 208
+      }
+    },
+    {
+      "name": "retained-duplicate-source-and-excluded-rows",
+      "status": "pass",
+      "value": {
+        "last_duplicate_row": 18,
+        "excluded": 5
+      }
+    },
+    {
+      "name": "complete-totals-and-occurrence-options",
+      "status": "pass",
+      "value": {
+        "count": "13 of 13 allocated visits shown · 6 used / 7 reserved in the complete report · as of 2026-10-08 · clinic time zone: UTC",
+        "authorization_options": 5
+      }
+    },
+    {
+      "name": "allocation-used-filter",
+      "status": "pass",
+      "value": {
+        "rows": 6
+      }
+    },
+    {
+      "name": "allocation-reserved-filter",
+      "status": "pass",
+      "value": {
+        "rows": 7
+      }
+    },
+    {
+      "name": "exact-separated-authorization-periods",
+      "status": "pass",
+      "value": {
+        "period_rows": [
+          4,
+          2
+        ]
+      }
+    },
+    {
+      "name": "visit-clinic-not-patient-home",
+      "status": "pass",
+      "value": {
+        "rows": 4
+      }
+    },
+    {
+      "name": "literal-case-insensitive-search",
+      "status": "pass",
+      "value": {
+        "queries": 3
+      }
+    },
+    {
+      "name": "search-does-not-join-fields",
+      "status": "pass",
+      "value": {
+        "rows": 0
+      }
+    },
+    {
+      "name": "four-filter-intersection-and-reset",
+      "status": "pass",
+      "value": {
+        "intersection": 1,
+        "reset": 13
+      }
+    },
+    {
+      "name": "actual-native-keyboard-select",
+      "status": "pass",
+      "value": {
+        "selected": "used",
+        "rows": 6
+      }
+    },
+    {
+      "name": "filtered-view-downloads-complete-native-csv",
+      "status": "fail",
+      "error": {
+        "name": "Error",
+        "message": "download.saveAs: ENOENT: no such file or directory, copyfile '/tmp/playwright-artifacts-Eu9MHG/a18a5738-65fa-448c-93f9-2591c036b317' -> '/dev/shm/hamon-b890f0b1bfcd-pt-receiving/receiving-v1/browser/actual-all-allocated.csv'",
+        "stack": "download.saveAs: ENOENT: no such file or directory, copyfile '/tmp/playwright-artifacts-Eu9MHG/a18a5738-65fa-448c-93f9-2591c036b317' -> '/dev/shm/hamon-b890f0b1bfcd-pt-receiving/receiving-v1/browser/actual-all-allocated.csv'\n    at /dev/shm/hamon-b890f0b1bfcd-pt-receiving/receive_browser.cjs:73:387\n    at async group (/dev/shm/hamon-b890f0b1bfcd-pt-receiving/receive_browser.cjs:18:47)\n    at async /dev/shm/hamon-b890f0b1bfcd-pt-receiving/receive_browser.cjs:73:3"
+      }
+    },
+    {
+      "name": "filtered-view-opens-complete-printable-digest",
+      "status": "pass",
+      "value": {
+        "rows": 13,
+        "pdf_bytes": 42936,
+        "pdf_sha256": "0dd860d2e5b04511fa8771932536e9c48ee22c6982b73320e33e9c5f5a0384d3",
+        "url": "http://127.0.0.1:44277/out/digest.html"
+      }
+    },
+    {
+      "name": "desktop-controls-and-document-bounds",
+      "status": "fail",
+      "error": {
+        "name": "TimeoutError",
+        "message": "page.screenshot: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n",
+        "stack": "page.screenshot: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\n    at capture (/dev/shm/hamon-b890f0b1bfcd-pt-receiving/receive_browser.cjs:29:83)\n    at /dev/shm/hamon-b890f0b1bfcd-pt-receiving/receive_browser.cjs:75:488\n    at async group (/dev/shm/hamon-b890f0b1bfcd-pt-receiving/receive_browser.cjs:18:47)\n    at async /dev/shm/hamon-b890f0b1bfcd-pt-receiving/receive_browser.cjs:75:3"
+      }
+    },
+    {
+      "name": "phone-controls-and-document-bounds",
+      "status": "pass",
+      "value": {
+        "viewport": 390,
+        "document": 390,
+        "controls": [
+          {
+            "id": "alloc-status",
+            "rect": {
+              "x": 91.015625,
+              "y": 470.390625,
+              "width": 210,
+              "height": 23,
+              "top": 470.390625,
+              "right": 301.015625,
+              "bottom": 493.390625,
+              "left": 91.015625
+            }
+          },
+          {
+            "id": "alloc-auth",
+            "rect": {
+              "x": 20,
+              "y": 527.6875,
+              "width": 350,
+              "height": 23,
+              "top": 527.6875,
+              "right": 370,
+              "bottom": 550.6875,
+              "left": 20
+            }
+          },
+          {
+            "id": "alloc-clinic",
+            "rect": {
+              "x": 20,
+              "y": 584.984375,
+              "width": 350,
+              "height": 23,
+              "top": 584.984375,
+              "right": 370,
+              "bottom": 607.984375,
+              "left": 20
+            }
+          },
+          {
+            "id": "alloc-search",
+            "rect": {
+              "x": 70.3125,
+              "y": 615.984375,
+              "width": 210,
+              "height": 26.296875,
+              "top": 615.984375,
+              "right": 280.3125,
+              "bottom": 642.28125,
+              "left": 70.3125
+            }
+          }
+        ],
+        "region": {
+          "client": 350,
+          "scroll": 1024
+        }
+      }
+    },
+    {
+      "name": "phone-keyboard-reaches-rightmost-columns",
+      "status": "pass",
+      "value": {
+        "before": 0,
+        "left": 674,
+        "max": 674
+      }
+    },
+    {
+      "name": "phone-keyboard-reaches-complete-download",
+      "status": "fail",
+      "error": {
+        "name": "Error",
+        "message": "download.saveAs: ENOENT: no such file or directory, copyfile '/tmp/playwright-artifacts-Eu9MHG/c86c3ffa-fe59-486d-ace8-cb810284c6a7' -> '/dev/shm/hamon-b890f0b1bfcd-pt-receiving/receiving-v1/browser/keyboard-all-allocated.csv'",
+        "stack": "download.saveAs: ENOENT: no such file or directory, copyfile '/tmp/playwright-artifacts-Eu9MHG/c86c3ffa-fe59-486d-ace8-cb810284c6a7' -> '/dev/shm/hamon-b890f0b1bfcd-pt-receiving/receiving-v1/browser/keyboard-all-allocated.csv'\n    at /dev/shm/hamon-b890f0b1bfcd-pt-receiving/receive_browser.cjs:78:549\n    at async group (/dev/shm/hamon-b890f0b1bfcd-pt-receiving/receive_browser.cjs:18:47)\n    at async /dev/shm/hamon-b890f0b1bfcd-pt-receiving/receive_browser.cjs:78:3"
+      }
+    },
+    {
+      "name": "legacy-native-report-is-unavailable",
+      "status": "pass",
+      "value": {
+        "disabled_controls": 4,
+        "no_download": true
+      }
+    },
+    {
+      "name": "valid-empty-native-report-is-empty",
+      "status": "fail",
+      "error": {
+        "name": "Error",
+        "message": "download.saveAs: ENOENT: no such file or directory, copyfile '/tmp/playwright-artifacts-Eu9MHG/6669247d-963a-45fa-add0-b6f8beccd9a7' -> '/dev/shm/hamon-b890f0b1bfcd-pt-receiving/receiving-v1/browser/empty-all-allocated.csv'",
+        "stack": "download.saveAs: ENOENT: no such file or directory, copyfile '/tmp/playwright-artifacts-Eu9MHG/6669247d-963a-45fa-add0-b6f8beccd9a7' -> '/dev/shm/hamon-b890f0b1bfcd-pt-receiving/receiving-v1/browser/empty-all-allocated.csv'\n    at /dev/shm/hamon-b890f0b1bfcd-pt-receiving/receive_browser.cjs:80:750\n    at async group (/dev/shm/hamon-b890f0b1bfcd-pt-receiving/receive_browser.cjs:18:47)\n    at async /dev/shm/hamon-b890f0b1bfcd-pt-receiving/receive_browser.cjs:80:3"
+      }
+    },
+    {
+      "name": "literal-markup-and-offline-read-only-requests",
+      "status": "pass",
+      "value": {
+        "page_errors": 0,
+        "dialogs": 0,
+        "external_requests": 0,
+        "all_requests_get": true,
+        "request_count": 10
+      }
+    }
+  ],
+  "page_errors": [],
+  "console_errors": [],
+  "external_requests": [],
+  "requests": [
+    {
+      "url": "http://127.0.0.1:44277/",
+      "method": "GET",
+      "resource": "document"
+    },
+    {
+      "url": "http://127.0.0.1:44277/calendar_ui.js",
+      "method": "GET",
+      "resource": "script"
+    },
+    {
+      "url": "http://127.0.0.1:44277/api/summary",
+      "method": "GET",
+      "resource": "fetch"
+    },
+    {
+      "url": "http://127.0.0.1:44277/out/digest.html",
+      "method": "GET",
+      "resource": "document"
+    },
+    {
+      "url": "http://127.0.0.1:33345/",
+      "method": "GET",
+      "resource": "document"
+    },
+    {
+      "url": "http://127.0.0.1:33345/calendar_ui.js",
+      "method": "GET",
+      "resource": "script"
+    },
+    {
+      "url": "http://127.0.0.1:33345/api/summary",
+      "method": "GET",
+      "resource": "fetch"
+    },
+    {
+      "url": "http://127.0.0.1:38191/",
+      "method": "GET",
+      "resource": "document"
+    },
+    {
+      "url": "http://127.0.0.1:38191/calendar_ui.js",
+      "method": "GET",
+      "resource": "script"
+    },
+    {
+      "url": "http://127.0.0.1:38191/api/summary",
+      "method": "GET",
+      "resource": "fetch"
+    }
+  ],
+  "dialogs": [],
+  "downloads": [],
+  "captures": [
+    {
+      "name": "complete-digest",
+      "file": "complete-digest.png",
+      "bytes": 562914,
+      "sha256": "f49fa9af2a047787f536a28788fa747bd5af31324c171afa90a4fd7cbe3e40ec"
+    },
+    {
+      "name": "phone-left",
+      "file": "phone-left.png",
+      "bytes": 211340,
+      "sha256": "e6b0845a2af42fc21412e2f03ab5909654663b82be7277417ef43a427abb32bd"
+    },
+    {
+      "name": "phone-right",
+      "file": "phone-right.png",
+      "bytes": 339712,
+      "sha256": "25d1fe87bb4a6fcb786c3bf00de2fa3e0821fb68b6e24748abd537863c70c601"
+    },
+    {
+      "name": "legacy-unavailable",
+      "file": "legacy-unavailable.png",
+      "bytes": 97002,
+      "sha256": "63ea282ed1f7f8aa81dffce1e41d9cb5a41282e3ad97d109a9e8f082c9ca8876"
+    }
+  ],
+  "started_at": "2026-10-08T19:56:09.295Z",
+  "capacity_before": {
+    "tmp_free": 813338624,
+    "shm_free": 5329641472
+  },
+  "profile": "/tmp/hamon-b890f0b1bfcd-pt-profile-v1-KKlLNs",
+  "browser_version": "153.0.8010.47",
+  "browser_version_protocol": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/153.0.8010.47",
+    "revision": "@73934a44f61e6b3878d1943064c141a5a820f5f7",
+    "userAgent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+    "jsVersion": "15.3.76.12"
+  },
+  "capacity_after": {
+    "tmp_free": 681000960,
+    "shm_free": 5209092096
+  },
+  "owned_profile_removed": true,
+  "completed_at": "2026-10-08T19:58:06.656Z",
+  "pass": 16,
+  "fail": 4
+}
