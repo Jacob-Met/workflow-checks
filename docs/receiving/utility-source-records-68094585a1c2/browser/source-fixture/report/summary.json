@@ -1,0 +1,67 @@
+{
+ "as_of": "2024-02-05",
+ "eval_from": "2024-01-01",
+ "data_mode": "synthetic",
+ "accounts": 4,
+ "bills": 8,
+ "flags": 3,
+ "by_code": {
+  "LATE_FEE_OR_PAST_DUE": 2,
+  "USAGE_SPIKE": 1
+ },
+ "exceptions": 0,
+ "payment_queue": 1,
+ "payment_queue_total": 60.0,
+ "naive_trailing3_hits": [],
+ "flags_detail": [
+  {
+   "key": "SHARED",
+   "account_no": "A",
+   "property": "Fictional <Courtyard> & \"East\"",
+   "utility": "electric",
+   "code": "LATE_FEE_OR_PAST_DUE",
+   "detail": "late fee $8.00, prior balance $0.00 on the bill",
+   "evidence": [
+    "bills.csv:7"
+   ]
+  },
+  {
+   "key": "C-2024",
+   "account_no": "C",
+   "property": "Fictional C",
+   "utility": "electric",
+   "code": "USAGE_SPIKE",
+   "detail": "19.4 kWh/day vs 9.7 same month last year (x2.00)",
+   "evidence": [
+    "bills.csv:11",
+    "bills.csv:10"
+   ]
+  },
+  {
+   "key": "SHARED",
+   "account_no": "D",
+   "property": "Fictional D",
+   "utility": "electric",
+   "code": "LATE_FEE_OR_PAST_DUE",
+   "detail": "late fee $5.00, prior balance $0.00 on the bill",
+   "evidence": [
+    "bills.csv:13"
+   ]
+  }
+ ],
+ "exceptions_detail": [],
+ "payment_queue_detail": [
+  {
+   "bill_id": "B-2024",
+   "account_no": "B",
+   "property": "Fictional B",
+   "utility": "electric",
+   "vendor": "Placeholder vendor",
+   "invoice": "INV-B-2024",
+   "amount_due": 60.0,
+   "due_date": "2024-03-01",
+   "status": "QUEUED_FOR_APPROVAL (not paid)",
+   "evidence": "bills.csv:9"
+  }
+ ]
+}

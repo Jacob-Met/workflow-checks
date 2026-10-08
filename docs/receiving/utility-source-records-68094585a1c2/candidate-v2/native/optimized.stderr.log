@@ -1,0 +1,21 @@
+test_actual_http_returns_native_bytes_and_retains_existing_auth_boundary (test_review_evidence.SourceRecordDeskTests.test_actual_http_returns_native_bytes_and_retains_existing_auth_boundary) ... /usr/lib/python3.14/tempfile.py:484: ResourceWarning: Implicitly cleaning up <HTTPError 403: 'Forbidden'>
+  _warnings.warn(self.warn_message, ResourceWarning)
+/usr/lib/python3.14/tempfile.py:484: ResourceWarning: Implicitly cleaning up <HTTPError 400: 'Bad Request'>
+  _warnings.warn(self.warn_message, ResourceWarning)
+ok
+test_annotation_download_and_native_reconciliation_survive_inspection (test_review_evidence.SourceRecordDeskTests.test_annotation_download_and_native_reconciliation_survive_inspection) ... ok
+test_changed_source_context_refuses_even_when_finding_fields_stay_the_same (test_review_evidence.SourceRecordDeskTests.test_changed_source_context_refuses_even_when_finding_fields_stay_the_same) ... ok
+test_changed_worksheet_refuses_before_and_after_native_production (test_review_evidence.SourceRecordDeskTests.test_changed_worksheet_refuses_before_and_after_native_production) ... ok
+test_cli_requires_paired_configuration_and_default_desk_stays_usable (test_review_evidence.SourceRecordDeskTests.test_cli_requires_paired_configuration_and_default_desk_stays_usable) ... ok
+test_exact_native_bytes_keep_literal_cells_header_order_and_all_inputs (test_review_evidence.SourceRecordDeskTests.test_exact_native_bytes_keep_literal_cells_header_order_and_all_inputs) ... ok
+test_native_stale_report_refusal_is_not_bypassed (test_review_evidence.SourceRecordDeskTests.test_native_stale_report_refusal_is_not_bypassed) ... ok
+test_new_report_date_is_not_silently_presented_as_the_saved_report (test_review_evidence.SourceRecordDeskTests.test_new_report_date_is_not_silently_presented_as_the_saved_report) ... ok
+test_protected_fields_pointers_and_manifest_metadata_are_bound (test_review_evidence.SourceRecordDeskTests.test_protected_fields_pointers_and_manifest_metadata_are_bound) ... ok
+test_request_shape_identity_and_unconfigured_source_refuse_before_producer (test_review_evidence.SourceRecordDeskTests.test_request_shape_identity_and_unconfigured_source_refuse_before_producer) ... ok
+test_same_bill_keys_stay_with_the_selected_account_and_history_refuses (test_review_evidence.SourceRecordDeskTests.test_same_bill_keys_stay_with_the_selected_account_and_history_refuses) ... ok
+test_whole_response_bound_refuses_without_truncating_or_writing_inputs (test_review_evidence.SourceRecordDeskTests.test_whole_response_bound_refuses_without_truncating_or_writing_inputs) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 2.207s
+
+OK

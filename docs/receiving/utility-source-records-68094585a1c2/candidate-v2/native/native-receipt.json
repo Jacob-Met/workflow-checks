@@ -1,0 +1,65 @@
+{
+  "source_pins": 43,
+  "records": [
+    {
+      "name": "syntax",
+      "command": [
+        "node",
+        "--check",
+        "tests/review_desk_browser.mjs"
+      ],
+      "started": "2026-10-08T18:02:41.117Z",
+      "finished": "2026-10-08T18:02:42.155Z",
+      "status": 0,
+      "signal": null,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_tail": "",
+      "stderr_tail": ""
+    },
+    {
+      "name": "native",
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "-p",
+        "no:cacheprovider"
+      ],
+      "started": "2026-10-08T18:02:42.171Z",
+      "finished": "2026-10-08T18:03:44.870Z",
+      "status": 0,
+      "signal": null,
+      "stdout_sha256": "8a39c2f169b9540cabfa16f244e40e2156407cb36e7dcc92982e5e67c938ea70",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_tail": "....................................... [ 24%]\n..........................................................................................................................                                               [100%]\n161 passed, 81 subtests passed in 60.88s (0:01:00)\n",
+      "stderr_tail": ""
+    },
+    {
+      "name": "optimized",
+      "command": [
+        "python3",
+        "-B",
+        "-O",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_review_evidence.py",
+        "-v"
+      ],
+      "started": "2026-10-08T18:03:44.870Z",
+      "finished": "2026-10-08T18:03:50.922Z",
+      "status": 0,
+      "signal": null,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "ff0dadf98e1994efa324ea579508017057122654662749c117f50dd555baca5a",
+      "stdout_tail": "",
+      "stderr_tail": "tion) ... ok\ntest_cli_requires_paired_configuration_and_default_desk_stays_usable (test_review_evidence.SourceRecordDeskTests.test_cli_requires_paired_configuration_and_default_desk_stays_usable) ... ok\ntest_exact_native_bytes_keep_literal_cells_header_order_and_all_inputs (test_review_evidence.SourceRecordDeskTests.test_exact_native_bytes_keep_literal_cells_header_order_and_all_inputs) ... ok\ntest_native_stale_report_refusal_is_not_bypassed (test_review_evidence.SourceRecordDeskTests.test_native_stale_report_refusal_is_not_bypassed) ... ok\ntest_new_report_date_is_not_silently_presented_as_the_saved_report (test_review_evidence.SourceRecordDeskTests.test_new_report_date_is_not_silently_presented_as_the_saved_report) ... ok\ntest_protected_fields_pointers_and_manifest_metadata_are_bound (test_review_evidence.SourceRecordDeskTests.test_protected_fields_pointers_and_manifest_metadata_are_bound) ... ok\ntest_request_shape_identity_and_unconfigured_source_refuse_before_producer (test_review_evidence.SourceRecordDeskTests.test_request_shape_identity_and_unconfigured_source_refuse_before_producer) ... ok\ntest_same_bill_keys_stay_with_the_selected_account_and_history_refuses (test_review_evidence.SourceRecordDeskTests.test_same_bill_keys_stay_with_the_selected_account_and_history_refuses) ... ok\ntest_whole_response_bound_refuses_without_truncating_or_writing_inputs (test_review_evidence.SourceRecordDeskTests.test_whole_response_bound_refuses_without_truncating_or_writing_inputs) ... ok\n\n----------------------------------------------------------------------\nRan 12 tests in 2.207s\n\nOK\n"
+    }
+  ]
+}

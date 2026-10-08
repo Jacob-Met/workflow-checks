@@ -72,8 +72,9 @@ async function waitFor(fn, label, milliseconds = 15000) {
   }
   throw new Error("Timed out: " + label);
 }
-async function startDesk(filename) {
-  const child = spawn(python, ["-B", "-m", "uwatch", "review-desk", "--worksheet", filename, "--port", "0"],
+async function startDesk(filename, data, report) {
+  const child = spawn(python, ["-B", "-m", "uwatch", "review-desk", "--worksheet", filename, "--port", "0",
+    ...(data ? ["--data", data, "--report", report] : [])],
     {cwd: packageRoot, env: nativeEnv, stdio: ["ignore", "pipe", "pipe"]});
   const record = {child, filename, stdout: "", stderr: "", error: null};
   child.stdout.on("data", data => { record.stdout += data; });
@@ -344,6 +345,140 @@ try {
   const empty = await download("04-empty-current.csv");
   expectRows(empty.rows, csvRows(emptyFile), {});
   mark("a native-valid empty worksheet opens and downloads its unchanged manifest");
+
+
+  // Optional source inspection uses the real CLI, unchanged native evidence
+  // producer and genuine downloaded bytes. These records are all fictional.
+  const sourceFixture = JSON.parse(run([path.join(here, "review_evidence_fixture.py"), path.join(root, "source-fixture")]));
+  const sourceInputPins = fileHashes(path.join(root, "source-fixture"));
+  const sourceOrigin = await startDesk(sourceFixture.worksheet, sourceFixture.data, sourceFixture.report);
+  await page(sourceOrigin);
+  const sourceRows = Object.fromEntries(["A", "D"].map(account => [account,
+    sourceFixture.rows.find(row => row.row_state === "current" && row.account_no === account)]));
+  const expectedEvidence = Object.fromEntries(["A", "D"].map(account =>
+    [account, JSON.parse(fs.readFileSync(sourceFixture.evidence[account], "utf8"))]));
+  async function chooseSource(account) {
+    await click('[data-row-id="' + sourceRows[account].row_id + '"]');
+  }
+  async function checkedSource(account) {
+    await click("#inspect-evidence");
+    await waitFor(() => evaluate(() => !document.getElementById("source-record-result").hidden),
+      "actual native source records for " + account);
+    const visible = await evaluate(() => ({
+      summary: document.getElementById("source-record-summary").textContent,
+      fields: [...document.querySelectorAll(".source-record")].map(record => ({
+        pointer: record.dataset.pointer,
+        entries: [...record.querySelectorAll("dt")].map(dt => [dt.textContent, dt.nextElementSibling.textContent]),
+      })),
+      executed: window.utilityExecuted ?? null,
+    }));
+    assert.ok(visible.summary.includes(" · " + account + " · SHARED · "));
+    assert.deepEqual(visible.fields, expectedEvidence[account].records.map(record => ({
+      pointer: record.pointer, entries: record.columns.map(column => [column, record.fields[column]]),
+    })));
+    assert.equal(visible.executed, null);
+    return visible;
+  }
+  async function evidenceDownload(account, name) {
+    const before = downloadEvents.length;
+    await click("#download-evidence");
+    await waitFor(() => downloadEvents.slice(before).some(event =>
+      event.method === "Browser.downloadProgress" && event.state === "completed"), "actual native JSON download");
+    const filename = path.join(downloads, "utility-source-evidence.json");
+    await waitFor(() => fs.existsSync(filename), "evidence download exists");
+    const destination = path.join(downloads, name);
+    fs.renameSync(filename, destination);
+    const raw = fs.readFileSync(destination);
+    assert.deepEqual(raw, fs.readFileSync(sourceFixture.evidence[account]));
+    return {account, path: destination, bytes: raw.length, sha256: hash(raw)};
+  }
+  await chooseSource("A");
+  await fill("#reviewer", "Source receiver Zoë");
+  await fill("#note", "Keep this draft while inspecting.\n=literal");
+  await fill("#search", "Keep this draft");
+  const draftBefore = await evaluate(() => ({
+    row: document.querySelector('.finding[aria-pressed="true"]').dataset.rowId,
+    reviewer: document.getElementById("reviewer").value, note: document.getElementById("note").value,
+    search: document.getElementById("search").value,
+    status: document.getElementById("review-status").value,
+    changes: document.getElementById("change-count").textContent,
+  }));
+  const requestsBefore = requests.length;
+  const renderedA = await checkedSource("A");
+  assert.ok(renderedA.fields.some(record => record.entries.some(([key, value]) => key === "memo" && value === sourceFixture.memo)));
+  const draftAfter = await evaluate(() => ({
+    row: document.querySelector('.finding[aria-pressed="true"]').dataset.rowId,
+    reviewer: document.getElementById("reviewer").value, note: document.getElementById("note").value,
+    search: document.getElementById("search").value,
+    status: document.getElementById("review-status").value,
+    changes: document.getElementById("change-count").textContent,
+  }));
+  assert.deepEqual(draftAfter, draftBefore);
+  assert.deepEqual(requests.slice(requestsBefore).filter(url => url.includes("/api/")).map(url => new URL(url).pathname),
+    ["/api/evidence"]);
+  const downloadedA = await evidenceDownload("A", "05-source-A.json");
+  await screenshot("source-records-desktop.png");
+  mark("literal multiline source fields match the native producer and same-byte JSON download; notes and filters remain", downloadedA);
+
+  await click("#clear-filters");
+  await chooseSource("D");
+  assert.equal(await evaluate(() => document.getElementById("source-record-result").hidden), true);
+  assert.equal(await evaluate(() => document.getElementById("download-evidence").disabled), true);
+  await checkedSource("D");
+  const downloadedD = await evidenceDownload("D", "06-source-D.json");
+  assert.notEqual(downloadedD.sha256, downloadedA.sha256);
+  mark("identical bill keys on two accounts keep separate record identity and discard the previous download", downloadedD);
+
+  // Delay delivery of one real completed native response, not its contents.
+  await evaluate(rowId => {
+    const nativeFetch = window.fetch.bind(window);
+    window.fetch = async (input, options) => {
+      const response = await nativeFetch(input, options);
+      if (input === "/api/evidence" && JSON.parse(options.body).row_id === rowId && !window.evidenceDelayDone) {
+        window.evidenceDelayDone = true;
+        window.evidenceArrived = true;
+        await new Promise(resolve => { window.releaseEvidence = resolve; });
+        window.evidenceReleased = true;
+      }
+      return response;
+    };
+  }, sourceRows.A.row_id);
+  await chooseSource("A");
+  await click("#inspect-evidence");
+  await waitFor(() => evaluate(() => window.evidenceArrived === true), "real A response held at the browser transport");
+  await chooseSource("D");
+  await fill("#note", "D stays selected while A finishes.");
+  await checkedSource("D");
+  const currentSummary = await evaluate(() => document.getElementById("source-record-summary").textContent);
+  await evaluate(() => window.releaseEvidence());
+  await waitFor(() => evaluate(() => window.evidenceReleased === true), "older response released");
+  assert.equal(await evaluate(() => document.getElementById("source-record-summary").textContent), currentSummary);
+  assert.equal(await evaluate(() => document.getElementById("note").value), "D stays selected while A finishes.");
+  assert.equal(await evaluate(() => document.getElementById("download-evidence").disabled), false);
+  mark("a late response for the former selection cannot replace the current account's records or draft");
+
+  const billsPath = path.join(sourceFixture.data, "bills.csv");
+  const billsBefore = fs.readFileSync(billsPath);
+  run(["-c", "import csv,sys\nfrom pathlib import Path\np=Path(sys.argv[1])\nwith p.open(newline='',encoding='utf-8') as f:\n r=csv.DictReader(f);cols=r.fieldnames;rows=list(r)\nfor row in rows:\n if row['account_no']=='D': row['memo']+=' changed source context'\nwith p.open('w',newline='',encoding='utf-8') as f:\n w=csv.DictWriter(f,fieldnames=cols);w.writeheader();w.writerows(rows)", billsPath]);
+  try {
+    await click("#inspect-evidence");
+    await waitFor(() => evaluate(() => !document.getElementById("source-record-error").hidden), "changed source context refusal");
+    assert.match(await evaluate(() => document.getElementById("source-record-error").textContent), /do not match this saved finding/);
+    assert.equal(await evaluate(() => document.getElementById("source-record-result").hidden), true);
+    assert.equal(await evaluate(() => document.getElementById("download-evidence").disabled), true);
+    assert.equal(await evaluate(() => document.getElementById("note").value), "D stays selected while A finishes.");
+  } finally {
+    fs.writeFileSync(billsPath, billsBefore);
+  }
+  await checkedSource("D");
+  assert.deepEqual(fileHashes(path.join(root, "source-fixture")), sourceInputPins);
+  mark("a native-valid changed source context refuses without losing draft notes; the exact restored source can be rechecked");
+
+  await cdp.call("Emulation.setDeviceMetricsOverride",
+    {width: 320, height: 1000, deviceScaleFactor: 1, mobile: false}, session);
+  assert.ok(await evaluate(() => document.documentElement.scrollWidth <= 321));
+  await screenshot("source-records-narrow.png");
+  mark("source record values remain readable in the existing 320-pixel desk without horizontal overflow");
 
   assert.deepEqual(exceptions, []);
   const allowed = new Set(servers.map(record => record.origin));

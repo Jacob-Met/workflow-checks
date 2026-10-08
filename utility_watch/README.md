@@ -87,6 +87,10 @@ file is read-only; edits stay in the page until you download a copy.
 
 Use the downloaded file as `--previous` in the existing review command when reconciling
 a new export. Opening the desk does not recheck bills or reconcile a newer report.
+Add `--data sample_data --report out/summary.json` to connect the matching export and
+report. **Inspect source records** shows the actual CSV values for the selected current
+finding after native source/report and saved-evidence checks; **Download evidence JSON**
+keeps the native producer’s exact bytes. Notes and payment eligibility stay unchanged.
 See [Review desk](docs/review-desk.md) for the complete workflow and native checks.
 
 ### What carries forward

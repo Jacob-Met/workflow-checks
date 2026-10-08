@@ -1,0 +1,111 @@
+{
+  "schema": "uwatch-evidence-v1",
+  "finding": {
+    "kind": "flag",
+    "account_no": "A",
+    "finding_key": "SHARED",
+    "code": "LATE_FEE_OR_PAST_DUE",
+    "property": "Fictional <Courtyard> & \"East\"",
+    "utility": "electric",
+    "detail": "late fee $8.00, prior balance $0.00 on the bill",
+    "finding_id": "420fbff9dbab525b711c337609d83a422f2aaf871c8f88df5c9d389d33ddc214",
+    "evidence_version": "69ec41aa9d228b514ba757054346a4995d8d1908701f72e3af859b04f5f68829",
+    "evidence": [
+      "bills.csv:7"
+    ]
+  },
+  "review": {
+    "as_of": "2024-02-05",
+    "eval_from": "2024-01-01",
+    "data_mode": "synthetic"
+  },
+  "source": {
+    "report": {
+      "file": "summary.json",
+      "present": true,
+      "bytes": 1440,
+      "sha256": "9604a3178f98865a3d4b38a5ac585ec3c61fe261b06c49f3446a308e2f9dfc18"
+    },
+    "inputs": [
+      {
+        "file": "accounts.csv",
+        "present": true,
+        "bytes": 320,
+        "sha256": "64c639848182d90e11549e720096fdb9e7ecf98a6d1e06145367a54531a54fb7"
+      },
+      {
+        "file": "bills.csv",
+        "present": true,
+        "bytes": 1058,
+        "sha256": "c2885994b9b3496e64734e8bbde9d8928d42891f26dc15a602048c4e2a33c699"
+      },
+      {
+        "file": "occupancy.csv",
+        "present": true,
+        "bytes": 30,
+        "sha256": "a5d1a56715792e6c974f8999a3b428b6090b5f4369d87d89ecb98e2b55b8450a"
+      },
+      {
+        "file": "payments.csv",
+        "present": true,
+        "bytes": 58,
+        "sha256": "29c7cb3eae40c96c9800e6359acacfb1d1928c3c7a65981c55e01485501f7300"
+      },
+      {
+        "file": "expected.json",
+        "present": true,
+        "bytes": 50,
+        "sha256": "a1769d49272239f40ac57838d8cbbb1f8283a8362829eb4d86af61a1fad0c3fe"
+      }
+    ],
+    "engine_sha256": "8d61b55e88415275ffe1c5edca6f914f10c4f47f6cfd9d0b56ba76854f6f1180",
+    "rules": {
+      "spike_ratio": 1.5,
+      "rate_ratio": 1.2,
+      "rate_min_amount": 100.0,
+      "vacant_standby_per_day": {
+        "water": 0.05,
+        "electric": 5.0
+      },
+      "payment_tolerance": 1.0,
+      "naive_trailing3_ratio": 1.5
+    }
+  },
+  "records": [
+    {
+      "pointer": "bills.csv:7",
+      "file": "bills.csv",
+      "record_end_line": 7,
+      "columns": [
+        "bill_id",
+        "account_no",
+        "vendor_invoice_no",
+        "period_start",
+        "period_end",
+        "usage",
+        "usage_unit",
+        "amount",
+        "late_fee",
+        "prior_balance",
+        "due_date",
+        "received_date",
+        "memo"
+      ],
+      "fields": {
+        "bill_id": "SHARED",
+        "account_no": "A",
+        "vendor_invoice_no": "INV-A-2024",
+        "period_start": "2024-01-01",
+        "period_end": "2024-01-31",
+        "usage": "300",
+        "usage_unit": "kWh",
+        "amount": "60",
+        "late_fee": "8",
+        "prior_balance": "0",
+        "due_date": "2024-03-01",
+        "received_date": "2024-02-01",
+        "memo": "  =SUM(1,2)\r\n<script>window.utilityExecuted=1</script>\nZoë 李 \"quoted\" & literal  "
+      }
+    }
+  ]
+}

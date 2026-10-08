@@ -1,0 +1,70 @@
+{
+  "frozen_at": "2026-10-08T17:57:31.910Z",
+  "repository": "Jacob-Met/workflow-checks",
+  "base": "76e6175d91320ac816cee019df969c0f0e1bbfc7",
+  "scope": "Utility Watch current-finding source-record inspection",
+  "config": {
+    "cli": "review-desk --worksheet PATH [--data DIR --report SUMMARY]",
+    "paired": true,
+    "default": "Existing saved worksheet-only desk"
+  },
+  "api": {
+    "method": "POST",
+    "path": "/api/evidence",
+    "request": {
+      "snapshot": "Admitted worksheet SHA256",
+      "row_id": "Exact current row ID"
+    },
+    "extra_fields": "refused",
+    "response": "Exact UTF-8 JSON bytes emitted by unchanged uwatch.evidence.write_evidence; no JS stringify reserialization",
+    "response_max_bytes": 8388608,
+    "auth": "Existing exact loopback Host/Origin/session token"
+  },
+  "binding": {
+    "before_and_after": "Exact saved worksheet bytes unchanged",
+    "row": "Admitted current row only",
+    "producer": "unchanged evidence.write_evidence(data, report, private_temporary_output, kind, account, key, code)",
+    "finding_fields": [
+      "kind",
+      "account_no",
+      "finding_key",
+      "code",
+      "property",
+      "utility",
+      "detail",
+      "finding_id",
+      "evidence_version"
+    ],
+    "pointers": "Native evidence array equals the selected protected evidence list, including order/repeats",
+    "report_fields": [
+      "as_of",
+      "eval_from",
+      "data_mode"
+    ],
+    "metadata": "Matches both selected current row and admitted worksheet manifest"
+  },
+  "ui": {
+    "action": "Inspect source records",
+    "render": "Literal header-order fields with pre-wrapped values; native report/source snapshot identity available",
+    "async": "Selection change/refresh invalidates older result and download; note/filter edits are unaffected",
+    "download": "Explicit same-byte JSON download of the displayed checked response",
+    "history": "No fresh source inspection for historical rows"
+  },
+  "unchanged": [
+    "evidence.py",
+    "review.py",
+    "engine.py",
+    "worksheet.py",
+    "review_report.py",
+    "auth restrictions",
+    "saved annotation/edit/download semantics",
+    "checker findings/payment eligibility",
+    "PT/Freight/shared CI"
+  ],
+  "limits": [
+    "No atomic cross-file source filesystem snapshot promise beyond existing writer rechecks",
+    "No automatic refresh/reconciliation/provider action",
+    "Local native runtime differs from hosted Python3.10/3.12; hosted gates remain receiving"
+  ],
+  "timestamp_note": "This native clock is the contract freeze; the retained initial draft contained a manually typed draft time."
+}

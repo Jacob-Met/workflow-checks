@@ -1,4 +1,5 @@
 "use strict";
+import {createEvidenceInspector} from "/review_evidence.js";
 (() => {
   const byId = (id) => document.getElementById(id);
   const labels = {open: "Open", in_progress: "In progress", reviewed: "Reviewed"};
@@ -9,6 +10,7 @@
   let busy = false;
   let lastDownloaded = null;
   const drafts = new Map();
+  const evidence = createEvidenceInspector();
 
   function element(tag, text, className) {
     const node = document.createElement(tag);
@@ -103,6 +105,7 @@
     const row = current.find((item) => item.row_id === id);
     if (!row) return;
     selectedId = id;
+    evidence.select(row, worksheet);
     byId("empty-editor").hidden = true;
     byId("selected").hidden = false;
     byId("selected-property").textContent = row.property || "Recorded finding";
@@ -165,6 +168,7 @@
   }
   function setBusy(value) {
     busy = value;
+    evidence.setBusy(value);
     byId("download").disabled = value;
     byId("annotation-fields").disabled = value;
     for (const id of ["search", "status-filter", "clear-filters", "show-invalid"]) byId(id).disabled = value;

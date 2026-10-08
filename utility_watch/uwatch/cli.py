@@ -42,11 +42,13 @@ def main(argv=None) -> int:
     desk = sub.add_parser("review-desk", help="edit current review notes in a local browser desk")
     desk.add_argument("--worksheet", type=Path, required=True, help="saved native review CSV; read-only")
     desk.add_argument("--port", type=int, default=0, help="loopback port; 0 selects an available port")
+    desk.add_argument("--data", type=Path, help="matching source CSV export for optional record inspection")
+    desk.add_argument("--report", type=Path, help="matching native summary.json; requires --data")
     a = ap.parse_args(argv)
     if a.cmd == "review-desk":
         from .review_desk import serve
         try:
-            serve(a.worksheet, a.port)
+            serve(a.worksheet, a.port, data=a.data, report=a.report)
         except (OSError, ValueError, KeyError) as exc:
             print(f"uwatch: review desk error: {exc}", file=sys.stderr)
             return 2

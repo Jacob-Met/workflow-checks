@@ -1,0 +1,171 @@
+{
+  "authored_as": "estate-68094585a1c2 / production",
+  "standing_identity": "chatgpt:68094585a1c2",
+  "work_issue": "https://github.com/Jacob-Met/workflow-checks/issues/53",
+  "recovered_by": "Continuation of the same contributor; this is author qualification, not independent acceptance.",
+  "sealed_at": "2026-10-08T18:48:04.373Z",
+  "original_parent": "76e6175d91320ac816cee019df969c0f0e1bbfc7",
+  "original_tree": "256483cd5c7cbb3731e5a6c322a117900ab24b65",
+  "composition_base": "c1f6fa79518bac5ca9836e6f931766368804ba7a",
+  "composition_tree": "4cc43c06b3cc06ecc6cdcc9f2bbb0f16557cbba7",
+  "composition_note": "Current main changed only Freight comparison and its receiving evidence. Utility source and shared tests workflow match originally qualified inputs. All current-main files are preserved by composing only the publication allowlist onto its complete tree.",
+  "source_scope": {
+    "authored_as": "estate-68094585a1c2 / production",
+    "continuing_worker": "chatgpt:68094585a1c2",
+    "original_parent": "76e6175d91320ac816cee019df969c0f0e1bbfc7",
+    "original_tree": "256483cd5c7cbb3731e5a6c322a117900ab24b65",
+    "original_full_tree_leaves": 1171,
+    "baseline_materialized": 39,
+    "candidate_materialized": 43,
+    "changed": [
+      {
+        "path": "utility_watch/README.md",
+        "bytes": 14769,
+        "sha256": "55eabfa2a59f3dc8e46fa3eb97f290976785e1d47e67bab2b4bfe43983dcd388",
+        "blob": "da5288186d42fbe3cd4c3366ad475c12695a4fac",
+        "previous_blob": "0887f672611b4bda56eac4373676bfb3748e18a1"
+      },
+      {
+        "path": "utility_watch/docs/review-desk.md",
+        "bytes": 7608,
+        "sha256": "dd8d238be2d9c2c65e7d858fc4488340fb5c6643c05178771707c7ef6a805514",
+        "blob": "07e3545a54953f37203435113afd974c881d0e4d",
+        "previous_blob": "ac74106dc53fe79591d0daf21913ba834124ee27"
+      },
+      {
+        "path": "utility_watch/tests/review_desk_browser.mjs",
+        "bytes": 29308,
+        "sha256": "e0ea0cc84f9d482665c423605949f210bd67d5d97cd93d63015d6d42cd2aa632",
+        "blob": "de7375009702ba6e4a307b048382fc84fe27610b",
+        "previous_blob": "b4cb971eabeff58009db221826cca9385265c0d1"
+      },
+      {
+        "path": "utility_watch/tests/review_evidence_fixture.py",
+        "bytes": 1840,
+        "sha256": "b41d1dc9d5f90977f2e1573d9886b758849da5ce68a56bf872d0879b3796c135",
+        "blob": "5229a488e51b0846de9a6b86831c5d89135eb520",
+        "previous_blob": null
+      },
+      {
+        "path": "utility_watch/tests/test_review_evidence.py",
+        "bytes": 13133,
+        "sha256": "243dc7a21b42cb0fe54950c44312c9bcef998d0fd1025c090330ff23c7519ce0",
+        "blob": "6fc8fbecd0e0c6eb799a3027eea157ce6cdc98ac",
+        "previous_blob": null
+      },
+      {
+        "path": "utility_watch/uwatch/cli.py",
+        "bytes": 6707,
+        "sha256": "951bb90b2515621aaa74482fbe5d335ec58b98d4688f800e4b36c6a776b00989",
+        "blob": "4bbf8b5ec202b3094a1742880313679e9b99d40a",
+        "previous_blob": "c764e1c5ebab01bf1a02c11cd5d1604ff04667c1"
+      },
+      {
+        "path": "utility_watch/uwatch/review_desk.css",
+        "bytes": 6503,
+        "sha256": "4dea1febd3884725306bfa2a76289c3921f8567d89117f716c33b8c64427fde6",
+        "blob": "f1ce53450b17fadb6fcaec55ffd01168e9fd1bbb",
+        "previous_blob": "26b2ca2eec1f266ac8547fc7835984ac6c859975"
+      },
+      {
+        "path": "utility_watch/uwatch/review_desk.html",
+        "bytes": 6723,
+        "sha256": "886b6322f60c84dec85d6fad1870b46d3a8f291956070f6ca1b0467560b09e68",
+        "blob": "bfa77b47403642f2a77df407b222e7785858854e",
+        "previous_blob": "f6e0b60f5df4211a9aaa2e81a1a2b94b0bfa181b"
+      },
+      {
+        "path": "utility_watch/uwatch/review_desk.js",
+        "bytes": 11771,
+        "sha256": "c3079a7b41d117d119e644cd3df5f9fcfa0205dec4524d5bb1be9770d011e563",
+        "blob": "bc5929a2ffd0eae6b347d84db5da9421f97f48ab",
+        "previous_blob": "942140e8e22cca0d27109cb6ccb53280c7673848"
+      },
+      {
+        "path": "utility_watch/uwatch/review_desk.py",
+        "bytes": 13153,
+        "sha256": "f47851b5dfbff10065a727ee40b1c9da6d94b83a286a8537573e4062198a40e9",
+        "blob": "0df1e2a3354f64a4f90a974cf80bda6f4293f8f9",
+        "previous_blob": "873b375de871916cfb597985b78c097e86f44ee3"
+      },
+      {
+        "path": "utility_watch/uwatch/review_evidence.js",
+        "bytes": 5867,
+        "sha256": "3cc2e3ede386e7d14c246492ef55e0fe6db6926fcccdace0f08524d9d4c20af7",
+        "blob": "f755872dca603d51d7d087f0b184de00d4dfedc2",
+        "previous_blob": null
+      },
+      {
+        "path": "utility_watch/uwatch/review_evidence.py",
+        "bytes": 2222,
+        "sha256": "53ab35d375272018615fd02480a48cdb0a7efe18b28fc511465f46c0c66c9ebb",
+        "blob": "37a2c2399a366bf1968474123e6169e2da45e53a",
+        "previous_blob": null
+      }
+    ],
+    "unchanged_protected": [
+      {
+        "path": "utility_watch/uwatch/evidence.py",
+        "bytes": 8570,
+        "sha256": "258338fba6102df9b5a2676a889eb057cfb07109b150022481bf4e13e1dbd2e5",
+        "blob": "9fba5e38b07f13c0db7b69cf5f4c3d4e620a8048"
+      },
+      {
+        "path": "utility_watch/uwatch/review.py",
+        "bytes": 15534,
+        "sha256": "f9f730ca45140436704d9823eafcfb58fb3922c5d0bf93a21a63f31347c947de",
+        "blob": "2475217ce9c073c39756f9fa3926342cd83f7254"
+      },
+      {
+        "path": "utility_watch/uwatch/engine.py",
+        "bytes": 21531,
+        "sha256": "8d61b55e88415275ffe1c5edca6f914f10c4f47f6cfd9d0b56ba76854f6f1180",
+        "blob": "dd1b752972b74232090ed602d11b84759bda19e3"
+      },
+      {
+        "path": "utility_watch/uwatch/worksheet.py",
+        "bytes": 7789,
+        "sha256": "827f7ba7d6eba19d07f18bc202a50b8283bf2b4a6b9b9247046a0441a1d845fa",
+        "blob": "d8880f1f33115c8589ad0a91b87ef5619ae95964"
+      },
+      {
+        "path": "utility_watch/uwatch/review_report.py",
+        "bytes": 8457,
+        "sha256": "4462088141b21c990ce5b949a9c683f68f647ae83bdba0eaa1409730e442f856",
+        "blob": "be869a940436172253c0a6d5020ba24860f1a7eb"
+      },
+      {
+        "path": ".github/workflows/tests.yml",
+        "bytes": 695,
+        "sha256": "521a133de92677bbdd8a9693c4d7fb9e6d14ce2dd19fdf841a41f558f0bddec9",
+        "blob": "d72b89ae3efb2963fbe7386021f467e82a8e1f2e"
+      }
+    ]
+  },
+  "source_byte_check": "All 39 original and 43 candidate pins were re-read; byte lengths, SHA-256 and Git blob IDs match retained qualification. Native and browser suites were not rerun merely for recovery.",
+  "accepted_author_qualification": {
+    "unchanged_original": "149 tests and 59 subtests passed on installed Python 3.14.4 / pytest 9.0.2",
+    "original_behavior": "Actual existing fixture, native evidence and worksheet desk succeeded; proposed source inspection was unavailable (HTTP 404, argparse exit 2).",
+    "candidate_v1": "12 new test methods and 22 subtests passed",
+    "candidate_v2": "161 tests and 81 subtests passed in 60.88s; Python -O unittest 12 methods passed; browser syntax check passed",
+    "actual_browser": "14 actual Chromium 153 controls passed: native CLI, real HTTP, UI inputs, same-byte downloads, two account identities, late selection response, drift refusal, restored source retry, 320px layout and source custody.",
+    "browser_environment": {
+      "node": "v22.22.1",
+      "browser": "Chrome/153.0.8010.47",
+      "platform": "linux",
+      "executable": "/usr/bin/chromium-browser"
+    }
+  },
+  "product_limitations": [
+    "A checked source snapshot does not monitor later filesystem edits.",
+    "Original writer rechecks apply; there is no atomic cross-file filesystem snapshot promise.",
+    "The desk has an 8 MiB whole-output limit; the native evidence CLI remains available for larger outputs.",
+    "Only synthetic authored fixtures were used. No real client or financial data and no payment decisions were changed."
+  ],
+  "receiving": {
+    "independent_root_review": "pending",
+    "hosted_exact_source_gates": "pending at author seal",
+    "merge": "root-owned and pending",
+    "deployed": false
+  }
+}

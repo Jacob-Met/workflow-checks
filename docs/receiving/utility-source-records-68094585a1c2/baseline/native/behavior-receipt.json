@@ -1,0 +1,63 @@
+{
+  "parent": "76e6175d91320ac816cee019df969c0f0e1bbfc7",
+  "tree": "256483cd5c7cbb3731e5a6c322a117900ab24b65",
+  "native_evidence": {
+    "command": [
+      "/usr/bin/python3",
+      "-B",
+      "-m",
+      "uwatch",
+      "evidence",
+      "--data",
+      "/tmp/hamon-utility-evidence-desk-68094585a1c2/baseline-evidence/fixture/data",
+      "--report",
+      "/tmp/hamon-utility-evidence-desk-68094585a1c2/baseline-evidence/fixture/report/summary.json",
+      "--kind",
+      "flag",
+      "--account",
+      "A",
+      "--key",
+      "SHARED",
+      "--code",
+      "LATE_FEE_OR_PAST_DUE",
+      "--out",
+      "/tmp/hamon-utility-evidence-desk-68094585a1c2/baseline-evidence/native-evidence.json"
+    ],
+    "status": 0,
+    "stdout": "evidence: flag A SHARED LATE_FEE_OR_PAST_DUE; 1 source records\noutput: /tmp/hamon-utility-evidence-desk-68094585a1c2/baseline-evidence/native-evidence.json\n",
+    "stderr": "",
+    "bytes": 2921,
+    "sha256": "f3df2d3ff509cc199337083d0886de5ae0806bf0f3709cf6e4d276546af3e3cb",
+    "records": 1,
+    "finding_id": "420fbff9dbab525b711c337609d83a422f2aaf871c8f88df5c9d389d33ddc214",
+    "evidence_version": "3cace08bcda47b3df20e4cdfa7fd8c37472ecd8d0411cc67861103916c921083"
+  },
+  "unchanged_desk": {
+    "snapshot": "2b48f5c59e89debb414824664b10b9ce2bcca82d7b8830e6042deb163f0d11f1",
+    "current": 3,
+    "history": 2,
+    "download_valid": true
+  },
+  "missing_browser_route": {
+    "status": 404,
+    "body": "{\"error\": \"No such review-desk route.\"}"
+  },
+  "missing_cli": {
+    "status": 2,
+    "stderr": "usage: uwatch [-h]\n              {generate,run,review,review-report,worksheet,evidence,review-desk} ...\nuwatch: error: unrecognized arguments: --data /tmp/hamon-utility-evidence-desk-68094585a1c2/baseline-evidence/fixture/data --report /tmp/hamon-utility-evidence-desk-68094585a1c2/baseline-evidence/fixture/report/summary.json\n"
+  },
+  "protected_inputs_unchanged": {
+    "/tmp/hamon-utility-evidence-desk-68094585a1c2/baseline-evidence/fixture/data/expected.json": "a1769d49272239f40ac57838d8cbbb1f8283a8362829eb4d86af61a1fad0c3fe",
+    "/tmp/hamon-utility-evidence-desk-68094585a1c2/baseline-evidence/fixture/data/payments.csv": "29c7cb3eae40c96c9800e6359acacfb1d1928c3c7a65981c55e01485501f7300",
+    "/tmp/hamon-utility-evidence-desk-68094585a1c2/baseline-evidence/fixture/data/occupancy.csv": "a5d1a56715792e6c974f8999a3b428b6090b5f4369d87d89ecb98e2b55b8450a",
+    "/tmp/hamon-utility-evidence-desk-68094585a1c2/baseline-evidence/fixture/data/bills.csv": "af01aff34dedd0e3c4a9ed7733830a820dcdb091acbfeb2dd8349cb405839a47",
+    "/tmp/hamon-utility-evidence-desk-68094585a1c2/baseline-evidence/fixture/data/accounts.csv": "64c639848182d90e11549e720096fdb9e7ecf98a6d1e06145367a54531a54fb7",
+    "/tmp/hamon-utility-evidence-desk-68094585a1c2/baseline-evidence/fixture/report/report.html": "bdb19f5c49d99696e86ef048aa0ee986c7603da34db3ee2c46dfb0cb76aab4db",
+    "/tmp/hamon-utility-evidence-desk-68094585a1c2/baseline-evidence/fixture/report/summary.json": "1df44430fbb6d79714ed487c6dd53f96e88f44d98640d842dd0c338e2481b4af",
+    "/tmp/hamon-utility-evidence-desk-68094585a1c2/baseline-evidence/fixture/report/audit.jsonl": "720b993e4e07cc96baf74f5ada7927d0aac6c1cb4efb8554ac639df488ac8f63",
+    "/tmp/hamon-utility-evidence-desk-68094585a1c2/baseline-evidence/fixture/report/payment_queue.csv": "8e67419f6bb1856177906b6164008306b486ace8cd21cdc6884cb178dd22942d",
+    "/tmp/hamon-utility-evidence-desk-68094585a1c2/baseline-evidence/fixture/report/exceptions.csv": "fcf802f57bd0ccdc25b71b2af3cd9f3afefff5ab67db97eb32fab3fce983d7b5",
+    "/tmp/hamon-utility-evidence-desk-68094585a1c2/baseline-evidence/fixture/report/flags.csv": "180ae7fd6ba4858821c111344de3886a6f82fa829570dd2ddd1c36e4e2bd0c17",
+    "/tmp/hamon-utility-evidence-desk-68094585a1c2/baseline-evidence/fixture/selected.csv": "2b48f5c59e89debb414824664b10b9ce2bcca82d7b8830e6042deb163f0d11f1"
+  }
+}
