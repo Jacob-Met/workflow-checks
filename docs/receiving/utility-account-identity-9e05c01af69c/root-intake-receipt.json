@@ -1,0 +1,78 @@
+{
+  "schema": "utility-account-identity-root-intake.v2",
+  "root_archive": {
+    "bytes": 151336,
+    "sha256": "cfaebc007af007f054159d98cc557d5e2b01be2754138b5a0c2f10e2d743b33d",
+    "git_blob": "cb1e0de4e2c2a65c7550f8ae315272f0c42c854a"
+  },
+  "archive_payloads": 384,
+  "archive_members": 385,
+  "archive_manifest": {
+    "bytes": 74503,
+    "sha256": "648102908d833632dd5f634c2ecfd689ac7db8a8f09d2f8eaf1837add3754e1e",
+    "git_blob": "e10bd8e82380011f3bbd459d71ae056b41b44d92"
+  },
+  "every_member_sha256_and_size_verified": true,
+  "direct_handoff_files_match_archive": true,
+  "source_engines_match_frozen_author_contexts": {
+    "baseline": {
+      "bytes": 21072,
+      "sha256": "48c968584d0494ee5fb0538fc7d4c685c2cc3128a45c33f57c2079234cdb7775",
+      "git_blob": "9deb205ad468381ffc91716f0d7ae6ab88d76f2a"
+    },
+    "candidate": {
+      "bytes": 21280,
+      "sha256": "ff0dc3a473235c55639e4373e3b5a4c786a0cd9ae7badd2be9113f39a4efd3d0",
+      "git_blob": "b764a1f45ba718b31f7841e2c2f61d16a7fef5e9"
+    }
+  },
+  "root_handoff_files": {
+    "evidence.tar.gz": {
+      "bytes": 151336,
+      "sha256": "cfaebc007af007f054159d98cc557d5e2b01be2754138b5a0c2f10e2d743b33d",
+      "git_blob": "cb1e0de4e2c2a65c7550f8ae315272f0c42c854a"
+    },
+    "REVIEW.md": {
+      "bytes": 5717,
+      "sha256": "6d8f453a32e724b1779173b080dd41b018b404e79544dd46b8cc7d5b8d0ab3b7",
+      "git_blob": "0b296ab4b190531f7bf6e1308d3af61e94918980"
+    },
+    "receive_account_identity.py": {
+      "bytes": 15609,
+      "sha256": "bf8f2f8268a7323f215fedb918d699506c809b2e4f8af6622d90932e84577246",
+      "git_blob": "cf10d54834f63a8cb13818bccac3bc4d641f9351"
+    },
+    "result.json": {
+      "bytes": 38417,
+      "sha256": "eab29947d3a63f3b2a8fa30a6da0185f26e6251107885b90c87ab6e7a1f36cd1",
+      "git_blob": "5f61cc387ecc70d43ebfddb300156386801d43c8"
+    }
+  },
+  "root_receiving": {
+    "paired_native_scenarios": 10,
+    "baseline_passed": 3,
+    "baseline_failed": 7,
+    "candidate_paired_passed": 10,
+    "additional_candidate_review_migration_passed": 1,
+    "actual_cli_processes": 30,
+    "python": "3.13.7",
+    "source_unchanged": true,
+    "all_six_clean_reference_outputs_byte_identical": true
+  },
+  "historical_v1_manifest": {
+    "bytes": 3686,
+    "sha256": "b1df0091b7e8761a6dca2a55f6480fed87022c9b803fd074bcc8eac344b69be1",
+    "git_blob": "e253d01bd448649693f4c21d6e2bc79fbca8ea57"
+  },
+  "author_archive_unchanged": {
+    "bytes": 103838,
+    "sha256": "e7bfbd9d7d9f07a5c9e8d5868aa7dc1b392c8202dabfa79ed267e6f236ee01b8",
+    "git_blob": "22547ea546a84c4bbabf6174718ae42f6f3c2d3b"
+  },
+  "source_whitelist_unchanged": true,
+  "limits": [
+    "Packaging/readback only; no repeated behavior tests.",
+    "Root retains current-main/PR24 composition and publication ownership.",
+    "Original historical author records retain their dated pending-review statements."
+  ]
+}

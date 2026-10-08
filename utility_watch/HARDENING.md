@@ -18,6 +18,7 @@ Audit date: 2026-09-29. Scope: `utility_watch` only.
 
 - Unknown accounts, missing baselines/invoices, zero or negative usage, credits/zero balances, changed usage units, partial vacancy, missing standby thresholds, and unit bills without vacancy evidence go to `exceptions.csv`.
 - Any bill in the exception queue, either side of a duplicate pair, and any flagged bill is excluded from `payment_queue.csv`. The queue is advisory and does not pay anything.
+- Duplicate-history exclusions, duplicate holds, flags and exceptions use the account together with the bill ID. A matching bill ID on another account does not change its baseline or payment-queue eligibility.
 - Flags, exceptions, and payment-queue decisions carry `file.csv:row` evidence and are appended to `audit.jsonl`.
 - Generated datasets retain the synthetic label. Client folders without `expected.json` get a review-only client report instead.
 

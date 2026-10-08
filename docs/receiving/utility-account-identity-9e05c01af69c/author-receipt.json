@@ -1,0 +1,110 @@
+{
+  "repository": "Jacob-Met/workflow-checks",
+  "issue": 25,
+  "baseline_commit": "65461ca8f6bd636cd85c0086210ccb1e6837fbee",
+  "baseline_tree": "24e0514dcb28c545dc8414090a5147db79d6ddac",
+  "candidate_scope": [
+    {
+      "path": "utility_watch/uwatch/engine.py",
+      "before_git_blob": "9deb205ad468381ffc91716f0d7ae6ab88d76f2a",
+      "git_blob": "b764a1f45ba718b31f7841e2c2f61d16a7fef5e9",
+      "sha256": "ff0dc3a473235c55639e4373e3b5a4c786a0cd9ae7badd2be9113f39a4efd3d0",
+      "bytes": 21280
+    },
+    {
+      "path": "utility_watch/tests/test_account_bill_keys.py",
+      "before_git_blob": null,
+      "git_blob": "00f833a02d17b7a757a7d028846f5c6012cddd17",
+      "sha256": "cc15ba0c7fa92f401677403a95a5e73b1788ee976726f36cbe6447b2e20837f3",
+      "bytes": 6460
+    },
+    {
+      "path": "utility_watch/README.md",
+      "before_git_blob": "3672e6c365a3e7771df148ae168708af3f5d1d4f",
+      "git_blob": "2b29f11cabf4c4967ca59c10178134abbb2843f8",
+      "sha256": "9f53f3ab30664add4ecfcf93922f6a32d183f97e4bc0f9a322f7510a7dd30233",
+      "bytes": 12068
+    },
+    {
+      "path": "utility_watch/HARDENING.md",
+      "before_git_blob": "2033a69d8ae5daf24e68e017ed20c6a4dd863397",
+      "git_blob": "4c621a673ddd9d7211bb9b0436f7b4bbebf7c856",
+      "sha256": "db44c2f8aeb1199aa7ba2036ab5759ae65209d47cfd41d54e765836246fa50f8",
+      "bytes": 4105
+    }
+  ],
+  "all_other_snapshot_files_unchanged": true,
+  "engine_changes_within_check_only": true,
+  "native_cli_baseline": {
+    "passed": 1,
+    "failed": 4,
+    "all_five_command_exits": 0
+  },
+  "native_cli_candidate": {
+    "passed": 5,
+    "failed": 0
+  },
+  "authored_regressions": {
+    "methods": 8,
+    "baseline_failed_methods": 6,
+    "baseline_passing_methods": 2,
+    "baseline_failure_records": 10,
+    "candidate_normal_passed": 8,
+    "candidate_optimized_passed": 8
+  },
+  "retained_utility_methods": {
+    "baseline_normal": 81,
+    "candidate_normal": 81,
+    "same_four_native_test_modules": true
+  },
+  "valid_control_full_output_files_byte_identical": 6,
+  "original_negative_and_setup_evidence_preserved": true,
+  "independent_receiving": "Root separately running exact frozen source via native Mac; pending at this author receipt",
+  "current_parent_composition": "Freight PR23 integration and any merged PR24 header guard must be inherited before final publication; no _rows change belongs to this candidate",
+  "artifacts": {
+    "source-manifest.json": {
+      "sha256": "0d4f2b9f5c277eb240841c535b2bd79e673207a44ed4406be18b7d016c0c9bad",
+      "bytes": 2680
+    },
+    "candidate-source-manifest.json": {
+      "sha256": "85dd78b207c2ddbe379d46903217be12f97d4653eb58cf89fb0c9140e2fd15df",
+      "bytes": 2873
+    },
+    "retained-support-manifest.json": {
+      "sha256": "8883bc15801c6a8ab78fbfb08379860c3dcab8dd004a406bbeab15fcbc3d877e",
+      "bytes": 624
+    },
+    "probe_account_keys.py": {
+      "sha256": "8709df70b2d324ed70e9e66d0b5c18f13688d91afc333ac0294194a7eaf9f9a2",
+      "bytes": 5156
+    },
+    "account-identity.patch": {
+      "sha256": "2018a529df8c25b9705a7a4bf9f2ed8992ab55ae4d6fceb81fc73719e7afac05",
+      "bytes": 12855
+    },
+    "evidence/baseline/receipt.json": {
+      "sha256": "d2fdc27e28d415b5dd611dc58235ca459b03c637eb08b2f0b3a54583c1531df1",
+      "bytes": 6479
+    },
+    "evidence/candidate/receipt.json": {
+      "sha256": "6b671112ce8210e3cb662ea023db895ce0ce5cbe5d49db40a9b7572d02f9f834",
+      "bytes": 8163
+    },
+    "evidence/authored-baseline.log": {
+      "sha256": "e756e4d92b794b90113ce07a910136f57c458705c1e65991b997c8b32bbd4493",
+      "bytes": 9506
+    },
+    "evidence/authored-candidate-receipt.json": {
+      "sha256": "9ba44ff13dc6db062aaf63b0d7b2678231c53e0637e47f5f9a55a607190ac026",
+      "bytes": 475
+    },
+    "evidence/retained-native-receipt.json": {
+      "sha256": "7a448acedbeac06a50488e85e2cadced15714c9864bada56aa350d1d2d20469c",
+      "bytes": 2207
+    },
+    "evidence/clean-control-byte-parity.json": {
+      "sha256": "318f926233937c8da653d6f4ed1f9df3fcc87b983284c0182c576115c02c039e",
+      "bytes": 1072
+    }
+  }
+}

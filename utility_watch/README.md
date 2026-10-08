@@ -136,6 +136,11 @@ Required columns (column order does not matter):
 | `occupancy.csv` | `property, unit, status, from, to` |
 | `payments.csv` | `payment_id, account_no, vendor_invoice_no, amount, paid_date` |
 
+Bill identifiers are scoped to `account_no`. Reusing a `bill_id` in another account
+does not transfer a flag, exception, duplicate hold or historical-baseline exclusion
+to that account. Within one account, repeated invoices or duplicate periods/amounts
+still hold both copies for review.
+
 Use `common` or `unit` for account `scope`, `monthly` for a monthly `cycle`, and `vacant` for vacancy rows. Files may have a UTF-8 BOM and blank rows. Dates may be `YYYY-MM-DD`, `M/D/YYYY`, or `M/D/YY`. Numeric fields may contain commas, a dollar sign, or accounting negatives such as `(25.00)` when the CSV value is properly quoted. `late_fee` and `prior_balance` may be blank; other bill fields are required. Blank occupancy `from`/`to` dates mean open-ended.
 
 All imported bill and payment numbers must be finite. `NaN`, positive or negative infinity,
