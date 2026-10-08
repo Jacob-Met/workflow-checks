@@ -1,0 +1,48 @@
+{
+  "schema": "freight-batch-final-source.v1",
+  "base": "5b12dcd4c3a2c09d6602b2313e2bb556ac5997f7",
+  "files": [
+    {
+      "path": "freight_packets/freightpkt/web.py",
+      "bytes": 16343,
+      "sha256": "fa0becc51604ecbec4b59613439064527db0a3915f183e1949d3b326e8fccfce",
+      "git_blob": "9215adc3241f722344a452b4f789a4a5b59a25ec"
+    },
+    {
+      "path": "freight_packets/freightpkt/ui.html",
+      "bytes": 19723,
+      "sha256": "497510e8c9491b5b6b74d0ae9b863c95a3b2bdad5431fe408dccdc28c6f45573",
+      "git_blob": "4fd22753daf54da4d0a04c1202429b79cbada7de"
+    },
+    {
+      "path": "freight_packets/freightpkt/batch_handoff.py",
+      "bytes": 6160,
+      "sha256": "70e4ab57e9ccf13962a01719661f9db2f4a1bfd1599ff9b30d02d9e374f3fe7d",
+      "git_blob": "2ae68efdfe0c0c45135e2a5764749a5444da62d7"
+    },
+    {
+      "path": "freight_packets/freightpkt/batch_handoff_ui.js",
+      "bytes": 10806,
+      "sha256": "bd300f25abf279ca16f11bddc4bf4c277f4e99b9146b5321904ecc82afaaca18",
+      "git_blob": "40f39412a16fe496afcc9b57e0ba3e03775ec303"
+    },
+    {
+      "path": "freight_packets/tests/test_review_batch.py",
+      "bytes": 14262,
+      "sha256": "e2706b0e6e0d25d80be8ad18477109a276ed75879773328eb45c85cd1c4bbdfb",
+      "git_blob": "56c76edb6954675c023d5c637ecaa648fa9f5485"
+    },
+    {
+      "path": "freight_packets/README.md",
+      "bytes": 17742,
+      "sha256": "9c7941d0207b4acf70c8f6fc488e5e7257645a71224e14b9c77bee63e9e8b6aa",
+      "git_blob": "249ee104175f1d36cc5b39abad5be02bc53e85be"
+    },
+    {
+      "path": "freight_packets/tests/review_batch_browser.cjs",
+      "bytes": 15552,
+      "sha256": "e66740675a8444d441e833db5b416fd52959edd9a923d825187dd82b831fa795",
+      "git_blob": "b33085c70eab78634dbc955d7d07ea4e2ace3e7c"
+    }
+  ]
+}

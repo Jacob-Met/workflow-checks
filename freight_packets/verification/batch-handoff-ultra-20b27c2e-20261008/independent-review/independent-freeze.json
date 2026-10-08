@@ -1,0 +1,40 @@
+{
+  "phase": "independent behavior freeze before candidate or authored batch tests are read",
+  "baseline": "5b12dcd4c3a2c09d6602b2313e2bb556ac5997f7",
+  "tree": "e16dd0815e252c7e1715545999918f303bc823af",
+  "files": [
+    {
+      "path": "CONTRACT.md",
+      "bytes": 5504,
+      "sha256": "cac18458bc7308d647431b6084d153d9f53b52428ca580f4f070bfbde5c90f74"
+    },
+    {
+      "path": "independent_freight_review.py",
+      "bytes": 30054,
+      "sha256": "ff0dcc84e7fa9d3b75e1e1434f210256352707b25fd664cc01e4d8193ef95b22"
+    },
+    {
+      "path": "independent_freight_browser.cjs",
+      "bytes": 19351,
+      "sha256": "46af3216bdd5b959779c136ae9fc47bf755d3d890d0f80655e40ef37993b32d3"
+    },
+    {
+      "path": "baseline-closure.json",
+      "bytes": 6615,
+      "sha256": "3520686077579f28861b9ec5a06743d3effea97218ce1a395b25a5eb63e7879b"
+    },
+    {
+      "path": "primary-source.json",
+      "bytes": 121940,
+      "sha256": "e71473d4b5aa7eee6822b1eea7a61de5f79912141c2e1b7d019c06f5cf51a08e"
+    },
+    {
+      "path": "preparation/fixture-receipt.json",
+      "bytes": 11097,
+      "sha256": "6341d9541a407195f27ca4b4bcaf024d9745b3260c2c6ca362ab0c8f4acc80d9"
+    }
+  ],
+  "browser_syntax_exit": 0,
+  "browser_syntax_stdout": "",
+  "browser_syntax_stderr": ""
+}

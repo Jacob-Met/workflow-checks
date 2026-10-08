@@ -1,0 +1,17 @@
+test_ambiguous_selected_packet_refuses_whole_batch (__main__.BatchHandoffTests.test_ambiguous_selected_packet_refuses_whole_batch) ... ok
+test_archive_paths_do_not_come_from_labels_or_per_load_filenames (__main__.BatchHandoffTests.test_archive_paths_do_not_come_from_labels_or_per_load_filenames) ... ok
+test_invalid_selections_fail_before_any_output (__main__.BatchHandoffTests.test_invalid_selections_fail_before_any_output) ... ok
+test_later_changed_packet_refuses_whole_batch (__main__.BatchHandoffTests.test_later_changed_packet_refuses_whole_batch) ... ok
+test_later_changed_saved_review_refuses_whole_batch (__main__.BatchHandoffTests.test_later_changed_saved_review_refuses_whole_batch) ... ok
+test_missing_later_packet_refuses_whole_batch (__main__.BatchHandoffTests.test_missing_later_packet_refuses_whole_batch) ... ok
+test_missing_summary_does_not_initialize_pipeline (__main__.BatchHandoffTests.test_missing_summary_does_not_initialize_pipeline) ... ok
+test_native_review_states_stay_distinct_in_existing_covers (__main__.BatchHandoffTests.test_native_review_states_stay_distinct_in_existing_covers) ... ok
+test_new_module_is_served_locally_and_ui_retains_single_load_flow (__main__.BatchHandoffTests.test_new_module_is_served_locally_and_ui_retains_single_load_flow) ... ok
+test_one_selected_load_is_supported_without_other_loads (__main__.BatchHandoffTests.test_one_selected_load_is_supported_without_other_loads) ... ok
+test_public_batch_preserves_exact_single_load_members_and_zip (__main__.BatchHandoffTests.test_public_batch_preserves_exact_single_load_members_and_zip) ... ok
+test_simultaneous_review_waits_for_the_complete_batch_snapshot (__main__.BatchHandoffTests.test_simultaneous_review_waits_for_the_complete_batch_snapshot) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 6.273s
+
+OK

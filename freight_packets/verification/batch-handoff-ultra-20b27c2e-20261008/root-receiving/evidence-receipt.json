@@ -1,0 +1,74 @@
+{
+  "author_archive": {
+    "bytes": 2814175,
+    "files": 340
+  },
+  "device": "0e3d582f-e25b-44b2-8418-9639fc4e4e33",
+  "executed_product_or_recorded_code": false,
+  "independent_bundles": [
+    {
+      "bytes": 159081,
+      "files": 46,
+      "path": "recorded-fixture.json"
+    },
+    {
+      "bytes": 819507,
+      "files": 19,
+      "path": "recorded-native.json"
+    },
+    {
+      "bytes": 291790,
+      "files": 20,
+      "path": "recorded-browser.json"
+    },
+    {
+      "bytes": 605567,
+      "files": 21,
+      "path": "recorded-artifacts.json"
+    }
+  ],
+  "independent_bytes": 1875945,
+  "independent_files": 106,
+  "outer_files": [
+    {
+      "bytes": 1543908,
+      "git_blob": "ac2ead10077f827d884633bcba397714616769fb",
+      "path": "/private/tmp/ultra-20b27c2e-memory-freight-batch/publication/runs.zip",
+      "sha256": "60c2425eb74dde1b7bd3d51f3ceed3a6cd9e6b61cfee788edb74968c041f6129"
+    },
+    {
+      "bytes": 83045,
+      "git_blob": "3261a53800bad82e1368875fc03855d2b8ada9fa",
+      "path": "/private/tmp/ultra-20b27c2e-memory-freight-batch/publication/runs-manifest.json",
+      "sha256": "067f8817a7997a78a761228522586191edc8f5ead8d9a5b48545e4fbd8f48f28"
+    },
+    {
+      "bytes": 361839,
+      "git_blob": "47532cc06abc856e503e7a1adcbb6595838d8cea",
+      "path": "/tmp/ultra-20b27c2e-runtime-freight-review/packet/recorded-artifacts.json",
+      "sha256": "e814e138cb2ffcc57e58f27420594de4d38db3ee41b9669a562f53e3616ad57d"
+    },
+    {
+      "bytes": 69934,
+      "git_blob": "df48e4795886dd7e0d2292ef522f1ebcd00c2d74",
+      "path": "/tmp/ultra-20b27c2e-runtime-freight-review/packet/recorded-browser.json",
+      "sha256": "4c52e6c777feb7fbab9d004a9ead9987acff646d3a508e6375b73d119a6640cb"
+    },
+    {
+      "bytes": 73208,
+      "git_blob": "c9303313535f5f20a236c49e7c3275e295517198",
+      "path": "/tmp/ultra-20b27c2e-runtime-freight-review/packet/recorded-fixture.json",
+      "sha256": "9f87acbebe34c875dc38cc35b5ee85493eca0b1c055b0b67d7ec398ecc58c75b"
+    },
+    {
+      "bytes": 141748,
+      "git_blob": "a133fff17c74462600c4a0b7439863da00293f9f",
+      "path": "/tmp/ultra-20b27c2e-runtime-freight-review/packet/recorded-native.json",
+      "sha256": "5d863f832688548a221ed7bbb6fd0afc6a0a4b000dab20e960f3a9ca583dd0e2"
+    }
+  ],
+  "python": "3.13.7 (v3.13.7:bcee1c32211, Aug 14 2025, 19:10:51) [Clang 16.0.0 (clang-1600.0.26.6)]",
+  "recorded_at_utc": "2026-10-08T15:51:22.240231+00:00",
+  "schema": "freight-batch-root-evidence-receiving.v1",
+  "wrote_files": false
+}

@@ -1,0 +1,94 @@
+{
+  "before-api": {
+    "command": [
+      "/usr/local/bin/python3",
+      "/tmp/ultra-20b27c2e-runtime-freight-review/independent_freight_review.py",
+      "api",
+      "--source",
+      "/tmp/ultra-20b27c2e-runtime-freight-review/baseline",
+      "--fixture",
+      "/tmp/ultra-20b27c2e-runtime-freight-review/fixture",
+      "--output",
+      "/tmp/ultra-20b27c2e-runtime-freight-review/before-api"
+    ],
+    "exit_code": 1,
+    "elapsed_seconds": 1.0882158279418945,
+    "stdout_sha256": "0f327f49fed8f77a1b081f74e70666025359febd8568ec98e07dc46060f287a2",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "probe_sha256": "ff0dcc84e7fa9d3b75e1e1434f210256352707b25fd664cc01e4d8193ef95b22"
+  },
+  "candidate-api": {
+    "command": [
+      "/usr/local/bin/python3",
+      "/tmp/ultra-20b27c2e-runtime-freight-review/independent_freight_review.py",
+      "api",
+      "--source",
+      "/tmp/ultra-20b27c2e-runtime-freight-review/candidate",
+      "--fixture",
+      "/tmp/ultra-20b27c2e-runtime-freight-review/fixture",
+      "--output",
+      "/tmp/ultra-20b27c2e-runtime-freight-review/candidate-api"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 7.676028251647949,
+    "stdout_sha256": "a8678172709e470b6caf9ce7012413df49582abe883b398c1e380f92e8e49d78",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "probe_sha256": "ff0dcc84e7fa9d3b75e1e1434f210256352707b25fd664cc01e4d8193ef95b22"
+  },
+  "before-browser": {
+    "command": [
+      "/opt/homebrew/Cellar/node/26.3.0/bin/node",
+      "/tmp/ultra-20b27c2e-runtime-freight-review/independent_freight_browser.cjs",
+      "/tmp/ultra-20b27c2e-runtime-freight-review/baseline",
+      "/tmp/ultra-20b27c2e-runtime-freight-review/fixture",
+      "/tmp/ultra-20b27c2e-runtime-freight-review/before-browser"
+    ],
+    "exit_code": 1,
+    "elapsed_seconds": 15.046198606491089,
+    "stdout_sha256": "abd21a3f4497bb577a80eac66cc209029b7ce10f81454656682d619434b441e3",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "probe_sha256": "2e29d593f2f6b530a13d3aee2685f1cb01cd86778009ee854901d0cdb8fedad2"
+  },
+  "candidate-browser": {
+    "command": [
+      "/opt/homebrew/Cellar/node/26.3.0/bin/node",
+      "/tmp/ultra-20b27c2e-runtime-freight-review/independent_freight_browser.cjs",
+      "/tmp/ultra-20b27c2e-runtime-freight-review/candidate",
+      "/tmp/ultra-20b27c2e-runtime-freight-review/fixture",
+      "/tmp/ultra-20b27c2e-runtime-freight-review/candidate-browser"
+    ],
+    "exit_code": 1,
+    "elapsed_seconds": 17.29085111618042,
+    "stdout_sha256": "d6b633350e3032b3b0672ce10228acba7a074b3ea6248831cfd0c244dfbfb9f5",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "probe_sha256": "2e29d593f2f6b530a13d3aee2685f1cb01cd86778009ee854901d0cdb8fedad2"
+  },
+  "pending-review-before": {
+    "command": [
+      "/opt/homebrew/Cellar/node/26.3.0/bin/node",
+      "/tmp/ultra-20b27c2e-runtime-freight-review/independent_pending_review_probe.cjs",
+      "/tmp/ultra-20b27c2e-runtime-freight-review/candidate",
+      "/tmp/ultra-20b27c2e-runtime-freight-review/fixture",
+      "/tmp/ultra-20b27c2e-runtime-freight-review/pending-review-before"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 5.581892013549805,
+    "probe_sha256": "264e1e89654095e642b38cd651ae13fbc464344c773d6fccf0f176c30eaaa2b5",
+    "stdout_sha256": "4accd8cadbf6235675c3472f90d5e9315866579c8bac486f38fed38864798303",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "fixed-browser": {
+    "command": [
+      "/opt/homebrew/Cellar/node/26.3.0/bin/node",
+      "/tmp/ultra-20b27c2e-runtime-freight-review/independent_freight_browser.cjs",
+      "/tmp/ultra-20b27c2e-runtime-freight-review/candidate-ui-fixed",
+      "/tmp/ultra-20b27c2e-runtime-freight-review/fixture",
+      "/tmp/ultra-20b27c2e-runtime-freight-review/fixed-browser"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 17.291501998901367,
+    "probe_sha256": "2e29d593f2f6b530a13d3aee2685f1cb01cd86778009ee854901d0cdb8fedad2",
+    "stdout_sha256": "5322f08325f1eeb1d61c3c05500d4610a4b309824c98ae929fced6f0c2b8f4c7",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

@@ -1,0 +1,25 @@
+[
+  {
+    "path": "freight_packets/freightpkt/web.py",
+    "remove": [
+      "from .batch_handoff import build_batch_bundle, validate_selection\r\n",
+      "    def review_batch(self, loads) -> tuple[str, bytes]:\r\n        selection = validate_selection(loads)\r\n        # The existing RLock is reentrant: every per-load snapshot shares this lock.\r\n        with self._lock:\r\n            bundles = []\r\n            for row in selection:\r\n                filename, content = self.review_bundle(\r\n                    row[\"load_id\"], row[\"evidence_version\"], row[\"review_version\"])\r\n                bundles.append((row, filename, content))\r\n            return build_batch_bundle(bundles)\r\n\r\n",
+      "                if path == \"/batch-handoff-ui.js\":\r\n                    content = UI.with_name(\"batch_handoff_ui.js\").read_bytes()\r\n                    return self._send(200, content, \"text/javascript; charset=utf-8\")\r\n",
+      "                if self.path == \"/api/review-batch\":\r\n                    if set(body) != {\"loads\"}:\r\n                        raise ValueError(\"a batch request needs only its selected loads\")\r\n                    try:\r\n                        filename, content = app.review_batch(body[\"loads\"])\r\n                    except FileNotFoundError:\r\n                        return self._json({\"error\": \"a selected packet or generated summary is unavailable\"}, 404)\r\n                    except OSError:\r\n                        return self._json({\"error\": \"could not read the selected review files\"}, 500)\r\n                    return self._send(200, content, \"application/zip\", download=filename)\r\n"
+    ]
+  },
+  {
+    "path": "freight_packets/freightpkt/ui.html",
+    "remove": [
+      "<script src=\"/batch-handoff-ui.js\"></script>\r\n",
+      "const batchHandoff = createFreightBatchHandoff(() => ({\r\n  selected, summary: S, busy: reviewBusy || $(\"#run\").disabled || $(\"#gen\").disabled,\r\n}));\r\n",
+      "  batchHandoff.render(S, $(\"#t-files\"));\r\n"
+    ]
+  },
+  {
+    "path": "freight_packets/README.md",
+    "remove": [
+      "# Downloading several saved reviews together\r\n\r\nIn **Downloads**, select the loads under **Download a group of saved reviews**,\r\nthen choose **Download selected reviews**. You can choose 1–100 loads; the archive\r\nkeeps their displayed order. **Select all available** selects the readable,\r\nunambiguous packets when there are no more than 100. This selection lives in\r\nthe open page and does not save or change a reviewer decision.\r\n\r\nUnzip the downloaded file and open its `index.html`. Each link opens the existing\r\nsaved-review cover, including the original packet, selected-load report records,\r\nsaved note and history. The five original member files and the exact original\r\nsingle-load ZIP are retained under an ordinal directory such as `loads/0001/`.\r\nLoad labels and download filenames never become archive directory names.\r\nThe batch manifest records every selected identity and all member byte counts\r\nand SHA-256 checksums.\r\n\r\nThe server checks all displayed packet/report and saved-review identities under\r\nthe same existing review lock. One changed, missing or ambiguous selected record\r\nrefuses the entire batch. It does not silently omit that load or refresh its review.\r\nDownloading does not initialize or rerun the pipeline and writes no review,\r\ninput, report or archive into the server output directory.\r\n\r\nSave or undo current note edits and wait for a review or pipeline update before\r\ndownloading. **Cancel batch download** stops a pending request. Selection edits,\r\nnote edits and review or pipeline actions discard a pending reply. A refresh\r\nthat changes a selected identity clears the selection and asks you to inspect\r\nand select the current records again; changes to unselected loads retain it.\r\nA failed download makes no automatic retry and leaves saved reviews unchanged.\r\n\r\nUnreviewed, cleared, stale, unbound and current decisions keep the meanings of the\r\nexisting per-load covers. The batch is a local draft snapshot, with no combined\r\npayment total or new approval. Nothing is sent, invoiced or paid.\r\n\r\n##"
+    ]
+  }
+]

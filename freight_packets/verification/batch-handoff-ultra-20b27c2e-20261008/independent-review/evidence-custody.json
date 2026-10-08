@@ -1,0 +1,82 @@
+{
+  "bundle_extraction": [
+    {
+      "bundle": "recorded-native.json",
+      "files": 19,
+      "unique_blobs": 16,
+      "raw_bytes": 819507,
+      "encoded_bytes": 141748,
+      "command": [
+        "/usr/local/bin/python3",
+        "/tmp/ultra-20b27c2e-runtime-freight-review/packet/extract_evidence.py",
+        "/tmp/ultra-20b27c2e-runtime-freight-review/packet/recorded-native.json",
+        "/tmp/ultra-20b27c2e-runtime-freight-review/extraction-check/recorded-native"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"verified_files\": 19,\n  \"verified_bytes\": 819507,\n  \"destination\": \"/private/tmp/ultra-20b27c2e-runtime-freight-review/extraction-check/recorded-native\"\n}\n",
+      "stderr": "",
+      "matches_original_native_files": true
+    },
+    {
+      "bundle": "recorded-browser.json",
+      "files": 20,
+      "unique_blobs": 17,
+      "raw_bytes": 291790,
+      "encoded_bytes": 69934,
+      "command": [
+        "/usr/local/bin/python3",
+        "/tmp/ultra-20b27c2e-runtime-freight-review/packet/extract_evidence.py",
+        "/tmp/ultra-20b27c2e-runtime-freight-review/packet/recorded-browser.json",
+        "/tmp/ultra-20b27c2e-runtime-freight-review/extraction-check/recorded-browser"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"verified_files\": 20,\n  \"verified_bytes\": 291790,\n  \"destination\": \"/private/tmp/ultra-20b27c2e-runtime-freight-review/extraction-check/recorded-browser\"\n}\n",
+      "stderr": "",
+      "matches_original_native_files": true
+    },
+    {
+      "bundle": "recorded-fixture.json",
+      "files": 46,
+      "unique_blobs": 46,
+      "raw_bytes": 159081,
+      "encoded_bytes": 73208,
+      "command": [
+        "/usr/local/bin/python3",
+        "/tmp/ultra-20b27c2e-runtime-freight-review/packet/extract_evidence.py",
+        "/tmp/ultra-20b27c2e-runtime-freight-review/packet/recorded-fixture.json",
+        "/tmp/ultra-20b27c2e-runtime-freight-review/extraction-check/recorded-fixture"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"verified_files\": 46,\n  \"verified_bytes\": 159081,\n  \"destination\": \"/private/tmp/ultra-20b27c2e-runtime-freight-review/extraction-check/recorded-fixture\"\n}\n",
+      "stderr": "",
+      "matches_original_native_files": true
+    },
+    {
+      "bundle": "recorded-artifacts.json",
+      "files": 21,
+      "unique_blobs": 11,
+      "raw_bytes": 605567,
+      "encoded_bytes": 361839,
+      "command": [
+        "/usr/local/bin/python3",
+        "/tmp/ultra-20b27c2e-runtime-freight-review/packet/extract_evidence.py",
+        "/tmp/ultra-20b27c2e-runtime-freight-review/packet/recorded-artifacts.json",
+        "/tmp/ultra-20b27c2e-runtime-freight-review/extraction-check/recorded-artifacts"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"verified_files\": 21,\n  \"verified_bytes\": 605567,\n  \"destination\": \"/private/tmp/ultra-20b27c2e-runtime-freight-review/extraction-check/recorded-artifacts\"\n}\n",
+      "stderr": "",
+      "matches_original_native_files": true
+    }
+  ],
+  "source_pins_rechecked": true,
+  "baseline_and_initial_candidate_unchanged": true,
+  "fixture_unchanged": true,
+  "frozen_probe_pins": {
+    "CONTRACT.md": "cac18458bc7308d647431b6084d153d9f53b52428ca580f4f070bfbde5c90f74",
+    "independent_freight_review.py": "ff0dcc84e7fa9d3b75e1e1434f210256352707b25fd664cc01e4d8193ef95b22",
+    "independent_freight_browser.cjs": "2e29d593f2f6b530a13d3aee2685f1cb01cd86778009ee854901d0cdb8fedad2",
+    "independent_pending_review_probe.cjs": "264e1e89654095e642b38cd651ae13fbc464344c773d6fccf0f176c30eaaa2b5"
+  },
+  "product_suites_rerun_during_packaging": false
+}
