@@ -1,0 +1,7 @@
+patient_id,display_name,clinic,primary_payer
+P1,Fictional Alex <b>literal</b>,Home HQ,PAY1
+P2,Fictional Cross Token,Home South,PAY1
+P3,"Fictional Zoë & ""Kim""",Home HTML,PAY2
+P4,Fictional Empty,Home Empty,PAY1
+P5,Fictional Pending,Home Pending,PAY1
+P6,Fictional Long,Home Long,PAY1

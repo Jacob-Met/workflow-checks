@@ -1,0 +1,1 @@
+{"status": "pass", "all_thirteen": true, "all_words_inside_page": true, "report": "/dev/shm/hamon-b890f0b1bfcd-pt-receiving/print-addendum-v1/report.json", "sha256": "e1b91f1da0114ebf8a24bc428e933bb7f1c48d2f5325d71ac22b7b54da4f8723"}

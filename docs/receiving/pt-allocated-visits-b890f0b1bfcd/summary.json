@@ -1,0 +1,185 @@
+{
+  "status": "qualified_with_retained_receiver_failures",
+  "candidate": "055c863a9484adb1f6f39f54bf6cce90825bf0ad",
+  "candidate_tree": "1987ba3b41d4780dcbed19dc8ba9ee1c46dee529",
+  "source_changed": false,
+  "original_browser": {
+    "passed": 16,
+    "failed": 4,
+    "report_sha256": "144a4fdf0144e786c7f45c9e9e09c34ccc081981cb75ff22f912af4cda6c92f3"
+  },
+  "additive_affected_replay": {
+    "passed": 4,
+    "failed": 0,
+    "report_sha256": "3e416c62a0e4d56ca70896693983a10a7a2bfc6caf7b1e0c47753f5af1bc6cd9"
+  },
+  "distinct_groups_qualified": 20,
+  "groups": [
+    {
+      "name": "all-thirteen-exact-visible-records",
+      "original_status": "pass",
+      "qualified_run": "receiving-v1",
+      "qualified_status": "pass"
+    },
+    {
+      "name": "retained-duplicate-source-and-excluded-rows",
+      "original_status": "pass",
+      "qualified_run": "receiving-v1",
+      "qualified_status": "pass"
+    },
+    {
+      "name": "complete-totals-and-occurrence-options",
+      "original_status": "pass",
+      "qualified_run": "receiving-v1",
+      "qualified_status": "pass"
+    },
+    {
+      "name": "allocation-used-filter",
+      "original_status": "pass",
+      "qualified_run": "receiving-v1",
+      "qualified_status": "pass"
+    },
+    {
+      "name": "allocation-reserved-filter",
+      "original_status": "pass",
+      "qualified_run": "receiving-v1",
+      "qualified_status": "pass"
+    },
+    {
+      "name": "exact-separated-authorization-periods",
+      "original_status": "pass",
+      "qualified_run": "receiving-v1",
+      "qualified_status": "pass"
+    },
+    {
+      "name": "visit-clinic-not-patient-home",
+      "original_status": "pass",
+      "qualified_run": "receiving-v1",
+      "qualified_status": "pass"
+    },
+    {
+      "name": "literal-case-insensitive-search",
+      "original_status": "pass",
+      "qualified_run": "receiving-v1",
+      "qualified_status": "pass"
+    },
+    {
+      "name": "search-does-not-join-fields",
+      "original_status": "pass",
+      "qualified_run": "receiving-v1",
+      "qualified_status": "pass"
+    },
+    {
+      "name": "four-filter-intersection-and-reset",
+      "original_status": "pass",
+      "qualified_run": "receiving-v1",
+      "qualified_status": "pass"
+    },
+    {
+      "name": "actual-native-keyboard-select",
+      "original_status": "pass",
+      "qualified_run": "receiving-v1",
+      "qualified_status": "pass"
+    },
+    {
+      "name": "filtered-view-downloads-complete-native-csv",
+      "original_status": "fail",
+      "qualified_run": "receiving-v2",
+      "qualified_status": "pass"
+    },
+    {
+      "name": "filtered-view-opens-complete-printable-digest",
+      "original_status": "pass",
+      "qualified_run": "receiving-v1",
+      "qualified_status": "pass"
+    },
+    {
+      "name": "desktop-controls-and-document-bounds",
+      "original_status": "fail",
+      "qualified_run": "receiving-v2",
+      "qualified_status": "pass"
+    },
+    {
+      "name": "phone-controls-and-document-bounds",
+      "original_status": "pass",
+      "qualified_run": "receiving-v1",
+      "qualified_status": "pass"
+    },
+    {
+      "name": "phone-keyboard-reaches-rightmost-columns",
+      "original_status": "pass",
+      "qualified_run": "receiving-v1",
+      "qualified_status": "pass"
+    },
+    {
+      "name": "phone-keyboard-reaches-complete-download",
+      "original_status": "fail",
+      "qualified_run": "receiving-v2",
+      "qualified_status": "pass"
+    },
+    {
+      "name": "legacy-native-report-is-unavailable",
+      "original_status": "pass",
+      "qualified_run": "receiving-v1",
+      "qualified_status": "pass"
+    },
+    {
+      "name": "valid-empty-native-report-is-empty",
+      "original_status": "fail",
+      "qualified_run": "receiving-v2",
+      "qualified_status": "pass"
+    },
+    {
+      "name": "literal-markup-and-offline-read-only-requests",
+      "original_status": "pass",
+      "qualified_run": "receiving-v1",
+      "qualified_status": "pass"
+    }
+  ],
+  "download_receipts": [
+    {
+      "file": "actual-all-allocated.csv",
+      "suggested_filename": "allocated_visits.csv",
+      "bytes": 4936,
+      "sha256": "289aea968ecc7f01be2641e809a0b790eeb7f43c10d8824d4c757e10945751ea",
+      "visible_rows_at_click": 1,
+      "complete_rows": 13
+    },
+    {
+      "file": "keyboard-all-allocated.csv",
+      "bytes": 4936,
+      "sha256": "289aea968ecc7f01be2641e809a0b790eeb7f43c10d8824d4c757e10945751ea",
+      "keyboard": true
+    },
+    {
+      "file": "empty-all-allocated.csv",
+      "bytes": 243,
+      "sha256": "45e06adbffae69642a82d867bfb6fdb097ccf94c53728bdeee78c86d6479c1a8",
+      "rows": 0
+    }
+  ],
+  "pdf": {
+    "sha256": "0dd860d2e5b04511fa8771932536e9c48ee22c6982b73320e33e9c5f5a0384d3",
+    "pages": 3,
+    "all_thirteen_exact_ids_present": true,
+    "all_words_inside_page": true,
+    "visually_inspected_pages": [
+      1,
+      2,
+      3
+    ],
+    "original_layout_scan_false_retained": true
+  },
+  "preservation": {
+    "watched_files": 58,
+    "both_runs_unchanged": true,
+    "all_private_servers_closed": true,
+    "both_profiles_removed": true
+  },
+  "limits": [
+    "Exact recovered PR56 source only, not any later complete composition.",
+    "Missing original author payloads and original Mac measurements remain missing; this packet is newly authored and measured.",
+    "Original owner retains draft source recovery and integration."
+  ],
+  "created_at": 1791490643.1265845
+}

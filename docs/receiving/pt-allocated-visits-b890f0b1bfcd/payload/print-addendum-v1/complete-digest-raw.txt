@@ -1,0 +1,582 @@
+SYNTHETIC DATA - NOT REAL PATIENTS. Proof of concept; payer rules are placeholders. Nothing is submitted to any payer.
+Daily authorization worklist — 2026-10-08
+Clinic time zone: UTC. Dates and times without an offset keep their written calendar date.
+1 act-today (P1) · 1 this week (P2) · 0 heads-up (P3) · 2 scheduled visits outside an approved auth · 0 completed visits without auth
+Pri Patient Clinic Payer / auth Reason Used /
+auth'd
+Auth
+end
+Next
+visit
+Submit
+by
+Detail
+P1 Fictional
+Pending
+P5
+Home
+Pending
+Fictional Plan
+<script>window.__allocatedInjected=1</script>
+& "one"
+AUTH-PENDING
+PENDING_FOLLOWUP - / - - 2026-
+10-09
+- visit 2026-
+10-09
+relies on
+PENDING
+auth
+AUTH-
+PENDING;
+follow up
+with
+payer
+P2 Fictional Alex
+<b>literal</b>
+P1
+Home
+HQ
+Fictional Plan
+<script>window.__allocatedInjected=1</script>
+& "one"
+AUTH-REPEAT (2026-10-16..2026-10-31)
+UNCOVERED_VISIT 1 / 5 2026-
+10-31
+23 d
+2026-
+10-10
+- 1
+scheduled
+visit(s)
+outside
+any
+approved
+auth, first
+2026-11-
+03 (P1-
+OUTSIDE)
+Re-auth packet checklists (pre-filled from payer rules table)
+Fictional Alex <b>literal</b> · Fictional Plan <script>window.__allocatedInjected=1</script> & "one" · AUTH-REPEAT (2026-10-16..2026-10-31)
+☐ Demo only
+Uncovered visits — scheduled and completed appointments
+These appointments have no covering approved authorization in this report: scheduled visits on or after the as-of date, and visits recorded as
+completed. Check the referenced source rows and authorization worklist. Past appointments still marked scheduled remain in Visit status review.
+This view does not change attendance, authorization rules or staff work states.
+2 appointments; complete review, ordered by date.
+Visit /
+type
+Date Recorded
+status
+Patient Visit
+clinic
+Therapist Payer Source row
+NO-
+AUTH
+treatment
+2026-
+10-09
+scheduled Fictional
+Pending
+P5
+Clinic
+Unknown
+Therapist
+D
+Fictional Plan
+<script>window.__allocatedInjected=1</script>
+& "one"
+PAY1
+schedule.csv:row15
+P1-
+OUTSIDE
+treatment
+2026-
+11-03
+scheduled Fictional Alex
+<b>literal</b>
+P1
+Clinic Z Therapist
+A
+Fictional Plan
+<script>window.__allocatedInjected=1</script>
+& "one"
+PAY1
+schedule.csv:row19
+Allocated visits
+These are the visits the existing ledger assigned to approved authorization periods. Used means recorded completed; reserved means recorded
+scheduled, including past dates still marked scheduled. Review both source rows against the input exports. This assignment is not confirmation
+from a payer.
+Complete review: 13 allocated visit(s). As of 2026-10-08; clinic time zone: UTC.Visit / type Date Allocation /
+recorded
+status
+Patient Visit clinic /
+therapist
+Payer Authorization
+period
+Source rows
+P1-EARLY
+treatment
+2026-10-03 Used
+Recorded
+completed
+Fictional Alex
+<b>literal</b>
+P1
+Clinic A.*B
+Therapist A
+Fictional Plan
+<script>window
+.__allocatedInje
+cted=1</script>
+& "one"
+PAY1
+AUTH-REPEAT
+(2026-10-
+01..2026-10-15)
+2026-10-01 to
+2026-10-15; 5
+authorized
+Patient P1; payer
+PAY1
+Visit:
+schedule.csv:ro
+w3
+Authorization:
+authorizations.c
+sv:row2
+DUP-1
+treatment
+2026-10-05 Used
+Recorded
+completed
+Fictional Alex
+<b>literal</b>
+P1
+Clinic A.*B
+Therapist A
+Fictional Plan
+<script>window
+.__allocatedInje
+cted=1</script>
+& "one"
+PAY1
+AUTH-REPEAT
+(2026-10-
+01..2026-10-15)
+2026-10-01 to
+2026-10-15; 5
+authorized
+Patient P1; payer
+PAY1
+Visit:
+schedule.csv:ro
+w18
+Authorization:
+authorizations.c
+sv:row2
+P1-NEXT
+treatment
+2026-10-10 Reserved
+Recorded
+scheduled
+Fictional Alex
+<b>literal</b>
+P1
+Clinic Z
+Therapist A
+Fictional Plan
+<script>window
+.__allocatedInje
+cted=1</script>
+& "one"
+PAY1
+AUTH-REPEAT
+(2026-10-
+01..2026-10-15)
+2026-10-01 to
+2026-10-15; 5
+authorized
+Patient P1; payer
+PAY1
+Visit:
+schedule.csv:ro
+w4
+Authorization:
+authorizations.c
+sv:row2
+P1-EXTRA
+treatment
+2026-10-11 Reserved
+Recorded
+scheduled
+Fictional Alex
+<b>literal</b>
+P1
+Clinic A.*B
+Therapist A
+Fictional Plan
+<script>window
+.__allocatedInje
+cted=1</script>
+& "one"
+PAY1
+AUTH-REPEAT
+(2026-10-
+01..2026-10-15)
+2026-10-01 to
+2026-10-15; 5
+authorized
+Patient P1; payer
+PAY1
+Visit:
+schedule.csv:ro
+w20
+Authorization:
+authorizations.c
+sv:row2
+P1-LATE-DONE
+treatment
+2026-10-21 Used
+Recorded
+completed
+Fictional Alex
+<b>literal</b>
+P1
+Clinic Z
+Therapist A
+Fictional Plan
+<script>window
+.__allocatedInje
+cted=1</script>
+& "one"
+PAY1
+AUTH-REPEAT
+(2026-10-
+16..2026-10-31)
+2026-10-16 to
+2026-10-31; 5
+authorized
+Patient P1; payer
+PAY1
+Visit:
+schedule.csv:ro
+w6
+Authorization:
+authorizations.c
+sv:row3
+P1-LATE
+treatment
+2026-10-20 Reserved
+Recorded
+scheduled
+Fictional Alex
+<b>literal</b>
+P1
+Clinic A.*B
+Therapist A
+Fictional Plan
+<script>window
+.__allocatedInje
+cted=1</script>
+& "one"
+PAY1
+AUTH-REPEAT
+(2026-10-
+16..2026-10-31)
+2026-10-16 to
+2026-10-31; 5
+authorized
+Patient P1; payer
+PAY1
+Visit:
+schedule.csv:ro
+w5
+Authorization:
+authorizations.c
+sv:row3
+P2-DONE
+treatment
+2026-10-04 Used
+Recorded
+completed
+Fictional Cross
+Token
+P2
+Visit South
+Therapist B
+Fictional Plan
+<script>window
+.__allocatedInje
+cted=1</script>
+& "one"
+PAY1
+AUTH-AMEND
+2026-10-01 to
+2026-10-31; 4
+authorized
+Patient P2; payer
+PAY1
+Visit:
+schedule.csv:ro
+w7
+Authorization:
+authorizations.c
+sv:row5
+P2-NEXT
+treatment
+2026-10-12 Reserved
+Recorded
+scheduled
+Fictional Cross
+Token
+P2
+Visit North
+Therapist B
+Fictional Plan
+<script>window
+.__allocatedInje
+cted=1</script>
+& "one"
+PAY1
+AUTH-AMEND
+2026-10-01 to
+2026-10-31; 4
+authorized
+Patient P2; payer
+PAY1
+Visit:
+schedule.csv:ro
+w8
+Authorization:
+authorizations.c
+sv:row5
+P2-TWIN
+treatment
+2026-10-12 Reserved
+Recorded
+scheduled
+Fictional Cross
+Token
+P2
+Visit North
+Therapist B
+Fictional Plan
+<script>window
+.__allocatedInje
+cted=1</script>
+& "one"
+PAY1
+AUTH-AMEND
+2026-10-01 to
+2026-10-31; 4
+authorized
+Patient P2; payer
+PAY1
+Visit:
+schedule.csv:ro
+w9
+Authorization:
+authorizations.c
+sv:row5Visit / type Date Allocation /
+recorded
+status
+Patient Visit clinic /
+therapist
+Payer Authorization
+period
+Source rows
+<img src=x
+onerror="windo
+w.__allocatedInj
+ected=1">-
+FICTION
+treatment
+2026-10-06 Used
+Recorded
+completed
+Fictional Zoë &
+"Kim"
+P3
+Clinic HTML
+Therapist "C", café
+Fictional Plan
+Café
+PAY2
+AUTH-MARKUP
+2026-10-01 to
+2026-10-31; 3
+authorized
+Patient P3; payer
+PAY2
+Visit:
+schedule.csv:ro
+w11
+Authorization:
+authorizations.c
+sv:row6
+P3-NEXT
+treatment
+2026-10-12 Reserved
+Recorded
+scheduled
+Fictional Zoë &
+"Kim"
+P3
+Clinic HTML
+Therapist C
+Fictional Plan
+Café
+PAY2
+AUTH-MARKUP
+2026-10-01 to
+2026-10-31; 3
+authorized
+Patient P3; payer
+PAY2
+Visit:
+schedule.csv:ro
+w12
+Authorization:
+authorizations.c
+sv:row6
+P6-LONG-
+RRRRRRRRRRRR
+RRRRRRRRRRRR
+RRRRRRRRRRRR
+RRRRRRRRRRRR
+RRRRRRRRRRRR
+RRRRRRRRRRRR
+RRRRRRRRRRRR
+RRRRRRRRRRRR
+RRRRRRRRRRRR
+RRRRRRRRRRRR
+RRRRRRRRRRRR
+RRRRRRRRRRRR
+RRRRRRRRRRRR
+RRRRRRRRRRRR
+RRRRRRRRRRRR
+RRRRRRRRRRRR
+RRRRRRRRRRRR
+RRRRRRRRRRRR
+RRRRRRRRRRRR
+RRRRRRRRRRRR
+RRRRRRRRRRRR
+RR
+treatment
+2026-10-07 Used
+Recorded
+completed
+Fictional Long
+P6
+Clinic-
+ZZZZZZZZZZZZZ
+ZZZZZZZZZZZZZ
+ZZZZZZZZZZZZZ
+ZZZZZZZZZZZZZ
+ZZZZZZZZZZZZZ
+ZZZZZZZZZZZZZ
+ZZZZZZZZZZZZZ
+ZZZZZZZZZZZZZ
+ZZZZZZZZZZZZZ
+ZZZZZZZZZZZZZ
+ZZZZZZZZZZZZZ
+ZZZZZZZZZZZZZ
+ZZZZ
+Therapist Long
+Fictional Plan
+<script>window
+.__allocatedInje
+cted=1</script>
+& "one"
+PAY1
+AUTH-
+XXXXXXXXXXXX
+XXXXXXXXXXXX
+XXXXXXXXXXXX
+XXXXXXXXXXXX
+XXXXXXXXXXXX
+XXXXXXXXXXXX
+XXXXXXXXXXXX
+XXXXXXXXXXXX
+XXXXXXXXXXXX
+XXXXXXXXXXXX
+XXXXXXXXXXXX
+XXXXXXXXXXXX
+XXXXXXXXXXXX
+XXXXXXXXXXXX
+XXXXXXXXXXXX
+XXXXXXXXXXXX
+XX
+2026-10-01 to
+2026-10-31; 3
+authorized
+Patient P6; payer
+PAY1
+Visit:
+schedule.csv:ro
+w16
+Authorization:
+authorizations.c
+sv:row9
+P6-NEXT
+treatment
+2026-10-18 Reserved
+Recorded
+scheduled
+Fictional Long
+P6
+Clinic-
+ZZZZZZZZZZZZZ
+ZZZZZZZZZZZZZ
+ZZZZZZZZZZZZZ
+ZZZZZZZZZZZZZ
+ZZZZZZZZZZZZZ
+ZZZZZZZZZZZZZ
+ZZZZZZZZZZZZZ
+ZZZZZZZZZZZZZ
+ZZZZZZZZZZZZZ
+ZZZZZZZZZZZZZ
+ZZZZZZZZZZZZZ
+ZZZZZZZZZZZZZ
+ZZZZ
+Therapist Long
+Fictional Plan
+<script>window
+.__allocatedInje
+cted=1</script>
+& "one"
+PAY1
+AUTH-
+XXXXXXXXXXXX
+XXXXXXXXXXXX
+XXXXXXXXXXXX
+XXXXXXXXXXXX
+XXXXXXXXXXXX
+XXXXXXXXXXXX
+XXXXXXXXXXXX
+XXXXXXXXXXXX
+XXXXXXXXXXXX
+XXXXXXXXXXXX
+XXXXXXXXXXXX
+XXXXXXXXXXXX
+XXXXXXXXXXXX
+XXXXXXXXXXXX
+XXXXXXXXXXXX
+XXXXXXXXXXXX
+XX
+2026-10-01 to
+2026-10-31; 3
+authorized
+Patient P6; payer
+PAY1
+Visit:
+schedule.csv:ro
+w17
+Authorization:
+authorizations.c
+sv:row9
+Visit status review — past appointments still marked scheduled
+Review these past dates in the source schedule, correct their status there, then run again. Any authorization visit shown below stays reserved
+until the corrected export is loaded.
+No past appointments remain marked scheduled.

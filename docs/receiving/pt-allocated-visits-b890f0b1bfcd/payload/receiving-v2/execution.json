@@ -1,0 +1,67 @@
+{
+  "source_head": "055c863a9484adb1f6f39f54bf6cce90825bf0ad",
+  "started_at": 1791490092.161397,
+  "status": "complete",
+  "requests": [
+    {
+      "fixture": "normal",
+      "method": "GET",
+      "path": "/"
+    },
+    {
+      "fixture": "normal",
+      "method": "GET",
+      "path": "/calendar_ui.js"
+    },
+    {
+      "fixture": "normal",
+      "method": "GET",
+      "path": "/api/summary"
+    },
+    {
+      "fixture": "normal",
+      "method": "GET",
+      "path": "/out/allocated_visits.csv"
+    },
+    {
+      "fixture": "normal",
+      "method": "GET",
+      "path": "/out/allocated_visits.csv"
+    },
+    {
+      "fixture": "empty",
+      "method": "GET",
+      "path": "/"
+    },
+    {
+      "fixture": "empty",
+      "method": "GET",
+      "path": "/calendar_ui.js"
+    },
+    {
+      "fixture": "empty",
+      "method": "GET",
+      "path": "/api/summary"
+    },
+    {
+      "fixture": "empty",
+      "method": "GET",
+      "path": "/out/allocated_visits.csv"
+    }
+  ],
+  "ports": {
+    "normal": 38369,
+    "legacy": 39165,
+    "empty": 37343
+  },
+  "browser_returncode": 0,
+  "watched_files": 58,
+  "changed_files": [],
+  "missing_files": [],
+  "source_status": "",
+  "baseline_status": "",
+  "all_watched_inputs_outputs_unchanged": true,
+  "all_requests_get": true,
+  "all_private_servers_closed": true,
+  "completed_at": 1791490157.4385858
+}

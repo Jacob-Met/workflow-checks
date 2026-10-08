@@ -1,0 +1,172 @@
+{
+  "additive_replay_of": "receiving-v1",
+  "receiver_changes": [
+    "explicit owned home profile/download directory for Snap",
+    "screenshot timeout 30 seconds",
+    "repeat only four original failing groups; same assertions"
+  ],
+  "source_pin": "055c863a9484adb1f6f39f54bf6cce90825bf0ad",
+  "driver_sha256": "2497ace94a3a50baa1d35e6eaeb62aa5f3a6afc2687c767d2c99fef7ffbc8de0",
+  "contract_sha256": "1bd70cbf71076e9621d0453aef0890b147034d8e91352fbcefd4e207cfba2630",
+  "fixture_sha256": "da5f0b3dcfcc3b2d80bcbf84a3edaa17e917ef4a6e4864f80506332bee9ca53b",
+  "groups": [
+    {
+      "name": "filtered-view-downloads-complete-native-csv",
+      "status": "pass",
+      "value": {
+        "file": "actual-all-allocated.csv",
+        "suggested_filename": "allocated_visits.csv",
+        "bytes": 4936,
+        "sha256": "289aea968ecc7f01be2641e809a0b790eeb7f43c10d8824d4c757e10945751ea",
+        "visible_rows_at_click": 1,
+        "complete_rows": 13
+      }
+    },
+    {
+      "name": "desktop-controls-and-document-bounds",
+      "status": "pass",
+      "value": {
+        "viewport": 1280,
+        "document": 1280,
+        "panel": {
+          "x": 20,
+          "y": 266.46875,
+          "width": 1240,
+          "height": 2421.734375,
+          "top": 266.46875,
+          "right": 1260,
+          "bottom": 2688.203125,
+          "left": 20
+        },
+        "table": {
+          "x": 20,
+          "y": 589.109375,
+          "width": 1240,
+          "height": 2044.5,
+          "top": 589.109375,
+          "right": 1260,
+          "bottom": 2633.609375,
+          "left": 20
+        }
+      }
+    },
+    {
+      "name": "phone-keyboard-reaches-complete-download",
+      "status": "pass",
+      "value": {
+        "file": "keyboard-all-allocated.csv",
+        "bytes": 4936,
+        "sha256": "289aea968ecc7f01be2641e809a0b790eeb7f43c10d8824d4c757e10945751ea",
+        "keyboard": true
+      }
+    },
+    {
+      "name": "valid-empty-native-report-is-empty",
+      "status": "pass",
+      "value": {
+        "enabled_controls": 4,
+        "download_bytes": 243
+      }
+    }
+  ],
+  "page_errors": [],
+  "console_errors": [],
+  "external_requests": [],
+  "requests": [
+    {
+      "url": "http://127.0.0.1:38369/",
+      "method": "GET",
+      "resource": "document"
+    },
+    {
+      "url": "http://127.0.0.1:38369/calendar_ui.js",
+      "method": "GET",
+      "resource": "script"
+    },
+    {
+      "url": "http://127.0.0.1:38369/api/summary",
+      "method": "GET",
+      "resource": "fetch"
+    },
+    {
+      "url": "http://127.0.0.1:37343/",
+      "method": "GET",
+      "resource": "document"
+    },
+    {
+      "url": "http://127.0.0.1:37343/calendar_ui.js",
+      "method": "GET",
+      "resource": "script"
+    },
+    {
+      "url": "http://127.0.0.1:37343/api/summary",
+      "method": "GET",
+      "resource": "fetch"
+    }
+  ],
+  "dialogs": [],
+  "downloads": [
+    {
+      "file": "actual-all-allocated.csv",
+      "suggested_filename": "allocated_visits.csv",
+      "bytes": 4936,
+      "sha256": "289aea968ecc7f01be2641e809a0b790eeb7f43c10d8824d4c757e10945751ea",
+      "visible_rows_at_click": 1,
+      "complete_rows": 13
+    },
+    {
+      "file": "keyboard-all-allocated.csv",
+      "bytes": 4936,
+      "sha256": "289aea968ecc7f01be2641e809a0b790eeb7f43c10d8824d4c757e10945751ea",
+      "keyboard": true
+    },
+    {
+      "file": "empty-all-allocated.csv",
+      "bytes": 243,
+      "sha256": "45e06adbffae69642a82d867bfb6fdb097ccf94c53728bdeee78c86d6479c1a8",
+      "rows": 0
+    }
+  ],
+  "captures": [
+    {
+      "name": "desktop-allocation",
+      "file": "desktop-allocation.png",
+      "bytes": 519621,
+      "sha256": "92110d7ab745bfcd9795870cffeafcb6b6a43d314055122aedfeea1bafaa09c2"
+    },
+    {
+      "name": "valid-empty",
+      "file": "valid-empty.png",
+      "bytes": 126718,
+      "sha256": "8697c49c0a60f4d9c03c7b0a7a4620e9aa5406c7dbd7eed9c69ad10820a0a1c6"
+    }
+  ],
+  "started_at": "2026-10-08T20:08:17.064Z",
+  "capacity_before": {
+    "home_free": 1122791424,
+    "tmp_free": 421888000,
+    "shm_free": 4774252544
+  },
+  "explicit_download_directory": "/home/jacob/hamon-b890f0b1bfcd/integration/pt-allocated-browser-v2-J5AkmU/downloads",
+  "profile": "/home/jacob/hamon-b890f0b1bfcd/integration/pt-allocated-browser-v2-J5AkmU",
+  "browser_version": "153.0.8010.47",
+  "browser_version_protocol": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/153.0.8010.47",
+    "revision": "@73934a44f61e6b3878d1943064c141a5a820f5f7",
+    "userAgent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+    "jsVersion": "15.3.76.12"
+  },
+  "last_download_transport": {
+    "native_path": "/home/jacob/hamon-b890f0b1bfcd/integration/pt-allocated-browser-v2-J5AkmU/downloads/073c486e-43de-4cf8-af16-cded4c42a7ff",
+    "failure": null
+  },
+  "capacity_after": {
+    "tmp_free": 317841408,
+    "shm_free": 4421595136
+  },
+  "owned_profile_removed": true,
+  "completed_at": "2026-10-08T20:09:15.562Z",
+  "pass": 4,
+  "fail": 0
+}
