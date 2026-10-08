@@ -1,0 +1,221 @@
+﻿2026-10-08T20:03:10.5156481Z Current runner version: '2.337.0'
+2026-10-08T20:03:10.5180814Z ##[group]Runner Image Provisioner
+2026-10-08T20:03:10.5181702Z Hosted Compute Agent
+2026-10-08T20:03:10.5182252Z Version: 20261002.596
+2026-10-08T20:03:10.5182904Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+2026-10-08T20:03:10.5183931Z Build Date: 2026-10-02T22:28:27Z
+2026-10-08T20:03:10.5184796Z Worker ID: {39489ee7-4e02-456d-9691-76b3cd60c478}
+2026-10-08T20:03:10.5185498Z Region: northcentralus
+2026-10-08T20:03:10.5186040Z Cloud: Azure
+2026-10-08T20:03:10.5186596Z ##[endgroup]
+2026-10-08T20:03:10.5187908Z ##[group]Operating System
+2026-10-08T20:03:10.5188911Z Ubuntu
+2026-10-08T20:03:10.5189492Z 24.04.5
+2026-10-08T20:03:10.5189987Z LTS
+2026-10-08T20:03:10.5190491Z ##[endgroup]
+2026-10-08T20:03:10.5191047Z ##[group]Runner Image
+2026-10-08T20:03:10.5191622Z Image: ubuntu-24.04
+2026-10-08T20:03:10.5192192Z Version: 20261004.327.1
+2026-10-08T20:03:10.5193456Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-08T20:03:10.5195157Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+2026-10-08T20:03:10.5196070Z ##[endgroup]
+2026-10-08T20:03:10.5197141Z ##[group]GITHUB_TOKEN Permissions
+2026-10-08T20:03:10.5199261Z Contents: read
+2026-10-08T20:03:10.5199824Z Metadata: read
+2026-10-08T20:03:10.5200363Z ##[endgroup]
+2026-10-08T20:03:10.5202326Z Secret source: Actions
+2026-10-08T20:03:10.5203224Z Cache mode: write
+2026-10-08T20:03:10.5204084Z Prepare workflow directory
+2026-10-08T20:03:10.5569609Z Prepare all required actions
+2026-10-08T20:03:10.5620834Z Getting action download info
+2026-10-08T20:03:10.8248173Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-10-08T20:03:10.9430902Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-10-08T20:03:11.1440428Z Complete job name: test (3.10)
+2026-10-08T20:03:11.2144599Z ##[group]Run actions/checkout@v4
+2026-10-08T20:03:11.2145500Z with:
+2026-10-08T20:03:11.2146134Z   repository: Jacob-Met/workflow-checks
+2026-10-08T20:03:11.2150171Z   token: ***
+2026-10-08T20:03:11.2150705Z   ssh-strict: true
+2026-10-08T20:03:11.2151217Z   ssh-user: git
+2026-10-08T20:03:11.2151718Z   persist-credentials: true
+2026-10-08T20:03:11.2152312Z   clean: true
+2026-10-08T20:03:11.2152856Z   sparse-checkout-cone-mode: true
+2026-10-08T20:03:11.2153499Z   fetch-depth: 1
+2026-10-08T20:03:11.2154143Z   fetch-tags: false
+2026-10-08T20:03:11.2154649Z   show-progress: true
+2026-10-08T20:03:11.2155201Z   lfs: false
+2026-10-08T20:03:11.2155713Z   submodules: false
+2026-10-08T20:03:11.2156234Z   set-safe-directory: true
+2026-10-08T20:03:11.2156831Z   allow-unsafe-pr-checkout: false
+2026-10-08T20:03:11.2157589Z ##[endgroup]
+2026-10-08T20:03:11.3178884Z Syncing repository: Jacob-Met/workflow-checks
+2026-10-08T20:03:11.3181284Z ##[group]Getting Git version info
+2026-10-08T20:03:11.3182706Z Working directory is '/home/runner/work/workflow-checks/workflow-checks'
+2026-10-08T20:03:11.3184630Z [command]/usr/bin/git version
+2026-10-08T20:03:11.3271534Z git version 2.55.0
+2026-10-08T20:03:11.3293422Z ##[endgroup]
+2026-10-08T20:03:11.3310219Z Temporarily overriding HOME='/home/runner/work/_temp/d75f072b-e34d-419e-87f5-657db36d8672' before making global git config changes
+2026-10-08T20:03:11.3311753Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-08T20:03:11.3318349Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/workflow-checks/workflow-checks
+2026-10-08T20:03:11.3375585Z Deleting the contents of '/home/runner/work/workflow-checks/workflow-checks'
+2026-10-08T20:03:11.3380229Z ##[group]Initializing the repository
+2026-10-08T20:03:11.3385102Z [command]/usr/bin/git init /home/runner/work/workflow-checks/workflow-checks
+2026-10-08T20:03:11.3498568Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-08T20:03:11.3500909Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-08T20:03:11.3503429Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-08T20:03:11.3504740Z hint: call:
+2026-10-08T20:03:11.3505247Z hint:
+2026-10-08T20:03:11.3505912Z hint: 	git config --global init.defaultBranch <name>
+2026-10-08T20:03:11.3506640Z hint:
+2026-10-08T20:03:11.3507288Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-08T20:03:11.3508260Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-08T20:03:11.3509042Z hint:
+2026-10-08T20:03:11.3509750Z hint: 	git branch -m <name>
+2026-10-08T20:03:11.3510395Z hint:
+2026-10-08T20:03:11.3511269Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-08T20:03:11.3512540Z Initialized empty Git repository in /home/runner/work/workflow-checks/workflow-checks/.git/
+2026-10-08T20:03:11.3514778Z [command]/usr/bin/git remote add origin https://github.com/Jacob-Met/workflow-checks
+2026-10-08T20:03:11.3724153Z ##[endgroup]
+2026-10-08T20:03:11.3726034Z ##[group]Disabling automatic garbage collection
+2026-10-08T20:03:11.3727353Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-08T20:03:11.3765504Z ##[endgroup]
+2026-10-08T20:03:11.3766426Z ##[group]Setting up auth
+2026-10-08T20:03:11.3774315Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-08T20:03:11.3810462Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-08T20:03:11.4165029Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-08T20:03:11.4195990Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-08T20:03:11.4385525Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-08T20:03:11.4416461Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-08T20:03:11.4615841Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-08T20:03:11.4657337Z ##[endgroup]
+2026-10-08T20:03:11.4658385Z ##[group]Fetching the repository
+2026-10-08T20:03:11.4669403Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +11e159f914617517e2322bdeb89de5e27007dcc5:refs/remotes/origin/main
+2026-10-08T20:03:12.8051174Z From https://github.com/Jacob-Met/workflow-checks
+2026-10-08T20:03:12.8052964Z  * [new ref]         11e159f914617517e2322bdeb89de5e27007dcc5 -> origin/main
+2026-10-08T20:03:12.8057485Z ##[endgroup]
+2026-10-08T20:03:12.8059638Z ##[group]Determining the checkout info
+2026-10-08T20:03:12.8061914Z ##[endgroup]
+2026-10-08T20:03:12.8063321Z [command]/usr/bin/git sparse-checkout disable
+2026-10-08T20:03:12.8121897Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-08T20:03:12.8159234Z ##[group]Checking out the ref
+2026-10-08T20:03:12.8175423Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-10-08T20:03:12.9487868Z Switched to a new branch 'main'
+2026-10-08T20:03:12.9490551Z branch 'main' set up to track 'origin/main'.
+2026-10-08T20:03:12.9500416Z ##[endgroup]
+2026-10-08T20:03:12.9539808Z [command]/usr/bin/git log -1 --format=%H
+2026-10-08T20:03:12.9563036Z 11e159f914617517e2322bdeb89de5e27007dcc5
+2026-10-08T20:03:12.9942505Z ##[group]Run actions/setup-python@v5
+2026-10-08T20:03:12.9944220Z with:
+2026-10-08T20:03:12.9945336Z   python-version: 3.10
+2026-10-08T20:03:12.9946541Z   check-latest: false
+2026-10-08T20:03:12.9955619Z   token: ***
+2026-10-08T20:03:12.9956826Z   update-environment: true
+2026-10-08T20:03:12.9958094Z   allow-prereleases: false
+2026-10-08T20:03:12.9960002Z   freethreaded: false
+2026-10-08T20:03:12.9961164Z ##[endgroup]
+2026-10-08T20:03:13.1295408Z ##[group]Installed versions
+2026-10-08T20:03:13.1574026Z (node:2223) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-08T20:03:13.1577056Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-08T20:03:13.1579470Z Successfully set up CPython (3.10.22)
+2026-10-08T20:03:13.1582830Z ##[endgroup]
+2026-10-08T20:03:13.1778102Z ##[group]Run python -m pip install pytest
+2026-10-08T20:03:13.1779730Z [36;1mpython -m pip install pytest[0m
+2026-10-08T20:03:13.2697379Z shell: /usr/bin/bash -e {0}
+2026-10-08T20:03:13.2698894Z env:
+2026-10-08T20:03:13.2700138Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-10-08T20:03:13.2702521Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.22/x64/lib/pkgconfig
+2026-10-08T20:03:13.2704729Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-10-08T20:03:13.2706825Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-10-08T20:03:13.2709192Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-10-08T20:03:13.2710939Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.22/x64/lib
+2026-10-08T20:03:13.2712563Z ##[endgroup]
+2026-10-08T20:03:22.9952854Z Collecting pytest
+2026-10-08T20:03:23.0460632Z   Downloading pytest-9.1.1-py3-none-any.whl.metadata (7.6 kB)
+2026-10-08T20:03:23.0624303Z Collecting exceptiongroup>=1 (from pytest)
+2026-10-08T20:03:23.0657610Z   Downloading exceptiongroup-1.3.1-py3-none-any.whl.metadata (6.7 kB)
+2026-10-08T20:03:23.0784375Z Collecting iniconfig>=1.0.1 (from pytest)
+2026-10-08T20:03:23.0817198Z   Downloading iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)
+2026-10-08T20:03:23.0974865Z Collecting packaging>=22 (from pytest)
+2026-10-08T20:03:23.1013912Z   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+2026-10-08T20:03:23.1135499Z Collecting pluggy<2,>=1.5 (from pytest)
+2026-10-08T20:03:23.1167131Z   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+2026-10-08T20:03:23.1363330Z Collecting pygments>=2.7.2 (from pytest)
+2026-10-08T20:03:23.1396802Z   Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+2026-10-08T20:03:23.1684750Z Collecting tomli>=1 (from pytest)
+2026-10-08T20:03:23.1720054Z   Downloading tomli-2.5.0-py3-none-any.whl.metadata (10 kB)
+2026-10-08T20:03:23.1899761Z Collecting typing-extensions>=4.6.0 (from exceptiongroup>=1->pytest)
+2026-10-08T20:03:23.1941706Z   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+2026-10-08T20:03:23.2020375Z Downloading pytest-9.1.1-py3-none-any.whl (386 kB)
+2026-10-08T20:03:23.2184193Z Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+2026-10-08T20:03:23.2238404Z Downloading exceptiongroup-1.3.1-py3-none-any.whl (16 kB)
+2026-10-08T20:03:23.2293934Z Downloading iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+2026-10-08T20:03:23.2346665Z Downloading packaging-26.3-py3-none-any.whl (129 kB)
+2026-10-08T20:03:23.2402323Z Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+2026-10-08T20:03:23.2682091Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 42.5 MB/s  0:00:00
+2026-10-08T20:03:23.2725736Z Downloading tomli-2.5.0-py3-none-any.whl (14 kB)
+2026-10-08T20:03:23.2792422Z Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+2026-10-08T20:03:23.6947674Z Installing collected packages: typing-extensions, tomli, pygments, pluggy, packaging, iniconfig, exceptiongroup, pytest
+2026-10-08T20:03:24.6123226Z 
+2026-10-08T20:03:24.6138709Z Successfully installed exceptiongroup-1.3.1 iniconfig-2.3.1 packaging-26.3 pluggy-1.6.0 pygments-2.21.0 pytest-9.1.1 tomli-2.5.0 typing-extensions-4.16.0
+2026-10-08T20:03:24.6830793Z ##[group]Run python -m pytest -q
+2026-10-08T20:03:24.6831326Z [36;1mpython -m pytest -q[0m
+2026-10-08T20:03:24.6877209Z shell: /usr/bin/bash -e {0}
+2026-10-08T20:03:24.6877673Z env:
+2026-10-08T20:03:24.6878063Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-10-08T20:03:24.6878963Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.22/x64/lib/pkgconfig
+2026-10-08T20:03:24.6879488Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-10-08T20:03:24.6880007Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-10-08T20:03:24.6880481Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-10-08T20:03:24.6880949Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.22/x64/lib
+2026-10-08T20:03:24.6881410Z ##[endgroup]
+2026-10-08T20:03:27.4746371Z ...................................................... [ 43%]
+2026-10-08T20:03:39.3598226Z ................................................... [ 84%]
+2026-10-08T20:03:44.8616584Z ....................                                      [100%]
+2026-10-08T20:03:44.8617663Z 125 passed, 126 subtests passed in 18.99s
+2026-10-08T20:03:44.9020647Z ##[group]Run python -m pytest -q
+2026-10-08T20:03:44.9021084Z [36;1mpython -m pytest -q[0m
+2026-10-08T20:03:44.9062660Z shell: /usr/bin/bash -e {0}
+2026-10-08T20:03:44.9063034Z env:
+2026-10-08T20:03:44.9063382Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-10-08T20:03:44.9064059Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.22/x64/lib/pkgconfig
+2026-10-08T20:03:44.9064552Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-10-08T20:03:44.9065054Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-10-08T20:03:44.9065501Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-10-08T20:03:44.9065954Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.22/x64/lib
+2026-10-08T20:03:44.9066406Z ##[endgroup]
+2026-10-08T20:03:47.2087732Z ..................s..................................................... [ 57%]
+2026-10-08T20:03:53.7360082Z ......................................................                                              [100%]
+2026-10-08T20:03:53.7364420Z 125 passed, 1 skipped, 45 subtests passed in 8.67s
+2026-10-08T20:03:53.7786676Z ##[group]Run python -m pytest -q
+2026-10-08T20:03:53.7787151Z [36;1mpython -m pytest -q[0m
+2026-10-08T20:03:53.7829762Z shell: /usr/bin/bash -e {0}
+2026-10-08T20:03:53.7830203Z env:
+2026-10-08T20:03:53.7830580Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-10-08T20:03:53.7831115Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.22/x64/lib/pkgconfig
+2026-10-08T20:03:53.7831660Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-10-08T20:03:53.7832119Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-10-08T20:03:53.7832621Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-10-08T20:03:53.7833097Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.22/x64/lib
+2026-10-08T20:03:53.7833493Z ##[endgroup]
+2026-10-08T20:03:54.7625889Z ....................................... [ 24%]
+2026-10-08T20:04:02.7377659Z ..........................................................................................................................                                               [100%]
+2026-10-08T20:04:02.7378932Z 161 passed, 81 subtests passed in 8.79s
+2026-10-08T20:04:02.7862071Z Post job cleanup.
+2026-10-08T20:04:02.9094373Z (node:2736) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-08T20:04:02.9095412Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-08T20:04:02.9301304Z Post job cleanup.
+2026-10-08T20:04:03.0199655Z [command]/usr/bin/git version
+2026-10-08T20:04:03.0250964Z git version 2.55.0
+2026-10-08T20:04:03.0296267Z Temporarily overriding HOME='/home/runner/work/_temp/5aad5289-b9da-4779-a74b-ff7441462b41' before making global git config changes
+2026-10-08T20:04:03.0297162Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-08T20:04:03.0303744Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/workflow-checks/workflow-checks
+2026-10-08T20:04:03.0345202Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-08T20:04:03.0387625Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-08T20:04:03.0616536Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-08T20:04:03.0665120Z http.https://github.com/.extraheader
+2026-10-08T20:04:03.0678948Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-08T20:04:03.0724446Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-08T20:04:03.0956830Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-08T20:04:03.0993452Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-08T20:04:03.1379979Z Cleaning up orphan processes
+2026-10-08T20:04:03.1684557Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

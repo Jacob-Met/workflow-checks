@@ -1,0 +1,252 @@
+{
+  "format": "utility-source-records-root-review/1",
+  "actor": "chatgpt:68094585a1c2 / root",
+  "author_attribution": "estate-68094585a1c2 / production; continued by chatgpt:68094585a1c2 / utility_production",
+  "reviewed_at": "2026-10-08T19:39:18.414719+00:00",
+  "decision": "accepted for normal expected-head integration",
+  "source": {
+    "current_main": "8fe2c9270f487729af9e88f40894e1c4530f2c20",
+    "current_tree": "ff97dbcf5ea9efe19e98d885c4694322a6fe627f",
+    "candidate": "08af0d16a33d47446f768169cacdbef0dba595af",
+    "candidate_tree": "18387e31ed12c26ee1bd8779b4768445140c6273",
+    "test_merge": "5418f0f4992f0f402dbf96d0d56094a775dac77e",
+    "test_merge_tree": "f86d733e0dc616125051fbaae8df848525c06eb8",
+    "base_leaves": 1285,
+    "candidate_leaves": 1324,
+    "test_merge_leaves": 1387,
+    "contribution_paths": 110,
+    "source_paths": 12,
+    "evidence_paths": 98,
+    "preserved_current_main_leaves": 1277,
+    "unexpected_differences": [],
+    "workflow_paths": [
+      ".github/workflows/freight-whatif.yml",
+      ".github/workflows/tests.yml"
+    ]
+  },
+  "qualification_state": {
+    "implemented": true,
+    "independently_native_qualified": true,
+    "pr_current_composition_hosted_qualified": true,
+    "integrated": false,
+    "installed_or_deployed": false
+  },
+  "independence": {
+    "contract_sha256": "efe0acef534023fa4aab143fc4c4943d1d20c935fc8e6d14024cab3553925b69",
+    "contract_frozen_at": "2026-10-08T18:55:59.633706+00:00",
+    "original_reference_receipt_sha256": "adfffa8260eee3f412010646e91b4e2b67fcd323abdf8ae99d3e12c39c7f3f7e",
+    "additional_original_receipt_sha256": "1be468bcb5e62ee440dd59b13114516bcbd785ccb301dc4062be0a8fca1f4220",
+    "receiver_before_candidate_sha256": "214e39cc96247bdb0b01364dbb294f4b247b2ca45a976e45ce5181e1996014e9",
+    "receiver_frozen_at": "2026-10-08T19:07:06.761451+00:00",
+    "candidate_first_access": "2026-10-08T19:10:01.871503+00:00",
+    "runtime_files_pinned_before_execution": 16,
+    "candidate_or_author_test_source_read_before_receiving": false,
+    "author_source_reviewed_only_after_pass": true
+  },
+  "independent_execution": {
+    "python": "3.14.4 (main, Aug 20 2026, 10:41:58) [GCC 15.2.0]",
+    "original_fixture_cli_commands": 6,
+    "original_native_reference_cases": 4,
+    "completed_groups": [
+      {
+        "group": "native_literal_identity",
+        "started_at": "2026-10-08T19:17:07.264363+00:00",
+        "passed": true,
+        "details": {
+          "references": 4,
+          "exact_original_annotation_sha256": "baff3ec5cef7782feaa209394f2b7c4839a556127542ce417aa7864816a14f38"
+        }
+      },
+      {
+        "group": "current_snapshot_and_annotation_custody",
+        "started_at": "2026-10-08T19:17:08.181200+00:00",
+        "passed": true,
+        "details": {
+          "prior_native_refusals": 6,
+          "prior_annotation_only_success": true,
+          "source_binding": "identical prior/current16 candidate source pins",
+          "new_HTTP_checks": 4,
+          "HTTP_annotation_download_preserved": true
+        }
+      },
+      {
+        "group": "resealed_worksheet_fields",
+        "started_at": "2026-10-08T19:17:08.263280+00:00",
+        "passed": true,
+        "details": {
+          "prior_original_checksum_valid_variants_refused": 8,
+          "new_HTTP_other_account_refusal": true
+        }
+      },
+      {
+        "group": "after_native_writer_file_change",
+        "started_at": "2026-10-08T19:17:08.356583+00:00",
+        "passed": true,
+        "details": {
+          "actual_native_publish": [
+            {
+              "published_bytes": 2961,
+              "published_sha256": "d33d25dfb083e9325ea8c9ad29e14bd7c86f08d71d4063b96a57a9852d11ecb0"
+            }
+          ],
+          "HTTP_refused_before_return": true,
+          "retry_exact": true
+        }
+      },
+      {
+        "group": "logical_identity_literal_refresh",
+        "started_at": "2026-10-08T19:17:08.512538+00:00",
+        "passed": true,
+        "details": {
+          "exact_refreshed_bytes": 2964,
+          "sha256": "dcd83901f06c936ef791c4621d92ac7985e70c86ea56ddf8b598066e4035922b",
+          "native_finding_identity_retained": true
+        }
+      }
+    ],
+    "continuation_http_requests": 15,
+    "prior_native_refusals_reused_without_rerun": 14,
+    "v1_receipt_sha256": "cfb9cfc177fe0e8c4701e4f4c29e08d033dbf647eb3cf65199efb645a78f13cd",
+    "v2_receipt_sha256": "77bf1f33e1d586c8d9830c7bb8f094b593bdb17ddfa3d8fff27a9693d7c06bfd",
+    "all_source_and_original_input_pins_preserved": true,
+    "author_suite_rerun": false,
+    "additional_chromium_run": false
+  },
+  "preserved_failure": {
+    "kind": "receiver-only import/name collision",
+    "v1_exit": 1,
+    "product_finding": false,
+    "description": "The frozen receiver function named http shadowed the imported http package. All attempted HTTP groups failed before a request was sent. Fourteen native refusal controls had already passed.",
+    "correction": "Import HTTPConnection directly; resume pending HTTP controls in a fresh v2 directory and reuse the completed exact-source native refusals.",
+    "correction_record_sha256": "276127065ddf749365496bd12229901fe2bed8ad8f9a9714de20d1769e83d6c1",
+    "correction_diff_sha256": "57ed369aeb95cfcf511a501555af6c33823a1e86eabb0aed699a3684dcf54311",
+    "continuation_exit": 0
+  },
+  "source_review": {
+    "new_adapter": "Calls unchanged native evidence.write_evidence in a private request directory; binds nine complete finding fields, ordered pointer arrays and three row/manifest report fields; returns the producer's exact bounded UTF-8 bytes.",
+    "desk": "Accepts only a configured source pair and an exact current saved row/snapshot. Original worksheet is checked before and after production. The authenticated route supplies no user-selected filesystem path.",
+    "browser": "Uses textContent and original CSV column order, pre-wrap literal strings, generation/selection guards and AbortController. Downloads the preserved response ArrayBuffer without JSON reserialization. Annotation handling and existing boundaries remain.",
+    "reviewed_paths": [
+      {
+        "path": "utility_watch/docs/review-desk.md",
+        "bytes": 7608,
+        "sha256": "dd8d238be2d9c2c65e7d858fc4488340fb5c6643c05178771707c7ef6a805514",
+        "blob": "07e3545a54953f37203435113afd974c881d0e4d"
+      },
+      {
+        "path": "utility_watch/README.md",
+        "bytes": 14769,
+        "sha256": "55eabfa2a59f3dc8e46fa3eb97f290976785e1d47e67bab2b4bfe43983dcd388",
+        "blob": "da5288186d42fbe3cd4c3366ad475c12695a4fac"
+      },
+      {
+        "path": "utility_watch/tests/review_desk_browser.mjs",
+        "bytes": 29308,
+        "sha256": "e0ea0cc84f9d482665c423605949f210bd67d5d97cd93d63015d6d42cd2aa632",
+        "blob": "de7375009702ba6e4a307b048382fc84fe27610b"
+      },
+      {
+        "path": "utility_watch/tests/review_evidence_fixture.py",
+        "bytes": 1840,
+        "sha256": "b41d1dc9d5f90977f2e1573d9886b758849da5ce68a56bf872d0879b3796c135",
+        "blob": "5229a488e51b0846de9a6b86831c5d89135eb520"
+      },
+      {
+        "path": "utility_watch/tests/test_review_evidence.py",
+        "bytes": 13133,
+        "sha256": "243dc7a21b42cb0fe54950c44312c9bcef998d0fd1025c090330ff23c7519ce0",
+        "blob": "6fc8fbecd0e0c6eb799a3027eea157ce6cdc98ac"
+      },
+      {
+        "path": "utility_watch/uwatch/cli.py",
+        "bytes": 6707,
+        "sha256": "951bb90b2515621aaa74482fbe5d335ec58b98d4688f800e4b36c6a776b00989",
+        "blob": "4bbf8b5ec202b3094a1742880313679e9b99d40a"
+      },
+      {
+        "path": "utility_watch/uwatch/review_desk.css",
+        "bytes": 6503,
+        "sha256": "4dea1febd3884725306bfa2a76289c3921f8567d89117f716c33b8c64427fde6",
+        "blob": "f1ce53450b17fadb6fcaec55ffd01168e9fd1bbb"
+      },
+      {
+        "path": "utility_watch/uwatch/review_desk.html",
+        "bytes": 6723,
+        "sha256": "886b6322f60c84dec85d6fad1870b46d3a8f291956070f6ca1b0467560b09e68",
+        "blob": "bfa77b47403642f2a77df407b222e7785858854e"
+      },
+      {
+        "path": "utility_watch/uwatch/review_desk.js",
+        "bytes": 11771,
+        "sha256": "c3079a7b41d117d119e644cd3df5f9fcfa0205dec4524d5bb1be9770d011e563",
+        "blob": "bc5929a2ffd0eae6b347d84db5da9421f97f48ab"
+      },
+      {
+        "path": "utility_watch/uwatch/review_desk.py",
+        "bytes": 13153,
+        "sha256": "f47851b5dfbff10065a727ee40b1c9da6d94b83a286a8537573e4062198a40e9",
+        "blob": "0df1e2a3354f64a4f90a974cf80bda6f4293f8f9"
+      },
+      {
+        "path": "utility_watch/uwatch/review_evidence.js",
+        "bytes": 5867,
+        "sha256": "3cc2e3ede386e7d14c246492ef55e0fe6db6926fcccdace0f08524d9d4c20af7",
+        "blob": "f755872dca603d51d7d087f0b184de00d4dfedc2"
+      },
+      {
+        "path": "utility_watch/uwatch/review_evidence.py",
+        "bytes": 2222,
+        "sha256": "53ab35d375272018615fd02480a48cdb0a7efe18b28fc511465f46c0c66c9ebb",
+        "blob": "37a2c2399a366bf1968474123e6169e2da45e53a"
+      }
+    ],
+    "runtime_diff_sha256": "a7c1c261602edcaa6027679903be8c1f3dabc131c9806199bbc4ac099c8bd356",
+    "docs_and_browser_diff_sha256": "eaa2a04f034cc0b9a28a61ad978d7ea98af87f3b99fe31dd06ed1b42f4dd74ba",
+    "source_or_test_correction_requested": false
+  },
+  "author_packet_receiving": {
+    "exact_native_files_rehashed_against_manifest_and_canonical_git_tree": 110,
+    "manifest_sha256": "f3bd33607544a435f4318b3c705161dd978cc907e7c28a6085161173b126e41a",
+    "rendered_images_root_inspected": [
+      {
+        "path": "browser/source-records-desktop.png",
+        "sha256": "2e5bdef76fa2ed4479c155d72c6ee88231b24e463b6d91de11e9d1ad8724ed5e"
+      },
+      {
+        "path": "browser/source-records-narrow.png",
+        "sha256": "a6ba2501154a9b6f1dc8e5478a9920c1c76072f3faf0561c99eb77e79e9e264c"
+      }
+    ],
+    "visual_findings": "Both original captures are readable; literal values, source record cards and note fields remain within the desktop and 320px layout."
+  },
+  "hosted_receiving": {
+    "run_id": 37828017608,
+    "event": "pull_request",
+    "conclusion": "success",
+    "test_merge_parents": [
+      "8fe2c9270f487729af9e88f40894e1c4530f2c20",
+      "08af0d16a33d47446f768169cacdbef0dba595af"
+    ],
+    "jobs": [
+      {
+        "job_id": 113485782221,
+        "log_sha256": "580ea537adc08a27c7dc9fe0e8c5b2557dcc81f6f8958c30e147d724ca5524f5",
+        "checkout": "5418f0f4992f0f402dbf96d0d56094a775dac77e",
+        "result": "success"
+      },
+      {
+        "job_id": 113485782663,
+        "log_sha256": "d2ed1d2dad6fd257790fa8e7aa00039f19336fcc3322f5004bc855e6fa0df59a",
+        "checkout": "5418f0f4992f0f402dbf96d0d56094a775dac77e",
+        "result": "success"
+      }
+    ],
+    "workflow_change_required": false
+  },
+  "limits": [
+    "Independent Unicode fixture covers Greek beta and contains the literal ASCII suffix U0001f600; it does not establish astral-code-point coverage.",
+    "Native-author and independent qualification are on ThinkPad. Earlier reported Mac attempts have no recovered process/output evidence and do not establish Mac qualification.",
+    "Source inspection is a checked native snapshot, not monitoring or an atomic cross-file lock. Whitespace-only logical identity can remain valid while literal fields and raw source hashes refresh.",
+    "No installed-device or hosted-app deployment is claimed. This review authorizes source integration through the existing repository gates."
+  ]
+}

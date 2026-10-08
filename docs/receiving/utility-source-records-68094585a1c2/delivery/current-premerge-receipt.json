@@ -1,0 +1,587 @@
+{
+  "format": "utility-current-composition-hosted-receipt-input/1",
+  "actor": "chatgpt:68094585a1c2 / root",
+  "original_source_commit": "08af0d16a33d47446f768169cacdbef0dba595af",
+  "head": "5b2af6b5d8e52748eba28d97e08c9da2727ff0c2",
+  "base": "39ea75b0da2a7c3463e426dd32ba52860966cae4",
+  "tree": "5708f85ffcd89eb4e804cac949965af0dce8055a",
+  "leaves": 1428,
+  "preserved_unowned_leaves": 1318,
+  "source_paths_changed_since_native_qualification": [],
+  "commit_create_result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Action completed."
+      }
+    ],
+    "structuredContent": {
+      "sha": "5b2af6b5d8e52748eba28d97e08c9da2727ff0c2"
+    },
+    "isError": false
+  },
+  "update_ref_result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Action completed."
+      }
+    ],
+    "structuredContent": {
+      "success": true
+    },
+    "isError": false
+  },
+  "test_merge": {
+    "sha": "069e0a42c9f48ec82e61897deff9eaec89ee1fd7",
+    "node_id": "C_kwDOU7AEu9oAKDA2OWUwYTQyYzlmNDhlYzgyZTYxODk3ZGVmZjllYWVjODllZTFmZDc",
+    "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/commits/069e0a42c9f48ec82e61897deff9eaec89ee1fd7",
+    "html_url": "https://github.com/Jacob-Met/workflow-checks/commit/069e0a42c9f48ec82e61897deff9eaec89ee1fd7",
+    "author": {
+      "name": "Jacob Metoyer",
+      "email": "150724801+Jacob-Met@users.noreply.github.com",
+      "date": "2026-10-08T19:50:02Z"
+    },
+    "committer": {
+      "name": "GitHub",
+      "email": "noreply@github.com",
+      "date": "2026-10-08T19:50:02Z"
+    },
+    "tree": {
+      "sha": "5708f85ffcd89eb4e804cac949965af0dce8055a",
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/trees/5708f85ffcd89eb4e804cac949965af0dce8055a"
+    },
+    "message": "Merge 5b2af6b5d8e52748eba28d97e08c9da2727ff0c2 into 39ea75b0da2a7c3463e426dd32ba52860966cae4",
+    "parents": [
+      {
+        "sha": "39ea75b0da2a7c3463e426dd32ba52860966cae4",
+        "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/commits/39ea75b0da2a7c3463e426dd32ba52860966cae4",
+        "html_url": "https://github.com/Jacob-Met/workflow-checks/commit/39ea75b0da2a7c3463e426dd32ba52860966cae4"
+      },
+      {
+        "sha": "5b2af6b5d8e52748eba28d97e08c9da2727ff0c2",
+        "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/commits/5b2af6b5d8e52748eba28d97e08c9da2727ff0c2",
+        "html_url": "https://github.com/Jacob-Met/workflow-checks/commit/5b2af6b5d8e52748eba28d97e08c9da2727ff0c2"
+      }
+    ],
+    "verification": {
+      "verified": true,
+      "reason": "valid",
+      "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqx/PqCRC1aQ7uu5UhlAAAnwoQADZCrykqr2UeKsTmiHHKRNdw\nu9tJotsGS/af53tdGl89kRdKCF2yLTAJJpoZeFMpkXnL/x8BSxwrRNA3xA3k07qk\n5hhGqFj9Ptd1Q4ss8Gp2NCdXocp/wRmJ+wO2CeO1Zo8ngWzAotPv4DlhIgpd3473\n0x8HD+44BWtKEzCMHjo2Yxc19y4kEeMbJe1i3V7mxPu+2yY7g0zsJhiL3VLr+qvh\nEoqyeujT+JeP1ckL53xFJqfaPknb3xF13E7PPxp5mUcJEEkTgfVPawulovEDn7xr\np9jTLdXKtwW7tNsBwKyiES2FyMe3AU4B1yT0sTHx6Yj0hLm5AtwOLy/5MDduiDtY\nt5zjAgulw1OvR9/YVEPaxGXUQAoOGyEryqlYjev+6j1SRw7mZlwYT6tEJDtx0I47\nkIGPX5/wyZpGqG2AaImYOEDTouAKBDOyeY5FQiOXkJR9oiuwfPuv9wqXujgUAUBK\nClg3W7q4p41pBqpJ6tL7Fs0qzHn1P4IhbhDfaccuxVO92EHmP1abNuhm0RD55I2M\nXVJDDbrHQj8UfatDpYi0PmsUmoFy0o21ZXT0RUmyLdVnFmBhH6sRjQ5x/d5jLVns\nzx2kQrt3MlH0tecU8ox7fOGz4Gcv6dJ/RhNsoSsnlvhCFNzJb2N/vMaoozOBEypR\ncVx1CV017yzZ96WSkTX+\n=G3Ml\n-----END PGP SIGNATURE-----\n",
+      "payload": "tree 5708f85ffcd89eb4e804cac949965af0dce8055a\nparent 39ea75b0da2a7c3463e426dd32ba52860966cae4\nparent 5b2af6b5d8e52748eba28d97e08c9da2727ff0c2\nauthor Jacob Metoyer <150724801+Jacob-Met@users.noreply.github.com> 1791489002 +0000\ncommitter GitHub <noreply@github.com> 1791489002 +0000\n\nMerge 5b2af6b5d8e52748eba28d97e08c9da2727ff0c2 into 39ea75b0da2a7c3463e426dd32ba52860966cae4\n",
+      "verified_at": "2026-10-08T19:50:03Z"
+    }
+  },
+  "run": {
+    "id": 37834900567,
+    "name": "tests",
+    "node_id": "WFR_kwLOU7AEu88AAAAIzyLEVw",
+    "head_branch": "estate/68094585a1c2/utility-source-records-20261008",
+    "head_sha": "5b2af6b5d8e52748eba28d97e08c9da2727ff0c2",
+    "path": ".github/workflows/tests.yml",
+    "display_title": "Inspect saved Utility findings with native source records",
+    "run_number": 126,
+    "event": "pull_request",
+    "status": "completed",
+    "conclusion": "success",
+    "workflow_id": 374437710,
+    "check_suite_id": 102509478776,
+    "check_suite_node_id": "CS_kwDOU7AEu88AAAAX3gqDeA",
+    "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/actions/runs/37834900567",
+    "html_url": "https://github.com/Jacob-Met/workflow-checks/actions/runs/37834900567",
+    "pull_requests": [
+      {
+        "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/pulls/55",
+        "id": 4791431204,
+        "number": 55,
+        "head": {
+          "ref": "estate/68094585a1c2/utility-source-records-20261008",
+          "sha": "5b2af6b5d8e52748eba28d97e08c9da2727ff0c2",
+          "repo": {
+            "id": 1404044475,
+            "url": "https://api.github.com/repos/Jacob-Met/workflow-checks",
+            "name": "workflow-checks"
+          }
+        },
+        "base": {
+          "ref": "main",
+          "sha": "39ea75b0da2a7c3463e426dd32ba52860966cae4",
+          "repo": {
+            "id": 1404044475,
+            "url": "https://api.github.com/repos/Jacob-Met/workflow-checks",
+            "name": "workflow-checks"
+          }
+        }
+      }
+    ],
+    "created_at": "2026-10-08T19:50:05Z",
+    "updated_at": "2026-10-08T19:50:58Z",
+    "actor": {
+      "login": "Jacob-Met",
+      "id": 150724801,
+      "node_id": "U_kgDOCPvgwQ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/150724801?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Jacob-Met",
+      "html_url": "https://github.com/Jacob-Met",
+      "followers_url": "https://api.github.com/users/Jacob-Met/followers",
+      "following_url": "https://api.github.com/users/Jacob-Met/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Jacob-Met/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Jacob-Met/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Jacob-Met/subscriptions",
+      "organizations_url": "https://api.github.com/users/Jacob-Met/orgs",
+      "repos_url": "https://api.github.com/users/Jacob-Met/repos",
+      "events_url": "https://api.github.com/users/Jacob-Met/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Jacob-Met/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "run_attempt": 1,
+    "referenced_workflows": [],
+    "run_started_at": "2026-10-08T19:50:05Z",
+    "triggering_actor": {
+      "login": "Jacob-Met",
+      "id": 150724801,
+      "node_id": "U_kgDOCPvgwQ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/150724801?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Jacob-Met",
+      "html_url": "https://github.com/Jacob-Met",
+      "followers_url": "https://api.github.com/users/Jacob-Met/followers",
+      "following_url": "https://api.github.com/users/Jacob-Met/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Jacob-Met/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Jacob-Met/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Jacob-Met/subscriptions",
+      "organizations_url": "https://api.github.com/users/Jacob-Met/orgs",
+      "repos_url": "https://api.github.com/users/Jacob-Met/repos",
+      "events_url": "https://api.github.com/users/Jacob-Met/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Jacob-Met/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "jobs_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/actions/runs/37834900567/jobs",
+    "logs_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/actions/runs/37834900567/logs",
+    "check_suite_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/check-suites/102509478776",
+    "artifacts_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/actions/runs/37834900567/artifacts",
+    "cancel_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/actions/runs/37834900567/cancel",
+    "rerun_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/actions/runs/37834900567/rerun",
+    "previous_attempt_url": null,
+    "workflow_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/actions/workflows/374437710",
+    "head_commit": {
+      "id": "5b2af6b5d8e52748eba28d97e08c9da2727ff0c2",
+      "tree_id": "5708f85ffcd89eb4e804cac949965af0dce8055a",
+      "message": "Compose current Freight main with qualified Utility source records\n\nActor: chatgpt:68094585a1c2 / root. Preserve the Utility source and 98 author evidence files from 08af0d16 unchanged while incorporating current main 39ea75b0, including Freight PR #57. Full-tree readback verifies 1,428 leaves, 110 allowed Utility contribution paths and all 1,318 other current-main leaves exactly. This current composition requires existing hosted qualification; the independent native receiving and author Chromium evidence remain bound to unchanged Utility bytes. No native suite or browser rerun.",
+      "timestamp": "2026-10-08T19:49:02Z",
+      "author": {
+        "name": "Jacob Metoyer",
+        "email": "150724801+Jacob-Met@users.noreply.github.com"
+      },
+      "committer": {
+        "name": "Jacob Metoyer",
+        "email": "150724801+Jacob-Met@users.noreply.github.com"
+      }
+    },
+    "repository": {
+      "id": 1404044475,
+      "node_id": "R_kgDOU7AEuw",
+      "name": "workflow-checks",
+      "full_name": "Jacob-Met/workflow-checks",
+      "private": false,
+      "owner": {
+        "login": "Jacob-Met",
+        "id": 150724801,
+        "node_id": "U_kgDOCPvgwQ",
+        "avatar_url": "https://avatars.githubusercontent.com/u/150724801?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Jacob-Met",
+        "html_url": "https://github.com/Jacob-Met",
+        "followers_url": "https://api.github.com/users/Jacob-Met/followers",
+        "following_url": "https://api.github.com/users/Jacob-Met/following{/other_user}",
+        "gists_url": "https://api.github.com/users/Jacob-Met/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/Jacob-Met/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/Jacob-Met/subscriptions",
+        "organizations_url": "https://api.github.com/users/Jacob-Met/orgs",
+        "repos_url": "https://api.github.com/users/Jacob-Met/repos",
+        "events_url": "https://api.github.com/users/Jacob-Met/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/Jacob-Met/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "html_url": "https://github.com/Jacob-Met/workflow-checks",
+      "description": "Evidence-first back-office checks on synthetic data: freight detention & carrier invoice audit, PT authorization worklist, utility bill exceptions. Python stdlib.",
+      "fork": false,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks",
+      "forks_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/forks",
+      "keys_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/keys{/key_id}",
+      "collaborators_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/collaborators{/collaborator}",
+      "teams_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/teams",
+      "hooks_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/hooks",
+      "issue_events_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/issues/events{/number}",
+      "events_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/events",
+      "assignees_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/assignees{/user}",
+      "branches_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/branches{/branch}",
+      "tags_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/tags",
+      "blobs_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs{/sha}",
+      "git_tags_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/tags{/sha}",
+      "git_refs_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/refs{/sha}",
+      "trees_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/trees{/sha}",
+      "statuses_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/statuses/{sha}",
+      "languages_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/languages",
+      "stargazers_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/stargazers",
+      "contributors_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/contributors",
+      "subscribers_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/subscribers",
+      "subscription_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/subscription",
+      "commits_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/commits{/sha}",
+      "git_commits_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/commits{/sha}",
+      "comments_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/comments{/number}",
+      "issue_comment_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/issues/comments{/number}",
+      "contents_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/contents/{+path}",
+      "compare_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/compare/{base}...{head}",
+      "merges_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/merges",
+      "archive_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/{archive_format}{/ref}",
+      "downloads_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/downloads",
+      "issues_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/issues{/number}",
+      "pulls_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/pulls{/number}",
+      "milestones_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/milestones{/number}",
+      "notifications_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/notifications{?since,all,participating}",
+      "labels_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/labels{/name}",
+      "releases_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/releases{/id}",
+      "deployments_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/deployments"
+    },
+    "head_repository": {
+      "id": 1404044475,
+      "node_id": "R_kgDOU7AEuw",
+      "name": "workflow-checks",
+      "full_name": "Jacob-Met/workflow-checks",
+      "private": false,
+      "owner": {
+        "login": "Jacob-Met",
+        "id": 150724801,
+        "node_id": "U_kgDOCPvgwQ",
+        "avatar_url": "https://avatars.githubusercontent.com/u/150724801?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Jacob-Met",
+        "html_url": "https://github.com/Jacob-Met",
+        "followers_url": "https://api.github.com/users/Jacob-Met/followers",
+        "following_url": "https://api.github.com/users/Jacob-Met/following{/other_user}",
+        "gists_url": "https://api.github.com/users/Jacob-Met/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/Jacob-Met/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/Jacob-Met/subscriptions",
+        "organizations_url": "https://api.github.com/users/Jacob-Met/orgs",
+        "repos_url": "https://api.github.com/users/Jacob-Met/repos",
+        "events_url": "https://api.github.com/users/Jacob-Met/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/Jacob-Met/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "html_url": "https://github.com/Jacob-Met/workflow-checks",
+      "description": "Evidence-first back-office checks on synthetic data: freight detention & carrier invoice audit, PT authorization worklist, utility bill exceptions. Python stdlib.",
+      "fork": false,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks",
+      "forks_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/forks",
+      "keys_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/keys{/key_id}",
+      "collaborators_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/collaborators{/collaborator}",
+      "teams_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/teams",
+      "hooks_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/hooks",
+      "issue_events_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/issues/events{/number}",
+      "events_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/events",
+      "assignees_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/assignees{/user}",
+      "branches_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/branches{/branch}",
+      "tags_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/tags",
+      "blobs_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs{/sha}",
+      "git_tags_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/tags{/sha}",
+      "git_refs_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/refs{/sha}",
+      "trees_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/trees{/sha}",
+      "statuses_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/statuses/{sha}",
+      "languages_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/languages",
+      "stargazers_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/stargazers",
+      "contributors_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/contributors",
+      "subscribers_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/subscribers",
+      "subscription_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/subscription",
+      "commits_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/commits{/sha}",
+      "git_commits_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/commits{/sha}",
+      "comments_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/comments{/number}",
+      "issue_comment_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/issues/comments{/number}",
+      "contents_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/contents/{+path}",
+      "compare_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/compare/{base}...{head}",
+      "merges_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/merges",
+      "archive_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/{archive_format}{/ref}",
+      "downloads_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/downloads",
+      "issues_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/issues{/number}",
+      "pulls_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/pulls{/number}",
+      "milestones_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/milestones{/number}",
+      "notifications_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/notifications{?since,all,participating}",
+      "labels_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/labels{/name}",
+      "releases_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/releases{/id}",
+      "deployments_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/deployments"
+    }
+  },
+  "jobs": [
+    {
+      "job": {
+        "id": 113509332893,
+        "run_id": 37834900567,
+        "workflow_name": "tests",
+        "head_branch": "estate/68094585a1c2/utility-source-records-20261008",
+        "run_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/actions/runs/37834900567",
+        "run_attempt": 1,
+        "node_id": "CR_kwDOU7AEu88AAAAaba73nQ",
+        "head_sha": "5b2af6b5d8e52748eba28d97e08c9da2727ff0c2",
+        "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/actions/jobs/113509332893",
+        "html_url": "https://github.com/Jacob-Met/workflow-checks/actions/runs/37834900567/job/113509332893",
+        "status": "completed",
+        "conclusion": "success",
+        "created_at": "2026-10-08T19:50:05Z",
+        "started_at": "2026-10-08T19:50:07Z",
+        "completed_at": "2026-10-08T19:50:57Z",
+        "name": "test (3.10)",
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1,
+            "started_at": "2026-10-08T19:50:08Z",
+            "completed_at": "2026-10-08T19:50:09Z"
+          },
+          {
+            "name": "Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2,
+            "started_at": "2026-10-08T19:50:09Z",
+            "completed_at": "2026-10-08T19:50:11Z"
+          },
+          {
+            "name": "Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3,
+            "started_at": "2026-10-08T19:50:11Z",
+            "completed_at": "2026-10-08T19:50:12Z"
+          },
+          {
+            "name": "Run python -m pip install pytest",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4,
+            "started_at": "2026-10-08T19:50:12Z",
+            "completed_at": "2026-10-08T19:50:18Z"
+          },
+          {
+            "name": "freight_packets",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5,
+            "started_at": "2026-10-08T19:50:18Z",
+            "completed_at": "2026-10-08T19:50:38Z"
+          },
+          {
+            "name": "pt_auth",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 6,
+            "started_at": "2026-10-08T19:50:38Z",
+            "completed_at": "2026-10-08T19:50:45Z"
+          },
+          {
+            "name": "utility_watch",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 7,
+            "started_at": "2026-10-08T19:50:45Z",
+            "completed_at": "2026-10-08T19:50:54Z"
+          },
+          {
+            "name": "Post Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 13,
+            "started_at": "2026-10-08T19:50:54Z",
+            "completed_at": "2026-10-08T19:50:54Z"
+          },
+          {
+            "name": "Post Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 14,
+            "started_at": "2026-10-08T19:50:54Z",
+            "completed_at": "2026-10-08T19:50:55Z"
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 15,
+            "started_at": "2026-10-08T19:50:55Z",
+            "completed_at": "2026-10-08T19:50:55Z"
+          }
+        ],
+        "check_run_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/check-runs/113509332893",
+        "labels": [
+          "ubuntu-latest"
+        ],
+        "runner_id": 1000008607,
+        "runner_name": "GitHub Actions 1000008607",
+        "runner_group_id": 0,
+        "runner_group_name": "GitHub Actions"
+      },
+      "raw_log": "﻿2026-10-08T19:50:08.8236419Z Current runner version: '2.337.0'\n2026-10-08T19:50:08.8263478Z ##[group]Runner Image Provisioner\n2026-10-08T19:50:08.8264669Z Hosted Compute Agent\n2026-10-08T19:50:08.8265311Z Version: 20261002.596\n2026-10-08T19:50:08.8265960Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0\n2026-10-08T19:50:08.8266824Z Build Date: 2026-10-02T22:28:27Z\n2026-10-08T19:50:08.8267598Z Worker ID: {4d7b45c3-25c8-4c76-a126-2e957f5d5d8e}\n2026-10-08T19:50:08.8268400Z Region: westcentralus\n2026-10-08T19:50:08.8269070Z Cloud: Azure\n2026-10-08T19:50:08.8269630Z ##[endgroup]\n2026-10-08T19:50:08.8271075Z ##[group]Operating System\n2026-10-08T19:50:08.8271851Z Ubuntu\n2026-10-08T19:50:08.8272643Z 24.04.5\n2026-10-08T19:50:08.8273337Z LTS\n2026-10-08T19:50:08.8274256Z ##[endgroup]\n2026-10-08T19:50:08.8275100Z ##[group]Runner Image\n2026-10-08T19:50:08.8275780Z Image: ubuntu-24.04\n2026-10-08T19:50:08.8276363Z Version: 20261004.327.1\n2026-10-08T19:50:08.8277784Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md\n2026-10-08T19:50:08.8279517Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327\n2026-10-08T19:50:08.8280609Z ##[endgroup]\n2026-10-08T19:50:08.8281840Z ##[group]GITHUB_TOKEN Permissions\n2026-10-08T19:50:08.8284573Z Contents: read\n2026-10-08T19:50:08.8285314Z Metadata: read\n2026-10-08T19:50:08.8285987Z ##[endgroup]\n2026-10-08T19:50:08.8288263Z Secret source: Actions\n2026-10-08T19:50:08.8289316Z Cache mode: write\n2026-10-08T19:50:08.8290324Z Prepare workflow directory\n2026-10-08T19:50:08.8639280Z Prepare all required actions\n2026-10-08T19:50:08.8688034Z Getting action download info\n2026-10-08T19:50:09.1619113Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)\n2026-10-08T19:50:09.2674710Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)\n2026-10-08T19:50:09.4559913Z Complete job name: test (3.10)\n2026-10-08T19:50:09.5396310Z ##[group]Run actions/checkout@v4\n2026-10-08T19:50:09.5397355Z with:\n2026-10-08T19:50:09.5397827Z   repository: Jacob-Met/workflow-checks\n2026-10-08T19:50:09.5401852Z   token: ***\n2026-10-08T19:50:09.5402301Z   ssh-strict: true\n2026-10-08T19:50:09.5402746Z   ssh-user: git\n2026-10-08T19:50:09.5403203Z   persist-credentials: true\n2026-10-08T19:50:09.5403700Z   clean: true\n2026-10-08T19:50:09.5404304Z   sparse-checkout-cone-mode: true\n2026-10-08T19:50:09.5404826Z   fetch-depth: 1\n2026-10-08T19:50:09.5405260Z   fetch-tags: false\n2026-10-08T19:50:09.5405708Z   show-progress: true\n2026-10-08T19:50:09.5406163Z   lfs: false\n2026-10-08T19:50:09.5406578Z   submodules: false\n2026-10-08T19:50:09.5407031Z   set-safe-directory: true\n2026-10-08T19:50:09.5407541Z   allow-unsafe-pr-checkout: false\n2026-10-08T19:50:09.5408290Z ##[endgroup]\n2026-10-08T19:50:09.6516962Z Syncing repository: Jacob-Met/workflow-checks\n2026-10-08T19:50:09.6519631Z ##[group]Getting Git version info\n2026-10-08T19:50:09.6520952Z Working directory is '/home/runner/work/workflow-checks/workflow-checks'\n2026-10-08T19:50:09.6522661Z [command]/usr/bin/git version\n2026-10-08T19:50:09.6600217Z git version 2.55.0\n2026-10-08T19:50:09.6621369Z ##[endgroup]\n2026-10-08T19:50:09.6636747Z Temporarily overriding HOME='/home/runner/work/_temp/738f7eb2-f9c5-429c-b6a4-0cf70d8ec4c6' before making global git config changes\n2026-10-08T19:50:09.6639231Z Adding repository directory to the temporary git global config as a safe directory\n2026-10-08T19:50:09.6643050Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/workflow-checks/workflow-checks\n2026-10-08T19:50:09.6700854Z Deleting the contents of '/home/runner/work/workflow-checks/workflow-checks'\n2026-10-08T19:50:09.6709344Z ##[group]Initializing the repository\n2026-10-08T19:50:09.6710618Z [command]/usr/bin/git init /home/runner/work/workflow-checks/workflow-checks\n2026-10-08T19:50:09.6800694Z hint: Using 'master' as the name for the initial branch. This default branch name\n2026-10-08T19:50:09.6802565Z hint: will change to \"main\" in Git 3.0. To configure the initial branch name\n2026-10-08T19:50:09.6806937Z hint: to use in all of your new repositories, which will suppress this warning,\n2026-10-08T19:50:09.6808456Z hint: call:\n2026-10-08T19:50:09.6809423Z hint:\n2026-10-08T19:50:09.6810805Z hint: \tgit config --global init.defaultBranch <name>\n2026-10-08T19:50:09.6812411Z hint:\n2026-10-08T19:50:09.6813672Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and\n2026-10-08T19:50:09.6815908Z hint: 'development'. The just-created branch can be renamed via this command:\n2026-10-08T19:50:09.6817588Z hint:\n2026-10-08T19:50:09.6818787Z hint: \tgit branch -m <name>\n2026-10-08T19:50:09.6819795Z hint:\n2026-10-08T19:50:09.6820994Z hint: Disable this message with \"git config set advice.defaultBranchName false\"\n2026-10-08T19:50:09.6823118Z Initialized empty Git repository in /home/runner/work/workflow-checks/workflow-checks/.git/\n2026-10-08T19:50:09.6826919Z [command]/usr/bin/git remote add origin https://github.com/Jacob-Met/workflow-checks\n2026-10-08T19:50:09.6864987Z ##[endgroup]\n2026-10-08T19:50:09.6866516Z ##[group]Disabling automatic garbage collection\n2026-10-08T19:50:09.6867927Z [command]/usr/bin/git config --local gc.auto 0\n2026-10-08T19:50:09.6902676Z ##[endgroup]\n2026-10-08T19:50:09.6904059Z ##[group]Setting up auth\n2026-10-08T19:50:09.6910285Z [command]/usr/bin/git config --local --name-only --get-regexp core\\.sshCommand\n2026-10-08T19:50:09.6952437Z [command]/usr/bin/git submodule foreach --recursive sh -c \"git config --local --name-only --get-regexp 'core\\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\"\n2026-10-08T19:50:09.7328917Z [command]/usr/bin/git config --local --name-only --get-regexp http\\.https\\:\\/\\/github\\.com\\/\\.extraheader\n2026-10-08T19:50:09.7377015Z [command]/usr/bin/git submodule foreach --recursive sh -c \"git config --local --name-only --get-regexp 'http\\.https\\:\\/\\/github\\.com\\/\\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\"\n2026-10-08T19:50:09.7655674Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\\.gitdir:\n2026-10-08T19:50:09.7697812Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url\n2026-10-08T19:50:09.7957373Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***\n2026-10-08T19:50:09.8066838Z ##[endgroup]\n2026-10-08T19:50:09.8068106Z ##[group]Fetching the repository\n2026-10-08T19:50:09.8079010Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +069e0a42c9f48ec82e61897deff9eaec89ee1fd7:refs/remotes/pull/55/merge\n2026-10-08T19:50:11.6200903Z From https://github.com/Jacob-Met/workflow-checks\n2026-10-08T19:50:11.6202842Z  * [new ref]         069e0a42c9f48ec82e61897deff9eaec89ee1fd7 -> pull/55/merge\n2026-10-08T19:50:11.6206738Z ##[endgroup]\n2026-10-08T19:50:11.6208231Z ##[group]Determining the checkout info\n2026-10-08T19:50:11.6209788Z ##[endgroup]\n2026-10-08T19:50:11.6220483Z [command]/usr/bin/git sparse-checkout disable\n2026-10-08T19:50:11.6283768Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig\n2026-10-08T19:50:11.6337836Z ##[group]Checking out the ref\n2026-10-08T19:50:11.6342026Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/55/merge\n2026-10-08T19:50:11.7844947Z Note: switching to 'refs/remotes/pull/55/merge'.\n2026-10-08T19:50:11.7845929Z \n2026-10-08T19:50:11.7846596Z You are in 'detached HEAD' state. You can look around, make experimental\n2026-10-08T19:50:11.7848163Z changes and commit them, and you can discard any commits you make in this\n2026-10-08T19:50:11.7849782Z state without impacting any branches by switching back to a branch.\n2026-10-08T19:50:11.7850740Z \n2026-10-08T19:50:11.7851371Z If you want to create a new branch to retain commits you create, you may\n2026-10-08T19:50:11.7852912Z do so (now or later) by using -c with the switch command. Example:\n2026-10-08T19:50:11.7854357Z \n2026-10-08T19:50:11.7854750Z   git switch -c <new-branch-name>\n2026-10-08T19:50:11.7855439Z \n2026-10-08T19:50:11.7855818Z Or undo this operation with:\n2026-10-08T19:50:11.7856410Z \n2026-10-08T19:50:11.7856719Z   git switch -\n2026-10-08T19:50:11.7857174Z \n2026-10-08T19:50:11.7857999Z Turn off this advice by setting config variable advice.detachedHead to false\n2026-10-08T19:50:11.7859080Z \n2026-10-08T19:50:11.7860075Z HEAD is now at 069e0a4 Merge 5b2af6b5d8e52748eba28d97e08c9da2727ff0c2 into 39ea75b0da2a7c3463e426dd32ba52860966cae4\n2026-10-08T19:50:11.7863533Z ##[endgroup]\n2026-10-08T19:50:11.7914348Z [command]/usr/bin/git log -1 --format=%H\n2026-10-08T19:50:11.7945506Z 069e0a42c9f48ec82e61897deff9eaec89ee1fd7\n2026-10-08T19:50:11.8449353Z ##[group]Run actions/setup-python@v5\n2026-10-08T19:50:11.8450157Z with:\n2026-10-08T19:50:11.8450652Z   python-version: 3.10\n2026-10-08T19:50:11.8451265Z   check-latest: false\n2026-10-08T19:50:11.8459962Z   token: ***\n2026-10-08T19:50:11.8460510Z   update-environment: true\n2026-10-08T19:50:11.8461216Z   allow-prereleases: false\n2026-10-08T19:50:11.8461884Z   freethreaded: false\n2026-10-08T19:50:11.8462458Z ##[endgroup]\n2026-10-08T19:50:11.9862409Z ##[group]Installed versions\n2026-10-08T19:50:11.9949063Z (node:2377) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n2026-10-08T19:50:11.9952425Z (Use `node --trace-deprecation ...` to show where the warning was created)\n2026-10-08T19:50:11.9954560Z Successfully set up CPython (3.10.22)\n2026-10-08T19:50:11.9956487Z ##[endgroup]\n2026-10-08T19:50:12.0208594Z ##[group]Run python -m pip install pytest\n2026-10-08T19:50:12.0209644Z \u001b[36;1mpython -m pip install pytest\u001b[0m\n2026-10-08T19:50:12.1148836Z shell: /usr/bin/bash -e {0}\n2026-10-08T19:50:12.1149629Z env:\n2026-10-08T19:50:12.1150379Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.22/x64\n2026-10-08T19:50:12.1151733Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.22/x64/lib/pkgconfig\n2026-10-08T19:50:12.1153139Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64\n2026-10-08T19:50:12.1154532Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64\n2026-10-08T19:50:12.1155744Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64\n2026-10-08T19:50:12.1156950Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.22/x64/lib\n2026-10-08T19:50:12.1157937Z ##[endgroup]\n2026-10-08T19:50:16.3117502Z Collecting pytest\n2026-10-08T19:50:16.4116805Z   Downloading pytest-9.1.1-py3-none-any.whl.metadata (7.6 kB)\n2026-10-08T19:50:16.4452267Z Collecting exceptiongroup>=1 (from pytest)\n2026-10-08T19:50:16.4655957Z   Downloading exceptiongroup-1.3.1-py3-none-any.whl.metadata (6.7 kB)\n2026-10-08T19:50:16.4948612Z Collecting iniconfig>=1.0.1 (from pytest)\n2026-10-08T19:50:16.5151229Z   Downloading iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)\n2026-10-08T19:50:16.5495035Z Collecting packaging>=22 (from pytest)\n2026-10-08T19:50:16.5703197Z   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)\n2026-10-08T19:50:16.5994195Z Collecting pluggy<2,>=1.5 (from pytest)\n2026-10-08T19:50:16.6205026Z   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)\n2026-10-08T19:50:16.6581089Z Collecting pygments>=2.7.2 (from pytest)\n2026-10-08T19:50:16.6782399Z   Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)\n2026-10-08T19:50:16.7279810Z Collecting tomli>=1 (from pytest)\n2026-10-08T19:50:16.7483252Z   Downloading tomli-2.5.0-py3-none-any.whl.metadata (10 kB)\n2026-10-08T19:50:16.7852164Z Collecting typing-extensions>=4.6.0 (from exceptiongroup>=1->pytest)\n2026-10-08T19:50:16.8063664Z   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)\n2026-10-08T19:50:16.8311579Z Downloading pytest-9.1.1-py3-none-any.whl (386 kB)\n2026-10-08T19:50:16.9221720Z Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)\n2026-10-08T19:50:16.9516718Z Downloading exceptiongroup-1.3.1-py3-none-any.whl (16 kB)\n2026-10-08T19:50:16.9740733Z Downloading iniconfig-2.3.1-py3-none-any.whl (7.6 kB)\n2026-10-08T19:50:16.9962515Z Downloading packaging-26.3-py3-none-any.whl (129 kB)\n2026-10-08T19:50:17.0216714Z Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)\n2026-10-08T19:50:17.0800379Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 18.9 MB/s  0:00:00\n2026-10-08T19:50:17.1002131Z Downloading tomli-2.5.0-py3-none-any.whl (14 kB)\n2026-10-08T19:50:17.1224561Z Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)\n2026-10-08T19:50:17.3686709Z Installing collected packages: typing-extensions, tomli, pygments, pluggy, packaging, iniconfig, exceptiongroup, pytest\n2026-10-08T19:50:18.4669705Z \n2026-10-08T19:50:18.4688304Z Successfully installed exceptiongroup-1.3.1 iniconfig-2.3.1 packaging-26.3 pluggy-1.6.0 pygments-2.21.0 pytest-9.1.1 tomli-2.5.0 typing-extensions-4.16.0\n2026-10-08T19:50:18.5372458Z ##[group]Run python -m pytest -q\n2026-10-08T19:50:18.5372853Z \u001b[36;1mpython -m pytest -q\u001b[0m\n2026-10-08T19:50:18.5446396Z shell: /usr/bin/bash -e {0}\n2026-10-08T19:50:18.5446737Z env:\n2026-10-08T19:50:18.5447052Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.22/x64\n2026-10-08T19:50:18.5447546Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.22/x64/lib/pkgconfig\n2026-10-08T19:50:18.5448001Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64\n2026-10-08T19:50:18.5448413Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64\n2026-10-08T19:50:18.5448809Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64\n2026-10-08T19:50:18.5449206Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.22/x64/lib\n2026-10-08T19:50:18.5449548Z ##[endgroup]\n2026-10-08T19:50:20.7649203Z ...................................................... [ 43%]\n2026-10-08T19:50:32.8478792Z ................................................... [ 84%]\n2026-10-08T19:50:38.4251391Z ....................                                      [100%]\n2026-10-08T19:50:38.4251891Z 125 passed, 126 subtests passed in 19.08s\n2026-10-08T19:50:38.4629216Z ##[group]Run python -m pytest -q\n2026-10-08T19:50:38.4629538Z \u001b[36;1mpython -m pytest -q\u001b[0m\n2026-10-08T19:50:38.4699144Z shell: /usr/bin/bash -e {0}\n2026-10-08T19:50:38.4699419Z env:\n2026-10-08T19:50:38.4699699Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.22/x64\n2026-10-08T19:50:38.4700152Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.22/x64/lib/pkgconfig\n2026-10-08T19:50:38.4700578Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64\n2026-10-08T19:50:38.4700966Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64\n2026-10-08T19:50:38.4701340Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64\n2026-10-08T19:50:38.4701714Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.22/x64/lib\n2026-10-08T19:50:38.4702044Z ##[endgroup]\n2026-10-08T19:50:40.9183343Z ..................s..................................................... [ 57%]\n2026-10-08T19:50:45.5000207Z ......................................................                                              [100%]\n2026-10-08T19:50:45.5003480Z 125 passed, 1 skipped, 45 subtests passed in 6.85s\n2026-10-08T19:50:45.5378703Z ##[group]Run python -m pytest -q\n2026-10-08T19:50:45.5379088Z \u001b[36;1mpython -m pytest -q\u001b[0m\n2026-10-08T19:50:45.5448451Z shell: /usr/bin/bash -e {0}\n2026-10-08T19:50:45.5448739Z env:\n2026-10-08T19:50:45.5449034Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.22/x64\n2026-10-08T19:50:45.5449506Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.22/x64/lib/pkgconfig\n2026-10-08T19:50:45.5449963Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64\n2026-10-08T19:50:45.5450386Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64\n2026-10-08T19:50:45.5450792Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64\n2026-10-08T19:50:45.5451197Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.22/x64/lib\n2026-10-08T19:50:45.5451547Z ##[endgroup]\n2026-10-08T19:50:46.6606879Z ....................................... [ 24%]\n2026-10-08T19:50:54.7520542Z ..........................................................................................................................                                               [100%]\n2026-10-08T19:50:54.7521501Z 161 passed, 81 subtests passed in 9.02s\n2026-10-08T19:50:54.7957594Z Post job cleanup.\n2026-10-08T19:50:54.9237700Z (node:2890) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n2026-10-08T19:50:54.9238469Z (Use `node --trace-deprecation ...` to show where the warning was created)\n2026-10-08T19:50:54.9523026Z Post job cleanup.\n2026-10-08T19:50:55.0433007Z [command]/usr/bin/git version\n2026-10-08T19:50:55.0476569Z git version 2.55.0\n2026-10-08T19:50:55.0512182Z Temporarily overriding HOME='/home/runner/work/_temp/c36e9cf0-ab5f-4243-94d2-aecdc5cc9ed2' before making global git config changes\n2026-10-08T19:50:55.0513578Z Adding repository directory to the temporary git global config as a safe directory\n2026-10-08T19:50:55.0521812Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/workflow-checks/workflow-checks\n2026-10-08T19:50:55.0558752Z [command]/usr/bin/git config --local --name-only --get-regexp core\\.sshCommand\n2026-10-08T19:50:55.0596061Z [command]/usr/bin/git submodule foreach --recursive sh -c \"git config --local --name-only --get-regexp 'core\\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\"\n2026-10-08T19:50:55.0880603Z [command]/usr/bin/git config --local --name-only --get-regexp http\\.https\\:\\/\\/github\\.com\\/\\.extraheader\n2026-10-08T19:50:55.0899210Z http.https://github.com/.extraheader\n2026-10-08T19:50:55.0920178Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader\n2026-10-08T19:50:55.0954656Z [command]/usr/bin/git submodule foreach --recursive sh -c \"git config --local --name-only --get-regexp 'http\\.https\\:\\/\\/github\\.com\\/\\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\"\n2026-10-08T19:50:55.1248422Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\\.gitdir:\n2026-10-08T19:50:55.1304729Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url\n2026-10-08T19:50:55.1765987Z Cleaning up orphan processes\n2026-10-08T19:50:55.2148746Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/\n",
+      "selected_lines": [
+        "2026-10-08T19:50:09.8079010Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +069e0a42c9f48ec82e61897deff9eaec89ee1fd7:refs/remotes/pull/55/merge",
+        "2026-10-08T19:50:11.6202842Z  * [new ref]         069e0a42c9f48ec82e61897deff9eaec89ee1fd7 -> pull/55/merge",
+        "2026-10-08T19:50:11.7860075Z HEAD is now at 069e0a4 Merge 5b2af6b5d8e52748eba28d97e08c9da2727ff0c2 into 39ea75b0da2a7c3463e426dd32ba52860966cae4",
+        "2026-10-08T19:50:11.7914348Z [command]/usr/bin/git log -1 --format=%H",
+        "2026-10-08T19:50:11.7945506Z 069e0a42c9f48ec82e61897deff9eaec89ee1fd7",
+        "2026-10-08T19:50:12.1150379Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.22/x64",
+        "2026-10-08T19:50:18.5447052Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.22/x64",
+        "2026-10-08T19:50:38.4251891Z 125 passed, 126 subtests passed in 19.08s",
+        "2026-10-08T19:50:38.4699699Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.22/x64",
+        "2026-10-08T19:50:45.5003480Z 125 passed, 1 skipped, 45 subtests passed in 6.85s",
+        "2026-10-08T19:50:45.5449034Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.22/x64",
+        "2026-10-08T19:50:54.7521501Z 161 passed, 81 subtests passed in 9.02s"
+      ]
+    },
+    {
+      "job": {
+        "id": 113509333410,
+        "run_id": 37834900567,
+        "workflow_name": "tests",
+        "head_branch": "estate/68094585a1c2/utility-source-records-20261008",
+        "run_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/actions/runs/37834900567",
+        "run_attempt": 1,
+        "node_id": "CR_kwDOU7AEu88AAAAaba75og",
+        "head_sha": "5b2af6b5d8e52748eba28d97e08c9da2727ff0c2",
+        "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/actions/jobs/113509333410",
+        "html_url": "https://github.com/Jacob-Met/workflow-checks/actions/runs/37834900567/job/113509333410",
+        "status": "completed",
+        "conclusion": "success",
+        "created_at": "2026-10-08T19:50:05Z",
+        "started_at": "2026-10-08T19:50:07Z",
+        "completed_at": "2026-10-08T19:50:49Z",
+        "name": "test (3.12)",
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1,
+            "started_at": "2026-10-08T19:50:08Z",
+            "completed_at": "2026-10-08T19:50:09Z"
+          },
+          {
+            "name": "Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2,
+            "started_at": "2026-10-08T19:50:09Z",
+            "completed_at": "2026-10-08T19:50:12Z"
+          },
+          {
+            "name": "Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3,
+            "started_at": "2026-10-08T19:50:12Z",
+            "completed_at": "2026-10-08T19:50:12Z"
+          },
+          {
+            "name": "Run python -m pip install pytest",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4,
+            "started_at": "2026-10-08T19:50:12Z",
+            "completed_at": "2026-10-08T19:50:14Z"
+          },
+          {
+            "name": "freight_packets",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5,
+            "started_at": "2026-10-08T19:50:14Z",
+            "completed_at": "2026-10-08T19:50:32Z"
+          },
+          {
+            "name": "pt_auth",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 6,
+            "started_at": "2026-10-08T19:50:32Z",
+            "completed_at": "2026-10-08T19:50:39Z"
+          },
+          {
+            "name": "utility_watch",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 7,
+            "started_at": "2026-10-08T19:50:39Z",
+            "completed_at": "2026-10-08T19:50:47Z"
+          },
+          {
+            "name": "Post Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 13,
+            "started_at": "2026-10-08T19:50:47Z",
+            "completed_at": "2026-10-08T19:50:47Z"
+          },
+          {
+            "name": "Post Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 14,
+            "started_at": "2026-10-08T19:50:47Z",
+            "completed_at": "2026-10-08T19:50:47Z"
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 15,
+            "started_at": "2026-10-08T19:50:47Z",
+            "completed_at": "2026-10-08T19:50:47Z"
+          }
+        ],
+        "check_run_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/check-runs/113509333410",
+        "labels": [
+          "ubuntu-latest"
+        ],
+        "runner_id": 1000008608,
+        "runner_name": "GitHub Actions 1000008608",
+        "runner_group_id": 0,
+        "runner_group_name": "GitHub Actions"
+      },
+      "raw_log": "﻿2026-10-08T19:50:08.8041930Z Current runner version: '2.337.0'\n2026-10-08T19:50:08.8063420Z ##[group]Runner Image Provisioner\n2026-10-08T19:50:08.8064140Z Hosted Compute Agent\n2026-10-08T19:50:08.8064614Z Version: 20261002.596\n2026-10-08T19:50:08.8065364Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0\n2026-10-08T19:50:08.8066004Z Build Date: 2026-10-02T22:28:27Z\n2026-10-08T19:50:08.8066569Z Worker ID: {09c4896c-b350-4605-9dc6-233880b49503}\n2026-10-08T19:50:08.8067141Z Region: westus3\n2026-10-08T19:50:08.8067592Z Cloud: Azure\n2026-10-08T19:50:08.8068062Z ##[endgroup]\n2026-10-08T19:50:08.8069180Z ##[group]Operating System\n2026-10-08T19:50:08.8069696Z Ubuntu\n2026-10-08T19:50:08.8070194Z 24.04.5\n2026-10-08T19:50:08.8070611Z LTS\n2026-10-08T19:50:08.8071079Z ##[endgroup]\n2026-10-08T19:50:08.8071611Z ##[group]Runner Image\n2026-10-08T19:50:08.8072098Z Image: ubuntu-24.04\n2026-10-08T19:50:08.8072609Z Version: 20261004.327.1\n2026-10-08T19:50:08.8073617Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md\n2026-10-08T19:50:08.8075033Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327\n2026-10-08T19:50:08.8075806Z ##[endgroup]\n2026-10-08T19:50:08.8076742Z ##[group]GITHUB_TOKEN Permissions\n2026-10-08T19:50:08.8078328Z Contents: read\n2026-10-08T19:50:08.8078891Z Metadata: read\n2026-10-08T19:50:08.8079373Z ##[endgroup]\n2026-10-08T19:50:08.8081567Z Secret source: Actions\n2026-10-08T19:50:08.8082358Z Cache mode: write\n2026-10-08T19:50:08.8082973Z Prepare workflow directory\n2026-10-08T19:50:08.8848407Z Prepare all required actions\n2026-10-08T19:50:08.8888036Z Getting action download info\n2026-10-08T19:50:09.1662399Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)\n2026-10-08T19:50:09.5356199Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)\n2026-10-08T19:50:09.7354236Z Complete job name: test (3.12)\n2026-10-08T19:50:09.7996648Z ##[group]Run actions/checkout@v4\n2026-10-08T19:50:09.7997305Z with:\n2026-10-08T19:50:09.7997668Z   repository: Jacob-Met/workflow-checks\n2026-10-08T19:50:09.8000703Z   token: ***\n2026-10-08T19:50:09.8001055Z   ssh-strict: true\n2026-10-08T19:50:09.8001402Z   ssh-user: git\n2026-10-08T19:50:09.8001749Z   persist-credentials: true\n2026-10-08T19:50:09.8002130Z   clean: true\n2026-10-08T19:50:09.8002484Z   sparse-checkout-cone-mode: true\n2026-10-08T19:50:09.8002887Z   fetch-depth: 1\n2026-10-08T19:50:09.8003233Z   fetch-tags: false\n2026-10-08T19:50:09.8003579Z   show-progress: true\n2026-10-08T19:50:09.8003927Z   lfs: false\n2026-10-08T19:50:09.8004250Z   submodules: false\n2026-10-08T19:50:09.8004600Z   set-safe-directory: true\n2026-10-08T19:50:09.8005128Z   allow-unsafe-pr-checkout: false\n2026-10-08T19:50:09.8005686Z ##[endgroup]\n2026-10-08T19:50:09.8929816Z Syncing repository: Jacob-Met/workflow-checks\n2026-10-08T19:50:09.8932182Z ##[group]Getting Git version info\n2026-10-08T19:50:09.8933453Z Working directory is '/home/runner/work/workflow-checks/workflow-checks'\n2026-10-08T19:50:09.8934975Z [command]/usr/bin/git version\n2026-10-08T19:50:09.9185561Z git version 2.55.0\n2026-10-08T19:50:09.9205407Z ##[endgroup]\n2026-10-08T19:50:09.9219722Z Temporarily overriding HOME='/home/runner/work/_temp/68128dda-b687-4d6c-8044-0321fdb4827e' before making global git config changes\n2026-10-08T19:50:09.9221219Z Adding repository directory to the temporary git global config as a safe directory\n2026-10-08T19:50:09.9224325Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/workflow-checks/workflow-checks\n2026-10-08T19:50:09.9270901Z Deleting the contents of '/home/runner/work/workflow-checks/workflow-checks'\n2026-10-08T19:50:09.9279929Z ##[group]Initializing the repository\n2026-10-08T19:50:09.9287952Z [command]/usr/bin/git init /home/runner/work/workflow-checks/workflow-checks\n2026-10-08T19:50:09.9355984Z hint: Using 'master' as the name for the initial branch. This default branch name\n2026-10-08T19:50:09.9357258Z hint: will change to \"main\" in Git 3.0. To configure the initial branch name\n2026-10-08T19:50:09.9358675Z hint: to use in all of your new repositories, which will suppress this warning,\n2026-10-08T19:50:09.9359602Z hint: call:\n2026-10-08T19:50:09.9360096Z hint:\n2026-10-08T19:50:09.9361207Z hint: \tgit config --global init.defaultBranch <name>\n2026-10-08T19:50:09.9362718Z hint:\n2026-10-08T19:50:09.9364197Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and\n2026-10-08T19:50:09.9366727Z hint: 'development'. The just-created branch can be renamed via this command:\n2026-10-08T19:50:09.9368620Z hint:\n2026-10-08T19:50:09.9369555Z hint: \tgit branch -m <name>\n2026-10-08T19:50:09.9370222Z hint:\n2026-10-08T19:50:09.9370996Z hint: Disable this message with \"git config set advice.defaultBranchName false\"\n2026-10-08T19:50:09.9372344Z Initialized empty Git repository in /home/runner/work/workflow-checks/workflow-checks/.git/\n2026-10-08T19:50:09.9384253Z [command]/usr/bin/git remote add origin https://github.com/Jacob-Met/workflow-checks\n2026-10-08T19:50:09.9426803Z ##[endgroup]\n2026-10-08T19:50:09.9427710Z ##[group]Disabling automatic garbage collection\n2026-10-08T19:50:09.9430639Z [command]/usr/bin/git config --local gc.auto 0\n2026-10-08T19:50:09.9467307Z ##[endgroup]\n2026-10-08T19:50:09.9468289Z ##[group]Setting up auth\n2026-10-08T19:50:09.9473490Z [command]/usr/bin/git config --local --name-only --get-regexp core\\.sshCommand\n2026-10-08T19:50:09.9507552Z [command]/usr/bin/git submodule foreach --recursive sh -c \"git config --local --name-only --get-regexp 'core\\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\"\n2026-10-08T19:50:09.9850198Z [command]/usr/bin/git config --local --name-only --get-regexp http\\.https\\:\\/\\/github\\.com\\/\\.extraheader\n2026-10-08T19:50:09.9884700Z [command]/usr/bin/git submodule foreach --recursive sh -c \"git config --local --name-only --get-regexp 'http\\.https\\:\\/\\/github\\.com\\/\\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\"\n2026-10-08T19:50:10.0073503Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\\.gitdir:\n2026-10-08T19:50:10.0103410Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url\n2026-10-08T19:50:10.0292655Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***\n2026-10-08T19:50:10.0329632Z ##[endgroup]\n2026-10-08T19:50:10.0330406Z ##[group]Fetching the repository\n2026-10-08T19:50:10.0337786Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +069e0a42c9f48ec82e61897deff9eaec89ee1fd7:refs/remotes/pull/55/merge\n2026-10-08T19:50:11.8773019Z From https://github.com/Jacob-Met/workflow-checks\n2026-10-08T19:50:11.8774525Z  * [new ref]         069e0a42c9f48ec82e61897deff9eaec89ee1fd7 -> pull/55/merge\n2026-10-08T19:50:11.8777865Z ##[endgroup]\n2026-10-08T19:50:11.8779374Z ##[group]Determining the checkout info\n2026-10-08T19:50:11.8780910Z ##[endgroup]\n2026-10-08T19:50:11.8785350Z [command]/usr/bin/git sparse-checkout disable\n2026-10-08T19:50:11.8867930Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig\n2026-10-08T19:50:11.8898347Z ##[group]Checking out the ref\n2026-10-08T19:50:11.8899051Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/55/merge\n2026-10-08T19:50:11.9994087Z Note: switching to 'refs/remotes/pull/55/merge'.\n2026-10-08T19:50:11.9994653Z \n2026-10-08T19:50:11.9995241Z You are in 'detached HEAD' state. You can look around, make experimental\n2026-10-08T19:50:11.9996074Z changes and commit them, and you can discard any commits you make in this\n2026-10-08T19:50:11.9996830Z state without impacting any branches by switching back to a branch.\n2026-10-08T19:50:11.9997281Z \n2026-10-08T19:50:11.9997655Z If you want to create a new branch to retain commits you create, you may\n2026-10-08T19:50:11.9998441Z do so (now or later) by using -c with the switch command. Example:\n2026-10-08T19:50:11.9998852Z \n2026-10-08T19:50:11.9999316Z   git switch -c <new-branch-name>\n2026-10-08T19:50:11.9999617Z \n2026-10-08T19:50:11.9999820Z Or undo this operation with:\n2026-10-08T19:50:12.0000094Z \n2026-10-08T19:50:12.0000276Z   git switch -\n2026-10-08T19:50:12.0000514Z \n2026-10-08T19:50:12.0000908Z Turn off this advice by setting config variable advice.detachedHead to false\n2026-10-08T19:50:12.0001459Z \n2026-10-08T19:50:12.0002341Z HEAD is now at 069e0a4 Merge 5b2af6b5d8e52748eba28d97e08c9da2727ff0c2 into 39ea75b0da2a7c3463e426dd32ba52860966cae4\n2026-10-08T19:50:12.0006922Z ##[endgroup]\n2026-10-08T19:50:12.0047603Z [command]/usr/bin/git log -1 --format=%H\n2026-10-08T19:50:12.0070103Z 069e0a42c9f48ec82e61897deff9eaec89ee1fd7\n2026-10-08T19:50:12.0428853Z ##[group]Run actions/setup-python@v5\n2026-10-08T19:50:12.0429406Z with:\n2026-10-08T19:50:12.0429779Z   python-version: 3.12\n2026-10-08T19:50:12.0430189Z   check-latest: false\n2026-10-08T19:50:12.0433523Z   token: ***\n2026-10-08T19:50:12.0433917Z   update-environment: true\n2026-10-08T19:50:12.0434372Z   allow-prereleases: false\n2026-10-08T19:50:12.0434981Z   freethreaded: false\n2026-10-08T19:50:12.0435395Z ##[endgroup]\n2026-10-08T19:50:12.1484447Z ##[group]Installed versions\n2026-10-08T19:50:12.1553664Z (node:2069) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n2026-10-08T19:50:12.1555269Z (Use `node --trace-deprecation ...` to show where the warning was created)\n2026-10-08T19:50:12.1556347Z Successfully set up CPython (3.12.15)\n2026-10-08T19:50:12.1557538Z ##[endgroup]\n2026-10-08T19:50:12.1729698Z ##[group]Run python -m pip install pytest\n2026-10-08T19:50:12.1730337Z \u001b[36;1mpython -m pip install pytest\u001b[0m\n2026-10-08T19:50:12.1968389Z shell: /usr/bin/bash -e {0}\n2026-10-08T19:50:12.1968931Z env:\n2026-10-08T19:50:12.1969411Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64\n2026-10-08T19:50:12.1970170Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig\n2026-10-08T19:50:12.1970871Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64\n2026-10-08T19:50:12.1971525Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64\n2026-10-08T19:50:12.1972153Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64\n2026-10-08T19:50:12.1972775Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib\n2026-10-08T19:50:12.1973334Z ##[endgroup]\n2026-10-08T19:50:12.8402099Z Collecting pytest\n2026-10-08T19:50:12.9031890Z   Downloading pytest-9.1.1-py3-none-any.whl.metadata (7.6 kB)\n2026-10-08T19:50:12.9141637Z Collecting iniconfig>=1.0.1 (from pytest)\n2026-10-08T19:50:12.9238609Z   Downloading iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)\n2026-10-08T19:50:12.9349980Z Collecting packaging>=22 (from pytest)\n2026-10-08T19:50:12.9445352Z   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)\n2026-10-08T19:50:12.9537937Z Collecting pluggy<2,>=1.5 (from pytest)\n2026-10-08T19:50:12.9632299Z   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)\n2026-10-08T19:50:12.9777782Z Collecting pygments>=2.7.2 (from pytest)\n2026-10-08T19:50:12.9876472Z   Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)\n2026-10-08T19:50:13.0005885Z Downloading pytest-9.1.1-py3-none-any.whl (386 kB)\n2026-10-08T19:50:13.0583089Z Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)\n2026-10-08T19:50:13.0693699Z Downloading iniconfig-2.3.1-py3-none-any.whl (7.6 kB)\n2026-10-08T19:50:13.0804682Z Downloading packaging-26.3-py3-none-any.whl (129 kB)\n2026-10-08T19:50:13.0926913Z Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)\n2026-10-08T19:50:13.1280950Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 40.1 MB/s  0:00:00\n2026-10-08T19:50:13.2397805Z Installing collected packages: pygments, pluggy, packaging, iniconfig, pytest\n2026-10-08T19:50:14.2660186Z \n2026-10-08T19:50:14.2669623Z Successfully installed iniconfig-2.3.1 packaging-26.3 pluggy-1.6.0 pygments-2.21.0 pytest-9.1.1\n2026-10-08T19:50:14.3116924Z ##[group]Run python -m pytest -q\n2026-10-08T19:50:14.3117208Z \u001b[36;1mpython -m pytest -q\u001b[0m\n2026-10-08T19:50:14.3176961Z shell: /usr/bin/bash -e {0}\n2026-10-08T19:50:14.3177175Z env:\n2026-10-08T19:50:14.3177412Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64\n2026-10-08T19:50:14.3177770Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig\n2026-10-08T19:50:14.3178113Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64\n2026-10-08T19:50:14.3178415Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64\n2026-10-08T19:50:14.3178718Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64\n2026-10-08T19:50:14.3179022Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib\n2026-10-08T19:50:14.3179322Z ##[endgroup]\n2026-10-08T19:50:15.5937683Z ...................................................... [ 43%]\n2026-10-08T19:50:27.3253018Z ................................................... [ 84%]\n2026-10-08T19:50:32.6775090Z ....................                                      [100%]\n2026-10-08T19:50:32.6775620Z 125 passed, 126 subtests passed in 18.13s\n2026-10-08T19:50:32.7065577Z ##[group]Run python -m pytest -q\n2026-10-08T19:50:32.7065848Z \u001b[36;1mpython -m pytest -q\u001b[0m\n2026-10-08T19:50:32.7121751Z shell: /usr/bin/bash -e {0}\n2026-10-08T19:50:32.7121964Z env:\n2026-10-08T19:50:32.7122189Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64\n2026-10-08T19:50:32.7122533Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig\n2026-10-08T19:50:32.7122871Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64\n2026-10-08T19:50:32.7123178Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64\n2026-10-08T19:50:32.7123472Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64\n2026-10-08T19:50:32.7123768Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib\n2026-10-08T19:50:32.7124028Z ##[endgroup]\n2026-10-08T19:50:34.6444400Z ..................s..................................................... [ 57%]\n2026-10-08T19:50:39.9505508Z ......................................................                                              [100%]\n2026-10-08T19:50:39.9505990Z 125 passed, 1 skipped, 45 subtests passed in 7.09s\n2026-10-08T19:50:39.9817514Z ##[group]Run python -m pytest -q\n2026-10-08T19:50:39.9817781Z \u001b[36;1mpython -m pytest -q\u001b[0m\n2026-10-08T19:50:39.9873293Z shell: /usr/bin/bash -e {0}\n2026-10-08T19:50:39.9873490Z env:\n2026-10-08T19:50:39.9873708Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64\n2026-10-08T19:50:39.9874059Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig\n2026-10-08T19:50:39.9874397Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64\n2026-10-08T19:50:39.9874707Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64\n2026-10-08T19:50:39.9875099Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64\n2026-10-08T19:50:39.9875405Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib\n2026-10-08T19:50:39.9875665Z ##[endgroup]\n2026-10-08T19:50:40.9787127Z ....................................... [ 24%]\n2026-10-08T19:50:47.4002529Z ..........................................................................................................................                                               [100%]\n2026-10-08T19:50:47.4003370Z 161 passed, 81 subtests passed in 7.26s\n2026-10-08T19:50:47.4349249Z Post job cleanup.\n2026-10-08T19:50:47.5298233Z (node:2587) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\n2026-10-08T19:50:47.5299115Z (Use `node --trace-deprecation ...` to show where the warning was created)\n2026-10-08T19:50:47.5516116Z Post job cleanup.\n2026-10-08T19:50:47.6208705Z [command]/usr/bin/git version\n2026-10-08T19:50:47.6246785Z git version 2.55.0\n2026-10-08T19:50:47.6278946Z Temporarily overriding HOME='/home/runner/work/_temp/e19c10ef-cd3b-44f3-a168-0c9ce0a98431' before making global git config changes\n2026-10-08T19:50:47.6279706Z Adding repository directory to the temporary git global config as a safe directory\n2026-10-08T19:50:47.6283484Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/workflow-checks/workflow-checks\n2026-10-08T19:50:47.6317394Z [command]/usr/bin/git config --local --name-only --get-regexp core\\.sshCommand\n2026-10-08T19:50:47.6346393Z [command]/usr/bin/git submodule foreach --recursive sh -c \"git config --local --name-only --get-regexp 'core\\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\"\n2026-10-08T19:50:47.6558168Z [command]/usr/bin/git config --local --name-only --get-regexp http\\.https\\:\\/\\/github\\.com\\/\\.extraheader\n2026-10-08T19:50:47.6582012Z http.https://github.com/.extraheader\n2026-10-08T19:50:47.6596987Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader\n2026-10-08T19:50:47.6622727Z [command]/usr/bin/git submodule foreach --recursive sh -c \"git config --local --name-only --get-regexp 'http\\.https\\:\\/\\/github\\.com\\/\\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\"\n2026-10-08T19:50:47.6846401Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\\.gitdir:\n2026-10-08T19:50:47.6879144Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url\n2026-10-08T19:50:47.7227338Z Cleaning up orphan processes\n2026-10-08T19:50:47.7507042Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/\n",
+      "selected_lines": [
+        "2026-10-08T19:50:10.0337786Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +069e0a42c9f48ec82e61897deff9eaec89ee1fd7:refs/remotes/pull/55/merge",
+        "2026-10-08T19:50:11.8774525Z  * [new ref]         069e0a42c9f48ec82e61897deff9eaec89ee1fd7 -> pull/55/merge",
+        "2026-10-08T19:50:12.0002341Z HEAD is now at 069e0a4 Merge 5b2af6b5d8e52748eba28d97e08c9da2727ff0c2 into 39ea75b0da2a7c3463e426dd32ba52860966cae4",
+        "2026-10-08T19:50:12.0047603Z [command]/usr/bin/git log -1 --format=%H",
+        "2026-10-08T19:50:12.0070103Z 069e0a42c9f48ec82e61897deff9eaec89ee1fd7",
+        "2026-10-08T19:50:12.1969411Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64",
+        "2026-10-08T19:50:14.3177412Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64",
+        "2026-10-08T19:50:32.6775620Z 125 passed, 126 subtests passed in 18.13s",
+        "2026-10-08T19:50:32.7122189Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64",
+        "2026-10-08T19:50:39.9505990Z 125 passed, 1 skipped, 45 subtests passed in 7.09s",
+        "2026-10-08T19:50:39.9873708Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64",
+        "2026-10-08T19:50:47.4003370Z 161 passed, 81 subtests passed in 7.26s"
+      ]
+    }
+  ],
+  "independent_capsule": {
+    "members": 134,
+    "bytes": 319825,
+    "sha256": "8cb6619aad84b1229db96f85e49046cab9dbdc76524c0d105335ffa8546ced4f"
+  },
+  "independent_review_receipt_sha256": "709e66c8128bc367e18ed80d123d59779c14265bd5da235a70595e4086d3181f",
+  "native_persistence_attempt": {
+    "path": "/tmp/hamon-utility-evidence-independent-68094585a1c2/current-main-composition-v2-gates.json",
+    "result": "RDC returned path-validation timeout after 10 seconds",
+    "write_outcome": "unconfirmed; no retry or overwrite",
+    "continuation": "Preserve exact receipt as a Git object for final delivery"
+  }
+}

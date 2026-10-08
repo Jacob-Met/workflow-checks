@@ -1,0 +1,1395 @@
+﻿2026-10-08T20:03:11.8110304Z Current runner version: '2.337.0'
+2026-10-08T20:03:11.8131933Z ##[group]Runner Image Provisioner
+2026-10-08T20:03:11.8132759Z Hosted Compute Agent
+2026-10-08T20:03:11.8133242Z Version: 20261002.596
+2026-10-08T20:03:11.8134032Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+2026-10-08T20:03:11.8134635Z Build Date: 2026-10-02T22:28:27Z
+2026-10-08T20:03:11.8135240Z Worker ID: {eb74209c-2323-4ef0-9e0f-6c89c386e3c0}
+2026-10-08T20:03:11.8135823Z Region: westus3
+2026-10-08T20:03:11.8136313Z Cloud: Azure
+2026-10-08T20:03:11.8136830Z ##[endgroup]
+2026-10-08T20:03:11.8138023Z ##[group]Operating System
+2026-10-08T20:03:11.8138521Z Ubuntu
+2026-10-08T20:03:11.8139030Z 24.04.5
+2026-10-08T20:03:11.8139484Z LTS
+2026-10-08T20:03:11.8139934Z ##[endgroup]
+2026-10-08T20:03:11.8140443Z ##[group]Runner Image
+2026-10-08T20:03:11.8140912Z Image: ubuntu-24.04
+2026-10-08T20:03:11.8141433Z Version: 20261004.327.1
+2026-10-08T20:03:11.8142478Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-08T20:03:11.8143874Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+2026-10-08T20:03:11.8144643Z ##[endgroup]
+2026-10-08T20:03:11.8145627Z ##[group]GITHUB_TOKEN Permissions
+2026-10-08T20:03:11.8147424Z Contents: read
+2026-10-08T20:03:11.8147996Z Metadata: read
+2026-10-08T20:03:11.8148458Z Pages: write
+2026-10-08T20:03:11.8148932Z ##[endgroup]
+2026-10-08T20:03:11.8150562Z Secret source: Actions
+2026-10-08T20:03:11.8151409Z Cache mode: read
+2026-10-08T20:03:11.8151989Z Prepare workflow directory
+2026-10-08T20:03:11.8409574Z Prepare all required actions
+2026-10-08T20:03:11.8448741Z Getting action download info
+2026-10-08T20:03:12.1356697Z Download action repository 'actions/checkout@v7.0.1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+2026-10-08T20:03:12.3227978Z Download action repository 'actions/upload-pages-artifact@v3' (SHA:56afc609e74202658d3ffba0e8f6dda462b719fa)
+2026-10-08T20:03:12.6429243Z Getting action download info
+2026-10-08T20:03:12.7416322Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-10-08T20:03:12.9318703Z Complete job name: build
+2026-10-08T20:03:12.9932154Z ##[group]Run actions/checkout@v7.0.1
+2026-10-08T20:03:12.9932922Z with:
+2026-10-08T20:03:12.9933291Z   ref: main
+2026-10-08T20:03:12.9933807Z   submodules: recursive
+2026-10-08T20:03:12.9934252Z   repository: Jacob-Met/workflow-checks
+2026-10-08T20:03:12.9938538Z   token: ***
+2026-10-08T20:03:12.9938960Z   ssh-strict: true
+2026-10-08T20:03:12.9939349Z   ssh-user: git
+2026-10-08T20:03:12.9939742Z   persist-credentials: true
+2026-10-08T20:03:12.9940186Z   clean: true
+2026-10-08T20:03:12.9940590Z   sparse-checkout-cone-mode: true
+2026-10-08T20:03:12.9941057Z   fetch-depth: 1
+2026-10-08T20:03:12.9941450Z   fetch-tags: false
+2026-10-08T20:03:12.9941881Z   show-progress: true
+2026-10-08T20:03:12.9942429Z   lfs: false
+2026-10-08T20:03:12.9942922Z   set-safe-directory: true
+2026-10-08T20:03:12.9943386Z   allow-unsafe-pr-checkout: false
+2026-10-08T20:03:12.9944242Z ##[endgroup]
+2026-10-08T20:03:13.0729730Z Syncing repository: Jacob-Met/workflow-checks
+2026-10-08T20:03:13.0732161Z ##[group]Getting Git version info
+2026-10-08T20:03:13.0733222Z Working directory is '/home/runner/work/workflow-checks/workflow-checks'
+2026-10-08T20:03:13.0734980Z [command]/usr/bin/git version
+2026-10-08T20:03:13.0774039Z git version 2.55.0
+2026-10-08T20:03:13.0790375Z ##[endgroup]
+2026-10-08T20:03:13.0802928Z Temporarily overriding HOME='/home/runner/work/_temp/8931c85d-9b49-49b2-a919-5b2ab1b023bc' before making global git config changes
+2026-10-08T20:03:13.0805141Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-08T20:03:13.0814983Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/workflow-checks/workflow-checks
+2026-10-08T20:03:13.0850660Z Deleting the contents of '/home/runner/work/workflow-checks/workflow-checks'
+2026-10-08T20:03:13.0853818Z ##[group]Determining repository object format
+2026-10-08T20:03:13.4016474Z ##[endgroup]
+2026-10-08T20:03:13.4018859Z ##[group]Initializing the repository
+2026-10-08T20:03:13.4021134Z [command]/usr/bin/git init /home/runner/work/workflow-checks/workflow-checks
+2026-10-08T20:03:13.5245637Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-08T20:03:13.5247325Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-08T20:03:13.5248856Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-08T20:03:13.5250117Z hint: call:
+2026-10-08T20:03:13.5250750Z hint:
+2026-10-08T20:03:13.5251466Z hint: 	git config --global init.defaultBranch <name>
+2026-10-08T20:03:13.5252245Z hint:
+2026-10-08T20:03:13.5252998Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-08T20:03:13.5254917Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-08T20:03:13.5256453Z hint:
+2026-10-08T20:03:13.5257215Z hint: 	git branch -m <name>
+2026-10-08T20:03:13.5257964Z hint:
+2026-10-08T20:03:13.5258890Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-08T20:03:13.5260490Z Initialized empty Git repository in /home/runner/work/workflow-checks/workflow-checks/.git/
+2026-10-08T20:03:13.5263175Z [command]/usr/bin/git remote add origin https://github.com/Jacob-Met/workflow-checks
+2026-10-08T20:03:13.5753946Z ##[endgroup]
+2026-10-08T20:03:13.5755634Z ##[group]Disabling automatic garbage collection
+2026-10-08T20:03:13.5757374Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-08T20:03:13.5789842Z ##[endgroup]
+2026-10-08T20:03:13.5791327Z ##[group]Setting up auth
+2026-10-08T20:03:13.5792774Z Removing SSH command configuration
+2026-10-08T20:03:13.5794810Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-08T20:03:13.5825151Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-08T20:03:13.6740306Z Removing HTTP extra header
+2026-10-08T20:03:13.6745739Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-08T20:03:13.6785507Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-08T20:03:13.6974809Z Removing includeIf entries pointing to credentials config files
+2026-10-08T20:03:13.6978067Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-08T20:03:13.7010475Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-08T20:03:13.7201921Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-21f0385a-778a-44ee-b288-a955a085016d.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-08T20:03:13.7282144Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/workflow-checks/workflow-checks/.git.path /home/runner/work/_temp/git-credentials-21f0385a-778a-44ee-b288-a955a085016d.config
+2026-10-08T20:03:13.7315587Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/workflow-checks/workflow-checks/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-21f0385a-778a-44ee-b288-a955a085016d.config
+2026-10-08T20:03:13.7349650Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-21f0385a-778a-44ee-b288-a955a085016d.config
+2026-10-08T20:03:13.7962503Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-21f0385a-778a-44ee-b288-a955a085016d.config
+2026-10-08T20:03:13.7992863Z ##[endgroup]
+2026-10-08T20:03:13.7998365Z ##[group]Fetching the repository
+2026-10-08T20:03:13.8002405Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +refs/heads/main*:refs/remotes/origin/main* +refs/tags/main*:refs/tags/main*
+2026-10-08T20:03:15.8707586Z From https://github.com/Jacob-Met/workflow-checks
+2026-10-08T20:03:15.8708158Z  * [new branch]      main       -> origin/main
+2026-10-08T20:03:15.8710596Z ##[endgroup]
+2026-10-08T20:03:15.8711216Z ##[group]Determining the checkout info
+2026-10-08T20:03:15.8715914Z [command]/usr/bin/git branch --list --remote origin/main
+2026-10-08T20:03:15.8743578Z   origin/main
+2026-10-08T20:03:15.8746877Z ##[endgroup]
+2026-10-08T20:03:15.8749851Z [command]/usr/bin/git sparse-checkout disable
+2026-10-08T20:03:16.5448473Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-08T20:03:16.5983298Z ##[group]Checking out the ref
+2026-10-08T20:03:16.5987355Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-10-08T20:03:16.7833484Z Switched to a new branch 'main'
+2026-10-08T20:03:16.7836133Z branch 'main' set up to track 'origin/main'.
+2026-10-08T20:03:16.7846877Z ##[endgroup]
+2026-10-08T20:03:16.7847435Z ##[group]Setting up auth for fetching submodules
+2026-10-08T20:03:16.7874880Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-21f0385a-778a-44ee-b288-a955a085016d.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-08T20:03:16.7896862Z [command]/usr/bin/git config --global include.path /home/runner/work/_temp/git-credentials-21f0385a-778a-44ee-b288-a955a085016d.config
+2026-10-08T20:03:16.7930200Z [command]/usr/bin/git config --global --unset-all url.https://github.com/.insteadOf
+2026-10-08T20:03:16.7963024Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf git@github.com:
+2026-10-08T20:03:16.8005323Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf org-150724801@github.com:
+2026-10-08T20:03:16.8029452Z ##[endgroup]
+2026-10-08T20:03:16.8029971Z ##[group]Fetching submodules
+2026-10-08T20:03:16.8033623Z [command]/usr/bin/git submodule sync --recursive
+2026-10-08T20:03:16.8248191Z [command]/usr/bin/git -c protocol.version=2 submodule update --init --force --depth=1 --recursive
+2026-10-08T20:03:16.8466439Z [command]/usr/bin/git submodule foreach --recursive git config --local gc.auto 0
+2026-10-08T20:03:16.8660398Z ##[endgroup]
+2026-10-08T20:03:16.8660914Z ##[group]Persisting credentials for submodules
+2026-10-08T20:03:16.8666338Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'url\.https\:\/\/github\.com\/\.insteadOf' && git config --local --unset-all 'url.https://github.com/.insteadOf' || :"
+2026-10-08T20:03:16.8866957Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-08T20:03:16.9065360Z [command]/usr/bin/git submodule foreach --recursive git config --local --add 'url.https://github.com/.insteadOf' 'git@github.com:'
+2026-10-08T20:03:16.9273425Z [command]/usr/bin/git submodule foreach --recursive git config --local --add 'url.https://github.com/.insteadOf' 'org-150724801@github.com:'
+2026-10-08T20:03:16.9467594Z ##[endgroup]
+2026-10-08T20:03:16.9508982Z [command]/usr/bin/git log -1 --format=%H
+2026-10-08T20:03:16.9536026Z 11e159f914617517e2322bdeb89de5e27007dcc5
+2026-10-08T20:03:16.9758863Z ##[group]Run actions/upload-pages-artifact@v3
+2026-10-08T20:03:16.9759121Z with:
+2026-10-08T20:03:16.9759290Z   path: ./docs
+2026-10-08T20:03:16.9759458Z   name: github-pages
+2026-10-08T20:03:16.9759648Z   retention-days: 1
+2026-10-08T20:03:16.9759822Z ##[endgroup]
+2026-10-08T20:03:16.9876732Z ##[start-action display=Archive artifact;id=__actions_upload-pages-artifact.__run]
+2026-10-08T20:03:16.9923037Z ##[group]Run echo ::group::Archive artifact
+2026-10-08T20:03:16.9923355Z [36;1mecho ::group::Archive artifact[0m
+2026-10-08T20:03:16.9923590Z [36;1mtar \[0m
+2026-10-08T20:03:16.9924019Z [36;1m  --dereference --hard-dereference \[0m
+2026-10-08T20:03:16.9924454Z [36;1m  --directory "$INPUT_PATH" \[0m
+2026-10-08T20:03:16.9924706Z [36;1m  -cvf "$RUNNER_TEMP/artifact.tar" \[0m
+2026-10-08T20:03:16.9924932Z [36;1m  --exclude=.git \[0m
+2026-10-08T20:03:16.9925128Z [36;1m  --exclude=.github \[0m
+2026-10-08T20:03:16.9925389Z [36;1m  .[0m
+2026-10-08T20:03:16.9925596Z [36;1mecho ::endgroup::[0m
+2026-10-08T20:03:16.9952263Z shell: /usr/bin/sh -e {0}
+2026-10-08T20:03:16.9952474Z env:
+2026-10-08T20:03:16.9952641Z   INPUT_PATH: ./docs
+2026-10-08T20:03:16.9952827Z ##[endgroup]
+2026-10-08T20:03:17.0005525Z ##[group]Archive artifact
+2026-10-08T20:03:17.0017582Z ./
+2026-10-08T20:03:17.0017835Z ./utility/
+2026-10-08T20:03:17.0018099Z ./utility/payment_queue.csv
+2026-10-08T20:03:17.0018357Z ./utility/audit.jsonl
+2026-10-08T20:03:17.0018671Z ./utility/exceptions.csv
+2026-10-08T20:03:17.0019040Z ./utility/report.html
+2026-10-08T20:03:17.0019315Z ./utility/flags.csv
+2026-10-08T20:03:17.0019585Z ./utility/summary.json
+2026-10-08T20:03:17.0019830Z ./.nojekyll
+2026-10-08T20:03:17.0019985Z ./verification/
+2026-10-08T20:03:17.0020188Z ./verification/freight-handoff-9e05-20261008/
+2026-10-08T20:03:17.0020481Z ./verification/freight-handoff-9e05-20261008/qa_server.py
+2026-10-08T20:03:17.0020793Z ./verification/freight-handoff-9e05-20261008/evidence.tar.gz
+2026-10-08T20:03:17.0033998Z ./verification/freight-handoff-9e05-20261008/browser_handoff.cjs
+2026-10-08T20:03:17.0034587Z ./verification/freight-handoff-9e05-20261008/source-pins.json
+2026-10-08T20:03:17.0035095Z ./verification/freight-handoff-9e05-20261008/results.json
+2026-10-08T20:03:17.0035609Z ./verification/freight-handoff-9e05-20261008/inspect_bundle.py
+2026-10-08T20:03:17.0036107Z ./verification/freight-handoff-9e05-20261008/README.md
+2026-10-08T20:03:17.0036539Z ./verification/freight-csv-headers-713adaab/
+2026-10-08T20:03:17.0036995Z ./verification/freight-csv-headers-713adaab/source-claim.json
+2026-10-08T20:03:17.0037506Z ./verification/freight-csv-headers-713adaab/transport/
+2026-10-08T20:03:17.0038070Z ./verification/freight-csv-headers-713adaab/transport/apply.process.stderr.txt
+2026-10-08T20:03:17.0038742Z ./verification/freight-csv-headers-713adaab/transport/apply.process.stdout.txt
+2026-10-08T20:03:17.0039378Z ./verification/freight-csv-headers-713adaab/transport/apply.process.json
+2026-10-08T20:03:17.0039927Z ./verification/freight-csv-headers-713adaab/archives/
+2026-10-08T20:03:17.0040589Z ./verification/freight-csv-headers-713adaab/archives/windows-cli-fixtures-and-retained-output.zip
+2026-10-08T20:03:17.0044387Z ./verification/freight-csv-headers-713adaab/archives/native-source.bundle
+2026-10-08T20:03:17.0045007Z ./verification/freight-csv-headers-713adaab/packet-manifest.json
+2026-10-08T20:03:17.0045513Z ./verification/freight-csv-headers-713adaab/source/
+2026-10-08T20:03:17.0046076Z ./verification/freight-csv-headers-713adaab/source/original-import-manifest.json
+2026-10-08T20:03:17.0046726Z ./verification/freight-csv-headers-713adaab/source/windows-import.json
+2026-10-08T20:03:17.0047326Z ./verification/freight-csv-headers-713adaab/source/source-repair.json
+2026-10-08T20:03:17.0047909Z ./verification/freight-csv-headers-713adaab/source/candidate.patch
+2026-10-08T20:03:17.0048432Z ./verification/freight-csv-headers-713adaab/retained-mac/
+2026-10-08T20:03:17.0049241Z ./verification/freight-csv-headers-713adaab/retained-mac/write-failure.json
+2026-10-08T20:03:17.0049899Z ./verification/freight-csv-headers-713adaab/retained-mac/before-driver.py.txt
+2026-10-08T20:03:17.0050544Z ./verification/freight-csv-headers-713adaab/retained-mac/before-report.json
+2026-10-08T20:03:17.0051200Z ./verification/freight-csv-headers-713adaab/acceptance.json
+2026-10-08T20:03:17.0051667Z ./verification/freight-csv-headers-713adaab/windows/
+2026-10-08T20:03:17.0052169Z ./verification/freight-csv-headers-713adaab/windows/focus-baseline/
+2026-10-08T20:03:17.0052817Z ./verification/freight-csv-headers-713adaab/windows/focus-baseline/process.stdout.txt
+2026-10-08T20:03:17.0053525Z ./verification/freight-csv-headers-713adaab/windows/focus-baseline/process.json
+2026-10-08T20:03:17.0054465Z ./verification/freight-csv-headers-713adaab/windows/focus-baseline/report.json
+2026-10-08T20:03:17.0055151Z ./verification/freight-csv-headers-713adaab/windows/focus-baseline/process.stderr.txt
+2026-10-08T20:03:17.0055799Z ./verification/freight-csv-headers-713adaab/windows/cli-candidate/
+2026-10-08T20:03:17.0056432Z ./verification/freight-csv-headers-713adaab/windows/cli-candidate/process.stdout.txt
+2026-10-08T20:03:17.0057192Z ./verification/freight-csv-headers-713adaab/windows/cli-candidate/duplicate_header.stdout.txt
+2026-10-08T20:03:17.0057930Z ./verification/freight-csv-headers-713adaab/windows/cli-candidate/process.json
+2026-10-08T20:03:17.0058611Z ./verification/freight-csv-headers-713adaab/windows/cli-candidate/generate.stdout.txt
+2026-10-08T20:03:17.0059329Z ./verification/freight-csv-headers-713adaab/windows/cli-candidate/ordinary.stdout.txt
+2026-10-08T20:03:17.0060110Z ./verification/freight-csv-headers-713adaab/windows/cli-candidate/duplicate_header.stderr.txt
+2026-10-08T20:03:17.0060837Z ./verification/freight-csv-headers-713adaab/windows/cli-candidate/report.json
+2026-10-08T20:03:17.0061515Z ./verification/freight-csv-headers-713adaab/windows/cli-candidate/generate.stderr.txt
+2026-10-08T20:03:17.0062230Z ./verification/freight-csv-headers-713adaab/windows/cli-candidate/process.stderr.txt
+2026-10-08T20:03:17.0062933Z ./verification/freight-csv-headers-713adaab/windows/cli-candidate/ordinary.stderr.txt
+2026-10-08T20:03:17.0063591Z ./verification/freight-csv-headers-713adaab/windows/focus-candidate/
+2026-10-08T20:03:17.0064385Z ./verification/freight-csv-headers-713adaab/windows/focus-candidate/process.stdout.txt
+2026-10-08T20:03:17.0065097Z ./verification/freight-csv-headers-713adaab/windows/focus-candidate/process.json
+2026-10-08T20:03:17.0065774Z ./verification/freight-csv-headers-713adaab/windows/focus-candidate/report.json
+2026-10-08T20:03:17.0066467Z ./verification/freight-csv-headers-713adaab/windows/focus-candidate/process.stderr.txt
+2026-10-08T20:03:17.0067055Z ./verification/freight-csv-headers-713adaab/drivers/
+2026-10-08T20:03:17.0067560Z ./verification/freight-csv-headers-713adaab/drivers/receive-cli.py.txt
+2026-10-08T20:03:17.0068161Z ./verification/freight-csv-headers-713adaab/drivers/run-focused.py.txt
+2026-10-08T20:03:17.0068780Z ./verification/freight-csv-headers-713adaab/drivers/apply-headers.py.txt
+2026-10-08T20:03:17.0069418Z ./verification/freight-csv-headers-713adaab/drivers/import-current.py.txt
+2026-10-08T20:03:17.0070109Z ./verification/freight-csv-headers-713adaab/drivers/runtime-probe.py.txt
+2026-10-08T20:03:17.0070642Z ./verification/freight-csv-headers-713adaab/README.md
+2026-10-08T20:03:17.0071064Z ./verification/freight-packet-names-713adaab/
+2026-10-08T20:03:17.0071504Z ./verification/freight-packet-names-713adaab/continuation/
+2026-10-08T20:03:17.0072118Z ./verification/freight-packet-names-713adaab/continuation/transport-recovery.json
+2026-10-08T20:03:17.0072809Z ./verification/freight-packet-names-713adaab/continuation/native-custody.json
+2026-10-08T20:03:17.0073446Z ./verification/freight-packet-names-713adaab/continuation/test-guard/
+2026-10-08T20:03:17.0074273Z ./verification/freight-packet-names-713adaab/continuation/test-guard/commit.json
+2026-10-08T20:03:17.0075147Z ./verification/freight-packet-names-713adaab/continuation/test-guard/test-only.patch
+2026-10-08T20:03:17.0075862Z ./verification/freight-packet-names-713adaab/continuation/test-guard/receipt.json
+2026-10-08T20:03:17.0076538Z ./verification/freight-packet-names-713adaab/continuation/test-guard/stderr.txt
+2026-10-08T20:03:17.0077208Z ./verification/freight-packet-names-713adaab/continuation/test-guard/stdout.txt
+2026-10-08T20:03:17.0077695Z ./verification/freight-packet-names-713adaab/continuation/receipt-readback.json
+2026-10-08T20:03:17.0078070Z ./verification/freight-packet-names-713adaab/observations/
+2026-10-08T20:03:17.0078416Z ./verification/freight-packet-names-713adaab/observations/linux-tests.json
+2026-10-08T20:03:17.0078947Z ./verification/freight-packet-names-713adaab/observations/independent-review.json
+2026-10-08T20:03:17.0079360Z ./verification/freight-packet-names-713adaab/observations/native-claim.json
+2026-10-08T20:03:17.0079770Z ./verification/freight-packet-names-713adaab/observations/ownership.json
+2026-10-08T20:03:17.0080121Z ./verification/freight-packet-names-713adaab/archives/
+2026-10-08T20:03:17.0080457Z ./verification/freight-packet-names-713adaab/archives/candidate-bundle.zip
+2026-10-08T20:03:17.0080836Z ./verification/freight-packet-names-713adaab/archives/baseline-custody.zip
+2026-10-08T20:03:17.0081235Z ./verification/freight-packet-names-713adaab/archives/baseline-source-bundle.zip
+2026-10-08T20:03:17.0081637Z ./verification/freight-packet-names-713adaab/archives/candidate-custody.zip
+2026-10-08T20:03:17.0081998Z ./verification/freight-packet-names-713adaab/windows-candidate/
+2026-10-08T20:03:17.0082380Z ./verification/freight-packet-names-713adaab/windows-candidate/ordinary.stdout.txt
+2026-10-08T20:03:17.0082822Z ./verification/freight-packet-names-713adaab/windows-candidate/case-pair.stderr.txt
+2026-10-08T20:03:17.0083273Z ./verification/freight-packet-names-713adaab/windows-candidate/nul-device.stdout.txt
+2026-10-08T20:03:17.0083936Z ./verification/freight-packet-names-713adaab/windows-candidate/nul-device.stderr.txt
+2026-10-08T20:03:17.0084496Z ./verification/freight-packet-names-713adaab/windows-candidate/report.json
+2026-10-08T20:03:17.0084907Z ./verification/freight-packet-names-713adaab/windows-candidate/driver.stderr.txt
+2026-10-08T20:03:17.0085320Z ./verification/freight-packet-names-713adaab/windows-candidate/driver.stdout.txt
+2026-10-08T20:03:17.0085740Z ./verification/freight-packet-names-713adaab/windows-candidate/case-pair.stdout.txt
+2026-10-08T20:03:17.0086172Z ./verification/freight-packet-names-713adaab/windows-candidate/ordinary.stderr.txt
+2026-10-08T20:03:17.0086565Z ./verification/freight-packet-names-713adaab/packet-manifest.json
+2026-10-08T20:03:17.0086912Z ./verification/freight-packet-names-713adaab/recovered-thinkpad/
+2026-10-08T20:03:17.0087320Z ./verification/freight-packet-names-713adaab/recovered-thinkpad/recovery-manifest.json
+2026-10-08T20:03:17.0087747Z ./verification/freight-packet-names-713adaab/recovered-thinkpad/native/
+2026-10-08T20:03:17.0088208Z ./verification/freight-packet-names-713adaab/recovered-thinkpad/native/candidate-paired.stdout.txt
+2026-10-08T20:03:17.0088713Z ./verification/freight-packet-names-713adaab/recovered-thinkpad/native/baseline.stdout.txt
+2026-10-08T20:03:17.0089196Z ./verification/freight-packet-names-713adaab/recovered-thinkpad/native/candidate-paired.xml
+2026-10-08T20:03:17.0089702Z ./verification/freight-packet-names-713adaab/recovered-thinkpad/native/candidate-paired.stderr.txt
+2026-10-08T20:03:17.0090212Z ./verification/freight-packet-names-713adaab/recovered-thinkpad/native/candidate-full.stdout.txt
+2026-10-08T20:03:17.0090701Z ./verification/freight-packet-names-713adaab/recovered-thinkpad/native/paired-receipt.json
+2026-10-08T20:03:17.0091157Z ./verification/freight-packet-names-713adaab/recovered-thinkpad/native/baseline.xml
+2026-10-08T20:03:17.0091598Z ./verification/freight-packet-names-713adaab/recovered-thinkpad/native/candidate-full.xml
+2026-10-08T20:03:17.0092084Z ./verification/freight-packet-names-713adaab/recovered-thinkpad/native/candidate-full.stderr.txt
+2026-10-08T20:03:17.0092688Z ./verification/freight-packet-names-713adaab/recovered-thinkpad/native/baseline.stderr.txt
+2026-10-08T20:03:17.0093123Z ./verification/freight-packet-names-713adaab/recovered-thinkpad/README.md
+2026-10-08T20:03:17.0093577Z ./verification/freight-packet-names-713adaab/recovered-thinkpad/original-controller-transport.zip
+2026-10-08T20:03:17.0094105Z ./verification/freight-packet-names-713adaab/source/
+2026-10-08T20:03:17.0094441Z ./verification/freight-packet-names-713adaab/source/candidate-manifest.json
+2026-10-08T20:03:17.0094830Z ./verification/freight-packet-names-713adaab/source/baseline-manifest.json
+2026-10-08T20:03:17.0095187Z ./verification/freight-packet-names-713adaab/acceptance.json
+2026-10-08T20:03:17.0095595Z ./verification/freight-packet-names-713adaab/drivers/
+2026-10-08T20:03:17.0095941Z ./verification/freight-packet-names-713adaab/drivers/baseline-controller.py.txt
+2026-10-08T20:03:17.0096350Z ./verification/freight-packet-names-713adaab/drivers/candidate-receiving.py.txt
+2026-10-08T20:03:17.0096743Z ./verification/freight-packet-names-713adaab/drivers/test-guard.py.txt
+2026-10-08T20:03:17.0097140Z ./verification/freight-packet-names-713adaab/drivers/candidate-controller.py.txt
+2026-10-08T20:03:17.0097557Z ./verification/freight-packet-names-713adaab/drivers/mac-continuation.py.txt
+2026-10-08T20:03:17.0097962Z ./verification/freight-packet-names-713adaab/drivers/baseline-receiving.py.txt
+2026-10-08T20:03:17.0098308Z ./verification/freight-packet-names-713adaab/README.md
+2026-10-08T20:03:17.0098611Z ./verification/freight-packet-names-713adaab/windows-baseline/
+2026-10-08T20:03:17.0098986Z ./verification/freight-packet-names-713adaab/windows-baseline/generate.stdout.txt
+2026-10-08T20:03:17.0099400Z ./verification/freight-packet-names-713adaab/windows-baseline/ordinary.stdout.txt
+2026-10-08T20:03:17.0099819Z ./verification/freight-packet-names-713adaab/windows-baseline/case-pair.stderr.txt
+2026-10-08T20:03:17.0100250Z ./verification/freight-packet-names-713adaab/windows-baseline/nul-device.stdout.txt
+2026-10-08T20:03:17.0100684Z ./verification/freight-packet-names-713adaab/windows-baseline/nul-device.stderr.txt
+2026-10-08T20:03:17.0101078Z ./verification/freight-packet-names-713adaab/windows-baseline/report.json
+2026-10-08T20:03:17.0101467Z ./verification/freight-packet-names-713adaab/windows-baseline/driver.stderr.txt
+2026-10-08T20:03:17.0101869Z ./verification/freight-packet-names-713adaab/windows-baseline/driver.stdout.txt
+2026-10-08T20:03:17.0102278Z ./verification/freight-packet-names-713adaab/windows-baseline/case-pair.stdout.txt
+2026-10-08T20:03:17.0102685Z ./verification/freight-packet-names-713adaab/windows-baseline/generate.stderr.txt
+2026-10-08T20:03:17.0103097Z ./verification/freight-packet-names-713adaab/windows-baseline/ordinary.stderr.txt
+2026-10-08T20:03:17.0103440Z ./verification/freight-invoice-headers-713adaab/
+2026-10-08T20:03:17.0103871Z ./verification/freight-invoice-headers-713adaab/file-inventory.json
+2026-10-08T20:03:17.0104249Z ./verification/freight-invoice-headers-713adaab/github-claim.request.json
+2026-10-08T20:03:17.0104611Z ./verification/freight-invoice-headers-713adaab/newtests-baseline/
+2026-10-08T20:03:17.0104990Z ./verification/freight-invoice-headers-713adaab/newtests-baseline/receipt.json
+2026-10-08T20:03:17.0105451Z ./verification/freight-invoice-headers-713adaab/newtests-baseline/stderr.txt
+2026-10-08T20:03:17.0106076Z ./verification/freight-invoice-headers-713adaab/newtests-baseline/stdout.txt
+2026-10-08T20:03:17.0106667Z ./verification/freight-invoice-headers-713adaab/ownership-summary.json
+2026-10-08T20:03:17.0107250Z ./verification/freight-invoice-headers-713adaab/contract/
+2026-10-08T20:03:17.0107853Z ./verification/freight-invoice-headers-713adaab/contract/contract-review.json
+2026-10-08T20:03:17.0108536Z ./verification/freight-invoice-headers-713adaab/contract/upstream-sample-carrier-invoices.csv
+2026-10-08T20:03:17.0109166Z ./verification/freight-invoice-headers-713adaab/candidate-source.json
+2026-10-08T20:03:17.0109834Z ./verification/freight-invoice-headers-713adaab/baseline/
+2026-10-08T20:03:17.0110459Z ./verification/freight-invoice-headers-713adaab/baseline/date-first-01/
+2026-10-08T20:03:17.0111022Z ./verification/freight-invoice-headers-713adaab/baseline/date-first-01/process.json
+2026-10-08T20:03:17.0111664Z ./verification/freight-invoice-headers-713adaab/baseline/date-first-01/stderr.txt
+2026-10-08T20:03:17.0112287Z ./verification/freight-invoice-headers-713adaab/baseline/date-first-01/data/
+2026-10-08T20:03:17.0112987Z ./verification/freight-invoice-headers-713adaab/baseline/date-first-01/data/README_SYNTHETIC.txt
+2026-10-08T20:03:17.0113804Z ./verification/freight-invoice-headers-713adaab/baseline/date-first-01/data/disputes.csv
+2026-10-08T20:03:17.0114554Z ./verification/freight-invoice-headers-713adaab/baseline/date-first-01/data/documents.csv
+2026-10-08T20:03:17.0115016Z ./verification/freight-invoice-headers-713adaab/baseline/date-first-01/data/tracking.csv
+2026-10-08T20:03:17.0115489Z ./verification/freight-invoice-headers-713adaab/baseline/date-first-01/data/loads.csv
+2026-10-08T20:03:17.0115974Z ./verification/freight-invoice-headers-713adaab/baseline/date-first-01/data/fines_schedule.csv
+2026-10-08T20:03:17.0116476Z ./verification/freight-invoice-headers-713adaab/baseline/date-first-01/data/carrier_invoices.csv
+2026-10-08T20:03:17.0116942Z ./verification/freight-invoice-headers-713adaab/baseline/date-first-01/data/ratecons/
+2026-10-08T20:03:17.0117417Z ./verification/freight-invoice-headers-713adaab/baseline/date-first-01/data/ratecons/RC-SYN.txt
+2026-10-08T20:03:17.0117876Z ./verification/freight-invoice-headers-713adaab/baseline/date-first-01/stdout.txt
+2026-10-08T20:03:17.0118322Z ./verification/freight-invoice-headers-713adaab/baseline/date-first-01/out/
+2026-10-08T20:03:17.0118744Z ./verification/freight-invoice-headers-713adaab/baseline/date-first-01/out/fines.csv
+2026-10-08T20:03:17.0119202Z ./verification/freight-invoice-headers-713adaab/baseline/date-first-01/out/detention_claims.csv
+2026-10-08T20:03:17.0119674Z ./verification/freight-invoice-headers-713adaab/baseline/date-first-01/out/settlement.csv
+2026-10-08T20:03:17.0120122Z ./verification/freight-invoice-headers-713adaab/baseline/date-first-01/out/audit.jsonl
+2026-10-08T20:03:17.0120568Z ./verification/freight-invoice-headers-713adaab/baseline/date-first-01/out/exceptions.csv
+2026-10-08T20:03:17.0121104Z ./verification/freight-invoice-headers-713adaab/baseline/date-first-01/out/summary.json
+2026-10-08T20:03:17.0121678Z ./verification/freight-invoice-headers-713adaab/baseline/date-first-01/out/invoice_flags.csv
+2026-10-08T20:03:17.0122263Z ./verification/freight-invoice-headers-713adaab/baseline/total-first-999/
+2026-10-08T20:03:17.0122816Z ./verification/freight-invoice-headers-713adaab/baseline/total-first-999/process.json
+2026-10-08T20:03:17.0123423Z ./verification/freight-invoice-headers-713adaab/baseline/total-first-999/stderr.txt
+2026-10-08T20:03:17.0124240Z ./verification/freight-invoice-headers-713adaab/baseline/total-first-999/data/
+2026-10-08T20:03:17.0124941Z ./verification/freight-invoice-headers-713adaab/baseline/total-first-999/data/README_SYNTHETIC.txt
+2026-10-08T20:03:17.0125710Z ./verification/freight-invoice-headers-713adaab/baseline/total-first-999/data/disputes.csv
+2026-10-08T20:03:17.0126369Z ./verification/freight-invoice-headers-713adaab/baseline/total-first-999/data/documents.csv
+2026-10-08T20:03:17.0127149Z ./verification/freight-invoice-headers-713adaab/baseline/total-first-999/data/tracking.csv
+2026-10-08T20:03:17.0127939Z ./verification/freight-invoice-headers-713adaab/baseline/total-first-999/data/loads.csv
+2026-10-08T20:03:17.0128732Z ./verification/freight-invoice-headers-713adaab/baseline/total-first-999/data/fines_schedule.csv
+2026-10-08T20:03:17.0129578Z ./verification/freight-invoice-headers-713adaab/baseline/total-first-999/data/carrier_invoices.csv
+2026-10-08T20:03:17.0130432Z ./verification/freight-invoice-headers-713adaab/baseline/total-first-999/data/ratecons/
+2026-10-08T20:03:17.0131387Z ./verification/freight-invoice-headers-713adaab/baseline/total-first-999/data/ratecons/RC-SYN.txt
+2026-10-08T20:03:17.0132260Z ./verification/freight-invoice-headers-713adaab/baseline/total-first-999/stdout.txt
+2026-10-08T20:03:17.0132901Z ./verification/freight-invoice-headers-713adaab/baseline/total-first-999/out/
+2026-10-08T20:03:17.0133580Z ./verification/freight-invoice-headers-713adaab/baseline/total-first-999/out/fines.csv
+2026-10-08T20:03:17.0134327Z ./verification/freight-invoice-headers-713adaab/baseline/total-first-999/out/detention_claims.csv
+2026-10-08T20:03:17.0134871Z ./verification/freight-invoice-headers-713adaab/baseline/total-first-999/out/settlement.csv
+2026-10-08T20:03:17.0135684Z ./verification/freight-invoice-headers-713adaab/baseline/total-first-999/out/audit.jsonl
+2026-10-08T20:03:17.0136557Z ./verification/freight-invoice-headers-713adaab/baseline/total-first-999/out/exceptions.csv
+2026-10-08T20:03:17.0137330Z ./verification/freight-invoice-headers-713adaab/baseline/total-first-999/out/summary.json
+2026-10-08T20:03:17.0138068Z ./verification/freight-invoice-headers-713adaab/baseline/total-first-999/out/invoice_flags.csv
+2026-10-08T20:03:17.0138764Z ./verification/freight-invoice-headers-713adaab/baseline/carrier-first-B/
+2026-10-08T20:03:17.0139398Z ./verification/freight-invoice-headers-713adaab/baseline/carrier-first-B/process.json
+2026-10-08T20:03:17.0140188Z ./verification/freight-invoice-headers-713adaab/baseline/carrier-first-B/stderr.txt
+2026-10-08T20:03:17.0140862Z ./verification/freight-invoice-headers-713adaab/baseline/carrier-first-B/data/
+2026-10-08T20:03:17.0141578Z ./verification/freight-invoice-headers-713adaab/baseline/carrier-first-B/data/README_SYNTHETIC.txt
+2026-10-08T20:03:17.0142343Z ./verification/freight-invoice-headers-713adaab/baseline/carrier-first-B/data/disputes.csv
+2026-10-08T20:03:17.0143001Z ./verification/freight-invoice-headers-713adaab/baseline/carrier-first-B/data/documents.csv
+2026-10-08T20:03:17.0143833Z ./verification/freight-invoice-headers-713adaab/baseline/carrier-first-B/data/tracking.csv
+2026-10-08T20:03:17.0144539Z ./verification/freight-invoice-headers-713adaab/baseline/carrier-first-B/data/loads.csv
+2026-10-08T20:03:17.0145219Z ./verification/freight-invoice-headers-713adaab/baseline/carrier-first-B/data/fines_schedule.csv
+2026-10-08T20:03:17.0146032Z ./verification/freight-invoice-headers-713adaab/baseline/carrier-first-B/data/carrier_invoices.csv
+2026-10-08T20:03:17.0146702Z ./verification/freight-invoice-headers-713adaab/baseline/carrier-first-B/data/ratecons/
+2026-10-08T20:03:17.0147463Z ./verification/freight-invoice-headers-713adaab/baseline/carrier-first-B/data/ratecons/RC-SYN.txt
+2026-10-08T20:03:17.0148229Z ./verification/freight-invoice-headers-713adaab/baseline/carrier-first-B/stdout.txt
+2026-10-08T20:03:17.0148929Z ./verification/freight-invoice-headers-713adaab/baseline/carrier-first-B/out/
+2026-10-08T20:03:17.0149456Z ./verification/freight-invoice-headers-713adaab/baseline/carrier-first-B/out/fines.csv
+2026-10-08T20:03:17.0149934Z ./verification/freight-invoice-headers-713adaab/baseline/carrier-first-B/out/detention_claims.csv
+2026-10-08T20:03:17.0150634Z ./verification/freight-invoice-headers-713adaab/baseline/carrier-first-B/out/settlement.csv
+2026-10-08T20:03:17.0151382Z ./verification/freight-invoice-headers-713adaab/baseline/carrier-first-B/out/audit.jsonl
+2026-10-08T20:03:17.0151939Z ./verification/freight-invoice-headers-713adaab/baseline/carrier-first-B/out/exceptions.csv
+2026-10-08T20:03:17.0152648Z ./verification/freight-invoice-headers-713adaab/baseline/carrier-first-B/out/summary.json
+2026-10-08T20:03:17.0153309Z ./verification/freight-invoice-headers-713adaab/baseline/carrier-first-B/out/invoice_flags.csv
+2026-10-08T20:03:17.0154144Z ./verification/freight-invoice-headers-713adaab/baseline/total-first-1100/
+2026-10-08T20:03:17.0154795Z ./verification/freight-invoice-headers-713adaab/baseline/total-first-1100/process.json
+2026-10-08T20:03:17.0155411Z ./verification/freight-invoice-headers-713adaab/baseline/total-first-1100/stderr.txt
+2026-10-08T20:03:17.0155963Z ./verification/freight-invoice-headers-713adaab/baseline/total-first-1100/data/
+2026-10-08T20:03:17.0156447Z ./verification/freight-invoice-headers-713adaab/baseline/total-first-1100/data/README_SYNTHETIC.txt
+2026-10-08T20:03:17.0157061Z ./verification/freight-invoice-headers-713adaab/baseline/total-first-1100/data/disputes.csv
+2026-10-08T20:03:17.0157552Z ./verification/freight-invoice-headers-713adaab/baseline/total-first-1100/data/documents.csv
+2026-10-08T20:03:17.0158123Z ./verification/freight-invoice-headers-713adaab/baseline/total-first-1100/data/tracking.csv
+2026-10-08T20:03:17.0158824Z ./verification/freight-invoice-headers-713adaab/baseline/total-first-1100/data/loads.csv
+2026-10-08T20:03:17.0159762Z ./verification/freight-invoice-headers-713adaab/baseline/total-first-1100/data/fines_schedule.csv
+2026-10-08T20:03:17.0160602Z ./verification/freight-invoice-headers-713adaab/baseline/total-first-1100/data/carrier_invoices.csv
+2026-10-08T20:03:17.0161174Z ./verification/freight-invoice-headers-713adaab/baseline/total-first-1100/data/ratecons/
+2026-10-08T20:03:17.0161669Z ./verification/freight-invoice-headers-713adaab/baseline/total-first-1100/data/ratecons/RC-SYN.txt
+2026-10-08T20:03:17.0162182Z ./verification/freight-invoice-headers-713adaab/baseline/total-first-1100/stdout.txt
+2026-10-08T20:03:17.0162858Z ./verification/freight-invoice-headers-713adaab/baseline/total-first-1100/out/
+2026-10-08T20:03:17.0163644Z ./verification/freight-invoice-headers-713adaab/baseline/total-first-1100/out/fines.csv
+2026-10-08T20:03:17.0164432Z ./verification/freight-invoice-headers-713adaab/baseline/total-first-1100/out/detention_claims.csv
+2026-10-08T20:03:17.0164935Z ./verification/freight-invoice-headers-713adaab/baseline/total-first-1100/out/settlement.csv
+2026-10-08T20:03:17.0165409Z ./verification/freight-invoice-headers-713adaab/baseline/total-first-1100/out/audit.jsonl
+2026-10-08T20:03:17.0165927Z ./verification/freight-invoice-headers-713adaab/baseline/total-first-1100/out/exceptions.csv
+2026-10-08T20:03:17.0166674Z ./verification/freight-invoice-headers-713adaab/baseline/total-first-1100/out/summary.json
+2026-10-08T20:03:17.0167276Z ./verification/freight-invoice-headers-713adaab/baseline/total-first-1100/out/invoice_flags.csv
+2026-10-08T20:03:17.0167992Z ./verification/freight-invoice-headers-713adaab/baseline/date-first-10/
+2026-10-08T20:03:17.0168624Z ./verification/freight-invoice-headers-713adaab/baseline/date-first-10/process.json
+2026-10-08T20:03:17.0169191Z ./verification/freight-invoice-headers-713adaab/baseline/date-first-10/stderr.txt
+2026-10-08T20:03:17.0169789Z ./verification/freight-invoice-headers-713adaab/baseline/date-first-10/data/
+2026-10-08T20:03:17.0170269Z ./verification/freight-invoice-headers-713adaab/baseline/date-first-10/data/README_SYNTHETIC.txt
+2026-10-08T20:03:17.0170747Z ./verification/freight-invoice-headers-713adaab/baseline/date-first-10/data/disputes.csv
+2026-10-08T20:03:17.0171211Z ./verification/freight-invoice-headers-713adaab/baseline/date-first-10/data/documents.csv
+2026-10-08T20:03:17.0171773Z ./verification/freight-invoice-headers-713adaab/baseline/date-first-10/data/tracking.csv
+2026-10-08T20:03:17.0172213Z ./verification/freight-invoice-headers-713adaab/baseline/date-first-10/data/loads.csv
+2026-10-08T20:03:17.0172675Z ./verification/freight-invoice-headers-713adaab/baseline/date-first-10/data/fines_schedule.csv
+2026-10-08T20:03:17.0173200Z ./verification/freight-invoice-headers-713adaab/baseline/date-first-10/data/carrier_invoices.csv
+2026-10-08T20:03:17.0174017Z ./verification/freight-invoice-headers-713adaab/baseline/date-first-10/data/ratecons/
+2026-10-08T20:03:17.0174505Z ./verification/freight-invoice-headers-713adaab/baseline/date-first-10/data/ratecons/RC-SYN.txt
+2026-10-08T20:03:17.0175093Z ./verification/freight-invoice-headers-713adaab/baseline/date-first-10/stdout.txt
+2026-10-08T20:03:17.0175506Z ./verification/freight-invoice-headers-713adaab/baseline/date-first-10/out/
+2026-10-08T20:03:17.0175920Z ./verification/freight-invoice-headers-713adaab/baseline/date-first-10/out/fines.csv
+2026-10-08T20:03:17.0176823Z ./verification/freight-invoice-headers-713adaab/baseline/date-first-10/out/detention_claims.csv
+2026-10-08T20:03:17.0177318Z ./verification/freight-invoice-headers-713adaab/baseline/date-first-10/out/settlement.csv
+2026-10-08T20:03:17.0178058Z ./verification/freight-invoice-headers-713adaab/baseline/date-first-10/out/audit.jsonl
+2026-10-08T20:03:17.0178788Z ./verification/freight-invoice-headers-713adaab/baseline/date-first-10/out/exceptions.csv
+2026-10-08T20:03:17.0179496Z ./verification/freight-invoice-headers-713adaab/baseline/date-first-10/out/summary.json
+2026-10-08T20:03:17.0179968Z ./verification/freight-invoice-headers-713adaab/baseline/date-first-10/out/invoice_flags.csv
+2026-10-08T20:03:17.0180606Z ./verification/freight-invoice-headers-713adaab/baseline/coherent/
+2026-10-08T20:03:17.0181219Z ./verification/freight-invoice-headers-713adaab/baseline/coherent/process.json
+2026-10-08T20:03:17.0181820Z ./verification/freight-invoice-headers-713adaab/baseline/coherent/stderr.txt
+2026-10-08T20:03:17.0182468Z ./verification/freight-invoice-headers-713adaab/baseline/coherent/data/
+2026-10-08T20:03:17.0183020Z ./verification/freight-invoice-headers-713adaab/baseline/coherent/data/README_SYNTHETIC.txt
+2026-10-08T20:03:17.0183621Z ./verification/freight-invoice-headers-713adaab/baseline/coherent/data/disputes.csv
+2026-10-08T20:03:17.0184220Z ./verification/freight-invoice-headers-713adaab/baseline/coherent/data/documents.csv
+2026-10-08T20:03:17.0184652Z ./verification/freight-invoice-headers-713adaab/baseline/coherent/data/tracking.csv
+2026-10-08T20:03:17.0185188Z ./verification/freight-invoice-headers-713adaab/baseline/coherent/data/loads.csv
+2026-10-08T20:03:17.0185724Z ./verification/freight-invoice-headers-713adaab/baseline/coherent/data/fines_schedule.csv
+2026-10-08T20:03:17.0186517Z ./verification/freight-invoice-headers-713adaab/baseline/coherent/data/carrier_invoices.csv
+2026-10-08T20:03:17.0187308Z ./verification/freight-invoice-headers-713adaab/baseline/coherent/data/ratecons/
+2026-10-08T20:03:17.0187958Z ./verification/freight-invoice-headers-713adaab/baseline/coherent/data/ratecons/RC-SYN.txt
+2026-10-08T20:03:17.0188656Z ./verification/freight-invoice-headers-713adaab/baseline/coherent/stdout.txt
+2026-10-08T20:03:17.0189328Z ./verification/freight-invoice-headers-713adaab/baseline/coherent/out/
+2026-10-08T20:03:17.0189961Z ./verification/freight-invoice-headers-713adaab/baseline/coherent/out/fines.csv
+2026-10-08T20:03:17.0190623Z ./verification/freight-invoice-headers-713adaab/baseline/coherent/out/detention_claims.csv
+2026-10-08T20:03:17.0191257Z ./verification/freight-invoice-headers-713adaab/baseline/coherent/out/settlement.csv
+2026-10-08T20:03:17.0191967Z ./verification/freight-invoice-headers-713adaab/baseline/coherent/out/audit.jsonl
+2026-10-08T20:03:17.0192600Z ./verification/freight-invoice-headers-713adaab/baseline/coherent/out/exceptions.csv
+2026-10-08T20:03:17.0193245Z ./verification/freight-invoice-headers-713adaab/baseline/coherent/out/summary.json
+2026-10-08T20:03:17.0194067Z ./verification/freight-invoice-headers-713adaab/baseline/coherent/out/invoice_flags.csv
+2026-10-08T20:03:17.0194667Z ./verification/freight-invoice-headers-713adaab/baseline/baseline-report.json
+2026-10-08T20:03:17.0195241Z ./verification/freight-invoice-headers-713adaab/baseline/carrier-first-A/
+2026-10-08T20:03:17.0195664Z ./verification/freight-invoice-headers-713adaab/baseline/carrier-first-A/process.json
+2026-10-08T20:03:17.0196101Z ./verification/freight-invoice-headers-713adaab/baseline/carrier-first-A/stderr.txt
+2026-10-08T20:03:17.0196515Z ./verification/freight-invoice-headers-713adaab/baseline/carrier-first-A/data/
+2026-10-08T20:03:17.0196983Z ./verification/freight-invoice-headers-713adaab/baseline/carrier-first-A/data/README_SYNTHETIC.txt
+2026-10-08T20:03:17.0197482Z ./verification/freight-invoice-headers-713adaab/baseline/carrier-first-A/data/disputes.csv
+2026-10-08T20:03:17.0197973Z ./verification/freight-invoice-headers-713adaab/baseline/carrier-first-A/data/documents.csv
+2026-10-08T20:03:17.0198574Z ./verification/freight-invoice-headers-713adaab/baseline/carrier-first-A/data/tracking.csv
+2026-10-08T20:03:17.0199044Z ./verification/freight-invoice-headers-713adaab/baseline/carrier-first-A/data/loads.csv
+2026-10-08T20:03:17.0199534Z ./verification/freight-invoice-headers-713adaab/baseline/carrier-first-A/data/fines_schedule.csv
+2026-10-08T20:03:17.0200040Z ./verification/freight-invoice-headers-713adaab/baseline/carrier-first-A/data/carrier_invoices.csv
+2026-10-08T20:03:17.0200513Z ./verification/freight-invoice-headers-713adaab/baseline/carrier-first-A/data/ratecons/
+2026-10-08T20:03:17.0200991Z ./verification/freight-invoice-headers-713adaab/baseline/carrier-first-A/data/ratecons/RC-SYN.txt
+2026-10-08T20:03:17.0201567Z ./verification/freight-invoice-headers-713adaab/baseline/carrier-first-A/stdout.txt
+2026-10-08T20:03:17.0201997Z ./verification/freight-invoice-headers-713adaab/baseline/carrier-first-A/out/
+2026-10-08T20:03:17.0202734Z ./verification/freight-invoice-headers-713adaab/baseline/carrier-first-A/out/fines.csv
+2026-10-08T20:03:17.0203281Z ./verification/freight-invoice-headers-713adaab/baseline/carrier-first-A/out/detention_claims.csv
+2026-10-08T20:03:17.0204063Z ./verification/freight-invoice-headers-713adaab/baseline/carrier-first-A/out/settlement.csv
+2026-10-08T20:03:17.0204903Z ./verification/freight-invoice-headers-713adaab/baseline/carrier-first-A/out/audit.jsonl
+2026-10-08T20:03:17.0205608Z ./verification/freight-invoice-headers-713adaab/baseline/carrier-first-A/out/exceptions.csv
+2026-10-08T20:03:17.0206421Z ./verification/freight-invoice-headers-713adaab/baseline/carrier-first-A/out/summary.json
+2026-10-08T20:03:17.0207298Z ./verification/freight-invoice-headers-713adaab/baseline/carrier-first-A/out/invoice_flags.csv
+2026-10-08T20:03:17.0207872Z ./verification/freight-invoice-headers-713adaab/independent-review.json
+2026-10-08T20:03:17.0208335Z ./verification/freight-invoice-headers-713adaab/freight-full-candidate/
+2026-10-08T20:03:17.0208752Z ./verification/freight-invoice-headers-713adaab/freight-full-candidate/receipt.json
+2026-10-08T20:03:17.0209184Z ./verification/freight-invoice-headers-713adaab/freight-full-candidate/stderr.txt
+2026-10-08T20:03:17.0209604Z ./verification/freight-invoice-headers-713adaab/freight-full-candidate/junit.xml
+2026-10-08T20:03:17.0210032Z ./verification/freight-invoice-headers-713adaab/freight-full-candidate/stdout.txt
+2026-10-08T20:03:17.0210427Z ./verification/freight-invoice-headers-713adaab/whitespace-custody.json
+2026-10-08T20:03:17.0210819Z ./verification/freight-invoice-headers-713adaab/github-claim.response.json
+2026-10-08T20:03:17.0211289Z ./verification/freight-invoice-headers-713adaab/acceptance.json
+2026-10-08T20:03:17.0211786Z ./verification/freight-invoice-headers-713adaab/windows/
+2026-10-08T20:03:17.0212335Z ./verification/freight-invoice-headers-713adaab/windows/receiving-evidence.zip
+2026-10-08T20:03:17.0212760Z ./verification/freight-invoice-headers-713adaab/windows/source-manifest.json
+2026-10-08T20:03:17.0213168Z ./verification/freight-invoice-headers-713adaab/windows/transport-summary.json
+2026-10-08T20:03:17.0213580Z ./verification/freight-invoice-headers-713adaab/windows/source-upload.stdout.txt
+2026-10-08T20:03:17.0214091Z ./verification/freight-invoice-headers-713adaab/windows/source-bundle.zip
+2026-10-08T20:03:17.0214669Z ./verification/freight-invoice-headers-713adaab/windows/receiving.ps1
+2026-10-08T20:03:17.0215301Z ./verification/freight-invoice-headers-713adaab/windows/setup.stdout.txt
+2026-10-08T20:03:17.0215880Z ./verification/freight-invoice-headers-713adaab/windows/receiving.stdout.txt
+2026-10-08T20:03:17.0216407Z ./verification/freight-invoice-headers-713adaab/windows/source-upload.stderr.txt
+2026-10-08T20:03:17.0216784Z ./verification/freight-invoice-headers-713adaab/windows/native/
+2026-10-08T20:03:17.0217295Z ./verification/freight-invoice-headers-713adaab/windows/native/reports/
+2026-10-08T20:03:17.0217825Z ./verification/freight-invoice-headers-713adaab/windows/native/reports/fines.csv
+2026-10-08T20:03:17.0218574Z ./verification/freight-invoice-headers-713adaab/windows/native/reports/detention_claims.csv
+2026-10-08T20:03:17.0219053Z ./verification/freight-invoice-headers-713adaab/windows/native/reports/settlement.csv
+2026-10-08T20:03:17.0219554Z ./verification/freight-invoice-headers-713adaab/windows/native/reports/audit.jsonl
+2026-10-08T20:03:17.0220075Z ./verification/freight-invoice-headers-713adaab/windows/native/reports/exceptions.csv
+2026-10-08T20:03:17.0220589Z ./verification/freight-invoice-headers-713adaab/windows/native/reports/summary.json
+2026-10-08T20:03:17.0221042Z ./verification/freight-invoice-headers-713adaab/windows/native/reports/packets
+2026-10-08T20:03:17.0221749Z ./verification/freight-invoice-headers-713adaab/windows/native/reports/invoice_flags.csv
+2026-10-08T20:03:17.0222426Z ./verification/freight-invoice-headers-713adaab/windows/native/evidence/
+2026-10-08T20:03:17.0223108Z ./verification/freight-invoice-headers-713adaab/windows/native/evidence/date-first-01/
+2026-10-08T20:03:17.0223990Z ./verification/freight-invoice-headers-713adaab/windows/native/evidence/date-first-01/process.json
+2026-10-08T20:03:17.0224784Z ./verification/freight-invoice-headers-713adaab/windows/native/evidence/date-first-01/stderr.txt
+2026-10-08T20:03:17.0225543Z ./verification/freight-invoice-headers-713adaab/windows/native/evidence/date-first-01/stdout.txt
+2026-10-08T20:03:17.0226211Z ./verification/freight-invoice-headers-713adaab/windows/native/evidence/total-first-999/
+2026-10-08T20:03:17.0226939Z ./verification/freight-invoice-headers-713adaab/windows/native/evidence/total-first-999/process.json
+2026-10-08T20:03:17.0227637Z ./verification/freight-invoice-headers-713adaab/windows/native/evidence/total-first-999/stderr.txt
+2026-10-08T20:03:17.0228260Z ./verification/freight-invoice-headers-713adaab/windows/native/evidence/total-first-999/stdout.txt
+2026-10-08T20:03:17.0228760Z ./verification/freight-invoice-headers-713adaab/windows/native/evidence/carrier-first-B/
+2026-10-08T20:03:17.0229405Z ./verification/freight-invoice-headers-713adaab/windows/native/evidence/carrier-first-B/process.json
+2026-10-08T20:03:17.0230240Z ./verification/freight-invoice-headers-713adaab/windows/native/evidence/carrier-first-B/stderr.txt
+2026-10-08T20:03:17.0231143Z ./verification/freight-invoice-headers-713adaab/windows/native/evidence/carrier-first-B/stdout.txt
+2026-10-08T20:03:17.0231968Z ./verification/freight-invoice-headers-713adaab/windows/native/evidence/native-process.json
+2026-10-08T20:03:17.0232644Z ./verification/freight-invoice-headers-713adaab/windows/native/evidence/total-first-1100/
+2026-10-08T20:03:17.0233369Z ./verification/freight-invoice-headers-713adaab/windows/native/evidence/total-first-1100/process.json
+2026-10-08T20:03:17.0234206Z ./verification/freight-invoice-headers-713adaab/windows/native/evidence/total-first-1100/stderr.txt
+2026-10-08T20:03:17.0234943Z ./verification/freight-invoice-headers-713adaab/windows/native/evidence/total-first-1100/stdout.txt
+2026-10-08T20:03:17.0235732Z ./verification/freight-invoice-headers-713adaab/windows/native/evidence/receiving-report.json
+2026-10-08T20:03:17.0236599Z ./verification/freight-invoice-headers-713adaab/windows/native/evidence/date-first-10/
+2026-10-08T20:03:17.0237440Z ./verification/freight-invoice-headers-713adaab/windows/native/evidence/date-first-10/process.json
+2026-10-08T20:03:17.0238091Z ./verification/freight-invoice-headers-713adaab/windows/native/evidence/date-first-10/stderr.txt
+2026-10-08T20:03:17.0238860Z ./verification/freight-invoice-headers-713adaab/windows/native/evidence/date-first-10/stdout.txt
+2026-10-08T20:03:17.0239442Z ./verification/freight-invoice-headers-713adaab/windows/native/evidence/driver.stderr.txt
+2026-10-08T20:03:17.0239981Z ./verification/freight-invoice-headers-713adaab/windows/native/evidence/driver.stdout.txt
+2026-10-08T20:03:17.0240475Z ./verification/freight-invoice-headers-713adaab/windows/native/evidence/coherent/
+2026-10-08T20:03:17.0241166Z ./verification/freight-invoice-headers-713adaab/windows/native/evidence/coherent/process.json
+2026-10-08T20:03:17.0241988Z ./verification/freight-invoice-headers-713adaab/windows/native/evidence/coherent/stderr.txt
+2026-10-08T20:03:17.0242773Z ./verification/freight-invoice-headers-713adaab/windows/native/evidence/coherent/stdout.txt
+2026-10-08T20:03:17.0243587Z ./verification/freight-invoice-headers-713adaab/windows/native/evidence/windows-filesystem.json
+2026-10-08T20:03:17.0244529Z ./verification/freight-invoice-headers-713adaab/windows/native/evidence/receiving-started.json
+2026-10-08T20:03:17.0245332Z ./verification/freight-invoice-headers-713adaab/windows/native/evidence/carrier-first-A/
+2026-10-08T20:03:17.0246271Z ./verification/freight-invoice-headers-713adaab/windows/native/evidence/carrier-first-A/process.json
+2026-10-08T20:03:17.0246885Z ./verification/freight-invoice-headers-713adaab/windows/native/evidence/carrier-first-A/stderr.txt
+2026-10-08T20:03:17.0247511Z ./verification/freight-invoice-headers-713adaab/windows/native/evidence/carrier-first-A/stdout.txt
+2026-10-08T20:03:17.0247974Z ./verification/freight-invoice-headers-713adaab/windows/receiving.stderr.txt
+2026-10-08T20:03:17.0248404Z ./verification/freight-invoice-headers-713adaab/windows/evidence-download.stdout.txt
+2026-10-08T20:03:17.0248848Z ./verification/freight-invoice-headers-713adaab/windows/source-upload.transport.json
+2026-10-08T20:03:17.0249267Z ./verification/freight-invoice-headers-713adaab/windows/setup.stderr.txt
+2026-10-08T20:03:17.0249668Z ./verification/freight-invoice-headers-713adaab/windows/receiving.transport.json
+2026-10-08T20:03:17.0250078Z ./verification/freight-invoice-headers-713adaab/windows/setup.transport.json
+2026-10-08T20:03:17.0250452Z ./verification/freight-invoice-headers-713adaab/windows/setup.ps1
+2026-10-08T20:03:17.0250866Z ./verification/freight-invoice-headers-713adaab/windows/evidence-download.transport.json
+2026-10-08T20:03:17.0251317Z ./verification/freight-invoice-headers-713adaab/windows/evidence-download.stderr.txt
+2026-10-08T20:03:17.0251871Z ./verification/freight-invoice-headers-713adaab/windows/transport-started.json
+2026-10-08T20:03:17.0252448Z ./verification/freight-invoice-headers-713adaab/drivers/
+2026-10-08T20:03:17.0253044Z ./verification/freight-invoice-headers-713adaab/drivers/original_baseline_driver.py
+2026-10-08T20:03:17.0253854Z ./verification/freight-invoice-headers-713adaab/drivers/transport_freight_headers.py
+2026-10-08T20:03:17.0254567Z ./verification/freight-invoice-headers-713adaab/drivers/receive_freight_headers.py
+2026-10-08T20:03:17.0254981Z ./verification/freight-invoice-headers-713adaab/README.md
+2026-10-08T20:03:17.0255315Z ./verification/freight-invoice-headers-713adaab/receiving-base.json
+2026-10-08T20:03:17.0255712Z ./verification/freight-invoice-headers-713adaab/upstream-source-manifest.json
+2026-10-08T20:03:17.0256095Z ./verification/freight-invoice-headers-713adaab/newtests-candidate/
+2026-10-08T20:03:17.0256620Z ./verification/freight-invoice-headers-713adaab/newtests-candidate/receipt.json
+2026-10-08T20:03:17.0257305Z ./verification/freight-invoice-headers-713adaab/newtests-candidate/stderr.txt
+2026-10-08T20:03:17.0257979Z ./verification/freight-invoice-headers-713adaab/newtests-candidate/stdout.txt
+2026-10-08T20:03:17.0258609Z ./verification/freight-invoice-headers-713adaab/source-changes.patch
+2026-10-08T20:03:17.0259184Z ./verification/freight-invoice-headers-713adaab/native-claim.json
+2026-10-08T20:03:17.0259748Z ./verification/freight-invoice-headers-713adaab/source-records.json
+2026-10-08T20:03:17.0260183Z ./receiving/
+2026-10-08T20:03:17.0260461Z ./receiving/utility-review-desk-39c2b591d7e5/
+2026-10-08T20:03:17.0260974Z ./receiving/utility-review-desk-39c2b591d7e5/receive-current-composition.py
+2026-10-08T20:03:17.0261541Z ./receiving/utility-review-desk-39c2b591d7e5/SOURCE.json
+2026-10-08T20:03:17.0262078Z ./receiving/utility-review-desk-39c2b591d7e5/PUBLICATION-21d08a16.json
+2026-10-08T20:03:17.0262659Z ./receiving/utility-review-desk-39c2b591d7e5/PUBLICATION-0418e630.json
+2026-10-08T20:03:17.0263451Z ./receiving/utility-review-desk-39c2b591d7e5/PUBLICATION-worksheet-composition.json
+2026-10-08T20:03:17.0264123Z ./receiving/utility-review-desk-39c2b591d7e5/PUBLICATION-995a48cd.json
+2026-10-08T20:03:17.0264632Z ./receiving/utility-review-desk-39c2b591d7e5/PUBLICATION-035c2562.json
+2026-10-08T20:03:17.0265141Z ./receiving/utility-review-desk-39c2b591d7e5/README.md
+2026-10-08T20:03:17.0265631Z ./receiving/utility-review-desk-39c2b591d7e5/unpack-receiving.py
+2026-10-08T20:03:17.0266193Z ./receiving/utility-review-desk-39c2b591d7e5/RAW_EVIDENCE_MANIFEST.json
+2026-10-08T20:03:17.0266779Z ./receiving/utility-review-desk-39c2b591d7e5/RAW_EVIDENCE.json.gz.b64
+2026-10-08T20:03:17.0267482Z ./receiving/utility-worksheet-61749b/
+2026-10-08T20:03:17.0267853Z ./receiving/utility-worksheet-61749b/manifest.json
+2026-10-08T20:03:17.0268330Z ./receiving/utility-worksheet-61749b/review-report-coexistence/
+2026-10-08T20:03:17.0268963Z ./receiving/utility-worksheet-61749b/review-report-coexistence/cli-integration.patch
+2026-10-08T20:03:17.0269738Z ./receiving/utility-worksheet-61749b/review-report-coexistence/current-manifest.json
+2026-10-08T20:03:17.0270407Z ./receiving/utility-worksheet-61749b/review-report-coexistence/native/
+2026-10-08T20:03:17.0271045Z ./receiving/utility-worksheet-61749b/review-report-coexistence/native/receipt.json
+2026-10-08T20:03:17.0271693Z ./receiving/utility-worksheet-61749b/review-report-coexistence/native/annotated.csv
+2026-10-08T20:03:17.0272401Z ./receiving/utility-worksheet-61749b/review-report-coexistence/native/review.html
+2026-10-08T20:03:17.0273182Z ./receiving/utility-worksheet-61749b/review-report-coexistence/native/input-07-reconciled-current.csv
+2026-10-08T20:03:17.0274065Z ./receiving/utility-worksheet-61749b/review-report-coexistence/composition.json
+2026-10-08T20:03:17.0274722Z ./receiving/utility-worksheet-61749b/review-report-coexistence/README.md
+2026-10-08T20:03:17.0275391Z ./receiving/utility-worksheet-61749b/review-report-coexistence/receive_coexistence.py
+2026-10-08T20:03:17.0275872Z ./receiving/utility-worksheet-61749b/publication-applicability.json
+2026-10-08T20:03:17.0276189Z ./receiving/utility-worksheet-61749b/independent/
+2026-10-08T20:03:17.0276606Z ./receiving/utility-worksheet-61749b/independent/manifest.json
+2026-10-08T20:03:17.0277108Z ./receiving/utility-worksheet-61749b/independent/REVIEW.md
+2026-10-08T20:03:17.0277631Z ./receiving/utility-worksheet-61749b/independent/receiving-plan.json
+2026-10-08T20:03:17.0278147Z ./receiving/utility-worksheet-61749b/independent/native/
+2026-10-08T20:03:17.0278661Z ./receiving/utility-worksheet-61749b/independent/native/05-returned.csv
+2026-10-08T20:03:17.0279278Z ./receiving/utility-worksheet-61749b/independent/native/02-other-reviewed.csv
+2026-10-08T20:03:17.0279891Z ./receiving/utility-worksheet-61749b/independent/native/receipt.json
+2026-10-08T20:03:17.0280509Z ./receiving/utility-worksheet-61749b/independent/native/07-reconciled-current.csv
+2026-10-08T20:03:17.0281181Z ./receiving/utility-worksheet-61749b/independent/native/06-returned-reviewed.csv
+2026-10-08T20:03:17.0281819Z ./receiving/utility-worksheet-61749b/independent/native/report-initial/
+2026-10-08T20:03:17.0282492Z ./receiving/utility-worksheet-61749b/independent/native/report-initial/payment_queue.csv
+2026-10-08T20:03:17.0283212Z ./receiving/utility-worksheet-61749b/independent/native/report-initial/audit.jsonl
+2026-10-08T20:03:17.0284008Z ./receiving/utility-worksheet-61749b/independent/native/report-initial/exceptions.csv
+2026-10-08T20:03:17.0284720Z ./receiving/utility-worksheet-61749b/independent/native/report-initial/report.html
+2026-10-08T20:03:17.0285407Z ./receiving/utility-worksheet-61749b/independent/native/report-initial/flags.csv
+2026-10-08T20:03:17.0286101Z ./receiving/utility-worksheet-61749b/independent/native/report-initial/summary.json
+2026-10-08T20:03:17.0286739Z ./receiving/utility-worksheet-61749b/independent/native/04-absent.csv
+2026-10-08T20:03:17.0287331Z ./receiving/utility-worksheet-61749b/independent/native/source-initial/
+2026-10-08T20:03:17.0288148Z ./receiving/utility-worksheet-61749b/independent/native/source-initial/bills.csv
+2026-10-08T20:03:17.0288852Z ./receiving/utility-worksheet-61749b/independent/native/source-initial/expected.json
+2026-10-08T20:03:17.0289565Z ./receiving/utility-worksheet-61749b/independent/native/source-initial/occupancy.csv
+2026-10-08T20:03:17.0290268Z ./receiving/utility-worksheet-61749b/independent/native/source-initial/accounts.csv
+2026-10-08T20:03:17.0290958Z ./receiving/utility-worksheet-61749b/independent/native/source-initial/payments.csv
+2026-10-08T20:03:17.0291602Z ./receiving/utility-worksheet-61749b/independent/native/report-absent/
+2026-10-08T20:03:17.0292259Z ./receiving/utility-worksheet-61749b/independent/native/report-absent/payment_queue.csv
+2026-10-08T20:03:17.0293085Z ./receiving/utility-worksheet-61749b/independent/native/report-absent/audit.jsonl
+2026-10-08T20:03:17.0293872Z ./receiving/utility-worksheet-61749b/independent/native/report-absent/exceptions.csv
+2026-10-08T20:03:17.0294563Z ./receiving/utility-worksheet-61749b/independent/native/report-absent/report.html
+2026-10-08T20:03:17.0295244Z ./receiving/utility-worksheet-61749b/independent/native/report-absent/flags.csv
+2026-10-08T20:03:17.0295928Z ./receiving/utility-worksheet-61749b/independent/native/report-absent/summary.json
+2026-10-08T20:03:17.0296555Z ./receiving/utility-worksheet-61749b/independent/native/source-absent/
+2026-10-08T20:03:17.0297197Z ./receiving/utility-worksheet-61749b/independent/native/source-absent/bills.csv
+2026-10-08T20:03:17.0297881Z ./receiving/utility-worksheet-61749b/independent/native/source-absent/expected.json
+2026-10-08T20:03:17.0298570Z ./receiving/utility-worksheet-61749b/independent/native/source-absent/occupancy.csv
+2026-10-08T20:03:17.0299256Z ./receiving/utility-worksheet-61749b/independent/native/source-absent/accounts.csv
+2026-10-08T20:03:17.0299936Z ./receiving/utility-worksheet-61749b/independent/native/source-absent/payments.csv
+2026-10-08T20:03:17.0300357Z ./receiving/utility-worksheet-61749b/independent/native/03-original-reviewed.csv
+2026-10-08T20:03:17.0300744Z ./receiving/utility-worksheet-61749b/independent/native/01-initial.csv
+2026-10-08T20:03:17.0301295Z ./receiving/utility-worksheet-61749b/independent/source-review-current.json
+2026-10-08T20:03:17.0301860Z ./receiving/utility-worksheet-61749b/independent/original/
+2026-10-08T20:03:17.0302379Z ./receiving/utility-worksheet-61749b/independent/original/native/
+2026-10-08T20:03:17.0302981Z ./receiving/utility-worksheet-61749b/independent/original/native/05-returned.csv
+2026-10-08T20:03:17.0303518Z ./receiving/utility-worksheet-61749b/independent/original/native/02-other-reviewed.csv
+2026-10-08T20:03:17.0304026Z ./receiving/utility-worksheet-61749b/independent/original/native/receipt.json
+2026-10-08T20:03:17.0304688Z ./receiving/utility-worksheet-61749b/independent/original/native/07-reconciled-current.csv
+2026-10-08T20:03:17.0305448Z ./receiving/utility-worksheet-61749b/independent/original/native/06-returned-reviewed.csv
+2026-10-08T20:03:17.0306167Z ./receiving/utility-worksheet-61749b/independent/original/native/report-initial/
+2026-10-08T20:03:17.0306713Z ./receiving/utility-worksheet-61749b/independent/original/native/report-initial/payment_queue.csv
+2026-10-08T20:03:17.0307277Z ./receiving/utility-worksheet-61749b/independent/original/native/report-initial/audit.jsonl
+2026-10-08T20:03:17.0308083Z ./receiving/utility-worksheet-61749b/independent/original/native/report-initial/exceptions.csv
+2026-10-08T20:03:17.0308568Z ./receiving/utility-worksheet-61749b/independent/original/native/report-initial/report.html
+2026-10-08T20:03:17.0309026Z ./receiving/utility-worksheet-61749b/independent/original/native/report-initial/flags.csv
+2026-10-08T20:03:17.0309699Z ./receiving/utility-worksheet-61749b/independent/original/native/report-initial/summary.json
+2026-10-08T20:03:17.0310417Z ./receiving/utility-worksheet-61749b/independent/original/native/04-absent.csv
+2026-10-08T20:03:17.0311076Z ./receiving/utility-worksheet-61749b/independent/original/native/source-initial/
+2026-10-08T20:03:17.0311928Z ./receiving/utility-worksheet-61749b/independent/original/native/source-initial/bills.csv
+2026-10-08T20:03:17.0312717Z ./receiving/utility-worksheet-61749b/independent/original/native/source-initial/expected.json
+2026-10-08T20:03:17.0313516Z ./receiving/utility-worksheet-61749b/independent/original/native/source-initial/occupancy.csv
+2026-10-08T20:03:17.0314419Z ./receiving/utility-worksheet-61749b/independent/original/native/source-initial/accounts.csv
+2026-10-08T20:03:17.0315196Z ./receiving/utility-worksheet-61749b/independent/original/native/source-initial/payments.csv
+2026-10-08T20:03:17.0315917Z ./receiving/utility-worksheet-61749b/independent/original/native/report-absent/
+2026-10-08T20:03:17.0316781Z ./receiving/utility-worksheet-61749b/independent/original/native/report-absent/payment_queue.csv
+2026-10-08T20:03:17.0317577Z ./receiving/utility-worksheet-61749b/independent/original/native/report-absent/audit.jsonl
+2026-10-08T20:03:17.0318368Z ./receiving/utility-worksheet-61749b/independent/original/native/report-absent/exceptions.csv
+2026-10-08T20:03:17.0319140Z ./receiving/utility-worksheet-61749b/independent/original/native/report-absent/report.html
+2026-10-08T20:03:17.0319885Z ./receiving/utility-worksheet-61749b/independent/original/native/report-absent/flags.csv
+2026-10-08T20:03:17.0320642Z ./receiving/utility-worksheet-61749b/independent/original/native/report-absent/summary.json
+2026-10-08T20:03:17.0321357Z ./receiving/utility-worksheet-61749b/independent/original/native/source-absent/
+2026-10-08T20:03:17.0322054Z ./receiving/utility-worksheet-61749b/independent/original/native/source-absent/bills.csv
+2026-10-08T20:03:17.0322806Z ./receiving/utility-worksheet-61749b/independent/original/native/source-absent/expected.json
+2026-10-08T20:03:17.0323594Z ./receiving/utility-worksheet-61749b/independent/original/native/source-absent/occupancy.csv
+2026-10-08T20:03:17.0324474Z ./receiving/utility-worksheet-61749b/independent/original/native/source-absent/accounts.csv
+2026-10-08T20:03:17.0325246Z ./receiving/utility-worksheet-61749b/independent/original/native/source-absent/payments.csv
+2026-10-08T20:03:17.0326011Z ./receiving/utility-worksheet-61749b/independent/original/native/03-original-reviewed.csv
+2026-10-08T20:03:17.0326632Z ./receiving/utility-worksheet-61749b/independent/original/native/01-initial.csv
+2026-10-08T20:03:17.0327314Z ./receiving/utility-worksheet-61749b/independent/original/review_absent_returned.py
+2026-10-08T20:03:17.0327986Z ./receiving/utility-worksheet-61749b/independent/original/source-review.json
+2026-10-08T20:03:17.0328562Z ./receiving/utility-worksheet-61749b/independent/review.json
+2026-10-08T20:03:17.0329122Z ./receiving/utility-worksheet-61749b/independent/review_absent_returned.py
+2026-10-08T20:03:17.0329632Z ./receiving/utility-worksheet-61749b/author/
+2026-10-08T20:03:17.0330135Z ./receiving/utility-worksheet-61749b/author/current-capture-limitation.json
+2026-10-08T20:03:17.0330764Z ./receiving/utility-worksheet-61749b/author/candidate-qualification.json
+2026-10-08T20:03:17.0331314Z ./receiving/utility-worksheet-61749b/author/queued-claim.md
+2026-10-08T20:03:17.0331764Z ./receiving/utility-worksheet-61749b/author/baseline/
+2026-10-08T20:03:17.0332244Z ./receiving/utility-worksheet-61749b/author/baseline/receipt.json
+2026-10-08T20:03:17.0332745Z ./receiving/utility-worksheet-61749b/author/baseline/data/
+2026-10-08T20:03:17.0333250Z ./receiving/utility-worksheet-61749b/author/baseline/data/bills.csv
+2026-10-08T20:03:17.0333951Z ./receiving/utility-worksheet-61749b/author/baseline/data/README_SYNTHETIC.txt
+2026-10-08T20:03:17.0334574Z ./receiving/utility-worksheet-61749b/author/baseline/data/expected.json
+2026-10-08T20:03:17.0335164Z ./receiving/utility-worksheet-61749b/author/baseline/data/occupancy.csv
+2026-10-08T20:03:17.0335747Z ./receiving/utility-worksheet-61749b/author/baseline/data/accounts.csv
+2026-10-08T20:03:17.0336322Z ./receiving/utility-worksheet-61749b/author/baseline/data/payments.csv
+2026-10-08T20:03:17.0337012Z ./receiving/utility-worksheet-61749b/author/baseline/report/
+2026-10-08T20:03:17.0337582Z ./receiving/utility-worksheet-61749b/author/baseline/report/payment_queue.csv
+2026-10-08T20:03:17.0338192Z ./receiving/utility-worksheet-61749b/author/baseline/report/audit.jsonl
+2026-10-08T20:03:17.0338794Z ./receiving/utility-worksheet-61749b/author/baseline/report/exceptions.csv
+2026-10-08T20:03:17.0339389Z ./receiving/utility-worksheet-61749b/author/baseline/report/report.html
+2026-10-08T20:03:17.0339960Z ./receiving/utility-worksheet-61749b/author/baseline/report/flags.csv
+2026-10-08T20:03:17.0340537Z ./receiving/utility-worksheet-61749b/author/baseline/report/summary.json
+2026-10-08T20:03:17.0341212Z ./receiving/utility-worksheet-61749b/author/baseline/review.csv
+2026-10-08T20:03:17.0341765Z ./receiving/utility-worksheet-61749b/author/original-source-tree.json
+2026-10-08T20:03:17.0342355Z ./receiving/utility-worksheet-61749b/author/current-composition.json
+2026-10-08T20:03:17.0342912Z ./receiving/utility-worksheet-61749b/author/original-candidate/
+2026-10-08T20:03:17.0343484Z ./receiving/utility-worksheet-61749b/author/original-candidate/README.md
+2026-10-08T20:03:17.0344159Z ./receiving/utility-worksheet-61749b/author/current-unittest.log
+2026-10-08T20:03:17.0344713Z ./receiving/utility-worksheet-61749b/author/current-qualification.json
+2026-10-08T20:03:17.0345282Z ./receiving/utility-worksheet-61749b/author/candidate-unittest.log
+2026-10-08T20:03:17.0345809Z ./receiving/utility-worksheet-61749b/author/capture_baseline.py
+2026-10-08T20:03:17.0346267Z ./receiving/utility-worksheet-61749b/results.json
+2026-10-08T20:03:17.0346750Z ./receiving/utility-worksheet-61749b/shared-file-integration.patch
+2026-10-08T20:03:17.0347227Z ./receiving/utility-worksheet-61749b/README.md
+2026-10-08T20:03:17.0347627Z ./receiving/utility-worksheet-61749b/ownership.json
+2026-10-08T20:03:17.0348013Z ./receiving/pt-calendar-58d79b68/
+2026-10-08T20:03:17.0348266Z ./receiving/pt-calendar-58d79b68/publication-manifest.json
+2026-10-08T20:03:17.0348692Z ./receiving/pt-calendar-58d79b68/contract.md
+2026-10-08T20:03:17.0349112Z ./receiving/pt-calendar-58d79b68/current-source-receiving/
+2026-10-08T20:03:17.0349711Z ./receiving/pt-calendar-58d79b68/current-source-receiving/uncovered-before-adapter.json
+2026-10-08T20:03:17.0350447Z ./receiving/pt-calendar-58d79b68/current-source-receiving/durable-source-receipt.json
+2026-10-08T20:03:17.0351129Z ./receiving/pt-calendar-58d79b68/current-source-receiving/fetch-parent.json
+2026-10-08T20:03:17.0351817Z ./receiving/pt-calendar-58d79b68/current-source-receiving/calendar-on-current-parent.json
+2026-10-08T20:03:17.0352571Z ./receiving/pt-calendar-58d79b68/current-source-receiving/current-parent-source.patch
+2026-10-08T20:03:17.0353260Z ./receiving/pt-calendar-58d79b68/current-source-receiving/runtime-archive.json
+2026-10-08T20:03:17.0354082Z ./receiving/pt-calendar-58d79b68/current-source-receiving/source-freeze-before-adapter.json
+2026-10-08T20:03:17.0354752Z ./receiving/pt-calendar-58d79b68/current-source-receiving/source-freeze-v2.json
+2026-10-08T20:03:17.0355159Z ./receiving/pt-calendar-58d79b68/current-source-receiving/test-bootstrap.patch
+2026-10-08T20:03:17.0355585Z ./receiving/pt-calendar-58d79b68/current-source-receiving/test-bootstrap-adaptation.json
+2026-10-08T20:03:17.0356213Z ./receiving/pt-calendar-58d79b68/current-source-receiving/reverse-differential-preservation.json
+2026-10-08T20:03:17.0356973Z ./receiving/pt-calendar-58d79b68/current-source-receiving/copy-manifest.json
+2026-10-08T20:03:17.0357707Z ./receiving/pt-calendar-58d79b68/current-source-receiving/active-composition-claim-receipt.json
+2026-10-08T20:03:17.0358416Z ./receiving/pt-calendar-58d79b68/current-source-receiving/composition-start.json
+2026-10-08T20:03:17.0358882Z ./receiving/pt-calendar-58d79b68/current-source-receiving/uncovered-after-adapter.json
+2026-10-08T20:03:17.0359336Z ./receiving/pt-calendar-58d79b68/current-source-receiving/apply-three-way.json
+2026-10-08T20:03:17.0359788Z ./receiving/pt-calendar-58d79b68/current-source-receiving/uncovered-review-before-adapter.cjs
+2026-10-08T20:03:17.0360390Z ./receiving/pt-calendar-58d79b68/current-source-receiving/index-refresh-and-check.json
+2026-10-08T20:03:17.0360833Z ./receiving/pt-calendar-58d79b68/current-source-receiving/pt-current-runtime.tar.gz
+2026-10-08T20:03:17.0361271Z ./receiving/pt-calendar-58d79b68/current-source-receiving/original-calendar.patch
+2026-10-08T20:03:17.0361623Z ./receiving/pt-calendar-58d79b68/browser-review/
+2026-10-08T20:03:17.0361916Z ./receiving/pt-calendar-58d79b68/browser-review/RECEIVER-SPEC.md
+2026-10-08T20:03:17.0362237Z ./receiving/pt-calendar-58d79b68/browser-review/manifest.json
+2026-10-08T20:03:17.0362576Z ./receiving/pt-calendar-58d79b68/browser-review/conscience-receipt.json
+2026-10-08T20:03:17.0363013Z ./receiving/pt-calendar-58d79b68/browser-review/contract.md
+2026-10-08T20:03:17.0363396Z ./receiving/pt-calendar-58d79b68/browser-review/receiver-archive-preflight-v1.json
+2026-10-08T20:03:17.0364024Z ./receiving/pt-calendar-58d79b68/browser-review/blind-freeze-v2.json
+2026-10-08T20:03:17.0364379Z ./receiving/pt-calendar-58d79b68/browser-review/build_fixture.py
+2026-10-08T20:03:17.0364775Z ./receiving/pt-calendar-58d79b68/browser-review/final-source-and-result-readback.json
+2026-10-08T20:03:17.0365191Z ./receiving/pt-calendar-58d79b68/browser-review/asof_original_engine_v2.py
+2026-10-08T20:03:17.0382507Z ./receiving/pt-calendar-58d79b68/browser-review/qualification.json
+2026-10-08T20:03:17.0382981Z ./receiving/pt-calendar-58d79b68/browser-review/fixture-build-v1.log
+2026-10-08T20:03:17.0383368Z ./receiving/pt-calendar-58d79b68/browser-review/browser_asof_receiver_v2.mjs
+2026-10-08T20:03:17.0383950Z ./receiving/pt-calendar-58d79b68/browser-review/owned-cache-reclaim-v1.json
+2026-10-08T20:03:17.0384352Z ./receiving/pt-calendar-58d79b68/browser-review/prelaunch-enospc-v1.json
+2026-10-08T20:03:17.0384744Z ./receiving/pt-calendar-58d79b68/browser-review/RECEIVER-SPEC-v2.md
+2026-10-08T20:03:17.0385138Z ./receiving/pt-calendar-58d79b68/browser-review/browser-v1-profile-cleanup.json
+2026-10-08T20:03:17.0385549Z ./receiving/pt-calendar-58d79b68/browser-review/blind-freeze.json
+2026-10-08T20:03:17.0385908Z ./receiving/pt-calendar-58d79b68/browser-review/browser-asof-v2-launch.json
+2026-10-08T20:03:17.0386277Z ./receiving/pt-calendar-58d79b68/browser-review/browser-v1.stdout.log
+2026-10-08T20:03:17.0386631Z ./receiving/pt-calendar-58d79b68/browser-review/browser-v1-launch.json
+2026-10-08T20:03:17.0387001Z ./receiving/pt-calendar-58d79b68/browser-review/asof-original-engine-v2.json
+2026-10-08T20:03:17.0387382Z ./receiving/pt-calendar-58d79b68/browser-review/browser-asof-v2.stdout.log
+2026-10-08T20:03:17.0387760Z ./receiving/pt-calendar-58d79b68/browser-review/archive_materialize_v2.py
+2026-10-08T20:03:17.0388123Z ./receiving/pt-calendar-58d79b68/browser-review/browser-asof-v2/
+2026-10-08T20:03:17.0388577Z ./receiving/pt-calendar-58d79b68/browser-review/browser-asof-v2/fresh-asof-reviewed.png
+2026-10-08T20:03:17.0389055Z ./receiving/pt-calendar-58d79b68/browser-review/browser-asof-v2/candidate-server.stdout.log
+2026-10-08T20:03:17.0389484Z ./receiving/pt-calendar-58d79b68/browser-review/browser-asof-v2/network.json
+2026-10-08T20:03:17.0389917Z ./receiving/pt-calendar-58d79b68/browser-review/browser-asof-v2/baseline-server.stdout.log
+2026-10-08T20:03:17.0390392Z ./receiving/pt-calendar-58d79b68/browser-review/browser-asof-v2/fresh-reviewed-october-30.ics
+2026-10-08T20:03:17.0390841Z ./receiving/pt-calendar-58d79b68/browser-review/browser-asof-v2/paused-http.json
+2026-10-08T20:03:17.0391236Z ./receiving/pt-calendar-58d79b68/browser-review/browser-asof-v2/result.json
+2026-10-08T20:03:17.0391612Z ./receiving/pt-calendar-58d79b68/browser-review/browser-asof-v2/downloads/
+2026-10-08T20:03:17.0392087Z ./receiving/pt-calendar-58d79b68/browser-review/browser-asof-v2/downloads/0998809b-9678-49bd-b30c-fb958ded1a8a
+2026-10-08T20:03:17.0392584Z ./receiving/pt-calendar-58d79b68/browser-review/browser-asof-v2/chrome.stderr.log
+2026-10-08T20:03:17.0393022Z ./receiving/pt-calendar-58d79b68/browser-review/browser-asof-v2/candidate-server.stderr.log
+2026-10-08T20:03:17.0393648Z ./receiving/pt-calendar-58d79b68/browser-review/browser-asof-v2/baseline-server.stderr.log
+2026-10-08T20:03:17.0394267Z ./receiving/pt-calendar-58d79b68/browser-review/browser-asof-v2/checks-progress.json
+2026-10-08T20:03:17.0394672Z ./receiving/pt-calendar-58d79b68/browser-review/browser_receiver.mjs
+2026-10-08T20:03:17.0395034Z ./receiving/pt-calendar-58d79b68/browser-review/browser-asof-v2.stderr.log
+2026-10-08T20:03:17.0395378Z ./receiving/pt-calendar-58d79b68/browser-review/browser-v1/
+2026-10-08T20:03:17.0395738Z ./receiving/pt-calendar-58d79b68/browser-review/browser-v1/stale-report-before.json
+2026-10-08T20:03:17.0396259Z ./receiving/pt-calendar-58d79b68/browser-review/browser-v1/same-name-east.ics
+2026-10-08T20:03:17.0396686Z ./receiving/pt-calendar-58d79b68/browser-review/browser-v1/desktop-reviewed-exclusions.png
+2026-10-08T20:03:17.0397106Z ./receiving/pt-calendar-58d79b68/browser-review/browser-v1/failure-7.png
+2026-10-08T20:03:17.0397477Z ./receiving/pt-calendar-58d79b68/browser-review/browser-v1/all-states.ics
+2026-10-08T20:03:17.0397881Z ./receiving/pt-calendar-58d79b68/browser-review/browser-v1/stale-staff-state-after.json
+2026-10-08T20:03:17.0398306Z ./receiving/pt-calendar-58d79b68/browser-review/browser-v1/narrow-390-review.png
+2026-10-08T20:03:17.0398709Z ./receiving/pt-calendar-58d79b68/browser-review/browser-v1/baseline-worklist.png
+2026-10-08T20:03:17.0399140Z ./receiving/pt-calendar-58d79b68/browser-review/browser-v1/late-failure-report-after.json
+2026-10-08T20:03:17.0399583Z ./receiving/pt-calendar-58d79b68/browser-review/browser-v1/candidate-server.stdout.log
+2026-10-08T20:03:17.0400018Z ./receiving/pt-calendar-58d79b68/browser-review/browser-v1/after-pending-refresh.ics
+2026-10-08T20:03:17.0400411Z ./receiving/pt-calendar-58d79b68/browser-review/browser-v1/network.json
+2026-10-08T20:03:17.0400797Z ./receiving/pt-calendar-58d79b68/browser-review/browser-v1/after-retired-success.ics
+2026-10-08T20:03:17.0401221Z ./receiving/pt-calendar-58d79b68/browser-review/browser-v1/baseline-server.stdout.log
+2026-10-08T20:03:17.0401666Z ./receiving/pt-calendar-58d79b68/browser-review/browser-v1/after-reviewed-report-drift.ics
+2026-10-08T20:03:17.0402106Z ./receiving/pt-calendar-58d79b68/browser-review/browser-v1/stale-report-after.json
+2026-10-08T20:03:17.0402521Z ./receiving/pt-calendar-58d79b68/browser-review/browser-v1/after-reviewed-state.ics
+2026-10-08T20:03:17.0402952Z ./receiving/pt-calendar-58d79b68/browser-review/browser-v1/stale-staff-state-before.json
+2026-10-08T20:03:17.0403394Z ./receiving/pt-calendar-58d79b68/browser-review/browser-v1/after-reviewed-state-drift.ics
+2026-10-08T20:03:17.0403996Z ./receiving/pt-calendar-58d79b68/browser-review/browser-v1/paused-http.json
+2026-10-08T20:03:17.0404434Z ./receiving/pt-calendar-58d79b68/browser-review/browser-v1/same-name-two-clinics.ics
+2026-10-08T20:03:17.0404822Z ./receiving/pt-calendar-58d79b68/browser-review/browser-v1/result.json
+2026-10-08T20:03:17.0405179Z ./receiving/pt-calendar-58d79b68/browser-review/browser-v1/downloads/
+2026-10-08T20:03:17.0405638Z ./receiving/pt-calendar-58d79b68/browser-review/browser-v1/downloads/37a75eec-f7e4-49a8-949e-8826e254fe57
+2026-10-08T20:03:17.0406174Z ./receiving/pt-calendar-58d79b68/browser-review/browser-v1/downloads/050e42da-e062-40d3-9580-16acbfc63257
+2026-10-08T20:03:17.0406693Z ./receiving/pt-calendar-58d79b68/browser-review/browser-v1/downloads/a64c45c8-de9f-4b0c-82a4-47a343657412
+2026-10-08T20:03:17.0407206Z ./receiving/pt-calendar-58d79b68/browser-review/browser-v1/downloads/f23f1c6e-5ed7-46dc-bc17-a44575ebe0e0
+2026-10-08T20:03:17.0407721Z ./receiving/pt-calendar-58d79b68/browser-review/browser-v1/downloads/aa844f38-7156-4060-90d8-012ea9015f81
+2026-10-08T20:03:17.0408237Z ./receiving/pt-calendar-58d79b68/browser-review/browser-v1/downloads/66239951-079f-4a3e-9d1d-11a2fdf61066
+2026-10-08T20:03:17.0408751Z ./receiving/pt-calendar-58d79b68/browser-review/browser-v1/downloads/5d1f8d08-9f03-47ed-9b1c-6691b7129bd7
+2026-10-08T20:03:17.0409379Z ./receiving/pt-calendar-58d79b68/browser-review/browser-v1/downloads/129babce-a66c-432d-a1c3-5506eb9a8946
+2026-10-08T20:03:17.0409916Z ./receiving/pt-calendar-58d79b68/browser-review/browser-v1/downloads/ada41312-808e-46d1-ad5e-5b7c5676a47d
+2026-10-08T20:03:17.0410431Z ./receiving/pt-calendar-58d79b68/browser-review/browser-v1/downloads/c31d671c-c7bb-4778-99c3-1aeea7d7fa0b
+2026-10-08T20:03:17.0410879Z ./receiving/pt-calendar-58d79b68/browser-review/browser-v1/chrome.stderr.log
+2026-10-08T20:03:17.0411287Z ./receiving/pt-calendar-58d79b68/browser-review/browser-v1/candidate-server.stderr.log
+2026-10-08T20:03:17.0411720Z ./receiving/pt-calendar-58d79b68/browser-review/browser-v1/desktop-keyboard-focus.png
+2026-10-08T20:03:17.0412264Z ./receiving/pt-calendar-58d79b68/browser-review/browser-v1/baseline-server.stderr.log
+2026-10-08T20:03:17.0412691Z ./receiving/pt-calendar-58d79b68/browser-review/browser-v1/checks-progress.json
+2026-10-08T20:03:17.0413123Z ./receiving/pt-calendar-58d79b68/browser-review/browser-v1/late-failure-report-before.json
+2026-10-08T20:03:17.0413569Z ./receiving/pt-calendar-58d79b68/browser-review/browser-v1/after-retired-failure.ics
+2026-10-08T20:03:17.0414161Z ./receiving/pt-calendar-58d79b68/browser-review/browser-v1/default-keyboard.ics
+2026-10-08T20:03:17.0414527Z ./receiving/pt-calendar-58d79b68/browser-review/serve_receiver.py
+2026-10-08T20:03:17.0414877Z ./receiving/pt-calendar-58d79b68/browser-review/archive_materialize_v1.py
+2026-10-08T20:03:17.0415207Z ./receiving/pt-calendar-58d79b68/browser-review/README.md
+2026-10-08T20:03:17.0415527Z ./receiving/pt-calendar-58d79b68/browser-review/browser-v1.stderr.log
+2026-10-08T20:03:17.0415869Z ./receiving/pt-calendar-58d79b68/browser-review/fixture-template/
+2026-10-08T20:03:17.0416236Z ./receiving/pt-calendar-58d79b68/browser-review/fixture-template/manifest.json
+2026-10-08T20:03:17.0416660Z ./receiving/pt-calendar-58d79b68/browser-review/fixture-template/fixture-description.json
+2026-10-08T20:03:17.0417064Z ./receiving/pt-calendar-58d79b68/browser-review/fixture-template/data/
+2026-10-08T20:03:17.0417448Z ./receiving/pt-calendar-58d79b68/browser-review/fixture-template/data/patients.csv
+2026-10-08T20:03:17.0417864Z ./receiving/pt-calendar-58d79b68/browser-review/fixture-template/data/expected.json
+2026-10-08T20:03:17.0418272Z ./receiving/pt-calendar-58d79b68/browser-review/fixture-template/data/schedule.csv
+2026-10-08T20:03:17.0418681Z ./receiving/pt-calendar-58d79b68/browser-review/fixture-template/data/payers.csv
+2026-10-08T20:03:17.0419111Z ./receiving/pt-calendar-58d79b68/browser-review/fixture-template/data/authorizations.csv
+2026-10-08T20:03:17.0419508Z ./receiving/pt-calendar-58d79b68/browser-review/fixture-template/out/
+2026-10-08T20:03:17.0419889Z ./receiving/pt-calendar-58d79b68/browser-review/fixture-template/out/work_state.json
+2026-10-08T20:03:17.0420298Z ./receiving/pt-calendar-58d79b68/browser-review/fixture-template/out/audit.jsonl
+2026-10-08T20:03:17.0420689Z ./receiving/pt-calendar-58d79b68/browser-review/fixture-template/out/ledger.csv
+2026-10-08T20:03:17.0421091Z ./receiving/pt-calendar-58d79b68/browser-review/fixture-template/out/summary.json
+2026-10-08T20:03:17.0421530Z ./receiving/pt-calendar-58d79b68/browser-review/fixture-template/out/visit_status_review.csv
+2026-10-08T20:03:17.0421960Z ./receiving/pt-calendar-58d79b68/browser-review/fixture-template/out/digest.html
+2026-10-08T20:03:17.0422368Z ./receiving/pt-calendar-58d79b68/browser-review/fixture-template/out/worklist.csv
+2026-10-08T20:03:17.0422743Z ./receiving/pt-calendar-58d79b68/browser-review/baseline-source.json
+2026-10-08T20:03:17.0423105Z ./receiving/pt-calendar-58d79b68/browser-review/public-source-readback.json
+2026-10-08T20:03:17.0423516Z ./receiving/pt-calendar-58d79b68/browser-review/browser-asof-v2-profile-cleanup.json
+2026-10-08T20:03:17.0424129Z ./receiving/pt-calendar-58d79b68/browser-review/candidate-source-freeze-v2.json
+2026-10-08T20:03:17.0424538Z ./receiving/pt-calendar-58d79b68/browser-review/candidate-materialization-v2.json
+2026-10-08T20:03:17.0425092Z ./receiving/pt-calendar-58d79b68/browser-review/asof-original-engine-v2/
+2026-10-08T20:03:17.0425534Z ./receiving/pt-calendar-58d79b68/browser-review/asof-original-engine-v2/after_all_appointments/
+2026-10-08T20:03:17.0426067Z ./receiving/pt-calendar-58d79b68/browser-review/asof-original-engine-v2/after_all_appointments/audit.jsonl
+2026-10-08T20:03:17.0426608Z ./receiving/pt-calendar-58d79b68/browser-review/asof-original-engine-v2/after_all_appointments/ledger.csv
+2026-10-08T20:03:17.0427150Z ./receiving/pt-calendar-58d79b68/browser-review/asof-original-engine-v2/after_all_appointments/summary.json
+2026-10-08T20:03:17.0427728Z ./receiving/pt-calendar-58d79b68/browser-review/asof-original-engine-v2/after_all_appointments/visit_status_review.csv
+2026-10-08T20:03:17.0428408Z ./receiving/pt-calendar-58d79b68/browser-review/asof-original-engine-v2/after_all_appointments/digest.html
+2026-10-08T20:03:17.0428941Z ./receiving/pt-calendar-58d79b68/browser-review/asof-original-engine-v2/after_all_appointments/worklist.csv
+2026-10-08T20:03:17.0429456Z ./receiving/pt-calendar-58d79b68/browser-review/asof-original-engine-v2/before_appointments/
+2026-10-08T20:03:17.0429951Z ./receiving/pt-calendar-58d79b68/browser-review/asof-original-engine-v2/before_appointments/audit.jsonl
+2026-10-08T20:03:17.0430477Z ./receiving/pt-calendar-58d79b68/browser-review/asof-original-engine-v2/before_appointments/ledger.csv
+2026-10-08T20:03:17.0431003Z ./receiving/pt-calendar-58d79b68/browser-review/asof-original-engine-v2/before_appointments/summary.json
+2026-10-08T20:03:17.0431562Z ./receiving/pt-calendar-58d79b68/browser-review/asof-original-engine-v2/before_appointments/visit_status_review.csv
+2026-10-08T20:03:17.0432128Z ./receiving/pt-calendar-58d79b68/browser-review/asof-original-engine-v2/before_appointments/digest.html
+2026-10-08T20:03:17.0432660Z ./receiving/pt-calendar-58d79b68/browser-review/asof-original-engine-v2/before_appointments/worklist.csv
+2026-10-08T20:03:17.0433100Z ./receiving/pt-calendar-58d79b68/native-browser-review.json.gz
+2026-10-08T20:03:17.0433394Z ./receiving/pt-calendar-58d79b68/integration/
+2026-10-08T20:03:17.0433874Z ./receiving/pt-calendar-58d79b68/integration/final-parent-source.json
+2026-10-08T20:03:17.0434238Z ./receiving/pt-calendar-58d79b68/integration/runtime-composition.json
+2026-10-08T20:03:17.0434594Z ./receiving/pt-calendar-58d79b68/integration/fetch-current-parent.json
+2026-10-08T20:03:17.0434977Z ./receiving/pt-calendar-58d79b68/integration/bootstrap-independent-review.json
+2026-10-08T20:03:17.0435372Z ./receiving/pt-calendar-58d79b68/integration/browser-transfer-receipt.json
+2026-10-08T20:03:17.0435753Z ./receiving/pt-calendar-58d79b68/integration/composition-browser-copy.json
+2026-10-08T20:03:17.0436143Z ./receiving/pt-calendar-58d79b68/integration/composition-blob-publication.json
+2026-10-08T20:03:17.0436524Z ./receiving/pt-calendar-58d79b68/integration/browser-copy-receipt.json
+2026-10-08T20:03:17.0436879Z ./receiving/pt-calendar-58d79b68/integration/current-source-copy.json
+2026-10-08T20:03:17.0437238Z ./receiving/pt-calendar-58d79b68/integration/producer-visual-readback.json
+2026-10-08T20:03:17.0437609Z ./receiving/pt-calendar-58d79b68/integration/fetch-current-parent-v2.json
+2026-10-08T20:03:17.0437985Z ./receiving/pt-calendar-58d79b68/integration/publication-enospc-v1.json
+2026-10-08T20:03:17.0438366Z ./receiving/pt-calendar-58d79b68/integration/shallow-alternate-correction.json
+2026-10-08T20:03:17.0438733Z ./receiving/pt-calendar-58d79b68/integration/parent-readback.json
+2026-10-08T20:03:17.0439082Z ./receiving/pt-calendar-58d79b68/integration/current-parent-readback.json
+2026-10-08T20:03:17.0439506Z ./receiving/pt-calendar-58d79b68/integration/current-composition-visual-readback.json
+2026-10-08T20:03:17.0439931Z ./receiving/pt-calendar-58d79b68/integration/immutable-blob-publication.json
+2026-10-08T20:03:17.0440313Z ./receiving/pt-calendar-58d79b68/integration/semantic-copy-receipt.json
+2026-10-08T20:03:17.0440666Z ./receiving/pt-calendar-58d79b68/integration/ownership-and-gates.json
+2026-10-08T20:03:17.0441068Z ./receiving/pt-calendar-58d79b68/README.md
+2026-10-08T20:03:17.0441328Z ./receiving/pt-calendar-58d79b68/semantic-review.tar.gz
+2026-10-08T20:03:17.0441645Z ./receiving/pt-calendar-58d79b68/composition-browser-review.tar.gz
+2026-10-08T20:03:17.0441943Z ./receiving/pt-calendar-58d79b68/producer-v2/
+2026-10-08T20:03:17.0442210Z ./receiving/pt-calendar-58d79b68/producer-v2/manifest.json
+2026-10-08T20:03:17.0442541Z ./receiving/pt-calendar-58d79b68/producer-v2/conscience-receipt.json
+2026-10-08T20:03:17.0442881Z ./receiving/pt-calendar-58d79b68/producer-v2/archive-readback.json
+2026-10-08T20:03:17.0443206Z ./receiving/pt-calendar-58d79b68/producer-v2/source-freeze.json
+2026-10-08T20:03:17.0443638Z ./receiving/pt-calendar-58d79b68/producer-v2/source-publication.json
+2026-10-08T20:03:17.0444142Z ./receiving/pt-calendar-58d79b68/producer-v2/native-producer-v2.tar.gz
+2026-10-08T20:03:17.0444469Z ./receiving/pt-calendar-58d79b68/producer-v2/README.md
+2026-10-08T20:03:17.0444774Z ./receiving/pt-calendar-58d79b68/producer-v2/archive-receipt.json
+2026-10-08T20:03:17.0445101Z ./receiving/pt-calendar-58d79b68/composition-browser-review/
+2026-10-08T20:03:17.0445481Z ./receiving/pt-calendar-58d79b68/composition-browser-review/profile-cleanup.json
+2026-10-08T20:03:17.0445882Z ./receiving/pt-calendar-58d79b68/composition-browser-review/manifest.json
+2026-10-08T20:03:17.0446294Z ./receiving/pt-calendar-58d79b68/composition-browser-review/conscience-receipt.json
+2026-10-08T20:03:17.0446719Z ./receiving/pt-calendar-58d79b68/composition-browser-review/final-readback.json
+2026-10-08T20:03:17.0447105Z ./receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/
+2026-10-08T20:03:17.0447556Z ./receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/combined-stale-report-after.json
+2026-10-08T20:03:17.0448084Z ./receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/combined-uncovered-390.png
+2026-10-08T20:03:17.0448595Z ./receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/candidate-server.stdout.log
+2026-10-08T20:03:17.0449127Z ./receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/combined-stale-report-before.json
+2026-10-08T20:03:17.0449609Z ./receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/network.json
+2026-10-08T20:03:17.0450096Z ./receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/combined-current-after-refusal.ics
+2026-10-08T20:03:17.0450596Z ./receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/paused-http.json
+2026-10-08T20:03:17.0451088Z ./receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/combined-calendar-desktop.png
+2026-10-08T20:03:17.0451638Z ./receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/all-uncovered-from-filtered-view.csv
+2026-10-08T20:03:17.0452175Z ./receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/combined-calendar-390.png
+2026-10-08T20:03:17.0452647Z ./receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/result.json
+2026-10-08T20:03:17.0453066Z ./receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/downloads/
+2026-10-08T20:03:17.0453574Z ./receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/downloads/6210bff0-d87f-48cf-8a02-7971a0b7b059
+2026-10-08T20:03:17.0454331Z ./receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/downloads/77b367bb-59d0-4ff5-87eb-f345981f1948
+2026-10-08T20:03:17.0454924Z ./receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/downloads/31cfd17c-b88b-4f04-ad19-bdf703b51050
+2026-10-08T20:03:17.0455445Z ./receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/chrome.stderr.log
+2026-10-08T20:03:17.0455930Z ./receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/candidate-server.stderr.log
+2026-10-08T20:03:17.0456427Z ./receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/candidate-fixture/
+2026-10-08T20:03:17.0456900Z ./receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/candidate-fixture/data/
+2026-10-08T20:03:17.0457551Z ./receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/candidate-fixture/data/patients.csv
+2026-10-08T20:03:17.0458120Z ./receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/candidate-fixture/data/expected.json
+2026-10-08T20:03:17.0458682Z ./receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/candidate-fixture/data/schedule.csv
+2026-10-08T20:03:17.0459235Z ./receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/candidate-fixture/data/payers.csv
+2026-10-08T20:03:17.0459806Z ./receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/candidate-fixture/data/authorizations.csv
+2026-10-08T20:03:17.0460471Z ./receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/candidate-fixture/out/
+2026-10-08T20:03:17.0461023Z ./receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/candidate-fixture/out/uncovered_visits.csv
+2026-10-08T20:03:17.0461604Z ./receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/candidate-fixture/out/work_state.json
+2026-10-08T20:03:17.0462153Z ./receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/candidate-fixture/out/audit.jsonl
+2026-10-08T20:03:17.0462691Z ./receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/candidate-fixture/out/ledger.csv
+2026-10-08T20:03:17.0463230Z ./receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/candidate-fixture/out/summary.json
+2026-10-08T20:03:17.0463931Z ./receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/candidate-fixture/out/visit_status_review.csv
+2026-10-08T20:03:17.0464530Z ./receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/candidate-fixture/out/digest.html
+2026-10-08T20:03:17.0465068Z ./receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/candidate-fixture/out/worklist.csv
+2026-10-08T20:03:17.0465578Z ./receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/checks-progress.json
+2026-10-08T20:03:17.0466093Z ./receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/combined-filtered-calendar.ics
+2026-10-08T20:03:17.0466573Z ./receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2.stderr.log
+2026-10-08T20:03:17.0467007Z ./receiving/pt-calendar-58d79b68/composition-browser-review/browser_composition_v2.mjs
+2026-10-08T20:03:17.0467441Z ./receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2.stdout.log
+2026-10-08T20:03:17.0467853Z ./receiving/pt-calendar-58d79b68/composition-browser-review/source-freeze-v2.json
+2026-10-08T20:03:17.0468257Z ./receiving/pt-calendar-58d79b68/composition-browser-review/serve_receiver.py
+2026-10-08T20:03:17.0468682Z ./receiving/pt-calendar-58d79b68/composition-browser-review/browser_composition_v1.mjs
+2026-10-08T20:03:17.0469089Z ./receiving/pt-calendar-58d79b68/composition-browser-review/README.md
+2026-10-08T20:03:17.0469460Z ./receiving/pt-calendar-58d79b68/composition-browser-review/launch-v2.json
+2026-10-08T20:03:17.0469815Z ./receiving/pt-calendar-58d79b68/semantic-review/
+2026-10-08T20:03:17.0470135Z ./receiving/pt-calendar-58d79b68/semantic-review/semantics-v1-result.json
+2026-10-08T20:03:17.0470487Z ./receiving/pt-calendar-58d79b68/semantic-review/RECEIVER-SPEC.md
+2026-10-08T20:03:17.0470820Z ./receiving/pt-calendar-58d79b68/semantic-review/manifest.json
+2026-10-08T20:03:17.0471169Z ./receiving/pt-calendar-58d79b68/semantic-review/conscience-receipt.json
+2026-10-08T20:03:17.0471543Z ./receiving/pt-calendar-58d79b68/semantic-review/receiver-v1-freeze.json
+2026-10-08T20:03:17.0471892Z ./receiving/pt-calendar-58d79b68/semantic-review/review-result.json
+2026-10-08T20:03:17.0472211Z ./receiving/pt-calendar-58d79b68/semantic-review/source/
+2026-10-08T20:03:17.0472519Z ./receiving/pt-calendar-58d79b68/semantic-review/source/pt_auth/
+2026-10-08T20:03:17.0472865Z ./receiving/pt-calendar-58d79b68/semantic-review/source/pt_auth/ptauth/
+2026-10-08T20:03:17.0473242Z ./receiving/pt-calendar-58d79b68/semantic-review/source/pt_auth/ptauth/cli.py
+2026-10-08T20:03:17.0473877Z ./receiving/pt-calendar-58d79b68/semantic-review/source/pt_auth/ptauth/synth.py
+2026-10-08T20:03:17.0474336Z ./receiving/pt-calendar-58d79b68/semantic-review/source/pt_auth/ptauth/worklist_calendar.py
+2026-10-08T20:03:17.0474785Z ./receiving/pt-calendar-58d79b68/semantic-review/source/pt_auth/ptauth/__main__.py
+2026-10-08T20:03:17.0475211Z ./receiving/pt-calendar-58d79b68/semantic-review/source/pt_auth/ptauth/calendar_ui.js
+2026-10-08T20:03:17.0475625Z ./receiving/pt-calendar-58d79b68/semantic-review/source/pt_auth/ptauth/ui.html
+2026-10-08T20:03:17.0476022Z ./receiving/pt-calendar-58d79b68/semantic-review/source/pt_auth/ptauth/report.py
+2026-10-08T20:03:17.0476529Z ./receiving/pt-calendar-58d79b68/semantic-review/source/pt_auth/ptauth/engine.py
+2026-10-08T20:03:17.0476937Z ./receiving/pt-calendar-58d79b68/semantic-review/source/pt_auth/ptauth/__init__.py
+2026-10-08T20:03:17.0477345Z ./receiving/pt-calendar-58d79b68/semantic-review/source/pt_auth/ptauth/web.py
+2026-10-08T20:03:17.0477734Z ./receiving/pt-calendar-58d79b68/semantic-review/source/pt_auth/ptauth/data.py
+2026-10-08T20:03:17.0478099Z ./receiving/pt-calendar-58d79b68/semantic-review/blind-freeze.json
+2026-10-08T20:03:17.0478453Z ./receiving/pt-calendar-58d79b68/semantic-review/source-freeze-v1.json
+2026-10-08T20:03:17.0478798Z ./receiving/pt-calendar-58d79b68/semantic-review/actual-files/
+2026-10-08T20:03:17.0479166Z ./receiving/pt-calendar-58d79b68/semantic-review/actual-files/status-selection.ics
+2026-10-08T20:03:17.0479629Z ./receiving/pt-calendar-58d79b68/semantic-review/actual-files/status-selection-metadata.json
+2026-10-08T20:03:17.0480102Z ./receiving/pt-calendar-58d79b68/semantic-review/actual-files/actual-cli-selection.ics
+2026-10-08T20:03:17.0480596Z ./receiving/pt-calendar-58d79b68/semantic-review/actual-files/actual-cli-no-clobber.stderr
+2026-10-08T20:03:17.0481107Z ./receiving/pt-calendar-58d79b68/semantic-review/actual-files/unicode-and-delimiter-roundtrip.ics
+2026-10-08T20:03:17.0481590Z ./receiving/pt-calendar-58d79b68/semantic-review/actual-files/actual-cli-invalid.stderr
+2026-10-08T20:03:17.0482032Z ./receiving/pt-calendar-58d79b68/semantic-review/actual-files/actual-cli-stdout.json
+2026-10-08T20:03:17.0482397Z ./receiving/pt-calendar-58d79b68/semantic-review/README.md
+2026-10-08T20:03:17.0482717Z ./receiving/pt-calendar-58d79b68/semantic-review/semantics-v1.stderr
+2026-10-08T20:03:17.0483053Z ./receiving/pt-calendar-58d79b68/semantic-review/contract-v1.md
+2026-10-08T20:03:17.0483394Z ./receiving/pt-calendar-58d79b68/semantic-review/semantics-v1.stdout
+2026-10-08T20:03:17.0483896Z ./receiving/pt-calendar-58d79b68/semantic-review/test_semantics_v1.py
+2026-10-08T20:03:17.0484228Z ./receiving/utility-account-identity-9e05c01af69c/
+2026-10-08T20:03:17.0484567Z ./receiving/utility-account-identity-9e05c01af69c/root-intake-receipt.json
+2026-10-08T20:03:17.0484946Z ./receiving/utility-account-identity-9e05c01af69c/author-receipt.json
+2026-10-08T20:03:17.0485329Z ./receiving/utility-account-identity-9e05c01af69c/receive_account_identity.py
+2026-10-08T20:03:17.0485701Z ./receiving/utility-account-identity-9e05c01af69c/root-review.md
+2026-10-08T20:03:17.0486058Z ./receiving/utility-account-identity-9e05c01af69c/author-evidence.tar.gz
+2026-10-08T20:03:17.0486428Z ./receiving/utility-account-identity-9e05c01af69c/root-evidence.tar.gz
+2026-10-08T20:03:17.0486775Z ./receiving/utility-account-identity-9e05c01af69c/README.md
+2026-10-08T20:03:17.0487115Z ./receiving/utility-account-identity-9e05c01af69c/evidence-manifest.json
+2026-10-08T20:03:17.0487472Z ./receiving/utility-account-identity-9e05c01af69c/root-result.json
+2026-10-08T20:03:17.0487792Z ./receiving/utility-review-desk-independent-39c2b591/
+2026-10-08T20:03:17.0488107Z ./receiving/utility-review-desk-independent-39c2b591/browser/
+2026-10-08T20:03:17.0488512Z ./receiving/utility-review-desk-independent-39c2b591/browser/utility-desk-consumer-v4.mjs
+2026-10-08T20:03:17.0488946Z ./receiving/utility-review-desk-independent-39c2b591/browser/SOURCE.json
+2026-10-08T20:03:17.0489421Z ./receiving/utility-review-desk-independent-39c2b591/browser/REVIEW.md
+2026-10-08T20:03:17.0489791Z ./receiving/utility-review-desk-independent-39c2b591/browser/REPLAY.md
+2026-10-08T20:03:17.0490184Z ./receiving/utility-review-desk-independent-39c2b591/browser/ACCEPTANCE.json
+2026-10-08T20:03:17.0490598Z ./receiving/utility-review-desk-independent-39c2b591/browser/unpack-receiving.py
+2026-10-08T20:03:17.0491057Z ./receiving/utility-review-desk-independent-39c2b591/browser/verify-downloaded-worksheet.py
+2026-10-08T20:03:17.0491531Z ./receiving/utility-review-desk-independent-39c2b591/browser/RAW_EVIDENCE_MANIFEST.json
+2026-10-08T20:03:17.0492087Z ./receiving/utility-review-desk-independent-39c2b591/browser/RAW_EVIDENCE.json.gz.b64
+2026-10-08T20:03:17.0492515Z ./receiving/utility-review-desk-independent-39c2b591/worksheet-coexistence/
+2026-10-08T20:03:17.0492944Z ./receiving/utility-review-desk-independent-39c2b591/worksheet-coexistence/SOURCE.json
+2026-10-08T20:03:17.0493435Z ./receiving/utility-review-desk-independent-39c2b591/worksheet-coexistence/receive_interop_v1.py
+2026-10-08T20:03:17.0494122Z ./receiving/utility-review-desk-independent-39c2b591/worksheet-coexistence/build_fixture_v1.py
+2026-10-08T20:03:17.0494594Z ./receiving/utility-review-desk-independent-39c2b591/worksheet-coexistence/REVIEW.md
+2026-10-08T20:03:17.0495033Z ./receiving/utility-review-desk-independent-39c2b591/worksheet-coexistence/REPLAY.md
+2026-10-08T20:03:17.0495497Z ./receiving/utility-review-desk-independent-39c2b591/worksheet-coexistence/ACCEPTANCE.json
+2026-10-08T20:03:17.0496000Z ./receiving/utility-review-desk-independent-39c2b591/worksheet-coexistence/unpack-receiving.py
+2026-10-08T20:03:17.0496545Z ./receiving/utility-review-desk-independent-39c2b591/worksheet-coexistence/RAW_EVIDENCE_MANIFEST.json
+2026-10-08T20:03:17.0497082Z ./receiving/utility-review-desk-independent-39c2b591/worksheet-coexistence/RAW_EVIDENCE.json.gz.b64
+2026-10-08T20:03:17.0497494Z ./receiving/utility-review-report-e04ee971c817/
+2026-10-08T20:03:17.0497792Z ./receiving/utility-review-report-e04ee971c817/current-main/
+2026-10-08T20:03:17.0498152Z ./receiving/utility-review-report-e04ee971c817/current-main/native-freeze.json
+2026-10-08T20:03:17.0498570Z ./receiving/utility-review-report-e04ee971c817/current-main/current-source-pins.json
+2026-10-08T20:03:17.0498966Z ./receiving/utility-review-report-e04ee971c817/current-main/README.md
+2026-10-08T20:03:17.0499312Z ./receiving/utility-review-report-e04ee971c817/current-main/evidence/
+2026-10-08T20:03:17.0499751Z ./receiving/utility-review-report-e04ee971c817/current-main/evidence/current-dependency-results.json
+2026-10-08T20:03:17.0500262Z ./receiving/utility-review-report-e04ee971c817/current-main/evidence/local-staging-enospc.json
+2026-10-08T20:03:17.0500772Z ./receiving/utility-review-report-e04ee971c817/current-main/evidence/receive_current_dependency.py
+2026-10-08T20:03:17.0501254Z ./receiving/utility-review-report-e04ee971c817/current-main/evidence/current-review.html
+2026-10-08T20:03:17.0501669Z ./receiving/utility-review-report-e04ee971c817/current-main/candidate/
+2026-10-08T20:03:17.0502060Z ./receiving/utility-review-report-e04ee971c817/current-main/candidate/utility_watch/
+2026-10-08T20:03:17.0502509Z ./receiving/utility-review-report-e04ee971c817/current-main/candidate/utility_watch/uwatch/
+2026-10-08T20:03:17.0502996Z ./receiving/utility-review-report-e04ee971c817/current-main/candidate/utility_watch/uwatch/cli.py
+2026-10-08T20:03:17.0503506Z ./receiving/utility-review-report-e04ee971c817/current-main/candidate/utility_watch/uwatch/synth.py
+2026-10-08T20:03:17.0504190Z ./receiving/utility-review-report-e04ee971c817/current-main/candidate/utility_watch/uwatch/__main__.py
+2026-10-08T20:03:17.0504714Z ./receiving/utility-review-report-e04ee971c817/current-main/candidate/utility_watch/uwatch/review.py
+2026-10-08T20:03:17.0505252Z ./receiving/utility-review-report-e04ee971c817/current-main/candidate/utility_watch/uwatch/review_report.py
+2026-10-08T20:03:17.0505926Z ./receiving/utility-review-report-e04ee971c817/current-main/candidate/utility_watch/uwatch/report.py
+2026-10-08T20:03:17.0506443Z ./receiving/utility-review-report-e04ee971c817/current-main/candidate/utility_watch/uwatch/engine.py
+2026-10-08T20:03:17.0506961Z ./receiving/utility-review-report-e04ee971c817/current-main/candidate/utility_watch/uwatch/__init__.py
+2026-10-08T20:03:17.0507421Z ./receiving/utility-review-report-e04ee971c817/integration-preflight.json
+2026-10-08T20:03:17.0507781Z ./receiving/utility-review-report-e04ee971c817/independent/
+2026-10-08T20:03:17.0508158Z ./receiving/utility-review-report-e04ee971c817/independent/current-engine-audit.json
+2026-10-08T20:03:17.0508708Z ./receiving/utility-review-report-e04ee971c817/independent/receive_saved_worksheet.py
+2026-10-08T20:03:17.0509140Z ./receiving/utility-review-report-e04ee971c817/independent/native-base-tree.json
+2026-10-08T20:03:17.0509535Z ./receiving/utility-review-report-e04ee971c817/independent/results.json
+2026-10-08T20:03:17.0509899Z ./receiving/utility-review-report-e04ee971c817/independent/pins.json
+2026-10-08T20:03:17.0510255Z ./receiving/utility-review-report-e04ee971c817/independent/review.json
+2026-10-08T20:03:17.0510608Z ./receiving/utility-review-report-e04ee971c817/independent/README.md
+2026-10-08T20:03:17.0510928Z ./receiving/utility-review-report-e04ee971c817/baseline/
+2026-10-08T20:03:17.0511255Z ./receiving/utility-review-report-e04ee971c817/baseline/utility_watch/
+2026-10-08T20:03:17.0511633Z ./receiving/utility-review-report-e04ee971c817/baseline/utility_watch/uwatch/
+2026-10-08T20:03:17.0512049Z ./receiving/utility-review-report-e04ee971c817/baseline/utility_watch/uwatch/cli.py
+2026-10-08T20:03:17.0512486Z ./receiving/utility-review-report-e04ee971c817/baseline/utility_watch/uwatch/synth.py
+2026-10-08T20:03:17.0512925Z ./receiving/utility-review-report-e04ee971c817/baseline/utility_watch/uwatch/__main__.py
+2026-10-08T20:03:17.0513371Z ./receiving/utility-review-report-e04ee971c817/baseline/utility_watch/uwatch/review.py
+2026-10-08T20:03:17.0513945Z ./receiving/utility-review-report-e04ee971c817/baseline/utility_watch/uwatch/report.py
+2026-10-08T20:03:17.0514389Z ./receiving/utility-review-report-e04ee971c817/baseline/utility_watch/uwatch/engine.py
+2026-10-08T20:03:17.0514899Z ./receiving/utility-review-report-e04ee971c817/baseline/utility_watch/uwatch/__init__.py
+2026-10-08T20:03:17.0515295Z ./receiving/utility-review-report-e04ee971c817/source-pins.json
+2026-10-08T20:03:17.0515621Z ./receiving/utility-review-report-e04ee971c817/scope-comment.md
+2026-10-08T20:03:17.0515959Z ./receiving/utility-review-report-e04ee971c817/candidate-pins.json
+2026-10-08T20:03:17.0516278Z ./receiving/utility-review-report-e04ee971c817/README.md
+2026-10-08T20:03:17.0516560Z ./receiving/utility-review-report-e04ee971c817/evidence/
+2026-10-08T20:03:17.0516916Z ./receiving/utility-review-report-e04ee971c817/evidence/browser-visual-review.json
+2026-10-08T20:03:17.0517346Z ./receiving/utility-review-report-e04ee971c817/evidence/captured-pr22-review-3.csv
+2026-10-08T20:03:17.0517800Z ./receiving/utility-review-report-e04ee971c817/evidence/accepted-pr22-producer-result.json
+2026-10-08T20:03:17.0518249Z ./receiving/utility-review-report-e04ee971c817/evidence/candidate-optimized.json
+2026-10-08T20:03:17.0518730Z ./receiving/utility-review-report-e04ee971c817/evidence/candidate-optimized-destination-replay.json
+2026-10-08T20:03:17.0519212Z ./receiving/utility-review-report-e04ee971c817/evidence/browser-history.png
+2026-10-08T20:03:17.0519604Z ./receiving/utility-review-report-e04ee971c817/evidence/browser-expected.json
+2026-10-08T20:03:17.0520036Z ./receiving/utility-review-report-e04ee971c817/evidence/probe_native_worksheet_baseline.py
+2026-10-08T20:03:17.0520461Z ./receiving/utility-review-report-e04ee971c817/evidence/preservation.json
+2026-10-08T20:03:17.0520890Z ./receiving/utility-review-report-e04ee971c817/evidence/candidate-html-portability.json
+2026-10-08T20:03:17.0521342Z ./receiving/utility-review-report-e04ee971c817/evidence/native-review-with-history.csv
+2026-10-08T20:03:17.0521993Z ./receiving/utility-review-report-e04ee971c817/evidence/candidate-optimized-destination-replay-v2.json
+2026-10-08T20:03:17.0522477Z ./receiving/utility-review-report-e04ee971c817/evidence/browser-desktop.png
+2026-10-08T20:03:17.0522895Z ./receiving/utility-review-report-e04ee971c817/evidence/browser-capacity-refusal.json
+2026-10-08T20:03:17.0523332Z ./receiving/utility-review-report-e04ee971c817/evidence/example-saved-review.html
+2026-10-08T20:03:17.0523884Z ./receiving/utility-review-report-e04ee971c817/evidence/browser-print.pdf
+2026-10-08T20:03:17.0524281Z ./receiving/utility-review-report-e04ee971c817/evidence/browser_review_report.mjs
+2026-10-08T20:03:17.0524855Z ./receiving/utility-review-report-e04ee971c817/evidence/replay_optimized_destination_restored.py
+2026-10-08T20:03:17.0525318Z ./receiving/utility-review-report-e04ee971c817/evidence/final-main-readback.json
+2026-10-08T20:03:17.0525781Z ./receiving/utility-review-report-e04ee971c817/evidence/replay_optimized_destination_restored_v2.py
+2026-10-08T20:03:17.0526269Z ./receiving/utility-review-report-e04ee971c817/evidence/replay_optimized_destination.py
+2026-10-08T20:03:17.0526701Z ./receiving/utility-review-report-e04ee971c817/evidence/qualify_review_report.py
+2026-10-08T20:03:17.0527102Z ./receiving/utility-review-report-e04ee971c817/evidence/browser-results.json
+2026-10-08T20:03:17.0527492Z ./receiving/utility-review-report-e04ee971c817/evidence/baseline-memory.json
+2026-10-08T20:03:17.0527895Z ./receiving/utility-review-report-e04ee971c817/evidence/candidate-normal.json
+2026-10-08T20:03:17.0528320Z ./receiving/utility-review-report-e04ee971c817/evidence/candidate-native-cli-tool.json
+2026-10-08T20:03:17.0528755Z ./receiving/utility-review-report-e04ee971c817/evidence/browser-print-text.txt
+2026-10-08T20:03:17.0529161Z ./receiving/utility-review-report-e04ee971c817/evidence/qualify_preservation.py
+2026-10-08T20:03:17.0529560Z ./receiving/utility-review-report-e04ee971c817/evidence/baseline-native.json
+2026-10-08T20:03:17.0529947Z ./receiving/utility-review-report-e04ee971c817/evidence/browser-mobile.png
+2026-10-08T20:03:17.0530368Z ./receiving/utility-review-report-e04ee971c817/evidence/interrupted-replay-write.json
+2026-10-08T20:03:17.0530819Z ./receiving/utility-review-report-e04ee971c817/evidence/probe_worksheet_view_baseline.py
+2026-10-08T20:03:17.0531210Z ./receiving/utility-review-report-e04ee971c817/candidate/
+2026-10-08T20:03:17.0531537Z ./receiving/utility-review-report-e04ee971c817/candidate/utility_watch/
+2026-10-08T20:03:17.0531917Z ./receiving/utility-review-report-e04ee971c817/candidate/utility_watch/uwatch/
+2026-10-08T20:03:17.0532334Z ./receiving/utility-review-report-e04ee971c817/candidate/utility_watch/uwatch/cli.py
+2026-10-08T20:03:17.0532767Z ./receiving/utility-review-report-e04ee971c817/candidate/utility_watch/uwatch/synth.py
+2026-10-08T20:03:17.0533211Z ./receiving/utility-review-report-e04ee971c817/candidate/utility_watch/uwatch/__main__.py
+2026-10-08T20:03:17.0533785Z ./receiving/utility-review-report-e04ee971c817/candidate/utility_watch/uwatch/review.py
+2026-10-08T20:03:17.0534264Z ./receiving/utility-review-report-e04ee971c817/candidate/utility_watch/uwatch/review_report.py
+2026-10-08T20:03:17.0534734Z ./receiving/utility-review-report-e04ee971c817/candidate/utility_watch/uwatch/report.py
+2026-10-08T20:03:17.0535172Z ./receiving/utility-review-report-e04ee971c817/candidate/utility_watch/uwatch/engine.py
+2026-10-08T20:03:17.0535617Z ./receiving/utility-review-report-e04ee971c817/candidate/utility_watch/uwatch/__init__.py
+2026-10-08T20:03:17.0536043Z ./receiving/utility-review-report-e04ee971c817/candidate/utility_watch/tests/
+2026-10-08T20:03:17.0536492Z ./receiving/utility-review-report-e04ee971c817/candidate/utility_watch/tests/test_review_report.py
+2026-10-08T20:03:17.0536944Z ./receiving/utility-review-report-e04ee971c817/candidate/utility_watch/docs/
+2026-10-08T20:03:17.0537376Z ./receiving/utility-review-report-e04ee971c817/candidate/utility_watch/docs/review-report.md
+2026-10-08T20:03:17.0537892Z ./receiving/utility-review-report-e04ee971c817/candidate.patch
+2026-10-08T20:03:17.0538184Z ./receiving/utility-review-a219f250962c/
+2026-10-08T20:03:17.0538459Z ./receiving/utility-review-a219f250962c/baseline-native.log
+2026-10-08T20:03:17.0538752Z ./receiving/utility-review-a219f250962c/cli-roundtrip/
+2026-10-08T20:03:17.0539063Z ./receiving/utility-review-a219f250962c/cli-roundtrip/review-1.csv
+2026-10-08T20:03:17.0539393Z ./receiving/utility-review-a219f250962c/cli-roundtrip/review-3.csv
+2026-10-08T20:03:17.0539724Z ./receiving/utility-review-a219f250962c/cli-roundtrip/result.json
+2026-10-08T20:03:17.0540054Z ./receiving/utility-review-a219f250962c/cli-roundtrip/review-2.csv
+2026-10-08T20:03:17.0540450Z ./receiving/utility-review-a219f250962c/independent/
+2026-10-08T20:03:17.0540784Z ./receiving/utility-review-a219f250962c/independent/review_cli_receiving.py
+2026-10-08T20:03:17.0541151Z ./receiving/utility-review-a219f250962c/independent/SHA256SUMS.json
+2026-10-08T20:03:17.0541525Z ./receiving/utility-review-a219f250962c/independent/source-scope-result.json
+2026-10-08T20:03:17.0541900Z ./receiving/utility-review-a219f250962c/independent/review-result.json
+2026-10-08T20:03:17.0542273Z ./receiving/utility-review-a219f250962c/independent/cli-receiving-result.json
+2026-10-08T20:03:17.0542629Z ./receiving/utility-review-a219f250962c/independent/REVIEW.md
+2026-10-08T20:03:17.0542968Z ./receiving/utility-review-a219f250962c/independent/candidate-source.json
+2026-10-08T20:03:17.0543321Z ./receiving/utility-review-a219f250962c/independent/as-executed/
+2026-10-08T20:03:17.0543861Z ./receiving/utility-review-a219f250962c/independent/as-executed/review_cli_receiving.py
+2026-10-08T20:03:17.0544353Z ./receiving/utility-review-a219f250962c/independent/as-executed/review_publication_receiving.py
+2026-10-08T20:03:17.0544827Z ./receiving/utility-review-a219f250962c/independent/publication-receiving-result.json
+2026-10-08T20:03:17.0545270Z ./receiving/utility-review-a219f250962c/independent/review_publication_receiving.py
+2026-10-08T20:03:17.0545673Z ./receiving/utility-review-a219f250962c/independent/baseline-source.json
+2026-10-08T20:03:17.0546054Z ./receiving/utility-review-a219f250962c/independent/portability-result.json
+2026-10-08T20:03:17.0546406Z ./receiving/utility-review-a219f250962c/candidate-result.json
+2026-10-08T20:03:17.0546693Z ./receiving/utility-review-a219f250962c/README.md
+2026-10-08T20:03:17.0546974Z ./receiving/utility-review-a219f250962c/baseline-source.json
+2026-10-08T20:03:17.0547279Z ./receiving/utility-review-a219f250962c/verify_cli.py
+2026-10-08T20:03:17.0547563Z ./receiving/utility-review-a219f250962c/baseline-result.json
+2026-10-08T20:03:17.0547864Z ./receiving/utility-review-a219f250962c/candidate-native.log
+2026-10-08T20:03:17.0548233Z ./receiving/utility-source-records-68094585a1c2/
+2026-10-08T20:03:17.0548573Z ./receiving/utility-source-records-68094585a1c2/candidate-v1/
+2026-10-08T20:03:17.0548908Z ./receiving/utility-source-records-68094585a1c2/candidate-v1/native/
+2026-10-08T20:03:17.0549311Z ./receiving/utility-source-records-68094585a1c2/candidate-v1/native/focused.stdout.log
+2026-10-08T20:03:17.0549749Z ./receiving/utility-source-records-68094585a1c2/candidate-v1/native/source-pins.json
+2026-10-08T20:03:17.0550188Z ./receiving/utility-source-records-68094585a1c2/candidate-v1/native/focused.stderr.log
+2026-10-08T20:03:17.0550631Z ./receiving/utility-source-records-68094585a1c2/candidate-v1/native/focused-receipt.json
+2026-10-08T20:03:17.0551065Z ./receiving/utility-source-records-68094585a1c2/candidate-v1/source-overlay.json
+2026-10-08T20:03:17.0551418Z ./receiving/utility-source-records-68094585a1c2/browser/
+2026-10-08T20:03:17.0551718Z ./receiving/utility-source-records-68094585a1c2/browser/fixture/
+2026-10-08T20:03:17.0552078Z ./receiving/utility-source-records-68094585a1c2/browser/fixture/fixture.json
+2026-10-08T20:03:17.0552468Z ./receiving/utility-source-records-68094585a1c2/browser/fixture/original.csv
+2026-10-08T20:03:17.0552836Z ./receiving/utility-source-records-68094585a1c2/browser/fixture/data/
+2026-10-08T20:03:17.0553360Z ./receiving/utility-source-records-68094585a1c2/browser/fixture/data/bills.csv
+2026-10-08T20:03:17.0553979Z ./receiving/utility-source-records-68094585a1c2/browser/fixture/data/expected.json
+2026-10-08T20:03:17.0554405Z ./receiving/utility-source-records-68094585a1c2/browser/fixture/data/occupancy.csv
+2026-10-08T20:03:17.0554818Z ./receiving/utility-source-records-68094585a1c2/browser/fixture/data/accounts.csv
+2026-10-08T20:03:17.0555227Z ./receiving/utility-source-records-68094585a1c2/browser/fixture/data/payments.csv
+2026-10-08T20:03:17.0555614Z ./receiving/utility-source-records-68094585a1c2/browser/fixture/report/
+2026-10-08T20:03:17.0556138Z ./receiving/utility-source-records-68094585a1c2/browser/fixture/report/payment_queue.csv
+2026-10-08T20:03:17.0556575Z ./receiving/utility-source-records-68094585a1c2/browser/fixture/report/audit.jsonl
+2026-10-08T20:03:17.0557005Z ./receiving/utility-source-records-68094585a1c2/browser/fixture/report/exceptions.csv
+2026-10-08T20:03:17.0557431Z ./receiving/utility-source-records-68094585a1c2/browser/fixture/report/report.html
+2026-10-08T20:03:17.0557841Z ./receiving/utility-source-records-68094585a1c2/browser/fixture/report/flags.csv
+2026-10-08T20:03:17.0558257Z ./receiving/utility-source-records-68094585a1c2/browser/fixture/report/summary.json
+2026-10-08T20:03:17.0558663Z ./receiving/utility-source-records-68094585a1c2/browser/fixture/selected.csv
+2026-10-08T20:03:17.0559062Z ./receiving/utility-source-records-68094585a1c2/browser/source-records-narrow.png
+2026-10-08T20:03:17.0559457Z ./receiving/utility-source-records-68094585a1c2/browser/browser-stderr.log
+2026-10-08T20:03:17.0559837Z ./receiving/utility-source-records-68094585a1c2/browser/empty-current.csv
+2026-10-08T20:03:17.0560229Z ./receiving/utility-source-records-68094585a1c2/browser/browser-receipt.json
+2026-10-08T20:03:17.0560617Z ./receiving/utility-source-records-68094585a1c2/browser/native-children.json
+2026-10-08T20:03:17.0560988Z ./receiving/utility-source-records-68094585a1c2/browser/reconciled.csv
+2026-10-08T20:03:17.0561378Z ./receiving/utility-source-records-68094585a1c2/browser/narrow-current-editor.png
+2026-10-08T20:03:17.0561755Z ./receiving/utility-source-records-68094585a1c2/browser/downloads/
+2026-10-08T20:03:17.0562148Z ./receiving/utility-source-records-68094585a1c2/browser/downloads/06-source-D.json
+2026-10-08T20:03:17.0562599Z ./receiving/utility-source-records-68094585a1c2/browser/downloads/03-source-restored.csv
+2026-10-08T20:03:17.0563044Z ./receiving/utility-source-records-68094585a1c2/browser/downloads/05-source-A.json
+2026-10-08T20:03:17.0563492Z ./receiving/utility-source-records-68094585a1c2/browser/downloads/02-corrected-review.csv
+2026-10-08T20:03:17.0564044Z ./receiving/utility-source-records-68094585a1c2/browser/downloads/01-filtered-edits.csv
+2026-10-08T20:03:17.0564492Z ./receiving/utility-source-records-68094585a1c2/browser/downloads/04-empty-current.csv
+2026-10-08T20:03:17.0564914Z ./receiving/utility-source-records-68094585a1c2/browser/desktop-initial.png
+2026-10-08T20:03:17.0565328Z ./receiving/utility-source-records-68094585a1c2/browser/source-records-desktop.png
+2026-10-08T20:03:17.0565728Z ./receiving/utility-source-records-68094585a1c2/browser/source-fixture/
+2026-10-08T20:03:17.0566150Z ./receiving/utility-source-records-68094585a1c2/browser/source-fixture/source-fixture.json
+2026-10-08T20:03:17.0566604Z ./receiving/utility-source-records-68094585a1c2/browser/source-fixture/fixture.json
+2026-10-08T20:03:17.0567041Z ./receiving/utility-source-records-68094585a1c2/browser/source-fixture/original.csv
+2026-10-08T20:03:17.0567240Z ./receiving/utility-source-records-68094585a1c2/browser/source-fixture/source-selected.csv
+2026-10-08T20:03:17.0567412Z ./receiving/utility-source-records-68094585a1c2/browser/source-fixture/data/
+2026-10-08T20:03:17.0567595Z ./receiving/utility-source-records-68094585a1c2/browser/source-fixture/data/bills.csv
+2026-10-08T20:03:17.0567797Z ./receiving/utility-source-records-68094585a1c2/browser/source-fixture/data/expected.json
+2026-10-08T20:03:17.0568093Z ./receiving/utility-source-records-68094585a1c2/browser/source-fixture/data/occupancy.csv
+2026-10-08T20:03:17.0568285Z ./receiving/utility-source-records-68094585a1c2/browser/source-fixture/data/accounts.csv
+2026-10-08T20:03:17.0568480Z ./receiving/utility-source-records-68094585a1c2/browser/source-fixture/data/payments.csv
+2026-10-08T20:03:17.0568695Z ./receiving/utility-source-records-68094585a1c2/browser/source-fixture/native-evidence-A.json
+2026-10-08T20:03:17.0568904Z ./receiving/utility-source-records-68094585a1c2/browser/source-fixture/native-evidence-D.json
+2026-10-08T20:03:17.0569069Z ./receiving/utility-source-records-68094585a1c2/browser/source-fixture/report/
+2026-10-08T20:03:17.0569389Z ./receiving/utility-source-records-68094585a1c2/browser/source-fixture/report/payment_queue.csv
+2026-10-08T20:03:17.0569585Z ./receiving/utility-source-records-68094585a1c2/browser/source-fixture/report/audit.jsonl
+2026-10-08T20:03:17.0569824Z ./receiving/utility-source-records-68094585a1c2/browser/source-fixture/report/exceptions.csv
+2026-10-08T20:03:17.0570019Z ./receiving/utility-source-records-68094585a1c2/browser/source-fixture/report/report.html
+2026-10-08T20:03:17.0570207Z ./receiving/utility-source-records-68094585a1c2/browser/source-fixture/report/flags.csv
+2026-10-08T20:03:17.0570409Z ./receiving/utility-source-records-68094585a1c2/browser/source-fixture/report/summary.json
+2026-10-08T20:03:17.0570593Z ./receiving/utility-source-records-68094585a1c2/browser/source-fixture/selected.csv
+2026-10-08T20:03:17.0570712Z ./receiving/utility-source-records-68094585a1c2/baseline/
+2026-10-08T20:03:17.0570897Z ./receiving/utility-source-records-68094585a1c2/baseline/behavior-driver.py.source
+2026-10-08T20:03:17.0571034Z ./receiving/utility-source-records-68094585a1c2/baseline/native/
+2026-10-08T20:03:17.0571222Z ./receiving/utility-source-records-68094585a1c2/baseline/native/behavior.stdout.log
+2026-10-08T20:03:17.0571401Z ./receiving/utility-source-records-68094585a1c2/baseline/native/behavior.stderr.log
+2026-10-08T20:03:17.0571554Z ./receiving/utility-source-records-68094585a1c2/baseline/native/fixture/
+2026-10-08T20:03:17.0571739Z ./receiving/utility-source-records-68094585a1c2/baseline/native/fixture/fixture.json
+2026-10-08T20:03:17.0571915Z ./receiving/utility-source-records-68094585a1c2/baseline/native/fixture/original.csv
+2026-10-08T20:03:17.0572086Z ./receiving/utility-source-records-68094585a1c2/baseline/native/fixture/data/
+2026-10-08T20:03:17.0572269Z ./receiving/utility-source-records-68094585a1c2/baseline/native/fixture/data/bills.csv
+2026-10-08T20:03:17.0572469Z ./receiving/utility-source-records-68094585a1c2/baseline/native/fixture/data/expected.json
+2026-10-08T20:03:17.0572665Z ./receiving/utility-source-records-68094585a1c2/baseline/native/fixture/data/occupancy.csv
+2026-10-08T20:03:17.0572854Z ./receiving/utility-source-records-68094585a1c2/baseline/native/fixture/data/accounts.csv
+2026-10-08T20:03:17.0573046Z ./receiving/utility-source-records-68094585a1c2/baseline/native/fixture/data/payments.csv
+2026-10-08T20:03:17.0573217Z ./receiving/utility-source-records-68094585a1c2/baseline/native/fixture/report/
+2026-10-08T20:03:17.0573440Z ./receiving/utility-source-records-68094585a1c2/baseline/native/fixture/report/payment_queue.csv
+2026-10-08T20:03:17.0573637Z ./receiving/utility-source-records-68094585a1c2/baseline/native/fixture/report/audit.jsonl
+2026-10-08T20:03:17.0573933Z ./receiving/utility-source-records-68094585a1c2/baseline/native/fixture/report/exceptions.csv
+2026-10-08T20:03:17.0574136Z ./receiving/utility-source-records-68094585a1c2/baseline/native/fixture/report/report.html
+2026-10-08T20:03:17.0574324Z ./receiving/utility-source-records-68094585a1c2/baseline/native/fixture/report/flags.csv
+2026-10-08T20:03:17.0574532Z ./receiving/utility-source-records-68094585a1c2/baseline/native/fixture/report/summary.json
+2026-10-08T20:03:17.0574720Z ./receiving/utility-source-records-68094585a1c2/baseline/native/fixture/selected.csv
+2026-10-08T20:03:17.0575006Z ./receiving/utility-source-records-68094585a1c2/baseline/native/behavior-receipt.json
+2026-10-08T20:03:17.0575203Z ./receiving/utility-source-records-68094585a1c2/baseline/native/native-suite.stdout.log
+2026-10-08T20:03:17.0575387Z ./receiving/utility-source-records-68094585a1c2/baseline/native/native-suite.stderr.log
+2026-10-08T20:03:17.0575568Z ./receiving/utility-source-records-68094585a1c2/baseline/native/source-pins.json
+2026-10-08T20:03:17.0575742Z ./receiving/utility-source-records-68094585a1c2/baseline/native/native-suite.json
+2026-10-08T20:03:17.0575926Z ./receiving/utility-source-records-68094585a1c2/baseline/native/native-evidence.json
+2026-10-08T20:03:17.0576047Z ./receiving/utility-source-records-68094585a1c2/recovery/
+2026-10-08T20:03:17.0576305Z ./receiving/utility-source-records-68094585a1c2/recovery/source-custody.json
+2026-10-08T20:03:17.0576453Z ./receiving/utility-source-records-68094585a1c2/recovery/stdout.log
+2026-10-08T20:03:17.0576651Z ./receiving/utility-source-records-68094585a1c2/recovery/recover-source-custody.mjs.source
+2026-10-08T20:03:17.0576794Z ./receiving/utility-source-records-68094585a1c2/recovery/stderr.log
+2026-10-08T20:03:17.0576903Z ./receiving/utility-source-records-68094585a1c2/draft/
+2026-10-08T20:03:17.0577103Z ./receiving/utility-source-records-68094585a1c2/draft/PUBLIC-CONTRACT.initial-draft.json
+2026-10-08T20:03:17.0577266Z ./receiving/utility-source-records-68094585a1c2/PUBLICATION-ALLOWLIST.txt
+2026-10-08T20:03:17.0577412Z ./receiving/utility-source-records-68094585a1c2/PUBLIC-CONTRACT.json
+2026-10-08T20:03:17.0577530Z ./receiving/utility-source-records-68094585a1c2/README.md
+2026-10-08T20:03:17.0577668Z ./receiving/utility-source-records-68094585a1c2/AUTHOR-RECEIPT.json
+2026-10-08T20:03:17.0577809Z ./receiving/utility-source-records-68094585a1c2/candidate-v2/
+2026-10-08T20:03:17.0577952Z ./receiving/utility-source-records-68094585a1c2/candidate-v2/native/
+2026-10-08T20:03:17.0578135Z ./receiving/utility-source-records-68094585a1c2/candidate-v2/native/syntax.stderr.log
+2026-10-08T20:03:17.0578322Z ./receiving/utility-source-records-68094585a1c2/candidate-v2/native/native.stderr.log
+2026-10-08T20:03:17.0578509Z ./receiving/utility-source-records-68094585a1c2/candidate-v2/native/optimized.stdout.log
+2026-10-08T20:03:17.0578700Z ./receiving/utility-source-records-68094585a1c2/candidate-v2/native/optimized.stderr.log
+2026-10-08T20:03:17.0578877Z ./receiving/utility-source-records-68094585a1c2/candidate-v2/native/source-pins.json
+2026-10-08T20:03:17.0579063Z ./receiving/utility-source-records-68094585a1c2/candidate-v2/native/browser-exit.json
+2026-10-08T20:03:17.0579252Z ./receiving/utility-source-records-68094585a1c2/candidate-v2/native/browser.stderr.log
+2026-10-08T20:03:17.0579431Z ./receiving/utility-source-records-68094585a1c2/candidate-v2/native/native.stdout.log
+2026-10-08T20:03:17.0579620Z ./receiving/utility-source-records-68094585a1c2/candidate-v2/native/native-receipt.json
+2026-10-08T20:03:17.0579794Z ./receiving/utility-source-records-68094585a1c2/candidate-v2/native/syntax.stdout.log
+2026-10-08T20:03:17.0579983Z ./receiving/utility-source-records-68094585a1c2/candidate-v2/native/browser.stdout.log
+2026-10-08T20:03:17.0580158Z ./receiving/utility-source-records-68094585a1c2/candidate-v2/source-overlay.json
+2026-10-08T20:03:17.0580331Z ./receiving/utility-source-records-68094585a1c2/UNACCEPTED-MAC-ATTEMPTS.json
+2026-10-08T20:03:17.0580489Z ./receiving/utility-source-records-68094585a1c2/PUBLICATION-MANIFEST.json
+2026-10-08T20:03:17.0580599Z ./receiving/freight-review-compare-dc13ebf4687f/
+2026-10-08T20:03:17.0580736Z ./receiving/freight-review-compare-dc13ebf4687f/independent/
+2026-10-08T20:03:17.0580914Z ./receiving/freight-review-compare-dc13ebf4687f/independent/run-observations.json
+2026-10-08T20:03:17.0581074Z ./receiving/freight-review-compare-dc13ebf4687f/independent/REVIEW.md
+2026-10-08T20:03:17.0581270Z ./receiving/freight-review-compare-dc13ebf4687f/independent/author-native-readback.json
+2026-10-08T20:03:17.0581413Z ./receiving/freight-review-compare-dc13ebf4687f/independent/rejected/
+2026-10-08T20:03:17.0581709Z ./receiving/freight-review-compare-dc13ebf4687f/independent/rejected/reviewer-v1-to-v2.patch
+2026-10-08T20:03:17.0581920Z ./receiving/freight-review-compare-dc13ebf4687f/independent/rejected/reviewer-v1-output.txt
+2026-10-08T20:03:17.0582081Z ./receiving/freight-review-compare-dc13ebf4687f/independent/receiving/
+2026-10-08T20:03:17.0582271Z ./receiving/freight-review-compare-dc13ebf4687f/independent/receiving/receipt.json
+2026-10-08T20:03:17.0582442Z ./receiving/freight-review-compare-dc13ebf4687f/independent/receiving/input.json
+2026-10-08T20:03:17.0582672Z ./receiving/freight-review-compare-dc13ebf4687f/independent/receiving/review_comparison.py.source
+2026-10-08T20:03:17.0582931Z ./receiving/freight-review-compare-dc13ebf4687f/independent/PUBLICATION-ALLOWLIST.txt
+2026-10-08T20:03:17.0583081Z ./receiving/freight-review-compare-dc13ebf4687f/independent/oracle/
+2026-10-08T20:03:17.0583298Z ./receiving/freight-review-compare-dc13ebf4687f/independent/oracle/freeze_native_oracle.py.source
+2026-10-08T20:03:17.0583474Z ./receiving/freight-review-compare-dc13ebf4687f/independent/oracle/input.json
+2026-10-08T20:03:17.0583649Z ./receiving/freight-review-compare-dc13ebf4687f/independent/source-review.json
+2026-10-08T20:03:17.0583917Z ./receiving/freight-review-compare-dc13ebf4687f/independent/PUBLICATION-MANIFEST.json
+2026-10-08T20:03:17.0584040Z ./receiving/freight-review-compare-dc13ebf4687f/author/
+2026-10-08T20:03:17.0584183Z ./receiving/freight-review-compare-dc13ebf4687f/author/SOURCE.json
+2026-10-08T20:03:17.0584358Z ./receiving/freight-review-compare-dc13ebf4687f/author/candidate-manifest.json
+2026-10-08T20:03:17.0584496Z ./receiving/freight-review-compare-dc13ebf4687f/author/baseline/
+2026-10-08T20:03:17.0584676Z ./receiving/freight-review-compare-dc13ebf4687f/author/baseline/handoff.py.source
+2026-10-08T20:03:17.0584863Z ./receiving/freight-review-compare-dc13ebf4687f/author/baseline/HARDENING.md.source
+2026-10-08T20:03:17.0585042Z ./receiving/freight-review-compare-dc13ebf4687f/author/baseline/__init__.py.source
+2026-10-08T20:03:17.0585223Z ./receiving/freight-review-compare-dc13ebf4687f/author/baseline/tests.yml.source
+2026-10-08T20:03:17.0585392Z ./receiving/freight-review-compare-dc13ebf4687f/author/baseline/README.md.source
+2026-10-08T20:03:17.0585529Z ./receiving/freight-review-compare-dc13ebf4687f/author/before/
+2026-10-08T20:03:17.0585722Z ./receiving/freight-review-compare-dc13ebf4687f/author/before/extension-receipt.json
+2026-10-08T20:03:17.0585903Z ./receiving/freight-review-compare-dc13ebf4687f/author/before/original-receipt.json
+2026-10-08T20:03:17.0586061Z ./receiving/freight-review-compare-dc13ebf4687f/author/before/rejected/
+2026-10-08T20:03:17.0586295Z ./receiving/freight-review-compare-dc13ebf4687f/author/before/rejected/structured-carrier-note.json
+2026-10-08T20:03:17.0586504Z ./receiving/freight-review-compare-dc13ebf4687f/author/before/rejected/python-output.txt
+2026-10-08T20:03:17.0586741Z ./receiving/freight-review-compare-dc13ebf4687f/author/before/rejected/extension-driver-v1.py.source
+2026-10-08T20:03:17.0586934Z ./receiving/freight-review-compare-dc13ebf4687f/author/before/original-driver.py.source
+2026-10-08T20:03:17.0587140Z ./receiving/freight-review-compare-dc13ebf4687f/author/before/extension-driver.py.source
+2026-10-08T20:03:17.0587333Z ./receiving/freight-review-compare-dc13ebf4687f/author/before/input-output-contract.json
+2026-10-08T20:03:17.0587506Z ./receiving/freight-review-compare-dc13ebf4687f/author/before/frozen-oracle.json
+2026-10-08T20:03:17.0587670Z ./receiving/freight-review-compare-dc13ebf4687f/author/source-carrier.json
+2026-10-08T20:03:17.0587844Z ./receiving/freight-review-compare-dc13ebf4687f/author/PUBLICATION-ALLOWLIST.txt
+2026-10-08T20:03:17.0587998Z ./receiving/freight-review-compare-dc13ebf4687f/author/qualification/
+2026-10-08T20:03:17.0588191Z ./receiving/freight-review-compare-dc13ebf4687f/author/qualification/pure-optimized.json
+2026-10-08T20:03:17.0588404Z ./receiving/freight-review-compare-dc13ebf4687f/author/qualification/main-model-normal.json
+2026-10-08T20:03:17.0588699Z ./receiving/freight-review-compare-dc13ebf4687f/author/qualification/materialization.json
+2026-10-08T20:03:17.0588892Z ./receiving/freight-review-compare-dc13ebf4687f/author/qualification/pure-normal.json
+2026-10-08T20:03:17.0589141Z ./receiving/freight-review-compare-dc13ebf4687f/author/qualification/native-filesystem-driver.py.source
+2026-10-08T20:03:17.0589357Z ./receiving/freight-review-compare-dc13ebf4687f/author/qualification/stock-module-receipt.json
+2026-10-08T20:03:17.0589587Z ./receiving/freight-review-compare-dc13ebf4687f/author/qualification/stock-module-driver.py.source
+2026-10-08T20:03:17.0589822Z ./receiving/freight-review-compare-dc13ebf4687f/author/qualification/native-filesystem-optimized.json
+2026-10-08T20:03:17.0590142Z ./receiving/freight-review-compare-dc13ebf4687f/author/qualification/main-model-optimized.json
+2026-10-08T20:03:17.0590336Z ./receiving/freight-review-compare-dc13ebf4687f/author/qualification/comparison.html
+2026-10-08T20:03:17.0590563Z ./receiving/freight-review-compare-dc13ebf4687f/author/qualification/native-filesystem-normal.json
+2026-10-08T20:03:17.0590707Z ./receiving/freight-review-compare-dc13ebf4687f/author/README.md
+2026-10-08T20:03:17.0590867Z ./receiving/freight-review-compare-dc13ebf4687f/author/AUTHOR-RECEIPT.json
+2026-10-08T20:03:17.0591052Z ./receiving/freight-review-compare-dc13ebf4687f/author/PUBLICATION-MANIFEST.json
+2026-10-08T20:03:17.0591212Z ./receiving/freight-review-compare-dc13ebf4687f/PUBLICATION-ALLOWLIST.txt
+2026-10-08T20:03:17.0591366Z ./receiving/freight-review-compare-dc13ebf4687f/COPY-MANIFEST.json
+2026-10-08T20:03:17.0591490Z ./receiving/freight-review-compare-dc13ebf4687f/README.md
+2026-10-08T20:03:17.0591557Z ./index.html
+2026-10-08T20:03:17.0591625Z ./pt/
+2026-10-08T20:03:17.0591692Z ./pt/audit.jsonl
+2026-10-08T20:03:17.0591763Z ./pt/ledger.csv
+2026-10-08T20:03:17.0591828Z ./pt/summary.json
+2026-10-08T20:03:17.0591901Z ./pt/digest.html
+2026-10-08T20:03:17.0591973Z ./pt/worklist.csv
+2026-10-08T20:03:17.0592035Z ./demos/
+2026-10-08T20:03:17.0592119Z ./demos/freight-whatif/
+2026-10-08T20:03:17.0592201Z ./demos/freight-whatif/model.mjs
+2026-10-08T20:03:17.0592286Z ./demos/freight-whatif/styles.css
+2026-10-08T20:03:17.0592360Z ./demos/freight-whatif/index.html
+2026-10-08T20:03:17.0592444Z ./demos/freight-whatif/data.mjs
+2026-10-08T20:03:17.0592521Z ./demos/freight-whatif/app.mjs
+2026-10-08T20:03:17.0592600Z ./demos/ptauth-whatif/
+2026-10-08T20:03:17.0592684Z ./demos/ptauth-whatif/index.html
+2026-10-08T20:03:17.0592747Z ./freight/
+2026-10-08T20:03:17.0592820Z ./freight/fines.csv
+2026-10-08T20:03:17.0592894Z ./freight/detention_claims.csv
+2026-10-08T20:03:17.0592975Z ./freight/settlement.csv
+2026-10-08T20:03:17.0593043Z ./freight/audit.jsonl
+2026-10-08T20:03:17.0593122Z ./freight/exceptions.csv
+2026-10-08T20:03:17.0593191Z ./freight/summary.json
+2026-10-08T20:03:17.0593266Z ./freight/packets/
+2026-10-08T20:03:17.0593347Z ./freight/packets/LD260928.html
+2026-10-08T20:03:17.0593420Z ./freight/packets/LD260977.html
+2026-10-08T20:03:17.0593499Z ./freight/packets/LD260956.html
+2026-10-08T20:03:17.0593568Z ./freight/packets/LD261033.html
+2026-10-08T20:03:17.0593643Z ./freight/packets/LD260921.html
+2026-10-08T20:03:17.0593794Z ./freight/packets/LD261026.html
+2026-10-08T20:03:17.0593871Z ./freight/packets/LD260949.html
+2026-10-08T20:03:17.0593940Z ./freight/packets/LD260900.html
+2026-10-08T20:03:17.0594016Z ./freight/packets/LD260935.html
+2026-10-08T20:03:17.0594090Z ./freight/packets/LD260914.html
+2026-10-08T20:03:17.0594158Z ./freight/packets/LD261061.html
+2026-10-08T20:03:17.0594233Z ./freight/packets/LD260907.html
+2026-10-08T20:03:17.0594305Z ./freight/packets/LD260991.html
+2026-10-08T20:03:17.0594392Z ./freight/packets/LD261005.html
+2026-10-08T20:03:17.0594463Z ./freight/packets/LD261019.html
+2026-10-08T20:03:17.0594543Z ./freight/invoice_flags.csv
+2026-10-08T20:03:17.0594824Z ##[endgroup]
+2026-10-08T20:03:17.0608998Z ##[end-action id=__actions_upload-pages-artifact.__run;outcome=success;conclusion=success;duration_ms=73]
+2026-10-08T20:03:17.0612816Z ##[start-action display=Archive artifact;id=__actions_upload-pages-artifact.__run_2]
+2026-10-08T20:03:17.0617429Z ##[end-action id=__actions_upload-pages-artifact.__run_2;outcome=skipped;conclusion=skipped;duration_ms=0]
+2026-10-08T20:03:17.0619510Z ##[start-action display=Archive artifact;id=__actions_upload-pages-artifact.__run_3]
+2026-10-08T20:03:17.0622230Z ##[end-action id=__actions_upload-pages-artifact.__run_3;outcome=skipped;conclusion=skipped;duration_ms=0]
+2026-10-08T20:03:17.0623533Z ##[start-action display=Upload artifact;id=__actions_upload-pages-artifact.upload-artifact]
+2026-10-08T20:03:17.0682053Z ##[group]Run actions/upload-artifact@v4
+2026-10-08T20:03:17.0682299Z with:
+2026-10-08T20:03:17.0682388Z   name: github-pages
+2026-10-08T20:03:17.0682486Z   path: /home/runner/work/_temp/artifact.tar
+2026-10-08T20:03:17.0682565Z   retention-days: 1
+2026-10-08T20:03:17.0682643Z   if-no-files-found: error
+2026-10-08T20:03:17.0682721Z   compression-level: 6
+2026-10-08T20:03:17.0682798Z   overwrite: false
+2026-10-08T20:03:17.0682875Z   include-hidden-files: false
+2026-10-08T20:03:17.0682948Z ##[endgroup]
+2026-10-08T20:03:17.2020187Z (node:2274) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-08T20:03:17.2020881Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-08T20:03:17.2057351Z With the provided path, there will be 1 file uploaded
+2026-10-08T20:03:17.2061949Z Artifact name is valid!
+2026-10-08T20:03:17.2063104Z Root directory input is valid!
+2026-10-08T20:03:17.5504028Z Beginning upload of artifact content to blob storage
+2026-10-08T20:03:17.8493504Z (node:2274) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-10-08T20:03:18.5917316Z Uploaded bytes 8388608
+2026-10-08T20:03:18.6798884Z Uploaded bytes 10146704
+2026-10-08T20:03:18.7408779Z Finished uploading artifact content to blob storage!
+2026-10-08T20:03:18.7409543Z SHA256 digest of uploaded artifact zip is e0e34bebb8e043f67236bacc0b91eea4ea0998e0cc1f401a22a2c70ca1af46d3
+2026-10-08T20:03:18.7410965Z Finalizing artifact upload
+2026-10-08T20:03:19.0048970Z Artifact github-pages.zip successfully finalized. Artifact ID 11576021244
+2026-10-08T20:03:19.0049796Z Artifact github-pages has been successfully uploaded! Final size is 10146704 bytes. Artifact ID is 11576021244
+2026-10-08T20:03:19.0054315Z Artifact download URL: https://github.com/Jacob-Met/workflow-checks/actions/runs/37836539684/artifacts/11576021244
+2026-10-08T20:03:19.0154420Z ##[end-action id=__actions_upload-pages-artifact.upload-artifact;outcome=success;conclusion=success;duration_ms=1953]
+2026-10-08T20:03:19.0252746Z Post job cleanup.
+2026-10-08T20:03:19.0900852Z [command]/usr/bin/git version
+2026-10-08T20:03:19.0934890Z git version 2.55.0
+2026-10-08T20:03:19.0968455Z Temporarily overriding HOME='/home/runner/work/_temp/eb9a2c4d-bde9-4f0b-a901-cf9e36acb2d9' before making global git config changes
+2026-10-08T20:03:19.0969258Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-08T20:03:19.0973048Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/workflow-checks/workflow-checks
+2026-10-08T20:03:19.1001739Z Removing SSH command configuration
+2026-10-08T20:03:19.1006992Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-08T20:03:19.1036360Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-08T20:03:19.1243216Z Removing HTTP extra header
+2026-10-08T20:03:19.1248260Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-08T20:03:19.1278280Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-08T20:03:19.1487382Z Removing includeIf entries pointing to credentials config files
+2026-10-08T20:03:19.1493550Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-08T20:03:19.1519965Z includeif.gitdir:/home/runner/work/workflow-checks/workflow-checks/.git.path
+2026-10-08T20:03:19.1520910Z includeif.gitdir:/home/runner/work/workflow-checks/workflow-checks/.git/worktrees/*.path
+2026-10-08T20:03:19.1521800Z includeif.gitdir:/github/workspace/.git.path
+2026-10-08T20:03:19.1522826Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-08T20:03:19.1526580Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/workflow-checks/workflow-checks/.git.path
+2026-10-08T20:03:19.1549779Z /home/runner/work/_temp/git-credentials-21f0385a-778a-44ee-b288-a955a085016d.config
+2026-10-08T20:03:19.1558755Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/workflow-checks/workflow-checks/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-21f0385a\-778a\-44ee\-b288\-a955a085016d\.config
+2026-10-08T20:03:19.1596808Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/workflow-checks/workflow-checks/.git/worktrees/*.path
+2026-10-08T20:03:19.1622839Z /home/runner/work/_temp/git-credentials-21f0385a-778a-44ee-b288-a955a085016d.config
+2026-10-08T20:03:19.1630907Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/workflow-checks/workflow-checks/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-21f0385a\-778a\-44ee\-b288\-a955a085016d\.config
+2026-10-08T20:03:19.1665048Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-10-08T20:03:19.1687813Z /github/runner_temp/git-credentials-21f0385a-778a-44ee-b288-a955a085016d.config
+2026-10-08T20:03:19.1693321Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-21f0385a\-778a\-44ee\-b288\-a955a085016d\.config
+2026-10-08T20:03:19.4836030Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-08T20:03:19.4862071Z /github/runner_temp/git-credentials-21f0385a-778a-44ee-b288-a955a085016d.config
+2026-10-08T20:03:19.4867789Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-21f0385a\-778a\-44ee\-b288\-a955a085016d\.config
+2026-10-08T20:03:19.4900246Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-08T20:03:19.5087663Z Removing credentials config '/home/runner/work/_temp/git-credentials-21f0385a-778a-44ee-b288-a955a085016d.config'
+2026-10-08T20:03:19.5209820Z Cleaning up orphan processes
+2026-10-08T20:03:19.5432835Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
