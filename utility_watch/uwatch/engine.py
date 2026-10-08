@@ -187,6 +187,7 @@ def check(accounts, bills, occ, pays, as_of: date, eval_from: date, rules=None):
     for b in sorted(bills, key=lambda x: (x.account_no, x.ps, x.received)):
         by_acct.setdefault(b.account_no, []).append(b)
     last_full = date(as_of.year, as_of.month, 1) - timedelta(days=1)
+    # Exported bill IDs are local to their account.
     dup_ids = set()
     duplicate_hold_ids = set()
 
@@ -218,8 +219,8 @@ def check(accounts, bills, occ, pays, as_of: date, eval_from: date, rules=None):
             first_by_period = seen_period.get(period_key)
             first = first_by_invoice or first_by_period
             if first is not None:
-                dup_ids.add(b.bill_id)
-                duplicate_hold_ids.update((first.bill_id, b.bill_id))
+                dup_ids.add((acct, b.bill_id))
+                duplicate_hold_ids.update(((acct, first.bill_id), (acct, b.bill_id)))
                 if in_eval:
                     flag(b, acct, "DUPLICATE_BILL",
                          f"same {'invoice number' if first_by_invoice else 'period and amount'} as {first.bill_id}"
@@ -280,7 +281,7 @@ def check(accounts, bills, occ, pays, as_of: date, eval_from: date, rules=None):
                 continue
             # same month last year baseline
             ly_all = [x for x in bl if x.month == date(b.month.year - 1, b.month.month, 1)
-                      and x.bill_id not in dup_ids]
+                      and (x.account_no, x.bill_id) not in dup_ids]
             ly = [x for x in ly_all if _unit_key(x.unit) == _unit_key(b.unit)]
             if ly_all and not ly:
                 add_exception(b, "USAGE_UNIT_CHANGED",
@@ -297,7 +298,7 @@ def check(accounts, bills, occ, pays, as_of: date, eval_from: date, rules=None):
                          f"{b.per_day:,.1f} {b.unit}/day vs {base:,.1f} same month last year ({comparison})",
                          [f"bills.csv:{b.row}", f"bills.csv:{ly[0].row}"])
             # naive comparison, reported only
-            tr = [x for x in bl if x.bill_id not in dup_ids and _unit_key(x.unit) == _unit_key(b.unit)
+            tr = [x for x in bl if (x.account_no, x.bill_id) not in dup_ids and _unit_key(x.unit) == _unit_key(b.unit)
                   and _prev_month(b.month) >= x.month >= _prev_month(_prev_month(_prev_month(b.month)))]
             if len(tr) == 3:
                 avg = sum(x.per_day for x in tr) / 3
@@ -306,7 +307,7 @@ def check(accounts, bills, occ, pays, as_of: date, eval_from: date, rules=None):
             # effective rate vs trailing-12 median
             if b.amount >= rules["rate_min_amount"] and b.usage > 0:
                 hist = [x.amount / x.usage for x in bl if x.usage > 0 and x.amount > 0
-                        and x.bill_id not in dup_ids
+                        and (x.account_no, x.bill_id) not in dup_ids
                         and _unit_key(x.unit) == _unit_key(b.unit)
                         and b.month > x.month >= date(b.month.year - 1, b.month.month, 1)]
                 if len(hist) >= 6:
@@ -334,10 +335,10 @@ def check(accounts, bills, occ, pays, as_of: date, eval_from: date, rules=None):
         if pdate <= as_of:
             paid.setdefault((acct, inv), []).append((amt, pdate, row))
     queue = []
-    flagged = {f.key for f in flags}
-    excepted = {e["key"] for e in exceptions}
+    flagged = {(f.account_no, f.key) for f in flags}
+    excepted = {(e["account_no"], e["key"]) for e in exceptions}
     for b in bills:
-        if b.bill_id in duplicate_hold_ids or b.account_no not in accounts or b.month < eval_from:
+        if (b.account_no, b.bill_id) in duplicate_hold_ids or b.account_no not in accounts or b.month < eval_from:
             continue
         owed = round(b.amount + b.late_fee + b.prior_balance, 2)
         if not b.invoice or b.amount < 0 or owed <= 0:
@@ -353,7 +354,7 @@ def check(accounts, bills, occ, pays, as_of: date, eval_from: date, rules=None):
             if b.due < as_of:
                 flag(b, b.account_no, "UNPAID_PAST_DUE", f"due {b.due}, no payment on file",
                      [f"bills.csv:{b.row}"])
-            elif b.bill_id not in flagged and b.bill_id not in excepted:
+            elif (b.account_no, b.bill_id) not in flagged and (b.account_no, b.bill_id) not in excepted:
                 a = accounts.get(b.account_no, {})
                 queue.append({"bill_id": b.bill_id, "account_no": b.account_no, "property": a.get("property"),
                               "utility": a.get("utility"), "vendor": a.get("vendor"), "invoice": b.invoice,

@@ -1,0 +1,930 @@
+{
+  "schema": "utility-account-identity-independent.v1",
+  "python": "3.13.7 (v3.13.7:bcee1c32211, Aug 14 2025, 19:10:51) [Clang 16.0.0 (clang-1600.0.26.6)]",
+  "carrier_sha256": "bf8f2f8268a7323f215fedb918d699506c809b2e4f8af6622d90932e84577246",
+  "baseline_engine_sha256": "48c968584d0494ee5fb0538fc7d4c685c2cc3128a45c33f57c2079234cdb7775",
+  "candidate_engine_sha256": "ff0dc3a473235c55639e4373e3b5a4c786a0cd9ae7badd2be9113f39a4efd3d0",
+  "sources_unchanged": true,
+  "source_files": {
+    "baseline": {
+      "utility_watch/HARDENING.md": "bff8d8594cc7554742fb4d9d12826e3babef47d66787f892794d874dfa5e77c0",
+      "utility_watch/README.md": "3a2d5a7295947dbca173f82e548832d42622de27d5808275cd265b37c58774d1",
+      "utility_watch/tests/test_numeric_csv.py": "d6128ec39491994185f9aabfe374caeb80ca13cbdbdc1fabe68b3eba567b65a2",
+      "utility_watch/tests/test_review.py": "f0c645af21d4f9af0539697c3e2dca26a197fc1284b943cd12d42e9500099155",
+      "utility_watch/tests/test_uwatch.py": "0638976cdfc928d8bd3980fb24fe18c24ef814c7f8c5e7612c8c02fb2b8f339a",
+      "utility_watch/uwatch/__init__.py": "a0332cb0878fcdfd02d1651f9a46c299ca0279996c6e5723d49311228c597a57",
+      "utility_watch/uwatch/__main__.py": "26c55ee4277631c49b2312533d7514a815ec2c3de08f48b0a9dea8946d8f8933",
+      "utility_watch/uwatch/cli.py": "0f8e6947baaadccc86c1f7d8cd0dd542b88d81b9b1990cc3aab7cbfcf3beb08d",
+      "utility_watch/uwatch/engine.py": "48c968584d0494ee5fb0538fc7d4c685c2cc3128a45c33f57c2079234cdb7775",
+      "utility_watch/uwatch/report.py": "dc43c4fbbef72204a9dc9c5d7e4d3883900e96daf26c725f10fe22d4721540db",
+      "utility_watch/uwatch/review.py": "f9f730ca45140436704d9823eafcfb58fb3922c5d0bf93a21a63f31347c947de"
+    },
+    "candidate": {
+      "utility_watch/HARDENING.md": "bff8d8594cc7554742fb4d9d12826e3babef47d66787f892794d874dfa5e77c0",
+      "utility_watch/README.md": "3a2d5a7295947dbca173f82e548832d42622de27d5808275cd265b37c58774d1",
+      "utility_watch/tests/test_numeric_csv.py": "d6128ec39491994185f9aabfe374caeb80ca13cbdbdc1fabe68b3eba567b65a2",
+      "utility_watch/tests/test_review.py": "f0c645af21d4f9af0539697c3e2dca26a197fc1284b943cd12d42e9500099155",
+      "utility_watch/tests/test_uwatch.py": "0638976cdfc928d8bd3980fb24fe18c24ef814c7f8c5e7612c8c02fb2b8f339a",
+      "utility_watch/uwatch/__init__.py": "a0332cb0878fcdfd02d1651f9a46c299ca0279996c6e5723d49311228c597a57",
+      "utility_watch/uwatch/__main__.py": "26c55ee4277631c49b2312533d7514a815ec2c3de08f48b0a9dea8946d8f8933",
+      "utility_watch/uwatch/cli.py": "0f8e6947baaadccc86c1f7d8cd0dd542b88d81b9b1990cc3aab7cbfcf3beb08d",
+      "utility_watch/uwatch/engine.py": "ff0dc3a473235c55639e4373e3b5a4c786a0cd9ae7badd2be9113f39a4efd3d0",
+      "utility_watch/uwatch/report.py": "dc43c4fbbef72204a9dc9c5d7e4d3883900e96daf26c725f10fe22d4721540db",
+      "utility_watch/uwatch/review.py": "f9f730ca45140436704d9823eafcfb58fb3922c5d0bf93a21a63f31347c947de"
+    }
+  },
+  "clean_reference_all_six_outputs_equal": true,
+  "results": [
+    {
+      "variant": "baseline",
+      "name": "queue-flag",
+      "passed": false,
+      "error": "AssertionError: unrelated account changed clean Target result",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/receive_account_identity.py\", line 90, in observe\n    detail = fn()\n  File \"/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/receive_account_identity.py\", line 160, in check_queue\n    require(actual_projection == expected_projection, \"unrelated account changed clean Target result\")\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/receive_account_identity.py\", line 28, in require\n    raise AssertionError(message)\nAssertionError: unrelated account changed clean Target result\n"
+    },
+    {
+      "variant": "baseline",
+      "name": "queue-exception",
+      "passed": false,
+      "error": "AssertionError: unrelated account changed clean Target result",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/receive_account_identity.py\", line 90, in observe\n    detail = fn()\n  File \"/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/receive_account_identity.py\", line 160, in check_queue\n    require(actual_projection == expected_projection, \"unrelated account changed clean Target result\")\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/receive_account_identity.py\", line 28, in require\n    raise AssertionError(message)\nAssertionError: unrelated account changed clean Target result\n"
+    },
+    {
+      "variant": "baseline",
+      "name": "queue-unknown",
+      "passed": false,
+      "error": "AssertionError: unrelated account changed clean Target result",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/receive_account_identity.py\", line 90, in observe\n    detail = fn()\n  File \"/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/receive_account_identity.py\", line 160, in check_queue\n    require(actual_projection == expected_projection, \"unrelated account changed clean Target result\")\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/receive_account_identity.py\", line 28, in require\n    raise AssertionError(message)\nAssertionError: unrelated account changed clean Target result\n"
+    },
+    {
+      "variant": "baseline",
+      "name": "queue-duplicate-first",
+      "passed": false,
+      "error": "AssertionError: unrelated account changed clean Target result",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/receive_account_identity.py\", line 90, in observe\n    detail = fn()\n  File \"/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/receive_account_identity.py\", line 160, in check_queue\n    require(actual_projection == expected_projection, \"unrelated account changed clean Target result\")\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/receive_account_identity.py\", line 28, in require\n    raise AssertionError(message)\nAssertionError: unrelated account changed clean Target result\n"
+    },
+    {
+      "variant": "baseline",
+      "name": "queue-duplicate-second",
+      "passed": false,
+      "error": "AssertionError: unrelated account changed clean Target result",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/receive_account_identity.py\", line 90, in observe\n    detail = fn()\n  File \"/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/receive_account_identity.py\", line 160, in check_queue\n    require(actual_projection == expected_projection, \"unrelated account changed clean Target result\")\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/receive_account_identity.py\", line 28, in require\n    raise AssertionError(message)\nAssertionError: unrelated account changed clean Target result\n"
+    },
+    {
+      "variant": "baseline",
+      "name": "history-H-PREVIOUS-YEAR-Earlier",
+      "passed": false,
+      "error": "AssertionError: other account's historical duplicate changed Middle baseline/rate/naive result",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/receive_account_identity.py\", line 90, in observe\n    detail = fn()\n  File \"/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/receive_account_identity.py\", line 176, in check_history\n    require(got == expected, \"other account's historical duplicate changed Middle baseline/rate/naive result\")\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/receive_account_identity.py\", line 28, in require\n    raise AssertionError(message)\nAssertionError: other account's historical duplicate changed Middle baseline/rate/naive result\n"
+    },
+    {
+      "variant": "baseline",
+      "name": "history-H-PREVIOUS-YEAR-Zlater",
+      "passed": true,
+      "detail": {
+        "projection_equal": true,
+        "source_output": "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/reports/baseline/history-H-PREVIOUS-YEAR-Zlater"
+      }
+    },
+    {
+      "variant": "baseline",
+      "name": "history-H-7-Earlier",
+      "passed": false,
+      "error": "AssertionError: other account's historical duplicate changed Middle baseline/rate/naive result",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/receive_account_identity.py\", line 90, in observe\n    detail = fn()\n  File \"/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/receive_account_identity.py\", line 176, in check_history\n    require(got == expected, \"other account's historical duplicate changed Middle baseline/rate/naive result\")\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/receive_account_identity.py\", line 28, in require\n    raise AssertionError(message)\nAssertionError: other account's historical duplicate changed Middle baseline/rate/naive result\n"
+    },
+    {
+      "variant": "baseline",
+      "name": "history-H-7-Zlater",
+      "passed": true,
+      "detail": {
+        "projection_equal": true,
+        "source_output": "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/reports/baseline/history-H-7-Zlater"
+      }
+    },
+    {
+      "variant": "baseline",
+      "name": "compound-identity-control",
+      "passed": true,
+      "detail": {
+        "distinct_pairs": [
+          [
+            "North:West",
+            "bill"
+          ],
+          [
+            "North",
+            "West:bill"
+          ]
+        ],
+        "target_queued": 1
+      }
+    },
+    {
+      "variant": "candidate",
+      "name": "queue-flag",
+      "passed": true,
+      "detail": {
+        "target_queued": 1,
+        "target_projection_equal": true,
+        "source_output": "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/reports/candidate/queue-flag"
+      }
+    },
+    {
+      "variant": "candidate",
+      "name": "queue-exception",
+      "passed": true,
+      "detail": {
+        "target_queued": 1,
+        "target_projection_equal": true,
+        "source_output": "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/reports/candidate/queue-exception"
+      }
+    },
+    {
+      "variant": "candidate",
+      "name": "queue-unknown",
+      "passed": true,
+      "detail": {
+        "target_queued": 1,
+        "target_projection_equal": true,
+        "source_output": "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/reports/candidate/queue-unknown"
+      }
+    },
+    {
+      "variant": "candidate",
+      "name": "queue-duplicate-first",
+      "passed": true,
+      "detail": {
+        "target_queued": 1,
+        "target_projection_equal": true,
+        "source_output": "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/reports/candidate/queue-duplicate-first"
+      }
+    },
+    {
+      "variant": "candidate",
+      "name": "queue-duplicate-second",
+      "passed": true,
+      "detail": {
+        "target_queued": 1,
+        "target_projection_equal": true,
+        "source_output": "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/reports/candidate/queue-duplicate-second"
+      }
+    },
+    {
+      "variant": "candidate",
+      "name": "history-H-PREVIOUS-YEAR-Earlier",
+      "passed": true,
+      "detail": {
+        "projection_equal": true,
+        "source_output": "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/reports/candidate/history-H-PREVIOUS-YEAR-Earlier"
+      }
+    },
+    {
+      "variant": "candidate",
+      "name": "history-H-PREVIOUS-YEAR-Zlater",
+      "passed": true,
+      "detail": {
+        "projection_equal": true,
+        "source_output": "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/reports/candidate/history-H-PREVIOUS-YEAR-Zlater"
+      }
+    },
+    {
+      "variant": "candidate",
+      "name": "history-H-7-Earlier",
+      "passed": true,
+      "detail": {
+        "projection_equal": true,
+        "source_output": "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/reports/candidate/history-H-7-Earlier"
+      }
+    },
+    {
+      "variant": "candidate",
+      "name": "history-H-7-Zlater",
+      "passed": true,
+      "detail": {
+        "projection_equal": true,
+        "source_output": "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/reports/candidate/history-H-7-Zlater"
+      }
+    },
+    {
+      "variant": "candidate",
+      "name": "compound-identity-control",
+      "passed": true,
+      "detail": {
+        "distinct_pairs": [
+          [
+            "North:West",
+            "bill"
+          ],
+          [
+            "North",
+            "West:bill"
+          ]
+        ],
+        "target_queued": 1
+      }
+    },
+    {
+      "variant": "candidate",
+      "name": "existing-review-migration-and-retention",
+      "passed": true,
+      "detail": {
+        "stale_report_exit": 2,
+        "stale_output_absent": true,
+        "changed_history_retained": true,
+        "current_note_retained": true,
+        "source_report_previous_unchanged": true,
+        "current_payment_queue": [
+          {
+            "bill_id": "SHARED",
+            "account_no": "Target",
+            "property": "Fixture Target",
+            "utility": "electric",
+            "vendor": "Fixture vendor",
+            "invoice": "Target:SHARED",
+            "amount_due": 100.0,
+            "due_date": "2026-11-15",
+            "status": "QUEUED_FOR_APPROVAL (not paid)",
+            "evidence": "bills.csv:3"
+          }
+        ]
+      }
+    }
+  ],
+  "native_cli_invocations": [
+    {
+      "variant": "baseline",
+      "name": "queue-reference",
+      "command": [
+        "/usr/local/bin/python3",
+        "-B",
+        "-m",
+        "uwatch",
+        "run",
+        "--data",
+        "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/inputs/queue-reference",
+        "--out",
+        "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/reports/baseline/queue-reference",
+        "--as-of",
+        "2026-10-15",
+        "--eval-from",
+        "2026-10-01"
+      ],
+      "cwd": "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/baseline/utility_watch",
+      "exit": 0,
+      "expected_exit": 0
+    },
+    {
+      "variant": "baseline",
+      "name": "queue-flag",
+      "command": [
+        "/usr/local/bin/python3",
+        "-B",
+        "-m",
+        "uwatch",
+        "run",
+        "--data",
+        "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/inputs/queue-flag",
+        "--out",
+        "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/reports/baseline/queue-flag",
+        "--as-of",
+        "2026-10-15",
+        "--eval-from",
+        "2026-10-01"
+      ],
+      "cwd": "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/baseline/utility_watch",
+      "exit": 0,
+      "expected_exit": 0
+    },
+    {
+      "variant": "baseline",
+      "name": "queue-exception",
+      "command": [
+        "/usr/local/bin/python3",
+        "-B",
+        "-m",
+        "uwatch",
+        "run",
+        "--data",
+        "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/inputs/queue-exception",
+        "--out",
+        "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/reports/baseline/queue-exception",
+        "--as-of",
+        "2026-10-15",
+        "--eval-from",
+        "2026-10-01"
+      ],
+      "cwd": "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/baseline/utility_watch",
+      "exit": 0,
+      "expected_exit": 0
+    },
+    {
+      "variant": "baseline",
+      "name": "queue-unknown",
+      "command": [
+        "/usr/local/bin/python3",
+        "-B",
+        "-m",
+        "uwatch",
+        "run",
+        "--data",
+        "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/inputs/queue-unknown",
+        "--out",
+        "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/reports/baseline/queue-unknown",
+        "--as-of",
+        "2026-10-15",
+        "--eval-from",
+        "2026-10-01"
+      ],
+      "cwd": "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/baseline/utility_watch",
+      "exit": 0,
+      "expected_exit": 0
+    },
+    {
+      "variant": "baseline",
+      "name": "queue-duplicate-first",
+      "command": [
+        "/usr/local/bin/python3",
+        "-B",
+        "-m",
+        "uwatch",
+        "run",
+        "--data",
+        "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/inputs/queue-duplicate-first",
+        "--out",
+        "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/reports/baseline/queue-duplicate-first",
+        "--as-of",
+        "2026-10-15",
+        "--eval-from",
+        "2026-10-01"
+      ],
+      "cwd": "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/baseline/utility_watch",
+      "exit": 0,
+      "expected_exit": 0
+    },
+    {
+      "variant": "baseline",
+      "name": "queue-duplicate-second",
+      "command": [
+        "/usr/local/bin/python3",
+        "-B",
+        "-m",
+        "uwatch",
+        "run",
+        "--data",
+        "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/inputs/queue-duplicate-second",
+        "--out",
+        "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/reports/baseline/queue-duplicate-second",
+        "--as-of",
+        "2026-10-15",
+        "--eval-from",
+        "2026-10-01"
+      ],
+      "cwd": "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/baseline/utility_watch",
+      "exit": 0,
+      "expected_exit": 0
+    },
+    {
+      "variant": "baseline",
+      "name": "history-reference",
+      "command": [
+        "/usr/local/bin/python3",
+        "-B",
+        "-m",
+        "uwatch",
+        "run",
+        "--data",
+        "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/inputs/history-reference",
+        "--out",
+        "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/reports/baseline/history-reference",
+        "--as-of",
+        "2026-10-15",
+        "--eval-from",
+        "2026-10-01"
+      ],
+      "cwd": "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/baseline/utility_watch",
+      "exit": 0,
+      "expected_exit": 0
+    },
+    {
+      "variant": "baseline",
+      "name": "history-H-PREVIOUS-YEAR-Earlier",
+      "command": [
+        "/usr/local/bin/python3",
+        "-B",
+        "-m",
+        "uwatch",
+        "run",
+        "--data",
+        "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/inputs/history-H-PREVIOUS-YEAR-Earlier",
+        "--out",
+        "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/reports/baseline/history-H-PREVIOUS-YEAR-Earlier",
+        "--as-of",
+        "2026-10-15",
+        "--eval-from",
+        "2026-10-01"
+      ],
+      "cwd": "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/baseline/utility_watch",
+      "exit": 0,
+      "expected_exit": 0
+    },
+    {
+      "variant": "baseline",
+      "name": "history-H-PREVIOUS-YEAR-Zlater",
+      "command": [
+        "/usr/local/bin/python3",
+        "-B",
+        "-m",
+        "uwatch",
+        "run",
+        "--data",
+        "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/inputs/history-H-PREVIOUS-YEAR-Zlater",
+        "--out",
+        "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/reports/baseline/history-H-PREVIOUS-YEAR-Zlater",
+        "--as-of",
+        "2026-10-15",
+        "--eval-from",
+        "2026-10-01"
+      ],
+      "cwd": "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/baseline/utility_watch",
+      "exit": 0,
+      "expected_exit": 0
+    },
+    {
+      "variant": "baseline",
+      "name": "history-H-7-Earlier",
+      "command": [
+        "/usr/local/bin/python3",
+        "-B",
+        "-m",
+        "uwatch",
+        "run",
+        "--data",
+        "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/inputs/history-H-7-Earlier",
+        "--out",
+        "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/reports/baseline/history-H-7-Earlier",
+        "--as-of",
+        "2026-10-15",
+        "--eval-from",
+        "2026-10-01"
+      ],
+      "cwd": "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/baseline/utility_watch",
+      "exit": 0,
+      "expected_exit": 0
+    },
+    {
+      "variant": "baseline",
+      "name": "history-H-7-Zlater",
+      "command": [
+        "/usr/local/bin/python3",
+        "-B",
+        "-m",
+        "uwatch",
+        "run",
+        "--data",
+        "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/inputs/history-H-7-Zlater",
+        "--out",
+        "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/reports/baseline/history-H-7-Zlater",
+        "--as-of",
+        "2026-10-15",
+        "--eval-from",
+        "2026-10-01"
+      ],
+      "cwd": "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/baseline/utility_watch",
+      "exit": 0,
+      "expected_exit": 0
+    },
+    {
+      "variant": "baseline",
+      "name": "punctuation-reference",
+      "command": [
+        "/usr/local/bin/python3",
+        "-B",
+        "-m",
+        "uwatch",
+        "run",
+        "--data",
+        "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/inputs/punctuation-reference",
+        "--out",
+        "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/reports/baseline/punctuation-reference",
+        "--as-of",
+        "2026-10-15",
+        "--eval-from",
+        "2026-10-01"
+      ],
+      "cwd": "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/baseline/utility_watch",
+      "exit": 0,
+      "expected_exit": 0
+    },
+    {
+      "variant": "baseline",
+      "name": "punctuation-combined",
+      "command": [
+        "/usr/local/bin/python3",
+        "-B",
+        "-m",
+        "uwatch",
+        "run",
+        "--data",
+        "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/inputs/punctuation-combined",
+        "--out",
+        "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/reports/baseline/punctuation-combined",
+        "--as-of",
+        "2026-10-15",
+        "--eval-from",
+        "2026-10-01"
+      ],
+      "cwd": "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/baseline/utility_watch",
+      "exit": 0,
+      "expected_exit": 0
+    },
+    {
+      "variant": "candidate",
+      "name": "queue-reference",
+      "command": [
+        "/usr/local/bin/python3",
+        "-B",
+        "-m",
+        "uwatch",
+        "run",
+        "--data",
+        "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/inputs/queue-reference",
+        "--out",
+        "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/reports/candidate/queue-reference",
+        "--as-of",
+        "2026-10-15",
+        "--eval-from",
+        "2026-10-01"
+      ],
+      "cwd": "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/candidate/utility_watch",
+      "exit": 0,
+      "expected_exit": 0
+    },
+    {
+      "variant": "candidate",
+      "name": "queue-flag",
+      "command": [
+        "/usr/local/bin/python3",
+        "-B",
+        "-m",
+        "uwatch",
+        "run",
+        "--data",
+        "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/inputs/queue-flag",
+        "--out",
+        "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/reports/candidate/queue-flag",
+        "--as-of",
+        "2026-10-15",
+        "--eval-from",
+        "2026-10-01"
+      ],
+      "cwd": "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/candidate/utility_watch",
+      "exit": 0,
+      "expected_exit": 0
+    },
+    {
+      "variant": "candidate",
+      "name": "queue-exception",
+      "command": [
+        "/usr/local/bin/python3",
+        "-B",
+        "-m",
+        "uwatch",
+        "run",
+        "--data",
+        "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/inputs/queue-exception",
+        "--out",
+        "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/reports/candidate/queue-exception",
+        "--as-of",
+        "2026-10-15",
+        "--eval-from",
+        "2026-10-01"
+      ],
+      "cwd": "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/candidate/utility_watch",
+      "exit": 0,
+      "expected_exit": 0
+    },
+    {
+      "variant": "candidate",
+      "name": "queue-unknown",
+      "command": [
+        "/usr/local/bin/python3",
+        "-B",
+        "-m",
+        "uwatch",
+        "run",
+        "--data",
+        "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/inputs/queue-unknown",
+        "--out",
+        "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/reports/candidate/queue-unknown",
+        "--as-of",
+        "2026-10-15",
+        "--eval-from",
+        "2026-10-01"
+      ],
+      "cwd": "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/candidate/utility_watch",
+      "exit": 0,
+      "expected_exit": 0
+    },
+    {
+      "variant": "candidate",
+      "name": "queue-duplicate-first",
+      "command": [
+        "/usr/local/bin/python3",
+        "-B",
+        "-m",
+        "uwatch",
+        "run",
+        "--data",
+        "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/inputs/queue-duplicate-first",
+        "--out",
+        "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/reports/candidate/queue-duplicate-first",
+        "--as-of",
+        "2026-10-15",
+        "--eval-from",
+        "2026-10-01"
+      ],
+      "cwd": "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/candidate/utility_watch",
+      "exit": 0,
+      "expected_exit": 0
+    },
+    {
+      "variant": "candidate",
+      "name": "queue-duplicate-second",
+      "command": [
+        "/usr/local/bin/python3",
+        "-B",
+        "-m",
+        "uwatch",
+        "run",
+        "--data",
+        "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/inputs/queue-duplicate-second",
+        "--out",
+        "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/reports/candidate/queue-duplicate-second",
+        "--as-of",
+        "2026-10-15",
+        "--eval-from",
+        "2026-10-01"
+      ],
+      "cwd": "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/candidate/utility_watch",
+      "exit": 0,
+      "expected_exit": 0
+    },
+    {
+      "variant": "candidate",
+      "name": "history-reference",
+      "command": [
+        "/usr/local/bin/python3",
+        "-B",
+        "-m",
+        "uwatch",
+        "run",
+        "--data",
+        "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/inputs/history-reference",
+        "--out",
+        "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/reports/candidate/history-reference",
+        "--as-of",
+        "2026-10-15",
+        "--eval-from",
+        "2026-10-01"
+      ],
+      "cwd": "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/candidate/utility_watch",
+      "exit": 0,
+      "expected_exit": 0
+    },
+    {
+      "variant": "candidate",
+      "name": "history-H-PREVIOUS-YEAR-Earlier",
+      "command": [
+        "/usr/local/bin/python3",
+        "-B",
+        "-m",
+        "uwatch",
+        "run",
+        "--data",
+        "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/inputs/history-H-PREVIOUS-YEAR-Earlier",
+        "--out",
+        "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/reports/candidate/history-H-PREVIOUS-YEAR-Earlier",
+        "--as-of",
+        "2026-10-15",
+        "--eval-from",
+        "2026-10-01"
+      ],
+      "cwd": "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/candidate/utility_watch",
+      "exit": 0,
+      "expected_exit": 0
+    },
+    {
+      "variant": "candidate",
+      "name": "history-H-PREVIOUS-YEAR-Zlater",
+      "command": [
+        "/usr/local/bin/python3",
+        "-B",
+        "-m",
+        "uwatch",
+        "run",
+        "--data",
+        "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/inputs/history-H-PREVIOUS-YEAR-Zlater",
+        "--out",
+        "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/reports/candidate/history-H-PREVIOUS-YEAR-Zlater",
+        "--as-of",
+        "2026-10-15",
+        "--eval-from",
+        "2026-10-01"
+      ],
+      "cwd": "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/candidate/utility_watch",
+      "exit": 0,
+      "expected_exit": 0
+    },
+    {
+      "variant": "candidate",
+      "name": "history-H-7-Earlier",
+      "command": [
+        "/usr/local/bin/python3",
+        "-B",
+        "-m",
+        "uwatch",
+        "run",
+        "--data",
+        "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/inputs/history-H-7-Earlier",
+        "--out",
+        "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/reports/candidate/history-H-7-Earlier",
+        "--as-of",
+        "2026-10-15",
+        "--eval-from",
+        "2026-10-01"
+      ],
+      "cwd": "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/candidate/utility_watch",
+      "exit": 0,
+      "expected_exit": 0
+    },
+    {
+      "variant": "candidate",
+      "name": "history-H-7-Zlater",
+      "command": [
+        "/usr/local/bin/python3",
+        "-B",
+        "-m",
+        "uwatch",
+        "run",
+        "--data",
+        "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/inputs/history-H-7-Zlater",
+        "--out",
+        "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/reports/candidate/history-H-7-Zlater",
+        "--as-of",
+        "2026-10-15",
+        "--eval-from",
+        "2026-10-01"
+      ],
+      "cwd": "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/candidate/utility_watch",
+      "exit": 0,
+      "expected_exit": 0
+    },
+    {
+      "variant": "candidate",
+      "name": "punctuation-reference",
+      "command": [
+        "/usr/local/bin/python3",
+        "-B",
+        "-m",
+        "uwatch",
+        "run",
+        "--data",
+        "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/inputs/punctuation-reference",
+        "--out",
+        "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/reports/candidate/punctuation-reference",
+        "--as-of",
+        "2026-10-15",
+        "--eval-from",
+        "2026-10-01"
+      ],
+      "cwd": "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/candidate/utility_watch",
+      "exit": 0,
+      "expected_exit": 0
+    },
+    {
+      "variant": "candidate",
+      "name": "punctuation-combined",
+      "command": [
+        "/usr/local/bin/python3",
+        "-B",
+        "-m",
+        "uwatch",
+        "run",
+        "--data",
+        "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/inputs/punctuation-combined",
+        "--out",
+        "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/reports/candidate/punctuation-combined",
+        "--as-of",
+        "2026-10-15",
+        "--eval-from",
+        "2026-10-01"
+      ],
+      "cwd": "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/candidate/utility_watch",
+      "exit": 0,
+      "expected_exit": 0
+    },
+    {
+      "variant": "baseline",
+      "name": "review-old",
+      "command": [
+        "/usr/local/bin/python3",
+        "-B",
+        "-m",
+        "uwatch",
+        "review",
+        "--data",
+        "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/inputs/queue-flag",
+        "--report",
+        "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/reports/baseline/queue-flag/summary.json",
+        "--out",
+        "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/migration/old.csv"
+      ],
+      "cwd": "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/baseline/utility_watch",
+      "exit": 0,
+      "expected_exit": 0
+    },
+    {
+      "variant": "candidate",
+      "name": "review-stale-report",
+      "command": [
+        "/usr/local/bin/python3",
+        "-B",
+        "-m",
+        "uwatch",
+        "review",
+        "--data",
+        "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/inputs/queue-flag",
+        "--report",
+        "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/reports/baseline/queue-flag/summary.json",
+        "--previous",
+        "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/migration/old-annotated.csv",
+        "--out",
+        "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/migration/must-not-exist.csv"
+      ],
+      "cwd": "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/candidate/utility_watch",
+      "exit": 2,
+      "expected_exit": 2
+    },
+    {
+      "variant": "candidate",
+      "name": "review-new",
+      "command": [
+        "/usr/local/bin/python3",
+        "-B",
+        "-m",
+        "uwatch",
+        "review",
+        "--data",
+        "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/inputs/queue-flag",
+        "--report",
+        "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/reports/candidate/queue-flag/summary.json",
+        "--previous",
+        "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/migration/old-annotated.csv",
+        "--out",
+        "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/migration/fresh.csv"
+      ],
+      "cwd": "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/candidate/utility_watch",
+      "exit": 0,
+      "expected_exit": 0
+    },
+    {
+      "variant": "candidate",
+      "name": "review-same-source",
+      "command": [
+        "/usr/local/bin/python3",
+        "-B",
+        "-m",
+        "uwatch",
+        "review",
+        "--data",
+        "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/inputs/queue-flag",
+        "--report",
+        "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/reports/candidate/queue-flag/summary.json",
+        "--previous",
+        "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/migration/current-annotated.csv",
+        "--out",
+        "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/independent-v1/migration/retained.csv"
+      ],
+      "cwd": "/Users/me/hamon-receiving-9e05c01af69c/utility-account-identity-root-v1/candidate/utility_watch",
+      "exit": 0,
+      "expected_exit": 0
+    }
+  ],
+  "counts": {
+    "baseline": {
+      "passed": 3,
+      "failed": 7
+    },
+    "candidate": {
+      "passed": 11,
+      "failed": 0
+    }
+  },
+  "limits": [
+    "Independently authored synthetic four-CSV fixtures and marker, using native CLI/report/review.",
+    "No customer files, payments, external service or app deployment.",
+    "Candidate runtime context uses baseline files plus the exact frozen candidate engine.",
+    "Original code failures are retained, not treated as a harness success."
+  ]
+}
