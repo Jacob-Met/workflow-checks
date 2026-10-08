@@ -1,0 +1,335 @@
+test_blank_trailing_headers_rows_and_source_lines_are_preserved (test_csv_headers.HeaderAdmission.test_blank_trailing_headers_rows_and_source_lines_are_preserved) ... ok
+test_bom_does_not_hide_collision (test_csv_headers.HeaderAdmission.test_bom_does_not_hide_collision) ... FAIL
+test_cli_refusal_keeps_report_and_inputs_for_all_four_files (test_csv_headers.HeaderAdmission.test_cli_refusal_keeps_report_and_inputs_for_all_four_files) ... 
+  test_cli_refusal_keeps_report_and_inputs_for_all_four_files (test_csv_headers.HeaderAdmission.test_cli_refusal_keeps_report_and_inputs_for_all_four_files) (file='schedule.csv', existing=False) ... FAIL
+  test_cli_refusal_keeps_report_and_inputs_for_all_four_files (test_csv_headers.HeaderAdmission.test_cli_refusal_keeps_report_and_inputs_for_all_four_files) (file='schedule.csv', existing=True) ... FAIL
+  test_cli_refusal_keeps_report_and_inputs_for_all_four_files (test_csv_headers.HeaderAdmission.test_cli_refusal_keeps_report_and_inputs_for_all_four_files) (file='authorizations.csv', existing=False) ... FAIL
+  test_cli_refusal_keeps_report_and_inputs_for_all_four_files (test_csv_headers.HeaderAdmission.test_cli_refusal_keeps_report_and_inputs_for_all_four_files) (file='authorizations.csv', existing=True) ... FAIL
+  test_cli_refusal_keeps_report_and_inputs_for_all_four_files (test_csv_headers.HeaderAdmission.test_cli_refusal_keeps_report_and_inputs_for_all_four_files) (file='payers.csv', existing=False) ... FAIL
+  test_cli_refusal_keeps_report_and_inputs_for_all_four_files (test_csv_headers.HeaderAdmission.test_cli_refusal_keeps_report_and_inputs_for_all_four_files) (file='payers.csv', existing=True) ... FAIL
+  test_cli_refusal_keeps_report_and_inputs_for_all_four_files (test_csv_headers.HeaderAdmission.test_cli_refusal_keeps_report_and_inputs_for_all_four_files) (file='patients.csv', existing=False) ... FAIL
+  test_cli_refusal_keeps_report_and_inputs_for_all_four_files (test_csv_headers.HeaderAdmission.test_cli_refusal_keeps_report_and_inputs_for_all_four_files) (file='patients.csv', existing=True) ... FAIL
+test_distinct_extra_columns_and_encodings_remain_accepted (test_csv_headers.HeaderAdmission.test_distinct_extra_columns_and_encodings_remain_accepted) ... ok
+test_empty_and_missing_optional_files_keep_existing_meaning (test_csv_headers.HeaderAdmission.test_empty_and_missing_optional_files_keep_existing_meaning) ... ok
+test_existing_normalization_aliases_are_ambiguous (test_csv_headers.HeaderAdmission.test_existing_normalization_aliases_are_ambiguous) ... 
+  test_existing_normalization_aliases_are_ambiguous (test_csv_headers.HeaderAdmission.test_existing_normalization_aliases_are_ambiguous) (first='Visit Date', second='visit_date') ... FAIL
+  test_existing_normalization_aliases_are_ambiguous (test_csv_headers.HeaderAdmission.test_existing_normalization_aliases_are_ambiguous) (first=' Patient-ID ', second='PATIENT ID') ... FAIL
+  test_existing_normalization_aliases_are_ambiguous (test_csv_headers.HeaderAdmission.test_existing_normalization_aliases_are_ambiguous) (first='requires\tauth', second='requires-auth') ... FAIL
+  test_existing_normalization_aliases_are_ambiguous (test_csv_headers.HeaderAdmission.test_existing_normalization_aliases_are_ambiguous) (first=' visits--authorized ', second='visits_authorized') ... FAIL
+test_header_only_files_refuse_in_every_loader (test_csv_headers.HeaderAdmission.test_header_only_files_refuse_in_every_loader) ... 
+  test_header_only_files_refuse_in_every_loader (test_csv_headers.HeaderAdmission.test_header_only_files_refuse_in_every_loader) (file='schedule.csv') ... FAIL
+  test_header_only_files_refuse_in_every_loader (test_csv_headers.HeaderAdmission.test_header_only_files_refuse_in_every_loader) (file='authorizations.csv') ... FAIL
+  test_header_only_files_refuse_in_every_loader (test_csv_headers.HeaderAdmission.test_header_only_files_refuse_in_every_loader) (file='payers.csv') ... FAIL
+  test_header_only_files_refuse_in_every_loader (test_csv_headers.HeaderAdmission.test_header_only_files_refuse_in_every_loader) (file='patients.csv') ... FAIL
+test_identical_headers_refuse_before_any_row (test_csv_headers.HeaderAdmission.test_identical_headers_refuse_before_any_row) ... FAIL
+test_multiline_header_reports_physical_header_end (test_csv_headers.HeaderAdmission.test_multiline_header_reports_physical_header_end) ... FAIL
+test_unused_named_duplicates_also_refuse (test_csv_headers.HeaderAdmission.test_unused_named_duplicates_also_refuse) ... FAIL
+
+======================================================================
+FAIL: test_bom_does_not_hide_collision (test_csv_headers.HeaderAdmission.test_bom_does_not_hide_collision)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/jacob/workflow-pt-csv-65ae877160f6/candidate/pt_auth/tests/test_csv_headers.py", line 99, in test_bom_does_not_hide_collision
+    with self.assertRaises(data.InputError):
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+AssertionError: InputError not raised
+
+======================================================================
+FAIL: test_cli_refusal_keeps_report_and_inputs_for_all_four_files (test_csv_headers.HeaderAdmission.test_cli_refusal_keeps_report_and_inputs_for_all_four_files) (file='schedule.csv', existing=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/jacob/workflow-pt-csv-65ae877160f6/candidate/pt_auth/tests/test_csv_headers.py", line 166, in test_cli_refusal_keeps_report_and_inputs_for_all_four_files
+    self.assertEqual(result.returncode, 2, result.stdout + result.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 != 2 : [SYNTHETIC] as_of 2026-09-28: 40 patients, 842 visits, 46 auths
+clinic time zone: system local
+worklist: 0 items (P1 0, P2 0, P3 0); 0 scheduled visits uncovered; 0 completed w/o auth
+0 past scheduled visits need status review: /tmp/pt-csv-headers-w062on6u/run-0-False/out/visit_status_review.csv
+0 uncovered visits to inspect: /tmp/pt-csv-headers-w062on6u/run-0-False/out/uncovered_visits.csv
+digest: /tmp/pt-csv-headers-w062on6u/run-0-False/out/digest.html
+
+
+======================================================================
+FAIL: test_cli_refusal_keeps_report_and_inputs_for_all_four_files (test_csv_headers.HeaderAdmission.test_cli_refusal_keeps_report_and_inputs_for_all_four_files) (file='schedule.csv', existing=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/jacob/workflow-pt-csv-65ae877160f6/candidate/pt_auth/tests/test_csv_headers.py", line 166, in test_cli_refusal_keeps_report_and_inputs_for_all_four_files
+    self.assertEqual(result.returncode, 2, result.stdout + result.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 != 2 : [SYNTHETIC] as_of 2026-09-28: 40 patients, 842 visits, 46 auths
+clinic time zone: system local
+worklist: 0 items (P1 0, P2 0, P3 0); 0 scheduled visits uncovered; 0 completed w/o auth
+0 past scheduled visits need status review: /tmp/pt-csv-headers-w062on6u/run-0-True/out/visit_status_review.csv
+0 uncovered visits to inspect: /tmp/pt-csv-headers-w062on6u/run-0-True/out/uncovered_visits.csv
+digest: /tmp/pt-csv-headers-w062on6u/run-0-True/out/digest.html
+
+
+======================================================================
+FAIL: test_cli_refusal_keeps_report_and_inputs_for_all_four_files (test_csv_headers.HeaderAdmission.test_cli_refusal_keeps_report_and_inputs_for_all_four_files) (file='authorizations.csv', existing=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/jacob/workflow-pt-csv-65ae877160f6/candidate/pt_auth/tests/test_csv_headers.py", line 166, in test_cli_refusal_keeps_report_and_inputs_for_all_four_files
+    self.assertEqual(result.returncode, 2, result.stdout + result.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 != 2 : [SYNTHETIC] as_of 2026-09-28: 40 patients, 842 visits, 46 auths
+clinic time zone: system local
+worklist: 18 items (P1 6, P2 12, P3 0); 135 scheduled visits uncovered; 2 completed w/o auth
+  P1 SYN-1038 PAY-COMM1 AUTH-70111  UNCOVERED_VISIT,REAUTH_BY_DATE     submit_by=2026-09-26
+  P1 SYN-1023 PAY-COMM1 AUTH-70066  UNCOVERED_VISIT,REAUTH_BY_DATE     submit_by=2026-09-28
+  P1 SYN-1025 PAY-COMM2 AUTH-70072  UNCOVERED_VISIT,REAUTH_BY_DATE     submit_by=2026-09-29
+  P1 SYN-1027 PAY-COMM1 AUTH-70078  UNCOVERED_VISIT,REAUTH_BY_DATE     submit_by=2026-09-29
+  P1 SYN-1030 PAY-COMM2 AUTH-70087  UNCOVERED_VISIT,REAUTH_BY_DATE     submit_by=2026-09-30
+  P1 SYN-1005 PAY-COMM1 AUTH-70012  UNAUTHORIZED_DONE,UNCOVERED_VISIT  submit_by=-
+  P2 SYN-1017 PAY-MA    AUTH-70048  UNCOVERED_VISIT,REAUTH_BY_DATE     submit_by=2026-09-29
+  P2 SYN-1020 PAY-COMM1 AUTH-70057  UNCOVERED_VISIT,REAUTH_BY_DATE     submit_by=2026-09-29
+  P2 SYN-1012 PAY-COMM1 AUTH-70033  UNCOVERED_VISIT,REAUTH_BY_DATE     submit_by=2026-10-01
+  P2 SYN-1021 PAY-COMM2 AUTH-70060  UNCOVERED_VISIT,REAUTH_BY_DATE     submit_by=2026-10-01
+  P2 SYN-1004 PAY-COMM1 AUTH-70009  UNCOVERED_VISIT,REAUTH_BY_DATE     submit_by=2026-10-02
+  P2 SYN-1032 PAY-MA    AUTH-70093  UNCOVERED_VISIT,REAUTH_BY_DATE     submit_by=2026-10-03
+  ... 6 more in /tmp/pt-csv-headers-w062on6u/run-1-False/out/worklist.csv
+0 past scheduled visits need status review: /tmp/pt-csv-headers-w062on6u/run-1-False/out/visit_status_review.csv
+137 uncovered visits to inspect: /tmp/pt-csv-headers-w062on6u/run-1-False/out/uncovered_visits.csv
+digest: /tmp/pt-csv-headers-w062on6u/run-1-False/out/digest.html
+
+
+======================================================================
+FAIL: test_cli_refusal_keeps_report_and_inputs_for_all_four_files (test_csv_headers.HeaderAdmission.test_cli_refusal_keeps_report_and_inputs_for_all_four_files) (file='authorizations.csv', existing=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/jacob/workflow-pt-csv-65ae877160f6/candidate/pt_auth/tests/test_csv_headers.py", line 166, in test_cli_refusal_keeps_report_and_inputs_for_all_four_files
+    self.assertEqual(result.returncode, 2, result.stdout + result.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 != 2 : [SYNTHETIC] as_of 2026-09-28: 40 patients, 842 visits, 46 auths
+clinic time zone: system local
+worklist: 18 items (P1 6, P2 12, P3 0); 135 scheduled visits uncovered; 2 completed w/o auth
+  P1 SYN-1038 PAY-COMM1 AUTH-70111  UNCOVERED_VISIT,REAUTH_BY_DATE     submit_by=2026-09-26
+  P1 SYN-1023 PAY-COMM1 AUTH-70066  UNCOVERED_VISIT,REAUTH_BY_DATE     submit_by=2026-09-28
+  P1 SYN-1025 PAY-COMM2 AUTH-70072  UNCOVERED_VISIT,REAUTH_BY_DATE     submit_by=2026-09-29
+  P1 SYN-1027 PAY-COMM1 AUTH-70078  UNCOVERED_VISIT,REAUTH_BY_DATE     submit_by=2026-09-29
+  P1 SYN-1030 PAY-COMM2 AUTH-70087  UNCOVERED_VISIT,REAUTH_BY_DATE     submit_by=2026-09-30
+  P1 SYN-1005 PAY-COMM1 AUTH-70012  UNAUTHORIZED_DONE,UNCOVERED_VISIT  submit_by=-
+  P2 SYN-1017 PAY-MA    AUTH-70048  UNCOVERED_VISIT,REAUTH_BY_DATE     submit_by=2026-09-29
+  P2 SYN-1020 PAY-COMM1 AUTH-70057  UNCOVERED_VISIT,REAUTH_BY_DATE     submit_by=2026-09-29
+  P2 SYN-1012 PAY-COMM1 AUTH-70033  UNCOVERED_VISIT,REAUTH_BY_DATE     submit_by=2026-10-01
+  P2 SYN-1021 PAY-COMM2 AUTH-70060  UNCOVERED_VISIT,REAUTH_BY_DATE     submit_by=2026-10-01
+  P2 SYN-1004 PAY-COMM1 AUTH-70009  UNCOVERED_VISIT,REAUTH_BY_DATE     submit_by=2026-10-02
+  P2 SYN-1032 PAY-MA    AUTH-70093  UNCOVERED_VISIT,REAUTH_BY_DATE     submit_by=2026-10-03
+  ... 6 more in /tmp/pt-csv-headers-w062on6u/run-1-True/out/worklist.csv
+0 past scheduled visits need status review: /tmp/pt-csv-headers-w062on6u/run-1-True/out/visit_status_review.csv
+137 uncovered visits to inspect: /tmp/pt-csv-headers-w062on6u/run-1-True/out/uncovered_visits.csv
+digest: /tmp/pt-csv-headers-w062on6u/run-1-True/out/digest.html
+
+
+======================================================================
+FAIL: test_cli_refusal_keeps_report_and_inputs_for_all_four_files (test_csv_headers.HeaderAdmission.test_cli_refusal_keeps_report_and_inputs_for_all_four_files) (file='payers.csv', existing=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/jacob/workflow-pt-csv-65ae877160f6/candidate/pt_auth/tests/test_csv_headers.py", line 166, in test_cli_refusal_keeps_report_and_inputs_for_all_four_files
+    self.assertEqual(result.returncode, 2, result.stdout + result.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 != 2 : [SYNTHETIC] as_of 2026-09-28: 40 patients, 842 visits, 46 auths
+clinic time zone: system local
+worklist: 12 items (P1 2, P2 10, P3 0); 0 scheduled visits uncovered; 0 completed w/o auth
+  P1 SYN-1038 PAY-COMM1 AUTH-70111  REAUTH_BY_DATE                     submit_by=2026-09-26
+  P1 SYN-1023 PAY-COMM1 AUTH-70066  REAUTH_BY_DATE                     submit_by=2026-09-28
+  P2 SYN-1017 PAY-MA    AUTH-70048  REAUTH_BY_DATE                     submit_by=2026-09-29
+  P2 SYN-1025 PAY-COMM2 AUTH-70072  REAUTH_BY_DATE                     submit_by=2026-09-29
+  P2 SYN-1020 PAY-COMM1 AUTH-70057  REAUTH_BY_DATE                     submit_by=2026-09-29
+  P2 SYN-1027 PAY-COMM1 AUTH-70078  REAUTH_BY_DATE                     submit_by=2026-09-29
+  P2 SYN-1030 PAY-COMM2 AUTH-70087  REAUTH_BY_DATE                     submit_by=2026-09-30
+  P2 SYN-1012 PAY-COMM1 AUTH-70033  REAUTH_BY_DATE                     submit_by=2026-10-01
+  P2 SYN-1021 PAY-COMM2 AUTH-70060  REAUTH_BY_DATE                     submit_by=2026-10-01
+  P2 SYN-1004 PAY-COMM1 AUTH-70009  REAUTH_BY_DATE                     submit_by=2026-10-02
+  P2 SYN-1032 PAY-MA    AUTH-70093  REAUTH_BY_DATE                     submit_by=2026-10-03
+  P2 SYN-1003 PAY-MA    AUTH-70006  REAUTH_BY_DATE                     submit_by=2026-10-03
+0 past scheduled visits need status review: /tmp/pt-csv-headers-w062on6u/run-2-False/out/visit_status_review.csv
+0 uncovered visits to inspect: /tmp/pt-csv-headers-w062on6u/run-2-False/out/uncovered_visits.csv
+digest: /tmp/pt-csv-headers-w062on6u/run-2-False/out/digest.html
+
+
+======================================================================
+FAIL: test_cli_refusal_keeps_report_and_inputs_for_all_four_files (test_csv_headers.HeaderAdmission.test_cli_refusal_keeps_report_and_inputs_for_all_four_files) (file='payers.csv', existing=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/jacob/workflow-pt-csv-65ae877160f6/candidate/pt_auth/tests/test_csv_headers.py", line 166, in test_cli_refusal_keeps_report_and_inputs_for_all_four_files
+    self.assertEqual(result.returncode, 2, result.stdout + result.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 != 2 : [SYNTHETIC] as_of 2026-09-28: 40 patients, 842 visits, 46 auths
+clinic time zone: system local
+worklist: 12 items (P1 2, P2 10, P3 0); 0 scheduled visits uncovered; 0 completed w/o auth
+  P1 SYN-1038 PAY-COMM1 AUTH-70111  REAUTH_BY_DATE                     submit_by=2026-09-26
+  P1 SYN-1023 PAY-COMM1 AUTH-70066  REAUTH_BY_DATE                     submit_by=2026-09-28
+  P2 SYN-1017 PAY-MA    AUTH-70048  REAUTH_BY_DATE                     submit_by=2026-09-29
+  P2 SYN-1025 PAY-COMM2 AUTH-70072  REAUTH_BY_DATE                     submit_by=2026-09-29
+  P2 SYN-1020 PAY-COMM1 AUTH-70057  REAUTH_BY_DATE                     submit_by=2026-09-29
+  P2 SYN-1027 PAY-COMM1 AUTH-70078  REAUTH_BY_DATE                     submit_by=2026-09-29
+  P2 SYN-1030 PAY-COMM2 AUTH-70087  REAUTH_BY_DATE                     submit_by=2026-09-30
+  P2 SYN-1012 PAY-COMM1 AUTH-70033  REAUTH_BY_DATE                     submit_by=2026-10-01
+  P2 SYN-1021 PAY-COMM2 AUTH-70060  REAUTH_BY_DATE                     submit_by=2026-10-01
+  P2 SYN-1004 PAY-COMM1 AUTH-70009  REAUTH_BY_DATE                     submit_by=2026-10-02
+  P2 SYN-1032 PAY-MA    AUTH-70093  REAUTH_BY_DATE                     submit_by=2026-10-03
+  P2 SYN-1003 PAY-MA    AUTH-70006  REAUTH_BY_DATE                     submit_by=2026-10-03
+0 past scheduled visits need status review: /tmp/pt-csv-headers-w062on6u/run-2-True/out/visit_status_review.csv
+0 uncovered visits to inspect: /tmp/pt-csv-headers-w062on6u/run-2-True/out/uncovered_visits.csv
+digest: /tmp/pt-csv-headers-w062on6u/run-2-True/out/digest.html
+
+
+======================================================================
+FAIL: test_cli_refusal_keeps_report_and_inputs_for_all_four_files (test_csv_headers.HeaderAdmission.test_cli_refusal_keeps_report_and_inputs_for_all_four_files) (file='patients.csv', existing=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/jacob/workflow-pt-csv-65ae877160f6/candidate/pt_auth/tests/test_csv_headers.py", line 166, in test_cli_refusal_keeps_report_and_inputs_for_all_four_files
+    self.assertEqual(result.returncode, 2, result.stdout + result.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 != 2 : [SYNTHETIC] as_of 2026-09-28: 1 patients, 842 visits, 46 auths
+clinic time zone: system local
+worklist: 26 items (P1 11, P2 15, P3 0); 194 scheduled visits uncovered; 2 completed w/o auth
+  P1 SYN-1014 PAY-MA    AUTH-70039  UNCOVERED_VISIT,REAUTH_BY_VISITS   submit_by=2026-09-23
+  P1 SYN-1038 PAY-COMM1 AUTH-70111  UNCOVERED_VISIT,REAUTH_BY_DATE     submit_by=2026-09-26
+  P1 SYN-1037 PAY-COMM2 AUTH-70108  UNCOVERED_VISIT,REAUTH_BY_VISITS   submit_by=2026-09-27
+  P1 SYN-1026 PAY-COMM1 AUTH-70075  UNCOVERED_VISIT,REAUTH_BY_VISITS   submit_by=2026-09-27
+  P1 SYN-1023 PAY-COMM1 AUTH-70066  UNCOVERED_VISIT,REAUTH_BY_DATE     submit_by=2026-09-28
+  P1 SYN-1025 PAY-COMM2 AUTH-70072  UNCOVERED_VISIT,REAUTH_BY_DATE     submit_by=2026-09-29
+  P1 SYN-1027 PAY-COMM1 AUTH-70078  UNCOVERED_VISIT,REAUTH_BY_DATE     submit_by=2026-09-29
+  P1 SYN-1028 PAY-COMM2 AUTH-70081  UNCOVERED_VISIT,REAUTH_BY_VISITS   submit_by=2026-09-29
+  P1 SYN-1030 PAY-COMM2 AUTH-70087  UNCOVERED_VISIT,REAUTH_BY_DATE     submit_by=2026-09-30
+  P1 SYN-1024 PAY-WC    AUTH-70069  UNCOVERED_VISIT,REAUTH_BY_VISITS   submit_by=2026-11-17
+  P1 SYN-1005 PAY-COMM1 AUTH-70012  UNAUTHORIZED_DONE,UNCOVERED_VISIT  submit_by=-
+  P2 SYN-1017 PAY-MA    AUTH-70048  UNCOVERED_VISIT,REAUTH_BY_DATE     submit_by=2026-09-29
+  ... 14 more in /tmp/pt-csv-headers-w062on6u/run-3-False/out/worklist.csv
+0 past scheduled visits need status review: /tmp/pt-csv-headers-w062on6u/run-3-False/out/visit_status_review.csv
+196 uncovered visits to inspect: /tmp/pt-csv-headers-w062on6u/run-3-False/out/uncovered_visits.csv
+digest: /tmp/pt-csv-headers-w062on6u/run-3-False/out/digest.html
+
+
+======================================================================
+FAIL: test_cli_refusal_keeps_report_and_inputs_for_all_four_files (test_csv_headers.HeaderAdmission.test_cli_refusal_keeps_report_and_inputs_for_all_four_files) (file='patients.csv', existing=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/jacob/workflow-pt-csv-65ae877160f6/candidate/pt_auth/tests/test_csv_headers.py", line 166, in test_cli_refusal_keeps_report_and_inputs_for_all_four_files
+    self.assertEqual(result.returncode, 2, result.stdout + result.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 != 2 : [SYNTHETIC] as_of 2026-09-28: 1 patients, 842 visits, 46 auths
+clinic time zone: system local
+worklist: 26 items (P1 11, P2 15, P3 0); 194 scheduled visits uncovered; 2 completed w/o auth
+  P1 SYN-1014 PAY-MA    AUTH-70039  UNCOVERED_VISIT,REAUTH_BY_VISITS   submit_by=2026-09-23
+  P1 SYN-1038 PAY-COMM1 AUTH-70111  UNCOVERED_VISIT,REAUTH_BY_DATE     submit_by=2026-09-26
+  P1 SYN-1037 PAY-COMM2 AUTH-70108  UNCOVERED_VISIT,REAUTH_BY_VISITS   submit_by=2026-09-27
+  P1 SYN-1026 PAY-COMM1 AUTH-70075  UNCOVERED_VISIT,REAUTH_BY_VISITS   submit_by=2026-09-27
+  P1 SYN-1023 PAY-COMM1 AUTH-70066  UNCOVERED_VISIT,REAUTH_BY_DATE     submit_by=2026-09-28
+  P1 SYN-1025 PAY-COMM2 AUTH-70072  UNCOVERED_VISIT,REAUTH_BY_DATE     submit_by=2026-09-29
+  P1 SYN-1027 PAY-COMM1 AUTH-70078  UNCOVERED_VISIT,REAUTH_BY_DATE     submit_by=2026-09-29
+  P1 SYN-1028 PAY-COMM2 AUTH-70081  UNCOVERED_VISIT,REAUTH_BY_VISITS   submit_by=2026-09-29
+  P1 SYN-1030 PAY-COMM2 AUTH-70087  UNCOVERED_VISIT,REAUTH_BY_DATE     submit_by=2026-09-30
+  P1 SYN-1024 PAY-WC    AUTH-70069  UNCOVERED_VISIT,REAUTH_BY_VISITS   submit_by=2026-11-17
+  P1 SYN-1005 PAY-COMM1 AUTH-70012  UNAUTHORIZED_DONE,UNCOVERED_VISIT  submit_by=-
+  P2 SYN-1017 PAY-MA    AUTH-70048  UNCOVERED_VISIT,REAUTH_BY_DATE     submit_by=2026-09-29
+  ... 14 more in /tmp/pt-csv-headers-w062on6u/run-3-True/out/worklist.csv
+0 past scheduled visits need status review: /tmp/pt-csv-headers-w062on6u/run-3-True/out/visit_status_review.csv
+196 uncovered visits to inspect: /tmp/pt-csv-headers-w062on6u/run-3-True/out/uncovered_visits.csv
+digest: /tmp/pt-csv-headers-w062on6u/run-3-True/out/digest.html
+
+
+======================================================================
+FAIL: test_existing_normalization_aliases_are_ambiguous (test_csv_headers.HeaderAdmission.test_existing_normalization_aliases_are_ambiguous) (first='Visit Date', second='visit_date')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/jacob/workflow-pt-csv-65ae877160f6/candidate/pt_auth/tests/test_csv_headers.py", line 66, in test_existing_normalization_aliases_are_ambiguous
+    with self.assertRaises(data.InputError) as raised:
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+AssertionError: InputError not raised
+
+======================================================================
+FAIL: test_existing_normalization_aliases_are_ambiguous (test_csv_headers.HeaderAdmission.test_existing_normalization_aliases_are_ambiguous) (first=' Patient-ID ', second='PATIENT ID')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/jacob/workflow-pt-csv-65ae877160f6/candidate/pt_auth/tests/test_csv_headers.py", line 66, in test_existing_normalization_aliases_are_ambiguous
+    with self.assertRaises(data.InputError) as raised:
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+AssertionError: InputError not raised
+
+======================================================================
+FAIL: test_existing_normalization_aliases_are_ambiguous (test_csv_headers.HeaderAdmission.test_existing_normalization_aliases_are_ambiguous) (first='requires\tauth', second='requires-auth')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/jacob/workflow-pt-csv-65ae877160f6/candidate/pt_auth/tests/test_csv_headers.py", line 66, in test_existing_normalization_aliases_are_ambiguous
+    with self.assertRaises(data.InputError) as raised:
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+AssertionError: InputError not raised
+
+======================================================================
+FAIL: test_existing_normalization_aliases_are_ambiguous (test_csv_headers.HeaderAdmission.test_existing_normalization_aliases_are_ambiguous) (first=' visits--authorized ', second='visits_authorized')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/jacob/workflow-pt-csv-65ae877160f6/candidate/pt_auth/tests/test_csv_headers.py", line 66, in test_existing_normalization_aliases_are_ambiguous
+    with self.assertRaises(data.InputError) as raised:
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+AssertionError: InputError not raised
+
+======================================================================
+FAIL: test_header_only_files_refuse_in_every_loader (test_csv_headers.HeaderAdmission.test_header_only_files_refuse_in_every_loader) (file='schedule.csv')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/jacob/workflow-pt-csv-65ae877160f6/candidate/pt_auth/tests/test_csv_headers.py", line 79, in test_header_only_files_refuse_in_every_loader
+    with self.assertRaises(data.InputError):
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+AssertionError: InputError not raised
+
+======================================================================
+FAIL: test_header_only_files_refuse_in_every_loader (test_csv_headers.HeaderAdmission.test_header_only_files_refuse_in_every_loader) (file='authorizations.csv')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/jacob/workflow-pt-csv-65ae877160f6/candidate/pt_auth/tests/test_csv_headers.py", line 79, in test_header_only_files_refuse_in_every_loader
+    with self.assertRaises(data.InputError):
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+AssertionError: InputError not raised
+
+======================================================================
+FAIL: test_header_only_files_refuse_in_every_loader (test_csv_headers.HeaderAdmission.test_header_only_files_refuse_in_every_loader) (file='payers.csv')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/jacob/workflow-pt-csv-65ae877160f6/candidate/pt_auth/tests/test_csv_headers.py", line 79, in test_header_only_files_refuse_in_every_loader
+    with self.assertRaises(data.InputError):
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+AssertionError: InputError not raised
+
+======================================================================
+FAIL: test_header_only_files_refuse_in_every_loader (test_csv_headers.HeaderAdmission.test_header_only_files_refuse_in_every_loader) (file='patients.csv')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/jacob/workflow-pt-csv-65ae877160f6/candidate/pt_auth/tests/test_csv_headers.py", line 79, in test_header_only_files_refuse_in_every_loader
+    with self.assertRaises(data.InputError):
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+AssertionError: InputError not raised
+
+======================================================================
+FAIL: test_identical_headers_refuse_before_any_row (test_csv_headers.HeaderAdmission.test_identical_headers_refuse_before_any_row)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/jacob/workflow-pt-csv-65ae877160f6/candidate/pt_auth/tests/test_csv_headers.py", line 49, in test_identical_headers_refuse_before_any_row
+    with self.assertRaises(data.InputError) as raised:
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+AssertionError: InputError not raised
+
+======================================================================
+FAIL: test_multiline_header_reports_physical_header_end (test_csv_headers.HeaderAdmission.test_multiline_header_reports_physical_header_end)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/jacob/workflow-pt-csv-65ae877160f6/candidate/pt_auth/tests/test_csv_headers.py", line 92, in test_multiline_header_reports_physical_header_end
+    with self.assertRaises(data.InputError) as raised:
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+AssertionError: InputError not raised
+
+======================================================================
+FAIL: test_unused_named_duplicates_also_refuse (test_csv_headers.HeaderAdmission.test_unused_named_duplicates_also_refuse)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/jacob/workflow-pt-csv-65ae877160f6/candidate/pt_auth/tests/test_csv_headers.py", line 87, in test_unused_named_duplicates_also_refuse
+    with self.assertRaises(data.InputError):
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+AssertionError: InputError not raised
+
+----------------------------------------------------------------------
+Ran 10 tests in 2.241s
+
+FAILED (failures=20)

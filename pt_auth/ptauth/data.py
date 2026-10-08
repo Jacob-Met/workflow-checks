@@ -145,6 +145,17 @@ def _rows(path: Path):
     """Yields (file line number, getter, row) with normalized headers; skips all-blank rows."""
     name = Path(path).name
     reader = csv.DictReader(io.StringIO(_decode(Path(path).read_bytes()), newline=""))
+    seen = {}
+    for column, header in enumerate(reader.fieldnames or [], start=1):
+        normalized = _key(header)
+        if not normalized:
+            continue
+        if normalized in seen:
+            raise InputError(
+                f"{name} line {reader.line_num}: duplicate normalized column "
+                f"{normalized!r} (columns {seen[normalized]} and {column})"
+            )
+        seen[normalized] = column
     for r in reader:
         row = {_key(k): (v or "").strip() for k, v in r.items() if k is not None}
         if any(row.values()):

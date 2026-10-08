@@ -1,0 +1,247 @@
+{
+  "canonical_commit": "8fe2c9270f487729af9e88f40894e1c4530f2c20",
+  "canonical_tree": "ff97dbcf5ea9efe19e98d885c4694322a6fe627f",
+  "source_scope": "30 exact pt_auth runtime/test/sample/document leaves; canonical unrelated/history bodies retained by metadata only",
+  "materialized": [
+    {
+      "path": "pt_auth/HARDENING.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "49db3a3e425e2ecb6c36b000daf95874dbf88cd9",
+      "size": 11058,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/49db3a3e425e2ecb6c36b000daf95874dbf88cd9"
+    },
+    {
+      "path": "pt_auth/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2c6440e7f9bdbc9f4d15e60d05b5626921d35cef",
+      "size": 23084,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/2c6440e7f9bdbc9f4d15e60d05b5626921d35cef"
+    },
+    {
+      "path": "pt_auth/ptauth/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a6f4545ac17e2578317ef694f7bb548489f6c71c",
+      "size": 311,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/a6f4545ac17e2578317ef694f7bb548489f6c71c"
+    },
+    {
+      "path": "pt_auth/ptauth/__main__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3c93dd90cf357624c77ab3589ef2b201868c181e",
+      "size": 57,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/3c93dd90cf357624c77ab3589ef2b201868c181e"
+    },
+    {
+      "path": "pt_auth/ptauth/calendar_ui.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a6ba45ec85c28f7fd80d7e2fdd32ac62e96daa99",
+      "size": 8448,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/a6ba45ec85c28f7fd80d7e2fdd32ac62e96daa99"
+    },
+    {
+      "path": "pt_auth/ptauth/cli.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "559c0a76effa2204041e9318e9869a6c7389f50d",
+      "size": 5071,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/559c0a76effa2204041e9318e9869a6c7389f50d"
+    },
+    {
+      "path": "pt_auth/ptauth/data.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "19a2a1b79eff6d2753507eebf3bf78011ddaaa87",
+      "size": 10283,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/19a2a1b79eff6d2753507eebf3bf78011ddaaa87"
+    },
+    {
+      "path": "pt_auth/ptauth/engine.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "39c97f35d61ff949b5c2381f0ad60d7af8d74226",
+      "size": 16057,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/39c97f35d61ff949b5c2381f0ad60d7af8d74226"
+    },
+    {
+      "path": "pt_auth/ptauth/report.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2ce82b1712e5c6fc03374d38996eceddf31782f0",
+      "size": 10743,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/2ce82b1712e5c6fc03374d38996eceddf31782f0"
+    },
+    {
+      "path": "pt_auth/ptauth/synth.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2ff6a2548bf55a812cfa62e397442a0d3f7debbb",
+      "size": 8873,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/2ff6a2548bf55a812cfa62e397442a0d3f7debbb"
+    },
+    {
+      "path": "pt_auth/ptauth/ui.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec2e198ee1873c41981d201c78a63dbccc13afad",
+      "size": 18655,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/ec2e198ee1873c41981d201c78a63dbccc13afad"
+    },
+    {
+      "path": "pt_auth/ptauth/uncovered.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9ab21781c4116dd0b9b76ac0116868898f3ee7d4",
+      "size": 4319,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/9ab21781c4116dd0b9b76ac0116868898f3ee7d4"
+    },
+    {
+      "path": "pt_auth/ptauth/web.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e5d38f4cf8c33f4b9c91bd3c3d929fcfa0f80b3",
+      "size": 8633,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/7e5d38f4cf8c33f4b9c91bd3c3d929fcfa0f80b3"
+    },
+    {
+      "path": "pt_auth/ptauth/worklist_calendar.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e125f9ed77343fcc3d82e6d6f25a7296b0463aa7",
+      "size": 13750,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/e125f9ed77343fcc3d82e6d6f25a7296b0463aa7"
+    },
+    {
+      "path": "pt_auth/sample_data/README_SYNTHETIC.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "943c3d0e2436abd6c1f3dcb6ef7b7f1aabaff90f",
+      "size": 262,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/943c3d0e2436abd6c1f3dcb6ef7b7f1aabaff90f"
+    },
+    {
+      "path": "pt_auth/sample_data/authorizations.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "036f7b276e3e09252afb886ad451531f51ada844",
+      "size": 2990,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/036f7b276e3e09252afb886ad451531f51ada844"
+    },
+    {
+      "path": "pt_auth/sample_data/expected.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "21177a89ac5c24c9faf79746550165a3a170d08a",
+      "size": 3482,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/21177a89ac5c24c9faf79746550165a3a170d08a"
+    },
+    {
+      "path": "pt_auth/sample_data/patients.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e67323b68d1ac9ee4a901dc3ef70a95384ba5000",
+      "size": 2333,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/e67323b68d1ac9ee4a901dc3ef70a95384ba5000"
+    },
+    {
+      "path": "pt_auth/sample_data/payers.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1853837e82048ac11698b4ad5bb6eeb055d56038",
+      "size": 904,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/1853837e82048ac11698b4ad5bb6eeb055d56038"
+    },
+    {
+      "path": "pt_auth/sample_data/schedule.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "24a395250f5318004bab4f168c3ca237189ab354",
+      "size": 71520,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/24a395250f5318004bab4f168c3ca237189ab354"
+    },
+    {
+      "path": "pt_auth/tests/browser/uncovered_review.test.cjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4093e4b85569cf1422fe440cf55e83addd324c9f",
+      "size": 9085,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/4093e4b85569cf1422fe440cf55e83addd324c9f"
+    },
+    {
+      "path": "pt_auth/tests/browser/visit_status_review.test.cjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3fbc4bd1dcbbc1db11e40aeda589753f0328310c",
+      "size": 12006,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/3fbc4bd1dcbbc1db11e40aeda589753f0328310c"
+    },
+    {
+      "path": "pt_auth/tests/conftest.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e4c2fd4ff87c63061fb6a10f0fb01228c46c0875",
+      "size": 102,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/e4c2fd4ff87c63061fb6a10f0fb01228c46c0875"
+    },
+    {
+      "path": "pt_auth/tests/test_clinic_timezone.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2d5d43e389dc886f4a2a3bed9f536858be06d5f0",
+      "size": 12481,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/2d5d43e389dc886f4a2a3bed9f536858be06d5f0"
+    },
+    {
+      "path": "pt_auth/tests/test_ptauth.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "172f5fef3ccaa02e60b7ea11bfbcdac08c01d51c",
+      "size": 7991,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/172f5fef3ccaa02e60b7ea11bfbcdac08c01d51c"
+    },
+    {
+      "path": "pt_auth/tests/test_ptauth_hardening.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4b8b689e31ed003e4b0755ae399355e4a19e5c71",
+      "size": 13114,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/4b8b689e31ed003e4b0755ae399355e4a19e5c71"
+    },
+    {
+      "path": "pt_auth/tests/test_receiving_timezone.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "18105410825b731e4475067d5e62124ea0cf4deb",
+      "size": 11789,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/18105410825b731e4475067d5e62124ea0cf4deb"
+    },
+    {
+      "path": "pt_auth/tests/test_uncovered_review.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "15f167e3af34056f6558be4672446b35eabb5f4d",
+      "size": 14446,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/15f167e3af34056f6558be4672446b35eabb5f4d"
+    },
+    {
+      "path": "pt_auth/tests/test_visit_status_review.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8bea7e9286cd3142f375de6a3d7bc08b57b75ef3",
+      "size": 9712,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/8bea7e9286cd3142f375de6a3d7bc08b57b75ef3"
+    },
+    {
+      "path": "pt_auth/tests/test_worklist_calendar.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "99334636ddb2a051e1d50686934b4bf308d2be58",
+      "size": 20398,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/99334636ddb2a051e1d50686934b4bf308d2be58"
+    }
+  ]
+}

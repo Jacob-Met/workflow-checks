@@ -1,0 +1,41 @@
+{
+  "recorded_at": "2026-10-08T19:32:25.588477+00:00",
+  "runs": [
+    {
+      "name": "inherited",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "cwd": "/home/jacob/workflow-pt-csv-65ae877160f6/baseline/pt_auth",
+      "exit_code": 0,
+      "stdout_sha256": "41497eee1ba9fa4c1d26c5c4f6fa9e894b9566e27dab3168682eb7e73ba1a463",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "new-headers",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_csv_headers.py",
+        "-v"
+      ],
+      "cwd": "/home/jacob/workflow-pt-csv-65ae877160f6/candidate/pt_auth",
+      "exit_code": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "9c82adc2773f043427d9d9822edbbba3f477e1a767d6f08eee40e7314d4420d8"
+    }
+  ],
+  "python": "3.14.4 (main, Aug 20 2026, 10:41:58) [GCC 15.2.0]",
+  "production_unchanged": true,
+  "test_sha256": "886acf93c97ef0b276d5c38ea49c9208d95731034a844aeb629d46a754a343e0"
+}

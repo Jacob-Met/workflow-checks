@@ -1,0 +1,484 @@
+{
+  "schema": "hamon.pt-header.independent-receiving.v1",
+  "actor": "estate-65ae877160f6/root",
+  "recorded_at": "2026-10-08T19:43:34.889274+00:00",
+  "source_origin": "/home/jacob/workflow-pt-csv-65ae877160f6/candidate/pt_auth",
+  "source_files": {
+    "__init__.py": "71e1527f153c607b679485e4954af1b3ec6a843b041562eb07f4d36e08fd231c",
+    "__main__.py": "4b1afbca74a10abc3cff7b4e5a11b558bf619e45b89709faf9225a474a2a250f",
+    "calendar_ui.js": "b91fe76b947f381b2fa0835646fc664bf7eaa4474631ae3c9e5cb3968b9cdf3a",
+    "cli.py": "cd4e5ed987b6ae686de687eabbb69007ab9cda8204ec41ebb25185f864321585",
+    "data.py": "b16d31711e678e3d25c9cf867098de93645298410985b96248e03ac3133adf19",
+    "engine.py": "bfa7049e9b133d654ce947b135c17ac401bd7b1fcd76350bdb10de5b7a1ad1f7",
+    "report.py": "20cbc86e153b9af5151fd3e74cb370298de4692c81b3546a214eb2cfa8307df7",
+    "synth.py": "b82a34447e43dacbe46ed06e60b693ed216e87f15892ae297c682aa5a3f139fd",
+    "ui.html": "a59df72e1edf5075e513047eb4000e94a87bf1dbcde8d243547944c283bbd492",
+    "uncovered.py": "21e92509df706e504a8630f3383ea4fe98d03047d2e4b070f3fdd188d995350e",
+    "web.py": "18a5f6e889f2a5d7e0e3704989f041681252df3ee0cb29e3c356aff560fd2967",
+    "worklist_calendar.py": "89751f1de5548ced34a59c296d0edf1eda06a38bdb935be3e7c3c8b2ae5d55c0"
+  },
+  "data_sha256": "b16d31711e678e3d25c9cf867098de93645298410985b96248e03ac3133adf19",
+  "receiver_sha256": "10446cf78c2da580fe929f163820fc20bca7cd1e6e4ec7dd76c57cce012ec0f2",
+  "python": "3.14.4 (main, Aug 20 2026, 10:41:58) [GCC 15.2.0]",
+  "reference_receipt": "/home/jacob/workflow-pt-header-receiving-65ae877160f6/baseline/receipt.json",
+  "reference_receipt_sha256": "2c8b4dcf36c926cab3a9a3ff7cbfa84bee9e7b2998f0c9d803d5173d1b0b9dfb",
+  "groups": [
+    {
+      "name": "schedule-normalized",
+      "passed": true
+    },
+    {
+      "name": "authorization-normalized",
+      "passed": true
+    },
+    {
+      "name": "payer-normalized",
+      "passed": true
+    },
+    {
+      "name": "patient-exact",
+      "passed": true
+    },
+    {
+      "name": "header-only-ambiguity",
+      "passed": true
+    },
+    {
+      "name": "quoted-header-physical-line",
+      "passed": true
+    },
+    {
+      "name": "accepted-export-quirks",
+      "passed": true
+    },
+    {
+      "name": "accepted-empty-files",
+      "passed": true
+    },
+    {
+      "name": "isolated-source-preserved",
+      "passed": true
+    }
+  ],
+  "cases": [
+    {
+      "name": "schedule-normalized",
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "ptauth",
+        "run",
+        "--data",
+        "/home/jacob/workflow-pt-header-receiving-65ae877160f6/candidate-v1/cases/schedule-normalized/inputs",
+        "--out",
+        "/home/jacob/workflow-pt-header-receiving-65ae877160f6/candidate-v1/cases/schedule-normalized/reports",
+        "--as-of",
+        "2026-09-28",
+        "--clinic-timezone",
+        "UTC"
+      ],
+      "returncode": 2,
+      "stdout": "",
+      "stderr": "ERROR: schedule.csv line 1: duplicate normalized column 'visit_id' (columns 1 and 9)\nCheck the input settings and files and run again; no outputs were written.\n",
+      "inputs_before": {
+        "authorizations.csv": "3a65ffd1f2e5890f9c0133b7ec42e4a1fbecacd67d806f2df1e3d323d5992cc8",
+        "patients.csv": "d7700f8d72224513d0a7e2ed4fbab6f22b043c081fa264790a36886916bc52e3",
+        "payers.csv": "8b1db52cbad4f849fe165e87cb6906d002a0b326f67a9c3738cf182ce48dc9f9",
+        "schedule.csv": "dbad8cbbaf208154591df2dabbdabd2a5e0bb97927ba64a8e4ca4b65fc53db60"
+      },
+      "inputs_after": {
+        "authorizations.csv": "3a65ffd1f2e5890f9c0133b7ec42e4a1fbecacd67d806f2df1e3d323d5992cc8",
+        "patients.csv": "d7700f8d72224513d0a7e2ed4fbab6f22b043c081fa264790a36886916bc52e3",
+        "payers.csv": "8b1db52cbad4f849fe165e87cb6906d002a0b326f67a9c3738cf182ce48dc9f9",
+        "schedule.csv": "dbad8cbbaf208154591df2dabbdabd2a5e0bb97927ba64a8e4ca4b65fc53db60"
+      },
+      "reports_before": {
+        "audit.jsonl": "8c93d8ae362d03dbd309aad72508f84ee859335322739269bdeea957b6279c3c",
+        "digest.html": "fe66c017a3c4ecc3b47223ae1dbc9162927373de0424715a2d8c9c55f852fbf2",
+        "ledger.csv": "4c5c40593ae0a119be04add2a3234e4b163276da23cd7f0c11e42adb1fc5131f",
+        "summary.json": "2995a691efe2bac8cab7872074a6c0099704527de8c91e12aabd9303b95306dc",
+        "uncovered_visits.csv": "be65e2e67afb59f973415b00ccec3857adf048e321026eb921f505e4333e3979",
+        "visit_status_review.csv": "fbfc3b40fe5351aea66906794bcf59e1a5e216692a423856102266befd451ed6",
+        "worklist.csv": "5778637840ef95fc21c8b6d2ebc209406042c81caa965af0a8e9f7f6136be02d"
+      },
+      "reports_after": {
+        "audit.jsonl": "8c93d8ae362d03dbd309aad72508f84ee859335322739269bdeea957b6279c3c",
+        "digest.html": "fe66c017a3c4ecc3b47223ae1dbc9162927373de0424715a2d8c9c55f852fbf2",
+        "ledger.csv": "4c5c40593ae0a119be04add2a3234e4b163276da23cd7f0c11e42adb1fc5131f",
+        "summary.json": "2995a691efe2bac8cab7872074a6c0099704527de8c91e12aabd9303b95306dc",
+        "uncovered_visits.csv": "be65e2e67afb59f973415b00ccec3857adf048e321026eb921f505e4333e3979",
+        "visit_status_review.csv": "fbfc3b40fe5351aea66906794bcf59e1a5e216692a423856102266befd451ed6",
+        "worklist.csv": "5778637840ef95fc21c8b6d2ebc209406042c81caa965af0a8e9f7f6136be02d"
+      },
+      "expected_refusal": true
+    },
+    {
+      "name": "authorization-normalized",
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "ptauth",
+        "run",
+        "--data",
+        "/home/jacob/workflow-pt-header-receiving-65ae877160f6/candidate-v1/cases/authorization-normalized/inputs",
+        "--out",
+        "/home/jacob/workflow-pt-header-receiving-65ae877160f6/candidate-v1/cases/authorization-normalized/reports",
+        "--as-of",
+        "2026-09-28",
+        "--clinic-timezone",
+        "UTC"
+      ],
+      "returncode": 2,
+      "stdout": "",
+      "stderr": "ERROR: authorizations.csv line 1: duplicate normalized column 'visits_authorized' (columns 4 and 8)\nCheck the input settings and files and run again; no outputs were written.\n",
+      "inputs_before": {
+        "authorizations.csv": "cff7030feb8c73f1abccd6487dfaa78d0de0b195171b8623ce393e288ac6ca23",
+        "patients.csv": "d7700f8d72224513d0a7e2ed4fbab6f22b043c081fa264790a36886916bc52e3",
+        "payers.csv": "8b1db52cbad4f849fe165e87cb6906d002a0b326f67a9c3738cf182ce48dc9f9",
+        "schedule.csv": "224a2df5376bd14d5cdd7a92bfda5062f37e412bedfa3d307f3e0014d54fabb9"
+      },
+      "inputs_after": {
+        "authorizations.csv": "cff7030feb8c73f1abccd6487dfaa78d0de0b195171b8623ce393e288ac6ca23",
+        "patients.csv": "d7700f8d72224513d0a7e2ed4fbab6f22b043c081fa264790a36886916bc52e3",
+        "payers.csv": "8b1db52cbad4f849fe165e87cb6906d002a0b326f67a9c3738cf182ce48dc9f9",
+        "schedule.csv": "224a2df5376bd14d5cdd7a92bfda5062f37e412bedfa3d307f3e0014d54fabb9"
+      },
+      "reports_before": {
+        "audit.jsonl": "8c93d8ae362d03dbd309aad72508f84ee859335322739269bdeea957b6279c3c",
+        "digest.html": "fe66c017a3c4ecc3b47223ae1dbc9162927373de0424715a2d8c9c55f852fbf2",
+        "ledger.csv": "4c5c40593ae0a119be04add2a3234e4b163276da23cd7f0c11e42adb1fc5131f",
+        "summary.json": "2995a691efe2bac8cab7872074a6c0099704527de8c91e12aabd9303b95306dc",
+        "uncovered_visits.csv": "be65e2e67afb59f973415b00ccec3857adf048e321026eb921f505e4333e3979",
+        "visit_status_review.csv": "fbfc3b40fe5351aea66906794bcf59e1a5e216692a423856102266befd451ed6",
+        "worklist.csv": "5778637840ef95fc21c8b6d2ebc209406042c81caa965af0a8e9f7f6136be02d"
+      },
+      "reports_after": {
+        "audit.jsonl": "8c93d8ae362d03dbd309aad72508f84ee859335322739269bdeea957b6279c3c",
+        "digest.html": "fe66c017a3c4ecc3b47223ae1dbc9162927373de0424715a2d8c9c55f852fbf2",
+        "ledger.csv": "4c5c40593ae0a119be04add2a3234e4b163276da23cd7f0c11e42adb1fc5131f",
+        "summary.json": "2995a691efe2bac8cab7872074a6c0099704527de8c91e12aabd9303b95306dc",
+        "uncovered_visits.csv": "be65e2e67afb59f973415b00ccec3857adf048e321026eb921f505e4333e3979",
+        "visit_status_review.csv": "fbfc3b40fe5351aea66906794bcf59e1a5e216692a423856102266befd451ed6",
+        "worklist.csv": "5778637840ef95fc21c8b6d2ebc209406042c81caa965af0a8e9f7f6136be02d"
+      },
+      "expected_refusal": true
+    },
+    {
+      "name": "payer-normalized",
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "ptauth",
+        "run",
+        "--data",
+        "/home/jacob/workflow-pt-header-receiving-65ae877160f6/candidate-v1/cases/payer-normalized/inputs",
+        "--out",
+        "/home/jacob/workflow-pt-header-receiving-65ae877160f6/candidate-v1/cases/payer-normalized/reports",
+        "--as-of",
+        "2026-09-28",
+        "--clinic-timezone",
+        "UTC"
+      ],
+      "returncode": 2,
+      "stdout": "",
+      "stderr": "ERROR: payers.csv line 1: duplicate normalized column 'payer_name' (columns 2 and 10)\nCheck the input settings and files and run again; no outputs were written.\n",
+      "inputs_before": {
+        "authorizations.csv": "3a65ffd1f2e5890f9c0133b7ec42e4a1fbecacd67d806f2df1e3d323d5992cc8",
+        "patients.csv": "d7700f8d72224513d0a7e2ed4fbab6f22b043c081fa264790a36886916bc52e3",
+        "payers.csv": "5c30edaff55aef2675ab263870760ec978262c7680cc8c359f767f5bed7bbe44",
+        "schedule.csv": "224a2df5376bd14d5cdd7a92bfda5062f37e412bedfa3d307f3e0014d54fabb9"
+      },
+      "inputs_after": {
+        "authorizations.csv": "3a65ffd1f2e5890f9c0133b7ec42e4a1fbecacd67d806f2df1e3d323d5992cc8",
+        "patients.csv": "d7700f8d72224513d0a7e2ed4fbab6f22b043c081fa264790a36886916bc52e3",
+        "payers.csv": "5c30edaff55aef2675ab263870760ec978262c7680cc8c359f767f5bed7bbe44",
+        "schedule.csv": "224a2df5376bd14d5cdd7a92bfda5062f37e412bedfa3d307f3e0014d54fabb9"
+      },
+      "reports_before": {
+        "audit.jsonl": "8c93d8ae362d03dbd309aad72508f84ee859335322739269bdeea957b6279c3c",
+        "digest.html": "fe66c017a3c4ecc3b47223ae1dbc9162927373de0424715a2d8c9c55f852fbf2",
+        "ledger.csv": "4c5c40593ae0a119be04add2a3234e4b163276da23cd7f0c11e42adb1fc5131f",
+        "summary.json": "2995a691efe2bac8cab7872074a6c0099704527de8c91e12aabd9303b95306dc",
+        "uncovered_visits.csv": "be65e2e67afb59f973415b00ccec3857adf048e321026eb921f505e4333e3979",
+        "visit_status_review.csv": "fbfc3b40fe5351aea66906794bcf59e1a5e216692a423856102266befd451ed6",
+        "worklist.csv": "5778637840ef95fc21c8b6d2ebc209406042c81caa965af0a8e9f7f6136be02d"
+      },
+      "reports_after": {
+        "audit.jsonl": "8c93d8ae362d03dbd309aad72508f84ee859335322739269bdeea957b6279c3c",
+        "digest.html": "fe66c017a3c4ecc3b47223ae1dbc9162927373de0424715a2d8c9c55f852fbf2",
+        "ledger.csv": "4c5c40593ae0a119be04add2a3234e4b163276da23cd7f0c11e42adb1fc5131f",
+        "summary.json": "2995a691efe2bac8cab7872074a6c0099704527de8c91e12aabd9303b95306dc",
+        "uncovered_visits.csv": "be65e2e67afb59f973415b00ccec3857adf048e321026eb921f505e4333e3979",
+        "visit_status_review.csv": "fbfc3b40fe5351aea66906794bcf59e1a5e216692a423856102266befd451ed6",
+        "worklist.csv": "5778637840ef95fc21c8b6d2ebc209406042c81caa965af0a8e9f7f6136be02d"
+      },
+      "expected_refusal": true
+    },
+    {
+      "name": "patient-exact",
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "ptauth",
+        "run",
+        "--data",
+        "/home/jacob/workflow-pt-header-receiving-65ae877160f6/candidate-v1/cases/patient-exact/inputs",
+        "--out",
+        "/home/jacob/workflow-pt-header-receiving-65ae877160f6/candidate-v1/cases/patient-exact/reports",
+        "--as-of",
+        "2026-09-28",
+        "--clinic-timezone",
+        "UTC"
+      ],
+      "returncode": 2,
+      "stdout": "",
+      "stderr": "ERROR: patients.csv line 1: duplicate normalized column 'display_name' (columns 2 and 5)\nCheck the input settings and files and run again; no outputs were written.\n",
+      "inputs_before": {
+        "authorizations.csv": "3a65ffd1f2e5890f9c0133b7ec42e4a1fbecacd67d806f2df1e3d323d5992cc8",
+        "patients.csv": "739e5cc49def70cbab3d94f1232e00ee91a3934d2fa5f50378c6c0f7a4e6dcd9",
+        "payers.csv": "8b1db52cbad4f849fe165e87cb6906d002a0b326f67a9c3738cf182ce48dc9f9",
+        "schedule.csv": "224a2df5376bd14d5cdd7a92bfda5062f37e412bedfa3d307f3e0014d54fabb9"
+      },
+      "inputs_after": {
+        "authorizations.csv": "3a65ffd1f2e5890f9c0133b7ec42e4a1fbecacd67d806f2df1e3d323d5992cc8",
+        "patients.csv": "739e5cc49def70cbab3d94f1232e00ee91a3934d2fa5f50378c6c0f7a4e6dcd9",
+        "payers.csv": "8b1db52cbad4f849fe165e87cb6906d002a0b326f67a9c3738cf182ce48dc9f9",
+        "schedule.csv": "224a2df5376bd14d5cdd7a92bfda5062f37e412bedfa3d307f3e0014d54fabb9"
+      },
+      "reports_before": {
+        "audit.jsonl": "8c93d8ae362d03dbd309aad72508f84ee859335322739269bdeea957b6279c3c",
+        "digest.html": "fe66c017a3c4ecc3b47223ae1dbc9162927373de0424715a2d8c9c55f852fbf2",
+        "ledger.csv": "4c5c40593ae0a119be04add2a3234e4b163276da23cd7f0c11e42adb1fc5131f",
+        "summary.json": "2995a691efe2bac8cab7872074a6c0099704527de8c91e12aabd9303b95306dc",
+        "uncovered_visits.csv": "be65e2e67afb59f973415b00ccec3857adf048e321026eb921f505e4333e3979",
+        "visit_status_review.csv": "fbfc3b40fe5351aea66906794bcf59e1a5e216692a423856102266befd451ed6",
+        "worklist.csv": "5778637840ef95fc21c8b6d2ebc209406042c81caa965af0a8e9f7f6136be02d"
+      },
+      "reports_after": {
+        "audit.jsonl": "8c93d8ae362d03dbd309aad72508f84ee859335322739269bdeea957b6279c3c",
+        "digest.html": "fe66c017a3c4ecc3b47223ae1dbc9162927373de0424715a2d8c9c55f852fbf2",
+        "ledger.csv": "4c5c40593ae0a119be04add2a3234e4b163276da23cd7f0c11e42adb1fc5131f",
+        "summary.json": "2995a691efe2bac8cab7872074a6c0099704527de8c91e12aabd9303b95306dc",
+        "uncovered_visits.csv": "be65e2e67afb59f973415b00ccec3857adf048e321026eb921f505e4333e3979",
+        "visit_status_review.csv": "fbfc3b40fe5351aea66906794bcf59e1a5e216692a423856102266befd451ed6",
+        "worklist.csv": "5778637840ef95fc21c8b6d2ebc209406042c81caa965af0a8e9f7f6136be02d"
+      },
+      "expected_refusal": true
+    },
+    {
+      "name": "header-only-ambiguity",
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "ptauth",
+        "run",
+        "--data",
+        "/home/jacob/workflow-pt-header-receiving-65ae877160f6/candidate-v1/cases/header-only-ambiguity/inputs",
+        "--out",
+        "/home/jacob/workflow-pt-header-receiving-65ae877160f6/candidate-v1/cases/header-only-ambiguity/reports",
+        "--as-of",
+        "2026-09-28",
+        "--clinic-timezone",
+        "UTC"
+      ],
+      "returncode": 2,
+      "stdout": "",
+      "stderr": "ERROR: schedule.csv line 1: duplicate normalized column 'visit_id' (columns 1 and 9)\nCheck the input settings and files and run again; no outputs were written.\n",
+      "inputs_before": {
+        "authorizations.csv": "3a65ffd1f2e5890f9c0133b7ec42e4a1fbecacd67d806f2df1e3d323d5992cc8",
+        "patients.csv": "d7700f8d72224513d0a7e2ed4fbab6f22b043c081fa264790a36886916bc52e3",
+        "payers.csv": "8b1db52cbad4f849fe165e87cb6906d002a0b326f67a9c3738cf182ce48dc9f9",
+        "schedule.csv": "2720d6f52178499c0c4f0a4d01b1b859734cb3799e26cc07e7e88f966d178b64"
+      },
+      "inputs_after": {
+        "authorizations.csv": "3a65ffd1f2e5890f9c0133b7ec42e4a1fbecacd67d806f2df1e3d323d5992cc8",
+        "patients.csv": "d7700f8d72224513d0a7e2ed4fbab6f22b043c081fa264790a36886916bc52e3",
+        "payers.csv": "8b1db52cbad4f849fe165e87cb6906d002a0b326f67a9c3738cf182ce48dc9f9",
+        "schedule.csv": "2720d6f52178499c0c4f0a4d01b1b859734cb3799e26cc07e7e88f966d178b64"
+      },
+      "reports_before": {
+        "audit.jsonl": "8c93d8ae362d03dbd309aad72508f84ee859335322739269bdeea957b6279c3c",
+        "digest.html": "fe66c017a3c4ecc3b47223ae1dbc9162927373de0424715a2d8c9c55f852fbf2",
+        "ledger.csv": "4c5c40593ae0a119be04add2a3234e4b163276da23cd7f0c11e42adb1fc5131f",
+        "summary.json": "2995a691efe2bac8cab7872074a6c0099704527de8c91e12aabd9303b95306dc",
+        "uncovered_visits.csv": "be65e2e67afb59f973415b00ccec3857adf048e321026eb921f505e4333e3979",
+        "visit_status_review.csv": "fbfc3b40fe5351aea66906794bcf59e1a5e216692a423856102266befd451ed6",
+        "worklist.csv": "5778637840ef95fc21c8b6d2ebc209406042c81caa965af0a8e9f7f6136be02d"
+      },
+      "reports_after": {
+        "audit.jsonl": "8c93d8ae362d03dbd309aad72508f84ee859335322739269bdeea957b6279c3c",
+        "digest.html": "fe66c017a3c4ecc3b47223ae1dbc9162927373de0424715a2d8c9c55f852fbf2",
+        "ledger.csv": "4c5c40593ae0a119be04add2a3234e4b163276da23cd7f0c11e42adb1fc5131f",
+        "summary.json": "2995a691efe2bac8cab7872074a6c0099704527de8c91e12aabd9303b95306dc",
+        "uncovered_visits.csv": "be65e2e67afb59f973415b00ccec3857adf048e321026eb921f505e4333e3979",
+        "visit_status_review.csv": "fbfc3b40fe5351aea66906794bcf59e1a5e216692a423856102266befd451ed6",
+        "worklist.csv": "5778637840ef95fc21c8b6d2ebc209406042c81caa965af0a8e9f7f6136be02d"
+      },
+      "expected_refusal": true
+    },
+    {
+      "name": "quoted-header-physical-line",
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "ptauth",
+        "run",
+        "--data",
+        "/home/jacob/workflow-pt-header-receiving-65ae877160f6/candidate-v1/cases/quoted-header-physical-line/inputs",
+        "--out",
+        "/home/jacob/workflow-pt-header-receiving-65ae877160f6/candidate-v1/cases/quoted-header-physical-line/reports",
+        "--as-of",
+        "2026-09-28",
+        "--clinic-timezone",
+        "UTC"
+      ],
+      "returncode": 2,
+      "stdout": "",
+      "stderr": "ERROR: schedule.csv line 2: duplicate normalized column 'visit_id' (columns 1 and 9)\nCheck the input settings and files and run again; no outputs were written.\n",
+      "inputs_before": {
+        "authorizations.csv": "3a65ffd1f2e5890f9c0133b7ec42e4a1fbecacd67d806f2df1e3d323d5992cc8",
+        "patients.csv": "d7700f8d72224513d0a7e2ed4fbab6f22b043c081fa264790a36886916bc52e3",
+        "payers.csv": "8b1db52cbad4f849fe165e87cb6906d002a0b326f67a9c3738cf182ce48dc9f9",
+        "schedule.csv": "2fbe84ca804dac3be9713312688221ea0f5fa5cd10d9a7561a28b3a4cd681761"
+      },
+      "inputs_after": {
+        "authorizations.csv": "3a65ffd1f2e5890f9c0133b7ec42e4a1fbecacd67d806f2df1e3d323d5992cc8",
+        "patients.csv": "d7700f8d72224513d0a7e2ed4fbab6f22b043c081fa264790a36886916bc52e3",
+        "payers.csv": "8b1db52cbad4f849fe165e87cb6906d002a0b326f67a9c3738cf182ce48dc9f9",
+        "schedule.csv": "2fbe84ca804dac3be9713312688221ea0f5fa5cd10d9a7561a28b3a4cd681761"
+      },
+      "reports_before": {
+        "audit.jsonl": "8c93d8ae362d03dbd309aad72508f84ee859335322739269bdeea957b6279c3c",
+        "digest.html": "fe66c017a3c4ecc3b47223ae1dbc9162927373de0424715a2d8c9c55f852fbf2",
+        "ledger.csv": "4c5c40593ae0a119be04add2a3234e4b163276da23cd7f0c11e42adb1fc5131f",
+        "summary.json": "2995a691efe2bac8cab7872074a6c0099704527de8c91e12aabd9303b95306dc",
+        "uncovered_visits.csv": "be65e2e67afb59f973415b00ccec3857adf048e321026eb921f505e4333e3979",
+        "visit_status_review.csv": "fbfc3b40fe5351aea66906794bcf59e1a5e216692a423856102266befd451ed6",
+        "worklist.csv": "5778637840ef95fc21c8b6d2ebc209406042c81caa965af0a8e9f7f6136be02d"
+      },
+      "reports_after": {
+        "audit.jsonl": "8c93d8ae362d03dbd309aad72508f84ee859335322739269bdeea957b6279c3c",
+        "digest.html": "fe66c017a3c4ecc3b47223ae1dbc9162927373de0424715a2d8c9c55f852fbf2",
+        "ledger.csv": "4c5c40593ae0a119be04add2a3234e4b163276da23cd7f0c11e42adb1fc5131f",
+        "summary.json": "2995a691efe2bac8cab7872074a6c0099704527de8c91e12aabd9303b95306dc",
+        "uncovered_visits.csv": "be65e2e67afb59f973415b00ccec3857adf048e321026eb921f505e4333e3979",
+        "visit_status_review.csv": "fbfc3b40fe5351aea66906794bcf59e1a5e216692a423856102266befd451ed6",
+        "worklist.csv": "5778637840ef95fc21c8b6d2ebc209406042c81caa965af0a8e9f7f6136be02d"
+      },
+      "expected_refusal": true
+    },
+    {
+      "name": "accepted-export-quirks",
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "ptauth",
+        "run",
+        "--data",
+        "/home/jacob/workflow-pt-header-receiving-65ae877160f6/candidate-v1/cases/accepted-export-quirks/inputs",
+        "--out",
+        "/home/jacob/workflow-pt-header-receiving-65ae877160f6/candidate-v1/cases/accepted-export-quirks/reports",
+        "--as-of",
+        "2026-09-28",
+        "--clinic-timezone",
+        "UTC"
+      ],
+      "returncode": 0,
+      "stdout": "[SYNTHETIC] as_of 2026-09-28: 1 patients, 1 visits, 1 auths\nclinic time zone: UTC\nworklist: 0 items (P1 0, P2 0, P3 0); 0 scheduled visits uncovered; 0 completed w/o auth\n0 past scheduled visits need status review: /home/jacob/workflow-pt-header-receiving-65ae877160f6/candidate-v1/cases/accepted-export-quirks/reports/visit_status_review.csv\n0 uncovered visits to inspect: /home/jacob/workflow-pt-header-receiving-65ae877160f6/candidate-v1/cases/accepted-export-quirks/reports/uncovered_visits.csv\ndigest: /home/jacob/workflow-pt-header-receiving-65ae877160f6/candidate-v1/cases/accepted-export-quirks/reports/digest.html\n",
+      "stderr": "",
+      "inputs_before": {
+        "authorizations.csv": "4aaf43b5b736b9472bc3ba9281b65e542c09683b8114d251cee7a7bd4984d87e",
+        "patients.csv": "e103a638764b3988183f21345f8ba755d246573d7abe6b74fbee36f7022b6258",
+        "payers.csv": "69448ecc9ffe23ba40c494a6cc3ced5b5d405c92b417e5033305367431fcfa3e",
+        "schedule.csv": "cd5307b008175422166e91b662f2a3f23e27095c630376dec83a5097728e16dd"
+      },
+      "inputs_after": {
+        "authorizations.csv": "4aaf43b5b736b9472bc3ba9281b65e542c09683b8114d251cee7a7bd4984d87e",
+        "patients.csv": "e103a638764b3988183f21345f8ba755d246573d7abe6b74fbee36f7022b6258",
+        "payers.csv": "69448ecc9ffe23ba40c494a6cc3ced5b5d405c92b417e5033305367431fcfa3e",
+        "schedule.csv": "cd5307b008175422166e91b662f2a3f23e27095c630376dec83a5097728e16dd"
+      },
+      "reports_before": {
+        "audit.jsonl": "8c93d8ae362d03dbd309aad72508f84ee859335322739269bdeea957b6279c3c",
+        "digest.html": "fe66c017a3c4ecc3b47223ae1dbc9162927373de0424715a2d8c9c55f852fbf2",
+        "ledger.csv": "4c5c40593ae0a119be04add2a3234e4b163276da23cd7f0c11e42adb1fc5131f",
+        "summary.json": "2995a691efe2bac8cab7872074a6c0099704527de8c91e12aabd9303b95306dc",
+        "uncovered_visits.csv": "be65e2e67afb59f973415b00ccec3857adf048e321026eb921f505e4333e3979",
+        "visit_status_review.csv": "fbfc3b40fe5351aea66906794bcf59e1a5e216692a423856102266befd451ed6",
+        "worklist.csv": "5778637840ef95fc21c8b6d2ebc209406042c81caa965af0a8e9f7f6136be02d"
+      },
+      "reports_after": {
+        "audit.jsonl": "309059ee398df206e1ad1bc9dbd9b7089fae5246b0e6083583b2ed24a10aa821",
+        "digest.html": "ca9e1df99af8a9f74c86769c2a339bab9c83d704befd8755d0b812a8f4db4293",
+        "ledger.csv": "8ecb433d704a3ab638737fd67a124f053fefb46cf536d5e3710936a718bde86b",
+        "summary.json": "69f373b5163922d84ee5c3719fe2c6bca37241be54c68e6efa25c34531567e86",
+        "uncovered_visits.csv": "6719e7dea0c56e97db63c1b757e09b6f197e4d89def65769d387887e27c678e3",
+        "visit_status_review.csv": "9cb3e3e82e30935f57448ed826dbd8dab78e39355e3bebba59c478fa355ee170",
+        "worklist.csv": "5cb68c9683510c064dcb50baf580c7b4676137cafa44b071c7985d34b11ee05d"
+      },
+      "expected_refusal": false
+    },
+    {
+      "name": "accepted-empty-files",
+      "argv": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "ptauth",
+        "run",
+        "--data",
+        "/home/jacob/workflow-pt-header-receiving-65ae877160f6/candidate-v1/cases/accepted-empty-files/inputs",
+        "--out",
+        "/home/jacob/workflow-pt-header-receiving-65ae877160f6/candidate-v1/cases/accepted-empty-files/reports",
+        "--as-of",
+        "2026-09-28",
+        "--clinic-timezone",
+        "UTC"
+      ],
+      "returncode": 0,
+      "stdout": "[SYNTHETIC] as_of 2026-09-28: 0 patients, 0 visits, 0 auths\nclinic time zone: UTC\nworklist: 0 items (P1 0, P2 0, P3 0); 0 scheduled visits uncovered; 0 completed w/o auth\n0 past scheduled visits need status review: /home/jacob/workflow-pt-header-receiving-65ae877160f6/candidate-v1/cases/accepted-empty-files/reports/visit_status_review.csv\n0 uncovered visits to inspect: /home/jacob/workflow-pt-header-receiving-65ae877160f6/candidate-v1/cases/accepted-empty-files/reports/uncovered_visits.csv\ndigest: /home/jacob/workflow-pt-header-receiving-65ae877160f6/candidate-v1/cases/accepted-empty-files/reports/digest.html\n",
+      "stderr": "",
+      "inputs_before": {
+        "authorizations.csv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "patients.csv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "payers.csv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "schedule.csv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "inputs_after": {
+        "authorizations.csv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "patients.csv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "payers.csv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "schedule.csv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "reports_before": {
+        "audit.jsonl": "8c93d8ae362d03dbd309aad72508f84ee859335322739269bdeea957b6279c3c",
+        "digest.html": "fe66c017a3c4ecc3b47223ae1dbc9162927373de0424715a2d8c9c55f852fbf2",
+        "ledger.csv": "4c5c40593ae0a119be04add2a3234e4b163276da23cd7f0c11e42adb1fc5131f",
+        "summary.json": "2995a691efe2bac8cab7872074a6c0099704527de8c91e12aabd9303b95306dc",
+        "uncovered_visits.csv": "be65e2e67afb59f973415b00ccec3857adf048e321026eb921f505e4333e3979",
+        "visit_status_review.csv": "fbfc3b40fe5351aea66906794bcf59e1a5e216692a423856102266befd451ed6",
+        "worklist.csv": "5778637840ef95fc21c8b6d2ebc209406042c81caa965af0a8e9f7f6136be02d"
+      },
+      "reports_after": {
+        "audit.jsonl": "8d1ab9343e1fa8b642e40eaab50e71f9a7281c8b043d0fba911f92c25c0b35a1",
+        "digest.html": "ca9e1df99af8a9f74c86769c2a339bab9c83d704befd8755d0b812a8f4db4293",
+        "ledger.csv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "summary.json": "7cabae5a8a2a0488d04ed4d170c2d79bf833936f2e37aa1daec0cb42a486ad06",
+        "uncovered_visits.csv": "6719e7dea0c56e97db63c1b757e09b6f197e4d89def65769d387887e27c678e3",
+        "visit_status_review.csv": "9cb3e3e82e30935f57448ed826dbd8dab78e39355e3bebba59c478fa355ee170",
+        "worklist.csv": "5cb68c9683510c064dcb50baf580c7b4676137cafa44b071c7985d34b11ee05d"
+      },
+      "expected_refusal": false
+    }
+  ],
+  "passed": 9,
+  "failed": 0,
+  "scope": "Eight actual native report CLI processes on newly authored synthetic inputs and root-owned prior reports; no clinical/rule/payer validity or browser qualification is claimed. Exact isolated executable package; source/data unchanged."
+}

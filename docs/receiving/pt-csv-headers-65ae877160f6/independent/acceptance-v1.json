@@ -1,0 +1,30 @@
+{
+  "schema": "hamon.pt-header.independent-acceptance.v1",
+  "actor": "estate-65ae877160f6/root",
+  "verdict": "ACCEPT",
+  "recorded_at": "2026-10-08T19:50:27.629055+00:00",
+  "native_source_commit": "a122b410a8b303a9ba1522b515c77ee91b46c325",
+  "original_data_sha256": "eeab8ab5b2b72524148969de0d13b27126cc64c4ec79b68a147b51b25a3741e2",
+  "candidate_data_sha256": "b16d31711e678e3d25c9cf867098de93645298410985b96248e03ac3133adf19",
+  "receiver_sha256": "10446cf78c2da580fe929f163820fc20bca7cd1e6e4ec7dd76c57cce012ec0f2",
+  "baseline_receipt": "/home/jacob/workflow-pt-header-receiving-65ae877160f6/baseline/receipt.json",
+  "baseline_receipt_sha256": "2c8b4dcf36c926cab3a9a3ff7cbfa84bee9e7b2998f0c9d803d5173d1b0b9dfb",
+  "candidate_receipt": "/home/jacob/workflow-pt-header-receiving-65ae877160f6/candidate-v1/receipt.json",
+  "candidate_receipt_sha256": "8035bfdd262628ee2426b448f7298bb31b73d2ff8dc038233d125f870f955b80",
+  "baseline": {
+    "passed": 3,
+    "failed": 6
+  },
+  "candidate": {
+    "passed": 9,
+    "failed": 0
+  },
+  "actual_cli_processes_per_run": 8,
+  "refusals_preserving_seven_prior_outputs": 6,
+  "source_diff": "/home/jacob/workflow-pt-header-receiving-65ae877160f6/reviewed-source.diff",
+  "source_diff_sha256": "42b9219612a89435feabf30000a24566721df26202424c11d72225a951d2a33c",
+  "source_review": "Exactly11 inserted lines in _rows validate repeated nonempty normalized header names before iterating rows. Existing _key, decoding, row extraction, all11 other runtime leaves and report pipeline unchanged.",
+  "control_scope": "Original synthetic fixtures; UTF-8 BOM, cp1252, trailing blank headers, blank rows, quoted multiline values, physical row counts and empty-file admission retained. Refusal evidence includes each input family, header-only file and quoted multiline header.",
+  "qualification_boundary": "Native Linux Python3.14.4 CLI plus loader observations only. No clinical/rule/payer validation, browser qualification, installed runtime activation or canonical integration asserted here.",
+  "integration_state": "accepted_source_ready_for_normal_current_parent_integration"
+}
