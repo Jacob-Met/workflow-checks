@@ -1,0 +1,351 @@
+{
+  "archive": {
+    "bytes": 33061,
+    "git_blob": "b362c4de18771b593310df0ebccb2480fbdbcd90",
+    "sha256": "6f61713c9e7d32a631f98147a635421ab5f366ffee2fba100cf5fd98944ee026"
+  },
+  "archive_members": [
+    {
+      "bytes": 2734,
+      "git_blob": "f556caf04adf0eae053dda71820fc29ca3846342",
+      "path": "loads/0001/index.html",
+      "sha256": "d0c3714a28075e0da852cdf5917d9878a720ed86507a0f59bc65c5e9efa1a4d7"
+    },
+    {
+      "bytes": 8285,
+      "git_blob": "8c41e54cc197c0da39930359030e0767e8c783ab",
+      "path": "loads/0001/packet.html",
+      "sha256": "d6c0acb15242798f644642c16457694e62517dadcedeaae7ac2195e4ab0951da"
+    },
+    {
+      "bytes": 550,
+      "git_blob": "7dba9c537033146e3a0fb03c9df4da0453c6e11f",
+      "path": "loads/0001/evidence.json",
+      "sha256": "d4bf3c7afc9f0e0c350102775990b9c6adfe3eb17f3f37ce85100864b2e7ec3f"
+    },
+    {
+      "bytes": 1050,
+      "git_blob": "7bdc166062ce255beee7800e4b2db28b16f16c92",
+      "path": "loads/0001/review.json",
+      "sha256": "4614e8e17f1a473a76756ca35d508d8e241688c31b0a66a9d0bde31e5524f5f3"
+    },
+    {
+      "bytes": 849,
+      "git_blob": "d03b168acd9049828725af2f44b983f39678f88a",
+      "path": "loads/0001/manifest.json",
+      "sha256": "aca535990732e69961d927c8f25d7c62ba5fd1c9621954bfc36935534bffed98"
+    },
+    {
+      "bytes": 7770,
+      "git_blob": "c55211271277ac600195730b3104d35ee181a85b",
+      "path": "loads/0001/review.zip",
+      "sha256": "c860dfec7a9cc8245f992685c85f189bd05d3a106305821b0a25957263b1f627"
+    },
+    {
+      "bytes": 2512,
+      "git_blob": "50e36d9138f0b979ff71d869b91f21dfe93a5d5d",
+      "path": "loads/0002/index.html",
+      "sha256": "6677638f7cfb7865553f994c947cfa0b5a996c97d050bf96ae036adfd2360805"
+    },
+    {
+      "bytes": 8285,
+      "git_blob": "86e6c84b3ff15dfa1a43a6803ae81056828c3b0b",
+      "path": "loads/0002/packet.html",
+      "sha256": "13b18e9292824134c623072e73fc63319cf240efa32e34bca41c9faf0204d5f2"
+    },
+    {
+      "bytes": 459,
+      "git_blob": "fd311ffc1c5f711343c4675425ede2981d6aeaa4",
+      "path": "loads/0002/evidence.json",
+      "sha256": "a9ee1fb3870986162bee6c337805804e205a350ca19801410182c3a377ac0aae"
+    },
+    {
+      "bytes": 748,
+      "git_blob": "346c8dd4aa4a0c4f83d236fd6ee73df7b6cce753",
+      "path": "loads/0002/review.json",
+      "sha256": "f51a4dadd4ac172b8a45b2fbf47b9c4c581fd3e7e01247a4ab699d3270a2c5e3"
+    },
+    {
+      "bytes": 848,
+      "git_blob": "e31fc868d228bb692717875a96f2a9f262541b36",
+      "path": "loads/0002/manifest.json",
+      "sha256": "d74ed47452679f0ee84c0856fac02051d96d415e9707fcdded696aca403cbc8b"
+    },
+    {
+      "bytes": 7630,
+      "git_blob": "01f90c42ac5e47b8eaa8ca504321723e5cb69d22",
+      "path": "loads/0002/review.zip",
+      "sha256": "aefcb90feb5b9d113eb69c175d607da3df669b41792a343fe9aebe32185b6ef4"
+    },
+    {
+      "bytes": 1889,
+      "git_blob": "340a05141374a82a6e7fc1d07ca5754f478f9a66",
+      "path": "index.html",
+      "sha256": "35b62a14c266f2a8682fb6d0cc172e60f2bcbb8782689f5f7e9d5c98aa330c95"
+    },
+    {
+      "bytes": 3120,
+      "git_blob": "5f4ffa37a6c6ac9ac05f337bdcd3f8498c9f4128",
+      "path": "manifest.json",
+      "sha256": "4025e069efc59673895673fc94674ecacf1f49a244b550fac4245197be057156"
+    }
+  ],
+  "canonical_build_batch_bundle_calls": 1,
+  "filename": "freight-review-batch-2-4025e069efc5.zip",
+  "manifest": {
+    "files": [
+      {
+        "bytes": 2734,
+        "path": "loads/0001/index.html",
+        "sha256": "d0c3714a28075e0da852cdf5917d9878a720ed86507a0f59bc65c5e9efa1a4d7"
+      },
+      {
+        "bytes": 8285,
+        "path": "loads/0001/packet.html",
+        "sha256": "d6c0acb15242798f644642c16457694e62517dadcedeaae7ac2195e4ab0951da"
+      },
+      {
+        "bytes": 550,
+        "path": "loads/0001/evidence.json",
+        "sha256": "d4bf3c7afc9f0e0c350102775990b9c6adfe3eb17f3f37ce85100864b2e7ec3f"
+      },
+      {
+        "bytes": 1050,
+        "path": "loads/0001/review.json",
+        "sha256": "4614e8e17f1a473a76756ca35d508d8e241688c31b0a66a9d0bde31e5524f5f3"
+      },
+      {
+        "bytes": 849,
+        "path": "loads/0001/manifest.json",
+        "sha256": "aca535990732e69961d927c8f25d7c62ba5fd1c9621954bfc36935534bffed98"
+      },
+      {
+        "bytes": 7770,
+        "path": "loads/0001/review.zip",
+        "sha256": "c860dfec7a9cc8245f992685c85f189bd05d3a106305821b0a25957263b1f627"
+      },
+      {
+        "bytes": 2512,
+        "path": "loads/0002/index.html",
+        "sha256": "6677638f7cfb7865553f994c947cfa0b5a996c97d050bf96ae036adfd2360805"
+      },
+      {
+        "bytes": 8285,
+        "path": "loads/0002/packet.html",
+        "sha256": "13b18e9292824134c623072e73fc63319cf240efa32e34bca41c9faf0204d5f2"
+      },
+      {
+        "bytes": 459,
+        "path": "loads/0002/evidence.json",
+        "sha256": "a9ee1fb3870986162bee6c337805804e205a350ca19801410182c3a377ac0aae"
+      },
+      {
+        "bytes": 748,
+        "path": "loads/0002/review.json",
+        "sha256": "f51a4dadd4ac172b8a45b2fbf47b9c4c581fd3e7e01247a4ab699d3270a2c5e3"
+      },
+      {
+        "bytes": 848,
+        "path": "loads/0002/manifest.json",
+        "sha256": "d74ed47452679f0ee84c0856fac02051d96d415e9707fcdded696aca403cbc8b"
+      },
+      {
+        "bytes": 7630,
+        "path": "loads/0002/review.zip",
+        "sha256": "aefcb90feb5b9d113eb69c175d607da3df669b41792a343fe9aebe32185b6ef4"
+      },
+      {
+        "bytes": 1889,
+        "path": "index.html",
+        "sha256": "35b62a14c266f2a8682fb6d0cc172e60f2bcbb8782689f5f7e9d5c98aa330c95"
+      }
+    ],
+    "loads": [
+      {
+        "bundle_filename": "freight-review-Dock-A-ed97dcfdbf87.zip",
+        "bundle_path": "loads/0001/review.zip",
+        "decision": "approve",
+        "evidence_version": "ed97dcfdbf8724aa753460e5dde3d07ee558930663cb2530b3781d35cd4fb52f",
+        "index_path": "loads/0001/index.html",
+        "load_id": "Dock/A<&\"",
+        "review_heading": "Current saved review: Approve",
+        "review_state": "current",
+        "review_version": "99efefaee38dbe8a3b553e8ea83d09893e7d6779bdc146fc585115029065937e"
+      },
+      {
+        "bundle_filename": "freight-review-Dock-A-7d58d4c3fee9.zip",
+        "bundle_path": "loads/0002/review.zip",
+        "decision": "approve",
+        "evidence_version": "7d58d4c3fee9b4ecc7c9866afa52a52fbfd9461971ff5fa1ea64b821e07f5201",
+        "index_path": "loads/0002/index.html",
+        "load_id": "Dock?A<&\"",
+        "review_heading": "Previous review — review again",
+        "review_state": "stale",
+        "review_version": "2489f65f8cf1a0654cb34dc3c00451d83e98748a7235c3a6bfbc0e74d1dfe216"
+      }
+    ],
+    "schema": "freight-review-batch.v1"
+  },
+  "native_tuples": [
+    {
+      "filename": "freight-review-Dock-A-ed97dcfdbf87.zip",
+      "identity": {
+        "evidence_version": "ed97dcfdbf8724aa753460e5dde3d07ee558930663cb2530b3781d35cd4fb52f",
+        "load_id": "Dock/A<&\"",
+        "review_version": "99efefaee38dbe8a3b553e8ea83d09893e7d6779bdc146fc585115029065937e"
+      },
+      "members": {
+        "evidence.json": {
+          "bytes": 550,
+          "git_blob": "7dba9c537033146e3a0fb03c9df4da0453c6e11f",
+          "sha256": "d4bf3c7afc9f0e0c350102775990b9c6adfe3eb17f3f37ce85100864b2e7ec3f"
+        },
+        "index.html": {
+          "bytes": 2734,
+          "git_blob": "f556caf04adf0eae053dda71820fc29ca3846342",
+          "sha256": "d0c3714a28075e0da852cdf5917d9878a720ed86507a0f59bc65c5e9efa1a4d7"
+        },
+        "manifest.json": {
+          "bytes": 849,
+          "git_blob": "d03b168acd9049828725af2f44b983f39678f88a",
+          "sha256": "aca535990732e69961d927c8f25d7c62ba5fd1c9621954bfc36935534bffed98"
+        },
+        "packet.html": {
+          "bytes": 8285,
+          "git_blob": "8c41e54cc197c0da39930359030e0767e8c783ab",
+          "sha256": "d6c0acb15242798f644642c16457694e62517dadcedeaae7ac2195e4ab0951da"
+        },
+        "review.json": {
+          "bytes": 1050,
+          "git_blob": "7bdc166062ce255beee7800e4b2db28b16f16c92",
+          "sha256": "4614e8e17f1a473a76756ca35d508d8e241688c31b0a66a9d0bde31e5524f5f3"
+        }
+      },
+      "old_native_path": "native-1.zip",
+      "packet_file": "packets/opaque-9b0ac7.html",
+      "raw_zip": {
+        "bytes": 7770,
+        "git_blob": "c55211271277ac600195730b3104d35ee181a85b",
+        "sha256": "c860dfec7a9cc8245f992685c85f189bd05d3a106305821b0a25957263b1f627"
+      },
+      "saved_review": {
+        "at": "2026-09-13T11:10:00+00:00",
+        "decision": "approve",
+        "evidence_version": "ed97dcfdbf8724aa753460e5dde3d07ee558930663cb2530b3781d35cd4fb52f",
+        "history": [
+          {
+            "at": "2026-09-13T10:00:00+00:00",
+            "decision": "reject",
+            "evidence_version": "0000000000000000000000000000000000000000000000000000000000000000",
+            "note": "previous rejection kept"
+          },
+          {
+            "at": "2026-09-13T10:30:00+00:00",
+            "decision": "adjust",
+            "evidence_version": "ed97dcfdbf8724aa753460e5dde3d07ee558930663cb2530b3781d35cd4fb52f",
+            "note": "previous adjustment kept"
+          }
+        ],
+        "note": "literal <&\" café> final approval",
+        "review_state": "current",
+        "reviewer_extra": {
+          "ticket": "manual/44"
+        }
+      }
+    },
+    {
+      "filename": "freight-review-Dock-A-7d58d4c3fee9.zip",
+      "identity": {
+        "evidence_version": "7d58d4c3fee9b4ecc7c9866afa52a52fbfd9461971ff5fa1ea64b821e07f5201",
+        "load_id": "Dock?A<&\"",
+        "review_version": "2489f65f8cf1a0654cb34dc3c00451d83e98748a7235c3a6bfbc0e74d1dfe216"
+      },
+      "members": {
+        "evidence.json": {
+          "bytes": 459,
+          "git_blob": "fd311ffc1c5f711343c4675425ede2981d6aeaa4",
+          "sha256": "a9ee1fb3870986162bee6c337805804e205a350ca19801410182c3a377ac0aae"
+        },
+        "index.html": {
+          "bytes": 2512,
+          "git_blob": "50e36d9138f0b979ff71d869b91f21dfe93a5d5d",
+          "sha256": "6677638f7cfb7865553f994c947cfa0b5a996c97d050bf96ae036adfd2360805"
+        },
+        "manifest.json": {
+          "bytes": 848,
+          "git_blob": "e31fc868d228bb692717875a96f2a9f262541b36",
+          "sha256": "d74ed47452679f0ee84c0856fac02051d96d415e9707fcdded696aca403cbc8b"
+        },
+        "packet.html": {
+          "bytes": 8285,
+          "git_blob": "86e6c84b3ff15dfa1a43a6803ae81056828c3b0b",
+          "sha256": "13b18e9292824134c623072e73fc63319cf240efa32e34bca41c9faf0204d5f2"
+        },
+        "review.json": {
+          "bytes": 748,
+          "git_blob": "346c8dd4aa4a0c4f83d236fd6ee73df7b6cce753",
+          "sha256": "f51a4dadd4ac172b8a45b2fbf47b9c4c581fd3e7e01247a4ab699d3270a2c5e3"
+        }
+      },
+      "old_native_path": "native-2.zip",
+      "packet_file": "packets/unrelated-location-14.html",
+      "raw_zip": {
+        "bytes": 7630,
+        "git_blob": "01f90c42ac5e47b8eaa8ca504321723e5cb69d22",
+        "sha256": "aefcb90feb5b9d113eb69c175d607da3df669b41792a343fe9aebe32185b6ef4"
+      },
+      "saved_review": {
+        "at": "2026-09-12T10:00:00+00:00",
+        "decision": "approve",
+        "evidence_version": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+        "history": [
+          {
+            "at": "2026-09-11T10:00:00+00:00",
+            "decision": "clear",
+            "evidence_version": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "note": "history clear retained"
+          }
+        ],
+        "note": "old approval must stay stale",
+        "review_state": "stale"
+      }
+    }
+  ],
+  "old_App_or_absence_or_full_suite_replays": 0,
+  "old_inputs_before_after_equal": true,
+  "result": "ACCEPT",
+  "runtime": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "scope": "Expected bytes from the actual published shared assembler on two preserved native per-load ZIPs. This is not qualification of the new terminal caller or a replay of the old aggregate format.",
+  "source_after_equal": true,
+  "source_before": {
+    "__init__.py": {
+      "bytes": 245,
+      "git_blob": "a7804a1379966afd1e6143a92cf08c1b25f7abfe",
+      "inode": 605351,
+      "mode": 33188,
+      "mtime_ns": 1791476452585427750,
+      "sha256": "f9364708963fa65b54aae5174a816c45df417fe7d93971c3b0ff046278929706"
+    },
+    "batch_handoff.py": {
+      "bytes": 6160,
+      "git_blob": "2ae68efdfe0c0c45135e2a5764749a5444da62d7",
+      "inode": 605276,
+      "mode": 33188,
+      "mtime_ns": 1791476450050506192,
+      "sha256": "70e4ab57e9ccf13962a01719661f9db2f4a1bfd1599ff9b30d02d9e374f3fe7d"
+    },
+    "handoff.py": {
+      "bytes": 7082,
+      "git_blob": "bdcb63507b57d07eed1a6598d7d37d5f5d9db802",
+      "inode": 605293,
+      "mode": 33188,
+      "mtime_ns": 1791476450404937772,
+      "sha256": "413290d887d045b96dd1639c34b9c769f0e730beb28dce06c654a0df36cf1a02"
+    }
+  },
+  "top_level_manifest_fields": [
+    "files",
+    "loads",
+    "schema"
+  ]
+}

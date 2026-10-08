@@ -1,0 +1,180 @@
+{
+  "base": "995a48cd92ebf1202fea08e08f90c7ce010ca424",
+  "canonical_archive": {
+    "bytes": 33061,
+    "git_blob": "b362c4de18771b593310df0ebccb2480fbdbcd90",
+    "sha256": "6f61713c9e7d32a631f98147a635421ab5f366ffee2fba100cf5fd98944ee026"
+  },
+  "canonical_oracle_receipt": {
+    "bytes": 12946,
+    "git_blob": "f9cfacb0a4940f9e1466e85573c5b92531345732",
+    "sha256": "2feca05b9b1f1196353977710878129065b098af2d5c77aaea37e12c9cec2210"
+  },
+  "canonical_reference_processes": 1,
+  "contract": {
+    "bytes": 6104,
+    "git_blob": "3a16928cd7d75b0aee851718c7a3506341e767f4",
+    "sha256": "89a0b2adcd50085c20a5ccc7497ee8d69ac33292614cb61b70b07fdc5997e42f"
+  },
+  "files": [
+    {
+      "bytes": 4311,
+      "git_blob": "0d532f5ffe51856202b21018ac70fffa983184e2",
+      "path": "ORACLE.md",
+      "sha256": "a1f53751e9788bb42ae8196cbf6f95955887169cecd95b8b2e2778f027c38618"
+    },
+    {
+      "bytes": 3274,
+      "git_blob": "43b76998d38f76e8a1cf5d9853a0e9805f7c9829",
+      "path": "assembler_interleaving.py",
+      "sha256": "f03b79f57fa4ed79f8d07a5615751aab3725dd5ecb83f71d1000cab2f958af96"
+    },
+    {
+      "bytes": 7245,
+      "git_blob": "bdd94dead9c6bb78b06130b27b323db6dc2039e1",
+      "path": "build_canonical_oracle.py",
+      "sha256": "2c3e0ba3b463aadf3c4d3904d3b0cd3b00dcee7099de2a0bfa7de5cb6f08936b"
+    },
+    {
+      "bytes": 33061,
+      "git_blob": "b362c4de18771b593310df0ebccb2480fbdbcd90",
+      "path": "canonical-oracle-r1/expected-canonical.zip",
+      "sha256": "6f61713c9e7d32a631f98147a635421ab5f366ffee2fba100cf5fd98944ee026"
+    },
+    {
+      "bytes": 3120,
+      "git_blob": "5f4ffa37a6c6ac9ac05f337bdcd3f8498c9f4128",
+      "path": "canonical-oracle-r1/expected-manifest.json",
+      "sha256": "4025e069efc59673895673fc94674ecacf1f49a244b550fac4245197be057156"
+    },
+    {
+      "bytes": 12946,
+      "git_blob": "f9cfacb0a4940f9e1466e85573c5b92531345732",
+      "path": "canonical-oracle-r1/receipt.json",
+      "sha256": "2feca05b9b1f1196353977710878129065b098af2d5c77aaea37e12c9cec2210"
+    },
+    {
+      "bytes": 245,
+      "git_blob": "a7804a1379966afd1e6143a92cf08c1b25f7abfe",
+      "path": "canonical-source/freightpkt/__init__.py",
+      "sha256": "f9364708963fa65b54aae5174a816c45df417fe7d93971c3b0ff046278929706"
+    },
+    {
+      "bytes": 6160,
+      "git_blob": "2ae68efdfe0c0c45135e2a5764749a5444da62d7",
+      "path": "canonical-source/freightpkt/batch_handoff.py",
+      "sha256": "70e4ab57e9ccf13962a01719661f9db2f4a1bfd1599ff9b30d02d9e374f3fe7d"
+    },
+    {
+      "bytes": 7082,
+      "git_blob": "bdcb63507b57d07eed1a6598d7d37d5f5d9db802",
+      "path": "canonical-source/freightpkt/handoff.py",
+      "sha256": "413290d887d045b96dd1639c34b9c769f0e730beb28dce06c654a0df36cf1a02"
+    },
+    {
+      "bytes": 16343,
+      "git_blob": "9215adc3241f722344a452b4f789a4a5b59a25ec",
+      "path": "canonical-source/freightpkt/web.py",
+      "sha256": "fa0becc51604ecbec4b59613439064527db0a3915f183e1949d3b326e8fccfce"
+    },
+    {
+      "bytes": 6104,
+      "git_blob": "3a16928cd7d75b0aee851718c7a3506341e767f4",
+      "path": "contract.md",
+      "sha256": "89a0b2adcd50085c20a5ccc7497ee8d69ac33292614cb61b70b07fdc5997e42f"
+    },
+    {
+      "bytes": 50,
+      "git_blob": "fcb0c9999870d8311000385260578df79aad9dd4",
+      "path": "fixture/audit.jsonl",
+      "sha256": "4bf69ba56c02249b4ab704cbf7344db5eb8ab7f645ea1482f943c77fd7b59d44"
+    },
+    {
+      "bytes": 1390,
+      "git_blob": "a842fb015ca0463f0c02c205632e82460e0e2560",
+      "path": "fixture/decisions.json",
+      "sha256": "0aafdb6589c513d6d101df5942b15d57e1659f7207f90f8edc5996025c1bd4cf"
+    },
+    {
+      "bytes": 34,
+      "git_blob": "d3c2cfb36b47b23811bfb1feeb31844f1706d9cd",
+      "path": "fixture/packets/not-selected.html",
+      "sha256": "d812c72e7117eb3a67b7157ff3576e2862a6d2e78b6163d9f271f876c4593983"
+    },
+    {
+      "bytes": 8285,
+      "git_blob": "8c41e54cc197c0da39930359030e0767e8c783ab",
+      "path": "fixture/packets/opaque-9b0ac7.html",
+      "sha256": "d6c0acb15242798f644642c16457694e62517dadcedeaae7ac2195e4ab0951da"
+    },
+    {
+      "bytes": 8285,
+      "git_blob": "86e6c84b3ff15dfa1a43a6803ae81056828c3b0b",
+      "path": "fixture/packets/unrelated-location-14.html",
+      "sha256": "13b18e9292824134c623072e73fc63319cf240efa32e34bca41c9faf0204d5f2"
+    },
+    {
+      "bytes": 43,
+      "git_blob": "c9a5d298205d1859c8074ccb08eee36367c61127",
+      "path": "fixture/reports.csv",
+      "sha256": "09750c61326811ef295289083394d5d142211ccdd50d61c9ed571616143de2f8"
+    },
+    {
+      "bytes": 986,
+      "git_blob": "e575434797a675f4fe2355e51184581e7e062828",
+      "path": "fixture/summary.json",
+      "sha256": "8a6b3b6fea628c864c0a63919b3869e9332af7a354f029d334938299dac3a01c"
+    },
+    {
+      "bytes": 3590,
+      "git_blob": "17db7be76c2f6dd590936d5151e466cd27045d41",
+      "path": "fixture-reuse-proof.json",
+      "sha256": "35c7778cf43ce73990646e54ac6209e73b22d593dd2fba138ad4e202cd92e188"
+    },
+    {
+      "bytes": 15824,
+      "git_blob": "399bd438caf5398aa767a8182999851aa92d50c1",
+      "path": "receive_canonical_terminal.py",
+      "sha256": "0d6183675d17b49a84ecbd481ba6a18b6f00abb289f0b6ca201d5ed17d8b7449"
+    },
+    {
+      "bytes": 7770,
+      "git_blob": "c55211271277ac600195730b3104d35ee181a85b",
+      "path": "reused-native/native-1.zip",
+      "sha256": "c860dfec7a9cc8245f992685c85f189bd05d3a106305821b0a25957263b1f627"
+    },
+    {
+      "bytes": 7630,
+      "git_blob": "01f90c42ac5e47b8eaa8ca504321723e5cb69d22",
+      "path": "reused-native/native-2.zip",
+      "sha256": "aefcb90feb5b9d113eb69c175d607da3df669b41792a343fe9aebe32185b6ef4"
+    },
+    {
+      "bytes": 3195,
+      "git_blob": "6cc0899ca9a8a8006a2e1311e278d55777cd680e",
+      "path": "reused-native/original-projection.json",
+      "sha256": "f0bfce7e6e80faecad3d75174b2c2e3c8ab19aca0a02f67fde68ca3d04151917"
+    },
+    {
+      "bytes": 977,
+      "git_blob": "0c866202ca0105403c126c32a337a0c373ffcd28",
+      "path": "reused-native/producer.json",
+      "sha256": "b95d22585e2f70ba06cf59ccedfcef4b87eb160e946939d67afce9bac4207438"
+    },
+    {
+      "bytes": 401,
+      "git_blob": "d878472a75a2026deabd9cfb5b1306e31fd2198b",
+      "path": "source-reuse-review.json",
+      "sha256": "bd0a9c250e719a2055ae066152860ebd29f682c7f80d77e32c15cc4f7103754d"
+    }
+  ],
+  "frozen_at": "2026-10-08T16:28:13.427224+00:00",
+  "future_new_caller_processes": 6,
+  "new_caller_source_or_tests_read": false,
+  "old_App_absence_or_full_suite_repeated": 0,
+  "receiving_boundary": "Public assembler reference, sealed exact receipt plus full-archive and controlled recheck/delivery oracle. No old format result relabeled.",
+  "repository": "Jacob-Met/workflow-checks",
+  "shared_assembler_git_blob": "2ae68efdfe0c0c45135e2a5764749a5444da62d7",
+  "state": "FROZEN BEFORE NEW CALLER OR AUTHOR TEST READ",
+  "tree": "3f50ec92b2dcf5c0d3351f0687eb1dbc7f5c0f05"
+}

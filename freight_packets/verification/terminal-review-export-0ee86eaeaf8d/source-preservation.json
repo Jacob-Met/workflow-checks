@@ -1,0 +1,123 @@
+{
+  "repository": "Jacob-Met/workflow-checks",
+  "base": "995a48cd92ebf1202fea08e08f90c7ce010ca424",
+  "tree": "3f50ec92b2dcf5c0d3351f0687eb1dbc7f5c0f05",
+  "source_files": 27,
+  "unchanged_inherited_files": [
+    {
+      "path": "freight_packets/README.md",
+      "git_blob": "249ee104175f1d36cc5b39abad5be02bc53e85be"
+    },
+    {
+      "path": "freight_packets/freightpkt/__init__.py",
+      "git_blob": "a7804a1379966afd1e6143a92cf08c1b25f7abfe"
+    },
+    {
+      "path": "freight_packets/freightpkt/__main__.py",
+      "git_blob": "3c93dd90cf357624c77ab3589ef2b201868c181e"
+    },
+    {
+      "path": "freight_packets/freightpkt/batch_handoff.py",
+      "git_blob": "2ae68efdfe0c0c45135e2a5764749a5444da62d7"
+    },
+    {
+      "path": "freight_packets/freightpkt/batch_handoff_ui.js",
+      "git_blob": "40f39412a16fe496afcc9b57e0ba3e03775ec303"
+    },
+    {
+      "path": "freight_packets/freightpkt/detention.py",
+      "git_blob": "b275165bce2ac5162fb49eab54674c11f13bfd2f"
+    },
+    {
+      "path": "freight_packets/freightpkt/fines.py",
+      "git_blob": "0b0f70344f3f2f1d58d524fc1ec6e67a51b495cb"
+    },
+    {
+      "path": "freight_packets/freightpkt/handoff.py",
+      "git_blob": "bdcb63507b57d07eed1a6598d7d37d5f5d9db802"
+    },
+    {
+      "path": "freight_packets/freightpkt/ingest.py",
+      "git_blob": "dad18f470035318241a9c432326d1f4bafa26edf"
+    },
+    {
+      "path": "freight_packets/freightpkt/invoice_match.py",
+      "git_blob": "584bb09b92335a350d9880f55b786baba1960941"
+    },
+    {
+      "path": "freight_packets/freightpkt/models.py",
+      "git_blob": "5087874944b6ee195111f30e98e9e9e5a8394fd1"
+    },
+    {
+      "path": "freight_packets/freightpkt/packet.py",
+      "git_blob": "3ee637afba32600f5e109e930086b7a4be46b989"
+    },
+    {
+      "path": "freight_packets/freightpkt/pdf.py",
+      "git_blob": "6e68ce008548c9a5f6473d38616ca52b7aa5d580"
+    },
+    {
+      "path": "freight_packets/freightpkt/pipeline.py",
+      "git_blob": "b0962d25557eaf84ad7595d64ea7ef834c2e2a58"
+    },
+    {
+      "path": "freight_packets/freightpkt/ratecon.py",
+      "git_blob": "c1f148e62d2b215d11511311782a57b8272fed03"
+    },
+    {
+      "path": "freight_packets/freightpkt/synth.py",
+      "git_blob": "646ee6ec3336eb237c2b4717c15f448230605196"
+    },
+    {
+      "path": "freight_packets/freightpkt/ui.html",
+      "git_blob": "4fd22753daf54da4d0a04c1202429b79cbada7de"
+    },
+    {
+      "path": "freight_packets/freightpkt/web.py",
+      "git_blob": "9215adc3241f722344a452b4f789a4a5b59a25ec"
+    },
+    {
+      "path": "freight_packets/tests/conftest.py",
+      "git_blob": "e4c2fd4ff87c63061fb6a10f0fb01228c46c0875"
+    },
+    {
+      "path": "freight_packets/tests/test_fines.py",
+      "git_blob": "6d46848b04068425705b4c3319923d636f68ab6b"
+    },
+    {
+      "path": "freight_packets/tests/test_freight.py",
+      "git_blob": "8539ae8a71e00f1ff19507626c809bbebffd81e3"
+    },
+    {
+      "path": "freight_packets/tests/test_freight_hardening.py",
+      "git_blob": "e7f6fdc9d68f714130a990b681be030aa5a71d2e"
+    },
+    {
+      "path": "freight_packets/tests/test_invoice_header_consistency.py",
+      "git_blob": "8edd399bddc85e8e4d349e00d638ccc5272b465e"
+    },
+    {
+      "path": "freight_packets/tests/test_review_batch.py",
+      "git_blob": "56c76edb6954675c023d5c637ecaa648fa9f5485"
+    },
+    {
+      "path": "freight_packets/tests/test_review_decisions.py",
+      "git_blob": "0fc6e22e7dc8b7e60d9712e69750fd5c71e3241b"
+    },
+    {
+      "path": "freight_packets/tests/test_review_handoff.py",
+      "git_blob": "a30c83740f7ad5f6e4cdb47eb467567fead6a606"
+    }
+  ],
+  "cli_inverse_exact": true,
+  "cli_base_blob": "a64a4d60816654595b1767ff9f96cd2cd9c49c32",
+  "cli_base_bytes": 2672,
+  "cli_candidate_blob": "27c299e31ff8db27e6126f36c4773c6c613c83aa",
+  "added_cli_parser": "    h = sub.add_parser(\"export-reviews\", help=\"export selected saved reviews as one canonical offline ZIP\")\r\n    h.add_argument(\"--out\", required=True, help=\"existing generated freight output directory\")\r\n    h.add_argument(\"--load\", dest=\"loads\", action=\"append\", required=True,\r\n                   help=\"exact load ID; repeat for each load to include\")\r\n    h.add_argument(\"--destination\", required=True, help=\"new ZIP filename outside the source output directory\")\r\n\r\n",
+  "added_cli_dispatch": "    if a.cmd == \"export-reviews\":\r\n        import json\r\n        import os\r\n        from .terminal_review_export import export_reviews\r\n        try:\r\n            result = export_reviews(Path(a.out), a.loads, Path(a.destination))\r\n        except (OSError, ValueError, KeyError, TypeError, RecursionError, OverflowError) as error:\r\n            print(f\"could not export saved reviews: {error}\", file=sys.stderr)\r\n            return 2\r\n        try:\r\n            print(json.dumps(result, ensure_ascii=True, sort_keys=True, indent=2, allow_nan=False), flush=True)\r\n        except OSError as error:\r\n            # Publication already succeeded; silence a second shutdown-flush failure.\r\n            try:\r\n                with open(os.devnull, \"w\") as sink:\r\n                    os.dup2(sink.fileno(), sys.stdout.fileno())\r\n            except (OSError, ValueError, AttributeError):\r\n                pass\r\n            print(f\"archive published to {result['destination']}, but could not write its receipt: {error}\",\r\n                  file=sys.stderr)\r\n            return 2\r\n        return 0\r\n",
+  "line_endings_preserved": "CRLF",
+  "shared_batch_blob": "2ae68efdfe0c0c45135e2a5764749a5444da62d7",
+  "old_custom_assembler_adopted": false,
+  "new_module_role": "capture, native App consumer, shared build_batch_bundle call, bounded no-clobber delivery; ZIP metadata reading only",
+  "source_or_test_execution": false
+}

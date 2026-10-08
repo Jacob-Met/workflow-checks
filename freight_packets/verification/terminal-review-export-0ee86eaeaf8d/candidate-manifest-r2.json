@@ -1,0 +1,229 @@
+{
+  "repository": "Jacob-Met/workflow-checks",
+  "base": "995a48cd92ebf1202fea08e08f90c7ce010ca424",
+  "base_tree": "3f50ec92b2dcf5c0d3351f0687eb1dbc7f5c0f05",
+  "source_files": 30,
+  "files": [
+    {
+      "path": "freight_packets/README.md",
+      "mode": "100644",
+      "bytes": 17742,
+      "git_blob": "249ee104175f1d36cc5b39abad5be02bc53e85be",
+      "sha256": "9c7941d0207b4acf70c8f6fc488e5e7257645a71224e14b9c77bee63e9e8b6aa"
+    },
+    {
+      "path": "freight_packets/TERMINAL_REVIEW_EXPORT.md",
+      "mode": "100644",
+      "bytes": 7603,
+      "git_blob": "c5cb61365de27b7a776471ed9f069e8859081472",
+      "sha256": "9b9b4dddd17e6293fd52c62a62386b0956f55f8caa6086b01b1792c58c8bd26e"
+    },
+    {
+      "path": "freight_packets/freightpkt/__init__.py",
+      "mode": "100644",
+      "bytes": 245,
+      "git_blob": "a7804a1379966afd1e6143a92cf08c1b25f7abfe",
+      "sha256": "f9364708963fa65b54aae5174a816c45df417fe7d93971c3b0ff046278929706"
+    },
+    {
+      "path": "freight_packets/freightpkt/__main__.py",
+      "mode": "100644",
+      "bytes": 57,
+      "git_blob": "3c93dd90cf357624c77ab3589ef2b201868c181e",
+      "sha256": "4b1afbca74a10abc3cff7b4e5a11b558bf619e45b89709faf9225a474a2a250f"
+    },
+    {
+      "path": "freight_packets/freightpkt/batch_handoff.py",
+      "mode": "100644",
+      "bytes": 6160,
+      "git_blob": "2ae68efdfe0c0c45135e2a5764749a5444da62d7",
+      "sha256": "70e4ab57e9ccf13962a01719661f9db2f4a1bfd1599ff9b30d02d9e374f3fe7d"
+    },
+    {
+      "path": "freight_packets/freightpkt/batch_handoff_ui.js",
+      "mode": "100644",
+      "bytes": 10806,
+      "git_blob": "40f39412a16fe496afcc9b57e0ba3e03775ec303",
+      "sha256": "bd300f25abf279ca16f11bddc4bf4c277f4e99b9146b5321904ecc82afaaca18"
+    },
+    {
+      "path": "freight_packets/freightpkt/cli.py",
+      "mode": "100644",
+      "bytes": 4240,
+      "git_blob": "27c299e31ff8db27e6126f36c4773c6c613c83aa",
+      "sha256": "a5526591bd58702578dc3d90bd1bed908f6816404a3d452df1f2e7dc8ed1399d"
+    },
+    {
+      "path": "freight_packets/freightpkt/detention.py",
+      "mode": "100644",
+      "bytes": 6574,
+      "git_blob": "b275165bce2ac5162fb49eab54674c11f13bfd2f",
+      "sha256": "31ca31fd3210ff680bc83291916e39ea19b82580c3a090720556afd4ef0cd76b"
+    },
+    {
+      "path": "freight_packets/freightpkt/fines.py",
+      "mode": "100644",
+      "bytes": 11074,
+      "git_blob": "0b0f70344f3f2f1d58d524fc1ec6e67a51b495cb",
+      "sha256": "6009e9c9e8d23556e98d9d2606ffac60073597dda50026209155039ec5efcdac"
+    },
+    {
+      "path": "freight_packets/freightpkt/handoff.py",
+      "mode": "100644",
+      "bytes": 7082,
+      "git_blob": "bdcb63507b57d07eed1a6598d7d37d5f5d9db802",
+      "sha256": "413290d887d045b96dd1639c34b9c769f0e730beb28dce06c654a0df36cf1a02"
+    },
+    {
+      "path": "freight_packets/freightpkt/ingest.py",
+      "mode": "100644",
+      "bytes": 11001,
+      "git_blob": "dad18f470035318241a9c432326d1f4bafa26edf",
+      "sha256": "1179675d011d55781c6de3ae806b905698df2a21fcc621ea788d73c6e29d6276"
+    },
+    {
+      "path": "freight_packets/freightpkt/invoice_match.py",
+      "mode": "100644",
+      "bytes": 5285,
+      "git_blob": "584bb09b92335a350d9880f55b786baba1960941",
+      "sha256": "37a9e0801de948c3b558ca7c9846b3d0eb76ec062703ee3e5132df273ff569ab"
+    },
+    {
+      "path": "freight_packets/freightpkt/models.py",
+      "mode": "100644",
+      "bytes": 2758,
+      "git_blob": "5087874944b6ee195111f30e98e9e9e5a8394fd1",
+      "sha256": "8a24ed2cca6f45aa8a47d793620b0e2e4d573ec92209954d3f3156795e3f0e05"
+    },
+    {
+      "path": "freight_packets/freightpkt/packet.py",
+      "mode": "100644",
+      "bytes": 7707,
+      "git_blob": "3ee637afba32600f5e109e930086b7a4be46b989",
+      "sha256": "1a2742168a27d52f5999823c409346bf7023ebb6442b2d0088f4c676609aefb3"
+    },
+    {
+      "path": "freight_packets/freightpkt/pdf.py",
+      "mode": "100644",
+      "bytes": 1671,
+      "git_blob": "6e68ce008548c9a5f6473d38616ca52b7aa5d580",
+      "sha256": "c4876c50eb46c152b71690a53d32463798925c543da06434012aeba833590129"
+    },
+    {
+      "path": "freight_packets/freightpkt/pipeline.py",
+      "mode": "100644",
+      "bytes": 11327,
+      "git_blob": "b0962d25557eaf84ad7595d64ea7ef834c2e2a58",
+      "sha256": "0cd5cf1fedd32ae97bf169a82357ef7e0e72339791503d415aefccde7c621dd8"
+    },
+    {
+      "path": "freight_packets/freightpkt/ratecon.py",
+      "mode": "100644",
+      "bytes": 4518,
+      "git_blob": "c1f148e62d2b215d11511311782a57b8272fed03",
+      "sha256": "c9684e8a7eed867b015bcad8fda90e7f06452f0ca310202ec3bb8287d4064c43"
+    },
+    {
+      "path": "freight_packets/freightpkt/synth.py",
+      "mode": "100644",
+      "bytes": 18300,
+      "git_blob": "646ee6ec3336eb237c2b4717c15f448230605196",
+      "sha256": "721cdad09373b047ac0d3cd0f721154cb17366d87edd6bf34224a97b817eef24"
+    },
+    {
+      "path": "freight_packets/freightpkt/terminal_review_export.py",
+      "mode": "100644",
+      "bytes": 9399,
+      "git_blob": "676159e8a79d00143b9e6b69ba94740489b1794d",
+      "sha256": "c697780be9bb7d1d6e3182c9419fe316f833c8148b14ff5c174266b9b5fb2db5"
+    },
+    {
+      "path": "freight_packets/freightpkt/ui.html",
+      "mode": "100644",
+      "bytes": 19723,
+      "git_blob": "4fd22753daf54da4d0a04c1202429b79cbada7de",
+      "sha256": "497510e8c9491b5b6b74d0ae9b863c95a3b2bdad5431fe408dccdc28c6f45573"
+    },
+    {
+      "path": "freight_packets/freightpkt/web.py",
+      "mode": "100644",
+      "bytes": 16343,
+      "git_blob": "9215adc3241f722344a452b4f789a4a5b59a25ec",
+      "sha256": "fa0becc51604ecbec4b59613439064527db0a3915f183e1949d3b326e8fccfce"
+    },
+    {
+      "path": "freight_packets/tests/conftest.py",
+      "mode": "100644",
+      "bytes": 102,
+      "git_blob": "e4c2fd4ff87c63061fb6a10f0fb01228c46c0875",
+      "sha256": "d8b2869aa8eac2206b490e4b76f49d6511a6da1c99506a96dc15caada93562a8"
+    },
+    {
+      "path": "freight_packets/tests/test_fines.py",
+      "mode": "100644",
+      "bytes": 6430,
+      "git_blob": "6d46848b04068425705b4c3319923d636f68ab6b",
+      "sha256": "698c586648212e693d246d72b83fccd1e36b4beed00f413553fd5aacb9eaa374"
+    },
+    {
+      "path": "freight_packets/tests/test_freight.py",
+      "mode": "100644",
+      "bytes": 8764,
+      "git_blob": "8539ae8a71e00f1ff19507626c809bbebffd81e3",
+      "sha256": "a91ba14b3af6f4109edafbe90b78a6eacc24ecdb34e0655940f4b5f73e2b137d"
+    },
+    {
+      "path": "freight_packets/tests/test_freight_hardening.py",
+      "mode": "100644",
+      "bytes": 8986,
+      "git_blob": "e7f6fdc9d68f714130a990b681be030aa5a71d2e",
+      "sha256": "415cb3b4e2f7c4076335426d3fc81c527744cb963a1248235ba576ed5be03d46"
+    },
+    {
+      "path": "freight_packets/tests/test_invoice_header_consistency.py",
+      "mode": "100644",
+      "bytes": 10564,
+      "git_blob": "8edd399bddc85e8e4d349e00d638ccc5272b465e",
+      "sha256": "1fda13d4c63ce4e2c311323db1995bd663a660c4637bc93bfded460ee2ae57d8"
+    },
+    {
+      "path": "freight_packets/tests/test_review_batch.py",
+      "mode": "100644",
+      "bytes": 14262,
+      "git_blob": "56c76edb6954675c023d5c637ecaa648fa9f5485",
+      "sha256": "e2706b0e6e0d25d80be8ad18477109a276ed75879773328eb45c85cd1c4bbdfb"
+    },
+    {
+      "path": "freight_packets/tests/test_review_decisions.py",
+      "mode": "100644",
+      "bytes": 13210,
+      "git_blob": "0fc6e22e7dc8b7e60d9712e69750fd5c71e3241b",
+      "sha256": "dbb9cb57c88e8cec39406730847996a8347dc071d4de67be9fe7b9732801568d"
+    },
+    {
+      "path": "freight_packets/tests/test_review_handoff.py",
+      "mode": "100644",
+      "bytes": 15907,
+      "git_blob": "a30c83740f7ad5f6e4cdb47eb467567fead6a606",
+      "sha256": "efb6061ccee7773fcf2149e8cc6489add4ee2210e0305a2d98801e130683a45b"
+    },
+    {
+      "path": "freight_packets/tests/test_terminal_review_export.py",
+      "mode": "100644",
+      "bytes": 17764,
+      "git_blob": "fcf7070223e95a5ccef3c801b0d369c7f4a43e2b",
+      "sha256": "6d3fe7720f0d6f79aa12d10d37440fe8d4af5d30137f6300fe6b5f1b5a3b112a"
+    }
+  ],
+  "changed_paths": [
+    "freight_packets/TERMINAL_REVIEW_EXPORT.md",
+    "freight_packets/freightpkt/cli.py",
+    "freight_packets/freightpkt/terminal_review_export.py",
+    "freight_packets/tests/test_terminal_review_export.py"
+  ],
+  "unchanged_native_inputs": 26,
+  "contract_sha256": "89a0b2adcd50085c20a5ccc7497ee8d69ac33292614cb61b70b07fdc5997e42f",
+  "independent_oracle_sha256": "20b2323561353eaa4418cabe2e5573d8920a5e864c9c7b848400848a83f3f043",
+  "status": "Frozen source for narrow shape regression; original r1/native/independent receipts remain immutable",
+  "revision": "r2: native report-row admission after exact r1 flags:[null] traceback witness; no producer, CLI, archive or delivery change"
+}

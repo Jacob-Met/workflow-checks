@@ -1,0 +1,92 @@
+{
+  "added_paths": [
+    "freight_packets/TERMINAL_REVIEW_EXPORT.md",
+    "freight_packets/freightpkt/terminal_review_export.py",
+    "freight_packets/tests/test_terminal_review_export.py"
+  ],
+  "all_18_Freight_package_paths_and_blobs_preserved": true,
+  "baseline_source_snapshot": {
+    "bytes": 261454,
+    "git_blob": "67c36613cfa7cd19b6510b219d9364e8a26368a4",
+    "sha256": "2b601f0f9217f4ae48a2083a34f629c4fbec567b940d982db4155504cc13ea7d"
+  },
+  "boundaries": "This captured main fence is a source proof, not current published/merged/hosted qualification. The old held offer remains historical. All R1 native receipts retain original pins; the R2 guard supplement adds no independent process.",
+  "captured_later_main": "76e6175d91320ac816cee019df969c0f0e1bbfc7",
+  "captured_later_tree": "256483cd5c7cbb3731e5a6c322a117900ab24b65",
+  "changed_existing_paths": [
+    "freight_packets/freightpkt/cli.py"
+  ],
+  "cli_three_change_spans": [
+    {
+      "candidate_lines": 1,
+      "candidate_start": 1,
+      "candidate_text": "\"\"\"CLI: python -m freightpkt <generate|run|pdf|serve|export-reviews> ...\"\"\"\r\n",
+      "operation": "replace",
+      "original_lines": 1,
+      "original_start": 1,
+      "original_text": "\"\"\"CLI: python -m freightpkt <generate|run|pdf|serve> ...\"\"\"\r\n"
+    },
+    {
+      "candidate_lines": 6,
+      "candidate_start": 27,
+      "candidate_text": "\r\n    h = sub.add_parser(\"export-reviews\", help=\"export selected saved reviews as one canonical offline ZIP\")\r\n    h.add_argument(\"--out\", required=True, help=\"existing generated freight output directory\")\r\n    h.add_argument(\"--load\", dest=\"loads\", action=\"append\", required=True,\r\n                   help=\"exact load ID; repeat for each load to include\")\r\n    h.add_argument(\"--destination\", required=True, help=\"new ZIP filename outside the source output directory\")\r\n",
+      "operation": "insert",
+      "original_lines": 0,
+      "original_start": 27,
+      "original_text": ""
+    },
+    {
+      "candidate_lines": 22,
+      "candidate_start": 61,
+      "candidate_text": "    if a.cmd == \"export-reviews\":\r\n        import json\r\n        import os\r\n        from .terminal_review_export import export_reviews\r\n        try:\r\n            result = export_reviews(Path(a.out), a.loads, Path(a.destination))\r\n        except (OSError, ValueError, KeyError, TypeError, RecursionError, OverflowError) as error:\r\n            print(f\"could not export saved reviews: {error}\", file=sys.stderr)\r\n            return 2\r\n        try:\r\n            print(json.dumps(result, ensure_ascii=True, sort_keys=True, indent=2, allow_nan=False), flush=True)\r\n        except OSError as error:\r\n            # Publication already succeeded; silence a second shutdown-flush failure.\r\n            try:\r\n                with open(os.devnull, \"w\") as sink:\r\n                    os.dup2(sink.fileno(), sys.stdout.fileno())\r\n            except (OSError, ValueError, AttributeError):\r\n                pass\r\n            print(f\"archive published to {result['destination']}, but could not write its receipt: {error}\",\r\n                  file=sys.stderr)\r\n            return 2\r\n        return 0\r\n",
+      "operation": "insert",
+      "original_lines": 0,
+      "original_start": 55,
+      "original_text": ""
+    }
+  ],
+  "final_candidate_manifest": {
+    "bytes": 8731,
+    "git_blob": "b328145cad41dd4b9abb25eb3be197030e6be992",
+    "sha256": "96859ddb99a82f12aac4bf360c099f52a3f993f047e7d04bfa270ce2659e703b"
+  },
+  "final_module": {
+    "bytes": 9399,
+    "git_blob": "676159e8a79d00143b9e6b69ba94740489b1794d",
+    "sha256": "c697780be9bb7d1d6e3182c9419fe316f833c8148b14ff5c174266b9b5fb2db5"
+  },
+  "original_27_inputs_verified": true,
+  "package_pins": {
+    "freight_packets/freightpkt/__init__.py": "a7804a1379966afd1e6143a92cf08c1b25f7abfe",
+    "freight_packets/freightpkt/__main__.py": "3c93dd90cf357624c77ab3589ef2b201868c181e",
+    "freight_packets/freightpkt/batch_handoff.py": "2ae68efdfe0c0c45135e2a5764749a5444da62d7",
+    "freight_packets/freightpkt/batch_handoff_ui.js": "40f39412a16fe496afcc9b57e0ba3e03775ec303",
+    "freight_packets/freightpkt/cli.py": "a64a4d60816654595b1767ff9f96cd2cd9c49c32",
+    "freight_packets/freightpkt/detention.py": "b275165bce2ac5162fb49eab54674c11f13bfd2f",
+    "freight_packets/freightpkt/fines.py": "0b0f70344f3f2f1d58d524fc1ec6e67a51b495cb",
+    "freight_packets/freightpkt/handoff.py": "bdcb63507b57d07eed1a6598d7d37d5f5d9db802",
+    "freight_packets/freightpkt/ingest.py": "dad18f470035318241a9c432326d1f4bafa26edf",
+    "freight_packets/freightpkt/invoice_match.py": "584bb09b92335a350d9880f55b786baba1960941",
+    "freight_packets/freightpkt/models.py": "5087874944b6ee195111f30e98e9e9e5a8394fd1",
+    "freight_packets/freightpkt/packet.py": "3ee637afba32600f5e109e930086b7a4be46b989",
+    "freight_packets/freightpkt/pdf.py": "6e68ce008548c9a5f6473d38616ca52b7aa5d580",
+    "freight_packets/freightpkt/pipeline.py": "b0962d25557eaf84ad7595d64ea7ef834c2e2a58",
+    "freight_packets/freightpkt/ratecon.py": "c1f148e62d2b215d11511311782a57b8272fed03",
+    "freight_packets/freightpkt/synth.py": "646ee6ec3336eb237c2b4717c15f448230605196",
+    "freight_packets/freightpkt/ui.html": "4fd22753daf54da4d0a04c1202429b79cbada7de",
+    "freight_packets/freightpkt/web.py": "9215adc3241f722344a452b4f789a4a5b59a25ec"
+  },
+  "packaging_metadata_assertion_correction": "packet-build-r1.log retains the failed over-strict all-insert assertion; actual source has one command-docstring replacement plus two insertions. No product source or execution was changed.",
+  "qualified_base": "995a48cd92ebf1202fea08e08f90c7ce010ca424",
+  "qualified_base_tree": "3f50ec92b2dcf5c0d3351f0687eb1dbc7f5c0f05",
+  "recorded_at": "2026-10-08T16:44:25.564427+00:00",
+  "repository": "Jacob-Met/workflow-checks",
+  "result": "ACCEPT_SOURCE_PRESERVATION",
+  "source_scope": "New terminal module, dedicated test, standalone guide and additive CLI command only; no shared assembler, per-load handoff, App, browser, package README, generator or filename allocator changes.",
+  "unchanged_cli": {
+    "bytes": 4240,
+    "git_blob": "27c299e31ff8db27e6126f36c4773c6c613c83aa",
+    "sha256": "a5526591bd58702578dc3d90bd1bed908f6816404a3d452df1f2e7dc8ed1399d"
+  },
+  "unchanged_inherited_inputs": 26
+}

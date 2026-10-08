@@ -1,0 +1,365 @@
+{
+  "baseline": "/workspace/scratch/0ee86eaeaf8d/production/freight-terminal-receiving/source/baseline-native/freight_packets",
+  "candidate": "/workspace/scratch/0ee86eaeaf8d/production/freight-terminal-receiving/source/candidate/freight_packets",
+  "candidate_cli_processes": 5,
+  "candidate_tests_used": false,
+  "checks": [
+    {
+      "details": null,
+      "name": "original API oracle completed",
+      "passed": true
+    },
+    {
+      "details": null,
+      "name": "native positive and stale meanings established",
+      "passed": true
+    },
+    {
+      "details": null,
+      "name": "distinct literal IDs share a sanitized label",
+      "passed": true
+    },
+    {
+      "details": null,
+      "name": "actual terminal export succeeded",
+      "passed": true
+    },
+    {
+      "details": null,
+      "name": "published ZIP is complete",
+      "passed": true
+    },
+    {
+      "details": null,
+      "name": "outer paths unique",
+      "passed": true
+    },
+    {
+      "details": null,
+      "name": "literal sorted selection retained",
+      "passed": true
+    },
+    {
+      "details": null,
+      "name": "original native five-file contract 1",
+      "passed": true
+    },
+    {
+      "details": null,
+      "name": "constituent 1/index.html byte identity",
+      "passed": true
+    },
+    {
+      "details": null,
+      "name": "constituent 1/packet.html byte identity",
+      "passed": true
+    },
+    {
+      "details": null,
+      "name": "constituent 1/evidence.json byte identity",
+      "passed": true
+    },
+    {
+      "details": null,
+      "name": "constituent 1/review.json byte identity",
+      "passed": true
+    },
+    {
+      "details": null,
+      "name": "constituent 1/manifest.json byte identity",
+      "passed": true
+    },
+    {
+      "details": null,
+      "name": "saved identity versions retained 1",
+      "passed": true
+    },
+    {
+      "details": null,
+      "name": "original native five-file contract 2",
+      "passed": true
+    },
+    {
+      "details": null,
+      "name": "constituent 2/index.html byte identity",
+      "passed": true
+    },
+    {
+      "details": null,
+      "name": "constituent 2/packet.html byte identity",
+      "passed": true
+    },
+    {
+      "details": null,
+      "name": "constituent 2/evidence.json byte identity",
+      "passed": true
+    },
+    {
+      "details": null,
+      "name": "constituent 2/review.json byte identity",
+      "passed": true
+    },
+    {
+      "details": null,
+      "name": "constituent 2/manifest.json byte identity",
+      "passed": true
+    },
+    {
+      "details": null,
+      "name": "saved identity versions retained 2",
+      "passed": true
+    },
+    {
+      "details": null,
+      "name": "only native constituents and batch cover/manifest included",
+      "passed": true
+    },
+    {
+      "details": null,
+      "name": "opaque file property preserved in evidence",
+      "passed": true
+    },
+    {
+      "details": null,
+      "name": "source identity hashes exact",
+      "passed": true
+    },
+    {
+      "details": null,
+      "name": "every advertised member size and checksum exact",
+      "passed": true
+    },
+    {
+      "details": null,
+      "name": "cover links exact native directories and literal escaped IDs",
+      "passed": true
+    },
+    {
+      "details": null,
+      "name": "unselected content excluded",
+      "passed": true
+    },
+    {
+      "details": null,
+      "name": "successful export source custody",
+      "passed": true
+    },
+    {
+      "details": null,
+      "name": "positive run leaves no staging",
+      "passed": true
+    },
+    {
+      "details": null,
+      "name": "source-targeting symlink refuses",
+      "passed": true
+    },
+    {
+      "details": null,
+      "name": "symlink itself and its source target remain unchanged",
+      "passed": true
+    },
+    {
+      "details": {
+        "complete_zip_bytes": 18663,
+        "limit": 8797
+      },
+      "name": "kernel staging limit fits every source file but not complete ZIP",
+      "passed": true
+    },
+    {
+      "details": null,
+      "name": "real kernel write failure refuses before publication",
+      "passed": true
+    },
+    {
+      "details": null,
+      "name": "write failure preserves sources and removes only own staging",
+      "passed": true
+    },
+    {
+      "details": null,
+      "name": "post-publication status delivery failure observed",
+      "passed": true
+    },
+    {
+      "details": null,
+      "name": "failed status output leaves exact complete delivered ZIP",
+      "passed": true
+    },
+    {
+      "details": null,
+      "name": "retry refuses to overwrite the already delivered result",
+      "passed": true
+    },
+    {
+      "details": null,
+      "name": "all cases preserve input paths bytes identity and timestamps",
+      "passed": true
+    },
+    {
+      "details": null,
+      "name": "no original input directory or source staging was created",
+      "passed": true
+    },
+    {
+      "details": null,
+      "name": "original and candidate production source preserved",
+      "passed": true
+    }
+  ],
+  "delivery_boundary": "A completed no-clobber publication survives a later stdout failure; a nonzero process exit does not by itself prove no ZIP exists. Inspect destination; retry cannot replace it.",
+  "exact_archive_sha256": "d607af1bbe797a9f8cb497325ee983ff822c8db04ffbc6acc55e270a6f334200",
+  "live_server_or_service_calls": 0,
+  "native_api_processes": 1,
+  "native_member_byte_comparisons": 10,
+  "outcome": "ACCEPT_WITH_EXPLICIT_DELIVERY_BOUNDARY",
+  "ownership": "Source/API/format agreement remains a separate held adoption gate.",
+  "processes": [
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/workspace/scratch/0ee86eaeaf8d/production/freight-terminal-receiving/receive_terminal.py",
+        "--baseline",
+        "/workspace/scratch/0ee86eaeaf8d/production/freight-terminal-receiving/source/baseline-native/freight_packets",
+        "--candidate",
+        "/workspace/scratch/0ee86eaeaf8d/production/freight-terminal-receiving/source/candidate/freight_packets",
+        "--output",
+        "/workspace/scratch/0ee86eaeaf8d/production/freight-terminal-receiving/native-r1",
+        "--oracle"
+      ],
+      "cwd": "/workspace/scratch/0ee86eaeaf8d/production/freight-terminal-receiving/source/baseline-native/freight_packets",
+      "kernel_file_size_limit": null,
+      "name": "01-original-native-oracle",
+      "returncode": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "d881bf6f3e4a71b53410653f42038ae011e57c5f962d1ff6889fbc6700aca1e8",
+      "stdout_target": "captured pipe"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "-m",
+        "freightpkt",
+        "export-reviews",
+        "--out",
+        "/workspace/scratch/0ee86eaeaf8d/production/freight-terminal-receiving/native-r1/saved-report",
+        "--load",
+        "Dock?A<&\"",
+        "--load",
+        "Dock/A<&\"",
+        "--destination",
+        "/workspace/scratch/0ee86eaeaf8d/production/freight-terminal-receiving/native-r1/deliveries/ordinary.zip"
+      ],
+      "cwd": "/workspace/scratch/0ee86eaeaf8d/production/freight-terminal-receiving/source/candidate/freight_packets",
+      "kernel_file_size_limit": null,
+      "name": "02-exact-constituents",
+      "returncode": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "ac3db16b2dd9eb2414ff39bb9a612b257b80ebee656d3a230a907993cd0978a8",
+      "stdout_target": "captured pipe"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "-m",
+        "freightpkt",
+        "export-reviews",
+        "--out",
+        "/workspace/scratch/0ee86eaeaf8d/production/freight-terminal-receiving/native-r1/saved-report",
+        "--load",
+        "Dock?A<&\"",
+        "--load",
+        "Dock/A<&\"",
+        "--destination",
+        "/workspace/scratch/0ee86eaeaf8d/production/freight-terminal-receiving/native-r1/deliveries/existing-source-link.zip"
+      ],
+      "cwd": "/workspace/scratch/0ee86eaeaf8d/production/freight-terminal-receiving/source/candidate/freight_packets",
+      "kernel_file_size_limit": null,
+      "name": "03-no-clobber-source-symlink",
+      "returncode": 2,
+      "stderr_sha256": "f1f6bb223184a465dd656660f1c2c3bab08f005c6d210852e94af0dea56ee44e",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_target": "captured pipe"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "-m",
+        "freightpkt",
+        "export-reviews",
+        "--out",
+        "/workspace/scratch/0ee86eaeaf8d/production/freight-terminal-receiving/native-r1/saved-report",
+        "--load",
+        "Dock?A<&\"",
+        "--load",
+        "Dock/A<&\"",
+        "--destination",
+        "/workspace/scratch/0ee86eaeaf8d/production/freight-terminal-receiving/native-r1/deliveries/kernel-write-failure.zip"
+      ],
+      "cwd": "/workspace/scratch/0ee86eaeaf8d/production/freight-terminal-receiving/source/candidate/freight_packets",
+      "kernel_file_size_limit": 8797,
+      "name": "04-kernel-staging-write-failure",
+      "returncode": 2,
+      "stderr_sha256": "969804a883994110544838e4571c3c822732e72a726fc76115c8fe753289e5ca",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_target": "captured pipe"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "-m",
+        "freightpkt",
+        "export-reviews",
+        "--out",
+        "/workspace/scratch/0ee86eaeaf8d/production/freight-terminal-receiving/native-r1/saved-report",
+        "--load",
+        "Dock?A<&\"",
+        "--load",
+        "Dock/A<&\"",
+        "--destination",
+        "/workspace/scratch/0ee86eaeaf8d/production/freight-terminal-receiving/native-r1/deliveries/stdout-failed.zip"
+      ],
+      "cwd": "/workspace/scratch/0ee86eaeaf8d/production/freight-terminal-receiving/source/candidate/freight_packets",
+      "kernel_file_size_limit": null,
+      "name": "05-publication-before-stdout-failure",
+      "returncode": 120,
+      "stderr_sha256": "2516767a1d736591f1c4df2056a45373b9ee0171df03f1d1b2321d182f097f69",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_target": "/dev/full"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "-m",
+        "freightpkt",
+        "export-reviews",
+        "--out",
+        "/workspace/scratch/0ee86eaeaf8d/production/freight-terminal-receiving/native-r1/saved-report",
+        "--load",
+        "Dock?A<&\"",
+        "--load",
+        "Dock/A<&\"",
+        "--destination",
+        "/workspace/scratch/0ee86eaeaf8d/production/freight-terminal-receiving/native-r1/deliveries/stdout-failed.zip"
+      ],
+      "cwd": "/workspace/scratch/0ee86eaeaf8d/production/freight-terminal-receiving/source/candidate/freight_packets",
+      "kernel_file_size_limit": null,
+      "name": "06-same-destination-recovery",
+      "returncode": 2,
+      "stderr_sha256": "f1f6bb223184a465dd656660f1c2c3bab08f005c6d210852e94af0dea56ee44e",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_target": "captured pipe"
+    }
+  ],
+  "product_source_mutations": 0,
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "python_executable": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+  "schema": "independent-freight-terminal-receiving.v1"
+}

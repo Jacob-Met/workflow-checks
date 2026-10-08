@@ -1,0 +1,121 @@
+{
+  "archive_paths": 73,
+  "archive_unique_bodies": 58,
+  "files": [
+    {
+      "bytes": 7367,
+      "git_blob": "fc03a6ab9d083ac53ff30e9e8d79e8ad6a82b577",
+      "mode": "100644",
+      "path": "README.md",
+      "sha256": "0e42d05c205347498234d0cb51e6d89eede8c1f27c972258ee1bb9f708efd0eb"
+    },
+    {
+      "bytes": 288836,
+      "git_blob": "6c2aa5c5ade1a8a135eb4f6225e314fd1b75c26e",
+      "mode": "100644",
+      "path": "artifacts.json.gz.b64",
+      "sha256": "bd26a796175a290ad78ed7a6edfe3832c4cf61cda9850883b1a6b5b6de3ecbea"
+    },
+    {
+      "bytes": 3270,
+      "git_blob": "df0f23908fb919a3db3113ff9d5d299d421d5a53",
+      "mode": "100644",
+      "path": "guard-r2-receipt.json",
+      "sha256": "8cc5a55d19e82193c9c84f8b984b0f62e1733c138bcda4bce8594f3c033b8778"
+    },
+    {
+      "bytes": 6902,
+      "git_blob": "dfe78716bf654571a0accbd15a3a3eb976608c56",
+      "mode": "100644",
+      "path": "oracle-manifest.json",
+      "sha256": "20b2323561353eaa4418cabe2e5573d8920a5e864c9c7b848400848a83f3f043"
+    },
+    {
+      "bytes": 45854,
+      "git_blob": "225fddc7af7e712a2ab34b4fff164a69aa720e66",
+      "mode": "100644",
+      "path": "receiving-r1.json",
+      "sha256": "b3fee2c04da65cea26a7d714bcc24a4974a2e892eaee424290dcaa345552ce08"
+    },
+    {
+      "bytes": 12946,
+      "git_blob": "f9cfacb0a4940f9e1466e85573c5b92531345732",
+      "mode": "100644",
+      "path": "reference-receipt.json",
+      "sha256": "2feca05b9b1f1196353977710878129065b098af2d5c77aaea37e12c9cec2210"
+    },
+    {
+      "bytes": 6368,
+      "git_blob": "7674cf804b6f4dd72dac3481c355861c311046d0",
+      "mode": "100644",
+      "path": "source-review.json",
+      "sha256": "ab5ee17d51a2ddfcdca86c72234a347704f4b3fab3215380f59dc3995482a973"
+    },
+    {
+      "bytes": 5235,
+      "git_blob": "f573f1b17522090fbe3d7ecf03d8f05428f945b4",
+      "mode": "100644",
+      "path": "verify_and_extract.py",
+      "sha256": "19df34ecb114cc6c8dfdeca0153fca1d2f06fdb923def92ea81277a40316f04e"
+    }
+  ],
+  "independent_native_processes": {
+    "R1_caller": 6,
+    "R2_additional": 0,
+    "shared_reference": 1
+  },
+  "native_R1_artifact_files": 34,
+  "original_oracle_files": 25,
+  "publication_prefix": "freight_packets/verification/terminal-review-export-0ee86eaeaf8d/independent/",
+  "readable_receipt_copies": {
+    "guard-r2-receipt.json": "guard-r2/receipt.json",
+    "oracle-manifest.json": "oracle-manifest.json",
+    "receiving-r1.json": "native-r1/receipt.json",
+    "reference-receipt.json": "canonical-oracle-r1/receipt.json",
+    "source-review.json": "source-review-final.json"
+  },
+  "receipt_boundaries": "R1 exact 89f49004 remains separate from final 676159e8 guard; old held-format exit120 remains historical, while this R1 canonical caller delivered the exact ZIP then cleanly returned2 on receipt failure.",
+  "recorded_author_R2_processes_received": 2,
+  "repository": "Jacob-Met/workflow-checks",
+  "schema": "freight-canonical-independent-packet.v1",
+  "shared_author_files": [
+    {
+      "bytes": 261454,
+      "git_blob": "67c36613cfa7cd19b6510b219d9364e8a26368a4",
+      "path": "source-snapshot.json",
+      "sha256": "2b601f0f9217f4ae48a2083a34f629c4fbec567b940d982db4155504cc13ea7d"
+    },
+    {
+      "bytes": 8570,
+      "git_blob": "a452c7fa51725d2353d3ff99bf11f5ef72408328",
+      "path": "candidate-manifest-r1.json",
+      "sha256": "c96aa05a3390170d7314232dfa4d1d44f804764836caa87302e54343386f2d83"
+    },
+    {
+      "bytes": 8731,
+      "git_blob": "b328145cad41dd4b9abb25eb3be197030e6be992",
+      "path": "candidate-manifest-r2.json",
+      "sha256": "96859ddb99a82f12aac4bf360c099f52a3f993f047e7d04bfa270ce2659e703b"
+    },
+    {
+      "bytes": 300389,
+      "git_blob": "42d50053a8b5eac6deb5e8e1f6e9556336918d0e",
+      "path": "native-r1/execution.json.gz.b64",
+      "sha256": "06aea91bcd2f8078024ec78882f92828837ac1d6b0c3120be69e416c59fbfc24"
+    },
+    {
+      "bytes": 2464,
+      "git_blob": "796224797a0cad8c1bd60cedd1f04b133e9bb08c",
+      "path": "shape-r1.json",
+      "sha256": "bc0f68cbce7e43706b89e99e8414471140e431412db57d712d54ea17192f14b6"
+    },
+    {
+      "bytes": 27989,
+      "git_blob": "9a148c9fc92d14a3022c408c3f0d95b6d19d21ff",
+      "path": "shape-r2.json",
+      "sha256": "e1cd4c7b7417646bd7bcf9fa9f5045dd836da107a97a3d550926a037b8f6b7a4"
+    }
+  ],
+  "shared_author_root": "..",
+  "status": "FROZEN; R1 native ACCEPT and R2 source/record supplement ACCEPT; publication remains subsequent"
+}

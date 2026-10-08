@@ -1,0 +1,30 @@
+{
+  "argv": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "-B",
+    "/workspace/scratch/0ee86eaeaf8d/production/freight-canonical-receiving/packet/verify_and_extract.py",
+    "--extract",
+    "/dev/freight-canonical-packet-2s_ul02j/restored",
+    "--author-evidence",
+    "/workspace/scratch/0ee86eaeaf8d/coordination/freight-review-inspection/canonical-terminal",
+    "--repository",
+    "/workspace/scratch/0ee86eaeaf8d/coordination/freight-review-inspection/canonical-terminal/candidate"
+  ],
+  "decoded": {
+    "artifact_paths": 73,
+    "extracted": true,
+    "frozen_oracle_files": 25,
+    "native_product_processes": 0,
+    "packet_files": 9,
+    "result": "ACCEPT",
+    "shared_author_files_verified": 6,
+    "unique_bodies": 58
+  },
+  "native_product_processes": 0,
+  "packet_manifest_sha256": "9a9ee9c363c9c977aa030a34e7554bb43c6a64c6264c5a49657f9c940280ee0e",
+  "purpose": "Offline packet verification and portable replay restoration only",
+  "result": "ACCEPT",
+  "returncode": 0,
+  "stderr": "",
+  "stdout": "{\"artifact_paths\": 73, \"extracted\": true, \"frozen_oracle_files\": 25, \"native_product_processes\": 0, \"packet_files\": 9, \"result\": \"ACCEPT\", \"shared_author_files_verified\": 6, \"unique_bodies\": 58}\n"
+}

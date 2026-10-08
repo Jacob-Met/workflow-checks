@@ -1,0 +1,18 @@
+{
+  "at": "2026-10-08T16:34:51.928981+00:00",
+  "argv": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "-B",
+    "/workspace/scratch/0ee86eaeaf8d/coordination/freight-review-inspection/canonical-terminal/qualify_shape.py",
+    "--candidate",
+    "/dev/canonical-freight-shape-r2-9xi_c9xj/candidate",
+    "--r1",
+    "/workspace/scratch/0ee86eaeaf8d/coordination/freight-review-inspection/canonical-terminal/shape-r1.json",
+    "--output",
+    "/dev/canonical-freight-shape-r2-9xi_c9xj/shape-r2.json"
+  ],
+  "returncode": 0,
+  "stdout": "{\"passed\": true, \"methods\": 1, \"failures\": 0, \"errors\": 0, \"new_cli_processes\": 2, \"original_raw_witness_preserved\": true, \"original_returncode\": 1, \"source_preserved\": true, \"log\": \"test_malformed_native_report_row_refuses_and_empty_report_is_valid (terminal_shape_regression.TerminalReviewExportTests.test_malformed_native_report_row_refuses_and_empty_report_is_valid) ... ok\\n\\n----------------------------------------------------------------------\\nRan 1 test in 0.203s\\n\\nOK\\n\"}\n",
+  "stderr": "",
+  "only_new_shape_regression_executed": true
+}

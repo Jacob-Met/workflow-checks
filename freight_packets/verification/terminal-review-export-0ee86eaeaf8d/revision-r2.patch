@@ -1,0 +1,45 @@
+--- r1/freight_packets/freightpkt/terminal_review_export.py
++++ r2/freight_packets/freightpkt/terminal_review_export.py
+@@ -12,7 +12,7 @@
+ import zipfile
+ 
+ from .batch_handoff import build_batch_bundle
+-from .web import App
++from .web import App, REVIEW_SECTIONS
+ 
+ MAX_LOADS = 100
+ MAX_JSON_BYTES = 16 * 1024 * 1024
+@@ -125,6 +125,10 @@
+             not isinstance(row, dict) or not isinstance(row.get("load_id"), str)
+             or not isinstance(row.get("file"), str) for row in packets):
+         raise ValueError("summary.json must contain the native packet list")
++    for section in REVIEW_SECTIONS:
++        records = summary.get(section, [])
++        if not isinstance(records, list) or any(not isinstance(row, dict) for row in records):
++            raise ValueError(f"summary.json {section} must be a list of native records")
+     for load_id in selected:
+         matches = [row for row in packets if row["load_id"] == load_id]
+         if len(matches) != 1:
+--- r1/freight_packets/tests/test_terminal_review_export.py
++++ r2/freight_packets/tests/test_terminal_review_export.py
+@@ -202,6 +202,20 @@
+         self.write_json("summary.json", summary)
+         self.refuse(self.cli())
+ 
++    def test_malformed_native_report_row_refuses_and_empty_report_is_valid(self):
++        shutil.rmtree(self.source)
++        (self.source / "packets").mkdir(parents=True)
++        raw = b'{"packets":[{"load_id":"A","file":"packets/a.html"}],"flags":[null]}\n'
++        (self.source / "summary.json").write_bytes(raw)
++        (self.source / "packets/a.html").write_bytes(b"<html>synthetic shape control</html>\n")
++        self.refuse(self.cli(["A"]))
++        self.assertEqual((self.source / "summary.json").read_bytes(), raw)
++        (self.source / "summary.json").write_bytes(raw.replace(b"[null]", b"[]"))
++        _, (_, expected) = self.native(["A"])
++        result = self.cli(["A"])
++        self.assertEqual(result.returncode, 0, result.stderr)
++        self.assertEqual(self.destination.read_bytes(), expected)
++
+     def test_packet_mapping_cannot_escape_capture_or_overwrite_summary(self):
+         original = json.loads((self.source / "summary.json").read_bytes())
+         outside = self.work / "outside.html"

@@ -1,0 +1,435 @@
+{
+  "schema": "canonical-freight-terminal-shape-receiving.v1",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "passed": true,
+  "methods": 1,
+  "failures": 0,
+  "errors": 0,
+  "new_cli_processes": 2,
+  "original_raw_witness_preserved": true,
+  "original_returncode": 1,
+  "source_preserved": true,
+  "source_before": {
+    "freight_packets/README.md": {
+      "bytes": 17742,
+      "sha256": "9c7941d0207b4acf70c8f6fc488e5e7257645a71224e14b9c77bee63e9e8b6aa",
+      "git_blob": "249ee104175f1d36cc5b39abad5be02bc53e85be"
+    },
+    "freight_packets/TERMINAL_REVIEW_EXPORT.md": {
+      "bytes": 7603,
+      "sha256": "9b9b4dddd17e6293fd52c62a62386b0956f55f8caa6086b01b1792c58c8bd26e",
+      "git_blob": "c5cb61365de27b7a776471ed9f069e8859081472"
+    },
+    "freight_packets/freightpkt/__init__.py": {
+      "bytes": 245,
+      "sha256": "f9364708963fa65b54aae5174a816c45df417fe7d93971c3b0ff046278929706",
+      "git_blob": "a7804a1379966afd1e6143a92cf08c1b25f7abfe"
+    },
+    "freight_packets/freightpkt/__main__.py": {
+      "bytes": 57,
+      "sha256": "4b1afbca74a10abc3cff7b4e5a11b558bf619e45b89709faf9225a474a2a250f",
+      "git_blob": "3c93dd90cf357624c77ab3589ef2b201868c181e"
+    },
+    "freight_packets/freightpkt/batch_handoff.py": {
+      "bytes": 6160,
+      "sha256": "70e4ab57e9ccf13962a01719661f9db2f4a1bfd1599ff9b30d02d9e374f3fe7d",
+      "git_blob": "2ae68efdfe0c0c45135e2a5764749a5444da62d7"
+    },
+    "freight_packets/freightpkt/batch_handoff_ui.js": {
+      "bytes": 10806,
+      "sha256": "bd300f25abf279ca16f11bddc4bf4c277f4e99b9146b5321904ecc82afaaca18",
+      "git_blob": "40f39412a16fe496afcc9b57e0ba3e03775ec303"
+    },
+    "freight_packets/freightpkt/cli.py": {
+      "bytes": 4240,
+      "sha256": "a5526591bd58702578dc3d90bd1bed908f6816404a3d452df1f2e7dc8ed1399d",
+      "git_blob": "27c299e31ff8db27e6126f36c4773c6c613c83aa"
+    },
+    "freight_packets/freightpkt/detention.py": {
+      "bytes": 6574,
+      "sha256": "31ca31fd3210ff680bc83291916e39ea19b82580c3a090720556afd4ef0cd76b",
+      "git_blob": "b275165bce2ac5162fb49eab54674c11f13bfd2f"
+    },
+    "freight_packets/freightpkt/fines.py": {
+      "bytes": 11074,
+      "sha256": "6009e9c9e8d23556e98d9d2606ffac60073597dda50026209155039ec5efcdac",
+      "git_blob": "0b0f70344f3f2f1d58d524fc1ec6e67a51b495cb"
+    },
+    "freight_packets/freightpkt/handoff.py": {
+      "bytes": 7082,
+      "sha256": "413290d887d045b96dd1639c34b9c769f0e730beb28dce06c654a0df36cf1a02",
+      "git_blob": "bdcb63507b57d07eed1a6598d7d37d5f5d9db802"
+    },
+    "freight_packets/freightpkt/ingest.py": {
+      "bytes": 11001,
+      "sha256": "1179675d011d55781c6de3ae806b905698df2a21fcc621ea788d73c6e29d6276",
+      "git_blob": "dad18f470035318241a9c432326d1f4bafa26edf"
+    },
+    "freight_packets/freightpkt/invoice_match.py": {
+      "bytes": 5285,
+      "sha256": "37a9e0801de948c3b558ca7c9846b3d0eb76ec062703ee3e5132df273ff569ab",
+      "git_blob": "584bb09b92335a350d9880f55b786baba1960941"
+    },
+    "freight_packets/freightpkt/models.py": {
+      "bytes": 2758,
+      "sha256": "8a24ed2cca6f45aa8a47d793620b0e2e4d573ec92209954d3f3156795e3f0e05",
+      "git_blob": "5087874944b6ee195111f30e98e9e9e5a8394fd1"
+    },
+    "freight_packets/freightpkt/packet.py": {
+      "bytes": 7707,
+      "sha256": "1a2742168a27d52f5999823c409346bf7023ebb6442b2d0088f4c676609aefb3",
+      "git_blob": "3ee637afba32600f5e109e930086b7a4be46b989"
+    },
+    "freight_packets/freightpkt/pdf.py": {
+      "bytes": 1671,
+      "sha256": "c4876c50eb46c152b71690a53d32463798925c543da06434012aeba833590129",
+      "git_blob": "6e68ce008548c9a5f6473d38616ca52b7aa5d580"
+    },
+    "freight_packets/freightpkt/pipeline.py": {
+      "bytes": 11327,
+      "sha256": "0cd5cf1fedd32ae97bf169a82357ef7e0e72339791503d415aefccde7c621dd8",
+      "git_blob": "b0962d25557eaf84ad7595d64ea7ef834c2e2a58"
+    },
+    "freight_packets/freightpkt/ratecon.py": {
+      "bytes": 4518,
+      "sha256": "c9684e8a7eed867b015bcad8fda90e7f06452f0ca310202ec3bb8287d4064c43",
+      "git_blob": "c1f148e62d2b215d11511311782a57b8272fed03"
+    },
+    "freight_packets/freightpkt/synth.py": {
+      "bytes": 18300,
+      "sha256": "721cdad09373b047ac0d3cd0f721154cb17366d87edd6bf34224a97b817eef24",
+      "git_blob": "646ee6ec3336eb237c2b4717c15f448230605196"
+    },
+    "freight_packets/freightpkt/terminal_review_export.py": {
+      "bytes": 9399,
+      "sha256": "c697780be9bb7d1d6e3182c9419fe316f833c8148b14ff5c174266b9b5fb2db5",
+      "git_blob": "676159e8a79d00143b9e6b69ba94740489b1794d"
+    },
+    "freight_packets/freightpkt/ui.html": {
+      "bytes": 19723,
+      "sha256": "497510e8c9491b5b6b74d0ae9b863c95a3b2bdad5431fe408dccdc28c6f45573",
+      "git_blob": "4fd22753daf54da4d0a04c1202429b79cbada7de"
+    },
+    "freight_packets/freightpkt/web.py": {
+      "bytes": 16343,
+      "sha256": "fa0becc51604ecbec4b59613439064527db0a3915f183e1949d3b326e8fccfce",
+      "git_blob": "9215adc3241f722344a452b4f789a4a5b59a25ec"
+    },
+    "freight_packets/tests/conftest.py": {
+      "bytes": 102,
+      "sha256": "d8b2869aa8eac2206b490e4b76f49d6511a6da1c99506a96dc15caada93562a8",
+      "git_blob": "e4c2fd4ff87c63061fb6a10f0fb01228c46c0875"
+    },
+    "freight_packets/tests/test_fines.py": {
+      "bytes": 6430,
+      "sha256": "698c586648212e693d246d72b83fccd1e36b4beed00f413553fd5aacb9eaa374",
+      "git_blob": "6d46848b04068425705b4c3319923d636f68ab6b"
+    },
+    "freight_packets/tests/test_freight.py": {
+      "bytes": 8764,
+      "sha256": "a91ba14b3af6f4109edafbe90b78a6eacc24ecdb34e0655940f4b5f73e2b137d",
+      "git_blob": "8539ae8a71e00f1ff19507626c809bbebffd81e3"
+    },
+    "freight_packets/tests/test_freight_hardening.py": {
+      "bytes": 8986,
+      "sha256": "415cb3b4e2f7c4076335426d3fc81c527744cb963a1248235ba576ed5be03d46",
+      "git_blob": "e7f6fdc9d68f714130a990b681be030aa5a71d2e"
+    },
+    "freight_packets/tests/test_invoice_header_consistency.py": {
+      "bytes": 10564,
+      "sha256": "1fda13d4c63ce4e2c311323db1995bd663a660c4637bc93bfded460ee2ae57d8",
+      "git_blob": "8edd399bddc85e8e4d349e00d638ccc5272b465e"
+    },
+    "freight_packets/tests/test_review_batch.py": {
+      "bytes": 14262,
+      "sha256": "e2706b0e6e0d25d80be8ad18477109a276ed75879773328eb45c85cd1c4bbdfb",
+      "git_blob": "56c76edb6954675c023d5c637ecaa648fa9f5485"
+    },
+    "freight_packets/tests/test_review_decisions.py": {
+      "bytes": 13210,
+      "sha256": "dbb9cb57c88e8cec39406730847996a8347dc071d4de67be9fe7b9732801568d",
+      "git_blob": "0fc6e22e7dc8b7e60d9712e69750fd5c71e3241b"
+    },
+    "freight_packets/tests/test_review_handoff.py": {
+      "bytes": 15907,
+      "sha256": "efb6061ccee7773fcf2149e8cc6489add4ee2210e0305a2d98801e130683a45b",
+      "git_blob": "a30c83740f7ad5f6e4cdb47eb467567fead6a606"
+    },
+    "freight_packets/tests/test_terminal_review_export.py": {
+      "bytes": 17764,
+      "sha256": "6d3fe7720f0d6f79aa12d10d37440fe8d4af5d30137f6300fe6b5f1b5a3b112a",
+      "git_blob": "fcf7070223e95a5ccef3c801b0d369c7f4a43e2b"
+    }
+  },
+  "source_after": {
+    "freight_packets/README.md": {
+      "bytes": 17742,
+      "sha256": "9c7941d0207b4acf70c8f6fc488e5e7257645a71224e14b9c77bee63e9e8b6aa",
+      "git_blob": "249ee104175f1d36cc5b39abad5be02bc53e85be"
+    },
+    "freight_packets/TERMINAL_REVIEW_EXPORT.md": {
+      "bytes": 7603,
+      "sha256": "9b9b4dddd17e6293fd52c62a62386b0956f55f8caa6086b01b1792c58c8bd26e",
+      "git_blob": "c5cb61365de27b7a776471ed9f069e8859081472"
+    },
+    "freight_packets/freightpkt/__init__.py": {
+      "bytes": 245,
+      "sha256": "f9364708963fa65b54aae5174a816c45df417fe7d93971c3b0ff046278929706",
+      "git_blob": "a7804a1379966afd1e6143a92cf08c1b25f7abfe"
+    },
+    "freight_packets/freightpkt/__main__.py": {
+      "bytes": 57,
+      "sha256": "4b1afbca74a10abc3cff7b4e5a11b558bf619e45b89709faf9225a474a2a250f",
+      "git_blob": "3c93dd90cf357624c77ab3589ef2b201868c181e"
+    },
+    "freight_packets/freightpkt/batch_handoff.py": {
+      "bytes": 6160,
+      "sha256": "70e4ab57e9ccf13962a01719661f9db2f4a1bfd1599ff9b30d02d9e374f3fe7d",
+      "git_blob": "2ae68efdfe0c0c45135e2a5764749a5444da62d7"
+    },
+    "freight_packets/freightpkt/batch_handoff_ui.js": {
+      "bytes": 10806,
+      "sha256": "bd300f25abf279ca16f11bddc4bf4c277f4e99b9146b5321904ecc82afaaca18",
+      "git_blob": "40f39412a16fe496afcc9b57e0ba3e03775ec303"
+    },
+    "freight_packets/freightpkt/cli.py": {
+      "bytes": 4240,
+      "sha256": "a5526591bd58702578dc3d90bd1bed908f6816404a3d452df1f2e7dc8ed1399d",
+      "git_blob": "27c299e31ff8db27e6126f36c4773c6c613c83aa"
+    },
+    "freight_packets/freightpkt/detention.py": {
+      "bytes": 6574,
+      "sha256": "31ca31fd3210ff680bc83291916e39ea19b82580c3a090720556afd4ef0cd76b",
+      "git_blob": "b275165bce2ac5162fb49eab54674c11f13bfd2f"
+    },
+    "freight_packets/freightpkt/fines.py": {
+      "bytes": 11074,
+      "sha256": "6009e9c9e8d23556e98d9d2606ffac60073597dda50026209155039ec5efcdac",
+      "git_blob": "0b0f70344f3f2f1d58d524fc1ec6e67a51b495cb"
+    },
+    "freight_packets/freightpkt/handoff.py": {
+      "bytes": 7082,
+      "sha256": "413290d887d045b96dd1639c34b9c769f0e730beb28dce06c654a0df36cf1a02",
+      "git_blob": "bdcb63507b57d07eed1a6598d7d37d5f5d9db802"
+    },
+    "freight_packets/freightpkt/ingest.py": {
+      "bytes": 11001,
+      "sha256": "1179675d011d55781c6de3ae806b905698df2a21fcc621ea788d73c6e29d6276",
+      "git_blob": "dad18f470035318241a9c432326d1f4bafa26edf"
+    },
+    "freight_packets/freightpkt/invoice_match.py": {
+      "bytes": 5285,
+      "sha256": "37a9e0801de948c3b558ca7c9846b3d0eb76ec062703ee3e5132df273ff569ab",
+      "git_blob": "584bb09b92335a350d9880f55b786baba1960941"
+    },
+    "freight_packets/freightpkt/models.py": {
+      "bytes": 2758,
+      "sha256": "8a24ed2cca6f45aa8a47d793620b0e2e4d573ec92209954d3f3156795e3f0e05",
+      "git_blob": "5087874944b6ee195111f30e98e9e9e5a8394fd1"
+    },
+    "freight_packets/freightpkt/packet.py": {
+      "bytes": 7707,
+      "sha256": "1a2742168a27d52f5999823c409346bf7023ebb6442b2d0088f4c676609aefb3",
+      "git_blob": "3ee637afba32600f5e109e930086b7a4be46b989"
+    },
+    "freight_packets/freightpkt/pdf.py": {
+      "bytes": 1671,
+      "sha256": "c4876c50eb46c152b71690a53d32463798925c543da06434012aeba833590129",
+      "git_blob": "6e68ce008548c9a5f6473d38616ca52b7aa5d580"
+    },
+    "freight_packets/freightpkt/pipeline.py": {
+      "bytes": 11327,
+      "sha256": "0cd5cf1fedd32ae97bf169a82357ef7e0e72339791503d415aefccde7c621dd8",
+      "git_blob": "b0962d25557eaf84ad7595d64ea7ef834c2e2a58"
+    },
+    "freight_packets/freightpkt/ratecon.py": {
+      "bytes": 4518,
+      "sha256": "c9684e8a7eed867b015bcad8fda90e7f06452f0ca310202ec3bb8287d4064c43",
+      "git_blob": "c1f148e62d2b215d11511311782a57b8272fed03"
+    },
+    "freight_packets/freightpkt/synth.py": {
+      "bytes": 18300,
+      "sha256": "721cdad09373b047ac0d3cd0f721154cb17366d87edd6bf34224a97b817eef24",
+      "git_blob": "646ee6ec3336eb237c2b4717c15f448230605196"
+    },
+    "freight_packets/freightpkt/terminal_review_export.py": {
+      "bytes": 9399,
+      "sha256": "c697780be9bb7d1d6e3182c9419fe316f833c8148b14ff5c174266b9b5fb2db5",
+      "git_blob": "676159e8a79d00143b9e6b69ba94740489b1794d"
+    },
+    "freight_packets/freightpkt/ui.html": {
+      "bytes": 19723,
+      "sha256": "497510e8c9491b5b6b74d0ae9b863c95a3b2bdad5431fe408dccdc28c6f45573",
+      "git_blob": "4fd22753daf54da4d0a04c1202429b79cbada7de"
+    },
+    "freight_packets/freightpkt/web.py": {
+      "bytes": 16343,
+      "sha256": "fa0becc51604ecbec4b59613439064527db0a3915f183e1949d3b326e8fccfce",
+      "git_blob": "9215adc3241f722344a452b4f789a4a5b59a25ec"
+    },
+    "freight_packets/tests/conftest.py": {
+      "bytes": 102,
+      "sha256": "d8b2869aa8eac2206b490e4b76f49d6511a6da1c99506a96dc15caada93562a8",
+      "git_blob": "e4c2fd4ff87c63061fb6a10f0fb01228c46c0875"
+    },
+    "freight_packets/tests/test_fines.py": {
+      "bytes": 6430,
+      "sha256": "698c586648212e693d246d72b83fccd1e36b4beed00f413553fd5aacb9eaa374",
+      "git_blob": "6d46848b04068425705b4c3319923d636f68ab6b"
+    },
+    "freight_packets/tests/test_freight.py": {
+      "bytes": 8764,
+      "sha256": "a91ba14b3af6f4109edafbe90b78a6eacc24ecdb34e0655940f4b5f73e2b137d",
+      "git_blob": "8539ae8a71e00f1ff19507626c809bbebffd81e3"
+    },
+    "freight_packets/tests/test_freight_hardening.py": {
+      "bytes": 8986,
+      "sha256": "415cb3b4e2f7c4076335426d3fc81c527744cb963a1248235ba576ed5be03d46",
+      "git_blob": "e7f6fdc9d68f714130a990b681be030aa5a71d2e"
+    },
+    "freight_packets/tests/test_invoice_header_consistency.py": {
+      "bytes": 10564,
+      "sha256": "1fda13d4c63ce4e2c311323db1995bd663a660c4637bc93bfded460ee2ae57d8",
+      "git_blob": "8edd399bddc85e8e4d349e00d638ccc5272b465e"
+    },
+    "freight_packets/tests/test_review_batch.py": {
+      "bytes": 14262,
+      "sha256": "e2706b0e6e0d25d80be8ad18477109a276ed75879773328eb45c85cd1c4bbdfb",
+      "git_blob": "56c76edb6954675c023d5c637ecaa648fa9f5485"
+    },
+    "freight_packets/tests/test_review_decisions.py": {
+      "bytes": 13210,
+      "sha256": "dbb9cb57c88e8cec39406730847996a8347dc071d4de67be9fe7b9732801568d",
+      "git_blob": "0fc6e22e7dc8b7e60d9712e69750fd5c71e3241b"
+    },
+    "freight_packets/tests/test_review_handoff.py": {
+      "bytes": 15907,
+      "sha256": "efb6061ccee7773fcf2149e8cc6489add4ee2210e0305a2d98801e130683a45b",
+      "git_blob": "a30c83740f7ad5f6e4cdb47eb467567fead6a606"
+    },
+    "freight_packets/tests/test_terminal_review_export.py": {
+      "bytes": 17764,
+      "sha256": "6d3fe7720f0d6f79aa12d10d37440fe8d4af5d30137f6300fe6b5f1b5a3b112a",
+      "git_blob": "fcf7070223e95a5ccef3c801b0d369c7f4a43e2b"
+    }
+  },
+  "cli": [
+    {
+      "test": "terminal_shape_regression.TerminalReviewExportTests.test_malformed_native_report_row_refuses_and_empty_report_is_valid",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "-m",
+        "freightpkt",
+        "export-reviews",
+        "--out",
+        "/dev/canonical-freight-shape-r2-9xi_c9xj/freight-terminal-case-ms78hm25/saved",
+        "--load",
+        "A",
+        "--destination",
+        "/dev/canonical-freight-shape-r2-9xi_c9xj/freight-terminal-case-ms78hm25/received/handoff.zip"
+      ],
+      "returncode": 2,
+      "stdout": "",
+      "stderr": "could not export saved reviews: summary.json flags must be a list of native records\n",
+      "stdout_full": false,
+      "file_limit": null,
+      "fixture_base64": {
+        "packets/a.html": "PGh0bWw+c3ludGhldGljIHNoYXBlIGNvbnRyb2w8L2h0bWw+Cg==",
+        "summary.json": "eyJwYWNrZXRzIjpbeyJsb2FkX2lkIjoiQSIsImZpbGUiOiJwYWNrZXRzL2EuaHRtbCJ9XSwiZmxhZ3MiOltudWxsXX0K"
+      },
+      "source_before": {
+        "packets/a.html": {
+          "sha256": "4f7b6f63e3aebc5ef1eebe6af45ac5f5883686db5b33c701486f9da842076bd4",
+          "bytes": 37,
+          "inode": 67,
+          "mtime_ns": 1791477291710603219
+        },
+        "summary.json": {
+          "sha256": "26a0df57110376d42f910d40664325ecbea7caae1320364ac150e20cf2fe4aa9",
+          "bytes": 69,
+          "inode": 66,
+          "mtime_ns": 1791477291710588016
+        }
+      },
+      "source_after": {
+        "packets/a.html": {
+          "sha256": "4f7b6f63e3aebc5ef1eebe6af45ac5f5883686db5b33c701486f9da842076bd4",
+          "bytes": 37,
+          "inode": 67,
+          "mtime_ns": 1791477291710603219
+        },
+        "summary.json": {
+          "sha256": "26a0df57110376d42f910d40664325ecbea7caae1320364ac150e20cf2fe4aa9",
+          "bytes": 69,
+          "inode": 66,
+          "mtime_ns": 1791477291710588016
+        }
+      },
+      "code_preserved": true,
+      "archive_base64": null
+    },
+    {
+      "test": "terminal_shape_regression.TerminalReviewExportTests.test_malformed_native_report_row_refuses_and_empty_report_is_valid",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "-m",
+        "freightpkt",
+        "export-reviews",
+        "--out",
+        "/dev/canonical-freight-shape-r2-9xi_c9xj/freight-terminal-case-ms78hm25/saved",
+        "--load",
+        "A",
+        "--destination",
+        "/dev/canonical-freight-shape-r2-9xi_c9xj/freight-terminal-case-ms78hm25/received/handoff.zip"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"archive_bytes\": 6596,\n  \"archive_filename\": \"freight-review-batch-1-3cd8b36555ee.zip\",\n  \"archive_sha256\": \"3222e15158904d10617737ed6f766a8927b7ed46a19899330e45e548e1c6f1b0\",\n  \"count\": 1,\n  \"destination\": \"/dev/canonical-freight-shape-r2-9xi_c9xj/freight-terminal-case-ms78hm25/received/handoff.zip\",\n  \"identities\": [\n    {\n      \"evidence_version\": \"b269020b28f898886b8dd0b93d073b459a7a91c522754a0393dbb9ee0d0ef36a\",\n      \"load_id\": \"A\",\n      \"review_version\": \"74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b\"\n    }\n  ],\n  \"schema\": \"freight-review-terminal-export.v1\",\n  \"source_decisions_sha256\": null,\n  \"source_summary_sha256\": \"e10838534da47e19f0958e6195b3d0c448165da6b03eb9c33926979063886546\"\n}\n",
+      "stderr": "",
+      "stdout_full": false,
+      "file_limit": null,
+      "fixture_base64": {
+        "packets/a.html": "PGh0bWw+c3ludGhldGljIHNoYXBlIGNvbnRyb2w8L2h0bWw+Cg==",
+        "summary.json": "eyJwYWNrZXRzIjpbeyJsb2FkX2lkIjoiQSIsImZpbGUiOiJwYWNrZXRzL2EuaHRtbCJ9XSwiZmxhZ3MiOltdfQo="
+      },
+      "source_before": {
+        "packets/a.html": {
+          "sha256": "4f7b6f63e3aebc5ef1eebe6af45ac5f5883686db5b33c701486f9da842076bd4",
+          "bytes": 37,
+          "inode": 67,
+          "mtime_ns": 1791477291710603219
+        },
+        "summary.json": {
+          "sha256": "e10838534da47e19f0958e6195b3d0c448165da6b03eb9c33926979063886546",
+          "bytes": 65,
+          "inode": 66,
+          "mtime_ns": 1791477291818493825
+        }
+      },
+      "source_after": {
+        "packets/a.html": {
+          "sha256": "4f7b6f63e3aebc5ef1eebe6af45ac5f5883686db5b33c701486f9da842076bd4",
+          "bytes": 37,
+          "inode": 67,
+          "mtime_ns": 1791477291710603219
+        },
+        "summary.json": {
+          "sha256": "e10838534da47e19f0958e6195b3d0c448165da6b03eb9c33926979063886546",
+          "bytes": 65,
+          "inode": 66,
+          "mtime_ns": 1791477291818493825
+        }
+      },
+      "code_preserved": true,
+      "archive_base64": "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"
+    }
+  ],
+  "original_witness": {
+    "bytes": 2464,
+    "sha256": "bc0f68cbce7e43706b89e99e8414471140e431412db57d712d54ea17192f14b6",
+    "git_blob": "796224797a0cad8c1bd60cedd1f04b133e9bb08c"
+  },
+  "log": "test_malformed_native_report_row_refuses_and_empty_report_is_valid (terminal_shape_regression.TerminalReviewExportTests.test_malformed_native_report_row_refuses_and_empty_report_is_valid) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.203s\n\nOK\n",
+  "boundary": "Only the new shape-admission regression: exact raw flags:[null] R1 refusal plus valid-empty native canonical parity control. Earlier authored/native/independent results are not replayed or relabeled."
+}

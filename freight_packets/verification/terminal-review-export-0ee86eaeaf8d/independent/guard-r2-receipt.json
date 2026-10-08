@@ -1,0 +1,74 @@
+{
+  "author_r2_shape_evidence": {
+    "bytes": 27989,
+    "git_blob": "9a148c9fc92d14a3022c408c3f0d95b6d19d21ff",
+    "sha256": "e1cd4c7b7417646bd7bcf9fa9f5045dd836da107a97a3d550926a037b8f6b7a4"
+  },
+  "boundaries": "R1 independent native ACCEPT remains at 89f49004; original malformed-row traceback remains retained. R2 acceptance is exact source preservation plus independent review of the author's two actual CLI outcomes. No repeated full suite, old baseline, source mutation or current-main hosted claim.",
+  "changed_candidate_paths": [
+    "freight_packets/freightpkt/terminal_review_export.py",
+    "freight_packets/tests/test_terminal_review_export.py"
+  ],
+  "independent_additional_native_processes": 0,
+  "independent_frozen_fixture_admission": {
+    "exceptions": true,
+    "fines": true,
+    "flags": true,
+    "packets": true,
+    "settlements": true,
+    "stops": true
+  },
+  "native_sections": [
+    "stops",
+    "flags",
+    "fines",
+    "settlements",
+    "exceptions",
+    "packets"
+  ],
+  "original_30_source_image_capsule": {
+    "bytes": 300389,
+    "git_blob": "42d50053a8b5eac6deb5e8e1f6e9556336918d0e",
+    "sha256": "06aea91bcd2f8078024ec78882f92828837ac1d6b0c3120be69e416c59fbfc24"
+  },
+  "original_counterexample_input_byte_identical": true,
+  "original_module": {
+    "bytes": 9119,
+    "git_blob": "89f49004173305804330443b87dc04b5d97ab149",
+    "sha256": "d82b9ce962f09612c4456f2aca9d4d2d0bc4fd75f8196741cb8d37435ecc9ef8"
+  },
+  "original_shape_witness": {
+    "bytes": 2464,
+    "git_blob": "796224797a0cad8c1bd60cedd1f04b133e9bb08c",
+    "sha256": "bc0f68cbce7e43706b89e99e8414471140e431412db57d712d54ea17192f14b6"
+  },
+  "original_six_process_receipt": {
+    "bytes": 45854,
+    "git_blob": "225fddc7af7e712a2ab34b4fff164a69aa720e66",
+    "sha256": "b3fee2c04da65cea26a7d714bcc24a4974a2e892eaee424290dcaa345552ce08"
+  },
+  "other_28_candidate_inputs_byte_identical": true,
+  "positive_manifest_checksums": 7,
+  "positive_native_per_load_members_preserved": 5,
+  "positive_recorded_archive": {
+    "bytes": 6596,
+    "git_blob": "cf9a6023ac6a777cb34e0f76dda621eefef82c8a",
+    "sha256": "3222e15158904d10617737ed6f766a8927b7ed46a19899330e45e548e1c6f1b0"
+  },
+  "positive_recorded_members": 8,
+  "received_author_processes": 2,
+  "result": "ACCEPT_SOURCE_AND_RECORDED_NATIVE_SUPPLEMENT",
+  "revised_module": {
+    "bytes": 9399,
+    "git_blob": "676159e8a79d00143b9e6b69ba94740489b1794d",
+    "sha256": "c697780be9bb7d1d6e3182c9419fe316f833c8148b14ff5c174266b9b5fb2db5"
+  },
+  "six_case_compatibility": "All six independent cases use this same valid summary shape; injected path/decision/destination changes happen after the guard and actual assembler. Source/data proofs suffice; those six processes were not repeated or attributed to R2.",
+  "source_capsule_location": "canonical-terminal/native-r1/execution.json.gz.b64 source_images",
+  "source_delta": "Exactly the native REVIEW_SECTIONS import and four-line list-of-dict admission guard; all later capture/App/per-load/shared assembly/receipt/recheck/staging/publication bytes are identical.",
+  "unchanged_cli": {
+    "bytes": 4240,
+    "git_blob": "27c299e31ff8db27e6126f36c4773c6c613c83aa",
+    "sha256": "a5526591bd58702578dc3d90bd1bed908f6816404a3d452df1f2e7dc8ed1399d"
+  }
+}

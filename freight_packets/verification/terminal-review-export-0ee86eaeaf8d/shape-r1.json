@@ -1,0 +1,29 @@
+{
+  "at": "2026-10-08T16:33:09.936147+00:00",
+  "source_module_blob": "89f49004173305804330443b87dc04b5d97ab149",
+  "source_cli_blob": "27c299e31ff8db27e6126f36c4773c6c613c83aa",
+  "argv": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "-B",
+    "-m",
+    "freightpkt",
+    "export-reviews",
+    "--out",
+    "/dev/canonical-freight-shape-_j7seqj8/saved",
+    "--load",
+    "A",
+    "--destination",
+    "/dev/canonical-freight-shape-_j7seqj8/result.zip"
+  ],
+  "returncode": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/dev/canonical-freight-shape-_j7seqj8/candidate/freight_packets/freightpkt/__main__.py\", line 5, in <module>\n    sys.exit(main())\n             ^^^^^^\n  File \"/dev/canonical-freight-shape-_j7seqj8/candidate/freight_packets/freightpkt/cli.py\", line 66, in main\n    result = export_reviews(Path(a.out), a.loads, Path(a.destination))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/dev/canonical-freight-shape-_j7seqj8/candidate/freight_packets/freightpkt/terminal_review_export.py\", line 150, in export_reviews\n    view = app.summary()\n           ^^^^^^^^^^^^^\n  File \"/dev/canonical-freight-shape-_j7seqj8/candidate/freight_packets/freightpkt/web.py\", line 100, in summary\n    versions = self._evidence_versions(summary)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/dev/canonical-freight-shape-_j7seqj8/candidate/freight_packets/freightpkt/web.py\", line 67, in _evidence_versions\n    **{section: sorted(\n                ^^^^^^^\n  File \"/dev/canonical-freight-shape-_j7seqj8/candidate/freight_packets/freightpkt/web.py\", line 68, in <genexpr>\n    (r for r in summary.get(section, []) if r.get(\"load_id\") == load_id),\n                                            ^^^^^\nAttributeError: 'NoneType' object has no attribute 'get'\n",
+  "fixture": {
+    "summary.json": "eyJwYWNrZXRzIjpbeyJsb2FkX2lkIjoiQSIsImZpbGUiOiJwYWNrZXRzL2EuaHRtbCJ9XSwiZmxhZ3MiOltudWxsXX0K",
+    "packets/a.html": "PGh0bWw+c3ludGhldGljIHNoYXBlIGNvbnRyb2w8L2h0bWw+Cg=="
+  },
+  "source_inputs_preserved": true,
+  "destination_exists": false,
+  "owned_stage_remaining": [],
+  "scope": "One additional actual-CLI malformed native report-row boundary; no original baseline, authored suite or independent oracle repetition."
+}

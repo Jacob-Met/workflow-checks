@@ -1,0 +1,242 @@
+{
+  "manifest_sha256": "9583fb235f29a2ed5ddc9c2f11b3409c71d91dcb3b798178f8424f3048964766",
+  "encoded_sha256": "ebc0d3e1a230fa3a5eabf7aee75baceb63af42a5247b3a9eff47b4cd11a18c43",
+  "decoded_sha256": "fdf729c8d2850dbd658cf8af2c969b9084b5b1411df07c446a4ec1eddf1a0202",
+  "all141_payloads_verified": true,
+  "restored_production_files": [
+    {
+      "bytes": 245,
+      "git_blob": "a7804a1379966afd1e6143a92cf08c1b25f7abfe",
+      "path": "baseline-native/freight_packets/freightpkt/__init__.py",
+      "sha256": "f9364708963fa65b54aae5174a816c45df417fe7d93971c3b0ff046278929706"
+    },
+    {
+      "bytes": 57,
+      "git_blob": "3c93dd90cf357624c77ab3589ef2b201868c181e",
+      "path": "baseline-native/freight_packets/freightpkt/__main__.py",
+      "sha256": "4b1afbca74a10abc3cff7b4e5a11b558bf619e45b89709faf9225a474a2a250f"
+    },
+    {
+      "bytes": 2672,
+      "git_blob": "a64a4d60816654595b1767ff9f96cd2cd9c49c32",
+      "path": "baseline-native/freight_packets/freightpkt/cli.py",
+      "sha256": "268ced979f2863c2dac85b9e950c70e3818c827f222522f6374b4ecdcb9b8f15"
+    },
+    {
+      "bytes": 6574,
+      "git_blob": "b275165bce2ac5162fb49eab54674c11f13bfd2f",
+      "path": "baseline-native/freight_packets/freightpkt/detention.py",
+      "sha256": "31ca31fd3210ff680bc83291916e39ea19b82580c3a090720556afd4ef0cd76b"
+    },
+    {
+      "bytes": 11074,
+      "git_blob": "0b0f70344f3f2f1d58d524fc1ec6e67a51b495cb",
+      "path": "baseline-native/freight_packets/freightpkt/fines.py",
+      "sha256": "6009e9c9e8d23556e98d9d2606ffac60073597dda50026209155039ec5efcdac"
+    },
+    {
+      "bytes": 7082,
+      "git_blob": "bdcb63507b57d07eed1a6598d7d37d5f5d9db802",
+      "path": "baseline-native/freight_packets/freightpkt/handoff.py",
+      "sha256": "413290d887d045b96dd1639c34b9c769f0e730beb28dce06c654a0df36cf1a02"
+    },
+    {
+      "bytes": 11001,
+      "git_blob": "dad18f470035318241a9c432326d1f4bafa26edf",
+      "path": "baseline-native/freight_packets/freightpkt/ingest.py",
+      "sha256": "1179675d011d55781c6de3ae806b905698df2a21fcc621ea788d73c6e29d6276"
+    },
+    {
+      "bytes": 5285,
+      "git_blob": "584bb09b92335a350d9880f55b786baba1960941",
+      "path": "baseline-native/freight_packets/freightpkt/invoice_match.py",
+      "sha256": "37a9e0801de948c3b558ca7c9846b3d0eb76ec062703ee3e5132df273ff569ab"
+    },
+    {
+      "bytes": 2758,
+      "git_blob": "5087874944b6ee195111f30e98e9e9e5a8394fd1",
+      "path": "baseline-native/freight_packets/freightpkt/models.py",
+      "sha256": "8a24ed2cca6f45aa8a47d793620b0e2e4d573ec92209954d3f3156795e3f0e05"
+    },
+    {
+      "bytes": 7707,
+      "git_blob": "3ee637afba32600f5e109e930086b7a4be46b989",
+      "path": "baseline-native/freight_packets/freightpkt/packet.py",
+      "sha256": "1a2742168a27d52f5999823c409346bf7023ebb6442b2d0088f4c676609aefb3"
+    },
+    {
+      "bytes": 1671,
+      "git_blob": "6e68ce008548c9a5f6473d38616ca52b7aa5d580",
+      "path": "baseline-native/freight_packets/freightpkt/pdf.py",
+      "sha256": "c4876c50eb46c152b71690a53d32463798925c543da06434012aeba833590129"
+    },
+    {
+      "bytes": 11327,
+      "git_blob": "b0962d25557eaf84ad7595d64ea7ef834c2e2a58",
+      "path": "baseline-native/freight_packets/freightpkt/pipeline.py",
+      "sha256": "0cd5cf1fedd32ae97bf169a82357ef7e0e72339791503d415aefccde7c621dd8"
+    },
+    {
+      "bytes": 4518,
+      "git_blob": "c1f148e62d2b215d11511311782a57b8272fed03",
+      "path": "baseline-native/freight_packets/freightpkt/ratecon.py",
+      "sha256": "c9684e8a7eed867b015bcad8fda90e7f06452f0ca310202ec3bb8287d4064c43"
+    },
+    {
+      "bytes": 18300,
+      "git_blob": "646ee6ec3336eb237c2b4717c15f448230605196",
+      "path": "baseline-native/freight_packets/freightpkt/synth.py",
+      "sha256": "721cdad09373b047ac0d3cd0f721154cb17366d87edd6bf34224a97b817eef24"
+    },
+    {
+      "bytes": 19485,
+      "git_blob": "75a50d1750025795ebdf44da691f994481d34f62",
+      "path": "baseline-native/freight_packets/freightpkt/ui.html",
+      "sha256": "cdc52a196a480df2db210870487bab84e248cf69278fb27cefbc78a89b2ad0e3"
+    },
+    {
+      "bytes": 14840,
+      "git_blob": "e26f84ff9e0d3475c910f681d80e19256f70eccc",
+      "path": "baseline-native/freight_packets/freightpkt/web.py",
+      "sha256": "ff4d2ef9dac9fa96e29525453a3dde1b4cf8d8852e62ec00d7e7c59b137719c7"
+    },
+    {
+      "bytes": 18665,
+      "git_blob": "975dcc6867174c58c792c184796ae777b672777b",
+      "path": "candidate/freight_packets/README.md",
+      "sha256": "d69d29cb39fca90a10494a074cd4f4dfd723799709321d743d6a37952c99e373"
+    },
+    {
+      "bytes": 245,
+      "git_blob": "a7804a1379966afd1e6143a92cf08c1b25f7abfe",
+      "path": "candidate/freight_packets/freightpkt/__init__.py",
+      "sha256": "f9364708963fa65b54aae5174a816c45df417fe7d93971c3b0ff046278929706"
+    },
+    {
+      "bytes": 57,
+      "git_blob": "3c93dd90cf357624c77ab3589ef2b201868c181e",
+      "path": "candidate/freight_packets/freightpkt/__main__.py",
+      "sha256": "4b1afbca74a10abc3cff7b4e5a11b558bf619e45b89709faf9225a474a2a250f"
+    },
+    {
+      "bytes": 12004,
+      "git_blob": "4caba3c09c45043bfc7ca46710362e367686db80",
+      "path": "candidate/freight_packets/freightpkt/batch_handoff.py",
+      "sha256": "65f2074fcafb6deb334a1cadd359981879723adb99077c8552951e37633f4c98"
+    },
+    {
+      "bytes": 3643,
+      "git_blob": "8815aaa58a347afc4c0686549e871ca7f4b9d20c",
+      "path": "candidate/freight_packets/freightpkt/cli.py",
+      "sha256": "b1eba428d7323f7d4b3c87317fa75f09574a26a088bf51f83711d6d814504fe2"
+    },
+    {
+      "bytes": 6574,
+      "git_blob": "b275165bce2ac5162fb49eab54674c11f13bfd2f",
+      "path": "candidate/freight_packets/freightpkt/detention.py",
+      "sha256": "31ca31fd3210ff680bc83291916e39ea19b82580c3a090720556afd4ef0cd76b"
+    },
+    {
+      "bytes": 11074,
+      "git_blob": "0b0f70344f3f2f1d58d524fc1ec6e67a51b495cb",
+      "path": "candidate/freight_packets/freightpkt/fines.py",
+      "sha256": "6009e9c9e8d23556e98d9d2606ffac60073597dda50026209155039ec5efcdac"
+    },
+    {
+      "bytes": 7082,
+      "git_blob": "bdcb63507b57d07eed1a6598d7d37d5f5d9db802",
+      "path": "candidate/freight_packets/freightpkt/handoff.py",
+      "sha256": "413290d887d045b96dd1639c34b9c769f0e730beb28dce06c654a0df36cf1a02"
+    },
+    {
+      "bytes": 11001,
+      "git_blob": "dad18f470035318241a9c432326d1f4bafa26edf",
+      "path": "candidate/freight_packets/freightpkt/ingest.py",
+      "sha256": "1179675d011d55781c6de3ae806b905698df2a21fcc621ea788d73c6e29d6276"
+    },
+    {
+      "bytes": 5285,
+      "git_blob": "584bb09b92335a350d9880f55b786baba1960941",
+      "path": "candidate/freight_packets/freightpkt/invoice_match.py",
+      "sha256": "37a9e0801de948c3b558ca7c9846b3d0eb76ec062703ee3e5132df273ff569ab"
+    },
+    {
+      "bytes": 2758,
+      "git_blob": "5087874944b6ee195111f30e98e9e9e5a8394fd1",
+      "path": "candidate/freight_packets/freightpkt/models.py",
+      "sha256": "8a24ed2cca6f45aa8a47d793620b0e2e4d573ec92209954d3f3156795e3f0e05"
+    },
+    {
+      "bytes": 7707,
+      "git_blob": "3ee637afba32600f5e109e930086b7a4be46b989",
+      "path": "candidate/freight_packets/freightpkt/packet.py",
+      "sha256": "1a2742168a27d52f5999823c409346bf7023ebb6442b2d0088f4c676609aefb3"
+    },
+    {
+      "bytes": 1671,
+      "git_blob": "6e68ce008548c9a5f6473d38616ca52b7aa5d580",
+      "path": "candidate/freight_packets/freightpkt/pdf.py",
+      "sha256": "c4876c50eb46c152b71690a53d32463798925c543da06434012aeba833590129"
+    },
+    {
+      "bytes": 11327,
+      "git_blob": "b0962d25557eaf84ad7595d64ea7ef834c2e2a58",
+      "path": "candidate/freight_packets/freightpkt/pipeline.py",
+      "sha256": "0cd5cf1fedd32ae97bf169a82357ef7e0e72339791503d415aefccde7c621dd8"
+    },
+    {
+      "bytes": 4518,
+      "git_blob": "c1f148e62d2b215d11511311782a57b8272fed03",
+      "path": "candidate/freight_packets/freightpkt/ratecon.py",
+      "sha256": "c9684e8a7eed867b015bcad8fda90e7f06452f0ca310202ec3bb8287d4064c43"
+    },
+    {
+      "bytes": 18300,
+      "git_blob": "646ee6ec3336eb237c2b4717c15f448230605196",
+      "path": "candidate/freight_packets/freightpkt/synth.py",
+      "sha256": "721cdad09373b047ac0d3cd0f721154cb17366d87edd6bf34224a97b817eef24"
+    },
+    {
+      "bytes": 19485,
+      "git_blob": "75a50d1750025795ebdf44da691f994481d34f62",
+      "path": "candidate/freight_packets/freightpkt/ui.html",
+      "sha256": "cdc52a196a480df2db210870487bab84e248cf69278fb27cefbc78a89b2ad0e3"
+    },
+    {
+      "bytes": 14840,
+      "git_blob": "e26f84ff9e0d3475c910f681d80e19256f70eccc",
+      "path": "candidate/freight_packets/freightpkt/web.py",
+      "sha256": "ff4d2ef9dac9fa96e29525453a3dde1b4cf8d8852e62ec00d7e7c59b137719c7"
+    }
+  ],
+  "qualified_candidate_files": [
+    {
+      "path": "freight_packets/freightpkt/batch_handoff.py",
+      "bytes": 12004,
+      "git_blob": "4caba3c09c45043bfc7ca46710362e367686db80",
+      "sha256": "65f2074fcafb6deb334a1cadd359981879723adb99077c8552951e37633f4c98"
+    },
+    {
+      "path": "freight_packets/freightpkt/cli.py",
+      "bytes": 3643,
+      "git_blob": "8815aaa58a347afc4c0686549e871ca7f4b9d20c",
+      "sha256": "b1eba428d7323f7d4b3c87317fa75f09574a26a088bf51f83711d6d814504fe2"
+    },
+    {
+      "path": "freight_packets/tests/test_review_batch.py",
+      "bytes": 17183,
+      "git_blob": "a2b33a0a2c6cdd065dd38ffd5a0b7c6d4c82453e",
+      "sha256": "5c28ceb625550767f3efd3a77390b077c73b6f17d83dd25faa0ea3f09846d89e"
+    },
+    {
+      "path": "freight_packets/README.md",
+      "bytes": 18665,
+      "git_blob": "975dcc6867174c58c792c184796ae777b672777b",
+      "sha256": "d69d29cb39fca90a10494a074cd4f4dfd723799709321d743d6a37952c99e373"
+    }
+  ],
+  "source_base": "5b12dcd4c3a2c09d6602b2313e2bb556ac5997f7",
+  "later_read_only_composition_main": "5a70e458ed455d47ef672ed9b5a614ec59812f0c",
+  "original_negative_records_preserved": true,
+  "author_tests_or_fixtures_read_as_oracle": false
+}

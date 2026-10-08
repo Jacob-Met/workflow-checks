@@ -1,4 +1,4 @@
-"""CLI: python -m freightpkt <generate|run|pdf|serve> ..."""
+"""CLI: python -m freightpkt <generate|run|pdf|serve|export-reviews> ..."""
 from __future__ import annotations
 
 import argparse
@@ -24,6 +24,12 @@ def main(argv=None) -> int:
     s.add_argument("--data", default="sample_data")
     s.add_argument("--out", default="out")
     s.add_argument("--port", type=int, default=8765)
+
+    h = sub.add_parser("export-reviews", help="export selected saved reviews as one canonical offline ZIP")
+    h.add_argument("--out", required=True, help="existing generated freight output directory")
+    h.add_argument("--load", dest="loads", action="append", required=True,
+                   help="exact load ID; repeat for each load to include")
+    h.add_argument("--destination", required=True, help="new ZIP filename outside the source output directory")
 
     a = ap.parse_args(argv)
     if a.cmd == "generate":
@@ -51,6 +57,28 @@ def main(argv=None) -> int:
                 html = Path(a.out) / p["file"]
                 ok += html_to_pdf(html, html.with_suffix(".pdf"))
             print(f"PDF: {ok}/{len(s['packets'])} rendered" + ("" if ok else " (no Edge/Chrome found; HTML kept)"))
+        return 0
+    if a.cmd == "export-reviews":
+        import json
+        import os
+        from .terminal_review_export import export_reviews
+        try:
+            result = export_reviews(Path(a.out), a.loads, Path(a.destination))
+        except (OSError, ValueError, KeyError, TypeError, RecursionError, OverflowError) as error:
+            print(f"could not export saved reviews: {error}", file=sys.stderr)
+            return 2
+        try:
+            print(json.dumps(result, ensure_ascii=True, sort_keys=True, indent=2, allow_nan=False), flush=True)
+        except OSError as error:
+            # Publication already succeeded; silence a second shutdown-flush failure.
+            try:
+                with open(os.devnull, "w") as sink:
+                    os.dup2(sink.fileno(), sys.stdout.fileno())
+            except (OSError, ValueError, AttributeError):
+                pass
+            print(f"archive published to {result['destination']}, but could not write its receipt: {error}",
+                  file=sys.stderr)
+            return 2
         return 0
     if a.cmd == "serve":
         from .web import serve
