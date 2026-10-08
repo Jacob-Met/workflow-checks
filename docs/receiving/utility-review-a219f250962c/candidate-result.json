@@ -1,0 +1,43 @@
+{
+  "time_utc": "2026-10-08T11:20:25.811523+00:00",
+  "command": [
+    "uv",
+    "run",
+    "--no-project",
+    "--offline",
+    "--with",
+    "pytest==9.1.1",
+    "python",
+    "-B",
+    "-m",
+    "pytest",
+    "-p",
+    "no:cacheprovider",
+    "-q",
+    "utility_watch/tests"
+  ],
+  "exit": 0,
+  "stdout": "........................................................................ [ 88%]\n.........                                                                [100%]\n81 passed in 2.54s\n",
+  "stderr": "",
+  "source_sha256": {
+    "utility_watch/uwatch/review.py": "f9f730ca45140436704d9823eafcfb58fb3922c5d0bf93a21a63f31347c947de",
+    "utility_watch/uwatch/cli.py": "0f8e6947baaadccc86c1f7d8cd0dd542b88d81b9b1990cc3aab7cbfcf3beb08d",
+    "utility_watch/tests/test_review.py": "f0c645af21d4f9af0539697c3e2dca26a197fc1284b943cd12d42e9500099155",
+    "utility_watch/README.md": "3a2d5a7295947dbca173f82e548832d42622de27d5808275cd265b37c58774d1"
+  },
+  "protected_source_sha256": {
+    "utility_watch/uwatch/engine.py": "48c968584d0494ee5fb0538fc7d4c685c2cc3128a45c33f57c2079234cdb7775",
+    "utility_watch/uwatch/report.py": "dc43c4fbbef72204a9dc9c5d7e4d3883900e96daf26c725f10fe22d4721540db",
+    "utility_watch/uwatch/synth.py": "8573a65a8c5907ebedda24c47183f60f258e895bae0a2656bb582ada9217209d",
+    "utility_watch/uwatch/__main__.py": "26c55ee4277631c49b2312533d7514a815ec2c3de08f48b0a9dea8946d8f8933",
+    "utility_watch/uwatch/__init__.py": "a0332cb0878fcdfd02d1651f9a46c299ca0279996c6e5723d49311228c597a57",
+    "utility_watch/tests/test_numeric_csv.py": "d6128ec39491994185f9aabfe374caeb80ca13cbdbdc1fabe68b3eba567b65a2",
+    "utility_watch/tests/test_report.py": "affe575fedaa7619520a6b23b63649e76029881a0a5641d6cc7d2900d150bc4f",
+    "utility_watch/tests/test_uwatch.py": "0638976cdfc928d8bd3980fb24fe18c24ef814c7f8c5e7612c8c02fb2b8f339a"
+  },
+  "protected_source_equal_baseline": true,
+  "canonical_base_commit": "2f1e5f777197eedd69d51a4d81c0da744b65ad88",
+  "canonical_base_tree": "86e6201872d2f2400537b84a50f026a1335a8c3d",
+  "scoped_local_base_commit": "906f1e058e41bee015a58466d5eee9f14ed71394",
+  "documentation_only_after_native_run": "README clarified that historical source row values require retaining the source export; implementation and tests unchanged."
+}

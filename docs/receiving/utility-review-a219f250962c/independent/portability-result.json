@@ -1,0 +1,47 @@
+{
+  "purpose": "Only baseline-ref/manifest portability changed in the replay script; rerun the affected native original-versus-candidate comparison.",
+  "tests": 1,
+  "failures": 0,
+  "errors": 0,
+  "successful": true,
+  "actual_cli_invocations": 2,
+  "executions": [
+    {
+      "case": "test_actual_run_cli_remains_identical_to_original_native_source",
+      "arguments": [
+        "run",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/packet/run-1791459389016941376/test_actual_run_cli_remains_identical_to_original_native_source/data",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/packet/run-1791459389016941376/test_actual_run_cli_remains_identical_to_original_native_source/report",
+        "--as-of",
+        "2026-10-08",
+        "--eval-from",
+        "2026-09-01"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 0,
+      "stdout": "as_of 2026-10-08: 4 accounts, 12 bills; 2 flags {'MISSING_BILL': 1, 'RATE_CHANGE': 1}; 1 exceptions; 1 bills ($100.00) queued for approval (not paid)\nnaive trailing-3 rule would add 0 seasonal false flags\nreport: /dev/shm/utility-watch-independent-a219f250962c/packet/run-1791459389016941376/test_actual_run_cli_remains_identical_to_original_native_source/report/report.html\n",
+      "stderr": ""
+    },
+    {
+      "case": "test_actual_run_cli_remains_identical_to_original_native_source",
+      "arguments": [
+        "run",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/packet/run-1791459389016941376/test_actual_run_cli_remains_identical_to_original_native_source/data",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/packet/run-1791459389016941376/test_actual_run_cli_remains_identical_to_original_native_source/original-native-report",
+        "--as-of",
+        "2026-10-08",
+        "--eval-from",
+        "2026-09-01"
+      ],
+      "source": "/dev/shm/utility-watch-independent-a219f250962c/packet/run-1791459389016941376/test_actual_run_cli_remains_identical_to_original_native_source/baseline/utility_watch",
+      "exit": 0,
+      "stdout": "as_of 2026-10-08: 4 accounts, 12 bills; 2 flags {'MISSING_BILL': 1, 'RATE_CHANGE': 1}; 1 exceptions; 1 bills ($100.00) queued for approval (not paid)\nnaive trailing-3 rule would add 0 seasonal false flags\nreport: /dev/shm/utility-watch-independent-a219f250962c/packet/run-1791459389016941376/test_actual_run_cli_remains_identical_to_original_native_source/original-native-report/report.html\n",
+      "stderr": ""
+    }
+  ],
+  "script_sha256": "55cc928e6470450d942effad2ed1d9e2c293727054ac8f8badc3ea70d2810ded"
+}

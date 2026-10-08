@@ -34,6 +34,78 @@ due-date order. Source rows count the CSV header as row 1. Use the companion CSV
 files when following up; closing a property only changes the view and does not save review
 progress or approve anything. The report works offline with JavaScript disabled.
 
+## Save a review worksheet
+
+Use a CSV worksheet to assign follow-up and retain notes across reports. The HTML report
+remains a view of the checker result; the worksheet is a separate, local record of human review.
+It includes every flag and unresolved exception, with its account, finding code, description
+and source CSV row pointers. It does not contain payment-approval controls.
+
+```powershell
+python -m uwatch run --data sample_data --out out
+python -m uwatch review --data sample_data --report out/summary.json --out review-1.csv
+```
+
+Open `review-1.csv` in a CSV editor, or import all columns as text in a spreadsheet. Edit only
+these first three columns on finding rows, then save as UTF-8 CSV:
+
+| Column | Meaning |
+|---|---|
+| `review_status` | `open`, `in_progress`, or `reviewed`; new findings start `open` |
+| `reviewer` | Person responsible for the review |
+| `note` | Follow-up, supporting context, or review conclusion; quoted commas and line breaks are supported |
+
+`in_progress` and `reviewed` require both a reviewer and a nonblank note. A `reviewed` row
+records human work; it does not clear an engine flag, approve an invoice, or change payment
+eligibility. You may reopen a row by setting its status to `open`. Keep every finding row,
+protected column, and the final `manifest` row; row and column order may change. The manifest
+lets the command detect accidentally deleted or duplicated rows and altered finding fields.
+Checksums detect worksheet editing mistakes; they are not signatures or reviewer authentication.
+
+After the next source export, regenerate its report and reconcile into a **new** worksheet:
+
+```powershell
+python -m uwatch run --data sample_data --out out
+python -m uwatch review --data sample_data --report out/summary.json --previous review-1.csv --out review-2.csv
+```
+
+To check and save edited notes against the same export, use the second command without a new
+`run`. Keep the previous file until you have inspected the new one. A successful command exits
+with status 0 and reports current/historical row counts. An input or reconciliation error exits
+with status 2 and leaves the requested output unpublished. An existing output, source file,
+report file, prior worksheet, or symbolic-link destination is never replaced.
+
+### What carries forward
+
+| `row_state` | How to use it |
+|---|---|
+| `current` | A finding in this report. Its annotation carries forward only while the finding and its source evidence match the previous current row. |
+| `changed` | A previous finding whose evidence changed. Its original reviewer and note remain here; the current finding starts `open`. |
+| `absent` | A previous finding not present in this report/window. This does not establish that it was resolved or paid. Its original review remains inspectable. |
+| `manifest` | Worksheet integrity record. Keep it unchanged; it is not a finding. |
+
+A finding identity includes its kind, account, bill or expected-period key, and code. Two
+accounts sharing a bill ID do not share a review. A version binds the displayed finding to the
+account's actual account, bill, and payment rows, plus the property's matching unit occupancy
+rows where relevant. That includes historical bills used in rate calculations and payment IDs
+that do not appear in report text. A source change can require a new review even when rounded
+report text stays the same. Unchanged findings can keep their review across report dates.
+
+Edits to another account's values leave an unchanged account's review intact. Source row
+numbers are evidence: inserting or reordering rows can shift those pointers and conservatively
+require renewed review. Historical rows never supply a current annotation, including when old
+evidence disappears and later returns. History is retained in each successive worksheet.
+Keep each source export with its report if you need to revisit the underlying historical rows;
+the worksheet retains the finding text, row pointers and evidence identity, not every source value.
+
+Before exporting, the command checks `summary.json` against the unchanged native checker on
+a fixed snapshot of the supplied CSVs and the report's dates. Use reports made with the current
+default rules. It rejects stale or altered report findings/queues, ambiguous duplicate account
+or finding identities, malformed CSV/JSON, and invalid prior worksheets. Keep the source export
+stable during review; an input change observed during reconciliation also refuses publication.
+The command only reads source/report/previous files and publishes a complete new worksheet.
+The checker, original report, audit log, and payment queue keep their existing semantics.
+
 ## Run it
 
 ```powershell
