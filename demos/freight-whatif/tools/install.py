@@ -10,7 +10,7 @@ import json
 from pathlib import Path
 import shutil
 
-SITE_FILES = ("app.mjs", "data.mjs", "index.html", "model.mjs", "styles.css")
+SITE_FILES = ("app.mjs", "data.mjs", "index.html", "model.mjs", "scenario-record.mjs", "styles.css")
 MARKER = ".freight-whatif-install.json"
 SCHEMA = "workflow-checks.freight-whatif.install.v1"
 
@@ -22,7 +22,7 @@ def inventory(source):
         raise ValueError("Source must be a real directory")
     names = sorted(p.name for p in source.iterdir())
     if names != list(SITE_FILES):
-        raise ValueError("Source must contain exactly the five static site files")
+        raise ValueError("Source must contain exactly the six static site files")
     if any((source / name).is_symlink() or not (source / name).is_file() for name in SITE_FILES):
         raise ValueError("Source files must be regular files, not symlinks")
     return {name: digest(source / name) for name in SITE_FILES}

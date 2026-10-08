@@ -1,0 +1,53 @@
+{
+  "format": "hamon-freight-independent-lifecycle-controls/1",
+  "status": "frozen before candidate implementation inspection and before lifecycle receiver authoring",
+  "owner": "estate_source",
+  "source_author": "native_qualification",
+  "scope": "Linux process lifecycle infrastructure only; actual supervisor helper code, no receiver/browser/product/npm/network execution",
+  "root": "/dev/shm/hamon-freight-lifecycle-receiving-cd1df0f1ee24",
+  "required_controls": [
+    {
+      "id": "registered_group_after_node_exit",
+      "setup": "Create own mock Node and separately-sessioned mock browser group. Register browser ownership while Node is alive; then let Node exit.",
+      "expect": "Verified browser group closes after Node exit; clean result; all signaled targets are the originally registered own identity."
+    },
+    {
+      "id": "unrelated_sentinel_survives",
+      "setup": "Create target own group plus separately-sessioned own sentinel with a different profile marker.",
+      "expect": "Target closes. Sentinel retains exact PID/start identity and remains alive; no signal is attempted against sentinel or its group."
+    },
+    {
+      "id": "identity_or_ownership_mismatch_refused",
+      "setup": "Register an own live group, then supply a deliberately different start identity or inconsistent profile/ownership expectation.",
+      "expect": "Cleanup refuses with failure; no signal syscall is attempted against the mismatched group. Original mock remains alive for harness cleanup."
+    },
+    {
+      "id": "verified_already_exited_group",
+      "setup": "Register an own live group then allow it to terminate naturally and reap it before cleanup.",
+      "expect": "Cleanup succeeds as already exited without unsafe signal attempts. A live different-start identity is refusal, not disappearance."
+    }
+  ],
+  "additional_bounded_controls": [
+    {
+      "id": "disappearance_between_check_and_signal",
+      "setup": "Using a disclosed syscall adapter, ask an own pipe-waiting mock to exit after final ownership verification but before actual killpg. Reap it, then call the original syscall so the kernel supplies ESRCH.",
+      "expect": "Only ProcessLookupError/ESRCH with confirmed no live recorded group members becomes clean already-exited; any live mismatch remains refusal."
+    },
+    {
+      "id": "term_ignoring_owned_group",
+      "setup": "Own mock group explicitly ignores TERM.",
+      "expect": "Cleanup escalates to KILL after its bounded grace period, then confirms no live owned member. No other group is signaled."
+    }
+  ],
+  "safety_and_bounds": [
+    "Each fixture process is created by this harness with a unique owned marker/profile and tracked PID/start_ticks/UID/PGID/SID.",
+    "Every real signal is guarded by current process identity and registry membership; any out-of-registry attempt fails before syscall.",
+    "All mock children have finite lifetimes; each control including cleanup is bounded to at most30seconds.",
+    "Harness finally-cleanup is limited to its own verified identities; no systemwide Chrome/node cleanup, existing profiles or other worker processes.",
+    "No inferred zero-internal-execution claim from previous browser timeout; this receiver qualifies cleanup infrastructure only.",
+    "Exact final corrected wrapper bytes and thin-adapter/harness hashes will be frozen before execution.",
+    "Raw stdout/stderr/structured result/process exit are retained, including any failures; no silent retry."
+  ],
+  "interface_boundary": "Pending author extraction of identical module-level lifecycle helper/class, used by main; no substitute implementation in receiver.",
+  "oracle_changes": false
+}

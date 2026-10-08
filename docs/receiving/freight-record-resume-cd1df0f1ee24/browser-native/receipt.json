@@ -1,0 +1,253 @@
+{
+  "format": "freight-browser-failed-attempt-custody/1",
+  "sealed_unix": 1791496747.7289402,
+  "activity": "Read-only source/evidence custody plus new seal files; no browser or product execution",
+  "attempt": "native d55 attempt1, receiver v4",
+  "outcome": "failed execution; supervisor timeout; Node -9; hang cause unclassified",
+  "completed_group_evidence": 0,
+  "not_a_claim_of_no_internal_execution": true,
+  "devtools_endpoint_observed_in_stderr": true,
+  "observed_nonprofile_files": [
+    "inputs/accept-preset-within-free.json",
+    "inputs/accept-incomplete-ratecon.json",
+    "inputs/accept-null-cap.json",
+    "inputs/reject-truncated-json.json",
+    "inputs/accept-literal-filename.json",
+    "inputs/accept-missing-pod.json",
+    "inputs/oversized.json",
+    "inputs/accept-zero-header.json",
+    "inputs/reject-current-amount.json",
+    "inputs/<b> invoice & café .json"
+  ],
+  "browser_receipt_present": false,
+  "partial_receipt_present": false,
+  "capture_files": [],
+  "download_files": [],
+  "source_rechecks": [
+    {
+      "original_path": "/dev/shm/hamon-freight-receiving-cd1df0f1ee24/browser-native/baseline-source/app.mjs",
+      "archive_path": "inputs/baseline/app.mjs",
+      "expected_sha256": "1555885a0f319407a0dd412599a5b6022ea048eadbad7a0259f3734a6d2e642f",
+      "bytes": 16038,
+      "sha256": "1555885a0f319407a0dd412599a5b6022ea048eadbad7a0259f3734a6d2e642f",
+      "git": "6fe0b0409c2d652dbdc6cecda2fe97b4f63e23be",
+      "matches_frozen": true
+    },
+    {
+      "original_path": "/dev/shm/hamon-freight-receiving-cd1df0f1ee24/browser-native/baseline-source/index.html",
+      "archive_path": "inputs/baseline/index.html",
+      "expected_sha256": "9eb0bf0a05a5df2799f2f3a5ee36cf0df85a3c618d3feb0b86973681311d6a63",
+      "bytes": 11173,
+      "sha256": "9eb0bf0a05a5df2799f2f3a5ee36cf0df85a3c618d3feb0b86973681311d6a63",
+      "git": "e6e8d6d757c2d51a666b267946d2544f2564a80a",
+      "matches_frozen": true
+    },
+    {
+      "original_path": "/dev/shm/hamon-freight-receiving-cd1df0f1ee24/browser-native/baseline-source/model.mjs",
+      "archive_path": "inputs/baseline/model.mjs",
+      "expected_sha256": "88e3d460da6f421e937cf54b21207da95734db3de3d5932235b1ec001be52590",
+      "bytes": 8946,
+      "sha256": "88e3d460da6f421e937cf54b21207da95734db3de3d5932235b1ec001be52590",
+      "git": "6b97e2c54e4283707913e13459f47cbd43f81137",
+      "matches_frozen": true
+    },
+    {
+      "original_path": "/dev/shm/hamon-freight-receiving-cd1df0f1ee24/browser-native/baseline-source/data.mjs",
+      "archive_path": "inputs/baseline/data.mjs",
+      "expected_sha256": "c5b8819e50961180208fa8dd4951f6a559b28cc4467c52dd2a68abeeb1b25d81",
+      "bytes": 4103,
+      "sha256": "c5b8819e50961180208fa8dd4951f6a559b28cc4467c52dd2a68abeeb1b25d81",
+      "git": "b4ee752139693744b8f05c930865e505e2ddf236",
+      "matches_frozen": true
+    },
+    {
+      "original_path": "/dev/shm/hamon-freight-receiving-cd1df0f1ee24/browser-native/baseline-source/styles.css",
+      "archive_path": "inputs/baseline/styles.css",
+      "expected_sha256": "0709487053ebc7e028577d46b6447847e7bfc4343027b7d1ecfab2c70c692a31",
+      "bytes": 20325,
+      "sha256": "0709487053ebc7e028577d46b6447847e7bfc4343027b7d1ecfab2c70c692a31",
+      "git": "1200d3b98a958a080f0899b91d8975494328401e",
+      "matches_frozen": true
+    },
+    {
+      "original_path": "/dev/shm/hamon-freight-source-cd1df0f1ee24/candidate/demos/freight-whatif/site/app.mjs",
+      "archive_path": "inputs/candidate/app.mjs",
+      "expected_sha256": "52e047f7c691f15085cfcefd5d01755e9d00382f6e7a5c46b8daa043871190d2",
+      "bytes": 23731,
+      "sha256": "52e047f7c691f15085cfcefd5d01755e9d00382f6e7a5c46b8daa043871190d2",
+      "git": "23d4f67d8ce223e0e478819eb45af2154a8e1e69",
+      "matches_frozen": true
+    },
+    {
+      "original_path": "/dev/shm/hamon-freight-source-cd1df0f1ee24/candidate/demos/freight-whatif/site/index.html",
+      "archive_path": "inputs/candidate/index.html",
+      "expected_sha256": "fb22bce7a5154df3b90df0a1cd0d7b4881500f46259472727040ee17c3493f8f",
+      "bytes": 13080,
+      "sha256": "fb22bce7a5154df3b90df0a1cd0d7b4881500f46259472727040ee17c3493f8f",
+      "git": "a63829a9a1f62d7ace0574586866f13a4ede806b",
+      "matches_frozen": true
+    },
+    {
+      "original_path": "/dev/shm/hamon-freight-source-cd1df0f1ee24/candidate/demos/freight-whatif/site/styles.css",
+      "archive_path": "inputs/candidate/styles.css",
+      "expected_sha256": "c000a502c3167bd9b6f2e6d786eae861e2f61800ade2da5bde863f906df500ae",
+      "bytes": 22286,
+      "sha256": "c000a502c3167bd9b6f2e6d786eae861e2f61800ade2da5bde863f906df500ae",
+      "git": "1ca01c52bd132274cff1f6ed7abe164a33bf90ca",
+      "matches_frozen": true
+    },
+    {
+      "original_path": "/dev/shm/hamon-freight-source-cd1df0f1ee24/candidate/demos/freight-whatif/site/scenario-record.mjs",
+      "archive_path": "inputs/candidate/scenario-record.mjs",
+      "expected_sha256": "435d882090273e1315b156b4bca402314553bd80ad35a5592353e1fbddf2c8eb",
+      "bytes": 5698,
+      "sha256": "435d882090273e1315b156b4bca402314553bd80ad35a5592353e1fbddf2c8eb",
+      "git": "89da6193283695d5bbe192131b9372882f3bd4f5",
+      "matches_frozen": true
+    },
+    {
+      "original_path": "/dev/shm/hamon-freight-source-cd1df0f1ee24/candidate/demos/freight-whatif/site/model.mjs",
+      "archive_path": "inputs/candidate/model.mjs",
+      "expected_sha256": "88e3d460da6f421e937cf54b21207da95734db3de3d5932235b1ec001be52590",
+      "bytes": 8946,
+      "sha256": "88e3d460da6f421e937cf54b21207da95734db3de3d5932235b1ec001be52590",
+      "git": "6b97e2c54e4283707913e13459f47cbd43f81137",
+      "matches_frozen": true
+    },
+    {
+      "original_path": "/dev/shm/hamon-freight-source-cd1df0f1ee24/candidate/demos/freight-whatif/site/data.mjs",
+      "archive_path": "inputs/candidate/data.mjs",
+      "expected_sha256": "c5b8819e50961180208fa8dd4951f6a559b28cc4467c52dd2a68abeeb1b25d81",
+      "bytes": 4103,
+      "sha256": "c5b8819e50961180208fa8dd4951f6a559b28cc4467c52dd2a68abeeb1b25d81",
+      "git": "b4ee752139693744b8f05c930865e505e2ddf236",
+      "matches_frozen": true
+    }
+  ],
+  "fixture_rechecks": [
+    {
+      "name": "accept-preset-within-free.json",
+      "archive_path": "inputs/fixtures/accept-preset-within-free.json",
+      "original_path": "/dev/shm/hamon-freight-receiving-cd1df0f1ee24/fixtures-v1/accept-preset-within-free.json",
+      "bytes": 4274,
+      "sha256": "7ccac1c4fffe4a9b180b19d23f18782328befb8a1b658b7222998e9f775132a9",
+      "git": "4bf379cb63e5f19b85d38d13c7c9c3954fd3850e"
+    },
+    {
+      "name": "reject-truncated-json.json",
+      "archive_path": "inputs/fixtures/reject-truncated-json.json",
+      "original_path": "/dev/shm/hamon-freight-receiving-cd1df0f1ee24/fixtures-v1/reject-truncated-json.json",
+      "bytes": 3981,
+      "sha256": "d246625f08874f18640341a02ea9edb47b483f0064bbe083bb14661111d5d91d",
+      "git": "78324d851acdc83c8d5c65cac5ad24aa898d8043"
+    },
+    {
+      "name": "reject-current-amount.json",
+      "archive_path": "inputs/fixtures/reject-current-amount.json",
+      "original_path": "/dev/shm/hamon-freight-receiving-cd1df0f1ee24/fixtures-v1/reject-current-amount.json",
+      "bytes": 5357,
+      "sha256": "9db4c6489666975b01c4e0a8ce3a77fe5962a1ac8d8a8bd607b74615e1098d5f",
+      "git": "59b83782891669e7db42332cfd2457cc4b82824b"
+    },
+    {
+      "name": "accept-literal-filename.json",
+      "archive_path": "inputs/fixtures/accept-literal-filename.json",
+      "original_path": "/dev/shm/hamon-freight-receiving-cd1df0f1ee24/fixtures-v1/accept-literal-filename.json",
+      "bytes": 5357,
+      "sha256": "35c94d096e70aeacbd5f0cfa640d62a605e7073c1d68963889eea59a44744e33",
+      "git": "08e1918d8e088dc279794d2536d47f1c8fdb0a53"
+    },
+    {
+      "name": "accept-null-cap.json",
+      "archive_path": "inputs/fixtures/accept-null-cap.json",
+      "original_path": "/dev/shm/hamon-freight-receiving-cd1df0f1ee24/fixtures-v1/accept-null-cap.json",
+      "bytes": 5356,
+      "sha256": "eb3d565f2c690d932bf6fb9168cd8e26284f61aed00f7bbfab0c40bfffe00f6a",
+      "git": "87e4411e826581e50534f82bb921cd9bfd4120ae"
+    },
+    {
+      "name": "accept-zero-header.json",
+      "archive_path": "inputs/fixtures/accept-zero-header.json",
+      "original_path": "/dev/shm/hamon-freight-receiving-cd1df0f1ee24/fixtures-v1/accept-zero-header.json",
+      "bytes": 5751,
+      "sha256": "1940ab141987505004317b6af8788eedb20475c2505bbcf2aa6c9b65d65323b5",
+      "git": "8f872452e0bee53279762d24a554e244b3a7548f"
+    },
+    {
+      "name": "accept-missing-pod.json",
+      "archive_path": "inputs/fixtures/accept-missing-pod.json",
+      "original_path": "/dev/shm/hamon-freight-receiving-cd1df0f1ee24/fixtures-v1/accept-missing-pod.json",
+      "bytes": 5785,
+      "sha256": "da0940e939cf7a3ce1237a85e382ca2431c8650eec6afd9bdfe40b333f7c8bc3",
+      "git": "4f9980f22bd36a39effaf4cce818a61e7413920c"
+    },
+    {
+      "name": "accept-incomplete-ratecon.json",
+      "archive_path": "inputs/fixtures/accept-incomplete-ratecon.json",
+      "original_path": "/dev/shm/hamon-freight-receiving-cd1df0f1ee24/fixtures-v1/accept-incomplete-ratecon.json",
+      "bytes": 5434,
+      "sha256": "fca94e64c8f9e10d10bbef3067a7bde9cc1a12bde6b66ac30903bcd0d4c542c4",
+      "git": "af290e4640e79dd58000f074666885baec0fd1dc"
+    }
+  ],
+  "receiver_history": [
+    {
+      "version": 1,
+      "execution": "not executed",
+      "file": "preparation/browser-receiver-v1.mjs",
+      "bytes": 27055,
+      "sha256": "c4cf708ab5b216603c5f99e8af9a4133de06c8120b6de7ae7fd966de107f7159",
+      "git": "299b4faf7b20b18533071c3a602ace8dbb2c930e"
+    },
+    {
+      "version": 2,
+      "execution": "not executed",
+      "file": "preparation/browser-receiver-v2.mjs",
+      "bytes": 27599,
+      "sha256": "4af9eaaa807f1f7eab920d635944c7eac378d98033f3681bbbf26d44a7d72b8c",
+      "git": "035a1a4c96deb43e5aeef3c2ffcfab9646cc1061"
+    },
+    {
+      "version": 3,
+      "execution": "not executed",
+      "file": "preparation/browser-receiver-v3.mjs",
+      "bytes": 28170,
+      "sha256": "043ecb0a71a4dfd4c7d5ecbdd59fe259e99db65f4664ca8c5fb14bf52146b743",
+      "git": "1a1b7408ea8cb4c332ad4aa40460f21401ca5c1b"
+    },
+    {
+      "version": 4,
+      "execution": "single timed-out native attempt",
+      "file": "preparation/browser-receiver-v4.mjs",
+      "bytes": 29352,
+      "sha256": "d44e2d17eeb3e583d11e856fbda1bb988d9ec8f871bf40e3f33f2b5425d333d8",
+      "git": "1e08bd4be25e149d568f1869c610b20f03fc6ac9"
+    }
+  ],
+  "process_receipt": {
+    "bytes": 1453,
+    "sha256": "5bbb3febffc1af2e322e99ab226cf29c5225d9f22554b57c55093e308fdb494d",
+    "git": "2c6f2609723a25d4bceae0415e16b78d83b91ef6"
+  },
+  "cleanup_receipt": {
+    "bytes": 7373,
+    "sha256": "e472f8d83b6540c7b1033c04d4380270ee9981d7bbdd1b72a78515d6cdf34903",
+    "git": "400bfb1f4d7a141be616252662d4ddd7ba748c9d"
+  },
+  "cleanup": {
+    "signal": "SIGTERM",
+    "group": 1599741,
+    "members_before": 10,
+    "members_after": 0,
+    "profile_preserved": true,
+    "original_evidence_unchanged": true
+  },
+  "boundaries": [
+    "Profile remains native and is intentionally excluded; no profile files deleted.",
+    "The frozen browser contract uses historical native-chooser-cancel wording; the adapter records Puppeteer25's untrusted DOM cancel listener boundary, not OS-picker cancellation.",
+    "The null-zero-false group uses four separate frozen fixtures, as reviewed before execution.",
+    "Preexecution documents saying browserExecuted:false describe their creation time; v4 later executed once and failed.",
+    "No screenshots exist in recovered nonprofile evidence and none are visually qualified.",
+    "No new hosted run has been performed."
+  ]
+}

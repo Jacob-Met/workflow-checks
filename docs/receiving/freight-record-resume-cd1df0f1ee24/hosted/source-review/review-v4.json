@@ -1,0 +1,45 @@
+{
+  "format": "hamon.freight-hosted-source-review/1",
+  "reviewer": "estate-cd1df0f1ee24/estate_coordination",
+  "source": {
+    "bytes": 19089,
+    "sha256": "b671cd1a88f6edc9c09fda53c6ccbe2cba6a252c65fa59df73706ad7d03bc2b7",
+    "git_blob": "f48093131fdc3cc9c9838ad9a5451ecd442b3891"
+  },
+  "workflow": {
+    "bytes": 1983,
+    "sha256": "3d319789b34927df84d35130bee9d0d2b34ed816e9e7bcbf7cd0e29d646c6cee",
+    "git_blob": "8ee5c9227d9377228ae1319759d85c1cd238d146"
+  },
+  "boundary": {
+    "source_review_only": true,
+    "product_or_browser_executed": false,
+    "github_calls_after_quota_stop": 0,
+    "original_driver_sha256": "d44e2d17eeb3e583d11e856fbda1bb988d9ec8f871bf40e3f33f2b5425d333d8"
+  },
+  "findings": [
+    {
+      "line": 104,
+      "kind": "ownership-and-exit-state",
+      "detail": "Require exact owned profile on every live leader, including pre-exec Python shim; avoid requiring cmdline from zombies."
+    },
+    {
+      "line": 310,
+      "kind": "cleanup-must-survive-diagnostic-io",
+      "detail": "Pre-cleanup receipt write or journal write must not prevent cleanup. Preserve diagnostic failure and fail result without suppressing ownership assertions."
+    },
+    {
+      "line": 69,
+      "kind": "atomic-registration",
+      "detail": "Shim writes identity in place while observer parses as soon as path exists; use atomic publication to avoid empty/partial registration."
+    }
+  ],
+  "accepted": [
+    "Exact receiver preserved; trusted archived inputs and current candidate pins verified before launch.",
+    "Distinct owned Chrome session registry is separate from Node lifetime.",
+    "ESRCH handled only after re-observed empty group.",
+    "PR67-only workflow, contents read, installed Chrome default sandbox, temporary exact Puppeteer version and no automatic retry.",
+    "Original failed native attempt is kept separate."
+  ],
+  "verdict": "successor-required"
+}

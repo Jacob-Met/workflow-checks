@@ -1,0 +1,40 @@
+{
+  "schema": "hamon.freight-readme-historical-clarification.v1",
+  "path": "demos/freight-whatif/README.md",
+  "original": {
+    "bytes": 13306,
+    "sha256": "a837930f73c4e9db75c382c95e118c4659a23cd7860e07d35d50ecb5532389f2",
+    "git_blob": "5fc1a79b4633e43eb517c4f9ee08362b67e6edeb"
+  },
+  "change": {
+    "old_sentence": "This is a new external contribution under Jacob's HAMON mandate, recorded in #17.",
+    "new_sentence": "The original #17 contribution was made under Jacob's HAMON mandate."
+  },
+  "scope": "Two documented documentation-only successors: one historical attribution sentence, then one Run it delivery paragraph. Original v1 text stays exact in source-transport-v1.json; runtime, tests and packaging source are unchanged.",
+  "historical_only_successor": {
+    "bytes": 13292,
+    "sha256": "3fa8047556701fac24b6724eb9489224429e4b11085a674037c829ac6388b0db",
+    "git_blob": "62e960f29d4e5c7fbef89a0e63085be4d03863d7"
+  },
+  "final_successor": {
+    "bytes": 13499,
+    "sha256": "51f6fc2218ae1126f3727850dc31d6d8a5f100b06e306eb0c83a59b94cb11f44",
+    "git_blob": "92edc4fb49f82c57c53ffa2b9edeecf78c94c9e2"
+  },
+  "delivery_clarification": {
+    "previous": {
+      "bytes": 13292,
+      "sha256": "3fa8047556701fac24b6724eb9489224429e4b11085a674037c829ac6388b0db",
+      "git_blob": "62e960f29d4e5c7fbef89a0e63085be4d03863d7"
+    },
+    "next": {
+      "bytes": 13499,
+      "sha256": "51f6fc2218ae1126f3727850dc31d6d8a5f100b06e306eb0c83a59b94cb11f44",
+      "git_blob": "92edc4fb49f82c57c53ffa2b9edeecf78c94c9e2"
+    },
+    "insert_before_heading": "## Use the workbench",
+    "inserted_paragraph": "The currently checked-in ZIP is the historical five-file release and does not include Open saved record; use the source workbench above for this draft feature until a verified replacement ZIP is published.",
+    "reason": "Independent review found that Run it advertised the historical five-file ZIP beside source-only new Open instructions. The user-route clarification preserves the existing dist bytes and labels the incomplete draft delivery.",
+    "authorization": "Root accepted the precise separate wording successor after independent receiving."
+  }
+}

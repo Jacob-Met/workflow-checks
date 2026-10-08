@@ -1,0 +1,38 @@
+{
+  "command": [
+    "/usr/bin/node",
+    "--test",
+    "demos/freight-whatif/tests/scenario-record.test.mjs"
+  ],
+  "exit_code": 0,
+  "node": "v22.22.1",
+  "stdout_bytes": 2216,
+  "stderr_bytes": 0,
+  "source": [
+    {
+      "path": "demos/freight-whatif/site/scenario-record.mjs",
+      "bytes": 5698,
+      "sha256": "435d882090273e1315b156b4bca402314553bd80ad35a5592353e1fbddf2c8eb",
+      "git_blob": "89da6193283695d5bbe192131b9372882f3bd4f5"
+    },
+    {
+      "path": "demos/freight-whatif/tests/scenario-record.test.mjs",
+      "bytes": 7130,
+      "sha256": "cbcaa54f00f77578c0f743af35f5a12f223d3813ae3d9ac9a1a418e7e4deeae4",
+      "git_blob": "ff9a2b17f3da4701215839a5a333fb3a82dc57f7"
+    },
+    {
+      "path": "demos/freight-whatif/site/model.mjs",
+      "bytes": 8946,
+      "sha256": "88e3d460da6f421e937cf54b21207da95734db3de3d5932235b1ec001be52590",
+      "git_blob": "6b97e2c54e4283707913e13459f47cbd43f81137"
+    },
+    {
+      "path": "demos/freight-whatif/site/data.mjs",
+      "bytes": 4103,
+      "sha256": "c5b8819e50961180208fa8dd4951f6a559b28cc4467c52dd2a68abeeb1b25d81",
+      "git_blob": "b4ee752139693744b8f05c930865e505e2ddf236"
+    }
+  ],
+  "source_unchanged": true
+}

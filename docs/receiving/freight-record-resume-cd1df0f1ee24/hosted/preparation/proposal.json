@@ -1,0 +1,91 @@
+{
+  "format": "freight-one-hosted-receiving-proposal/1",
+  "status": "Prepared only; root review required; no browser, dependency install, or hosted execution performed",
+  "preparedFor": {
+    "repository": "Jacob-Met/workflow-checks",
+    "draftPr": 67,
+    "knownPriorHead": "6da2c7c2867e6eeb9d11a097a14d977a2b010b70",
+    "headBoundary": "Source author is composing evidence successor; actual proposed/tested checkout must be recorded at execution"
+  },
+  "unchanged": {
+    "receiverGit": "1e08bd4be25e149d568f1869c610b20f03fc6ac9",
+    "receiverSha256": "d44e2d17eeb3e583d11e856fbda1bb988d9ec8f871bf40e3f33f2b5425d333d8",
+    "receiverBytes": 29352,
+    "groups": 17,
+    "contractSha256": "44b5e3fc7523c3856f01d03e36c7cb5bc1047ce74b6077a30db91d60dde739b7",
+    "packetGit": "048996fd5adb38852d1bd7048992a2c0336c1709",
+    "packetSha256": "b06e59f6bdefd3c9d988cc5a9a883439364aaac7982a2e3a0184be1022a58e21",
+    "sourceFiles": 11,
+    "canonicalFixtures": 8
+  },
+  "runtime": {
+    "runner": "ubuntu-24.04 existing Google Chrome, Node22 via repository-pinned official setup-node v6",
+    "browserSandbox": "default; no no-sandbox or setuid sandbox bypass",
+    "dependency": "PROPOSED ONLY temporary npm install --ignore-scripts --no-audit --no-fund --save-exact puppeteer-core@25.12.0; no native installation; preserve resolved package-lock and actual package version",
+    "launchBoundMs": 45000,
+    "receiverTotalBoundMs": 240000,
+    "supervisorSeconds": 255,
+    "workflowMinutes": 10,
+    "automaticRetries": 0
+  },
+  "configChanges": [
+    "Remap only runRoot, baselineRoot, candidateRoot, source/fixture filesystem paths, puppeteerPath and chromiumPath for hosted isolation.",
+    "Candidate bodies come from actual checkout and must match all six frozen candidate source hashes. Baseline five bodies and fixture eight bodies come from exact sealed native packet.",
+    "chromiumPath is an executable shim: verifies exact owned profile/default-sandbox arguments, creates/registers a separate owned process session before exec of the existing Chrome binary. No Puppeteer/API/product monkeypatch."
+  ],
+  "telemetryFacts": [
+    {
+      "lines": "v4 11–45",
+      "fact": "Receiver creates fresh run/inputs and copies source-verified fixtures before installing its total timer. Recovered files establish preparation occurred."
+    },
+    {
+      "lines": "v4 51–56",
+      "fact": "A partial receipt is saved only after a group resolves or throws; entering a group or an unresolved awaited operation is not durably recorded."
+    },
+    {
+      "lines": "v4 182–187",
+      "fact": "Total-bound callback awaits browser.close before writing its fatal receipt. An unresolved close can prevent that receipt write. This is a source-level possibility, not an observed cause."
+    },
+    {
+      "lines": "v4 200–220",
+      "fact": "Server requests, launch completion, runtime identification and initial CDP/page setup are retained in memory until a later group receipt."
+    },
+    {
+      "lines": "v4 449–462",
+      "fact": "Finally awaits browser.close and server.close before writing the final receipt."
+    },
+    {
+      "lines": "native wrapper v1 17–28",
+      "fact": "The prior supervisor owned/killed Node's session. Recovered Chrome group1599741 was a separate session, verified and cleaned later."
+    },
+    {
+      "lines": "recovered failed attempt",
+      "fact": "Raw stderr announced DevTools. No completed partial/final browser receipt or capture/download was recovered. No precise hanging awaited operation or causal product defect is established."
+    }
+  ],
+  "newSupervisor": [
+    "Write preflight and append-only lifecycle before launch; stream raw stdout/stderr directly to files.",
+    "Record Node PID/session/start identity and shim PID/session/start identity before Chrome exec, even if Puppeteer launch promise never resolves.",
+    "Observe only own identity, own DevToolsActivePort existence, partial/final file hashes and raw log sizes; no diagnostic browser commands or new product interactions.",
+    "Write pre-cleanup receipt before potentially blocking cleanup.",
+    "Close only revalidated own Node and separately registered Chrome groups by bounded TERM, then KILL only surviving identity-anchored groups; no process-name killing, no profiles removed.",
+    "Rehash sources/fixtures/receiver/config after cleanup and retain final actual errors/download cardinality. Preserve raw v4 results unchanged.",
+    "Emit one bounded archive of raw logs, lifecycle, inputs, snapshots, downloads, captures, dependency lock and receipts; exclude profile and duplicate sealed packet bodies. Captures remain uninspected until actual visual review."
+  ],
+  "history": [
+    "Native attempt1 remains failed (timeout, Node -9), with unclassified cause and preserved separate61-member packet.",
+    "Receiver v1-v3 native revisions remain unexecuted; v4 is exact unchanged source. Hosted wrapper draft revisions are syntax-only and never executed.",
+    "A future hosted result is a distinct runtime qualification, not a retry relabeled as the native outcome."
+  ],
+  "workflowBasis": {
+    "existingWorkflowGit": "0c2981495c8167ea35cc87ac2ba41536f36ba18e",
+    "observedPattern": "Repository uses Ubuntu24.04, pinned checkout/setup-node v6, read-only permissions and concurrency. It has no observed browser provision/test step.",
+    "newScope": "PR67-only qualification on opened/synchronize/reopened, one authorized revision; no push-main/permanent product gate, no ready_for_review event."
+  },
+  "remainingReview": [
+    "Root must inspect exact wrapper/workflow before publication/execution.",
+    "Independent review must verify identity cleanup, unchanged17oracles, immutable source/fixture mapping and evidence closure.",
+    "Installed hosted Chrome/library/sandbox availability has not been exercised. Any startup limitation must be recorded without weakening the sandbox or automatic retry.",
+    "GitHub API quota stop applies; these artifacts are native checkpoints only until root releases API writes."
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "/dev/shm/hamon-freight-lifecycle-receiving-cd1df0f1ee24/receive_lifecycle_v1.py"
+  ],
+  "pid": 2418941,
+  "exit_code": 0,
+  "timed_out": false,
+  "duration_seconds": 11.749631503014825,
+  "stdout": {
+    "bytes": 1113,
+    "sha256": "70d94156b0c70add487d097d5e4628961512a6367e9f23331226ad8083f0c08b"
+  },
+  "stderr": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "source_manifest": {
+    "bytes": 1161,
+    "sha256": "e92ebe4655e75f33b76de4a5d1fc32411aed698cb8063548b9250d95c190e9cc"
+  }
+}

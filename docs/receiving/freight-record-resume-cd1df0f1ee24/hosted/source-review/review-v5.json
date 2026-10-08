@@ -1,0 +1,37 @@
+{
+  "format": "hamon.freight-hosted-source-review/1",
+  "reviewer": "estate-cd1df0f1ee24/estate_coordination",
+  "verdict": "source-accepted-pending-independent-mock-controls",
+  "source": {
+    "native_path": "/dev/shm/hamon-freight-receiving-cd1df0f1ee24/browser-native/hosted-proposal-v1/receive_browser_hosted-reviewed-v5.py",
+    "bytes": 20222,
+    "sha256": "b9735d6efbfcbe62ca9d26d945be2798f91ed1addd08a34f948862fa9d291649",
+    "git_blob": "4089e2451438a7917ea95472704c97c295fb816f"
+  },
+  "predecessor_review": {
+    "path": "review-v4.json",
+    "sha256": "9699bebabca9a66b23e53f3ec1728087c44fdbbc21df2c6339b2c94d716c04ef"
+  },
+  "workflow": {
+    "bytes": 1983,
+    "sha256": "3d319789b34927df84d35130bee9d0d2b34ed816e9e7bcbf7cd0e29d646c6cee",
+    "git_blob": "8ee5c9227d9377228ae1319759d85c1cd238d146"
+  },
+  "verification": [
+    "Complete native source readback with restored terminal newline matches prior declared bytes, SHA256 and Git blob.",
+    "Independent syntax-only AST parse passed; no source import or product execution.",
+    "Full v4 to v5 diff limited to three identified corrections.",
+    "Atomic hard-link publication refuses an existing registration and prevents partially read JSON.",
+    "Every live leader must carry exact owned profile; zombie PID/start/session identity is retained without impossible live-cmdline requirement.",
+    "Diagnostic journal/pre-cleanup receipt OSError records failure without preventing owned cleanup; ownership assertions remain uncaught by the diagnostic helper.",
+    "ESRCH requires a newly observed empty group; live mismatches refuse signaling.",
+    "Immutable17-group receiver and source/fixture pin mapping remain unchanged.",
+    "Workflow is PR67-only, read-only credentials, pinned temporary dependency with install scripts disabled, installed Chrome/default sandbox, one bounded attempt."
+  ],
+  "boundaries": {
+    "github_mutations": 0,
+    "product_or_browser_execution": false,
+    "mock_outcome_received": false,
+    "hosted_execution_authorized_by_this_review": false
+  }
+}

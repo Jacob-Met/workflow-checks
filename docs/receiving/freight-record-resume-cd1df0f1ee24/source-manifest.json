@@ -1,0 +1,84 @@
+{
+  "schema": "hamon.freight-draft-source-manifest.v1",
+  "scope": "Thirteen product, maintained admission test, guide, workflow and hosted-mirror paths. Evidence/index files are not self-hashed here.",
+  "files": [
+    {
+      "path": "demos/freight-whatif/site/app.mjs",
+      "git_blob": "23d4f67d8ce223e0e478819eb45af2154a8e1e69",
+      "sha256": "52e047f7c691f15085cfcefd5d01755e9d00382f6e7a5c46b8daa043871190d2",
+      "bytes": 23731
+    },
+    {
+      "path": "demos/freight-whatif/site/index.html",
+      "git_blob": "a63829a9a1f62d7ace0574586866f13a4ede806b",
+      "sha256": "fb22bce7a5154df3b90df0a1cd0d7b4881500f46259472727040ee17c3493f8f",
+      "bytes": 13080
+    },
+    {
+      "path": "demos/freight-whatif/site/styles.css",
+      "git_blob": "1ca01c52bd132274cff1f6ed7abe164a33bf90ca",
+      "sha256": "c000a502c3167bd9b6f2e6d786eae861e2f61800ade2da5bde863f906df500ae",
+      "bytes": 22286
+    },
+    {
+      "path": "demos/freight-whatif/site/scenario-record.mjs",
+      "git_blob": "89da6193283695d5bbe192131b9372882f3bd4f5",
+      "sha256": "435d882090273e1315b156b4bca402314553bd80ad35a5592353e1fbddf2c8eb",
+      "bytes": 5698
+    },
+    {
+      "path": "demos/freight-whatif/tools/install.py",
+      "git_blob": "a95c17cdb613495cf297c093bca2d500223528a9",
+      "sha256": "dbc8ee1a675c6fdd4d579eb64c44714e3a598fa272700bc96566c4287b7e5a86",
+      "bytes": 4362
+    },
+    {
+      "path": "demos/freight-whatif/tools/package.py",
+      "git_blob": "761d4d84a7166d6fbc0403da598d1140879ea92d",
+      "sha256": "5ec79e3126c0f5e214b6488bdbbd31bb034f23f3f8a6a7b64c67b9a796a873b7",
+      "bytes": 4933
+    },
+    {
+      "path": "demos/freight-whatif/README.md",
+      "bytes": 13499,
+      "sha256": "51f6fc2218ae1126f3727850dc31d6d8a5f100b06e306eb0c83a59b94cb11f44",
+      "git_blob": "92edc4fb49f82c57c53ffa2b9edeecf78c94c9e2"
+    },
+    {
+      "path": "demos/freight-whatif/tests/scenario-record.test.mjs",
+      "git_blob": "ff9a2b17f3da4701215839a5a333fb3a82dc57f7",
+      "sha256": "cbcaa54f00f77578c0f743af35f5a12f223d3813ae3d9ac9a1a418e7e4deeae4",
+      "bytes": 7130
+    },
+    {
+      "path": ".github/workflows/freight-whatif.yml",
+      "git_blob": "cfd804a45607f362f430faca5c9b9cd9dfb3ad4f",
+      "sha256": "4793616d39a50c8f286e6571370f0712f6396279d9fcbed8bd65b15dc35949bf",
+      "bytes": 2001
+    },
+    {
+      "path": "docs/demos/freight-whatif/app.mjs",
+      "git_blob": "23d4f67d8ce223e0e478819eb45af2154a8e1e69",
+      "sha256": "52e047f7c691f15085cfcefd5d01755e9d00382f6e7a5c46b8daa043871190d2",
+      "bytes": 23731
+    },
+    {
+      "path": "docs/demos/freight-whatif/index.html",
+      "git_blob": "a63829a9a1f62d7ace0574586866f13a4ede806b",
+      "sha256": "fb22bce7a5154df3b90df0a1cd0d7b4881500f46259472727040ee17c3493f8f",
+      "bytes": 13080
+    },
+    {
+      "path": "docs/demos/freight-whatif/styles.css",
+      "git_blob": "1ca01c52bd132274cff1f6ed7abe164a33bf90ca",
+      "sha256": "c000a502c3167bd9b6f2e6d786eae861e2f61800ade2da5bde863f906df500ae",
+      "bytes": 22286
+    },
+    {
+      "path": "docs/demos/freight-whatif/scenario-record.mjs",
+      "git_blob": "89da6193283695d5bbe192131b9372882f3bd4f5",
+      "sha256": "435d882090273e1315b156b4bca402314553bd80ad35a5592353e1fbddf2c8eb",
+      "bytes": 5698
+    }
+  ]
+}

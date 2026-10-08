@@ -1,0 +1,49 @@
+name: freight-pr67-browser-qualification
+
+# Frozen source receiving for this draft only; not a permanent product gate.
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  browser:
+    if: github.event.pull_request.number == 67
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # official v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # official v6
+        with:
+          node-version: "22"
+          package-manager-cache: false
+      - name: Prepare one temporary pinned Puppeteer dependency
+        env:
+          PUPPETEER_SKIP_DOWNLOAD: "true"
+        run: |
+          command -v google-chrome
+          command -v python3
+          timeout 120s npm install \
+            --prefix "$RUNNER_TEMP/freight-puppeteer" \
+            --ignore-scripts --no-audit --no-fund --save-exact puppeteer-core@25.12.0
+      - name: Check the unchanged receiver and supervisor syntax
+        run: |
+          node --check demos/freight-whatif/tests/scenario-record-browser.mjs
+          python3 -c 'import pathlib; p=pathlib.Path("demos/freight-whatif/tools/receive_browser_hosted.py"); compile(p.read_text(), str(p), "exec")'
+      - name: Receive once with the installed Chrome default sandbox
+        run: |
+          python3 demos/freight-whatif/tools/receive_browser_hosted.py \
+            --root "$GITHUB_WORKSPACE" \
+            --packet "$GITHUB_WORKSPACE/docs/receiving/freight-record-resume-cd1df0f1ee24/browser-native/packet.tar.gz" \
+            --puppeteer-root "$RUNNER_TEMP/freight-puppeteer/node_modules/puppeteer-core" \
+            --chrome "$(command -v google-chrome)" \
+            --output "$RUNNER_TEMP/freight-browser-hosted-attempt1" \
+            --emit-bundle
