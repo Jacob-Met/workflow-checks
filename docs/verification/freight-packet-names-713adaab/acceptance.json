@@ -1,0 +1,143 @@
+{
+  "schema": "workflow-checks.freight-packet-names.acceptance.v1",
+  "issue": "https://github.com/Jacob-Met/workflow-checks/issues/39",
+  "source_paths": [
+    {
+      "path": "freight_packets/freightpkt/pipeline.py",
+      "bytes": 11505,
+      "sha256": "e2c034fdc0032d47942a1e732c0737e603109678bac09ad17638c461ad23a8c9",
+      "git_blob": "06fb63c9d15b185ca7f18b24ed643be4076da85d",
+      "mode": "100644",
+      "encoding": "utf8"
+    },
+    {
+      "path": "freight_packets/freightpkt/packet_names.py",
+      "bytes": 1623,
+      "sha256": "a7eac687ae9291cce4677cde7ace229a464f9e4f0e207297b910881a87b2c997",
+      "git_blob": "f2c841d4a2c9b01923cfcdda7c6e76d1cd58ef7c",
+      "mode": "100644",
+      "encoding": "utf8"
+    },
+    {
+      "path": "freight_packets/tests/test_packet_names.py",
+      "bytes": 7392,
+      "sha256": "7f9b393f8f85a973e5fa4b25fb2732bd1fe6d963e557877dbdb2c1894c3c3458",
+      "git_blob": "61c562a84d6271b918157057d691084e77f9477f",
+      "mode": "100644",
+      "encoding": "utf8"
+    },
+    {
+      "path": "freight_packets/PACKET_FILENAMES.md",
+      "bytes": 2482,
+      "sha256": "16bf0c12799ec473e078e06e31cb99f15a0adf156abbdbb799b13e3e5254fc33",
+      "git_blob": "b75d2a20e36e4f0050fe5ff533baec3024ea2e34",
+      "mode": "100644",
+      "encoding": "utf8"
+    }
+  ],
+  "upstream_base_commit": "5a70e458ed455d47ef672ed9b5a614ec59812f0c",
+  "windows_native_source_commit": "5f7c0b7692563f8ee7c006aeda35a3083c590460",
+  "windows_native_source_tree": "d124f575b46b6d0b0ed4cc60321014cdaac1e89c",
+  "mac_exact_tree_import": "81a4824b0d2caaeb538b13baf78290fb1d5d6810",
+  "mac_test_only_revision": "2ba8a9e282d13f7fed23bdb1795f93e86ce42559",
+  "baseline_report_sha256": "330c572343fce76fff48cfe130a14e3283d5303e1ae605bd7f850f117ca75fb8",
+  "candidate_report_sha256": "d7fdd900f31c210a1946f5e59d4c528383e041ea6dad8759689090d5bf8da1d9",
+  "actual_windows_returncodes_baseline": [
+    0,
+    0,
+    0
+  ],
+  "actual_windows_returncodes_candidate": [
+    0,
+    0,
+    0
+  ],
+  "baseline_declared_retained_counts": [
+    [
+      7,
+      7
+    ],
+    [
+      7,
+      6
+    ],
+    [
+      7,
+      6
+    ]
+  ],
+  "candidate_declared_retained_counts": [
+    [
+      7,
+      7
+    ],
+    [
+      7,
+      7
+    ],
+    [
+      7,
+      7
+    ]
+  ],
+  "candidate_receiving_passed": true,
+  "candidate_source_unchanged": true,
+  "test_only_revision_passed": true,
+  "test_only_revision_preserves_windows_product_source": true,
+  "test_guard_receipt_sha256": "4144339bcace3f2d8cd330c1a075c298fd529b68b16b5aac8658ad418be4e06c",
+  "source_scope": "One pipeline filename integration plus new allocator, maintained regression and standalone guide",
+  "archives": [
+    {
+      "path": "archives/baseline-custody.zip",
+      "bytes": 111647,
+      "sha256": "bb0ed1133fcef0bb18d81e59a3c1dad44e3701f3c52567a04af1dbaf9c35f49f",
+      "git_blob": "9d2c538a25d075e3ff347a35eb88c980fb47d3b3",
+      "mode": "100644",
+      "encoding": "binary"
+    },
+    {
+      "path": "archives/baseline-source-bundle.zip",
+      "bytes": 81507,
+      "sha256": "c39a34c0b59ad59c9be63761c98713d61a4a7926db1eb2c3584087fabd4b56a4",
+      "git_blob": "ddde4336b3654867fa8b5fa48ae3070db8b537a2",
+      "mode": "100644",
+      "encoding": "binary"
+    },
+    {
+      "path": "archives/candidate-bundle.zip",
+      "bytes": 128849,
+      "sha256": "bbc4619911ea9c347d2f75fb31fb9ad6579977327bd965e058c13036b967748f",
+      "git_blob": "531d85fb0655cb3789dde4564db789b76367e4ea",
+      "mode": "100644",
+      "encoding": "binary"
+    },
+    {
+      "path": "archives/candidate-custody.zip",
+      "bytes": 152476,
+      "sha256": "d5b24873f4c9107e62514149cfc4a39f854a3392634812ee013bf23e929bf70d",
+      "git_blob": "a43157686caed4b2da087be9b59515a07fef7405",
+      "mode": "100644",
+      "encoding": "binary"
+    }
+  ],
+  "archive_total_bytes": 474479,
+  "independent_review": {
+    "actor": "/root",
+    "kind": "independent source and fixture review",
+    "runtime_review": "Parent read the full four-file candidate patch, checked Microsoft filename rules, and found no runtime blocker. Parent independently verified the i*7 generator. Final test-only guard and full Windows receipt review pending.",
+    "scope": "Component allocation, ID preservation, same-source Windows receiving, existing consumer compatibility",
+    "no_deployment": true
+  },
+  "original_thinkpad_raw_logs_recovered": false,
+  "installation": false,
+  "live_stage": false,
+  "cutover": false,
+  "firmware_action": false,
+  "customer_data": false,
+  "qualified_limits": [
+    "ordinary NTFS and installed Python3.11.9 on actual Windows; native Mac Python3.13.7 test-only continuation",
+    "component allocation only; no hostile-parent/concurrent-writer/atomic-run/full-path-length claim",
+    "source tree and bytes pinned; original partial Git lineage distinct from future full upstream publication",
+    "existing issue37 batch/UI/handoff/review writers remain unchanged"
+  ]
+}

@@ -1,0 +1,80 @@
+DRIVER="\"\"\"Isolated original-source Windows filename receiving; synthetic inputs only.\"\"\"\nfrom pathlib import Path\nimport datetime, hashlib, json, os, platform, shutil, subprocess, sys\n\nROOT = Path(__file__).resolve().parent\nassert os.name == \"nt\" and platform.node().upper() == \"DESKTOP-LA7CMTA\"\nassert ROOT.parent == Path(os.environ[\"TEMP\"]).resolve()\nassert ROOT.name.startswith(\"hamon-freight-packet-names-713adaab-\")\nassert sys.version_info[:2] == (3, 11)\nSOURCE = ROOT / \"source\"\nEVIDENCE = ROOT / \"evidence\"\nEVIDENCE.mkdir(exist_ok=False)\nmanifest = json.loads((ROOT / \"source-manifest.json\").read_text(encoding=\"utf-8\"))\ndef digest(raw): return hashlib.sha256(raw).hexdigest()\ndef hashes(root):\n    return {p.relative_to(root).as_posix(): digest(p.read_bytes())\n            for p in sorted(root.rglob(\"*\")) if p.is_file()}\nsource_before = hashes(SOURCE)\nexpected = {r[\"path\"]: r[\"sha256\"] for r in manifest[\"files\"]}\nassert source_before == expected\nenv = dict(os.environ)\nenv.pop(\"PYTHONPATH\", None); env.pop(\"PYTHONHOME\", None)\nenv.update(PYTHONDONTWRITEBYTECODE=\"1\", PYTHONIOENCODING=\"utf-8\")\ncommands = []\ndef run(label, args):\n    argv = [sys.executable, \"-B\", \"-m\", \"freightpkt\", *args]\n    proc = subprocess.run(argv, cwd=SOURCE / \"freight_packets\", env=env,\n                          capture_output=True, timeout=30)\n    (EVIDENCE / (label + \".stdout.txt\")).write_bytes(proc.stdout)\n    (EVIDENCE / (label + \".stderr.txt\")).write_bytes(proc.stderr)\n    record = {\"label\": label, \"argv\": argv, \"cwd\": str(SOURCE / \"freight_packets\"),\n              \"returncode\": proc.returncode, \"stdout_sha256\": digest(proc.stdout),\n              \"stderr_sha256\": digest(proc.stderr),\n              \"environment\": {\"PYTHONPATH\": \"removed\", \"PYTHONHOME\": \"removed\",\n                              \"PYTHONDONTWRITEBYTECODE\": \"1\", \"PYTHONIOENCODING\": \"utf-8\"}}\n    commands.append(record)\n    return record\nfixture = ROOT / \"fixture\"\ngenerated = run(\"generate\", [\"generate\", \"--out\", str(fixture), \"--loads\", \"8\", \"--seed\", \"7\"])\nassert generated[\"returncode\"] == 0\ncases = []\nfor name, old_id, new_id in [(\"ordinary\", None, None),\n                             (\"case-pair\", \"LD260907\", \"ld260900\"),\n                             (\"nul-device\", \"LD260900\", \"NUL\")]:\n    case = ROOT / name; case.mkdir()\n    data = case / \"data\"; out = case / \"out\"\n    shutil.copytree(fixture, data)\n    replacements = []\n    if old_id is not None:\n        for p in sorted(data.rglob(\"*\")):\n            if p.is_file():\n                raw = p.read_bytes()\n                count = raw.count(old_id.encode(\"utf-8\"))\n                if count:\n                    updated = raw.replace(old_id.encode(\"utf-8\"), new_id.encode(\"utf-8\"))\n                    p.write_bytes(updated)\n                    replacements.append({\"path\": p.relative_to(data).as_posix(),\n                                         \"occurrences\": count, \"before_sha256\": digest(raw),\n                                         \"after_sha256\": digest(updated)})\n    before = hashes(data)\n    command = run(name, [\"run\", \"--data\", str(data), \"--out\", str(out)])\n    summary_path = out / \"summary.json\"\n    summary = json.loads(summary_path.read_text(encoding=\"utf-8\")) if summary_path.is_file() else None\n    actual = {p.name: {\"bytes\": p.stat().st_size, \"sha256\": digest(p.read_bytes())}\n              for p in sorted((out / \"packets\").iterdir()) if p.is_file()}\n    declared = []\n    for packet in summary[\"packets\"] if summary else []:\n        name_path = out / packet[\"file\"]\n        declared.append({**packet, \"exists\": name_path.exists(), \"is_file\": name_path.is_file()})\n    pair_paths = [out / \"packets\" / \"LD260900.html\", out / \"packets\" / \"ld260900.html\"]\n    pair_samefile = pair_paths[0].samefile(pair_paths[1]) if all(p.is_file() for p in pair_paths) else None\n    after = hashes(data)\n    cases.append({\"name\": name, \"command\": command, \"replacement\": {\"from\": old_id, \"to\": new_id,\n                  \"files\": replacements}, \"input_hashes_before\": before, \"input_hashes_after\": after,\n                  \"inputs_unchanged\": before == after, \"summary_counts\": summary[\"counts\"] if summary else None,\n                  \"summary_sha256\": digest(summary_path.read_bytes()) if summary else None,\n                  \"declared_packets\": declared, \"actual_packet_files\": actual,\n                  \"case_pair_same_physical_file\": pair_samefile,\n                  \"missing_declared_files\": [p[\"file\"] for p in declared if not p[\"is_file\"]],\n                  \"output_hashes\": hashes(out)})\nsource_after = hashes(SOURCE)\nordinary, pair, nul = cases\nobservations = {\n    \"ordinary_control_pass\": ordinary[\"command\"][\"returncode\"] == 0\n       and len(ordinary[\"declared_packets\"]) == 7\n       and len(ordinary[\"actual_packet_files\"]) == 7\n       and not ordinary[\"missing_declared_files\"],\n    \"case_pair_silent_collision\": pair[\"command\"][\"returncode\"] == 0\n       and len(pair[\"declared_packets\"]) == 7\n       and len(pair[\"actual_packet_files\"]) == 6\n       and pair[\"case_pair_same_physical_file\"] is True,\n    \"nul_silent_missing_packet\": nul[\"command\"][\"returncode\"] == 0\n       and len(nul[\"declared_packets\"]) == 7\n       and len(nul[\"actual_packet_files\"]) == 6\n       and \"packets/NUL.html\" in nul[\"missing_declared_files\"],\n    \"source_unchanged\": source_before == source_after,\n    \"all_inputs_unchanged\": all(c[\"inputs_unchanged\"] for c in cases),\n}\nreport = {\"schema\": \"workflow-checks.freight-packet-names.windows-baseline.v1\",\n          \"observed_utc\": datetime.datetime.now(datetime.timezone.utc).isoformat(),\n          \"host\": platform.node(), \"platform\": platform.platform(), \"python\": sys.version,\n          \"executable\": sys.executable, \"namespace\": str(ROOT),\n          \"source_commit\": manifest[\"source_commit\"], \"source_tree\": manifest[\"source_tree\"],\n          \"source_manifest_sha256\": digest((ROOT / \"source-manifest.json\").read_bytes()),\n          \"driver_sha256\": digest(Path(__file__).read_bytes()),\n          \"source_hashes_before\": source_before, \"source_hashes_after\": source_after,\n          \"generator\": generated, \"cases\": cases, \"observations\": observations,\n          \"synthetic_inputs_only\": True, \"production_service_invoked\": False,\n          \"interpretation\": \"Original-source negative receiving; a zero wrapper exit confirms the stated defect witness, not product correctness.\"}\n(EVIDENCE / \"report.json\").write_text(json.dumps(report, indent=2) + \"\\n\", encoding=\"utf-8\")\nprint(json.dumps({\"host\": report[\"host\"], \"python\": sys.version.split()[0], \"namespace\": str(ROOT),\n                  \"source_commit\": report[\"source_commit\"], \"observations\": observations,\n                  \"returncodes\": [c[\"command\"][\"returncode\"] for c in cases],\n                  \"packet_counts\": [[len(c[\"declared_packets\"]), len(c[\"actual_packet_files\"])] for c in cases],\n                  \"report_sha256\": digest((EVIDENCE / \"report.json\").read_bytes())}))\nsys.exit(0 if all(observations.values()) else 3)\n"
+from pathlib import Path
+import base64,datetime,hashlib,json,os,shutil,subprocess,uuid,zipfile
+r=Path("/dev/shm/chatgpt-freight-packet-names-713adaab")
+r.mkdir(mode=0o700,exist_ok=False)
+e=r/"evidence";e.mkdir(); source=r/"source";source.mkdir()
+old=Path("/dev/shm/chatgpt-freight-review-batch-713adaab")
+manifest=json.loads((old/"evidence/source-manifest.json").read_text())
+for item in manifest["files"]:
+ raw=(old/"source"/item["path"]).read_bytes()
+ assert hashlib.sha256(raw).hexdigest()==item["sha256"]
+ dst=source/item["path"];dst.parent.mkdir(parents=True,exist_ok=True);dst.write_bytes(raw)
+(r/"source-manifest.json").write_text(json.dumps(manifest,indent=2)+"\n")
+(r/"receiving-driver.py").write_text(DRIVER,encoding="utf-8")
+bundle=r/"source-bundle.zip"
+with zipfile.ZipFile(bundle,"x",zipfile.ZIP_DEFLATED) as z:
+ for p in [r/"receiving-driver.py",r/"source-manifest.json",*[source/x["path"] for x in manifest["files"]]]:
+  z.write(p,p.relative_to(r).as_posix())
+name="hamon-freight-packet-names-713adaab-"+uuid.uuid4().hex
+remote=r"C:\Users\minec\AppData\Local\Temp"+"\\"+name
+route=["-o","BatchMode=yes","-o","StrictHostKeyChecking=yes","-o","ConnectTimeout=10","-o","LogLevel=ERROR","-i","/home/jacob/.ssh/id_ed25519"]
+records=[]
+def call(label,argv):
+ p=subprocess.run(argv,capture_output=True,timeout=90)
+ (e/(label+".stdout.txt")).write_bytes(p.stdout);(e/(label+".stderr.txt")).write_bytes(p.stderr)
+ record={"label":label,"argv":argv,"returncode":p.returncode,"stdout_sha256":hashlib.sha256(p.stdout).hexdigest(),"stderr_sha256":hashlib.sha256(p.stderr).hexdigest()}
+ records.append(record)
+ print(json.dumps({"stage":label,"returncode":p.returncode,"stdout":p.stdout.decode("utf-8",errors="replace")[:5000],"stderr":p.stderr.decode("utf-8",errors="replace")[:1000]}),flush=True)
+ return p
+def ps(label,script):
+ (e/(label+".ps1")).write_text(script,encoding="utf-8")
+ enc=base64.b64encode(script.encode("utf-16le")).decode()
+ return call(label,["ssh",*route,"minec@100.115.131.125","powershell.exe","-NoProfile","-NonInteractive","-EncodedCommand",enc])
+pre=ps("preflight",r"""$ErrorActionPreference='Stop'
+[Console]::OutputEncoding=[Text.UTF8Encoding]::new($false)
+$root='REMOTE'
+if ($env:COMPUTERNAME -ne 'DESKTOP-LA7CMTA') { throw 'unexpected host' }
+if (Test-Path -LiteralPath $root) { throw 'namespace exists' }
+New-Item -ItemType Directory -Path $root | Out-Null
+[pscustomobject]@{host=$env:COMPUTERNAME;namespace=$root;drive_format=(Get-Volume -DriveLetter C).FileSystem;free_bytes=(Get-PSDrive C).Free;python=(& C:\Windows\py.exe -3.11 -V 2>&1 | Out-String).Trim()} | ConvertTo-Json -Compress
+""".replace("REMOTE",remote))
+assert pre.returncode==0
+upload=call("upload",["scp",*route,str(bundle),"minec@100.115.131.125:AppData/Local/Temp/"+name+"/source-bundle.zip"])
+assert upload.returncode==0
+run=ps("execute",r"""$ErrorActionPreference='Stop'
+[Console]::OutputEncoding=[Text.UTF8Encoding]::new($false)
+$root='REMOTE'
+$zip=Join-Path $root 'source-bundle.zip'
+if ((Get-FileHash -LiteralPath $zip -Algorithm SHA256).Hash.ToLower() -ne 'BUNDLESHA') {throw 'bundle hash mismatch'}
+Expand-Archive -LiteralPath $zip -DestinationPath $root
+$p=Start-Process -FilePath C:\Windows\py.exe -ArgumentList @('-3.11','-I','-S','-B','-X','utf8',(Join-Path $root 'receiving-driver.py')) -WorkingDirectory $root -Wait -PassThru -RedirectStandardOutput (Join-Path $root 'driver.stdout.txt') -RedirectStandardError (Join-Path $root 'driver.stderr.txt')
+$code=$p.ExitCode
+[pscustomobject]@{inner_returncode=$code;stdout=(Get-Content -LiteralPath (Join-Path $root 'driver.stdout.txt') -Raw);stderr=(Get-Content -LiteralPath (Join-Path $root 'driver.stderr.txt') -Raw)} | ConvertTo-Json -Compress
+exit $code
+""".replace("REMOTE",remote).replace("BUNDLESHA",hashlib.sha256(bundle.read_bytes()).hexdigest()))
+# Preserve the exact original-source outcome, including unexpected negative results.
+archive=ps("archive",r"""$ErrorActionPreference='Stop'
+[Console]::OutputEncoding=[Text.UTF8Encoding]::new($false)
+$root='REMOTE'
+$zip=Join-Path $root 'baseline-custody.zip'
+Compress-Archive -LiteralPath @((Join-Path $root 'evidence'),(Join-Path $root 'ordinary'),(Join-Path $root 'case-pair'),(Join-Path $root 'nul-device'),(Join-Path $root 'fixture'),(Join-Path $root 'driver.stdout.txt'),(Join-Path $root 'driver.stderr.txt'),(Join-Path $root 'receiving-driver.py'),(Join-Path $root 'source-manifest.json')) -DestinationPath $zip
+[pscustomobject]@{path=$zip;bytes=(Get-Item -LiteralPath $zip).Length;sha256=(Get-FileHash -LiteralPath $zip -Algorithm SHA256).Hash.ToLower()} | ConvertTo-Json -Compress
+""".replace("REMOTE",remote))
+if archive.returncode==0:
+ download=call("download",["scp",*route,"minec@100.115.131.125:AppData/Local/Temp/"+name+"/baseline-custody.zip",str(e/"baseline-custody.zip")])
+ if download.returncode==0:
+  metadata=json.loads(archive.stdout.decode("utf-8-sig"))
+  assert hashlib.sha256((e/"baseline-custody.zip").read_bytes()).hexdigest()==metadata["sha256"]
+  dest=e/"windows-baseline";dest.mkdir()
+  with zipfile.ZipFile(e/"baseline-custody.zip") as z:
+   for item in z.infolist():
+    normal=item.filename.replace("\\","/")
+    parts=Path(normal).parts
+    assert not normal.startswith("/") and ".." not in parts and ":" not in normal
+    p=dest.joinpath(*parts)
+    if item.is_dir() or normal.endswith("/"):p.mkdir(parents=True,exist_ok=True)
+    else:p.parent.mkdir(parents=True,exist_ok=True);p.write_bytes(z.read(item))
+receipt={"schema":"freight-packet-names.transport.v1","observed_utc":datetime.datetime.now(datetime.timezone.utc).isoformat(),"route":"ThinkPad RDC -> existing authorized SSH minec@100.115.131.125 -> Windows PowerShell -> installed py -3.11","namespace":remote,"source_commit":manifest["source_commit"],"source_bundle_sha256":hashlib.sha256(bundle.read_bytes()).hexdigest(),"source_bundle_bytes":bundle.stat().st_size,"driver_sha256":hashlib.sha256((r/"receiving-driver.py").read_bytes()).hexdigest(),"records":records,"product_driver_inner_exit":run.returncode}
+(e/"transport.json").write_text(json.dumps(receipt,indent=2)+"\n")
+print(json.dumps({"root":str(r),"namespace":remote,"driver_inner_exit":run.returncode,"transport_sha256":hashlib.sha256((e/"transport.json").read_bytes()).hexdigest()}),flush=True)

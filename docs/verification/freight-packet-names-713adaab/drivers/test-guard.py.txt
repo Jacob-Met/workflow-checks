@@ -1,0 +1,32 @@
+from pathlib import Path
+import csv,datetime,hashlib,json,os,platform,subprocess,sys
+r=Path("/Users/me/Developer/workflow-checks-packet-names-713adaab");s=r/"source";e=r/"continuation/test-guard";e.mkdir()
+p=s/"freight_packets/tests/test_packet_names.py";raw=p.read_bytes()
+assert hashlib.sha256(raw).hexdigest()=="6e1e4c0b0ebbe98472eddb3a9e656e9f717ec8f9c5306c12eacfd8bc5b63a0bf"
+text=raw.decode();text=text.replace("import hashlib\n","import csv\nimport hashlib\n")
+old="    def replace_id(self, old, new):\n        for path in self.data.rglob(\"*\"):\n            if path.is_file():\n                raw = path.read_bytes()\n                if old.encode() in raw:\n                    path.write_bytes(raw.replace(old.encode(), new.encode()))\n"
+new="    def replace_id(self, old, new):\n        with (self.data / \"loads.csv\").open(encoding=\"utf-8\", newline=\"\") as source:\n            self.assertEqual(sum(row[\"load_id\"] == old for row in csv.DictReader(source)), 1,\n                             \"replacement must target one actual fixture load\")\n        replacements = 0\n        for path in self.data.rglob(\"*\"):\n            if path.is_file():\n                raw = path.read_bytes()\n                if old.encode() in raw:\n                    replacements += raw.count(old.encode())\n                    path.write_bytes(raw.replace(old.encode(), new.encode()))\n        self.assertGreater(replacements, 0, \"fixture replacement must occur\")\n"
+assert text.count(old)==1;text=text.replace(old,new);p.write_bytes(text.encode())
+patch=subprocess.check_output(["git","diff","--","freight_packets/tests/test_packet_names.py"],cwd=s)
+(e/"test-only.patch").write_bytes(patch)
+def hashes():return {str(x.relative_to(s)):hashlib.sha256(x.read_bytes()).hexdigest() for x in sorted(s.rglob("*")) if x.is_file() and ".git" not in x.relative_to(s).parts}
+before=hashes()
+env=dict(os.environ);env.pop("PYTHONPATH",None);env.pop("PYTHONHOME",None);env["PYTHONDONTWRITEBYTECODE"]="1";env["PYTHONIOENCODING"]="utf-8"
+argv=[sys.executable,"-B","-m","unittest","discover","-s","tests","-p","test_packet_names.py","-v"]
+proc=subprocess.run(argv,cwd=s/"freight_packets",env=env,capture_output=True,timeout=45)
+(e/"stdout.txt").write_bytes(proc.stdout);(e/"stderr.txt").write_bytes(proc.stderr)
+after=hashes();assert before==after
+baseline_csv=r/"unpacked/baseline-custody/ordinary/data/loads.csv"
+with baseline_csv.open(encoding="utf-8",newline="") as f:found=[row for row in csv.DictReader(f) if row["load_id"]=="LD260942"]
+baseline_report=json.loads((r/"unpacked/baseline-custody/evidence/report.json").read_text())
+ids=[p["load_id"] for p in baseline_report["cases"][0]["declared_packets"]]
+assert len(found)==1 and "LD260942" not in ids
+receipt={"schema":"freight-packet-names.test-only-guard.v1","observed_utc":datetime.datetime.now(datetime.timezone.utc).isoformat(),"host":platform.node(),"python":sys.version,"executable":sys.executable,"argv":argv,"cwd":str(s/"freight_packets"),"returncode":proc.returncode,"stdout_sha256":hashlib.sha256(proc.stdout).hexdigest(),"stderr_sha256":hashlib.sha256(proc.stderr).hexdigest(),"old_test_sha256":hashlib.sha256(raw).hexdigest(),"new_test_sha256":hashlib.sha256(p.read_bytes()).hexdigest(),"before":before,"after":after,"source_unchanged_during_tests":before==after,"windows_product_source_unchanged":all(before[x["path"]]==x["sha256"] for x in json.loads((r/"unpacked/candidate-bundle/source-manifest.json").read_text())["files"] if x["path"]!="freight_packets/tests/test_packet_names.py"),"original_fixture_csv_sha256":hashlib.sha256(baseline_csv.read_bytes()).hexdigest(),"actual_non_emitted_fixture_rows":found,"original_declared_packet_ids":ids,"new_scope":"test-only exact fixture membership and positive replacement count; no product source change","environment":{"PYTHONPATH":"removed","PYTHONHOME":"removed","PYTHONDONTWRITEBYTECODE":"1","PYTHONIOENCODING":"utf-8"}}
+(e/"receipt.json").write_text(json.dumps(receipt,indent=2)+"\n")
+print(json.dumps({"returncode":proc.returncode,"stdout":proc.stdout.decode(),"stderr":proc.stderr.decode(),"new_test_sha256":receipt["new_test_sha256"],"receipt_sha256":hashlib.sha256((e/"receipt.json").read_bytes()).hexdigest(),"product_source_unchanged":receipt["windows_product_source_unchanged"]},indent=2))
+assert proc.returncode==0
+subprocess.run(["git","add","--","freight_packets/tests/test_packet_names.py"],cwd=s,check=True)
+subprocess.run(["git","-c","user.name=ChatGPT migration_execution","-c","user.email=chatgpt-713adaab@users.noreply.github.com","commit","-q","-m","Require packet filename regression replacements to target a real fixture load"],cwd=s,check=True)
+commit=subprocess.check_output(["git","rev-parse","HEAD"],cwd=s,text=True).strip()
+(e/"commit.json").write_text(json.dumps({"native_test_only_commit":commit,"native_tree":subprocess.check_output(["git","rev-parse","HEAD^{tree}"],cwd=s,text=True).strip(),"parent_exact_tree_import":"81a4824b0d2caaeb538b13baf78290fb1d5d6810","changed_paths":["freight_packets/tests/test_packet_names.py"]},indent=2)+"\n")
+print(json.dumps({"native_test_only_commit":commit}))

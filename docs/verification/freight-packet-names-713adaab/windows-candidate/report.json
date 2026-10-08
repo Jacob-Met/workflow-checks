@@ -1,0 +1,2906 @@
+{
+  "schema": "workflow-checks.freight-packet-names.windows-candidate.v1",
+  "observed_utc": "2026-10-08T15:08:49.012106+00:00",
+  "host": "DESKTOP-LA7CMTA",
+  "platform": "Windows-10-10.0.19045-SP0",
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "executable": "C:\\Users\\minec\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\python.exe",
+  "namespace": "C:\\Users\\minec\\AppData\\Local\\Temp\\hamon-freight-packet-names-713adaab-fixed-87da595f4f5048d0bb28108ba7a7fbe3",
+  "native_source_commit": "5f7c0b7692563f8ee7c006aeda35a3083c590460",
+  "native_source_tree": "d124f575b46b6d0b0ed4cc60321014cdaac1e89c",
+  "upstream_base_commit": "5a70e458ed455d47ef672ed9b5a614ec59812f0c",
+  "source_manifest_sha256": "b360627b7101e281ad7d3179039cb16272c8908fac3e91be4ee09eaa86dce546",
+  "driver_sha256": "9338da3cafa48c285ebfea7cdecbf8a00e49cdc3bebc79be219acbc85a7a6ca5",
+  "baseline_report_sha256": "330c572343fce76fff48cfe130a14e3283d5303e1ae605bd7f850f117ca75fb8",
+  "source_hashes_before": {
+    ".gitignore": "84af7338bb766c9a432d5225a90708d9869dbaa23aa419c3b47ec0857ae84284",
+    "freight_packets/freightpkt/__init__.py": "f9364708963fa65b54aae5174a816c45df417fe7d93971c3b0ff046278929706",
+    "freight_packets/freightpkt/__main__.py": "4b1afbca74a10abc3cff7b4e5a11b558bf619e45b89709faf9225a474a2a250f",
+    "freight_packets/freightpkt/cli.py": "268ced979f2863c2dac85b9e950c70e3818c827f222522f6374b4ecdcb9b8f15",
+    "freight_packets/freightpkt/detention.py": "31ca31fd3210ff680bc83291916e39ea19b82580c3a090720556afd4ef0cd76b",
+    "freight_packets/freightpkt/fines.py": "6009e9c9e8d23556e98d9d2606ffac60073597dda50026209155039ec5efcdac",
+    "freight_packets/freightpkt/handoff.py": "413290d887d045b96dd1639c34b9c769f0e730beb28dce06c654a0df36cf1a02",
+    "freight_packets/freightpkt/ingest.py": "1179675d011d55781c6de3ae806b905698df2a21fcc621ea788d73c6e29d6276",
+    "freight_packets/freightpkt/invoice_match.py": "37a9e0801de948c3b558ca7c9846b3d0eb76ec062703ee3e5132df273ff569ab",
+    "freight_packets/freightpkt/models.py": "8a24ed2cca6f45aa8a47d793620b0e2e4d573ec92209954d3f3156795e3f0e05",
+    "freight_packets/freightpkt/packet.py": "1a2742168a27d52f5999823c409346bf7023ebb6442b2d0088f4c676609aefb3",
+    "freight_packets/freightpkt/packet_names.py": "a7eac687ae9291cce4677cde7ace229a464f9e4f0e207297b910881a87b2c997",
+    "freight_packets/freightpkt/pdf.py": "c4876c50eb46c152b71690a53d32463798925c543da06434012aeba833590129",
+    "freight_packets/freightpkt/pipeline.py": "e2c034fdc0032d47942a1e732c0737e603109678bac09ad17638c461ad23a8c9",
+    "freight_packets/freightpkt/ratecon.py": "c9684e8a7eed867b015bcad8fda90e7f06452f0ca310202ec3bb8287d4064c43",
+    "freight_packets/freightpkt/synth.py": "721cdad09373b047ac0d3cd0f721154cb17366d87edd6bf34224a97b817eef24",
+    "freight_packets/freightpkt/ui.html": "cdc52a196a480df2db210870487bab84e248cf69278fb27cefbc78a89b2ad0e3",
+    "freight_packets/freightpkt/web.py": "ff4d2ef9dac9fa96e29525453a3dde1b4cf8d8852e62ec00d7e7c59b137719c7",
+    "freight_packets/HARDENING.md": "221e184d4e84d60f9827465c8d7910c6e5e1bf19d817bc0af8fc769e1c965226",
+    "freight_packets/PACKET_FILENAMES.md": "16bf0c12799ec473e078e06e31cb99f15a0adf156abbdbb799b13e3e5254fc33",
+    "freight_packets/README.md": "a8152465bff0efd8bf52af275a92acffa0ec1300593b9a20620dd155ffe8645b",
+    "freight_packets/tests/conftest.py": "d8b2869aa8eac2206b490e4b76f49d6511a6da1c99506a96dc15caada93562a8",
+    "freight_packets/tests/review_browser_smoke.cjs": "b4fba55fd2f0654fb20ff982925d826c820f6c9379625d22556c91a2f0d6b61a",
+    "freight_packets/tests/test_fines.py": "698c586648212e693d246d72b83fccd1e36b4beed00f413553fd5aacb9eaa374",
+    "freight_packets/tests/test_freight.py": "a91ba14b3af6f4109edafbe90b78a6eacc24ecdb34e0655940f4b5f73e2b137d",
+    "freight_packets/tests/test_freight_hardening.py": "415cb3b4e2f7c4076335426d3fc81c527744cb963a1248235ba576ed5be03d46",
+    "freight_packets/tests/test_invoice_header_consistency.py": "1fda13d4c63ce4e2c311323db1995bd663a660c4637bc93bfded460ee2ae57d8",
+    "freight_packets/tests/test_packet_names.py": "6e1e4c0b0ebbe98472eddb3a9e656e9f717ec8f9c5306c12eacfd8bc5b63a0bf",
+    "freight_packets/tests/test_review_decisions.py": "dbb9cb57c88e8cec39406730847996a8347dc071d4de67be9fe7b9732801568d",
+    "freight_packets/tests/test_review_handoff.py": "efb6061ccee7773fcf2149e8cc6489add4ee2210e0305a2d98801e130683a45b",
+    "LICENSE": "f6a3d0f7d08a7590f907c08d6127545ab44eff0d23b6074714ad3fb935b998bb"
+  },
+  "source_hashes_after": {
+    ".gitignore": "84af7338bb766c9a432d5225a90708d9869dbaa23aa419c3b47ec0857ae84284",
+    "freight_packets/freightpkt/__init__.py": "f9364708963fa65b54aae5174a816c45df417fe7d93971c3b0ff046278929706",
+    "freight_packets/freightpkt/__main__.py": "4b1afbca74a10abc3cff7b4e5a11b558bf619e45b89709faf9225a474a2a250f",
+    "freight_packets/freightpkt/cli.py": "268ced979f2863c2dac85b9e950c70e3818c827f222522f6374b4ecdcb9b8f15",
+    "freight_packets/freightpkt/detention.py": "31ca31fd3210ff680bc83291916e39ea19b82580c3a090720556afd4ef0cd76b",
+    "freight_packets/freightpkt/fines.py": "6009e9c9e8d23556e98d9d2606ffac60073597dda50026209155039ec5efcdac",
+    "freight_packets/freightpkt/handoff.py": "413290d887d045b96dd1639c34b9c769f0e730beb28dce06c654a0df36cf1a02",
+    "freight_packets/freightpkt/ingest.py": "1179675d011d55781c6de3ae806b905698df2a21fcc621ea788d73c6e29d6276",
+    "freight_packets/freightpkt/invoice_match.py": "37a9e0801de948c3b558ca7c9846b3d0eb76ec062703ee3e5132df273ff569ab",
+    "freight_packets/freightpkt/models.py": "8a24ed2cca6f45aa8a47d793620b0e2e4d573ec92209954d3f3156795e3f0e05",
+    "freight_packets/freightpkt/packet.py": "1a2742168a27d52f5999823c409346bf7023ebb6442b2d0088f4c676609aefb3",
+    "freight_packets/freightpkt/packet_names.py": "a7eac687ae9291cce4677cde7ace229a464f9e4f0e207297b910881a87b2c997",
+    "freight_packets/freightpkt/pdf.py": "c4876c50eb46c152b71690a53d32463798925c543da06434012aeba833590129",
+    "freight_packets/freightpkt/pipeline.py": "e2c034fdc0032d47942a1e732c0737e603109678bac09ad17638c461ad23a8c9",
+    "freight_packets/freightpkt/ratecon.py": "c9684e8a7eed867b015bcad8fda90e7f06452f0ca310202ec3bb8287d4064c43",
+    "freight_packets/freightpkt/synth.py": "721cdad09373b047ac0d3cd0f721154cb17366d87edd6bf34224a97b817eef24",
+    "freight_packets/freightpkt/ui.html": "cdc52a196a480df2db210870487bab84e248cf69278fb27cefbc78a89b2ad0e3",
+    "freight_packets/freightpkt/web.py": "ff4d2ef9dac9fa96e29525453a3dde1b4cf8d8852e62ec00d7e7c59b137719c7",
+    "freight_packets/HARDENING.md": "221e184d4e84d60f9827465c8d7910c6e5e1bf19d817bc0af8fc769e1c965226",
+    "freight_packets/PACKET_FILENAMES.md": "16bf0c12799ec473e078e06e31cb99f15a0adf156abbdbb799b13e3e5254fc33",
+    "freight_packets/README.md": "a8152465bff0efd8bf52af275a92acffa0ec1300593b9a20620dd155ffe8645b",
+    "freight_packets/tests/conftest.py": "d8b2869aa8eac2206b490e4b76f49d6511a6da1c99506a96dc15caada93562a8",
+    "freight_packets/tests/review_browser_smoke.cjs": "b4fba55fd2f0654fb20ff982925d826c820f6c9379625d22556c91a2f0d6b61a",
+    "freight_packets/tests/test_fines.py": "698c586648212e693d246d72b83fccd1e36b4beed00f413553fd5aacb9eaa374",
+    "freight_packets/tests/test_freight.py": "a91ba14b3af6f4109edafbe90b78a6eacc24ecdb34e0655940f4b5f73e2b137d",
+    "freight_packets/tests/test_freight_hardening.py": "415cb3b4e2f7c4076335426d3fc81c527744cb963a1248235ba576ed5be03d46",
+    "freight_packets/tests/test_invoice_header_consistency.py": "1fda13d4c63ce4e2c311323db1995bd663a660c4637bc93bfded460ee2ae57d8",
+    "freight_packets/tests/test_packet_names.py": "6e1e4c0b0ebbe98472eddb3a9e656e9f717ec8f9c5306c12eacfd8bc5b63a0bf",
+    "freight_packets/tests/test_review_decisions.py": "dbb9cb57c88e8cec39406730847996a8347dc071d4de67be9fe7b9732801568d",
+    "freight_packets/tests/test_review_handoff.py": "efb6061ccee7773fcf2149e8cc6489add4ee2210e0305a2d98801e130683a45b",
+    "LICENSE": "f6a3d0f7d08a7590f907c08d6127545ab44eff0d23b6074714ad3fb935b998bb"
+  },
+  "source_unchanged": true,
+  "cases": [
+    {
+      "name": "ordinary",
+      "argv": [
+        "C:\\Users\\minec\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\python.exe",
+        "-B",
+        "-m",
+        "freightpkt",
+        "run",
+        "--data",
+        "C:\\Users\\minec\\AppData\\Local\\Temp\\hamon-freight-packet-names-713adaab-fixed-87da595f4f5048d0bb28108ba7a7fbe3\\ordinary\\data",
+        "--out",
+        "C:\\Users\\minec\\AppData\\Local\\Temp\\hamon-freight-packet-names-713adaab-fixed-87da595f4f5048d0bb28108ba7a7fbe3\\ordinary\\out"
+      ],
+      "cwd": "C:\\Users\\minec\\AppData\\Local\\Temp\\hamon-freight-packet-names-713adaab-fixed-87da595f4f5048d0bb28108ba7a7fbe3\\source\\freight_packets",
+      "returncode": 0,
+      "stdout_sha256": "d07d1c91279fe61a75e5f2371af5b46b11a332084a2ed0197ee9bd979ab12b97",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "baseline_summary_sha256": "8fc6e930ab03f60eb06d750fd269e44f8233cab05de9ba663b9394d44fa77995",
+      "summary_sha256": "f39b6f65c4b8cef502b09bf663ca7c6a9bfaadaa997c2f33675ff8fbe3d10b91",
+      "input_hashes_before": {
+        "carrier_invoices.csv": "fd7f7184a3da06edd6dc5dde77d1e5d353021a5a4c04f8c8d5cd46f38a55e500",
+        "disputes.csv": "0b86c24f93a057292dac5decfb3043c420bdba19c6dbd3aa4015d69a65b103d7",
+        "documents.csv": "f7edc8ab95db71b4209cde7195944b92b17a954edf1755e9fe88ec5767693420",
+        "expected.json": "4752314ce4ac22d1f7a7072d34e359141433f902a5fba23cc27776ceb052efa9",
+        "fines_schedule.csv": "b00ec42105ab1258b2a37274f0cb1dad18a9f403af6dba740493e96e22846985",
+        "loads.csv": "3973d25133ba4c3fc8ba8f3c80d849884709e0f99d2496149556be343b8c063e",
+        "ratecons/RC-48000.txt": "cf712b666bdfeaf859521cc4a976d9368a7acf2b65bfdbfcb1776036e0ff9e08",
+        "ratecons/RC-48001.txt": "257d689fd7c030181e69cfcfa8a7f4f91e7a50d1865670058f333bb7b70a20a9",
+        "ratecons/RC-48002.txt": "0c8af1911dc492ed6ff8dd00e39669669a401df568c2524ddf84566e9bbcecef",
+        "ratecons/RC-48003.txt": "321cd318251f79da26e123b882ea43e29b445d84e816e2f69357688d84f9cf2e",
+        "ratecons/RC-48004.txt": "0f1b0c27ee30280005fe3feea31207e20f4c47a038431643530072dc3c006e42",
+        "ratecons/RC-48005.txt": "fb763e9895d410b91655be5747aa65baa2238a5e7890bf4d215c90eb27a9403c",
+        "ratecons/RC-48006.txt": "ba895cb28e1f043b91b4960df96a76ade93dedf08db116dbdac8d272043cc606",
+        "ratecons/RC-48007.txt": "8f432838aa5ef714917c6f6cb40fe69203638f11797995989688beea96c8ea53",
+        "README_SYNTHETIC.txt": "6d1d4643a5499901036bddd7703825ca8fe66b4250834eba23e603f107344c60",
+        "telematics.csv": "3b0f0b6de080bbdd79880341627004bc53546e61d3841c6a524b96085f674043",
+        "telematics_extra.json": "521aea16e995ee60ac24f9b16e0cad49df92ef507e7a8699e34edc899b22ac25",
+        "tracking_stops.csv": "9efdafd3912930c84d21d5a9cd8bf5f3cf89e301dff31abce4f6109e68c71c8f"
+      },
+      "input_hashes_after": {
+        "carrier_invoices.csv": "fd7f7184a3da06edd6dc5dde77d1e5d353021a5a4c04f8c8d5cd46f38a55e500",
+        "disputes.csv": "0b86c24f93a057292dac5decfb3043c420bdba19c6dbd3aa4015d69a65b103d7",
+        "documents.csv": "f7edc8ab95db71b4209cde7195944b92b17a954edf1755e9fe88ec5767693420",
+        "expected.json": "4752314ce4ac22d1f7a7072d34e359141433f902a5fba23cc27776ceb052efa9",
+        "fines_schedule.csv": "b00ec42105ab1258b2a37274f0cb1dad18a9f403af6dba740493e96e22846985",
+        "loads.csv": "3973d25133ba4c3fc8ba8f3c80d849884709e0f99d2496149556be343b8c063e",
+        "ratecons/RC-48000.txt": "cf712b666bdfeaf859521cc4a976d9368a7acf2b65bfdbfcb1776036e0ff9e08",
+        "ratecons/RC-48001.txt": "257d689fd7c030181e69cfcfa8a7f4f91e7a50d1865670058f333bb7b70a20a9",
+        "ratecons/RC-48002.txt": "0c8af1911dc492ed6ff8dd00e39669669a401df568c2524ddf84566e9bbcecef",
+        "ratecons/RC-48003.txt": "321cd318251f79da26e123b882ea43e29b445d84e816e2f69357688d84f9cf2e",
+        "ratecons/RC-48004.txt": "0f1b0c27ee30280005fe3feea31207e20f4c47a038431643530072dc3c006e42",
+        "ratecons/RC-48005.txt": "fb763e9895d410b91655be5747aa65baa2238a5e7890bf4d215c90eb27a9403c",
+        "ratecons/RC-48006.txt": "ba895cb28e1f043b91b4960df96a76ade93dedf08db116dbdac8d272043cc606",
+        "ratecons/RC-48007.txt": "8f432838aa5ef714917c6f6cb40fe69203638f11797995989688beea96c8ea53",
+        "README_SYNTHETIC.txt": "6d1d4643a5499901036bddd7703825ca8fe66b4250834eba23e603f107344c60",
+        "telematics.csv": "3b0f0b6de080bbdd79880341627004bc53546e61d3841c6a524b96085f674043",
+        "telematics_extra.json": "521aea16e995ee60ac24f9b16e0cad49df92ef507e7a8699e34edc899b22ac25",
+        "tracking_stops.csv": "9efdafd3912930c84d21d5a9cd8bf5f3cf89e301dff31abce4f6109e68c71c8f"
+      },
+      "declared_packets": [
+        {
+          "load_id": "LD260900",
+          "file": "packets/LD260900.html",
+          "detention_cents": 22500,
+          "claim_ids": [
+            "DET-FDC41B9FE7"
+          ],
+          "late_stops": [],
+          "is_file": true,
+          "title_matches_logical_id": true,
+          "sha256": "549c92d187f0212ca4d68e7e63013fc950b91c61034c8141b2d9bb3e945904b8"
+        },
+        {
+          "load_id": "LD260907",
+          "file": "packets/LD260907.html",
+          "detention_cents": 16875,
+          "claim_ids": [
+            "DET-129C1A149C"
+          ],
+          "late_stops": [],
+          "is_file": true,
+          "title_matches_logical_id": true,
+          "sha256": "044990a7b09db271f4dbc6fa4b9d530fbb6b27e3bf208438d4766f4dfe73a24b"
+        },
+        {
+          "load_id": "LD260914",
+          "file": "packets/LD260914.html",
+          "detention_cents": 6000,
+          "claim_ids": [
+            "DET-B34A842BB1"
+          ],
+          "late_stops": [],
+          "is_file": true,
+          "title_matches_logical_id": true,
+          "sha256": "52f5b30cd9ea4d9e554eec8ee1927ff3daebd495bab6a9c13af61000e1ddc210"
+        },
+        {
+          "load_id": "LD260921",
+          "file": "packets/LD260921.html",
+          "detention_cents": 16500,
+          "claim_ids": [
+            "DET-6AA0C0374F"
+          ],
+          "late_stops": [],
+          "is_file": true,
+          "title_matches_logical_id": true,
+          "sha256": "1bcd8a0afb4c39555a00b62aff82f607b9d7d3539b4c8c6c0c7bb6621fefbf85"
+        },
+        {
+          "load_id": "LD260928",
+          "file": "packets/LD260928.html",
+          "detention_cents": 4500,
+          "claim_ids": [
+            "DET-70E434F598"
+          ],
+          "late_stops": [],
+          "is_file": true,
+          "title_matches_logical_id": true,
+          "sha256": "d5918feaeadadd94989c06a0fecc22e9959fc519eb6d4ddc1fb629f121720b5f"
+        },
+        {
+          "load_id": "LD260935",
+          "file": "packets/LD260935.html",
+          "detention_cents": 9375,
+          "claim_ids": [
+            "DET-6747007A8F"
+          ],
+          "late_stops": [],
+          "is_file": true,
+          "title_matches_logical_id": true,
+          "sha256": "c2c2443c6cc5fc950491631fc4f964eae18ff501584a85cdbe33220a5827e404"
+        },
+        {
+          "load_id": "LD260949",
+          "file": "packets/LD260949.html",
+          "detention_cents": 7500,
+          "claim_ids": [
+            "DET-66F6B49517"
+          ],
+          "late_stops": [],
+          "is_file": true,
+          "title_matches_logical_id": true,
+          "sha256": "07f49f671c31d5444ae4f977a19489bff13c387b441aa45622961b2a0c619bef"
+        }
+      ],
+      "actual_packet_files": {
+        "LD260900.html": {
+          "bytes": 5617,
+          "sha256": "549c92d187f0212ca4d68e7e63013fc950b91c61034c8141b2d9bb3e945904b8"
+        },
+        "LD260907.html": {
+          "bytes": 5272,
+          "sha256": "044990a7b09db271f4dbc6fa4b9d530fbb6b27e3bf208438d4766f4dfe73a24b"
+        },
+        "LD260914.html": {
+          "bytes": 5018,
+          "sha256": "52f5b30cd9ea4d9e554eec8ee1927ff3daebd495bab6a9c13af61000e1ddc210"
+        },
+        "LD260921.html": {
+          "bytes": 5541,
+          "sha256": "1bcd8a0afb4c39555a00b62aff82f607b9d7d3539b4c8c6c0c7bb6621fefbf85"
+        },
+        "LD260928.html": {
+          "bytes": 5372,
+          "sha256": "d5918feaeadadd94989c06a0fecc22e9959fc519eb6d4ddc1fb629f121720b5f"
+        },
+        "LD260935.html": {
+          "bytes": 5125,
+          "sha256": "c2c2443c6cc5fc950491631fc4f964eae18ff501584a85cdbe33220a5827e404"
+        },
+        "LD260949.html": {
+          "bytes": 5276,
+          "sha256": "07f49f671c31d5444ae4f977a19489bff13c387b441aa45622961b2a0c619bef"
+        }
+      },
+      "physical_aliases": [],
+      "monetary_and_rule_projection": {
+        "counts": {
+          "events": 37,
+          "loads": 8,
+          "stops": 16,
+          "detention_stops": 7,
+          "late_arrivals": 0,
+          "exceptions": 1,
+          "invoices": 8,
+          "invoice_flags": 3,
+          "packets": 7,
+          "fines": 5,
+          "settlement_ready": 8,
+          "settlement_hold": 0
+        },
+        "detention_total_cents": 83250,
+        "fines_total_cents": 20000,
+        "net_payable_ready_cents": 2113014,
+        "packets_except_filename": [
+          {
+            "load_id": "LD260900",
+            "detention_cents": 22500,
+            "claim_ids": [
+              "DET-FDC41B9FE7"
+            ],
+            "late_stops": []
+          },
+          {
+            "load_id": "LD260907",
+            "detention_cents": 16875,
+            "claim_ids": [
+              "DET-129C1A149C"
+            ],
+            "late_stops": []
+          },
+          {
+            "load_id": "LD260914",
+            "detention_cents": 6000,
+            "claim_ids": [
+              "DET-B34A842BB1"
+            ],
+            "late_stops": []
+          },
+          {
+            "load_id": "LD260921",
+            "detention_cents": 16500,
+            "claim_ids": [
+              "DET-6AA0C0374F"
+            ],
+            "late_stops": []
+          },
+          {
+            "load_id": "LD260928",
+            "detention_cents": 4500,
+            "claim_ids": [
+              "DET-70E434F598"
+            ],
+            "late_stops": []
+          },
+          {
+            "load_id": "LD260935",
+            "detention_cents": 9375,
+            "claim_ids": [
+              "DET-6747007A8F"
+            ],
+            "late_stops": []
+          },
+          {
+            "load_id": "LD260949",
+            "detention_cents": 7500,
+            "claim_ids": [
+              "DET-66F6B49517"
+            ],
+            "late_stops": []
+          }
+        ],
+        "stop_rule_results": [
+          {
+            "load_id": "LD260900",
+            "stop_index": 1,
+            "status": "ok",
+            "billable_minutes": 0,
+            "amount_cents": 0,
+            "claim_id": "DET-91029840C9"
+          },
+          {
+            "load_id": "LD260900",
+            "stop_index": 2,
+            "status": "detention",
+            "billable_minutes": 180,
+            "amount_cents": 22500,
+            "claim_id": "DET-FDC41B9FE7"
+          },
+          {
+            "load_id": "LD260907",
+            "stop_index": 1,
+            "status": "ok",
+            "billable_minutes": 0,
+            "amount_cents": 0,
+            "claim_id": "DET-5CB9C8C54A"
+          },
+          {
+            "load_id": "LD260907",
+            "stop_index": 2,
+            "status": "detention",
+            "billable_minutes": 135,
+            "amount_cents": 16875,
+            "claim_id": "DET-129C1A149C"
+          },
+          {
+            "load_id": "LD260914",
+            "stop_index": 1,
+            "status": "detention",
+            "billable_minutes": 60,
+            "amount_cents": 6000,
+            "claim_id": "DET-B34A842BB1"
+          },
+          {
+            "load_id": "LD260914",
+            "stop_index": 2,
+            "status": "ok",
+            "billable_minutes": 0,
+            "amount_cents": 0,
+            "claim_id": "DET-57073A48B2"
+          },
+          {
+            "load_id": "LD260921",
+            "stop_index": 1,
+            "status": "detention",
+            "billable_minutes": 165,
+            "amount_cents": 16500,
+            "claim_id": "DET-6AA0C0374F"
+          },
+          {
+            "load_id": "LD260921",
+            "stop_index": 2,
+            "status": "ok",
+            "billable_minutes": 0,
+            "amount_cents": 0,
+            "claim_id": "DET-BB658819D5"
+          },
+          {
+            "load_id": "LD260928",
+            "stop_index": 1,
+            "status": "ok",
+            "billable_minutes": 0,
+            "amount_cents": 0,
+            "claim_id": "DET-9DB6B28F3C"
+          },
+          {
+            "load_id": "LD260928",
+            "stop_index": 2,
+            "status": "detention",
+            "billable_minutes": 45,
+            "amount_cents": 4500,
+            "claim_id": "DET-70E434F598"
+          },
+          {
+            "load_id": "LD260935",
+            "stop_index": 1,
+            "status": "ok",
+            "billable_minutes": 0,
+            "amount_cents": 0,
+            "claim_id": "DET-DE6B2BE33E"
+          },
+          {
+            "load_id": "LD260935",
+            "stop_index": 2,
+            "status": "detention",
+            "billable_minutes": 75,
+            "amount_cents": 9375,
+            "claim_id": "DET-6747007A8F"
+          },
+          {
+            "load_id": "LD260942",
+            "stop_index": 1,
+            "status": "ok",
+            "billable_minutes": 0,
+            "amount_cents": 0,
+            "claim_id": "DET-D1F00D4F16"
+          },
+          {
+            "load_id": "LD260942",
+            "stop_index": 2,
+            "status": "exception",
+            "billable_minutes": 0,
+            "amount_cents": 0,
+            "claim_id": "DET-06BE71B556"
+          },
+          {
+            "load_id": "LD260949",
+            "stop_index": 1,
+            "status": "detention",
+            "billable_minutes": 75,
+            "amount_cents": 7500,
+            "claim_id": "DET-66F6B49517"
+          },
+          {
+            "load_id": "LD260949",
+            "stop_index": 2,
+            "status": "ok",
+            "billable_minutes": 0,
+            "amount_cents": 0,
+            "claim_id": "DET-955D5A7E10"
+          }
+        ],
+        "flags_except_evidence": [
+          {
+            "invoice_no": "CAL-7101",
+            "load_id": "LD260907",
+            "carrier": "Caliche Carriers LLC",
+            "code": "LINEHAUL_MISMATCH",
+            "detail": "linehaul: invoiced $1,532.00 vs rate-con $1,382.00",
+            "invoiced_cents": 153200,
+            "expected_cents": 138200,
+            "variance_cents": 15000
+          },
+          {
+            "invoice_no": "CAL-7104",
+            "load_id": "LD260928",
+            "carrier": "Caliche Carriers LLC",
+            "code": "FUEL_MISMATCH",
+            "detail": "fuel surcharge: invoiced $656.77 vs rate-con $614.02",
+            "invoiced_cents": 65677,
+            "expected_cents": 61402,
+            "variance_cents": 4275
+          },
+          {
+            "invoice_no": "CAL-7107",
+            "load_id": "LD260949",
+            "carrier": "Caliche Carriers LLC",
+            "code": "DETENTION_UNSUPPORTED",
+            "detail": "detention invoiced $200.00 but telematics supports $75.00",
+            "invoiced_cents": 20000,
+            "expected_cents": 7500,
+            "variance_cents": 12500
+          }
+        ],
+        "settlements_except_evidence": [
+          {
+            "invoice_no": "BLU-7100",
+            "load_id": "LD260900",
+            "carrier": "Blue Mesa Transport (asset)",
+            "invoiced_cents": 249922,
+            "approved_cents": 249922,
+            "fines_cents": 0,
+            "net_cents": 249922,
+            "status": "READY",
+            "hold_reasons": [],
+            "notes": []
+          },
+          {
+            "invoice_no": "CAL-7101",
+            "load_id": "LD260907",
+            "carrier": "Caliche Carriers LLC",
+            "invoiced_cents": 222125,
+            "approved_cents": 207125,
+            "fines_cents": 5000,
+            "net_cents": 202125,
+            "status": "READY",
+            "hold_reasons": [],
+            "notes": [
+              "short-pay vs invoice: see invoice flags"
+            ]
+          },
+          {
+            "invoice_no": "PEC-7102",
+            "load_id": "LD260914",
+            "carrier": "Pecos Freightways Inc",
+            "invoiced_cents": 232206,
+            "approved_cents": 232206,
+            "fines_cents": 5000,
+            "net_cents": 227206,
+            "status": "READY",
+            "hold_reasons": [],
+            "notes": []
+          },
+          {
+            "invoice_no": "BLU-7103",
+            "load_id": "LD260921",
+            "carrier": "Blue Mesa Transport (asset)",
+            "invoiced_cents": 300570,
+            "approved_cents": 300570,
+            "fines_cents": 0,
+            "net_cents": 300570,
+            "status": "READY",
+            "hold_reasons": [],
+            "notes": []
+          },
+          {
+            "invoice_no": "CAL-7104",
+            "load_id": "LD260928",
+            "carrier": "Caliche Carriers LLC",
+            "invoiced_cents": 349277,
+            "approved_cents": 345002,
+            "fines_cents": 0,
+            "net_cents": 345002,
+            "status": "READY",
+            "hold_reasons": [],
+            "notes": [
+              "LATE_POD FINE-D6198BB6B7 disputed in window: not deducted",
+              "short-pay vs invoice: see invoice flags"
+            ]
+          },
+          {
+            "invoice_no": "PEC-7105",
+            "load_id": "LD260935",
+            "carrier": "Pecos Freightways Inc",
+            "invoiced_cents": 188499,
+            "approved_cents": 188499,
+            "fines_cents": 5000,
+            "net_cents": 183499,
+            "status": "READY",
+            "hold_reasons": [],
+            "notes": []
+          },
+          {
+            "invoice_no": "BLU-7106",
+            "load_id": "LD260942",
+            "carrier": "Blue Mesa Transport (asset)",
+            "invoiced_cents": 296652,
+            "approved_cents": 296652,
+            "fines_cents": 0,
+            "net_cents": 296652,
+            "status": "READY",
+            "hold_reasons": [],
+            "notes": []
+          },
+          {
+            "invoice_no": "CAL-7107",
+            "load_id": "LD260949",
+            "carrier": "Caliche Carriers LLC",
+            "invoiced_cents": 325538,
+            "approved_cents": 313038,
+            "fines_cents": 5000,
+            "net_cents": 308038,
+            "status": "READY",
+            "hold_reasons": [],
+            "notes": [
+              "short-pay vs invoice: see invoice flags"
+            ]
+          }
+        ]
+      },
+      "baseline_monetary_and_rule_projection": {
+        "counts": {
+          "events": 37,
+          "loads": 8,
+          "stops": 16,
+          "detention_stops": 7,
+          "late_arrivals": 0,
+          "exceptions": 1,
+          "invoices": 8,
+          "invoice_flags": 3,
+          "packets": 7,
+          "fines": 5,
+          "settlement_ready": 8,
+          "settlement_hold": 0
+        },
+        "detention_total_cents": 83250,
+        "fines_total_cents": 20000,
+        "net_payable_ready_cents": 2113014,
+        "packets_except_filename": [
+          {
+            "load_id": "LD260900",
+            "detention_cents": 22500,
+            "claim_ids": [
+              "DET-FDC41B9FE7"
+            ],
+            "late_stops": []
+          },
+          {
+            "load_id": "LD260907",
+            "detention_cents": 16875,
+            "claim_ids": [
+              "DET-129C1A149C"
+            ],
+            "late_stops": []
+          },
+          {
+            "load_id": "LD260914",
+            "detention_cents": 6000,
+            "claim_ids": [
+              "DET-B34A842BB1"
+            ],
+            "late_stops": []
+          },
+          {
+            "load_id": "LD260921",
+            "detention_cents": 16500,
+            "claim_ids": [
+              "DET-6AA0C0374F"
+            ],
+            "late_stops": []
+          },
+          {
+            "load_id": "LD260928",
+            "detention_cents": 4500,
+            "claim_ids": [
+              "DET-70E434F598"
+            ],
+            "late_stops": []
+          },
+          {
+            "load_id": "LD260935",
+            "detention_cents": 9375,
+            "claim_ids": [
+              "DET-6747007A8F"
+            ],
+            "late_stops": []
+          },
+          {
+            "load_id": "LD260949",
+            "detention_cents": 7500,
+            "claim_ids": [
+              "DET-66F6B49517"
+            ],
+            "late_stops": []
+          }
+        ],
+        "stop_rule_results": [
+          {
+            "load_id": "LD260900",
+            "stop_index": 1,
+            "status": "ok",
+            "billable_minutes": 0,
+            "amount_cents": 0,
+            "claim_id": "DET-91029840C9"
+          },
+          {
+            "load_id": "LD260900",
+            "stop_index": 2,
+            "status": "detention",
+            "billable_minutes": 180,
+            "amount_cents": 22500,
+            "claim_id": "DET-FDC41B9FE7"
+          },
+          {
+            "load_id": "LD260907",
+            "stop_index": 1,
+            "status": "ok",
+            "billable_minutes": 0,
+            "amount_cents": 0,
+            "claim_id": "DET-5CB9C8C54A"
+          },
+          {
+            "load_id": "LD260907",
+            "stop_index": 2,
+            "status": "detention",
+            "billable_minutes": 135,
+            "amount_cents": 16875,
+            "claim_id": "DET-129C1A149C"
+          },
+          {
+            "load_id": "LD260914",
+            "stop_index": 1,
+            "status": "detention",
+            "billable_minutes": 60,
+            "amount_cents": 6000,
+            "claim_id": "DET-B34A842BB1"
+          },
+          {
+            "load_id": "LD260914",
+            "stop_index": 2,
+            "status": "ok",
+            "billable_minutes": 0,
+            "amount_cents": 0,
+            "claim_id": "DET-57073A48B2"
+          },
+          {
+            "load_id": "LD260921",
+            "stop_index": 1,
+            "status": "detention",
+            "billable_minutes": 165,
+            "amount_cents": 16500,
+            "claim_id": "DET-6AA0C0374F"
+          },
+          {
+            "load_id": "LD260921",
+            "stop_index": 2,
+            "status": "ok",
+            "billable_minutes": 0,
+            "amount_cents": 0,
+            "claim_id": "DET-BB658819D5"
+          },
+          {
+            "load_id": "LD260928",
+            "stop_index": 1,
+            "status": "ok",
+            "billable_minutes": 0,
+            "amount_cents": 0,
+            "claim_id": "DET-9DB6B28F3C"
+          },
+          {
+            "load_id": "LD260928",
+            "stop_index": 2,
+            "status": "detention",
+            "billable_minutes": 45,
+            "amount_cents": 4500,
+            "claim_id": "DET-70E434F598"
+          },
+          {
+            "load_id": "LD260935",
+            "stop_index": 1,
+            "status": "ok",
+            "billable_minutes": 0,
+            "amount_cents": 0,
+            "claim_id": "DET-DE6B2BE33E"
+          },
+          {
+            "load_id": "LD260935",
+            "stop_index": 2,
+            "status": "detention",
+            "billable_minutes": 75,
+            "amount_cents": 9375,
+            "claim_id": "DET-6747007A8F"
+          },
+          {
+            "load_id": "LD260942",
+            "stop_index": 1,
+            "status": "ok",
+            "billable_minutes": 0,
+            "amount_cents": 0,
+            "claim_id": "DET-D1F00D4F16"
+          },
+          {
+            "load_id": "LD260942",
+            "stop_index": 2,
+            "status": "exception",
+            "billable_minutes": 0,
+            "amount_cents": 0,
+            "claim_id": "DET-06BE71B556"
+          },
+          {
+            "load_id": "LD260949",
+            "stop_index": 1,
+            "status": "detention",
+            "billable_minutes": 75,
+            "amount_cents": 7500,
+            "claim_id": "DET-66F6B49517"
+          },
+          {
+            "load_id": "LD260949",
+            "stop_index": 2,
+            "status": "ok",
+            "billable_minutes": 0,
+            "amount_cents": 0,
+            "claim_id": "DET-955D5A7E10"
+          }
+        ],
+        "flags_except_evidence": [
+          {
+            "invoice_no": "CAL-7101",
+            "load_id": "LD260907",
+            "carrier": "Caliche Carriers LLC",
+            "code": "LINEHAUL_MISMATCH",
+            "detail": "linehaul: invoiced $1,532.00 vs rate-con $1,382.00",
+            "invoiced_cents": 153200,
+            "expected_cents": 138200,
+            "variance_cents": 15000
+          },
+          {
+            "invoice_no": "CAL-7104",
+            "load_id": "LD260928",
+            "carrier": "Caliche Carriers LLC",
+            "code": "FUEL_MISMATCH",
+            "detail": "fuel surcharge: invoiced $656.77 vs rate-con $614.02",
+            "invoiced_cents": 65677,
+            "expected_cents": 61402,
+            "variance_cents": 4275
+          },
+          {
+            "invoice_no": "CAL-7107",
+            "load_id": "LD260949",
+            "carrier": "Caliche Carriers LLC",
+            "code": "DETENTION_UNSUPPORTED",
+            "detail": "detention invoiced $200.00 but telematics supports $75.00",
+            "invoiced_cents": 20000,
+            "expected_cents": 7500,
+            "variance_cents": 12500
+          }
+        ],
+        "settlements_except_evidence": [
+          {
+            "invoice_no": "BLU-7100",
+            "load_id": "LD260900",
+            "carrier": "Blue Mesa Transport (asset)",
+            "invoiced_cents": 249922,
+            "approved_cents": 249922,
+            "fines_cents": 0,
+            "net_cents": 249922,
+            "status": "READY",
+            "hold_reasons": [],
+            "notes": []
+          },
+          {
+            "invoice_no": "CAL-7101",
+            "load_id": "LD260907",
+            "carrier": "Caliche Carriers LLC",
+            "invoiced_cents": 222125,
+            "approved_cents": 207125,
+            "fines_cents": 5000,
+            "net_cents": 202125,
+            "status": "READY",
+            "hold_reasons": [],
+            "notes": [
+              "short-pay vs invoice: see invoice flags"
+            ]
+          },
+          {
+            "invoice_no": "PEC-7102",
+            "load_id": "LD260914",
+            "carrier": "Pecos Freightways Inc",
+            "invoiced_cents": 232206,
+            "approved_cents": 232206,
+            "fines_cents": 5000,
+            "net_cents": 227206,
+            "status": "READY",
+            "hold_reasons": [],
+            "notes": []
+          },
+          {
+            "invoice_no": "BLU-7103",
+            "load_id": "LD260921",
+            "carrier": "Blue Mesa Transport (asset)",
+            "invoiced_cents": 300570,
+            "approved_cents": 300570,
+            "fines_cents": 0,
+            "net_cents": 300570,
+            "status": "READY",
+            "hold_reasons": [],
+            "notes": []
+          },
+          {
+            "invoice_no": "CAL-7104",
+            "load_id": "LD260928",
+            "carrier": "Caliche Carriers LLC",
+            "invoiced_cents": 349277,
+            "approved_cents": 345002,
+            "fines_cents": 0,
+            "net_cents": 345002,
+            "status": "READY",
+            "hold_reasons": [],
+            "notes": [
+              "LATE_POD FINE-D6198BB6B7 disputed in window: not deducted",
+              "short-pay vs invoice: see invoice flags"
+            ]
+          },
+          {
+            "invoice_no": "PEC-7105",
+            "load_id": "LD260935",
+            "carrier": "Pecos Freightways Inc",
+            "invoiced_cents": 188499,
+            "approved_cents": 188499,
+            "fines_cents": 5000,
+            "net_cents": 183499,
+            "status": "READY",
+            "hold_reasons": [],
+            "notes": []
+          },
+          {
+            "invoice_no": "BLU-7106",
+            "load_id": "LD260942",
+            "carrier": "Blue Mesa Transport (asset)",
+            "invoiced_cents": 296652,
+            "approved_cents": 296652,
+            "fines_cents": 0,
+            "net_cents": 296652,
+            "status": "READY",
+            "hold_reasons": [],
+            "notes": []
+          },
+          {
+            "invoice_no": "CAL-7107",
+            "load_id": "LD260949",
+            "carrier": "Caliche Carriers LLC",
+            "invoiced_cents": 325538,
+            "approved_cents": 313038,
+            "fines_cents": 5000,
+            "net_cents": 308038,
+            "status": "READY",
+            "hold_reasons": [],
+            "notes": [
+              "short-pay vs invoice: see invoice flags"
+            ]
+          }
+        ]
+      },
+      "audit_file_map": {
+        "LD260900": "LD260900.html",
+        "LD260907": "LD260907.html",
+        "LD260914": "LD260914.html",
+        "LD260921": "LD260921.html",
+        "LD260928": "LD260928.html",
+        "LD260935": "LD260935.html",
+        "LD260949": "LD260949.html"
+      },
+      "consumer_receipts": [
+        {
+          "load_id": "LD260900",
+          "file": "packets/LD260900.html",
+          "download_name": "freight-review-LD260900-501ba67eb8e6.zip",
+          "packet_sha256": "549c92d187f0212ca4d68e7e63013fc950b91c61034c8141b2d9bb3e945904b8",
+          "bundle_sha256": "43765edb08a95830f95867843fa2cca761a88d9c9d5306d80d406c33d3f7ea63",
+          "bundle_bytes": 5064,
+          "bundle_path": "evidence/ordinary-bundle-0.zip",
+          "matches_retained_packet": true,
+          "bundle_matches_retained_packet": true,
+          "evidence_version": "501ba67eb8e63089013264f7943f41f3484b56d2ac789fc7630da16a3b2794ad",
+          "review_version": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+        }
+      ],
+      "output_hashes_before_consumer": {
+        "audit.jsonl": "fdcdb7ae9efe9f8c75dc1f0e345f642f2aa79d7be47acb7a465142d00f82f849",
+        "detention_claims.csv": "12631d039714f69c380d0452e9addf889a960ebcec3a592af9ba8f36937f5ca5",
+        "exceptions.csv": "9f32ea7e17c8d2b47eb5dbeba3c83682fc896a4062138c946d9a75aff3ae21dd",
+        "fines.csv": "d7cdaf4164098f6d41c63cc8a2ad0cf3b509c183fa78879d51d8f63c46e065c6",
+        "invoice_flags.csv": "cf7b3d9fef5feb9731e117aff0cadb258b8052ac0541ca1e751cac810a51ffa1",
+        "packets/LD260900.html": "549c92d187f0212ca4d68e7e63013fc950b91c61034c8141b2d9bb3e945904b8",
+        "packets/LD260907.html": "044990a7b09db271f4dbc6fa4b9d530fbb6b27e3bf208438d4766f4dfe73a24b",
+        "packets/LD260914.html": "52f5b30cd9ea4d9e554eec8ee1927ff3daebd495bab6a9c13af61000e1ddc210",
+        "packets/LD260921.html": "1bcd8a0afb4c39555a00b62aff82f607b9d7d3539b4c8c6c0c7bb6621fefbf85",
+        "packets/LD260928.html": "d5918feaeadadd94989c06a0fecc22e9959fc519eb6d4ddc1fb629f121720b5f",
+        "packets/LD260935.html": "c2c2443c6cc5fc950491631fc4f964eae18ff501584a85cdbe33220a5827e404",
+        "packets/LD260949.html": "07f49f671c31d5444ae4f977a19489bff13c387b441aa45622961b2a0c619bef",
+        "settlement.csv": "671fecfda46545f6a5b7469c2b199e92271b8c90ca3d326bce2cea78e031c5fc",
+        "summary.json": "f39b6f65c4b8cef502b09bf663ca7c6a9bfaadaa997c2f33675ff8fbe3d10b91"
+      },
+      "output_hashes_after_consumer": {
+        "audit.jsonl": "fdcdb7ae9efe9f8c75dc1f0e345f642f2aa79d7be47acb7a465142d00f82f849",
+        "detention_claims.csv": "12631d039714f69c380d0452e9addf889a960ebcec3a592af9ba8f36937f5ca5",
+        "exceptions.csv": "9f32ea7e17c8d2b47eb5dbeba3c83682fc896a4062138c946d9a75aff3ae21dd",
+        "fines.csv": "d7cdaf4164098f6d41c63cc8a2ad0cf3b509c183fa78879d51d8f63c46e065c6",
+        "invoice_flags.csv": "cf7b3d9fef5feb9731e117aff0cadb258b8052ac0541ca1e751cac810a51ffa1",
+        "packets/LD260900.html": "549c92d187f0212ca4d68e7e63013fc950b91c61034c8141b2d9bb3e945904b8",
+        "packets/LD260907.html": "044990a7b09db271f4dbc6fa4b9d530fbb6b27e3bf208438d4766f4dfe73a24b",
+        "packets/LD260914.html": "52f5b30cd9ea4d9e554eec8ee1927ff3daebd495bab6a9c13af61000e1ddc210",
+        "packets/LD260921.html": "1bcd8a0afb4c39555a00b62aff82f607b9d7d3539b4c8c6c0c7bb6621fefbf85",
+        "packets/LD260928.html": "d5918feaeadadd94989c06a0fecc22e9959fc519eb6d4ddc1fb629f121720b5f",
+        "packets/LD260935.html": "c2c2443c6cc5fc950491631fc4f964eae18ff501584a85cdbe33220a5827e404",
+        "packets/LD260949.html": "07f49f671c31d5444ae4f977a19489bff13c387b441aa45622961b2a0c619bef",
+        "settlement.csv": "671fecfda46545f6a5b7469c2b199e92271b8c90ca3d326bce2cea78e031c5fc",
+        "summary.json": "f39b6f65c4b8cef502b09bf663ca7c6a9bfaadaa997c2f33675ff8fbe3d10b91"
+      },
+      "observations": {
+        "cli_returned_zero": true,
+        "seven_declared_and_retained": true,
+        "all_packets_regular_and_correct": true,
+        "names_casefold_distinct": true,
+        "no_physical_aliases": true,
+        "audit_references_actual_files": true,
+        "input_bytes_equal_to_baseline_and_preserved": true,
+        "monetary_and_rule_projection_equal_to_baseline": true,
+        "consumer_returns_exact_retained_bytes": true,
+        "consumer_preserves_all_output_bytes": true,
+        "ordinary_filenames_preserved": true
+      }
+    },
+    {
+      "name": "case-pair",
+      "argv": [
+        "C:\\Users\\minec\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\python.exe",
+        "-B",
+        "-m",
+        "freightpkt",
+        "run",
+        "--data",
+        "C:\\Users\\minec\\AppData\\Local\\Temp\\hamon-freight-packet-names-713adaab-fixed-87da595f4f5048d0bb28108ba7a7fbe3\\case-pair\\data",
+        "--out",
+        "C:\\Users\\minec\\AppData\\Local\\Temp\\hamon-freight-packet-names-713adaab-fixed-87da595f4f5048d0bb28108ba7a7fbe3\\case-pair\\out"
+      ],
+      "cwd": "C:\\Users\\minec\\AppData\\Local\\Temp\\hamon-freight-packet-names-713adaab-fixed-87da595f4f5048d0bb28108ba7a7fbe3\\source\\freight_packets",
+      "returncode": 0,
+      "stdout_sha256": "802a467003a3c403bc4f81e347c01da84cd4a8364d8e041f25f0278da9432e59",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "baseline_summary_sha256": "68320d659f877f44a3bb405fa0a94292d6ec17f9a81d0f40a5a206a792c7e2ff",
+      "summary_sha256": "bdb049b4c8ae0628645a7d7a349bb9af92243305e50b2956dd7887cebe498698",
+      "input_hashes_before": {
+        "carrier_invoices.csv": "0a3484c8cbb1e18af0273d766f467360712a2d58ff9ac1c849dff2b440a78953",
+        "disputes.csv": "0b86c24f93a057292dac5decfb3043c420bdba19c6dbd3aa4015d69a65b103d7",
+        "documents.csv": "1b0a96d3dafe615ca31228cebad90f58843ae43bb1cc4b0b9b8c86577366426a",
+        "expected.json": "71deb4e5daea9ec6fb394205767ff95cf200959c429bb0768eaebde4de68c634",
+        "fines_schedule.csv": "b00ec42105ab1258b2a37274f0cb1dad18a9f403af6dba740493e96e22846985",
+        "loads.csv": "2672459a6bd40dc5e2c584346114228e0d3cbf314a37c98e03321a0a529eaa6f",
+        "ratecons/RC-48000.txt": "cf712b666bdfeaf859521cc4a976d9368a7acf2b65bfdbfcb1776036e0ff9e08",
+        "ratecons/RC-48001.txt": "5ee31c42862c5d259ab49e4f5df56a8e32b93732ff882cb8cda40810acd2d268",
+        "ratecons/RC-48002.txt": "0c8af1911dc492ed6ff8dd00e39669669a401df568c2524ddf84566e9bbcecef",
+        "ratecons/RC-48003.txt": "321cd318251f79da26e123b882ea43e29b445d84e816e2f69357688d84f9cf2e",
+        "ratecons/RC-48004.txt": "0f1b0c27ee30280005fe3feea31207e20f4c47a038431643530072dc3c006e42",
+        "ratecons/RC-48005.txt": "fb763e9895d410b91655be5747aa65baa2238a5e7890bf4d215c90eb27a9403c",
+        "ratecons/RC-48006.txt": "ba895cb28e1f043b91b4960df96a76ade93dedf08db116dbdac8d272043cc606",
+        "ratecons/RC-48007.txt": "8f432838aa5ef714917c6f6cb40fe69203638f11797995989688beea96c8ea53",
+        "README_SYNTHETIC.txt": "6d1d4643a5499901036bddd7703825ca8fe66b4250834eba23e603f107344c60",
+        "telematics.csv": "3b0f0b6de080bbdd79880341627004bc53546e61d3841c6a524b96085f674043",
+        "telematics_extra.json": "521aea16e995ee60ac24f9b16e0cad49df92ef507e7a8699e34edc899b22ac25",
+        "tracking_stops.csv": "bd3b8c6a0e08d1080c2a7bc86e8773f5316be89822ae6dabcf676d85cbaaadc8"
+      },
+      "input_hashes_after": {
+        "carrier_invoices.csv": "0a3484c8cbb1e18af0273d766f467360712a2d58ff9ac1c849dff2b440a78953",
+        "disputes.csv": "0b86c24f93a057292dac5decfb3043c420bdba19c6dbd3aa4015d69a65b103d7",
+        "documents.csv": "1b0a96d3dafe615ca31228cebad90f58843ae43bb1cc4b0b9b8c86577366426a",
+        "expected.json": "71deb4e5daea9ec6fb394205767ff95cf200959c429bb0768eaebde4de68c634",
+        "fines_schedule.csv": "b00ec42105ab1258b2a37274f0cb1dad18a9f403af6dba740493e96e22846985",
+        "loads.csv": "2672459a6bd40dc5e2c584346114228e0d3cbf314a37c98e03321a0a529eaa6f",
+        "ratecons/RC-48000.txt": "cf712b666bdfeaf859521cc4a976d9368a7acf2b65bfdbfcb1776036e0ff9e08",
+        "ratecons/RC-48001.txt": "5ee31c42862c5d259ab49e4f5df56a8e32b93732ff882cb8cda40810acd2d268",
+        "ratecons/RC-48002.txt": "0c8af1911dc492ed6ff8dd00e39669669a401df568c2524ddf84566e9bbcecef",
+        "ratecons/RC-48003.txt": "321cd318251f79da26e123b882ea43e29b445d84e816e2f69357688d84f9cf2e",
+        "ratecons/RC-48004.txt": "0f1b0c27ee30280005fe3feea31207e20f4c47a038431643530072dc3c006e42",
+        "ratecons/RC-48005.txt": "fb763e9895d410b91655be5747aa65baa2238a5e7890bf4d215c90eb27a9403c",
+        "ratecons/RC-48006.txt": "ba895cb28e1f043b91b4960df96a76ade93dedf08db116dbdac8d272043cc606",
+        "ratecons/RC-48007.txt": "8f432838aa5ef714917c6f6cb40fe69203638f11797995989688beea96c8ea53",
+        "README_SYNTHETIC.txt": "6d1d4643a5499901036bddd7703825ca8fe66b4250834eba23e603f107344c60",
+        "telematics.csv": "3b0f0b6de080bbdd79880341627004bc53546e61d3841c6a524b96085f674043",
+        "telematics_extra.json": "521aea16e995ee60ac24f9b16e0cad49df92ef507e7a8699e34edc899b22ac25",
+        "tracking_stops.csv": "bd3b8c6a0e08d1080c2a7bc86e8773f5316be89822ae6dabcf676d85cbaaadc8"
+      },
+      "declared_packets": [
+        {
+          "load_id": "LD260900",
+          "file": "packets/~4732f5b4898333a8a3c7607e91bb2aa39aba40b5dabf987b85b9f58299061264.html",
+          "detention_cents": 22500,
+          "claim_ids": [
+            "DET-FDC41B9FE7"
+          ],
+          "late_stops": [],
+          "is_file": true,
+          "title_matches_logical_id": true,
+          "sha256": "549c92d187f0212ca4d68e7e63013fc950b91c61034c8141b2d9bb3e945904b8"
+        },
+        {
+          "load_id": "ld260900",
+          "file": "packets/~558a413ace70e6f61314b3cd32f4944eaeaa6181186ee5b626028c4d5d0ca21e.html",
+          "detention_cents": 16875,
+          "claim_ids": [
+            "DET-9BCEF222E0"
+          ],
+          "late_stops": [],
+          "is_file": true,
+          "title_matches_logical_id": true,
+          "sha256": "b460ee1b4fc38fbd71b6784acd3423907878fbd7df4bc3f1844696d0d2a98868"
+        },
+        {
+          "load_id": "LD260914",
+          "file": "packets/LD260914.html",
+          "detention_cents": 6000,
+          "claim_ids": [
+            "DET-B34A842BB1"
+          ],
+          "late_stops": [],
+          "is_file": true,
+          "title_matches_logical_id": true,
+          "sha256": "52f5b30cd9ea4d9e554eec8ee1927ff3daebd495bab6a9c13af61000e1ddc210"
+        },
+        {
+          "load_id": "LD260921",
+          "file": "packets/LD260921.html",
+          "detention_cents": 16500,
+          "claim_ids": [
+            "DET-6AA0C0374F"
+          ],
+          "late_stops": [],
+          "is_file": true,
+          "title_matches_logical_id": true,
+          "sha256": "1bcd8a0afb4c39555a00b62aff82f607b9d7d3539b4c8c6c0c7bb6621fefbf85"
+        },
+        {
+          "load_id": "LD260928",
+          "file": "packets/LD260928.html",
+          "detention_cents": 4500,
+          "claim_ids": [
+            "DET-70E434F598"
+          ],
+          "late_stops": [],
+          "is_file": true,
+          "title_matches_logical_id": true,
+          "sha256": "d5918feaeadadd94989c06a0fecc22e9959fc519eb6d4ddc1fb629f121720b5f"
+        },
+        {
+          "load_id": "LD260935",
+          "file": "packets/LD260935.html",
+          "detention_cents": 9375,
+          "claim_ids": [
+            "DET-6747007A8F"
+          ],
+          "late_stops": [],
+          "is_file": true,
+          "title_matches_logical_id": true,
+          "sha256": "c2c2443c6cc5fc950491631fc4f964eae18ff501584a85cdbe33220a5827e404"
+        },
+        {
+          "load_id": "LD260949",
+          "file": "packets/LD260949.html",
+          "detention_cents": 7500,
+          "claim_ids": [
+            "DET-66F6B49517"
+          ],
+          "late_stops": [],
+          "is_file": true,
+          "title_matches_logical_id": true,
+          "sha256": "07f49f671c31d5444ae4f977a19489bff13c387b441aa45622961b2a0c619bef"
+        }
+      ],
+      "actual_packet_files": {
+        "LD260914.html": {
+          "bytes": 5018,
+          "sha256": "52f5b30cd9ea4d9e554eec8ee1927ff3daebd495bab6a9c13af61000e1ddc210"
+        },
+        "LD260921.html": {
+          "bytes": 5541,
+          "sha256": "1bcd8a0afb4c39555a00b62aff82f607b9d7d3539b4c8c6c0c7bb6621fefbf85"
+        },
+        "LD260928.html": {
+          "bytes": 5372,
+          "sha256": "d5918feaeadadd94989c06a0fecc22e9959fc519eb6d4ddc1fb629f121720b5f"
+        },
+        "LD260935.html": {
+          "bytes": 5125,
+          "sha256": "c2c2443c6cc5fc950491631fc4f964eae18ff501584a85cdbe33220a5827e404"
+        },
+        "LD260949.html": {
+          "bytes": 5276,
+          "sha256": "07f49f671c31d5444ae4f977a19489bff13c387b441aa45622961b2a0c619bef"
+        },
+        "~4732f5b4898333a8a3c7607e91bb2aa39aba40b5dabf987b85b9f58299061264.html": {
+          "bytes": 5617,
+          "sha256": "549c92d187f0212ca4d68e7e63013fc950b91c61034c8141b2d9bb3e945904b8"
+        },
+        "~558a413ace70e6f61314b3cd32f4944eaeaa6181186ee5b626028c4d5d0ca21e.html": {
+          "bytes": 5272,
+          "sha256": "b460ee1b4fc38fbd71b6784acd3423907878fbd7df4bc3f1844696d0d2a98868"
+        }
+      },
+      "physical_aliases": [],
+      "monetary_and_rule_projection": {
+        "counts": {
+          "events": 37,
+          "loads": 8,
+          "stops": 16,
+          "detention_stops": 7,
+          "late_arrivals": 0,
+          "exceptions": 1,
+          "invoices": 8,
+          "invoice_flags": 3,
+          "packets": 7,
+          "fines": 5,
+          "settlement_ready": 8,
+          "settlement_hold": 0
+        },
+        "detention_total_cents": 83250,
+        "fines_total_cents": 20000,
+        "net_payable_ready_cents": 2113014,
+        "packets_except_filename": [
+          {
+            "load_id": "LD260900",
+            "detention_cents": 22500,
+            "claim_ids": [
+              "DET-FDC41B9FE7"
+            ],
+            "late_stops": []
+          },
+          {
+            "load_id": "ld260900",
+            "detention_cents": 16875,
+            "claim_ids": [
+              "DET-9BCEF222E0"
+            ],
+            "late_stops": []
+          },
+          {
+            "load_id": "LD260914",
+            "detention_cents": 6000,
+            "claim_ids": [
+              "DET-B34A842BB1"
+            ],
+            "late_stops": []
+          },
+          {
+            "load_id": "LD260921",
+            "detention_cents": 16500,
+            "claim_ids": [
+              "DET-6AA0C0374F"
+            ],
+            "late_stops": []
+          },
+          {
+            "load_id": "LD260928",
+            "detention_cents": 4500,
+            "claim_ids": [
+              "DET-70E434F598"
+            ],
+            "late_stops": []
+          },
+          {
+            "load_id": "LD260935",
+            "detention_cents": 9375,
+            "claim_ids": [
+              "DET-6747007A8F"
+            ],
+            "late_stops": []
+          },
+          {
+            "load_id": "LD260949",
+            "detention_cents": 7500,
+            "claim_ids": [
+              "DET-66F6B49517"
+            ],
+            "late_stops": []
+          }
+        ],
+        "stop_rule_results": [
+          {
+            "load_id": "LD260900",
+            "stop_index": 1,
+            "status": "ok",
+            "billable_minutes": 0,
+            "amount_cents": 0,
+            "claim_id": "DET-91029840C9"
+          },
+          {
+            "load_id": "LD260900",
+            "stop_index": 2,
+            "status": "detention",
+            "billable_minutes": 180,
+            "amount_cents": 22500,
+            "claim_id": "DET-FDC41B9FE7"
+          },
+          {
+            "load_id": "ld260900",
+            "stop_index": 1,
+            "status": "ok",
+            "billable_minutes": 0,
+            "amount_cents": 0,
+            "claim_id": "DET-88D013700C"
+          },
+          {
+            "load_id": "ld260900",
+            "stop_index": 2,
+            "status": "detention",
+            "billable_minutes": 135,
+            "amount_cents": 16875,
+            "claim_id": "DET-9BCEF222E0"
+          },
+          {
+            "load_id": "LD260914",
+            "stop_index": 1,
+            "status": "detention",
+            "billable_minutes": 60,
+            "amount_cents": 6000,
+            "claim_id": "DET-B34A842BB1"
+          },
+          {
+            "load_id": "LD260914",
+            "stop_index": 2,
+            "status": "ok",
+            "billable_minutes": 0,
+            "amount_cents": 0,
+            "claim_id": "DET-57073A48B2"
+          },
+          {
+            "load_id": "LD260921",
+            "stop_index": 1,
+            "status": "detention",
+            "billable_minutes": 165,
+            "amount_cents": 16500,
+            "claim_id": "DET-6AA0C0374F"
+          },
+          {
+            "load_id": "LD260921",
+            "stop_index": 2,
+            "status": "ok",
+            "billable_minutes": 0,
+            "amount_cents": 0,
+            "claim_id": "DET-BB658819D5"
+          },
+          {
+            "load_id": "LD260928",
+            "stop_index": 1,
+            "status": "ok",
+            "billable_minutes": 0,
+            "amount_cents": 0,
+            "claim_id": "DET-9DB6B28F3C"
+          },
+          {
+            "load_id": "LD260928",
+            "stop_index": 2,
+            "status": "detention",
+            "billable_minutes": 45,
+            "amount_cents": 4500,
+            "claim_id": "DET-70E434F598"
+          },
+          {
+            "load_id": "LD260935",
+            "stop_index": 1,
+            "status": "ok",
+            "billable_minutes": 0,
+            "amount_cents": 0,
+            "claim_id": "DET-DE6B2BE33E"
+          },
+          {
+            "load_id": "LD260935",
+            "stop_index": 2,
+            "status": "detention",
+            "billable_minutes": 75,
+            "amount_cents": 9375,
+            "claim_id": "DET-6747007A8F"
+          },
+          {
+            "load_id": "LD260942",
+            "stop_index": 1,
+            "status": "ok",
+            "billable_minutes": 0,
+            "amount_cents": 0,
+            "claim_id": "DET-D1F00D4F16"
+          },
+          {
+            "load_id": "LD260942",
+            "stop_index": 2,
+            "status": "exception",
+            "billable_minutes": 0,
+            "amount_cents": 0,
+            "claim_id": "DET-06BE71B556"
+          },
+          {
+            "load_id": "LD260949",
+            "stop_index": 1,
+            "status": "detention",
+            "billable_minutes": 75,
+            "amount_cents": 7500,
+            "claim_id": "DET-66F6B49517"
+          },
+          {
+            "load_id": "LD260949",
+            "stop_index": 2,
+            "status": "ok",
+            "billable_minutes": 0,
+            "amount_cents": 0,
+            "claim_id": "DET-955D5A7E10"
+          }
+        ],
+        "flags_except_evidence": [
+          {
+            "invoice_no": "CAL-7104",
+            "load_id": "LD260928",
+            "carrier": "Caliche Carriers LLC",
+            "code": "FUEL_MISMATCH",
+            "detail": "fuel surcharge: invoiced $656.77 vs rate-con $614.02",
+            "invoiced_cents": 65677,
+            "expected_cents": 61402,
+            "variance_cents": 4275
+          },
+          {
+            "invoice_no": "CAL-7107",
+            "load_id": "LD260949",
+            "carrier": "Caliche Carriers LLC",
+            "code": "DETENTION_UNSUPPORTED",
+            "detail": "detention invoiced $200.00 but telematics supports $75.00",
+            "invoiced_cents": 20000,
+            "expected_cents": 7500,
+            "variance_cents": 12500
+          },
+          {
+            "invoice_no": "CAL-7101",
+            "load_id": "ld260900",
+            "carrier": "Caliche Carriers LLC",
+            "code": "LINEHAUL_MISMATCH",
+            "detail": "linehaul: invoiced $1,532.00 vs rate-con $1,382.00",
+            "invoiced_cents": 153200,
+            "expected_cents": 138200,
+            "variance_cents": 15000
+          }
+        ],
+        "settlements_except_evidence": [
+          {
+            "invoice_no": "BLU-7100",
+            "load_id": "LD260900",
+            "carrier": "Blue Mesa Transport (asset)",
+            "invoiced_cents": 249922,
+            "approved_cents": 249922,
+            "fines_cents": 0,
+            "net_cents": 249922,
+            "status": "READY",
+            "hold_reasons": [],
+            "notes": []
+          },
+          {
+            "invoice_no": "PEC-7102",
+            "load_id": "LD260914",
+            "carrier": "Pecos Freightways Inc",
+            "invoiced_cents": 232206,
+            "approved_cents": 232206,
+            "fines_cents": 5000,
+            "net_cents": 227206,
+            "status": "READY",
+            "hold_reasons": [],
+            "notes": []
+          },
+          {
+            "invoice_no": "BLU-7103",
+            "load_id": "LD260921",
+            "carrier": "Blue Mesa Transport (asset)",
+            "invoiced_cents": 300570,
+            "approved_cents": 300570,
+            "fines_cents": 0,
+            "net_cents": 300570,
+            "status": "READY",
+            "hold_reasons": [],
+            "notes": []
+          },
+          {
+            "invoice_no": "CAL-7104",
+            "load_id": "LD260928",
+            "carrier": "Caliche Carriers LLC",
+            "invoiced_cents": 349277,
+            "approved_cents": 345002,
+            "fines_cents": 0,
+            "net_cents": 345002,
+            "status": "READY",
+            "hold_reasons": [],
+            "notes": [
+              "LATE_POD FINE-D6198BB6B7 disputed in window: not deducted",
+              "short-pay vs invoice: see invoice flags"
+            ]
+          },
+          {
+            "invoice_no": "PEC-7105",
+            "load_id": "LD260935",
+            "carrier": "Pecos Freightways Inc",
+            "invoiced_cents": 188499,
+            "approved_cents": 188499,
+            "fines_cents": 5000,
+            "net_cents": 183499,
+            "status": "READY",
+            "hold_reasons": [],
+            "notes": []
+          },
+          {
+            "invoice_no": "BLU-7106",
+            "load_id": "LD260942",
+            "carrier": "Blue Mesa Transport (asset)",
+            "invoiced_cents": 296652,
+            "approved_cents": 296652,
+            "fines_cents": 0,
+            "net_cents": 296652,
+            "status": "READY",
+            "hold_reasons": [],
+            "notes": []
+          },
+          {
+            "invoice_no": "CAL-7107",
+            "load_id": "LD260949",
+            "carrier": "Caliche Carriers LLC",
+            "invoiced_cents": 325538,
+            "approved_cents": 313038,
+            "fines_cents": 5000,
+            "net_cents": 308038,
+            "status": "READY",
+            "hold_reasons": [],
+            "notes": [
+              "short-pay vs invoice: see invoice flags"
+            ]
+          },
+          {
+            "invoice_no": "CAL-7101",
+            "load_id": "ld260900",
+            "carrier": "Caliche Carriers LLC",
+            "invoiced_cents": 222125,
+            "approved_cents": 207125,
+            "fines_cents": 5000,
+            "net_cents": 202125,
+            "status": "READY",
+            "hold_reasons": [],
+            "notes": [
+              "short-pay vs invoice: see invoice flags"
+            ]
+          }
+        ]
+      },
+      "baseline_monetary_and_rule_projection": {
+        "counts": {
+          "events": 37,
+          "loads": 8,
+          "stops": 16,
+          "detention_stops": 7,
+          "late_arrivals": 0,
+          "exceptions": 1,
+          "invoices": 8,
+          "invoice_flags": 3,
+          "packets": 7,
+          "fines": 5,
+          "settlement_ready": 8,
+          "settlement_hold": 0
+        },
+        "detention_total_cents": 83250,
+        "fines_total_cents": 20000,
+        "net_payable_ready_cents": 2113014,
+        "packets_except_filename": [
+          {
+            "load_id": "LD260900",
+            "detention_cents": 22500,
+            "claim_ids": [
+              "DET-FDC41B9FE7"
+            ],
+            "late_stops": []
+          },
+          {
+            "load_id": "ld260900",
+            "detention_cents": 16875,
+            "claim_ids": [
+              "DET-9BCEF222E0"
+            ],
+            "late_stops": []
+          },
+          {
+            "load_id": "LD260914",
+            "detention_cents": 6000,
+            "claim_ids": [
+              "DET-B34A842BB1"
+            ],
+            "late_stops": []
+          },
+          {
+            "load_id": "LD260921",
+            "detention_cents": 16500,
+            "claim_ids": [
+              "DET-6AA0C0374F"
+            ],
+            "late_stops": []
+          },
+          {
+            "load_id": "LD260928",
+            "detention_cents": 4500,
+            "claim_ids": [
+              "DET-70E434F598"
+            ],
+            "late_stops": []
+          },
+          {
+            "load_id": "LD260935",
+            "detention_cents": 9375,
+            "claim_ids": [
+              "DET-6747007A8F"
+            ],
+            "late_stops": []
+          },
+          {
+            "load_id": "LD260949",
+            "detention_cents": 7500,
+            "claim_ids": [
+              "DET-66F6B49517"
+            ],
+            "late_stops": []
+          }
+        ],
+        "stop_rule_results": [
+          {
+            "load_id": "LD260900",
+            "stop_index": 1,
+            "status": "ok",
+            "billable_minutes": 0,
+            "amount_cents": 0,
+            "claim_id": "DET-91029840C9"
+          },
+          {
+            "load_id": "LD260900",
+            "stop_index": 2,
+            "status": "detention",
+            "billable_minutes": 180,
+            "amount_cents": 22500,
+            "claim_id": "DET-FDC41B9FE7"
+          },
+          {
+            "load_id": "ld260900",
+            "stop_index": 1,
+            "status": "ok",
+            "billable_minutes": 0,
+            "amount_cents": 0,
+            "claim_id": "DET-88D013700C"
+          },
+          {
+            "load_id": "ld260900",
+            "stop_index": 2,
+            "status": "detention",
+            "billable_minutes": 135,
+            "amount_cents": 16875,
+            "claim_id": "DET-9BCEF222E0"
+          },
+          {
+            "load_id": "LD260914",
+            "stop_index": 1,
+            "status": "detention",
+            "billable_minutes": 60,
+            "amount_cents": 6000,
+            "claim_id": "DET-B34A842BB1"
+          },
+          {
+            "load_id": "LD260914",
+            "stop_index": 2,
+            "status": "ok",
+            "billable_minutes": 0,
+            "amount_cents": 0,
+            "claim_id": "DET-57073A48B2"
+          },
+          {
+            "load_id": "LD260921",
+            "stop_index": 1,
+            "status": "detention",
+            "billable_minutes": 165,
+            "amount_cents": 16500,
+            "claim_id": "DET-6AA0C0374F"
+          },
+          {
+            "load_id": "LD260921",
+            "stop_index": 2,
+            "status": "ok",
+            "billable_minutes": 0,
+            "amount_cents": 0,
+            "claim_id": "DET-BB658819D5"
+          },
+          {
+            "load_id": "LD260928",
+            "stop_index": 1,
+            "status": "ok",
+            "billable_minutes": 0,
+            "amount_cents": 0,
+            "claim_id": "DET-9DB6B28F3C"
+          },
+          {
+            "load_id": "LD260928",
+            "stop_index": 2,
+            "status": "detention",
+            "billable_minutes": 45,
+            "amount_cents": 4500,
+            "claim_id": "DET-70E434F598"
+          },
+          {
+            "load_id": "LD260935",
+            "stop_index": 1,
+            "status": "ok",
+            "billable_minutes": 0,
+            "amount_cents": 0,
+            "claim_id": "DET-DE6B2BE33E"
+          },
+          {
+            "load_id": "LD260935",
+            "stop_index": 2,
+            "status": "detention",
+            "billable_minutes": 75,
+            "amount_cents": 9375,
+            "claim_id": "DET-6747007A8F"
+          },
+          {
+            "load_id": "LD260942",
+            "stop_index": 1,
+            "status": "ok",
+            "billable_minutes": 0,
+            "amount_cents": 0,
+            "claim_id": "DET-D1F00D4F16"
+          },
+          {
+            "load_id": "LD260942",
+            "stop_index": 2,
+            "status": "exception",
+            "billable_minutes": 0,
+            "amount_cents": 0,
+            "claim_id": "DET-06BE71B556"
+          },
+          {
+            "load_id": "LD260949",
+            "stop_index": 1,
+            "status": "detention",
+            "billable_minutes": 75,
+            "amount_cents": 7500,
+            "claim_id": "DET-66F6B49517"
+          },
+          {
+            "load_id": "LD260949",
+            "stop_index": 2,
+            "status": "ok",
+            "billable_minutes": 0,
+            "amount_cents": 0,
+            "claim_id": "DET-955D5A7E10"
+          }
+        ],
+        "flags_except_evidence": [
+          {
+            "invoice_no": "CAL-7104",
+            "load_id": "LD260928",
+            "carrier": "Caliche Carriers LLC",
+            "code": "FUEL_MISMATCH",
+            "detail": "fuel surcharge: invoiced $656.77 vs rate-con $614.02",
+            "invoiced_cents": 65677,
+            "expected_cents": 61402,
+            "variance_cents": 4275
+          },
+          {
+            "invoice_no": "CAL-7107",
+            "load_id": "LD260949",
+            "carrier": "Caliche Carriers LLC",
+            "code": "DETENTION_UNSUPPORTED",
+            "detail": "detention invoiced $200.00 but telematics supports $75.00",
+            "invoiced_cents": 20000,
+            "expected_cents": 7500,
+            "variance_cents": 12500
+          },
+          {
+            "invoice_no": "CAL-7101",
+            "load_id": "ld260900",
+            "carrier": "Caliche Carriers LLC",
+            "code": "LINEHAUL_MISMATCH",
+            "detail": "linehaul: invoiced $1,532.00 vs rate-con $1,382.00",
+            "invoiced_cents": 153200,
+            "expected_cents": 138200,
+            "variance_cents": 15000
+          }
+        ],
+        "settlements_except_evidence": [
+          {
+            "invoice_no": "BLU-7100",
+            "load_id": "LD260900",
+            "carrier": "Blue Mesa Transport (asset)",
+            "invoiced_cents": 249922,
+            "approved_cents": 249922,
+            "fines_cents": 0,
+            "net_cents": 249922,
+            "status": "READY",
+            "hold_reasons": [],
+            "notes": []
+          },
+          {
+            "invoice_no": "PEC-7102",
+            "load_id": "LD260914",
+            "carrier": "Pecos Freightways Inc",
+            "invoiced_cents": 232206,
+            "approved_cents": 232206,
+            "fines_cents": 5000,
+            "net_cents": 227206,
+            "status": "READY",
+            "hold_reasons": [],
+            "notes": []
+          },
+          {
+            "invoice_no": "BLU-7103",
+            "load_id": "LD260921",
+            "carrier": "Blue Mesa Transport (asset)",
+            "invoiced_cents": 300570,
+            "approved_cents": 300570,
+            "fines_cents": 0,
+            "net_cents": 300570,
+            "status": "READY",
+            "hold_reasons": [],
+            "notes": []
+          },
+          {
+            "invoice_no": "CAL-7104",
+            "load_id": "LD260928",
+            "carrier": "Caliche Carriers LLC",
+            "invoiced_cents": 349277,
+            "approved_cents": 345002,
+            "fines_cents": 0,
+            "net_cents": 345002,
+            "status": "READY",
+            "hold_reasons": [],
+            "notes": [
+              "LATE_POD FINE-D6198BB6B7 disputed in window: not deducted",
+              "short-pay vs invoice: see invoice flags"
+            ]
+          },
+          {
+            "invoice_no": "PEC-7105",
+            "load_id": "LD260935",
+            "carrier": "Pecos Freightways Inc",
+            "invoiced_cents": 188499,
+            "approved_cents": 188499,
+            "fines_cents": 5000,
+            "net_cents": 183499,
+            "status": "READY",
+            "hold_reasons": [],
+            "notes": []
+          },
+          {
+            "invoice_no": "BLU-7106",
+            "load_id": "LD260942",
+            "carrier": "Blue Mesa Transport (asset)",
+            "invoiced_cents": 296652,
+            "approved_cents": 296652,
+            "fines_cents": 0,
+            "net_cents": 296652,
+            "status": "READY",
+            "hold_reasons": [],
+            "notes": []
+          },
+          {
+            "invoice_no": "CAL-7107",
+            "load_id": "LD260949",
+            "carrier": "Caliche Carriers LLC",
+            "invoiced_cents": 325538,
+            "approved_cents": 313038,
+            "fines_cents": 5000,
+            "net_cents": 308038,
+            "status": "READY",
+            "hold_reasons": [],
+            "notes": [
+              "short-pay vs invoice: see invoice flags"
+            ]
+          },
+          {
+            "invoice_no": "CAL-7101",
+            "load_id": "ld260900",
+            "carrier": "Caliche Carriers LLC",
+            "invoiced_cents": 222125,
+            "approved_cents": 207125,
+            "fines_cents": 5000,
+            "net_cents": 202125,
+            "status": "READY",
+            "hold_reasons": [],
+            "notes": [
+              "short-pay vs invoice: see invoice flags"
+            ]
+          }
+        ]
+      },
+      "audit_file_map": {
+        "LD260900": "~4732f5b4898333a8a3c7607e91bb2aa39aba40b5dabf987b85b9f58299061264.html",
+        "ld260900": "~558a413ace70e6f61314b3cd32f4944eaeaa6181186ee5b626028c4d5d0ca21e.html",
+        "LD260914": "LD260914.html",
+        "LD260921": "LD260921.html",
+        "LD260928": "LD260928.html",
+        "LD260935": "LD260935.html",
+        "LD260949": "LD260949.html"
+      },
+      "consumer_receipts": [
+        {
+          "load_id": "LD260900",
+          "file": "packets/~4732f5b4898333a8a3c7607e91bb2aa39aba40b5dabf987b85b9f58299061264.html",
+          "download_name": "freight-review-LD260900-521604db7a90.zip",
+          "packet_sha256": "549c92d187f0212ca4d68e7e63013fc950b91c61034c8141b2d9bb3e945904b8",
+          "bundle_sha256": "e48b1ed232e0a2679265638865b1c51a4d0c46dfc141a02dd65a69e6df7f77fd",
+          "bundle_bytes": 5113,
+          "bundle_path": "evidence/case-pair-bundle-0.zip",
+          "matches_retained_packet": true,
+          "bundle_matches_retained_packet": true,
+          "evidence_version": "521604db7a900001557ef5e09fb07220b5ebff06687425b14d42068960569013",
+          "review_version": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+        },
+        {
+          "load_id": "ld260900",
+          "file": "packets/~558a413ace70e6f61314b3cd32f4944eaeaa6181186ee5b626028c4d5d0ca21e.html",
+          "download_name": "freight-review-ld260900-d2c8742b86ec.zip",
+          "packet_sha256": "b460ee1b4fc38fbd71b6784acd3423907878fbd7df4bc3f1844696d0d2a98868",
+          "bundle_sha256": "75fca4d9be8142281c9b9bad98fecc8980ecdf4df3286141ae83abeb92ebcef4",
+          "bundle_bytes": 5307,
+          "bundle_path": "evidence/case-pair-bundle-1.zip",
+          "matches_retained_packet": true,
+          "bundle_matches_retained_packet": true,
+          "evidence_version": "d2c8742b86ec7a6ae0fa6425f1a4c54f82beb3674bb3f254c41ff6bebc1b16d6",
+          "review_version": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+        }
+      ],
+      "output_hashes_before_consumer": {
+        "audit.jsonl": "5da4c7a2046afd2029999d768fbe77acf4eb5cd08c4a8e9f2252112ae7e1840f",
+        "detention_claims.csv": "733babf0c71b4522e31ebbcfcce8aab3a1f58f21b487fdb8df2c3a32c9f60b08",
+        "exceptions.csv": "9f32ea7e17c8d2b47eb5dbeba3c83682fc896a4062138c946d9a75aff3ae21dd",
+        "fines.csv": "1c9a04e33a4889db66788ba986aba9b27106d97be09a72c864d17965756921c8",
+        "invoice_flags.csv": "e00cb8741511e6617e430b34a230c6a8bf5605824a0d3f5de565f2e4d9f78324",
+        "packets/LD260914.html": "52f5b30cd9ea4d9e554eec8ee1927ff3daebd495bab6a9c13af61000e1ddc210",
+        "packets/LD260921.html": "1bcd8a0afb4c39555a00b62aff82f607b9d7d3539b4c8c6c0c7bb6621fefbf85",
+        "packets/LD260928.html": "d5918feaeadadd94989c06a0fecc22e9959fc519eb6d4ddc1fb629f121720b5f",
+        "packets/LD260935.html": "c2c2443c6cc5fc950491631fc4f964eae18ff501584a85cdbe33220a5827e404",
+        "packets/LD260949.html": "07f49f671c31d5444ae4f977a19489bff13c387b441aa45622961b2a0c619bef",
+        "packets/~4732f5b4898333a8a3c7607e91bb2aa39aba40b5dabf987b85b9f58299061264.html": "549c92d187f0212ca4d68e7e63013fc950b91c61034c8141b2d9bb3e945904b8",
+        "packets/~558a413ace70e6f61314b3cd32f4944eaeaa6181186ee5b626028c4d5d0ca21e.html": "b460ee1b4fc38fbd71b6784acd3423907878fbd7df4bc3f1844696d0d2a98868",
+        "settlement.csv": "9593a9c86af0f94337325617fba6ff433d5d3340db20b6d3779715ed3ca76416",
+        "summary.json": "bdb049b4c8ae0628645a7d7a349bb9af92243305e50b2956dd7887cebe498698"
+      },
+      "output_hashes_after_consumer": {
+        "audit.jsonl": "5da4c7a2046afd2029999d768fbe77acf4eb5cd08c4a8e9f2252112ae7e1840f",
+        "detention_claims.csv": "733babf0c71b4522e31ebbcfcce8aab3a1f58f21b487fdb8df2c3a32c9f60b08",
+        "exceptions.csv": "9f32ea7e17c8d2b47eb5dbeba3c83682fc896a4062138c946d9a75aff3ae21dd",
+        "fines.csv": "1c9a04e33a4889db66788ba986aba9b27106d97be09a72c864d17965756921c8",
+        "invoice_flags.csv": "e00cb8741511e6617e430b34a230c6a8bf5605824a0d3f5de565f2e4d9f78324",
+        "packets/LD260914.html": "52f5b30cd9ea4d9e554eec8ee1927ff3daebd495bab6a9c13af61000e1ddc210",
+        "packets/LD260921.html": "1bcd8a0afb4c39555a00b62aff82f607b9d7d3539b4c8c6c0c7bb6621fefbf85",
+        "packets/LD260928.html": "d5918feaeadadd94989c06a0fecc22e9959fc519eb6d4ddc1fb629f121720b5f",
+        "packets/LD260935.html": "c2c2443c6cc5fc950491631fc4f964eae18ff501584a85cdbe33220a5827e404",
+        "packets/LD260949.html": "07f49f671c31d5444ae4f977a19489bff13c387b441aa45622961b2a0c619bef",
+        "packets/~4732f5b4898333a8a3c7607e91bb2aa39aba40b5dabf987b85b9f58299061264.html": "549c92d187f0212ca4d68e7e63013fc950b91c61034c8141b2d9bb3e945904b8",
+        "packets/~558a413ace70e6f61314b3cd32f4944eaeaa6181186ee5b626028c4d5d0ca21e.html": "b460ee1b4fc38fbd71b6784acd3423907878fbd7df4bc3f1844696d0d2a98868",
+        "settlement.csv": "9593a9c86af0f94337325617fba6ff433d5d3340db20b6d3779715ed3ca76416",
+        "summary.json": "bdb049b4c8ae0628645a7d7a349bb9af92243305e50b2956dd7887cebe498698"
+      },
+      "observations": {
+        "cli_returned_zero": true,
+        "seven_declared_and_retained": true,
+        "all_packets_regular_and_correct": true,
+        "names_casefold_distinct": true,
+        "no_physical_aliases": true,
+        "audit_references_actual_files": true,
+        "input_bytes_equal_to_baseline_and_preserved": true,
+        "monetary_and_rule_projection_equal_to_baseline": true,
+        "consumer_returns_exact_retained_bytes": true,
+        "consumer_preserves_all_output_bytes": true
+      }
+    },
+    {
+      "name": "nul-device",
+      "argv": [
+        "C:\\Users\\minec\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\python.exe",
+        "-B",
+        "-m",
+        "freightpkt",
+        "run",
+        "--data",
+        "C:\\Users\\minec\\AppData\\Local\\Temp\\hamon-freight-packet-names-713adaab-fixed-87da595f4f5048d0bb28108ba7a7fbe3\\nul-device\\data",
+        "--out",
+        "C:\\Users\\minec\\AppData\\Local\\Temp\\hamon-freight-packet-names-713adaab-fixed-87da595f4f5048d0bb28108ba7a7fbe3\\nul-device\\out"
+      ],
+      "cwd": "C:\\Users\\minec\\AppData\\Local\\Temp\\hamon-freight-packet-names-713adaab-fixed-87da595f4f5048d0bb28108ba7a7fbe3\\source\\freight_packets",
+      "returncode": 0,
+      "stdout_sha256": "49a91ac61d13ecff1a1c984c060f45e9e721b2dc3987bdf33fb99fe472a60607",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "baseline_summary_sha256": "3dbb3388fcfc231530349b1a51647812b9b76d95fe14ebec8c6676b4a06d1f60",
+      "summary_sha256": "bcca96b0e05cc5a604b2d9fe0f14617615ef2892e1bc2624b0f07c6e54074e05",
+      "input_hashes_before": {
+        "carrier_invoices.csv": "930ad858d7eba16d35cb6e6a2b5bcba9b45f635f3c0c8004ea3f8e52dd4eb344",
+        "disputes.csv": "0b86c24f93a057292dac5decfb3043c420bdba19c6dbd3aa4015d69a65b103d7",
+        "documents.csv": "064673622dce66933f3774523697ad148b91686df0b402d7715ed3fcf36fa64e",
+        "expected.json": "887b5ae297856b916629805f7f1977eee92aa5212d94301b043723f321afd5c2",
+        "fines_schedule.csv": "b00ec42105ab1258b2a37274f0cb1dad18a9f403af6dba740493e96e22846985",
+        "loads.csv": "b6a9f44da2d86b24e1f6fbbe24d130244d972fd4d8b8609bd00adb8e816e9cfc",
+        "ratecons/RC-48000.txt": "377dd769ef0c2be80fb61ef9ae579784b5d47d5f9ffdf73def373958c48945da",
+        "ratecons/RC-48001.txt": "257d689fd7c030181e69cfcfa8a7f4f91e7a50d1865670058f333bb7b70a20a9",
+        "ratecons/RC-48002.txt": "0c8af1911dc492ed6ff8dd00e39669669a401df568c2524ddf84566e9bbcecef",
+        "ratecons/RC-48003.txt": "321cd318251f79da26e123b882ea43e29b445d84e816e2f69357688d84f9cf2e",
+        "ratecons/RC-48004.txt": "0f1b0c27ee30280005fe3feea31207e20f4c47a038431643530072dc3c006e42",
+        "ratecons/RC-48005.txt": "fb763e9895d410b91655be5747aa65baa2238a5e7890bf4d215c90eb27a9403c",
+        "ratecons/RC-48006.txt": "ba895cb28e1f043b91b4960df96a76ade93dedf08db116dbdac8d272043cc606",
+        "ratecons/RC-48007.txt": "8f432838aa5ef714917c6f6cb40fe69203638f11797995989688beea96c8ea53",
+        "README_SYNTHETIC.txt": "6d1d4643a5499901036bddd7703825ca8fe66b4250834eba23e603f107344c60",
+        "telematics.csv": "3b0f0b6de080bbdd79880341627004bc53546e61d3841c6a524b96085f674043",
+        "telematics_extra.json": "521aea16e995ee60ac24f9b16e0cad49df92ef507e7a8699e34edc899b22ac25",
+        "tracking_stops.csv": "9efdafd3912930c84d21d5a9cd8bf5f3cf89e301dff31abce4f6109e68c71c8f"
+      },
+      "input_hashes_after": {
+        "carrier_invoices.csv": "930ad858d7eba16d35cb6e6a2b5bcba9b45f635f3c0c8004ea3f8e52dd4eb344",
+        "disputes.csv": "0b86c24f93a057292dac5decfb3043c420bdba19c6dbd3aa4015d69a65b103d7",
+        "documents.csv": "064673622dce66933f3774523697ad148b91686df0b402d7715ed3fcf36fa64e",
+        "expected.json": "887b5ae297856b916629805f7f1977eee92aa5212d94301b043723f321afd5c2",
+        "fines_schedule.csv": "b00ec42105ab1258b2a37274f0cb1dad18a9f403af6dba740493e96e22846985",
+        "loads.csv": "b6a9f44da2d86b24e1f6fbbe24d130244d972fd4d8b8609bd00adb8e816e9cfc",
+        "ratecons/RC-48000.txt": "377dd769ef0c2be80fb61ef9ae579784b5d47d5f9ffdf73def373958c48945da",
+        "ratecons/RC-48001.txt": "257d689fd7c030181e69cfcfa8a7f4f91e7a50d1865670058f333bb7b70a20a9",
+        "ratecons/RC-48002.txt": "0c8af1911dc492ed6ff8dd00e39669669a401df568c2524ddf84566e9bbcecef",
+        "ratecons/RC-48003.txt": "321cd318251f79da26e123b882ea43e29b445d84e816e2f69357688d84f9cf2e",
+        "ratecons/RC-48004.txt": "0f1b0c27ee30280005fe3feea31207e20f4c47a038431643530072dc3c006e42",
+        "ratecons/RC-48005.txt": "fb763e9895d410b91655be5747aa65baa2238a5e7890bf4d215c90eb27a9403c",
+        "ratecons/RC-48006.txt": "ba895cb28e1f043b91b4960df96a76ade93dedf08db116dbdac8d272043cc606",
+        "ratecons/RC-48007.txt": "8f432838aa5ef714917c6f6cb40fe69203638f11797995989688beea96c8ea53",
+        "README_SYNTHETIC.txt": "6d1d4643a5499901036bddd7703825ca8fe66b4250834eba23e603f107344c60",
+        "telematics.csv": "3b0f0b6de080bbdd79880341627004bc53546e61d3841c6a524b96085f674043",
+        "telematics_extra.json": "521aea16e995ee60ac24f9b16e0cad49df92ef507e7a8699e34edc899b22ac25",
+        "tracking_stops.csv": "9efdafd3912930c84d21d5a9cd8bf5f3cf89e301dff31abce4f6109e68c71c8f"
+      },
+      "declared_packets": [
+        {
+          "load_id": "NUL",
+          "file": "packets/~ae6de1827cfc8111a6e049e80d19a5ca25f0d8e018e879286eab9919ab642f01.html",
+          "detention_cents": 22500,
+          "claim_ids": [
+            "DET-8D581ABF77"
+          ],
+          "late_stops": [],
+          "is_file": true,
+          "title_matches_logical_id": true,
+          "sha256": "c4319ab72a6d12fae62a36572fc99a6fe44c327c6364dc4903d0220e92720ddd"
+        },
+        {
+          "load_id": "LD260907",
+          "file": "packets/LD260907.html",
+          "detention_cents": 16875,
+          "claim_ids": [
+            "DET-129C1A149C"
+          ],
+          "late_stops": [],
+          "is_file": true,
+          "title_matches_logical_id": true,
+          "sha256": "044990a7b09db271f4dbc6fa4b9d530fbb6b27e3bf208438d4766f4dfe73a24b"
+        },
+        {
+          "load_id": "LD260914",
+          "file": "packets/LD260914.html",
+          "detention_cents": 6000,
+          "claim_ids": [
+            "DET-B34A842BB1"
+          ],
+          "late_stops": [],
+          "is_file": true,
+          "title_matches_logical_id": true,
+          "sha256": "52f5b30cd9ea4d9e554eec8ee1927ff3daebd495bab6a9c13af61000e1ddc210"
+        },
+        {
+          "load_id": "LD260921",
+          "file": "packets/LD260921.html",
+          "detention_cents": 16500,
+          "claim_ids": [
+            "DET-6AA0C0374F"
+          ],
+          "late_stops": [],
+          "is_file": true,
+          "title_matches_logical_id": true,
+          "sha256": "1bcd8a0afb4c39555a00b62aff82f607b9d7d3539b4c8c6c0c7bb6621fefbf85"
+        },
+        {
+          "load_id": "LD260928",
+          "file": "packets/LD260928.html",
+          "detention_cents": 4500,
+          "claim_ids": [
+            "DET-70E434F598"
+          ],
+          "late_stops": [],
+          "is_file": true,
+          "title_matches_logical_id": true,
+          "sha256": "d5918feaeadadd94989c06a0fecc22e9959fc519eb6d4ddc1fb629f121720b5f"
+        },
+        {
+          "load_id": "LD260935",
+          "file": "packets/LD260935.html",
+          "detention_cents": 9375,
+          "claim_ids": [
+            "DET-6747007A8F"
+          ],
+          "late_stops": [],
+          "is_file": true,
+          "title_matches_logical_id": true,
+          "sha256": "c2c2443c6cc5fc950491631fc4f964eae18ff501584a85cdbe33220a5827e404"
+        },
+        {
+          "load_id": "LD260949",
+          "file": "packets/LD260949.html",
+          "detention_cents": 7500,
+          "claim_ids": [
+            "DET-66F6B49517"
+          ],
+          "late_stops": [],
+          "is_file": true,
+          "title_matches_logical_id": true,
+          "sha256": "07f49f671c31d5444ae4f977a19489bff13c387b441aa45622961b2a0c619bef"
+        }
+      ],
+      "actual_packet_files": {
+        "LD260907.html": {
+          "bytes": 5272,
+          "sha256": "044990a7b09db271f4dbc6fa4b9d530fbb6b27e3bf208438d4766f4dfe73a24b"
+        },
+        "LD260914.html": {
+          "bytes": 5018,
+          "sha256": "52f5b30cd9ea4d9e554eec8ee1927ff3daebd495bab6a9c13af61000e1ddc210"
+        },
+        "LD260921.html": {
+          "bytes": 5541,
+          "sha256": "1bcd8a0afb4c39555a00b62aff82f607b9d7d3539b4c8c6c0c7bb6621fefbf85"
+        },
+        "LD260928.html": {
+          "bytes": 5372,
+          "sha256": "d5918feaeadadd94989c06a0fecc22e9959fc519eb6d4ddc1fb629f121720b5f"
+        },
+        "LD260935.html": {
+          "bytes": 5125,
+          "sha256": "c2c2443c6cc5fc950491631fc4f964eae18ff501584a85cdbe33220a5827e404"
+        },
+        "LD260949.html": {
+          "bytes": 5276,
+          "sha256": "07f49f671c31d5444ae4f977a19489bff13c387b441aa45622961b2a0c619bef"
+        },
+        "~ae6de1827cfc8111a6e049e80d19a5ca25f0d8e018e879286eab9919ab642f01.html": {
+          "bytes": 5607,
+          "sha256": "c4319ab72a6d12fae62a36572fc99a6fe44c327c6364dc4903d0220e92720ddd"
+        }
+      },
+      "physical_aliases": [],
+      "monetary_and_rule_projection": {
+        "counts": {
+          "events": 37,
+          "loads": 8,
+          "stops": 16,
+          "detention_stops": 7,
+          "late_arrivals": 0,
+          "exceptions": 1,
+          "invoices": 8,
+          "invoice_flags": 3,
+          "packets": 7,
+          "fines": 5,
+          "settlement_ready": 8,
+          "settlement_hold": 0
+        },
+        "detention_total_cents": 83250,
+        "fines_total_cents": 20000,
+        "net_payable_ready_cents": 2113014,
+        "packets_except_filename": [
+          {
+            "load_id": "NUL",
+            "detention_cents": 22500,
+            "claim_ids": [
+              "DET-8D581ABF77"
+            ],
+            "late_stops": []
+          },
+          {
+            "load_id": "LD260907",
+            "detention_cents": 16875,
+            "claim_ids": [
+              "DET-129C1A149C"
+            ],
+            "late_stops": []
+          },
+          {
+            "load_id": "LD260914",
+            "detention_cents": 6000,
+            "claim_ids": [
+              "DET-B34A842BB1"
+            ],
+            "late_stops": []
+          },
+          {
+            "load_id": "LD260921",
+            "detention_cents": 16500,
+            "claim_ids": [
+              "DET-6AA0C0374F"
+            ],
+            "late_stops": []
+          },
+          {
+            "load_id": "LD260928",
+            "detention_cents": 4500,
+            "claim_ids": [
+              "DET-70E434F598"
+            ],
+            "late_stops": []
+          },
+          {
+            "load_id": "LD260935",
+            "detention_cents": 9375,
+            "claim_ids": [
+              "DET-6747007A8F"
+            ],
+            "late_stops": []
+          },
+          {
+            "load_id": "LD260949",
+            "detention_cents": 7500,
+            "claim_ids": [
+              "DET-66F6B49517"
+            ],
+            "late_stops": []
+          }
+        ],
+        "stop_rule_results": [
+          {
+            "load_id": "NUL",
+            "stop_index": 1,
+            "status": "ok",
+            "billable_minutes": 0,
+            "amount_cents": 0,
+            "claim_id": "DET-A4563E42DD"
+          },
+          {
+            "load_id": "NUL",
+            "stop_index": 2,
+            "status": "detention",
+            "billable_minutes": 180,
+            "amount_cents": 22500,
+            "claim_id": "DET-8D581ABF77"
+          },
+          {
+            "load_id": "LD260907",
+            "stop_index": 1,
+            "status": "ok",
+            "billable_minutes": 0,
+            "amount_cents": 0,
+            "claim_id": "DET-5CB9C8C54A"
+          },
+          {
+            "load_id": "LD260907",
+            "stop_index": 2,
+            "status": "detention",
+            "billable_minutes": 135,
+            "amount_cents": 16875,
+            "claim_id": "DET-129C1A149C"
+          },
+          {
+            "load_id": "LD260914",
+            "stop_index": 1,
+            "status": "detention",
+            "billable_minutes": 60,
+            "amount_cents": 6000,
+            "claim_id": "DET-B34A842BB1"
+          },
+          {
+            "load_id": "LD260914",
+            "stop_index": 2,
+            "status": "ok",
+            "billable_minutes": 0,
+            "amount_cents": 0,
+            "claim_id": "DET-57073A48B2"
+          },
+          {
+            "load_id": "LD260921",
+            "stop_index": 1,
+            "status": "detention",
+            "billable_minutes": 165,
+            "amount_cents": 16500,
+            "claim_id": "DET-6AA0C0374F"
+          },
+          {
+            "load_id": "LD260921",
+            "stop_index": 2,
+            "status": "ok",
+            "billable_minutes": 0,
+            "amount_cents": 0,
+            "claim_id": "DET-BB658819D5"
+          },
+          {
+            "load_id": "LD260928",
+            "stop_index": 1,
+            "status": "ok",
+            "billable_minutes": 0,
+            "amount_cents": 0,
+            "claim_id": "DET-9DB6B28F3C"
+          },
+          {
+            "load_id": "LD260928",
+            "stop_index": 2,
+            "status": "detention",
+            "billable_minutes": 45,
+            "amount_cents": 4500,
+            "claim_id": "DET-70E434F598"
+          },
+          {
+            "load_id": "LD260935",
+            "stop_index": 1,
+            "status": "ok",
+            "billable_minutes": 0,
+            "amount_cents": 0,
+            "claim_id": "DET-DE6B2BE33E"
+          },
+          {
+            "load_id": "LD260935",
+            "stop_index": 2,
+            "status": "detention",
+            "billable_minutes": 75,
+            "amount_cents": 9375,
+            "claim_id": "DET-6747007A8F"
+          },
+          {
+            "load_id": "LD260942",
+            "stop_index": 1,
+            "status": "ok",
+            "billable_minutes": 0,
+            "amount_cents": 0,
+            "claim_id": "DET-D1F00D4F16"
+          },
+          {
+            "load_id": "LD260942",
+            "stop_index": 2,
+            "status": "exception",
+            "billable_minutes": 0,
+            "amount_cents": 0,
+            "claim_id": "DET-06BE71B556"
+          },
+          {
+            "load_id": "LD260949",
+            "stop_index": 1,
+            "status": "detention",
+            "billable_minutes": 75,
+            "amount_cents": 7500,
+            "claim_id": "DET-66F6B49517"
+          },
+          {
+            "load_id": "LD260949",
+            "stop_index": 2,
+            "status": "ok",
+            "billable_minutes": 0,
+            "amount_cents": 0,
+            "claim_id": "DET-955D5A7E10"
+          }
+        ],
+        "flags_except_evidence": [
+          {
+            "invoice_no": "CAL-7101",
+            "load_id": "LD260907",
+            "carrier": "Caliche Carriers LLC",
+            "code": "LINEHAUL_MISMATCH",
+            "detail": "linehaul: invoiced $1,532.00 vs rate-con $1,382.00",
+            "invoiced_cents": 153200,
+            "expected_cents": 138200,
+            "variance_cents": 15000
+          },
+          {
+            "invoice_no": "CAL-7104",
+            "load_id": "LD260928",
+            "carrier": "Caliche Carriers LLC",
+            "code": "FUEL_MISMATCH",
+            "detail": "fuel surcharge: invoiced $656.77 vs rate-con $614.02",
+            "invoiced_cents": 65677,
+            "expected_cents": 61402,
+            "variance_cents": 4275
+          },
+          {
+            "invoice_no": "CAL-7107",
+            "load_id": "LD260949",
+            "carrier": "Caliche Carriers LLC",
+            "code": "DETENTION_UNSUPPORTED",
+            "detail": "detention invoiced $200.00 but telematics supports $75.00",
+            "invoiced_cents": 20000,
+            "expected_cents": 7500,
+            "variance_cents": 12500
+          }
+        ],
+        "settlements_except_evidence": [
+          {
+            "invoice_no": "CAL-7101",
+            "load_id": "LD260907",
+            "carrier": "Caliche Carriers LLC",
+            "invoiced_cents": 222125,
+            "approved_cents": 207125,
+            "fines_cents": 5000,
+            "net_cents": 202125,
+            "status": "READY",
+            "hold_reasons": [],
+            "notes": [
+              "short-pay vs invoice: see invoice flags"
+            ]
+          },
+          {
+            "invoice_no": "PEC-7102",
+            "load_id": "LD260914",
+            "carrier": "Pecos Freightways Inc",
+            "invoiced_cents": 232206,
+            "approved_cents": 232206,
+            "fines_cents": 5000,
+            "net_cents": 227206,
+            "status": "READY",
+            "hold_reasons": [],
+            "notes": []
+          },
+          {
+            "invoice_no": "BLU-7103",
+            "load_id": "LD260921",
+            "carrier": "Blue Mesa Transport (asset)",
+            "invoiced_cents": 300570,
+            "approved_cents": 300570,
+            "fines_cents": 0,
+            "net_cents": 300570,
+            "status": "READY",
+            "hold_reasons": [],
+            "notes": []
+          },
+          {
+            "invoice_no": "CAL-7104",
+            "load_id": "LD260928",
+            "carrier": "Caliche Carriers LLC",
+            "invoiced_cents": 349277,
+            "approved_cents": 345002,
+            "fines_cents": 0,
+            "net_cents": 345002,
+            "status": "READY",
+            "hold_reasons": [],
+            "notes": [
+              "LATE_POD FINE-D6198BB6B7 disputed in window: not deducted",
+              "short-pay vs invoice: see invoice flags"
+            ]
+          },
+          {
+            "invoice_no": "PEC-7105",
+            "load_id": "LD260935",
+            "carrier": "Pecos Freightways Inc",
+            "invoiced_cents": 188499,
+            "approved_cents": 188499,
+            "fines_cents": 5000,
+            "net_cents": 183499,
+            "status": "READY",
+            "hold_reasons": [],
+            "notes": []
+          },
+          {
+            "invoice_no": "BLU-7106",
+            "load_id": "LD260942",
+            "carrier": "Blue Mesa Transport (asset)",
+            "invoiced_cents": 296652,
+            "approved_cents": 296652,
+            "fines_cents": 0,
+            "net_cents": 296652,
+            "status": "READY",
+            "hold_reasons": [],
+            "notes": []
+          },
+          {
+            "invoice_no": "CAL-7107",
+            "load_id": "LD260949",
+            "carrier": "Caliche Carriers LLC",
+            "invoiced_cents": 325538,
+            "approved_cents": 313038,
+            "fines_cents": 5000,
+            "net_cents": 308038,
+            "status": "READY",
+            "hold_reasons": [],
+            "notes": [
+              "short-pay vs invoice: see invoice flags"
+            ]
+          },
+          {
+            "invoice_no": "BLU-7100",
+            "load_id": "NUL",
+            "carrier": "Blue Mesa Transport (asset)",
+            "invoiced_cents": 249922,
+            "approved_cents": 249922,
+            "fines_cents": 0,
+            "net_cents": 249922,
+            "status": "READY",
+            "hold_reasons": [],
+            "notes": []
+          }
+        ]
+      },
+      "baseline_monetary_and_rule_projection": {
+        "counts": {
+          "events": 37,
+          "loads": 8,
+          "stops": 16,
+          "detention_stops": 7,
+          "late_arrivals": 0,
+          "exceptions": 1,
+          "invoices": 8,
+          "invoice_flags": 3,
+          "packets": 7,
+          "fines": 5,
+          "settlement_ready": 8,
+          "settlement_hold": 0
+        },
+        "detention_total_cents": 83250,
+        "fines_total_cents": 20000,
+        "net_payable_ready_cents": 2113014,
+        "packets_except_filename": [
+          {
+            "load_id": "NUL",
+            "detention_cents": 22500,
+            "claim_ids": [
+              "DET-8D581ABF77"
+            ],
+            "late_stops": []
+          },
+          {
+            "load_id": "LD260907",
+            "detention_cents": 16875,
+            "claim_ids": [
+              "DET-129C1A149C"
+            ],
+            "late_stops": []
+          },
+          {
+            "load_id": "LD260914",
+            "detention_cents": 6000,
+            "claim_ids": [
+              "DET-B34A842BB1"
+            ],
+            "late_stops": []
+          },
+          {
+            "load_id": "LD260921",
+            "detention_cents": 16500,
+            "claim_ids": [
+              "DET-6AA0C0374F"
+            ],
+            "late_stops": []
+          },
+          {
+            "load_id": "LD260928",
+            "detention_cents": 4500,
+            "claim_ids": [
+              "DET-70E434F598"
+            ],
+            "late_stops": []
+          },
+          {
+            "load_id": "LD260935",
+            "detention_cents": 9375,
+            "claim_ids": [
+              "DET-6747007A8F"
+            ],
+            "late_stops": []
+          },
+          {
+            "load_id": "LD260949",
+            "detention_cents": 7500,
+            "claim_ids": [
+              "DET-66F6B49517"
+            ],
+            "late_stops": []
+          }
+        ],
+        "stop_rule_results": [
+          {
+            "load_id": "NUL",
+            "stop_index": 1,
+            "status": "ok",
+            "billable_minutes": 0,
+            "amount_cents": 0,
+            "claim_id": "DET-A4563E42DD"
+          },
+          {
+            "load_id": "NUL",
+            "stop_index": 2,
+            "status": "detention",
+            "billable_minutes": 180,
+            "amount_cents": 22500,
+            "claim_id": "DET-8D581ABF77"
+          },
+          {
+            "load_id": "LD260907",
+            "stop_index": 1,
+            "status": "ok",
+            "billable_minutes": 0,
+            "amount_cents": 0,
+            "claim_id": "DET-5CB9C8C54A"
+          },
+          {
+            "load_id": "LD260907",
+            "stop_index": 2,
+            "status": "detention",
+            "billable_minutes": 135,
+            "amount_cents": 16875,
+            "claim_id": "DET-129C1A149C"
+          },
+          {
+            "load_id": "LD260914",
+            "stop_index": 1,
+            "status": "detention",
+            "billable_minutes": 60,
+            "amount_cents": 6000,
+            "claim_id": "DET-B34A842BB1"
+          },
+          {
+            "load_id": "LD260914",
+            "stop_index": 2,
+            "status": "ok",
+            "billable_minutes": 0,
+            "amount_cents": 0,
+            "claim_id": "DET-57073A48B2"
+          },
+          {
+            "load_id": "LD260921",
+            "stop_index": 1,
+            "status": "detention",
+            "billable_minutes": 165,
+            "amount_cents": 16500,
+            "claim_id": "DET-6AA0C0374F"
+          },
+          {
+            "load_id": "LD260921",
+            "stop_index": 2,
+            "status": "ok",
+            "billable_minutes": 0,
+            "amount_cents": 0,
+            "claim_id": "DET-BB658819D5"
+          },
+          {
+            "load_id": "LD260928",
+            "stop_index": 1,
+            "status": "ok",
+            "billable_minutes": 0,
+            "amount_cents": 0,
+            "claim_id": "DET-9DB6B28F3C"
+          },
+          {
+            "load_id": "LD260928",
+            "stop_index": 2,
+            "status": "detention",
+            "billable_minutes": 45,
+            "amount_cents": 4500,
+            "claim_id": "DET-70E434F598"
+          },
+          {
+            "load_id": "LD260935",
+            "stop_index": 1,
+            "status": "ok",
+            "billable_minutes": 0,
+            "amount_cents": 0,
+            "claim_id": "DET-DE6B2BE33E"
+          },
+          {
+            "load_id": "LD260935",
+            "stop_index": 2,
+            "status": "detention",
+            "billable_minutes": 75,
+            "amount_cents": 9375,
+            "claim_id": "DET-6747007A8F"
+          },
+          {
+            "load_id": "LD260942",
+            "stop_index": 1,
+            "status": "ok",
+            "billable_minutes": 0,
+            "amount_cents": 0,
+            "claim_id": "DET-D1F00D4F16"
+          },
+          {
+            "load_id": "LD260942",
+            "stop_index": 2,
+            "status": "exception",
+            "billable_minutes": 0,
+            "amount_cents": 0,
+            "claim_id": "DET-06BE71B556"
+          },
+          {
+            "load_id": "LD260949",
+            "stop_index": 1,
+            "status": "detention",
+            "billable_minutes": 75,
+            "amount_cents": 7500,
+            "claim_id": "DET-66F6B49517"
+          },
+          {
+            "load_id": "LD260949",
+            "stop_index": 2,
+            "status": "ok",
+            "billable_minutes": 0,
+            "amount_cents": 0,
+            "claim_id": "DET-955D5A7E10"
+          }
+        ],
+        "flags_except_evidence": [
+          {
+            "invoice_no": "CAL-7101",
+            "load_id": "LD260907",
+            "carrier": "Caliche Carriers LLC",
+            "code": "LINEHAUL_MISMATCH",
+            "detail": "linehaul: invoiced $1,532.00 vs rate-con $1,382.00",
+            "invoiced_cents": 153200,
+            "expected_cents": 138200,
+            "variance_cents": 15000
+          },
+          {
+            "invoice_no": "CAL-7104",
+            "load_id": "LD260928",
+            "carrier": "Caliche Carriers LLC",
+            "code": "FUEL_MISMATCH",
+            "detail": "fuel surcharge: invoiced $656.77 vs rate-con $614.02",
+            "invoiced_cents": 65677,
+            "expected_cents": 61402,
+            "variance_cents": 4275
+          },
+          {
+            "invoice_no": "CAL-7107",
+            "load_id": "LD260949",
+            "carrier": "Caliche Carriers LLC",
+            "code": "DETENTION_UNSUPPORTED",
+            "detail": "detention invoiced $200.00 but telematics supports $75.00",
+            "invoiced_cents": 20000,
+            "expected_cents": 7500,
+            "variance_cents": 12500
+          }
+        ],
+        "settlements_except_evidence": [
+          {
+            "invoice_no": "CAL-7101",
+            "load_id": "LD260907",
+            "carrier": "Caliche Carriers LLC",
+            "invoiced_cents": 222125,
+            "approved_cents": 207125,
+            "fines_cents": 5000,
+            "net_cents": 202125,
+            "status": "READY",
+            "hold_reasons": [],
+            "notes": [
+              "short-pay vs invoice: see invoice flags"
+            ]
+          },
+          {
+            "invoice_no": "PEC-7102",
+            "load_id": "LD260914",
+            "carrier": "Pecos Freightways Inc",
+            "invoiced_cents": 232206,
+            "approved_cents": 232206,
+            "fines_cents": 5000,
+            "net_cents": 227206,
+            "status": "READY",
+            "hold_reasons": [],
+            "notes": []
+          },
+          {
+            "invoice_no": "BLU-7103",
+            "load_id": "LD260921",
+            "carrier": "Blue Mesa Transport (asset)",
+            "invoiced_cents": 300570,
+            "approved_cents": 300570,
+            "fines_cents": 0,
+            "net_cents": 300570,
+            "status": "READY",
+            "hold_reasons": [],
+            "notes": []
+          },
+          {
+            "invoice_no": "CAL-7104",
+            "load_id": "LD260928",
+            "carrier": "Caliche Carriers LLC",
+            "invoiced_cents": 349277,
+            "approved_cents": 345002,
+            "fines_cents": 0,
+            "net_cents": 345002,
+            "status": "READY",
+            "hold_reasons": [],
+            "notes": [
+              "LATE_POD FINE-D6198BB6B7 disputed in window: not deducted",
+              "short-pay vs invoice: see invoice flags"
+            ]
+          },
+          {
+            "invoice_no": "PEC-7105",
+            "load_id": "LD260935",
+            "carrier": "Pecos Freightways Inc",
+            "invoiced_cents": 188499,
+            "approved_cents": 188499,
+            "fines_cents": 5000,
+            "net_cents": 183499,
+            "status": "READY",
+            "hold_reasons": [],
+            "notes": []
+          },
+          {
+            "invoice_no": "BLU-7106",
+            "load_id": "LD260942",
+            "carrier": "Blue Mesa Transport (asset)",
+            "invoiced_cents": 296652,
+            "approved_cents": 296652,
+            "fines_cents": 0,
+            "net_cents": 296652,
+            "status": "READY",
+            "hold_reasons": [],
+            "notes": []
+          },
+          {
+            "invoice_no": "CAL-7107",
+            "load_id": "LD260949",
+            "carrier": "Caliche Carriers LLC",
+            "invoiced_cents": 325538,
+            "approved_cents": 313038,
+            "fines_cents": 5000,
+            "net_cents": 308038,
+            "status": "READY",
+            "hold_reasons": [],
+            "notes": [
+              "short-pay vs invoice: see invoice flags"
+            ]
+          },
+          {
+            "invoice_no": "BLU-7100",
+            "load_id": "NUL",
+            "carrier": "Blue Mesa Transport (asset)",
+            "invoiced_cents": 249922,
+            "approved_cents": 249922,
+            "fines_cents": 0,
+            "net_cents": 249922,
+            "status": "READY",
+            "hold_reasons": [],
+            "notes": []
+          }
+        ]
+      },
+      "audit_file_map": {
+        "NUL": "~ae6de1827cfc8111a6e049e80d19a5ca25f0d8e018e879286eab9919ab642f01.html",
+        "LD260907": "LD260907.html",
+        "LD260914": "LD260914.html",
+        "LD260921": "LD260921.html",
+        "LD260928": "LD260928.html",
+        "LD260935": "LD260935.html",
+        "LD260949": "LD260949.html"
+      },
+      "consumer_receipts": [
+        {
+          "load_id": "NUL",
+          "file": "packets/~ae6de1827cfc8111a6e049e80d19a5ca25f0d8e018e879286eab9919ab642f01.html",
+          "download_name": "freight-review-NUL-3575ea9a0e27.zip",
+          "packet_sha256": "c4319ab72a6d12fae62a36572fc99a6fe44c327c6364dc4903d0220e92720ddd",
+          "bundle_sha256": "df1a95b4ca253f842f0017f8721e865347ee745bcb165e797572aa6af0a1b891",
+          "bundle_bytes": 5090,
+          "bundle_path": "evidence/nul-device-bundle-0.zip",
+          "matches_retained_packet": true,
+          "bundle_matches_retained_packet": true,
+          "evidence_version": "3575ea9a0e27c08ae4cfa9652c752375d4a5bee5093ae88fe3cd45a56badb9bc",
+          "review_version": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+        }
+      ],
+      "output_hashes_before_consumer": {
+        "audit.jsonl": "b2a0273e5f2b329701eb98eab6dec3ed6aec4a59b11891de13628995c7586da7",
+        "detention_claims.csv": "d2857f83a459689d5bcc4ec7cc737b83c07c434b85ccceb051f0feb377fa72bc",
+        "exceptions.csv": "9f32ea7e17c8d2b47eb5dbeba3c83682fc896a4062138c946d9a75aff3ae21dd",
+        "fines.csv": "d7cdaf4164098f6d41c63cc8a2ad0cf3b509c183fa78879d51d8f63c46e065c6",
+        "invoice_flags.csv": "cf7b3d9fef5feb9731e117aff0cadb258b8052ac0541ca1e751cac810a51ffa1",
+        "packets/LD260907.html": "044990a7b09db271f4dbc6fa4b9d530fbb6b27e3bf208438d4766f4dfe73a24b",
+        "packets/LD260914.html": "52f5b30cd9ea4d9e554eec8ee1927ff3daebd495bab6a9c13af61000e1ddc210",
+        "packets/LD260921.html": "1bcd8a0afb4c39555a00b62aff82f607b9d7d3539b4c8c6c0c7bb6621fefbf85",
+        "packets/LD260928.html": "d5918feaeadadd94989c06a0fecc22e9959fc519eb6d4ddc1fb629f121720b5f",
+        "packets/LD260935.html": "c2c2443c6cc5fc950491631fc4f964eae18ff501584a85cdbe33220a5827e404",
+        "packets/LD260949.html": "07f49f671c31d5444ae4f977a19489bff13c387b441aa45622961b2a0c619bef",
+        "packets/~ae6de1827cfc8111a6e049e80d19a5ca25f0d8e018e879286eab9919ab642f01.html": "c4319ab72a6d12fae62a36572fc99a6fe44c327c6364dc4903d0220e92720ddd",
+        "settlement.csv": "9a41a15aa2f510a2edacbe60497526fa319e97232370e273f77542d415867bd8",
+        "summary.json": "bcca96b0e05cc5a604b2d9fe0f14617615ef2892e1bc2624b0f07c6e54074e05"
+      },
+      "output_hashes_after_consumer": {
+        "audit.jsonl": "b2a0273e5f2b329701eb98eab6dec3ed6aec4a59b11891de13628995c7586da7",
+        "detention_claims.csv": "d2857f83a459689d5bcc4ec7cc737b83c07c434b85ccceb051f0feb377fa72bc",
+        "exceptions.csv": "9f32ea7e17c8d2b47eb5dbeba3c83682fc896a4062138c946d9a75aff3ae21dd",
+        "fines.csv": "d7cdaf4164098f6d41c63cc8a2ad0cf3b509c183fa78879d51d8f63c46e065c6",
+        "invoice_flags.csv": "cf7b3d9fef5feb9731e117aff0cadb258b8052ac0541ca1e751cac810a51ffa1",
+        "packets/LD260907.html": "044990a7b09db271f4dbc6fa4b9d530fbb6b27e3bf208438d4766f4dfe73a24b",
+        "packets/LD260914.html": "52f5b30cd9ea4d9e554eec8ee1927ff3daebd495bab6a9c13af61000e1ddc210",
+        "packets/LD260921.html": "1bcd8a0afb4c39555a00b62aff82f607b9d7d3539b4c8c6c0c7bb6621fefbf85",
+        "packets/LD260928.html": "d5918feaeadadd94989c06a0fecc22e9959fc519eb6d4ddc1fb629f121720b5f",
+        "packets/LD260935.html": "c2c2443c6cc5fc950491631fc4f964eae18ff501584a85cdbe33220a5827e404",
+        "packets/LD260949.html": "07f49f671c31d5444ae4f977a19489bff13c387b441aa45622961b2a0c619bef",
+        "packets/~ae6de1827cfc8111a6e049e80d19a5ca25f0d8e018e879286eab9919ab642f01.html": "c4319ab72a6d12fae62a36572fc99a6fe44c327c6364dc4903d0220e92720ddd",
+        "settlement.csv": "9a41a15aa2f510a2edacbe60497526fa319e97232370e273f77542d415867bd8",
+        "summary.json": "bcca96b0e05cc5a604b2d9fe0f14617615ef2892e1bc2624b0f07c6e54074e05"
+      },
+      "observations": {
+        "cli_returned_zero": true,
+        "seven_declared_and_retained": true,
+        "all_packets_regular_and_correct": true,
+        "names_casefold_distinct": true,
+        "no_physical_aliases": true,
+        "audit_references_actual_files": true,
+        "input_bytes_equal_to_baseline_and_preserved": true,
+        "monetary_and_rule_projection_equal_to_baseline": true,
+        "consumer_returns_exact_retained_bytes": true,
+        "consumer_preserves_all_output_bytes": true
+      }
+    }
+  ],
+  "passed": true,
+  "synthetic_inputs_only": true,
+  "production_service_invoked": false,
+  "environment": {
+    "PYTHONPATH": "removed",
+    "PYTHONHOME": "removed",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONIOENCODING": "utf-8"
+  }
+}

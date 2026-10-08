@@ -1,0 +1,39 @@
+{
+  "passed": true,
+  "returncodes": [
+    0,
+    0,
+    1
+  ],
+  "checks": {
+    "ordinary_exit_zero": true,
+    "duplicate_exit_one": true,
+    "diagnostic_names_input_and_columns": true,
+    "all_prior_output_bytes_preserved": true,
+    "all_input_bytes_preserved": true,
+    "all_source_bytes_preserved": true,
+    "missing_pod_hold_preserved": true
+  },
+  "retained_files": 22,
+  "input_files": 68,
+  "source_files": 36,
+  "settlement": {
+    "invoice_no": "CAL-7122",
+    "load_id": "LD261054",
+    "carrier": "Caliche Carriers LLC",
+    "invoiced_cents": 265300,
+    "approved_cents": 265300,
+    "fines_cents": 5000,
+    "net_cents": 260300,
+    "status": "HOLD",
+    "hold_reasons": [
+      "MISSING_POD"
+    ],
+    "notes": [],
+    "evidence": [
+      "carrier_invoices.csv:row72",
+      "RC-48022.txt"
+    ]
+  },
+  "report_sha256": "31e10a47653760dddb3080ec9d2eb07e4685cdfdb2936d4247b0752f4e32ba0e"
+}

@@ -1,0 +1,30 @@
+diff --git a/freight_packets/tests/test_packet_names.py b/freight_packets/tests/test_packet_names.py
+index d2f9a1e..61c562a 100644
+--- a/freight_packets/tests/test_packet_names.py
++++ b/freight_packets/tests/test_packet_names.py
+@@ -1,6 +1,7 @@
+ """Packet identity and filename retention across case-insensitive filesystems."""
+ from __future__ import annotations
+ 
++import csv
+ import hashlib
+ import io
+ import json
+@@ -77,11 +78,17 @@ class PacketFileRetentionTests(unittest.TestCase):
+         self.expected = generate(self.data, 8, 7)
+ 
+     def replace_id(self, old, new):
++        with (self.data / "loads.csv").open(encoding="utf-8", newline="") as source:
++            self.assertEqual(sum(row["load_id"] == old for row in csv.DictReader(source)), 1,
++                             "replacement must target one actual fixture load")
++        replacements = 0
+         for path in self.data.rglob("*"):
+             if path.is_file():
+                 raw = path.read_bytes()
+                 if old.encode() in raw:
++                    replacements += raw.count(old.encode())
+                     path.write_bytes(raw.replace(old.encode(), new.encode()))
++        self.assertGreater(replacements, 0, "fixture replacement must occur")
+ 
+     def run_and_check(self):
+         before = {p.relative_to(self.data).as_posix(): p.read_bytes()

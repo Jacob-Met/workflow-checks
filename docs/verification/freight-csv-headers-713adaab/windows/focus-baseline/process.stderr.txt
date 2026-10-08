@@ -1,0 +1,189 @@
+test_alias_readers_reject_their_existing_strip_lower_collisions (test_csv_header_admission.CsvHeaderAdmissionTests.test_alias_readers_reject_their_existing_strip_lower_collisions) ... 
+  test_alias_readers_reject_their_existing_strip_lower_collisions (test_csv_header_admission.CsvHeaderAdmissionTests.test_alias_readers_reject_their_existing_strip_lower_collisions) (reader='telematics') ... FAIL
+  test_alias_readers_reject_their_existing_strip_lower_collisions (test_csv_header_admission.CsvHeaderAdmissionTests.test_alias_readers_reject_their_existing_strip_lower_collisions) (reader='tracking') ... FAIL
+test_ambiguous_pod_refuses_before_replacing_prior_reports (test_csv_header_admission.CsvHeaderAdmissionTests.test_ambiguous_pod_refuses_before_replacing_prior_reports) ... FAIL
+test_bom_and_existing_alias_header_normalization_are_preserved (test_csv_header_admission.CsvHeaderAdmissionTests.test_bom_and_existing_alias_header_normalization_are_preserved) ... ok
+test_distinct_alias_priority_is_preserved (test_csv_header_admission.CsvHeaderAdmissionTests.test_distinct_alias_priority_is_preserved) ... ok
+test_duplicate_headers_are_refused_by_all_four_csv_readers (test_csv_header_admission.CsvHeaderAdmissionTests.test_duplicate_headers_are_refused_by_all_four_csv_readers) ... 
+  test_duplicate_headers_are_refused_by_all_four_csv_readers (test_csv_header_admission.CsvHeaderAdmissionTests.test_duplicate_headers_are_refused_by_all_four_csv_readers) (reader='loads') ... FAIL
+  test_duplicate_headers_are_refused_by_all_four_csv_readers (test_csv_header_admission.CsvHeaderAdmissionTests.test_duplicate_headers_are_refused_by_all_four_csv_readers) (reader='invoices') ... FAIL
+  test_duplicate_headers_are_refused_by_all_four_csv_readers (test_csv_header_admission.CsvHeaderAdmissionTests.test_duplicate_headers_are_refused_by_all_four_csv_readers) (reader='telematics') ... FAIL
+  test_duplicate_headers_are_refused_by_all_four_csv_readers (test_csv_header_admission.CsvHeaderAdmissionTests.test_duplicate_headers_are_refused_by_all_four_csv_readers) (reader='tracking') ... FAIL
+test_duplicate_headers_are_rejected_even_without_data_rows (test_csv_header_admission.CsvHeaderAdmissionTests.test_duplicate_headers_are_rejected_even_without_data_rows) ... 
+  test_duplicate_headers_are_rejected_even_without_data_rows (test_csv_header_admission.CsvHeaderAdmissionTests.test_duplicate_headers_are_rejected_even_without_data_rows) (reader='loads') ... FAIL
+  test_duplicate_headers_are_rejected_even_without_data_rows (test_csv_header_admission.CsvHeaderAdmissionTests.test_duplicate_headers_are_rejected_even_without_data_rows) (reader='invoices') ... FAIL
+  test_duplicate_headers_are_rejected_even_without_data_rows (test_csv_header_admission.CsvHeaderAdmissionTests.test_duplicate_headers_are_rejected_even_without_data_rows) (reader='telematics') ... FAIL
+  test_duplicate_headers_are_rejected_even_without_data_rows (test_csv_header_admission.CsvHeaderAdmissionTests.test_duplicate_headers_are_rejected_even_without_data_rows) (reader='tracking') ... FAIL
+test_equal_values_do_not_make_duplicate_columns_unambiguous (test_csv_header_admission.CsvHeaderAdmissionTests.test_equal_values_do_not_make_duplicate_columns_unambiguous) ... 
+  test_equal_values_do_not_make_duplicate_columns_unambiguous (test_csv_header_admission.CsvHeaderAdmissionTests.test_equal_values_do_not_make_duplicate_columns_unambiguous) (reader='loads') ... FAIL
+  test_equal_values_do_not_make_duplicate_columns_unambiguous (test_csv_header_admission.CsvHeaderAdmissionTests.test_equal_values_do_not_make_duplicate_columns_unambiguous) (reader='invoices') ... FAIL
+  test_equal_values_do_not_make_duplicate_columns_unambiguous (test_csv_header_admission.CsvHeaderAdmissionTests.test_equal_values_do_not_make_duplicate_columns_unambiguous) (reader='telematics') ... FAIL
+  test_equal_values_do_not_make_duplicate_columns_unambiguous (test_csv_header_admission.CsvHeaderAdmissionTests.test_equal_values_do_not_make_duplicate_columns_unambiguous) (reader='tracking') ... FAIL
+test_existing_duplicate_load_identity_refusal_is_preserved (test_csv_header_admission.CsvHeaderAdmissionTests.test_existing_duplicate_load_identity_refusal_is_preserved) ... ok
+test_fixed_schema_readers_keep_exact_extra_column_names (test_csv_header_admission.CsvHeaderAdmissionTests.test_fixed_schema_readers_keep_exact_extra_column_names) ... ok
+test_quoted_headers_are_checked_as_parsed_csv_fields (test_csv_header_admission.CsvHeaderAdmissionTests.test_quoted_headers_are_checked_as_parsed_csv_fields) ... FAIL
+test_telematics_json_remains_unchanged (test_csv_header_admission.CsvHeaderAdmissionTests.test_telematics_json_remains_unchanged) ... ok
+test_valid_multiline_invoice_keeps_existing_group_and_money_rules (test_csv_header_admission.CsvHeaderAdmissionTests.test_valid_multiline_invoice_keeps_existing_group_and_money_rules) ... ok
+
+======================================================================
+FAIL: test_alias_readers_reject_their_existing_strip_lower_collisions (test_csv_header_admission.CsvHeaderAdmissionTests.test_alias_readers_reject_their_existing_strip_lower_collisions) (reader='telematics')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\minec\AppData\Local\Temp\hamon-freight-csv-headers-713adaab-eaac9c5260964a5491ec5b6cbd6426e3\source\freight_packets\tests\test_csv_header_admission.py", line 91, in test_alias_readers_reject_their_existing_strip_lower_collisions
+    self.expect_header_refusal(reader, path, duplicate, variant)
+  File "C:\Users\minec\AppData\Local\Temp\hamon-freight-csv-headers-713adaab-eaac9c5260964a5491ec5b6cbd6426e3\source\freight_packets\tests\test_csv_header_admission.py", line 59, in expect_header_refusal
+    with self.assertRaisesRegex(ValueError, "duplicate CSV header") as caught:
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_alias_readers_reject_their_existing_strip_lower_collisions (test_csv_header_admission.CsvHeaderAdmissionTests.test_alias_readers_reject_their_existing_strip_lower_collisions) (reader='tracking')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\minec\AppData\Local\Temp\hamon-freight-csv-headers-713adaab-eaac9c5260964a5491ec5b6cbd6426e3\source\freight_packets\tests\test_csv_header_admission.py", line 91, in test_alias_readers_reject_their_existing_strip_lower_collisions
+    self.expect_header_refusal(reader, path, duplicate, variant)
+  File "C:\Users\minec\AppData\Local\Temp\hamon-freight-csv-headers-713adaab-eaac9c5260964a5491ec5b6cbd6426e3\source\freight_packets\tests\test_csv_header_admission.py", line 59, in expect_header_refusal
+    with self.assertRaisesRegex(ValueError, "duplicate CSV header") as caught:
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_ambiguous_pod_refuses_before_replacing_prior_reports (test_csv_header_admission.CsvHeaderAdmissionTests.test_ambiguous_pod_refuses_before_replacing_prior_reports)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\minec\AppData\Local\Temp\hamon-freight-csv-headers-713adaab-eaac9c5260964a5491ec5b6cbd6426e3\source\freight_packets\tests\test_csv_header_admission.py", line 197, in test_ambiguous_pod_refuses_before_replacing_prior_reports
+    with self.assertRaisesRegex(ValueError, "duplicate CSV header"):
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_duplicate_headers_are_refused_by_all_four_csv_readers (test_csv_header_admission.CsvHeaderAdmissionTests.test_duplicate_headers_are_refused_by_all_four_csv_readers) (reader='loads')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\minec\AppData\Local\Temp\hamon-freight-csv-headers-713adaab-eaac9c5260964a5491ec5b6cbd6426e3\source\freight_packets\tests\test_csv_header_admission.py", line 70, in test_duplicate_headers_are_refused_by_all_four_csv_readers
+    self.expect_header_refusal(reader, path, duplicate, duplicate)
+  File "C:\Users\minec\AppData\Local\Temp\hamon-freight-csv-headers-713adaab-eaac9c5260964a5491ec5b6cbd6426e3\source\freight_packets\tests\test_csv_header_admission.py", line 59, in expect_header_refusal
+    with self.assertRaisesRegex(ValueError, "duplicate CSV header") as caught:
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_duplicate_headers_are_refused_by_all_four_csv_readers (test_csv_header_admission.CsvHeaderAdmissionTests.test_duplicate_headers_are_refused_by_all_four_csv_readers) (reader='invoices')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\minec\AppData\Local\Temp\hamon-freight-csv-headers-713adaab-eaac9c5260964a5491ec5b6cbd6426e3\source\freight_packets\tests\test_csv_header_admission.py", line 70, in test_duplicate_headers_are_refused_by_all_four_csv_readers
+    self.expect_header_refusal(reader, path, duplicate, duplicate)
+  File "C:\Users\minec\AppData\Local\Temp\hamon-freight-csv-headers-713adaab-eaac9c5260964a5491ec5b6cbd6426e3\source\freight_packets\tests\test_csv_header_admission.py", line 59, in expect_header_refusal
+    with self.assertRaisesRegex(ValueError, "duplicate CSV header") as caught:
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_duplicate_headers_are_refused_by_all_four_csv_readers (test_csv_header_admission.CsvHeaderAdmissionTests.test_duplicate_headers_are_refused_by_all_four_csv_readers) (reader='telematics')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\minec\AppData\Local\Temp\hamon-freight-csv-headers-713adaab-eaac9c5260964a5491ec5b6cbd6426e3\source\freight_packets\tests\test_csv_header_admission.py", line 70, in test_duplicate_headers_are_refused_by_all_four_csv_readers
+    self.expect_header_refusal(reader, path, duplicate, duplicate)
+  File "C:\Users\minec\AppData\Local\Temp\hamon-freight-csv-headers-713adaab-eaac9c5260964a5491ec5b6cbd6426e3\source\freight_packets\tests\test_csv_header_admission.py", line 59, in expect_header_refusal
+    with self.assertRaisesRegex(ValueError, "duplicate CSV header") as caught:
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_duplicate_headers_are_refused_by_all_four_csv_readers (test_csv_header_admission.CsvHeaderAdmissionTests.test_duplicate_headers_are_refused_by_all_four_csv_readers) (reader='tracking')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\minec\AppData\Local\Temp\hamon-freight-csv-headers-713adaab-eaac9c5260964a5491ec5b6cbd6426e3\source\freight_packets\tests\test_csv_header_admission.py", line 70, in test_duplicate_headers_are_refused_by_all_four_csv_readers
+    self.expect_header_refusal(reader, path, duplicate, duplicate)
+  File "C:\Users\minec\AppData\Local\Temp\hamon-freight-csv-headers-713adaab-eaac9c5260964a5491ec5b6cbd6426e3\source\freight_packets\tests\test_csv_header_admission.py", line 59, in expect_header_refusal
+    with self.assertRaisesRegex(ValueError, "duplicate CSV header") as caught:
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_duplicate_headers_are_rejected_even_without_data_rows (test_csv_header_admission.CsvHeaderAdmissionTests.test_duplicate_headers_are_rejected_even_without_data_rows) (reader='loads')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\minec\AppData\Local\Temp\hamon-freight-csv-headers-713adaab-eaac9c5260964a5491ec5b6cbd6426e3\source\freight_packets\tests\test_csv_header_admission.py", line 84, in test_duplicate_headers_are_rejected_even_without_data_rows
+    self.expect_header_refusal(reader, path, duplicate, duplicate)
+  File "C:\Users\minec\AppData\Local\Temp\hamon-freight-csv-headers-713adaab-eaac9c5260964a5491ec5b6cbd6426e3\source\freight_packets\tests\test_csv_header_admission.py", line 59, in expect_header_refusal
+    with self.assertRaisesRegex(ValueError, "duplicate CSV header") as caught:
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_duplicate_headers_are_rejected_even_without_data_rows (test_csv_header_admission.CsvHeaderAdmissionTests.test_duplicate_headers_are_rejected_even_without_data_rows) (reader='invoices')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\minec\AppData\Local\Temp\hamon-freight-csv-headers-713adaab-eaac9c5260964a5491ec5b6cbd6426e3\source\freight_packets\tests\test_csv_header_admission.py", line 84, in test_duplicate_headers_are_rejected_even_without_data_rows
+    self.expect_header_refusal(reader, path, duplicate, duplicate)
+  File "C:\Users\minec\AppData\Local\Temp\hamon-freight-csv-headers-713adaab-eaac9c5260964a5491ec5b6cbd6426e3\source\freight_packets\tests\test_csv_header_admission.py", line 59, in expect_header_refusal
+    with self.assertRaisesRegex(ValueError, "duplicate CSV header") as caught:
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_duplicate_headers_are_rejected_even_without_data_rows (test_csv_header_admission.CsvHeaderAdmissionTests.test_duplicate_headers_are_rejected_even_without_data_rows) (reader='telematics')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\minec\AppData\Local\Temp\hamon-freight-csv-headers-713adaab-eaac9c5260964a5491ec5b6cbd6426e3\source\freight_packets\tests\test_csv_header_admission.py", line 84, in test_duplicate_headers_are_rejected_even_without_data_rows
+    self.expect_header_refusal(reader, path, duplicate, duplicate)
+  File "C:\Users\minec\AppData\Local\Temp\hamon-freight-csv-headers-713adaab-eaac9c5260964a5491ec5b6cbd6426e3\source\freight_packets\tests\test_csv_header_admission.py", line 59, in expect_header_refusal
+    with self.assertRaisesRegex(ValueError, "duplicate CSV header") as caught:
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_duplicate_headers_are_rejected_even_without_data_rows (test_csv_header_admission.CsvHeaderAdmissionTests.test_duplicate_headers_are_rejected_even_without_data_rows) (reader='tracking')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\minec\AppData\Local\Temp\hamon-freight-csv-headers-713adaab-eaac9c5260964a5491ec5b6cbd6426e3\source\freight_packets\tests\test_csv_header_admission.py", line 84, in test_duplicate_headers_are_rejected_even_without_data_rows
+    self.expect_header_refusal(reader, path, duplicate, duplicate)
+  File "C:\Users\minec\AppData\Local\Temp\hamon-freight-csv-headers-713adaab-eaac9c5260964a5491ec5b6cbd6426e3\source\freight_packets\tests\test_csv_header_admission.py", line 59, in expect_header_refusal
+    with self.assertRaisesRegex(ValueError, "duplicate CSV header") as caught:
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_equal_values_do_not_make_duplicate_columns_unambiguous (test_csv_header_admission.CsvHeaderAdmissionTests.test_equal_values_do_not_make_duplicate_columns_unambiguous) (reader='loads')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\minec\AppData\Local\Temp\hamon-freight-csv-headers-713adaab-eaac9c5260964a5491ec5b6cbd6426e3\source\freight_packets\tests\test_csv_header_admission.py", line 78, in test_equal_values_do_not_make_duplicate_columns_unambiguous
+    self.expect_header_refusal(reader, path, duplicate, duplicate)
+  File "C:\Users\minec\AppData\Local\Temp\hamon-freight-csv-headers-713adaab-eaac9c5260964a5491ec5b6cbd6426e3\source\freight_packets\tests\test_csv_header_admission.py", line 59, in expect_header_refusal
+    with self.assertRaisesRegex(ValueError, "duplicate CSV header") as caught:
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_equal_values_do_not_make_duplicate_columns_unambiguous (test_csv_header_admission.CsvHeaderAdmissionTests.test_equal_values_do_not_make_duplicate_columns_unambiguous) (reader='invoices')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\minec\AppData\Local\Temp\hamon-freight-csv-headers-713adaab-eaac9c5260964a5491ec5b6cbd6426e3\source\freight_packets\tests\test_csv_header_admission.py", line 78, in test_equal_values_do_not_make_duplicate_columns_unambiguous
+    self.expect_header_refusal(reader, path, duplicate, duplicate)
+  File "C:\Users\minec\AppData\Local\Temp\hamon-freight-csv-headers-713adaab-eaac9c5260964a5491ec5b6cbd6426e3\source\freight_packets\tests\test_csv_header_admission.py", line 59, in expect_header_refusal
+    with self.assertRaisesRegex(ValueError, "duplicate CSV header") as caught:
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_equal_values_do_not_make_duplicate_columns_unambiguous (test_csv_header_admission.CsvHeaderAdmissionTests.test_equal_values_do_not_make_duplicate_columns_unambiguous) (reader='telematics')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\minec\AppData\Local\Temp\hamon-freight-csv-headers-713adaab-eaac9c5260964a5491ec5b6cbd6426e3\source\freight_packets\tests\test_csv_header_admission.py", line 78, in test_equal_values_do_not_make_duplicate_columns_unambiguous
+    self.expect_header_refusal(reader, path, duplicate, duplicate)
+  File "C:\Users\minec\AppData\Local\Temp\hamon-freight-csv-headers-713adaab-eaac9c5260964a5491ec5b6cbd6426e3\source\freight_packets\tests\test_csv_header_admission.py", line 59, in expect_header_refusal
+    with self.assertRaisesRegex(ValueError, "duplicate CSV header") as caught:
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_equal_values_do_not_make_duplicate_columns_unambiguous (test_csv_header_admission.CsvHeaderAdmissionTests.test_equal_values_do_not_make_duplicate_columns_unambiguous) (reader='tracking')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\minec\AppData\Local\Temp\hamon-freight-csv-headers-713adaab-eaac9c5260964a5491ec5b6cbd6426e3\source\freight_packets\tests\test_csv_header_admission.py", line 78, in test_equal_values_do_not_make_duplicate_columns_unambiguous
+    self.expect_header_refusal(reader, path, duplicate, duplicate)
+  File "C:\Users\minec\AppData\Local\Temp\hamon-freight-csv-headers-713adaab-eaac9c5260964a5491ec5b6cbd6426e3\source\freight_packets\tests\test_csv_header_admission.py", line 59, in expect_header_refusal
+    with self.assertRaisesRegex(ValueError, "duplicate CSV header") as caught:
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_quoted_headers_are_checked_as_parsed_csv_fields (test_csv_header_admission.CsvHeaderAdmissionTests.test_quoted_headers_are_checked_as_parsed_csv_fields)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\minec\AppData\Local\Temp\hamon-freight-csv-headers-713adaab-eaac9c5260964a5491ec5b6cbd6426e3\source\freight_packets\tests\test_csv_header_admission.py", line 152, in test_quoted_headers_are_checked_as_parsed_csv_fields
+    self.expect_header_refusal(reader, path, duplicate, duplicate)
+  File "C:\Users\minec\AppData\Local\Temp\hamon-freight-csv-headers-713adaab-eaac9c5260964a5491ec5b6cbd6426e3\source\freight_packets\tests\test_csv_header_admission.py", line 59, in expect_header_refusal
+    with self.assertRaisesRegex(ValueError, "duplicate CSV header") as caught:
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.527s
+
+FAILED (failures=16)

@@ -1,0 +1,1 @@
+wrote synthetic data to C:\Users\minec\AppData\Local\Temp\hamon-freight-packet-names-713adaab-e2c62ff09de544df82ce01963ada15a5\fixture: 8 loads, 3 seeded invoice defects, expected detention $832.50

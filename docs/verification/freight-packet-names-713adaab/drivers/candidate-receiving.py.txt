@@ -1,0 +1,146 @@
+"""Exact-input native Windows receiving for the frozen packet filename repair."""
+from pathlib import Path
+import datetime, hashlib, io, itertools, json, os, platform, subprocess, sys, zipfile
+from html import escape
+
+ROOT = Path(__file__).resolve().parent
+assert os.name == "nt" and platform.node().upper() == "DESKTOP-LA7CMTA"
+assert ROOT.parent == Path(os.environ["TEMP"]).resolve()
+assert ROOT.name.startswith("hamon-freight-packet-names-713adaab-fixed-")
+assert sys.version_info[:2] == (3, 11)
+SOURCE = ROOT / "source"; EVIDENCE = ROOT / "evidence"; EVIDENCE.mkdir(exist_ok=False)
+def digest(raw): return hashlib.sha256(raw).hexdigest()
+def hashes(root):
+    return {p.relative_to(root).as_posix(): digest(p.read_bytes())
+            for p in sorted(root.rglob("*")) if p.is_file()}
+manifest = json.loads((ROOT / "source-manifest.json").read_text(encoding="utf-8"))
+baseline_raw = (ROOT / "baseline-report.json").read_bytes()
+assert digest(baseline_raw) == "330c572343fce76fff48cfe130a14e3283d5303e1ae605bd7f850f117ca75fb8"
+baseline = json.loads(baseline_raw)
+source_before = hashes(SOURCE)
+assert source_before == {r["path"]: r["sha256"] for r in manifest["files"]}
+env = dict(os.environ); env.pop("PYTHONPATH", None); env.pop("PYTHONHOME", None)
+env.update(PYTHONDONTWRITEBYTECODE="1", PYTHONIOENCODING="utf-8")
+sys.path.insert(0, str(SOURCE / "freight_packets"))
+from freightpkt.web import App
+
+def projection(summary):
+    return {
+        "counts": summary["counts"],
+        "detention_total_cents": summary["detention_total_cents"],
+        "fines_total_cents": summary["fines_total_cents"],
+        "net_payable_ready_cents": summary["net_payable_ready_cents"],
+        "packets_except_filename": [{k: v for k, v in p.items() if k != "file"}
+                                   for p in summary["packets"]],
+        "stop_rule_results": [{k: s[k] for k in ("load_id", "stop_index", "status",
+                                                "billable_minutes", "amount_cents", "claim_id")}
+                              for s in summary["stops"]],
+        "flags_except_evidence": [{k: v for k, v in f.items() if k != "evidence"}
+                                 for f in summary["flags"]],
+        "settlements_except_evidence": [{k: v for k, v in s.items() if k != "evidence"}
+                                       for s in summary["settlements"]],
+    }
+cases = []
+for original in baseline["cases"]:
+    name = original["name"]; case = ROOT / name; data = case / "data"; out = case / "out"
+    before = hashes(data)
+    assert before == original["input_hashes_before"]
+    argv = [sys.executable, "-B", "-m", "freightpkt", "run", "--data", str(data), "--out", str(out)]
+    proc = subprocess.run(argv, cwd=SOURCE / "freight_packets", env=env, capture_output=True, timeout=30)
+    (EVIDENCE / (name + ".stdout.txt")).write_bytes(proc.stdout)
+    (EVIDENCE / (name + ".stderr.txt")).write_bytes(proc.stderr)
+    summary = json.loads((out / "summary.json").read_text(encoding="utf-8"))
+    old_summary = json.loads((case / "baseline-summary.json").read_text(encoding="utf-8"))
+    assert digest((case / "baseline-summary.json").read_bytes()) == original["summary_sha256"]
+    actual = {p.name: {"bytes": p.stat().st_size, "sha256": digest(p.read_bytes())}
+              for p in sorted((out / "packets").iterdir()) if p.is_file()}
+    checks = []
+    for packet in summary["packets"]:
+        path = out / packet["file"]
+        checks.append({**packet, "is_file": path.is_file(),
+                       "title_matches_logical_id": path.is_file() and
+                           ("<title>Detention packet " + escape(packet["load_id"]) + "</title>")
+                           in path.read_text(encoding="utf-8"),
+                       "sha256": digest(path.read_bytes()) if path.is_file() else None})
+    physical_aliases = []
+    for first, second in itertools.combinations(summary["packets"], 2):
+        a, b = out / first["file"], out / second["file"]
+        if a.is_file() and b.is_file() and a.samefile(b):
+            physical_aliases.append([first["load_id"], second["load_id"]])
+    output_before_consumer = hashes(out)
+    app = App(data, out); view = app.summary()
+    selected = ["LD260900", "ld260900"] if name == "case-pair" else ["NUL"] if name == "nul-device" else ["LD260900"]
+    consumers = []
+    for load_id in selected:
+        packet = next(p for p in summary["packets"] if p["load_id"] == load_id)
+        _, downloaded = app.output(packet["file"], view["evidence_versions"][load_id])
+        filename, bundle = app.review_bundle(load_id, view["evidence_versions"][load_id],
+                                              view["review_versions"][load_id])
+        target = EVIDENCE / (name + "-bundle-" + str(len(consumers)) + ".zip")
+        target.write_bytes(bundle)
+        with zipfile.ZipFile(io.BytesIO(bundle)) as archive:
+            bundled_packet = archive.read("packet.html")
+        consumers.append({"load_id": load_id, "file": packet["file"], "download_name": filename,
+                          "packet_sha256": digest(downloaded), "bundle_sha256": digest(bundle),
+                          "bundle_bytes": len(bundle), "bundle_path": target.relative_to(ROOT).as_posix(),
+                          "matches_retained_packet": downloaded == (out / packet["file"]).read_bytes(),
+                          "bundle_matches_retained_packet": bundled_packet == downloaded,
+                          "evidence_version": view["evidence_versions"][load_id],
+                          "review_version": view["review_versions"][load_id]})
+    output_after_consumer = hashes(out)
+    drafted = [json.loads(line) for line in (out / "audit.jsonl").read_text(encoding="utf-8").splitlines()
+               if json.loads(line)["action"] == "packet_drafted"]
+    audit_files = {d["load_id"]: d["file"] for d in drafted}
+    summary_files = {p["load_id"]: Path(p["file"]).name for p in summary["packets"]}
+    after = hashes(data)
+    current_projection, previous_projection = projection(summary), projection(old_summary)
+    observations = {
+        "cli_returned_zero": proc.returncode == 0,
+        "seven_declared_and_retained": len(checks) == len(actual) == 7,
+        "all_packets_regular_and_correct": all(p["is_file"] and p["title_matches_logical_id"] for p in checks),
+        "names_casefold_distinct": len({p["file"].casefold() for p in checks}) == len(checks),
+        "no_physical_aliases": not physical_aliases,
+        "audit_references_actual_files": audit_files == summary_files,
+        "input_bytes_equal_to_baseline_and_preserved": before == after == original["input_hashes_before"],
+        "monetary_and_rule_projection_equal_to_baseline": current_projection == previous_projection,
+        "consumer_returns_exact_retained_bytes": all(c["matches_retained_packet"] and c["bundle_matches_retained_packet"] for c in consumers),
+        "consumer_preserves_all_output_bytes": output_before_consumer == output_after_consumer,
+    }
+    if name == "ordinary":
+        observations["ordinary_filenames_preserved"] = [p["file"] for p in checks] == [p["file"] for p in original["declared_packets"]]
+    cases.append({"name": name, "argv": argv, "cwd": str(SOURCE / "freight_packets"),
+                  "returncode": proc.returncode, "stdout_sha256": digest(proc.stdout), "stderr_sha256": digest(proc.stderr),
+                  "baseline_summary_sha256": original["summary_sha256"],
+                  "summary_sha256": digest((out / "summary.json").read_bytes()),
+                  "input_hashes_before": before, "input_hashes_after": after,
+                  "declared_packets": checks, "actual_packet_files": actual, "physical_aliases": physical_aliases,
+                  "monetary_and_rule_projection": current_projection,
+                  "baseline_monetary_and_rule_projection": previous_projection,
+                  "audit_file_map": audit_files, "consumer_receipts": consumers,
+                  "output_hashes_before_consumer": output_before_consumer,
+                  "output_hashes_after_consumer": output_after_consumer, "observations": observations})
+source_after = hashes(SOURCE)
+passed = source_before == source_after and all(all(c["observations"].values()) for c in cases)
+report = {"schema": "workflow-checks.freight-packet-names.windows-candidate.v1",
+          "observed_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(),
+          "host": platform.node(), "platform": platform.platform(), "python": sys.version,
+          "executable": sys.executable, "namespace": str(ROOT),
+          "native_source_commit": manifest["native_source_commit"],
+          "native_source_tree": manifest["native_source_tree"],
+          "upstream_base_commit": manifest["upstream_base_commit"],
+          "source_manifest_sha256": digest((ROOT / "source-manifest.json").read_bytes()),
+          "driver_sha256": digest(Path(__file__).read_bytes()), "baseline_report_sha256": digest(baseline_raw),
+          "source_hashes_before": source_before, "source_hashes_after": source_after,
+          "source_unchanged": source_before == source_after, "cases": cases,
+          "passed": passed, "synthetic_inputs_only": True, "production_service_invoked": False,
+          "environment": {"PYTHONPATH": "removed", "PYTHONHOME": "removed",
+                          "PYTHONDONTWRITEBYTECODE": "1", "PYTHONIOENCODING": "utf-8"}}
+(EVIDENCE / "report.json").write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
+print(json.dumps({"host": report["host"], "python": sys.version.split()[0], "namespace": str(ROOT),
+                  "native_source_commit": report["native_source_commit"], "passed": passed,
+                  "returncodes": [c["returncode"] for c in cases],
+                  "packet_counts": [[len(c["declared_packets"]), len(c["actual_packet_files"])] for c in cases],
+                  "consumer_bundles": sum(len(c["consumer_receipts"]) for c in cases),
+                  "report_sha256": digest((EVIDENCE / "report.json").read_bytes()),
+                  "observations": {c["name"]: c["observations"] for c in cases}}))
+sys.exit(0 if passed else 3)

@@ -1,0 +1,49 @@
+from pathlib import Path
+import base64,datetime,hashlib,json,os,platform,shutil,stat,subprocess,sys,zipfile
+r=Path("/Users/me/Developer/workflow-checks-packet-names-713adaab");t=r/"transfer/windows-transfer.json"
+assert hashlib.sha256(t.read_bytes()).hexdigest()=="b29a04adcd229ecdd3d106087fe5d471e3063c824de5d8f49a15fb86c0a009f9"
+assert shutil.disk_usage(r).free>50*1024*1024
+transfer=json.loads(t.read_text());archives=r/"archives";archives.mkdir();u=r/"unpacked";u.mkdir()
+archive_records=[]
+for item in transfer["files"]:
+ raw=base64.b64decode(item["base64"],validate=True)
+ assert len(raw)==item["bytes"] and hashlib.sha256(raw).hexdigest()==item["sha256"]
+ name=item["label"];assert Path(name).name==name and name.endswith(".zip")
+ archive=archives/name
+ with archive.open("xb") as f:f.write(raw)
+ dest=u/name.removesuffix(".zip");dest.mkdir()
+ with zipfile.ZipFile(archive) as z:
+  assert sum(i.file_size for i in z.infolist())<20*1024*1024
+  seen=set()
+  for info in z.infolist():
+   name=info.filename.replace("\\","/");parts=Path(name).parts
+   assert not name.startswith("/") and ".." not in parts and ":" not in name
+   assert not stat.S_ISLNK(info.external_attr>>16)
+   key=name.rstrip("/").casefold()
+   assert key not in seen,(archive.name,name);seen.add(key)
+   p=dest.joinpath(*parts)
+   if info.is_dir() or name.endswith("/"):p.mkdir(parents=True,exist_ok=True)
+   else:
+    p.parent.mkdir(parents=True,exist_ok=True)
+    with p.open("xb") as f:f.write(z.read(info))
+ archive_records.append({"label":item["label"],"bytes":len(raw),"sha256":item["sha256"]})
+bundle=u/"candidate-bundle";manifest=json.loads((bundle/"source-manifest.json").read_text())
+assert manifest["native_source_commit"]=="5f7c0b7692563f8ee7c006aeda35a3083c590460"
+s=r/"source";s.mkdir()
+for item in manifest["files"]:
+ raw=(bundle/"source"/item["path"]).read_bytes()
+ assert hashlib.sha256(raw).hexdigest()==item["sha256"]
+ blob=hashlib.sha1(b"blob "+str(len(raw)).encode()+b"\0"+raw).hexdigest();assert blob==item["git_blob"]
+ p=s/item["path"];p.parent.mkdir(parents=True,exist_ok=True);p.write_bytes(raw)
+for label,expected in [("baseline-custody","330c572343fce76fff48cfe130a14e3283d5303e1ae605bd7f850f117ca75fb8"),("candidate-custody","d7fdd900f31c210a1946f5e59d4c528383e041ea6dad8759689090d5bf8da1d9")]:
+ assert hashlib.sha256((u/label/"evidence/report.json").read_bytes()).hexdigest()==expected
+subprocess.run(["git","init","-q","-b","fix/freight-packet-names-713adaab"],cwd=s,check=True)
+subprocess.run(["git","config","core.autocrlf","false"],cwd=s,check=True)
+subprocess.run(["git","add","-f","--",*[x["path"] for x in manifest["files"]]],cwd=s,check=True)
+subprocess.run(["git","-c","user.name=ChatGPT migration_execution","-c","user.email=chatgpt-713adaab@users.noreply.github.com","commit","-q","-m","Import exact Windows-qualified Freight source closure from native lineage 5f7c0b76"],cwd=s,check=True)
+commit=subprocess.check_output(["git","rev-parse","HEAD"],cwd=s,text=True).strip();tree=subprocess.check_output(["git","rev-parse","HEAD^{tree}"],cwd=s,text=True).strip()
+assert tree==manifest["native_source_tree"],(tree,manifest["native_source_tree"])
+e=r/"continuation";e.mkdir()
+receipt={"schema":"freight-packet-names.native-continuation.v1","observed_utc":datetime.datetime.now(datetime.timezone.utc).isoformat(),"host":platform.node(),"python":sys.version,"executable":sys.executable,"native_continuation_import_commit":commit,"native_continuation_import_tree":tree,"windows_qualified_native_commit":manifest["native_source_commit"],"upstream_base_commit":manifest["upstream_base_commit"],"original_native_partial_import_commit":"b4ace5a1fe939799aeb82ebd16d575d696536e94","source_files":len(manifest["files"]),"source_tree_identical_to_windows_qualified_native_tree":True,"archives":archive_records,"transfer_json_sha256":hashlib.sha256(t.read_bytes()).hexdigest(),"transport":"Authorized RDC read_file on own Windows export -> in-session relay -> authorized RDC write_file on exclusive Mac namespace","credentials_moved":False,"connection_configuration_changed":False,"qualification_replayed":False,"source_lineage_note":"The Mac import reproduces the exact 31-file tree. It is a new native partial-source root commit, not a reconstruction of the original ThinkPad Git commit object or a descendant of the full upstream repository.","original_thinkpad_evidence_note":"Original native Linux raw paired-test receipts, controller SSH logs and Git objects remain in the owned ThinkPad tmpfs worktree, currently unavailable through RDC. Their contemporaneously observed results and exact recorded hashes remain separate historical evidence; this packet does not fabricate missing original files.","free_bytes_after":shutil.disk_usage(r).free}
+(e/"receipt.json").write_text(json.dumps(receipt,indent=2)+"\n")
+print(json.dumps(receipt,indent=2))

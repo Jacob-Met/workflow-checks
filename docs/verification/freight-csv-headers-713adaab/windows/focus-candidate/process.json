@@ -1,0 +1,7 @@
+﻿{
+    "stage":  "focus-candidate",
+    "inner_returncode":  0,
+    "observed_utc":  "2026-10-08T19:00:28.6742725Z",
+    "actor":  "NT AUTHORITY\\SYSTEM",
+    "command":  "C:\\Windows\\py.exe -3.11 -I -S -B -X utf8 run-focused.py focus-candidate"
+}

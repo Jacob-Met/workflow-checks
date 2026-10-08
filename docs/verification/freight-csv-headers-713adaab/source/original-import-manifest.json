@@ -1,0 +1,283 @@
+{
+  "upstream_commit": "76e6175d91320ac816cee019df969c0f0e1bbfc7",
+  "upstream_tree": "256483cd5c7cbb3731e5a6c322a117900ab24b65",
+  "files": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6fbdfae076d57b6d7b7c188e22e20fa147a2f2b3",
+      "size": 123,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/6fbdfae076d57b6d7b7c188e22e20fa147a2f2b3"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "edb188254288b40f2895833e3647b7e0be34c962",
+      "size": 1070,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/edb188254288b40f2895833e3647b7e0be34c962"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d13a764020918c215f91263d97d6c949a827d385",
+      "size": 6883,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/d13a764020918c215f91263d97d6c949a827d385"
+    },
+    {
+      "path": "freight_packets/HARDENING.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b6efb226aeef5c67012676a5a3782bb5a90bb327",
+      "size": 6821,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/b6efb226aeef5c67012676a5a3782bb5a90bb327"
+    },
+    {
+      "path": "freight_packets/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "249ee104175f1d36cc5b39abad5be02bc53e85be",
+      "size": 17742,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/249ee104175f1d36cc5b39abad5be02bc53e85be"
+    },
+    {
+      "path": "freight_packets/freightpkt/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a7804a1379966afd1e6143a92cf08c1b25f7abfe",
+      "size": 245,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/a7804a1379966afd1e6143a92cf08c1b25f7abfe"
+    },
+    {
+      "path": "freight_packets/freightpkt/__main__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3c93dd90cf357624c77ab3589ef2b201868c181e",
+      "size": 57,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/3c93dd90cf357624c77ab3589ef2b201868c181e"
+    },
+    {
+      "path": "freight_packets/freightpkt/batch_handoff.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2ae68efdfe0c0c45135e2a5764749a5444da62d7",
+      "size": 6160,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/2ae68efdfe0c0c45135e2a5764749a5444da62d7"
+    },
+    {
+      "path": "freight_packets/freightpkt/batch_handoff_ui.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "40f39412a16fe496afcc9b57e0ba3e03775ec303",
+      "size": 10806,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/40f39412a16fe496afcc9b57e0ba3e03775ec303"
+    },
+    {
+      "path": "freight_packets/freightpkt/cli.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a64a4d60816654595b1767ff9f96cd2cd9c49c32",
+      "size": 2672,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/a64a4d60816654595b1767ff9f96cd2cd9c49c32"
+    },
+    {
+      "path": "freight_packets/freightpkt/detention.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b275165bce2ac5162fb49eab54674c11f13bfd2f",
+      "size": 6574,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/b275165bce2ac5162fb49eab54674c11f13bfd2f"
+    },
+    {
+      "path": "freight_packets/freightpkt/fines.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0b0f70344f3f2f1d58d524fc1ec6e67a51b495cb",
+      "size": 11074,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/0b0f70344f3f2f1d58d524fc1ec6e67a51b495cb"
+    },
+    {
+      "path": "freight_packets/freightpkt/handoff.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bdcb63507b57d07eed1a6598d7d37d5f5d9db802",
+      "size": 7082,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/bdcb63507b57d07eed1a6598d7d37d5f5d9db802"
+    },
+    {
+      "path": "freight_packets/freightpkt/ingest.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dad18f470035318241a9c432326d1f4bafa26edf",
+      "size": 11001,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/dad18f470035318241a9c432326d1f4bafa26edf"
+    },
+    {
+      "path": "freight_packets/freightpkt/invoice_match.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "584bb09b92335a350d9880f55b786baba1960941",
+      "size": 5285,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/584bb09b92335a350d9880f55b786baba1960941"
+    },
+    {
+      "path": "freight_packets/freightpkt/models.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5087874944b6ee195111f30e98e9e9e5a8394fd1",
+      "size": 2758,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/5087874944b6ee195111f30e98e9e9e5a8394fd1"
+    },
+    {
+      "path": "freight_packets/freightpkt/packet.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3ee637afba32600f5e109e930086b7a4be46b989",
+      "size": 7707,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/3ee637afba32600f5e109e930086b7a4be46b989"
+    },
+    {
+      "path": "freight_packets/freightpkt/pdf.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6e68ce008548c9a5f6473d38616ca52b7aa5d580",
+      "size": 1671,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/6e68ce008548c9a5f6473d38616ca52b7aa5d580"
+    },
+    {
+      "path": "freight_packets/freightpkt/pipeline.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0962d25557eaf84ad7595d64ea7ef834c2e2a58",
+      "size": 11327,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/b0962d25557eaf84ad7595d64ea7ef834c2e2a58"
+    },
+    {
+      "path": "freight_packets/freightpkt/ratecon.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c1f148e62d2b215d11511311782a57b8272fed03",
+      "size": 4518,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/c1f148e62d2b215d11511311782a57b8272fed03"
+    },
+    {
+      "path": "freight_packets/freightpkt/synth.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "646ee6ec3336eb237c2b4717c15f448230605196",
+      "size": 18300,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/646ee6ec3336eb237c2b4717c15f448230605196"
+    },
+    {
+      "path": "freight_packets/freightpkt/ui.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4fd22753daf54da4d0a04c1202429b79cbada7de",
+      "size": 19723,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/4fd22753daf54da4d0a04c1202429b79cbada7de"
+    },
+    {
+      "path": "freight_packets/freightpkt/web.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9215adc3241f722344a452b4f789a4a5b59a25ec",
+      "size": 16343,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/9215adc3241f722344a452b4f789a4a5b59a25ec"
+    },
+    {
+      "path": "freight_packets/tests/conftest.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e4c2fd4ff87c63061fb6a10f0fb01228c46c0875",
+      "size": 102,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/e4c2fd4ff87c63061fb6a10f0fb01228c46c0875"
+    },
+    {
+      "path": "freight_packets/tests/review_batch_browser.cjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b33085c70eab78634dbc955d7d07ea4e2ace3e7c",
+      "size": 15552,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/b33085c70eab78634dbc955d7d07ea4e2ace3e7c"
+    },
+    {
+      "path": "freight_packets/tests/review_browser_smoke.cjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7a1f3dc268dd3d02867957425cbf5ee1eabc82b8",
+      "size": 7512,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/7a1f3dc268dd3d02867957425cbf5ee1eabc82b8"
+    },
+    {
+      "path": "freight_packets/tests/test_fines.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6d46848b04068425705b4c3319923d636f68ab6b",
+      "size": 6430,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/6d46848b04068425705b4c3319923d636f68ab6b"
+    },
+    {
+      "path": "freight_packets/tests/test_freight.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8539ae8a71e00f1ff19507626c809bbebffd81e3",
+      "size": 8764,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/8539ae8a71e00f1ff19507626c809bbebffd81e3"
+    },
+    {
+      "path": "freight_packets/tests/test_freight_hardening.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e7f6fdc9d68f714130a990b681be030aa5a71d2e",
+      "size": 8986,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/e7f6fdc9d68f714130a990b681be030aa5a71d2e"
+    },
+    {
+      "path": "freight_packets/tests/test_invoice_header_consistency.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8edd399bddc85e8e4d349e00d638ccc5272b465e",
+      "size": 10564,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/8edd399bddc85e8e4d349e00d638ccc5272b465e"
+    },
+    {
+      "path": "freight_packets/tests/test_review_batch.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "56c76edb6954675c023d5c637ecaa648fa9f5485",
+      "size": 14262,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/56c76edb6954675c023d5c637ecaa648fa9f5485"
+    },
+    {
+      "path": "freight_packets/tests/test_review_decisions.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0fc6e22e7dc8b7e60d9712e69750fd5c71e3241b",
+      "size": 13210,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/0fc6e22e7dc8b7e60d9712e69750fd5c71e3241b"
+    },
+    {
+      "path": "freight_packets/tests/test_review_handoff.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a30c83740f7ad5f6e4cdb47eb467567fead6a606",
+      "size": 15907,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/a30c83740f7ad5f6e4cdb47eb467567fead6a606"
+    }
+  ],
+  "mac_native_source_import": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Process started with PID 17601 (shell: /bin/zsh)\nInitial output:\n{\n  \"schema\": \"freight-csv-header-source-import/1\",\n  \"host\": \"Mac.lan\",\n  \"python\": \"3.13.7 (v3.13.7:bcee1c32211, Aug 14 2025, 19:10:51) [Clang 16.0.0 (clang-1600.0.26.6)]\",\n  \"executable\": \"/usr/local/bin/python3\",\n  \"upstream_commit\": \"76e6175d91320ac816cee019df969c0f0e1bbfc7\",\n  \"upstream_tree\": \"256483cd5c7cbb3731e5a6c322a117900ab24b65\",\n  \"native_partial_commit\": \"735f8b4016f204046e60ec2346d1eb59bd490c64\",\n  \"native_partial_tree\": \"aa9f5226870800e59ba8fdda7f5e6709b1669f2a\",\n  \"claim_sha256\": \"70537d7ce4e7dfc89d872cd2adb23b702335948ea084c0e2752d978df90f3907\",\n  \"git_status\": \"\",\n  \"pytest_available\": false,\n  \"free_bytes\": 292216832,\n  \"source_paths\": 33,\n  \"source_bytes\": 277231\n}\n"
+      },
+      {
+        "type": "text",
+        "text": "\n[executed on device: Mac.lan (0e3d582f-e25b-44b2-8418-9639fc4e4e33)]"
+      }
+    ],
+    "isError": false
+  }
+}

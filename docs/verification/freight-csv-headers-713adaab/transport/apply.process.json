@@ -1,0 +1,9 @@
+﻿{
+    "stage":  "apply",
+    "inner_returncode":  0,
+    "host":  null,
+    "actor":  "NT AUTHORITY\\SYSTEM",
+    "observed_utc":  "2026-10-08T19:00:01.7470326Z",
+    "source_before":  "6111a94356901c75f3274182f411d40ab61e31c6",
+    "driver":  "C:\\Users\\minec\\AppData\\Local\\Temp\\hamon-freight-csv-headers-713adaab-eaac9c5260964a5491ec5b6cbd6426e3\\apply-headers.py"
+}

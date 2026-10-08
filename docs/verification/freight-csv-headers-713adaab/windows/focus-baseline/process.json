@@ -1,0 +1,10 @@
+{
+    "observed_utc":  "2026-10-08T17:07:28.4681124Z",
+    "stage":  "focus-baseline",
+    "namespace":  "C:\\Users\\minec\\AppData\\Local\\Temp\\hamon-freight-csv-headers-713adaab-eaac9c5260964a5491ec5b6cbd6426e3",
+    "returncode":  1,
+    "stdout_sha256":  "33cb39704e2fe75b43d8eb1a6203d462904c0d644e121c5a643517e1a16c2ba6",
+    "stderr_sha256":  "a21a0ccb4350c7289cfac18366e6499a154fb3911d244ece135b94ca7a46a6c4",
+    "stdout":  "{\r\n  \"stage\": \"focus-baseline\",\r\n  \"tests_run\": 12,\r\n  \"failure_entries\": 16,\r\n  \"failed_methods\": [\r\n    \"test_csv_header_admission.CsvHeaderAdmissionTests.test_alias_readers_reject_their_existing_strip_lower_collisions\",\r\n    \"test_csv_header_admission.CsvHeaderAdmissionTests.test_ambiguous_pod_refuses_before_replacing_prior_reports\",\r\n    \"test_csv_header_admission.CsvHeaderAdmissionTests.test_duplicate_headers_are_refused_by_all_four_csv_readers\",\r\n    \"test_csv_header_admission.CsvHeaderAdmissionTests.test_duplicate_headers_are_rejected_even_without_data_rows\",\r\n    \"test_csv_header_admission.CsvHeaderAdmissionTests.test_equal_values_do_not_make_duplicate_columns_unambiguous\",\r\n    \"test_csv_header_admission.CsvHeaderAdmissionTests.test_quoted_headers_are_checked_as_parsed_csv_fields\"\r\n  ],\r\n  \"errors\": 0,\r\n  \"skips\": 0,\r\n  \"successful\": false,\r\n  \"source_unchanged\": true,\r\n  \"report_sha256\": \"343d42aff557348a6124c4a7d550240af45911e864499fd885dfded54020c6ac\",\r\n  \"first_failure\": \"AssertionError: ValueError not raised\",\r\n  \"new_test_sha256\": \"0ad850988184c584972968840ea0accf0e9c508f184509a392eea7981de864af\"\r\n}\r\n",
+    "stderr_bytes":  20952
+}

@@ -74,6 +74,22 @@ _CSV_ALIASES = {
 }
 
 
+def _check_csv_headers(
+    reader: csv.DictReader, path: Path, *, normalize: bool = False
+) -> None:
+    """Reject column names that this reader would silently collapse."""
+    seen: dict[str, tuple[str, int]] = {}
+    for column, name in enumerate(reader.fieldnames or [], start=1):
+        key = name.strip().lower() if normalize else name
+        if key in seen:
+            first_name, first_column = seen[key]
+            raise ValueError(
+                f"{path.name}: duplicate CSV header {name!r} in columns "
+                f"{first_column} ({first_name!r}) and {column}"
+            )
+        seen[key] = (name, column)
+
+
 def _resolve_headers(fieldnames: list[str]) -> dict[str, str]:
     lower = {f.strip().lower(): f for f in fieldnames}
     out = {}
@@ -111,6 +127,7 @@ def load_telematics(path: Path) -> list[StopEvent]:
     else:
         with path.open(newline="", encoding="utf-8-sig") as fh:
             reader = csv.DictReader(fh)
+            _check_csv_headers(reader, path, normalize=True)
             h = _resolve_headers(reader.fieldnames or [])
             for i, r in enumerate(reader, start=2):
                 events.append(StopEvent(
@@ -132,7 +149,9 @@ def load_loads(path: Path) -> list[Load]:
     out = []
     seen: dict[str, str] = {}
     with path.open(newline="", encoding="utf-8-sig") as fh:
-        for i, r in enumerate(csv.DictReader(fh), start=2):
+        reader = csv.DictReader(fh)
+        _check_csv_headers(reader, path)
+        for i, r in enumerate(reader, start=2):
             lid = r["load_id"].strip()
             source = f"{path.name}:row{i}"
             if lid in seen:
@@ -180,6 +199,7 @@ def load_tracking_stops(path: Path) -> list[StopEvent]:
     events: list[StopEvent] = []
     with path.open(newline="", encoding="utf-8-sig") as fh:
         reader = csv.DictReader(fh)
+        _check_csv_headers(reader, path, normalize=True)
         lower = {f.strip().lower(): f for f in (reader.fieldnames or [])}
         h = {}
         for key, aliases in _TRACK_ALIASES.items():
@@ -221,7 +241,9 @@ def load_invoices(path: Path) -> list[Invoice]:
     path = Path(path)
     grouped: dict[tuple[str, str], Invoice] = {}
     with path.open(newline="", encoding="utf-8-sig") as fh:
-        for i, r in enumerate(csv.DictReader(fh), start=2):
+        reader = csv.DictReader(fh)
+        _check_csv_headers(reader, path)
+        for i, r in enumerate(reader, start=2):
             key = (r["invoice_no"].strip(), r["load_id"].strip())
             carrier = r["carrier"].strip()
             invoice_date = r["invoice_date"].strip()

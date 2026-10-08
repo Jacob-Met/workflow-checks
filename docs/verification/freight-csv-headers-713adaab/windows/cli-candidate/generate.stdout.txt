@@ -1,0 +1,1 @@
+wrote synthetic data to C:\Users\minec\AppData\Local\Temp\hamon-freight-csv-headers-713adaab-eaac9c5260964a5491ec5b6cbd6426e3\cli-candidate\ordinary-input: 24 loads, 8 seeded invoice defects, expected detention $2,251.25

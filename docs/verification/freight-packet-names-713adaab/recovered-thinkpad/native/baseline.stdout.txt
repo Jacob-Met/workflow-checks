@@ -1,0 +1,44 @@
+F...                                                [100%]
+=================================== FAILURES ===================================
+_ PacketFileRetentionTests.test_case_distinct_loads_keep_distinct_readable_packets _
+
+self = <test_packet_names.PacketFileRetentionTests testMethod=test_case_distinct_loads_keep_distinct_readable_packets>
+
+    def test_case_distinct_loads_keep_distinct_readable_packets(self):
+        self.replace_id("LD260907", "ld260900")
+>       result, _, _ = self.run_and_check()
+                       ^^^^^^^^^^^^^^^^^^^^
+
+tests/test_packet_names.py:122: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/test_packet_names.py:93: in run_and_check
+    self.assertEqual(len({p["file"].casefold() for p in packets}), 7)
+E   AssertionError: 6 != 7
+_ PacketFileRetentionTests.test_device_load_id_has_a_retained_packet_and_existing_handoff (load_id='NUL') _
+
+self = <test_packet_names.PacketFileRetentionTests testMethod=test_device_load_id_has_a_retained_packet_and_existing_handoff>
+
+    def run_and_check(self):
+        before = {p.relative_to(self.data).as_posix(): p.read_bytes()
+                  for p in self.data.rglob("*") if p.is_file()}
+        result = run(self.data, self.out)
+        packets = result["packets"]
+        self.assertEqual(result["detention_total_cents"], self.expected["detention_total_cents"])
+        self.assertEqual(len(packets), 7)
+        self.assertEqual(len({p["file"].casefold() for p in packets}), 7)
+        self.assertEqual(len(list((self.out / "packets").glob("*.html"))), 7)
+        app = App(self.data, self.out)
+        view = app.summary()
+        for packet in packets:
+            with self.subTest(load_id=packet["load_id"]):
+                path = self.out / packet["file"]
+                self.assertEqual(path.parent, self.out / "packets")
+                self.assertTrue(path.is_file())
+>               self.assertNotRegex(path.stem.upper(), r"^(CON|PRN|AUX|NUL|COM[1-9]|LPT[1-9])$")
+E               AssertionError: Regex matched: 'NUL' matches '^(CON|PRN|AUX|NUL|COM[1-9]|LPT[1-9])$' in 'NUL'
+
+tests/test_packet_names.py:102: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_packet_names.py::PacketFileRetentionTests::test_case_distinct_loads_keep_distinct_readable_packets
+SUBFAILED(load_id='NUL') tests/test_packet_names.py::PacketFileRetentionTests::test_device_load_id_has_a_retained_packet_and_existing_handoff
+2 failed, 3 passed, 20 subtests passed in 0.39s

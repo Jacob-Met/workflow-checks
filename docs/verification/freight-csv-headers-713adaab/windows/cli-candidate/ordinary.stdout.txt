@@ -1,0 +1,15 @@
+events=105 loads=24 stops=48
+detention stops=13  total=$2,251.25  late arrivals=3  exceptions=5
+invoice flags=12  packets=15  -> C:\Users\minec\AppData\Local\Temp\hamon-freight-csv-headers-713adaab-eaac9c5260964a5491ec5b6cbd6426e3\cli-candidate\out
+  [LINEHAUL_MISMATCH] LD260907 inv CAL-7101: linehaul: invoiced $1,532.00 vs rate-con $1,382.00
+  [FUEL_MISMATCH] LD260928 inv CAL-7104: fuel surcharge: invoiced $656.77 vs rate-con $614.02
+  [DETENTION_UNSUPPORTED] LD260949 inv CAL-7107: detention invoiced $200.00 but telematics supports $75.00
+  [ACCESSORIAL_NOT_ON_RATECON] LD260970 inv CAL-7110: TONU $250.00 billed but not on rate-con
+  [ACCESSORIAL_OVER_RATECON] LD260991 inv CAL-7113: LUMPER: invoiced $255.00 vs agreed $175.00
+  [TOTAL_MISMATCH] LD261012 inv CAL-7116: header total $1,883.64 != line sum $1,783.64
+  [DETENTION_UNSUPPORTED] LD261026 inv CAL-7119: detention invoiced $206.25 but telematics supports $0.00
+  [DUPLICATE_INVOICE] LD261026 inv CAL-7119: invoice #CAL-7119 also billed on load(s) LD261033
+  [FUEL_MISMATCH] LD261026 inv CAL-7119: fuel surcharge: invoiced $208.34 vs rate-con $377.75
+  [LINEHAUL_MISMATCH] LD261026 inv CAL-7119: linehaul: invoiced $947.00 vs rate-con $1,511.00
+  [DUPLICATE_INVOICE] LD261033 inv CAL-7119: invoice #CAL-7119 also billed on load(s) LD261026
+  [MISSING_POD] LD261054 inv CAL-7122: no POD on file; hold payment until POD received

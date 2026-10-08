@@ -1,0 +1,9 @@
+{
+  "seq": 4343,
+  "event_id": "cev_b783d5ea0f104c108b3975f5",
+  "event_hash": "ba151661e38f0ff9a760d134a99afe652485a0abb37d137545f150aadd4bae58",
+  "actor": "chatgpt:/root/migration_execution",
+  "key": "claim:freight-packet-names-713adaab",
+  "value": "active_isolated_source",
+  "observation_note": "Recorded from the successful original native Conscience append response. This is a curated event reference, not a reconstruction of the full native journal row."
+}
