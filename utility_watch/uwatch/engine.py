@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import csv
 import json
+import math
 import statistics
 from dataclasses import dataclass, field, asdict
 from datetime import date, datetime, timedelta
@@ -87,7 +88,7 @@ def _d(s: str) -> date:
     raise ValueError(f"unsupported date {s!r}; use YYYY-MM-DD or MM/DD/YYYY")
 
 
-def _number(s: str, *, blank: float | None = None) -> float:
+def _number(s: str, *, blank: float | None = None, field_name: str = "number") -> float:
     value = s.strip()
     if not value:
         if blank is not None:
@@ -98,6 +99,8 @@ def _number(s: str, *, blank: float | None = None) -> float:
         value = value[1:-1]
     value = value.replace("$", "").replace(",", "").strip()
     result = float(value)
+    if not math.isfinite(result):
+        raise ValueError(f"{field_name} must be a finite number")
     return -abs(result) if negative else result
 
 
@@ -140,8 +143,10 @@ def load(data: Path):
     for i, r in _rows(data / "bills.csv", bill_fields):
         try:
             bill = Bill(i, r["bill_id"], r["account_no"], r["vendor_invoice_no"], _d(r["period_start"]),
-                        _d(r["period_end"]), _number(r["usage"]), r["usage_unit"], _number(r["amount"]),
-                        _number(r["late_fee"], blank=0), _number(r["prior_balance"], blank=0),
+                        _d(r["period_end"]), _number(r["usage"], field_name="usage"), r["usage_unit"],
+                        _number(r["amount"], field_name="amount"),
+                        _number(r["late_fee"], blank=0, field_name="late_fee"),
+                        _number(r["prior_balance"], blank=0, field_name="prior_balance"),
                         _d(r["due_date"]), _d(r["received_date"]))
         except ValueError as exc:
             raise ValueError(f"bills.csv:{i}: {exc}") from exc
@@ -164,7 +169,7 @@ def load(data: Path):
     for i, r in _rows(data / "payments.csv",
                       ["payment_id", "account_no", "vendor_invoice_no", "amount", "paid_date"]):
         try:
-            pays.append((r["account_no"], r["vendor_invoice_no"], _number(r["amount"]),
+            pays.append((r["account_no"], r["vendor_invoice_no"], _number(r["amount"], field_name="amount"),
                          _d(r["paid_date"]), i))
         except ValueError as exc:
             raise ValueError(f"payments.csv:{i}: {exc}") from exc
