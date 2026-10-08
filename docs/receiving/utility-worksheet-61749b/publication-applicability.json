@@ -1,0 +1,13 @@
+{
+  "qualified_parent": "a5fd61b0c361c8a9b8a6737b33ecc9efab46e0ad",
+  "publication_parent": "5b12dcd4c3a2c09d6602b2313e2bb556ac5997f7",
+  "publication_tree": "e16dd0815e252c7e1715545999918f303bc823af",
+  "changed_leaves": 214,
+  "utility_changed": 0,
+  "changed_groups": [
+    "docs",
+    "freight_packets"
+  ],
+  "base_leaves": 568,
+  "untruncated": true
+}

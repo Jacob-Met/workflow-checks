@@ -1,0 +1,63 @@
+{
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "-B",
+    "/dev/shm/hamon-61749b-utility-worksheet/candidate/utility_watch/tests/test_worksheet_cli.py"
+  ],
+  "cwd": "/dev/shm/hamon-61749b-utility-worksheet/candidate/utility_watch",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "exit": 0,
+  "source_commit": "9e931fa9f42033bf2368f7149684fb5631345715",
+  "source_tree": "0b0c903801f432968e9cdfb1f1fa134cecc37217",
+  "runtime_and_tests": {
+    "utility_watch/uwatch/worksheet.py": {
+      "bytes": 7789,
+      "sha256": "827f7ba7d6eba19d07f18bc202a50b8283bf2b4a6b9b9247046a0441a1d845fa",
+      "git_blob": "d8880f1f33115c8589ad0a91b87ef5619ae95964"
+    },
+    "utility_watch/uwatch/cli.py": {
+      "bytes": 3567,
+      "sha256": "e9da048a729bab5e4baa6056df5de9eecfdd4b5815ac708b1f303ae803c47134",
+      "git_blob": "c1490f867ac077818e7c22bff719f9dbed8ce500"
+    },
+    "utility_watch/tests/test_worksheet_cli.py": {
+      "bytes": 19455,
+      "sha256": "7f34553faab1a45bcb901bcfc51ea4fe6fd8f474d4061d3c95afba3aa6af88a1",
+      "git_blob": "4963d459c3c41e02fa04bf30495c1b9883db26de"
+    },
+    "utility_watch/docs/worksheet-cli.md": {
+      "bytes": 6044,
+      "sha256": "b843af2e765f4a9a4cbe10d269e2b86aaf6c1836b158f3abe80b9c5b84578221",
+      "git_blob": "31ce5972fa7d9318922cb08b7423e6b908f7ebd5"
+    },
+    "utility_watch/README.md": {
+      "bytes": 12876,
+      "sha256": "7f00ef9d9fb45394cc0ef91dc9e6e703a792af2446802379b3cf607d534238a1",
+      "git_blob": "1132abfa260496a107e2f0694968f0585077927f"
+    }
+  },
+  "unowned_selected_inputs_unchanged": [
+    "utility_watch/HARDENING.md",
+    "utility_watch/sample_data/README_SYNTHETIC.txt",
+    "utility_watch/sample_data/accounts.csv",
+    "utility_watch/sample_data/bills.csv",
+    "utility_watch/sample_data/expected.json",
+    "utility_watch/sample_data/occupancy.csv",
+    "utility_watch/sample_data/payments.csv",
+    "utility_watch/tests/test_numeric_csv.py",
+    "utility_watch/tests/test_report.py",
+    "utility_watch/tests/test_review.py",
+    "utility_watch/tests/test_uwatch.py",
+    "utility_watch/uwatch/__init__.py",
+    "utility_watch/uwatch/__main__.py",
+    "utility_watch/uwatch/engine.py",
+    "utility_watch/uwatch/report.py",
+    "utility_watch/uwatch/review.py",
+    "utility_watch/uwatch/synth.py"
+  ],
+  "source_unchanged_during_execution": true,
+  "browser_execution": false,
+  "real_financial_data": false,
+  "pytest_available": false,
+  "log_sha256": "e7ac11e92ffef1e54c6c73b1e1dfcac86aa25b057270e5e39f9d1a39d275628d"
+}

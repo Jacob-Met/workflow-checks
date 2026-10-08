@@ -1,0 +1,12 @@
+{
+  "first_attempt": {
+    "candidate_parent": "a5fd61b0c361c8a9b8a6737b33ecc9efab46e0ad",
+    "command": "python -B candidate-current/utility_watch/tests/test_worksheet_cli.py",
+    "runtime_exit_not_observable": true,
+    "reason": "capture wrapper raised ENOSPC while writing log before it printed child output; test result cannot be claimed",
+    "source_unchanged_not_checked_in_failed_wrapper": true
+  },
+  "observable_retry_passed": true,
+  "observable_retry_log_initial_persistence": "ENOSPC after output and source-stability checks were emitted; exact tool-captured log restored after verifying SHA256; no further test execution",
+  "log_sha256": "a01e6ad23223727163d5d136b8d453f7a818604d48da274f9006343f1bc964d2"
+}

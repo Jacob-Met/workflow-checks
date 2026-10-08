@@ -1,0 +1,83 @@
+{
+  "parent_commit": "a5fd61b0c361c8a9b8a6737b33ecc9efab46e0ad",
+  "parent_tree": "5ac515d24c722128f04b7ae343fb7c3e369a06c9",
+  "owner_merge_pr": 29,
+  "original_qualification_commit": "9e931fa9f42033bf2368f7149684fb5631345715",
+  "authored_runtime_and_tests_unchanged": true,
+  "readme_composition": "one original annotation-workflow section inserted; removing it restores exact current parent README",
+  "owned": [
+    {
+      "path": "utility_watch/README.md",
+      "bytes": 13170,
+      "git_blob": "a3b376c1739d4ccf5f1b3bc1b8affd2137351084",
+      "sha256": "8674ab82c0891b611a2c33bd8d5434bc347a1ce08c2f1bb3812976440eab4109",
+      "mode": "100644"
+    },
+    {
+      "path": "utility_watch/docs/worksheet-cli.md",
+      "bytes": 6044,
+      "git_blob": "31ce5972fa7d9318922cb08b7423e6b908f7ebd5",
+      "sha256": "b843af2e765f4a9a4cbe10d269e2b86aaf6c1836b158f3abe80b9c5b84578221",
+      "mode": "100644"
+    },
+    {
+      "path": "utility_watch/tests/test_worksheet_cli.py",
+      "bytes": 19455,
+      "git_blob": "4963d459c3c41e02fa04bf30495c1b9883db26de",
+      "sha256": "7f34553faab1a45bcb901bcfc51ea4fe6fd8f474d4061d3c95afba3aa6af88a1",
+      "mode": "100644"
+    },
+    {
+      "path": "utility_watch/uwatch/cli.py",
+      "bytes": 3567,
+      "git_blob": "c1490f867ac077818e7c22bff719f9dbed8ce500",
+      "sha256": "e9da048a729bab5e4baa6056df5de9eecfdd4b5815ac708b1f303ae803c47134",
+      "mode": "100644"
+    },
+    {
+      "path": "utility_watch/uwatch/worksheet.py",
+      "bytes": 7789,
+      "git_blob": "d8880f1f33115c8589ad0a91b87ef5619ae95964",
+      "sha256": "827f7ba7d6eba19d07f18bc202a50b8283bf2b4a6b9b9247046a0441a1d845fa",
+      "mode": "100644"
+    }
+  ],
+  "inherited_selected_current_parent_exact": [
+    "utility_watch/HARDENING.md",
+    "utility_watch/sample_data/README_SYNTHETIC.txt",
+    "utility_watch/sample_data/accounts.csv",
+    "utility_watch/sample_data/bills.csv",
+    "utility_watch/sample_data/expected.json",
+    "utility_watch/sample_data/occupancy.csv",
+    "utility_watch/sample_data/payments.csv",
+    "utility_watch/tests/test_account_bill_keys.py",
+    "utility_watch/tests/test_numeric_csv.py",
+    "utility_watch/tests/test_report.py",
+    "utility_watch/tests/test_review.py",
+    "utility_watch/tests/test_uwatch.py",
+    "utility_watch/uwatch/__init__.py",
+    "utility_watch/uwatch/__main__.py",
+    "utility_watch/uwatch/engine.py",
+    "utility_watch/uwatch/report.py",
+    "utility_watch/uwatch/review.py",
+    "utility_watch/uwatch/synth.py"
+  ],
+  "received_current_owner_inputs": [
+    {
+      "path": "utility_watch/uwatch/engine.py",
+      "git_blob": "b764a1f45ba718b31f7841e2c2f61d16a7fef5e9"
+    },
+    {
+      "path": "utility_watch/README.md",
+      "git_blob": "2b29f11cabf4c4967ca59c10178134abbb2843f8"
+    },
+    {
+      "path": "utility_watch/HARDENING.md",
+      "git_blob": "4c621a673ddd9d7211bb9b0436f7b4bbebf7c856"
+    },
+    {
+      "path": "utility_watch/tests/test_account_bill_keys.py",
+      "git_blob": "00f833a02d17b7a757a7d028846f5c6012cddd17"
+    }
+  ]
+}

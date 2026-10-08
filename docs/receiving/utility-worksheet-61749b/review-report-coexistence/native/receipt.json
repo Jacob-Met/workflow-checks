@@ -1,0 +1,387 @@
+{
+  "schema": "utility-worksheet-printable-coexistence-v1",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "package": "/dev/shm/hamon-61749b-utility-worksheet/printable-receiving/candidate/utility_watch",
+  "input": "/workspace/scratch/61749b0088e2/utility-worksheet-independent-current/native/07-reconciled-current.csv",
+  "input_pin": {
+    "bytes": 1998,
+    "sha256": "97e9b952a1a009d2582c4901d1d570cd75d9796b63b3479f513092968dd1abfe",
+    "git_blob": "a3e5cb588411015b3c01a31beabf0d30a40bef28"
+  },
+  "source_before": {
+    "HARDENING.md": {
+      "bytes": 4105,
+      "sha256": "db44c2f8aeb1199aa7ba2036ab5759ae65209d47cfd41d54e765836246fa50f8",
+      "git_blob": "4c621a673ddd9d7211bb9b0436f7b4bbebf7c856"
+    },
+    "README.md": {
+      "bytes": 13170,
+      "sha256": "8674ab82c0891b611a2c33bd8d5434bc347a1ce08c2f1bb3812976440eab4109",
+      "git_blob": "a3b376c1739d4ccf5f1b3bc1b8affd2137351084"
+    },
+    "docs/review-report.md": {
+      "bytes": 4603,
+      "sha256": "8ae387b4401ec2653779b59aeb7d7c44b9bb319f299ab6cf74195ea64aac5d0d",
+      "git_blob": "2a676d0ae4cecc8c45d8c3a371701c8748bdc977"
+    },
+    "docs/worksheet-cli.md": {
+      "bytes": 6044,
+      "sha256": "b843af2e765f4a9a4cbe10d269e2b86aaf6c1836b158f3abe80b9c5b84578221",
+      "git_blob": "31ce5972fa7d9318922cb08b7423e6b908f7ebd5"
+    },
+    "sample_data/README_SYNTHETIC.txt": {
+      "bytes": 170,
+      "sha256": "ef34519e3f46f3e19bd8554620b07cbc13850c6b5cd6337508bf47cf01d536b4",
+      "git_blob": "237579a904d7b7b605f78ed122c97140c6f06003"
+    },
+    "sample_data/accounts.csv": {
+      "bytes": 2802,
+      "sha256": "58518376e0a67bf1a31f76e754020307a42330a87d3d7a538e6ccbb947d97958",
+      "git_blob": "8524a01938d9dfa3b9a0d05676a64e31e921ea8e"
+    },
+    "sample_data/bills.csv": {
+      "bytes": 27296,
+      "sha256": "1b8f6897703b42723e17e6089867634e04e7c609c0a578f33636fb9dda321e4e",
+      "git_blob": "21eca3e9265e3bdeacb668e1ff602121f96edda6"
+    },
+    "sample_data/expected.json": {
+      "bytes": 899,
+      "sha256": "222dd41aa5f5f20be0f08ea31bf7e8ca656cd56720b694b4380ce6f418df445c",
+      "git_blob": "0016cf0754d112b3a55a0ede42e6999aee17a847"
+    },
+    "sample_data/occupancy.csv": {
+      "bytes": 564,
+      "sha256": "0f77598a53f50162ef28059c88be91798f918e57e66eaa0a1f1d79880512cb6e",
+      "git_blob": "4396760f366c95f09343ce3e778beb7abd80bea0"
+    },
+    "sample_data/payments.csv": {
+      "bytes": 12113,
+      "sha256": "86cf78324cd395e86200ec205f49fe73afa2984306ab6ccd2e5cf71261710853",
+      "git_blob": "7f94d9c67855bc0def8b515b2b55450f9d65631e"
+    },
+    "tests/test_account_bill_keys.py": {
+      "bytes": 6460,
+      "sha256": "cc15ba0c7fa92f401677403a95a5e73b1788ee976726f36cbe6447b2e20837f3",
+      "git_blob": "00f833a02d17b7a757a7d028846f5c6012cddd17"
+    },
+    "tests/test_numeric_csv.py": {
+      "bytes": 3424,
+      "sha256": "d6128ec39491994185f9aabfe374caeb80ca13cbdbdc1fabe68b3eba567b65a2",
+      "git_blob": "2e63820b66001b2cf35590ca8f41270ce84f7500"
+    },
+    "tests/test_report.py": {
+      "bytes": 7083,
+      "sha256": "affe575fedaa7619520a6b23b63649e76029881a0a5641d6cc7d2900d150bc4f",
+      "git_blob": "a4480762868831bdafef1bf52e94a1cc68e31e43"
+    },
+    "tests/test_review.py": {
+      "bytes": 19251,
+      "sha256": "f0c645af21d4f9af0539697c3e2dca26a197fc1284b943cd12d42e9500099155",
+      "git_blob": "0308086a88c256bd5ad5fe2a9b2868c118ee52ec"
+    },
+    "tests/test_review_report.py": {
+      "bytes": 10866,
+      "sha256": "6d48681bbfd4c4725b4aa6a191f04ed9f2fa4fd6beca0799f5265fb50210d7d5",
+      "git_blob": "9ea0860c27a77ed8c67f8349525ec452e8a523b8"
+    },
+    "tests/test_uwatch.py": {
+      "bytes": 15469,
+      "sha256": "0638976cdfc928d8bd3980fb24fe18c24ef814c7f8c5e7612c8c02fb2b8f339a",
+      "git_blob": "1a71129311c88af32bb4abf0d633e5fcc496ab78"
+    },
+    "tests/test_worksheet_cli.py": {
+      "bytes": 19455,
+      "sha256": "7f34553faab1a45bcb901bcfc51ea4fe6fd8f474d4061d3c95afba3aa6af88a1",
+      "git_blob": "4963d459c3c41e02fa04bf30495c1b9883db26de"
+    },
+    "uwatch/__init__.py": {
+      "bytes": 60,
+      "sha256": "a0332cb0878fcdfd02d1651f9a46c299ca0279996c6e5723d49311228c597a57",
+      "git_blob": "7074157fb1710370668c2a0ad5217cd10cfe3618"
+    },
+    "uwatch/__main__.py": {
+      "bytes": 53,
+      "sha256": "26c55ee4277631c49b2312533d7514a815ec2c3de08f48b0a9dea8946d8f8933",
+      "git_blob": "823d40a6bf41beb59790ce83476b359f76f4b1ec"
+    },
+    "uwatch/cli.py": {
+      "bytes": 4473,
+      "sha256": "80cb716a37aa810c63ad69916ab293fcbfd83a44b51570d013339c0b217c7cb3",
+      "git_blob": "034935eeb633ecf68bfda4c5dd1181c7931880e6"
+    },
+    "uwatch/engine.py": {
+      "bytes": 21280,
+      "sha256": "ff0dc3a473235c55639e4373e3b5a4c786a0cd9ae7badd2be9113f39a4efd3d0",
+      "git_blob": "b764a1f45ba718b31f7841e2c2f61d16a7fef5e9"
+    },
+    "uwatch/report.py": {
+      "bytes": 12382,
+      "sha256": "dc43c4fbbef72204a9dc9c5d7e4d3883900e96daf26c725f10fe22d4721540db",
+      "git_blob": "ee2fcabd2026b4224c3cdfc51890f71762a9ef0f"
+    },
+    "uwatch/review.py": {
+      "bytes": 15534,
+      "sha256": "f9f730ca45140436704d9823eafcfb58fb3922c5d0bf93a21a63f31347c947de",
+      "git_blob": "2475217ce9c073c39756f9fa3926342cd83f7254"
+    },
+    "uwatch/review_report.py": {
+      "bytes": 8457,
+      "sha256": "4462088141b21c990ce5b949a9c683f68f647ae83bdba0eaa1409730e442f856",
+      "git_blob": "be869a940436172253c0a6d5020ba24860f1a7eb"
+    },
+    "uwatch/synth.py": {
+      "bytes": 13194,
+      "sha256": "8573a65a8c5907ebedda24c47183f60f258e895bae0a2656bb582ada9217209d",
+      "git_blob": "0d5c8137b3790bd062609ce4725beda63db9e58d"
+    },
+    "uwatch/worksheet.py": {
+      "bytes": 7789,
+      "sha256": "827f7ba7d6eba19d07f18bc202a50b8283bf2b4a6b9b9247046a0441a1d845fa",
+      "git_blob": "d8880f1f33115c8589ad0a91b87ef5619ae95964"
+    }
+  },
+  "commands": [
+    {
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "-m",
+        "uwatch",
+        "worksheet",
+        "list",
+        "--worksheet",
+        "/workspace/scratch/61749b0088e2/utility-worksheet-independent-current/native/07-reconciled-current.csv",
+        "--json"
+      ],
+      "cwd": "/dev/shm/hamon-61749b-utility-worksheet/printable-receiving/candidate/utility_watch",
+      "exit": 0,
+      "stdout": "{\n  \"worksheet\": \"/workspace/scratch/61749b0088e2/utility-worksheet-independent-current/native/07-reconciled-current.csv\",\n  \"worksheet_schema\": \"uwatch-review-v1\",\n  \"worksheet_sha256\": \"97e9b952a1a009d2582c4901d1d570cd75d9796b63b3479f513092968dd1abfe\",\n  \"as_of\": \"2026-10-08\",\n  \"eval_from\": \"2026-09-01\",\n  \"data_mode\": \"synthetic\",\n  \"current\": 2,\n  \"history\": 1,\n  \"shown\": 2,\n  \"filters\": {\n    \"include_history\": false,\n    \"account\": null,\n    \"status\": null\n  },\n  \"rows\": [\n    {\n      \"review_status\": \"reviewed\",\n      \"reviewer\": \" New current reviewer \",\n      \"note\": \" Reviewed the returned current evidence.\\nA distinct deliberate annotation. \",\n      \"row_state\": \"current\",\n      \"kind\": \"flag\",\n      \"account_no\": \"RECV-A\",\n      \"finding_key\": \"A-SEP\",\n      \"code\": \"LATE_FEE_OR_PAST_DUE\",\n      \"property\": \"Authored A\",\n      \"utility\": \"gas\",\n      \"detail\": \"late fee $5.00, prior balance $0.00 on the bill\",\n      \"evidence\": \"[\\\"bills.csv:4\\\"]\",\n      \"as_of\": \"2026-10-08\",\n      \"eval_from\": \"2026-09-01\",\n      \"data_mode\": \"synthetic\",\n      \"row_id\": \"2042aa2726dd413cb358429179efba03\",\n      \"finding_id\": \"3dd13b23726a47fab35c3f691158e4e4770b65e3a37acd22a7ef53216f1e093d\",\n      \"evidence_version\": \"dee3ba6d4f1960a9ffd3f464fa6c5a1177c6c77050316544ac75d1b86aae7dda\",\n      \"record_sha256\": \"e68b8f3c41f44fda95803aea6da1f33173b6694dabc466fd5f2ace6eb0230b4c\"\n    },\n    {\n      \"review_status\": \"in_progress\",\n      \"reviewer\": \"  Bea, receiving analyst  \",\n      \"note\": \" Keep this other account.\\nSecond line: 雪 \",\n      \"row_state\": \"current\",\n      \"kind\": \"flag\",\n      \"account_no\": \"RECV-B\",\n      \"finding_key\": \"B-SEP\",\n      \"code\": \"LATE_FEE_OR_PAST_DUE\",\n      \"property\": \"Authored B\",\n      \"utility\": \"gas\",\n      \"detail\": \"late fee $5.00, prior balance $0.00 on the bill\",\n      \"evidence\": \"[\\\"bills.csv:5\\\"]\",\n      \"as_of\": \"2026-10-08\",\n      \"eval_from\": \"2026-09-01\",\n      \"data_mode\": \"synthetic\",\n      \"row_id\": \"a7ecd9e12c7c4af5904dfd241d37c6fd\",\n      \"finding_id\": \"2739611fd0d4cdcbe7ea797edca9afdc3fb0d4b77a194637a910f6aa367eb15d\",\n      \"evidence_version\": \"27ad1d3f4d20b3750771866b2462ce552f89f100019a18455779af5fdb2512ad\",\n      \"record_sha256\": \"b76b2d27434f7a4c7a7142ef8c79b1930f52fff9a0ea040ad9e9fd65e6a9c834\"\n    }\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "-m",
+        "uwatch",
+        "worksheet",
+        "annotate",
+        "--worksheet",
+        "/workspace/scratch/61749b0088e2/utility-worksheet-independent-current/native/07-reconciled-current.csv",
+        "--row-id",
+        "2042aa2726dd413cb358429179efba03",
+        "--status",
+        "in_progress",
+        "--reviewer",
+        " René & \"QA\" ",
+        "--note",
+        "Printable coexistence: <b>literal</b> & \"quoted\".\r\nSecond line: 雪 — café\t.",
+        "--out",
+        "/dev/shm/hamon-61749b-utility-worksheet/printable-receiving/native/annotated.csv"
+      ],
+      "cwd": "/dev/shm/hamon-61749b-utility-worksheet/printable-receiving/candidate/utility_watch",
+      "exit": 0,
+      "stdout": "Saved in_progress annotation for 2042aa2726dd413cb358429179efba03\nworksheet: \"/dev/shm/hamon-61749b-utility-worksheet/printable-receiving/native/annotated.csv\"\nRecorded findings and payment eligibility are unchanged. Use review --previous for source reconciliation.\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "-m",
+        "uwatch",
+        "review-report",
+        "--worksheet",
+        "/dev/shm/hamon-61749b-utility-worksheet/printable-receiving/native/annotated.csv",
+        "--out",
+        "/dev/shm/hamon-61749b-utility-worksheet/printable-receiving/native/review.html"
+      ],
+      "cwd": "/dev/shm/hamon-61749b-utility-worksheet/printable-receiving/candidate/utility_watch",
+      "exit": 0,
+      "stdout": "review report: 2 current findings; 1 prior findings\nworksheet SHA256: 38a78d67195d7b5ef6fdbc460de3b65261fd03849e42c3930823946098545712\nreport: /dev/shm/hamon-61749b-utility-worksheet/printable-receiving/native/review.html\n",
+      "stderr": ""
+    }
+  ],
+  "checks": [
+    "list validates the retained saved input and exposes its exact digest and complete counts",
+    "selection comes from the native list and is one exact current CSV row",
+    "annotation changes only the three selected cells; order, protected fields, history, manifest and other reviewers remain exact",
+    "list and annotation leave the actual retained input byte-exact",
+    "the owner report renders each current and historical row exactly once with its native identity/state",
+    "the selected row displays the explicit status, reviewer and raw decoded Unicode/multiline note",
+    "literal markup is escaped text and introduces no element into the selected article",
+    "the printable owner retains every other row's reviewer and note text",
+    "printable provenance names the annotated worksheet digest and keeps its input byte-exact",
+    "all 26 composed source files and the retained peer input remain byte-exact after all three real commands"
+  ],
+  "passed": true,
+  "author_suite_reexecuted": false,
+  "browser_execution": false,
+  "fixture_origin": "Retained independent absent-to-returned receiver's 07-reconciled-current.csv",
+  "selected_row_id": "2042aa2726dd413cb358429179efba03",
+  "explicit_annotation": {
+    "review_status": "in_progress",
+    "reviewer": " René & \"QA\" ",
+    "note": "Printable coexistence: <b>literal</b> & \"quoted\".\r\nSecond line: 雪 — café\t."
+  },
+  "annotated_pin": {
+    "bytes": 2003,
+    "sha256": "38a78d67195d7b5ef6fdbc460de3b65261fd03849e42c3930823946098545712",
+    "git_blob": "2a86ce6f4080397c72374d0625e653ae6eea2a3f"
+  },
+  "report_pin": {
+    "bytes": 6983,
+    "sha256": "8bb28087fa1562677d65811cc7fb9280d760d4937b87fba940a33dda3e579692",
+    "git_blob": "2266733a5714dea1adb6a9cf2fcfcb2781525c0b"
+  },
+  "actual_cli_children": 3,
+  "source_after": {
+    "HARDENING.md": {
+      "bytes": 4105,
+      "sha256": "db44c2f8aeb1199aa7ba2036ab5759ae65209d47cfd41d54e765836246fa50f8",
+      "git_blob": "4c621a673ddd9d7211bb9b0436f7b4bbebf7c856"
+    },
+    "README.md": {
+      "bytes": 13170,
+      "sha256": "8674ab82c0891b611a2c33bd8d5434bc347a1ce08c2f1bb3812976440eab4109",
+      "git_blob": "a3b376c1739d4ccf5f1b3bc1b8affd2137351084"
+    },
+    "docs/review-report.md": {
+      "bytes": 4603,
+      "sha256": "8ae387b4401ec2653779b59aeb7d7c44b9bb319f299ab6cf74195ea64aac5d0d",
+      "git_blob": "2a676d0ae4cecc8c45d8c3a371701c8748bdc977"
+    },
+    "docs/worksheet-cli.md": {
+      "bytes": 6044,
+      "sha256": "b843af2e765f4a9a4cbe10d269e2b86aaf6c1836b158f3abe80b9c5b84578221",
+      "git_blob": "31ce5972fa7d9318922cb08b7423e6b908f7ebd5"
+    },
+    "sample_data/README_SYNTHETIC.txt": {
+      "bytes": 170,
+      "sha256": "ef34519e3f46f3e19bd8554620b07cbc13850c6b5cd6337508bf47cf01d536b4",
+      "git_blob": "237579a904d7b7b605f78ed122c97140c6f06003"
+    },
+    "sample_data/accounts.csv": {
+      "bytes": 2802,
+      "sha256": "58518376e0a67bf1a31f76e754020307a42330a87d3d7a538e6ccbb947d97958",
+      "git_blob": "8524a01938d9dfa3b9a0d05676a64e31e921ea8e"
+    },
+    "sample_data/bills.csv": {
+      "bytes": 27296,
+      "sha256": "1b8f6897703b42723e17e6089867634e04e7c609c0a578f33636fb9dda321e4e",
+      "git_blob": "21eca3e9265e3bdeacb668e1ff602121f96edda6"
+    },
+    "sample_data/expected.json": {
+      "bytes": 899,
+      "sha256": "222dd41aa5f5f20be0f08ea31bf7e8ca656cd56720b694b4380ce6f418df445c",
+      "git_blob": "0016cf0754d112b3a55a0ede42e6999aee17a847"
+    },
+    "sample_data/occupancy.csv": {
+      "bytes": 564,
+      "sha256": "0f77598a53f50162ef28059c88be91798f918e57e66eaa0a1f1d79880512cb6e",
+      "git_blob": "4396760f366c95f09343ce3e778beb7abd80bea0"
+    },
+    "sample_data/payments.csv": {
+      "bytes": 12113,
+      "sha256": "86cf78324cd395e86200ec205f49fe73afa2984306ab6ccd2e5cf71261710853",
+      "git_blob": "7f94d9c67855bc0def8b515b2b55450f9d65631e"
+    },
+    "tests/test_account_bill_keys.py": {
+      "bytes": 6460,
+      "sha256": "cc15ba0c7fa92f401677403a95a5e73b1788ee976726f36cbe6447b2e20837f3",
+      "git_blob": "00f833a02d17b7a757a7d028846f5c6012cddd17"
+    },
+    "tests/test_numeric_csv.py": {
+      "bytes": 3424,
+      "sha256": "d6128ec39491994185f9aabfe374caeb80ca13cbdbdc1fabe68b3eba567b65a2",
+      "git_blob": "2e63820b66001b2cf35590ca8f41270ce84f7500"
+    },
+    "tests/test_report.py": {
+      "bytes": 7083,
+      "sha256": "affe575fedaa7619520a6b23b63649e76029881a0a5641d6cc7d2900d150bc4f",
+      "git_blob": "a4480762868831bdafef1bf52e94a1cc68e31e43"
+    },
+    "tests/test_review.py": {
+      "bytes": 19251,
+      "sha256": "f0c645af21d4f9af0539697c3e2dca26a197fc1284b943cd12d42e9500099155",
+      "git_blob": "0308086a88c256bd5ad5fe2a9b2868c118ee52ec"
+    },
+    "tests/test_review_report.py": {
+      "bytes": 10866,
+      "sha256": "6d48681bbfd4c4725b4aa6a191f04ed9f2fa4fd6beca0799f5265fb50210d7d5",
+      "git_blob": "9ea0860c27a77ed8c67f8349525ec452e8a523b8"
+    },
+    "tests/test_uwatch.py": {
+      "bytes": 15469,
+      "sha256": "0638976cdfc928d8bd3980fb24fe18c24ef814c7f8c5e7612c8c02fb2b8f339a",
+      "git_blob": "1a71129311c88af32bb4abf0d633e5fcc496ab78"
+    },
+    "tests/test_worksheet_cli.py": {
+      "bytes": 19455,
+      "sha256": "7f34553faab1a45bcb901bcfc51ea4fe6fd8f474d4061d3c95afba3aa6af88a1",
+      "git_blob": "4963d459c3c41e02fa04bf30495c1b9883db26de"
+    },
+    "uwatch/__init__.py": {
+      "bytes": 60,
+      "sha256": "a0332cb0878fcdfd02d1651f9a46c299ca0279996c6e5723d49311228c597a57",
+      "git_blob": "7074157fb1710370668c2a0ad5217cd10cfe3618"
+    },
+    "uwatch/__main__.py": {
+      "bytes": 53,
+      "sha256": "26c55ee4277631c49b2312533d7514a815ec2c3de08f48b0a9dea8946d8f8933",
+      "git_blob": "823d40a6bf41beb59790ce83476b359f76f4b1ec"
+    },
+    "uwatch/cli.py": {
+      "bytes": 4473,
+      "sha256": "80cb716a37aa810c63ad69916ab293fcbfd83a44b51570d013339c0b217c7cb3",
+      "git_blob": "034935eeb633ecf68bfda4c5dd1181c7931880e6"
+    },
+    "uwatch/engine.py": {
+      "bytes": 21280,
+      "sha256": "ff0dc3a473235c55639e4373e3b5a4c786a0cd9ae7badd2be9113f39a4efd3d0",
+      "git_blob": "b764a1f45ba718b31f7841e2c2f61d16a7fef5e9"
+    },
+    "uwatch/report.py": {
+      "bytes": 12382,
+      "sha256": "dc43c4fbbef72204a9dc9c5d7e4d3883900e96daf26c725f10fe22d4721540db",
+      "git_blob": "ee2fcabd2026b4224c3cdfc51890f71762a9ef0f"
+    },
+    "uwatch/review.py": {
+      "bytes": 15534,
+      "sha256": "f9f730ca45140436704d9823eafcfb58fb3922c5d0bf93a21a63f31347c947de",
+      "git_blob": "2475217ce9c073c39756f9fa3926342cd83f7254"
+    },
+    "uwatch/review_report.py": {
+      "bytes": 8457,
+      "sha256": "4462088141b21c990ce5b949a9c683f68f647ae83bdba0eaa1409730e442f856",
+      "git_blob": "be869a940436172253c0a6d5020ba24860f1a7eb"
+    },
+    "uwatch/synth.py": {
+      "bytes": 13194,
+      "sha256": "8573a65a8c5907ebedda24c47183f60f258e895bae0a2656bb582ada9217209d",
+      "git_blob": "0d5c8137b3790bd062609ce4725beda63db9e58d"
+    },
+    "uwatch/worksheet.py": {
+      "bytes": 7789,
+      "sha256": "827f7ba7d6eba19d07f18bc202a50b8283bf2b4a6b9b9247046a0441a1d845fa",
+      "git_blob": "d8880f1f33115c8589ad0a91b87ef5619ae95964"
+    }
+  },
+  "files": {
+    "annotated.csv": {
+      "bytes": 2003,
+      "sha256": "38a78d67195d7b5ef6fdbc460de3b65261fd03849e42c3930823946098545712",
+      "git_blob": "2a86ce6f4080397c72374d0625e653ae6eea2a3f"
+    },
+    "input-07-reconciled-current.csv": {
+      "bytes": 1998,
+      "sha256": "97e9b952a1a009d2582c4901d1d570cd75d9796b63b3479f513092968dd1abfe",
+      "git_blob": "a3e5cb588411015b3c01a31beabf0d30a40bef28"
+    },
+    "review.html": {
+      "bytes": 6983,
+      "sha256": "8bb28087fa1562677d65811cc7fb9280d760d4937b87fba940a33dda3e579692",
+      "git_blob": "2266733a5714dea1adb6a9cf2fcfcb2781525c0b"
+    }
+  }
+}

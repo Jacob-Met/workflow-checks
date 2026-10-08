@@ -1,0 +1,43 @@
+{
+ "as_of": "2026-10-08",
+ "eval_from": "2026-09-01",
+ "data_mode": "synthetic",
+ "accounts": 2,
+ "bills": 4,
+ "flags": 1,
+ "by_code": {
+  "LATE_FEE_OR_PAST_DUE": 1
+ },
+ "exceptions": 0,
+ "payment_queue": 1,
+ "payment_queue_total": 100.0,
+ "naive_trailing3_hits": [],
+ "flags_detail": [
+  {
+   "key": "B-SEP",
+   "account_no": "RECV-B",
+   "property": "Authored B",
+   "utility": "gas",
+   "code": "LATE_FEE_OR_PAST_DUE",
+   "detail": "late fee $5.00, prior balance $0.00 on the bill",
+   "evidence": [
+    "bills.csv:5"
+   ]
+  }
+ ],
+ "exceptions_detail": [],
+ "payment_queue_detail": [
+  {
+   "bill_id": "A-SEP",
+   "account_no": "RECV-A",
+   "property": "Authored A",
+   "utility": "gas",
+   "vendor": "Example A",
+   "invoice": "A-SEP-INV",
+   "amount_due": 100.0,
+   "due_date": "2026-10-20",
+   "status": "QUEUED_FOR_APPROVAL (not paid)",
+   "evidence": "bills.csv:4"
+  }
+ ]
+}
