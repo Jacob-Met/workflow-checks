@@ -54,6 +54,12 @@ Required columns (column order does not matter):
 
 Use `common` or `unit` for account `scope`, `monthly` for a monthly `cycle`, and `vacant` for vacancy rows. Files may have a UTF-8 BOM and blank rows. Dates may be `YYYY-MM-DD`, `M/D/YYYY`, or `M/D/YY`. Numeric fields may contain commas, a dollar sign, or accounting negatives such as `(25.00)` when the CSV value is properly quoted. `late_fee` and `prior_balance` may be blank; other bill fields are required. Blank occupancy `from`/`to` dates mean open-ended.
 
+All imported bill and payment numbers must be finite. `NaN`, positive or negative infinity,
+and values that overflow the numeric parser (such as `1e309`) are input errors. The command
+exits with status 2 and identifies the CSV file, row and field so you can correct the export.
+Rejected input leaves the previous reports and audit file unchanged; those files still describe
+the earlier successful run, so use the new command's exit status before treating them as current.
+
 `--as-of` defaults to today. `--eval-from` defaults to about six months before the review date. Use the first day of a month for `--eval-from`. Service periods crossing month boundaries are assigned to the month containing the most service days (ties use the ending month).
 
 Keep `expected.json` out of a client-data folder: that file marks generated sample data and supplies its fixed test dates.
