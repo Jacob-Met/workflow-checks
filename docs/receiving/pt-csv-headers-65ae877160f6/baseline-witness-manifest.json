@@ -1,0 +1,333 @@
+{
+  "file": "baseline-witness.zip",
+  "bytes": 95798,
+  "sha256": "0e83e37f9ed3b0602d500e87865635c82f240a236056c28468c423de623f9ab2",
+  "members": [
+    {
+      "path": "1/data/README_SYNTHETIC.txt",
+      "bytes": 262,
+      "sha256": "2a7e8be2b866866b2280df867a71ce18d57946b188ae9c9bb9d4af631b5f859a"
+    },
+    {
+      "path": "1/data/authorizations.csv",
+      "bytes": 2990,
+      "sha256": "306cae3c27895d2b81978d4cf3115e867b8853edb4939ec8f7e733a7f27b0657"
+    },
+    {
+      "path": "1/data/expected.json",
+      "bytes": 3482,
+      "sha256": "0652052b6f37ce068cb77d4b8cde0f5a75d9b275be51b05f570c35a60a8a6d02"
+    },
+    {
+      "path": "1/data/patients.csv",
+      "bytes": 2333,
+      "sha256": "1dd9bc97889ca4a2e46e19804841d4af29ada284ede22d328370d20fb520e6e5"
+    },
+    {
+      "path": "1/data/payers.csv",
+      "bytes": 904,
+      "sha256": "81f143eed15c9ce613ee7cf372e51d6223a44700c877cc42d283a824d30900ed"
+    },
+    {
+      "path": "1/data/schedule.csv",
+      "bytes": 79947,
+      "sha256": "fb37e1aeafa0532e45dd5a65dee9f6cc677d47c0fbf251838facdba40dff2736"
+    },
+    {
+      "path": "1/out/audit.jsonl",
+      "bytes": 316,
+      "sha256": "a465a0b72fb4395f82dfec1a2cd144fba642bb4c779095cef76696fc243801a8"
+    },
+    {
+      "path": "1/out/digest.html",
+      "bytes": 2302,
+      "sha256": "ad8884257fb76f6780cb375b4063553de3f44730450c5042b3bd7ca5a737ecb0"
+    },
+    {
+      "path": "1/out/ledger.csv",
+      "bytes": 3743,
+      "sha256": "0448eda14b690c34a45f505c0212717f233ce6285ea857c0a8c6822127186d6f"
+    },
+    {
+      "path": "1/out/sentinel.bin",
+      "bytes": 31,
+      "sha256": "cd5262c30a770c718226eafe802e3075cc070446eac6182c60d8a3dab31bff67"
+    },
+    {
+      "path": "1/out/summary.json",
+      "bytes": 16472,
+      "sha256": "659f6deb93601922692a90ed8b1caadfa4cdcfdfdd479e42b36a1dd28f2dcb99"
+    },
+    {
+      "path": "1/out/uncovered_visits.csv",
+      "bytes": 127,
+      "sha256": "6719e7dea0c56e97db63c1b757e09b6f197e4d89def65769d387887e27c678e3"
+    },
+    {
+      "path": "1/out/visit_status_review.csv",
+      "bytes": 125,
+      "sha256": "9cb3e3e82e30935f57448ed826dbd8dab78e39355e3bebba59c478fa355ee170"
+    },
+    {
+      "path": "1/out/worklist.csv",
+      "bytes": 186,
+      "sha256": "5cb68c9683510c064dcb50baf580c7b4676137cafa44b071c7985d34b11ee05d"
+    },
+    {
+      "path": "1/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "1/stdout.txt",
+      "bytes": 516,
+      "sha256": "ba4fa9546cbfeaf6d333ebfd640c2ff98f93ccfc1161378509397004cdc8c6ef"
+    },
+    {
+      "path": "2/data/README_SYNTHETIC.txt",
+      "bytes": 262,
+      "sha256": "2a7e8be2b866866b2280df867a71ce18d57946b188ae9c9bb9d4af631b5f859a"
+    },
+    {
+      "path": "2/data/authorizations.csv",
+      "bytes": 3192,
+      "sha256": "78ed7527244fc21f8da4bb337297a82b915c3b18272e35e354cc006079cf657d"
+    },
+    {
+      "path": "2/data/expected.json",
+      "bytes": 3482,
+      "sha256": "0652052b6f37ce068cb77d4b8cde0f5a75d9b275be51b05f570c35a60a8a6d02"
+    },
+    {
+      "path": "2/data/patients.csv",
+      "bytes": 2333,
+      "sha256": "1dd9bc97889ca4a2e46e19804841d4af29ada284ede22d328370d20fb520e6e5"
+    },
+    {
+      "path": "2/data/payers.csv",
+      "bytes": 904,
+      "sha256": "81f143eed15c9ce613ee7cf372e51d6223a44700c877cc42d283a824d30900ed"
+    },
+    {
+      "path": "2/data/schedule.csv",
+      "bytes": 71520,
+      "sha256": "a5f9177b2e0fb9b4397a83839961d11c947e74cc2f13d5de29a31f39254e5198"
+    },
+    {
+      "path": "2/out/audit.jsonl",
+      "bytes": 320,
+      "sha256": "8419e1b1bd493926530c9eb179ab2600465fbc6bd48ea552f9aea2ee90d306f9"
+    },
+    {
+      "path": "2/out/digest.html",
+      "bytes": 56515,
+      "sha256": "4d5c99f3129805de1f1d20fd333821dd3faa4fe2b0b222dac033579ff777e5f6"
+    },
+    {
+      "path": "2/out/ledger.csv",
+      "bytes": 3824,
+      "sha256": "7b8876c501bf82d073e170f6bab819b94712e6a9062cc15ee08ac278bd9b229d"
+    },
+    {
+      "path": "2/out/sentinel.bin",
+      "bytes": 31,
+      "sha256": "cd5262c30a770c718226eafe802e3075cc070446eac6182c60d8a3dab31bff67"
+    },
+    {
+      "path": "2/out/summary.json",
+      "bytes": 124935,
+      "sha256": "73b15cf31d8532529103fc48ba2e4ffbb58677ad4a18789b72d8dbc5c0c79856"
+    },
+    {
+      "path": "2/out/uncovered_visits.csv",
+      "bytes": 21756,
+      "sha256": "111bcf5ab5db32a6d43b975e72c2e75c32ca746e46b125304b842a0423b79cf3"
+    },
+    {
+      "path": "2/out/visit_status_review.csv",
+      "bytes": 125,
+      "sha256": "9cb3e3e82e30935f57448ed826dbd8dab78e39355e3bebba59c478fa355ee170"
+    },
+    {
+      "path": "2/out/worklist.csv",
+      "bytes": 11265,
+      "sha256": "9a09d37a4e266a6350de84a712cbd7344726fd82dde00f2d3d84d69807db462e"
+    },
+    {
+      "path": "2/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "2/stdout.txt",
+      "bytes": 1710,
+      "sha256": "082c6b8e83612a1e1a1660eb6f479a3c23e2a1122447c4fec34ddcc3e94398cf"
+    },
+    {
+      "path": "3/data/README_SYNTHETIC.txt",
+      "bytes": 262,
+      "sha256": "2a7e8be2b866866b2280df867a71ce18d57946b188ae9c9bb9d4af631b5f859a"
+    },
+    {
+      "path": "3/data/authorizations.csv",
+      "bytes": 2990,
+      "sha256": "306cae3c27895d2b81978d4cf3115e867b8853edb4939ec8f7e733a7f27b0657"
+    },
+    {
+      "path": "3/data/expected.json",
+      "bytes": 3482,
+      "sha256": "0652052b6f37ce068cb77d4b8cde0f5a75d9b275be51b05f570c35a60a8a6d02"
+    },
+    {
+      "path": "3/data/patients.csv",
+      "bytes": 2333,
+      "sha256": "1dd9bc97889ca4a2e46e19804841d4af29ada284ede22d328370d20fb520e6e5"
+    },
+    {
+      "path": "3/data/payers.csv",
+      "bytes": 930,
+      "sha256": "aa0f8c501ed4c60d1a1363349badc8679b7cd914075fa8fd1f4fa52c2ecb6518"
+    },
+    {
+      "path": "3/data/schedule.csv",
+      "bytes": 71520,
+      "sha256": "a5f9177b2e0fb9b4397a83839961d11c947e74cc2f13d5de29a31f39254e5198"
+    },
+    {
+      "path": "3/out/audit.jsonl",
+      "bytes": 318,
+      "sha256": "7004f00ac59f37feebe2cecc9b88262870abdf3cfcf43bfc0fa06cbf1f3a2d9f"
+    },
+    {
+      "path": "3/out/digest.html",
+      "bytes": 11026,
+      "sha256": "63273cfffa5f06d2ecb0cc499584b814d5fb6072a4c6511d4cb98e3dcbd1a1a3"
+    },
+    {
+      "path": "3/out/ledger.csv",
+      "bytes": 3743,
+      "sha256": "0448eda14b690c34a45f505c0212717f233ce6285ea857c0a8c6822127186d6f"
+    },
+    {
+      "path": "3/out/sentinel.bin",
+      "bytes": 31,
+      "sha256": "cd5262c30a770c718226eafe802e3075cc070446eac6182c60d8a3dab31bff67"
+    },
+    {
+      "path": "3/out/summary.json",
+      "bytes": 28419,
+      "sha256": "ba9508831586a75b7b149ee3ad70ad388c3d1ef86c1fca82832b1b342fa614aa"
+    },
+    {
+      "path": "3/out/uncovered_visits.csv",
+      "bytes": 127,
+      "sha256": "6719e7dea0c56e97db63c1b757e09b6f197e4d89def65769d387887e27c678e3"
+    },
+    {
+      "path": "3/out/visit_status_review.csv",
+      "bytes": 125,
+      "sha256": "9cb3e3e82e30935f57448ed826dbd8dab78e39355e3bebba59c478fa355ee170"
+    },
+    {
+      "path": "3/out/worklist.csv",
+      "bytes": 3063,
+      "sha256": "4ea77795e10b893dfac707662306ecd993dabadc2a7bf9e576d017edb14a2afc"
+    },
+    {
+      "path": "3/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "3/stdout.txt",
+      "bytes": 1622,
+      "sha256": "5f23968a126723bd50b9c397b964ae9f21f02ecfa2bed711bde170181af6ae3f"
+    },
+    {
+      "path": "4/data/README_SYNTHETIC.txt",
+      "bytes": 262,
+      "sha256": "2a7e8be2b866866b2280df867a71ce18d57946b188ae9c9bb9d4af631b5f859a"
+    },
+    {
+      "path": "4/data/authorizations.csv",
+      "bytes": 2990,
+      "sha256": "306cae3c27895d2b81978d4cf3115e867b8853edb4939ec8f7e733a7f27b0657"
+    },
+    {
+      "path": "4/data/expected.json",
+      "bytes": 3482,
+      "sha256": "0652052b6f37ce068cb77d4b8cde0f5a75d9b275be51b05f570c35a60a8a6d02"
+    },
+    {
+      "path": "4/data/patients.csv",
+      "bytes": 2744,
+      "sha256": "5bc33acfa1d9e62dfcc7dd7e056a9ca49fe908e2574a9af6d40ac893289f61ca"
+    },
+    {
+      "path": "4/data/payers.csv",
+      "bytes": 904,
+      "sha256": "81f143eed15c9ce613ee7cf372e51d6223a44700c877cc42d283a824d30900ed"
+    },
+    {
+      "path": "4/data/schedule.csv",
+      "bytes": 71520,
+      "sha256": "a5f9177b2e0fb9b4397a83839961d11c947e74cc2f13d5de29a31f39254e5198"
+    },
+    {
+      "path": "4/out/audit.jsonl",
+      "bytes": 320,
+      "sha256": "b502da7828dd56fd8696f08bb2c18d89e26d5f22db142eb1b07c21afd257c2b0"
+    },
+    {
+      "path": "4/out/digest.html",
+      "bytes": 78917,
+      "sha256": "c87cca8484194c2b5f35c1f0e1c7bf531e0c261a5a57d45ea7fdd8e8a18a36c3"
+    },
+    {
+      "path": "4/out/ledger.csv",
+      "bytes": 3205,
+      "sha256": "79892ebca8926620c139e87612839297a74626d061f9f94e975539492dfa923f"
+    },
+    {
+      "path": "4/out/sentinel.bin",
+      "bytes": 31,
+      "sha256": "cd5262c30a770c718226eafe802e3075cc070446eac6182c60d8a3dab31bff67"
+    },
+    {
+      "path": "4/out/summary.json",
+      "bytes": 166279,
+      "sha256": "ac01c3b7c1f998a80f21137b4a8ce793f2dca82cb7ca643ccb9183d526a2377d"
+    },
+    {
+      "path": "4/out/uncovered_visits.csv",
+      "bytes": 28525,
+      "sha256": "032c1e929597a903d365ead9c6056111fc631985b486f9a02e4a9001dc094f9a"
+    },
+    {
+      "path": "4/out/visit_status_review.csv",
+      "bytes": 125,
+      "sha256": "9cb3e3e82e30935f57448ed826dbd8dab78e39355e3bebba59c478fa355ee170"
+    },
+    {
+      "path": "4/out/worklist.csv",
+      "bytes": 14229,
+      "sha256": "c130cf91334c194418744f0c8af316cccc8a2f01cb140839f5072f7f3c22e8b3"
+    },
+    {
+      "path": "4/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "4/stdout.txt",
+      "bytes": 1711,
+      "sha256": "3ce230cc4661e1f1ab373030bb8dc0e65e69e83918344e8d13989df302cd6ae5"
+    },
+    {
+      "path": "receipt.json",
+      "bytes": 4752,
+      "sha256": "ef1c3680bf60189d7a0541225582944812ad1af43075e0c5ee22bc19e75d8f47"
+    }
+  ],
+  "raw_names_forward_slash": true
+}
