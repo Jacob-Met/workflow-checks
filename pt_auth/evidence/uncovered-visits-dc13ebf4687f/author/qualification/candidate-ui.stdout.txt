@@ -1,0 +1,15 @@
+✔ the complete review is reachable and contains all eight appointments (8.474279ms)
+✔ recorded-status filtering keeps complete scheduled and completed groups (3.796663ms)
+✔ actual blank clinic and literal search combine without colliding with All (3.7619ms)
+✔ field text stays escaped in rows and clinic option attributes (4.503876ms)
+✔ CSV link stays explicitly complete and independent of filters (4.436134ms)
+✔ old saved summaries require a rerun while a recorded empty review is zero (6.08909ms)
+✔ staff approval and worklist filters do not hide or mutate the visit review (2.25967ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 129.024377

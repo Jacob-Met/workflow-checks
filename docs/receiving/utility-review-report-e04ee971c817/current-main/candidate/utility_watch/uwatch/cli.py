@@ -29,11 +29,7 @@ def main(argv=None) -> int:
     review_report = sub.add_parser("review-report", help="read or print a saved review worksheet as HTML")
     review_report.add_argument("--worksheet", type=Path, required=True, help="saved uwatch-review-v1 CSV worksheet")
     review_report.add_argument("--out", type=Path, required=True, help="new HTML path in an existing directory; never replaces a file")
-    from . import worksheet
-    worksheet.add_parser(sub)
     a = ap.parse_args(argv)
-    if a.cmd == "worksheet":
-        return worksheet.run(a)
     if a.cmd == "review-report":
         from .review_report import export_html
         try:

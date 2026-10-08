@@ -1,0 +1,409 @@
+{
+  "result": "PASS",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "checks": [
+    {
+      "name": "exact pinned native utility_watch/uwatch/cli.py",
+      "ok": true
+    },
+    {
+      "name": "exact pinned native utility_watch/uwatch/report.py",
+      "ok": true
+    },
+    {
+      "name": "exact pinned native utility_watch/uwatch/review.py",
+      "ok": true
+    },
+    {
+      "name": "exact pinned native utility_watch/uwatch/__init__.py",
+      "ok": true
+    },
+    {
+      "name": "exact pinned native utility_watch/uwatch/__main__.py",
+      "ok": true
+    },
+    {
+      "name": "exact pinned native utility_watch/uwatch/engine.py",
+      "ok": true
+    },
+    {
+      "name": "exact pinned native utility_watch/uwatch/synth.py",
+      "ok": true
+    },
+    {
+      "name": "unchanged qualified candidate utility_watch/uwatch/review_report.py",
+      "ok": true
+    },
+    {
+      "name": "unchanged qualified candidate utility_watch/uwatch/cli.py",
+      "ok": true
+    },
+    {
+      "name": "unchanged qualified candidate utility_watch/tests/test_review_report.py",
+      "ok": true
+    },
+    {
+      "name": "unchanged qualified candidate utility_watch/docs/review-report.md",
+      "ok": true
+    },
+    {
+      "name": "single additive parser span",
+      "ok": true
+    },
+    {
+      "name": "single additive dispatch span",
+      "ok": true
+    },
+    {
+      "name": "entire prior CLI restored byte exactly",
+      "ok": true
+    },
+    {
+      "name": "CLI line endings remain CRLF",
+      "ok": true
+    },
+    {
+      "name": "entire native dependency preserved utility_watch/uwatch/report.py",
+      "ok": true
+    },
+    {
+      "name": "entire native dependency preserved utility_watch/uwatch/review.py",
+      "ok": true
+    },
+    {
+      "name": "entire native dependency preserved utility_watch/uwatch/__init__.py",
+      "ok": true
+    },
+    {
+      "name": "entire native dependency preserved utility_watch/uwatch/__main__.py",
+      "ok": true
+    },
+    {
+      "name": "entire native dependency preserved utility_watch/uwatch/engine.py",
+      "ok": true
+    },
+    {
+      "name": "entire native dependency preserved utility_watch/uwatch/synth.py",
+      "ok": true
+    },
+    {
+      "name": "patch changes exactly the four reserved paths",
+      "ok": true
+    },
+    {
+      "name": "ordinary repository-relative patch headers",
+      "ok": true
+    },
+    {
+      "name": "native git apply replay exact utility_watch/docs/review-report.md",
+      "ok": true
+    },
+    {
+      "name": "native git apply replay exact utility_watch/tests/test_review_report.py",
+      "ok": true
+    },
+    {
+      "name": "native git apply replay exact utility_watch/uwatch/__init__.py",
+      "ok": true
+    },
+    {
+      "name": "native git apply replay exact utility_watch/uwatch/__main__.py",
+      "ok": true
+    },
+    {
+      "name": "native git apply replay exact utility_watch/uwatch/cli.py",
+      "ok": true
+    },
+    {
+      "name": "native git apply replay exact utility_watch/uwatch/engine.py",
+      "ok": true
+    },
+    {
+      "name": "native git apply replay exact utility_watch/uwatch/report.py",
+      "ok": true
+    },
+    {
+      "name": "native git apply replay exact utility_watch/uwatch/review.py",
+      "ok": true
+    },
+    {
+      "name": "native git apply replay exact utility_watch/uwatch/review_report.py",
+      "ok": true
+    },
+    {
+      "name": "native git apply replay exact utility_watch/uwatch/synth.py",
+      "ok": true
+    }
+  ],
+  "commands": [
+    {
+      "argv": [
+        "git",
+        "-c",
+        "core.autocrlf=false",
+        "-c",
+        "core.hooksPath=/dev/null",
+        "-c",
+        "commit.gpgsign=false",
+        "-c",
+        "user.name=Utility Watch receiving",
+        "-c",
+        "user.email=utility-receiving@invalid.local",
+        "init",
+        "--quiet",
+        "--template="
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "-c",
+        "core.autocrlf=false",
+        "-c",
+        "core.hooksPath=/dev/null",
+        "-c",
+        "commit.gpgsign=false",
+        "-c",
+        "user.name=Utility Watch receiving",
+        "-c",
+        "user.email=utility-receiving@invalid.local",
+        "add",
+        "--",
+        "utility_watch/uwatch/cli.py",
+        "utility_watch/uwatch/report.py",
+        "utility_watch/uwatch/review.py",
+        "utility_watch/uwatch/__init__.py",
+        "utility_watch/uwatch/__main__.py",
+        "utility_watch/uwatch/engine.py",
+        "utility_watch/uwatch/synth.py"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "-c",
+        "core.autocrlf=false",
+        "-c",
+        "core.hooksPath=/dev/null",
+        "-c",
+        "commit.gpgsign=false",
+        "-c",
+        "user.name=Utility Watch receiving",
+        "-c",
+        "user.email=utility-receiving@invalid.local",
+        "commit",
+        "--quiet",
+        "-m",
+        "Exact selected native Utility Watch base"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "-c",
+        "core.autocrlf=false",
+        "-c",
+        "core.hooksPath=/dev/null",
+        "-c",
+        "commit.gpgsign=false",
+        "-c",
+        "user.name=Utility Watch receiving",
+        "-c",
+        "user.email=utility-receiving@invalid.local",
+        "add",
+        "--",
+        "utility_watch/uwatch/review_report.py",
+        "utility_watch/uwatch/cli.py",
+        "utility_watch/tests/test_review_report.py",
+        "utility_watch/docs/review-report.md"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "-c",
+        "core.autocrlf=false",
+        "-c",
+        "core.hooksPath=/dev/null",
+        "-c",
+        "commit.gpgsign=false",
+        "-c",
+        "user.name=Utility Watch receiving",
+        "-c",
+        "user.email=utility-receiving@invalid.local",
+        "diff",
+        "--cached",
+        "--name-only",
+        "-z"
+      ],
+      "returncode": 0,
+      "stdout": "utility_watch/docs/review-report.md\u0000utility_watch/tests/test_review_report.py\u0000utility_watch/uwatch/cli.py\u0000utility_watch/uwatch/review_report.py\u0000",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "-c",
+        "core.autocrlf=false",
+        "-c",
+        "core.hooksPath=/dev/null",
+        "-c",
+        "commit.gpgsign=false",
+        "-c",
+        "user.name=Utility Watch receiving",
+        "-c",
+        "user.email=utility-receiving@invalid.local",
+        "diff",
+        "--cached",
+        "--binary",
+        "--full-index",
+        "--no-ext-diff"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "-c",
+        "core.autocrlf=false",
+        "-c",
+        "core.hooksPath=/dev/null",
+        "-c",
+        "commit.gpgsign=false",
+        "-c",
+        "user.name=Utility Watch receiving",
+        "-c",
+        "user.email=utility-receiving@invalid.local",
+        "reset",
+        "--hard",
+        "HEAD"
+      ],
+      "returncode": 0,
+      "stdout": "HEAD is now at 9fb6bce Exact selected native Utility Watch base\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "-c",
+        "core.autocrlf=false",
+        "-c",
+        "core.hooksPath=/dev/null",
+        "-c",
+        "commit.gpgsign=false",
+        "-c",
+        "user.name=Utility Watch receiving",
+        "-c",
+        "user.email=utility-receiving@invalid.local",
+        "apply",
+        "--check",
+        "--index",
+        "-"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "-c",
+        "core.autocrlf=false",
+        "-c",
+        "core.hooksPath=/dev/null",
+        "-c",
+        "commit.gpgsign=false",
+        "-c",
+        "user.name=Utility Watch receiving",
+        "-c",
+        "user.email=utility-receiving@invalid.local",
+        "apply",
+        "--index",
+        "-"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "patch": {
+    "git_blob": "854d2814e504a24e5856680d2097f34f5fc4907c",
+    "sha256": "4f2d5c52d4c19c98bf440685c511352544695221714d1c0efe842a2f4a8d24b0",
+    "bytes": 27104
+  },
+  "source_ref": "9e931fa9f42033bf2368f7149684fb5631345715",
+  "source_tree": "0b0c903801f432968e9cdfb1f1fa134cecc37217",
+  "candidate_files": {
+    "utility_watch/uwatch/review_report.py": {
+      "git_blob": "be869a940436172253c0a6d5020ba24860f1a7eb",
+      "sha256": "4462088141b21c990ce5b949a9c683f68f647ae83bdba0eaa1409730e442f856",
+      "bytes": 8457
+    },
+    "utility_watch/uwatch/cli.py": {
+      "git_blob": "27bfe687d071ff045bd5642f6408413c8cc6a805",
+      "sha256": "d7e223edf55790642b011f8159d113da0433416c6344c6be255037d558dd9c45",
+      "bytes": 4350
+    },
+    "utility_watch/tests/test_review_report.py": {
+      "git_blob": "9ea0860c27a77ed8c67f8349525ec452e8a523b8",
+      "sha256": "6d48681bbfd4c4725b4aa6a191f04ed9f2fa4fd6beca0799f5265fb50210d7d5",
+      "bytes": 10866
+    },
+    "utility_watch/docs/review-report.md": {
+      "git_blob": "2a676d0ae4cecc8c45d8c3a371701c8748bdc977",
+      "sha256": "8ae387b4401ec2653779b59aeb7d7c44b9bb319f299ab6cf74195ea64aac5d0d",
+      "bytes": 4603
+    }
+  },
+  "native_support": {
+    "utility_watch/uwatch/report.py": {
+      "git_blob": "ee2fcabd2026b4224c3cdfc51890f71762a9ef0f",
+      "sha256": "dc43c4fbbef72204a9dc9c5d7e4d3883900e96daf26c725f10fe22d4721540db",
+      "bytes": 12382
+    },
+    "utility_watch/uwatch/review.py": {
+      "git_blob": "2475217ce9c073c39756f9fa3926342cd83f7254",
+      "sha256": "f9f730ca45140436704d9823eafcfb58fb3922c5d0bf93a21a63f31347c947de",
+      "bytes": 15534
+    },
+    "utility_watch/uwatch/__init__.py": {
+      "git_blob": "7074157fb1710370668c2a0ad5217cd10cfe3618",
+      "sha256": "a0332cb0878fcdfd02d1651f9a46c299ca0279996c6e5723d49311228c597a57",
+      "bytes": 60
+    },
+    "utility_watch/uwatch/__main__.py": {
+      "git_blob": "823d40a6bf41beb59790ce83476b359f76f4b1ec",
+      "sha256": "26c55ee4277631c49b2312533d7514a815ec2c3de08f48b0a9dea8946d8f8933",
+      "bytes": 53
+    },
+    "utility_watch/uwatch/engine.py": {
+      "git_blob": "9deb205ad468381ffc91716f0d7ae6ab88d76f2a",
+      "sha256": "48c968584d0494ee5fb0538fc7d4c685c2cc3128a45c33f57c2079234cdb7775",
+      "bytes": 21072
+    },
+    "utility_watch/uwatch/synth.py": {
+      "git_blob": "0d5c8137b3790bd062609ce4725beda63db9e58d",
+      "sha256": "8573a65a8c5907ebedda24c47183f60f258e895bae0a2656bb582ada9217209d",
+      "bytes": 13194
+    }
+  },
+  "limits": [
+    "This is an exact selected-source replay; it is not a complete repository checkout.",
+    "No remote calls, Git hooks, installed source changes, or inherited full test suite.",
+    "Git stderr is retained verbatim, including any line-ending whitespace diagnostics."
+  ]
+}

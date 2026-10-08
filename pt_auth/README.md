@@ -100,6 +100,54 @@ The UI is a single page with no CDN, bound to 127.0.0.1 only. It has:
 - an **as-of date** picker to show how the worklist changes day to day
 - a "New synthetic clinic" generator
 
+## Inspect every uncovered appointment
+
+Open **Uncovered visits** after running the worklist. It lists every scheduled
+appointment on or after the report's **as-of** date and every appointment
+recorded as completed that the existing allocation check returned without a
+covering approved authorization. Its totals match the existing scheduled and
+completed uncovered-visit counts. Past dates still marked scheduled stay in
+**Visit status review**; this view does not infer attendance or release capacity.
+
+Each row shows its normalized visit ID, clinic-calendar date, recorded status,
+patient and payer IDs/names, actual visit clinic, therapist, visit type and exact
+schedule source row. The visit clinic is not replaced with the patient's home
+clinic. Missing names remain unavailable, and an unknown payer is marked
+**Rules unavailable**. These are the current loader/engine facts, not a new
+authorization decision or an explanation of which individual rule caused a gap.
+
+Filter by **Recorded status** and **Visit clinic**, or search literal patient,
+visit or payer text without case sensitivity. The shown/total count reflects
+the filters. Every matching row remains available; there is no four-visit
+abbreviation. Changing a work item's staff status does not hide its appointments.
+
+**Download all uncovered visits CSV** exports the complete review, independently
+of the active UI filters. The same complete table appears in the printable
+daily digest. The existing run command prints the new
+`uncovered_visits.csv` path; `summary.json` also includes `uncovered_review`
+and its explanatory note. The original `uncovered` array is preserved.
+
+The CSV has a header even when no appointments qualify. Fields retain the
+normalized source values; Python's CSV quoting preserves commas, quotes,
+multiline text and Unicode. `payer_rules_known` is `True` or `False`.
+An older saved summary without the new review asks for **Run worklist** before
+showing a count or offering the new export. A newly generated empty review
+explicitly reports zero. Correct the original source export and rerun to refresh
+the view; it does not write to a schedule, payer or clinical system.
+
+Focused qualification uses synthetic inputs only:
+
+```sh
+python -B -m unittest discover -s tests -p test_uncovered_review.py
+```
+
+The Python entry also runs the actual inline UI script through Node's built-in
+test runner when Node is available. Those checks supply explicit DOM and API
+boundaries; they are not browser/layout tests. The companion file is
+`tests/browser/uncovered_review.test.cjs`. Optional real-browser receiving
+uses the existing Node Playwright and Chromium paths in the receiving evidence,
+without a runtime dependency or browser download.
+
 ## Reconcile past scheduled visits
 
 Open **Visit status review** after running the worklist. It lists appointments strictly before the selected **as-of** date that still have a scheduled status, oldest first. Today's and future appointments are excluded. Appended exports use the latest row for each visit ID, matching the ledger's existing rule.

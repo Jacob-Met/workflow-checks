@@ -1,0 +1,19 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Auth worklist 2026-10-08</title>
+<style>body{font:13px/1.4 system-ui,Segoe UI,Arial,sans-serif;margin:20px;color:#1b1f24}
+.banner{background:#fde2e1;border:1px solid #c0392b;padding:8px 12px;font-weight:700;border-radius:6px}
+table{border-collapse:collapse;width:100%}th,td{border:1px solid #ccd;padding:4px 6px;vertical-align:top;text-align:left}
+th{background:#eef1f5}tr.P1 td:first-child{background:#fde2e1}tr.P2 td:first-child{background:#fff4ce}
+small{color:#666}.ck{border:1px solid #ccd;border-radius:6px;padding:6px 10px;margin:6px 0;break-inside:avoid}
+.ck ul{margin:4px 0;padding-left:18px;list-style:none}</style></head><body>
+<div class="banner">SYNTHETIC DATA - NOT REAL PATIENTS. Proof of concept; payer rules are placeholders. Nothing is submitted to any payer.</div>
+<h1>Daily authorization worklist &mdash; 2026-10-08</h1>
+<p>Clinic time zone: <b>UTC</b>.
+Dates and times without an offset keep their written calendar date.</p>
+<p>1 act-today (P1) &middot; 1 this week (P2) &middot; 0 heads-up (P3) &middot;
+6 scheduled visits outside an approved auth &middot; 2 completed visits without auth</p>
+<table><tr><th>Pri</th><th>Patient</th><th>Clinic</th><th>Payer / auth</th><th>Reason</th><th>Used / auth'd</th>
+<th>Auth end</th><th>Next visit</th><th>Submit by</th><th>Detail</th></tr><tr class='P1'><td><b>P1</b></td><td>Test &lt;A&gt; &amp; &quot;café&quot;<br><small>SYN-A</small></td><td>Home clinic (synthetic)</td><td>Placeholder &lt;A&gt; &amp; plan<br><small>AUTH-OLD</small></td><td>UNAUTHORIZED_DONE<br>UNCOVERED_VISIT</td><td>1 / 1</td><td>2026-09-30<br><small>-8 d</small></td><td>2026-10-08</td><td>-</td><td><small>6 scheduled visit(s) outside any approved auth, first 2026-10-08 (V-UPCOMING-1, V-UPCOMING-2, V-UPCOMING-3, V-UPCOMING-4 ...)<br>completed visit 2026-10-01 (V-DONE-1) had no covering approved auth<br>completed visit 2026-10-02 (V-DONE-2) had no covering approved auth</small></td></tr><tr class='P2'><td><b>P2</b></td><td>Test Covered<br><small>SYN-B</small></td><td>Other clinic (synthetic)</td><td>Placeholder &lt;A&gt; &amp; plan<br><small>AUTH-COVERED</small></td><td>REAUTH_BY_VISITS</td><td>0 / 2</td><td>2026-10-31<br><small>23 d</small></td><td>2026-10-09</td><td>2026-10-28</td><td><small>2 of 2 visits left (payer threshold 2)</small></td></tr></table>
+<h2>Re-auth packet checklists (pre-filled from payer rules table)</h2><div class='ck'><b>Test &lt;A&gt; &amp; &quot;café&quot;</b> &middot; Placeholder &lt;A&gt; &amp; plan &middot; AUTH-OLD<ul><li>&#9744; Auth request</li></ul></div><div class='ck'><b>Test Covered</b> &middot; Placeholder &lt;A&gt; &amp; plan &middot; AUTH-COVERED<ul><li>&#9744; Auth request</li></ul></div>
+<h2>Visit status review &mdash; past appointments still marked scheduled</h2>
+<p>Review these past dates in the source schedule, correct their status there, then run again. Any authorization visit shown below stays reserved until the corrected export is loaded.</p><table><tr><th>Visit</th><th>Date</th><th>Patient</th><th>Clinic</th><th>Payer</th><th>Reserved auth</th><th>Source row</th></tr><tr><td>V-PAST-SCHEDULED</td><td>2026-10-03<br><small>5 days ago</small></td><td>Test &lt;A&gt; &amp; &quot;café&quot;<br><small>SYN-A</small></td><td>Actual clinic &lt;A&gt;</td><td>Placeholder &lt;A&gt; &amp; plan<br><small>PAY-A</small></td><td>None<br><small>No approved authorization visit allocated</small></td><td>schedule.csv:row5</td></tr></table>
+</body></html>

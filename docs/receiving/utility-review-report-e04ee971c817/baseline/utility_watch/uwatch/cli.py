@@ -1,4 +1,4 @@
-"""CLI: python -m uwatch <generate|run|review|review-report> ..."""
+"""CLI: python -m uwatch <generate|run|review> ..."""
 from __future__ import annotations
 
 import argparse
@@ -26,25 +26,7 @@ def main(argv=None) -> int:
     review.add_argument("--report", type=Path, required=True, help="native summary.json from uwatch run")
     review.add_argument("--previous", type=Path, help="completed prior review worksheet (optional)")
     review.add_argument("--out", type=Path, required=True, help="new review CSV path; never replaces an existing file")
-    review_report = sub.add_parser("review-report", help="read or print a saved review worksheet as HTML")
-    review_report.add_argument("--worksheet", type=Path, required=True, help="saved uwatch-review-v1 CSV worksheet")
-    review_report.add_argument("--out", type=Path, required=True, help="new HTML path in an existing directory; never replaces a file")
-    from . import worksheet
-    worksheet.add_parser(sub)
     a = ap.parse_args(argv)
-    if a.cmd == "worksheet":
-        return worksheet.run(a)
-    if a.cmd == "review-report":
-        from .review_report import export_html
-        try:
-            result = export_html(a.worksheet, a.out)
-        except (OSError, ValueError, KeyError) as exc:
-            print(f"uwatch: review report error: {exc}", file=sys.stderr)
-            return 2
-        print(f"review report: {result['current']} current findings; {result['history']} prior findings")
-        print(f"worksheet SHA256: {result['worksheet_sha256']}")
-        print(f"report: {a.out}")
-        return 0
     if a.cmd == "generate":
         from .synth import generate
         exp = generate(Path(a.out), a.seed, a.as_of)

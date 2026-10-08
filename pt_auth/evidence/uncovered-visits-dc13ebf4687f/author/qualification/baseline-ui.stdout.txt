@@ -1,0 +1,139 @@
+✖ the complete review is reachable and contains all eight appointments (8.975263ms)
+✖ recorded-status filtering keeps complete scheduled and completed groups (4.00812ms)
+✖ actual blank clinic and literal search combine without colliding with All (4.195202ms)
+✖ field text stays escaped in rows and clinic option attributes (2.363426ms)
+✖ CSV link stays explicitly complete and independent of filters (2.986673ms)
+✖ old saved summaries require a rerun while a recorded empty review is zero (3.862702ms)
+✖ staff approval and worklist filters do not hide or mutate the visit review (5.924803ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 0
+ℹ fail 7
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 163.037685
+
+✖ failing tests:
+
+test at ../../../dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate/pt_auth/tests/browser/uncovered_review.test.cjs:64:1
+✖ the complete review is reachable and contains all eight appointments (8.975263ms)
+  AssertionError [ERR_ASSERTION]: missing Uncovered visits navigation
+      at TestContext.<anonymous> (/dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate/pt_auth/tests/browser/uncovered_review.test.cjs:67:10)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at ../../../dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate/pt_auth/tests/browser/uncovered_review.test.cjs:80:1
+✖ recorded-status filtering keeps complete scheduled and completed groups (4.00812ms)
+  AssertionError [ERR_ASSERTION]: #uc-status has no handler
+  + actual - expected
+  
+  + 'undefined'
+  - 'function'
+  
+      at change (/dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate/pt_auth/tests/browser/uncovered_review.test.cjs:56:10)
+      at TestContext.<anonymous> (/dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate/pt_auth/tests/browser/uncovered_review.test.cjs:82:3)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 'undefined',
+    expected: 'function',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at ../../../dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate/pt_auth/tests/browser/uncovered_review.test.cjs:92:1
+✖ actual blank clinic and literal search combine without colliding with All (4.195202ms)
+  AssertionError [ERR_ASSERTION]: #uc-clinic has no handler
+  + actual - expected
+  
+  + 'undefined'
+  - 'function'
+  
+      at change (/dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate/pt_auth/tests/browser/uncovered_review.test.cjs:56:10)
+      at TestContext.<anonymous> (/dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate/pt_auth/tests/browser/uncovered_review.test.cjs:96:3)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 'undefined',
+    expected: 'function',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at ../../../dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate/pt_auth/tests/browser/uncovered_review.test.cjs:110:1
+✖ field text stays escaped in rows and clinic option attributes (2.363426ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /Test &lt;A&gt; &amp; &quot;café&quot;/. Input:
+  
+  ''
+  
+      at TestContext.<anonymous> (/dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate/pt_auth/tests/browser/uncovered_review.test.cjs:119:10)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '',
+    expected: /Test &lt;A&gt; &amp; &quot;café&quot;/,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at ../../../dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate/pt_auth/tests/browser/uncovered_review.test.cjs:129:1
+✖ CSV link stays explicitly complete and independent of filters (2.986673ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /href="\/out\/uncovered_visits.csv" download/. Input:
+  
+  ''
+  
+      at TestContext.<anonymous> (/dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate/pt_auth/tests/browser/uncovered_review.test.cjs:132:10)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '',
+    expected: /href="\/out\/uncovered_visits.csv" download/,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at ../../../dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate/pt_auth/tests/browser/uncovered_review.test.cjs:141:1
+✖ old saved summaries require a rerun while a recorded empty review is zero (3.862702ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /Run worklist/. Input:
+  
+  ''
+  
+      at TestContext.<anonymous> (/dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate/pt_auth/tests/browser/uncovered_review.test.cjs:146:10)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '',
+    expected: /Run worklist/,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at ../../../dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate/pt_auth/tests/browser/uncovered_review.test.cjs:159:1
+✖ staff approval and worklist filters do not hide or mutate the visit review (5.924803ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /^8 of 8 appointments/. Input:
+  
+  ''
+  
+      at TestContext.<anonymous> (/dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate/pt_auth/tests/browser/uncovered_review.test.cjs:168:10)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '',
+    expected: /^8 of 8 appointments/,
+    operator: 'match',
+    diff: 'simple'
+  }

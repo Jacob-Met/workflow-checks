@@ -1,0 +1,14 @@
+test_actual_cli_reports_complete_export (test_uncovered_review.UncoveredReviewTests.test_actual_cli_reports_complete_export) ... ok
+test_actual_inline_ui_through_node (test_uncovered_review.UncoveredReviewTests.test_actual_inline_ui_through_node) ... ok
+test_clinic_timezone_already_controls_the_review_date (test_uncovered_review.UncoveredReviewTests.test_clinic_timezone_already_controls_the_review_date) ... ok
+test_complete_review_matches_the_existing_engine_and_source_rows (test_uncovered_review.UncoveredReviewTests.test_complete_review_matches_the_existing_engine_and_source_rows) ... ok
+test_csv_and_print_preserve_all_rows_and_literal_multiline_context (test_uncovered_review.UncoveredReviewTests.test_csv_and_print_preserve_all_rows_and_literal_multiline_context) ... ok
+test_existing_http_csv_and_staff_states_keep_the_review_independent (test_uncovered_review.UncoveredReviewTests.test_existing_http_csv_and_staff_states_keep_the_review_independent) ... ok
+test_latest_source_corrections_clear_review_without_hiding_past_status (test_uncovered_review.UncoveredReviewTests.test_latest_source_corrections_clear_review_without_hiding_past_status) ... ok
+test_older_printable_summary_requests_rerun_instead_of_false_zero (test_uncovered_review.UncoveredReviewTests.test_older_printable_summary_requests_rerun_instead_of_false_zero) ... ok
+test_unknown_context_and_future_completed_keep_recorded_facts (test_uncovered_review.UncoveredReviewTests.test_unknown_context_and_future_completed_keep_recorded_facts) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.950s
+
+OK

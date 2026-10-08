@@ -1,0 +1,260 @@
+{
+  "repository": "Jacob-Met/workflow-checks",
+  "scope_issue": 26,
+  "candidate_head": "9676a5a20f3adab0ccf46e31e3052de04f50d267",
+  "candidate_manifest_sha256": "46a503ccdd0c793cc1ad4ec1759e6d615c12c67e7aec8fad93cff2f55e8dadab",
+  "publication_prefix": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author",
+  "files": [
+    {
+      "path": "AUTHOR.md",
+      "original_source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/AUTHOR.md",
+      "size": 7436,
+      "sha256": "7dc2100a8bf9afa15624517f981b304bb1440a4980a6e0a6cff92b7069520d05",
+      "git_blob": "e64fbfcf8e45d717dcbb17a4f36735a5a10ac429"
+    },
+    {
+      "path": "baseline-manifest.json",
+      "original_source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/baseline-manifest.json",
+      "size": 3238,
+      "sha256": "6390ba36accd23bd14edb6dbd1b943f1fb4a6fae2ce1a3786d5ddce3c80b761c",
+      "git_blob": "23ac44fc997e6f2523b86640d517b6fdd9ba3b46"
+    },
+    {
+      "path": "baseline/authored-baseline.json",
+      "original_source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/authored-baseline.json",
+      "size": 3773,
+      "sha256": "b2c84fb2c686f6fcf8d538127829c735669beb114e4351b9b10221868f50766c",
+      "git_blob": "53f1019345a5526576ec7a7f8aac66add94f800e"
+    },
+    {
+      "path": "baseline/cli-result.json",
+      "original_source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/cli-result.json",
+      "size": 2023,
+      "sha256": "16b4056e6b92c3501ce7de207319834ca770e9da330b6f45dc48c280c0574c1f",
+      "git_blob": "ba602c59fb5338795ed003705b8dd7b553bc34a0"
+    },
+    {
+      "path": "baseline/inline-ui.json",
+      "original_source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/node-baseline.json",
+      "size": 1267,
+      "sha256": "84563ceee3d380450bdf2f080bc17f9934fdaafc1826d70ba74e361c3b5810ee",
+      "git_blob": "bc7b5a38adc03cc92aa58061b1aa4e1fca5ed50c"
+    },
+    {
+      "path": "baseline/shipped-workflow.json",
+      "original_source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/baseline-workflow.json",
+      "size": 4178,
+      "sha256": "f05d3fd5832acbf5de7f5cb42dadd506b5fc03488504ea4da6c4cc8d6ebfe2dd",
+      "git_blob": "a9eb8831afe4f13cfcae30b49db2c2f9c236482a"
+    },
+    {
+      "path": "candidate-manifest.json",
+      "original_source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate-manifest.json",
+      "size": 2527,
+      "sha256": "46a503ccdd0c793cc1ad4ec1759e6d615c12c67e7aec8fad93cff2f55e8dadab",
+      "git_blob": "afadcfae9d6d795dd2da57e30e5fddc5103ed3a6"
+    },
+    {
+      "path": "candidate.patch",
+      "original_source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate.patch",
+      "size": 43036,
+      "sha256": "9fd74ea848da47a8f0a9be642575f88810dbbe41e831d7efa8825be9c487dd90",
+      "git_blob": "b345a6a15fd2bc0038251a721e22a1004b3282c0"
+    },
+    {
+      "path": "example-after/digest.html",
+      "original_source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate-first-output/digest.html",
+      "size": 6726,
+      "sha256": "fc6db288d4ed5bfd09c50706f92aeb452388e5149a13021da09482ab9ff3b3ba",
+      "git_blob": "35dfb4409b4193e7785f2c6e56dd3352526552d1"
+    },
+    {
+      "path": "example-after/summary.json",
+      "original_source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate-first-output/summary.json",
+      "size": 9282,
+      "sha256": "9c004c079d00f9e00b538bbab589cc0e07d7b8e686fc985f66ee60f0d1ca5b38",
+      "git_blob": "4220d4e55a744780a56793b0a1950cef7f4e96aa"
+    },
+    {
+      "path": "example-after/uncovered_visits.csv",
+      "original_source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate-first-output/uncovered_visits.csv",
+      "size": 1313,
+      "sha256": "232c0c626722be93167d1274083ea3e5c956eaa77ce47a91bb0cbff9b0d86adf",
+      "git_blob": "3f099e83e594d4d6cbeceb810b4a8a8aaa84fdb0"
+    },
+    {
+      "path": "example-before/digest.html",
+      "original_source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/authored-output/digest.html",
+      "size": 3520,
+      "sha256": "2ee96b4a3de4ba547e61d63a32f2d39d39df733efd4ba03b624af4947d3a2053",
+      "git_blob": "b908045a1eae8be0050b3ee935471062814c01d7"
+    },
+    {
+      "path": "example-before/summary.json",
+      "original_source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/authored-output/summary.json",
+      "size": 5423,
+      "sha256": "9f95a48ca9a308e8e182e8880584dabc5a8348fa21641cb499881943588e27d1",
+      "git_blob": "f308e52c0269430a59a212bfc1c027ef61d5ea8a"
+    },
+    {
+      "path": "fixtures/authored-input/authorizations.csv",
+      "original_source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/authored-input/authorizations.csv",
+      "size": 185,
+      "sha256": "799416fc5be487772717e243d94a381c277f76f9adcd36b5d97c493528411ddb",
+      "git_blob": "1a22901fe9756eabacaad5dfdcf0e346c4a3ad24"
+    },
+    {
+      "path": "fixtures/authored-input/patients.csv",
+      "original_source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/authored-input/patients.csv",
+      "size": 203,
+      "sha256": "84a2b4c63f18523dfd199d05384a4936e1e114c9d0cc543a564b6fdc45cd3f23",
+      "git_blob": "898c86ed68aef612c77761956324a511a481bbe1"
+    },
+    {
+      "path": "fixtures/authored-input/payers.csv",
+      "original_source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/authored-input/payers.csv",
+      "size": 225,
+      "sha256": "61e1d6aa25e01147f495e7a99a285cb4b9d36653a4927190c9fe0c038156d0a2",
+      "git_blob": "51c3d6bbd7d0987acb4ebc675b3a2cb01cbfd220"
+    },
+    {
+      "path": "fixtures/authored-input/schedule.csv",
+      "original_source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/authored-input/schedule.csv",
+      "size": 1113,
+      "sha256": "ef86bef593070f9c79001ec4ce21e58618a487d66919a7f4ebbefdcc2e02c15c",
+      "git_blob": "f7125aea958eed2af05b0d4c3a63c57716b440d8"
+    },
+    {
+      "path": "historical/probe-ui.mjs.source",
+      "original_source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/probe-ui.mjs",
+      "size": 2503,
+      "sha256": "c4f0be76717a5670c0effc2ff34ead95790f7629fcb383cce4dcbe8346ce993f",
+      "git_blob": "6e5880e414a479dffa7e820969a6e46049f27c5e"
+    },
+    {
+      "path": "historical/qualify_candidate.py.source",
+      "original_source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/qualify_candidate.py",
+      "size": 3319,
+      "sha256": "f2aea724db93a5f32ff1c49f479ce3ce1914251f2b574ecbabf897d48e69e5f6",
+      "git_blob": "259d23374e0a2e17df1a938f4a0cd41e9536e602"
+    },
+    {
+      "path": "historical/verify_preservation.py.source",
+      "original_source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/verify_preservation.py",
+      "size": 10055,
+      "sha256": "7b50f36f3250a4aa2fe414234d31ecbbad19a6139cb7df4827541c8d5aec04fe",
+      "git_blob": "0471640a7347743ab14773b503f5d8bf8a07d4ec"
+    },
+    {
+      "path": "qualification/baseline-normal.stderr.txt",
+      "original_source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/qualification/baseline-normal.stderr.txt",
+      "size": 19756,
+      "sha256": "17ef3d2f6ef9aac0758b4b2e519e707f4f42bca709f1c3f3aff17c9fbb1c7711",
+      "git_blob": "ce34b0821261ce2c8c5c78164bc2c17c0838672e"
+    },
+    {
+      "path": "qualification/baseline-normal.stdout.txt",
+      "original_source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/qualification/baseline-normal.stdout.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "qualification/baseline-ui.stderr.txt",
+      "original_source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/qualification/baseline-ui.stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "qualification/baseline-ui.stdout.txt",
+      "original_source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/qualification/baseline-ui.stdout.txt",
+      "size": 6426,
+      "sha256": "6fee578f20b7fe0b29d73d21a030b1ce99b4f7ecd6ac548d1bcc2a22f70d14f3",
+      "git_blob": "688a947ca7324bd6880e67a7c6c0fcde1e1de1a8"
+    },
+    {
+      "path": "qualification/candidate-normal.stderr.txt",
+      "original_source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/qualification/candidate-normal.stderr.txt",
+      "size": 1622,
+      "sha256": "4f3f805feaf3bf0a8fdab79457043ca55db15dda658fe3818a5b9647fee7e6f5",
+      "git_blob": "141e791f7ea938ddcdfb1bc77ac2dbaadbd495d3"
+    },
+    {
+      "path": "qualification/candidate-normal.stdout.txt",
+      "original_source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/qualification/candidate-normal.stdout.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "qualification/candidate-optimized.stderr.txt",
+      "original_source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/qualification/candidate-optimized.stderr.txt",
+      "size": 1622,
+      "sha256": "0c016fd8c1ff51677f46330b5d39cf0ea2f32602d2d4fc7203ecfda1b1b96120",
+      "git_blob": "609e9fd2e3ac597f346f13cd7d62b02c84ba0279"
+    },
+    {
+      "path": "qualification/candidate-optimized.stdout.txt",
+      "original_source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/qualification/candidate-optimized.stdout.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "qualification/candidate-ui.stderr.txt",
+      "original_source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/qualification/candidate-ui.stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "qualification/candidate-ui.stdout.txt",
+      "original_source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/qualification/candidate-ui.stdout.txt",
+      "size": 718,
+      "sha256": "6a29bd6b0a583dae055327c3352d0dc74497f6c62b47a9eac475a81cad26f9e9",
+      "git_blob": "56670aa7b6db1ad94f5ab9efb405fc7e2593fdc8"
+    },
+    {
+      "path": "qualification/generated-output-cleanup.json",
+      "original_source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/qualification/generated-output-cleanup.json",
+      "size": 2005,
+      "sha256": "0a973ee69b41483ed29c73f3ce5c8171312eecae0254529fa3f9df5085e9181c",
+      "git_blob": "c4ac2392d07e679399bed153fbb2869475ed2b77"
+    },
+    {
+      "path": "qualification/preservation.json",
+      "original_source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/qualification/preservation.json",
+      "size": 17482,
+      "sha256": "fc0ae0c57ebe5fbe218069621db02fe36490acd17ab0da6ef87065fca0574408",
+      "git_blob": "dc30dbe7c24f9540d9ee8c14cc54b2738395d724"
+    },
+    {
+      "path": "qualification/receipt.json",
+      "original_source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/qualification/receipt.json",
+      "size": 6473,
+      "sha256": "07a52ca57cc8cae62af3cb16b02d2387fc7817c07bc8d016f3a4fb8112257d13",
+      "git_blob": "e80c2fde111168bd4dad2fcd215400568bea8868"
+    },
+    {
+      "path": "source-preconditions.json",
+      "original_source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/source-preconditions.json",
+      "size": 2280,
+      "sha256": "162bfc3de96d6ce881cc9afe2bac46c737d3f9ddef3e9311d2d6c43262f84b37",
+      "git_blob": "fbc4e96512c448f7db087abec9d5974fa5b3812b"
+    }
+  ],
+  "input_file_count": 34,
+  "input_bytes": 169729,
+  "allowlist": {
+    "path": "PUBLICATION-ALLOWLIST.txt",
+    "size": 1126,
+    "sha256": "a559556f21bfcba6fc2c93fb56626279005f6df0b3f200e86039fc915883853f",
+    "git_blob": "9664cbb61b2d957b8951d1521fb8524f80dd6a19"
+  },
+  "carrier_rule": "The explicit allowlist covers all input files; this manifest and the allowlist are two additional carrier files. Both are copied without rewriting.",
+  "limits": [
+    "Historical programs preserve original local paths and use .source archive names; portable tests remain in the actual source paths.",
+    "No disposable state/cache/Git directory or complete source duplicate is included."
+  ]
+}

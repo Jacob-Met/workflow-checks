@@ -1,0 +1,186 @@
+"""Record the new view's correspondence to two retained original report runs.
+
+This historical author check expects the adjacent exact sparse baseline,
+candidate and retained outputs. The committed tests are the portable entry.
+"""
+from __future__ import annotations
+
+import csv
+import hashlib
+import json
+from collections import Counter
+from datetime import datetime, timezone
+from html import escape
+from pathlib import Path
+import subprocess
+import sys
+
+
+ROOT = Path(__file__).resolve().parent
+CANDIDATE = ROOT / "candidate"
+BASELINE_HEAD = "d67c6087ab5fae717be2eec08f131d2c80b539f6"
+CANDIDATE_HEAD = "9676a5a20f3adab0ccf46e31e3052de04f50d267"
+
+
+def require(value, message):
+    if not value:
+        raise RuntimeError(message)
+
+
+def identity(raw):
+    return {
+        "size": len(raw),
+        "sha256": hashlib.sha256(raw).hexdigest(),
+        "git_blob": hashlib.sha1(b"blob " + str(len(raw)).encode() + b"\0" + raw).hexdigest(),
+    }
+
+
+def files(root):
+    return {str(p.relative_to(root)): identity(p.read_bytes())
+            for p in sorted(root.rglob("*")) if p.is_file() and ".git" not in p.parts}
+
+
+def git(*args):
+    return subprocess.check_output(["git", *args], cwd=CANDIDATE)
+
+
+def compare(label, original_dir, candidate_dir, data_dir):
+    original = json.loads((original_dir / "summary.json").read_text())
+    current = json.loads((candidate_dir / "summary.json").read_text())
+    inherited = sorted(set(original) - {"generated_at"})
+    require(set(current) - set(original) == {"uncovered_review", "uncovered_review_note"},
+            label + ": unexpected summary field changes")
+    require(all(original[k] == current[k] for k in inherited), label + ": original summary changed")
+    csv_preserved = {}
+    for name in ["worklist.csv", "ledger.csv", "visit_status_review.csv"]:
+        old = (original_dir / name).read_bytes()
+        new = (candidate_dir / name).read_bytes()
+        require(old == new, label + ": original CSV changed: " + name)
+        csv_preserved[name] = identity(old)
+
+    eligible = [row for row in original["uncovered"] if row["status"] == "completed"
+                or (row["status"] == "scheduled" and row["date"] >= original["as_of"])]
+    projected = [dict(visit_id=row["visit_id"], patient_id=row["patient_id"],
+                      date=row["visit_date"], status=row["status"], payer_id=row["payer_id"])
+                 for row in current["uncovered_review"]]
+    freeze = lambda row: json.dumps(row, sort_keys=True)
+    require(Counter(map(freeze, projected)) == Counter(map(freeze, eligible)),
+            label + ": new review does not match original engine subset")
+    require(len(projected) == original["counts"]["uncovered_scheduled"]
+            + original["counts"]["unauthorized_done"], label + ": original counts disagree")
+
+    # These are the byte-identical loader and engine. The independent review
+    # supplies a separate authored fixture rather than relying on this join.
+    from ptauth import data
+    visits = {v.visit_id: v for v in data.load_visits(
+        data_dir / "schedule.csv", clinic_tz=data.resolve_clinic_timezone(original["clinic_timezone"]))}
+    patients = data.load_patients(data_dir / "patients.csv")
+    payers = data.load_payers(data_dir / "payers.csv")
+    for row in current["uncovered_review"]:
+        visit = visits[row["visit_id"]]
+        require((row["clinic"], row["therapist"], row["visit_type"], row["evidence"])
+                == (visit.clinic, visit.therapist, visit.visit_type, visit.source_row),
+                label + ": actual visit detail changed")
+        patient = patients.get(visit.patient_id)
+        payer = payers.get(visit.payer_id)
+        require(row["patient_name"] == (patient.display_name if patient else ""), label + ": patient mismatch")
+        require(row["payer_name"] == (payer.payer_name if payer else "")
+                and row["payer_rules_known"] == (payer is not None), label + ": payer mismatch")
+    with (candidate_dir / "uncovered_visits.csv").open(newline="", encoding="utf-8") as handle:
+        csv_rows = list(csv.DictReader(handle))
+    require(csv_rows == [{k: str(v) for k, v in row.items()} for row in current["uncovered_review"]],
+            label + ": export is not complete exact detail")
+
+    original_html = (original_dir / "digest.html").read_bytes().decode("utf-8")
+    candidate_html = (candidate_dir / "digest.html").read_bytes().decode("utf-8")
+    start = candidate_html.index("<h2>Uncovered visits")
+    end = candidate_html.index("<h2>Visit status review", start)
+    section = candidate_html[start:end]
+    require(candidate_html[:start] + candidate_html[end:] == original_html,
+            label + ": original printable sections changed")
+    require(section.count("<tr><td>") == len(projected), label + ": printable row count mismatch")
+    require(all(escape(row["visit_id"]) in section for row in current["uncovered_review"]),
+            label + ": printable visit omitted")
+    omitted_before = [row["visit_id"] for row in eligible if escape(row["visit_id"]) not in original_html]
+    return {
+        "label": label,
+        "as_of": original["as_of"],
+        "clinic_timezone": original["clinic_timezone"],
+        "counts_unchanged": original["counts"],
+        "all_inherited_summary_fields_equal_except_generated_at": inherited,
+        "original_csv_bytes_unchanged": csv_preserved,
+        "original_printable_sections_bytes_equal_after_new_section_removed": True,
+        "eligible_original_uncovered_rows": len(eligible),
+        "new_review_rows": len(projected),
+        "review_matches_original_engine_subset": True,
+        "actual_source_detail_matches_unchanged_loader": True,
+        "export_matches_every_review_field_and_row": True,
+        "printable_rows": section.count("<tr><td>"),
+        "ids_omitted_by_original_digest_now_printed": omitted_before,
+        "review_statuses": dict(Counter(row["status"] for row in current["uncovered_review"])),
+        "original_summary": identity((original_dir / "summary.json").read_bytes()),
+        "candidate_summary": identity((candidate_dir / "summary.json").read_bytes()),
+        "original_digest": identity((original_dir / "digest.html").read_bytes()),
+        "candidate_digest": identity((candidate_dir / "digest.html").read_bytes()),
+        "new_csv": identity((candidate_dir / "uncovered_visits.csv").read_bytes()),
+    }
+
+
+def main():
+    source_before = files(CANDIDATE)
+    authored_before = files(ROOT / "authored-input")
+    baseline_before = files(ROOT / "baseline")
+    manifest = json.loads((ROOT / "candidate-manifest.json").read_text())
+    for row in manifest["changed_paths"]:
+        require(identity((CANDIDATE / row["path"]).read_bytes())
+                == {k: row[k] for k in ["size", "sha256", "git_blob"]}, "candidate pin mismatch")
+    require(git("rev-parse", "HEAD").decode().strip() == CANDIDATE_HEAD, "candidate head changed")
+    names = git("ls-tree", "-r", "--name-only", BASELINE_HEAD).decode().splitlines()
+    same, changed = [], []
+    for name in names:
+        old = git("show", BASELINE_HEAD + ":" + name)
+        new = (CANDIDATE / name).read_bytes()
+        (same if old == new else changed).append({"path": name, "before": identity(old), "after": identity(new)})
+    require({r["path"] for r in changed} == {r["path"] for r in manifest["changed_paths"]
+                                            if r["expected_old_git_blob"]}, "unexpected changed source")
+
+    out = ROOT / "candidate-shipped-output"
+    require(not out.exists(), "retained shipped output already exists; this check does not replace evidence")
+    command = [sys.executable, "-B", "-m", "ptauth", "run", "--data", "sample_data", "--out", str(out),
+               "--as-of", "2026-09-28", "--clinic-timezone", "UTC"]
+    proc = subprocess.run(command, cwd=CANDIDATE / "pt_auth", capture_output=True, text=True)
+    require(proc.returncode == 0, proc.stderr)
+    sys.path.insert(0, str(CANDIDATE / "pt_auth"))
+    comparisons = [
+        compare("authored 13-visit mixed-status fixture", ROOT / "authored-output", ROOT / "candidate-first-output",
+                ROOT / "authored-input"),
+        compare("unchanged shipped 842-visit synthetic fixture", ROOT / "probe-output", out,
+                CANDIDATE / "pt_auth/sample_data"),
+    ]
+    require(source_before == files(CANDIDATE), "source mutated")
+    require(authored_before == files(ROOT / "authored-input"), "authored input mutated")
+    require(baseline_before == files(ROOT / "baseline"), "baseline mutated")
+    result = {
+        "recorded_at_utc": datetime.now(timezone.utc).isoformat(),
+        "repository": manifest["repository"], "upstream_baseline": manifest["upstream_baseline"],
+        "candidate_head": CANDIDATE_HEAD,
+        "candidate_manifest_sha256": hashlib.sha256((ROOT / "candidate-manifest.json").read_bytes()).hexdigest(),
+        "new_run": {"command": command, "cwd": str(CANDIDATE / "pt_auth"),
+                    "returncode": proc.returncode, "stdout": proc.stdout, "stderr": proc.stderr},
+        "comparisons": comparisons, "unchanged_source_paths": same, "changed_existing_paths": changed,
+        "all_source_and_input_files_unchanged_by_check": True,
+        "limits": ["Retained original outputs are used; no old suite was rerun",
+                   "The original generated_at value is intentionally excluded from equality",
+                   "No claim about browser layout or real patient inputs"],
+    }
+    dest = ROOT / "qualification/preservation.json"
+    dest.write_text(json.dumps(result, indent=2, ensure_ascii=False) + "\n")
+    print(json.dumps({"receipt": str(dest), **identity(dest.read_bytes()),
+                      "unchanged_old_paths": len(same),
+                      "comparisons": [{"label": row["label"], "review_rows": row["new_review_rows"],
+                                       "previously_omitted": len(row["ids_omitted_by_original_digest_now_printed"])}
+                                      for row in comparisons]}, indent=2))
+
+
+if __name__ == "__main__":
+    main()

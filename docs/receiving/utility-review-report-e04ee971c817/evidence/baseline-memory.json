@@ -1,0 +1,74 @@
+{
+  "result": "MISSING_CAPABILITY_CONFIRMED",
+  "source_ref": "9e931fa9f42033bf2368f7149684fb5631345715",
+  "method": "Exact current modules loaded from verified source bytes in one actual Python child; native package __main__ and argparse executed. Captured accepted PR22 worksheet validated by unchanged native _previous. No fresh generate/run/reconcile replay or filesystem input/output is claimed in this disk-full probe.",
+  "source_pins": {
+    "utility_watch/uwatch/__init__.py": {
+      "git_blob": "7074157fb1710370668c2a0ad5217cd10cfe3618",
+      "sha256": "a0332cb0878fcdfd02d1651f9a46c299ca0279996c6e5723d49311228c597a57",
+      "bytes": 60
+    },
+    "utility_watch/uwatch/engine.py": {
+      "git_blob": "9deb205ad468381ffc91716f0d7ae6ab88d76f2a",
+      "sha256": "48c968584d0494ee5fb0538fc7d4c685c2cc3128a45c33f57c2079234cdb7775",
+      "bytes": 21072
+    },
+    "utility_watch/uwatch/review.py": {
+      "git_blob": "2475217ce9c073c39756f9fa3926342cd83f7254",
+      "sha256": "f9f730ca45140436704d9823eafcfb58fb3922c5d0bf93a21a63f31347c947de",
+      "bytes": 15534
+    },
+    "utility_watch/uwatch/cli.py": {
+      "git_blob": "8655fdb7cd1e4735ece1da1727b68af6401e40a8",
+      "sha256": "0f8e6947baaadccc86c1f7d8cd0dd542b88d81b9b1990cc3aab7cbfcf3beb08d",
+      "bytes": 3444
+    },
+    "utility_watch/uwatch/__main__.py": {
+      "git_blob": "823d40a6bf41beb59790ce83476b359f76f4b1ec",
+      "sha256": "26c55ee4277631c49b2312533d7514a815ec2c3de08f48b0a9dea8946d8f8933",
+      "bytes": 53
+    }
+  },
+  "worksheet": {
+    "git_blob": "ddb9cc3cbed2c70d17d81b07a2b239693ba209bd",
+    "sha256": "fab2b166762ec404eb9df7afabe14121f2d3e335826b35b8219b0ff99c12e86a",
+    "bytes": 7279,
+    "native_row_states": {
+      "current": 14,
+      "changed": 1
+    }
+  },
+  "retained_history": {
+    "row_state": "changed",
+    "review_status": "reviewed",
+    "reviewer": "Zoë 李",
+    "note": "Statement reviewed.\nVendor says \"credit next month\"; keep the hold.",
+    "finding_key": "B50087",
+    "finding_id": "a8ae5d25bdd085f56c3f65fd9fe9cca2c6fac0f7f340099a41868ff95bd3aecf",
+    "evidence_version": "030b7f6b169c53467b46271e32d840bf4786e50362c016fdce7d0190d9e9dd74"
+  },
+  "current_same_finding": {
+    "row_state": "current",
+    "review_status": "open",
+    "reviewer": "",
+    "note": "",
+    "finding_key": "B50087",
+    "finding_id": "a8ae5d25bdd085f56c3f65fd9fe9cca2c6fac0f7f340099a41868ff95bd3aecf",
+    "evidence_version": "1246e951133f24fc7f39cb65dbf864c2da70196ac249d5358f83654c98bb75da"
+  },
+  "cli": {
+    "argv": [
+      "uwatch",
+      "review-report",
+      "--worksheet",
+      "review-3.csv",
+      "--out",
+      "review.html"
+    ],
+    "rc": 2,
+    "stdout": "",
+    "stderr": "usage: uwatch [-h] {generate,run,review} ...\nuwatch: error: argument cmd: invalid choice: 'review-report' (choose from generate, run, review)\n"
+  },
+  "filesystem_and_external_effects": "none; source and captured CSV were passed through stdin and no uwatch writing command ran",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]"
+}

@@ -1,0 +1,136 @@
+{
+  "result": "MISSING_CAPABILITY_CONFIRMED",
+  "method": "Actual current native package through six real Python CLI children: generate, run, review, edited-source run, reconcile and refused review-report. Last child traps engine/reconcile/generator/network/subprocess effects after native imports.",
+  "python": "3.14.4 (main, Aug 20 2026, 10:41:58) [GCC 15.2.0]",
+  "package_root": "/home/jacob/hamon-e04-utility-review-z8yisrmp/baseline/utility_watch",
+  "commands": [
+    {
+      "argv": [
+        "generate",
+        "--out",
+        "/home/jacob/hamon-e04-utility-review-z8yisrmp/native-worksheet-baseline-om_cp412/data",
+        "--seed",
+        "11",
+        "--as-of",
+        "2026-09-28"
+      ],
+      "tripwires": false,
+      "returncode": 0,
+      "stdout": "SYNTHETIC data written to /home/jacob/hamon-e04-utility-review-z8yisrmp/native-worksheet-baseline-om_cp412/data: 12 seeded anomalies, 9 seasonal decoys, answer key in expected.json\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "run",
+        "--data",
+        "/home/jacob/hamon-e04-utility-review-z8yisrmp/native-worksheet-baseline-om_cp412/data",
+        "--out",
+        "/home/jacob/hamon-e04-utility-review-z8yisrmp/native-worksheet-baseline-om_cp412/report"
+      ],
+      "tripwires": false,
+      "returncode": 0,
+      "stdout": "[SYNTHETIC] as_of 2026-09-28: 31 accounts, 274 bills; 12 flags {'USAGE_SPIKE': 2, 'RATE_CHANGE': 1, 'LATE_FEE_OR_PAST_DUE': 1, 'PERIOD_OVERLAP': 1, 'MISSING_BILL': 1, 'DUPLICATE_BILL': 1, 'VACANT_UNIT_USAGE': 2, 'PAYMENT_MISMATCH': 2, 'UNPAID_PAST_DUE': 1}; 2 exceptions; 12 bills ($39,821.07) queued for approval (not paid)\nnaive trailing-3 rule would add 5 seasonal false flags\nreport: /home/jacob/hamon-e04-utility-review-z8yisrmp/native-worksheet-baseline-om_cp412/report/report.html\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "review",
+        "--data",
+        "/home/jacob/hamon-e04-utility-review-z8yisrmp/native-worksheet-baseline-om_cp412/data",
+        "--report",
+        "/home/jacob/hamon-e04-utility-review-z8yisrmp/native-worksheet-baseline-om_cp412/report/summary.json",
+        "--out",
+        "/home/jacob/hamon-e04-utility-review-z8yisrmp/native-worksheet-baseline-om_cp412/review-1.csv"
+      ],
+      "tripwires": false,
+      "returncode": 0,
+      "stdout": "review: 14 current findings {'open': 14}; 0 historical rows; annotations do not change payment eligibility\nworksheet: /home/jacob/hamon-e04-utility-review-z8yisrmp/native-worksheet-baseline-om_cp412/review-1.csv\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "run",
+        "--data",
+        "/home/jacob/hamon-e04-utility-review-z8yisrmp/native-worksheet-baseline-om_cp412/data",
+        "--out",
+        "/home/jacob/hamon-e04-utility-review-z8yisrmp/native-worksheet-baseline-om_cp412/report"
+      ],
+      "tripwires": false,
+      "returncode": 0,
+      "stdout": "[SYNTHETIC] as_of 2026-09-28: 31 accounts, 274 bills; 12 flags {'USAGE_SPIKE': 2, 'RATE_CHANGE': 1, 'LATE_FEE_OR_PAST_DUE': 1, 'PERIOD_OVERLAP': 1, 'MISSING_BILL': 1, 'DUPLICATE_BILL': 1, 'VACANT_UNIT_USAGE': 2, 'PAYMENT_MISMATCH': 2, 'UNPAID_PAST_DUE': 1}; 2 exceptions; 12 bills ($39,821.07) queued for approval (not paid)\nnaive trailing-3 rule would add 5 seasonal false flags\nreport: /home/jacob/hamon-e04-utility-review-z8yisrmp/native-worksheet-baseline-om_cp412/report/report.html\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "review",
+        "--data",
+        "/home/jacob/hamon-e04-utility-review-z8yisrmp/native-worksheet-baseline-om_cp412/data",
+        "--report",
+        "/home/jacob/hamon-e04-utility-review-z8yisrmp/native-worksheet-baseline-om_cp412/report/summary.json",
+        "--previous",
+        "/home/jacob/hamon-e04-utility-review-z8yisrmp/native-worksheet-baseline-om_cp412/review-1.csv",
+        "--out",
+        "/home/jacob/hamon-e04-utility-review-z8yisrmp/native-worksheet-baseline-om_cp412/review Zoë #%.csv"
+      ],
+      "tripwires": false,
+      "returncode": 0,
+      "stdout": "review: 14 current findings {'open': 14}; 1 historical rows; annotations do not change payment eligibility\nworksheet: /home/jacob/hamon-e04-utility-review-z8yisrmp/native-worksheet-baseline-om_cp412/review Zoë #%.csv\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "review-report",
+        "--worksheet",
+        "/home/jacob/hamon-e04-utility-review-z8yisrmp/native-worksheet-baseline-om_cp412/review Zoë #%.csv",
+        "--out",
+        "/home/jacob/hamon-e04-utility-review-z8yisrmp/native-worksheet-baseline-om_cp412/saved review.html"
+      ],
+      "tripwires": true,
+      "returncode": 2,
+      "stdout": "",
+      "stderr": "usage: uwatch [-h] {generate,run,review} ...\nuwatch: error: argument cmd: invalid choice: 'review-report' (choose from generate, run, review)\n"
+    }
+  ],
+  "actual_cli_children": 6,
+  "native_counts": {
+    "current": 14,
+    "changed": 1
+  },
+  "historical_annotation": {
+    "reviewer": "Zoë 李 <AP>",
+    "note": "Vendor says \"credit next month\".\nRetain the hold; <script>must remain text</script>.",
+    "review_status": "reviewed",
+    "finding_id": "a8ae5d25bdd085f56c3f65fd9fe9cca2c6fac0f7f340099a41868ff95bd3aecf",
+    "row_id": "db32ae3893484484be611d4481d22270"
+  },
+  "current_same_finding": {
+    "reviewer": "",
+    "note": "",
+    "review_status": "open",
+    "finding_id": "a8ae5d25bdd085f56c3f65fd9fe9cca2c6fac0f7f340099a41868ff95bd3aecf",
+    "row_id": "c7fdbd5b652f477da1bdf9c8b35666d1"
+  },
+  "all_existing_fixture_bytes_preserved_by_view": true,
+  "fixture_before_sha256": {
+    "data/README_SYNTHETIC.txt": "70ac39efa93a35be384266a58ce157bc862edc817822f86457cd65d507858611",
+    "data/accounts.csv": "58518376e0a67bf1a31f76e754020307a42330a87d3d7a538e6ccbb947d97958",
+    "data/bills.csv": "1e029648b82602306d216312ce2ec61c1e223676ea8b70c920f1c6dee5c1ede0",
+    "data/expected.json": "56eafdb5ae9525b8b36037e6a475ad908dffb62214ae7bb99af029989a21ad63",
+    "data/occupancy.csv": "0f77598a53f50162ef28059c88be91798f918e57e66eaa0a1f1d79880512cb6e",
+    "data/payments.csv": "86cf78324cd395e86200ec205f49fe73afa2984306ab6ccd2e5cf71261710853",
+    "report/audit.jsonl": "ebcdc7e0c0b50644f087765a4aa83a61174b780ef5e4aa06f28b4f9113569cd4",
+    "report/exceptions.csv": "7360ed7db451b317608619b028d9332247fd201c7c71850786284a76a75950f0",
+    "report/flags.csv": "9c5c196a304de95971e9cfbc499b46866fd3f57ee6f837eb3de44b4134e0796a",
+    "report/payment_queue.csv": "61183cd2f847548f1f27138156c9b058fee0a1a4fab17910f469c6d497b1e991",
+    "report/report.html": "8989c4cfa256643083fcebe8ee15cdb48cba99c11695665ed4746f1517b14f79",
+    "report/summary.json": "5e6cfbcfe0488ff053347ca52c77d5be6ef082e154bcd31722e7a27dedaab3b9",
+    "review Zoë #%.csv": "d9305edacc7e94a7ac076809a9e0c7cab1ce0ba557616be9afd8a86b8b783ddd",
+    "review-1.csv": "33ddc62ce56e74be31bf07c4e07c7b2eb4759127cc7768c7065d621729ce4964"
+  },
+  "worksheet": {
+    "artifact": "native-review-with-history.csv",
+    "sha256": "d9305edacc7e94a7ac076809a9e0c7cab1ce0ba557616be9afd8a86b8b783ddd",
+    "bytes": 7301
+  },
+  "limits": "Synthetic seed only. No real export, payment, service, provider, browser or production action. Temporary native data/report fixtures are removed after retaining their hashes and the exact worksheet."
+}

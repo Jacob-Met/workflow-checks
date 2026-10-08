@@ -1,0 +1,47 @@
+import fs from 'node:fs';
+import vm from 'node:vm';
+import path from 'node:path';
+import crypto from 'node:crypto';
+const root = '/dev/shm/pt-uncovered-visits-dc13ebf4687f';
+const html = fs.readFileSync(path.join(root, 'baseline/pt_auth/ptauth/ui.html'), 'utf8');
+const summary = JSON.parse(fs.readFileSync(path.join(root, 'authored-output/summary.json'), 'utf8'));
+const source = html.slice(html.indexOf('<script>') + 8, html.lastIndexOf('</script>'));
+const elements = new Map();
+function element(selector) {
+  if (!elements.has(selector)) elements.set(selector, {
+    value: '', innerHTML: '', textContent: '', disabled: false, dataset: {},
+    classList: {toggle() {}}
+  });
+  return elements.get(selector);
+}
+const calls = [];
+const document = {querySelector: element, querySelectorAll() { return []; }};
+const context = vm.createContext({
+  document,
+  fetch: async (url, options) => {
+    calls.push({url, method: options?.method ?? 'GET'});
+    if (url !== '/api/summary' || options?.method) throw new Error('unexpected operation');
+    return {ok: true, json: async () => structuredClone(summary)};
+  },
+  alert: message => { throw new Error(message); }
+});
+vm.runInContext(source, context, {filename: 'exact-ui-inline.js', timeout: 1000});
+await new Promise(setImmediate);
+const rendered = [...elements.values()].map(e => e.innerHTML).join('\n');
+const relevant = summary.uncovered.filter(v => v.status === 'completed' || (v.status === 'scheduled' && v.date >= summary.as_of));
+const result = {
+  source_head: '9e931fa9f42033bf2368f7149684fb5631345715',
+  runtime: process.version,
+  boundary: 'exact inline UI script with authored DOM/API boundaries; no browser/layout claim',
+  calls,
+  relevant_count: relevant.length,
+  displayed_relevant_ids: relevant.filter(v => rendered.includes(v.visit_id)).map(v => v.visit_id),
+  missing_relevant_ids: relevant.filter(v => !rendered.includes(v.visit_id)).map(v => v.visit_id),
+  declared_detail_dates: relevant.map(v => ({id:v.visit_id,date:v.date})),
+  ui_mentions_uncovered_array: /S\.uncovered\b/.test(source),
+  work_sha256: crypto.createHash('sha256').update(element('#work').innerHTML).digest('hex'),
+  synthetic_name_is_escaped: element('#work').innerHTML.includes('Test &lt;A&gt; &amp; &quot;café&quot;'),
+  state_action_calls: calls.filter(c => c.method !== 'GET').length
+};
+fs.writeFileSync(path.join(root, 'node-baseline.json'), JSON.stringify(result,null,2)+'\n', {flag:'wx'});
+process.stdout.write(JSON.stringify(result,null,2)+'\n');

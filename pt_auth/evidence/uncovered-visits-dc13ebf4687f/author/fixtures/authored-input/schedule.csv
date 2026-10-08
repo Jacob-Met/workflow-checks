@@ -1,0 +1,14 @@
+visit_id,patient_id,visit_date,clinic,therapist,payer_id,status,visit_type
+V-COVERED-DONE,SYN-A,2026-09-29,Actual clinic <A>,PT-A,PAY-A,completed,treatment
+V-DONE-1,SYN-A,2026-10-01,Actual clinic <A>,PT-A,PAY-A,completed,treatment
+V-DONE-2,SYN-A,2026-10-02,Actual clinic <A>,PT-A,PAY-A,completed,treatment
+V-PAST-SCHEDULED,SYN-A,2026-10-03,Actual clinic <A>,PT-A,PAY-A,scheduled,treatment
+V-UPCOMING-1,SYN-A,2026-10-08,Actual clinic <A>,PT-A,PAY-A,scheduled,treatment
+V-UPCOMING-2,SYN-A,2026-10-09,Actual clinic <A>,PT-A,PAY-A,scheduled,treatment
+V-UPCOMING-3,SYN-A,2026-10-10,Actual clinic <A>,PT-A,PAY-A,scheduled,treatment
+V-UPCOMING-4,SYN-A,2026-10-11,Actual clinic <A>,PT-A,PAY-A,scheduled,treatment
+V-UPCOMING-5,SYN-A,2026-10-12,Actual clinic <A>,PT-A,PAY-A,scheduled,treatment
+V-UPCOMING-6,SYN-A,2026-10-13,Actual clinic <A>,PT-A,PAY-A,scheduled,treatment
+V-CANCELLED,SYN-A,2026-10-14,Actual clinic <A>,PT-A,PAY-A,cancelled,treatment
+V-COVERED-FUTURE,SYN-B,2026-10-09,Other clinic (synthetic),PT-B,PAY-A,scheduled,treatment
+V-EXEMPT,SYN-C,2026-10-10,Other clinic (synthetic),PT-C,PAY-N,scheduled,treatment

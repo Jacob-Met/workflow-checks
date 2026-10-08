@@ -1,0 +1,1028 @@
+UTILITY WATCH
+
+Saved review worksheet
+Report as of 2026-09-28 · Evaluation from 2026-03-01
+SYNTHETIC DATA · Read-only snapshot
+This view records the saved worksheet. It does not recheck the source export or establish that these findings
+are still current. Reviewer names and notes are user-entered; worksheet checksums are integrity checks, not
+signatures.
+
+Worksheet: native-review-with-history.csv
+Worksheet SHA256: d9305edacc7e94a7ac076809a9e0c7cab1ce0ba557616be9afd8a86b8b783ddd
+
+Current findings (14)
+Open: 14 · In progress: 0 · Reviewed: 0
+Current finding
+
+NO_BASELINE
+Account
+
+SYN-7013
+
+Bill or period
+
+B50273
+
+Property
+
+Gaylord Ridge (synthetic)
+
+Utility
+
+electric
+
+Kind / code
+
+exception / NO_BASELINE
+
+Report as of
+
+2026-09-28
+
+Evaluation from
+
+2026-03-01
+
+Data mode
+
+synthetic
+
+no same-month bill last year; usage not judged
+Review status
+
+Open
+
+Reviewer
+
+Unassigned
+
+Note
+
+No note recorded
+
+Recorded source rows
+bills.csv:274
+
+Worksheet row ID
+
+ae82a457526b410aaac95cedd09332f3
+
+Finding ID
+
+d88d084506c12343fcb51ca5228bcf1a47e161af26ac7b026735e8269ea9c444
+
+Evidence version
+
+65e1fe43e3519c301e715c1cfde6f0439d4f6c5634516c051ad5c095a5e21d30
+
+Protected record SHA256
+
+51b767263c8ac399ddb50fe34e17d351a89f8898d4c4ed1282f5b38f5ecaa467
+
+Current finding
+
+NO_BASELINE
+Account
+
+SYN-7013
+
+Bill or period
+
+B50274
+
+Property
+
+Gaylord Ridge (synthetic)
+
+Utility
+
+electric
+
+Kind / code
+
+exception / NO_BASELINE
+
+Report as of
+
+2026-09-28
+
+Evaluation from
+
+2026-03-01
+
+Data mode
+
+synthetic
+
+no same-month bill last year; usage not judged
+Review status
+
+Open
+
+Reviewer
+
+Unassigned
+
+Note
+
+No note recorded
+
+Recorded source rows
+bills.csv:275
+Worksheet row ID
+
+30e4aa7015ea4aba9b6edb54786614e2
+
+Finding ID
+
+8a76bbc9da4b23c468cb4c9d7a9728cecc05d3173e3f460f6a0b1b4b1c134ec4
+
+Evidence version
+
+e6bdc15bac17eb59343475a9f9315497f038cf4adb0b69c66eca71b7d1b6caac
+
+Protected record SHA256
+
+1dd07987c752dd516111ad18b6de36cf66c4c885cd9c3848d4b18a89e7ed7ddc
+
+Current finding
+
+Late fee / past-due balance
+Account
+
+SYN-7005
+
+Bill or period
+
+B50087
+
+Property
+
+Bayou Flats (synthetic)
+
+Utility
+
+electric
+
+Kind / code
+
+flag / LATE_FEE_OR_PAST_DUE
+
+Report as of
+
+2026-09-28
+
+Evaluation from
+
+2026-03-01
+
+Data mode
+
+synthetic
+
+late fee $180.02, prior balance $3,222.36 on the bill
+Review status
+
+Open
+
+Reviewer
+
+Unassigned
+
+Note
+
+No note recorded
+
+Recorded source rows
+bills.csv:88
+Worksheet row ID
+
+c7fdbd5b652f477da1bdf9c8b35666d1
+
+Finding ID
+
+a8ae5d25bdd085f56c3f65fd9fe9cca2c6fac0f7f340099a41868ff95bd3aecf
+
+Evidence version
+
+1246e951133f24fc7f39cb65dbf864c2da70196ac249d5358f83654c98bb75da
+
+Protected record SHA256
+
+63bcadb794a965c598ed6607db3ea2aeeb0dd99ce73984a75deeeb7b4e6dc5d9
+
+Current finding
+
+Service periods overlap
+Account
+
+SYN-7006
+
+Bill or period
+
+B50107
+
+Property
+
+Bayou Flats (synthetic)
+
+Utility
+
+gas
+
+Kind / code
+
+flag / PERIOD_OVERLAP
+
+Report as of
+
+2026-09-28
+
+Evaluation from
+
+2026-03-01
+
+Data mode
+
+synthetic
+
+service period 2026-06-22..2026-07-31 overlaps prior bill B50106 (2026-06-01..2026-06-30); 9 days may be
+billed twice
+Review status
+
+Open
+
+Reviewer
+
+Unassigned
+
+Note
+
+No note recorded
+
+Recorded source rows
+bills.csv:108
+bills.csv:107
+Worksheet row ID
+
+09fa37c78c414487ad22b7bedbab3eac
+
+Finding ID
+
+c22b61037a6aa0667cd20a17257d1694a11f6fcc456d79db0deb61eb1e42a327
+
+Evidence version
+
+1c6778eb2e39eed7e6040898d3f040193ce9cf1bbf86a91ce0edc2ac705ad77e
+
+Protected record SHA256
+
+3ce991e7d9064c7e6bc2bc39882c083b9b66118e71613b5eae5c7b8e4e63b845
+
+Current finding
+
+Payment does not match bill
+Account
+
+SYN-7007
+
+Bill or period
+
+B50125
+
+Property
+
+Bayou Flats (synthetic)
+
+Utility
+
+water
+
+Kind / code
+
+flag / PAYMENT_MISMATCH
+
+Report as of
+
+2026-09-28
+
+Evaluation from
+
+2026-03-01
+
+Data mode
+
+synthetic
+
+owed $4,232.12; 2 payment(s) totalling $8,464.24
+Review status
+
+Open
+
+Reviewer
+
+Unassigned
+
+Note
+
+No note recorded
+
+Recorded source rows
+bills.csv:126
+payments.csv:120
+payments.csv:121
+Worksheet row ID
+
+a5ac0f1d12dc459a982e5738253dec6a
+
+Finding ID
+
+d9031301ff8ef36e560faf1ada796cd19ef0c178991cd51093b123aeaecf6cc2
+
+Evidence version
+
+8a51a885b31c4f031bb97b14219f7d154120125515c17a0079a202cce0e8c6a8
+
+Protected record SHA256
+
+78aaaf7753ff120461b0b1f1fea0ea5de10e8d8db5a1489fe3c93ab703bd33be
+
+Current finding
+
+Payment does not match bill
+Account
+
+SYN-7008
+
+Bill or period
+
+B50142
+
+Property
+
+Bayou Flats (synthetic)
+
+Utility
+
+trash
+
+Kind / code
+
+flag / PAYMENT_MISMATCH
+
+Report as of
+
+2026-09-28
+
+Evaluation from
+
+2026-03-01
+
+Data mode
+
+synthetic
+
+owed $1,258.66; 1 payment(s) totalling $1,108.66
+Review status
+
+Open
+
+Reviewer
+
+Unassigned
+
+Note
+
+No note recorded
+
+Recorded source rows
+bills.csv:143
+payments.csv:137
+
+Worksheet row ID
+
+12f074809e644c28b63c57b9e20cf5ed
+
+Finding ID
+
+4941ae7ef35524a3c915c3c959855e9e492024e395fb8510b5a84831fcc952e6
+
+Evidence version
+
+64c75f6f7adc60879d5f51a76244a6445a8c0a583f493d4ccd38ca6e40a50bec
+
+Protected record SHA256
+
+340a6cdc4458a980adf2f9b6e9bd2c79c5dae3fb46dc4f8bc68327082b1b6876
+
+Current finding
+
+Usage on a vacant unit
+Account
+
+SYN-7021
+
+Bill or period
+
+B50242
+
+Property
+
+Bayou Flats (synthetic)
+
+Utility
+
+water
+
+Kind / code
+
+flag / VACANT_UNIT_USAGE
+
+Report as of
+
+2026-09-28
+
+Evaluation from
+
+2026-03-01
+
+Data mode
+
+synthetic
+
+unit 201 vacant; 0.360 kgal/day vs standby ceiling 0.05 (possible leak or running equipment)
+Review status
+
+Open
+
+Reviewer
+
+Unassigned
+
+Note
+
+No note recorded
+
+Recorded source rows
+bills.csv:243
+occupancy.csv:5
+Worksheet row ID
+
+e063d45e9c0b4174a25e8392f532dedf
+
+Finding ID
+
+529a3f36d44aee91514f08c62292785b3445bf3f759d92fc4c6112792b026229
+
+Evidence version
+
+4171848c33929c5891b556f6a86bc5c3d7a6b54b3aab4ee4b8aa384d2eaab747
+
+Protected record SHA256
+
+f890735001b976ff64742e7fcc0ccf33f1f994191a5506d0e4008ebd3d7d8b99
+
+Current finding
+
+Usage on a vacant unit
+Account
+
+SYN-7021
+
+Bill or period
+
+B50243
+
+Property
+
+Bayou Flats (synthetic)
+
+Utility
+
+water
+
+Kind / code
+
+flag / VACANT_UNIT_USAGE
+
+Report as of
+
+2026-09-28
+
+Evaluation from
+
+2026-03-01
+
+Data mode
+
+synthetic
+
+unit 201 vacant; 0.360 kgal/day vs standby ceiling 0.05 (possible leak or running equipment)
+Review status
+
+Open
+
+Reviewer
+
+Unassigned
+
+Note
+
+No note recorded
+
+Recorded source rows
+bills.csv:244
+occupancy.csv:5
+Worksheet row ID
+
+19e2bfd2448c45de81b7bb7393ac9c6f
+
+Finding ID
+
+621220d51b5233f83f93dcdfd11c37cc32cac06436647ed021add4b3d8bef6ab
+
+Evidence version
+
+534924da630bfee93e6fafef54ca21bca83082969678333bea7cc4561803705b
+
+Protected record SHA256
+
+18ab65d3e2acd2b0bd479ff737c661ae96ad96763c3a6cb7bde3438a2cb52b8f
+
+Current finding
+
+Usage spike vs same month last year
+Account
+
+SYN-7002
+
+Bill or period
+
+B50032
+
+Property
+
+Cypress Court (synthetic)
+
+Utility
+
+gas
+
+Kind / code
+
+flag / USAGE_SPIKE
+
+Report as of
+
+2026-09-28
+
+Evaluation from
+
+2026-03-01
+
+Data mode
+
+synthetic
+
+92.7 therm/day vs 49.4 same month last year (x1.88)
+Review status
+
+Open
+
+Reviewer
+
+Unassigned
+
+Note
+
+No note recorded
+
+Recorded source rows
+bills.csv:33
+bills.csv:21
+Worksheet row ID
+
+a308c51a04784d8e81d63f8b096fb03e
+
+Finding ID
+
+62a09e474177d99c7cec574b1b56c2c869ac4941c8cfd0be6842e62a0b207fa4
+
+Evidence version
+
+887fe4a19af86a078c2204ea0321ae7045837d6a37d1fb99585276b8200536e9
+
+Protected record SHA256
+
+138375084c38a4e5c06b65feedf1811a0943b09bcba02c81d6c006efd9869722
+
+Current finding
+
+Usage spike vs same month last year
+Account
+
+SYN-7003
+
+Bill or period
+
+B50050
+
+Property
+
+Cypress Court (synthetic)
+
+Utility
+
+water
+
+Kind / code
+
+flag / USAGE_SPIKE
+
+Report as of
+
+2026-09-28
+
+Evaluation from
+
+2026-03-01
+
+Data mode
+
+synthetic
+
+17.9 kgal/day vs 10.0 same month last year (x1.79)
+Review status
+
+Open
+
+Reviewer
+
+Unassigned
+
+Note
+
+No note recorded
+
+Recorded source rows
+bills.csv:51
+bills.csv:39
+Worksheet row ID
+
+2422004565664de5b19fda5d7b84346a
+
+Finding ID
+
+de9534d5b38877324df29740622af1699ed1c696e6914586b321f2c607667e96
+
+Evidence version
+
+4fb9535f7919b3a259f7fb0317ce3d8b757803415aaf640515f343dab4448e2b
+
+Protected record SHA256
+
+2c2028af02504967d4dc0fe993d61e509377f1350572febb1927da8d5d77d97f
+
+Current finding
+
+Effective rate jumped
+Account
+
+SYN-7004
+
+Bill or period
+
+B50068
+
+Property
+
+Cypress Court (synthetic)
+
+Utility
+
+trash
+
+Kind / code
+
+flag / RATE_CHANGE
+
+Report as of
+
+2026-09-28
+
+Evaluation from
+
+2026-03-01
+
+Data mode
+
+synthetic
+
+$123.7817/pull vs trailing median $92.0173 (x1.35); check tariff/rate plan
+Review status
+
+Open
+
+Reviewer
+
+Unassigned
+
+Note
+
+No note recorded
+
+Recorded source rows
+bills.csv:69
+
+Worksheet row ID
+
+237b006bc2c844b0ba9fb7c04010062b
+
+Finding ID
+
+a3266d25613b99a1d4d0c7b6f593820e471070964fc145b686f168f8007e3174
+
+Evidence version
+
+545ae01b18f3e0110e7ded95b12a74140b5710c8f469bcdb2844b29360b6a0e6
+
+Protected record SHA256
+
+c03d6590c60d0aaccbb22d732fad25492180f305cacbf4ba1c02e9ce618fefdc
+
+Current finding
+
+Expected bill missing
+Account
+
+SYN-7009
+
+Bill or period
+
+SYN-7009:2026-04-01
+
+Property
+
+Gaylord Ridge (synthetic)
+
+Utility
+
+electric
+
+Kind / code
+
+flag / MISSING_BILL
+
+Report as of
+
+2026-09-28
+
+Evaluation from
+
+2026-03-01
+
+Data mode
+
+synthetic
+
+no bill for service month 2026-04; check vendor portal / mail before a late fee lands
+Review status
+
+Open
+
+Reviewer
+
+Unassigned
+
+Note
+
+No note recorded
+
+Recorded source rows
+accounts.csv:10
+Worksheet row ID
+
+93ea15d535f44815aec79ad4df330910
+
+Finding ID
+
+db4bab6bbdd93b3367d16e49239e88294c8ed976e5862b4f7bf336486efa13c8
+
+Evidence version
+
+f6aada553ec5a3a4b0ccfb52fe1a9f34a7288b8c126170becaf2a5c95053cde3
+
+Protected record SHA256
+
+0a0a07dc112a1a1534613caae8a14869b76a25c5ce2b8b9180f3a424c21a8dca
+
+Current finding
+
+Unpaid and past due
+Account
+
+SYN-7010
+
+Bill or period
+
+B50178
+
+Property
+
+Gaylord Ridge (synthetic)
+
+Utility
+
+gas
+
+Kind / code
+
+flag / UNPAID_PAST_DUE
+
+Report as of
+
+2026-09-28
+
+Evaluation from
+
+2026-03-01
+
+Data mode
+
+synthetic
+
+due 2026-09-06, no payment on file
+Review status
+
+Open
+
+Reviewer
+
+Unassigned
+
+Note
+
+No note recorded
+
+Recorded source rows
+bills.csv:179
+Worksheet row ID
+
+6f82e990ee424f268ce4bfda493edd15
+
+Finding ID
+
+fcfb60b086fcbf0c5b883f7bd17e23ae800409e5786cc1a471b0685021b00b17
+
+Evidence version
+
+e2d45648f2a7885a648ed07c69d577a0a27509d00b0fefe44e04ae58754e470b
+
+Protected record SHA256
+
+74f4372d4bcd7e1f29ced573baed0b68dbc5490e4615fb006dfe313aa2737c89
+
+Current finding
+
+Duplicate bill (hold)
+Account
+
+SYN-7012
+
+Bill or period
+
+B50213
+
+Property
+
+Gaylord Ridge (synthetic)
+
+Utility
+
+trash
+
+Kind / code
+
+flag / DUPLICATE_BILL
+
+Report as of
+
+2026-09-28
+
+Evaluation from
+
+2026-03-01
+
+Data mode
+
+synthetic
+
+same invoice number as B50212 (HAUL-50212); hold, do not pay twice
+Review status
+
+Open
+
+Reviewer
+
+Unassigned
+
+Note
+
+No note recorded
+
+Recorded source rows
+bills.csv:214
+bills.csv:213
+Worksheet row ID
+
+d166a09fdd3e4a5c946e743f4d6f9a1d
+
+Finding ID
+
+794c90fb655f81192788e6a943b1bd584e81297fbf9043b8c6a5e0713211476c
+
+Evidence version
+
+fbe1ca0eec6cc85b7609910fd86ce4bda4d8ab31d5d93737891cee860512a50b
+
+Protected record SHA256
+
+4ece42edb3411d28415b97eb6bfff42d569fc67e7bf1ed430a375ef666e7d2f4
+
+Prior findings (1)
+Changed rows retain the review of earlier evidence. Absent rows were not present in the later report or evaluation
+window; absence does not establish resolution or payment. Prior annotations do not apply to a current finding.
+
+Prior finding: evidence changed
+
+Late fee / past-due balance
+Account
+
+SYN-7005
+
+Bill or period
+
+B50087
+
+Property
+
+Bayou Flats (synthetic)
+
+Utility
+
+electric
+
+Kind / code
+
+flag / LATE_FEE_OR_PAST_DUE
+
+Report as of
+
+2026-09-28
+
+Evaluation from
+
+2026-03-01
+
+Data mode
+
+synthetic
+
+late fee $179.02, prior balance $3,222.36 on the bill
+Review status
+
+Reviewed
+
+Reviewer
+
+Zoë
+
+Note
+
+Vendor says "credit next month".
+
+李 <AP>
+
+Retain the hold; <script>must remain text</script>.
+Recorded source rows
+bills.csv:88
+Worksheet row ID
+
+db32ae3893484484be611d4481d22270
+
+Finding ID
+
+a8ae5d25bdd085f56c3f65fd9fe9cca2c6fac0f7f340099a41868ff95bd3aecf
+
+Evidence version
+
+030b7f6b169c53467b46271e32d840bf4786e50362c016fdce7d0190d9e9dd74
+
+Protected record SHA256
+
+049b17ed1a98f2cdec7df552d57663f335633296aebbbf57c150a278d4cd585a
+
+A Reviewed status records human follow-up. It does not clear a checker flag, approve an invoice or change payment eligibility. Keep the
+worksheet and its source exports for further review.
+
+

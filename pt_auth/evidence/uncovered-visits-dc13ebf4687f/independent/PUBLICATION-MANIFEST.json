@@ -1,0 +1,103 @@
+{
+  "candidate": "9676a5a20f3adab0ccf46e31e3052de04f50d267",
+  "file_count_including_manifest": 17,
+  "convention": "The manifest binds all files including this allowlist except the manifest itself; its hash is in the handoff.",
+  "files": [
+    {
+      "path": "review_reports.py",
+      "size": 17373,
+      "sha256": "5a3894fa60c2000952070534a42c1ad216dbedfc571c679eee2c8b7059bc8fee",
+      "git_blob": "fd7196955c6afa42a0c5d2616028042aa5179d00"
+    },
+    {
+      "path": "report-receipt.json",
+      "size": 23540,
+      "sha256": "f1e865aaa190bb766dbb6dfaa37fba92eff491765fc5cce40b48062e2055d801",
+      "git_blob": "ae2e54f471c9a8a531be9ea6f3a35149e90685be"
+    },
+    {
+      "path": "review_inline.cjs",
+      "size": 16670,
+      "sha256": "d40f61c47ba55084d9d6bde75056a1edeaab6eb17e65562b039f63a0155257ed",
+      "git_blob": "5cde86b23118d51c07179470e056599ba5b9d1a9"
+    },
+    {
+      "path": "inline-receipt.json",
+      "size": 17585,
+      "sha256": "cb4196732fb4b1a75416ddd8fbe922f140528afe135f5a221cb6a0ecb0e90d25",
+      "git_blob": "9117b8403ad7c84f717b003e17bdf6408fedf999"
+    },
+    {
+      "path": "serve_fixture.py",
+      "size": 2001,
+      "sha256": "99c0e4d9457932e232bce81559ccdccb1df2e19ccda8b7cf6b3b49a0539ff134",
+      "git_blob": "c3bfcf7f999d6f8efb955dfac282691869202e28"
+    },
+    {
+      "path": "browser-input.json",
+      "size": 5453,
+      "sha256": "4b734b6c6aea4d93a4a39eead3ca574a9dfe16cea5620531ec6c9e21c338bf4a",
+      "git_blob": "22a221be4102740e8d02bca913f69e98cdca8618"
+    },
+    {
+      "path": "review_ui.cjs",
+      "size": 17573,
+      "sha256": "1ef3f7c70151875d6eb2cddd34a05c7857ded2e20574df2e6432db3fad08803e",
+      "git_blob": "56ea8f9c6c829c1fb65e66dc1e47bb98e0d37591"
+    },
+    {
+      "path": "rejected-harnesses/inline-v1.cjs",
+      "size": 16627,
+      "sha256": "a06af05f7d8e59142d64c353b45cd0efa3bc7e403df10db34825b6658808ebdf",
+      "git_blob": "e96d9c57976d164ced9ec62b2b48e58268974328"
+    },
+    {
+      "path": "rejected-harnesses/inline-v1.json",
+      "size": 4745,
+      "sha256": "7f923df944cdf4699a95dd8cb4fa2fa37ffd3965a097e7ee512855b5b1a519ee",
+      "git_blob": "b8c835db75de0a75403743ec23e9b11f2bef7212"
+    },
+    {
+      "path": "authored-input/patients.csv",
+      "size": 194,
+      "sha256": "664ec8d3b7f05fea2151b36736d96f436f235573bcb979cadb1c739d7c7c7ca6",
+      "git_blob": "8f63a08c2b916ccc5f92c56d18a291aecc1412ef"
+    },
+    {
+      "path": "authored-input/payers.csv",
+      "size": 261,
+      "sha256": "06d24625edf5c5d0b8fae796769b887b85daaec3fb488c14fb204edce57715c8",
+      "git_blob": "02b2550928094c1c34acb646e8ff1c3052949c8d"
+    },
+    {
+      "path": "authored-input/authorizations.csv",
+      "size": 178,
+      "sha256": "e0ba56fe428e30b09da26c36607325a2a1f6d9ce28309560120c86dc097a1085",
+      "git_blob": "a833066c0e052d4f0cb27c2c77bd14ef6d8930e4"
+    },
+    {
+      "path": "authored-input/schedule.csv",
+      "size": 1286,
+      "sha256": "40c75d38597239c953f11277e8a7d590083ed3ad95a29db076c863169bf6060b",
+      "git_blob": "c653b9734253ebd7f4b63f701b21467078ce4081"
+    },
+    {
+      "path": "review-receipt.json",
+      "size": 10847,
+      "sha256": "b1bc82c56b7c751ea29441cbc487ee9be5e9e103787ab33fd17991377d04479f",
+      "git_blob": "790269ec2dd4d6b9b6bc301f38be5f8b529765a8"
+    },
+    {
+      "path": "REVIEW.md",
+      "size": 5469,
+      "sha256": "47bb7e210ee8485b082c581e9c1274a924bfd7595075dbbcf181646316fdfb9d",
+      "git_blob": "3f0f2787c7b7922da4acfe16cb8c078f7220f47c"
+    },
+    {
+      "path": "publication-allowlist.json",
+      "size": 660,
+      "sha256": "65eb5833faa6e60e0eaf32acbd1926145ede699acb467929ed28ce7f566820cb",
+      "git_blob": "d258e07723009e8ec032adb116f99176e99e0046"
+    }
+  ]
+}

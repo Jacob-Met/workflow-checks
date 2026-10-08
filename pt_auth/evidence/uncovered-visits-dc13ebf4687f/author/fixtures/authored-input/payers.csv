@@ -1,0 +1,3 @@
+payer_id,payer_name,requires_auth,reauth_visits_before,reauth_days_before,turnaround_days,annual_visit_limit,counts_evals,checklist
+PAY-A,"Placeholder <A> & plan",Y,2,7,3,,Y,Auth request
+PAY-N,No-auth placeholder,N,0,0,0,,Y,

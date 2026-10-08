@@ -1,0 +1,33 @@
+{
+  "result": "PASS",
+  "python": "3.14.4 (main, Aug 20 2026, 10:41:58) [GCC 15.2.0]",
+  "optimized": 0,
+  "tests_run": 7,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "log": "test_current_and_historical_annotations_remain_separate (test_review_report.ReviewReportTests.test_current_and_historical_annotations_remain_separate) ... ok\ntest_empty_native_worksheet_has_explicit_sections (test_review_report.ReviewReportTests.test_empty_native_worksheet_has_explicit_sections) ... ok\ntest_existing_destinations_and_source_are_preserved (test_review_report.ReviewReportTests.test_existing_destinations_and_source_are_preserved) ... ok\ntest_html_keeps_user_text_inert_and_multiline (test_review_report.ReviewReportTests.test_html_keeps_user_text_inert_and_multiline) ... ok\ntest_invalid_native_worksheets_publish_nothing (test_review_report.ReviewReportTests.test_invalid_native_worksheets_publish_nothing) ... ok\ntest_native_cli_exports_without_rechecking_or_changing_inputs (test_review_report.ReviewReportTests.test_native_cli_exports_without_rechecking_or_changing_inputs) ... ok\ntest_publication_failures_leave_incomplete_output_unpublished (test_review_report.ReviewReportTests.test_publication_failures_leave_incomplete_output_unpublished) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 0.128s\n\nOK\n",
+  "candidate_files": {
+    "utility_watch/uwatch/review_report.py": {
+      "git_blob": "be869a940436172253c0a6d5020ba24860f1a7eb",
+      "sha256": "4462088141b21c990ce5b949a9c683f68f647ae83bdba0eaa1409730e442f856",
+      "bytes": 8457
+    },
+    "utility_watch/uwatch/cli.py": {
+      "git_blob": "27bfe687d071ff045bd5642f6408413c8cc6a805",
+      "sha256": "d7e223edf55790642b011f8159d113da0433416c6344c6be255037d558dd9c45",
+      "bytes": 4350
+    },
+    "utility_watch/tests/test_review_report.py": {
+      "git_blob": "9ea0860c27a77ed8c67f8349525ec452e8a523b8",
+      "sha256": "6d48681bbfd4c4725b4aa6a191f04ed9f2fa4fd6beca0799f5265fb50210d7d5",
+      "bytes": 10866
+    },
+    "utility_watch/docs/review-report.md": {
+      "git_blob": "2a676d0ae4cecc8c45d8c3a371701c8748bdc977",
+      "sha256": "8ae387b4401ec2653779b59aeb7d7c44b9bb319f299ab6cf74195ea64aac5d0d",
+      "bytes": 4603
+    }
+  },
+  "limits": "Seven new focused consumer methods only. The complete inherited suite is not rerun here. Publication failures are controlled fsync/link injections; no real production/filesystem failure is claimed."
+}

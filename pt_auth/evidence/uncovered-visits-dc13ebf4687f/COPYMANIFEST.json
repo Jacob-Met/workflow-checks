@@ -1,0 +1,1241 @@
+{
+  "repository": "Jacob-Met/workflow-checks",
+  "prefix": "pt_auth/evidence/uncovered-visits-dc13ebf4687f",
+  "assembled_at_utc": "2026-10-08T13:59:06.822341+00:00",
+  "assembly_method": "Exact frozen file references, no checkout/evidence duplication. Only the entry and two carriers are created in this assembly directory.",
+  "convention": "This manifest binds every publication file except itself. Its own pin is carried by publication-files.json and the handoff. The allowlist enumerates all 67 repository paths.",
+  "published_file_count_including_this_manifest": 67,
+  "frozen_input_count": 64,
+  "origin_packets": {
+    "author_publication_map": {
+      "source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/publication-files.json",
+      "size": 18852,
+      "sha256": "03ae47ca8925b1cb6450a38042985c9270a3b492db550978901b3a9288bb5253",
+      "git_blob": "af139c879e9f6a56cd70825efd3f5ad7f68cfced"
+    },
+    "author_manifest": {
+      "source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/author-packet/PUBLICATION-MANIFEST.json",
+      "size": 12342,
+      "sha256": "6673421222bbff8836ee7f1075c5c5390dcb504d3710a760fc5f64c526b9e5f4",
+      "git_blob": "c2148cd58eef5c5a21bcc914f9eced0c62742de5"
+    },
+    "independent_manifest": {
+      "source_path": "/dev/shm/work-portability-pt-uncovered-review-dc13ebf4687f/PUBLICATION-MANIFEST.json",
+      "size": 3736,
+      "sha256": "da82fd92b2057d1c07ebf297ce739731edc455474aaf57b7e78895682b5cf11f",
+      "git_blob": "c57ac45d12f99fd522cfe620ddb59d77528de54f"
+    },
+    "independent_acceptance": {
+      "source_path": "/dev/shm/work-portability-pt-uncovered-review-dc13ebf4687f/review-receipt.json",
+      "size": 10847,
+      "sha256": "b1bc82c56b7c751ea29441cbc487ee9be5e9e103787ab33fd17991377d04479f",
+      "git_blob": "790269ec2dd4d6b9b6bc301f38be5f8b529765a8"
+    },
+    "distribution_receipt": {
+      "source_path": "/dev/shm/pt-distribution-review-dc13ebf4687f/receipt.json",
+      "size": 2072,
+      "sha256": "a899248ab4e3bde439bb148d3d91a35a920f4c22ab0ecf8822302fbb9c3ff25b",
+      "git_blob": "cc1fd85ac94abfa7ca8beeff5eb55d269f5f6154"
+    }
+  },
+  "receiving_preconditions": {
+    "receiving_head": "a5fd61b0c361c8a9b8a6737b33ecc9efab46e0ad",
+    "receiving_tree": "5ac515d24c722128f04b7ae343fb7c3e369a06c9",
+    "tree_truncated": false,
+    "accepted_source_baseline": "9e931fa9f42033bf2368f7149684fb5631345715",
+    "accepted_local_partial_base": "d67c6087ab5fae717be2eec08f131d2c80b539f6",
+    "accepted_local_candidate": "9676a5a20f3adab0ccf46e31e3052de04f50d267",
+    "modified_existing_paths": [
+      {
+        "path": "pt_auth/README.md",
+        "size": 16098,
+        "sha256": "93c5ec2693f80c4312557a73aa7ccbcff2792b7b603bd98d4bec7866a9cc1e6f",
+        "git_blob": "0dd3d4c7c83ac33d4099286e7785de111c8f19de",
+        "mode": "100644"
+      },
+      {
+        "path": "pt_auth/ptauth/cli.py",
+        "size": 3618,
+        "sha256": "ec368a77a8c96e68a86718150bc35138ce5cdbd621b51988daf3568e3d342222",
+        "git_blob": "b79a054cd4140b523d901d8109fc11a5958f91d2",
+        "mode": "100644"
+      },
+      {
+        "path": "pt_auth/ptauth/report.py",
+        "size": 10086,
+        "sha256": "794cf0a631b0f1a33ea85df4de387be0ce12d2744e8c8cb1308a61ce99516740",
+        "git_blob": "608626d57918e4d43fca2fc14421063d35b49cfc",
+        "mode": "100644"
+      },
+      {
+        "path": "pt_auth/ptauth/ui.html",
+        "size": 12468,
+        "sha256": "c94b54f51fbdedc6fe19bb36ac8e74973c834fc5a0ffa6b474d63eb61edc61c4",
+        "git_blob": "98bbca10a6341b8e76251e6f1fca65a8689a9db0",
+        "mode": "100644"
+      }
+    ],
+    "new_source_paths_absent": [
+      "pt_auth/ptauth/uncovered.py",
+      "pt_auth/tests/test_uncovered_review.py",
+      "pt_auth/tests/browser/uncovered_review.test.cjs"
+    ],
+    "evidence_prefix_absent": "pt_auth/evidence/uncovered-visits-dc13ebf4687f",
+    "existing_pt_inputs": [
+      {
+        "path": "pt_auth/ptauth/__init__.py",
+        "expected_git_blob": "a6f4545ac17e2578317ef694f7bb548489f6c71c",
+        "current": {
+          "path": "pt_auth/ptauth/__init__.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "a6f4545ac17e2578317ef694f7bb548489f6c71c",
+          "size": 311,
+          "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/a6f4545ac17e2578317ef694f7bb548489f6c71c"
+        }
+      },
+      {
+        "path": "pt_auth/ptauth/__main__.py",
+        "expected_git_blob": "3c93dd90cf357624c77ab3589ef2b201868c181e",
+        "current": {
+          "path": "pt_auth/ptauth/__main__.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "3c93dd90cf357624c77ab3589ef2b201868c181e",
+          "size": 57,
+          "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/3c93dd90cf357624c77ab3589ef2b201868c181e"
+        }
+      },
+      {
+        "path": "pt_auth/ptauth/cli.py",
+        "expected_git_blob": "b79a054cd4140b523d901d8109fc11a5958f91d2",
+        "current": {
+          "path": "pt_auth/ptauth/cli.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "b79a054cd4140b523d901d8109fc11a5958f91d2",
+          "size": 3618,
+          "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/b79a054cd4140b523d901d8109fc11a5958f91d2"
+        }
+      },
+      {
+        "path": "pt_auth/ptauth/data.py",
+        "expected_git_blob": "19a2a1b79eff6d2753507eebf3bf78011ddaaa87",
+        "current": {
+          "path": "pt_auth/ptauth/data.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "19a2a1b79eff6d2753507eebf3bf78011ddaaa87",
+          "size": 10283,
+          "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/19a2a1b79eff6d2753507eebf3bf78011ddaaa87"
+        }
+      },
+      {
+        "path": "pt_auth/ptauth/engine.py",
+        "expected_git_blob": "39c97f35d61ff949b5c2381f0ad60d7af8d74226",
+        "current": {
+          "path": "pt_auth/ptauth/engine.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "39c97f35d61ff949b5c2381f0ad60d7af8d74226",
+          "size": 16057,
+          "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/39c97f35d61ff949b5c2381f0ad60d7af8d74226"
+        }
+      },
+      {
+        "path": "pt_auth/ptauth/report.py",
+        "expected_git_blob": "608626d57918e4d43fca2fc14421063d35b49cfc",
+        "current": {
+          "path": "pt_auth/ptauth/report.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "608626d57918e4d43fca2fc14421063d35b49cfc",
+          "size": 10086,
+          "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/608626d57918e4d43fca2fc14421063d35b49cfc"
+        }
+      },
+      {
+        "path": "pt_auth/ptauth/synth.py",
+        "expected_git_blob": "2ff6a2548bf55a812cfa62e397442a0d3f7debbb",
+        "current": {
+          "path": "pt_auth/ptauth/synth.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "2ff6a2548bf55a812cfa62e397442a0d3f7debbb",
+          "size": 8873,
+          "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/2ff6a2548bf55a812cfa62e397442a0d3f7debbb"
+        }
+      },
+      {
+        "path": "pt_auth/ptauth/ui.html",
+        "expected_git_blob": "98bbca10a6341b8e76251e6f1fca65a8689a9db0",
+        "current": {
+          "path": "pt_auth/ptauth/ui.html",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "98bbca10a6341b8e76251e6f1fca65a8689a9db0",
+          "size": 12468,
+          "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/98bbca10a6341b8e76251e6f1fca65a8689a9db0"
+        }
+      },
+      {
+        "path": "pt_auth/ptauth/web.py",
+        "expected_git_blob": "71d17ec9642798a5e7df56ab7c2bdbab8d061352",
+        "current": {
+          "path": "pt_auth/ptauth/web.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "71d17ec9642798a5e7df56ab7c2bdbab8d061352",
+          "size": 6239,
+          "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/71d17ec9642798a5e7df56ab7c2bdbab8d061352"
+        }
+      },
+      {
+        "path": "pt_auth/sample_data/authorizations.csv",
+        "expected_git_blob": "036f7b276e3e09252afb886ad451531f51ada844",
+        "current": {
+          "path": "pt_auth/sample_data/authorizations.csv",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "036f7b276e3e09252afb886ad451531f51ada844",
+          "size": 2990,
+          "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/036f7b276e3e09252afb886ad451531f51ada844"
+        }
+      },
+      {
+        "path": "pt_auth/sample_data/expected.json",
+        "expected_git_blob": "21177a89ac5c24c9faf79746550165a3a170d08a",
+        "current": {
+          "path": "pt_auth/sample_data/expected.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "21177a89ac5c24c9faf79746550165a3a170d08a",
+          "size": 3482,
+          "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/21177a89ac5c24c9faf79746550165a3a170d08a"
+        }
+      },
+      {
+        "path": "pt_auth/sample_data/patients.csv",
+        "expected_git_blob": "e67323b68d1ac9ee4a901dc3ef70a95384ba5000",
+        "current": {
+          "path": "pt_auth/sample_data/patients.csv",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "e67323b68d1ac9ee4a901dc3ef70a95384ba5000",
+          "size": 2333,
+          "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/e67323b68d1ac9ee4a901dc3ef70a95384ba5000"
+        }
+      },
+      {
+        "path": "pt_auth/sample_data/payers.csv",
+        "expected_git_blob": "1853837e82048ac11698b4ad5bb6eeb055d56038",
+        "current": {
+          "path": "pt_auth/sample_data/payers.csv",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "1853837e82048ac11698b4ad5bb6eeb055d56038",
+          "size": 904,
+          "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/1853837e82048ac11698b4ad5bb6eeb055d56038"
+        }
+      },
+      {
+        "path": "pt_auth/sample_data/schedule.csv",
+        "expected_git_blob": "24a395250f5318004bab4f168c3ca237189ab354",
+        "current": {
+          "path": "pt_auth/sample_data/schedule.csv",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "24a395250f5318004bab4f168c3ca237189ab354",
+          "size": 71520,
+          "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/24a395250f5318004bab4f168c3ca237189ab354"
+        }
+      },
+      {
+        "path": "pt_auth/README.md",
+        "expected_git_blob": "0dd3d4c7c83ac33d4099286e7785de111c8f19de",
+        "current": {
+          "path": "pt_auth/README.md",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "0dd3d4c7c83ac33d4099286e7785de111c8f19de",
+          "size": 16098,
+          "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/0dd3d4c7c83ac33d4099286e7785de111c8f19de"
+        }
+      }
+    ],
+    "unchanged_distribution_metadata": [
+      {
+        "path": "README.md",
+        "expected": "d13a764020918c215f91263d97d6c949a827d385",
+        "actual": "d13a764020918c215f91263d97d6c949a827d385",
+        "mode": "100644",
+        "matches": true
+      },
+      {
+        "path": "demo.ps1",
+        "expected": "04e135cf3ddc97654e58393e9b14c3541fe12d94",
+        "actual": "04e135cf3ddc97654e58393e9b14c3541fe12d94",
+        "mode": "100644",
+        "matches": true
+      },
+      {
+        "path": "scripts/build_pages.py",
+        "expected": "c5c5506e5672b52362a09f0c0dadb870dc03c9ab",
+        "actual": "c5c5506e5672b52362a09f0c0dadb870dc03c9ab",
+        "mode": "100644",
+        "matches": true
+      },
+      {
+        "path": ".github/workflows/tests.yml",
+        "expected": "d72b89ae3efb2963fbe7386021f467e82a8e1f2e",
+        "actual": "d72b89ae3efb2963fbe7386021f467e82a8e1f2e",
+        "mode": "100644",
+        "matches": true
+      },
+      {
+        "path": "pt_auth/tests/conftest.py",
+        "expected": "e4c2fd4ff87c63061fb6a10f0fb01228c46c0875",
+        "actual": "e4c2fd4ff87c63061fb6a10f0fb01228c46c0875",
+        "mode": "100644",
+        "matches": true
+      },
+      {
+        "path": ".github/workflows/freight-whatif.yml",
+        "expected": "0c2981495c8167ea35cc87ac2ba41536f36ba18e",
+        "actual": "0c2981495c8167ea35cc87ac2ba41536f36ba18e",
+        "mode": "100644",
+        "matches": true
+      }
+    ],
+    "unchanged_pt_inputs": [
+      {
+        "path": "pt_auth/ptauth/__init__.py",
+        "expected_git_blob": "a6f4545ac17e2578317ef694f7bb548489f6c71c",
+        "current": {
+          "path": "pt_auth/ptauth/__init__.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "a6f4545ac17e2578317ef694f7bb548489f6c71c",
+          "size": 311,
+          "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/a6f4545ac17e2578317ef694f7bb548489f6c71c"
+        }
+      },
+      {
+        "path": "pt_auth/ptauth/__main__.py",
+        "expected_git_blob": "3c93dd90cf357624c77ab3589ef2b201868c181e",
+        "current": {
+          "path": "pt_auth/ptauth/__main__.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "3c93dd90cf357624c77ab3589ef2b201868c181e",
+          "size": 57,
+          "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/3c93dd90cf357624c77ab3589ef2b201868c181e"
+        }
+      },
+      {
+        "path": "pt_auth/ptauth/data.py",
+        "expected_git_blob": "19a2a1b79eff6d2753507eebf3bf78011ddaaa87",
+        "current": {
+          "path": "pt_auth/ptauth/data.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "19a2a1b79eff6d2753507eebf3bf78011ddaaa87",
+          "size": 10283,
+          "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/19a2a1b79eff6d2753507eebf3bf78011ddaaa87"
+        }
+      },
+      {
+        "path": "pt_auth/ptauth/engine.py",
+        "expected_git_blob": "39c97f35d61ff949b5c2381f0ad60d7af8d74226",
+        "current": {
+          "path": "pt_auth/ptauth/engine.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "39c97f35d61ff949b5c2381f0ad60d7af8d74226",
+          "size": 16057,
+          "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/39c97f35d61ff949b5c2381f0ad60d7af8d74226"
+        }
+      },
+      {
+        "path": "pt_auth/ptauth/synth.py",
+        "expected_git_blob": "2ff6a2548bf55a812cfa62e397442a0d3f7debbb",
+        "current": {
+          "path": "pt_auth/ptauth/synth.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "2ff6a2548bf55a812cfa62e397442a0d3f7debbb",
+          "size": 8873,
+          "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/2ff6a2548bf55a812cfa62e397442a0d3f7debbb"
+        }
+      },
+      {
+        "path": "pt_auth/ptauth/web.py",
+        "expected_git_blob": "71d17ec9642798a5e7df56ab7c2bdbab8d061352",
+        "current": {
+          "path": "pt_auth/ptauth/web.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "71d17ec9642798a5e7df56ab7c2bdbab8d061352",
+          "size": 6239,
+          "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/71d17ec9642798a5e7df56ab7c2bdbab8d061352"
+        }
+      },
+      {
+        "path": "pt_auth/sample_data/authorizations.csv",
+        "expected_git_blob": "036f7b276e3e09252afb886ad451531f51ada844",
+        "current": {
+          "path": "pt_auth/sample_data/authorizations.csv",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "036f7b276e3e09252afb886ad451531f51ada844",
+          "size": 2990,
+          "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/036f7b276e3e09252afb886ad451531f51ada844"
+        }
+      },
+      {
+        "path": "pt_auth/sample_data/expected.json",
+        "expected_git_blob": "21177a89ac5c24c9faf79746550165a3a170d08a",
+        "current": {
+          "path": "pt_auth/sample_data/expected.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "21177a89ac5c24c9faf79746550165a3a170d08a",
+          "size": 3482,
+          "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/21177a89ac5c24c9faf79746550165a3a170d08a"
+        }
+      },
+      {
+        "path": "pt_auth/sample_data/patients.csv",
+        "expected_git_blob": "e67323b68d1ac9ee4a901dc3ef70a95384ba5000",
+        "current": {
+          "path": "pt_auth/sample_data/patients.csv",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "e67323b68d1ac9ee4a901dc3ef70a95384ba5000",
+          "size": 2333,
+          "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/e67323b68d1ac9ee4a901dc3ef70a95384ba5000"
+        }
+      },
+      {
+        "path": "pt_auth/sample_data/payers.csv",
+        "expected_git_blob": "1853837e82048ac11698b4ad5bb6eeb055d56038",
+        "current": {
+          "path": "pt_auth/sample_data/payers.csv",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "1853837e82048ac11698b4ad5bb6eeb055d56038",
+          "size": 904,
+          "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/1853837e82048ac11698b4ad5bb6eeb055d56038"
+        }
+      },
+      {
+        "path": "pt_auth/sample_data/schedule.csv",
+        "expected_git_blob": "24a395250f5318004bab4f168c3ca237189ab354",
+        "current": {
+          "path": "pt_auth/sample_data/schedule.csv",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "24a395250f5318004bab4f168c3ca237189ab354",
+          "size": 71520,
+          "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/24a395250f5318004bab4f168c3ca237189ab354"
+        }
+      }
+    ],
+    "unrelated_receiving_change": "Main advanced through Utility-account PR29; all PT/distribution pins still match. No source retest or overwrite of that work."
+  },
+  "files": [
+    {
+      "repo_path": "pt_auth/README.md",
+      "source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate/pt_auth/README.md",
+      "size": 18875,
+      "sha256": "17ee483cb2e24393f1ed4b501e2164c289cfb7310891a1bc510cc283f13b4879",
+      "git_blob": "43c517674b03403156323078b089441ecdd488ff",
+      "mode": "100644",
+      "expected_old_git_blob": "0dd3d4c7c83ac33d4099286e7785de111c8f19de",
+      "role": "source",
+      "origin_packet": "author",
+      "assembly_action": "reference_exact_frozen_bytes"
+    },
+    {
+      "repo_path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/PUBLICATION-ALLOWLIST.txt",
+      "source_path": "/dev/shm/pt-uncovered-integration-dc13ebf4687f/pt_auth/evidence/uncovered-visits-dc13ebf4687f/PUBLICATION-ALLOWLIST.txt",
+      "size": 5225,
+      "sha256": "7d947d448f4a681c6bdeed80725a878249debb69664e4d811884cf0d1e5e0c66",
+      "git_blob": "a0d528750f5115a64f81fc04f04b605afdbe6bfc",
+      "mode": "100644",
+      "expected_old_git_blob": null,
+      "role": "carrier",
+      "origin_packet": "assembly",
+      "assembly_action": "new_exact_repository_path_allowlist"
+    },
+    {
+      "repo_path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/README.md",
+      "source_path": "/dev/shm/pt-uncovered-integration-dc13ebf4687f/pt_auth/evidence/uncovered-visits-dc13ebf4687f/README.md",
+      "size": 5065,
+      "sha256": "040a806647859f09a460c77a5535e77762fb54d051118908611b0f92047c3a3e",
+      "git_blob": "b7d0a734d1f6730b47789d3d009570f35af99b52",
+      "mode": "100644",
+      "expected_old_git_blob": null,
+      "role": "entry",
+      "origin_packet": "assembly",
+      "assembly_action": "new_entry_document"
+    },
+    {
+      "repo_path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/AUTHOR.md",
+      "source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/author-packet/AUTHOR.md",
+      "size": 7436,
+      "sha256": "7dc2100a8bf9afa15624517f981b304bb1440a4980a6e0a6cff92b7069520d05",
+      "git_blob": "e64fbfcf8e45d717dcbb17a4f36735a5a10ac429",
+      "mode": "100644",
+      "expected_old_git_blob": null,
+      "role": "author_evidence",
+      "origin_packet": "author",
+      "assembly_action": "reference_exact_frozen_bytes"
+    },
+    {
+      "repo_path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/PUBLICATION-ALLOWLIST.txt",
+      "source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/author-packet/PUBLICATION-ALLOWLIST.txt",
+      "size": 1126,
+      "sha256": "a559556f21bfcba6fc2c93fb56626279005f6df0b3f200e86039fc915883853f",
+      "git_blob": "9664cbb61b2d957b8951d1521fb8524f80dd6a19",
+      "mode": "100644",
+      "expected_old_git_blob": null,
+      "role": "author_evidence",
+      "origin_packet": "author",
+      "assembly_action": "reference_exact_frozen_bytes"
+    },
+    {
+      "repo_path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/PUBLICATION-MANIFEST.json",
+      "source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/author-packet/PUBLICATION-MANIFEST.json",
+      "size": 12342,
+      "sha256": "6673421222bbff8836ee7f1075c5c5390dcb504d3710a760fc5f64c526b9e5f4",
+      "git_blob": "c2148cd58eef5c5a21bcc914f9eced0c62742de5",
+      "mode": "100644",
+      "expected_old_git_blob": null,
+      "role": "author_evidence",
+      "origin_packet": "author",
+      "assembly_action": "reference_exact_frozen_bytes"
+    },
+    {
+      "repo_path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/baseline-manifest.json",
+      "source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/author-packet/baseline-manifest.json",
+      "size": 3238,
+      "sha256": "6390ba36accd23bd14edb6dbd1b943f1fb4a6fae2ce1a3786d5ddce3c80b761c",
+      "git_blob": "23ac44fc997e6f2523b86640d517b6fdd9ba3b46",
+      "mode": "100644",
+      "expected_old_git_blob": null,
+      "role": "author_evidence",
+      "origin_packet": "author",
+      "assembly_action": "reference_exact_frozen_bytes"
+    },
+    {
+      "repo_path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/baseline/authored-baseline.json",
+      "source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/author-packet/baseline/authored-baseline.json",
+      "size": 3773,
+      "sha256": "b2c84fb2c686f6fcf8d538127829c735669beb114e4351b9b10221868f50766c",
+      "git_blob": "53f1019345a5526576ec7a7f8aac66add94f800e",
+      "mode": "100644",
+      "expected_old_git_blob": null,
+      "role": "author_evidence",
+      "origin_packet": "author",
+      "assembly_action": "reference_exact_frozen_bytes"
+    },
+    {
+      "repo_path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/baseline/cli-result.json",
+      "source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/author-packet/baseline/cli-result.json",
+      "size": 2023,
+      "sha256": "16b4056e6b92c3501ce7de207319834ca770e9da330b6f45dc48c280c0574c1f",
+      "git_blob": "ba602c59fb5338795ed003705b8dd7b553bc34a0",
+      "mode": "100644",
+      "expected_old_git_blob": null,
+      "role": "author_evidence",
+      "origin_packet": "author",
+      "assembly_action": "reference_exact_frozen_bytes"
+    },
+    {
+      "repo_path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/baseline/inline-ui.json",
+      "source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/author-packet/baseline/inline-ui.json",
+      "size": 1267,
+      "sha256": "84563ceee3d380450bdf2f080bc17f9934fdaafc1826d70ba74e361c3b5810ee",
+      "git_blob": "bc7b5a38adc03cc92aa58061b1aa4e1fca5ed50c",
+      "mode": "100644",
+      "expected_old_git_blob": null,
+      "role": "author_evidence",
+      "origin_packet": "author",
+      "assembly_action": "reference_exact_frozen_bytes"
+    },
+    {
+      "repo_path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/baseline/shipped-workflow.json",
+      "source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/author-packet/baseline/shipped-workflow.json",
+      "size": 4178,
+      "sha256": "f05d3fd5832acbf5de7f5cb42dadd506b5fc03488504ea4da6c4cc8d6ebfe2dd",
+      "git_blob": "a9eb8831afe4f13cfcae30b49db2c2f9c236482a",
+      "mode": "100644",
+      "expected_old_git_blob": null,
+      "role": "author_evidence",
+      "origin_packet": "author",
+      "assembly_action": "reference_exact_frozen_bytes"
+    },
+    {
+      "repo_path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/candidate-manifest.json",
+      "source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/author-packet/candidate-manifest.json",
+      "size": 2527,
+      "sha256": "46a503ccdd0c793cc1ad4ec1759e6d615c12c67e7aec8fad93cff2f55e8dadab",
+      "git_blob": "afadcfae9d6d795dd2da57e30e5fddc5103ed3a6",
+      "mode": "100644",
+      "expected_old_git_blob": null,
+      "role": "author_evidence",
+      "origin_packet": "author",
+      "assembly_action": "reference_exact_frozen_bytes"
+    },
+    {
+      "repo_path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/candidate.patch",
+      "source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/author-packet/candidate.patch",
+      "size": 43036,
+      "sha256": "9fd74ea848da47a8f0a9be642575f88810dbbe41e831d7efa8825be9c487dd90",
+      "git_blob": "b345a6a15fd2bc0038251a721e22a1004b3282c0",
+      "mode": "100644",
+      "expected_old_git_blob": null,
+      "role": "author_evidence",
+      "origin_packet": "author",
+      "assembly_action": "reference_exact_frozen_bytes"
+    },
+    {
+      "repo_path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/example-after/digest.html",
+      "source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/author-packet/example-after/digest.html",
+      "size": 6726,
+      "sha256": "fc6db288d4ed5bfd09c50706f92aeb452388e5149a13021da09482ab9ff3b3ba",
+      "git_blob": "35dfb4409b4193e7785f2c6e56dd3352526552d1",
+      "mode": "100644",
+      "expected_old_git_blob": null,
+      "role": "author_evidence",
+      "origin_packet": "author",
+      "assembly_action": "reference_exact_frozen_bytes"
+    },
+    {
+      "repo_path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/example-after/summary.json",
+      "source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/author-packet/example-after/summary.json",
+      "size": 9282,
+      "sha256": "9c004c079d00f9e00b538bbab589cc0e07d7b8e686fc985f66ee60f0d1ca5b38",
+      "git_blob": "4220d4e55a744780a56793b0a1950cef7f4e96aa",
+      "mode": "100644",
+      "expected_old_git_blob": null,
+      "role": "author_evidence",
+      "origin_packet": "author",
+      "assembly_action": "reference_exact_frozen_bytes"
+    },
+    {
+      "repo_path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/example-after/uncovered_visits.csv",
+      "source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/author-packet/example-after/uncovered_visits.csv",
+      "size": 1313,
+      "sha256": "232c0c626722be93167d1274083ea3e5c956eaa77ce47a91bb0cbff9b0d86adf",
+      "git_blob": "3f099e83e594d4d6cbeceb810b4a8a8aaa84fdb0",
+      "mode": "100644",
+      "expected_old_git_blob": null,
+      "role": "author_evidence",
+      "origin_packet": "author",
+      "assembly_action": "reference_exact_frozen_bytes"
+    },
+    {
+      "repo_path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/example-before/digest.html",
+      "source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/author-packet/example-before/digest.html",
+      "size": 3520,
+      "sha256": "2ee96b4a3de4ba547e61d63a32f2d39d39df733efd4ba03b624af4947d3a2053",
+      "git_blob": "b908045a1eae8be0050b3ee935471062814c01d7",
+      "mode": "100644",
+      "expected_old_git_blob": null,
+      "role": "author_evidence",
+      "origin_packet": "author",
+      "assembly_action": "reference_exact_frozen_bytes"
+    },
+    {
+      "repo_path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/example-before/summary.json",
+      "source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/author-packet/example-before/summary.json",
+      "size": 5423,
+      "sha256": "9f95a48ca9a308e8e182e8880584dabc5a8348fa21641cb499881943588e27d1",
+      "git_blob": "f308e52c0269430a59a212bfc1c027ef61d5ea8a",
+      "mode": "100644",
+      "expected_old_git_blob": null,
+      "role": "author_evidence",
+      "origin_packet": "author",
+      "assembly_action": "reference_exact_frozen_bytes"
+    },
+    {
+      "repo_path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/fixtures/authored-input/authorizations.csv",
+      "source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/author-packet/fixtures/authored-input/authorizations.csv",
+      "size": 185,
+      "sha256": "799416fc5be487772717e243d94a381c277f76f9adcd36b5d97c493528411ddb",
+      "git_blob": "1a22901fe9756eabacaad5dfdcf0e346c4a3ad24",
+      "mode": "100644",
+      "expected_old_git_blob": null,
+      "role": "author_evidence",
+      "origin_packet": "author",
+      "assembly_action": "reference_exact_frozen_bytes"
+    },
+    {
+      "repo_path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/fixtures/authored-input/patients.csv",
+      "source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/author-packet/fixtures/authored-input/patients.csv",
+      "size": 203,
+      "sha256": "84a2b4c63f18523dfd199d05384a4936e1e114c9d0cc543a564b6fdc45cd3f23",
+      "git_blob": "898c86ed68aef612c77761956324a511a481bbe1",
+      "mode": "100644",
+      "expected_old_git_blob": null,
+      "role": "author_evidence",
+      "origin_packet": "author",
+      "assembly_action": "reference_exact_frozen_bytes"
+    },
+    {
+      "repo_path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/fixtures/authored-input/payers.csv",
+      "source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/author-packet/fixtures/authored-input/payers.csv",
+      "size": 225,
+      "sha256": "61e1d6aa25e01147f495e7a99a285cb4b9d36653a4927190c9fe0c038156d0a2",
+      "git_blob": "51c3d6bbd7d0987acb4ebc675b3a2cb01cbfd220",
+      "mode": "100644",
+      "expected_old_git_blob": null,
+      "role": "author_evidence",
+      "origin_packet": "author",
+      "assembly_action": "reference_exact_frozen_bytes"
+    },
+    {
+      "repo_path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/fixtures/authored-input/schedule.csv",
+      "source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/author-packet/fixtures/authored-input/schedule.csv",
+      "size": 1113,
+      "sha256": "ef86bef593070f9c79001ec4ce21e58618a487d66919a7f4ebbefdcc2e02c15c",
+      "git_blob": "f7125aea958eed2af05b0d4c3a63c57716b440d8",
+      "mode": "100644",
+      "expected_old_git_blob": null,
+      "role": "author_evidence",
+      "origin_packet": "author",
+      "assembly_action": "reference_exact_frozen_bytes"
+    },
+    {
+      "repo_path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/historical/probe-ui.mjs.source",
+      "source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/author-packet/historical/probe-ui.mjs.source",
+      "size": 2503,
+      "sha256": "c4f0be76717a5670c0effc2ff34ead95790f7629fcb383cce4dcbe8346ce993f",
+      "git_blob": "6e5880e414a479dffa7e820969a6e46049f27c5e",
+      "mode": "100644",
+      "expected_old_git_blob": null,
+      "role": "author_evidence",
+      "origin_packet": "author",
+      "assembly_action": "reference_exact_frozen_bytes"
+    },
+    {
+      "repo_path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/historical/qualify_candidate.py.source",
+      "source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/author-packet/historical/qualify_candidate.py.source",
+      "size": 3319,
+      "sha256": "f2aea724db93a5f32ff1c49f479ce3ce1914251f2b574ecbabf897d48e69e5f6",
+      "git_blob": "259d23374e0a2e17df1a938f4a0cd41e9536e602",
+      "mode": "100644",
+      "expected_old_git_blob": null,
+      "role": "author_evidence",
+      "origin_packet": "author",
+      "assembly_action": "reference_exact_frozen_bytes"
+    },
+    {
+      "repo_path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/historical/verify_preservation.py.source",
+      "source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/author-packet/historical/verify_preservation.py.source",
+      "size": 10055,
+      "sha256": "7b50f36f3250a4aa2fe414234d31ecbbad19a6139cb7df4827541c8d5aec04fe",
+      "git_blob": "0471640a7347743ab14773b503f5d8bf8a07d4ec",
+      "mode": "100644",
+      "expected_old_git_blob": null,
+      "role": "author_evidence",
+      "origin_packet": "author",
+      "assembly_action": "reference_exact_frozen_bytes"
+    },
+    {
+      "repo_path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/qualification/baseline-normal.stderr.txt",
+      "source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/author-packet/qualification/baseline-normal.stderr.txt",
+      "size": 19756,
+      "sha256": "17ef3d2f6ef9aac0758b4b2e519e707f4f42bca709f1c3f3aff17c9fbb1c7711",
+      "git_blob": "ce34b0821261ce2c8c5c78164bc2c17c0838672e",
+      "mode": "100644",
+      "expected_old_git_blob": null,
+      "role": "author_evidence",
+      "origin_packet": "author",
+      "assembly_action": "reference_exact_frozen_bytes"
+    },
+    {
+      "repo_path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/qualification/baseline-normal.stdout.txt",
+      "source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/author-packet/qualification/baseline-normal.stdout.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "expected_old_git_blob": null,
+      "role": "author_evidence",
+      "origin_packet": "author",
+      "assembly_action": "reference_exact_frozen_bytes"
+    },
+    {
+      "repo_path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/qualification/baseline-ui.stderr.txt",
+      "source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/author-packet/qualification/baseline-ui.stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "expected_old_git_blob": null,
+      "role": "author_evidence",
+      "origin_packet": "author",
+      "assembly_action": "reference_exact_frozen_bytes"
+    },
+    {
+      "repo_path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/qualification/baseline-ui.stdout.txt",
+      "source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/author-packet/qualification/baseline-ui.stdout.txt",
+      "size": 6426,
+      "sha256": "6fee578f20b7fe0b29d73d21a030b1ce99b4f7ecd6ac548d1bcc2a22f70d14f3",
+      "git_blob": "688a947ca7324bd6880e67a7c6c0fcde1e1de1a8",
+      "mode": "100644",
+      "expected_old_git_blob": null,
+      "role": "author_evidence",
+      "origin_packet": "author",
+      "assembly_action": "reference_exact_frozen_bytes"
+    },
+    {
+      "repo_path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/qualification/candidate-normal.stderr.txt",
+      "source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/author-packet/qualification/candidate-normal.stderr.txt",
+      "size": 1622,
+      "sha256": "4f3f805feaf3bf0a8fdab79457043ca55db15dda658fe3818a5b9647fee7e6f5",
+      "git_blob": "141e791f7ea938ddcdfb1bc77ac2dbaadbd495d3",
+      "mode": "100644",
+      "expected_old_git_blob": null,
+      "role": "author_evidence",
+      "origin_packet": "author",
+      "assembly_action": "reference_exact_frozen_bytes"
+    },
+    {
+      "repo_path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/qualification/candidate-normal.stdout.txt",
+      "source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/author-packet/qualification/candidate-normal.stdout.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "expected_old_git_blob": null,
+      "role": "author_evidence",
+      "origin_packet": "author",
+      "assembly_action": "reference_exact_frozen_bytes"
+    },
+    {
+      "repo_path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/qualification/candidate-optimized.stderr.txt",
+      "source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/author-packet/qualification/candidate-optimized.stderr.txt",
+      "size": 1622,
+      "sha256": "0c016fd8c1ff51677f46330b5d39cf0ea2f32602d2d4fc7203ecfda1b1b96120",
+      "git_blob": "609e9fd2e3ac597f346f13cd7d62b02c84ba0279",
+      "mode": "100644",
+      "expected_old_git_blob": null,
+      "role": "author_evidence",
+      "origin_packet": "author",
+      "assembly_action": "reference_exact_frozen_bytes"
+    },
+    {
+      "repo_path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/qualification/candidate-optimized.stdout.txt",
+      "source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/author-packet/qualification/candidate-optimized.stdout.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "expected_old_git_blob": null,
+      "role": "author_evidence",
+      "origin_packet": "author",
+      "assembly_action": "reference_exact_frozen_bytes"
+    },
+    {
+      "repo_path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/qualification/candidate-ui.stderr.txt",
+      "source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/author-packet/qualification/candidate-ui.stderr.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "expected_old_git_blob": null,
+      "role": "author_evidence",
+      "origin_packet": "author",
+      "assembly_action": "reference_exact_frozen_bytes"
+    },
+    {
+      "repo_path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/qualification/candidate-ui.stdout.txt",
+      "source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/author-packet/qualification/candidate-ui.stdout.txt",
+      "size": 718,
+      "sha256": "6a29bd6b0a583dae055327c3352d0dc74497f6c62b47a9eac475a81cad26f9e9",
+      "git_blob": "56670aa7b6db1ad94f5ab9efb405fc7e2593fdc8",
+      "mode": "100644",
+      "expected_old_git_blob": null,
+      "role": "author_evidence",
+      "origin_packet": "author",
+      "assembly_action": "reference_exact_frozen_bytes"
+    },
+    {
+      "repo_path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/qualification/generated-output-cleanup.json",
+      "source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/author-packet/qualification/generated-output-cleanup.json",
+      "size": 2005,
+      "sha256": "0a973ee69b41483ed29c73f3ce5c8171312eecae0254529fa3f9df5085e9181c",
+      "git_blob": "c4ac2392d07e679399bed153fbb2869475ed2b77",
+      "mode": "100644",
+      "expected_old_git_blob": null,
+      "role": "author_evidence",
+      "origin_packet": "author",
+      "assembly_action": "reference_exact_frozen_bytes"
+    },
+    {
+      "repo_path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/qualification/preservation.json",
+      "source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/author-packet/qualification/preservation.json",
+      "size": 17482,
+      "sha256": "fc0ae0c57ebe5fbe218069621db02fe36490acd17ab0da6ef87065fca0574408",
+      "git_blob": "dc30dbe7c24f9540d9ee8c14cc54b2738395d724",
+      "mode": "100644",
+      "expected_old_git_blob": null,
+      "role": "author_evidence",
+      "origin_packet": "author",
+      "assembly_action": "reference_exact_frozen_bytes"
+    },
+    {
+      "repo_path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/qualification/receipt.json",
+      "source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/author-packet/qualification/receipt.json",
+      "size": 6473,
+      "sha256": "07a52ca57cc8cae62af3cb16b02d2387fc7817c07bc8d016f3a4fb8112257d13",
+      "git_blob": "e80c2fde111168bd4dad2fcd215400568bea8868",
+      "mode": "100644",
+      "expected_old_git_blob": null,
+      "role": "author_evidence",
+      "origin_packet": "author",
+      "assembly_action": "reference_exact_frozen_bytes"
+    },
+    {
+      "repo_path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/source-preconditions.json",
+      "source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/author-packet/source-preconditions.json",
+      "size": 2280,
+      "sha256": "162bfc3de96d6ce881cc9afe2bac46c737d3f9ddef3e9311d2d6c43262f84b37",
+      "git_blob": "fbc4e96512c448f7db087abec9d5974fa5b3812b",
+      "mode": "100644",
+      "expected_old_git_blob": null,
+      "role": "author_evidence",
+      "origin_packet": "author",
+      "assembly_action": "reference_exact_frozen_bytes"
+    },
+    {
+      "repo_path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/distribution/PUBLICATION-ALLOWLIST.txt",
+      "source_path": "/dev/shm/pt-distribution-review-dc13ebf4687f/PUBLICATION-ALLOWLIST.txt",
+      "size": 31,
+      "sha256": "84e45151574e9cbadd421627cbe1a626be279899b8379bb8852435bf9a7841ea",
+      "git_blob": "bd82a12816a93e12a165e2cf347a2074748db469",
+      "mode": "100644",
+      "expected_old_git_blob": null,
+      "role": "distribution_evidence",
+      "origin_packet": "distribution",
+      "assembly_action": "reference_exact_frozen_bytes"
+    },
+    {
+      "repo_path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/distribution/REVIEW.md",
+      "source_path": "/dev/shm/pt-distribution-review-dc13ebf4687f/REVIEW.md",
+      "size": 4883,
+      "sha256": "c990cccb9f50094484f7620aa5936ed8fb8993555f99dc55e1de06f02804d0dd",
+      "git_blob": "ec757f3ecde8cb79c931a5252df1b1edd33d8447",
+      "mode": "100644",
+      "expected_old_git_blob": null,
+      "role": "distribution_evidence",
+      "origin_packet": "distribution",
+      "assembly_action": "reference_exact_frozen_bytes"
+    },
+    {
+      "repo_path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/distribution/receipt.json",
+      "source_path": "/dev/shm/pt-distribution-review-dc13ebf4687f/receipt.json",
+      "size": 2072,
+      "sha256": "a899248ab4e3bde439bb148d3d91a35a920f4c22ab0ecf8822302fbb9c3ff25b",
+      "git_blob": "cc1fd85ac94abfa7ca8beeff5eb55d269f5f6154",
+      "mode": "100644",
+      "expected_old_git_blob": null,
+      "role": "distribution_evidence",
+      "origin_packet": "distribution",
+      "assembly_action": "reference_exact_frozen_bytes"
+    },
+    {
+      "repo_path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/distribution/source-readback.json",
+      "source_path": "/dev/shm/pt-distribution-review-dc13ebf4687f/source-readback.json",
+      "size": 20719,
+      "sha256": "634f7eb0fdfad7aa9a970f1438933cc355411cd391907a954cd0b0a535b73ae8",
+      "git_blob": "590da77ed11c3bcba96872e3c613f0a0c4b9d6e8",
+      "mode": "100644",
+      "expected_old_git_blob": null,
+      "role": "distribution_evidence",
+      "origin_packet": "distribution",
+      "assembly_action": "reference_exact_frozen_bytes"
+    },
+    {
+      "repo_path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/independent/PUBLICATION-MANIFEST.json",
+      "source_path": "/dev/shm/work-portability-pt-uncovered-review-dc13ebf4687f/PUBLICATION-MANIFEST.json",
+      "size": 3736,
+      "sha256": "da82fd92b2057d1c07ebf297ce739731edc455474aaf57b7e78895682b5cf11f",
+      "git_blob": "c57ac45d12f99fd522cfe620ddb59d77528de54f",
+      "mode": "100644",
+      "expected_old_git_blob": null,
+      "role": "independent_evidence",
+      "origin_packet": "independent",
+      "assembly_action": "reference_exact_frozen_bytes"
+    },
+    {
+      "repo_path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/independent/REVIEW.md",
+      "source_path": "/dev/shm/work-portability-pt-uncovered-review-dc13ebf4687f/REVIEW.md",
+      "size": 5469,
+      "sha256": "47bb7e210ee8485b082c581e9c1274a924bfd7595075dbbcf181646316fdfb9d",
+      "git_blob": "3f0f2787c7b7922da4acfe16cb8c078f7220f47c",
+      "mode": "100644",
+      "expected_old_git_blob": null,
+      "role": "independent_evidence",
+      "origin_packet": "independent",
+      "assembly_action": "reference_exact_frozen_bytes"
+    },
+    {
+      "repo_path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/independent/authored-input/authorizations.csv",
+      "source_path": "/dev/shm/work-portability-pt-uncovered-review-dc13ebf4687f/authored-input/authorizations.csv",
+      "size": 178,
+      "sha256": "e0ba56fe428e30b09da26c36607325a2a1f6d9ce28309560120c86dc097a1085",
+      "git_blob": "a833066c0e052d4f0cb27c2c77bd14ef6d8930e4",
+      "mode": "100644",
+      "expected_old_git_blob": null,
+      "role": "independent_evidence",
+      "origin_packet": "independent",
+      "assembly_action": "reference_exact_frozen_bytes"
+    },
+    {
+      "repo_path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/independent/authored-input/patients.csv",
+      "source_path": "/dev/shm/work-portability-pt-uncovered-review-dc13ebf4687f/authored-input/patients.csv",
+      "size": 194,
+      "sha256": "664ec8d3b7f05fea2151b36736d96f436f235573bcb979cadb1c739d7c7c7ca6",
+      "git_blob": "8f63a08c2b916ccc5f92c56d18a291aecc1412ef",
+      "mode": "100644",
+      "expected_old_git_blob": null,
+      "role": "independent_evidence",
+      "origin_packet": "independent",
+      "assembly_action": "reference_exact_frozen_bytes"
+    },
+    {
+      "repo_path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/independent/authored-input/payers.csv",
+      "source_path": "/dev/shm/work-portability-pt-uncovered-review-dc13ebf4687f/authored-input/payers.csv",
+      "size": 261,
+      "sha256": "06d24625edf5c5d0b8fae796769b887b85daaec3fb488c14fb204edce57715c8",
+      "git_blob": "02b2550928094c1c34acb646e8ff1c3052949c8d",
+      "mode": "100644",
+      "expected_old_git_blob": null,
+      "role": "independent_evidence",
+      "origin_packet": "independent",
+      "assembly_action": "reference_exact_frozen_bytes"
+    },
+    {
+      "repo_path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/independent/authored-input/schedule.csv",
+      "source_path": "/dev/shm/work-portability-pt-uncovered-review-dc13ebf4687f/authored-input/schedule.csv",
+      "size": 1286,
+      "sha256": "40c75d38597239c953f11277e8a7d590083ed3ad95a29db076c863169bf6060b",
+      "git_blob": "c653b9734253ebd7f4b63f701b21467078ce4081",
+      "mode": "100644",
+      "expected_old_git_blob": null,
+      "role": "independent_evidence",
+      "origin_packet": "independent",
+      "assembly_action": "reference_exact_frozen_bytes"
+    },
+    {
+      "repo_path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/independent/browser-input.json",
+      "source_path": "/dev/shm/work-portability-pt-uncovered-review-dc13ebf4687f/browser-input.json",
+      "size": 5453,
+      "sha256": "4b734b6c6aea4d93a4a39eead3ca574a9dfe16cea5620531ec6c9e21c338bf4a",
+      "git_blob": "22a221be4102740e8d02bca913f69e98cdca8618",
+      "mode": "100644",
+      "expected_old_git_blob": null,
+      "role": "independent_evidence",
+      "origin_packet": "independent",
+      "assembly_action": "reference_exact_frozen_bytes"
+    },
+    {
+      "repo_path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/independent/inline-receipt.json",
+      "source_path": "/dev/shm/work-portability-pt-uncovered-review-dc13ebf4687f/inline-receipt.json",
+      "size": 17585,
+      "sha256": "cb4196732fb4b1a75416ddd8fbe922f140528afe135f5a221cb6a0ecb0e90d25",
+      "git_blob": "9117b8403ad7c84f717b003e17bdf6408fedf999",
+      "mode": "100644",
+      "expected_old_git_blob": null,
+      "role": "independent_evidence",
+      "origin_packet": "independent",
+      "assembly_action": "reference_exact_frozen_bytes"
+    },
+    {
+      "repo_path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/independent/publication-allowlist.json",
+      "source_path": "/dev/shm/work-portability-pt-uncovered-review-dc13ebf4687f/publication-allowlist.json",
+      "size": 660,
+      "sha256": "65eb5833faa6e60e0eaf32acbd1926145ede699acb467929ed28ce7f566820cb",
+      "git_blob": "d258e07723009e8ec032adb116f99176e99e0046",
+      "mode": "100644",
+      "expected_old_git_blob": null,
+      "role": "independent_evidence",
+      "origin_packet": "independent",
+      "assembly_action": "reference_exact_frozen_bytes"
+    },
+    {
+      "repo_path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/independent/rejected-harnesses/inline-v1.cjs",
+      "source_path": "/dev/shm/work-portability-pt-uncovered-review-dc13ebf4687f/rejected-harnesses/inline-v1.cjs",
+      "size": 16627,
+      "sha256": "a06af05f7d8e59142d64c353b45cd0efa3bc7e403df10db34825b6658808ebdf",
+      "git_blob": "e96d9c57976d164ced9ec62b2b48e58268974328",
+      "mode": "100644",
+      "expected_old_git_blob": null,
+      "role": "independent_evidence",
+      "origin_packet": "independent",
+      "assembly_action": "reference_exact_frozen_bytes"
+    },
+    {
+      "repo_path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/independent/rejected-harnesses/inline-v1.json",
+      "source_path": "/dev/shm/work-portability-pt-uncovered-review-dc13ebf4687f/rejected-harnesses/inline-v1.json",
+      "size": 4745,
+      "sha256": "7f923df944cdf4699a95dd8cb4fa2fa37ffd3965a097e7ee512855b5b1a519ee",
+      "git_blob": "b8c835db75de0a75403743ec23e9b11f2bef7212",
+      "mode": "100644",
+      "expected_old_git_blob": null,
+      "role": "independent_evidence",
+      "origin_packet": "independent",
+      "assembly_action": "reference_exact_frozen_bytes"
+    },
+    {
+      "repo_path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/independent/report-receipt.json",
+      "source_path": "/dev/shm/work-portability-pt-uncovered-review-dc13ebf4687f/report-receipt.json",
+      "size": 23540,
+      "sha256": "f1e865aaa190bb766dbb6dfaa37fba92eff491765fc5cce40b48062e2055d801",
+      "git_blob": "ae2e54f471c9a8a531be9ea6f3a35149e90685be",
+      "mode": "100644",
+      "expected_old_git_blob": null,
+      "role": "independent_evidence",
+      "origin_packet": "independent",
+      "assembly_action": "reference_exact_frozen_bytes"
+    },
+    {
+      "repo_path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/independent/review-receipt.json",
+      "source_path": "/dev/shm/work-portability-pt-uncovered-review-dc13ebf4687f/review-receipt.json",
+      "size": 10847,
+      "sha256": "b1bc82c56b7c751ea29441cbc487ee9be5e9e103787ab33fd17991377d04479f",
+      "git_blob": "790269ec2dd4d6b9b6bc301f38be5f8b529765a8",
+      "mode": "100644",
+      "expected_old_git_blob": null,
+      "role": "independent_evidence",
+      "origin_packet": "independent",
+      "assembly_action": "reference_exact_frozen_bytes"
+    },
+    {
+      "repo_path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/independent/review_inline.cjs",
+      "source_path": "/dev/shm/work-portability-pt-uncovered-review-dc13ebf4687f/review_inline.cjs",
+      "size": 16670,
+      "sha256": "d40f61c47ba55084d9d6bde75056a1edeaab6eb17e65562b039f63a0155257ed",
+      "git_blob": "5cde86b23118d51c07179470e056599ba5b9d1a9",
+      "mode": "100644",
+      "expected_old_git_blob": null,
+      "role": "independent_evidence",
+      "origin_packet": "independent",
+      "assembly_action": "reference_exact_frozen_bytes"
+    },
+    {
+      "repo_path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/independent/review_reports.py",
+      "source_path": "/dev/shm/work-portability-pt-uncovered-review-dc13ebf4687f/review_reports.py",
+      "size": 17373,
+      "sha256": "5a3894fa60c2000952070534a42c1ad216dbedfc571c679eee2c8b7059bc8fee",
+      "git_blob": "fd7196955c6afa42a0c5d2616028042aa5179d00",
+      "mode": "100644",
+      "expected_old_git_blob": null,
+      "role": "independent_evidence",
+      "origin_packet": "independent",
+      "assembly_action": "reference_exact_frozen_bytes"
+    },
+    {
+      "repo_path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/independent/review_ui.cjs",
+      "source_path": "/dev/shm/work-portability-pt-uncovered-review-dc13ebf4687f/review_ui.cjs",
+      "size": 17573,
+      "sha256": "1ef3f7c70151875d6eb2cddd34a05c7857ded2e20574df2e6432db3fad08803e",
+      "git_blob": "56ea8f9c6c829c1fb65e66dc1e47bb98e0d37591",
+      "mode": "100644",
+      "expected_old_git_blob": null,
+      "role": "independent_evidence",
+      "origin_packet": "independent",
+      "assembly_action": "reference_exact_frozen_bytes"
+    },
+    {
+      "repo_path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/independent/serve_fixture.py",
+      "source_path": "/dev/shm/work-portability-pt-uncovered-review-dc13ebf4687f/serve_fixture.py",
+      "size": 2001,
+      "sha256": "99c0e4d9457932e232bce81559ccdccb1df2e19ccda8b7cf6b3b49a0539ff134",
+      "git_blob": "c3bfcf7f999d6f8efb955dfac282691869202e28",
+      "mode": "100644",
+      "expected_old_git_blob": null,
+      "role": "independent_evidence",
+      "origin_packet": "independent",
+      "assembly_action": "reference_exact_frozen_bytes"
+    },
+    {
+      "repo_path": "pt_auth/ptauth/cli.py",
+      "source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate/pt_auth/ptauth/cli.py",
+      "size": 3776,
+      "sha256": "55cce5ca33abc027f8f7c2afe1ae3eae32b9412d612b41d3c72a4037f1933a96",
+      "git_blob": "1012ba6c759e95b0c14de0e9c00bb4cbb73562ea",
+      "mode": "100644",
+      "expected_old_git_blob": "b79a054cd4140b523d901d8109fc11a5958f91d2",
+      "role": "source",
+      "origin_packet": "author",
+      "assembly_action": "reference_exact_frozen_bytes"
+    },
+    {
+      "repo_path": "pt_auth/ptauth/report.py",
+      "source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate/pt_auth/ptauth/report.py",
+      "size": 10743,
+      "sha256": "20cbc86e153b9af5151fd3e74cb370298de4692c81b3546a214eb2cfa8307df7",
+      "git_blob": "2ce82b1712e5c6fc03374d38996eceddf31782f0",
+      "mode": "100644",
+      "expected_old_git_blob": "608626d57918e4d43fca2fc14421063d35b49cfc",
+      "role": "source",
+      "origin_packet": "author",
+      "assembly_action": "reference_exact_frozen_bytes"
+    },
+    {
+      "repo_path": "pt_auth/ptauth/ui.html",
+      "source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate/pt_auth/ptauth/ui.html",
+      "size": 16354,
+      "sha256": "fddb0d6e5fe587f961ac602660161728195ff5904966a54577f8d4dcfcd41242",
+      "git_blob": "3bd3bbe67f3a6b9536b7e99b8ef52b2d1fa048db",
+      "mode": "100644",
+      "expected_old_git_blob": "98bbca10a6341b8e76251e6f1fca65a8689a9db0",
+      "role": "source",
+      "origin_packet": "author",
+      "assembly_action": "reference_exact_frozen_bytes"
+    },
+    {
+      "repo_path": "pt_auth/ptauth/uncovered.py",
+      "source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate/pt_auth/ptauth/uncovered.py",
+      "size": 4319,
+      "sha256": "21e92509df706e504a8630f3383ea4fe98d03047d2e4b070f3fdd188d995350e",
+      "git_blob": "9ab21781c4116dd0b9b76ac0116868898f3ee7d4",
+      "mode": "100644",
+      "expected_old_git_blob": null,
+      "role": "source",
+      "origin_packet": "author",
+      "assembly_action": "reference_exact_frozen_bytes"
+    },
+    {
+      "repo_path": "pt_auth/tests/browser/uncovered_review.test.cjs",
+      "source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate/pt_auth/tests/browser/uncovered_review.test.cjs",
+      "size": 8415,
+      "sha256": "25cac361af6bf20b93d017586087db0457669ba386ae47144db184f235e9037c",
+      "git_blob": "01f44c8e4f0cf909ac894c3b9f4469e89db7298e",
+      "mode": "100644",
+      "expected_old_git_blob": null,
+      "role": "source",
+      "origin_packet": "author",
+      "assembly_action": "reference_exact_frozen_bytes"
+    },
+    {
+      "repo_path": "pt_auth/tests/test_uncovered_review.py",
+      "source_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate/pt_auth/tests/test_uncovered_review.py",
+      "size": 14446,
+      "sha256": "df3e9acdba7db9449988f66c0b9796cec0c7e59d354d9436fbe57737927338fb",
+      "git_blob": "15f167e3af34056f6558be4672446b35eabb5f4d",
+      "mode": "100644",
+      "expected_old_git_blob": null,
+      "role": "source",
+      "origin_packet": "author",
+      "assembly_action": "reference_exact_frozen_bytes"
+    }
+  ],
+  "qualification_boundary": "Source/CLI/report/exact-inline+real-App acceptance; native browser/keyboard unqualified. No tests, runtime calls, source edits or remote writes performed during assembly."
+}

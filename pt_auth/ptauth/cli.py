@@ -55,6 +55,8 @@ def main(argv=None) -> int:
             print(f"  ... {len(s['worklist']) - 12} more in {a.out}/worklist.csv")
         print(f"{c['past_scheduled']} past scheduled visits need status review: "
               f"{Path(a.out) / 'visit_status_review.csv'}")
+        print(f"{c['uncovered_scheduled'] + c['unauthorized_done']} uncovered visits to inspect: "
+              f"{Path(a.out) / 'uncovered_visits.csv'}")
         print(f"digest: {Path(a.out) / 'digest.html'}")
         return 0
     if a.cmd == "serve":

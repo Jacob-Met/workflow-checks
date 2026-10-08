@@ -1,0 +1,121 @@
+{
+  "kind": "exact inline UI + real local App; authored DOM seam, not browser receiving",
+  "candidate": "9676a5a20f3adab0ccf46e31e3052de04f50d267",
+  "node": "v24.19.0",
+  "checks": [
+    "baseline actual HTTP selects pinned UI bytes",
+    "baseline accepted UI pin",
+    "baseline unchanged real web.py pin",
+    "baseline exact one inline program"
+  ],
+  "servers": [
+    {
+      "label": "baseline",
+      "events": [
+        {
+          "ready": true,
+          "label": "baseline",
+          "origin": "http://127.0.0.1:32799",
+          "source": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/baseline/pt_auth",
+          "ui_sha256": "c94b54f51fbdedc6fe19bb36ac8e74973c834fc5a0ffa6b474d63eb61edc61c4",
+          "web_sha256": "2f7d01cda0bb42e907d135d4a34cedb655b780c646cbe01ed4050ab7c11b2b23"
+        },
+        {
+          "request": "GET",
+          "path": "/"
+        },
+        {
+          "request": "GET",
+          "path": "/api/summary"
+        }
+      ],
+      "stderr": "",
+      "ready": true,
+      "origin": "http://127.0.0.1:32799",
+      "source": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/baseline/pt_auth",
+      "ui_sha256": "c94b54f51fbdedc6fe19bb36ac8e74973c834fc5a0ffa6b474d63eb61edc61c4",
+      "web_sha256": "2f7d01cda0bb42e907d135d4a34cedb655b780c646cbe01ed4050ab7c11b2b23"
+    }
+  ],
+  "blocked": [],
+  "alerts": [],
+  "filter_observations": [],
+  "program_sha256": "a06af05f7d8e59142d64c353b45cd0efa3bc7e403df10db34825b6658808ebdf",
+  "server_program_sha256": "99c0e4d9457932e232bce81559ccdccb1df2e19ccda8b7cf6b3b49a0539ff134",
+  "source_before": {
+    "pt_auth/README.md": {
+      "size": 18875,
+      "sha256": "17ee483cb2e24393f1ed4b501e2164c289cfb7310891a1bc510cc283f13b4879"
+    },
+    "pt_auth/ptauth/__init__.py": {
+      "size": 311,
+      "sha256": "71e1527f153c607b679485e4954af1b3ec6a843b041562eb07f4d36e08fd231c"
+    },
+    "pt_auth/ptauth/__main__.py": {
+      "size": 57,
+      "sha256": "4b1afbca74a10abc3cff7b4e5a11b558bf619e45b89709faf9225a474a2a250f"
+    },
+    "pt_auth/ptauth/cli.py": {
+      "size": 3776,
+      "sha256": "55cce5ca33abc027f8f7c2afe1ae3eae32b9412d612b41d3c72a4037f1933a96"
+    },
+    "pt_auth/ptauth/data.py": {
+      "size": 10283,
+      "sha256": "eeab8ab5b2b72524148969de0d13b27126cc64c4ec79b68a147b51b25a3741e2"
+    },
+    "pt_auth/ptauth/engine.py": {
+      "size": 16057,
+      "sha256": "bfa7049e9b133d654ce947b135c17ac401bd7b1fcd76350bdb10de5b7a1ad1f7"
+    },
+    "pt_auth/ptauth/report.py": {
+      "size": 10743,
+      "sha256": "20cbc86e153b9af5151fd3e74cb370298de4692c81b3546a214eb2cfa8307df7"
+    },
+    "pt_auth/ptauth/synth.py": {
+      "size": 8873,
+      "sha256": "b82a34447e43dacbe46ed06e60b693ed216e87f15892ae297c682aa5a3f139fd"
+    },
+    "pt_auth/ptauth/ui.html": {
+      "size": 16354,
+      "sha256": "fddb0d6e5fe587f961ac602660161728195ff5904966a54577f8d4dcfcd41242"
+    },
+    "pt_auth/ptauth/uncovered.py": {
+      "size": 4319,
+      "sha256": "21e92509df706e504a8630f3383ea4fe98d03047d2e4b070f3fdd188d995350e"
+    },
+    "pt_auth/ptauth/web.py": {
+      "size": 6239,
+      "sha256": "2f7d01cda0bb42e907d135d4a34cedb655b780c646cbe01ed4050ab7c11b2b23"
+    },
+    "pt_auth/sample_data/authorizations.csv": {
+      "size": 2990,
+      "sha256": "306cae3c27895d2b81978d4cf3115e867b8853edb4939ec8f7e733a7f27b0657"
+    },
+    "pt_auth/sample_data/expected.json": {
+      "size": 3482,
+      "sha256": "0652052b6f37ce068cb77d4b8cde0f5a75d9b275be51b05f570c35a60a8a6d02"
+    },
+    "pt_auth/sample_data/patients.csv": {
+      "size": 2333,
+      "sha256": "1dd9bc97889ca4a2e46e19804841d4af29ada284ede22d328370d20fb520e6e5"
+    },
+    "pt_auth/sample_data/payers.csv": {
+      "size": 904,
+      "sha256": "81f143eed15c9ce613ee7cf372e51d6223a44700c877cc42d283a824d30900ed"
+    },
+    "pt_auth/sample_data/schedule.csv": {
+      "size": 71520,
+      "sha256": "a5f9177b2e0fb9b4397a83839961d11c947e74cc2f13d5de29a31f39254e5198"
+    },
+    "pt_auth/tests/browser/uncovered_review.test.cjs": {
+      "size": 8415,
+      "sha256": "25cac361af6bf20b93d017586087db0457669ba386ae47144db184f235e9037c"
+    },
+    "pt_auth/tests/test_uncovered_review.py": {
+      "size": 14446,
+      "sha256": "df3e9acdba7db9449988f66c0b9796cec0c7e59d354d9436fbe57737927338fb"
+    }
+  },
+  "accepted": false,
+  "error": "AssertionError [ERR_ASSERTION]: one actual authored legacy rerun, no other POSTs\n+ actual - expected\n\n+ []\n- [\n-   {\n-     label: 'legacy',\n-     path: '/api/run'\n-   }\n- ]\n\n    at same (/dev/shm/work-portability-pt-uncovered-review-dc13ebf4687f/review_inline.cjs:12:33)\n    at /dev/shm/work-portability-pt-uncovered-review-dc13ebf4687f/review_inline.cjs:174:7\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)"
+}

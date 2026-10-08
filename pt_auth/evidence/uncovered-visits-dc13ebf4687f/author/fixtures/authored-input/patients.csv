@@ -1,0 +1,4 @@
+patient_id,display_name,clinic,primary_payer
+SYN-A,"Test <A> & ""café""",Home clinic (synthetic),PAY-A
+SYN-B,Test Covered,Other clinic (synthetic),PAY-A
+SYN-C,Test Exempt,Other clinic (synthetic),PAY-N
