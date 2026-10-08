@@ -1,0 +1,84 @@
+--- baseline/freight_packets/freightpkt/web.py
++++ candidate/freight_packets/freightpkt/web.py
+@@ -18,6 +18,7 @@
+ 
+ from .pipeline import audit, run
+ from .handoff import build_bundle, bundle_filename, review_version
++from .batch_handoff import build_batch_bundle, validate_selection
+ 
+ UI = Path(__file__).with_name("ui.html")
+ REVIEW_SECTIONS = ("stops", "flags", "fines", "settlements", "exceptions", "packets")
+@@ -201,6 +202,17 @@
+             content = build_bundle(load_id, packet, evidence, saved_review, expected, saved_version)
+             return bundle_filename(load_id, expected), content
+ 
++    def review_batch(self, loads) -> tuple[str, bytes]:
++        selection = validate_selection(loads)
++        # The existing RLock is reentrant: every per-load snapshot shares this lock.
++        with self._lock:
++            bundles = []
++            for row in selection:
++                filename, content = self.review_bundle(
++                    row["load_id"], row["evidence_version"], row["review_version"])
++                bundles.append((row, filename, content))
++            return build_batch_bundle(bundles)
++
+     def output(self, relative: str, expected: str | None = None) -> tuple[Path, bytes]:
+         with self._lock:
+             target = (self.out_dir / relative).resolve()
+@@ -238,6 +250,9 @@
+             try:
+                 if path == "/":
+                     return self._send(200, UI.read_bytes(), "text/html; charset=utf-8")
++                if path == "/batch-handoff-ui.js":
++                    content = UI.with_name("batch_handoff_ui.js").read_bytes()
++                    return self._send(200, content, "text/javascript; charset=utf-8")
+                 if path == "/api/summary":
+                     return self._json(app.summary())
+                 if path == "/api/review-bundle":
+@@ -275,6 +290,16 @@
+                 body = json.loads(self.rfile.read(n) or b"{}")
+                 if not isinstance(body, dict):
+                     raise ValueError("request must be a JSON object")
++                if self.path == "/api/review-batch":
++                    if set(body) != {"loads"}:
++                        raise ValueError("a batch request needs only its selected loads")
++                    try:
++                        filename, content = app.review_batch(body["loads"])
++                    except FileNotFoundError:
++                        return self._json({"error": "a selected packet or generated summary is unavailable"}, 404)
++                    except OSError:
++                        return self._json({"error": "could not read the selected review files"}, 500)
++                    return self._send(200, content, "application/zip", download=filename)
+                 if self.path == "/api/run":
+                     return self._json(app.rerun())
+                 if self.path == "/api/generate":
+
+--- baseline/freight_packets/freightpkt/ui.html
++++ candidate/freight_packets/freightpkt/ui.html
+@@ -55,6 +55,7 @@
+   <section id="t-stops" class="hidden"></section>
+   <section id="t-files" class="hidden"></section>
+ </main>
++<script src="/batch-handoff-ui.js"></script>
+ <script>
+ const $ = s => document.querySelector(s);
+ const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+@@ -62,6 +63,9 @@
+ const t = s => s ? s.replace("T", " ").slice(0, 16) : "-";
+ let S = null, selected = null, reviewBusy = false, reviewFeedback = null;
+ let bundleController = null, bundleView = 0;
++const batchHandoff = createFreightBatchHandoff(() => ({
++  selected, summary: S, busy: reviewBusy || $("#run").disabled || $("#gen").disabled,
++}));
+ 
+ async function api(path, body) {
+   const r = await fetch(path, body === undefined ? {} : {method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify(body)});
+@@ -234,6 +238,7 @@
+ 
+   $("#t-files").innerHTML = `<ul>${["detention_claims.csv", "invoice_flags.csv", "fines.csv", "settlement.csv", "exceptions.csv", "summary.json", "audit.jsonl"]
+     .map(f => `<li><a href="/out/${f}" download>${f}</a></li>`).join("")}</ul><p><small>Generated ${esc(S.generated_at)} from ${esc(S.data_dir)}</small></p>`;
++  batchHandoff.render(S, $("#t-files"));
+ }
+ 
+ document.querySelectorAll("#tabs button").forEach(b => b.onclick = () => {

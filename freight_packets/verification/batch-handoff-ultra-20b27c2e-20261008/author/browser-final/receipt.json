@@ -1,0 +1,257 @@
+{
+  "schema": "freight-batch-browser.v1",
+  "source": "/private/tmp/ultra-20b27c2e-memory-freight-batch/candidate",
+  "evidence": "/tmp/ultra-20b27c2e-memory-freight-batch/browser-final",
+  "node": "v26.3.0",
+  "groups": [
+    {
+      "name": "native source and controls",
+      "ok": true,
+      "detail": {
+        "packet_count": 7,
+        "browser": "Chrome/154.0.8037.98"
+      }
+    },
+    {
+      "name": "selected batch and original ZIP preservation",
+      "ok": true,
+      "detail": {
+        "download": {
+          "file": "/tmp/ultra-20b27c2e-memory-freight-batch/browser-final/downloads/freight-review-batch-2-5efbf9114061.zip",
+          "filename": "freight-review-batch-2-5efbf9114061.zip",
+          "bytes": 22761,
+          "sha256": "300479cee3562cbc77f79259f09d010212817d354a7cd966f12cd4f7ac2bed1c"
+        },
+        "readback": {
+          "loads": [
+            "LD260900",
+            "LD260907"
+          ],
+          "member_count": 14,
+          "exact_original_zips": 2
+        }
+      }
+    },
+    {
+      "name": "all, clear and keyboard selection",
+      "ok": true,
+      "detail": {
+        "all_count": 7,
+        "keyboard": "Space"
+      }
+    },
+    {
+      "name": "unsaved note blocks batch and can be restored",
+      "ok": true,
+      "detail": {
+        "selection_retained": "2 selected",
+        "after_triple_click": "unsaved fixture tex",
+        "saved_note": "",
+        "restored": {
+          "note": "",
+          "count": "2 selected",
+          "status": "The archive includes saved reviews only.",
+          "run_disabled": false,
+          "gen_disabled": false,
+          "batch_disabled": false
+        }
+      }
+    },
+    {
+      "name": "cancel pending download retains selection",
+      "ok": true,
+      "detail": {
+        "completed_downloads": 1
+      }
+    },
+    {
+      "name": "review updates preserve or clear exact selection",
+      "ok": true,
+      "detail": {
+        "unselected_update_retained": true,
+        "selected_update_cleared": true
+      }
+    },
+    {
+      "name": "stale server evidence refuses the complete download",
+      "ok": true,
+      "detail": {
+        "download_count_unchanged": true,
+        "selection_retained": true
+      }
+    },
+    {
+      "name": "narrow selection and existing per-load download",
+      "ok": true,
+      "detail": {
+        "layout": {
+          "left": 20,
+          "right": 370,
+          "width": 390,
+          "buttons": [
+            44,
+            44,
+            44
+          ]
+        },
+        "existing_single_load_download": {
+          "file": "/tmp/ultra-20b27c2e-memory-freight-batch/browser-final/downloads/freight-review-LD260900-0f19e001f430.zip",
+          "filename": "freight-review-LD260900-0f19e001f430.zip",
+          "bytes": 5221,
+          "sha256": "aac8d266b589fc312fbd7759ebccf5bef2e0243367dbfa4cfc2d66b199fc3a59"
+        }
+      }
+    },
+    {
+      "name": "receiving network and source identity",
+      "ok": true,
+      "detail": {
+        "responses": 18,
+        "external_requests": 0,
+        "page_errors": 0
+      }
+    }
+  ],
+  "refused": [],
+  "pageErrors": [],
+  "downloads": [
+    {
+      "frameId": "FC4CE11396B64C19266F55ABB8757B8E",
+      "guid": "79b7299f-af0e-44c2-ae09-2e63c7db7916",
+      "url": "blob:http://127.0.0.1:61873/bf4d36af-5ec6-476f-9f5f-0fab33e9b5ea",
+      "suggestedFilename": "freight-review-batch-2-5efbf9114061.zip"
+    },
+    {
+      "frameId": "FC4CE11396B64C19266F55ABB8757B8E",
+      "guid": "6cfa059b-a45a-4c61-9d14-34027f892c2b",
+      "url": "blob:http://127.0.0.1:61873/b79084d4-521e-4f62-84d2-000e93abdc0e",
+      "suggestedFilename": "freight-review-LD260900-0f19e001f430.zip"
+    }
+  ],
+  "completed": [
+    {
+      "guid": "79b7299f-af0e-44c2-ae09-2e63c7db7916",
+      "totalBytes": 22761,
+      "receivedBytes": 22761,
+      "state": "completed",
+      "filePath": "/tmp/ultra-20b27c2e-memory-freight-batch/browser-final/downloads/freight-review-batch-2-5efbf9114061.zip"
+    },
+    {
+      "guid": "6cfa059b-a45a-4c61-9d14-34027f892c2b",
+      "totalBytes": 5221,
+      "receivedBytes": 5221,
+      "state": "completed",
+      "filePath": "/tmp/ultra-20b27c2e-memory-freight-batch/browser-final/downloads/freight-review-LD260900-0f19e001f430.zip"
+    }
+  ],
+  "responsePins": [
+    {
+      "path": "/",
+      "status": 200,
+      "bytes": 19723,
+      "sha256": "497510e8c9491b5b6b74d0ae9b863c95a3b2bdad5431fe408dccdc28c6f45573"
+    },
+    {
+      "path": "/batch-handoff-ui.js",
+      "status": 200,
+      "bytes": 10806,
+      "sha256": "bd300f25abf279ca16f11bddc4bf4c277f4e99b9146b5321904ecc82afaaca18"
+    },
+    {
+      "path": "/favicon.ico",
+      "status": 404,
+      "bytes": 9,
+      "sha256": "907ba78b4545338d3539683e63ecb51cf51c10adc9dabd86e92bd52339f298b9"
+    },
+    {
+      "path": "/api/summary",
+      "status": 200,
+      "bytes": 17397,
+      "sha256": "761f09c8bf48d40f279987928a605a9d4918da688187a409e51c4f9c9ce95859"
+    },
+    {
+      "path": "/out/packets/LD260900.html",
+      "status": 200,
+      "bytes": 5580,
+      "sha256": "f076100ae83fb0fddc3a2ad8b4be44a8f1bedf619619bbedfbb9ada0c1c7d104"
+    },
+    {
+      "path": "/api/review-batch",
+      "status": 200,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/out/packets/LD260900.html",
+      "status": 200,
+      "bytes": 5580,
+      "sha256": "f076100ae83fb0fddc3a2ad8b4be44a8f1bedf619619bbedfbb9ada0c1c7d104"
+    },
+    {
+      "path": "/out/packets/LD260914.html",
+      "status": 200,
+      "bytes": 4981,
+      "sha256": "b3390386763cb730e897be617010fa7d0ef817d7446d731f926df94041a507eb"
+    },
+    {
+      "path": "/api/decision",
+      "status": 200,
+      "bytes": 244,
+      "sha256": "280172bf57184d798c795090d57162d1bc16c2d2e1b453ae15cecd88eedb1b6f"
+    },
+    {
+      "path": "/api/summary",
+      "status": 200,
+      "bytes": 17639,
+      "sha256": "bb6d9acff1379fd29761479a1e231ecc556511b8ca369a639227df75c6b75778"
+    },
+    {
+      "path": "/out/packets/LD260914.html",
+      "status": 200,
+      "bytes": 4981,
+      "sha256": "b3390386763cb730e897be617010fa7d0ef817d7446d731f926df94041a507eb"
+    },
+    {
+      "path": "/out/packets/LD260900.html",
+      "status": 200,
+      "bytes": 5580,
+      "sha256": "f076100ae83fb0fddc3a2ad8b4be44a8f1bedf619619bbedfbb9ada0c1c7d104"
+    },
+    {
+      "path": "/api/decision",
+      "status": 200,
+      "bytes": 486,
+      "sha256": "36f520aead646f43a0aaa4f15cfd01614781dd021856237e71968259006e3ddc"
+    },
+    {
+      "path": "/api/summary",
+      "status": 200,
+      "bytes": 17881,
+      "sha256": "d178ddb727ba07ad8511f99c6ec6a1f4507389ecbedfd569b6fb9d451536f5dd"
+    },
+    {
+      "path": "/out/packets/LD260900.html",
+      "status": 200,
+      "bytes": 5580,
+      "sha256": "f076100ae83fb0fddc3a2ad8b4be44a8f1bedf619619bbedfbb9ada0c1c7d104"
+    },
+    {
+      "path": "/api/review-batch",
+      "status": 409,
+      "bytes": 79,
+      "sha256": "24c9ee24254188447e32b12dde151d60ed4ea5959ec654874c42e79ce9abcc6c"
+    },
+    {
+      "path": "/out/packets/LD260900.html",
+      "status": 200,
+      "bytes": 5580,
+      "sha256": "f076100ae83fb0fddc3a2ad8b4be44a8f1bedf619619bbedfbb9ada0c1c7d104"
+    },
+    {
+      "path": "/api/review-bundle",
+      "status": 200,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "classification": "pre-execution reviewer harness initialization correction",
+  "candidate_or_author_tests_read": false,
+  "change": "Initialize held-response gate to null, matching its strict empty-state check; all behavior assertions unchanged",
+  "before_sha256": "46af3216bdd5b959779c136ae9fc47bf755d3d890d0f80655e40ef37993b32d3",
+  "after_sha256": "2e29d593f2f6b530a13d3aee2685f1cb01cd86778009ee854901d0cdb8fedad2",
+  "initial_version_retained": "/tmp/ultra-20b27c2e-runtime-freight-review/pre-execution-browser-v1/independent_freight_browser.cjs"
+}
