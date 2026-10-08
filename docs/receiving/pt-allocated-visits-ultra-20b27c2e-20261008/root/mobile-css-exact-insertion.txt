@@ -1,0 +1,2 @@
+#alloc-rows table{min-width:64rem;table-layout:fixed}
+#alloc-rows th:nth-child(2),#alloc-rows td:nth-child(2){white-space:nowrap}

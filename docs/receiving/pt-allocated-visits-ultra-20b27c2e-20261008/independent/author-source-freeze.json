@@ -1,0 +1,75 @@
+{
+  "captured_at_utc": "2026-10-08T15:58:56.067304+00:00",
+  "repository": "Jacob-Met/workflow-checks",
+  "base": "0418e6308d886d0678ace759a9b984c1d06ac54d",
+  "tree": "92c62093a0bd4d86e8a518a50cb2869d809cbe63",
+  "claim": "https://github.com/Jacob-Met/workflow-checks/issues/43",
+  "entries": [
+    {
+      "repo_path": "pt_auth/ptauth/allocated.py",
+      "native_path": "/Users/me/workflow-pt-allocations-ultra-20b27c2e-20261008/candidate/pt_auth/ptauth/allocated.py",
+      "original_blob": null,
+      "bytes": 6038,
+      "sha256": "343cecb2e6dcca2accff77cd7b75db57a47b61043ca4e07478824af66a918a1a",
+      "git_blob": "cd8a391067639f5f647818ed03a122089b4bad74",
+      "mode": "100644"
+    },
+    {
+      "repo_path": "pt_auth/ptauth/report.py",
+      "native_path": "/Users/me/workflow-pt-allocations-ultra-20b27c2e-20261008/candidate/pt_auth/ptauth/report.py",
+      "original_blob": "2ce82b1712e5c6fc03374d38996eceddf31782f0",
+      "bytes": 11376,
+      "sha256": "18f0faf298e96e28ac1f2d9d05bb8620bac1005beb1127a10e9816d52c225fcb",
+      "git_blob": "ef95e177ee35e32447743ab6867e739be5cbe9ba",
+      "mode": "100644"
+    },
+    {
+      "repo_path": "pt_auth/ptauth/ui.html",
+      "native_path": "/Users/me/workflow-pt-allocations-ultra-20b27c2e-20261008/candidate/pt_auth/ptauth/ui.html",
+      "original_blob": "ec2e198ee1873c41981d201c78a63dbccc13afad",
+      "bytes": 25355,
+      "sha256": "0ed0e49cbdbb5c0b32b2ff7568c95a1650a8dffc38f51f9dd72d28e50b835cc0",
+      "git_blob": "c1d2173e6c69f4994f5a2b2fe68cbf109cbe3f95",
+      "mode": "100644"
+    },
+    {
+      "repo_path": "pt_auth/tests/test_allocated_review.py",
+      "native_path": "/Users/me/workflow-pt-allocations-ultra-20b27c2e-20261008/candidate/pt_auth/tests/test_allocated_review.py",
+      "original_blob": null,
+      "bytes": 12413,
+      "sha256": "43ef60b236ad9ebee88976707f3263da6e54e7c1e725696353e54b8a487689e6",
+      "git_blob": "d69913c73dacf9c2943f0a309c666af381e9c5ca",
+      "mode": "100644"
+    },
+    {
+      "repo_path": "pt_auth/tests/browser/allocated_review.test.cjs",
+      "native_path": "/Users/me/workflow-pt-allocations-ultra-20b27c2e-20261008/candidate/pt_auth/tests/browser/allocated_review.test.cjs",
+      "original_blob": null,
+      "bytes": 24018,
+      "sha256": "5d29813c40d7309bc1c17bcf4711abcfef29ae178255a1e3aa92c5b55e881300",
+      "git_blob": "f286e63b8f49762c11929d6123863f07ca532589",
+      "mode": "100644"
+    },
+    {
+      "repo_path": "pt_auth/ALLOCATED_VISITS.md",
+      "native_path": "/Users/me/workflow-pt-allocations-ultra-20b27c2e-20261008/candidate/pt_auth/ALLOCATED_VISITS.md",
+      "original_blob": null,
+      "bytes": 4987,
+      "sha256": "1e0a7b3cd9472619a2a42420fc8548dfecee4928e5c2f48080c16b8cd41b7c0c",
+      "git_blob": "18fd97103f1bae91d8f74c3eba5989a90bfe9744",
+      "mode": "100644"
+    },
+    {
+      "repo_path": "pt_auth/README.md",
+      "native_path": "/Users/me/workflow-pt-allocations-ultra-20b27c2e-20261008/candidate/pt_auth/README.md",
+      "original_blob": "2c6440e7f9bdbc9f4d15e60d05b5626921d35cef",
+      "bytes": 23596,
+      "sha256": "8e634999e8b5534055b2c3392ec2f323c5988d04ab77a77abdf2ff05118a8294",
+      "git_blob": "6256aa8d623361f3ee97a7b6c20d91588a2d92c6",
+      "mode": "100644"
+    }
+  ],
+  "exact_report_ui_readme_inverse": true,
+  "current_baseline_source_manifest_sha256": "870977ce672db69e5054c415150bb3d863f0dfcf2cfcf7b603639931ec5ceb00",
+  "qualification": "39 native unittest methods and exact same-input CLI/output preservation passed; author Chromium test withheld by disk floor before browser launch; independent executable probes frozen before this source handoff."
+}

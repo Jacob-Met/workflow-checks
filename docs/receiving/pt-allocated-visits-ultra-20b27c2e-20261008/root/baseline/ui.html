@@ -33,11 +33,6 @@ small{color:var(--mut)}.hidden{display:none}tr.done{opacity:.55}details ul{margi
 .calendar-panel p{margin:6px 0}.calendar-panel details{margin-top:8px}.calendar-panel li{margin:4px 0}
 .calendar-panel button:disabled{opacity:.55;cursor:not-allowed}.calendar-status{min-height:1.45em;color:var(--mut)}
 #work{overflow-x:auto}#work:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
-#allocation-panel{margin-top:20px;min-width:0;overflow-wrap:anywhere}
-#alloc-filters label{display:flex;align-items:center;gap:6px;flex-wrap:wrap;max-width:100%}
-#alloc-filters select,#alloc-filters input{max-width:100%;min-width:0}
-#alloc-rows table{min-width:64rem;table-layout:fixed}
-#alloc-rows th:nth-child(2),#alloc-rows td:nth-child(2){white-space:nowrap}
 </style>
 </head>
 <body>
@@ -83,22 +78,7 @@ small{color:var(--mut)}.hidden{display:none}tr.done{opacity:.55}details ul{margi
     <p id="uc-export"></p>
   </section>
   <section id="t-review" class="hidden"></section>
-  <section id="t-ledger" class="hidden">
-    <div id="auth-ledger-summary" class="review-table" tabindex="0" role="region" aria-label="Authorization totals"></div>
-    <section id="allocation-panel" aria-labelledby="allocation-title">
-      <h2 id="allocation-title">Allocated visits</h2>
-      <p id="alloc-note"></p>
-      <div class="filters" id="alloc-filters">
-        <label>Allocation <select id="alloc-status"><option value="">All allocations</option><option value="used">Used by completed visits</option><option value="scheduled">Reserved by scheduled visits</option></select></label>
-        <label>Authorization period <select id="alloc-auth"><option value="">All allocated authorization periods</option></select></label>
-        <label>Visit clinic <select id="alloc-clinic"><option value="">All visit clinics</option></select></label>
-        <label>Search <input type="search" id="alloc-search" placeholder="visit / patient / payer / authorization"></label>
-      </div>
-      <p id="alloc-count" class="review-count" role="status" aria-live="polite"></p>
-      <div id="alloc-rows"></div>
-      <p id="alloc-export"></p>
-    </section>
-  </section>
+  <section id="t-ledger" class="hidden"></section>
   <section id="t-files" class="hidden"></section>
   <div class="note"><small><b>Rules:</b> P1 = act today (visit outside auth within 7 days, submit-by date passed, completed visit without auth);
   P2 = this week (re-auth threshold hit by visits or days, pending auth needs follow-up); P3 = heads-up (annual visit cap).
@@ -177,94 +157,16 @@ function render(calendarTicket) {
         : `<p>No past appointments remain marked scheduled.</p>`)
       + `<p><a href="/out/visit_status_review.csv" download>Download visit status review CSV</a></p>`);
 
-  $("#auth-ledger-summary").innerHTML = `<table><tr><th>Auth</th><th>Patient</th><th>Payer</th><th>Window</th><th>Authorized</th><th>Used</th><th>Scheduled</th><th>Remaining</th><th>After sched.</th><th>Days left</th><th>Status</th></tr>${
+  $("#t-ledger").innerHTML = `<table><tr><th>Auth</th><th>Patient</th><th>Payer</th><th>Window</th><th>Authorized</th><th>Used</th><th>Scheduled</th><th>Remaining</th><th>After sched.</th><th>Days left</th><th>Status</th></tr>${
     S.ledger.map(l => `<tr><td>${esc(l.auth_no)}</td><td>${esc(l.patient_name)} <small>${esc(l.patient_id)}</small></td><td>${esc(l.payer_id)}</td>
       <td>${esc(l.start)} &rarr; ${esc(l.end)}</td><td>${l.authorized}</td><td>${l.used}${meter(l.used, l.authorized)}</td><td>${l.scheduled}</td>
       <td>${l.remaining}</td><td style="color:${l.remaining_after_scheduled < 0 ? "#b91c1c" : "inherit"}">${l.remaining_after_scheduled}</td>
       <td>${l.days_left}</td><td>${esc(l.status)}</td></tr>`).join("")}</table>`;
-  renderAllocationReview();
   $("#t-files").innerHTML = `<ul><li><a href="/out/digest.html" target="_blank">Daily digest (printable HTML)</a></li>
-    ${["worklist.csv", "ledger.csv", ...(review == null ? [] : ["visit_status_review.csv"]), ...(Array.isArray(S.uncovered_review) ? ["uncovered_visits.csv"] : []), ...(Array.isArray(S.allocation_review) ? ["allocated_visits.csv"] : []), "summary.json", "audit.jsonl"].map(f => `<li><a href="/out/${f}" download>${f}</a></li>`).join("")}</ul>
+    ${["worklist.csv", "ledger.csv", ...(review == null ? [] : ["visit_status_review.csv"]), ...(Array.isArray(S.uncovered_review) ? ["uncovered_visits.csv"] : []), "summary.json", "audit.jsonl"].map(f => `<li><a href="/out/${f}" download>${f}</a></li>`).join("")}</ul>
     <p><small>Generated ${esc(S.generated_at)} for as-of date ${esc(S.as_of)}.
     Clinic time zone: ${esc(S.clinic_timezone || "unrecorded")}.</small></p>`;
 }
-
-
-function allocationAuthKey(row) {
-  return JSON.stringify([row.auth_patient_id, row.auth_payer_id, row.auth_no,
-    row.auth_start, row.auth_end, row.auth_evidence]);
-}
-function allocationCell(primary, detail) {
-  return "<td>" + esc(primary) + (detail === undefined ? "" : "<br><small>" + esc(detail) + "</small>") + "</td>";
-}
-function renderAllocationReview() {
-  if (!S) return;
-  const review = S.allocation_review, available = Array.isArray(review);
-  ["#alloc-status", "#alloc-auth", "#alloc-clinic", "#alloc-search"].forEach(id => $(id).disabled = !available);
-  $("#alloc-rows").innerHTML = "";
-  $("#alloc-export").innerHTML = "";
-  if (!available) {
-    $("#alloc-note").textContent = "Allocation details are unavailable in this saved report. Run the worklist to build them.";
-    $("#alloc-count").textContent = "";
-    return;
-  }
-  $("#alloc-note").textContent = S.allocation_review_note || "The existing ledger's assigned visits, with their recorded source rows.";
-  const auths = new Map();
-  for (const row of review) {
-    const key = allocationAuthKey(row);
-    if (!auths.has(key)) auths.set(key, row);
-  }
-  const authSelect = $("#alloc-auth"), priorAuth = authSelect.value;
-  authSelect.innerHTML = '<option value="">All allocated authorization periods</option>' + [...auths].map(([key, row]) => {
-    const label = [row.auth_no, row.auth_patient_id, row.auth_payer_id,
-      row.auth_start + " to " + row.auth_end, row.auth_evidence || "Source unrecorded"].join(" · ");
-    return '<option value="' + esc(key) + '">' + esc(label) + "</option>";
-  }).join("");
-  authSelect.value = auths.has(priorAuth) ? priorAuth : "";
-  const clinics = [...new Set(review.map(row => row.clinic))].sort();
-  const clinicSelect = $("#alloc-clinic"), priorClinic = clinicSelect.value;
-  clinicSelect.innerHTML = '<option value="">All visit clinics</option>' + clinics.map(name =>
-    '<option value="' + esc(JSON.stringify(name)) + '">' + esc(name || "Unrecorded visit clinic") + "</option>").join("");
-  clinicSelect.value = clinics.some(name => JSON.stringify(name) === priorClinic) ? priorClinic : "";
-  const bucket = $("#alloc-status").value, auth = authSelect.value, clinic = clinicSelect.value;
-  const query = $("#alloc-search").value.toLowerCase();
-  const rows = review.filter(row => (!bucket || row.allocation === bucket)
-    && (!auth || allocationAuthKey(row) === auth)
-    && (!clinic || JSON.stringify(row.clinic) === clinic)
-    && (!query || Object.values(row).some(value => String(value).toLowerCase().includes(query))));
-  const used = review.filter(row => row.allocation === "used").length;
-  const reserved = review.filter(row => row.allocation === "scheduled").length;
-  $("#alloc-count").textContent = rows.length + " of " + review.length + " allocated visits shown · "
-    + used + " used / " + reserved + " reserved in the complete report · as of "
-    + S.as_of + " · clinic time zone: " + (S.clinic_timezone || "unrecorded");
-  if (rows.length) {
-    const headers = ["Visit / type", "Date", "Allocation / recorded status", "Patient",
-      "Visit clinic / therapist", "Payer", "Authorization period", "Source rows"];
-    $("#alloc-rows").innerHTML = '<div class="review-table" tabindex="0" role="region" aria-label="Allocated visits"><table><thead><tr>'
-      + headers.map(label => '<th scope="col">' + label + "</th>").join("") + "</tr></thead><tbody>"
-      + rows.map(row => {
-        const allocation = row.allocation === "used" ? "Used" : row.allocation === "scheduled" ? "Reserved" : row.allocation;
-        return '<tr data-visit-id="' + esc(row.visit_id) + '" data-authorization="' + esc(allocationAuthKey(row)) + '">'
-          + allocationCell(row.visit_id, row.visit_type)
-          + allocationCell(row.visit_date)
-          + allocationCell(allocation, "Recorded " + row.status)
-          + allocationCell(row.patient_name || "Name unavailable", row.patient_id)
-          + allocationCell(row.clinic || "Unrecorded", row.therapist || "Therapist unrecorded")
-          + allocationCell(row.payer_name || "Name unavailable", row.payer_id)
-          + allocationCell(row.auth_no, row.auth_start + " to " + row.auth_end + "; "
-            + row.auth_visits_authorized + " authorized; patient " + row.auth_patient_id + "; payer " + row.auth_payer_id)
-          + allocationCell("Visit: " + (row.visit_evidence || "Unrecorded"),
-            "Authorization: " + (row.auth_evidence || "Unrecorded")) + "</tr>";
-      }).join("") + "</tbody></table></div>";
-  } else {
-    $("#alloc-rows").innerHTML = review.length ? "<p>No allocated visits match these filters.</p>" : "<p>No visits were allocated in this report.</p>";
-  }
-  $("#alloc-export").innerHTML = '<a href="/out/allocated_visits.csv" download>Download all allocated visits CSV</a> · '
-    + '<a href="/out/digest.html" target="_blank" rel="noopener">Open complete printable digest</a><br>'
-    + "<small>Both include all allocated visits, independent of these filters.</small>";
-}
-["#alloc-status", "#alloc-auth", "#alloc-clinic"].forEach(id => $(id).onchange = renderAllocationReview);
-$("#alloc-search").oninput = renderAllocationReview;
 
 function renderUncoveredReview() {
   if (!S) return;

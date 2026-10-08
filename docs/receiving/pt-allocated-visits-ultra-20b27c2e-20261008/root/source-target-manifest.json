@@ -1,0 +1,82 @@
+{
+  "original_author_source_freeze_git_blob": "745f242e14f178979678f0c132a2c107a7889d49",
+  "original_author_source_bundle": {
+    "path": "/Users/me/workflow-pt-allocations-ultra-20b27c2e-20261008/publication-owner-source-bundle.json",
+    "bytes": 116618,
+    "sha256": "02d0a85a5a5f82dcbf46eed10c62f244295504b61309dfc292fcacf2add58d11"
+  },
+  "later_source_freeze_browser_sha256": "7a3f9344bc4a14b3061ea5686d8522cf0e049fb44b6eb93c3352e3e8f9b4e7b9",
+  "target_payload_bytes": 110963,
+  "entries": [
+    {
+      "repo_path": "pt_auth/ptauth/allocated.py",
+      "native_path": "/Users/me/workflow-pt-allocations-ultra-20b27c2e-20261008/candidate/pt_auth/ptauth/allocated.py",
+      "original_blob": null,
+      "bytes": 6038,
+      "sha256": "343cecb2e6dcca2accff77cd7b75db57a47b61043ca4e07478824af66a918a1a",
+      "git_blob": "cd8a391067639f5f647818ed03a122089b4bad74",
+      "mode": "100644",
+      "status": "exact_bytes_recovered_and_included"
+    },
+    {
+      "repo_path": "pt_auth/ptauth/report.py",
+      "native_path": "/Users/me/workflow-pt-allocations-ultra-20b27c2e-20261008/candidate/pt_auth/ptauth/report.py",
+      "original_blob": "2ce82b1712e5c6fc03374d38996eceddf31782f0",
+      "bytes": 11376,
+      "sha256": "18f0faf298e96e28ac1f2d9d05bb8620bac1005beb1127a10e9816d52c225fcb",
+      "git_blob": "ef95e177ee35e32447743ab6867e739be5cbe9ba",
+      "mode": "100644",
+      "status": "exact_bytes_recovered_and_included"
+    },
+    {
+      "repo_path": "pt_auth/ptauth/ui.html",
+      "native_path": "/Users/me/workflow-pt-allocations-ultra-20b27c2e-20261008/candidate/pt_auth/ptauth/ui.html",
+      "original_blob": "ec2e198ee1873c41981d201c78a63dbccc13afad",
+      "bytes": 25487,
+      "sha256": "4281cb85515441e9bce852a1f842e5e55ee240228319fc9cfc566e77112bb5ef",
+      "git_blob": "af7dadb2755bb587494644d85c26d3ae51abcbe3",
+      "mode": "100644",
+      "status": "exact_bytes_recovered_and_included"
+    },
+    {
+      "repo_path": "pt_auth/tests/test_allocated_review.py",
+      "native_path": "/Users/me/workflow-pt-allocations-ultra-20b27c2e-20261008/candidate/pt_auth/tests/test_allocated_review.py",
+      "original_blob": null,
+      "bytes": 12413,
+      "sha256": "43ef60b236ad9ebee88976707f3263da6e54e7c1e725696353e54b8a487689e6",
+      "git_blob": "d69913c73dacf9c2943f0a309c666af381e9c5ca",
+      "mode": "100644",
+      "status": "prior_receipt_pin_retained_payload_unavailable"
+    },
+    {
+      "repo_path": "pt_auth/tests/browser/allocated_review.test.cjs",
+      "native_path": "/Users/me/workflow-pt-allocations-ultra-20b27c2e-20261008/candidate/pt_auth/tests/browser/allocated_review.test.cjs",
+      "original_blob": null,
+      "bytes": 27066,
+      "sha256": "ea6688ece9c9fb308ecbcaa2a68acd17b9c6506d10481719d15ad0f5a6b5b33e",
+      "git_blob": "3b231287e5a596901d672d9c9ce9c734ab196a7b",
+      "mode": "100644",
+      "status": "prior_receipt_pin_retained_payload_unavailable"
+    },
+    {
+      "repo_path": "pt_auth/ALLOCATED_VISITS.md",
+      "native_path": "/Users/me/workflow-pt-allocations-ultra-20b27c2e-20261008/candidate/pt_auth/ALLOCATED_VISITS.md",
+      "original_blob": null,
+      "bytes": 4987,
+      "sha256": "1e0a7b3cd9472619a2a42420fc8548dfecee4928e5c2f48080c16b8cd41b7c0c",
+      "git_blob": "18fd97103f1bae91d8f74c3eba5989a90bfe9744",
+      "mode": "100644",
+      "status": "prior_receipt_pin_retained_payload_unavailable"
+    },
+    {
+      "repo_path": "pt_auth/README.md",
+      "native_path": "/Users/me/workflow-pt-allocations-ultra-20b27c2e-20261008/candidate/pt_auth/README.md",
+      "original_blob": "2c6440e7f9bdbc9f4d15e60d05b5626921d35cef",
+      "bytes": 23596,
+      "sha256": "8e634999e8b5534055b2c3392ec2f323c5988d04ab77a77abdf2ff05118a8294",
+      "git_blob": "6256aa8d623361f3ee97a7b6c20d91588a2d92c6",
+      "mode": "100644",
+      "status": "prior_receipt_pin_retained_payload_unavailable"
+    }
+  ]
+}
