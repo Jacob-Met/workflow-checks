@@ -1,0 +1,33 @@
+[
+  {
+    "phase": "legacy report to real combined Run while calendar stays pending",
+    "sessionId": "6959CFDAA9399C601C77BE66A1DEA6B2",
+    "requestId": "interception-job-1.0",
+    "request": {
+      "url": "http://127.0.0.1:34481/api/run",
+      "method": "POST",
+      "headers": {
+        "Accept": "*/*",
+        "Content-Type": "application/json",
+        "Origin": "http://127.0.0.1:34481",
+        "Referer": "http://127.0.0.1:34481/",
+        "User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Chromium\";v=\"153\", \"Not_A Brand\";v=\"8\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"Linux\""
+      },
+      "postData": "{\"as_of\":\"2026-10-31\"}",
+      "hasPostData": true,
+      "postDataEntries": [
+        {
+          "bytes": "eyJhc19vZiI6IjIwMjYtMTAtMzEifQ=="
+        }
+      ],
+      "initialPriority": "High",
+      "referrerPolicy": "strict-origin-when-cross-origin"
+    },
+    "frameId": "C5CAC9858EEB1A82814B9AD4968D26BC",
+    "resourceType": "XHR",
+    "networkId": "3203880.7"
+  }
+]

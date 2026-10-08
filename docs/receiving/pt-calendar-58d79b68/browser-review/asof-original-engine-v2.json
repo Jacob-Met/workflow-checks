@@ -1,0 +1,44 @@
+{
+  "schema": "pt_calendar.independent_asof_oracle.v2",
+  "baseline_commit": "9e931fa9f42033bf2368f7149684fb5631345715",
+  "engine_sha256": "bfa7049e9b133d654ce947b135c17ac401bd7b1fcd76350bdb10de5b7a1ad1f7",
+  "method": "Unchanged original engine, independent CSVs and frozen existing staff states; no candidate formatter/tests",
+  "v1_failure": "Receiver incorrectly required export to be enabled after November 2 although every fixture appointment is November 1. Original native15/16 run and failure-7.png remain unchanged.",
+  "runs": [
+    {
+      "case": "after_all_appointments",
+      "as_of": "2026-11-02",
+      "worklist_count": 0,
+      "eligible": [],
+      "summary_sha256": "f4ac8bbba21204b122f8dff319cccef63a60073600568f994ddd6cad242715b2"
+    },
+    {
+      "case": "before_appointments",
+      "as_of": "2026-10-30",
+      "worklist_count": 7,
+      "eligible": [
+        {
+          "key": "PT1001|PTEST|AUTH-PT1001",
+          "submit_by": "2026-10-31"
+        },
+        {
+          "key": "PT1002|PTEST|AUTH-PT1002",
+          "submit_by": "2026-11-01"
+        },
+        {
+          "key": "PT1007|PTEST|AUTH-PT1007",
+          "submit_by": "2026-11-04"
+        }
+      ],
+      "summary_sha256": "2daef3d2c256108a174667eba1034b3f68035b9dba156a118cd5961f409dd48e"
+    }
+  ],
+  "source_csv_preserved": true,
+  "input_sha256": {
+    "expected.json": "6af5c908df574a88e6a257880155d5cda7542c67528d3548dcb736d1a9bc5984",
+    "payers.csv": "7945074d84b642f19682e54a5765bd12743bc92d7d1edb8c8b9be2585e0784a8",
+    "schedule.csv": "d621ab89ff22087e60e0fef7a95b5e7ec14dab6c1b80da5f08f5edf3d56f2da3",
+    "authorizations.csv": "5dd5d1fefb3e14ca0b0b900f6e452d93cfcc31882b9cdbd231f5e27f2d77f546",
+    "patients.csv": "8eaabdd8c167b96f529e0c8cab36772f233609188229ebb169e2c76d5a6c0b7d"
+  }
+}

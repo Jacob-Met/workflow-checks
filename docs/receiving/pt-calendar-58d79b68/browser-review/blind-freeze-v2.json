@@ -1,0 +1,34 @@
+{
+  "schema": "hamon.contract_first_receiving_freeze.v1",
+  "recordedAt": "2026-10-08T13:21:20.184Z",
+  "reviewer": "chatgpt:58d79b68c9e4:mac_estate",
+  "sourceOwner": "chatgpt:58d79b68c9e4:product_work",
+  "repository": "Jacob-Met/workflow-checks",
+  "issue": "https://github.com/Jacob-Met/workflow-checks/issues/27",
+  "scope": "Actual native browser and completed calendar download receiving only",
+  "baseline": "9e931fa9f42033bf2368f7149684fb5631345715",
+  "candidateImplementationRead": false,
+  "authorTestsRead": false,
+  "candidateFrozen": false,
+  "files": [
+    {
+      "path": "contract.md",
+      "bytes": 5022,
+      "sha256": "0bc7fe83e5dc587e0a6734de50d42cd6f3d53a05ebb083a429d77a6c4a1ac037"
+    },
+    {
+      "path": "RECEIVER-SPEC-v2.md",
+      "bytes": 7299,
+      "sha256": "17dbd8b0d7c729b1cb261e34375abc3dbbf266faeea0b6ebb7a07ab5a6668d7c"
+    }
+  ],
+  "availableBytes": 658677760,
+  "correction": {
+    "originalFreezeSha256": "84306810fd403a3c9d281fc7519152aa3996db1f1c0193b750d57d7c2beb7498",
+    "originalFilesPreserved": true,
+    "scope": "Inventory metadata only: six unreadable records, not seven; do not infer their contents. All twelve receiving controls remain unchanged.",
+    "candidateImplementationRead": false,
+    "authorTestsRead": false,
+    "ownerEndpointHandoffReceivedAfterOriginalFreeze": true
+  }
+}

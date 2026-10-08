@@ -1,0 +1,12 @@
+{
+  "profile": "/Users/me/pt-calendar-browser-review-58d79b68c9e4/browser-asof-v2/profile",
+  "observed_chrome_exit": {
+    "label": "chrome",
+    "pid": 25416,
+    "code": 0,
+    "signal": null
+  },
+  "matching_active_processes": 0,
+  "source_downloads_screenshots_logs_and_result_preserved": true,
+  "timestamp": "2026-10-08T13:51:12.647Z"
+}

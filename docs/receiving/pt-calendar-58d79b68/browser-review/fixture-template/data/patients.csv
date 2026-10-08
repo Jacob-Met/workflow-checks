@@ -1,0 +1,8 @@
+patient_id,display_name,clinic,primary_payer
+PT1001,"Shared Léo <literal>, care;group 😀",East,PTEST
+PT1002,"Shared Léo <literal>, care;group 😀",West,PTEST
+PT1003,Approved review,East,PTEST
+PT1004,N/A review,West,PTEST
+PT1005,Undated open,East,PTEST
+PT1006,Undated submitted,West,PTEST
+PT1007,Current note Ω,East,PTEST

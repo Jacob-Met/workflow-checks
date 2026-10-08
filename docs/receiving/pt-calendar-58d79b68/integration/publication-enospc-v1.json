@@ -1,0 +1,22 @@
+{
+  "observed_at": "2026-10-08T14:07:40.720Z",
+  "device": "hamon-thinkpad",
+  "available_bytes": 0,
+  "attempt": "Fetch current main into the existing own source clone, then write a small integration log.",
+  "write_error": "ENOSPC: no space left on device, write",
+  "partial_log": {
+    "path": "/home/jacob/workflow-checks-pt-calendar-publication-58d79b68/current-main-fetch-v2.log",
+    "bytes": 0
+  },
+  "fetch_received_new_commit": false,
+  "existing_own_current_main_ref": "a5fd61b0c361c8a9b8a6737b33ecc9efab46e0ad",
+  "qualified_source_readback": {
+    "at": "2026-10-08T14:07:59.005Z",
+    "head": "d75fb908a9893fd40b21112f62af16d32027bbe1",
+    "status": "clean",
+    "git_status_exit": 0
+  },
+  "readback_harness_correction": "A first status probe incorrectly paired the source clone index with a --work-tree override. Its deletion/untracked listing was not a source modification. The corrected probe used the actual linked worktree metadata with GIT_OPTIONAL_LOCKS=0 and found it clean.",
+  "recovery": "Compose in a bounded isolated /dev/shm Git namespace; original source objects and proof read only, no reserved disk blocks or other worker cache deletion.",
+  "product_source_changed": false
+}

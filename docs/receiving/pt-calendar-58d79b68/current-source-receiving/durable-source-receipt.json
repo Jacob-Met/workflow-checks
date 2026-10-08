@@ -1,0 +1,10 @@
+{
+  "recorded_at": "2026-10-08T14:29:55.670Z",
+  "source": "/dev/shm/pt-calendar-integration-58d79b68c9e4/git",
+  "destination": "/home/jacob/workflow-checks-pt-calendar-source-58d79b68",
+  "ref": "refs/heads/receiving/pt-calendar-current-58d79b68",
+  "status": 0,
+  "stdout": "",
+  "stderr": "From /dev/shm/pt-calendar-integration-58d79b68c9e4/git\n * [new branch]      pt-calendar-composition-v2 -> receiving/pt-calendar-current-58d79b68\n",
+  "expected_commit": "33432db05b9def1a249650c79571402400c18d15"
+}

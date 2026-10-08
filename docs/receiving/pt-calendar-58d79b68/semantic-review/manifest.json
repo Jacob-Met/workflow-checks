@@ -1,0 +1,186 @@
+{
+  "schema": "hamon.receiving_packet_manifest.v1",
+  "recorded_at": "2026-10-08T13:46:29.824678+00:00",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 6557,
+      "mode": 436,
+      "sha256": "25b2df25472f7475d0ca652534669f181d545b72eaec0f89b1e922cf4fc07ac0"
+    },
+    {
+      "path": "RECEIVER-SPEC.md",
+      "bytes": 4458,
+      "mode": 436,
+      "sha256": "4386db6a20665cdcfc90b4d9365f1ca29bf722b44b4ea1c1f5d8ee35176da66d"
+    },
+    {
+      "path": "actual-files/actual-cli-invalid.stderr",
+      "bytes": 46,
+      "mode": 436,
+      "sha256": "f2abe8bfea224d7679beeff1e3734bd631f24e8415bc34f857172de4b0326b5f"
+    },
+    {
+      "path": "actual-files/actual-cli-no-clobber.stderr",
+      "bytes": 81,
+      "mode": 436,
+      "sha256": "adc19d906026253f06a7e0e298962d3321dd8705403954b532b2ebf0c06bd579"
+    },
+    {
+      "path": "actual-files/actual-cli-selection.ics",
+      "bytes": 1181,
+      "mode": 436,
+      "sha256": "86d7ca0ecdbb159f5e203251af0381233217bd48be18005871a8105eaf80308b"
+    },
+    {
+      "path": "actual-files/actual-cli-stdout.json",
+      "bytes": 320,
+      "mode": 436,
+      "sha256": "c04ecbf03871d6a28401fb0a7c164a844117f2540a3fab8ac978d559d17c762a"
+    },
+    {
+      "path": "actual-files/status-selection-metadata.json",
+      "bytes": 815,
+      "mode": 436,
+      "sha256": "36bd5ef6d1efa2305bb094d9a53eb31ef63be7b6de763660c31b7ad5e288b949"
+    },
+    {
+      "path": "actual-files/status-selection.ics",
+      "bytes": 2307,
+      "mode": 436,
+      "sha256": "ada4d96ba4d682ceaa3465669735a9e548398c253d1b4464f3badd503aadb0be"
+    },
+    {
+      "path": "actual-files/unicode-and-delimiter-roundtrip.ics",
+      "bytes": 20406,
+      "mode": 436,
+      "sha256": "e5f24e58ae7f687fc991a9f38791ea040d3ef2bed766af20cd6ff13e5ce4a324"
+    },
+    {
+      "path": "blind-freeze.json",
+      "bytes": 779,
+      "mode": 420,
+      "sha256": "35af02363aea9d468531bc12b1881c1ec78ca1ddcb4c1696e6c5684216b29947"
+    },
+    {
+      "path": "contract-v1.md",
+      "bytes": 5022,
+      "mode": 420,
+      "sha256": "0bc7fe83e5dc587e0a6734de50d42cd6f3d53a05ebb083a429d77a6c4a1ac037"
+    },
+    {
+      "path": "receiver-v1-freeze.json",
+      "bytes": 313,
+      "mode": 436,
+      "sha256": "008ff896af541442b515308ce246a68cca6b25363296d49a653865a63df81366"
+    },
+    {
+      "path": "review-result.json",
+      "bytes": 1164,
+      "mode": 436,
+      "sha256": "5bad06cb1ca24ec4969e563d6fd4fd39954b87358bc259a2374902d31d92da38"
+    },
+    {
+      "path": "semantics-v1-result.json",
+      "bytes": 574,
+      "mode": 436,
+      "sha256": "a7e12620ba4f88011412555b8237e7f68417856e2addb80c7affcf48e7a4cfd1"
+    },
+    {
+      "path": "semantics-v1.stderr",
+      "bytes": 3117,
+      "mode": 436,
+      "sha256": "c85d0f2954b85c23e463da8b72b2dfdc885f454566d85098c78e7f8c804420d3"
+    },
+    {
+      "path": "semantics-v1.stdout",
+      "bytes": 0,
+      "mode": 436,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "source/pt_auth/ptauth/__init__.py",
+      "bytes": 311,
+      "mode": 436,
+      "sha256": "71e1527f153c607b679485e4954af1b3ec6a843b041562eb07f4d36e08fd231c"
+    },
+    {
+      "path": "source/pt_auth/ptauth/__main__.py",
+      "bytes": 57,
+      "mode": 436,
+      "sha256": "4b1afbca74a10abc3cff7b4e5a11b558bf619e45b89709faf9225a474a2a250f"
+    },
+    {
+      "path": "source/pt_auth/ptauth/calendar_ui.js",
+      "bytes": 8448,
+      "mode": 436,
+      "sha256": "b91fe76b947f381b2fa0835646fc664bf7eaa4474631ae3c9e5cb3968b9cdf3a"
+    },
+    {
+      "path": "source/pt_auth/ptauth/cli.py",
+      "bytes": 4913,
+      "mode": 436,
+      "sha256": "b3c8052b0be06b50f6b534585bf27e5a3ddaa1d7cfd20fc21840461fb8e9c2ed"
+    },
+    {
+      "path": "source/pt_auth/ptauth/data.py",
+      "bytes": 10283,
+      "mode": 436,
+      "sha256": "eeab8ab5b2b72524148969de0d13b27126cc64c4ec79b68a147b51b25a3741e2"
+    },
+    {
+      "path": "source/pt_auth/ptauth/engine.py",
+      "bytes": 16057,
+      "mode": 436,
+      "sha256": "bfa7049e9b133d654ce947b135c17ac401bd7b1fcd76350bdb10de5b7a1ad1f7"
+    },
+    {
+      "path": "source/pt_auth/ptauth/report.py",
+      "bytes": 10086,
+      "mode": 436,
+      "sha256": "794cf0a631b0f1a33ea85df4de387be0ce12d2744e8c8cb1308a61ce99516740"
+    },
+    {
+      "path": "source/pt_auth/ptauth/synth.py",
+      "bytes": 8873,
+      "mode": 436,
+      "sha256": "b82a34447e43dacbe46ed06e60b693ed216e87f15892ae297c682aa5a3f139fd"
+    },
+    {
+      "path": "source/pt_auth/ptauth/ui.html",
+      "bytes": 14769,
+      "mode": 436,
+      "sha256": "20dd667868f3fdaeba30404e158afd9d352d8ec14be445b006e3f6b633ede2f0"
+    },
+    {
+      "path": "source/pt_auth/ptauth/web.py",
+      "bytes": 8633,
+      "mode": 436,
+      "sha256": "18a5f6e889f2a5d7e0e3704989f041681252df3ee0cb29e3c356aff560fd2967"
+    },
+    {
+      "path": "source/pt_auth/ptauth/worklist_calendar.py",
+      "bytes": 13750,
+      "mode": 436,
+      "sha256": "89751f1de5548ced34a59c296d0edf1eda06a38bdb935be3e7c3c8b2ae5d55c0"
+    },
+    {
+      "path": "source-freeze-v1.json",
+      "bytes": 3190,
+      "mode": 436,
+      "sha256": "2b1eef894f3f7d1952ef82b91a7efc0496bea9a8e347d15eba3d8d47ae9c2296"
+    },
+    {
+      "path": "test_semantics_v1.py",
+      "bytes": 21474,
+      "mode": 436,
+      "sha256": "ae92c57d11337a794149e1bacdbb15ec2966d1427aab99f45d6f0dbfb99ae261"
+    }
+  ],
+  "excluded": [
+    "manifest.json (self)",
+    "conscience-receipt.json (later native result/claim closure)"
+  ],
+  "files_count": 29,
+  "bytes": 167984
+}

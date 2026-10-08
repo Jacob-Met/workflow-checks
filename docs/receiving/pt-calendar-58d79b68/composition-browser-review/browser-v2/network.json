@@ -1,0 +1,212 @@
+[
+  {
+    "phase": "legacy report to real combined Run while calendar stays pending",
+    "event": "request",
+    "sessionId": "6959CFDAA9399C601C77BE66A1DEA6B2",
+    "requestId": "864B9C1790C8EC2B852959E17A2B97FC",
+    "method": "GET",
+    "url": "http://127.0.0.1:34481/"
+  },
+  {
+    "phase": "legacy report to real combined Run while calendar stays pending",
+    "event": "response",
+    "sessionId": "6959CFDAA9399C601C77BE66A1DEA6B2",
+    "requestId": "864B9C1790C8EC2B852959E17A2B97FC",
+    "url": "http://127.0.0.1:34481/",
+    "status": 200,
+    "mimeType": "text/html"
+  },
+  {
+    "phase": "legacy report to real combined Run while calendar stays pending",
+    "event": "request",
+    "sessionId": "6959CFDAA9399C601C77BE66A1DEA6B2",
+    "requestId": "3203880.2",
+    "method": "GET",
+    "url": "http://127.0.0.1:34481/calendar_ui.js"
+  },
+  {
+    "phase": "legacy report to real combined Run while calendar stays pending",
+    "event": "request",
+    "sessionId": "6959CFDAA9399C601C77BE66A1DEA6B2",
+    "requestId": "3203880.4",
+    "method": "GET",
+    "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJXaW5kb3dUZXh0IiBkPSJNMjAgM2gtMVYxaC0ydjJIN1YxSDV2Mkg0Yy0xLjEgMC0yIC45LTIgMnYxNmMwIDEuMS45IDIgMiAyaDE2YzEuMSAwIDItLjkgMi0yVjVjMC0xLjEtLjktMi0yLTJ6bTAgMThINFY4aDE2djEzeiIvPjxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiLz48L3N2Zz4="
+  },
+  {
+    "phase": "legacy report to real combined Run while calendar stays pending",
+    "event": "response",
+    "sessionId": "6959CFDAA9399C601C77BE66A1DEA6B2",
+    "requestId": "3203880.4",
+    "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJXaW5kb3dUZXh0IiBkPSJNMjAgM2gtMVYxaC0ydjJIN1YxSDV2Mkg0Yy0xLjEgMC0yIC45LTIgMnYxNmMwIDEuMS45IDIgMiAyaDE2YzEuMSAwIDItLjkgMi0yVjVjMC0xLjEtLjktMi0yLTJ6bTAgMThINFY4aDE2djEzeiIvPjxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiLz48L3N2Zz4=",
+    "status": 200,
+    "mimeType": "image/svg+xml"
+  },
+  {
+    "phase": "legacy report to real combined Run while calendar stays pending",
+    "event": "response",
+    "sessionId": "6959CFDAA9399C601C77BE66A1DEA6B2",
+    "requestId": "3203880.2",
+    "url": "http://127.0.0.1:34481/calendar_ui.js",
+    "status": 200,
+    "mimeType": "text/javascript"
+  },
+  {
+    "phase": "legacy report to real combined Run while calendar stays pending",
+    "event": "request",
+    "sessionId": "6959CFDAA9399C601C77BE66A1DEA6B2",
+    "requestId": "3203880.5",
+    "method": "GET",
+    "url": "http://127.0.0.1:34481/api/summary"
+  },
+  {
+    "phase": "legacy report to real combined Run while calendar stays pending",
+    "event": "response",
+    "sessionId": "6959CFDAA9399C601C77BE66A1DEA6B2",
+    "requestId": "3203880.5",
+    "url": "http://127.0.0.1:34481/api/summary",
+    "status": 200,
+    "mimeType": "application/json"
+  },
+  {
+    "phase": "legacy report to real combined Run while calendar stays pending",
+    "event": "request",
+    "sessionId": "6959CFDAA9399C601C77BE66A1DEA6B2",
+    "requestId": "3203880.6",
+    "method": "GET",
+    "url": "http://127.0.0.1:34481/favicon.ico"
+  },
+  {
+    "phase": "legacy report to real combined Run while calendar stays pending",
+    "event": "response",
+    "sessionId": "6959CFDAA9399C601C77BE66A1DEA6B2",
+    "requestId": "3203880.6",
+    "url": "http://127.0.0.1:34481/favicon.ico",
+    "status": 404,
+    "mimeType": "text/plain"
+  },
+  {
+    "phase": "legacy report to real combined Run while calendar stays pending",
+    "event": "request",
+    "sessionId": "6959CFDAA9399C601C77BE66A1DEA6B2",
+    "requestId": "3203880.7",
+    "method": "POST",
+    "url": "http://127.0.0.1:34481/api/run",
+    "postData": "{\"as_of\":\"2026-10-31\"}"
+  },
+  {
+    "phase": "legacy report to real combined Run while calendar stays pending",
+    "event": "response",
+    "sessionId": "6959CFDAA9399C601C77BE66A1DEA6B2",
+    "requestId": "3203880.7",
+    "url": "http://127.0.0.1:34481/api/run",
+    "status": 200,
+    "mimeType": "application/json"
+  },
+  {
+    "phase": "staff work state does not hide an uncovered appointment or change its all-CSV",
+    "event": "request",
+    "sessionId": "6959CFDAA9399C601C77BE66A1DEA6B2",
+    "requestId": "3203880.8",
+    "method": "POST",
+    "url": "http://127.0.0.1:34481/api/state",
+    "postData": "{\"key\":\"PT1005|PTEST|\",\"state\":\"approved\"}"
+  },
+  {
+    "phase": "staff work state does not hide an uncovered appointment or change its all-CSV",
+    "event": "response",
+    "sessionId": "6959CFDAA9399C601C77BE66A1DEA6B2",
+    "requestId": "3203880.8",
+    "url": "http://127.0.0.1:34481/api/state",
+    "status": 200,
+    "mimeType": "application/json"
+  },
+  {
+    "phase": "staff work state does not hide an uncovered appointment or change its all-CSV",
+    "event": "request",
+    "sessionId": "6959CFDAA9399C601C77BE66A1DEA6B2",
+    "requestId": "3203880.9",
+    "method": "GET",
+    "url": "http://127.0.0.1:34481/api/summary"
+  },
+  {
+    "phase": "staff work state does not hide an uncovered appointment or change its all-CSV",
+    "event": "response",
+    "sessionId": "6959CFDAA9399C601C77BE66A1DEA6B2",
+    "requestId": "3203880.9",
+    "url": "http://127.0.0.1:34481/api/summary",
+    "status": 200,
+    "mimeType": "application/json"
+  },
+  {
+    "phase": "return to calendar completes exact current filtered ICS with new report fields",
+    "event": "request",
+    "sessionId": "6959CFDAA9399C601C77BE66A1DEA6B2",
+    "requestId": "3203880.10",
+    "method": "POST",
+    "url": "http://127.0.0.1:34481/api/calendar",
+    "postData": "{\"snapshot\":\"7810c9661c7e109e229818d6541ee5e5284271af741dfe4ae3e69bd714611b80\",\"keys\":[\"PT1001|PTEST|AUTH-PT1001\"]}"
+  },
+  {
+    "phase": "return to calendar completes exact current filtered ICS with new report fields",
+    "event": "response",
+    "sessionId": "6959CFDAA9399C601C77BE66A1DEA6B2",
+    "requestId": "3203880.10",
+    "url": "http://127.0.0.1:34481/api/calendar",
+    "status": 200,
+    "mimeType": "text/calendar"
+  },
+  {
+    "phase": "combined report drift refuses stale calendar and real Run restores current export",
+    "event": "request",
+    "sessionId": "6959CFDAA9399C601C77BE66A1DEA6B2",
+    "requestId": "3203880.11",
+    "method": "POST",
+    "url": "http://127.0.0.1:34481/api/calendar",
+    "postData": "{\"snapshot\":\"7810c9661c7e109e229818d6541ee5e5284271af741dfe4ae3e69bd714611b80\",\"keys\":[\"PT1001|PTEST|AUTH-PT1001\"]}"
+  },
+  {
+    "phase": "combined report drift refuses stale calendar and real Run restores current export",
+    "event": "response",
+    "sessionId": "6959CFDAA9399C601C77BE66A1DEA6B2",
+    "requestId": "3203880.11",
+    "url": "http://127.0.0.1:34481/api/calendar",
+    "status": 409,
+    "mimeType": "application/json"
+  },
+  {
+    "phase": "combined report drift refuses stale calendar and real Run restores current export",
+    "event": "request",
+    "sessionId": "6959CFDAA9399C601C77BE66A1DEA6B2",
+    "requestId": "3203880.12",
+    "method": "POST",
+    "url": "http://127.0.0.1:34481/api/run",
+    "postData": "{\"as_of\":\"2026-10-31\"}"
+  },
+  {
+    "phase": "combined report drift refuses stale calendar and real Run restores current export",
+    "event": "response",
+    "sessionId": "6959CFDAA9399C601C77BE66A1DEA6B2",
+    "requestId": "3203880.12",
+    "url": "http://127.0.0.1:34481/api/run",
+    "status": 200,
+    "mimeType": "application/json"
+  },
+  {
+    "phase": "combined report drift refuses stale calendar and real Run restores current export",
+    "event": "request",
+    "sessionId": "6959CFDAA9399C601C77BE66A1DEA6B2",
+    "requestId": "3203880.13",
+    "method": "POST",
+    "url": "http://127.0.0.1:34481/api/calendar",
+    "postData": "{\"snapshot\":\"fab8c3d0bed4f1f6e3f298fe06619dc6ee219e325d2ed6ec9e5f9a181f2fff3b\",\"keys\":[\"PT1001|PTEST|AUTH-PT1001\",\"PT1006|PTEST|\",\"PT1002|PTEST|AUTH-PT1002\",\"PT1007|PTEST|AUTH-PT1007\"]}"
+  },
+  {
+    "phase": "combined report drift refuses stale calendar and real Run restores current export",
+    "event": "response",
+    "sessionId": "6959CFDAA9399C601C77BE66A1DEA6B2",
+    "requestId": "3203880.13",
+    "url": "http://127.0.0.1:34481/api/calendar",
+    "status": 200,
+    "mimeType": "text/calendar"
+  }
+]

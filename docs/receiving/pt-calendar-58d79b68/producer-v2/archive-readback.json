@@ -1,0 +1,6 @@
+{
+  "command": "stdlib streaming tar readback",
+  "status": 0,
+  "stdout": "{\"verified_members\": 76, \"bytes_and_modes\": \"pass\", \"extraction\": \"none\"}\n",
+  "stderr": ""
+}

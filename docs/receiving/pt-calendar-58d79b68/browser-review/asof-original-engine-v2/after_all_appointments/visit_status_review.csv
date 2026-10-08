@@ -1,0 +1,8 @@
+visit_id,patient_id,patient_name,clinic,payer_id,payer_name,visit_date,days_since,visit_type,auth_no,capacity_note,evidence
+VISIT-PT1001,PT1001,"Shared Léo <literal>, care;group 😀",East,PTEST,"Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\literal",2026-11-01,1,treatment,AUTH-PT1001,Reserves one authorized visit,schedule.csv:row2
+VISIT-PT1002,PT1002,"Shared Léo <literal>, care;group 😀",West,PTEST,"Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\literal",2026-11-01,1,treatment,AUTH-PT1002,Reserves one authorized visit,schedule.csv:row3
+VISIT-PT1003,PT1003,Approved review,East,PTEST,"Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\literal",2026-11-01,1,treatment,AUTH-PT1003,Reserves one authorized visit,schedule.csv:row4
+VISIT-PT1004,PT1004,N/A review,West,PTEST,"Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\literal",2026-11-01,1,treatment,AUTH-PT1004,Reserves one authorized visit,schedule.csv:row5
+VISIT-PT1005,PT1005,Undated open,East,PTEST,"Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\literal",2026-11-01,1,treatment,,No approved authorization visit allocated,schedule.csv:row6
+VISIT-PT1006,PT1006,Undated submitted,West,PTEST,"Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\literal",2026-11-01,1,treatment,,No approved authorization visit allocated,schedule.csv:row7
+VISIT-PT1007,PT1007,Current note Ω,East,PTEST,"Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\literal",2026-11-01,1,treatment,AUTH-PT1007,Reserves one authorized visit,schedule.csv:row8

@@ -1,0 +1,10 @@
+{
+  "current_main": "a5fd61b0c361c8a9b8a6737b33ecc9efab46e0ad",
+  "current_tree": "5ac515d24c722128f04b7ae343fb7c3e369a06c9",
+  "original_pt_tree": "110262564c3ab3970bfd2df9da404f2f1fd46f77",
+  "current_pt_tree": "110262564c3ab3970bfd2df9da404f2f1fd46f77",
+  "exact_pt_parent_preserved": true,
+  "source_worktree_head": "d75fb908a9893fd40b21112f62af16d32027bbe1",
+  "source_clean": true,
+  "integration_strategy": "Compose through an owned temporary Git index; retain qualified runtime worktree and avoid a duplicate full checkout."
+}

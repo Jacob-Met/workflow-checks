@@ -1,0 +1,14 @@
+{
+  "repository": "Jacob-Met/workflow-checks",
+  "branch": "work/pt-calendar-58d79b68",
+  "native_commit": "d75fb908a9893fd40b21112f62af16d32027bbe1",
+  "published_commit": "a68a667f3610153618c6cc8952c72abe980d89aa",
+  "exact_equal_tree": "94074bd3d39705fced23629038ab79057e943aff",
+  "parent": "9e931fa9f42033bf2368f7149684fb5631345715",
+  "native_received": true,
+  "worktree_clean": true,
+  "author_provenance": "GitHub content API creates its own publication commit; exact native authored commit/tree retained separately, no same-commit assertion",
+  "native_git_push": "one attempt failed because no local Git password; connector publication used without credential inspection",
+  "gate": "source review stage; no PR/merge until independent receiving",
+  "recorded_at": "2026-10-08T13:32:03.817Z"
+}

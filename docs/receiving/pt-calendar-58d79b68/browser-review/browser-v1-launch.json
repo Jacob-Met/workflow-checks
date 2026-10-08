@@ -1,0 +1,18 @@
+{
+  "started": "2026-10-08T13:43:03.120Z",
+  "ended": "2026-10-08T13:43:28.017Z",
+  "command": [
+    "/opt/homebrew/bin/node",
+    "/Users/me/pt-calendar-browser-review-58d79b68c9e4/browser_receiver.mjs",
+    "/Users/me/pt-calendar-browser-review-58d79b68c9e4/baseline/pt_auth",
+    "/Users/me/pt-calendar-browser-review-58d79b68c9e4/candidate/pt_auth",
+    "/Users/me/pt-calendar-browser-review-58d79b68c9e4/fixture-template",
+    "/Users/me/pt-calendar-browser-review-58d79b68c9e4/browser-v1"
+  ],
+  "pid": 2338,
+  "code": 1,
+  "signal": null,
+  "driver_sha256": "854fd9f8100e9415b23f34fbb7f8e42a0914e3c35e35de4fef5512d7f7b165f1",
+  "stdout_sha256": "82b7ff575b02a2f329732a0b720366e814a08da1e1a0a0a8b4fb8f583847ba7c",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

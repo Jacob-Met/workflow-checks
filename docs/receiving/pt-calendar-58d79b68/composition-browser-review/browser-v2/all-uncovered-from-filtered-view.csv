@@ -1,0 +1,3 @@
+visit_id,visit_date,status,patient_id,patient_name,clinic,therapist,payer_id,payer_name,payer_rules_known,visit_type,evidence
+VISIT-PT1005,2026-11-01,scheduled,PT1005,Undated open,East,SYNTHETIC,PTEST,"Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\literal",True,treatment,schedule.csv:row6
+VISIT-PT1006,2026-11-01,scheduled,PT1006,Undated submitted,West,SYNTHETIC,PTEST,"Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\literal",True,treatment,schedule.csv:row7

@@ -1,0 +1,14 @@
+{
+  "copied_semantic_files": 31,
+  "copied_directories": 5,
+  "source_manifest_sha256": "bf8d65ea7bf2a3aa8a9b46850860fc2b77fe91626e518205d7cb8add72e6bb0d",
+  "copied_bytes_and_modes": "exact",
+  "archive": {
+    "path": "semantic-review.tar.gz",
+    "bytes": 48538,
+    "sha256": "07166d7bc271a320940d1a5a01ef479e4d4513738a49c7b5c6ec6cae9c408641"
+  },
+  "mode_transport": "Native copy and archive preserve full original UNIX modes. Git tracks file executability only; the immutable archive retains group-write bits for exact replay.",
+  "source": "a68a667f3610153618c6cc8952c72abe980d89aa",
+  "tree": "94074bd3d39705fced23629038ab79057e943aff"
+}

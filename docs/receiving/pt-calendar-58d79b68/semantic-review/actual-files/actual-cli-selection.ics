@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Workflow Checks//Synthetic PT handoff v1//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:7057521d951ccf7ef9085e448e94aa4f2f9bb7d01990d45a587f90fa640db453@ptauth
+ .workflow-checks.invalid
+DTSTAMP:20261008T134207Z
+DTSTART;VALUE=DATE:20240229
+SUMMARY:[SYNTHETIC] P1 authorization review — north
+DESCRIPTION:SYNTHETIC INDEPENDENT RECEIVER — no real patient data\nAdmini
+ strative submit-by review\; no payer submission or staff-state change.\nWo
+ rk-item key: north|review-payer|review-auth\nPatient: north — Synthetic 
+ receiver\nPayer: review-payer — Fictional payer\nAuthorization: review-a
+ uth\nClinic: North\nPriority: P1\nRecorded submit-by: 2024-02-29\nAuthoriz
+ ation end: 2027-02-28\nNext visit: 2026-12-21\nStaff state: open\nStaff no
+ te: \nStaff state recorded at: unrecorded\nReport as of: 2026-10-08\nRepor
+ t generated at (as recorded): 2020-01-02T03:04:05+00:00\nClinic time zone 
+ (context\; all-day date unchanged): America/New_York\nReasons:\nRecorded r
+ eason\nDetails:\nRecorded detail\nChecklist:\nRecorded checklist\nSource e
+ vidence:\nsource.csv: row 3
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

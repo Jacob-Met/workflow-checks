@@ -1,0 +1,6 @@
+auth_no,patient_id,patient_name,payer_id,start,end,authorized,used,scheduled,remaining,remaining_after_scheduled,days_left,status
+AUTH-PT1001,PT1001,"Shared Léo <literal>, care;group 😀",PTEST,2026-10-01,2026-11-02,10,0,1,10,9,2,active
+AUTH-PT1002,PT1002,"Shared Léo <literal>, care;group 😀",PTEST,2026-10-01,2026-11-03,10,0,1,10,9,3,active
+AUTH-PT1003,PT1003,Approved review,PTEST,2026-10-01,2026-11-04,10,0,1,10,9,4,active
+AUTH-PT1004,PT1004,N/A review,PTEST,2026-10-01,2026-11-05,10,0,1,10,9,5,active
+AUTH-PT1007,PT1007,Current note Ω,PTEST,2026-10-01,2026-11-06,10,0,1,10,9,6,active

@@ -28,6 +28,11 @@ th{background:#eef1f5;font-size:12px;text-transform:uppercase;letter-spacing:.03
 .meter{height:8px;background:#eef1f5;border-radius:4px;overflow:hidden;width:110px;margin-top:3px}.meter span{display:block;height:100%}
 small{color:var(--mut)}.hidden{display:none}tr.done{opacity:.55}details ul{margin:4px 0;padding-left:18px}
 .note{background:#fff;border:1px solid var(--line);border-radius:8px;padding:10px 14px;margin-top:14px}
+.calendar-panel{background:#fff;border:1px solid var(--line);border-left:4px solid var(--acc);border-radius:8px;padding:14px;margin:12px 0 16px;overflow-wrap:anywhere}
+.calendar-panel h2{font-size:16px;margin:0 0 6px}.calendar-head{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap}
+.calendar-panel p{margin:6px 0}.calendar-panel details{margin-top:8px}.calendar-panel li{margin:4px 0}
+.calendar-panel button:disabled{opacity:.55;cursor:not-allowed}.calendar-status{min-height:1.45em;color:var(--mut)}
+#work{overflow-x:auto}#work:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
 </style>
 </head>
 <body>
@@ -49,7 +54,16 @@ small{color:var(--mut)}.hidden{display:none}tr.done{opacity:.55}details ul{margi
       <input id="q" placeholder="search patient / payer / auth" style="padding:5px 8px;border:1px solid var(--line);border-radius:6px;min-width:220px">
       <small id="shown"></small>
     </div>
-    <div id="work"></div>
+    <aside id="calendar" class="calendar-panel" aria-labelledby="calendar-title">
+      <div class="calendar-head"><div><h2 id="calendar-title">Submit-by calendar handoff</h2><b data-calendar-summary>Loading worklist…</b></div>
+        <button class="pri" data-calendar-download disabled>Download calendar (.ics)</button></div>
+      <p data-calendar-context></p>
+      <p><small>Single-day, all-day reminders for recorded submit-by dates. Includes dated open/submitted items in the current filters. Exporting does not change staff status or submit anything to a payer.</small></p>
+      <details data-calendar-details hidden><summary>Review included and excluded items</summary><ul data-calendar-list></ul></details>
+      <p class="calendar-status" data-calendar-status role="status" aria-live="polite"></p>
+      <p><small>Repeated exports keep the same event identity for the same authorization period, clinic and recorded zone. Calendar apps handle repeat imports differently; a new download does not remove earlier imports. Review the file in your calendar app.</small></p>
+    </aside>
+    <div id="work" tabindex="0" role="region" aria-label="Daily worklist"></div>
   </section>
   <section id="t-uncovered" class="hidden">
     <h2>Uncovered visits</h2>
@@ -70,15 +84,20 @@ small{color:var(--mut)}.hidden{display:none}tr.done{opacity:.55}details ul{margi
   P2 = this week (re-auth threshold hit by visits or days, pending auth needs follow-up); P3 = heads-up (annual visit cap).
   Submit-by = earlier of auth end or the visit that exhausts the auth, minus the payer's turnaround days. Thresholds come from the payer rules table (placeholders).</small></div>
 </main>
+<script src="/calendar_ui.js"></script>
 <script>
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 let S = null;
+const calendar = PTWorklistCalendar.create($("#calendar"), $("#asof"));
 async function api(path, body) {
   const r = await fetch(path, body === undefined ? {} : {method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify(body)});
   const j = await r.json(); if (!r.ok) throw new Error(j.error || r.status); return j;
 }
-async function load(p) { S = await p; $("#asof").value = S.as_of; fillClinics(); render(); }
+async function load(p, ticket = calendar.beginChange()) {
+  try { S = await p; $("#asof").value = S.as_of; fillClinics(); render(ticket); }
+  catch (e) { calendar.fail(ticket, e.message); throw e; }
+}
 function fillClinics() {
   const cur = $("#fc").value, cl = [...new Set(S.worklist.map(w => w.clinic).filter(Boolean))].sort();
   $("#fc").innerHTML = '<option value="">All clinics</option>' + cl.map(c => `<option ${c === cur ? "selected" : ""}>${esc(c)}</option>`).join("");
@@ -89,7 +108,7 @@ function meter(used, auth) {
   const col = pct >= 90 ? "#dc2626" : pct >= 70 ? "#d97706" : "#0f766e";
   return `<div class="meter"><span style="width:${pct}%;background:${col}"></span></div>`;
 }
-function render() {
+function render(calendarTicket) {
   $("#timezone").textContent = `Clinic time zone: ${S.clinic_timezone || "unrecorded"}`;
   const c = S.counts, st = S.states || {};
   const done = S.worklist.filter(w => ["submitted", "approved", "n/a"].includes((st[w.key] || {}).state)).length;
@@ -102,6 +121,7 @@ function render() {
     && (fs === "all" || !["approved", "n/a"].includes((st[w.key] || {}).state))
     && (!q || [w.patient_id, w.patient_name, w.payer_name, w.auth_no].join(" ").toLowerCase().includes(q)));
   $("#shown").textContent = `${rows.length} of ${S.worklist.length} items`;
+  calendar.update(S, rows, calendarTicket);
   $("#work").innerHTML = `<table><tr><th>Pri</th><th>Patient</th><th>Payer / auth</th><th>Why</th><th>Visits</th><th>Auth end</th><th>Next visit</th><th>Submit by</th><th>Re-auth checklist</th><th>Status</th></tr>${
     rows.map(w => { const s = (st[w.key] || {}).state || "open"; return `<tr class="${["approved", "n/a"].includes(s) ? "done" : ""}">
       <td><span class="p ${w.priority}">${w.priority}</span></td>
@@ -114,7 +134,11 @@ function render() {
       <td>${w.checklist.length ? `<details><summary>${w.checklist.length} items</summary><ul>${w.checklist.map(x => `<li>&#9744; ${esc(x)}</li>`).join("")}</ul></details>` : "<small>-</small>"}</td>
       <td><select data-k="${esc(w.key)}">${["open", "submitted", "approved", "n/a"].map(o => `<option ${o === s ? "selected" : ""}>${o}</option>`).join("")}</select></td></tr>`; }).join("")}</table>`;
   document.querySelectorAll("#work select[data-k]").forEach(sel => sel.onchange = async () => {
-    S.states = await api("/api/state", {key: sel.dataset.k, state: sel.value}); render();
+    const ticket = calendar.beginChange("Saving staff status…");
+    try {
+      S.states = await api("/api/state", {key: sel.dataset.k, state: sel.value});
+      await load(api("/api/summary"), ticket);
+    } catch (e) { calendar.fail(ticket, e.message); alert(e.message); }
   });
 
   renderUncoveredReview();
@@ -187,11 +211,11 @@ document.querySelectorAll("#tabs button").forEach(b => b.onclick = () => {
   document.querySelectorAll("#tabs button").forEach(x => x.classList.toggle("on", x === b));
   document.querySelectorAll("main > section").forEach(s => s.classList.toggle("hidden", s.id !== "t-" + b.dataset.t));
 });
-["#fp", "#fc", "#fs"].forEach(id => $(id).onchange = render); $("#q").oninput = render;
+["#fp", "#fc", "#fs"].forEach(id => $(id).onchange = () => render()); $("#q").oninput = () => render();
 async function busy(btn, fn) { btn.disabled = true; try { await fn(); } catch (e) { alert(e.message); } btn.disabled = false; }
 $("#run").onclick = e => busy(e.target, () => load(api("/api/run", {as_of: $("#asof").value})));
 $("#gen").onclick = e => busy(e.target, () => load(api("/api/generate", {seed: +$("#seed").value || 21})));
-load(api("/api/summary"));
+load(api("/api/summary")).catch(() => {});
 </script>
 </body>
 </html>

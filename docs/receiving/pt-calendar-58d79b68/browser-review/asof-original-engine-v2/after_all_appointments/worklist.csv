@@ -1,0 +1,1 @@
+priority,patient_id,patient_name,clinic,payer,auth_no,reasons,visits_used,visits_authorized,visits_remaining,scheduled_in_window,auth_end,days_left,next_visit,submit_by,detail,evidence

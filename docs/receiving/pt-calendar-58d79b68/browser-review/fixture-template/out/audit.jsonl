@@ -1,0 +1,1 @@
+{"ts": "2026-10-08T13:29:09+00:00", "action": "run", "run_by": "independent_calendar_browser_fixture", "as_of": "2026-10-31", "clinic_timezone": "America/Los_Angeles", "patients": 7, "visits": 7, "auths": 5, "worklist": 7, "p1": 3, "p2": 4, "p3": 0, "uncovered_scheduled": 2, "unauthorized_done": 0, "past_scheduled": 0}

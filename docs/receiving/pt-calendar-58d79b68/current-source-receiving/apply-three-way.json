@@ -1,0 +1,6 @@
+{
+  "status": 0,
+  "stdout": "",
+  "stderr": "Applied patch to 'pt_auth/README.md' cleanly.\nFalling back to direct application...\nApplied patch to 'pt_auth/ptauth/cli.py' cleanly.\nApplied patch to 'pt_auth/ptauth/ui.html' cleanly.\nApplied patch to 'pt_auth/ptauth/web.py' cleanly.\nFalling back to direct application...\nFalling back to direct application...\n",
+  "unmerged": ""
+}

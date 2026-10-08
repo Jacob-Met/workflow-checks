@@ -1,0 +1,69 @@
+{
+  "files": [
+    {
+      "path": "data/authorizations.csv",
+      "bytes": 374,
+      "sha256": "5dd5d1fefb3e14ca0b0b900f6e452d93cfcc31882b9cdbd231f5e27f2d77f546"
+    },
+    {
+      "path": "data/expected.json",
+      "bytes": 43,
+      "sha256": "6af5c908df574a88e6a257880155d5cda7542c67528d3548dcb736d1a9bc5984"
+    },
+    {
+      "path": "data/patients.csv",
+      "bytes": 335,
+      "sha256": "8eaabdd8c167b96f529e0c8cab36772f233609188229ebb169e2c76d5a6c0b7d"
+    },
+    {
+      "path": "data/payers.csv",
+      "bytes": 358,
+      "sha256": "7945074d84b642f19682e54a5765bd12743bc92d7d1edb8c8b9be2585e0784a8"
+    },
+    {
+      "path": "data/schedule.csv",
+      "bytes": 692,
+      "sha256": "d621ab89ff22087e60e0fef7a95b5e7ec14dab6c1b80da5f08f5edf3d56f2da3"
+    },
+    {
+      "path": "fixture-description.json",
+      "bytes": 6508,
+      "sha256": "fdc34f746d14f5bbc6e2b54cb0a3afefc400f0d8642a40c63ff31d995cc43e35"
+    },
+    {
+      "path": "out/audit.jsonl",
+      "bytes": 321,
+      "sha256": "a084f846cbf13671c59d32587f9fb8181a913555ddc5f465fa9999e1e26401a6"
+    },
+    {
+      "path": "out/digest.html",
+      "bytes": 7443,
+      "sha256": "e1e19c5df269b3870847894e971238eab71f7b6db3989258d8af57593acdd4bc"
+    },
+    {
+      "path": "out/ledger.csv",
+      "bytes": 601,
+      "sha256": "9f6f1b01f90d8e6587838cf02909bc394b58c095e4d5b639a698f417d9b0c311"
+    },
+    {
+      "path": "out/summary.json",
+      "bytes": 11268,
+      "sha256": "7992741e2535c87591e1237eb51cfc667cdf2fbf25c8e4e875a5dd59ba0a3ec3"
+    },
+    {
+      "path": "out/visit_status_review.csv",
+      "bytes": 125,
+      "sha256": "9cb3e3e82e30935f57448ed826dbd8dab78e39355e3bebba59c478fa355ee170"
+    },
+    {
+      "path": "out/work_state.json",
+      "bytes": 657,
+      "sha256": "2348a7fecbc2e7d096dc1f1b8f5724e75e99628f1446a8aa9f4f06a72cd1d59d"
+    },
+    {
+      "path": "out/worklist.csv",
+      "bytes": 2432,
+      "sha256": "817ccc3e5885e01a43462c1422dd56ad82e1a7b3c10ad117842b65e8db56ed81"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "status": 0,
+  "stdout": "",
+  "stderr": "Falling back to direct application...\nFalling back to direct application...\nApplied patch to 'pt_auth/ptauth/web.py' cleanly.\nApplied patch to 'pt_auth/ptauth/ui.html' cleanly.\nApplied patch to 'pt_auth/ptauth/cli.py' cleanly.\nFalling back to direct application...\nApplied patch to 'pt_auth/README.md' cleanly.\n",
+  "result_tree": "b470f3578107ce412bb0a66cd4bf835902bfede4",
+  "expected_tree": "b470f3578107ce412bb0a66cd4bf835902bfede4",
+  "exact_parent_restored": true,
+  "method": "Restore only the test bootstrap blob, then reverse the original calendar patch through a separate cached three-way index. Qualified source worktree is not changed."
+}

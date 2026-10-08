@@ -1,0 +1,22 @@
+{
+  "recorded_at": "2026-10-08T13:37:19.199256+00:00",
+  "spec_sha256": "4386db6a20665cdcfc90b4d9365f1ca29bf722b44b4ea1c1f5d8ee35176da66d",
+  "contract_sha256": "0bc7fe83e5dc587e0a6734de50d42cd6f3d53a05ebb083a429d77a6c4a1ac037",
+  "source_not_yet_read": true,
+  "source_commit": "a68a667f3610153618c6cc8952c72abe980d89aa",
+  "native_receipts": [
+    {
+      "seq": 4141,
+      "event_id": "cev_6bdac414239f45eebf6f6ec0",
+      "event_type": "conscience.decision",
+      "actor": "chatgpt:58d79b68c9e4:root"
+    },
+    {
+      "seq": 4142,
+      "event_id": "cev_94e1c34fc1584e459e01d140",
+      "event_type": "conscience.decision",
+      "actor": "chatgpt:58d79b68c9e4:root"
+    }
+  ],
+  "coord_after_sha256": "c3ddf5d3d644ade178c2f8f4dd159727b4529f8474d5ec6f77e99f75f17e032d"
+}

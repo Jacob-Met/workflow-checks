@@ -1,0 +1,12 @@
+{
+  "payload": {
+    "key": "result:ptauth-calendar-producer-58d79b68c9e4:v2",
+    "value": "native_and_hosted_pass_independent_receiving_pending",
+    "text": "Exact authored d75fb908 / publisheda68a667 / tree94074bd3; parent9e931fa9. 74 frozen producer evidence files; manifest SHA256 c617368ad4761333b9fcff883005e7bb372662380dea2c8ce4098999423df26e. Native116pass/1existing skip/45subtests, additive19stdlib checks. Hosted3.10/3.12 success run37785036652. V1 native blank-clinic failure preserved and repaired. All343 unrelated parent leaves and staff-state writer preserved. Source-only branch; root semantics and Mac browser review pending. Calendar issue27 source claim stays active; earlier issue26 additive ownership retained."
+  },
+  "receipt": {
+    "seq": 4140,
+    "event_id": "cev_9945c25978544dfb8e971e21",
+    "event_hash": "0f4b1ef58e59b8519b0a445594ada1ff45665cc11b1d6c8e713446c0058a7bcd"
+  }
+}

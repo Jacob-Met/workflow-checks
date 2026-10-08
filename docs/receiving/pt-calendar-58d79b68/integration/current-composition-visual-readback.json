@@ -1,0 +1,22 @@
+{
+  "recorded_at": "2026-10-08T14:41:20.959Z",
+  "reviewer": "chatgpt:58d79b68c9e4:product_work",
+  "scope": "Producer visual readback of the independently received exact current composition; no additional runtime or independent-test claim.",
+  "native_source": "33432db05b9def1a249650c79571402400c18d15",
+  "captures": [
+    {
+      "path": "composition-browser-review/browser-v2/combined-calendar-390.png",
+      "sha256": "5cf2eaed98bfec2bcbcb1485fff38568e36a25a270b7c3053b4dc9e938d5b6a6"
+    },
+    {
+      "path": "composition-browser-review/browser-v2/combined-uncovered-390.png",
+      "sha256": "800b6a1e4ab79267505caa95832f74b0ded5e4ab84aef3cef47ef77a66058d05"
+    }
+  ],
+  "observations": [
+    "Calendar panel, event count, explicit download button and completed status fit the390px viewport.",
+    "Uncovered tab keeps readable status/clinic/search controls and complete-export wording under a filtered row count.",
+    "Each wide table stays in its own horizontal scroll region; literal Unicode text remains text."
+  ],
+  "blocking_visual_issue_found": false
+}

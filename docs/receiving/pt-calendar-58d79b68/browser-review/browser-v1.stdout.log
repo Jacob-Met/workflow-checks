@@ -1,0 +1,17 @@
+{"check":"original real worklist has no calendar handoff","status":"pass"}
+{"check":"default review and actual keyboard download","status":"pass"}
+{"check":"all-state exclusions and repeat identities","status":"pass"}
+{"check":"actual text and clinic filters preserve distinct same-name keys","status":"pass"}
+{"check":"empty eligible selection refuses a misleading download","status":"pass"}
+{"check":"390px real panel and literal review text","status":"pass"}
+{"check":"edited as-of, revert and actual refreshed report","status":"fail","error":"Timed out: refreshed reviewed as-of"}
+{"check":"pending real refresh blocks export and accepts current filters","status":"pass"}
+{"check":"pending real staff-state save blocks export then reviews new state","status":"pass"}
+{"check":"failed real refresh leaves calendar unavailable and next refresh recovers","status":"pass"}
+{"check":"saved-report drift rejects earlier snapshot and replacement must be reviewed","status":"pass"}
+{"check":"saved staff-state drift rejects snapshot until actual replacement review","status":"pass"}
+{"check":"late actual success retired by filter change cannot download or replace status","status":"pass"}
+{"check":"late actual 409 retired by filter change cannot replace newer status","status":"pass"}
+{"check":"late actual success retired by as-of edit remains unavailable","status":"pass"}
+{"check":"initial real summary pending is unavailable until exact report arrives","status":"pass"}
+{"status":"fail","passed":15,"failed":1,"downloads":10,"exceptions":0,"output":"/Users/me/pt-calendar-browser-review-58d79b68c9e4/browser-v1"}

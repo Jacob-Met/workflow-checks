@@ -1,0 +1,296 @@
+
+DevTools listening on ws://127.0.0.1:62444/devtools/browser/1154a3aa-981d-482a-82af-7f7c2a1251fc
+Trying to load the allocator multiple times. This is *not* supported.
+[2390:63131433:1008/064304.483072:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064304.483636:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064304.483760:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064304.483889:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064304.484006:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064304.484147:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064304.484235:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064304.673454:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064304.674437:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064304.675618:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064304.675954:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064304.676099:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064305.098363:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064305.101117:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064305.102544:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064305.102837:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064305.103045:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064305.667413:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064305.673554:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064305.675631:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064305.675817:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064305.676030:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064306.210999:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064306.216062:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064306.226634:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064306.226844:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064306.227034:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064306.691961:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064306.693087:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064306.708877:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064306.709197:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064306.710152:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064307.069955:ERROR:gpu/command_buffer/service/shared_image/shared_image_manager.cc:401] SharedImageManager::ProduceMemory: Trying to Produce a Memory representation from a non-existent mailbox.
+[2390:63131433:1008/064307.069968:ERROR:gpu/command_buffer/service/shared_image/shared_image_manager.cc:401] SharedImageManager::ProduceMemory: Trying to Produce a Memory representation from a non-existent mailbox.
+[2390:63131433:1008/064307.069971:ERROR:gpu/command_buffer/service/shared_image/shared_image_manager.cc:401] SharedImageManager::ProduceMemory: Trying to Produce a Memory representation from a non-existent mailbox.
+[2390:63131433:1008/064307.069973:ERROR:gpu/command_buffer/service/shared_image/shared_image_manager.cc:401] SharedImageManager::ProduceMemory: Trying to Produce a Memory representation from a non-existent mailbox.
+[2390:63131433:1008/064307.069975:ERROR:gpu/command_buffer/service/shared_image/shared_image_manager.cc:401] SharedImageManager::ProduceMemory: Trying to Produce a Memory representation from a non-existent mailbox.
+[2390:63131433:1008/064307.069977:ERROR:gpu/command_buffer/service/shared_image/shared_image_manager.cc:401] SharedImageManager::ProduceMemory: Trying to Produce a Memory representation from a non-existent mailbox.
+[2390:63131433:1008/064307.069978:ERROR:gpu/command_buffer/service/shared_image/shared_image_manager.cc:401] SharedImageManager::ProduceMemory: Trying to Produce a Memory representation from a non-existent mailbox.
+[2390:63131433:1008/064307.069980:ERROR:gpu/command_buffer/service/shared_image/shared_image_manager.cc:401] SharedImageManager::ProduceMemory: Trying to Produce a Memory representation from a non-existent mailbox.
+[2390:63131433:1008/064307.069982:ERROR:gpu/command_buffer/service/shared_image/shared_image_manager.cc:401] SharedImageManager::ProduceMemory: Trying to Produce a Memory representation from a non-existent mailbox.
+[2390:63131433:1008/064307.069984:ERROR:gpu/command_buffer/service/shared_image/shared_image_manager.cc:401] SharedImageManager::ProduceMemory: Trying to Produce a Memory representation from a non-existent mailbox.
+[2390:63131433:1008/064307.069985:ERROR:gpu/command_buffer/service/shared_image/shared_image_manager.cc:401] SharedImageManager::ProduceMemory: Trying to Produce a Memory representation from a non-existent mailbox.
+[2390:63131433:1008/064307.069987:ERROR:gpu/command_buffer/service/shared_image/shared_image_manager.cc:401] SharedImageManager::ProduceMemory: Trying to Produce a Memory representation from a non-existent mailbox.
+[2390:63131433:1008/064307.069992:ERROR:gpu/command_buffer/service/shared_image/shared_image_manager.cc:401] SharedImageManager::ProduceMemory: Trying to Produce a Memory representation from a non-existent mailbox.
+[2390:63131433:1008/064307.069994:ERROR:gpu/command_buffer/service/shared_image/shared_image_manager.cc:401] SharedImageManager::ProduceMemory: Trying to Produce a Memory representation from a non-existent mailbox.
+[2390:63131433:1008/064307.069996:ERROR:gpu/command_buffer/service/shared_image/shared_image_manager.cc:401] SharedImageManager::ProduceMemory: Trying to Produce a Memory representation from a non-existent mailbox.
+[2390:63131433:1008/064307.177385:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064307.181921:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064307.183435:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064307.184042:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064307.184386:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064307.617575:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064307.623516:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064307.623637:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064307.623700:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064307.623754:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064323.192523:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064323.198748:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064323.202175:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064323.202259:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064323.202334:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[3863:63151572:1008/064323.374880:VERBOSE1:chrome/updater/updater.cc:374] Version: 152.0.7933.0, opt, ARM_64, command line: /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/154.0.8037.98/Helpers/GoogleUpdater.app/Contents/MacOS/GoogleUpdater --install --enable-logging --vmodule=*/components/update_client/*=2,*/chrome/enterprise_companion/*=2,*/chrome/updater/*=2
+[3863:63151572:1008/064323.376511:VERBOSE1:chrome/updater/updater.cc:377] OS version: 26.6.2, arch: arm64, System uptime (seconds): 1006570, parent pid: 2360
+[3863:63151572:1008/064323.380919:VERBOSE1:chrome/updater/updater.cc:382] Available disk space in install directory (/Users/me/Library/Application Support/Google/GoogleUpdater): 135622656B (129.340MiB) / 994662584320B (926.352GiB)
+[3863:63151572:1008/064323.380946:VERBOSE1:chrome/updater/updater.cc:386] Available disk space in temporary directory (/var/folders/_b/0vl_rrg956l17vk8xl5mxps40000gn/T/): 135622656B (129.340MiB) / 994662584320B (926.352GiB)
+[3863:63151572:1008/064323.382837:VERBOSE2:chrome/updater/event_history.cc:265] Emitted a UPDATER_PROCESS START event to the history log
+[3865:63151600:1008/064323.399694:VERBOSE1:chrome/updater/updater.cc:374] Version: 152.0.7933.0, opt, ARM_64, command line: /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/154.0.8037.98/Helpers/GoogleUpdater.app/Contents/MacOS/GoogleUpdater --crash-handler --database=/Users/me/Library/Application Support/Google/GoogleUpdater/152.0.7933.0/Crashpad --url=https://clients2.google.com/cr/report --annotation=prod=Update4 --annotation=ver=152.0.7933.0 --handshake-fd=6 --enable-logging --vmodule=*/components/update_client/*=2,*/chrome/enterprise_companion/*=2,*/chrome/updater/*=2
+[3865:63151600:1008/064323.400584:VERBOSE1:chrome/updater/updater.cc:377] OS version: 26.6.2, arch: arm64, System uptime (seconds): 1006570, parent pid: 1
+[3865:63151600:1008/064323.403277:VERBOSE1:chrome/updater/updater.cc:382] Available disk space in install directory (/Users/me/Library/Application Support/Google/GoogleUpdater): 135614464B (129.332MiB) / 994662584320B (926.352GiB)
+[3865:63151600:1008/064323.403302:VERBOSE1:chrome/updater/updater.cc:386] Available disk space in temporary directory (/var/folders/_b/0vl_rrg956l17vk8xl5mxps40000gn/T/): 135614464B (129.332MiB) / 994662584320B (926.352GiB)
+[3865:63151600:1008/064323.403443:VERBOSE2:chrome/updater/event_history.cc:265] Emitted a UPDATER_PROCESS START event to the history log
+[3863:63151572:1008/064323.404358:VERBOSE1:chrome/updater/crash_reporter.cc:124] Crash handler launched and ready.
+[3863:63151572:1008/064323.405597:VERBOSE1:chrome/updater/crash_client.cc:108] Found 0 completed crash reports
+[3863:63151572:1008/064323.405754:VERBOSE1:chrome/updater/crash_client.cc:132] Found 0 pending crash reports
+[3863:63151572:1008/064323.406414:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /Users/me/Library/Application Support/Google/RLZ/Crashpad/settings.dat: No such file or directory (2)
+[3863:63151572:1008/064323.407629:VERBOSE1:chrome/updater/updater.cc:105] Crash reporting initialized.
+[3863:63151572:1008/064323.408215:VERBOSE1:chrome/updater/ipc/update_service_proxy_mojo.cc:194] GetVersion
+[3863:63151572:1008/064323.408249:VERBOSE1:chrome/updater/ipc/update_service_proxy_mojo.cc:446] EnsureConnecting
+[3863:63151608:1008/064323.414489:VERBOSE1:chrome/updater/ipc/update_service_dialer_mac.cc:37] DialUpdateService launcher failure: launcher: posix_spawn failed: No such file or directory
+
+[3863:63151608:1008/064323.414565:VERBOSE1:chrome/updater/ipc/update_service_dialer_posix.cc:56] Failed to connect to remote mojo service, is_internal_service: 0, scope: User, no updater exists.
+[3863:63151572:1008/064323.414617:VERBOSE1:chrome/updater/ipc/update_service_proxy_mojo.cc:395] OnConnected
+[3863:63151572:1008/064323.414646:VERBOSE1:chrome/updater/ipc/update_service_proxy_mojo.cc:194] GetVersion
+[3863:63151572:1008/064323.414662:VERBOSE1:chrome/updater/ipc/update_service_proxy_mojo.cc:446] EnsureConnecting
+[3863:63151608:1008/064323.421870:VERBOSE1:chrome/updater/ipc/update_service_dialer_mac.cc:37] DialUpdateService launcher failure: launcher: posix_spawn failed: No such file or directory
+
+[3863:63151608:1008/064323.421938:VERBOSE1:chrome/updater/ipc/update_service_dialer_posix.cc:56] Failed to connect to remote mojo service, is_internal_service: 0, scope: User, no updater exists.
+[3863:63151572:1008/064323.421976:VERBOSE1:chrome/updater/ipc/update_service_proxy_mojo.cc:395] OnConnected
+[3863:63151572:1008/064323.422004:VERBOSE1:chrome/updater/ipc/update_service_proxy_mojo.cc:194] GetVersion
+[3863:63151572:1008/064323.422019:VERBOSE1:chrome/updater/ipc/update_service_proxy_mojo.cc:446] EnsureConnecting
+[3863:63151608:1008/064323.428511:VERBOSE1:chrome/updater/ipc/update_service_dialer_mac.cc:37] DialUpdateService launcher failure: launcher: posix_spawn failed: No such file or directory
+
+[3863:63151608:1008/064323.428577:VERBOSE1:chrome/updater/ipc/update_service_dialer_posix.cc:56] Failed to connect to remote mojo service, is_internal_service: 0, scope: User, no updater exists.
+[3863:63151572:1008/064323.428611:VERBOSE1:chrome/updater/ipc/update_service_proxy_mojo.cc:395] OnConnected
+[3863:63151608:1008/064323.428874:VERBOSE2:chrome/updater/util/util.cc:341] DeleteExcept deleting: /Users/me/Library/Application Support/Google/GoogleUpdater/152.0.7933.0/GoogleUpdater.app
+[2390:63131433:1008/064323.676085:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064323.678228:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064323.684848:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064323.685021:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064323.685133:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[3863:63151608:1008/064323.725407:VERBOSE1:chrome/updater/mac/setup/mac_setup.mm:263] PrepareToRunBundle failed. Gatekeeper may prompt.
+[3863:63151608:1008/064323.726336:VERBOSE2:chrome/updater/mac/setup/mac_setup.mm:160] Skipping unnecessary update to /Users/me/Library/LaunchAgents/com.google.GoogleUpdater.wake.plist
+[3863:63151608:1008/064323.727012:VERBOSE2:chrome/updater/prefs.cc:113] CreateGlobalPrefsInternal
+[3863:63151608:1008/064323.728045:VERBOSE1:chrome/updater/prefs.cc:159] UpdaterPrefsImpl (global): /Users/me/Library/Application Support/Google/GoogleUpdater
+[3863:63151611:1008/064323.728196:VERBOSE2:chrome/updater/event_history.cc:265] Emitted a ACTIVATE START event to the history log
+[3863:63151611:1008/064323.728223:VERBOSE1:chrome/updater/prefs.cc:251] Prefs committed.
+[3863:63151608:1008/064323.728333:VERBOSE1:chrome/updater/prefs.cc:164] ~UpdaterPrefsImpl: /Users/me/Library/Application Support/Google/GoogleUpdater
+[3863:63151611:1008/064323.728366:VERBOSE2:chrome/updater/event_history.cc:265] Emitted a ACTIVATE END event to the history log
+[3863:63151572:1008/064323.728376:VERBOSE1:chrome/updater/ipc/update_service_internal_proxy_mojo.cc:73] Hello
+[3863:63151608:1008/064323.744774:VERBOSE1:chrome/updater/ipc/update_service_dialer_mac.cc:37] DialUpdateService launcher failure: launcher: posix_spawn failed: No such file or directory
+
+[3863:63151608:1008/064323.744850:VERBOSE1:chrome/updater/ipc/update_service_dialer_posix.cc:56] Failed to connect to remote mojo service, is_internal_service: 1, scope: User, no updater exists.
+[3863:63151572:1008/064323.744888:VERBOSE2:chrome/updater/ipc/update_service_internal_proxy_mojo.cc:119] No endpoint received.
+[3863:63151572:1008/064323.744972:VERBOSE1:chrome/updater/ipc/update_service_internal_proxy_mojo.cc:73] Hello
+[3863:63151608:1008/064323.768140:VERBOSE1:chrome/updater/ipc/update_service_dialer_mac.cc:37] DialUpdateService launcher failure: launcher: posix_spawn failed: No such file or directory
+
+[3863:63151608:1008/064323.768194:VERBOSE1:chrome/updater/ipc/update_service_dialer_posix.cc:56] Failed to connect to remote mojo service, is_internal_service: 1, scope: User, no updater exists.
+[3863:63151572:1008/064323.768226:VERBOSE2:chrome/updater/ipc/update_service_internal_proxy_mojo.cc:119] No endpoint received.
+[3863:63151572:1008/064323.768252:VERBOSE1:chrome/updater/ipc/update_service_internal_proxy_mojo.cc:73] Hello
+[3863:63151608:1008/064323.776495:VERBOSE1:chrome/updater/ipc/update_service_dialer_mac.cc:37] DialUpdateService launcher failure: launcher: posix_spawn failed: No such file or directory
+
+[3863:63151608:1008/064323.776543:VERBOSE1:chrome/updater/ipc/update_service_dialer_posix.cc:56] Failed to connect to remote mojo service, is_internal_service: 1, scope: User, no updater exists.
+[3863:63151572:1008/064323.776578:VERBOSE2:chrome/updater/ipc/update_service_internal_proxy_mojo.cc:119] No endpoint received.
+[3863:63151572:1008/064323.776654:VERBOSE1:chrome/updater/ipc/update_service_proxy_mojo.cc:441] ~UpdateServiceProxyMojoImpl
+[3863:63151572:1008/064323.776673:VERBOSE1:chrome/updater/ipc/update_service_proxy_mojo.cc:235] RegisterApp
+[3863:63151572:1008/064323.776685:VERBOSE1:chrome/updater/ipc/update_service_proxy_mojo.cc:446] EnsureConnecting
+[3863:63151608:1008/064323.787651:VERBOSE1:chrome/updater/ipc/update_service_dialer_mac.cc:37] DialUpdateService launcher failure: launcher: posix_spawn failed: No such file or directory
+
+[3863:63151608:1008/064323.787721:VERBOSE1:chrome/updater/ipc/update_service_dialer_posix.cc:56] Failed to connect to remote mojo service, is_internal_service: 0, scope: User, no updater exists.
+[3863:63151572:1008/064323.787762:VERBOSE1:chrome/updater/ipc/update_service_proxy_mojo.cc:395] OnConnected
+[3863:63151572:1008/064323.787790:VERBOSE1:chrome/updater/ipc/update_service_proxy_mojo.cc:235] RegisterApp
+[3863:63151572:1008/064323.787797:VERBOSE1:chrome/updater/ipc/update_service_proxy_mojo.cc:446] EnsureConnecting
+[3863:63151608:1008/064323.799297:VERBOSE1:chrome/updater/ipc/update_service_dialer_mac.cc:37] DialUpdateService launcher failure: launcher: posix_spawn failed: No such file or directory
+
+[3863:63151608:1008/064323.799366:VERBOSE1:chrome/updater/ipc/update_service_dialer_posix.cc:56] Failed to connect to remote mojo service, is_internal_service: 0, scope: User, no updater exists.
+[3863:63151572:1008/064323.799405:VERBOSE1:chrome/updater/ipc/update_service_proxy_mojo.cc:395] OnConnected
+[3863:63151572:1008/064323.799432:VERBOSE1:chrome/updater/ipc/update_service_proxy_mojo.cc:235] RegisterApp
+[3863:63151572:1008/064323.799448:VERBOSE1:chrome/updater/ipc/update_service_proxy_mojo.cc:446] EnsureConnecting
+[3863:63151608:1008/064323.817151:VERBOSE1:chrome/updater/ipc/update_service_dialer_mac.cc:37] DialUpdateService launcher failure: launcher: posix_spawn failed: No such file or directory
+
+[3863:63151608:1008/064323.817200:VERBOSE1:chrome/updater/ipc/update_service_dialer_posix.cc:56] Failed to connect to remote mojo service, is_internal_service: 0, scope: User, no updater exists.
+[3863:63151572:1008/064323.817241:VERBOSE1:chrome/updater/ipc/update_service_proxy_mojo.cc:395] OnConnected
+[3863:63151572:1008/064323.817855:VERBOSE2:chrome/updater/app/app_install.cc:302] Updater registration failed: 35
+[3863:63151608:1008/064323.817946:VERBOSE2:components/update_client/update_client.cc:305] SendPing
+[3863:63151608:1008/064323.817964:VERBOSE2:components/update_client/update_client.cc:157] RunTask
+[3863:63151608:1008/064323.818285:VERBOSE2:components/update_client/request_sender.cc:110] url: https://update.googleapis.com/service/update2/json
+[3863:63151608:1008/064323.818300:VERBOSE2:components/update_client/request_sender.cc:119] Sending Omaha request: {"request":{"@os":"mac","@updater":"GoogleUpdater","acceptformat":"crx3,download,puff,run,xz,zucc","apps":[{"appid":"{44fc7fe2-65ce-487c-93f4-edee46eeaaab}","enabled":true,"events":[{"errorcode":3,"eventresult":0,"eventtype":2,"previousversion":"152.0.7933.0"}],"installdate":0,"version":"152.0.7933.0"}],"arch":"arm64","dedup":"cr","hw":{"avx":false,"physmemory":36,"sse":false,"sse2":false,"sse3":false,"sse41":false,"sse42":false,"ssse3":false},"ismachine":false,"os":{"arch":"arm64","platform":"Mac OS X","version":"26.6.2"},"prodversion":"152.0.7933.0","protocol":"4.0","requestid":"{88685365-6488-4773-9280-5369bc2da847}","sessionid":"{7f730815-2884-4f00-8616-2bd2115d088d}","updaterversion":"152.0.7933.0"}}
+[3863:63151611:1008/064323.818560:VERBOSE2:chrome/updater/event_history.cc:265] Emitted a POST_REQUEST START event to the history log
+[3863:63151608:1008/064323.819491:VERBOSE1:chrome/updater/net/network_fetcher_mac.mm:824] Posting data: {"request":{"@os":"mac","@updater":"GoogleUpdater","acceptformat":"crx3,download,puff,run,xz,zucc","apps":[{"appid":"{44fc7fe2-65ce-487c-93f4-edee46eeaaab}","enabled":true,"events":[{"errorcode":3,"eventresult":0,"eventtype":2,"previousversion":"152.0.7933.0"}],"installdate":0,"version":"152.0.7933.0"}],"arch":"arm64","dedup":"cr","hw":{"avx":false,"physmemory":36,"sse":false,"sse2":false,"sse3":false,"sse41":false,"sse42":false,"ssse3":false},"ismachine":false,"os":{"arch":"arm64","platform":"Mac OS X","version":"26.6.2"},"prodversion":"152.0.7933.0","protocol":"4.0","requestid":"{88685365-6488-4773-9280-5369bc2da847}","sessionid":"{7f730815-2884-4f00-8616-2bd2115d088d}","updaterversion":"152.0.7933.0"}}
+[3863:63151608:1008/064324.032183:VERBOSE1:components/update_client/request_sender.cc:203] Request completed from url: https://update.googleapis.com/service/update2/json
+[3863:63151608:1008/064324.032228:VERBOSE2:components/update_client/request_sender.cc:151] Omaha response received: )]}'
+{"response":{"server":"prod","protocol":"4.0","daystart":{"elapsed_seconds":24204,"elapsed_days":7220},"apps":[{"appid":"{44fc7fe2-65ce-487c-93f4-edee46eeaaab}","status":"ok","events":[{"status":"ok"}]}]}}
+[3863:63151608:1008/064324.032241:VERBOSE2:components/update_client/request_sender.cc:259] TakeRequestSenderCallback
+[3863:63151611:1008/064324.032242:VERBOSE2:chrome/updater/event_history.cc:265] Emitted a POST_REQUEST END event to the history log
+[3863:63151608:1008/064324.032253:VERBOSE2:components/update_client/task_send_ping.cc:58] TaskComplete
+[3863:63151608:1008/064324.032319:VERBOSE2:components/update_client/update_client.cc:183] OnTaskComplete: tasks_.empty(): 1, task_queue_.empty(): 1, error: 0
+[3863:63151572:1008/064324.032360:VERBOSE1:chrome/updater/app/app.cc:52] Shutdown: 3
+[3863:63151572:1008/064324.032377:VERBOSE1:chrome/updater/ipc/update_service_proxy_mojo.cc:441] ~UpdateServiceProxyMojoImpl
+[3863:63151572:1008/064324.032978:VERBOSE2:chrome/updater/event_history.cc:265] Emitted a UPDATER_PROCESS END event to the history log
+[3863:63151572:1008/064324.033010:VERBOSE1:chrome/updater/updater.cc:419] UpdaterMain (--install) returned 3.
+[3865:63151600:1008/064324.036179:VERBOSE2:chrome/updater/event_history.cc:265] Emitted a UPDATER_PROCESS END event to the history log
+[3865:63151600:1008/064324.036208:VERBOSE1:chrome/updater/updater.cc:419] UpdaterMain (--crash-handler) returned 0.
+[2390:63131433:1008/064324.192434:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064324.198009:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064324.211185:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064324.215731:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064324.215953:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064324.465275:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[3890:63151850:1008/064324.488631:VERBOSE1:chrome/updater/updater.cc:374] Version: 152.0.7933.0, opt, ARM_64, command line: /Users/me/Library/Application Support/Google/GoogleUpdater/152.0.7933.0/GoogleUpdater.app/Contents/MacOS/GoogleUpdater --wake-all --enable-logging --vmodule=*/components/update_client/*=2,*/chrome/enterprise_companion/*=2,*/chrome/updater/*=2
+[3890:63151850:1008/064324.489983:VERBOSE1:chrome/updater/updater.cc:377] OS version: 26.6.2, arch: arm64, System uptime (seconds): 1006571, parent pid: 2360
+[3890:63151850:1008/064324.493470:VERBOSE1:chrome/updater/updater.cc:382] Available disk space in install directory (/Users/me/Library/Application Support/Google/GoogleUpdater): 138178560B (131.777MiB) / 994662584320B (926.352GiB)
+[3890:63151850:1008/064324.493520:VERBOSE1:chrome/updater/updater.cc:386] Available disk space in temporary directory (/var/folders/_b/0vl_rrg956l17vk8xl5mxps40000gn/T/): 138178560B (131.777MiB) / 994662584320B (926.352GiB)
+[3890:63151850:1008/064324.493822:VERBOSE2:chrome/updater/event_history.cc:265] Emitted a UPDATER_PROCESS START event to the history log
+[3893:63151887:1008/064324.510169:VERBOSE1:chrome/updater/updater.cc:374] Version: 152.0.7933.0, opt, ARM_64, command line: /Users/me/Library/Application Support/Google/GoogleUpdater/152.0.7933.0/GoogleUpdater.app/Contents/MacOS/GoogleUpdater --crash-handler --database=/Users/me/Library/Application Support/Google/GoogleUpdater/152.0.7933.0/Crashpad --url=https://clients2.google.com/cr/report --annotation=prod=Update4 --annotation=ver=152.0.7933.0 --handshake-fd=6 --enable-logging --vmodule=*/components/update_client/*=2,*/chrome/enterprise_companion/*=2,*/chrome/updater/*=2
+[3893:63151887:1008/064324.512835:VERBOSE1:chrome/updater/updater.cc:377] OS version: 26.6.2, arch: arm64, System uptime (seconds): 1006571, parent pid: 1
+[3893:63151887:1008/064324.516381:VERBOSE1:chrome/updater/updater.cc:382] Available disk space in install directory (/Users/me/Library/Application Support/Google/GoogleUpdater): 138170368B (131.770MiB) / 994662584320B (926.352GiB)
+[3893:63151887:1008/064324.516408:VERBOSE1:chrome/updater/updater.cc:386] Available disk space in temporary directory (/var/folders/_b/0vl_rrg956l17vk8xl5mxps40000gn/T/): 138170368B (131.770MiB) / 994662584320B (926.352GiB)
+[3893:63151887:1008/064324.516923:VERBOSE2:chrome/updater/event_history.cc:265] Emitted a UPDATER_PROCESS START event to the history log
+[3890:63151850:1008/064324.517604:VERBOSE1:chrome/updater/crash_reporter.cc:124] Crash handler launched and ready.
+[3890:63151850:1008/064324.518882:VERBOSE1:chrome/updater/crash_client.cc:108] Found 0 completed crash reports
+[3890:63151850:1008/064324.519080:VERBOSE1:chrome/updater/crash_client.cc:132] Found 0 pending crash reports
+[3890:63151850:1008/064324.519346:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /Users/me/Library/Application Support/Google/RLZ/Crashpad/settings.dat: No such file or directory (2)
+[3890:63151850:1008/064324.519889:VERBOSE1:chrome/updater/updater.cc:105] Crash reporting initialized.
+[3890:63151922:1008/064324.520553:VERBOSE1:chrome/updater/app/app_wakeall.cc:58] Launching `/Users/me/Library/Application Support/Google/GoogleUpdater/156.0.8067.0/GoogleUpdater.app/Contents/MacOS/GoogleUpdater --wake`
+[3898:63151926:1008/064324.557133:VERBOSE1:chrome/updater/updater.cc:364] Version: 156.0.8067.0, opt, ARM_64, command line: /Users/me/Library/Application Support/Google/GoogleUpdater/156.0.8067.0/GoogleUpdater.app/Contents/MacOS/GoogleUpdater --wake --enable-logging --vmodule=*/components/update_client/*=2,*/chrome/enterprise_companion/*=2,*/chrome/updater/*=2
+[3898:63151926:1008/064324.558328:VERBOSE1:chrome/updater/updater.cc:367] OS version: 26.6.2, arch: arm64, System uptime (seconds): 1006571, parent pid: 3890
+[3898:63151926:1008/064324.563861:VERBOSE1:chrome/updater/updater.cc:372] Available disk space in install directory (/Users/me/Library/Application Support/Google/GoogleUpdater): 138166272B (131.766MiB) / 994662584320B (926.352GiB)
+[3898:63151926:1008/064324.564263:VERBOSE1:chrome/updater/updater.cc:376] Available disk space in temporary directory (/var/folders/_b/0vl_rrg956l17vk8xl5mxps40000gn/T/): 138166272B (131.766MiB) / 994662584320B (926.352GiB)
+[3898:63151926:1008/064324.565408:VERBOSE2:chrome/updater/event_history.cc:266] Emitted a UPDATER_PROCESS START event to the history log
+[3902:63152005:1008/064324.588459:VERBOSE1:chrome/updater/updater.cc:364] Version: 156.0.8067.0, opt, ARM_64, command line: /Users/me/Library/Application Support/Google/GoogleUpdater/156.0.8067.0/GoogleUpdater.app/Contents/MacOS/GoogleUpdater --crash-handler --database=/Users/me/Library/Application Support/Google/GoogleUpdater/156.0.8067.0/Crashpad --url=https://clients2.google.com/cr/report --annotation=prod=Update4 --annotation=ver=156.0.8067.0 --handshake-fd=6 --enable-logging --vmodule=*/components/update_client/*=2,*/chrome/enterprise_companion/*=2,*/chrome/updater/*=2
+[3902:63152005:1008/064324.589527:VERBOSE1:chrome/updater/updater.cc:367] OS version: 26.6.2, arch: arm64, System uptime (seconds): 1006571, parent pid: 1
+[3902:63152005:1008/064324.593240:VERBOSE1:chrome/updater/updater.cc:372] Available disk space in install directory (/Users/me/Library/Application Support/Google/GoogleUpdater): 138158080B (131.758MiB) / 994662584320B (926.352GiB)
+[3902:63152005:1008/064324.593269:VERBOSE1:chrome/updater/updater.cc:376] Available disk space in temporary directory (/var/folders/_b/0vl_rrg956l17vk8xl5mxps40000gn/T/): 138158080B (131.758MiB) / 994662584320B (926.352GiB)
+[3902:63152005:1008/064324.593440:VERBOSE2:chrome/updater/event_history.cc:266] Emitted a UPDATER_PROCESS START event to the history log
+[3898:63151926:1008/064324.596377:VERBOSE1:chrome/updater/crash_reporter.cc:123] Crash handler launched and ready.
+[3898:63151926:1008/064324.600671:VERBOSE1:chrome/updater/crash_client.cc:108] Found 0 completed crash reports
+[3898:63151926:1008/064324.600900:VERBOSE1:chrome/updater/crash_client.cc:132] Found 0 pending crash reports
+[3898:63151926:1008/064324.601782:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /Users/me/Library/Application Support/Google/RLZ/Crashpad/settings.dat: No such file or directory (2)
+[3898:63151926:1008/064324.603200:VERBOSE1:chrome/updater/updater.cc:105] Crash reporting initialized.
+[3898:63151926:1008/064324.604837:VERBOSE1:chrome/updater/ipc/update_service_internal_proxy_mojo.cc:61] Run
+[3898:63152051:1008/064324.615592:VERBOSE1:chrome/updater/ipc/update_service_dialer_mac.cc:37] DialUpdateService launcher failure: launcher: posix_spawn failed: No such file or directory
+
+[3898:63152051:1008/064324.615679:VERBOSE1:chrome/updater/ipc/update_service_dialer_posix.cc:56] Failed to connect to remote mojo service, is_internal_service: 1, scope: User, no updater exists.
+[3898:63151926:1008/064324.615761:VERBOSE2:chrome/updater/ipc/update_service_internal_proxy_mojo.cc:119] No endpoint received.
+[3898:63151926:1008/064324.615848:VERBOSE1:chrome/updater/ipc/update_service_internal_proxy_mojo.cc:61] Run
+[3898:63152051:1008/064324.623347:VERBOSE1:chrome/updater/ipc/update_service_dialer_mac.cc:37] DialUpdateService launcher failure: launcher: posix_spawn failed: No such file or directory
+
+[3898:63152051:1008/064324.623390:VERBOSE1:chrome/updater/ipc/update_service_dialer_posix.cc:56] Failed to connect to remote mojo service, is_internal_service: 1, scope: User, no updater exists.
+[3898:63151926:1008/064324.623426:VERBOSE2:chrome/updater/ipc/update_service_internal_proxy_mojo.cc:119] No endpoint received.
+[3898:63151926:1008/064324.623453:VERBOSE1:chrome/updater/ipc/update_service_internal_proxy_mojo.cc:61] Run
+[3898:63152051:1008/064324.631787:VERBOSE1:chrome/updater/ipc/update_service_dialer_mac.cc:37] DialUpdateService launcher failure: launcher: posix_spawn failed: No such file or directory
+
+[3898:63152051:1008/064324.631859:VERBOSE1:chrome/updater/ipc/update_service_dialer_posix.cc:56] Failed to connect to remote mojo service, is_internal_service: 1, scope: User, no updater exists.
+[3898:63151926:1008/064324.631907:VERBOSE2:chrome/updater/ipc/update_service_internal_proxy_mojo.cc:119] No endpoint received.
+[3898:63151926:1008/064324.631943:VERBOSE1:chrome/updater/app/app.cc:52] Shutdown: 0
+[3898:63151926:1008/064324.632731:VERBOSE2:chrome/updater/event_history.cc:266] Emitted a UPDATER_PROCESS END event to the history log
+[3898:63151926:1008/064324.632766:VERBOSE1:chrome/updater/updater.cc:409] UpdaterMain (--wake) returned 0.
+[3902:63152005:1008/064324.634445:VERBOSE2:chrome/updater/event_history.cc:266] Emitted a UPDATER_PROCESS END event to the history log
+[3902:63152005:1008/064324.634489:VERBOSE1:chrome/updater/updater.cc:409] UpdaterMain (--crash-handler) returned 0.
+[3890:63151922:1008/064324.644658:VERBOSE1:chrome/updater/app/app_wakeall.cc:68] `/Users/me/Library/Application Support/Google/GoogleUpdater/156.0.8067.0/GoogleUpdater.app/Contents/MacOS/GoogleUpdater --wake` exited 0
+[3890:63151922:1008/064324.644774:VERBOSE1:chrome/updater/app/app_wakeall.cc:58] Launching `/Users/me/Library/Application Support/Google/GoogleUpdater/152.0.7933.0/GoogleUpdater.app/Contents/MacOS/GoogleUpdater --wake`
+[3914:63152112:1008/064324.659151:VERBOSE1:chrome/updater/updater.cc:374] Version: 152.0.7933.0, opt, ARM_64, command line: /Users/me/Library/Application Support/Google/GoogleUpdater/152.0.7933.0/GoogleUpdater.app/Contents/MacOS/GoogleUpdater --wake --enable-logging --vmodule=*/components/update_client/*=2,*/chrome/enterprise_companion/*=2,*/chrome/updater/*=2
+[3914:63152112:1008/064324.660239:VERBOSE1:chrome/updater/updater.cc:377] OS version: 26.6.2, arch: arm64, System uptime (seconds): 1006571, parent pid: 3890
+[3914:63152112:1008/064324.664087:VERBOSE1:chrome/updater/updater.cc:382] Available disk space in install directory (/Users/me/Library/Application Support/Google/GoogleUpdater): 138027008B (131.633MiB) / 994662584320B (926.352GiB)
+[3914:63152112:1008/064324.664125:VERBOSE1:chrome/updater/updater.cc:386] Available disk space in temporary directory (/var/folders/_b/0vl_rrg956l17vk8xl5mxps40000gn/T/): 138027008B (131.633MiB) / 994662584320B (926.352GiB)
+[3914:63152112:1008/064324.664246:VERBOSE2:chrome/updater/event_history.cc:265] Emitted a UPDATER_PROCESS START event to the history log
+[2390:63131433:1008/064324.690752:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[3918:63152136:1008/064324.692212:VERBOSE1:chrome/updater/updater.cc:374] Version: 152.0.7933.0, opt, ARM_64, command line: /Users/me/Library/Application Support/Google/GoogleUpdater/152.0.7933.0/GoogleUpdater.app/Contents/MacOS/GoogleUpdater --crash-handler --database=/Users/me/Library/Application Support/Google/GoogleUpdater/152.0.7933.0/Crashpad --url=https://clients2.google.com/cr/report --annotation=prod=Update4 --annotation=ver=152.0.7933.0 --handshake-fd=6 --enable-logging --vmodule=*/components/update_client/*=2,*/chrome/enterprise_companion/*=2,*/chrome/updater/*=2
+[2390:63131433:1008/064324.694330:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[3918:63152136:1008/064324.693196:VERBOSE1:chrome/updater/updater.cc:377] OS version: 26.6.2, arch: arm64, System uptime (seconds): 1006571, parent pid: 1
+[3918:63152136:1008/064324.697201:VERBOSE1:chrome/updater/updater.cc:382] Available disk space in install directory (/Users/me/Library/Application Support/Google/GoogleUpdater): 138027008B (131.633MiB) / 994662584320B (926.352GiB)
+[3918:63152136:1008/064324.697216:VERBOSE1:chrome/updater/updater.cc:386] Available disk space in temporary directory (/var/folders/_b/0vl_rrg956l17vk8xl5mxps40000gn/T/): 138027008B (131.633MiB) / 994662584320B (926.352GiB)
+[3918:63152136:1008/064324.697304:VERBOSE2:chrome/updater/event_history.cc:265] Emitted a UPDATER_PROCESS START event to the history log
+[3914:63152112:1008/064324.698106:VERBOSE1:chrome/updater/crash_reporter.cc:124] Crash handler launched and ready.
+[2390:63131433:1008/064324.700927:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064324.701764:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064324.701895:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[3914:63152112:1008/064324.704927:VERBOSE1:chrome/updater/crash_client.cc:108] Found 0 completed crash reports
+[3914:63152112:1008/064324.706717:VERBOSE1:chrome/updater/crash_client.cc:132] Found 0 pending crash reports
+[3914:63152112:1008/064324.706844:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /Users/me/Library/Application Support/Google/RLZ/Crashpad/settings.dat: No such file or directory (2)
+[3914:63152112:1008/064324.707207:VERBOSE1:chrome/updater/updater.cc:105] Crash reporting initialized.
+[3914:63152112:1008/064324.707543:VERBOSE1:chrome/updater/ipc/update_service_internal_proxy_mojo.cc:61] Run
+[3914:63152182:1008/064324.724051:VERBOSE1:chrome/updater/ipc/update_service_dialer_mac.cc:37] DialUpdateService launcher failure: launcher: posix_spawn failed: No such file or directory
+
+[3914:63152182:1008/064324.724137:VERBOSE1:chrome/updater/ipc/update_service_dialer_posix.cc:56] Failed to connect to remote mojo service, is_internal_service: 1, scope: User, no updater exists.
+[3914:63152112:1008/064324.725378:VERBOSE2:chrome/updater/ipc/update_service_internal_proxy_mojo.cc:119] No endpoint received.
+[3914:63152112:1008/064324.726030:VERBOSE1:chrome/updater/ipc/update_service_internal_proxy_mojo.cc:61] Run
+[3914:63152182:1008/064324.736539:VERBOSE1:chrome/updater/ipc/update_service_dialer_mac.cc:37] DialUpdateService launcher failure: launcher: posix_spawn failed: No such file or directory
+
+[3914:63152182:1008/064324.736572:VERBOSE1:chrome/updater/ipc/update_service_dialer_posix.cc:56] Failed to connect to remote mojo service, is_internal_service: 1, scope: User, no updater exists.
+[3914:63152112:1008/064324.736621:VERBOSE2:chrome/updater/ipc/update_service_internal_proxy_mojo.cc:119] No endpoint received.
+[3914:63152112:1008/064324.736696:VERBOSE1:chrome/updater/ipc/update_service_internal_proxy_mojo.cc:61] Run
+[3914:63152182:1008/064324.747673:VERBOSE1:chrome/updater/ipc/update_service_dialer_mac.cc:37] DialUpdateService launcher failure: launcher: posix_spawn failed: No such file or directory
+
+[3914:63152182:1008/064324.747819:VERBOSE1:chrome/updater/ipc/update_service_dialer_posix.cc:56] Failed to connect to remote mojo service, is_internal_service: 1, scope: User, no updater exists.
+[3914:63152112:1008/064324.747852:VERBOSE2:chrome/updater/ipc/update_service_internal_proxy_mojo.cc:119] No endpoint received.
+[3914:63152112:1008/064324.747876:VERBOSE1:chrome/updater/app/app.cc:52] Shutdown: 0
+[3914:63152112:1008/064324.748458:VERBOSE2:chrome/updater/event_history.cc:265] Emitted a UPDATER_PROCESS END event to the history log
+[3914:63152112:1008/064324.748620:VERBOSE1:chrome/updater/updater.cc:419] UpdaterMain (--wake) returned 0.
+[3918:63152136:1008/064324.751417:VERBOSE2:chrome/updater/event_history.cc:265] Emitted a UPDATER_PROCESS END event to the history log
+[3918:63152136:1008/064324.751465:VERBOSE1:chrome/updater/updater.cc:419] UpdaterMain (--crash-handler) returned 0.
+[3890:63151922:1008/064324.764384:VERBOSE1:chrome/updater/app/app_wakeall.cc:68] `/Users/me/Library/Application Support/Google/GoogleUpdater/152.0.7933.0/GoogleUpdater.app/Contents/MacOS/GoogleUpdater --wake` exited 0
+[3890:63151850:1008/064324.766751:VERBOSE1:chrome/updater/app/app.cc:52] Shutdown: 0
+[3890:63151850:1008/064324.773816:VERBOSE2:chrome/updater/event_history.cc:265] Emitted a UPDATER_PROCESS END event to the history log
+[3890:63151850:1008/064324.773891:VERBOSE1:chrome/updater/updater.cc:419] UpdaterMain (--wake-all) returned 0.
+[3893:63151887:1008/064324.777139:VERBOSE2:chrome/updater/event_history.cc:265] Emitted a UPDATER_PROCESS END event to the history log
+[3893:63151887:1008/064324.777199:VERBOSE1:chrome/updater/updater.cc:419] UpdaterMain (--crash-handler) returned 0.
+[2390:63131433:1008/064325.191808:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064325.198182:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064325.198305:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064325.198396:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064325.198460:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064325.664785:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064325.664904:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064325.698248:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064325.698454:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064325.698577:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064326.308967:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064326.315168:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064326.315388:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064326.315456:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064326.316214:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064326.943828:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064326.947766:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064326.950473:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064326.950731:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064326.950966:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064327.536358:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064327.539687:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064327.542989:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064327.543361:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+[2390:63131433:1008/064327.543551:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670

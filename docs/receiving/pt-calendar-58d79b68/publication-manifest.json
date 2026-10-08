@@ -1,0 +1,2225 @@
+{
+  "schema": "pt_calendar.complete_publication_manifest.v1",
+  "recorded_at": "2026-10-08T14:47:44.175Z",
+  "canonical_parent": "5a70e458ed455d47ef672ed9b5a614ec59812f0c",
+  "qualified_native_source": "33432db05b9def1a249650c79571402400c18d15",
+  "qualified_pt_tree": "46ea80e968210b2f8ef694ba2704c8e1a95f9ccb",
+  "excluded_self": "docs/receiving/pt-calendar-58d79b68/publication-manifest.json",
+  "files": [
+    {
+      "path": "pt_auth/README.md",
+      "bytes": 23084,
+      "sha256": "a23a1f70a2579b81dad2166571be6b1301400ffa9a0893b13cd4ad31d8217faf",
+      "blob": "2c6440e7f9bdbc9f4d15e60d05b5626921d35cef",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "qualified_source"
+    },
+    {
+      "path": "pt_auth/ptauth/calendar_ui.js",
+      "bytes": 8448,
+      "sha256": "b91fe76b947f381b2fa0835646fc664bf7eaa4474631ae3c9e5cb3968b9cdf3a",
+      "blob": "a6ba45ec85c28f7fd80d7e2fdd32ac62e96daa99",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "qualified_source"
+    },
+    {
+      "path": "pt_auth/ptauth/cli.py",
+      "bytes": 5071,
+      "sha256": "cd4e5ed987b6ae686de687eabbb69007ab9cda8204ec41ebb25185f864321585",
+      "blob": "559c0a76effa2204041e9318e9869a6c7389f50d",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "qualified_source"
+    },
+    {
+      "path": "pt_auth/ptauth/ui.html",
+      "bytes": 18655,
+      "sha256": "a59df72e1edf5075e513047eb4000e94a87bf1dbcde8d243547944c283bbd492",
+      "blob": "ec2e198ee1873c41981d201c78a63dbccc13afad",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "qualified_source"
+    },
+    {
+      "path": "pt_auth/ptauth/web.py",
+      "bytes": 8633,
+      "sha256": "18a5f6e889f2a5d7e0e3704989f041681252df3ee0cb29e3c356aff560fd2967",
+      "blob": "7e5d38f4cf8c33f4b9c91bd3c3d929fcfa0f80b3",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "qualified_source"
+    },
+    {
+      "path": "pt_auth/ptauth/worklist_calendar.py",
+      "bytes": 13750,
+      "sha256": "89751f1de5548ced34a59c296d0edf1eda06a38bdb935be3e7c3c8b2ae5d55c0",
+      "blob": "e125f9ed77343fcc3d82e6d6f25a7296b0463aa7",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "qualified_source"
+    },
+    {
+      "path": "pt_auth/tests/browser/uncovered_review.test.cjs",
+      "bytes": 9085,
+      "sha256": "55cdcce692418e4746128b76a5a02c50b08704db4a3228575af1b167d940f2ae",
+      "blob": "4093e4b85569cf1422fe440cf55e83addd324c9f",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "qualified_source"
+    },
+    {
+      "path": "pt_auth/tests/test_worklist_calendar.py",
+      "bytes": 20398,
+      "sha256": "083b3f29409e0e4fe4c55d2c93744740baba7d24fc3c82ec12137b0d5f981b2b",
+      "blob": "99334636ddb2a051e1d50686934b4bf308d2be58",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "qualified_source"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/README.md",
+      "bytes": 10786,
+      "sha256": "f03736777ae7588de1dbd977fb319987d83e9ffb490668a6de849c14d0a3e1e3",
+      "blob": "f20a20bdaed8e071ba251ee4592e60879586c10e",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/README.md",
+      "bytes": 10519,
+      "sha256": "26b05e07476cb1bc3d2814a56aebeb5d0cc2de4cc5f757c3d0ded80d319c1050",
+      "blob": "e4775800dbb6892ec9a114238ad81547d13c7947",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/RECEIVER-SPEC-v2.md",
+      "bytes": 7299,
+      "sha256": "17dbd8b0d7c729b1cb261e34375abc3dbbf266faeea0b6ebb7a07ab5a6668d7c",
+      "blob": "c1bc782bf59d4073b9fcaae9173426c44dca8475",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/RECEIVER-SPEC.md",
+      "bytes": 7287,
+      "sha256": "3a10dc0986c03b44b6ff02fd6e927f7734e88791205f46d34c2ef52c2e4859a4",
+      "blob": "c0cb345fef6d44bba28807c98d231684a883b219",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/archive_materialize_v1.py",
+      "bytes": 2002,
+      "sha256": "b2f2de8a98fdeaf217f43fa031c427ca0c90828043f2106a8863f4d2965c9fc6",
+      "blob": "e1b527af7ac9922c226a0e95948338459e967d3d",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/archive_materialize_v2.py",
+      "bytes": 2636,
+      "sha256": "a8f74cc0f40a69bc4de9948c1d6eb34c65ca22c19ea8b5176792fd9185777be3",
+      "blob": "7bcf1093a12fb303ebabd36c56491c2e0a1adb40",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/asof-original-engine-v2/after_all_appointments/audit.jsonl",
+      "bytes": 322,
+      "sha256": "40cacc4bdd083c02a1e228bdb6f3e478dbc0f7b8a8dadd7d4c6d596ff596d7cd",
+      "blob": "fad8384d776fa58958ad739c231b6e0c85904e07",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/asof-original-engine-v2/after_all_appointments/digest.html",
+      "bytes": 4740,
+      "sha256": "077bb3109454ec7cbf5c05a65338cea779bb80608260110b53af7dc76f8a87bf",
+      "blob": "e1fe3aefc95d1f64cf2710b024027696980b4fc1",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/asof-original-engine-v2/after_all_appointments/ledger.csv",
+      "bytes": 601,
+      "sha256": "d7e026a4fa157152c3355831fbaf70b79fe5d8eb78c8c98579a19e966fcfccbd",
+      "blob": "16c25756a1e8e59fe4eeeed75871d22510167b38",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/asof-original-engine-v2/after_all_appointments/summary.json",
+      "bytes": 8283,
+      "sha256": "f4ac8bbba21204b122f8dff319cccef63a60073600568f994ddd6cad242715b2",
+      "blob": "b6d1b7c0ee2d6e79ad97df867165faf0be0b27e3",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/asof-original-engine-v2/after_all_appointments/visit_status_review.csv",
+      "bytes": 2026,
+      "sha256": "c165d7d2e7b05dcfb43ab0fa92cbf187606098fcef4eef496aa799c9726050cb",
+      "blob": "e2329f795f0a17d5461d99d035059bd8c1cc04c3",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/asof-original-engine-v2/after_all_appointments/worklist.csv",
+      "bytes": 186,
+      "sha256": "5cb68c9683510c064dcb50baf580c7b4676137cafa44b071c7985d34b11ee05d",
+      "blob": "868cedab733844450840881f52c49d98a2cbe963",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/asof-original-engine-v2/before_appointments/audit.jsonl",
+      "bytes": 322,
+      "sha256": "8706a4d5b62e13bc3a9d9c68b3f6e580babf10d474cf872841dc51463ef311a7",
+      "blob": "cf004589dc518a89c27cee16f3fe30f41d7aa5b9",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/asof-original-engine-v2/before_appointments/digest.html",
+      "bytes": 7443,
+      "sha256": "6806391fa6f13272cc375020b1dec88fee69122d90f8d162841f6dc7e1f6beee",
+      "blob": "a19cfc58479b0e920e28def6e8fef07fe26f694f",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/asof-original-engine-v2/before_appointments/ledger.csv",
+      "bytes": 601,
+      "sha256": "e50ea00f81fb2216d68aa2de9462f8438741037db26f6c582ec124a4a9dcfb21",
+      "blob": "108d9d80d76f7d038fc25d145d36352e3e9ab2d5",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/asof-original-engine-v2/before_appointments/summary.json",
+      "bytes": 11268,
+      "sha256": "2daef3d2c256108a174667eba1034b3f68035b9dba156a118cd5961f409dd48e",
+      "blob": "e3863b5e8d2141ef7c2b1719ec303ebb67783db1",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/asof-original-engine-v2/before_appointments/visit_status_review.csv",
+      "bytes": 125,
+      "sha256": "9cb3e3e82e30935f57448ed826dbd8dab78e39355e3bebba59c478fa355ee170",
+      "blob": "2f954eb61f6a5ed9df00b35756f5f97af5037b1f",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/asof-original-engine-v2/before_appointments/worklist.csv",
+      "bytes": 2432,
+      "sha256": "89dbf8a52961faa189ecfdf474693e71b11a787670098995dca2c8e42fffdc8c",
+      "blob": "35c42c7d241aa95acc0f2796777faf21edd0b3fc",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/asof-original-engine-v2.json",
+      "bytes": 1799,
+      "sha256": "2c067abeb3d75076328b5963f376d6a49c5f7b68e7dc4573eda93bd872292a96",
+      "blob": "801fbdc4f658e5051cb322f3027089e6328a196b",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/asof_original_engine_v2.py",
+      "bytes": 2203,
+      "sha256": "345369744d371e02ce3286d4ccc25b34dbe551b7b114752b3f0aa773d8965ba6",
+      "blob": "4b69be74a26597b6eba6c8d2500055b36ae361a0",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/baseline-source.json",
+      "bytes": 3112,
+      "sha256": "a757e0f79bf34fc3b2e5071d46b76b99e0ec748f9d254d3a20671a0462ca474d",
+      "blob": "621bae6776db75cfcbe781dfc1c6a3fb0da2f1e9",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/blind-freeze-v2.json",
+      "bytes": 1345,
+      "sha256": "e6184f9f55d83fd69cd254f67a1a5b5502736161b2989b43a39f6d216142dba7",
+      "blob": "7f0bcf2065d79ceb433c5b4d9ee6917b6d8c8d34",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/blind-freeze.json",
+      "bytes": 902,
+      "sha256": "84306810fd403a3c9d281fc7519152aa3996db1f1c0193b750d57d7c2beb7498",
+      "blob": "bae85645cc30b3078f7c3e860189245a7bcc9ef5",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/browser-asof-v2/baseline-server.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/browser-asof-v2/baseline-server.stdout.log",
+      "bytes": 253,
+      "sha256": "bd58ba2d2816bcd0e5bc0e0396c1ab6ca0cc52c70c731f4bc95235648104349f",
+      "blob": "4b1c61b6f66dbff54591d202877513f622a03c3a",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/browser-asof-v2/candidate-server.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/browser-asof-v2/candidate-server.stdout.log",
+      "bytes": 255,
+      "sha256": "5e757c47f8227ce963e0b98e2ba5bef3a7d0e464114b2f17433a67eebbaa2435",
+      "blob": "1f865f60c26aa8b6467631b7a8606a52c4e11f8d",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/browser-asof-v2/checks-progress.json",
+      "bytes": 3228,
+      "sha256": "7998c58ec9eed967d4ccf84255eb0e67b4a5004ba26d7ae7b9ef0bffdc0bbf2b",
+      "blob": "3de210341ebaf96377b4f08654fd2cea0adb9c08",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/browser-asof-v2/chrome.stderr.log",
+      "bytes": 1860,
+      "sha256": "9c202031af81a97f19d1a85aa9782bc3770d80cdf925d9e830cb7e895967e6b3",
+      "blob": "4620c01b63fb73b8e4b2bcfddfee55393bb5f2f4",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/browser-asof-v2/downloads/0998809b-9678-49bd-b30c-fb958ded1a8a",
+      "bytes": 4258,
+      "sha256": "1431e2000c2ff1e9906da2406bfc0471a6e83de07622fa4279f8727024f24dd2",
+      "blob": "7bf9a0fcf6691a041080cc740ff9616b83939c61",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/browser-asof-v2/fresh-asof-reviewed.png",
+      "bytes": 177401,
+      "sha256": "3d702a802d85392018d4b8fcca1bde0ee6e40fba9b5a75f6eec1a7b54b0207a2",
+      "blob": "0c4cbc4d2e107a84a9bb867e9e4c3ad107df2caa",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/browser-asof-v2/fresh-reviewed-october-30.ics",
+      "bytes": 4258,
+      "sha256": "1431e2000c2ff1e9906da2406bfc0471a6e83de07622fa4279f8727024f24dd2",
+      "blob": "7bf9a0fcf6691a041080cc740ff9616b83939c61",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/browser-asof-v2/network.json",
+      "bytes": 5279,
+      "sha256": "dd4937a4834a6288c9acf3afc7245ea4057b9957e6c970b1bacfb16472b8e03d",
+      "blob": "02c8c5d0174d9950af90863e9f15d66805f2d530",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/browser-asof-v2/paused-http.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "blob": "fe51488c7066f6687ef680d6bfaa4f7768ef205c",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/browser-asof-v2/result.json",
+      "bytes": 38402,
+      "sha256": "aafb68e2d42f05079169f47989c41919210de7abacb79244247a288fead92c0e",
+      "blob": "15eda5d455c2ae6ccf1882fb9305fb378910963e",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/browser-asof-v2-launch.json",
+      "bytes": 915,
+      "sha256": "c5ffb978f0cf8e759e9ce3a6201f59001579208b9766aaec93a45c16f8413a36",
+      "blob": "47efdacb4ea7e98ddde9303b8b16396bbdb89433",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/browser-asof-v2-profile-cleanup.json",
+      "bytes": 344,
+      "sha256": "5ebbe4c32033657a8f2c26ce3670fe637352e953ddb266c7645a63af7dd194a0",
+      "blob": "53706cd278a75591e3429af33ab93843115df5bd",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/browser-asof-v2.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/browser-asof-v2.stdout.log",
+      "bytes": 223,
+      "sha256": "eed9da9b6ac39b605ed7291cdf87561bd3c8bfab87d905c970304858902898f1",
+      "blob": "d342e3c6465d7776c1e8bdf5be888cbcf4aeddc2",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/browser-v1/after-pending-refresh.ics",
+      "bytes": 2923,
+      "sha256": "9055969b5f6f4850b0c9bea92365186af40bcd259160e6c2e137e627b735a64b",
+      "blob": "8fcce2459260bfab337157c545b40dd01c983704",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/browser-v1/after-retired-failure.ics",
+      "bytes": 2923,
+      "sha256": "c0ac941f2789ac876c2cd072fcf66b2c93531c0e98f6833ad83d2722f2bcb757",
+      "blob": "71072e690cb0e843afcc796f7619d59bf968cd11",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/browser-v1/after-retired-success.ics",
+      "bytes": 2923,
+      "sha256": "c0ac941f2789ac876c2cd072fcf66b2c93531c0e98f6833ad83d2722f2bcb757",
+      "blob": "71072e690cb0e843afcc796f7619d59bf968cd11",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/browser-v1/after-reviewed-report-drift.ics",
+      "bytes": 4258,
+      "sha256": "7adb60a9da721db79111419236be4da7e17dc4bd0e15ee85d615d4ffb6796399",
+      "blob": "f06b89937975131aca016a3893cf16735849bc4c",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/browser-v1/after-reviewed-state-drift.ics",
+      "bytes": 2895,
+      "sha256": "c2ac7d41c3e0dfe6e7c0ef512813f11bbb0c074f659a1b76e5b3ce7bf98ea86c",
+      "blob": "57ac28e3ff08fc36c2746c33a87a2e59f5bd0f8c",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/browser-v1/after-reviewed-state.ics",
+      "bytes": 2923,
+      "sha256": "4fbb6f0b77f46b2d82733287aec6a528e4c6ccaafa88b1597b120eeb7f7acf4d",
+      "blob": "d4415fdb61ee89f5bb946a819860167ece7588c3",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/browser-v1/all-states.ics",
+      "bytes": 4258,
+      "sha256": "4a8635dfd158dbeaa150520520e97ba4616a5689880fab71b9d817f17c5e1d3a",
+      "blob": "d3fa6dddf8b196d579e9758cdfa53d10a64d1880",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/browser-v1/baseline-server.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/browser-v1/baseline-server.stdout.log",
+      "bytes": 248,
+      "sha256": "c6a7abfa51072ad4b5df6aa8d6ef14e957041d9226ecb714b309c351de6b809f",
+      "blob": "4ce20b5f13f988e8cd393c8b957d44a71ecd6374",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/browser-v1/baseline-worklist.png",
+      "bytes": 153436,
+      "sha256": "1796e119aecb80df79607c9f6c779ce9fd1643b4412413109b6c89ed1798dc9f",
+      "blob": "d4cdb3c1a98989540da1fb7d612a2e40c6973b47",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/browser-v1/candidate-server.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/browser-v1/candidate-server.stdout.log",
+      "bytes": 250,
+      "sha256": "5a3fc3b747331188443d17f39af6f1444f3a409875c477956c69e794e85e10be",
+      "blob": "907222818e84c6456739ccc0870fbc07e7110962",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/browser-v1/checks-progress.json",
+      "bytes": 28992,
+      "sha256": "d9071ca433f0668c4ea7ef589b1ffdff263eac3b4b73222ee5d74753d4d1db99",
+      "blob": "e03cde07b96c171479c64dc9cada0e5686812fb3",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/browser-v1/chrome.stderr.log",
+      "bytes": 45949,
+      "sha256": "b2ba854a3873ffe4d23949bbf8255a4791dd757aa08c176bf13dc9fcfa098681",
+      "blob": "2ade58f481e887d7a93a41f699e88aea574ad1d4",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/browser-v1/default-keyboard.ics",
+      "bytes": 4258,
+      "sha256": "3688946d47ccc7a336875a83660a1f4c3045de6d3178ac1dc0e282da39cd41e7",
+      "blob": "2b72b59de6557a7eb4c8d39dababdeed08e88cc3",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/browser-v1/desktop-keyboard-focus.png",
+      "bytes": 175271,
+      "sha256": "055dba360622bd1b89fe84a47652e6def690c644da8b90846c051bdeb4e815c2",
+      "blob": "af9641625463d90df96fb51338f3c1dfe8c5eca4",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/browser-v1/desktop-reviewed-exclusions.png",
+      "bytes": 187906,
+      "sha256": "5ade9893e3d0512befc7e34c16aaa9ab1eb212ab4fc1b472c2b7c2e002b7683c",
+      "blob": "fc2dfb27588d1bcc3ff589752091d8c3dfc8f693",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/browser-v1/downloads/050e42da-e062-40d3-9580-16acbfc63257",
+      "bytes": 2895,
+      "sha256": "c2ac7d41c3e0dfe6e7c0ef512813f11bbb0c074f659a1b76e5b3ce7bf98ea86c",
+      "blob": "57ac28e3ff08fc36c2746c33a87a2e59f5bd0f8c",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/browser-v1/downloads/129babce-a66c-432d-a1c3-5506eb9a8946",
+      "bytes": 1484,
+      "sha256": "ea77fe48cbd0f783f840f4edbcbe8fda1b4461eea977e0551fd87569decd3c90",
+      "blob": "d35ea7ae3e4bec824fc4d7794eef8942bee80915",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/browser-v1/downloads/37a75eec-f7e4-49a8-949e-8826e254fe57",
+      "bytes": 2923,
+      "sha256": "a5d10bd410b6ae55b478aa97d8c79db68196ffa02bf7801c6b9fa4a09df167ad",
+      "blob": "6d0464c3e0e75af74b4f6f27e884b482bae5ddac",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/browser-v1/downloads/5d1f8d08-9f03-47ed-9b1c-6691b7129bd7",
+      "bytes": 4258,
+      "sha256": "7adb60a9da721db79111419236be4da7e17dc4bd0e15ee85d615d4ffb6796399",
+      "blob": "f06b89937975131aca016a3893cf16735849bc4c",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/browser-v1/downloads/66239951-079f-4a3e-9d1d-11a2fdf61066",
+      "bytes": 2923,
+      "sha256": "c0ac941f2789ac876c2cd072fcf66b2c93531c0e98f6833ad83d2722f2bcb757",
+      "blob": "71072e690cb0e843afcc796f7619d59bf968cd11",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/browser-v1/downloads/a64c45c8-de9f-4b0c-82a4-47a343657412",
+      "bytes": 2923,
+      "sha256": "4fbb6f0b77f46b2d82733287aec6a528e4c6ccaafa88b1597b120eeb7f7acf4d",
+      "blob": "d4415fdb61ee89f5bb946a819860167ece7588c3",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/browser-v1/downloads/aa844f38-7156-4060-90d8-012ea9015f81",
+      "bytes": 2923,
+      "sha256": "9055969b5f6f4850b0c9bea92365186af40bcd259160e6c2e137e627b735a64b",
+      "blob": "8fcce2459260bfab337157c545b40dd01c983704",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/browser-v1/downloads/ada41312-808e-46d1-ad5e-5b7c5676a47d",
+      "bytes": 4258,
+      "sha256": "3688946d47ccc7a336875a83660a1f4c3045de6d3178ac1dc0e282da39cd41e7",
+      "blob": "2b72b59de6557a7eb4c8d39dababdeed08e88cc3",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/browser-v1/downloads/c31d671c-c7bb-4778-99c3-1aeea7d7fa0b",
+      "bytes": 2923,
+      "sha256": "c0ac941f2789ac876c2cd072fcf66b2c93531c0e98f6833ad83d2722f2bcb757",
+      "blob": "71072e690cb0e843afcc796f7619d59bf968cd11",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/browser-v1/downloads/f23f1c6e-5ed7-46dc-bc17-a44575ebe0e0",
+      "bytes": 4258,
+      "sha256": "4a8635dfd158dbeaa150520520e97ba4616a5689880fab71b9d817f17c5e1d3a",
+      "blob": "d3fa6dddf8b196d579e9758cdfa53d10a64d1880",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/browser-v1/failure-7.png",
+      "bytes": 130495,
+      "sha256": "0fd2dc392845d905a15246bf88c76e04ff4f37869eb19178e183a611ab852726",
+      "blob": "4ea5adf2001efcc119d5a6ebf4ccece53067de28",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/browser-v1/late-failure-report-after.json",
+      "bytes": 9757,
+      "sha256": "319115da4a4978149e21f9495a07980fc64f9b4f5c0341d2d3d8b4e0f619a0f3",
+      "blob": "191adf2bd0582f9d670781070c1e71d3b0dd0a45",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/browser-v1/late-failure-report-before.json",
+      "bytes": 11268,
+      "sha256": "7992741e2535c87591e1237eb51cfc667cdf2fbf25c8e4e875a5dd59ba0a3ec3",
+      "blob": "dd6348dd6339b449b1446d82175744f49439071e",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/browser-v1/narrow-390-review.png",
+      "bytes": 91759,
+      "sha256": "0374c0b7c7fb8409362a084e44c957de00cb6dbd5ccb5fa94e9136daa6de9219",
+      "blob": "0e0737ff87c6db60545bae4204711518f9adf0ab",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/browser-v1/network.json",
+      "bytes": 67631,
+      "sha256": "d8450293296b7c10c87a0054b2826be08372de81da799ffb58ade028dd5183ac",
+      "blob": "0852d29d8fdbf222506ea231b31571907497a8cb",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/browser-v1/paused-http.json",
+      "bytes": 11433,
+      "sha256": "5515e05ac3a2dd548eb46783232c8473e11780137403e40ed6e460601d667b41",
+      "blob": "60b8d4ff8e37e186110bbd4319aeb445b96e5a5e",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/browser-v1/result.json",
+      "bytes": 87555,
+      "sha256": "1b91dae855a5a60f9a39e5bb94f9275670cfac9f5dc79b8f0f9aff0f11592f5d",
+      "blob": "c7a60c53c3f5bd6edb327c916d9225676a5369a8",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/browser-v1/same-name-east.ics",
+      "bytes": 1484,
+      "sha256": "ea77fe48cbd0f783f840f4edbcbe8fda1b4461eea977e0551fd87569decd3c90",
+      "blob": "d35ea7ae3e4bec824fc4d7794eef8942bee80915",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/browser-v1/same-name-two-clinics.ics",
+      "bytes": 2923,
+      "sha256": "a5d10bd410b6ae55b478aa97d8c79db68196ffa02bf7801c6b9fa4a09df167ad",
+      "blob": "6d0464c3e0e75af74b4f6f27e884b482bae5ddac",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/browser-v1/stale-report-after.json",
+      "bytes": 9757,
+      "sha256": "319115da4a4978149e21f9495a07980fc64f9b4f5c0341d2d3d8b4e0f619a0f3",
+      "blob": "191adf2bd0582f9d670781070c1e71d3b0dd0a45",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/browser-v1/stale-report-before.json",
+      "bytes": 11268,
+      "sha256": "7992741e2535c87591e1237eb51cfc667cdf2fbf25c8e4e875a5dd59ba0a3ec3",
+      "blob": "dd6348dd6339b449b1446d82175744f49439071e",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/browser-v1/stale-staff-state-after.json",
+      "bytes": 804,
+      "sha256": "07dbce7b3945b7f13b1e37eb8477dc16f455cdff96ed946cb9ca369cdbc6d030",
+      "blob": "ea3572e1124d13c56933a3387ceb9701ce809c92",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/browser-v1/stale-staff-state-before.json",
+      "bytes": 657,
+      "sha256": "2348a7fecbc2e7d096dc1f1b8f5724e75e99628f1446a8aa9f4f06a72cd1d59d",
+      "blob": "62bb3b7b8f7c8e9ee1f81cb22d7e354acb642584",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/browser-v1-launch.json",
+      "bytes": 808,
+      "sha256": "722122d89767a862afcc53232b4a301fba4c6c03c6c5baebdcde402bab6f3aa3",
+      "blob": "8463ade06ca24551558bb00ea6ed3b86bf80f9e3",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/browser-v1-profile-cleanup.json",
+      "bytes": 460,
+      "sha256": "f5de03f378cd07785f4185b5a90a1d2e908dc500174541f6c7357150d0230cf2",
+      "blob": "594b4f32c9df66ed9998a828a2b71b065510a32e",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/browser-v1.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/browser-v1.stdout.log",
+      "bytes": 1615,
+      "sha256": "82b7ff575b02a2f329732a0b720366e814a08da1e1a0a0a8b4fb8f583847ba7c",
+      "blob": "f4f748790087c3ef135b1fd69174fb6f74fbf20c",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/browser_asof_receiver_v2.mjs",
+      "bytes": 36689,
+      "sha256": "f0a399e7f67f35804e963276b5b1b96e8ee93ca58d1210fee29ec53135a57b35",
+      "blob": "b7506b6c6beaa12ba071db31255a707f917b085c",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/browser_receiver.mjs",
+      "bytes": 34518,
+      "sha256": "854fd9f8100e9415b23f34fbb7f8e42a0914e3c35e35de4fef5512d7f7b165f1",
+      "blob": "5c7ab17a1e93032829c95e8f856d35ed9d94ce0a",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/build_fixture.py",
+      "bytes": 6766,
+      "sha256": "022c14cd9f47dd3810aa0c71ce8ce595af621cdd5e026f81dc468e3b8c42c6b7",
+      "blob": "d361c94b69c51c76d3e6e50e955664e7197161f4",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/candidate-materialization-v2.json",
+      "bytes": 373,
+      "sha256": "e1506cbd9f1330edae76a4f8d3b5ddac5185a450c5c539b11b20f8546e089cc1",
+      "blob": "478bc449b3639410362adf68dab4cd4603e60e99",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/candidate-source-freeze-v2.json",
+      "bytes": 18360,
+      "sha256": "7cd010c033799766c534cfe2f99edae01488878ffad80cf300463e76ca223b3e",
+      "blob": "0c42dd7e4c70c08bf70a03ec44312b022f055596",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/conscience-receipt.json",
+      "bytes": 2640,
+      "sha256": "21e1fdfa769cfb0cf8711e3f15e42f8ee18862fb9c9cb2cf8516f7ae07313ec6",
+      "blob": "41afa7ace839959683316083f539a4ccbe41bb23",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/contract.md",
+      "bytes": 5022,
+      "sha256": "0bc7fe83e5dc587e0a6734de50d42cd6f3d53a05ebb083a429d77a6c4a1ac037",
+      "blob": "cd8769833bd01be0e3a69f4c0717585d3d76a9a9",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/final-source-and-result-readback.json",
+      "bytes": 13000,
+      "sha256": "e8f750568782303934e43cf7b5d7bfe1d390935077d6e96d69bcdb02a190430a",
+      "blob": "94a4537e9e093d598ab6b21c0b86f72e631710ca",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/fixture-build-v1.log",
+      "bytes": 288,
+      "sha256": "48be6112cf35d10b227f5514c81be562baab35cb18bb17775f21b7475373cc75",
+      "blob": "6b7de8c8ce2761a39a2137de34ff81289e43f9c7",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/fixture-template/data/authorizations.csv",
+      "bytes": 374,
+      "sha256": "5dd5d1fefb3e14ca0b0b900f6e452d93cfcc31882b9cdbd231f5e27f2d77f546",
+      "blob": "b2315d2e0957dcea88ad1fc97e65fb3c65ac595f",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/fixture-template/data/expected.json",
+      "bytes": 43,
+      "sha256": "6af5c908df574a88e6a257880155d5cda7542c67528d3548dcb736d1a9bc5984",
+      "blob": "99ce0b63fe77ce8d006c8f1f0c25dc2d6420a0ad",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/fixture-template/data/patients.csv",
+      "bytes": 335,
+      "sha256": "8eaabdd8c167b96f529e0c8cab36772f233609188229ebb169e2c76d5a6c0b7d",
+      "blob": "d0dd5e06ed44977191c7fbb12ed8b3c8b54aa365",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/fixture-template/data/payers.csv",
+      "bytes": 358,
+      "sha256": "7945074d84b642f19682e54a5765bd12743bc92d7d1edb8c8b9be2585e0784a8",
+      "blob": "e1d2fcb2eb97490eb8b7ccee768e05e7c0628aae",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/fixture-template/data/schedule.csv",
+      "bytes": 692,
+      "sha256": "d621ab89ff22087e60e0fef7a95b5e7ec14dab6c1b80da5f08f5edf3d56f2da3",
+      "blob": "bfc132c412da2df4c28996a2bba4662f2ddf4688",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/fixture-template/fixture-description.json",
+      "bytes": 6508,
+      "sha256": "fdc34f746d14f5bbc6e2b54cb0a3afefc400f0d8642a40c63ff31d995cc43e35",
+      "blob": "edbacc433d9281e442599ab1653efcc31c803d84",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/fixture-template/manifest.json",
+      "bytes": 2002,
+      "sha256": "f8a01589d951efeb8260d9c0295e32217a09f8c10f7735d4313da452b4637484",
+      "blob": "0ad589af6179d65b15c0a23892382ad38617ae46",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/fixture-template/out/audit.jsonl",
+      "bytes": 321,
+      "sha256": "a084f846cbf13671c59d32587f9fb8181a913555ddc5f465fa9999e1e26401a6",
+      "blob": "6613b8a6ddd10fbee1fe80427981bc3b2b93afe8",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/fixture-template/out/digest.html",
+      "bytes": 7443,
+      "sha256": "e1e19c5df269b3870847894e971238eab71f7b6db3989258d8af57593acdd4bc",
+      "blob": "2374b1fdc5fc64e2e7496385203a4938ff4e817b",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/fixture-template/out/ledger.csv",
+      "bytes": 601,
+      "sha256": "9f6f1b01f90d8e6587838cf02909bc394b58c095e4d5b639a698f417d9b0c311",
+      "blob": "3421d4c7c2d7c745b1c8fd5f43d5859b00cfc656",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/fixture-template/out/summary.json",
+      "bytes": 11268,
+      "sha256": "7992741e2535c87591e1237eb51cfc667cdf2fbf25c8e4e875a5dd59ba0a3ec3",
+      "blob": "dd6348dd6339b449b1446d82175744f49439071e",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/fixture-template/out/visit_status_review.csv",
+      "bytes": 125,
+      "sha256": "9cb3e3e82e30935f57448ed826dbd8dab78e39355e3bebba59c478fa355ee170",
+      "blob": "2f954eb61f6a5ed9df00b35756f5f97af5037b1f",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/fixture-template/out/work_state.json",
+      "bytes": 657,
+      "sha256": "2348a7fecbc2e7d096dc1f1b8f5724e75e99628f1446a8aa9f4f06a72cd1d59d",
+      "blob": "62bb3b7b8f7c8e9ee1f81cb22d7e354acb642584",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/fixture-template/out/worklist.csv",
+      "bytes": 2432,
+      "sha256": "817ccc3e5885e01a43462c1422dd56ad82e1a7b3c10ad117842b65e8db56ed81",
+      "blob": "0e63a0644711a00f0058419cf5ac0febcc97f9f6",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/manifest.json",
+      "bytes": 22139,
+      "sha256": "6da0e9179229ced9b4ce3b362ab1f755d8b754387260d9c99fccdade3b79b807",
+      "blob": "014112d23904067f852ba2f0f633974847542948",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/owned-cache-reclaim-v1.json",
+      "bytes": 140714,
+      "sha256": "b420b0f2b0f13eeda3640a0358b9e57f310ee57eba569662fbf10f4ad46eacfc",
+      "blob": "6d1e435d00e58700b5b886c9fc70cfe83a16dfb3",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/prelaunch-enospc-v1.json",
+      "bytes": 339,
+      "sha256": "a2f4223cb42bb2d9f0f47ac914c2fa3c335d6c528be71cc1ceb7698a6d9ac4a4",
+      "blob": "9b754a7a842d01f70ad445580bf5daea3410e257",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/public-source-readback.json",
+      "bytes": 10877,
+      "sha256": "7296e50e55b45b160231421d33a6a2301a6a0bda9ea695408c9cb95a0cc943f6",
+      "blob": "d965a85a266bd35797eb92c0ea3ee2f0df409e73",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/qualification.json",
+      "bytes": 6488,
+      "sha256": "30a34180d3ee4ca966c6d3bc433504cfe88a35841ebc32efd39bcab5c150a126",
+      "blob": "51bd43f4499d1f49104332bc3448879f09234da5",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/receiver-archive-preflight-v1.json",
+      "bytes": 360,
+      "sha256": "b0e114274676776e80ccec690ae0a9c34fd58aee24a6c6b7a28a8351426d79a6",
+      "blob": "f3e32f9406e1026d385ad7238f2ad804cb080457",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/serve_receiver.py",
+      "bytes": 926,
+      "sha256": "8e5ad587b0257bdebf879611a11bd83e4b8b9c8e5ca07b048dbaa5021954ed11",
+      "blob": "a1ffd88ad59f1726dd7c16fb1d22293808cb8aa5",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/composition-browser-review/README.md",
+      "bytes": 4651,
+      "sha256": "6b01c52f91367d941fff163b71eef7bf152acbff3db21b75c8e52191884ad3d6",
+      "blob": "e5c8dad0b5389553eca191a083a751da2055b1fb",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/all-uncovered-from-filtered-view.csv",
+      "bytes": 618,
+      "sha256": "96bcf7e9ffff67a98e06e4de07135e02be79e4a0a1fb07bfa9cfc1111d92abc2",
+      "blob": "af528d2f0925c4f7fd377f069f5603d14aa9805e",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/candidate-fixture/data/authorizations.csv",
+      "bytes": 374,
+      "sha256": "5dd5d1fefb3e14ca0b0b900f6e452d93cfcc31882b9cdbd231f5e27f2d77f546",
+      "blob": "b2315d2e0957dcea88ad1fc97e65fb3c65ac595f",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/candidate-fixture/data/expected.json",
+      "bytes": 43,
+      "sha256": "6af5c908df574a88e6a257880155d5cda7542c67528d3548dcb736d1a9bc5984",
+      "blob": "99ce0b63fe77ce8d006c8f1f0c25dc2d6420a0ad",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/candidate-fixture/data/patients.csv",
+      "bytes": 335,
+      "sha256": "8eaabdd8c167b96f529e0c8cab36772f233609188229ebb169e2c76d5a6c0b7d",
+      "blob": "d0dd5e06ed44977191c7fbb12ed8b3c8b54aa365",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/candidate-fixture/data/payers.csv",
+      "bytes": 358,
+      "sha256": "7945074d84b642f19682e54a5765bd12743bc92d7d1edb8c8b9be2585e0784a8",
+      "blob": "e1d2fcb2eb97490eb8b7ccee768e05e7c0628aae",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/candidate-fixture/data/schedule.csv",
+      "bytes": 692,
+      "sha256": "d621ab89ff22087e60e0fef7a95b5e7ec14dab6c1b80da5f08f5edf3d56f2da3",
+      "blob": "bfc132c412da2df4c28996a2bba4662f2ddf4688",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/candidate-fixture/out/audit.jsonl",
+      "bytes": 1002,
+      "sha256": "be2002c3458228194a347f1a6a1998345f8f61e6a381a67a98f8f0a9017fac45",
+      "blob": "097d6bf252bb3eef80d6435a3c0d947a321e48f8",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/candidate-fixture/out/digest.html",
+      "bytes": 8968,
+      "sha256": "b14626c03474a6274dfbbc442c68757cfc79c7daec5275beec132e50f03fa159",
+      "blob": "5115d7e2ab050c062700b67f8765c6b4bf73fcb4",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/candidate-fixture/out/ledger.csv",
+      "bytes": 601,
+      "sha256": "9f6f1b01f90d8e6587838cf02909bc394b58c095e4d5b639a698f417d9b0c311",
+      "blob": "3421d4c7c2d7c745b1c8fd5f43d5859b00cfc656",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/candidate-fixture/out/summary.json",
+      "bytes": 13148,
+      "sha256": "b302a68a700a389e70c1feea2f89bdf1981919aee11122d0720256437d048440",
+      "blob": "797d074bbe7214e1aff61d1654616dfa31ef3753",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/candidate-fixture/out/uncovered_visits.csv",
+      "bytes": 618,
+      "sha256": "96bcf7e9ffff67a98e06e4de07135e02be79e4a0a1fb07bfa9cfc1111d92abc2",
+      "blob": "af528d2f0925c4f7fd377f069f5603d14aa9805e",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/candidate-fixture/out/visit_status_review.csv",
+      "bytes": 125,
+      "sha256": "9cb3e3e82e30935f57448ed826dbd8dab78e39355e3bebba59c478fa355ee170",
+      "blob": "2f954eb61f6a5ed9df00b35756f5f97af5037b1f",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/candidate-fixture/out/work_state.json",
+      "bytes": 777,
+      "sha256": "c0cc989b2c8e308cd2a1a6e30ca27e4f011a630645f535d463986a5cc3784c46",
+      "blob": "f27cdf4a6cb70f802ca15bec5b29d474eb318ad8",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/candidate-fixture/out/worklist.csv",
+      "bytes": 2432,
+      "sha256": "817ccc3e5885e01a43462c1422dd56ad82e1a7b3c10ad117842b65e8db56ed81",
+      "blob": "0e63a0644711a00f0058419cf5ac0febcc97f9f6",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/candidate-server.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/candidate-server.stdout.log",
+      "bytes": 270,
+      "sha256": "f820d61d3d00a57acdb1d940cdfe61ba02e15c801c1916ca9faf86d42f7e12ea",
+      "blob": "37df359bc2371a29571282af503849b72a586b2f",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/checks-progress.json",
+      "bytes": 14736,
+      "sha256": "86835a53bbc9b0200bee6ae7dce3264ef0be25b89064eba9d89e048feca7bba3",
+      "blob": "dab80b823425b4f0a72badfd48a2e558563e2063",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/chrome.stderr.log",
+      "bytes": 3138,
+      "sha256": "4edcab8982254f6f1fff8d038ab57ea59e09644e0135c93a7ae32c0dce34a5d6",
+      "blob": "f4ddc891803c9aae2f569a652b716b38e1574d86",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/combined-calendar-390.png",
+      "bytes": 76690,
+      "sha256": "5cf2eaed98bfec2bcbcb1485fff38568e36a25a270b7c3053b4dc9e938d5b6a6",
+      "blob": "6c627707a079b7dfcfd8e1d16878abe8d8389120",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/combined-calendar-desktop.png",
+      "bytes": 145194,
+      "sha256": "a703ee5fd30e1d98d11dd2c8d230e42d757ca55adefe8aa7fbd895d6b10abfd7",
+      "blob": "82a9b1fb19704e0b46bb38e4c5ebb41cd973a245",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/combined-current-after-refusal.ics",
+      "bytes": 4258,
+      "sha256": "9ceca53c281aa8ca4d3cec8f568cf1ccb94d76eaa8c492708e7344346e147d83",
+      "blob": "75ea061acf27aea9c8bb2fbc780a501059015924",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/combined-filtered-calendar.ics",
+      "bytes": 1484,
+      "sha256": "d4135331908681010944a1ab80bffc9c46523ad0d810d63f31052fd68907dedc",
+      "blob": "0e1355a73c386677af8f02bbef77e539171adc76",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/combined-stale-report-after.json",
+      "bytes": 11229,
+      "sha256": "cea4692dbf6c1792a26333dc6bfdcf373f86b018c12783b8b1fa15057ea027d7",
+      "blob": "e5c79eb04923875d52c9ecbbe724977c5cd1eba6",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/combined-stale-report-before.json",
+      "bytes": 13148,
+      "sha256": "0a7d1f5634aa48f3690768308b301334d34b03a75c341a10e5ff1a9058e4cea7",
+      "blob": "bd0442fd538a2fb7d18b7c5981995e5c47eb36e2",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/combined-uncovered-390.png",
+      "bytes": 72900,
+      "sha256": "800b6a1e4ab79267505caa95832f74b0ded5e4ab84aef3cef47ef77a66058d05",
+      "blob": "32afd87a6a8a2a545f4e90fc35bda81a7e9b4a48",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/downloads/31cfd17c-b88b-4f04-ad19-bdf703b51050",
+      "bytes": 1484,
+      "sha256": "d4135331908681010944a1ab80bffc9c46523ad0d810d63f31052fd68907dedc",
+      "blob": "0e1355a73c386677af8f02bbef77e539171adc76",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/downloads/6210bff0-d87f-48cf-8a02-7971a0b7b059",
+      "bytes": 618,
+      "sha256": "96bcf7e9ffff67a98e06e4de07135e02be79e4a0a1fb07bfa9cfc1111d92abc2",
+      "blob": "af528d2f0925c4f7fd377f069f5603d14aa9805e",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/downloads/77b367bb-59d0-4ff5-87eb-f345981f1948",
+      "bytes": 4258,
+      "sha256": "9ceca53c281aa8ca4d3cec8f568cf1ccb94d76eaa8c492708e7344346e147d83",
+      "blob": "75ea061acf27aea9c8bb2fbc780a501059015924",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/network.json",
+      "bytes": 8347,
+      "sha256": "3ea15bba052ea5da0cd177279e665bf6827cd6bb3798324f8e176e1cbebdf689",
+      "blob": "4c4f5419f288b0f11541bc680c5cf288518c2faf",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/paused-http.json",
+      "bytes": 1142,
+      "sha256": "9d692e844e2209657077f766bbf119e40569d1a13f9b81b046f4ac09868c451c",
+      "blob": "c55bc41a5b0c465cb7a175a825f35d97f6e68e39",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/result.json",
+      "bytes": 80185,
+      "sha256": "6a51b463456e7064d5e4b4c78d2528700093118a507abeec6bbc91cb43813266",
+      "blob": "7dec41a18462e6ce7e2746a9b7330b0dd3c5e213",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2.stdout.log",
+      "bytes": 668,
+      "sha256": "38d0ad88fd875cc8ebc4a1135b2ca8bd96d4dc82018e39831b981d9b83ba38cb",
+      "blob": "904e35a9b27a317cc259bb75a78c44b52a52b501",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/composition-browser-review/browser_composition_v1.mjs",
+      "bytes": 30369,
+      "sha256": "3d83183a9d58f3f011b12438ecb0b1bc9dbe2513ad60b590a873891632e3133d",
+      "blob": "377baae85ed0a021533e9dc9946f6afa8cc0bfd5",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/composition-browser-review/browser_composition_v2.mjs",
+      "bytes": 30291,
+      "sha256": "e75d0618483a9ff8e0c5a2b79191b17f6dca1a6553f8cbd0c5bd5983675eb992",
+      "blob": "0a38d21cebb838edb92d2f85ea7c35f36276f4d5",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/composition-browser-review/conscience-receipt.json",
+      "bytes": 148,
+      "sha256": "c11f5d6389d53d37e18e09f197c55386f47865cc719d3b7bd3b6a23693dcc6ed",
+      "blob": "c3c3f48fe53dbdbb17d82be1eab0ba544232a3a6",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/composition-browser-review/final-readback.json",
+      "bytes": 1520,
+      "sha256": "72f9f8f3c049857d7603e5df8d24780be1521c2ac24163ccdefec0779cdf0ee3",
+      "blob": "9222a69b71e50bcc991c0ac1b4309346916edca6",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/composition-browser-review/launch-v2.json",
+      "bytes": 748,
+      "sha256": "e32a4bb4d83ce113a6e50bf32099c8d92daf4a6e5df33880f009b58b3dd62a5f",
+      "blob": "fab93072bd7b4d50c1dae2d37b16a8618b5ceb23",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/composition-browser-review/manifest.json",
+      "bytes": 8180,
+      "sha256": "2fe58c53ad26fd03efa6deb3a0cbfb560fe959aca58db5ee2e54c6b92de277ce",
+      "blob": "1664b0923ac1b77f54a1b1f681989a29ec2a7d60",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/composition-browser-review/profile-cleanup.json",
+      "bytes": 465,
+      "sha256": "09282667506595841baded278c8caa14215c33a311e7c72e83ab1b325945b15e",
+      "blob": "565e3b2ddf7a7a9ef911598976ea3b534e591e1c",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/composition-browser-review/serve_receiver.py",
+      "bytes": 926,
+      "sha256": "8e5ad587b0257bdebf879611a11bd83e4b8b9c8e5ca07b048dbaa5021954ed11",
+      "blob": "a1ffd88ad59f1726dd7c16fb1d22293808cb8aa5",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/composition-browser-review/source-freeze-v2.json",
+      "bytes": 37503,
+      "sha256": "b9a365611cda4444ede91c1e55724a0eacb93c91f8bf85cfe43a4222e83701b6",
+      "blob": "7b684603055f2f86d9415b364fe234dcd4b2c96d",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/composition-browser-review.tar.gz",
+      "bytes": 342120,
+      "sha256": "e8eb91af165f3ab8957fb682b717a9a35289e15ac8552236d237e8fb4dcfa4b1",
+      "blob": "ed1b7007b26bcee1ff2c083ab40730b6c0b7c13e",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/contract.md",
+      "bytes": 5022,
+      "sha256": "0bc7fe83e5dc587e0a6734de50d42cd6f3d53a05ebb083a429d77a6c4a1ac037",
+      "blob": "cd8769833bd01be0e3a69f4c0717585d3d76a9a9",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/current-source-receiving/active-composition-claim-receipt.json",
+      "bytes": 148,
+      "sha256": "201954168cb3f6af7003c26760ba2d6773790e6197e979784d48b82eba99656a",
+      "blob": "770d9426b46cb849aef9eb9d159fd2ac9a5eea01",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/current-source-receiving/apply-three-way.json",
+      "bytes": 386,
+      "sha256": "7a44942e35ec7327fcebf506e08313f3c67478201906950213bf2fd7df771271",
+      "blob": "5c88456824118ef2c6f8e4c35a73fe90fbc65890",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/current-source-receiving/calendar-on-current-parent.json",
+      "bytes": 3930,
+      "sha256": "5894a344e310a08d3516498c5f432b31988e8302fe97527826fd011eb7d2d0bf",
+      "blob": "3521337481782b3e2eada1be4c90b505dc222b6b",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/current-source-receiving/composition-start.json",
+      "bytes": 24187,
+      "sha256": "b0f1cd25c2d86231913ac1edd9b59534b3da64ab6579f474c2c3489b9b691350",
+      "blob": "4b8f9391c8a564f1cb05ff1107d14d7004818024",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/current-source-receiving/copy-manifest.json",
+      "bytes": 3398,
+      "sha256": "d63c035b6c185d2d2b52e952edddf896469f5857d32a2f670c9df907e00f3b97",
+      "blob": "d392e3df02359856eee9a22dd8db5438b4ea2e28",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/current-source-receiving/current-parent-source.patch",
+      "bytes": 65675,
+      "sha256": "c8e22179d83a084c0de7799554c8db8d4852de5dedb78b51a5dc7f337154936f",
+      "blob": "62f78997699528cb6252f421ca17cbba54566ba3",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/current-source-receiving/durable-source-receipt.json",
+      "bytes": 510,
+      "sha256": "8f09ae76eb4b38a7efda994fdd747e088e0bf0c8e8f2a6a2085b5ff31e9f4d24",
+      "blob": "833e19a4eb2eed93834618d55a6ce7e7fa6447be",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/current-source-receiving/fetch-parent.json",
+      "bytes": 185,
+      "sha256": "f4161e9310363a952b22f73c0e432c3e3f9ef0fb8e941a8abeb391e145ed6497",
+      "blob": "ddc84972cb9bf63661587ac95885d1f2bc01792c",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/current-source-receiving/index-refresh-and-check.json",
+      "bytes": 1293,
+      "sha256": "577c8d00b0701907f9d72193453cd2cf0888566845ca1af93921613aa622c0eb",
+      "blob": "8b6e5d669b35161548c8ec24a34358c341358d2a",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/current-source-receiving/original-calendar.patch",
+      "bytes": 63314,
+      "sha256": "1c68a3ee978f014a18dbaa7f0227847329938121510e1214dcedbba0dbefff94",
+      "blob": "cb0ee0205ac62e814fa6002ad0cf898b7f536f02",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/current-source-receiving/pt-current-runtime.tar.gz",
+      "bytes": 209429,
+      "sha256": "7a10b232573853d15d3d17ae82d185162c16ab751bf62017fb25f287a3227234",
+      "blob": "952dac775b9df9bbf7b343ff2a5a028e955a3bbc",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/current-source-receiving/reverse-differential-preservation.json",
+      "bytes": 704,
+      "sha256": "d8d387702fe05d11be5283977eb2ac3db187f8bf73b13c84caeed169fa074c64",
+      "blob": "8ae0e669b296d3fff7480efd5ff95bd464a5c79d",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/current-source-receiving/runtime-archive.json",
+      "bytes": 443,
+      "sha256": "04e98dc2db7c75cd7c38173ff998a214cf4ec1b7029ee895c4581599203ed937",
+      "blob": "babfacc8a51b2664b64bf28b36db7cc53104461e",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/current-source-receiving/source-freeze-before-adapter.json",
+      "bytes": 1742,
+      "sha256": "5d698c6283fe820b725a1463ecd90e29a821ac8cc49c42eddcadf3ee50fc6dc3",
+      "blob": "e7228c9db599e9f04d2fa0d312330eb217e008e4",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/current-source-receiving/source-freeze-v2.json",
+      "bytes": 37503,
+      "sha256": "b9a365611cda4444ede91c1e55724a0eacb93c91f8bf85cfe43a4222e83701b6",
+      "blob": "7b684603055f2f86d9415b364fe234dcd4b2c96d",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/current-source-receiving/test-bootstrap-adaptation.json",
+      "bytes": 844,
+      "sha256": "945ae9f9b76a4e93effea45e3b12eb74a20a0839ff60750eb480b2a68da531b4",
+      "blob": "0f94af290746f737269cfa451706691653cc96b0",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/current-source-receiving/test-bootstrap.patch",
+      "bytes": 2403,
+      "sha256": "f7e0156a10162f390cc67275f1c2598de5ec3b7b826afdbc34f997790d10c981",
+      "blob": "9c98376eb3e709016c27dcddb26c58e9f958aeb8",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/current-source-receiving/uncovered-after-adapter.json",
+      "bytes": 2039,
+      "sha256": "94846eb4d06bbe1dfe82629ebecbaeb8e21bb9d8d92be79e0f443af433820997",
+      "blob": "7f0514229c7caefdb916e1f15a85347950405192",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/current-source-receiving/uncovered-before-adapter.json",
+      "bytes": 11632,
+      "sha256": "6d06b363f6f83e8262839b24f005f1b94be984242d1c159eae1e03ea8f099dc5",
+      "blob": "840e736c0a4ddee416596caca6c884f40dd50bd7",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/current-source-receiving/uncovered-review-before-adapter.cjs",
+      "bytes": 8415,
+      "sha256": "25cac361af6bf20b93d017586087db0457669ba386ae47144db184f235e9037c",
+      "blob": "01f44c8e4f0cf909ac894c3b9f4469e89db7298e",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/integration/bootstrap-independent-review.json",
+      "bytes": 4000,
+      "sha256": "5b11524306742ad24361043e3a37025cfdbf5eb0bb9064b761b8e427350e3544",
+      "blob": "1ae1f26f7085c36763be6a6e805ae6e0fc406617",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/integration/browser-copy-receipt.json",
+      "bytes": 22732,
+      "sha256": "76c9caf5aac7b9ad0c3f281b58560494195e1bf288bc4c8848f7c2d4c89bc5f6",
+      "blob": "c41174f32c707ac261cf731da4889f36ebd9965b",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/integration/browser-transfer-receipt.json",
+      "bytes": 4378,
+      "sha256": "f53bc481bc97dd0b16916b0947baa7d43d7ec3d20ae774ad330501f23fcc2deb",
+      "blob": "7c5f9d81aca7352a5fc551a8659cfd1be8d44416",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/integration/composition-blob-publication.json",
+      "bytes": 1632,
+      "sha256": "6a1819cf121aa4ae7fd6464b44a71ebfac7cf6150a8958ca148d8d1d668874fe",
+      "blob": "4abd8bffbeade5cddfc9a511567f99203ca15cf9",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/integration/composition-browser-copy.json",
+      "bytes": 636,
+      "sha256": "393653083b67e6af7c38a30b98339cbbb21d78ec5f0b968bd6be48ab65a65eaf",
+      "blob": "5903b3b02b03352bec0c9ca78fe24e676eb403c6",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/integration/current-composition-visual-readback.json",
+      "bytes": 1074,
+      "sha256": "52070b7c68c5bd11ae706a9d1b3c35c7824775ecd270eb242cada9e34ec47de5",
+      "blob": "e7f5f8bc549517c0e280c6da01af341dc152f013",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/integration/current-parent-readback.json",
+      "bytes": 535,
+      "sha256": "693710dcd1b97a6c0a4f3787b0dc1f154c7a162de7869a2c2e5b561abfd67222",
+      "blob": "a028c0ffdd861d02681445d5cf2081075968b300",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/integration/current-source-copy.json",
+      "bytes": 3888,
+      "sha256": "7974248639bab959db3b4e01ee2a8c4d4936b34192e5f9ef90f85ca34662cd8c",
+      "blob": "5e460c806aa39299d83453a86c82b7b667e2c15e",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/integration/fetch-current-parent-v2.json",
+      "bytes": 283,
+      "sha256": "32587bc3c9777c04a22be1eb5666a75b96daacdbd4080ef58389635d1fc26975",
+      "blob": "9a93728015029f9112e403f798df6cf280f9df53",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/integration/fetch-current-parent.json",
+      "bytes": 759,
+      "sha256": "53733dbe1a15f6613225f726a799d5cd6b5b050fd75e18d4c54bf0673378357e",
+      "blob": "e2ddf44bbcdbe9cf8cd698db95deb2d2d857dece",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/integration/final-parent-source.json",
+      "bytes": 1423,
+      "sha256": "8268329aefb0993e3ef646e7957784d45711bcbcaca49f3e2e416fd28d329d48",
+      "blob": "376afe1d0e0d14274b9894da9e92c986674ea3e8",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/integration/immutable-blob-publication.json",
+      "bytes": 3551,
+      "sha256": "7bb5e9267ddabce5c2f439cee3d2af3a407b39bb5e3853a44e097146ef14271e",
+      "blob": "c03ea97b10f0f981b738c704fd54399c61ef640d",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/integration/ownership-and-gates.json",
+      "bytes": 1386,
+      "sha256": "3c5dee1ee1853eaacdc74342447d08c1888d56e115db06c6e5d3511201766417",
+      "blob": "47e16133e254190e9d117764a89f161c9dbbe8b0",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/integration/parent-readback.json",
+      "bytes": 409,
+      "sha256": "09b7ca258e95796d076c22467f1e371d90519625234b009f06efc820483ab7bb",
+      "blob": "5439c2df43c0c3461458e064761011b040435f27",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/integration/producer-visual-readback.json",
+      "bytes": 1148,
+      "sha256": "ac0779d67ae3fb0fb98f94cb931e166809b5fa734b01bc07f8fd0722029dc137",
+      "blob": "e6c04025d16cde964b3ef49725d03e9fd5ed26c3",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/integration/publication-enospc-v1.json",
+      "bytes": 1210,
+      "sha256": "f385d591b54bc364fa682f6513907ad260745686f5812ddc289a55b2d7795c80",
+      "blob": "b2fc0021104ff4d7dec7641d0ba2fc3010530a59",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/integration/runtime-composition.json",
+      "bytes": 1687,
+      "sha256": "45564fdcba15b962e3c2f37fe26fcd9b79c81a6f4b95c90233b73958cd6dc76a",
+      "blob": "fc8fa9ebae4d35a790eb61d97963fc71fd53eb2a",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/integration/semantic-copy-receipt.json",
+      "bytes": 646,
+      "sha256": "12ac28d22751e162e42e6b0563f82d8d1c592a1fd8dc2c3b40f9a0b95b3594e6",
+      "blob": "a8409cd749f9c49fee96f370afd0d4631859b590",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/integration/shallow-alternate-correction.json",
+      "bytes": 589,
+      "sha256": "9236f58e5e963a00cfce87df663887c5d3feb1b26e1bc013738806caa13af3a6",
+      "blob": "4feef17ed43431821be6c569b287feac42723d34",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/native-browser-review.json.gz",
+      "bytes": 1146656,
+      "sha256": "c296acea68f36d63f071d71aaefc2b803002b21af84282a69b1a81d7ccb1feb4",
+      "blob": "8512427ed4b87de2d9611cea66c69f707aad03a4",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/producer-v2/README.md",
+      "bytes": 5499,
+      "sha256": "f66ec63c14a56e2bc588c69003fc71a97c0f352a65cdc5d21a9d3b68eeca23fe",
+      "blob": "7bc3d899be1a027ce8abfe54de0594b6be9aa3d1",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/producer-v2/archive-readback.json",
+      "bytes": 181,
+      "sha256": "c3dfd74dfc9f21e97e3499547c14b1081da7113f26e210a242738c25a89ea936",
+      "blob": "b77b4397a9a1234108d0166e6c029b989400c362",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/producer-v2/archive-receipt.json",
+      "bytes": 542,
+      "sha256": "58114facffd9054106248a04e6e3595b6d5e26cd3990fc48a2492f736ccc8bc8",
+      "blob": "36f58735b1c4ee17d6baa376f102be15468dc52f",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/producer-v2/conscience-receipt.json",
+      "bytes": 912,
+      "sha256": "a931ba57a44bdca3b7d8a0d8f478275b3a89d6d0987a01b82c3a9c8d0acf8518",
+      "blob": "e5bd7d0448fc8befc50bed0c356636f33ecb67b9",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/producer-v2/manifest.json",
+      "bytes": 13855,
+      "sha256": "c617368ad4761333b9fcff883005e7bb372662380dea2c8ce4098999423df26e",
+      "blob": "1518b03ca8ce125bda1203f3e13ca4fd38f1b13b",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/producer-v2/native-producer-v2.tar.gz",
+      "bytes": 215277,
+      "sha256": "fa79ce904bd754815fef2e8dcf4b63e108cf0cc46ea63452cfebd83453366a69",
+      "blob": "17e3a91c192bd95c396f85f985bf4f43214c4e5e",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/producer-v2/source-freeze.json",
+      "bytes": 18360,
+      "sha256": "7cd010c033799766c534cfe2f99edae01488878ffad80cf300463e76ca223b3e",
+      "blob": "0c42dd7e4c70c08bf70a03ec44312b022f055596",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/producer-v2/source-publication.json",
+      "bytes": 804,
+      "sha256": "3959eef70b7dd5645593100fe05eb82c5dd4f0d695b28f4b2de75ea4ee1f7483",
+      "blob": "b9e44d7fe11a285f5e595bf6a488c98f9bc280f9",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/semantic-review/README.md",
+      "bytes": 6557,
+      "sha256": "25b2df25472f7475d0ca652534669f181d545b72eaec0f89b1e922cf4fc07ac0",
+      "blob": "380d96cd23bad1fa84bc66dca4e536ecdec38ec3",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/semantic-review/RECEIVER-SPEC.md",
+      "bytes": 4458,
+      "sha256": "4386db6a20665cdcfc90b4d9365f1ca29bf722b44b4ea1c1f5d8ee35176da66d",
+      "blob": "5a7a06c44141598ed57fc3dfb468d3ab1fccb836",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/semantic-review/actual-files/actual-cli-invalid.stderr",
+      "bytes": 46,
+      "sha256": "f2abe8bfea224d7679beeff1e3734bd631f24e8415bc34f857172de4b0326b5f",
+      "blob": "49f533fa06b043b2f1018491dddd2be242ed7f47",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/semantic-review/actual-files/actual-cli-no-clobber.stderr",
+      "bytes": 81,
+      "sha256": "adc19d906026253f06a7e0e298962d3321dd8705403954b532b2ebf0c06bd579",
+      "blob": "0796ade1b94ef62f28780542139089d2d9cfbc56",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/semantic-review/actual-files/actual-cli-selection.ics",
+      "bytes": 1181,
+      "sha256": "86d7ca0ecdbb159f5e203251af0381233217bd48be18005871a8105eaf80308b",
+      "blob": "f9f5457aaf442ddab799fa3632cce58a441ddd3d",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/semantic-review/actual-files/actual-cli-stdout.json",
+      "bytes": 320,
+      "sha256": "c04ecbf03871d6a28401fb0a7c164a844117f2540a3fab8ac978d559d17c762a",
+      "blob": "02904027cee793a1ab67760eecd22ab05afdb054",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/semantic-review/actual-files/status-selection-metadata.json",
+      "bytes": 815,
+      "sha256": "36bd5ef6d1efa2305bb094d9a53eb31ef63be7b6de763660c31b7ad5e288b949",
+      "blob": "40dc6327f669511f718523b2d7e25d16e0e862e5",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/semantic-review/actual-files/status-selection.ics",
+      "bytes": 2307,
+      "sha256": "ada4d96ba4d682ceaa3465669735a9e548398c253d1b4464f3badd503aadb0be",
+      "blob": "33b58b1d68fa93df0a5d05ee6f2d7183c796cd85",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/semantic-review/actual-files/unicode-and-delimiter-roundtrip.ics",
+      "bytes": 20406,
+      "sha256": "e5f24e58ae7f687fc991a9f38791ea040d3ef2bed766af20cd6ff13e5ce4a324",
+      "blob": "740f5a02ec86e883c483bd1b17579603f0aa1d6b",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/semantic-review/blind-freeze.json",
+      "bytes": 779,
+      "sha256": "35af02363aea9d468531bc12b1881c1ec78ca1ddcb4c1696e6c5684216b29947",
+      "blob": "5b4b74c68805c3effb6f2436d60a14f28a81005c",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/semantic-review/conscience-receipt.json",
+      "bytes": 646,
+      "sha256": "ab104714b8eb427d1b180d5563fe1af0b914260934a60e8b0905be677c5fc85f",
+      "blob": "4a5a9d5c2d616b89122bba852145f465df1b2410",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/semantic-review/contract-v1.md",
+      "bytes": 5022,
+      "sha256": "0bc7fe83e5dc587e0a6734de50d42cd6f3d53a05ebb083a429d77a6c4a1ac037",
+      "blob": "cd8769833bd01be0e3a69f4c0717585d3d76a9a9",
+      "mode": "100644",
+      "native_mode": 420,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/semantic-review/manifest.json",
+      "bytes": 5561,
+      "sha256": "bf8d65ea7bf2a3aa8a9b46850860fc2b77fe91626e518205d7cb8add72e6bb0d",
+      "blob": "dde2748a080dc2a2ed0c0c888378e69f1173c3cd",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/semantic-review/receiver-v1-freeze.json",
+      "bytes": 313,
+      "sha256": "008ff896af541442b515308ce246a68cca6b25363296d49a653865a63df81366",
+      "blob": "97cdefb23b122b92f978f138e1fd26aedca0f159",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/semantic-review/review-result.json",
+      "bytes": 1164,
+      "sha256": "5bad06cb1ca24ec4969e563d6fd4fd39954b87358bc259a2374902d31d92da38",
+      "blob": "815d5d986c3aebf01ab0cdde7147a614226cf2c3",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/semantic-review/semantics-v1-result.json",
+      "bytes": 574,
+      "sha256": "a7e12620ba4f88011412555b8237e7f68417856e2addb80c7affcf48e7a4cfd1",
+      "blob": "ed34b363c14f69a348a8319a2b82d6a15d8a6a12",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/semantic-review/semantics-v1.stderr",
+      "bytes": 3117,
+      "sha256": "c85d0f2954b85c23e463da8b72b2dfdc885f454566d85098c78e7f8c804420d3",
+      "blob": "467d96b73cb3997994c26e6c8aefb2baf54735cf",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/semantic-review/semantics-v1.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/semantic-review/source/pt_auth/ptauth/__init__.py",
+      "bytes": 311,
+      "sha256": "71e1527f153c607b679485e4954af1b3ec6a843b041562eb07f4d36e08fd231c",
+      "blob": "a6f4545ac17e2578317ef694f7bb548489f6c71c",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/semantic-review/source/pt_auth/ptauth/__main__.py",
+      "bytes": 57,
+      "sha256": "4b1afbca74a10abc3cff7b4e5a11b558bf619e45b89709faf9225a474a2a250f",
+      "blob": "3c93dd90cf357624c77ab3589ef2b201868c181e",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/semantic-review/source/pt_auth/ptauth/calendar_ui.js",
+      "bytes": 8448,
+      "sha256": "b91fe76b947f381b2fa0835646fc664bf7eaa4474631ae3c9e5cb3968b9cdf3a",
+      "blob": "a6ba45ec85c28f7fd80d7e2fdd32ac62e96daa99",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/semantic-review/source/pt_auth/ptauth/cli.py",
+      "bytes": 4913,
+      "sha256": "b3c8052b0be06b50f6b534585bf27e5a3ddaa1d7cfd20fc21840461fb8e9c2ed",
+      "blob": "b80869a8fe1c9310762a77f45bde939ff5e03b01",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/semantic-review/source/pt_auth/ptauth/data.py",
+      "bytes": 10283,
+      "sha256": "eeab8ab5b2b72524148969de0d13b27126cc64c4ec79b68a147b51b25a3741e2",
+      "blob": "19a2a1b79eff6d2753507eebf3bf78011ddaaa87",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/semantic-review/source/pt_auth/ptauth/engine.py",
+      "bytes": 16057,
+      "sha256": "bfa7049e9b133d654ce947b135c17ac401bd7b1fcd76350bdb10de5b7a1ad1f7",
+      "blob": "39c97f35d61ff949b5c2381f0ad60d7af8d74226",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/semantic-review/source/pt_auth/ptauth/report.py",
+      "bytes": 10086,
+      "sha256": "794cf0a631b0f1a33ea85df4de387be0ce12d2744e8c8cb1308a61ce99516740",
+      "blob": "608626d57918e4d43fca2fc14421063d35b49cfc",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/semantic-review/source/pt_auth/ptauth/synth.py",
+      "bytes": 8873,
+      "sha256": "b82a34447e43dacbe46ed06e60b693ed216e87f15892ae297c682aa5a3f139fd",
+      "blob": "2ff6a2548bf55a812cfa62e397442a0d3f7debbb",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/semantic-review/source/pt_auth/ptauth/ui.html",
+      "bytes": 14769,
+      "sha256": "20dd667868f3fdaeba30404e158afd9d352d8ec14be445b006e3f6b633ede2f0",
+      "blob": "6749bbf24c91e43e639c5455768f263b18e04507",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/semantic-review/source/pt_auth/ptauth/web.py",
+      "bytes": 8633,
+      "sha256": "18a5f6e889f2a5d7e0e3704989f041681252df3ee0cb29e3c356aff560fd2967",
+      "blob": "7e5d38f4cf8c33f4b9c91bd3c3d929fcfa0f80b3",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/semantic-review/source/pt_auth/ptauth/worklist_calendar.py",
+      "bytes": 13750,
+      "sha256": "89751f1de5548ced34a59c296d0edf1eda06a38bdb935be3e7c3c8b2ae5d55c0",
+      "blob": "e125f9ed77343fcc3d82e6d6f25a7296b0463aa7",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/semantic-review/source-freeze-v1.json",
+      "bytes": 3190,
+      "sha256": "2b1eef894f3f7d1952ef82b91a7efc0496bea9a8e347d15eba3d8d47ae9c2296",
+      "blob": "0f3acb200b9c845cb4e8b2772085a0a3fab95f66",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/semantic-review/test_semantics_v1.py",
+      "bytes": 21474,
+      "sha256": "ae92c57d11337a794149e1bacdbb15ec2966d1427aab99f45d6f0dbfb99ae261",
+      "blob": "1b208a036278829551c7199e54f34411be79e311",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/semantic-review.tar.gz",
+      "bytes": 48538,
+      "sha256": "07166d7bc271a320940d1a5a01ef479e4d4513738a49c7b5c6ec6cae9c408641",
+      "blob": "0d31d0ab809686ddfd65b6e52a988ddbae04394d",
+      "mode": "100644",
+      "native_mode": 436,
+      "kind": "receiving_evidence"
+    }
+  ],
+  "mode_note": "Git mode records executability; native_mode retains original full UNIX permissions. Receiver archives additionally preserve native modes."
+}

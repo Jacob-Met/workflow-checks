@@ -1,0 +1,27 @@
+{
+  "PT1006|PTEST|": {
+    "state": "submitted",
+    "note": "Synthetic reviewed, waiting; \u03a9\\notes\nSecond line",
+    "at": "2026-10-01T12:00:00+00:00"
+  },
+  "PT1002|PTEST|AUTH-PT1002": {
+    "state": "submitted",
+    "note": "Synthetic reviewed, waiting; \u03a9\\notes\nSecond line",
+    "at": "2026-10-01T12:00:00+00:00"
+  },
+  "PT1003|PTEST|AUTH-PT1003": {
+    "state": "approved",
+    "note": "Synthetic reviewed, waiting; \u03a9\\notes\nSecond line",
+    "at": "2026-10-01T12:00:00+00:00"
+  },
+  "PT1004|PTEST|AUTH-PT1004": {
+    "state": "n/a",
+    "note": "Synthetic reviewed, waiting; \u03a9\\notes\nSecond line",
+    "at": "2026-10-01T12:00:00+00:00"
+  },
+  "PT1005|PTEST|": {
+    "state": "approved",
+    "note": "",
+    "at": "2026-10-08T14:35:06+00:00"
+  }
+}

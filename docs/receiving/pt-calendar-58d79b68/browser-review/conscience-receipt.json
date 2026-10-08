@@ -1,0 +1,28 @@
+{
+  "schema": "pt_calendar.independent_browser_conscience.v1",
+  "database": "/var/lib/hamon/conscience.sqlite3",
+  "manifest_sha256": "6da0e9179229ced9b4ce3b362ab1f755d8b754387260d9c99fccdade3b79b807",
+  "result": {
+    "kind": "result",
+    "seq": 4160,
+    "event_id": "cev_a7f33c29572a418eab3a58bc",
+    "event_hash": "2e77a05f329cdd31bb459c78b1276ffc5727dcb23cb186eed1825fffad399a7f"
+  },
+  "claim_completed": {
+    "kind": "claim_completed",
+    "seq": 4161,
+    "event_id": "cev_f6ebda1d05e44ebd8f815b2e",
+    "event_hash": "c0f33bcda5ad5f9f6e5276281581ce3496d6549d96e07d5c1fff08becaa11773"
+  },
+  "actor": "chatgpt:58d79b68c9e4:mac_estate",
+  "payload": {
+    "key": "result:pt-calendar-browser-review-58d79b68c9e4",
+    "value": "qualified_browser_server_scope",
+    "text": "Independent actual Mac Chrome receiving of PT calendar issue27 complete at exact native d75fb908a9893fd40b21112f62af16d32027bbe1, published equivalent a68a667f3610153618c6cc8952c72abe980d89aa, tree94074bd3d39705fced23629038ab79057e943aff. All55 PT source blobs/modes exact by native and independent GitHub readback. Original run15passed/1failed retained; sole failure was receiver expectation of enabled export after all fixture appointments. Unchanged original-engine controls confirm empty Nov2; separate targeted as-of replay1/1passes on unchanged candidate and completes fresh Oct30 download. Eleven native completed .ics downloads total; zero browser exceptions; source and fixture template preserved; all successful downloads assert full synthetic input/report/state preservation. Qualified filtered/excluded keys, pending/stale/late HTTP200/409 retirement, native Tab/Enter and390px panel. No full RFC/calendar import, later-parent execution or integration acceptance claim. Native packet /Users/me/pt-calendar-browser-review-58d79b68c9e4;110 files1712866bytes; manifestSHA256 6da0e9179229ced9b4ce3b362ab1f755d8b754387260d9c99fccdade3b79b807; qualificationSHA25630a34180d3ee4ca966c6d3bc433504cfe88a35841ebc32efd39bcab5c150a126. Source/date/integration owners retain their scopes; transfer/publication next."
+  },
+  "closing": {
+    "key": "claim:pt-calendar-browser-review-58d79b68c9e4",
+    "value": "completed",
+    "text": "Completes the exact original review claim4126 after bounded frozen-source actual-browser receiving. Result key result:pt-calendar-browser-review-58d79b68c9e4 and manifest6da0e9179229ced9b4ce3b362ab1f755d8b754387260d9c99fccdade3b79b807 preserve all failures and limits. No implementation ownership, root semantic acceptance or source integration is claimed; exact evidence transfer remains executable handoff work."
+  }
+}
