@@ -1,0 +1,683 @@
+<!doctype html>
+<!-- hamon-demo:ptauth-whatif -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; connect-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>PT authorization what-if · Synthetic worklist</title>
+  <meta name="description" content="Explore a synthetic PT authorization worklist. Change capacity, expiry and visit dates, then inspect the existing rules and evidence behind the result.">
+  <style>:root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#203538;background:#f1f4ef;font-size:16px;line-height:1.5;--ink:#173e40;--teal:#176861;--muted:#617270;--line:#d7dfd8;--paper:#fffefa;--p1:#8b2f20;--p2:#795915;--p3:#475b78}
+*{box-sizing:border-box}body{margin:0}button,input,select{font:inherit}button,a,input,select,summary{-webkit-tap-highlight-color:transparent}button,input,select{min-height:44px}button{border:1px solid #bdcbc1;border-radius:8px;background:#fffefa;color:var(--ink);padding:.65rem .85rem;cursor:pointer;text-align:left;font-weight:650}button:hover{background:#e8f0e8;border-color:var(--teal)}button:disabled{cursor:default;opacity:.5}a{color:var(--teal);text-underline-offset:3px}a:hover{text-decoration-thickness:2px}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:3px solid #da891e;outline-offset:3px}h1,h2,h3,p{margin-top:0}h2{font-size:1.15rem;letter-spacing:-.02em;line-height:1.25}h3{font-size:.93rem;letter-spacing:.02em}p:last-child{margin-bottom:0}button,summary,label,.context,.detail,.source-ref,h1,h2,h3{overflow-wrap:anywhere}[hidden]{display:none!important}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.skip-link{position:absolute;left:1rem;top:-5rem;z-index:5;background:var(--paper);padding:1rem}.skip-link:focus{top:1rem}.hero{max-width:1240px;margin:auto;padding:3rem 2rem 1.9rem}.eyebrow{font-size:.68rem;font-weight:800;letter-spacing:.13em;color:var(--muted)}.hero .eyebrow span{padding:0 .45rem;color:#b1bcb3}.hero h1{font-size:clamp(2rem,4.5vw,3.25rem);line-height:1.12;letter-spacing:-.045em;max-width:810px;margin:.9rem 0 1rem;color:var(--ink)}.lede{font-size:1.08rem;max-width:750px;color:#4e6663}.notice{max-width:1050px;border-left:4px solid #b57a29;padding:.8rem 1rem;background:#f9eedb;font-size:.85rem;color:#654b24}.notice strong{color:#5a391a}main{max-width:1240px;margin:auto;padding:0 2rem}.workspace{display:grid;grid-template-columns:minmax(260px,320px) minmax(0,1fr);gap:1.4rem;align-items:start}.editor-panel,.results-panel{min-width:0;background:var(--paper);border:1px solid var(--line);border-radius:14px}.editor-panel{padding:1.35rem}.results-panel{padding:1.45rem}.section-title{display:flex;gap:.65rem;align-items:center;margin-bottom:1rem}.section-title h2{margin:0}.step{font-size:.7rem;border:1px solid #b9c8bc;border-radius:50%;width:27px;height:27px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;font-weight:700;color:var(--teal)}fieldset{border:0;margin:0;padding:0;min-width:0}label{display:block;font-weight:650;font-size:.79rem;margin-bottom:.35rem}input,select{width:100%;max-width:100%;min-width:0;padding:.55rem .6rem;border:1px solid #b7c4bb;border-radius:7px;color:#203538;background:white}input:disabled,select:disabled{background:#f0f2ed;color:var(--muted)}input[aria-invalid=true]{border-color:var(--p1);box-shadow:0 0 0 1px var(--p1)}.help{font-size:.73rem;color:var(--muted);line-height:1.5;margin:.45rem 0 1rem}.quiet{font-weight:400;color:var(--muted)}.context{font-size:.74rem;color:var(--muted);margin:.5rem 0 1rem}.editor-group{padding:1rem 0;border-top:1px solid var(--line)}.editor-group h3{margin-bottom:.85rem}.editor-group input+label{margin-top:.75rem}.primary{display:block;width:100%;background:var(--teal);border-color:var(--teal);color:white;text-align:center;margin-top:.15rem}.primary:hover{background:#104e49;color:white}.draft-state{font-size:.74rem;color:var(--muted);min-height:1.2rem;margin:.55rem 0 1rem}.quick-tries{border-top:1px solid var(--line);padding-top:1rem}.quick-tries h3{margin-bottom:.4rem}.quick-tries .help{margin-bottom:.6rem}.quick-tries button{display:block;width:100%;font-size:.78rem;margin-top:.45rem;line-height:1.4}.quick-tries .reset{background:none;border-color:transparent;text-decoration:underline;color:var(--muted)}.privacy{font-size:.7rem;color:var(--muted);border-top:1px solid var(--line);padding-top:1rem;margin-top:1rem}.error{background:#fff0eb;color:#842e20;border:1px solid #dfb2a4;border-radius:9px;padding:1rem;margin-bottom:1rem;font-size:.9rem}.result-announcement{font-size:.78rem;color:var(--muted);margin-bottom:1.15rem}.metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.65rem}.metric{background:#f0f4ee;padding:.85rem;border-radius:9px;min-width:0}.metric strong{display:block;font-size:1.85rem;font-weight:750;line-height:1.15;color:var(--ink);letter-spacing:-.04em}.metric span{display:block;font-size:.7rem;color:var(--muted);margin-top:.3rem}.metric.p1 strong{color:var(--p1)}.metric.p2 strong{color:var(--p2)}.comparison{display:flex;justify-content:space-between;gap:1rem;padding:1.1rem 0 .75rem}.comparison>div{min-width:0}.comparison p{font-size:.88rem;font-weight:650;margin:.25rem 0 0}.changes{font-size:.75rem;color:var(--muted);border-bottom:1px solid var(--line);padding-bottom:1rem}.changes summary{cursor:pointer}.changes ul{padding-left:1.1rem;margin-bottom:0}.changes li{margin-top:.35rem;overflow-wrap:anywhere}.rule-note{margin-top:1rem;background:#f8f0dc;border-left:3px solid #b18739;padding:.75rem;font-size:.75rem;color:#695023}.worklist-bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin:1.2rem 0}.worklist-bar>p{font-size:.7rem;max-width:245px;color:var(--muted);margin:0}.worklist-bar label{display:flex;align-items:center;gap:.45rem;margin:0;font-size:.7rem;min-width:0}.worklist-bar select{width:155px;font-size:.73rem}.worklist{display:grid;gap:.9rem}.work-item{border:1px solid #d4ddd4;background:white;border-radius:10px;overflow:hidden}.work-item.selected{border-color:#50917d;box-shadow:inset 3px 0 #297760}.card-top{display:flex;justify-content:space-between;align-items:start;gap:.7rem;padding:1rem 1rem .3rem}.card-title{margin:0;font-size:.95rem;font-weight:750}.card-context{font-size:.67rem;color:var(--muted);margin:.25rem 0 0}.priority{font-size:.72rem;letter-spacing:.03em;border-radius:5px;padding:.2rem .5rem;font-weight:800;white-space:nowrap;background:#eaf0f5;color:var(--p3)}.priority.P1{background:#f9e7e1;color:var(--p1)}.priority.P2{background:#f6edd8;color:var(--p2)}.reason-list{display:flex;gap:.35rem;flex-wrap:wrap;margin:.5rem 1rem .65rem;padding:0;list-style:none}.reason-list li{font-size:.67rem;color:#3d6157;background:#edf4ed;padding:.25rem .5rem;border-radius:4px;overflow-wrap:anywhere}.work-item .card-dates{display:flex;flex-wrap:wrap;gap:.75rem 1.4rem;font-size:.72rem;padding:0 1rem .8rem}.card-dates span{color:var(--muted);display:block;font-size:.62rem;text-transform:uppercase;letter-spacing:.06em}.card-dates strong{font-weight:600}.work-item details{border-top:1px solid #e7ece5;font-size:.75rem;padding:.7rem 1rem}.work-item summary{cursor:pointer;font-weight:650}.work-item details ul{padding-left:1.1rem;margin-bottom:.3rem}.work-item details li{margin:.4rem 0;overflow-wrap:anywhere}.source-ref{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.65rem;color:#526568}.edited{font-family:inherit;display:inline-block;background:#fbebd2;color:#76521a;font-size:.62rem;padding:.05rem .3rem;border-radius:3px;margin-left:.3rem}.source-list{list-style:none;padding-left:0!important}.inspect{padding:.45rem .6rem;min-height:38px;font-size:.69rem;margin:0 1rem .8rem;background:#f7faf6}.empty{padding:1.2rem;border:1px dashed #c7d4c8;border-radius:10px;font-size:.86rem;background:#f7faf4;color:#466556}.empty strong{display:block;margin-bottom:.3rem}.selected-evidence{border-top:1px solid var(--line);margin-top:1.65rem;padding-top:1.4rem}.selected-evidence>p{font-size:.77rem;color:var(--muted)}.ledger-card{border:1px solid var(--line);padding:.85rem;border-radius:9px;margin-top:.65rem}.ledger-title{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.35rem;font-size:.76rem;font-weight:650}.ledger-title span{font-weight:400;color:var(--muted);font-size:.7rem}.ledger-meter{height:10px;display:flex;background:#e9eee5;border-radius:4px;margin:.8rem 0;overflow:hidden}.ledger-meter .used{background:#2c6661}.ledger-meter .reserved{background:#a5ba89}.ledger-counts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.5rem;font-size:.65rem;color:var(--muted)}.ledger-counts strong{display:block;font-size:1rem;color:var(--ink)}.ledger-source{font-size:.65rem;color:var(--muted);margin:.65rem 0 0}.visit-disclosure,.payer-disclosure{font-size:.76rem;margin-top:.95rem;border:1px solid var(--line);border-radius:8px;padding:.8rem}.visit-disclosure summary,.payer-disclosure summary{cursor:pointer;font-weight:650}.visit-list{list-style:none;padding:0;margin:.6rem 0 0}.visit-list li{padding:.7rem 0;border-top:1px solid #e4e9e0}.visit-line{display:grid;grid-template-columns:90px minmax(0,1fr);gap:.6rem;font-size:.72rem}.visit-line strong{font-weight:650}.visit-line div{min-width:0;overflow-wrap:anywhere}.visit-line small{display:block;color:var(--muted);font-size:.66rem}.visit-uncovered{color:var(--p1)}.visit-list .source-ref{display:block;margin-top:.3rem}.payer-rules{padding-left:1rem}.payer-rules li{margin:.35rem 0}.method{padding:2rem 0}.method h2{font-size:1.05rem}.method-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.4rem}.method p{font-size:.75rem;color:#5e716b;line-height:1.7}.method strong{color:#345750}.source-links{display:flex;flex-wrap:wrap;gap:1.2rem;margin-top:1.1rem}footer{max-width:1176px;margin:0 auto;padding:1rem 0 2rem;font-size:.67rem;color:#6e8077;border-top:1px solid #d3ded2}
+@media(max-width:900px){.hero{padding:2rem 1.2rem 1rem}main{padding:0 1.2rem}.workspace{grid-template-columns:minmax(230px,280px) minmax(0,1fr);gap:1rem}.editor-panel,.results-panel{padding:1rem}.metrics{gap:.4rem}.metric{padding:.7rem}.metric strong{font-size:1.55rem}.worklist-bar{align-items:start;flex-direction:column;gap:.6rem}.worklist-bar>p{max-width:none}.card-top{padding:.85rem .8rem .3rem}.card-context{font-size:.65rem}.reason-list{margin-left:.8rem;margin-right:.8rem}.comparison{gap:.6rem}.comparison p{font-size:.78rem}footer{margin:0 1.2rem}}
+@media(max-width:650px){.hero{padding:1.6rem 1rem 1rem}.hero h1{font-size:2.2rem}.lede{font-size:.94rem}.notice{font-size:.78rem;padding:.75rem}.hero .eyebrow{font-size:.61rem}main{padding:0 1rem}.workspace{grid-template-columns:minmax(0,1fr);gap:1rem}.editor-panel,.results-panel{padding:1rem}.editor-panel .section-title{margin-bottom:1rem}.quick-tries{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.3rem .55rem}.quick-tries h3,.quick-tries .help{grid-column:1/-1}.quick-tries button{font-size:.74rem;margin-top:0}.privacy{margin-top:1rem}.metrics{gap:.4rem}.metric{padding:.7rem .6rem}.metric strong{font-size:1.7rem}.metric span{font-size:.65rem}.comparison{flex-wrap:wrap;row-gap:.7rem}.comparison>div:first-child{flex:1;min-width:150px}.comparison p{font-size:.83rem}.worklist-bar{gap:.7rem}.worklist-bar label{width:100%;justify-content:space-between}.worklist-bar select{width:180px}.method-grid{grid-template-columns:minmax(0,1fr);gap:.5rem}.method-grid p{margin-bottom:.5rem}.method{padding:1.5rem 0}.source-links{gap:.6rem 1rem}footer{margin:0 1rem}.visit-line{grid-template-columns:82px minmax(0,1fr)}}
+@media print{body{background:white;font-size:10pt}.hero{padding:.5rem 0}.hero h1{font-size:24pt}.workspace{display:block}.editor-panel,.quick-tries,.worklist-bar,.inspect,.skip-link{display:none}main{padding:0}.results-panel{border:0;padding:0}.metrics{grid-template-columns:repeat(3,1fr)}.work-item{break-inside:avoid}.method{padding:1rem 0}.method-grid{display:block}.source-links{display:block}.notice{background:white}footer{padding:.5rem 0}.comparison{justify-content:start;gap:2rem}}
+</style>
+</head>
+<body>
+  <a class="skip-link" href="#worklist-heading">Skip to worklist</a>
+  <header class="hero">
+    <div class="eyebrow">WORKFLOW CHECKS <span aria-hidden="true">/</span> INTERACTIVE DEMO</div>
+    <h1>When does the worklist change?</h1>
+    <p class="lede">Explore PT authorization capacity, expiry and visit dates. See which fictional cases move up the list, and exactly why.</p>
+    <p class="notice"><strong>Synthetic data only.</strong> Eight fictional patients and placeholder payer rules. This is an administrative rules demonstration, not medical advice, coverage confirmation or a payer submission.</p>
+  </header>
+  <main>
+    <noscript><div class="error">JavaScript is required for the what-if controls. The controls are disabled and no calculated worklist is displayed. The source links below remain available.</div></noscript>
+    <div id="error" class="error" role="alert" hidden></div>
+    <div class="workspace">
+      <aside class="editor-panel" aria-labelledby="editor-heading">
+        <div class="section-title"><span class="step">01</span><h2 id="editor-heading">Change a scenario</h2></div>
+        <form id="editor-form" novalidate>
+          <fieldset id="editor-fields" disabled>
+            <legend class="sr-only">Synthetic scenario controls</legend>
+            <label for="as-of">Worklist as of</label>
+            <input id="as-of" type="date" min="2026-01-01" max="2027-12-31" required aria-describedby="as-of-help">
+            <p id="as-of-help" class="help">Changes date cutoffs. Visit statuses remain as recorded; moving the date does not infer attendance.</p>
+            <label for="patient">Synthetic patient</label>
+            <select id="patient"></select>
+            <p id="patient-context" class="context"></p>
+            <div class="editor-group">
+              <h3>Authorization</h3>
+              <label for="authorization">Record to explore</label>
+              <select id="authorization"></select>
+              <p id="auth-context" class="help"></p>
+              <label for="capacity">Authorized visits</label>
+              <input id="capacity" type="number" min="0" max="200" step="1" inputmode="numeric" required>
+              <label for="expiry">Expiry date <span class="quiet">(inclusive)</span></label>
+              <input id="expiry" type="date" min="2026-01-01" max="2027-12-31" required>
+            </div>
+            <div class="editor-group">
+              <h3>Schedule</h3>
+              <label for="visit">Scheduled visit to move</label>
+              <select id="visit"></select>
+              <label for="visit-date">Visit date</label>
+              <input id="visit-date" type="date" min="2026-01-01" max="2027-12-31" required>
+              <p class="help">Only this visit moves. Completed visits and all other records stay in the scenario.</p>
+            </div>
+            <button type="submit" class="primary">Apply changes</button>
+            <p id="draft-state" class="draft-state" role="status" aria-live="polite"></p>
+          </fieldset>
+        </form>
+        <div class="quick-tries" aria-labelledby="quick-heading">
+          <h3 id="quick-heading">Try a boundary</h3>
+          <p class="help">Each example starts from the original synthetic scenario.</p>
+          <button id="try-capacity" type="button" disabled>Use the last authorized visit</button>
+          <button id="try-expiry" type="button" disabled>Expire before the next visit</button>
+          <button id="try-date" type="button" disabled>Move a visit beyond expiry</button>
+          <button id="reset" type="button" class="reset" disabled>Reset all changes</button>
+        </div>
+        <p class="privacy">Works entirely in this page. No uploads, accounts, tracking, local storage or network requests. Reloading starts over.</p>
+      </aside>
+      <section class="results-panel" aria-labelledby="worklist-heading">
+        <div class="section-title"><span class="step">02</span><h2 id="worklist-heading" tabindex="-1">Inspect the worklist</h2></div>
+        <p id="result-announcement" class="result-announcement" role="status" aria-live="polite" aria-atomic="true">Preparing the synthetic scenario…</p>
+        <div id="results" hidden>
+          <div id="metrics" class="metrics"></div>
+          <div class="comparison"><div><span class="eyebrow">SELECTED PATIENT</span><p id="priority-change"></p></div><div><span class="eyebrow">SCENARIO EDITS</span><p id="edit-count"></p></div></div>
+          <details id="changes-disclosure" class="changes"><summary>Changes from the original sample</summary><ul id="changes"></ul></details>
+          <div id="past-scheduled" class="rule-note" hidden></div>
+          <div class="worklist-bar"><p>Sorted by priority, submit-by, next visit and patient ID.</p><label for="view">Show<select id="view"><option value="all">All eight patients</option><option value="selected">Selected patient</option></select></label></div>
+          <div id="worklist" class="worklist"></div>
+          <section id="selected-evidence" class="selected-evidence" aria-labelledby="selected-heading">
+            <div class="section-title"><span class="step">03</span><h2 id="selected-heading">Follow the allocation</h2></div>
+            <p id="selected-label"></p>
+            <div id="ledger"></div>
+            <details class="visit-disclosure"><summary id="visit-summary">Visit allocation</summary><ol id="visit-allocations" class="visit-list"></ol></details>
+            <details class="payer-disclosure"><summary>Placeholder payer rules for this patient</summary><div id="payer-rules"></div></details>
+          </section>
+        </div>
+      </section>
+    </div>
+    <section class="method" aria-labelledby="method-heading">
+      <h2 id="method-heading">How to read this demonstration</h2>
+      <div class="method-grid">
+        <p><strong>Capacity follows the source ledger.</strong> Completed visits consume approved capacity first; scheduled visits follow in date order. Authorization start and end dates are inclusive. A pending record does not supply approved capacity.</p>
+        <p><strong>Priority is an administrative rule label.</strong> P1, P2 and P3 come from the existing synthetic payer table and rule engine. They are not clinical urgency, a guarantee of coverage or instructions to change patient care.</p>
+        <p><strong>Evidence remains traceable.</strong> File and row references identify the original repository sample. A “scenario edited” label marks any row changed here. No original file is rewritten.</p>
+      </div>
+      <p class="source-links"><a href="https://github.com/Jacob-Met/workflow-checks/blob/2f1e5f777197eedd69d51a4d81c0da744b65ad88/pt_auth/ptauth/engine.py" target="_blank" rel="noopener">Pinned Python rule source</a><a href="https://github.com/Jacob-Met/workflow-checks/tree/2f1e5f777197eedd69d51a4d81c0da744b65ad88/pt_auth/sample_data" target="_blank" rel="noopener">Original synthetic sample</a></p>
+    </section>
+  </main>
+  <footer>PT authorization what-if · Workflow Checks · Synthetic scenario dated September 28, 2026</footer>
+  <script type="module">/** Browser projection of ptauth.engine.build_worklist, source blob 39c97f3.
+ * The Python source remains authoritative. This module accepts normalized,
+ * date-only records produced by the adjacent fixture builder; it is not a CSV
+ * importer or a real payer-policy service. See tests/parity.py and README.md.
+ */
+const DAY = 86400000;
+const ORDER = { P1: 0, P2: 1, P3: 2 };
+const LAST_DATE = '9999-12-31';
+const active = (v) => v.status === 'completed' || v.status === 'scheduled';
+const compare = (a, b) => a < b ? -1 : a > b ? 1 : 0;
+const pair = (a, b) => JSON.stringify([a, b]);
+const covers = (a, d) => a.start <= d && d <= a.end;
+
+function dateNumber(value) {
+  if (typeof value !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(value) || value < '0001-01-01') {
+    throw new Error('Use a complete calendar date (YYYY-MM-DD).');
+  }
+  const ms = Date.parse(`${value}T00:00:00Z`);
+  if (!Number.isFinite(ms) || new Date(ms).toISOString().slice(0, 10) !== value) {
+    throw new Error('Use a valid calendar date (YYYY-MM-DD).');
+  }
+  return ms / DAY;
+}
+
+function shiftDate(value, days) {
+  if (!Number.isSafeInteger(days)) throw new Error('The day offset must be a whole number.');
+  const result = new Date((dateNumber(value) + days) * DAY).toISOString().slice(0, 10);
+  dateNumber(result);
+  return result;
+}
+
+const daysBetween = (later, earlier) => dateNumber(later) - dateNumber(earlier);
+const counts = (v, rule) => !(v.visit_type === 'eval' && rule && !rule.counts_evals);
+
+function normalizedInput(input) {
+  const result = structuredClone(input);
+  dateNumber(result.as_of);
+  if (!Array.isArray(result.visits) || !Array.isArray(result.auths) || !result.payers || !result.patients) {
+    throw new Error('The synthetic scenario is incomplete.');
+  }
+  for (const v of result.visits) {
+    dateNumber(v.visit_date);
+    v.visit_type ??= 'treatment';
+    v.source_row ??= '';
+  }
+  for (const a of result.auths) {
+    dateNumber(a.start); dateNumber(a.end);
+    if (a.end < a.start) throw new Error('Authorization expiry must be on or after its start.');
+    if (!Number.isSafeInteger(a.visits_authorized) || a.visits_authorized < 0) {
+      throw new Error('Authorized visits must be a whole number of zero or more.');
+    }
+    a.source_row ??= '';
+  }
+  return result;
+}
+
+function dedupeVisits(visits) {
+  const last = new Map(visits.filter((v) => v.visit_id).map((v) => [v.visit_id, v]));
+  return visits.filter((v) => !v.visit_id || last.get(v.visit_id) === v);
+}
+
+function resolveAuths(auths) {
+  const result = [];
+  for (const a of auths) {
+    const index = result.findIndex((b) => b.auth_no === a.auth_no && b.patient_id === a.patient_id &&
+      b.payer_id === a.payer_id && b.start <= a.end && a.start <= b.end);
+    if (index < 0) result.push(a); else result[index] = a;
+  }
+  const frequencies = new Map();
+  for (const a of result) frequencies.set(a.auth_no, (frequencies.get(a.auth_no) ?? 0) + 1);
+  const seen = new Set();
+  return result.map((a) => {
+    let auth = a;
+    if (frequencies.get(a.auth_no) > 1) {
+      let label = `${a.auth_no} (${a.start}..${a.end})`;
+      while (seen.has(label)) label += '*';
+      auth = { ...a, auth_no: label };
+    }
+    seen.add(auth.auth_no);
+    return auth;
+  });
+}
+
+function allocate(visits, auths, payers) {
+  const approved = new Map();
+  for (const a of auths) {
+    if (a.status !== 'approved') continue;
+    const key = pair(a.patient_id, a.payer_id);
+    if (!approved.has(key)) approved.set(key, []);
+    approved.get(key).push(a);
+  }
+  for (const list of approved.values()) list.sort((a, b) => compare(a.end, b.end) || compare(a.start, b.start));
+  const ledgers = new Map();
+  for (const list of approved.values()) {
+    for (const auth of list) ledgers.set(auth.auth_no, { auth, used: [], scheduled: [] });
+  }
+  const uncovered = [];
+  const ordered = visits.filter(active).sort((a, b) =>
+    Number(a.status !== 'completed') - Number(b.status !== 'completed') ||
+    compare(a.visit_date, b.visit_date) || compare(a.visit_id, b.visit_id));
+  for (const v of ordered) {
+    const rule = payers[v.payer_id];
+    if ((rule && !rule.requires_auth) || !counts(v, rule)) continue;
+    let home;
+    for (const a of approved.get(pair(v.patient_id, v.payer_id)) ?? []) {
+      const ledger = ledgers.get(a.auth_no);
+      if (covers(a, v.visit_date) && a.visits_authorized - ledger.used.length - ledger.scheduled.length > 0) {
+        home = ledger; break;
+      }
+    }
+    if (!home) uncovered.push(v);
+    else home[v.status === 'completed' ? 'used' : 'scheduled'].push(v);
+  }
+  return { ledgers, uncovered };
+}
+
+function evaluate(input) {
+  const data = normalizedInput(input);
+  const { as_of: asOf, payers, patients } = data;
+  const visits = dedupeVisits(data.visits);
+  const auths = resolveAuths(data.auths);
+  const { ledgers, uncovered } = allocate(visits, auths, payers);
+  const items = new Map();
+  function item(pid, payerId, authNo = '') {
+    const key = `${pid}|${payerId}|${authNo}`;
+    if (!items.has(key)) {
+      const patient = patients[pid], rule = payers[payerId];
+      items.set(key, {
+        patient_id: pid, patient_name: patient ? patient.display_name : pid,
+        clinic: patient ? patient.clinic : '', payer_id: payerId,
+        payer_name: rule ? rule.payer_name : payerId, auth_no: authNo,
+        priority: 'P3', reasons: [], detail: [], visits_used: null,
+        visits_authorized: null, visits_remaining: null, scheduled_in_window: null,
+        auth_end: null, days_left: null, next_visit: null, submit_by: null,
+        checklist: [...(rule?.checklist ?? [])], evidence: [], key,
+      });
+    }
+    return items.get(key);
+  }
+  const bump = (it, priority) => { if (ORDER[priority] < ORDER[it.priority]) it.priority = priority; };
+  const future = new Map();
+  for (const v of visits) {
+    if (v.status === 'scheduled' && v.visit_date >= asOf) {
+      const key = pair(v.patient_id, v.payer_id);
+      if (!future.has(key)) future.set(key, []);
+      future.get(key).push(v);
+    }
+  }
+  const latestApproved = (pid, payerId) => {
+    let latest;
+    for (const a of auths) {
+      if (a.status === 'approved' && a.patient_id === pid && a.payer_id === payerId &&
+          (!latest || a.end > latest.end)) latest = a;
+    }
+    return latest;
+  };
+  const uncoveredByItem = new Map();
+  for (const v of uncovered) {
+    const pending = auths.find((a) => a.status === 'pending' && a.patient_id === v.patient_id &&
+      a.payer_id === v.payer_id && covers(a, v.visit_date));
+    const anchor = pending ?? latestApproved(v.patient_id, v.payer_id);
+    const it = item(v.patient_id, v.payer_id, anchor?.auth_no ?? '');
+    it.evidence.push(v.source_row);
+    if (v.status === 'completed') {
+      if (!it.reasons.includes('UNAUTHORIZED_DONE')) it.reasons.push('UNAUTHORIZED_DONE');
+      it.detail.push(`completed visit ${v.visit_date} (${v.visit_id}) had no covering approved auth`);
+      bump(it, 'P1'); continue;
+    }
+    // Past scheduled rows may anchor later annual-limit alerts. Keep their
+    // context until all rules finish, then omit placeholders without a reason.
+    if (v.visit_date < asOf) continue;
+    const code = pending ? 'PENDING_FOLLOWUP' : 'UNCOVERED_VISIT';
+    if (!it.reasons.includes(code)) it.reasons.push(code);
+    if (pending) {
+      it.detail.push(`visit ${v.visit_date} relies on PENDING auth ${pending.auth_no}; follow up with payer`);
+      bump(it, daysBetween(v.visit_date, asOf) <= 2 ? 'P1' : 'P2');
+    } else {
+      if (!uncoveredByItem.has(it.key)) uncoveredByItem.set(it.key, []);
+      uncoveredByItem.get(it.key).push(v);
+      bump(it, daysBetween(v.visit_date, asOf) <= 7 ? 'P1' : 'P2');
+    }
+    it.next_visit = it.next_visit && it.next_visit < v.visit_date ? it.next_visit : v.visit_date;
+  }
+  for (const [key, list] of uncoveredByItem) {
+    list.sort((a, b) => compare(a.visit_date, b.visit_date));
+    const ids = list.slice(0, 4).map((v) => v.visit_id).join(', ') + (list.length > 4 ? ' ...' : '');
+    items.get(key).detail.unshift(`${list.length} scheduled visit(s) outside any approved auth, first ${list[0].visit_date} (${ids})`);
+  }
+  for (const led of ledgers.values()) {
+    const a = led.auth, rule = payers[a.payer_id];
+    if (!rule || a.end < asOf || a.start > shiftDate(asOf, 30)) continue;
+    const successor = auths.find((b) => ['approved', 'pending'].includes(b.status) &&
+      b.patient_id === a.patient_id && b.payer_id === a.payer_id && b.auth_no !== a.auth_no &&
+      b.start >= a.start && b.end > a.end);
+    const remaining = a.visits_authorized - led.used.length;
+    const daysLeft = daysBetween(a.end, asOf);
+    const continuing = future.get(pair(a.patient_id, a.payer_id)) ?? [];
+    const reasons = [], detail = [];
+    if (remaining <= rule.reauth_visits_before && continuing.length) {
+      reasons.push('REAUTH_BY_VISITS');
+      detail.push(`${remaining} of ${a.visits_authorized} visits left (payer threshold ${rule.reauth_visits_before})`);
+    }
+    if (daysLeft <= rule.reauth_days_before && continuing.length) {
+      reasons.push('REAUTH_BY_DATE');
+      detail.push(`auth ends ${a.end} (${daysLeft} days); ${continuing.length} visit(s) still scheduled`);
+    }
+    if (remaining - led.scheduled.length < 0) detail.push(`scheduled visits exceed remaining by ${led.scheduled.length - remaining}`);
+    if (!reasons.length || successor) continue;
+    const it = item(a.patient_id, a.payer_id, a.auth_no);
+    it.reasons.push(...reasons.filter((r) => !it.reasons.includes(r)));
+    it.detail.push(...detail); it.evidence.push(a.source_row);
+    const exhaust = remaining > 0 && remaining <= led.scheduled.length ? led.scheduled[remaining - 1].visit_date : null;
+    const cutoff = exhaust && exhaust < a.end ? exhaust : a.end;
+    it.submit_by = shiftDate(cutoff, -rule.turnaround_days);
+    bump(it, it.submit_by <= asOf || remaining <= 0 ? 'P1' : 'P2');
+  }
+  const unknown = new Map();
+  for (const v of visits) {
+    if (!payers[v.payer_id] && v.status === 'scheduled' && v.visit_date >= asOf) {
+      unknown.set(pair(v.patient_id, v.payer_id), [v.patient_id, v.payer_id]);
+    }
+  }
+  for (const a of auths) {
+    if (!payers[a.payer_id] && ['approved', 'pending'].includes(a.status) && a.end >= asOf) {
+      unknown.set(pair(a.patient_id, a.payer_id), [a.patient_id, a.payer_id]);
+    }
+  }
+  for (const [pid, payerId] of [...unknown.values()].sort((a, b) => compare(a[0], b[0]) || compare(a[1], b[1]))) {
+    const it = item(pid, payerId, latestApproved(pid, payerId)?.auth_no ?? '');
+    it.reasons.push('UNKNOWN_PAYER');
+    it.detail.push(`payer ${payerId} is not in payers.csv; add its rules - re-auth thresholds and turnaround were not checked`);
+    bump(it, 'P2');
+  }
+  for (const it of items.values()) {
+    const led = ledgers.get(it.auth_no);
+    if (led) {
+      const a = led.auth;
+      it.visits_used = led.used.length; it.visits_authorized = a.visits_authorized;
+      it.visits_remaining = a.visits_authorized - led.used.length;
+      it.scheduled_in_window = led.scheduled.length;
+      it.auth_end = a.end; it.days_left = daysBetween(a.end, asOf);
+    }
+    const next = (future.get(pair(it.patient_id, it.payer_id)) ?? []).map((v) => v.visit_date).sort(compare);
+    if (next.length) it.next_visit = next[0];
+  }
+  const year = new Map();
+  for (const v of visits) {
+    if (v.visit_date.slice(0, 4) !== asOf.slice(0, 4) || !active(v)) continue;
+    const key = pair(v.patient_id, v.payer_id);
+    if (!year.has(key)) year.set(key, { pid: v.patient_id, payerId: v.payer_id, done: 0, scheduled: 0 });
+    year.get(key)[v.status === 'completed' ? 'done' : 'scheduled'] += 1;
+  }
+  for (const { pid, payerId, done, scheduled } of year.values()) {
+    const rule = payers[payerId], limit = rule?.annual_visit_limit;
+    if (!limit) continue;
+    if (done + scheduled > limit || limit - done <= 3) {
+      const it = [...items.values()].find((x) => x.patient_id === pid && x.payer_id === payerId) ?? item(pid, payerId);
+      it.reasons.push('ANNUAL_LIMIT');
+      it.detail.push(`${done} visits used of ${limit}/yr payer limit; ${scheduled} more scheduled`);
+      bump(it, done + scheduled > limit ? 'P2' : 'P3');
+    }
+  }
+  const ordered = [...items.values()].filter((it) => it.reasons.length).sort((a, b) => ORDER[a.priority] - ORDER[b.priority] ||
+    compare(a.submit_by ?? LAST_DATE, b.submit_by ?? LAST_DATE) ||
+    compare(a.next_visit ?? LAST_DATE, b.next_visit ?? LAST_DATE) || compare(a.patient_id, b.patient_id));
+  const serializedLedgers = Object.fromEntries([...ledgers].map(([key, led]) => [key, {
+    ...led, remaining: led.auth.visits_authorized - led.used.length,
+    remaining_after_scheduled: led.auth.visits_authorized - led.used.length - led.scheduled.length,
+  }]));
+  return { items: ordered, ledgers: serializedLedgers, uncovered };
+}
+
+/** UI for the self-contained synthetic demonstration. No storage or I/O. */
+function mount(fixture, model) {
+  const $ = (id) => document.getElementById(id);
+  const el = (tag, className, text) => {
+    const node = document.createElement(tag);
+    if (className) node.className = className;
+    if (text !== undefined) node.textContent = text;
+    return node;
+  };
+  const clone = (value) => structuredClone(value);
+  const canonical = (value) => JSON.stringify(value, (_, v) => v && typeof v === 'object' && !Array.isArray(v)
+    ? Object.fromEntries(Object.keys(v).sort().map((k) => [k, v[k]])) : v);
+  const names = {
+    UNCOVERED_VISIT: 'Scheduled visits without approved capacity',
+    UNAUTHORIZED_DONE: 'Completed visit without covering approval',
+    REAUTH_BY_VISITS: 'Visits-left threshold reached',
+    REAUTH_BY_DATE: 'Expiry threshold reached',
+    PENDING_FOLLOWUP: 'Upcoming visits rely on pending approval',
+    ANNUAL_LIMIT: 'Calendar-year limit', UNKNOWN_PAYER: 'Payer rules missing',
+  };
+  let input = clone(fixture.input), output;
+  let selectedPatient = 'SYN-1002', selectedAuth = -1, selectedVisit = -1, dirty = false;
+  let changedSources = new Set();
+
+  function option(select, value, text) {
+    const node = el('option', '', text); node.value = String(value); select.append(node);
+  }
+  function earliestScheduled(pid) {
+    const candidates = input.visits.map((v, index) => ({ v, index })).filter(({ v }) =>
+      v.patient_id === pid && v.status === 'scheduled');
+    candidates.sort((a, b) => a.v.visit_date.localeCompare(b.v.visit_date) || a.v.visit_id.localeCompare(b.v.visit_id));
+    return (candidates.find(({ v }) => v.visit_date >= input.as_of) ?? candidates[0])?.index ?? -1;
+  }
+  function syncEditors() {
+    $('as-of').value = input.as_of;
+    $('patient').value = selectedPatient;
+    const patient = input.patients[selectedPatient], rule = input.payers[patient.primary_payer];
+    $('patient-context').textContent = `${patient.clinic} · ${rule?.payer_name ?? patient.primary_payer}`;
+    const authIndices = input.auths.map((a, i) => a.patient_id === selectedPatient ? i : -1).filter((i) => i >= 0);
+    if (!authIndices.includes(selectedAuth)) selectedAuth = authIndices[0] ?? -1;
+    $('authorization').replaceChildren();
+    if (!authIndices.length) option($('authorization'), -1, 'No authorization record');
+    for (const i of authIndices) option($('authorization'), i, `${input.auths[i].auth_no} · ${input.auths[i].status}`);
+    $('authorization').value = String(selectedAuth);
+    const auth = input.auths[selectedAuth];
+    $('capacity').value = auth ? auth.visits_authorized : '';
+    $('expiry').value = auth ? auth.end : '';
+    $('expiry').min = auth?.start ?? '2026-01-01';
+    $('capacity').disabled = !auth; $('expiry').disabled = !auth;
+    $('auth-context').textContent = auth
+      ? `${auth.status.toUpperCase()} · starts ${auth.start} · ${auth.source_row}${auth.status === 'pending' ? '. Pending records do not supply approved capacity.' : ''}`
+      : rule && !rule.requires_auth ? 'This placeholder payer does not require authorization.' : 'No approved capacity is available from an authorization record.';
+    const visitIndices = input.visits.map((v, i) => v.patient_id === selectedPatient && v.status === 'scheduled' ? i : -1).filter((i) => i >= 0);
+    if (!visitIndices.includes(selectedVisit)) selectedVisit = earliestScheduled(selectedPatient);
+    $('visit').replaceChildren();
+    if (!visitIndices.length) option($('visit'), -1, 'No scheduled visits');
+    for (const i of visitIndices) option($('visit'), i, `${input.visits[i].visit_id} · ${input.visits[i].visit_date}`);
+    $('visit').value = String(selectedVisit);
+    $('visit-date').value = input.visits[selectedVisit]?.visit_date ?? '';
+    $('visit-date').disabled = selectedVisit < 0;
+    $('patient').disabled = false;
+    $('authorization').disabled = authIndices.length === 0;
+    $('visit').disabled = visitIndices.length === 0;
+    for (const control of [$('as-of'), $('capacity'), $('expiry'), $('visit-date')]) control.removeAttribute('aria-invalid');
+    dirty = false;
+    $('draft-state').textContent = 'Showing the applied scenario.';
+  }
+  function markDirty() {
+    dirty = true;
+    $('results').hidden = true;
+    $('error').hidden = true;
+    $('patient').disabled = true; $('authorization').disabled = true; $('visit').disabled = true;
+    $('draft-state').textContent = 'Edits are waiting. Apply or reset before changing records.';
+    $('result-announcement').textContent = 'Worklist hidden while changes are waiting. Apply changes to calculate this scenario.';
+  }
+  function dateFrom(control) {
+    const value = control.value;
+    try { model.dateNumber(value); } catch { throw { control, message: `Enter a valid ${control.id === 'as-of' ? 'worklist as-of' : control.id === 'expiry' ? 'authorization expiry' : 'scheduled visit'} date.` }; }
+    if ((control.min && value < control.min) || (control.max && value > control.max)) {
+      throw { control, message: `Use a date from ${control.min} through ${control.max}. Authorization expiry cannot precede its start.` };
+    }
+    return value;
+  }
+  function applyEditors(event) {
+    event.preventDefault();
+    try {
+      const candidate = clone(input);
+      candidate.as_of = dateFrom($('as-of'));
+      if (selectedAuth >= 0) {
+        const raw = $('capacity').value;
+        const count = raw.trim() ? Number(raw) : NaN;
+        if (!Number.isSafeInteger(count) || count < 0 || count > 200) {
+          throw { control: $('capacity'), message: 'Authorized visits must be a whole number from 0 through 200 in this demonstration.' };
+        }
+        candidate.auths[selectedAuth].visits_authorized = count;
+        candidate.auths[selectedAuth].end = dateFrom($('expiry'));
+      }
+      if (selectedVisit >= 0) candidate.visits[selectedVisit].visit_date = dateFrom($('visit-date'));
+      const result = model.evaluate(candidate);
+      input = candidate; output = result;
+      $('error').hidden = true;
+      syncEditors(); render();
+    } catch (error) {
+      $('results').hidden = true;
+      $('error').textContent = error.message ?? 'The scenario could not be calculated. Correct the controls or reset all changes.';
+      $('error').hidden = false;
+      if (error.control) { error.control.setAttribute('aria-invalid', 'true'); error.control.focus(); }
+      $('result-announcement').textContent = 'No calculated worklist is displayed for the invalid scenario.';
+      $('draft-state').textContent = 'Correct the marked field, then apply the changes. The last valid scenario is retained in memory.';
+    }
+  }
+  function changes() {
+    const result = [];
+    if (input.as_of !== fixture.input.as_of) result.push({ source: '', text: `Worklist as of: ${fixture.input.as_of} → ${input.as_of}` });
+    input.auths.forEach((a, i) => {
+      const original = fixture.input.auths[i];
+      if (a.visits_authorized !== original.visits_authorized) result.push({ source: a.source_row, text: `${a.auth_no} authorized visits: ${original.visits_authorized} → ${a.visits_authorized}` });
+      if (a.end !== original.end) result.push({ source: a.source_row, text: `${a.auth_no} expiry: ${original.end} → ${a.end}` });
+    });
+    input.visits.forEach((v, i) => {
+      const original = fixture.input.visits[i];
+      if (v.visit_date !== original.visit_date) result.push({ source: v.source_row, text: `${v.visit_id} scheduled date: ${original.visit_date} → ${v.visit_date}` });
+    });
+    return result;
+  }
+  function sourceReference(source) {
+    const node = el('span', 'source-ref', source);
+    if (changedSources.has(source)) node.append(el('span', 'edited', 'scenario edited'));
+    return node;
+  }
+  function highest(result, pid) {
+    const priorities = result.items.filter((i) => i.patient_id === pid).map((i) => i.priority);
+    return ['P1', 'P2', 'P3'].find((p) => priorities.includes(p)) ?? 'No item';
+  }
+  function renderWorklist() {
+    $('worklist').replaceChildren();
+    const list = $('view').value === 'selected' ? output.items.filter((i) => i.patient_id === selectedPatient) : output.items;
+    if (!list.length) {
+      const blank = el('div', 'empty');
+      blank.append(el('strong', '', 'No work item in this view.'), el('p', '', 'The encoded rules produced no item for these inputs. This is not a coverage confirmation.'));
+      $('worklist').append(blank); return;
+    }
+    for (const item of list) {
+      const card = el('article', `work-item${item.patient_id === selectedPatient ? ' selected' : ''}`);
+      card.dataset.key = item.key; card.dataset.priority = item.priority; card.dataset.patient = item.patient_id;
+      const top = el('div', 'card-top'), title = el('div');
+      title.append(el('h3', 'card-title', item.patient_name), el('p', 'card-context', `${item.patient_id} · ${item.clinic} · ${item.auth_no || 'No authorization anchor'}`));
+      top.append(title, el('span', `priority ${item.priority}`, item.priority)); card.append(top);
+      const reasons = el('ul', 'reason-list');
+      for (const reason of item.reasons) {
+        const node = el('li', '', names[reason] ?? reason); node.dataset.reason = reason; reasons.append(node);
+      }
+      if (!item.reasons.length) reasons.append(el('li', '', 'Source work item has no actionable reason'));
+      card.append(reasons);
+      const dates = el('div', 'card-dates');
+      for (const [label, value] of [['Submit by', item.submit_by], ['Next scheduled', item.next_visit], ['Auth expires', item.auth_end]]) {
+        if (value) { const part = el('div'); part.append(el('span', '', label), el('strong', '', value)); dates.append(part); }
+      }
+      card.append(dates);
+      const inspect = el('button', 'inspect', item.patient_id === selectedPatient ? 'Inspecting this patient' : 'Explore this patient');
+      inspect.type = 'button';
+      inspect.addEventListener('click', () => {
+        selectedPatient = item.patient_id;
+        selectedAuth = input.auths.findIndex((a) => a.auth_no === item.auth_no && a.patient_id === selectedPatient);
+        selectedVisit = -1; syncEditors(); render(); $('patient').focus();
+      });
+      card.append(inspect);
+      const evidence = el('details'); evidence.append(el('summary', '', 'Why this item appears'));
+      const detail = el('ul');
+      for (const text of item.detail) detail.append(el('li', 'detail', text));
+      if (item.reasons.length) detail.append(el('li', 'source-ref', `Rule codes: ${item.reasons.join(', ')}`));
+      evidence.append(detail);
+      const sources = el('ul', 'source-list');
+      for (const source of item.evidence) { const row = el('li'); row.append(sourceReference(source)); sources.append(row); }
+      if (sources.childNodes.length) evidence.append(sources);
+      card.append(evidence);
+      if (item.checklist.length) {
+        const checklist = el('details'); checklist.append(el('summary', '', 'Placeholder reauthorization checklist'));
+        const entries = el('ul'); for (const text of item.checklist) entries.append(el('li', '', text));
+        checklist.append(entries); card.append(checklist);
+      }
+      $('worklist').append(card);
+    }
+  }
+  function renderAllocation() {
+    const patient = input.patients[selectedPatient], rule = input.payers[patient.primary_payer];
+    $('selected-label').textContent = `${patient.display_name} · ${selectedPatient} · ${patient.clinic}`;
+    $('ledger').replaceChildren();
+    const ledgers = Object.values(output.ledgers).filter((l) => l.auth.patient_id === selectedPatient);
+    if (!ledgers.length) $('ledger').append(el('p', 'help', rule && !rule.requires_auth
+      ? 'This placeholder payer does not require authorization, so these visits do not enter the authorization ledger.'
+      : 'There is no approved authorization ledger for this patient. Pending records do not supply approved capacity.'));
+    for (const ledger of ledgers) {
+      const a = ledger.auth, card = el('div', 'ledger-card'); card.dataset.auth = a.auth_no;
+      const heading = el('div', 'ledger-title', a.auth_no);
+      heading.append(el('span', '', `${a.start} – ${a.end} · ${a.visits_authorized} authorized`)); card.append(heading);
+      const meter = el('div', 'ledger-meter'); meter.setAttribute('aria-hidden', 'true');
+      for (const [name, value] of [['used', ledger.used.length], ['reserved', ledger.scheduled.length]]) {
+        const segment = el('span', name); segment.style.width = `${a.visits_authorized ? value / a.visits_authorized * 100 : 0}%`; meter.append(segment);
+      }
+      card.append(meter);
+      const counts = el('div', 'ledger-counts');
+      for (const [name, value] of [['Completed', ledger.used.length], ['Scheduled reserved', ledger.scheduled.length], ['Unallocated left', ledger.remaining_after_scheduled]]) {
+        const count = el('div', '', name); count.prepend(el('strong', '', String(value))); counts.append(count);
+      }
+      card.append(counts);
+      const source = el('p', 'ledger-source'); source.append(sourceReference(a.source_row)); card.append(source);
+      $('ledger').append(card);
+    }
+    const assigned = new Map();
+    for (const ledger of Object.values(output.ledgers)) {
+      for (const visit of [...ledger.used, ...ledger.scheduled]) assigned.set(visit.visit_id, ledger.auth.auth_no);
+    }
+    const uncovered = new Set(output.uncovered.map((v) => v.visit_id));
+    const visits = input.visits.filter((v) => v.patient_id === selectedPatient).sort((a, b) => a.visit_date.localeCompare(b.visit_date) || a.visit_id.localeCompare(b.visit_id));
+    $('visit-summary').textContent = `Inspect all ${visits.length} recorded visits and their allocation`;
+    $('visit-allocations').replaceChildren();
+    for (const visit of visits) {
+      const row = el('li'); row.dataset.visit = visit.visit_id;
+      const line = el('div', 'visit-line'), left = el('div');
+      left.append(el('strong', '', visit.visit_date), el('small', '', visit.visit_id));
+      const right = el('div');
+      let allocation = assigned.get(visit.visit_id) ? `Assigned to ${assigned.get(visit.visit_id)}`
+        : uncovered.has(visit.visit_id) ? 'No covering approved capacity'
+          : !['completed', 'scheduled'].includes(visit.status) ? 'This status does not consume capacity'
+            : rule && !rule.requires_auth ? 'Authorization not required by placeholder rule'
+              : visit.visit_type === 'eval' && rule && !rule.counts_evals ? 'Evaluation excluded by placeholder rule' : 'Not assigned';
+      right.append(el('span', uncovered.has(visit.visit_id) ? 'visit-uncovered' : '', allocation));
+      const past = visit.status === 'scheduled' && visit.visit_date < input.as_of;
+      right.append(el('small', '', `${visit.status}${past ? ' (past; status not inferred)' : ''} · ${visit.visit_type}`));
+      line.append(left, right); row.append(line, sourceReference(visit.source_row)); $('visit-allocations').append(row);
+    }
+    $('payer-rules').replaceChildren();
+    if (rule) {
+      const list = el('ul', 'payer-rules');
+      const values = [rule.payer_name, `Authorization required: ${rule.requires_auth ? 'yes' : 'no'}`,
+        `Reauthorization visits-left threshold: ${rule.reauth_visits_before}`,
+        `Reauthorization days-left threshold: ${rule.reauth_days_before}`,
+        `Turnaround: ${rule.turnaround_days} calendar days`,
+        `Calendar-year visit limit: ${rule.annual_visit_limit ?? 'none in the sample'}`,
+        `Evaluations consume authorization capacity: ${rule.counts_evals ? 'yes' : 'no'}`];
+      for (const value of values) list.append(el('li', '', value)); $('payer-rules').append(list);
+    } else $('payer-rules').append(el('p', '', 'No payer rule exists for this ID. The worklist must preserve that uncertainty.'));
+  }
+  function render() {
+    if (dirty) return;
+    const edited = changes(); changedSources = new Set(edited.map((c) => c.source).filter(Boolean));
+    const p1 = output.items.filter((i) => i.priority === 'P1').length;
+    const p2 = output.items.filter((i) => i.priority === 'P2').length;
+    const futureUncovered = output.uncovered.filter((v) => v.status === 'scheduled' && v.visit_date >= input.as_of).length;
+    $('metrics').replaceChildren();
+    for (const [kind, value, label] of [['p1', p1, 'P1 work items'], ['p2', p2, 'P2 work items'], ['uncovered', futureUncovered, 'Future visits without approved capacity']]) {
+      const card = el('div', `metric ${kind}`); card.dataset.metric = kind;
+      card.append(el('strong', '', String(value)), el('span', '', label)); $('metrics').append(card);
+    }
+    $('priority-change').textContent = `${highest(fixture.baseline, selectedPatient)} → ${highest(output, selectedPatient)}`;
+    $('edit-count').textContent = `${edited.length} ${edited.length === 1 ? 'field changed' : 'fields changed'}`;
+    $('changes').replaceChildren();
+    if (!edited.length) $('changes').append(el('li', '', 'Original synthetic sample; no scenario changes.'));
+    for (const change of edited) {
+      const li = el('li', '', change.text + ' '); if (change.source) li.append(sourceReference(change.source)); $('changes').append(li);
+    }
+    const past = input.visits.filter((v) => v.status === 'scheduled' && v.visit_date < input.as_of).length;
+    $('past-scheduled').hidden = past === 0;
+    $('past-scheduled').textContent = `${past} recorded scheduled visit${past === 1 ? ' is' : 's are'} now in the past. These rows can still reserve capacity under the source engine; their attendance is not inferred.`;
+    $('result-announcement').textContent = `Applied scenario as of ${input.as_of}: ${output.items.length} work items, ${p1} P1, ${p2} P2. ${futureUncovered} future visits lack approved capacity, including any visits relying on pending records.`;
+    renderWorklist(); renderAllocation(); $('results').hidden = false;
+  }
+  function reset(preset = '') {
+    input = clone(fixture.input); selectedPatient = preset === 'capacity' || !preset ? 'SYN-1002' : 'SYN-1001';
+    selectedAuth = input.auths.findIndex((a) => a.patient_id === selectedPatient && a.status === 'approved');
+    selectedVisit = earliestScheduled(selectedPatient);
+    const auth = input.auths[selectedAuth], visit = input.visits[selectedVisit];
+    if (preset === 'capacity') auth.visits_authorized = fixture.baseline.ledgers[auth.auth_no].used.length;
+    if (preset === 'expiry') auth.end = model.shiftDate(visit.visit_date, -1);
+    if (preset === 'date') visit.visit_date = model.shiftDate(auth.end, 1);
+    output = model.evaluate(input); $('error').hidden = true; syncEditors(); render();
+  }
+  try {
+    output = model.evaluate(input);
+    if (canonical(output) !== canonical(fixture.baseline)) throw new Error('The bundled scenario does not match its Python baseline. Rebuild and qualify this artifact before use.');
+    for (const patient of Object.values(input.patients)) option($('patient'), patient.patient_id, `${patient.display_name} · ${patient.patient_id}`);
+    $('editor-fields').disabled = false;
+    for (const id of ['try-capacity', 'try-expiry', 'try-date', 'reset']) $(id).disabled = false;
+    $('editor-form').addEventListener('submit', applyEditors);
+    for (const id of ['as-of', 'capacity', 'expiry', 'visit-date']) $(id).addEventListener('input', markDirty);
+    $('patient').addEventListener('change', () => { selectedPatient = $('patient').value; selectedAuth = -1; selectedVisit = -1; syncEditors(); render(); });
+    $('authorization').addEventListener('change', () => { selectedAuth = Number($('authorization').value); syncEditors(); });
+    $('visit').addEventListener('change', () => { selectedVisit = Number($('visit').value); syncEditors(); });
+    $('view').addEventListener('change', renderWorklist);
+    $('try-capacity').addEventListener('click', () => reset('capacity'));
+    $('try-expiry').addEventListener('click', () => reset('expiry'));
+    $('try-date').addEventListener('click', () => reset('date'));
+    $('reset').addEventListener('click', () => reset());
+    syncEditors(); render();
+  } catch (error) {
+    $('editor-fields').disabled = true;
+    for (const id of ['try-capacity', 'try-expiry', 'try-date', 'reset']) $(id).disabled = true;
+    $('results').hidden = true; $('error').textContent = error.message; $('error').hidden = false;
+    $('result-announcement').textContent = 'The demo did not initialize. No worklist is being presented.';
+  }
+}
+
+mount({"schema":"ptauth-whatif/1","source_base":"2f1e5f777197eedd69d51a4d81c0da744b65ad88","notice":"SYNTHETIC DATA ONLY. Placeholder payer rules; no medical advice or payer submission.","source":[{"path":"pt_auth/ptauth/engine.py","bytes":16057,"sha256":"bfa7049e9b133d654ce947b135c17ac401bd7b1fcd76350bdb10de5b7a1ad1f7","git_blob":"39c97f35d61ff949b5c2381f0ad60d7af8d74226"},{"path":"pt_auth/ptauth/data.py","bytes":10283,"sha256":"eeab8ab5b2b72524148969de0d13b27126cc64c4ec79b68a147b51b25a3741e2","git_blob":"19a2a1b79eff6d2753507eebf3bf78011ddaaa87"},{"path":"pt_auth/sample_data/schedule.csv","bytes":71520,"sha256":"a5f9177b2e0fb9b4397a83839961d11c947e74cc2f13d5de29a31f39254e5198","git_blob":"24a395250f5318004bab4f168c3ca237189ab354"},{"path":"pt_auth/sample_data/authorizations.csv","bytes":2990,"sha256":"306cae3c27895d2b81978d4cf3115e867b8853edb4939ec8f7e733a7f27b0657","git_blob":"036f7b276e3e09252afb886ad451531f51ada844"},{"path":"pt_auth/sample_data/payers.csv","bytes":904,"sha256":"81f143eed15c9ce613ee7cf372e51d6223a44700c877cc42d283a824d30900ed","git_blob":"1853837e82048ac11698b4ad5bb6eeb055d56038"},{"path":"pt_auth/sample_data/patients.csv","bytes":2333,"sha256":"1dd9bc97889ca4a2e46e19804841d4af29ada284ede22d328370d20fb520e6e5","git_blob":"e67323b68d1ac9ee4a901dc3ef70a95384ba5000"}],"input":{"as_of":"2026-09-28","visits":[{"visit_id":"V1001","patient_id":"SYN-1001","visit_date":"2026-08-19","clinic":"Clinic West (synthetic)","therapist":"PT-A","payer_id":"PAY-MA","status":"completed","visit_type":"eval","source_row":"schedule.csv:row2"},{"visit_id":"V1002","patient_id":"SYN-1001","visit_date":"2026-08-22","clinic":"Clinic West (synthetic)","therapist":"PT-C","payer_id":"PAY-MA","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row3"},{"visit_id":"V1003","patient_id":"SYN-1001","visit_date":"2026-08-26","clinic":"Clinic West (synthetic)","therapist":"PT-A","payer_id":"PAY-MA","status":"cancelled","visit_type":"treatment","source_row":"schedule.csv:row4"},{"visit_id":"V1004","patient_id":"SYN-1001","visit_date":"2026-08-28","clinic":"Clinic West (synthetic)","therapist":"PT-A","payer_id":"PAY-MA","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row5"},{"visit_id":"V1005","patient_id":"SYN-1001","visit_date":"2026-09-01","clinic":"Clinic West (synthetic)","therapist":"PTA-E","payer_id":"PAY-MA","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row6"},{"visit_id":"V1006","patient_id":"SYN-1001","visit_date":"2026-09-05","clinic":"Clinic West (synthetic)","therapist":"PT-D","payer_id":"PAY-MA","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row7"},{"visit_id":"V1007","patient_id":"SYN-1001","visit_date":"2026-09-07","clinic":"Clinic West (synthetic)","therapist":"PT-B","payer_id":"PAY-MA","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row8"},{"visit_id":"V1008","patient_id":"SYN-1001","visit_date":"2026-09-09","clinic":"Clinic West (synthetic)","therapist":"PT-D","payer_id":"PAY-MA","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row9"},{"visit_id":"V1009","patient_id":"SYN-1001","visit_date":"2026-09-11","clinic":"Clinic West (synthetic)","therapist":"PT-B","payer_id":"PAY-MA","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row10"},{"visit_id":"V1010","patient_id":"SYN-1001","visit_date":"2026-09-14","clinic":"Clinic West (synthetic)","therapist":"PT-B","payer_id":"PAY-MA","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row11"},{"visit_id":"V1011","patient_id":"SYN-1001","visit_date":"2026-09-18","clinic":"Clinic West (synthetic)","therapist":"PTA-E","payer_id":"PAY-MA","status":"completed","visit_type":"re-eval","source_row":"schedule.csv:row12"},{"visit_id":"V1012","patient_id":"SYN-1001","visit_date":"2026-09-21","clinic":"Clinic West (synthetic)","therapist":"PT-A","payer_id":"PAY-MA","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row13"},{"visit_id":"V1013","patient_id":"SYN-1001","visit_date":"2026-09-23","clinic":"Clinic West (synthetic)","therapist":"PT-D","payer_id":"PAY-MA","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row14"},{"visit_id":"V1014","patient_id":"SYN-1001","visit_date":"2026-09-25","clinic":"Clinic West (synthetic)","therapist":"PT-D","payer_id":"PAY-MA","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row15"},{"visit_id":"V1015","patient_id":"SYN-1001","visit_date":"2026-09-27","clinic":"Clinic West (synthetic)","therapist":"PT-B","payer_id":"PAY-MA","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row16"},{"visit_id":"V1016","patient_id":"SYN-1001","visit_date":"2026-09-29","clinic":"Clinic West (synthetic)","therapist":"PTA-E","payer_id":"PAY-MA","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row17"},{"visit_id":"V1017","patient_id":"SYN-1001","visit_date":"2026-10-03","clinic":"Clinic West (synthetic)","therapist":"PT-D","payer_id":"PAY-MA","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row18"},{"visit_id":"V1018","patient_id":"SYN-1001","visit_date":"2026-10-05","clinic":"Clinic West (synthetic)","therapist":"PT-C","payer_id":"PAY-MA","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row19"},{"visit_id":"V1019","patient_id":"SYN-1001","visit_date":"2026-10-08","clinic":"Clinic West (synthetic)","therapist":"PT-C","payer_id":"PAY-MA","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row20"},{"visit_id":"V1020","patient_id":"SYN-1001","visit_date":"2026-10-12","clinic":"Clinic West (synthetic)","therapist":"PT-D","payer_id":"PAY-MA","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row21"},{"visit_id":"V1021","patient_id":"SYN-1001","visit_date":"2026-10-15","clinic":"Clinic West (synthetic)","therapist":"PTA-E","payer_id":"PAY-MA","status":"scheduled","visit_type":"re-eval","source_row":"schedule.csv:row22"},{"visit_id":"V1022","patient_id":"SYN-1001","visit_date":"2026-10-19","clinic":"Clinic West (synthetic)","therapist":"PT-D","payer_id":"PAY-MA","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row23"},{"visit_id":"V1023","patient_id":"SYN-1001","visit_date":"2026-10-22","clinic":"Clinic West (synthetic)","therapist":"PT-C","payer_id":"PAY-MA","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row24"},{"visit_id":"V1024","patient_id":"SYN-1001","visit_date":"2026-10-24","clinic":"Clinic West (synthetic)","therapist":"PT-D","payer_id":"PAY-MA","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row25"},{"visit_id":"V1025","patient_id":"SYN-1002","visit_date":"2026-09-08","clinic":"Clinic West (synthetic)","therapist":"PT-C","payer_id":"PAY-COMM1","status":"completed","visit_type":"eval","source_row":"schedule.csv:row26"},{"visit_id":"V1026","patient_id":"SYN-1002","visit_date":"2026-09-11","clinic":"Clinic West (synthetic)","therapist":"PT-C","payer_id":"PAY-COMM1","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row27"},{"visit_id":"V1027","patient_id":"SYN-1002","visit_date":"2026-09-13","clinic":"Clinic West (synthetic)","therapist":"PTA-E","payer_id":"PAY-COMM1","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row28"},{"visit_id":"V1028","patient_id":"SYN-1002","visit_date":"2026-09-16","clinic":"Clinic West (synthetic)","therapist":"PT-B","payer_id":"PAY-COMM1","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row29"},{"visit_id":"V1029","patient_id":"SYN-1002","visit_date":"2026-09-18","clinic":"Clinic West (synthetic)","therapist":"PT-A","payer_id":"PAY-COMM1","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row30"},{"visit_id":"V1030","patient_id":"SYN-1002","visit_date":"2026-09-22","clinic":"Clinic West (synthetic)","therapist":"PT-B","payer_id":"PAY-COMM1","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row31"},{"visit_id":"V1031","patient_id":"SYN-1002","visit_date":"2026-09-26","clinic":"Clinic West (synthetic)","therapist":"PT-C","payer_id":"PAY-COMM1","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row32"},{"visit_id":"V1032","patient_id":"SYN-1002","visit_date":"2026-09-30","clinic":"Clinic West (synthetic)","therapist":"PT-B","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row33"},{"visit_id":"V1033","patient_id":"SYN-1002","visit_date":"2026-10-04","clinic":"Clinic West (synthetic)","therapist":"PT-A","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row34"},{"visit_id":"V1034","patient_id":"SYN-1002","visit_date":"2026-10-06","clinic":"Clinic West (synthetic)","therapist":"PTA-E","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row35"},{"visit_id":"V1035","patient_id":"SYN-1002","visit_date":"2026-10-10","clinic":"Clinic West (synthetic)","therapist":"PT-B","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"re-eval","source_row":"schedule.csv:row36"},{"visit_id":"V1036","patient_id":"SYN-1002","visit_date":"2026-10-14","clinic":"Clinic West (synthetic)","therapist":"PT-D","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row37"},{"visit_id":"V1037","patient_id":"SYN-1002","visit_date":"2026-10-17","clinic":"Clinic West (synthetic)","therapist":"PT-B","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row38"},{"visit_id":"V1038","patient_id":"SYN-1002","visit_date":"2026-10-21","clinic":"Clinic West (synthetic)","therapist":"PTA-E","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row39"},{"visit_id":"V1039","patient_id":"SYN-1002","visit_date":"2026-10-25","clinic":"Clinic West (synthetic)","therapist":"PT-A","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row40"},{"visit_id":"V1040","patient_id":"SYN-1003","visit_date":"2026-09-03","clinic":"Clinic West (synthetic)","therapist":"PT-A","payer_id":"PAY-MA","status":"completed","visit_type":"eval","source_row":"schedule.csv:row41"},{"visit_id":"V1041","patient_id":"SYN-1003","visit_date":"2026-09-06","clinic":"Clinic West (synthetic)","therapist":"PTA-E","payer_id":"PAY-MA","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row42"},{"visit_id":"V1042","patient_id":"SYN-1003","visit_date":"2026-09-09","clinic":"Clinic West (synthetic)","therapist":"PT-D","payer_id":"PAY-MA","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row43"},{"visit_id":"V1043","patient_id":"SYN-1003","visit_date":"2026-09-13","clinic":"Clinic West (synthetic)","therapist":"PT-C","payer_id":"PAY-MA","status":"cancelled","visit_type":"treatment","source_row":"schedule.csv:row44"},{"visit_id":"V1044","patient_id":"SYN-1003","visit_date":"2026-09-16","clinic":"Clinic West (synthetic)","therapist":"PT-C","payer_id":"PAY-MA","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row45"},{"visit_id":"V1045","patient_id":"SYN-1003","visit_date":"2026-09-18","clinic":"Clinic West (synthetic)","therapist":"PT-D","payer_id":"PAY-MA","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row46"},{"visit_id":"V1046","patient_id":"SYN-1003","visit_date":"2026-09-21","clinic":"Clinic West (synthetic)","therapist":"PT-D","payer_id":"PAY-MA","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row47"},{"visit_id":"V1047","patient_id":"SYN-1003","visit_date":"2026-09-23","clinic":"Clinic West (synthetic)","therapist":"PTA-E","payer_id":"PAY-MA","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row48"},{"visit_id":"V1048","patient_id":"SYN-1003","visit_date":"2026-09-26","clinic":"Clinic West (synthetic)","therapist":"PT-B","payer_id":"PAY-MA","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row49"},{"visit_id":"V1049","patient_id":"SYN-1003","visit_date":"2026-09-30","clinic":"Clinic West (synthetic)","therapist":"PT-A","payer_id":"PAY-MA","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row50"},{"visit_id":"V1050","patient_id":"SYN-1003","visit_date":"2026-10-03","clinic":"Clinic West (synthetic)","therapist":"PT-D","payer_id":"PAY-MA","status":"scheduled","visit_type":"re-eval","source_row":"schedule.csv:row51"},{"visit_id":"V1051","patient_id":"SYN-1003","visit_date":"2026-10-05","clinic":"Clinic West (synthetic)","therapist":"PT-B","payer_id":"PAY-MA","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row52"},{"visit_id":"V1052","patient_id":"SYN-1003","visit_date":"2026-10-08","clinic":"Clinic West (synthetic)","therapist":"PT-A","payer_id":"PAY-MA","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row53"},{"visit_id":"V1053","patient_id":"SYN-1003","visit_date":"2026-10-10","clinic":"Clinic West (synthetic)","therapist":"PT-C","payer_id":"PAY-MA","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row54"},{"visit_id":"V1054","patient_id":"SYN-1003","visit_date":"2026-10-12","clinic":"Clinic West (synthetic)","therapist":"PTA-E","payer_id":"PAY-MA","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row55"},{"visit_id":"V1055","patient_id":"SYN-1003","visit_date":"2026-10-15","clinic":"Clinic West (synthetic)","therapist":"PT-C","payer_id":"PAY-MA","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row56"},{"visit_id":"V1056","patient_id":"SYN-1003","visit_date":"2026-10-17","clinic":"Clinic West (synthetic)","therapist":"PT-B","payer_id":"PAY-MA","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row57"},{"visit_id":"V1057","patient_id":"SYN-1003","visit_date":"2026-10-20","clinic":"Clinic West (synthetic)","therapist":"PTA-E","payer_id":"PAY-MA","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row58"},{"visit_id":"V1058","patient_id":"SYN-1003","visit_date":"2026-10-24","clinic":"Clinic West (synthetic)","therapist":"PT-D","payer_id":"PAY-MA","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row59"},{"visit_id":"V1059","patient_id":"SYN-1003","visit_date":"2026-10-26","clinic":"Clinic West (synthetic)","therapist":"PT-C","payer_id":"PAY-MA","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row60"},{"visit_id":"V1060","patient_id":"SYN-1004","visit_date":"2026-08-24","clinic":"Clinic North (synthetic)","therapist":"PT-A","payer_id":"PAY-COMM1","status":"cancelled","visit_type":"eval","source_row":"schedule.csv:row61"},{"visit_id":"V1061","patient_id":"SYN-1004","visit_date":"2026-08-28","clinic":"Clinic North (synthetic)","therapist":"PT-A","payer_id":"PAY-COMM1","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row62"},{"visit_id":"V1062","patient_id":"SYN-1004","visit_date":"2026-08-31","clinic":"Clinic North (synthetic)","therapist":"PTA-E","payer_id":"PAY-COMM1","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row63"},{"visit_id":"V1063","patient_id":"SYN-1004","visit_date":"2026-09-02","clinic":"Clinic North (synthetic)","therapist":"PT-B","payer_id":"PAY-COMM1","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row64"},{"visit_id":"V1064","patient_id":"SYN-1004","visit_date":"2026-09-04","clinic":"Clinic North (synthetic)","therapist":"PTA-E","payer_id":"PAY-COMM1","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row65"},{"visit_id":"V1065","patient_id":"SYN-1004","visit_date":"2026-09-06","clinic":"Clinic North (synthetic)","therapist":"PT-A","payer_id":"PAY-COMM1","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row66"},{"visit_id":"V1066","patient_id":"SYN-1004","visit_date":"2026-09-10","clinic":"Clinic North (synthetic)","therapist":"PT-B","payer_id":"PAY-COMM1","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row67"},{"visit_id":"V1067","patient_id":"SYN-1004","visit_date":"2026-09-13","clinic":"Clinic North (synthetic)","therapist":"PT-C","payer_id":"PAY-COMM1","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row68"},{"visit_id":"V1068","patient_id":"SYN-1004","visit_date":"2026-09-15","clinic":"Clinic North (synthetic)","therapist":"PTA-E","payer_id":"PAY-COMM1","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row69"},{"visit_id":"V1069","patient_id":"SYN-1004","visit_date":"2026-09-18","clinic":"Clinic North (synthetic)","therapist":"PTA-E","payer_id":"PAY-COMM1","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row70"},{"visit_id":"V1070","patient_id":"SYN-1004","visit_date":"2026-09-22","clinic":"Clinic North (synthetic)","therapist":"PTA-E","payer_id":"PAY-COMM1","status":"completed","visit_type":"re-eval","source_row":"schedule.csv:row71"},{"visit_id":"V1071","patient_id":"SYN-1004","visit_date":"2026-09-25","clinic":"Clinic North (synthetic)","therapist":"PTA-E","payer_id":"PAY-COMM1","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row72"},{"visit_id":"V1072","patient_id":"SYN-1004","visit_date":"2026-09-28","clinic":"Clinic North (synthetic)","therapist":"PT-C","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row73"},{"visit_id":"V1073","patient_id":"SYN-1004","visit_date":"2026-10-01","clinic":"Clinic North (synthetic)","therapist":"PTA-E","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row74"},{"visit_id":"V1074","patient_id":"SYN-1004","visit_date":"2026-10-03","clinic":"Clinic North (synthetic)","therapist":"PT-C","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row75"},{"visit_id":"V1075","patient_id":"SYN-1004","visit_date":"2026-10-07","clinic":"Clinic North (synthetic)","therapist":"PT-C","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row76"},{"visit_id":"V1076","patient_id":"SYN-1004","visit_date":"2026-10-09","clinic":"Clinic North (synthetic)","therapist":"PTA-E","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row77"},{"visit_id":"V1077","patient_id":"SYN-1004","visit_date":"2026-10-11","clinic":"Clinic North (synthetic)","therapist":"PTA-E","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row78"},{"visit_id":"V1078","patient_id":"SYN-1004","visit_date":"2026-10-13","clinic":"Clinic North (synthetic)","therapist":"PTA-E","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row79"},{"visit_id":"V1079","patient_id":"SYN-1004","visit_date":"2026-10-16","clinic":"Clinic North (synthetic)","therapist":"PT-B","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row80"},{"visit_id":"V1080","patient_id":"SYN-1004","visit_date":"2026-10-18","clinic":"Clinic North (synthetic)","therapist":"PT-A","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"re-eval","source_row":"schedule.csv:row81"},{"visit_id":"V1081","patient_id":"SYN-1004","visit_date":"2026-10-22","clinic":"Clinic North (synthetic)","therapist":"PTA-E","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row82"},{"visit_id":"V1082","patient_id":"SYN-1004","visit_date":"2026-10-26","clinic":"Clinic North (synthetic)","therapist":"PT-C","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row83"},{"visit_id":"V1083","patient_id":"SYN-1005","visit_date":"2026-09-12","clinic":"Clinic West (synthetic)","therapist":"PT-A","payer_id":"PAY-COMM1","status":"completed","visit_type":"eval","source_row":"schedule.csv:row84"},{"visit_id":"V1084","patient_id":"SYN-1005","visit_date":"2026-09-16","clinic":"Clinic West (synthetic)","therapist":"PT-A","payer_id":"PAY-COMM1","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row85"},{"visit_id":"V1085","patient_id":"SYN-1005","visit_date":"2026-09-19","clinic":"Clinic West (synthetic)","therapist":"PT-A","payer_id":"PAY-COMM1","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row86"},{"visit_id":"V1086","patient_id":"SYN-1005","visit_date":"2026-09-23","clinic":"Clinic West (synthetic)","therapist":"PTA-E","payer_id":"PAY-COMM1","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row87"},{"visit_id":"V1087","patient_id":"SYN-1005","visit_date":"2026-09-27","clinic":"Clinic West (synthetic)","therapist":"PT-D","payer_id":"PAY-COMM1","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row88"},{"visit_id":"V1088","patient_id":"SYN-1005","visit_date":"2026-09-29","clinic":"Clinic West (synthetic)","therapist":"PT-D","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row89"},{"visit_id":"V1089","patient_id":"SYN-1005","visit_date":"2026-10-03","clinic":"Clinic West (synthetic)","therapist":"PT-B","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row90"},{"visit_id":"V1090","patient_id":"SYN-1005","visit_date":"2026-10-07","clinic":"Clinic West (synthetic)","therapist":"PT-D","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row91"},{"visit_id":"V1091","patient_id":"SYN-1005","visit_date":"2026-10-11","clinic":"Clinic West (synthetic)","therapist":"PT-D","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row92"},{"visit_id":"V1092","patient_id":"SYN-1005","visit_date":"2026-10-14","clinic":"Clinic West (synthetic)","therapist":"PT-C","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row93"},{"visit_id":"V1093","patient_id":"SYN-1005","visit_date":"2026-10-17","clinic":"Clinic West (synthetic)","therapist":"PT-D","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"re-eval","source_row":"schedule.csv:row94"},{"visit_id":"V1094","patient_id":"SYN-1005","visit_date":"2026-10-21","clinic":"Clinic West (synthetic)","therapist":"PT-B","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row95"},{"visit_id":"V1095","patient_id":"SYN-1005","visit_date":"2026-10-25","clinic":"Clinic West (synthetic)","therapist":"PT-A","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row96"},{"visit_id":"V1096","patient_id":"SYN-1006","visit_date":"2026-08-04","clinic":"Clinic West (synthetic)","therapist":"PT-B","payer_id":"PAY-COMM1","status":"completed","visit_type":"eval","source_row":"schedule.csv:row97"},{"visit_id":"V1097","patient_id":"SYN-1006","visit_date":"2026-08-07","clinic":"Clinic West (synthetic)","therapist":"PT-C","payer_id":"PAY-COMM1","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row98"},{"visit_id":"V1098","patient_id":"SYN-1006","visit_date":"2026-08-11","clinic":"Clinic West (synthetic)","therapist":"PT-D","payer_id":"PAY-COMM1","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row99"},{"visit_id":"V1099","patient_id":"SYN-1006","visit_date":"2026-08-15","clinic":"Clinic West (synthetic)","therapist":"PT-D","payer_id":"PAY-COMM1","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row100"},{"visit_id":"V1100","patient_id":"SYN-1006","visit_date":"2026-08-19","clinic":"Clinic West (synthetic)","therapist":"PT-B","payer_id":"PAY-COMM1","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row101"},{"visit_id":"V1101","patient_id":"SYN-1006","visit_date":"2026-08-23","clinic":"Clinic West (synthetic)","therapist":"PT-B","payer_id":"PAY-COMM1","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row102"},{"visit_id":"V1102","patient_id":"SYN-1006","visit_date":"2026-08-27","clinic":"Clinic West (synthetic)","therapist":"PT-C","payer_id":"PAY-COMM1","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row103"},{"visit_id":"V1103","patient_id":"SYN-1006","visit_date":"2026-08-31","clinic":"Clinic West (synthetic)","therapist":"PT-B","payer_id":"PAY-COMM1","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row104"},{"visit_id":"V1104","patient_id":"SYN-1006","visit_date":"2026-09-04","clinic":"Clinic West (synthetic)","therapist":"PT-A","payer_id":"PAY-COMM1","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row105"},{"visit_id":"V1105","patient_id":"SYN-1006","visit_date":"2026-09-08","clinic":"Clinic West (synthetic)","therapist":"PT-C","payer_id":"PAY-COMM1","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row106"},{"visit_id":"V1106","patient_id":"SYN-1006","visit_date":"2026-09-11","clinic":"Clinic West (synthetic)","therapist":"PT-B","payer_id":"PAY-COMM1","status":"completed","visit_type":"re-eval","source_row":"schedule.csv:row107"},{"visit_id":"V1107","patient_id":"SYN-1006","visit_date":"2026-09-13","clinic":"Clinic West (synthetic)","therapist":"PTA-E","payer_id":"PAY-COMM1","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row108"},{"visit_id":"V1108","patient_id":"SYN-1006","visit_date":"2026-09-16","clinic":"Clinic West (synthetic)","therapist":"PTA-E","payer_id":"PAY-COMM1","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row109"},{"visit_id":"V1109","patient_id":"SYN-1006","visit_date":"2026-09-19","clinic":"Clinic West (synthetic)","therapist":"PT-D","payer_id":"PAY-COMM1","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row110"},{"visit_id":"V1110","patient_id":"SYN-1006","visit_date":"2026-09-22","clinic":"Clinic West (synthetic)","therapist":"PT-D","payer_id":"PAY-COMM1","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row111"},{"visit_id":"V1111","patient_id":"SYN-1006","visit_date":"2026-09-25","clinic":"Clinic West (synthetic)","therapist":"PT-D","payer_id":"PAY-COMM1","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row112"},{"visit_id":"V1112","patient_id":"SYN-1006","visit_date":"2026-09-29","clinic":"Clinic West (synthetic)","therapist":"PT-D","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row113"},{"visit_id":"V1113","patient_id":"SYN-1006","visit_date":"2026-10-02","clinic":"Clinic West (synthetic)","therapist":"PTA-E","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row114"},{"visit_id":"V1114","patient_id":"SYN-1006","visit_date":"2026-10-06","clinic":"Clinic West (synthetic)","therapist":"PT-C","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row115"},{"visit_id":"V1115","patient_id":"SYN-1006","visit_date":"2026-10-10","clinic":"Clinic West (synthetic)","therapist":"PT-B","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row116"},{"visit_id":"V1116","patient_id":"SYN-1006","visit_date":"2026-10-12","clinic":"Clinic West (synthetic)","therapist":"PT-D","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"re-eval","source_row":"schedule.csv:row117"},{"visit_id":"V1117","patient_id":"SYN-1006","visit_date":"2026-10-14","clinic":"Clinic West (synthetic)","therapist":"PTA-E","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row118"},{"visit_id":"V1118","patient_id":"SYN-1006","visit_date":"2026-10-17","clinic":"Clinic West (synthetic)","therapist":"PT-C","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row119"},{"visit_id":"V1119","patient_id":"SYN-1006","visit_date":"2026-10-19","clinic":"Clinic West (synthetic)","therapist":"PT-A","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row120"},{"visit_id":"V1120","patient_id":"SYN-1006","visit_date":"2026-10-22","clinic":"Clinic West (synthetic)","therapist":"PT-B","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row121"},{"visit_id":"V1121","patient_id":"SYN-1006","visit_date":"2026-10-25","clinic":"Clinic West (synthetic)","therapist":"PT-B","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row122"},{"visit_id":"V1122","patient_id":"SYN-1007","visit_date":"2026-09-17","clinic":"Clinic West (synthetic)","therapist":"PT-B","payer_id":"PAY-WC","status":"completed","visit_type":"eval","source_row":"schedule.csv:row123"},{"visit_id":"V1123","patient_id":"SYN-1007","visit_date":"2026-09-19","clinic":"Clinic West (synthetic)","therapist":"PT-D","payer_id":"PAY-WC","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row124"},{"visit_id":"V1124","patient_id":"SYN-1007","visit_date":"2026-09-22","clinic":"Clinic West (synthetic)","therapist":"PT-A","payer_id":"PAY-WC","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row125"},{"visit_id":"V1125","patient_id":"SYN-1007","visit_date":"2026-09-26","clinic":"Clinic West (synthetic)","therapist":"PT-D","payer_id":"PAY-WC","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row126"},{"visit_id":"V1126","patient_id":"SYN-1007","visit_date":"2026-09-29","clinic":"Clinic West (synthetic)","therapist":"PT-D","payer_id":"PAY-WC","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row127"},{"visit_id":"V1127","patient_id":"SYN-1007","visit_date":"2026-10-03","clinic":"Clinic West (synthetic)","therapist":"PTA-E","payer_id":"PAY-WC","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row128"},{"visit_id":"V1128","patient_id":"SYN-1007","visit_date":"2026-10-06","clinic":"Clinic West (synthetic)","therapist":"PT-B","payer_id":"PAY-WC","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row129"},{"visit_id":"V1129","patient_id":"SYN-1007","visit_date":"2026-10-08","clinic":"Clinic West (synthetic)","therapist":"PT-B","payer_id":"PAY-WC","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row130"},{"visit_id":"V1130","patient_id":"SYN-1007","visit_date":"2026-10-10","clinic":"Clinic West (synthetic)","therapist":"PTA-E","payer_id":"PAY-WC","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row131"},{"visit_id":"V1131","patient_id":"SYN-1007","visit_date":"2026-10-14","clinic":"Clinic West (synthetic)","therapist":"PTA-E","payer_id":"PAY-WC","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row132"},{"visit_id":"V1132","patient_id":"SYN-1007","visit_date":"2026-10-16","clinic":"Clinic West (synthetic)","therapist":"PT-D","payer_id":"PAY-WC","status":"scheduled","visit_type":"re-eval","source_row":"schedule.csv:row133"},{"visit_id":"V1133","patient_id":"SYN-1007","visit_date":"2026-10-18","clinic":"Clinic West (synthetic)","therapist":"PT-A","payer_id":"PAY-WC","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row134"},{"visit_id":"V1134","patient_id":"SYN-1007","visit_date":"2026-10-21","clinic":"Clinic West (synthetic)","therapist":"PTA-E","payer_id":"PAY-WC","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row135"},{"visit_id":"V1135","patient_id":"SYN-1007","visit_date":"2026-10-23","clinic":"Clinic West (synthetic)","therapist":"PT-A","payer_id":"PAY-WC","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row136"},{"visit_id":"V1136","patient_id":"SYN-1007","visit_date":"2026-10-26","clinic":"Clinic West (synthetic)","therapist":"PT-A","payer_id":"PAY-WC","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row137"},{"visit_id":"V1137","patient_id":"SYN-1008","visit_date":"2026-09-09","clinic":"Clinic Lake (synthetic)","therapist":"PT-A","payer_id":"PAY-SELF","status":"completed","visit_type":"eval","source_row":"schedule.csv:row138"},{"visit_id":"V1138","patient_id":"SYN-1008","visit_date":"2026-09-13","clinic":"Clinic Lake (synthetic)","therapist":"PT-A","payer_id":"PAY-SELF","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row139"},{"visit_id":"V1139","patient_id":"SYN-1008","visit_date":"2026-09-17","clinic":"Clinic Lake (synthetic)","therapist":"PT-B","payer_id":"PAY-SELF","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row140"},{"visit_id":"V1140","patient_id":"SYN-1008","visit_date":"2026-09-21","clinic":"Clinic Lake (synthetic)","therapist":"PT-B","payer_id":"PAY-SELF","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row141"},{"visit_id":"V1141","patient_id":"SYN-1008","visit_date":"2026-09-25","clinic":"Clinic Lake (synthetic)","therapist":"PT-C","payer_id":"PAY-SELF","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row142"},{"visit_id":"V1142","patient_id":"SYN-1008","visit_date":"2026-09-28","clinic":"Clinic Lake (synthetic)","therapist":"PT-A","payer_id":"PAY-SELF","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row143"},{"visit_id":"V1143","patient_id":"SYN-1008","visit_date":"2026-10-01","clinic":"Clinic Lake (synthetic)","therapist":"PT-B","payer_id":"PAY-SELF","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row144"},{"visit_id":"V1144","patient_id":"SYN-1008","visit_date":"2026-10-05","clinic":"Clinic Lake (synthetic)","therapist":"PT-A","payer_id":"PAY-SELF","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row145"},{"visit_id":"V1145","patient_id":"SYN-1008","visit_date":"2026-10-09","clinic":"Clinic Lake (synthetic)","therapist":"PTA-E","payer_id":"PAY-SELF","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row146"},{"visit_id":"V1146","patient_id":"SYN-1008","visit_date":"2026-10-12","clinic":"Clinic Lake (synthetic)","therapist":"PT-D","payer_id":"PAY-SELF","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row147"},{"visit_id":"V1147","patient_id":"SYN-1008","visit_date":"2026-10-14","clinic":"Clinic Lake (synthetic)","therapist":"PT-C","payer_id":"PAY-SELF","status":"scheduled","visit_type":"re-eval","source_row":"schedule.csv:row148"},{"visit_id":"V1148","patient_id":"SYN-1008","visit_date":"2026-10-17","clinic":"Clinic Lake (synthetic)","therapist":"PT-D","payer_id":"PAY-SELF","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row149"},{"visit_id":"V1149","patient_id":"SYN-1008","visit_date":"2026-10-19","clinic":"Clinic Lake (synthetic)","therapist":"PT-B","payer_id":"PAY-SELF","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row150"},{"visit_id":"V1150","patient_id":"SYN-1008","visit_date":"2026-10-22","clinic":"Clinic Lake (synthetic)","therapist":"PT-A","payer_id":"PAY-SELF","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row151"},{"visit_id":"V1151","patient_id":"SYN-1008","visit_date":"2026-10-25","clinic":"Clinic Lake (synthetic)","therapist":"PT-A","payer_id":"PAY-SELF","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row152"}],"auths":[{"auth_no":"AUTH-70000","patient_id":"SYN-1001","payer_id":"PAY-MA","visits_authorized":30,"start":"2026-08-19","end":"2026-11-12","status":"approved","source_row":"authorizations.csv:row2"},{"auth_no":"AUTH-70003","patient_id":"SYN-1002","payer_id":"PAY-COMM1","visits_authorized":8,"start":"2026-09-08","end":"2026-12-07","status":"approved","source_row":"authorizations.csv:row3"},{"auth_no":"AUTH-70006","patient_id":"SYN-1003","payer_id":"PAY-MA","visits_authorized":30,"start":"2026-09-03","end":"2026-10-10","status":"approved","source_row":"authorizations.csv:row4"},{"auth_no":"AUTH-70009","patient_id":"SYN-1004","payer_id":"PAY-COMM1","visits_authorized":33,"start":"2026-08-24","end":"2026-10-07","status":"approved","source_row":"authorizations.csv:row5"},{"auth_no":"AUTH-70012","patient_id":"SYN-1005","payer_id":"PAY-COMM1","visits_authorized":40,"start":"2026-09-12","end":"2026-09-22","status":"approved","source_row":"authorizations.csv:row6"},{"auth_no":"AUTH-70015","patient_id":"SYN-1006","payer_id":"PAY-COMM1","visits_authorized":36,"start":"2026-08-04","end":"2026-10-01","status":"approved","source_row":"authorizations.csv:row7"},{"auth_no":"AUTH-70016","patient_id":"SYN-1006","payer_id":"PAY-COMM1","visits_authorized":12,"start":"2026-10-02","end":"2026-12-01","status":"pending","source_row":"authorizations.csv:row8"},{"auth_no":"AUTH-70018","patient_id":"SYN-1007","payer_id":"PAY-WC","visits_authorized":25,"start":"2026-09-17","end":"2026-09-30","status":"approved","source_row":"authorizations.csv:row9"},{"auth_no":"AUTH-70019","patient_id":"SYN-1007","payer_id":"PAY-WC","visits_authorized":12,"start":"2026-10-01","end":"2026-11-30","status":"approved","source_row":"authorizations.csv:row10"}],"payers":{"PAY-COMM1":{"payer_id":"PAY-COMM1","payer_name":"Commercial Plan A (placeholder)","requires_auth":true,"reauth_visits_before":3,"reauth_days_before":10,"turnaround_days":5,"annual_visit_limit":null,"counts_evals":false,"checklist":["Current plan of care signed by referring provider","Progress note within last 30 days","Objective measures (ROM, strength, functional score)","Updated goals","Payer portal request form"]},"PAY-COMM2":{"payer_id":"PAY-COMM2","payer_name":"Commercial Plan B (placeholder)","requires_auth":true,"reauth_visits_before":2,"reauth_days_before":7,"turnaround_days":3,"annual_visit_limit":30,"counts_evals":true,"checklist":["Progress note","Functional outcome score (e.g., LEFS/ODI)","Visit history","Portal submission"]},"PAY-MA":{"payer_id":"PAY-MA","payer_name":"Medicare Advantage Plan (placeholder)","requires_auth":true,"reauth_visits_before":4,"reauth_days_before":14,"turnaround_days":7,"annual_visit_limit":null,"counts_evals":true,"checklist":["Plan of care certification","Progress report (every 10th visit)","Medical necessity statement","Functional limitation reporting","Utilization-management vendor form"]},"PAY-WC":{"payer_id":"PAY-WC","payer_name":"Workers Comp Carrier (placeholder)","requires_auth":true,"reauth_visits_before":2,"reauth_days_before":7,"turnaround_days":10,"annual_visit_limit":null,"counts_evals":true,"checklist":["Adjuster approval request","Work status report","Progress note","Physician referral / Rx"]},"PAY-SELF":{"payer_id":"PAY-SELF","payer_name":"Self-pay / cash","requires_auth":false,"reauth_visits_before":0,"reauth_days_before":0,"turnaround_days":0,"annual_visit_limit":null,"counts_evals":true,"checklist":[]}},"patients":{"SYN-1001":{"patient_id":"SYN-1001","display_name":"Test Finley A.","clinic":"Clinic West (synthetic)","primary_payer":"PAY-MA"},"SYN-1002":{"patient_id":"SYN-1002","display_name":"Test Morgan B.","clinic":"Clinic West (synthetic)","primary_payer":"PAY-COMM1"},"SYN-1003":{"patient_id":"SYN-1003","display_name":"Test Logan C.","clinic":"Clinic West (synthetic)","primary_payer":"PAY-MA"},"SYN-1004":{"patient_id":"SYN-1004","display_name":"Test Morgan D.","clinic":"Clinic North (synthetic)","primary_payer":"PAY-COMM1"},"SYN-1005":{"patient_id":"SYN-1005","display_name":"Test Gray E.","clinic":"Clinic West (synthetic)","primary_payer":"PAY-COMM1"},"SYN-1006":{"patient_id":"SYN-1006","display_name":"Test Blair F.","clinic":"Clinic West (synthetic)","primary_payer":"PAY-COMM1"},"SYN-1007":{"patient_id":"SYN-1007","display_name":"Test Blair G.","clinic":"Clinic West (synthetic)","primary_payer":"PAY-WC"},"SYN-1008":{"patient_id":"SYN-1008","display_name":"Test Noel H.","clinic":"Clinic Lake (synthetic)","primary_payer":"PAY-SELF"}}},"baseline":{"items":[{"patient_id":"SYN-1005","patient_name":"Test Gray E.","clinic":"Clinic West (synthetic)","payer_id":"PAY-COMM1","payer_name":"Commercial Plan A (placeholder)","auth_no":"AUTH-70012","priority":"P1","reasons":["UNAUTHORIZED_DONE","UNCOVERED_VISIT"],"detail":["8 scheduled visit(s) outside any approved auth, first 2026-09-29 (V1088, V1089, V1090, V1091 ...)","completed visit 2026-09-23 (V1086) had no covering approved auth","completed visit 2026-09-27 (V1087) had no covering approved auth"],"visits_used":2,"visits_authorized":40,"visits_remaining":38,"scheduled_in_window":0,"auth_end":"2026-09-22","days_left":-6,"next_visit":"2026-09-29","submit_by":null,"checklist":["Current plan of care signed by referring provider","Progress note within last 30 days","Objective measures (ROM, strength, functional score)","Updated goals","Payer portal request form"],"evidence":["schedule.csv:row87","schedule.csv:row88","schedule.csv:row89","schedule.csv:row90","schedule.csv:row91","schedule.csv:row92","schedule.csv:row93","schedule.csv:row94","schedule.csv:row95","schedule.csv:row96"],"key":"SYN-1005|PAY-COMM1|AUTH-70012"},{"patient_id":"SYN-1002","patient_name":"Test Morgan B.","clinic":"Clinic West (synthetic)","payer_id":"PAY-COMM1","payer_name":"Commercial Plan A (placeholder)","auth_no":"AUTH-70003","priority":"P2","reasons":["UNCOVERED_VISIT","REAUTH_BY_VISITS"],"detail":["6 scheduled visit(s) outside any approved auth, first 2026-10-06 (V1034, V1035, V1036, V1037 ...)","2 of 8 visits left (payer threshold 3)"],"visits_used":6,"visits_authorized":8,"visits_remaining":2,"scheduled_in_window":2,"auth_end":"2026-12-07","days_left":70,"next_visit":"2026-09-30","submit_by":"2026-09-29","checklist":["Current plan of care signed by referring provider","Progress note within last 30 days","Objective measures (ROM, strength, functional score)","Updated goals","Payer portal request form"],"evidence":["schedule.csv:row35","schedule.csv:row36","schedule.csv:row37","schedule.csv:row38","schedule.csv:row39","schedule.csv:row40","authorizations.csv:row3"],"key":"SYN-1002|PAY-COMM1|AUTH-70003"},{"patient_id":"SYN-1004","patient_name":"Test Morgan D.","clinic":"Clinic North (synthetic)","payer_id":"PAY-COMM1","payer_name":"Commercial Plan A (placeholder)","auth_no":"AUTH-70009","priority":"P2","reasons":["UNCOVERED_VISIT","REAUTH_BY_DATE"],"detail":["7 scheduled visit(s) outside any approved auth, first 2026-10-09 (V1076, V1077, V1078, V1079 ...)","auth ends 2026-10-07 (9 days); 11 visit(s) still scheduled"],"visits_used":11,"visits_authorized":33,"visits_remaining":22,"scheduled_in_window":4,"auth_end":"2026-10-07","days_left":9,"next_visit":"2026-09-28","submit_by":"2026-10-02","checklist":["Current plan of care signed by referring provider","Progress note within last 30 days","Objective measures (ROM, strength, functional score)","Updated goals","Payer portal request form"],"evidence":["schedule.csv:row77","schedule.csv:row78","schedule.csv:row79","schedule.csv:row80","schedule.csv:row81","schedule.csv:row82","schedule.csv:row83","authorizations.csv:row5"],"key":"SYN-1004|PAY-COMM1|AUTH-70009"},{"patient_id":"SYN-1003","patient_name":"Test Logan C.","clinic":"Clinic West (synthetic)","payer_id":"PAY-MA","payer_name":"Medicare Advantage Plan (placeholder)","auth_no":"AUTH-70006","priority":"P2","reasons":["UNCOVERED_VISIT","REAUTH_BY_DATE"],"detail":["6 scheduled visit(s) outside any approved auth, first 2026-10-12 (V1054, V1055, V1056, V1057 ...)","auth ends 2026-10-10 (12 days); 11 visit(s) still scheduled"],"visits_used":8,"visits_authorized":30,"visits_remaining":22,"scheduled_in_window":5,"auth_end":"2026-10-10","days_left":12,"next_visit":"2026-09-30","submit_by":"2026-10-03","checklist":["Plan of care certification","Progress report (every 10th visit)","Medical necessity statement","Functional limitation reporting","Utilization-management vendor form"],"evidence":["schedule.csv:row55","schedule.csv:row56","schedule.csv:row57","schedule.csv:row58","schedule.csv:row59","schedule.csv:row60","authorizations.csv:row4"],"key":"SYN-1003|PAY-MA|AUTH-70006"},{"patient_id":"SYN-1006","patient_name":"Test Blair F.","clinic":"Clinic West (synthetic)","payer_id":"PAY-COMM1","payer_name":"Commercial Plan A (placeholder)","auth_no":"AUTH-70016","priority":"P2","reasons":["PENDING_FOLLOWUP"],"detail":["visit 2026-10-02 relies on PENDING auth AUTH-70016; follow up with payer","visit 2026-10-06 relies on PENDING auth AUTH-70016; follow up with payer","visit 2026-10-10 relies on PENDING auth AUTH-70016; follow up with payer","visit 2026-10-12 relies on PENDING auth AUTH-70016; follow up with payer","visit 2026-10-14 relies on PENDING auth AUTH-70016; follow up with payer","visit 2026-10-17 relies on PENDING auth AUTH-70016; follow up with payer","visit 2026-10-19 relies on PENDING auth AUTH-70016; follow up with payer","visit 2026-10-22 relies on PENDING auth AUTH-70016; follow up with payer","visit 2026-10-25 relies on PENDING auth AUTH-70016; follow up with payer"],"visits_used":null,"visits_authorized":null,"visits_remaining":null,"scheduled_in_window":null,"auth_end":null,"days_left":null,"next_visit":"2026-09-29","submit_by":null,"checklist":["Current plan of care signed by referring provider","Progress note within last 30 days","Objective measures (ROM, strength, functional score)","Updated goals","Payer portal request form"],"evidence":["schedule.csv:row114","schedule.csv:row115","schedule.csv:row116","schedule.csv:row117","schedule.csv:row118","schedule.csv:row119","schedule.csv:row120","schedule.csv:row121","schedule.csv:row122"],"key":"SYN-1006|PAY-COMM1|AUTH-70016"}],"ledgers":{"AUTH-70000":{"auth":{"auth_no":"AUTH-70000","patient_id":"SYN-1001","payer_id":"PAY-MA","visits_authorized":30,"start":"2026-08-19","end":"2026-11-12","status":"approved","source_row":"authorizations.csv:row2"},"used":[{"visit_id":"V1001","patient_id":"SYN-1001","visit_date":"2026-08-19","clinic":"Clinic West (synthetic)","therapist":"PT-A","payer_id":"PAY-MA","status":"completed","visit_type":"eval","source_row":"schedule.csv:row2"},{"visit_id":"V1002","patient_id":"SYN-1001","visit_date":"2026-08-22","clinic":"Clinic West (synthetic)","therapist":"PT-C","payer_id":"PAY-MA","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row3"},{"visit_id":"V1004","patient_id":"SYN-1001","visit_date":"2026-08-28","clinic":"Clinic West (synthetic)","therapist":"PT-A","payer_id":"PAY-MA","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row5"},{"visit_id":"V1005","patient_id":"SYN-1001","visit_date":"2026-09-01","clinic":"Clinic West (synthetic)","therapist":"PTA-E","payer_id":"PAY-MA","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row6"},{"visit_id":"V1006","patient_id":"SYN-1001","visit_date":"2026-09-05","clinic":"Clinic West (synthetic)","therapist":"PT-D","payer_id":"PAY-MA","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row7"},{"visit_id":"V1007","patient_id":"SYN-1001","visit_date":"2026-09-07","clinic":"Clinic West (synthetic)","therapist":"PT-B","payer_id":"PAY-MA","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row8"},{"visit_id":"V1008","patient_id":"SYN-1001","visit_date":"2026-09-09","clinic":"Clinic West (synthetic)","therapist":"PT-D","payer_id":"PAY-MA","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row9"},{"visit_id":"V1009","patient_id":"SYN-1001","visit_date":"2026-09-11","clinic":"Clinic West (synthetic)","therapist":"PT-B","payer_id":"PAY-MA","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row10"},{"visit_id":"V1010","patient_id":"SYN-1001","visit_date":"2026-09-14","clinic":"Clinic West (synthetic)","therapist":"PT-B","payer_id":"PAY-MA","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row11"},{"visit_id":"V1011","patient_id":"SYN-1001","visit_date":"2026-09-18","clinic":"Clinic West (synthetic)","therapist":"PTA-E","payer_id":"PAY-MA","status":"completed","visit_type":"re-eval","source_row":"schedule.csv:row12"},{"visit_id":"V1012","patient_id":"SYN-1001","visit_date":"2026-09-21","clinic":"Clinic West (synthetic)","therapist":"PT-A","payer_id":"PAY-MA","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row13"},{"visit_id":"V1013","patient_id":"SYN-1001","visit_date":"2026-09-23","clinic":"Clinic West (synthetic)","therapist":"PT-D","payer_id":"PAY-MA","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row14"},{"visit_id":"V1014","patient_id":"SYN-1001","visit_date":"2026-09-25","clinic":"Clinic West (synthetic)","therapist":"PT-D","payer_id":"PAY-MA","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row15"},{"visit_id":"V1015","patient_id":"SYN-1001","visit_date":"2026-09-27","clinic":"Clinic West (synthetic)","therapist":"PT-B","payer_id":"PAY-MA","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row16"}],"scheduled":[{"visit_id":"V1016","patient_id":"SYN-1001","visit_date":"2026-09-29","clinic":"Clinic West (synthetic)","therapist":"PTA-E","payer_id":"PAY-MA","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row17"},{"visit_id":"V1017","patient_id":"SYN-1001","visit_date":"2026-10-03","clinic":"Clinic West (synthetic)","therapist":"PT-D","payer_id":"PAY-MA","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row18"},{"visit_id":"V1018","patient_id":"SYN-1001","visit_date":"2026-10-05","clinic":"Clinic West (synthetic)","therapist":"PT-C","payer_id":"PAY-MA","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row19"},{"visit_id":"V1019","patient_id":"SYN-1001","visit_date":"2026-10-08","clinic":"Clinic West (synthetic)","therapist":"PT-C","payer_id":"PAY-MA","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row20"},{"visit_id":"V1020","patient_id":"SYN-1001","visit_date":"2026-10-12","clinic":"Clinic West (synthetic)","therapist":"PT-D","payer_id":"PAY-MA","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row21"},{"visit_id":"V1021","patient_id":"SYN-1001","visit_date":"2026-10-15","clinic":"Clinic West (synthetic)","therapist":"PTA-E","payer_id":"PAY-MA","status":"scheduled","visit_type":"re-eval","source_row":"schedule.csv:row22"},{"visit_id":"V1022","patient_id":"SYN-1001","visit_date":"2026-10-19","clinic":"Clinic West (synthetic)","therapist":"PT-D","payer_id":"PAY-MA","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row23"},{"visit_id":"V1023","patient_id":"SYN-1001","visit_date":"2026-10-22","clinic":"Clinic West (synthetic)","therapist":"PT-C","payer_id":"PAY-MA","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row24"},{"visit_id":"V1024","patient_id":"SYN-1001","visit_date":"2026-10-24","clinic":"Clinic West (synthetic)","therapist":"PT-D","payer_id":"PAY-MA","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row25"}],"remaining":16,"remaining_after_scheduled":7},"AUTH-70003":{"auth":{"auth_no":"AUTH-70003","patient_id":"SYN-1002","payer_id":"PAY-COMM1","visits_authorized":8,"start":"2026-09-08","end":"2026-12-07","status":"approved","source_row":"authorizations.csv:row3"},"used":[{"visit_id":"V1026","patient_id":"SYN-1002","visit_date":"2026-09-11","clinic":"Clinic West (synthetic)","therapist":"PT-C","payer_id":"PAY-COMM1","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row27"},{"visit_id":"V1027","patient_id":"SYN-1002","visit_date":"2026-09-13","clinic":"Clinic West (synthetic)","therapist":"PTA-E","payer_id":"PAY-COMM1","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row28"},{"visit_id":"V1028","patient_id":"SYN-1002","visit_date":"2026-09-16","clinic":"Clinic West (synthetic)","therapist":"PT-B","payer_id":"PAY-COMM1","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row29"},{"visit_id":"V1029","patient_id":"SYN-1002","visit_date":"2026-09-18","clinic":"Clinic West (synthetic)","therapist":"PT-A","payer_id":"PAY-COMM1","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row30"},{"visit_id":"V1030","patient_id":"SYN-1002","visit_date":"2026-09-22","clinic":"Clinic West (synthetic)","therapist":"PT-B","payer_id":"PAY-COMM1","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row31"},{"visit_id":"V1031","patient_id":"SYN-1002","visit_date":"2026-09-26","clinic":"Clinic West (synthetic)","therapist":"PT-C","payer_id":"PAY-COMM1","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row32"}],"scheduled":[{"visit_id":"V1032","patient_id":"SYN-1002","visit_date":"2026-09-30","clinic":"Clinic West (synthetic)","therapist":"PT-B","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row33"},{"visit_id":"V1033","patient_id":"SYN-1002","visit_date":"2026-10-04","clinic":"Clinic West (synthetic)","therapist":"PT-A","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row34"}],"remaining":2,"remaining_after_scheduled":0},"AUTH-70006":{"auth":{"auth_no":"AUTH-70006","patient_id":"SYN-1003","payer_id":"PAY-MA","visits_authorized":30,"start":"2026-09-03","end":"2026-10-10","status":"approved","source_row":"authorizations.csv:row4"},"used":[{"visit_id":"V1040","patient_id":"SYN-1003","visit_date":"2026-09-03","clinic":"Clinic West (synthetic)","therapist":"PT-A","payer_id":"PAY-MA","status":"completed","visit_type":"eval","source_row":"schedule.csv:row41"},{"visit_id":"V1041","patient_id":"SYN-1003","visit_date":"2026-09-06","clinic":"Clinic West (synthetic)","therapist":"PTA-E","payer_id":"PAY-MA","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row42"},{"visit_id":"V1042","patient_id":"SYN-1003","visit_date":"2026-09-09","clinic":"Clinic West (synthetic)","therapist":"PT-D","payer_id":"PAY-MA","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row43"},{"visit_id":"V1044","patient_id":"SYN-1003","visit_date":"2026-09-16","clinic":"Clinic West (synthetic)","therapist":"PT-C","payer_id":"PAY-MA","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row45"},{"visit_id":"V1045","patient_id":"SYN-1003","visit_date":"2026-09-18","clinic":"Clinic West (synthetic)","therapist":"PT-D","payer_id":"PAY-MA","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row46"},{"visit_id":"V1046","patient_id":"SYN-1003","visit_date":"2026-09-21","clinic":"Clinic West (synthetic)","therapist":"PT-D","payer_id":"PAY-MA","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row47"},{"visit_id":"V1047","patient_id":"SYN-1003","visit_date":"2026-09-23","clinic":"Clinic West (synthetic)","therapist":"PTA-E","payer_id":"PAY-MA","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row48"},{"visit_id":"V1048","patient_id":"SYN-1003","visit_date":"2026-09-26","clinic":"Clinic West (synthetic)","therapist":"PT-B","payer_id":"PAY-MA","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row49"}],"scheduled":[{"visit_id":"V1049","patient_id":"SYN-1003","visit_date":"2026-09-30","clinic":"Clinic West (synthetic)","therapist":"PT-A","payer_id":"PAY-MA","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row50"},{"visit_id":"V1050","patient_id":"SYN-1003","visit_date":"2026-10-03","clinic":"Clinic West (synthetic)","therapist":"PT-D","payer_id":"PAY-MA","status":"scheduled","visit_type":"re-eval","source_row":"schedule.csv:row51"},{"visit_id":"V1051","patient_id":"SYN-1003","visit_date":"2026-10-05","clinic":"Clinic West (synthetic)","therapist":"PT-B","payer_id":"PAY-MA","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row52"},{"visit_id":"V1052","patient_id":"SYN-1003","visit_date":"2026-10-08","clinic":"Clinic West (synthetic)","therapist":"PT-A","payer_id":"PAY-MA","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row53"},{"visit_id":"V1053","patient_id":"SYN-1003","visit_date":"2026-10-10","clinic":"Clinic West (synthetic)","therapist":"PT-C","payer_id":"PAY-MA","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row54"}],"remaining":22,"remaining_after_scheduled":17},"AUTH-70009":{"auth":{"auth_no":"AUTH-70009","patient_id":"SYN-1004","payer_id":"PAY-COMM1","visits_authorized":33,"start":"2026-08-24","end":"2026-10-07","status":"approved","source_row":"authorizations.csv:row5"},"used":[{"visit_id":"V1061","patient_id":"SYN-1004","visit_date":"2026-08-28","clinic":"Clinic North (synthetic)","therapist":"PT-A","payer_id":"PAY-COMM1","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row62"},{"visit_id":"V1062","patient_id":"SYN-1004","visit_date":"2026-08-31","clinic":"Clinic North (synthetic)","therapist":"PTA-E","payer_id":"PAY-COMM1","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row63"},{"visit_id":"V1063","patient_id":"SYN-1004","visit_date":"2026-09-02","clinic":"Clinic North (synthetic)","therapist":"PT-B","payer_id":"PAY-COMM1","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row64"},{"visit_id":"V1064","patient_id":"SYN-1004","visit_date":"2026-09-04","clinic":"Clinic North (synthetic)","therapist":"PTA-E","payer_id":"PAY-COMM1","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row65"},{"visit_id":"V1065","patient_id":"SYN-1004","visit_date":"2026-09-06","clinic":"Clinic North (synthetic)","therapist":"PT-A","payer_id":"PAY-COMM1","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row66"},{"visit_id":"V1066","patient_id":"SYN-1004","visit_date":"2026-09-10","clinic":"Clinic North (synthetic)","therapist":"PT-B","payer_id":"PAY-COMM1","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row67"},{"visit_id":"V1067","patient_id":"SYN-1004","visit_date":"2026-09-13","clinic":"Clinic North (synthetic)","therapist":"PT-C","payer_id":"PAY-COMM1","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row68"},{"visit_id":"V1068","patient_id":"SYN-1004","visit_date":"2026-09-15","clinic":"Clinic North (synthetic)","therapist":"PTA-E","payer_id":"PAY-COMM1","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row69"},{"visit_id":"V1069","patient_id":"SYN-1004","visit_date":"2026-09-18","clinic":"Clinic North (synthetic)","therapist":"PTA-E","payer_id":"PAY-COMM1","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row70"},{"visit_id":"V1070","patient_id":"SYN-1004","visit_date":"2026-09-22","clinic":"Clinic North (synthetic)","therapist":"PTA-E","payer_id":"PAY-COMM1","status":"completed","visit_type":"re-eval","source_row":"schedule.csv:row71"},{"visit_id":"V1071","patient_id":"SYN-1004","visit_date":"2026-09-25","clinic":"Clinic North (synthetic)","therapist":"PTA-E","payer_id":"PAY-COMM1","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row72"}],"scheduled":[{"visit_id":"V1072","patient_id":"SYN-1004","visit_date":"2026-09-28","clinic":"Clinic North (synthetic)","therapist":"PT-C","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row73"},{"visit_id":"V1073","patient_id":"SYN-1004","visit_date":"2026-10-01","clinic":"Clinic North (synthetic)","therapist":"PTA-E","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row74"},{"visit_id":"V1074","patient_id":"SYN-1004","visit_date":"2026-10-03","clinic":"Clinic North (synthetic)","therapist":"PT-C","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row75"},{"visit_id":"V1075","patient_id":"SYN-1004","visit_date":"2026-10-07","clinic":"Clinic North (synthetic)","therapist":"PT-C","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row76"}],"remaining":22,"remaining_after_scheduled":18},"AUTH-70012":{"auth":{"auth_no":"AUTH-70012","patient_id":"SYN-1005","payer_id":"PAY-COMM1","visits_authorized":40,"start":"2026-09-12","end":"2026-09-22","status":"approved","source_row":"authorizations.csv:row6"},"used":[{"visit_id":"V1084","patient_id":"SYN-1005","visit_date":"2026-09-16","clinic":"Clinic West (synthetic)","therapist":"PT-A","payer_id":"PAY-COMM1","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row85"},{"visit_id":"V1085","patient_id":"SYN-1005","visit_date":"2026-09-19","clinic":"Clinic West (synthetic)","therapist":"PT-A","payer_id":"PAY-COMM1","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row86"}],"scheduled":[],"remaining":38,"remaining_after_scheduled":38},"AUTH-70015":{"auth":{"auth_no":"AUTH-70015","patient_id":"SYN-1006","payer_id":"PAY-COMM1","visits_authorized":36,"start":"2026-08-04","end":"2026-10-01","status":"approved","source_row":"authorizations.csv:row7"},"used":[{"visit_id":"V1097","patient_id":"SYN-1006","visit_date":"2026-08-07","clinic":"Clinic West (synthetic)","therapist":"PT-C","payer_id":"PAY-COMM1","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row98"},{"visit_id":"V1098","patient_id":"SYN-1006","visit_date":"2026-08-11","clinic":"Clinic West (synthetic)","therapist":"PT-D","payer_id":"PAY-COMM1","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row99"},{"visit_id":"V1099","patient_id":"SYN-1006","visit_date":"2026-08-15","clinic":"Clinic West (synthetic)","therapist":"PT-D","payer_id":"PAY-COMM1","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row100"},{"visit_id":"V1100","patient_id":"SYN-1006","visit_date":"2026-08-19","clinic":"Clinic West (synthetic)","therapist":"PT-B","payer_id":"PAY-COMM1","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row101"},{"visit_id":"V1101","patient_id":"SYN-1006","visit_date":"2026-08-23","clinic":"Clinic West (synthetic)","therapist":"PT-B","payer_id":"PAY-COMM1","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row102"},{"visit_id":"V1102","patient_id":"SYN-1006","visit_date":"2026-08-27","clinic":"Clinic West (synthetic)","therapist":"PT-C","payer_id":"PAY-COMM1","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row103"},{"visit_id":"V1103","patient_id":"SYN-1006","visit_date":"2026-08-31","clinic":"Clinic West (synthetic)","therapist":"PT-B","payer_id":"PAY-COMM1","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row104"},{"visit_id":"V1104","patient_id":"SYN-1006","visit_date":"2026-09-04","clinic":"Clinic West (synthetic)","therapist":"PT-A","payer_id":"PAY-COMM1","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row105"},{"visit_id":"V1105","patient_id":"SYN-1006","visit_date":"2026-09-08","clinic":"Clinic West (synthetic)","therapist":"PT-C","payer_id":"PAY-COMM1","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row106"},{"visit_id":"V1106","patient_id":"SYN-1006","visit_date":"2026-09-11","clinic":"Clinic West (synthetic)","therapist":"PT-B","payer_id":"PAY-COMM1","status":"completed","visit_type":"re-eval","source_row":"schedule.csv:row107"},{"visit_id":"V1107","patient_id":"SYN-1006","visit_date":"2026-09-13","clinic":"Clinic West (synthetic)","therapist":"PTA-E","payer_id":"PAY-COMM1","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row108"},{"visit_id":"V1108","patient_id":"SYN-1006","visit_date":"2026-09-16","clinic":"Clinic West (synthetic)","therapist":"PTA-E","payer_id":"PAY-COMM1","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row109"},{"visit_id":"V1109","patient_id":"SYN-1006","visit_date":"2026-09-19","clinic":"Clinic West (synthetic)","therapist":"PT-D","payer_id":"PAY-COMM1","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row110"},{"visit_id":"V1110","patient_id":"SYN-1006","visit_date":"2026-09-22","clinic":"Clinic West (synthetic)","therapist":"PT-D","payer_id":"PAY-COMM1","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row111"},{"visit_id":"V1111","patient_id":"SYN-1006","visit_date":"2026-09-25","clinic":"Clinic West (synthetic)","therapist":"PT-D","payer_id":"PAY-COMM1","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row112"}],"scheduled":[{"visit_id":"V1112","patient_id":"SYN-1006","visit_date":"2026-09-29","clinic":"Clinic West (synthetic)","therapist":"PT-D","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row113"}],"remaining":21,"remaining_after_scheduled":20},"AUTH-70018":{"auth":{"auth_no":"AUTH-70018","patient_id":"SYN-1007","payer_id":"PAY-WC","visits_authorized":25,"start":"2026-09-17","end":"2026-09-30","status":"approved","source_row":"authorizations.csv:row9"},"used":[{"visit_id":"V1122","patient_id":"SYN-1007","visit_date":"2026-09-17","clinic":"Clinic West (synthetic)","therapist":"PT-B","payer_id":"PAY-WC","status":"completed","visit_type":"eval","source_row":"schedule.csv:row123"},{"visit_id":"V1123","patient_id":"SYN-1007","visit_date":"2026-09-19","clinic":"Clinic West (synthetic)","therapist":"PT-D","payer_id":"PAY-WC","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row124"},{"visit_id":"V1124","patient_id":"SYN-1007","visit_date":"2026-09-22","clinic":"Clinic West (synthetic)","therapist":"PT-A","payer_id":"PAY-WC","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row125"},{"visit_id":"V1125","patient_id":"SYN-1007","visit_date":"2026-09-26","clinic":"Clinic West (synthetic)","therapist":"PT-D","payer_id":"PAY-WC","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row126"}],"scheduled":[{"visit_id":"V1126","patient_id":"SYN-1007","visit_date":"2026-09-29","clinic":"Clinic West (synthetic)","therapist":"PT-D","payer_id":"PAY-WC","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row127"}],"remaining":21,"remaining_after_scheduled":20},"AUTH-70019":{"auth":{"auth_no":"AUTH-70019","patient_id":"SYN-1007","payer_id":"PAY-WC","visits_authorized":12,"start":"2026-10-01","end":"2026-11-30","status":"approved","source_row":"authorizations.csv:row10"},"used":[],"scheduled":[{"visit_id":"V1127","patient_id":"SYN-1007","visit_date":"2026-10-03","clinic":"Clinic West (synthetic)","therapist":"PTA-E","payer_id":"PAY-WC","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row128"},{"visit_id":"V1128","patient_id":"SYN-1007","visit_date":"2026-10-06","clinic":"Clinic West (synthetic)","therapist":"PT-B","payer_id":"PAY-WC","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row129"},{"visit_id":"V1129","patient_id":"SYN-1007","visit_date":"2026-10-08","clinic":"Clinic West (synthetic)","therapist":"PT-B","payer_id":"PAY-WC","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row130"},{"visit_id":"V1130","patient_id":"SYN-1007","visit_date":"2026-10-10","clinic":"Clinic West (synthetic)","therapist":"PTA-E","payer_id":"PAY-WC","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row131"},{"visit_id":"V1131","patient_id":"SYN-1007","visit_date":"2026-10-14","clinic":"Clinic West (synthetic)","therapist":"PTA-E","payer_id":"PAY-WC","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row132"},{"visit_id":"V1132","patient_id":"SYN-1007","visit_date":"2026-10-16","clinic":"Clinic West (synthetic)","therapist":"PT-D","payer_id":"PAY-WC","status":"scheduled","visit_type":"re-eval","source_row":"schedule.csv:row133"},{"visit_id":"V1133","patient_id":"SYN-1007","visit_date":"2026-10-18","clinic":"Clinic West (synthetic)","therapist":"PT-A","payer_id":"PAY-WC","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row134"},{"visit_id":"V1134","patient_id":"SYN-1007","visit_date":"2026-10-21","clinic":"Clinic West (synthetic)","therapist":"PTA-E","payer_id":"PAY-WC","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row135"},{"visit_id":"V1135","patient_id":"SYN-1007","visit_date":"2026-10-23","clinic":"Clinic West (synthetic)","therapist":"PT-A","payer_id":"PAY-WC","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row136"},{"visit_id":"V1136","patient_id":"SYN-1007","visit_date":"2026-10-26","clinic":"Clinic West (synthetic)","therapist":"PT-A","payer_id":"PAY-WC","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row137"}],"remaining":12,"remaining_after_scheduled":2}},"uncovered":[{"visit_id":"V1086","patient_id":"SYN-1005","visit_date":"2026-09-23","clinic":"Clinic West (synthetic)","therapist":"PTA-E","payer_id":"PAY-COMM1","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row87"},{"visit_id":"V1087","patient_id":"SYN-1005","visit_date":"2026-09-27","clinic":"Clinic West (synthetic)","therapist":"PT-D","payer_id":"PAY-COMM1","status":"completed","visit_type":"treatment","source_row":"schedule.csv:row88"},{"visit_id":"V1088","patient_id":"SYN-1005","visit_date":"2026-09-29","clinic":"Clinic West (synthetic)","therapist":"PT-D","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row89"},{"visit_id":"V1113","patient_id":"SYN-1006","visit_date":"2026-10-02","clinic":"Clinic West (synthetic)","therapist":"PTA-E","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row114"},{"visit_id":"V1089","patient_id":"SYN-1005","visit_date":"2026-10-03","clinic":"Clinic West (synthetic)","therapist":"PT-B","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row90"},{"visit_id":"V1034","patient_id":"SYN-1002","visit_date":"2026-10-06","clinic":"Clinic West (synthetic)","therapist":"PTA-E","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row35"},{"visit_id":"V1114","patient_id":"SYN-1006","visit_date":"2026-10-06","clinic":"Clinic West (synthetic)","therapist":"PT-C","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row115"},{"visit_id":"V1090","patient_id":"SYN-1005","visit_date":"2026-10-07","clinic":"Clinic West (synthetic)","therapist":"PT-D","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row91"},{"visit_id":"V1076","patient_id":"SYN-1004","visit_date":"2026-10-09","clinic":"Clinic North (synthetic)","therapist":"PTA-E","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row77"},{"visit_id":"V1035","patient_id":"SYN-1002","visit_date":"2026-10-10","clinic":"Clinic West (synthetic)","therapist":"PT-B","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"re-eval","source_row":"schedule.csv:row36"},{"visit_id":"V1115","patient_id":"SYN-1006","visit_date":"2026-10-10","clinic":"Clinic West (synthetic)","therapist":"PT-B","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row116"},{"visit_id":"V1077","patient_id":"SYN-1004","visit_date":"2026-10-11","clinic":"Clinic North (synthetic)","therapist":"PTA-E","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row78"},{"visit_id":"V1091","patient_id":"SYN-1005","visit_date":"2026-10-11","clinic":"Clinic West (synthetic)","therapist":"PT-D","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row92"},{"visit_id":"V1054","patient_id":"SYN-1003","visit_date":"2026-10-12","clinic":"Clinic West (synthetic)","therapist":"PTA-E","payer_id":"PAY-MA","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row55"},{"visit_id":"V1116","patient_id":"SYN-1006","visit_date":"2026-10-12","clinic":"Clinic West (synthetic)","therapist":"PT-D","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"re-eval","source_row":"schedule.csv:row117"},{"visit_id":"V1078","patient_id":"SYN-1004","visit_date":"2026-10-13","clinic":"Clinic North (synthetic)","therapist":"PTA-E","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row79"},{"visit_id":"V1036","patient_id":"SYN-1002","visit_date":"2026-10-14","clinic":"Clinic West (synthetic)","therapist":"PT-D","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row37"},{"visit_id":"V1092","patient_id":"SYN-1005","visit_date":"2026-10-14","clinic":"Clinic West (synthetic)","therapist":"PT-C","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row93"},{"visit_id":"V1117","patient_id":"SYN-1006","visit_date":"2026-10-14","clinic":"Clinic West (synthetic)","therapist":"PTA-E","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row118"},{"visit_id":"V1055","patient_id":"SYN-1003","visit_date":"2026-10-15","clinic":"Clinic West (synthetic)","therapist":"PT-C","payer_id":"PAY-MA","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row56"},{"visit_id":"V1079","patient_id":"SYN-1004","visit_date":"2026-10-16","clinic":"Clinic North (synthetic)","therapist":"PT-B","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row80"},{"visit_id":"V1037","patient_id":"SYN-1002","visit_date":"2026-10-17","clinic":"Clinic West (synthetic)","therapist":"PT-B","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row38"},{"visit_id":"V1056","patient_id":"SYN-1003","visit_date":"2026-10-17","clinic":"Clinic West (synthetic)","therapist":"PT-B","payer_id":"PAY-MA","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row57"},{"visit_id":"V1093","patient_id":"SYN-1005","visit_date":"2026-10-17","clinic":"Clinic West (synthetic)","therapist":"PT-D","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"re-eval","source_row":"schedule.csv:row94"},{"visit_id":"V1118","patient_id":"SYN-1006","visit_date":"2026-10-17","clinic":"Clinic West (synthetic)","therapist":"PT-C","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row119"},{"visit_id":"V1080","patient_id":"SYN-1004","visit_date":"2026-10-18","clinic":"Clinic North (synthetic)","therapist":"PT-A","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"re-eval","source_row":"schedule.csv:row81"},{"visit_id":"V1119","patient_id":"SYN-1006","visit_date":"2026-10-19","clinic":"Clinic West (synthetic)","therapist":"PT-A","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row120"},{"visit_id":"V1057","patient_id":"SYN-1003","visit_date":"2026-10-20","clinic":"Clinic West (synthetic)","therapist":"PTA-E","payer_id":"PAY-MA","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row58"},{"visit_id":"V1038","patient_id":"SYN-1002","visit_date":"2026-10-21","clinic":"Clinic West (synthetic)","therapist":"PTA-E","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row39"},{"visit_id":"V1094","patient_id":"SYN-1005","visit_date":"2026-10-21","clinic":"Clinic West (synthetic)","therapist":"PT-B","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row95"},{"visit_id":"V1081","patient_id":"SYN-1004","visit_date":"2026-10-22","clinic":"Clinic North (synthetic)","therapist":"PTA-E","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row82"},{"visit_id":"V1120","patient_id":"SYN-1006","visit_date":"2026-10-22","clinic":"Clinic West (synthetic)","therapist":"PT-B","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row121"},{"visit_id":"V1058","patient_id":"SYN-1003","visit_date":"2026-10-24","clinic":"Clinic West (synthetic)","therapist":"PT-D","payer_id":"PAY-MA","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row59"},{"visit_id":"V1039","patient_id":"SYN-1002","visit_date":"2026-10-25","clinic":"Clinic West (synthetic)","therapist":"PT-A","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row40"},{"visit_id":"V1095","patient_id":"SYN-1005","visit_date":"2026-10-25","clinic":"Clinic West (synthetic)","therapist":"PT-A","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row96"},{"visit_id":"V1121","patient_id":"SYN-1006","visit_date":"2026-10-25","clinic":"Clinic West (synthetic)","therapist":"PT-B","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row122"},{"visit_id":"V1059","patient_id":"SYN-1003","visit_date":"2026-10-26","clinic":"Clinic West (synthetic)","therapist":"PT-C","payer_id":"PAY-MA","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row60"},{"visit_id":"V1082","patient_id":"SYN-1004","visit_date":"2026-10-26","clinic":"Clinic North (synthetic)","therapist":"PT-C","payer_id":"PAY-COMM1","status":"scheduled","visit_type":"treatment","source_row":"schedule.csv:row83"}]}}, { evaluate, dateNumber, shiftDate });
+</script>
+</body>
+</html>

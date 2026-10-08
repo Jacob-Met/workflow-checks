@@ -1,0 +1,91 @@
+{
+  "schema": "utility-watch.whatif-browser-receiving.v1",
+  "at": "2026-10-08T10:03:22.404Z",
+  "node": "v26.3.0",
+  "browser": "154.0.8037.98",
+  "source": "/Users/me/hamon-mcp-lab/utility-whatif-81ba1ed0179c",
+  "sourceCommit": "26d6bb87ee3269930db4ab5885cde2b74e93bf7e",
+  "engineBlob": "9deb205ad468381ffc91716f0d7ae6ab88d76f2a",
+  "origin": "http://127.0.0.1:51938",
+  "servedSha256": {
+    "app.mjs": "d0d8c2c4993893a6604d4f93c3832e3b36de0138fabae612b55f49cfb33ee4cd",
+    "fixture.json": "cda108e5391e0c396a8d51462bed65525dff89a629bcb695042d9671ce1ae193",
+    "index.html": "cff868060b38ab007856c883144d47149e4d439eca7a5cb85a0bb3ead59bd46b",
+    "model.mjs": "b6d3c0acdd5a413398174d595a2ad4cd580e308d0a29ca724021e45c50d2fdce",
+    "styles.css": "999214aa60374385da911bc5be4efeab42c660f05b653615a6d204eb681fec94"
+  },
+  "checks": [
+    {
+      "name": "desktop: actual synthetic baseline and source rows render",
+      "passed": true
+    },
+    {
+      "name": "desktop: actual presets change comparisons and restore independently",
+      "passed": true
+    },
+    {
+      "name": "desktop: draft and invalid period retain and label the previous result",
+      "passed": true
+    },
+    {
+      "name": "desktop: exact amount validation and keyboard recovery work",
+      "passed": true
+    },
+    {
+      "name": "desktop: leap dates and unevaluated history do not become a clean bill",
+      "passed": true
+    },
+    {
+      "name": "desktop: a duplicated fixture interval is withheld before comparison",
+      "passed": true
+    },
+    {
+      "name": "desktop: viewport and form remain usable",
+      "passed": true
+    },
+    {
+      "name": "phone: actual synthetic baseline and source rows render",
+      "passed": true
+    },
+    {
+      "name": "phone: actual presets change comparisons and restore independently",
+      "passed": true
+    },
+    {
+      "name": "phone: draft and invalid period retain and label the previous result",
+      "passed": true
+    },
+    {
+      "name": "phone: exact amount validation and keyboard recovery work",
+      "passed": true
+    },
+    {
+      "name": "phone: leap dates and unevaluated history do not become a clean bill",
+      "passed": true
+    },
+    {
+      "name": "phone: a duplicated fixture interval is withheld before comparison",
+      "passed": true
+    },
+    {
+      "name": "phone: viewport and form remain usable",
+      "passed": true
+    },
+    {
+      "name": "a mixed fixture source version refuses to show stale results",
+      "passed": true
+    },
+    {
+      "name": "failed sample loading supports an explicit fresh reload",
+      "passed": true
+    },
+    {
+      "name": "served bytes match the five installed assets and no external calls occur",
+      "passed": true
+    }
+  ],
+  "failures": [],
+  "pageErrors": [],
+  "externalRequests": [],
+  "passed": true
+}

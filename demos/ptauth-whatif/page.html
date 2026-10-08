@@ -1,0 +1,101 @@
+<!doctype html>
+<!-- hamon-demo:ptauth-whatif -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; connect-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>PT authorization what-if · Synthetic worklist</title>
+  <meta name="description" content="Explore a synthetic PT authorization worklist. Change capacity, expiry and visit dates, then inspect the existing rules and evidence behind the result.">
+  <style>__STYLE__</style>
+</head>
+<body>
+  <a class="skip-link" href="#worklist-heading">Skip to worklist</a>
+  <header class="hero">
+    <div class="eyebrow">WORKFLOW CHECKS <span aria-hidden="true">/</span> INTERACTIVE DEMO</div>
+    <h1>When does the worklist change?</h1>
+    <p class="lede">Explore PT authorization capacity, expiry and visit dates. See which fictional cases move up the list, and exactly why.</p>
+    <p class="notice"><strong>Synthetic data only.</strong> Eight fictional patients and placeholder payer rules. This is an administrative rules demonstration, not medical advice, coverage confirmation or a payer submission.</p>
+  </header>
+  <main>
+    <noscript><div class="error">JavaScript is required for the what-if controls. The controls are disabled and no calculated worklist is displayed. The source links below remain available.</div></noscript>
+    <div id="error" class="error" role="alert" hidden></div>
+    <div class="workspace">
+      <aside class="editor-panel" aria-labelledby="editor-heading">
+        <div class="section-title"><span class="step">01</span><h2 id="editor-heading">Change a scenario</h2></div>
+        <form id="editor-form" novalidate>
+          <fieldset id="editor-fields" disabled>
+            <legend class="sr-only">Synthetic scenario controls</legend>
+            <label for="as-of">Worklist as of</label>
+            <input id="as-of" type="date" min="2026-01-01" max="2027-12-31" required aria-describedby="as-of-help">
+            <p id="as-of-help" class="help">Changes date cutoffs. Visit statuses remain as recorded; moving the date does not infer attendance.</p>
+            <label for="patient">Synthetic patient</label>
+            <select id="patient"></select>
+            <p id="patient-context" class="context"></p>
+            <div class="editor-group">
+              <h3>Authorization</h3>
+              <label for="authorization">Record to explore</label>
+              <select id="authorization"></select>
+              <p id="auth-context" class="help"></p>
+              <label for="capacity">Authorized visits</label>
+              <input id="capacity" type="number" min="0" max="200" step="1" inputmode="numeric" required>
+              <label for="expiry">Expiry date <span class="quiet">(inclusive)</span></label>
+              <input id="expiry" type="date" min="2026-01-01" max="2027-12-31" required>
+            </div>
+            <div class="editor-group">
+              <h3>Schedule</h3>
+              <label for="visit">Scheduled visit to move</label>
+              <select id="visit"></select>
+              <label for="visit-date">Visit date</label>
+              <input id="visit-date" type="date" min="2026-01-01" max="2027-12-31" required>
+              <p class="help">Only this visit moves. Completed visits and all other records stay in the scenario.</p>
+            </div>
+            <button type="submit" class="primary">Apply changes</button>
+            <p id="draft-state" class="draft-state" role="status" aria-live="polite"></p>
+          </fieldset>
+        </form>
+        <div class="quick-tries" aria-labelledby="quick-heading">
+          <h3 id="quick-heading">Try a boundary</h3>
+          <p class="help">Each example starts from the original synthetic scenario.</p>
+          <button id="try-capacity" type="button" disabled>Use the last authorized visit</button>
+          <button id="try-expiry" type="button" disabled>Expire before the next visit</button>
+          <button id="try-date" type="button" disabled>Move a visit beyond expiry</button>
+          <button id="reset" type="button" class="reset" disabled>Reset all changes</button>
+        </div>
+        <p class="privacy">Works entirely in this page. No uploads, accounts, tracking, local storage or network requests. Reloading starts over.</p>
+      </aside>
+      <section class="results-panel" aria-labelledby="worklist-heading">
+        <div class="section-title"><span class="step">02</span><h2 id="worklist-heading" tabindex="-1">Inspect the worklist</h2></div>
+        <p id="result-announcement" class="result-announcement" role="status" aria-live="polite" aria-atomic="true">Preparing the synthetic scenario…</p>
+        <div id="results" hidden>
+          <div id="metrics" class="metrics"></div>
+          <div class="comparison"><div><span class="eyebrow">SELECTED PATIENT</span><p id="priority-change"></p></div><div><span class="eyebrow">SCENARIO EDITS</span><p id="edit-count"></p></div></div>
+          <details id="changes-disclosure" class="changes"><summary>Changes from the original sample</summary><ul id="changes"></ul></details>
+          <div id="past-scheduled" class="rule-note" hidden></div>
+          <div class="worklist-bar"><p>Sorted by priority, submit-by, next visit and patient ID.</p><label for="view">Show<select id="view"><option value="all">All eight patients</option><option value="selected">Selected patient</option></select></label></div>
+          <div id="worklist" class="worklist"></div>
+          <section id="selected-evidence" class="selected-evidence" aria-labelledby="selected-heading">
+            <div class="section-title"><span class="step">03</span><h2 id="selected-heading">Follow the allocation</h2></div>
+            <p id="selected-label"></p>
+            <div id="ledger"></div>
+            <details class="visit-disclosure"><summary id="visit-summary">Visit allocation</summary><ol id="visit-allocations" class="visit-list"></ol></details>
+            <details class="payer-disclosure"><summary>Placeholder payer rules for this patient</summary><div id="payer-rules"></div></details>
+          </section>
+        </div>
+      </section>
+    </div>
+    <section class="method" aria-labelledby="method-heading">
+      <h2 id="method-heading">How to read this demonstration</h2>
+      <div class="method-grid">
+        <p><strong>Capacity follows the source ledger.</strong> Completed visits consume approved capacity first; scheduled visits follow in date order. Authorization start and end dates are inclusive. A pending record does not supply approved capacity.</p>
+        <p><strong>Priority is an administrative rule label.</strong> P1, P2 and P3 come from the existing synthetic payer table and rule engine. They are not clinical urgency, a guarantee of coverage or instructions to change patient care.</p>
+        <p><strong>Evidence remains traceable.</strong> File and row references identify the original repository sample. A “scenario edited” label marks any row changed here. No original file is rewritten.</p>
+      </div>
+      <p class="source-links"><a href="https://github.com/Jacob-Met/workflow-checks/blob/__SOURCE_BASE__/pt_auth/ptauth/engine.py" target="_blank" rel="noopener">Pinned Python rule source</a><a href="https://github.com/Jacob-Met/workflow-checks/tree/__SOURCE_BASE__/pt_auth/sample_data" target="_blank" rel="noopener">Original synthetic sample</a></p>
+    </section>
+  </main>
+  <footer>PT authorization what-if · Workflow Checks · Synthetic scenario dated September 28, 2026</footer>
+  <script type="module">__SCRIPT__</script>
+</body>
+</html>
