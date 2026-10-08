@@ -1,0 +1,22 @@
+{
+  "source": "58d18344b1ba81e704a22096d05ead2f5d5cdddd",
+  "command": [
+    "/workspace/scratch/86776bb3cdb8/product-delivery/venv/bin/python",
+    "-B",
+    "-m",
+    "pytest",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "test_receiving_timezone.py",
+    "-k",
+    "local_moved_host"
+  ],
+  "sourceEnvironment": "/workspace/scratch/86776bb3cdb8/receiving-pt/baseline",
+  "status": 1,
+  "signal": null,
+  "error": null,
+  "elapsedMs": 615,
+  "logSha256": "8f5d2329162e479387fb80b2591a1a64dfa6bdb39467d1326bd1b96c682aa9e4",
+  "independentTestSha256": "99304b0324fe13c62be3bc4685e938b8efb0ffd7cbbb739f7c49bebaa8466ead"
+}

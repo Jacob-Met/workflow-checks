@@ -1,0 +1,80 @@
+{
+  "source": "58d18344b1ba81e704a22096d05ead2f5d5cdddd",
+  "same_authored_input_two_hosts": [
+    {
+      "host_timezone": "UTC",
+      "command": [
+        "/workspace/scratch/86776bb3cdb8/product-delivery/venv/bin/python",
+        "-B",
+        "-m",
+        "ptauth",
+        "run",
+        "--data",
+        "/workspace/scratch/86776bb3cdb8/product-delivery/pt-timezone-evidence/authored-input",
+        "--out",
+        "/workspace/scratch/86776bb3cdb8/product-delivery/pt-timezone-evidence/utc-host",
+        "--as-of",
+        "2026-09-27"
+      ],
+      "exit": 0,
+      "stdout": "[SYNTHETIC] as_of 2026-09-27: 1 patients, 1 visits, 1 auths\nworklist: 1 items (P1 1, P2 0, P3 0); 1 scheduled visits uncovered; 0 completed w/o auth\n  P1 SYN-1 P         A1          UNCOVERED_VISIT                    submit_by=-\ndigest: /workspace/scratch/86776bb3cdb8/product-delivery/pt-timezone-evidence/utc-host/digest.html\n",
+      "stderr": "",
+      "uncovered_scheduled": 1,
+      "ledger_scheduled": 0,
+      "uncovered": [
+        {
+          "visit_id": "V1",
+          "patient_id": "SYN-1",
+          "date": "2026-09-29",
+          "status": "scheduled",
+          "payer_id": "P"
+        }
+      ],
+      "clinic_timezone_provenance": null
+    },
+    {
+      "host_timezone": "America/Los_Angeles",
+      "command": [
+        "/workspace/scratch/86776bb3cdb8/product-delivery/venv/bin/python",
+        "-B",
+        "-m",
+        "ptauth",
+        "run",
+        "--data",
+        "/workspace/scratch/86776bb3cdb8/product-delivery/pt-timezone-evidence/authored-input",
+        "--out",
+        "/workspace/scratch/86776bb3cdb8/product-delivery/pt-timezone-evidence/pacific-host",
+        "--as-of",
+        "2026-09-27"
+      ],
+      "exit": 0,
+      "stdout": "[SYNTHETIC] as_of 2026-09-27: 1 patients, 1 visits, 1 auths\nworklist: 0 items (P1 0, P2 0, P3 0); 0 scheduled visits uncovered; 0 completed w/o auth\ndigest: /workspace/scratch/86776bb3cdb8/product-delivery/pt-timezone-evidence/pacific-host/digest.html\n",
+      "stderr": "",
+      "uncovered_scheduled": 0,
+      "ledger_scheduled": 1,
+      "uncovered": [],
+      "clinic_timezone_provenance": null
+    }
+  ],
+  "explicit_option": {
+    "command": [
+      "/workspace/scratch/86776bb3cdb8/product-delivery/venv/bin/python",
+      "-B",
+      "-m",
+      "ptauth",
+      "run",
+      "--data",
+      "/workspace/scratch/86776bb3cdb8/product-delivery/pt-timezone-evidence/authored-input",
+      "--out",
+      "/workspace/scratch/86776bb3cdb8/product-delivery/pt-timezone-evidence/explicit-option",
+      "--as-of",
+      "2026-09-27",
+      "--clinic-timezone",
+      "America/Los_Angeles"
+    ],
+    "exit": 2,
+    "stdout": "",
+    "stderr": "usage: ptauth [-h] {generate,run,serve} ...\nptauth: error: unrecognized arguments: --clinic-timezone America/Los_Angeles\n"
+  },
+  "boundary": "Actual native CLI on authored synthetic CSVs; no real clinic, patient or payer data."
+}

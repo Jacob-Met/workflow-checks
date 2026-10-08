@@ -63,7 +63,6 @@ Guard tests that already passed (kept as regressions): BOM header, ISO / `M/D/YY
 
 - **Stale "scheduled" rows in the past** (never checked out or cancelled) still consume auth capacity, but they are not surfaced. They could be undocumented or unbilled visits and deserve their own worklist code.
 - **Duplicate auth numbers** are resolved by a heuristic (overlapping = amendment, later row wins). Nothing tells staff this happened; a "data warnings" panel in the digest/UI would help.
-- **Time zone** has no CLI flag; offset-bearing timestamps use this machine's zone. Naive timestamps keep the date as written.
 - **Day-first dates** (`DD/MM/YYYY`) are rejected, not auto-detected. This is deliberate, because detection is ambiguous.
 - **Numeric ids** drop leading zeros (`001234` = `1234`) to survive Excel. That would merge two genuinely different patients whose ids differ only by leading zeros.
 - **ANNUAL_LIMIT** uses the calendar year (no plan/benefit-year option), counts evals even when `counts_evals = N`, includes stale scheduled rows, and can fire for no-auth payers that have a cap.
@@ -71,4 +70,25 @@ Guard tests that already passed (kept as regressions): BOM header, ISO / `M/D/YY
 - **Name mismatches** cannot be detected: the schedule has no name column, and duplicate `patient_id` rows in `patients.csv` resolve last-wins.
 - A patient whose insurance changed mid-episode is correctly shown as uncovered, but the tool doesn't hint that it's a payer mismatch.
 - The status/synonym lists are generic. Map the clinic's EMR vocabulary (WebPT, Raintree, etc.) on the first real de-identified export.
-- Tested on Python 3.14 only; the README claims 3.10+.
+- The original review ran on Python 3.14. The 2026-10-08 clinic-timezone contribution also runs the inherited PT suite on Python 3.12; the configured CI matrix covers 3.10 and 3.12.
+
+## Clinic timezone selection (2026-10-08)
+
+The same authored UTC appointment is uncovered on a UTC host and covered on
+a Pacific host when the authorization ends on the prior calendar day. This
+reproduced through the real CLI on source
+`58d18344b1ba81e704a22096d05ead2f5d5cdddd`; neither report identified its zone.
+
+Named-zone selection now binds visit and authorization timestamp conversion
+to one per-run `ZoneInfo`, without changing the process or module default.
+The selected zone supplies fallback "today" and is recorded in the summary,
+audit, CLI, browser, and printable digest. Cached summaries for another or
+unrecorded zone are rebuilt for their same as-of date. Host-local mode
+refreshes once at server startup because its label alone cannot establish
+which host interpreted the input.
+
+`tests/test_clinic_timezone.py` covers host-independent named-zone decisions,
+historical offsets, date-only/naive compatibility, separate concurrent runs,
+invalid-zone refusal before output changes or startup, and actual local HTTP
+and optional Chromium consumption. These are synthetic software controls;
+they do not establish a real clinic's rules or accuracy.

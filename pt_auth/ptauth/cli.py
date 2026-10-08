@@ -23,6 +23,9 @@ def main(argv=None) -> int:
     s.add_argument("--data", default="sample_data")
     s.add_argument("--out", default="out")
     s.add_argument("--port", type=int, default=8766)
+    for command in (r, s):
+        command.add_argument("--clinic-timezone", default=None, metavar="IANA_ZONE",
+                             help="clinic zone for offset-bearing timestamps (default: system local)")
     a = ap.parse_args(argv)
 
     if a.cmd == "generate":
@@ -35,12 +38,14 @@ def main(argv=None) -> int:
         from .data import InputError
         from .report import run
         try:
-            s = run(Path(a.data), Path(a.out), date.fromisoformat(a.as_of) if a.as_of else None)
+            s = run(Path(a.data), Path(a.out), date.fromisoformat(a.as_of) if a.as_of else None,
+                    clinic_timezone=a.clinic_timezone)
         except (InputError, FileNotFoundError) as e:
-            print(f"ERROR: {e}\nFix the file above and run again; no outputs were written.", file=sys.stderr)
+            print(f"ERROR: {e}\nCheck the input settings and files and run again; no outputs were written.", file=sys.stderr)
             return 2
         c = s["counts"]
         print(f"[SYNTHETIC] as_of {s['as_of']}: {c['patients']} patients, {c['visits']} visits, {c['auths']} auths")
+        print(f"clinic time zone: {s['clinic_timezone']}")
         print(f"worklist: {c['worklist']} items (P1 {c['p1']}, P2 {c['p2']}, P3 {c['p3']}); "
               f"{c['uncovered_scheduled']} scheduled visits uncovered; {c['unauthorized_done']} completed w/o auth")
         for x in s["worklist"][:12]:
@@ -51,8 +56,13 @@ def main(argv=None) -> int:
         print(f"digest: {Path(a.out) / 'digest.html'}")
         return 0
     if a.cmd == "serve":
+        from .data import InputError
         from .web import serve
-        serve(Path(a.data), Path(a.out), a.port)
+        try:
+            serve(Path(a.data), Path(a.out), a.port, clinic_timezone=a.clinic_timezone)
+        except InputError as e:
+            print(f"ERROR: {e}", file=sys.stderr)
+            return 2
         return 0
     return 1
 

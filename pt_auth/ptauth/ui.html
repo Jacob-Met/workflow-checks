@@ -32,6 +32,7 @@ small{color:var(--mut)}.hidden{display:none}tr.done{opacity:.55}details ul{margi
 <div class="syn">SYNTHETIC DATA &mdash; NOT REAL PATIENTS &middot; proof of concept &middot; nothing is sent to any payer</div>
 <header>
   <h1>PT Authorization &amp; Visit-Limit Tracker</h1><span class="sp"></span>
+  <span id="timezone"></span>
   <label>as of <input type="date" id="asof"></label><button id="run" class="pri">Run worklist</button>
   <label style="font-size:12px">seed <input id="seed" type="number" value="21" style="width:60px"></label><button id="gen">New synthetic clinic</button>
 </header>
@@ -74,6 +75,7 @@ function meter(used, auth) {
   return `<div class="meter"><span style="width:${pct}%;background:${col}"></span></div>`;
 }
 function render() {
+  $("#timezone").textContent = `Clinic time zone: ${S.clinic_timezone || "unrecorded"}`;
   const c = S.counts, st = S.states || {};
   const done = S.worklist.filter(w => ["submitted", "approved", "n/a"].includes((st[w.key] || {}).state)).length;
   $("#cards").innerHTML = [[c.p1, "P1 act today"], [c.p2, "P2 this week"], [c.p3, "P3 heads-up"], [c.uncovered_scheduled, "scheduled visits outside auth"],
@@ -107,7 +109,8 @@ function render() {
       <td>${l.days_left}</td><td>${esc(l.status)}</td></tr>`).join("")}</table>`;
   $("#t-files").innerHTML = `<ul><li><a href="/out/digest.html" target="_blank">Daily digest (printable HTML)</a></li>
     ${["worklist.csv", "ledger.csv", "summary.json", "audit.jsonl"].map(f => `<li><a href="/out/${f}" download>${f}</a></li>`).join("")}</ul>
-    <p><small>Generated ${esc(S.generated_at)} for as-of date ${esc(S.as_of)}.</small></p>`;
+    <p><small>Generated ${esc(S.generated_at)} for as-of date ${esc(S.as_of)}.
+    Clinic time zone: ${esc(S.clinic_timezone || "unrecorded")}.</small></p>`;
 }
 document.querySelectorAll("#tabs button").forEach(b => b.onclick = () => {
   document.querySelectorAll("#tabs button").forEach(x => x.classList.toggle("on", x === b));

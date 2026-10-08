@@ -15,6 +15,7 @@ from datetime import date, datetime, timezone
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 
+from .data import clinic_timezone_label, resolve_clinic_timezone
 from .report import audit, run
 
 UI = Path(__file__).with_name("ui.html")
@@ -22,7 +23,11 @@ STATES = ("open", "submitted", "approved", "n/a")
 
 
 class App:
-    def __init__(self, data_dir: Path, out_dir: Path):
+    def __init__(self, data_dir: Path, out_dir: Path, *, clinic_timezone: str | None = None):
+        self.timezone_label = clinic_timezone_label(resolve_clinic_timezone(clinic_timezone))
+        self.clinic_timezone = clinic_timezone
+        # A host-local label cannot establish equivalence with another machine.
+        self._local_zone_checked = clinic_timezone is not None
         self.data_dir, self.out_dir = Path(data_dir), Path(out_dir)
         self.as_of: date | None = None
 
@@ -37,13 +42,22 @@ class App:
         if not (self.data_dir / "schedule.csv").exists():
             from .synth import generate
             generate(self.data_dir)
-        return run(self.data_dir, self.out_dir, self.as_of, run_by="web")
+        result = run(self.data_dir, self.out_dir, self.as_of, run_by="web",
+                     clinic_timezone=self.clinic_timezone)
+        self._local_zone_checked = True
+        return result
 
     def summary(self) -> dict:
         p = self.out_dir / "summary.json"
         if not p.exists():
             self.run()
         s = json.loads(p.read_text(encoding="utf-8"))
+        if s.get("clinic_timezone") != self.timezone_label or not self._local_zone_checked:
+            # A timezone change reinterprets this report's same reviewed date.
+            if self.as_of is None:
+                self.as_of = date.fromisoformat(s["as_of"])
+            self.run()
+            s = json.loads(p.read_text(encoding="utf-8"))
         s["states"] = self.states()
         return s
 
@@ -116,11 +130,12 @@ def make_handler(app: App):
     return H
 
 
-def serve(data_dir: Path, out_dir: Path, port: int = 8766) -> None:
-    app = App(data_dir, out_dir)
+def serve(data_dir: Path, out_dir: Path, port: int = 8766, *, clinic_timezone: str | None = None) -> None:
+    app = App(data_dir, out_dir, clinic_timezone=clinic_timezone)
     app.summary()
     srv = ThreadingHTTPServer(("127.0.0.1", port), make_handler(app))
     print(f"PT auth tracker UI (SYNTHETIC DATA): http://127.0.0.1:{port}/  (Ctrl+C to stop)")
+    print(f"Clinic time zone: {app.timezone_label}")
     try:
         srv.serve_forever()
     except KeyboardInterrupt:

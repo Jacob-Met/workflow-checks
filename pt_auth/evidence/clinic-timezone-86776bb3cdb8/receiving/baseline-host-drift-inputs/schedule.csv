@@ -1,0 +1,2 @@
+visit_id,patient_id,visit_date,clinic,therapist,payer_id,status,visit_type
+V0,SYN-0000,2026-09-29T01:30:00Z,Clinic (synthetic),Test PT,P,scheduled,treatment

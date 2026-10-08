@@ -1,0 +1,140 @@
+{
+  "repository": "Jacob-Met/workflow-checks",
+  "base_commit": "58d18344b1ba81e704a22096d05ead2f5d5cdddd",
+  "first_reviewed_source": "2946f7754c921a9e670ba48d325d634665f50e94",
+  "qualified_source_commit": "5222ac0e38d2b48631c527770afa3d6d951e0a6a",
+  "branch": "estate/86776bb3cdb8-pt-clinic-timezone",
+  "files": [
+    {
+      "path": "pt_auth/HARDENING.md",
+      "bytes": 9588,
+      "sha256": "2a5aa828ec674d7e8481969216d5bdbbab4305078ab49b2aded4392f24030144",
+      "git_blob": "43eec7f2e9ee9946754e954a252ba52da5b13b11"
+    },
+    {
+      "path": "pt_auth/README.md",
+      "bytes": 13331,
+      "sha256": "7780d15b6c2176e13bf5641ec1c2e4a1c32c62d28322240870c27613e1f06904",
+      "git_blob": "065065f77f7c0bad89dc10268c9f144c68841f9d"
+    },
+    {
+      "path": "pt_auth/ptauth/cli.py",
+      "bytes": 3474,
+      "sha256": "5c7a64eea33139b45f24c6b4f5fd2c53af9dd370e9b3b8a0c36828aabd93ad11",
+      "git_blob": "90e183ec0a50a950c94d6e385504b74b0e9bb12a"
+    },
+    {
+      "path": "pt_auth/ptauth/data.py",
+      "bytes": 10283,
+      "sha256": "eeab8ab5b2b72524148969de0d13b27126cc64c4ec79b68a147b51b25a3741e2",
+      "git_blob": "19a2a1b79eff6d2753507eebf3bf78011ddaaa87"
+    },
+    {
+      "path": "pt_auth/ptauth/report.py",
+      "bytes": 8098,
+      "sha256": "de1089f4c3e94bc1734754f69e7aa7a7e1ad2b7c9b6f4512b639d426dde0d6de",
+      "git_blob": "d2a8765538624bfeb6a175aa18ec3f9db1c84b3a"
+    },
+    {
+      "path": "pt_auth/ptauth/ui.html",
+      "bytes": 10542,
+      "sha256": "5d44e83c11980527a31427fea2c8c4fa98fbeaeb93a430bc7c52993d3de952bb",
+      "git_blob": "bd89225f441968aac9471f2fa8be5862555f78e0"
+    },
+    {
+      "path": "pt_auth/ptauth/web.py",
+      "bytes": 6239,
+      "sha256": "2f7d01cda0bb42e907d135d4a34cedb655b780c646cbe01ed4050ab7c11b2b23",
+      "git_blob": "71d17ec9642798a5e7df56ab7c2bdbab8d061352"
+    },
+    {
+      "path": "pt_auth/tests/test_clinic_timezone.py",
+      "bytes": 12481,
+      "sha256": "4590aaf4c3a880326e63a453038d39caa8c1613f163b754040210144a65cda05",
+      "git_blob": "2d5d43e389dc886f4a2a3bed9f536858be06d5f0"
+    },
+    {
+      "path": "pt_auth/tests/test_receiving_timezone.py",
+      "bytes": 11789,
+      "sha256": "99304b0324fe13c62be3bc4685e938b8efb0ffd7cbbb739f7c49bebaa8466ead",
+      "git_blob": "18105410825b731e4475067d5e62124ea0cf4deb"
+    }
+  ],
+  "runtime": {
+    "python": "3.12.14",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+    "pytest": "9.1.1",
+    "playwright": "1.63.0",
+    "chromium": "153.0.8010.0",
+    "node": "v24.19.0",
+    "timezone_data_version": "# version 2025b",
+    "timezone_rule_files": [
+      {
+        "zone": "UTC",
+        "path": "/usr/share/zoneinfo/UTC",
+        "sha256": "8b85846791ab2c8a5463c83a5be3c043e2570d7448434d41398969ed47e3e6f2"
+      },
+      {
+        "zone": "America/Los_Angeles",
+        "path": "/usr/share/zoneinfo/America/Los_Angeles",
+        "sha256": "68977bb9ad6d186fefc6c7abd36010a66e30008dcb2d376087a41c49861e7268"
+      },
+      {
+        "zone": "America/New_York",
+        "path": "/usr/share/zoneinfo/America/New_York",
+        "sha256": "e9ed07d7bee0c76a9d442d091ef1f01668fee7c4f26014c0a868b19fe6c18a95"
+      },
+      {
+        "zone": "Asia/Kathmandu",
+        "path": "/usr/share/zoneinfo/Asia/Kathmandu",
+        "sha256": "4d4796eeb0d289f3934ac371be8f628086197c621311951ffb4123825c910d6b"
+      },
+      {
+        "zone": "Pacific/Kiritimati",
+        "path": "/usr/share/zoneinfo/Pacific/Kiritimati",
+        "sha256": "5474778aec22bf7b71eb95ad8ad5470a840483754977cd76559e5d8ee4b25317"
+      },
+      {
+        "zone": "Etc/GMT+12",
+        "path": "/usr/share/zoneinfo/Etc/GMT+12",
+        "sha256": "6fbd0712112babc2099aaf31edc399cb8791fffddfab9b871e98ef3c1107a8c0"
+      },
+      {
+        "zone": "Etc/GMT-14",
+        "path": "/usr/share/zoneinfo/Etc/GMT-14",
+        "sha256": "3e95e8444061d36a85a6fc55323da957d200cd242f044ed73ef9cdf6a499f8a7"
+      }
+    ]
+  },
+  "qualification": {
+    "pt_auth": {
+      "passed": 88,
+      "skipped": 0,
+      "seconds": 4.13,
+      "command": "PT_RECEIVING_SOURCE=/workspace/scratch/86776bb3cdb8/product-delivery/workflow-checks PTAUTH_TEST_CHROME=/workspace/scratch/86776bb3cdb8/product-delivery/browser-runtime/chromium /workspace/scratch/86776bb3cdb8/product-delivery/venv/bin/python -B -m pytest -q -s pt_auth"
+    },
+    "initial_pt_suite": {
+      "passed": 55
+    },
+    "first_candidate_pt": {
+      "passed": 74,
+      "skipped": 0
+    },
+    "independent_receiving": {
+      "passed": 14,
+      "skipped": 0
+    },
+    "baseline_author_controls": {
+      "failed": 19
+    },
+    "baseline_actual_cache_control": {
+      "failed": 1,
+      "deselected": 13
+    }
+  },
+  "boundary": "Authored synthetic CSV records, native CLI subprocesses and actual isolated loopback HTTP/browser paths; no existing server, real clinic, patient, payer or provider operation.",
+  "sources": [
+    "https://github.com/Jacob-Met/workflow-checks/blob/58d18344b1ba81e704a22096d05ead2f5d5cdddd/pt_auth/HARDENING.md",
+    "https://docs.python.org/3/library/zoneinfo.html"
+  ]
+}
