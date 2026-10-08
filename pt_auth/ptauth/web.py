@@ -5,6 +5,7 @@
   POST /api/run        {"as_of": "YYYY-MM-DD"?}
   POST /api/generate   {"seed": int}
   POST /api/state      {"key", "state": open|submitted|approved|n/a, "note"}
+  POST /api/calendar   {"snapshot", "keys"} -> read-only reviewed .ics handoff
   GET  /out/<file>     digest.html, worklist.csv, ledger.csv, audit.jsonl
 """
 from __future__ import annotations
@@ -17,6 +18,8 @@ from pathlib import Path
 
 from .data import clinic_timezone_label, resolve_clinic_timezone
 from .report import audit, run
+from .worklist_calendar import (CalendarInputError, CalendarStaleError, decode_json,
+                                load_report, prepare_calendar, render_calendar, snapshot_token)
 
 UI = Path(__file__).with_name("ui.html")
 STATES = ("open", "submitted", "approved", "n/a")
@@ -59,7 +62,29 @@ class App:
             self.run()
             s = json.loads(p.read_text(encoding="utf-8"))
         s["states"] = self.states()
+        try:
+            s["calendar_snapshot"] = prepare_calendar(s)["snapshot"]
+        except CalendarInputError as e:
+            s["calendar_snapshot"] = None
+            s["calendar_error"] = str(e)
         return s
+
+    def calendar(self, body: dict) -> bytes:
+        if not isinstance(body, dict) or set(body) != {"snapshot", "keys"}:
+            raise CalendarInputError("Calendar request requires snapshot and selected keys")
+        expected = body["snapshot"]
+        if not isinstance(expected, str) or len(expected) != 64:
+            raise CalendarInputError("A reviewed calendar snapshot is required")
+        if not isinstance(body["keys"], list):
+            raise CalendarInputError("Selected keys must be an array")
+        current = load_report(self.out_dir)
+        if snapshot_token(current) != expected:
+            raise CalendarStaleError("Report or staff state changed; refresh the worklist before exporting")
+        plan = prepare_calendar(current, body["keys"])
+        content = render_calendar(plan)
+        if snapshot_token(load_report(self.out_dir)) != expected:
+            raise CalendarStaleError("Report or staff state changed during export; refresh and try again")
+        return content
 
     def set_state(self, body: dict) -> dict:
         key, st = str(body.get("key", "")), str(body.get("state", ""))
@@ -94,6 +119,8 @@ def make_handler(app: App):
             path = self.path.split("?", 1)[0]
             if path == "/":
                 return self._send(200, UI.read_bytes(), "text/html; charset=utf-8")
+            if path == "/calendar_ui.js":
+                return self._send(200, UI.with_name("calendar_ui.js").read_bytes(), "text/javascript; charset=utf-8")
             if path == "/api/summary":
                 return self._json(app.summary())
             if path.startswith("/out/"):
@@ -104,7 +131,21 @@ def make_handler(app: App):
                 return self._send(200, t.read_bytes(), ct + ("; charset=utf-8" if ct.startswith("text/") else ""))
             self._send(404, b"not found", "text/plain")
 
+        def _calendar(self):
+            try:
+                n = int(self.headers.get("Content-Length") or 0)
+                if not 0 < n <= 2 * 1024 * 1024:
+                    raise CalendarInputError("Calendar request must contain at most 2 MiB of JSON")
+                content = app.calendar(decode_json(self.rfile.read(n)))
+            except CalendarStaleError as e:
+                return self._json({"error": str(e)}, 409)
+            except (CalendarInputError, OSError, ValueError) as e:
+                return self._json({"error": str(e)}, 400)
+            return self._send(200, content, "text/calendar; charset=utf-8")
+
         def do_POST(self):
+            if self.path == "/api/calendar":
+                return self._calendar()
             n = int(self.headers.get("Content-Length") or 0)
             try:
                 body = json.loads(self.rfile.read(n) or b"{}")

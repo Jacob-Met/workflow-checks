@@ -172,3 +172,74 @@ This PoC contains **no PHI** and must not be pointed at real patient data as-is.
 - **Manual audit baseline.** A current manual audit for one clinic, used to measure the worklist against.
 - **Workflow.** Who works the list and when (a morning huddle?), what the statuses should be, and whether they want the digest per clinic or per specialist.
 - **Compliance.** A signed BAA, a hosting decision inside their HIPAA environment, and SSO/MFA identities before any identified data is used.
+
+## Export a reviewed submit-by calendar
+
+The local **Daily worklist** includes a **Submit-by calendar handoff** panel. Set
+the existing priority, clinic, staff-state and search filters, review the included
+and excluded items, then explicitly download the `.ics` file. It contains dated
+**open/submitted** work items from those filters. Approved and n/a items are
+excluded even when the table shows All states. Undated items stay undated; the
+panel and CLI count each excluded item and disclose its exclusion reasons.
+
+To export from an already generated report without starting the web server:
+
+~~~bash
+cd pt_auth
+python -m ptauth calendar --report out --output submit-by.ics
+python -m ptauth calendar --report out --output priority-one.ics --priority P1
+python -m ptauth calendar --report out --output one-clinic.ics --clinic "Clinic North (synthetic)"
+python -m ptauth calendar --report out --output one-item.ics --key "SYN-1014|PAY-MA|AUTH-70039"
+~~~
+
+`--key` may be repeated. Keys select existing identities; duplicates and unknown
+keys refuse the whole export. Filters combine by intersection. `--clinic ""`
+selects the native report's blank clinic value. A successful CLI command prints
+one JSON result containing the selected/event counts, excluded keys/reasons,
+report date, recorded zone, snapshot and output path. An empty eligible
+selection, malformed saved data, missing report or existing output path exits 2
+with an error on stderr and no success result. Use a new output filename;
+existing files and symlinks are never replaced. No missing report or staff-state
+file is created, and the calendar command never runs the report engine.
+
+### Date, identity and review boundaries
+
+Each event uses the report's existing `submit_by` as a single-day **all-day date**.
+There is no invented appointment time, time-zone conversion, recurrence, alarm,
+attendee or organizer. The recorded clinic-zone label stays in the description
+as context. The event also retains the original work-item key, patient, payer,
+authorization, clinic, report date/time, staff state/note, reasons, checklist and
+source evidence. Optional blank patient names/clinics remain blank. All data in
+this proof of concept is synthetic and payer rules remain placeholders.
+
+Repeated exports retain the same UID for the same existing key, clinic,
+authorization-end period and recorded zone. A changed submit-by date keeps that
+identity; a changed authorization-end, clinic or zone changes it. DTSTAMP is the
+actual UTC export time. Calendar applications decide how repeat imports behave:
+this export does not promise deduplication, replace prior imports, cancel old
+events, submit to a payer or change the recorded staff state.
+
+The browser posts only its reviewed snapshot and filtered keys to the local
+read-only calendar endpoint. Editing the as-of input, pending refresh/state
+changes, malformed inputs and empty selections disable the handoff. The server
+checks the existing summary/state pair before and after rendering and refuses
+a changed snapshot (HTTP 409). A changed selection or obsolete response cannot
+initiate a delayed download. These checks bind observed file contents; they do
+not lock other writers or authenticate a reviewer. The existing report/state
+writer behavior remains unchanged.
+
+Saved inputs must be regular UTF-8 JSON files, with no duplicate JSON fields or
+non-finite values. Older reports without a recorded clinic zone should be
+regenerated through the existing Run worklist command. Each input file and the
+resulting calendar is limited to 16 MiB, the worklist/selection to 20,000 items,
+and each text value to 20,000 characters. The calendar request is limited to
+2 MiB. Narrow the filters if a handoff exceeds these bounds. The format follows
+[RFC 5545](https://www.rfc-editor.org/rfc/rfc5545.html): DATE events with no
+DTEND/DURATION last one day (§3.6.1), text is escaped (§3.3.11), and CRLF content
+lines fold at UTF-8-safe 75-octet boundaries (§3.1).
+
+The additive formatter/real CLI/HTTP checks use only the Python standard library:
+
+~~~bash
+python -B -m unittest discover -s tests -p test_worklist_calendar.py -v
+~~~
