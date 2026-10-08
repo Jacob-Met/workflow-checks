@@ -92,39 +92,6 @@ cover. An earlier approval is not presented as approval of changed evidence.
 The original packet remains a draft, and the bundle is a snapshot: later app
 changes do not update it. Nothing is sent, filed, invoiced or paid.
 
-### Downloading several saved reviews together
-
-In **Downloads**, select the loads under **Download a group of saved reviews**,
-then choose **Download selected reviews**. You can choose 1–100 loads; the archive
-keeps their displayed order. **Select all available** selects the readable,
-unambiguous packets when there are no more than 100. This selection lives in
-the open page and does not save or change a reviewer decision.
-
-Unzip the downloaded file and open its `index.html`. Each link opens the existing
-saved-review cover, including the original packet, selected-load report records,
-saved note and history. The five original member files and the exact original
-single-load ZIP are retained under an ordinal directory such as `loads/0001/`.
-Load labels and download filenames never become archive directory names.
-The batch manifest records every selected identity and all member byte counts
-and SHA-256 checksums.
-
-The server checks all displayed packet/report and saved-review identities under
-the same existing review lock. One changed, missing or ambiguous selected record
-refuses the entire batch. It does not silently omit that load or refresh its review.
-Downloading does not initialize or rerun the pipeline and writes no review,
-input, report or archive into the server output directory.
-
-Save or undo current note edits and wait for a review or pipeline update before
-downloading. **Cancel batch download** stops a pending request. Selection edits,
-note edits and review or pipeline actions discard a pending reply. A refresh
-that changes a selected identity clears the selection and asks you to inspect
-and select the current records again; changes to unselected loads retain it.
-A failed download makes no automatic retry and leaves saved reviews unchanged.
-
-Unreviewed, cleared, stale, unbound and current decisions keep the meanings of the
-existing per-load covers. The batch is a local draft snapshot, with no combined
-payment total or new approval. Nothing is sent, invoiced or paid.
-
 ## Verification
 
 The freight test suite includes real local HTTP checks for unchanged and changed evidence, stale clients, missing packets, legacy decisions, history, concurrent reviews and failed writes. An optional browser check runs with an installed Playwright and Chromium: `node tests/review_browser_smoke.cjs` from `freight_packets`. Set `BROWSER_BIN` for an existing Chromium executable and `PYTHON` if the interpreter is not named `python3`. It uses a disposable synthetic fixture and local server, and retains its screenshots and receipt under the process temporary directory.
@@ -186,7 +153,3 @@ those source records before running again. The conflict is detected during
 input loading, before any audit append or replacement of existing packet and
 report files. Valid nonadjacent invoice lines still combine, and different
 invoice/load groups retain their existing behavior.
-
-## Compare two retained review copies
-
-From `freight_packets`, run `python -m freightpkt.review_compare COPY_A.zip COPY_B.zip --out comparison.html` to create a new self-contained comparison of two existing per-load saved-review ZIPs. The report shows complete native evidence records with duplicate counts, both saved review histories, and exact source identities. A and B retain the supplied order; no current approval is inferred. Both inputs are validated before exclusive output creation, and existing files are never replaced. No review, packet-generation or payment action is taken. See [REVIEW_COMPARE.md](REVIEW_COMPARE.md) for the accepted format, full behavior and write-failure limits.

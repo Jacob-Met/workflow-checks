@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "<string>", line 114, in <module>
+  File "<string>", line 91, in report_check
+  File "<string>", line 13, in check
+AssertionError: changed_departure actual rendered counts

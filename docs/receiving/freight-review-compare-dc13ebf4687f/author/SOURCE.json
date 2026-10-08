@@ -1,0 +1,136 @@
+{
+  "repository": "Jacob-Met/workflow-checks",
+  "baseline": {
+    "head": "125339ec63eeb7c4989c9b240c01202555dce573",
+    "tree": "e3a3501d60ee8f301f9d45ea15d0d324b814e59a"
+  },
+  "claims": {
+    "project_issue": "https://github.com/Jacob-Met/workflow-checks/issues/50",
+    "central_comment": "https://github.com/Jacob-Met/hamon/issues/140#issuecomment-6064049643"
+  },
+  "source_preconditions": {
+    "examined_tree": "e3a3501d60ee8f301f9d45ea15d0d324b814e59a",
+    "truncated": false,
+    "entry_count": 1248,
+    "agent_files": [],
+    "new_paths_absent": [
+      {
+        "path": "freight_packets/freightpkt/review_compare.py",
+        "absent": true
+      },
+      {
+        "path": "freight_packets/tests/test_review_compare.py",
+        "absent": true
+      },
+      {
+        "path": "freight_packets/REVIEW_COMPARE.md",
+        "absent": true
+      }
+    ],
+    "receiving_paths": [
+      {
+        "path": "freight_packets/README.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "da5f0289076248be51bbe8336bdf6837b5f76681",
+        "size": 15699,
+        "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/da5f0289076248be51bbe8336bdf6837b5f76681"
+      },
+      {
+        "path": "freight_packets/freightpkt/__init__.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a7804a1379966afd1e6143a92cf08c1b25f7abfe",
+        "size": 245,
+        "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/a7804a1379966afd1e6143a92cf08c1b25f7abfe"
+      },
+      {
+        "path": "freight_packets/freightpkt/handoff.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "bdcb63507b57d07eed1a6598d7d37d5f5d9db802",
+        "size": 7082,
+        "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/bdcb63507b57d07eed1a6598d7d37d5f5d9db802"
+      },
+      {
+        "path": "freight_packets/freightpkt/cli.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a64a4d60816654595b1767ff9f96cd2cd9c49c32",
+        "size": 2672,
+        "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/a64a4d60816654595b1767ff9f96cd2cd9c49c32"
+      },
+      {
+        "path": "freight_packets/freightpkt/pipeline.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b0962d25557eaf84ad7595d64ea7ef834c2e2a58",
+        "size": 11327,
+        "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/b0962d25557eaf84ad7595d64ea7ef834c2e2a58"
+      },
+      {
+        "path": "freight_packets/freightpkt/packet.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3ee637afba32600f5e109e930086b7a4be46b989",
+        "size": 7707,
+        "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/3ee637afba32600f5e109e930086b7a4be46b989"
+      },
+      {
+        "path": "freight_packets/tests/test_review_handoff.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a30c83740f7ad5f6e4cdb47eb467567fead6a606",
+        "size": 15907,
+        "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/a30c83740f7ad5f6e4cdb47eb467567fead6a606"
+      },
+      {
+        "path": ".github/workflows/tests.yml",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d72b89ae3efb2963fbe7386021f467e82a8e1f2e",
+        "size": 695,
+        "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/d72b89ae3efb2963fbe7386021f467e82a8e1f2e"
+      }
+    ],
+    "packaging_metadata": []
+  },
+  "frozen_carrier": {
+    "carrier": {
+      "bytes": 57422,
+      "git_blob": "2d35b4969dc2eb51c5870e4fbe7025eb76423642",
+      "sha256": "14882de031e421460183b40c67d8bfb1429a6e008d65ba7b4c11973c3421bfd2"
+    },
+    "files": {
+      "freight_packets/README.md": {
+        "bytes": 16402,
+        "git_blob": "afabddbfa95fb6c86ce60a3e5abeb6b069f10aa5",
+        "sha256": "d920fc7a9faac770e295d252301c84c2c7d181ddbcf2572429c57837174e82f0"
+      },
+      "freight_packets/REVIEW_COMPARE.md": {
+        "bytes": 6433,
+        "git_blob": "5d2029f365e3d57bcced9a170231b2a458091a35",
+        "sha256": "184f7c693fd2d70d5b1c1613e2cbc3a0f510f4ba98cf0cd0380a942d0877354f"
+      },
+      "freight_packets/freightpkt/review_compare.py": {
+        "bytes": 15201,
+        "git_blob": "0d32c0574bda267f7066ec6ee673f15eefdaefde",
+        "sha256": "cd0d7b45fe4f1f80023049acfb649a752e73ed1df58cd73d814735e9ddeebe21"
+      },
+      "freight_packets/tests/test_review_compare.py": {
+        "bytes": 16159,
+        "git_blob": "c16f6fd4f06542b40f776332de87ce5f0b89c44f",
+        "sha256": "3fa0c6f12821527f9592b82606542ba8ef253423b8719978762bb4f4e77dd31f"
+      }
+    },
+    "free_bytes": {
+      "/dev/shm": 356352,
+      "/workspace/scratch/dc13ebf4687f": 0
+    }
+  },
+  "observed_owner_boundaries": {
+    "batch": "workflow-checks #37/#47; handoff/web/UI/CLI and batch assembler unchanged",
+    "filenames": "workflow-checks #39; native packet file property is retained",
+    "root_fresh_read": "Parent reported #47 open on source125339 and no comparison owner immediately before claim; this is a parent-attributed observation."
+  }
+}

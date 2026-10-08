@@ -1,0 +1,40 @@
+{
+  "blocked_attempts": [],
+  "errors": 0,
+  "failures": 0,
+  "limits": [
+    "Real filesystem and stock imports from an exact sparse candidate were used.",
+    "Only authored disposable state under receiving-tmp was written; no App/pipeline/provider/estate invocation.",
+    "The nine unchanged pure methods were not repeated in this distinct receiving selection."
+  ],
+  "log": "test_cli_checks_both_inputs_and_load_ids_before_any_output (test_review_compare.ReviewComparisonTests.test_cli_checks_both_inputs_and_load_ids_before_any_output) ... ok\ntest_cli_creates_complete_new_report_and_preserves_existing_bytes (test_review_compare.ReviewComparisonTests.test_cli_creates_complete_new_report_and_preserves_existing_bytes) ... ok\ntest_output_failure_retains_partial_new_file_and_refuses_later_replacement (test_review_compare.ReviewComparisonTests.test_output_failure_retains_partial_new_file_and_refuses_later_replacement) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.011s\n\nOK\n",
+  "methods": 3,
+  "optimize": 0,
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "seconds": 0.011123,
+  "selection": [
+    "test_cli_checks_both_inputs_and_load_ids_before_any_output",
+    "test_cli_creates_complete_new_report_and_preserves_existing_bytes",
+    "test_output_failure_retains_partial_new_file_and_refuses_later_replacement"
+  ],
+  "skips": 0,
+  "source_after": {
+    "candidate/freight_packets/README.md": "d920fc7a9faac770e295d252301c84c2c7d181ddbcf2572429c57837174e82f0",
+    "candidate/freight_packets/REVIEW_COMPARE.md": "184f7c693fd2d70d5b1c1613e2cbc3a0f510f4ba98cf0cd0380a942d0877354f",
+    "candidate/freight_packets/freightpkt/__init__.py": "f9364708963fa65b54aae5174a816c45df417fe7d93971c3b0ff046278929706",
+    "candidate/freight_packets/freightpkt/handoff.py": "413290d887d045b96dd1639c34b9c769f0e730beb28dce06c654a0df36cf1a02",
+    "candidate/freight_packets/freightpkt/review_compare.py": "cd0d7b45fe4f1f80023049acfb649a752e73ed1df58cd73d814735e9ddeebe21",
+    "candidate/freight_packets/tests/test_review_compare.py": "3fa0c6f12821527f9592b82606542ba8ef253423b8719978762bb4f4e77dd31f",
+    "source-carrier.json": "14882de031e421460183b40c67d8bfb1429a6e008d65ba7b4c11973c3421bfd2"
+  },
+  "source_before": {
+    "candidate/freight_packets/README.md": "d920fc7a9faac770e295d252301c84c2c7d181ddbcf2572429c57837174e82f0",
+    "candidate/freight_packets/REVIEW_COMPARE.md": "184f7c693fd2d70d5b1c1613e2cbc3a0f510f4ba98cf0cd0380a942d0877354f",
+    "candidate/freight_packets/freightpkt/__init__.py": "f9364708963fa65b54aae5174a816c45df417fe7d93971c3b0ff046278929706",
+    "candidate/freight_packets/freightpkt/handoff.py": "413290d887d045b96dd1639c34b9c769f0e730beb28dce06c654a0df36cf1a02",
+    "candidate/freight_packets/freightpkt/review_compare.py": "cd0d7b45fe4f1f80023049acfb649a752e73ed1df58cd73d814735e9ddeebe21",
+    "candidate/freight_packets/tests/test_review_compare.py": "3fa0c6f12821527f9592b82606542ba8ef253423b8719978762bb4f4e77dd31f",
+    "source-carrier.json": "14882de031e421460183b40c67d8bfb1429a6e008d65ba7b4c11973c3421bfd2"
+  },
+  "status": "pass"
+}

@@ -1,0 +1,28 @@
+import hashlib,io,json,os,sys,tempfile,time,unittest
+from pathlib import Path
+root=Path("/dev/shm/freight-review-compare-dc13ebf4687f")
+source_root=root/"candidate"/"freight_packets"
+tempfile.tempdir=str(root/"receiving-tmp")
+sys.path[:0]=[str(source_root),str(source_root/"tests")]
+import test_review_compare as tests
+watched=[p for p in (root/"candidate").rglob("*") if p.is_file()]+[root/"source-carrier.json"]
+before={str(p.relative_to(root)):hashlib.sha256(p.read_bytes()).hexdigest() for p in watched}
+blocked=[]
+def audit(event,args):
+    if event=="open":
+        mode=args[1];flags=args[2]
+        write=(isinstance(mode,str) and any(c in mode for c in "wax+")) or (isinstance(flags,int) and flags & (1|2|64|512|1024))
+        if write:
+            path=args[0]
+            if not isinstance(path,(str,bytes,os.PathLike)) or not Path(path).absolute().is_relative_to(root/"receiving-tmp"):
+                blocked.append([event,str(path)]);raise RuntimeError("write outside authored receiving state")
+    if event in ("socket.connect","socket.bind","subprocess.Popen","os.system"):
+        blocked.append([event]);raise RuntimeError("external operation forbidden")
+sys.addaudithook(audit)
+names=["test_cli_checks_both_inputs_and_load_ids_before_any_output","test_cli_creates_complete_new_report_and_preserves_existing_bytes","test_output_failure_retains_partial_new_file_and_refuses_later_replacement"]
+log=io.StringIO();start=time.monotonic()
+result=unittest.TextTestRunner(stream=log,verbosity=2).run(unittest.TestSuite(tests.ReviewComparisonTests(n) for n in names))
+after={str(p.relative_to(root)):hashlib.sha256(p.read_bytes()).hexdigest() for p in watched}
+receipt={"status":"pass" if result.wasSuccessful() and before==after and not blocked else "fail","optimize":sys.flags.optimize,"python":sys.version,"methods":result.testsRun,"failures":len(result.failures),"errors":len(result.errors),"skips":len(result.skipped),"selection":names,"seconds":round(time.monotonic()-start,6),"source_before":before,"source_after":after,"blocked_attempts":blocked,"log":log.getvalue(),"limits":["Real filesystem and stock imports from an exact sparse candidate were used.","Only authored disposable state under receiving-tmp was written; no App/pipeline/provider/estate invocation.","The nine unchanged pure methods were not repeated in this distinct receiving selection."]}
+print(json.dumps(receipt,sort_keys=True,indent=2))
+raise SystemExit(0 if receipt["status"]=="pass" else 1)

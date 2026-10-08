@@ -1,0 +1,4 @@
+  File "<stdin>", line 28
+    ev_a=hashlib.sha256(canonical(a).encode()).hexdigest()
+                                                          ^
+SyntaxError: unexpected character after line continuation character

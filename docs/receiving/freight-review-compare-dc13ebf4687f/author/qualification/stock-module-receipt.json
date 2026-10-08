@@ -1,0 +1,87 @@
+{
+  "checks": {
+    "all_six_source_files_unchanged": true,
+    "complete_document": true,
+    "exact_new_departure": true,
+    "exact_old_departure": true,
+    "exit_zero": true,
+    "inputs_unchanged": true,
+    "no_current_approval_inference": true,
+    "original_source_pointer": true,
+    "recorded_stale_state": true,
+    "stderr_empty": true
+  },
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "-B",
+    "-S",
+    "-m",
+    "freightpkt.review_compare",
+    "/dev/shm/freight-review-compare-dc13ebf4687f/receiving-tmp/module-entry/A.zip",
+    "/dev/shm/freight-review-compare-dc13ebf4687f/receiving-tmp/module-entry/B.zip",
+    "--out",
+    "/dev/shm/freight-review-compare-dc13ebf4687f/receiving-tmp/module-entry/comparison.html"
+  ],
+  "cwd": "/tmp",
+  "inputs_after": {
+    "A": {
+      "bytes": 2884,
+      "inode": 875040,
+      "mtime_ns": 1791476426912636989,
+      "sha256": "e2e4d6f6e5b3640978fe38076c9cd8987b2c0e31878d99a764a4a8e6262479c8"
+    },
+    "B": {
+      "bytes": 2918,
+      "inode": 875041,
+      "mtime_ns": 1791476426912665812,
+      "sha256": "ded626c2cccca663e9cddf6d6b112e68a476539dcc69fe3cc473fe74b2b3e68c"
+    }
+  },
+  "inputs_before": {
+    "A": {
+      "bytes": 2884,
+      "inode": 875040,
+      "mtime_ns": 1791476426912636989,
+      "sha256": "e2e4d6f6e5b3640978fe38076c9cd8987b2c0e31878d99a764a4a8e6262479c8"
+    },
+    "B": {
+      "bytes": 2918,
+      "inode": 875041,
+      "mtime_ns": 1791476426912665812,
+      "sha256": "ded626c2cccca663e9cddf6d6b112e68a476539dcc69fe3cc473fe74b2b3e68c"
+    }
+  },
+  "limits": [
+    "One actual stock python -m invocation using a sparse exact receiving tree and authored native ZIP bytes.",
+    "No GUI, app/server/source pipeline or live operational state.",
+    "Source lookup uses only the explicit receiving PYTHONPATH; no installation or deployment claim."
+  ],
+  "output": {
+    "bytes": 9042,
+    "inode": 875042,
+    "mtime_ns": 1791476426996615356,
+    "path": "/dev/shm/freight-review-compare-dc13ebf4687f/receiving-tmp/module-entry/comparison.html",
+    "sha256": "ad0b265b7f7abc5368e35bf02749bbbdb4759f9bc47b09f10f30b08433c68c3e"
+  },
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "returncode": 0,
+  "source_after": {
+    "candidate/freight_packets/README.md": "d920fc7a9faac770e295d252301c84c2c7d181ddbcf2572429c57837174e82f0",
+    "candidate/freight_packets/REVIEW_COMPARE.md": "184f7c693fd2d70d5b1c1613e2cbc3a0f510f4ba98cf0cd0380a942d0877354f",
+    "candidate/freight_packets/freightpkt/__init__.py": "f9364708963fa65b54aae5174a816c45df417fe7d93971c3b0ff046278929706",
+    "candidate/freight_packets/freightpkt/handoff.py": "413290d887d045b96dd1639c34b9c769f0e730beb28dce06c654a0df36cf1a02",
+    "candidate/freight_packets/freightpkt/review_compare.py": "cd0d7b45fe4f1f80023049acfb649a752e73ed1df58cd73d814735e9ddeebe21",
+    "candidate/freight_packets/tests/test_review_compare.py": "3fa0c6f12821527f9592b82606542ba8ef253423b8719978762bb4f4e77dd31f"
+  },
+  "source_before": {
+    "candidate/freight_packets/README.md": "d920fc7a9faac770e295d252301c84c2c7d181ddbcf2572429c57837174e82f0",
+    "candidate/freight_packets/REVIEW_COMPARE.md": "184f7c693fd2d70d5b1c1613e2cbc3a0f510f4ba98cf0cd0380a942d0877354f",
+    "candidate/freight_packets/freightpkt/__init__.py": "f9364708963fa65b54aae5174a816c45df417fe7d93971c3b0ff046278929706",
+    "candidate/freight_packets/freightpkt/handoff.py": "413290d887d045b96dd1639c34b9c769f0e730beb28dce06c654a0df36cf1a02",
+    "candidate/freight_packets/freightpkt/review_compare.py": "cd0d7b45fe4f1f80023049acfb649a752e73ed1df58cd73d814735e9ddeebe21",
+    "candidate/freight_packets/tests/test_review_compare.py": "3fa0c6f12821527f9592b82606542ba8ef253423b8719978762bb4f4e77dd31f"
+  },
+  "status": "pass",
+  "stderr": "",
+  "stdout": "Comparison written: /dev/shm/freight-review-compare-dc13ebf4687f/receiving-tmp/module-entry/comparison.html\n"
+}

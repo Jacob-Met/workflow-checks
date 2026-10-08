@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "status": "frozen before product implementation",
+  "native_schemas": {
+    "manifest": "freight-review-bundle.v1",
+    "evidence": "freight-review.v1",
+    "review": "freight-review-snapshot.v1"
+  },
+  "zip_members": [
+    "index.html",
+    "packet.html",
+    "evidence.json",
+    "review.json",
+    "manifest.json"
+  ],
+  "payload_contract": [
+    "Four manifest rows uniquely bind the four nonmanifest members by exact bytes and SHA-256.",
+    "Manifest/review load ID and evidence/review tokens agree; exact evidence canonicalization and unchanged handoff.review_version reproduce the identities.",
+    "Evidence contains all six native section arrays; every record is an object bound to the same exact load ID. Unknown record fields are retained.",
+    "Saved review is null or an object; its recorded state and fields are displayed as supplied, never promoted to present approval.",
+    "Reject duplicate JSON object keys and nonfinite JSON values because the native producer never emits either."
+  ],
+  "comparison": [
+    "Copy A/B retain supplied order.",
+    "Exact same nonempty string load ID required; no cross-load change claim.",
+    "Canonical JSON string keys preserve numeric/boolean/null distinctions, unknown fields, order within a record and occurrence counts.",
+    "Section tables show A/B/unchanged/A-only/B-only occurrence counts; full escaped records appear in all three groups without truncation.",
+    "Show full escaped saved review/history for both copies plus exact identities and packet hashes.",
+    "Include source ZIP identities; changes confined to cover/container bytes must remain visible as such, without claiming changed evidence.",
+    "No packet/index HTML execution, external assets, dynamic fetching, or current app access."
+  ],
+  "writer": [
+    "Read each supplied ZIP into memory once and validate both before output creation.",
+    "Render all report bytes before exclusive output.open('xb').",
+    "Do not create parent directories or replace any existing target.",
+    "An I/O failure during an already-created report write may retain a partial new output; do not claim atomic publication.",
+    "Input/result paths use existing Path/argparse interfaces, Python standard library only."
+  ],
+  "tests": [
+    "Reuse unchanged native build_bundle as fixture producer.",
+    "Use frozen same/departure/multiplicity/literal controls plus review-only/cover-only/different-load.",
+    "Exercise validation of both sides before writer, existing destination refusal, and supplied order.",
+    "Tests invoke this standalone module entry; original CLI/main/pipeline/web are untouched.",
+    "No old source suites or native browser checks unless a concrete changed-input risk requires them."
+  ]
+}

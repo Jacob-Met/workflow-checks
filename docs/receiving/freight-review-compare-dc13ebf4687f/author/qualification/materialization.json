@@ -1,0 +1,55 @@
+{
+  "free_after": 221184,
+  "free_before": 356352,
+  "limits": [
+    "Sparse receiving tree, not a full repository checkout.",
+    "Only exact four candidate outputs and two unchanged runtime dependencies materialized.",
+    "No Git mutation or estate action."
+  ],
+  "root": "/dev/shm/freight-review-compare-dc13ebf4687f",
+  "status": "complete",
+  "written": [
+    {
+      "bytes": 15201,
+      "git_blob": "0d32c0574bda267f7066ec6ee673f15eefdaefde",
+      "path": "/dev/shm/freight-review-compare-dc13ebf4687f/candidate/freight_packets/freightpkt/review_compare.py",
+      "sha256": "cd0d7b45fe4f1f80023049acfb649a752e73ed1df58cd73d814735e9ddeebe21"
+    },
+    {
+      "bytes": 16159,
+      "git_blob": "c16f6fd4f06542b40f776332de87ce5f0b89c44f",
+      "path": "/dev/shm/freight-review-compare-dc13ebf4687f/candidate/freight_packets/tests/test_review_compare.py",
+      "sha256": "3fa0c6f12821527f9592b82606542ba8ef253423b8719978762bb4f4e77dd31f"
+    },
+    {
+      "bytes": 6433,
+      "git_blob": "5d2029f365e3d57bcced9a170231b2a458091a35",
+      "path": "/dev/shm/freight-review-compare-dc13ebf4687f/candidate/freight_packets/REVIEW_COMPARE.md",
+      "sha256": "184f7c693fd2d70d5b1c1613e2cbc3a0f510f4ba98cf0cd0380a942d0877354f"
+    },
+    {
+      "bytes": 16402,
+      "git_blob": "afabddbfa95fb6c86ce60a3e5abeb6b069f10aa5",
+      "path": "/dev/shm/freight-review-compare-dc13ebf4687f/candidate/freight_packets/README.md",
+      "sha256": "d920fc7a9faac770e295d252301c84c2c7d181ddbcf2572429c57837174e82f0"
+    },
+    {
+      "bytes": 245,
+      "git_blob": "a7804a1379966afd1e6143a92cf08c1b25f7abfe",
+      "path": "/dev/shm/freight-review-compare-dc13ebf4687f/candidate/freight_packets/freightpkt/__init__.py",
+      "sha256": "f9364708963fa65b54aae5174a816c45df417fe7d93971c3b0ff046278929706"
+    },
+    {
+      "bytes": 7082,
+      "git_blob": "bdcb63507b57d07eed1a6598d7d37d5f5d9db802",
+      "path": "/dev/shm/freight-review-compare-dc13ebf4687f/candidate/freight_packets/freightpkt/handoff.py",
+      "sha256": "413290d887d045b96dd1639c34b9c769f0e730beb28dce06c654a0df36cf1a02"
+    },
+    {
+      "bytes": 57422,
+      "git_blob": "2d35b4969dc2eb51c5870e4fbe7025eb76423642",
+      "path": "/dev/shm/freight-review-compare-dc13ebf4687f/source-carrier.json",
+      "sha256": "14882de031e421460183b40c67d8bfb1429a6e008d65ba7b4c11973c3421bfd2"
+    }
+  ]
+}

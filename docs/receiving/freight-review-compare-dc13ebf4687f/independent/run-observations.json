@@ -1,0 +1,45 @@
+{
+  "schema": "freight-independent-run-observations.v1",
+  "oracle": {
+    "chunk": "adcff9",
+    "exit": 0,
+    "seconds": 0.024655259,
+    "pin": {
+      "bytes": 64371,
+      "sha256": "330f8969404d3987f1e01c204dfa36c192e8440e9d4af48c0b4003b5578d4de1",
+      "git_blob": "73f5f57bcec05d84f8d9553cfda55a4ad8f0810d"
+    }
+  },
+  "rejected_reviewer_v1": {
+    "chunk": "f953fe",
+    "exit": 1,
+    "seconds": 0.013423739,
+    "output_file": "rejected/reviewer-v1-output.txt",
+    "cause": "Reviewer used sorted JSON dictionary order for the native rendered-section table. The sealed oracle dictionary does not define presentation order."
+  },
+  "accepted_reviewer_v2": {
+    "chunk": "2c19df",
+    "exit": 0,
+    "seconds": 0.014569789,
+    "pin": {
+      "bytes": 17497,
+      "sha256": "7b594740b80f7b4124a9e8cf2655064ffb4f8b392c8d6257641aa071a96c2b52",
+      "git_blob": "e13c4ff6c7a23e2eca1c051866f4ca47b9e6a710"
+    },
+    "correction": "Only the table oracle iterates the original App REVIEW_SECTIONS order; source and sealed values unchanged."
+  },
+  "serializer_limit": {
+    "observation": "The original native oracle completed with exit0, then storing its decoded lone-surrogate value failed in the tool serializer. Exact ASCII JSON and base64 native inputs were retained; no producer rerun or value substitution.",
+    "error": "failed to serialize JavaScript value: unexpected end of hex escape at line 1 column 2782"
+  },
+  "packaging_limit": {
+    "observation": "One first-stage base64 response was tool-output truncated at 14000 tokens; it was excluded. Exact same serialization was returned completely with a sufficient output budget. No source, fixture or receiving test was rerun."
+  },
+  "physical": {
+    "available_at_gate": 0,
+    "fixed_floor": 98304,
+    "writes": 0,
+    "cli_calls": 0
+  },
+  "reproducibility": "Scripts are historical local harnesses driven by the exact saved JSON arguments. They retain original absolute source locators; they are not a newly supported portable product command."
+}
