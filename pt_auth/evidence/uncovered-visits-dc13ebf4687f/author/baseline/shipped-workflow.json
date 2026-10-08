@@ -1,0 +1,171 @@
+{
+  "source_head": "9e931fa9f42033bf2368f7149684fb5631345715",
+  "counts": {
+    "patients": 40,
+    "visits": 842,
+    "auths": 46,
+    "worklist": 26,
+    "p1": 11,
+    "p2": 15,
+    "p3": 0,
+    "uncovered_scheduled": 194,
+    "unauthorized_done": 2,
+    "past_scheduled": 0
+  },
+  "uncovered_total": 196,
+  "selected_patient_payer": [
+    "SYN-1024",
+    "PAY-WC"
+  ],
+  "upcoming_uncovered": [
+    {
+      "visit_id": "V1464",
+      "patient_id": "SYN-1024",
+      "date": "2026-09-28",
+      "status": "scheduled",
+      "payer_id": "PAY-WC"
+    },
+    {
+      "visit_id": "V1465",
+      "patient_id": "SYN-1024",
+      "date": "2026-09-30",
+      "status": "scheduled",
+      "payer_id": "PAY-WC"
+    },
+    {
+      "visit_id": "V1466",
+      "patient_id": "SYN-1024",
+      "date": "2026-10-04",
+      "status": "scheduled",
+      "payer_id": "PAY-WC"
+    },
+    {
+      "visit_id": "V1467",
+      "patient_id": "SYN-1024",
+      "date": "2026-10-07",
+      "status": "scheduled",
+      "payer_id": "PAY-WC"
+    },
+    {
+      "visit_id": "V1468",
+      "patient_id": "SYN-1024",
+      "date": "2026-10-10",
+      "status": "scheduled",
+      "payer_id": "PAY-WC"
+    },
+    {
+      "visit_id": "V1469",
+      "patient_id": "SYN-1024",
+      "date": "2026-10-14",
+      "status": "scheduled",
+      "payer_id": "PAY-WC"
+    },
+    {
+      "visit_id": "V1470",
+      "patient_id": "SYN-1024",
+      "date": "2026-10-17",
+      "status": "scheduled",
+      "payer_id": "PAY-WC"
+    },
+    {
+      "visit_id": "V1471",
+      "patient_id": "SYN-1024",
+      "date": "2026-10-19",
+      "status": "scheduled",
+      "payer_id": "PAY-WC"
+    },
+    {
+      "visit_id": "V1472",
+      "patient_id": "SYN-1024",
+      "date": "2026-10-23",
+      "status": "scheduled",
+      "payer_id": "PAY-WC"
+    }
+  ],
+  "worklist_items": [
+    {
+      "patient_id": "SYN-1024",
+      "patient_name": "Test Jordan X.",
+      "clinic": "Clinic West (synthetic)",
+      "payer_id": "PAY-WC",
+      "payer_name": "Workers Comp Carrier (placeholder)",
+      "auth_no": "AUTH-70069",
+      "priority": "P1",
+      "reasons": [
+        "UNCOVERED_VISIT",
+        "REAUTH_BY_VISITS"
+      ],
+      "detail": [
+        "9 scheduled visit(s) outside any approved auth, first 2026-09-28 (V1464, V1465, V1466, V1467 ...)",
+        "0 of 4 visits left (payer threshold 2)"
+      ],
+      "visits_used": 4,
+      "visits_authorized": 4,
+      "visits_remaining": 0,
+      "scheduled_in_window": 0,
+      "auth_end": "2026-11-27",
+      "days_left": 60,
+      "next_visit": "2026-09-28",
+      "submit_by": "2026-11-17",
+      "checklist": [
+        "Adjuster approval request",
+        "Work status report",
+        "Progress note",
+        "Physician referral / Rx"
+      ],
+      "evidence": [
+        "schedule.csv:row465",
+        "schedule.csv:row466",
+        "schedule.csv:row467",
+        "schedule.csv:row468",
+        "schedule.csv:row469",
+        "schedule.csv:row470",
+        "schedule.csv:row471",
+        "schedule.csv:row472",
+        "schedule.csv:row473",
+        "authorizations.csv:row28"
+      ],
+      "key": "SYN-1024|PAY-WC|AUTH-70069"
+    }
+  ],
+  "missing_from_digest": [
+    {
+      "visit_id": "V1468",
+      "patient_id": "SYN-1024",
+      "date": "2026-10-10",
+      "status": "scheduled",
+      "payer_id": "PAY-WC"
+    },
+    {
+      "visit_id": "V1469",
+      "patient_id": "SYN-1024",
+      "date": "2026-10-14",
+      "status": "scheduled",
+      "payer_id": "PAY-WC"
+    },
+    {
+      "visit_id": "V1470",
+      "patient_id": "SYN-1024",
+      "date": "2026-10-17",
+      "status": "scheduled",
+      "payer_id": "PAY-WC"
+    },
+    {
+      "visit_id": "V1471",
+      "patient_id": "SYN-1024",
+      "date": "2026-10-19",
+      "status": "scheduled",
+      "payer_id": "PAY-WC"
+    },
+    {
+      "visit_id": "V1472",
+      "patient_id": "SYN-1024",
+      "date": "2026-10-23",
+      "status": "scheduled",
+      "payer_id": "PAY-WC"
+    }
+  ],
+  "summary_sha256": "c966276a6f060f3e4dbba702da4f09f1647efd54d0775d6485b25f0b3d6c3cec",
+  "digest_sha256": "4749858a2a47b6eb0b168221ada513df305045fd0e8ff9c6ae5048555e0cacc2",
+  "ui_explicit_uncovered_reference": false
+}

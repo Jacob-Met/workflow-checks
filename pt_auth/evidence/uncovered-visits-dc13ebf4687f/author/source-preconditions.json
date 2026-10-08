@@ -1,0 +1,68 @@
+{
+  "repository": "Jacob-Met/workflow-checks",
+  "requested_ref": "9e931fa9f42033bf2368f7149684fb5631345715",
+  "source": "Retained original GitHub connector tree response, materialized after qualification; not a fresh current-main observation",
+  "response_sha": "9e931fa9f42033bf2368f7149684fb5631345715",
+  "response_url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/trees/9e931fa9f42033bf2368f7149684fb5631345715",
+  "truncated": false,
+  "entry_count": 403,
+  "paths": [
+    {
+      "path": "pt_auth/README.md",
+      "entry": {
+        "path": "pt_auth/README.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0dd3d4c7c83ac33d4099286e7785de111c8f19de",
+        "size": 16098,
+        "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/0dd3d4c7c83ac33d4099286e7785de111c8f19de"
+      }
+    },
+    {
+      "path": "pt_auth/ptauth/cli.py",
+      "entry": {
+        "path": "pt_auth/ptauth/cli.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b79a054cd4140b523d901d8109fc11a5958f91d2",
+        "size": 3618,
+        "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/b79a054cd4140b523d901d8109fc11a5958f91d2"
+      }
+    },
+    {
+      "path": "pt_auth/ptauth/report.py",
+      "entry": {
+        "path": "pt_auth/ptauth/report.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "608626d57918e4d43fca2fc14421063d35b49cfc",
+        "size": 10086,
+        "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/608626d57918e4d43fca2fc14421063d35b49cfc"
+      }
+    },
+    {
+      "path": "pt_auth/ptauth/ui.html",
+      "entry": {
+        "path": "pt_auth/ptauth/ui.html",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "98bbca10a6341b8e76251e6f1fca65a8689a9db0",
+        "size": 12468,
+        "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/98bbca10a6341b8e76251e6f1fca65a8689a9db0"
+      }
+    },
+    {
+      "path": "pt_auth/ptauth/uncovered.py",
+      "entry": null
+    },
+    {
+      "path": "pt_auth/tests/test_uncovered_review.py",
+      "entry": null
+    },
+    {
+      "path": "pt_auth/tests/browser/uncovered_review.test.cjs",
+      "entry": null
+    }
+  ],
+  "instruction_files": []
+}

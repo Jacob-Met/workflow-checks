@@ -1,0 +1,320 @@
+{
+  "banner": "SYNTHETIC DATA - NOT REAL PATIENTS. Proof of concept; payer rules are placeholders. Nothing is submitted to any payer.",
+  "as_of": "2026-10-08",
+  "generated_at": "2026-10-08T22:05:51",
+  "clinic_timezone": "UTC",
+  "counts": {
+    "patients": 3,
+    "visits": 13,
+    "auths": 2,
+    "worklist": 2,
+    "p1": 1,
+    "p2": 1,
+    "p3": 0,
+    "uncovered_scheduled": 6,
+    "unauthorized_done": 2,
+    "past_scheduled": 1
+  },
+  "worklist": [
+    {
+      "patient_id": "SYN-A",
+      "patient_name": "Test <A> & \"caf\u00e9\"",
+      "clinic": "Home clinic (synthetic)",
+      "payer_id": "PAY-A",
+      "payer_name": "Placeholder <A> & plan",
+      "auth_no": "AUTH-OLD",
+      "priority": "P1",
+      "reasons": [
+        "UNAUTHORIZED_DONE",
+        "UNCOVERED_VISIT"
+      ],
+      "detail": [
+        "6 scheduled visit(s) outside any approved auth, first 2026-10-08 (V-UPCOMING-1, V-UPCOMING-2, V-UPCOMING-3, V-UPCOMING-4 ...)",
+        "completed visit 2026-10-01 (V-DONE-1) had no covering approved auth",
+        "completed visit 2026-10-02 (V-DONE-2) had no covering approved auth"
+      ],
+      "visits_used": 1,
+      "visits_authorized": 1,
+      "visits_remaining": 0,
+      "scheduled_in_window": 0,
+      "auth_end": "2026-09-30",
+      "days_left": -8,
+      "next_visit": "2026-10-08",
+      "submit_by": null,
+      "checklist": [
+        "Auth request"
+      ],
+      "evidence": [
+        "schedule.csv:row3",
+        "schedule.csv:row4",
+        "schedule.csv:row5",
+        "schedule.csv:row6",
+        "schedule.csv:row7",
+        "schedule.csv:row8",
+        "schedule.csv:row9",
+        "schedule.csv:row10",
+        "schedule.csv:row11"
+      ],
+      "key": "SYN-A|PAY-A|AUTH-OLD"
+    },
+    {
+      "patient_id": "SYN-B",
+      "patient_name": "Test Covered",
+      "clinic": "Other clinic (synthetic)",
+      "payer_id": "PAY-A",
+      "payer_name": "Placeholder <A> & plan",
+      "auth_no": "AUTH-COVERED",
+      "priority": "P2",
+      "reasons": [
+        "REAUTH_BY_VISITS"
+      ],
+      "detail": [
+        "2 of 2 visits left (payer threshold 2)"
+      ],
+      "visits_used": 0,
+      "visits_authorized": 2,
+      "visits_remaining": 2,
+      "scheduled_in_window": 1,
+      "auth_end": "2026-10-31",
+      "days_left": 23,
+      "next_visit": "2026-10-09",
+      "submit_by": "2026-10-28",
+      "checklist": [
+        "Auth request"
+      ],
+      "evidence": [
+        "authorizations.csv:row3"
+      ],
+      "key": "SYN-B|PAY-A|AUTH-COVERED"
+    }
+  ],
+  "ledger": [
+    {
+      "auth_no": "AUTH-OLD",
+      "patient_id": "SYN-A",
+      "patient_name": "Test <A> & \"caf\u00e9\"",
+      "payer_id": "PAY-A",
+      "start": "2026-09-01",
+      "end": "2026-09-30",
+      "authorized": 1,
+      "used": 1,
+      "scheduled": 0,
+      "remaining": 0,
+      "remaining_after_scheduled": 0,
+      "days_left": -8,
+      "status": "expired"
+    },
+    {
+      "auth_no": "AUTH-COVERED",
+      "patient_id": "SYN-B",
+      "patient_name": "Test Covered",
+      "payer_id": "PAY-A",
+      "start": "2026-10-01",
+      "end": "2026-10-31",
+      "authorized": 2,
+      "used": 0,
+      "scheduled": 1,
+      "remaining": 2,
+      "remaining_after_scheduled": 1,
+      "days_left": 23,
+      "status": "active"
+    }
+  ],
+  "visit_status_review": [
+    {
+      "visit_id": "V-PAST-SCHEDULED",
+      "patient_id": "SYN-A",
+      "patient_name": "Test <A> & \"caf\u00e9\"",
+      "clinic": "Actual clinic <A>",
+      "payer_id": "PAY-A",
+      "payer_name": "Placeholder <A> & plan",
+      "visit_date": "2026-10-03",
+      "days_since": 5,
+      "visit_type": "treatment",
+      "auth_no": "",
+      "capacity_note": "No approved authorization visit allocated",
+      "evidence": "schedule.csv:row5"
+    }
+  ],
+  "visit_status_review_note": "Review these past dates in the source schedule, correct their status there, then run again. Any authorization visit shown below stays reserved until the corrected export is loaded.",
+  "uncovered_review": [
+    {
+      "visit_id": "V-DONE-1",
+      "visit_date": "2026-10-01",
+      "status": "completed",
+      "patient_id": "SYN-A",
+      "patient_name": "Test <A> & \"caf\u00e9\"",
+      "clinic": "Actual clinic <A>",
+      "therapist": "PT-A",
+      "payer_id": "PAY-A",
+      "payer_name": "Placeholder <A> & plan",
+      "payer_rules_known": true,
+      "visit_type": "treatment",
+      "evidence": "schedule.csv:row3"
+    },
+    {
+      "visit_id": "V-DONE-2",
+      "visit_date": "2026-10-02",
+      "status": "completed",
+      "patient_id": "SYN-A",
+      "patient_name": "Test <A> & \"caf\u00e9\"",
+      "clinic": "Actual clinic <A>",
+      "therapist": "PT-A",
+      "payer_id": "PAY-A",
+      "payer_name": "Placeholder <A> & plan",
+      "payer_rules_known": true,
+      "visit_type": "treatment",
+      "evidence": "schedule.csv:row4"
+    },
+    {
+      "visit_id": "V-UPCOMING-1",
+      "visit_date": "2026-10-08",
+      "status": "scheduled",
+      "patient_id": "SYN-A",
+      "patient_name": "Test <A> & \"caf\u00e9\"",
+      "clinic": "Actual clinic <A>",
+      "therapist": "PT-A",
+      "payer_id": "PAY-A",
+      "payer_name": "Placeholder <A> & plan",
+      "payer_rules_known": true,
+      "visit_type": "treatment",
+      "evidence": "schedule.csv:row6"
+    },
+    {
+      "visit_id": "V-UPCOMING-2",
+      "visit_date": "2026-10-09",
+      "status": "scheduled",
+      "patient_id": "SYN-A",
+      "patient_name": "Test <A> & \"caf\u00e9\"",
+      "clinic": "Actual clinic <A>",
+      "therapist": "PT-A",
+      "payer_id": "PAY-A",
+      "payer_name": "Placeholder <A> & plan",
+      "payer_rules_known": true,
+      "visit_type": "treatment",
+      "evidence": "schedule.csv:row7"
+    },
+    {
+      "visit_id": "V-UPCOMING-3",
+      "visit_date": "2026-10-10",
+      "status": "scheduled",
+      "patient_id": "SYN-A",
+      "patient_name": "Test <A> & \"caf\u00e9\"",
+      "clinic": "Actual clinic <A>",
+      "therapist": "PT-A",
+      "payer_id": "PAY-A",
+      "payer_name": "Placeholder <A> & plan",
+      "payer_rules_known": true,
+      "visit_type": "treatment",
+      "evidence": "schedule.csv:row8"
+    },
+    {
+      "visit_id": "V-UPCOMING-4",
+      "visit_date": "2026-10-11",
+      "status": "scheduled",
+      "patient_id": "SYN-A",
+      "patient_name": "Test <A> & \"caf\u00e9\"",
+      "clinic": "Actual clinic <A>",
+      "therapist": "PT-A",
+      "payer_id": "PAY-A",
+      "payer_name": "Placeholder <A> & plan",
+      "payer_rules_known": true,
+      "visit_type": "treatment",
+      "evidence": "schedule.csv:row9"
+    },
+    {
+      "visit_id": "V-UPCOMING-5",
+      "visit_date": "2026-10-12",
+      "status": "scheduled",
+      "patient_id": "SYN-A",
+      "patient_name": "Test <A> & \"caf\u00e9\"",
+      "clinic": "Actual clinic <A>",
+      "therapist": "PT-A",
+      "payer_id": "PAY-A",
+      "payer_name": "Placeholder <A> & plan",
+      "payer_rules_known": true,
+      "visit_type": "treatment",
+      "evidence": "schedule.csv:row10"
+    },
+    {
+      "visit_id": "V-UPCOMING-6",
+      "visit_date": "2026-10-13",
+      "status": "scheduled",
+      "patient_id": "SYN-A",
+      "patient_name": "Test <A> & \"caf\u00e9\"",
+      "clinic": "Actual clinic <A>",
+      "therapist": "PT-A",
+      "payer_id": "PAY-A",
+      "payer_name": "Placeholder <A> & plan",
+      "payer_rules_known": true,
+      "visit_type": "treatment",
+      "evidence": "schedule.csv:row11"
+    }
+  ],
+  "uncovered_review_note": "These appointments have no covering approved authorization in this report: scheduled visits on or after the as-of date, and visits recorded as completed. Check the referenced source rows and authorization worklist. Past appointments still marked scheduled remain in Visit status review. This view does not change attendance, authorization rules or staff work states.",
+  "uncovered": [
+    {
+      "visit_id": "V-DONE-1",
+      "patient_id": "SYN-A",
+      "date": "2026-10-01",
+      "status": "completed",
+      "payer_id": "PAY-A"
+    },
+    {
+      "visit_id": "V-DONE-2",
+      "patient_id": "SYN-A",
+      "date": "2026-10-02",
+      "status": "completed",
+      "payer_id": "PAY-A"
+    },
+    {
+      "visit_id": "V-PAST-SCHEDULED",
+      "patient_id": "SYN-A",
+      "date": "2026-10-03",
+      "status": "scheduled",
+      "payer_id": "PAY-A"
+    },
+    {
+      "visit_id": "V-UPCOMING-1",
+      "patient_id": "SYN-A",
+      "date": "2026-10-08",
+      "status": "scheduled",
+      "payer_id": "PAY-A"
+    },
+    {
+      "visit_id": "V-UPCOMING-2",
+      "patient_id": "SYN-A",
+      "date": "2026-10-09",
+      "status": "scheduled",
+      "payer_id": "PAY-A"
+    },
+    {
+      "visit_id": "V-UPCOMING-3",
+      "patient_id": "SYN-A",
+      "date": "2026-10-10",
+      "status": "scheduled",
+      "payer_id": "PAY-A"
+    },
+    {
+      "visit_id": "V-UPCOMING-4",
+      "patient_id": "SYN-A",
+      "date": "2026-10-11",
+      "status": "scheduled",
+      "payer_id": "PAY-A"
+    },
+    {
+      "visit_id": "V-UPCOMING-5",
+      "patient_id": "SYN-A",
+      "date": "2026-10-12",
+      "status": "scheduled",
+      "payer_id": "PAY-A"
+    },
+    {
+      "visit_id": "V-UPCOMING-6",
+      "patient_id": "SYN-A",
+      "date": "2026-10-13",
+      "status": "scheduled",
+      "payer_id": "PAY-A"
+    }
+  ]
+}

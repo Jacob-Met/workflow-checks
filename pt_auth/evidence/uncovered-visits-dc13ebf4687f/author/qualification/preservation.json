@@ -1,0 +1,513 @@
+{
+  "recorded_at_utc": "2026-10-08T13:16:36.922772+00:00",
+  "repository": "Jacob-Met/workflow-checks",
+  "upstream_baseline": "9e931fa9f42033bf2368f7149684fb5631345715",
+  "candidate_head": "9676a5a20f3adab0ccf46e31e3052de04f50d267",
+  "candidate_manifest_sha256": "46a503ccdd0c793cc1ad4ec1759e6d615c12c67e7aec8fad93cff2f55e8dadab",
+  "new_run": {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "-B",
+      "-m",
+      "ptauth",
+      "run",
+      "--data",
+      "sample_data",
+      "--out",
+      "/dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate-shipped-output",
+      "--as-of",
+      "2026-09-28",
+      "--clinic-timezone",
+      "UTC"
+    ],
+    "cwd": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate/pt_auth",
+    "returncode": 0,
+    "stdout": "[SYNTHETIC] as_of 2026-09-28: 40 patients, 842 visits, 46 auths\nclinic time zone: UTC\nworklist: 26 items (P1 11, P2 15, P3 0); 194 scheduled visits uncovered; 2 completed w/o auth\n  P1 SYN-1014 PAY-MA    AUTH-70039  UNCOVERED_VISIT,REAUTH_BY_VISITS   submit_by=2026-09-23\n  P1 SYN-1038 PAY-COMM1 AUTH-70111  UNCOVERED_VISIT,REAUTH_BY_DATE     submit_by=2026-09-26\n  P1 SYN-1037 PAY-COMM2 AUTH-70108  UNCOVERED_VISIT,REAUTH_BY_VISITS   submit_by=2026-09-27\n  P1 SYN-1026 PAY-COMM1 AUTH-70075  UNCOVERED_VISIT,REAUTH_BY_VISITS   submit_by=2026-09-27\n  P1 SYN-1023 PAY-COMM1 AUTH-70066  UNCOVERED_VISIT,REAUTH_BY_DATE     submit_by=2026-09-28\n  P1 SYN-1025 PAY-COMM2 AUTH-70072  UNCOVERED_VISIT,REAUTH_BY_DATE     submit_by=2026-09-29\n  P1 SYN-1027 PAY-COMM1 AUTH-70078  UNCOVERED_VISIT,REAUTH_BY_DATE     submit_by=2026-09-29\n  P1 SYN-1028 PAY-COMM2 AUTH-70081  UNCOVERED_VISIT,REAUTH_BY_VISITS   submit_by=2026-09-29\n  P1 SYN-1030 PAY-COMM2 AUTH-70087  UNCOVERED_VISIT,REAUTH_BY_DATE     submit_by=2026-09-30\n  P1 SYN-1024 PAY-WC    AUTH-70069  UNCOVERED_VISIT,REAUTH_BY_VISITS   submit_by=2026-11-17\n  P1 SYN-1005 PAY-COMM1 AUTH-70012  UNAUTHORIZED_DONE,UNCOVERED_VISIT  submit_by=-\n  P2 SYN-1017 PAY-MA    AUTH-70048  UNCOVERED_VISIT,REAUTH_BY_DATE     submit_by=2026-09-29\n  ... 14 more in /dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate-shipped-output/worklist.csv\n0 past scheduled visits need status review: /dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate-shipped-output/visit_status_review.csv\n196 uncovered visits to inspect: /dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate-shipped-output/uncovered_visits.csv\ndigest: /dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate-shipped-output/digest.html\n",
+    "stderr": ""
+  },
+  "comparisons": [
+    {
+      "label": "authored 13-visit mixed-status fixture",
+      "as_of": "2026-10-08",
+      "clinic_timezone": "UTC",
+      "counts_unchanged": {
+        "patients": 3,
+        "visits": 13,
+        "auths": 2,
+        "worklist": 2,
+        "p1": 1,
+        "p2": 1,
+        "p3": 0,
+        "uncovered_scheduled": 6,
+        "unauthorized_done": 2,
+        "past_scheduled": 1
+      },
+      "all_inherited_summary_fields_equal_except_generated_at": [
+        "as_of",
+        "banner",
+        "clinic_timezone",
+        "counts",
+        "ledger",
+        "uncovered",
+        "visit_status_review",
+        "visit_status_review_note",
+        "worklist"
+      ],
+      "original_csv_bytes_unchanged": {
+        "worklist.csv": {
+          "size": 983,
+          "sha256": "5942f97bf5501cd79238acac6b75bd15ef7994ff473606b0669d906ea7d63e99",
+          "git_blob": "c7ce615d911c211bec267a24a231041df5101999"
+        },
+        "ledger.csv": {
+          "size": 300,
+          "sha256": "05a2bb819b2dab1bb93ffa174b06eabc31459aa1927eb0b2bb7fc673360eff60",
+          "git_blob": "51a3e0146b1b03b2c95b6e07be91bd43380d9695"
+        },
+        "visit_status_review.csv": {
+          "size": 303,
+          "sha256": "e3bfb6cd572ecdbec5371ad05b8e2e906bfdd465de53f9ddff10ddfbba6cc5a6",
+          "git_blob": "2ecca1c093985ff5a9906b1d0f5dece1c34cb145"
+        }
+      },
+      "original_printable_sections_bytes_equal_after_new_section_removed": true,
+      "eligible_original_uncovered_rows": 8,
+      "new_review_rows": 8,
+      "review_matches_original_engine_subset": true,
+      "actual_source_detail_matches_unchanged_loader": true,
+      "export_matches_every_review_field_and_row": true,
+      "printable_rows": 8,
+      "ids_omitted_by_original_digest_now_printed": [
+        "V-UPCOMING-5",
+        "V-UPCOMING-6"
+      ],
+      "review_statuses": {
+        "completed": 2,
+        "scheduled": 6
+      },
+      "original_summary": {
+        "size": 5423,
+        "sha256": "9f95a48ca9a308e8e182e8880584dabc5a8348fa21641cb499881943588e27d1",
+        "git_blob": "f308e52c0269430a59a212bfc1c027ef61d5ea8a"
+      },
+      "candidate_summary": {
+        "size": 9282,
+        "sha256": "9c004c079d00f9e00b538bbab589cc0e07d7b8e686fc985f66ee60f0d1ca5b38",
+        "git_blob": "4220d4e55a744780a56793b0a1950cef7f4e96aa"
+      },
+      "original_digest": {
+        "size": 3520,
+        "sha256": "2ee96b4a3de4ba547e61d63a32f2d39d39df733efd4ba03b624af4947d3a2053",
+        "git_blob": "b908045a1eae8be0050b3ee935471062814c01d7"
+      },
+      "candidate_digest": {
+        "size": 6726,
+        "sha256": "fc6db288d4ed5bfd09c50706f92aeb452388e5149a13021da09482ab9ff3b3ba",
+        "git_blob": "35dfb4409b4193e7785f2c6e56dd3352526552d1"
+      },
+      "new_csv": {
+        "size": 1313,
+        "sha256": "232c0c626722be93167d1274083ea3e5c956eaa77ce47a91bb0cbff9b0d86adf",
+        "git_blob": "3f099e83e594d4d6cbeceb810b4a8a8aaa84fdb0"
+      }
+    },
+    {
+      "label": "unchanged shipped 842-visit synthetic fixture",
+      "as_of": "2026-09-28",
+      "clinic_timezone": "UTC",
+      "counts_unchanged": {
+        "patients": 40,
+        "visits": 842,
+        "auths": 46,
+        "worklist": 26,
+        "p1": 11,
+        "p2": 15,
+        "p3": 0,
+        "uncovered_scheduled": 194,
+        "unauthorized_done": 2,
+        "past_scheduled": 0
+      },
+      "all_inherited_summary_fields_equal_except_generated_at": [
+        "as_of",
+        "banner",
+        "clinic_timezone",
+        "counts",
+        "ledger",
+        "uncovered",
+        "visit_status_review",
+        "visit_status_review_note",
+        "worklist"
+      ],
+      "original_csv_bytes_unchanged": {
+        "worklist.csv": {
+          "size": 14972,
+          "sha256": "73a95f16776325610d3d4049db7313407dd904f39ac2e375335a5705b392a9be",
+          "git_blob": "eae26d8268ca14ebd5a5df3985ff3a893d8c9139"
+        },
+        "ledger.csv": {
+          "size": 3746,
+          "sha256": "ee571c8339864dc97d217e7b31a358fc9b06609328c1790076e81c530be93d96",
+          "git_blob": "d49dee32ca8620cd20f7b0c7ef263281dce1d4db"
+        },
+        "visit_status_review.csv": {
+          "size": 125,
+          "sha256": "9cb3e3e82e30935f57448ed826dbd8dab78e39355e3bebba59c478fa355ee170",
+          "git_blob": "2f954eb61f6a5ed9df00b35756f5f97af5037b1f"
+        }
+      },
+      "original_printable_sections_bytes_equal_after_new_section_removed": true,
+      "eligible_original_uncovered_rows": 196,
+      "new_review_rows": 196,
+      "review_matches_original_engine_subset": true,
+      "actual_source_detail_matches_unchanged_loader": true,
+      "export_matches_every_review_field_and_row": true,
+      "printable_rows": 196,
+      "ids_omitted_by_original_digest_now_printed": [
+        "V1113",
+        "V1184",
+        "V1630",
+        "V1256",
+        "V1114",
+        "V1185",
+        "V1631",
+        "V1257",
+        "V1809",
+        "V1115",
+        "V1186",
+        "V1468",
+        "V1632",
+        "V1810",
+        "V1258",
+        "V1116",
+        "V1187",
+        "V1811",
+        "V1259",
+        "V1633",
+        "V1092",
+        "V1117",
+        "V1188",
+        "V1275",
+        "V1455",
+        "V1469",
+        "V1521",
+        "V1634",
+        "V1764",
+        "V1812",
+        "V1260",
+        "V1495",
+        "V1781",
+        "V1093",
+        "V1118",
+        "V1189",
+        "V1276",
+        "V1456",
+        "V1470",
+        "V1522",
+        "V1549",
+        "V1572",
+        "V1635",
+        "V1080",
+        "V1388",
+        "V1407",
+        "V1496",
+        "V1617",
+        "V1782",
+        "V1813",
+        "V1119",
+        "V1261",
+        "V1457",
+        "V1471",
+        "V1550",
+        "V1573",
+        "V1765",
+        "V1277",
+        "V1408",
+        "V1497",
+        "V1618",
+        "V1636",
+        "V1783",
+        "V1038",
+        "V1094",
+        "V1190",
+        "V1234",
+        "V1325",
+        "V1458",
+        "V1523",
+        "V1551",
+        "V1766",
+        "V1081",
+        "V1120",
+        "V1262",
+        "V1389",
+        "V1428",
+        "V1619",
+        "V1655",
+        "V1814",
+        "V1191",
+        "V1235",
+        "V1409",
+        "V1459",
+        "V1472",
+        "V1574",
+        "V1637",
+        "V1740",
+        "V1784",
+        "V1058",
+        "V1278",
+        "V1498",
+        "V1524",
+        "V1815",
+        "V1039",
+        "V1095",
+        "V1121",
+        "V1326",
+        "V1390",
+        "V1552",
+        "V1575",
+        "V1656",
+        "V1767",
+        "V1059",
+        "V1082",
+        "V1263",
+        "V1429",
+        "V1525",
+        "V1620",
+        "V1785"
+      ],
+      "review_statuses": {
+        "completed": 2,
+        "scheduled": 194
+      },
+      "original_summary": {
+        "size": 84048,
+        "sha256": "c966276a6f060f3e4dbba702da4f09f1647efd54d0775d6485b25f0b3d6c3cec",
+        "git_blob": "4870dab19377218303705060b7059a86ee968fe3"
+      },
+      "candidate_summary": {
+        "size": 170131,
+        "sha256": "b16d2b77eed1ec9a2e597ba65190431037fe147085edfed8c359d9f71dc4a869",
+        "git_blob": "8c8203b5af8e4ef30d491b28c225ead1bb8a99d8"
+      },
+      "original_digest": {
+        "size": 23710,
+        "sha256": "4749858a2a47b6eb0b168221ada513df305045fd0e8ff9c6ae5048555e0cacc2",
+        "git_blob": "c7824ba0beec05838498c7561ce6c5547b80b083"
+      },
+      "candidate_digest": {
+        "size": 79198,
+        "sha256": "0d6d4bbe45afb01c65964c164d21fd981d458b96a1a5d6022e14903d1cc122ca",
+        "git_blob": "78dae5546640494818381584d4b285388c856239"
+      },
+      "new_csv": {
+        "size": 31101,
+        "sha256": "adef91b6f7086f8f4e192a6267a84ad9e63b437e51b62df115a133497422a8ec",
+        "git_blob": "e750ad287278f3857be3684c8009d0afe7dd2a35"
+      }
+    }
+  ],
+  "unchanged_source_paths": [
+    {
+      "path": "pt_auth/ptauth/__init__.py",
+      "before": {
+        "size": 311,
+        "sha256": "71e1527f153c607b679485e4954af1b3ec6a843b041562eb07f4d36e08fd231c",
+        "git_blob": "a6f4545ac17e2578317ef694f7bb548489f6c71c"
+      },
+      "after": {
+        "size": 311,
+        "sha256": "71e1527f153c607b679485e4954af1b3ec6a843b041562eb07f4d36e08fd231c",
+        "git_blob": "a6f4545ac17e2578317ef694f7bb548489f6c71c"
+      }
+    },
+    {
+      "path": "pt_auth/ptauth/__main__.py",
+      "before": {
+        "size": 57,
+        "sha256": "4b1afbca74a10abc3cff7b4e5a11b558bf619e45b89709faf9225a474a2a250f",
+        "git_blob": "3c93dd90cf357624c77ab3589ef2b201868c181e"
+      },
+      "after": {
+        "size": 57,
+        "sha256": "4b1afbca74a10abc3cff7b4e5a11b558bf619e45b89709faf9225a474a2a250f",
+        "git_blob": "3c93dd90cf357624c77ab3589ef2b201868c181e"
+      }
+    },
+    {
+      "path": "pt_auth/ptauth/data.py",
+      "before": {
+        "size": 10283,
+        "sha256": "eeab8ab5b2b72524148969de0d13b27126cc64c4ec79b68a147b51b25a3741e2",
+        "git_blob": "19a2a1b79eff6d2753507eebf3bf78011ddaaa87"
+      },
+      "after": {
+        "size": 10283,
+        "sha256": "eeab8ab5b2b72524148969de0d13b27126cc64c4ec79b68a147b51b25a3741e2",
+        "git_blob": "19a2a1b79eff6d2753507eebf3bf78011ddaaa87"
+      }
+    },
+    {
+      "path": "pt_auth/ptauth/engine.py",
+      "before": {
+        "size": 16057,
+        "sha256": "bfa7049e9b133d654ce947b135c17ac401bd7b1fcd76350bdb10de5b7a1ad1f7",
+        "git_blob": "39c97f35d61ff949b5c2381f0ad60d7af8d74226"
+      },
+      "after": {
+        "size": 16057,
+        "sha256": "bfa7049e9b133d654ce947b135c17ac401bd7b1fcd76350bdb10de5b7a1ad1f7",
+        "git_blob": "39c97f35d61ff949b5c2381f0ad60d7af8d74226"
+      }
+    },
+    {
+      "path": "pt_auth/ptauth/synth.py",
+      "before": {
+        "size": 8873,
+        "sha256": "b82a34447e43dacbe46ed06e60b693ed216e87f15892ae297c682aa5a3f139fd",
+        "git_blob": "2ff6a2548bf55a812cfa62e397442a0d3f7debbb"
+      },
+      "after": {
+        "size": 8873,
+        "sha256": "b82a34447e43dacbe46ed06e60b693ed216e87f15892ae297c682aa5a3f139fd",
+        "git_blob": "2ff6a2548bf55a812cfa62e397442a0d3f7debbb"
+      }
+    },
+    {
+      "path": "pt_auth/ptauth/web.py",
+      "before": {
+        "size": 6239,
+        "sha256": "2f7d01cda0bb42e907d135d4a34cedb655b780c646cbe01ed4050ab7c11b2b23",
+        "git_blob": "71d17ec9642798a5e7df56ab7c2bdbab8d061352"
+      },
+      "after": {
+        "size": 6239,
+        "sha256": "2f7d01cda0bb42e907d135d4a34cedb655b780c646cbe01ed4050ab7c11b2b23",
+        "git_blob": "71d17ec9642798a5e7df56ab7c2bdbab8d061352"
+      }
+    },
+    {
+      "path": "pt_auth/sample_data/authorizations.csv",
+      "before": {
+        "size": 2990,
+        "sha256": "306cae3c27895d2b81978d4cf3115e867b8853edb4939ec8f7e733a7f27b0657",
+        "git_blob": "036f7b276e3e09252afb886ad451531f51ada844"
+      },
+      "after": {
+        "size": 2990,
+        "sha256": "306cae3c27895d2b81978d4cf3115e867b8853edb4939ec8f7e733a7f27b0657",
+        "git_blob": "036f7b276e3e09252afb886ad451531f51ada844"
+      }
+    },
+    {
+      "path": "pt_auth/sample_data/expected.json",
+      "before": {
+        "size": 3482,
+        "sha256": "0652052b6f37ce068cb77d4b8cde0f5a75d9b275be51b05f570c35a60a8a6d02",
+        "git_blob": "21177a89ac5c24c9faf79746550165a3a170d08a"
+      },
+      "after": {
+        "size": 3482,
+        "sha256": "0652052b6f37ce068cb77d4b8cde0f5a75d9b275be51b05f570c35a60a8a6d02",
+        "git_blob": "21177a89ac5c24c9faf79746550165a3a170d08a"
+      }
+    },
+    {
+      "path": "pt_auth/sample_data/patients.csv",
+      "before": {
+        "size": 2333,
+        "sha256": "1dd9bc97889ca4a2e46e19804841d4af29ada284ede22d328370d20fb520e6e5",
+        "git_blob": "e67323b68d1ac9ee4a901dc3ef70a95384ba5000"
+      },
+      "after": {
+        "size": 2333,
+        "sha256": "1dd9bc97889ca4a2e46e19804841d4af29ada284ede22d328370d20fb520e6e5",
+        "git_blob": "e67323b68d1ac9ee4a901dc3ef70a95384ba5000"
+      }
+    },
+    {
+      "path": "pt_auth/sample_data/payers.csv",
+      "before": {
+        "size": 904,
+        "sha256": "81f143eed15c9ce613ee7cf372e51d6223a44700c877cc42d283a824d30900ed",
+        "git_blob": "1853837e82048ac11698b4ad5bb6eeb055d56038"
+      },
+      "after": {
+        "size": 904,
+        "sha256": "81f143eed15c9ce613ee7cf372e51d6223a44700c877cc42d283a824d30900ed",
+        "git_blob": "1853837e82048ac11698b4ad5bb6eeb055d56038"
+      }
+    },
+    {
+      "path": "pt_auth/sample_data/schedule.csv",
+      "before": {
+        "size": 71520,
+        "sha256": "a5f9177b2e0fb9b4397a83839961d11c947e74cc2f13d5de29a31f39254e5198",
+        "git_blob": "24a395250f5318004bab4f168c3ca237189ab354"
+      },
+      "after": {
+        "size": 71520,
+        "sha256": "a5f9177b2e0fb9b4397a83839961d11c947e74cc2f13d5de29a31f39254e5198",
+        "git_blob": "24a395250f5318004bab4f168c3ca237189ab354"
+      }
+    }
+  ],
+  "changed_existing_paths": [
+    {
+      "path": "pt_auth/README.md",
+      "before": {
+        "size": 16098,
+        "sha256": "93c5ec2693f80c4312557a73aa7ccbcff2792b7b603bd98d4bec7866a9cc1e6f",
+        "git_blob": "0dd3d4c7c83ac33d4099286e7785de111c8f19de"
+      },
+      "after": {
+        "size": 18875,
+        "sha256": "17ee483cb2e24393f1ed4b501e2164c289cfb7310891a1bc510cc283f13b4879",
+        "git_blob": "43c517674b03403156323078b089441ecdd488ff"
+      }
+    },
+    {
+      "path": "pt_auth/ptauth/cli.py",
+      "before": {
+        "size": 3618,
+        "sha256": "ec368a77a8c96e68a86718150bc35138ce5cdbd621b51988daf3568e3d342222",
+        "git_blob": "b79a054cd4140b523d901d8109fc11a5958f91d2"
+      },
+      "after": {
+        "size": 3776,
+        "sha256": "55cce5ca33abc027f8f7c2afe1ae3eae32b9412d612b41d3c72a4037f1933a96",
+        "git_blob": "1012ba6c759e95b0c14de0e9c00bb4cbb73562ea"
+      }
+    },
+    {
+      "path": "pt_auth/ptauth/report.py",
+      "before": {
+        "size": 10086,
+        "sha256": "794cf0a631b0f1a33ea85df4de387be0ce12d2744e8c8cb1308a61ce99516740",
+        "git_blob": "608626d57918e4d43fca2fc14421063d35b49cfc"
+      },
+      "after": {
+        "size": 10743,
+        "sha256": "20cbc86e153b9af5151fd3e74cb370298de4692c81b3546a214eb2cfa8307df7",
+        "git_blob": "2ce82b1712e5c6fc03374d38996eceddf31782f0"
+      }
+    },
+    {
+      "path": "pt_auth/ptauth/ui.html",
+      "before": {
+        "size": 12468,
+        "sha256": "c94b54f51fbdedc6fe19bb36ac8e74973c834fc5a0ffa6b474d63eb61edc61c4",
+        "git_blob": "98bbca10a6341b8e76251e6f1fca65a8689a9db0"
+      },
+      "after": {
+        "size": 16354,
+        "sha256": "fddb0d6e5fe587f961ac602660161728195ff5904966a54577f8d4dcfcd41242",
+        "git_blob": "3bd3bbe67f3a6b9536b7e99b8ef52b2d1fa048db"
+      }
+    }
+  ],
+  "all_source_and_input_files_unchanged_by_check": true,
+  "limits": [
+    "Retained original outputs are used; no old suite was rerun",
+    "The original generated_at value is intentionally excluded from equality",
+    "No claim about browser layout or real patient inputs"
+  ]
+}

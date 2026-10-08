@@ -1,0 +1,62 @@
+{
+  "source_head": "9e931fa9f42033bf2368f7149684fb5631345715",
+  "runtime": "v24.19.0",
+  "boundary": "exact inline UI script with authored DOM/API boundaries; no browser/layout claim",
+  "calls": [
+    {
+      "url": "/api/summary",
+      "method": "GET"
+    }
+  ],
+  "relevant_count": 8,
+  "displayed_relevant_ids": [
+    "V-DONE-1",
+    "V-DONE-2",
+    "V-UPCOMING-1",
+    "V-UPCOMING-2",
+    "V-UPCOMING-3",
+    "V-UPCOMING-4"
+  ],
+  "missing_relevant_ids": [
+    "V-UPCOMING-5",
+    "V-UPCOMING-6"
+  ],
+  "declared_detail_dates": [
+    {
+      "id": "V-DONE-1",
+      "date": "2026-10-01"
+    },
+    {
+      "id": "V-DONE-2",
+      "date": "2026-10-02"
+    },
+    {
+      "id": "V-UPCOMING-1",
+      "date": "2026-10-08"
+    },
+    {
+      "id": "V-UPCOMING-2",
+      "date": "2026-10-09"
+    },
+    {
+      "id": "V-UPCOMING-3",
+      "date": "2026-10-10"
+    },
+    {
+      "id": "V-UPCOMING-4",
+      "date": "2026-10-11"
+    },
+    {
+      "id": "V-UPCOMING-5",
+      "date": "2026-10-12"
+    },
+    {
+      "id": "V-UPCOMING-6",
+      "date": "2026-10-13"
+    }
+  ],
+  "ui_mentions_uncovered_array": false,
+  "work_sha256": "abc521c847bae95eb143d0c93c51f91f8e72142f49210a596ac4c8a75a0e508b",
+  "synthetic_name_is_escaped": true,
+  "state_action_calls": 0
+}

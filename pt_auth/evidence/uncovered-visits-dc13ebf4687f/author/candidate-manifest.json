@@ -1,0 +1,61 @@
+{
+  "repository": "Jacob-Met/workflow-checks",
+  "scope_issue": 26,
+  "upstream_baseline": "9e931fa9f42033bf2368f7149684fb5631345715",
+  "upstream_tree": "0b0c903801f432968e9cdfb1f1fa134cecc37217",
+  "local_partial_baseline": "d67c6087ab5fae717be2eec08f131d2c80b539f6",
+  "candidate_head": "9676a5a20f3adab0ccf46e31e3052de04f50d267",
+  "ancestry": "partial exact local reconstruction, not upstream commit ancestry",
+  "changed_paths": [
+    {
+      "path": "pt_auth/README.md",
+      "size": 18875,
+      "sha256": "17ee483cb2e24393f1ed4b501e2164c289cfb7310891a1bc510cc283f13b4879",
+      "git_blob": "43c517674b03403156323078b089441ecdd488ff",
+      "expected_old_git_blob": "0dd3d4c7c83ac33d4099286e7785de111c8f19de"
+    },
+    {
+      "path": "pt_auth/ptauth/cli.py",
+      "size": 3776,
+      "sha256": "55cce5ca33abc027f8f7c2afe1ae3eae32b9412d612b41d3c72a4037f1933a96",
+      "git_blob": "1012ba6c759e95b0c14de0e9c00bb4cbb73562ea",
+      "expected_old_git_blob": "b79a054cd4140b523d901d8109fc11a5958f91d2"
+    },
+    {
+      "path": "pt_auth/ptauth/report.py",
+      "size": 10743,
+      "sha256": "20cbc86e153b9af5151fd3e74cb370298de4692c81b3546a214eb2cfa8307df7",
+      "git_blob": "2ce82b1712e5c6fc03374d38996eceddf31782f0",
+      "expected_old_git_blob": "608626d57918e4d43fca2fc14421063d35b49cfc"
+    },
+    {
+      "path": "pt_auth/ptauth/ui.html",
+      "size": 16354,
+      "sha256": "fddb0d6e5fe587f961ac602660161728195ff5904966a54577f8d4dcfcd41242",
+      "git_blob": "3bd3bbe67f3a6b9536b7e99b8ef52b2d1fa048db",
+      "expected_old_git_blob": "98bbca10a6341b8e76251e6f1fca65a8689a9db0"
+    },
+    {
+      "path": "pt_auth/ptauth/uncovered.py",
+      "size": 4319,
+      "sha256": "21e92509df706e504a8630f3383ea4fe98d03047d2e4b070f3fdd188d995350e",
+      "git_blob": "9ab21781c4116dd0b9b76ac0116868898f3ee7d4",
+      "expected_old_git_blob": null
+    },
+    {
+      "path": "pt_auth/tests/test_uncovered_review.py",
+      "size": 14446,
+      "sha256": "df3e9acdba7db9449988f66c0b9796cec0c7e59d354d9436fbe57737927338fb",
+      "git_blob": "15f167e3af34056f6558be4672446b35eabb5f4d",
+      "expected_old_git_blob": null
+    },
+    {
+      "path": "pt_auth/tests/browser/uncovered_review.test.cjs",
+      "size": 8415,
+      "sha256": "25cac361af6bf20b93d017586087db0457669ba386ae47144db184f235e9037c",
+      "git_blob": "01f44c8e4f0cf909ac894c3b9f4469e89db7298e",
+      "expected_old_git_blob": null
+    }
+  ],
+  "qualification_receipt_sha256": "07a52ca57cc8cae62af3cb16b02d2387fc7817c07bc8d016f3a4fb8112257d13"
+}

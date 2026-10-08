@@ -1,0 +1,565 @@
+{
+  "kind": "independent authored report/CLI comparison",
+  "checks": [
+    "exact 14-source baseline manifest",
+    "exact seven-path candidate manifest",
+    "frozen candidate HEAD",
+    "only seven declared paths changed",
+    "baseline exact: pt_auth/ptauth/__init__.py",
+    "baseline exact: pt_auth/ptauth/__main__.py",
+    "baseline exact: pt_auth/ptauth/cli.py",
+    "baseline exact: pt_auth/ptauth/data.py",
+    "baseline exact: pt_auth/ptauth/engine.py",
+    "baseline exact: pt_auth/ptauth/report.py",
+    "baseline exact: pt_auth/ptauth/synth.py",
+    "baseline exact: pt_auth/ptauth/ui.html",
+    "baseline exact: pt_auth/ptauth/web.py",
+    "baseline exact: pt_auth/sample_data/authorizations.csv",
+    "baseline exact: pt_auth/sample_data/expected.json",
+    "baseline exact: pt_auth/sample_data/patients.csv",
+    "baseline exact: pt_auth/sample_data/payers.csv",
+    "baseline exact: pt_auth/sample_data/schedule.csv",
+    "candidate exact: pt_auth/README.md",
+    "expected preimage: pt_auth/README.md",
+    "candidate exact: pt_auth/ptauth/cli.py",
+    "expected preimage: pt_auth/ptauth/cli.py",
+    "candidate exact: pt_auth/ptauth/report.py",
+    "expected preimage: pt_auth/ptauth/report.py",
+    "candidate exact: pt_auth/ptauth/ui.html",
+    "expected preimage: pt_auth/ptauth/ui.html",
+    "candidate exact: pt_auth/ptauth/uncovered.py",
+    "new path absent: pt_auth/ptauth/uncovered.py",
+    "candidate exact: pt_auth/tests/test_uncovered_review.py",
+    "new path absent: pt_auth/tests/test_uncovered_review.py",
+    "candidate exact: pt_auth/tests/browser/uncovered_review.test.cjs",
+    "new path absent: pt_auth/tests/browser/uncovered_review.test.cjs",
+    "unchanged package/sample bytes: pt_auth/ptauth/__init__.py",
+    "unchanged package/sample bytes: pt_auth/ptauth/__main__.py",
+    "unchanged package/sample bytes: pt_auth/ptauth/data.py",
+    "unchanged package/sample bytes: pt_auth/ptauth/engine.py",
+    "unchanged package/sample bytes: pt_auth/ptauth/synth.py",
+    "unchanged package/sample bytes: pt_auth/ptauth/web.py",
+    "unchanged package/sample bytes: pt_auth/sample_data/authorizations.csv",
+    "unchanged package/sample bytes: pt_auth/sample_data/expected.json",
+    "unchanged package/sample bytes: pt_auth/sample_data/patients.csv",
+    "unchanged package/sample bytes: pt_auth/sample_data/payers.csv",
+    "unchanged package/sample bytes: pt_auth/sample_data/schedule.csv",
+    "embedded source newline has physical line evidence 3 through 16",
+    "baseline actual CLI succeeds",
+    "baseline staff state bytes survive report run",
+    "candidate actual CLI succeeds",
+    "candidate staff state bytes survive report run",
+    "authored independent matrix is 14 visits, 7 scheduled + 2 completed + 1 separate status review",
+    "raw uncovered retains separate past-scheduled tenth row",
+    "all twelve fields of all nine review rows match independent CSV expectations",
+    "offset timestamp remains UTC past-status review only",
+    "all existing summary fields and counts unchanged",
+    "existing output bytes unchanged: worklist.csv",
+    "existing output bytes unchanged: ledger.csv",
+    "existing output bytes unchanged: visit_status_review.csv",
+    "existing audit run facts unchanged except clock timestamp",
+    "documented twelve CSV columns in exact order",
+    "full CSV roundtrip preserves Unicode/HTML/commas/quotes/newline/blank names/False",
+    "actual CLI exposes new complete CSV path and count",
+    "all original printable HTML bytes remain after removing additive review section",
+    "baseline printable digest omits exactly later upcoming U5/U6",
+    "actual digest contains every ordered visit once in complete review table",
+    "literal HTML fields create no canary elements in either digest",
+    "empty actual CLI succeeds",
+    "empty staff state bytes survive report run",
+    "real control-only CLI yields explicit empty review and separate status row",
+    "empty CSV retains full header only",
+    "empty digest explicitly reports no review appointments",
+    "candidate pure renderer reads authored legacy saved report",
+    "legacy digest requests rerun instead of claiming empty review",
+    "every tracked candidate source byte unchanged after review",
+    "authored input bytes unchanged"
+  ],
+  "cli": [
+    {
+      "label": "baseline",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "-m",
+        "ptauth",
+        "run",
+        "--data",
+        "/dev/shm/work-portability-pt-uncovered-review-dc13ebf4687f/authored-input",
+        "--out",
+        "/dev/shm/work-portability-pt-uncovered-review-dc13ebf4687f/baseline-output",
+        "--as-of",
+        "2026-10-08",
+        "--clinic-timezone",
+        "UTC"
+      ],
+      "cwd": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/baseline/pt_auth",
+      "exit": 0,
+      "stdout": "[SYNTHETIC] as_of 2026-10-08: 3 patients, 14 visits, 2 auths\nclinic time zone: UTC\nworklist: 2 items (P1 2, P2 0, P3 0); 7 scheduled visits uncovered; 2 completed w/o auth\n  P1 PT-A PAY-A     OLD-A       UNAUTHORIZED_DONE,UNCOVERED_VISIT  submit_by=-\n  P1 PT-C PAY-MISSING -           UNCOVERED_VISIT,UNKNOWN_PAYER      submit_by=-\n1 past scheduled visits need status review: /dev/shm/work-portability-pt-uncovered-review-dc13ebf4687f/baseline-output/visit_status_review.csv\ndigest: /dev/shm/work-portability-pt-uncovered-review-dc13ebf4687f/baseline-output/digest.html\n",
+      "stderr": ""
+    },
+    {
+      "label": "candidate",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "-m",
+        "ptauth",
+        "run",
+        "--data",
+        "/dev/shm/work-portability-pt-uncovered-review-dc13ebf4687f/authored-input",
+        "--out",
+        "/dev/shm/work-portability-pt-uncovered-review-dc13ebf4687f/candidate-output",
+        "--as-of",
+        "2026-10-08",
+        "--clinic-timezone",
+        "UTC"
+      ],
+      "cwd": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate/pt_auth",
+      "exit": 0,
+      "stdout": "[SYNTHETIC] as_of 2026-10-08: 3 patients, 14 visits, 2 auths\nclinic time zone: UTC\nworklist: 2 items (P1 2, P2 0, P3 0); 7 scheduled visits uncovered; 2 completed w/o auth\n  P1 PT-A PAY-A     OLD-A       UNAUTHORIZED_DONE,UNCOVERED_VISIT  submit_by=-\n  P1 PT-C PAY-MISSING -           UNCOVERED_VISIT,UNKNOWN_PAYER      submit_by=-\n1 past scheduled visits need status review: /dev/shm/work-portability-pt-uncovered-review-dc13ebf4687f/candidate-output/visit_status_review.csv\n9 uncovered visits to inspect: /dev/shm/work-portability-pt-uncovered-review-dc13ebf4687f/candidate-output/uncovered_visits.csv\ndigest: /dev/shm/work-portability-pt-uncovered-review-dc13ebf4687f/candidate-output/digest.html\n",
+      "stderr": ""
+    },
+    {
+      "label": "empty",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "-m",
+        "ptauth",
+        "run",
+        "--data",
+        "/dev/shm/work-portability-pt-uncovered-review-dc13ebf4687f/empty-input",
+        "--out",
+        "/dev/shm/work-portability-pt-uncovered-review-dc13ebf4687f/empty-output",
+        "--as-of",
+        "2026-10-08",
+        "--clinic-timezone",
+        "UTC"
+      ],
+      "cwd": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate/pt_auth",
+      "exit": 0,
+      "stdout": "[SYNTHETIC] as_of 2026-10-08: 3 patients, 5 visits, 2 auths\nclinic time zone: UTC\nworklist: 0 items (P1 0, P2 0, P3 0); 0 scheduled visits uncovered; 0 completed w/o auth\n1 past scheduled visits need status review: /dev/shm/work-portability-pt-uncovered-review-dc13ebf4687f/empty-output/visit_status_review.csv\n0 uncovered visits to inspect: /dev/shm/work-portability-pt-uncovered-review-dc13ebf4687f/empty-output/uncovered_visits.csv\ndigest: /dev/shm/work-portability-pt-uncovered-review-dc13ebf4687f/empty-output/digest.html\n",
+      "stderr": ""
+    }
+  ],
+  "source": {
+    "repository": "Jacob-Met/workflow-checks",
+    "upstream": "9e931fa9f42033bf2368f7149684fb5631345715",
+    "tree": "0b0c903801f432968e9cdfb1f1fa134cecc37217",
+    "candidate": "9676a5a20f3adab0ccf46e31e3052de04f50d267",
+    "partial_baseline": "d67c6087ab5fae717be2eec08f131d2c80b539f6",
+    "changed": [
+      {
+        "path": "pt_auth/README.md",
+        "size": 18875,
+        "sha256": "17ee483cb2e24393f1ed4b501e2164c289cfb7310891a1bc510cc283f13b4879",
+        "git_blob": "43c517674b03403156323078b089441ecdd488ff",
+        "expected_old_git_blob": "0dd3d4c7c83ac33d4099286e7785de111c8f19de"
+      },
+      {
+        "path": "pt_auth/ptauth/cli.py",
+        "size": 3776,
+        "sha256": "55cce5ca33abc027f8f7c2afe1ae3eae32b9412d612b41d3c72a4037f1933a96",
+        "git_blob": "1012ba6c759e95b0c14de0e9c00bb4cbb73562ea",
+        "expected_old_git_blob": "b79a054cd4140b523d901d8109fc11a5958f91d2"
+      },
+      {
+        "path": "pt_auth/ptauth/report.py",
+        "size": 10743,
+        "sha256": "20cbc86e153b9af5151fd3e74cb370298de4692c81b3546a214eb2cfa8307df7",
+        "git_blob": "2ce82b1712e5c6fc03374d38996eceddf31782f0",
+        "expected_old_git_blob": "608626d57918e4d43fca2fc14421063d35b49cfc"
+      },
+      {
+        "path": "pt_auth/ptauth/ui.html",
+        "size": 16354,
+        "sha256": "fddb0d6e5fe587f961ac602660161728195ff5904966a54577f8d4dcfcd41242",
+        "git_blob": "3bd3bbe67f3a6b9536b7e99b8ef52b2d1fa048db",
+        "expected_old_git_blob": "98bbca10a6341b8e76251e6f1fca65a8689a9db0"
+      },
+      {
+        "path": "pt_auth/ptauth/uncovered.py",
+        "size": 4319,
+        "sha256": "21e92509df706e504a8630f3383ea4fe98d03047d2e4b070f3fdd188d995350e",
+        "git_blob": "9ab21781c4116dd0b9b76ac0116868898f3ee7d4",
+        "expected_old_git_blob": null
+      },
+      {
+        "path": "pt_auth/tests/test_uncovered_review.py",
+        "size": 14446,
+        "sha256": "df3e9acdba7db9449988f66c0b9796cec0c7e59d354d9436fbe57737927338fb",
+        "git_blob": "15f167e3af34056f6558be4672446b35eabb5f4d",
+        "expected_old_git_blob": null
+      },
+      {
+        "path": "pt_auth/tests/browser/uncovered_review.test.cjs",
+        "size": 8415,
+        "sha256": "25cac361af6bf20b93d017586087db0457669ba386ae47144db184f235e9037c",
+        "git_blob": "01f44c8e4f0cf909ac894c3b9f4469e89db7298e",
+        "expected_old_git_blob": null
+      }
+    ],
+    "unchanged": [
+      {
+        "path": "pt_auth/ptauth/__init__.py",
+        "git_blob": "a6f4545ac17e2578317ef694f7bb548489f6c71c",
+        "sha256": "71e1527f153c607b679485e4954af1b3ec6a843b041562eb07f4d36e08fd231c",
+        "size": 311
+      },
+      {
+        "path": "pt_auth/ptauth/__main__.py",
+        "git_blob": "3c93dd90cf357624c77ab3589ef2b201868c181e",
+        "sha256": "4b1afbca74a10abc3cff7b4e5a11b558bf619e45b89709faf9225a474a2a250f",
+        "size": 57
+      },
+      {
+        "path": "pt_auth/ptauth/data.py",
+        "git_blob": "19a2a1b79eff6d2753507eebf3bf78011ddaaa87",
+        "sha256": "eeab8ab5b2b72524148969de0d13b27126cc64c4ec79b68a147b51b25a3741e2",
+        "size": 10283
+      },
+      {
+        "path": "pt_auth/ptauth/engine.py",
+        "git_blob": "39c97f35d61ff949b5c2381f0ad60d7af8d74226",
+        "sha256": "bfa7049e9b133d654ce947b135c17ac401bd7b1fcd76350bdb10de5b7a1ad1f7",
+        "size": 16057
+      },
+      {
+        "path": "pt_auth/ptauth/synth.py",
+        "git_blob": "2ff6a2548bf55a812cfa62e397442a0d3f7debbb",
+        "sha256": "b82a34447e43dacbe46ed06e60b693ed216e87f15892ae297c682aa5a3f139fd",
+        "size": 8873
+      },
+      {
+        "path": "pt_auth/ptauth/web.py",
+        "git_blob": "71d17ec9642798a5e7df56ab7c2bdbab8d061352",
+        "sha256": "2f7d01cda0bb42e907d135d4a34cedb655b780c646cbe01ed4050ab7c11b2b23",
+        "size": 6239
+      },
+      {
+        "path": "pt_auth/sample_data/authorizations.csv",
+        "git_blob": "036f7b276e3e09252afb886ad451531f51ada844",
+        "sha256": "306cae3c27895d2b81978d4cf3115e867b8853edb4939ec8f7e733a7f27b0657",
+        "size": 2990
+      },
+      {
+        "path": "pt_auth/sample_data/expected.json",
+        "git_blob": "21177a89ac5c24c9faf79746550165a3a170d08a",
+        "sha256": "0652052b6f37ce068cb77d4b8cde0f5a75d9b275be51b05f570c35a60a8a6d02",
+        "size": 3482
+      },
+      {
+        "path": "pt_auth/sample_data/patients.csv",
+        "git_blob": "e67323b68d1ac9ee4a901dc3ef70a95384ba5000",
+        "sha256": "1dd9bc97889ca4a2e46e19804841d4af29ada284ede22d328370d20fb520e6e5",
+        "size": 2333
+      },
+      {
+        "path": "pt_auth/sample_data/payers.csv",
+        "git_blob": "1853837e82048ac11698b4ad5bb6eeb055d56038",
+        "sha256": "81f143eed15c9ce613ee7cf372e51d6223a44700c877cc42d283a824d30900ed",
+        "size": 904
+      },
+      {
+        "path": "pt_auth/sample_data/schedule.csv",
+        "git_blob": "24a395250f5318004bab4f168c3ca237189ab354",
+        "sha256": "a5f9177b2e0fb9b4397a83839961d11c947e74cc2f13d5de29a31f39254e5198",
+        "size": 71520
+      }
+    ],
+    "instruction_tree_lookup": {
+      "tree": "0b0c903801f432968e9cdfb1f1fa134cecc37217",
+      "truncated": false,
+      "AGENTS_or_SKILL_files": []
+    }
+  },
+  "accepted": true,
+  "baseline_missing_ids": [
+    "U5-<b data-pt-canary=\"visit\">雪</b>",
+    "U6,\"quoted\""
+  ],
+  "counts": {
+    "patients": 3,
+    "visits": 14,
+    "auths": 2,
+    "worklist": 2,
+    "p1": 2,
+    "p2": 0,
+    "p3": 0,
+    "uncovered_scheduled": 7,
+    "unauthorized_done": 2,
+    "past_scheduled": 1
+  },
+  "raw_uncovered_count": 10,
+  "complete_review_count": 9,
+  "fixture_files": {
+    "patients.csv": {
+      "size": 194,
+      "sha256": "664ec8d3b7f05fea2151b36736d96f436f235573bcb979cadb1c739d7c7c7ca6",
+      "git_blob": "8f63a08c2b916ccc5f92c56d18a291aecc1412ef"
+    },
+    "payers.csv": {
+      "size": 261,
+      "sha256": "06d24625edf5c5d0b8fae796769b887b85daaec3fb488c14fb204edce57715c8",
+      "git_blob": "02b2550928094c1c34acb646e8ff1c3052949c8d"
+    },
+    "authorizations.csv": {
+      "size": 178,
+      "sha256": "e0ba56fe428e30b09da26c36607325a2a1f6d9ce28309560120c86dc097a1085",
+      "git_blob": "a833066c0e052d4f0cb27c2c77bd14ef6d8930e4"
+    },
+    "schedule.csv": {
+      "size": 1286,
+      "sha256": "40c75d38597239c953f11277e8a7d590083ed3ad95a29db076c863169bf6060b",
+      "git_blob": "c653b9734253ebd7f4b63f701b21467078ce4081"
+    }
+  },
+  "expected_rows": [
+    {
+      "visit_id": "D-PAST",
+      "visit_date": "2026-10-01",
+      "status": "completed",
+      "patient_id": "PT-A",
+      "patient_name": "Zoë <b data-pt-canary=\"patient\">雪</b> & \"A\"",
+      "clinic": "Satellite",
+      "therapist": "Therapist \"Q\", Ω",
+      "payer_id": "PAY-A",
+      "payer_name": "Known & <i data-pt-canary=\"payer\">Plan</i>",
+      "payer_rules_known": true,
+      "visit_type": "treatment",
+      "evidence": "schedule.csv:row10"
+    },
+    {
+      "visit_id": "U1",
+      "visit_date": "2026-10-08",
+      "status": "scheduled",
+      "patient_id": "PT-A",
+      "patient_name": "Zoë <b data-pt-canary=\"patient\">雪</b> & \"A\"",
+      "clinic": "Satellite",
+      "therapist": "Therapist \"Q\", Ω",
+      "payer_id": "PAY-A",
+      "payer_name": "Known & <i data-pt-canary=\"payer\">Plan</i>",
+      "payer_rules_known": true,
+      "visit_type": "treatment",
+      "evidence": "schedule.csv:row7"
+    },
+    {
+      "visit_id": "U2",
+      "visit_date": "2026-10-09",
+      "status": "scheduled",
+      "patient_id": "PT-A",
+      "patient_name": "Zoë <b data-pt-canary=\"patient\">雪</b> & \"A\"",
+      "clinic": "South",
+      "therapist": "Therapist \"Q\", Ω",
+      "payer_id": "PAY-A",
+      "payer_name": "Known & <i data-pt-canary=\"payer\">Plan</i>",
+      "payer_rules_known": true,
+      "visit_type": "treatment",
+      "evidence": "schedule.csv:row13"
+    },
+    {
+      "visit_id": "U3",
+      "visit_date": "2026-10-10",
+      "status": "scheduled",
+      "patient_id": "PT-A",
+      "patient_name": "Zoë <b data-pt-canary=\"patient\">雪</b> & \"A\"",
+      "clinic": "",
+      "therapist": "Therapist \"Q\", Ω",
+      "payer_id": "PAY-A",
+      "payer_name": "Known & <i data-pt-canary=\"payer\">Plan</i>",
+      "payer_rules_known": true,
+      "visit_type": "treatment",
+      "evidence": "schedule.csv:row5"
+    },
+    {
+      "visit_id": "U4",
+      "visit_date": "2026-10-11",
+      "status": "scheduled",
+      "patient_id": "PT-A",
+      "patient_name": "Zoë <b data-pt-canary=\"patient\">雪</b> & \"A\"",
+      "clinic": "South",
+      "therapist": "Therapist \"Q\", Ω",
+      "payer_id": "PAY-A",
+      "payer_name": "Known & <i data-pt-canary=\"payer\">Plan</i>",
+      "payer_rules_known": true,
+      "visit_type": "treatment",
+      "evidence": "schedule.csv:row11"
+    },
+    {
+      "visit_id": "U5-<b data-pt-canary=\"visit\">雪</b>",
+      "visit_date": "2026-10-12",
+      "status": "scheduled",
+      "patient_id": "PT-A",
+      "patient_name": "Zoë <b data-pt-canary=\"patient\">雪</b> & \"A\"",
+      "clinic": "South",
+      "therapist": "Therapist \"Q\", Ω",
+      "payer_id": "PAY-A",
+      "payer_name": "Known & <i data-pt-canary=\"payer\">Plan</i>",
+      "payer_rules_known": true,
+      "visit_type": "treatment",
+      "evidence": "schedule.csv:row9"
+    },
+    {
+      "visit_id": "U6,\"quoted\"",
+      "visit_date": "2026-10-13",
+      "status": "scheduled",
+      "patient_id": "PT-A",
+      "patient_name": "Zoë <b data-pt-canary=\"patient\">雪</b> & \"A\"",
+      "clinic": "Visit-only & 雪\nFloor 2",
+      "therapist": "Therapist \"Q\", Ω",
+      "payer_id": "PAY-A",
+      "payer_name": "Known & <i data-pt-canary=\"payer\">Plan</i>",
+      "payer_rules_known": true,
+      "visit_type": "re-eval",
+      "evidence": "schedule.csv:row3"
+    },
+    {
+      "visit_id": "UNKNOWN",
+      "visit_date": "2026-10-14",
+      "status": "scheduled",
+      "patient_id": "PT-C",
+      "patient_name": "",
+      "clinic": "Unknown clinic",
+      "therapist": "Therapist \"Q\", Ω",
+      "payer_id": "PAY-MISSING",
+      "payer_name": "",
+      "payer_rules_known": false,
+      "visit_type": "treatment",
+      "evidence": "schedule.csv:row14"
+    },
+    {
+      "visit_id": "D-FUTURE",
+      "visit_date": "2026-10-22",
+      "status": "completed",
+      "patient_id": "PT-A",
+      "patient_name": "Zoë <b data-pt-canary=\"patient\">雪</b> & \"A\"",
+      "clinic": "South",
+      "therapist": "Therapist \"Q\", Ω",
+      "payer_id": "PAY-A",
+      "payer_name": "Known & <i data-pt-canary=\"payer\">Plan</i>",
+      "payer_rules_known": true,
+      "visit_type": "treatment",
+      "evidence": "schedule.csv:row4"
+    }
+  ],
+  "unchanged_csv": {
+    "worklist.csv": {
+      "size": 1065,
+      "sha256": "b24f308ba71c534bd590458a2d066b713c394f169a0917304887d70c1ede6ccc",
+      "git_blob": "7198109a12678b5b898f4fd867a2b2dfb009ffcb"
+    },
+    "ledger.csv": {
+      "size": 323,
+      "sha256": "b2c33e55c9f9618189fac26ae34099311f416f98a570c6a33d4417448528c49e",
+      "git_blob": "3a91a8ddbe4a39888ba3032e0f23d9d8b47db868"
+    },
+    "visit_status_review.csv": {
+      "size": 340,
+      "sha256": "b561b39e7c12bfe1e86c5390d83236628684a8c9a1f4db5e2032cbf256cdd937",
+      "git_blob": "68b9824135ace600a2245eb36acc6fe73c67e0e7"
+    }
+  },
+  "new_csv": {
+    "size": 1910,
+    "sha256": "d2808753a8858e1da5bfa92752732671340643d19e67cd54cf5ed6f4d39d9a43",
+    "git_blob": "01e56daaec91953a47ea1f9e741d304155d40f89"
+  },
+  "source_after": {
+    "pt_auth/README.md": {
+      "size": 18875,
+      "sha256": "17ee483cb2e24393f1ed4b501e2164c289cfb7310891a1bc510cc283f13b4879",
+      "git_blob": "43c517674b03403156323078b089441ecdd488ff"
+    },
+    "pt_auth/ptauth/__init__.py": {
+      "size": 311,
+      "sha256": "71e1527f153c607b679485e4954af1b3ec6a843b041562eb07f4d36e08fd231c",
+      "git_blob": "a6f4545ac17e2578317ef694f7bb548489f6c71c"
+    },
+    "pt_auth/ptauth/__main__.py": {
+      "size": 57,
+      "sha256": "4b1afbca74a10abc3cff7b4e5a11b558bf619e45b89709faf9225a474a2a250f",
+      "git_blob": "3c93dd90cf357624c77ab3589ef2b201868c181e"
+    },
+    "pt_auth/ptauth/cli.py": {
+      "size": 3776,
+      "sha256": "55cce5ca33abc027f8f7c2afe1ae3eae32b9412d612b41d3c72a4037f1933a96",
+      "git_blob": "1012ba6c759e95b0c14de0e9c00bb4cbb73562ea"
+    },
+    "pt_auth/ptauth/data.py": {
+      "size": 10283,
+      "sha256": "eeab8ab5b2b72524148969de0d13b27126cc64c4ec79b68a147b51b25a3741e2",
+      "git_blob": "19a2a1b79eff6d2753507eebf3bf78011ddaaa87"
+    },
+    "pt_auth/ptauth/engine.py": {
+      "size": 16057,
+      "sha256": "bfa7049e9b133d654ce947b135c17ac401bd7b1fcd76350bdb10de5b7a1ad1f7",
+      "git_blob": "39c97f35d61ff949b5c2381f0ad60d7af8d74226"
+    },
+    "pt_auth/ptauth/report.py": {
+      "size": 10743,
+      "sha256": "20cbc86e153b9af5151fd3e74cb370298de4692c81b3546a214eb2cfa8307df7",
+      "git_blob": "2ce82b1712e5c6fc03374d38996eceddf31782f0"
+    },
+    "pt_auth/ptauth/synth.py": {
+      "size": 8873,
+      "sha256": "b82a34447e43dacbe46ed06e60b693ed216e87f15892ae297c682aa5a3f139fd",
+      "git_blob": "2ff6a2548bf55a812cfa62e397442a0d3f7debbb"
+    },
+    "pt_auth/ptauth/ui.html": {
+      "size": 16354,
+      "sha256": "fddb0d6e5fe587f961ac602660161728195ff5904966a54577f8d4dcfcd41242",
+      "git_blob": "3bd3bbe67f3a6b9536b7e99b8ef52b2d1fa048db"
+    },
+    "pt_auth/ptauth/uncovered.py": {
+      "size": 4319,
+      "sha256": "21e92509df706e504a8630f3383ea4fe98d03047d2e4b070f3fdd188d995350e",
+      "git_blob": "9ab21781c4116dd0b9b76ac0116868898f3ee7d4"
+    },
+    "pt_auth/ptauth/web.py": {
+      "size": 6239,
+      "sha256": "2f7d01cda0bb42e907d135d4a34cedb655b780c646cbe01ed4050ab7c11b2b23",
+      "git_blob": "71d17ec9642798a5e7df56ab7c2bdbab8d061352"
+    },
+    "pt_auth/sample_data/authorizations.csv": {
+      "size": 2990,
+      "sha256": "306cae3c27895d2b81978d4cf3115e867b8853edb4939ec8f7e733a7f27b0657",
+      "git_blob": "036f7b276e3e09252afb886ad451531f51ada844"
+    },
+    "pt_auth/sample_data/expected.json": {
+      "size": 3482,
+      "sha256": "0652052b6f37ce068cb77d4b8cde0f5a75d9b275be51b05f570c35a60a8a6d02",
+      "git_blob": "21177a89ac5c24c9faf79746550165a3a170d08a"
+    },
+    "pt_auth/sample_data/patients.csv": {
+      "size": 2333,
+      "sha256": "1dd9bc97889ca4a2e46e19804841d4af29ada284ede22d328370d20fb520e6e5",
+      "git_blob": "e67323b68d1ac9ee4a901dc3ef70a95384ba5000"
+    },
+    "pt_auth/sample_data/payers.csv": {
+      "size": 904,
+      "sha256": "81f143eed15c9ce613ee7cf372e51d6223a44700c877cc42d283a824d30900ed",
+      "git_blob": "1853837e82048ac11698b4ad5bb6eeb055d56038"
+    },
+    "pt_auth/sample_data/schedule.csv": {
+      "size": 71520,
+      "sha256": "a5f9177b2e0fb9b4397a83839961d11c947e74cc2f13d5de29a31f39254e5198",
+      "git_blob": "24a395250f5318004bab4f168c3ca237189ab354"
+    },
+    "pt_auth/tests/browser/uncovered_review.test.cjs": {
+      "size": 8415,
+      "sha256": "25cac361af6bf20b93d017586087db0457669ba386ae47144db184f235e9037c",
+      "git_blob": "01f44c8e4f0cf909ac894c3b9f4469e89db7298e"
+    },
+    "pt_auth/tests/test_uncovered_review.py": {
+      "size": 14446,
+      "sha256": "df3e9acdba7db9449988f66c0b9796cec0c7e59d354d9436fbe57737927338fb",
+      "git_blob": "15f167e3af34056f6558be4672446b35eabb5f4d"
+    }
+  },
+  "limits": [
+    "Authored inputs only; no clinical/provider/account data.",
+    "No clinical decision, payer compliance, or browser-layout qualification in this script.",
+    "Three actual CLI invocations and one pure legacy-renderer process; no inherited suite."
+  ]
+}

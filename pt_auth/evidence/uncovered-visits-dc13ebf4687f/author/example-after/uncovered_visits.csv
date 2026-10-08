@@ -1,0 +1,9 @@
+visit_id,visit_date,status,patient_id,patient_name,clinic,therapist,payer_id,payer_name,payer_rules_known,visit_type,evidence
+V-DONE-1,2026-10-01,completed,SYN-A,"Test <A> & ""café""",Actual clinic <A>,PT-A,PAY-A,Placeholder <A> & plan,True,treatment,schedule.csv:row3
+V-DONE-2,2026-10-02,completed,SYN-A,"Test <A> & ""café""",Actual clinic <A>,PT-A,PAY-A,Placeholder <A> & plan,True,treatment,schedule.csv:row4
+V-UPCOMING-1,2026-10-08,scheduled,SYN-A,"Test <A> & ""café""",Actual clinic <A>,PT-A,PAY-A,Placeholder <A> & plan,True,treatment,schedule.csv:row6
+V-UPCOMING-2,2026-10-09,scheduled,SYN-A,"Test <A> & ""café""",Actual clinic <A>,PT-A,PAY-A,Placeholder <A> & plan,True,treatment,schedule.csv:row7
+V-UPCOMING-3,2026-10-10,scheduled,SYN-A,"Test <A> & ""café""",Actual clinic <A>,PT-A,PAY-A,Placeholder <A> & plan,True,treatment,schedule.csv:row8
+V-UPCOMING-4,2026-10-11,scheduled,SYN-A,"Test <A> & ""café""",Actual clinic <A>,PT-A,PAY-A,Placeholder <A> & plan,True,treatment,schedule.csv:row9
+V-UPCOMING-5,2026-10-12,scheduled,SYN-A,"Test <A> & ""café""",Actual clinic <A>,PT-A,PAY-A,Placeholder <A> & plan,True,treatment,schedule.csv:row10
+V-UPCOMING-6,2026-10-13,scheduled,SYN-A,"Test <A> & ""café""",Actual clinic <A>,PT-A,PAY-A,Placeholder <A> & plan,True,treatment,schedule.csv:row11

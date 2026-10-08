@@ -1,0 +1,512 @@
+{
+  "kind": "exact inline UI + real local App; authored DOM seam, not browser receiving",
+  "candidate": "9676a5a20f3adab0ccf46e31e3052de04f50d267",
+  "node": "v24.19.0",
+  "checks": [
+    "baseline actual HTTP selects pinned UI bytes",
+    "baseline accepted UI pin",
+    "baseline unchanged real web.py pin",
+    "baseline exact one inline program",
+    "candidate actual HTTP selects pinned UI bytes",
+    "candidate accepted UI pin",
+    "candidate unchanged real web.py pin",
+    "candidate exact one inline program",
+    "existing rendered markup unchanged: cards",
+    "existing rendered markup unchanged: work",
+    "existing rendered markup unchanged: t-review",
+    "existing rendered markup unchanged: t-ledger",
+    "approved work item remains hidden by default",
+    "all old digest/export hrefs and actions retained",
+    "baseline all-staff-state markup still omits exact U5/U6",
+    "baseline lacks complete uncovered tab",
+    "actual tab handler opens complete review section",
+    "all nine complete rows independent of approved staff work item",
+    "exact complete shown/total count",
+    "literal source HTML creates no unescaped canary tag",
+    "unknown payer is visibly marked unavailable",
+    "seven scheduled rows",
+    "past and recorded future completed rows",
+    "actual generated option values preserve blank/newline/Unicode clinic distinction",
+    "blank visit clinic is distinct from all",
+    "newline visit clinic exact selection",
+    "source clinic embedded newline remains literal text",
+    "case-insensitive literal Unicode/HTML visit search",
+    "patient name search spans all eight visits",
+    "actual unknown payer ID search",
+    "unknown payer/name does not become patient primary payer",
+    "status/visit-clinic/patient filter intersection",
+    "regex punctuation is literal",
+    "filtered-empty differs from empty saved report",
+    "search excludes undocumented therapist field",
+    "native download markup points to complete CSV with no filter parameters",
+    "export explicitly labels its complete unfiltered scope",
+    "unchanged real HTTP route serves complete CSV",
+    "one-row-filter URL returns exact all-nine-row CSV bytes",
+    "export leaves active UI filter unchanged",
+    "existing worklist-only search remains effective",
+    "work-item search never truncates appointment review",
+    "legacy actual HTTP selects pinned UI bytes",
+    "legacy accepted UI pin",
+    "legacy unchanged real web.py pin",
+    "legacy exact one inline program",
+    "real matching-zone legacy GET does not silently rerun report",
+    "missing review asks for actual rerun",
+    "legacy disables uc-status",
+    "legacy disables uc-clinic",
+    "legacy disables uc-search",
+    "missing review does not claim zero",
+    "legacy has no new export action",
+    "legacy files tab also omits new export",
+    "existing Run action actually upgrades legacy report to all nine rows",
+    "rerun completes and enables actual review controls",
+    "actual legacy web rerun creates same complete CSV bytes",
+    "legacy rerun preserves approved work state",
+    "empty actual HTTP selects pinned UI bytes",
+    "empty accepted UI pin",
+    "empty unchanged real web.py pin",
+    "empty exact one inline program",
+    "explicit empty saved array truthfully reports zero",
+    "empty report message differs from legacy/no-match",
+    "empty report has valid enabled review and header-only export",
+    "baseline staff state bytes unchanged through all UI/report operations",
+    "candidate staff state bytes unchanged through all UI/report operations",
+    "empty staff state bytes unchanged through all UI/report operations",
+    "legacy staff state bytes unchanged through all UI/report operations",
+    "zero attempted external/state/generator actions",
+    "zero UI action errors",
+    "all tracked source bytes unchanged after receiving",
+    "one actual authored legacy rerun, no other POSTs"
+  ],
+  "servers": [
+    {
+      "label": "baseline",
+      "events": [
+        {
+          "ready": true,
+          "label": "baseline",
+          "origin": "http://127.0.0.1:45911",
+          "source": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/baseline/pt_auth",
+          "ui_sha256": "c94b54f51fbdedc6fe19bb36ac8e74973c834fc5a0ffa6b474d63eb61edc61c4",
+          "web_sha256": "2f7d01cda0bb42e907d135d4a34cedb655b780c646cbe01ed4050ab7c11b2b23"
+        },
+        {
+          "request": "GET",
+          "path": "/"
+        },
+        {
+          "request": "GET",
+          "path": "/api/summary"
+        }
+      ],
+      "stderr": "",
+      "ready": true,
+      "origin": "http://127.0.0.1:45911",
+      "source": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/baseline/pt_auth",
+      "ui_sha256": "c94b54f51fbdedc6fe19bb36ac8e74973c834fc5a0ffa6b474d63eb61edc61c4",
+      "web_sha256": "2f7d01cda0bb42e907d135d4a34cedb655b780c646cbe01ed4050ab7c11b2b23"
+    },
+    {
+      "label": "candidate",
+      "events": [
+        {
+          "ready": true,
+          "label": "candidate",
+          "origin": "http://127.0.0.1:41667",
+          "source": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate/pt_auth",
+          "ui_sha256": "fddb0d6e5fe587f961ac602660161728195ff5904966a54577f8d4dcfcd41242",
+          "web_sha256": "2f7d01cda0bb42e907d135d4a34cedb655b780c646cbe01ed4050ab7c11b2b23"
+        },
+        {
+          "request": "GET",
+          "path": "/"
+        },
+        {
+          "request": "GET",
+          "path": "/api/summary"
+        },
+        {
+          "request": "GET",
+          "path": "/out/uncovered_visits.csv"
+        }
+      ],
+      "stderr": "",
+      "ready": true,
+      "origin": "http://127.0.0.1:41667",
+      "source": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate/pt_auth",
+      "ui_sha256": "fddb0d6e5fe587f961ac602660161728195ff5904966a54577f8d4dcfcd41242",
+      "web_sha256": "2f7d01cda0bb42e907d135d4a34cedb655b780c646cbe01ed4050ab7c11b2b23"
+    },
+    {
+      "label": "legacy",
+      "events": [
+        {
+          "ready": true,
+          "label": "legacy",
+          "origin": "http://127.0.0.1:40669",
+          "source": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate/pt_auth",
+          "ui_sha256": "fddb0d6e5fe587f961ac602660161728195ff5904966a54577f8d4dcfcd41242",
+          "web_sha256": "2f7d01cda0bb42e907d135d4a34cedb655b780c646cbe01ed4050ab7c11b2b23"
+        },
+        {
+          "request": "GET",
+          "path": "/"
+        },
+        {
+          "request": "GET",
+          "path": "/api/summary"
+        },
+        {
+          "request": "POST",
+          "path": "/api/run"
+        }
+      ],
+      "stderr": "",
+      "ready": true,
+      "origin": "http://127.0.0.1:40669",
+      "source": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate/pt_auth",
+      "ui_sha256": "fddb0d6e5fe587f961ac602660161728195ff5904966a54577f8d4dcfcd41242",
+      "web_sha256": "2f7d01cda0bb42e907d135d4a34cedb655b780c646cbe01ed4050ab7c11b2b23"
+    },
+    {
+      "label": "empty",
+      "events": [
+        {
+          "ready": true,
+          "label": "empty",
+          "origin": "http://127.0.0.1:46253",
+          "source": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate/pt_auth",
+          "ui_sha256": "fddb0d6e5fe587f961ac602660161728195ff5904966a54577f8d4dcfcd41242",
+          "web_sha256": "2f7d01cda0bb42e907d135d4a34cedb655b780c646cbe01ed4050ab7c11b2b23"
+        },
+        {
+          "request": "GET",
+          "path": "/"
+        },
+        {
+          "request": "GET",
+          "path": "/api/summary"
+        }
+      ],
+      "stderr": "",
+      "ready": true,
+      "origin": "http://127.0.0.1:46253",
+      "source": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate/pt_auth",
+      "ui_sha256": "fddb0d6e5fe587f961ac602660161728195ff5904966a54577f8d4dcfcd41242",
+      "web_sha256": "2f7d01cda0bb42e907d135d4a34cedb655b780c646cbe01ed4050ab7c11b2b23"
+    }
+  ],
+  "blocked": [],
+  "alerts": [],
+  "filter_observations": [
+    {
+      "label": "all nine complete rows independent of approved staff work item",
+      "shown": "9 of 9 appointments · as of 2026-10-08",
+      "ids": [
+        "D-PAST",
+        "U1",
+        "U2",
+        "U3",
+        "U4",
+        "U5-<b data-pt-canary=\"visit\">雪</b>",
+        "U6,\"quoted\"",
+        "UNKNOWN",
+        "D-FUTURE"
+      ]
+    },
+    {
+      "label": "seven scheduled rows",
+      "shown": "7 of 9 appointments · as of 2026-10-08",
+      "ids": [
+        "U1",
+        "U2",
+        "U3",
+        "U4",
+        "U5-<b data-pt-canary=\"visit\">雪</b>",
+        "U6,\"quoted\"",
+        "UNKNOWN"
+      ]
+    },
+    {
+      "label": "past and recorded future completed rows",
+      "shown": "2 of 9 appointments · as of 2026-10-08",
+      "ids": [
+        "D-PAST",
+        "D-FUTURE"
+      ]
+    },
+    {
+      "label": "blank visit clinic is distinct from all",
+      "shown": "1 of 9 appointments · as of 2026-10-08",
+      "ids": [
+        "U3"
+      ]
+    },
+    {
+      "label": "newline visit clinic exact selection",
+      "shown": "1 of 9 appointments · as of 2026-10-08",
+      "ids": [
+        "U6,\"quoted\""
+      ]
+    },
+    {
+      "label": "case-insensitive literal Unicode/HTML visit search",
+      "shown": "1 of 9 appointments · as of 2026-10-08",
+      "ids": [
+        "U5-<b data-pt-canary=\"visit\">雪</b>"
+      ]
+    },
+    {
+      "label": "patient name search spans all eight visits",
+      "shown": "8 of 9 appointments · as of 2026-10-08",
+      "ids": [
+        "D-PAST",
+        "U1",
+        "U2",
+        "U3",
+        "U4",
+        "U5-<b data-pt-canary=\"visit\">雪</b>",
+        "U6,\"quoted\"",
+        "D-FUTURE"
+      ]
+    },
+    {
+      "label": "actual unknown payer ID search",
+      "shown": "1 of 9 appointments · as of 2026-10-08",
+      "ids": [
+        "UNKNOWN"
+      ]
+    },
+    {
+      "label": "status/visit-clinic/patient filter intersection",
+      "shown": "3 of 9 appointments · as of 2026-10-08",
+      "ids": [
+        "U2",
+        "U4",
+        "U5-<b data-pt-canary=\"visit\">雪</b>"
+      ]
+    },
+    {
+      "label": "regex punctuation is literal",
+      "shown": "0 of 9 appointments · as of 2026-10-08",
+      "ids": []
+    },
+    {
+      "label": "search excludes undocumented therapist field",
+      "shown": "0 of 9 appointments · as of 2026-10-08",
+      "ids": []
+    },
+    {
+      "label": "export leaves active UI filter unchanged",
+      "shown": "1 of 9 appointments · as of 2026-10-08",
+      "ids": [
+        "UNKNOWN"
+      ]
+    },
+    {
+      "label": "work-item search never truncates appointment review",
+      "shown": "9 of 9 appointments · as of 2026-10-08",
+      "ids": [
+        "D-PAST",
+        "U1",
+        "U2",
+        "U3",
+        "U4",
+        "U5-<b data-pt-canary=\"visit\">雪</b>",
+        "U6,\"quoted\"",
+        "UNKNOWN",
+        "D-FUTURE"
+      ]
+    },
+    {
+      "label": "existing Run action actually upgrades legacy report to all nine rows",
+      "shown": "9 of 9 appointments · as of 2026-10-08",
+      "ids": [
+        "D-PAST",
+        "U1",
+        "U2",
+        "U3",
+        "U4",
+        "U5-<b data-pt-canary=\"visit\">雪</b>",
+        "U6,\"quoted\"",
+        "UNKNOWN",
+        "D-FUTURE"
+      ]
+    }
+  ],
+  "program_sha256": "d40f61c47ba55084d9d6bde75056a1edeaab6eb17e65562b039f63a0155257ed",
+  "server_program_sha256": "99c0e4d9457932e232bce81559ccdccb1df2e19ccda8b7cf6b3b49a0539ff134",
+  "source_before": {
+    "pt_auth/README.md": {
+      "size": 18875,
+      "sha256": "17ee483cb2e24393f1ed4b501e2164c289cfb7310891a1bc510cc283f13b4879"
+    },
+    "pt_auth/ptauth/__init__.py": {
+      "size": 311,
+      "sha256": "71e1527f153c607b679485e4954af1b3ec6a843b041562eb07f4d36e08fd231c"
+    },
+    "pt_auth/ptauth/__main__.py": {
+      "size": 57,
+      "sha256": "4b1afbca74a10abc3cff7b4e5a11b558bf619e45b89709faf9225a474a2a250f"
+    },
+    "pt_auth/ptauth/cli.py": {
+      "size": 3776,
+      "sha256": "55cce5ca33abc027f8f7c2afe1ae3eae32b9412d612b41d3c72a4037f1933a96"
+    },
+    "pt_auth/ptauth/data.py": {
+      "size": 10283,
+      "sha256": "eeab8ab5b2b72524148969de0d13b27126cc64c4ec79b68a147b51b25a3741e2"
+    },
+    "pt_auth/ptauth/engine.py": {
+      "size": 16057,
+      "sha256": "bfa7049e9b133d654ce947b135c17ac401bd7b1fcd76350bdb10de5b7a1ad1f7"
+    },
+    "pt_auth/ptauth/report.py": {
+      "size": 10743,
+      "sha256": "20cbc86e153b9af5151fd3e74cb370298de4692c81b3546a214eb2cfa8307df7"
+    },
+    "pt_auth/ptauth/synth.py": {
+      "size": 8873,
+      "sha256": "b82a34447e43dacbe46ed06e60b693ed216e87f15892ae297c682aa5a3f139fd"
+    },
+    "pt_auth/ptauth/ui.html": {
+      "size": 16354,
+      "sha256": "fddb0d6e5fe587f961ac602660161728195ff5904966a54577f8d4dcfcd41242"
+    },
+    "pt_auth/ptauth/uncovered.py": {
+      "size": 4319,
+      "sha256": "21e92509df706e504a8630f3383ea4fe98d03047d2e4b070f3fdd188d995350e"
+    },
+    "pt_auth/ptauth/web.py": {
+      "size": 6239,
+      "sha256": "2f7d01cda0bb42e907d135d4a34cedb655b780c646cbe01ed4050ab7c11b2b23"
+    },
+    "pt_auth/sample_data/authorizations.csv": {
+      "size": 2990,
+      "sha256": "306cae3c27895d2b81978d4cf3115e867b8853edb4939ec8f7e733a7f27b0657"
+    },
+    "pt_auth/sample_data/expected.json": {
+      "size": 3482,
+      "sha256": "0652052b6f37ce068cb77d4b8cde0f5a75d9b275be51b05f570c35a60a8a6d02"
+    },
+    "pt_auth/sample_data/patients.csv": {
+      "size": 2333,
+      "sha256": "1dd9bc97889ca4a2e46e19804841d4af29ada284ede22d328370d20fb520e6e5"
+    },
+    "pt_auth/sample_data/payers.csv": {
+      "size": 904,
+      "sha256": "81f143eed15c9ce613ee7cf372e51d6223a44700c877cc42d283a824d30900ed"
+    },
+    "pt_auth/sample_data/schedule.csv": {
+      "size": 71520,
+      "sha256": "a5f9177b2e0fb9b4397a83839961d11c947e74cc2f13d5de29a31f39254e5198"
+    },
+    "pt_auth/tests/browser/uncovered_review.test.cjs": {
+      "size": 8415,
+      "sha256": "25cac361af6bf20b93d017586087db0457669ba386ae47144db184f235e9037c"
+    },
+    "pt_auth/tests/test_uncovered_review.py": {
+      "size": 14446,
+      "sha256": "df3e9acdba7db9449988f66c0b9796cec0c7e59d354d9436fbe57737927338fb"
+    }
+  },
+  "csv_download": {
+    "bytes": 1910,
+    "sha256": "d2808753a8858e1da5bfa92752732671340643d19e67cd54cf5ed6f4d39d9a43",
+    "ui_rows": 1,
+    "csv_rows": 9,
+    "method": "actual Node HTTP GET from emitted link, not a browser download"
+  },
+  "source_after": {
+    "pt_auth/README.md": {
+      "size": 18875,
+      "sha256": "17ee483cb2e24393f1ed4b501e2164c289cfb7310891a1bc510cc283f13b4879"
+    },
+    "pt_auth/ptauth/__init__.py": {
+      "size": 311,
+      "sha256": "71e1527f153c607b679485e4954af1b3ec6a843b041562eb07f4d36e08fd231c"
+    },
+    "pt_auth/ptauth/__main__.py": {
+      "size": 57,
+      "sha256": "4b1afbca74a10abc3cff7b4e5a11b558bf619e45b89709faf9225a474a2a250f"
+    },
+    "pt_auth/ptauth/cli.py": {
+      "size": 3776,
+      "sha256": "55cce5ca33abc027f8f7c2afe1ae3eae32b9412d612b41d3c72a4037f1933a96"
+    },
+    "pt_auth/ptauth/data.py": {
+      "size": 10283,
+      "sha256": "eeab8ab5b2b72524148969de0d13b27126cc64c4ec79b68a147b51b25a3741e2"
+    },
+    "pt_auth/ptauth/engine.py": {
+      "size": 16057,
+      "sha256": "bfa7049e9b133d654ce947b135c17ac401bd7b1fcd76350bdb10de5b7a1ad1f7"
+    },
+    "pt_auth/ptauth/report.py": {
+      "size": 10743,
+      "sha256": "20cbc86e153b9af5151fd3e74cb370298de4692c81b3546a214eb2cfa8307df7"
+    },
+    "pt_auth/ptauth/synth.py": {
+      "size": 8873,
+      "sha256": "b82a34447e43dacbe46ed06e60b693ed216e87f15892ae297c682aa5a3f139fd"
+    },
+    "pt_auth/ptauth/ui.html": {
+      "size": 16354,
+      "sha256": "fddb0d6e5fe587f961ac602660161728195ff5904966a54577f8d4dcfcd41242"
+    },
+    "pt_auth/ptauth/uncovered.py": {
+      "size": 4319,
+      "sha256": "21e92509df706e504a8630f3383ea4fe98d03047d2e4b070f3fdd188d995350e"
+    },
+    "pt_auth/ptauth/web.py": {
+      "size": 6239,
+      "sha256": "2f7d01cda0bb42e907d135d4a34cedb655b780c646cbe01ed4050ab7c11b2b23"
+    },
+    "pt_auth/sample_data/authorizations.csv": {
+      "size": 2990,
+      "sha256": "306cae3c27895d2b81978d4cf3115e867b8853edb4939ec8f7e733a7f27b0657"
+    },
+    "pt_auth/sample_data/expected.json": {
+      "size": 3482,
+      "sha256": "0652052b6f37ce068cb77d4b8cde0f5a75d9b275be51b05f570c35a60a8a6d02"
+    },
+    "pt_auth/sample_data/patients.csv": {
+      "size": 2333,
+      "sha256": "1dd9bc97889ca4a2e46e19804841d4af29ada284ede22d328370d20fb520e6e5"
+    },
+    "pt_auth/sample_data/payers.csv": {
+      "size": 904,
+      "sha256": "81f143eed15c9ce613ee7cf372e51d6223a44700c877cc42d283a824d30900ed"
+    },
+    "pt_auth/sample_data/schedule.csv": {
+      "size": 71520,
+      "sha256": "a5f9177b2e0fb9b4397a83839961d11c947e74cc2f13d5de29a31f39254e5198"
+    },
+    "pt_auth/tests/browser/uncovered_review.test.cjs": {
+      "size": 8415,
+      "sha256": "25cac361af6bf20b93d017586087db0457669ba386ae47144db184f235e9037c"
+    },
+    "pt_auth/tests/test_uncovered_review.py": {
+      "size": 14446,
+      "sha256": "df3e9acdba7db9449988f66c0b9796cec0c7e59d354d9436fbe57737927338fb"
+    }
+  },
+  "inline_source_pins": [
+    {
+      "label": "baseline",
+      "sha256": "43df54b4105d0ea0fe13f476d5af1b57f7a4aee4de4a1154bac390347a496d74"
+    },
+    {
+      "label": "candidate",
+      "sha256": "4db9cae35e758cda233fa136c8dcf1bcc1afc5ce06f970e9d4033bd042210f19"
+    },
+    {
+      "label": "legacy",
+      "sha256": "4db9cae35e758cda233fa136c8dcf1bcc1afc5ce06f970e9d4033bd042210f19"
+    },
+    {
+      "label": "empty",
+      "sha256": "4db9cae35e758cda233fa136c8dcf1bcc1afc5ce06f970e9d4033bd042210f19"
+    }
+  ],
+  "accepted": true
+}

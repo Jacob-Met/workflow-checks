@@ -1,0 +1,4 @@
+patient_id,display_name,clinic,primary_payer
+PT-A,"Zoë <b data-pt-canary=""patient"">雪</b> & ""A""",Home clinic not visit,PAY-A
+PT-B,Covered control,Home control,PAY-A
+PT-C,,Home C,PAY-A
