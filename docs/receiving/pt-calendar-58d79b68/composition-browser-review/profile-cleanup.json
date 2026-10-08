@@ -1,0 +1,14 @@
+{
+  "recordedAt": "2026-10-08T14:36:43.021Z",
+  "path": "/home/jacob/pt-calendar-composition-browser-review-58d79b68c9e4/browser-v2/profile",
+  "reason": "Own reproducible browser profile after actual Chromium exit 0 and no active browser process; sources, fixtures, all downloads/logs/captures preserved.",
+  "chrome": {
+    "label": "chrome",
+    "pid": 3202659,
+    "code": 0,
+    "signal": null
+  },
+  "activeBrowsers": [],
+  "files": 132,
+  "bytes": 2615627
+}

@@ -1,0 +1,21 @@
+{
+  "role": "producer visual readback, separate from the independent browser verdict",
+  "source_commit": "a68a667f3610153618c6cc8952c72abe980d89aa",
+  "native_source": "d75fb908a9893fd40b21112f62af16d32027bbe1",
+  "source_tree": "94074bd3d39705fced23629038ab79057e943aff",
+  "captures": [
+    "/Users/me/pt-calendar-browser-review-58d79b68c9e4/browser-v1/desktop-keyboard-focus.png",
+    "/Users/me/pt-calendar-browser-review-58d79b68c9e4/browser-v1/narrow-390-review.png"
+  ],
+  "observations": [
+    "Desktop keyboard focus is visibly outlined on the enabled calendar download button.",
+    "At390px the panel and button fit inside the viewport; current selected/event/exclusion counts are readable.",
+    "Long literal Unicode payer text wraps; recorded include dates and excluded undated identities/reasons remain visible.",
+    "The existing wide worklist stays in its own horizontal scrolling region."
+  ],
+  "verdict": "No blocking visual defect observed in these two actual native captures.",
+  "limits": [
+    "Not a new independent semantic review.",
+    "No acceptance of every viewport, assistive technology or calendar client."
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "began": "2026-10-08T14:13:17.232Z",
+  "finished": "2026-10-08T14:13:17.795Z",
+  "status": 1,
+  "signal": null,
+  "stdout": "",
+  "stderr": "error: Could not read e55536bb2303f7351aaabc309b94ef44ba99b5ba\nerror: Could not read 65461ca8f6bd636cd85c0086210ccb1e6837fbee\nerror: Could not read cc12c4af9137f72df4ee5f719e42b0e6458e2135\nerror: Could not read e55536bb2303f7351aaabc309b94ef44ba99b5ba\nfatal: Failed to traverse parents of commit a5fd61b0c361c8a9b8a6737b33ecc9efab46e0ad\nerror: remote did not send all necessary objects\n",
+  "root": "/dev/shm/pt-calendar-integration-58d79b68c9e4",
+  "git": "/dev/shm/pt-calendar-integration-58d79b68c9e4/git",
+  "read_only_alternate": "/home/jacob/workflow-checks-pt-calendar-source-58d79b68/.git/objects"
+}

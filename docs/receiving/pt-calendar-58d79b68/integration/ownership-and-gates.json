@@ -1,0 +1,23 @@
+{
+  "recorded_at": "2026-10-08T14:47:44.132Z",
+  "source_claim": {
+    "key": "claim:ptauth-calendar-58d79b68c9e4",
+    "latest_active_seq": 4216,
+    "event": "cev_15062c5586574450bd147d60",
+    "status": "active; source integration and final hosted gates pending"
+  },
+  "project_issue": "https://github.com/Jacob-Met/workflow-checks/issues/27",
+  "earlier_owner": "https://github.com/Jacob-Met/workflow-checks/issues/26#issuecomment-6062065947",
+  "historical_browser_receiving": "https://github.com/Jacob-Met/workflow-checks/issues/27#issuecomment-6062013826",
+  "current_browser_receiving": "https://github.com/Jacob-Met/workflow-checks/issues/27#issuecomment-6062290967",
+  "qualified_source": "33432db05b9def1a249650c79571402400c18d15",
+  "current_publication_parent": "5a70e458ed455d47ef672ed9b5a614ec59812f0c",
+  "scope": "Eight feature/bootstrap paths plus this receiving prefix. Earlier uncovered PR34 and later Utility PR36 remain canonical.",
+  "gates": {
+    "historical_formatter_review": "18/18; exact formatter retained",
+    "test_bootstrap_review": "independent exact diff and whole-tail preservation pass",
+    "current_native": "calendar19 and uncovered9 pass; 7 inline groups overlap one method",
+    "current_browser": "5/5, 3 real completed files, no exceptions, all118 source leaves preserved",
+    "final_hosted": "pending publication; no merge claimed"
+  }
+}

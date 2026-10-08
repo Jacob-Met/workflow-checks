@@ -1,0 +1,1084 @@
+{
+  "schema": "pt_calendar.independent_browser.v1",
+  "started_at": "2026-10-08T13:46:56.117Z",
+  "source_boundary": "Exact frozen PT native server/UI in an isolated synthetic fixture; actual completed Chrome downloads. No calendar importer, full repository build or later-parent execution claim.",
+  "driver_sha256": "f0a399e7f67f35804e963276b5b1b96e8ee93ca58d1210fee29ec53135a57b35",
+  "contract_sha256": "0bc7fe83e5dc587e0a6734de50d42cd6f3d53a05ebb083a429d77a6c4a1ac037",
+  "specification_sha256": "17dbd8b0d7c729b1cb261e34375abc3dbbf266faeea0b6ebb7a07ab5a6668d7c",
+  "baseline_commit": "9e931fa9f42033bf2368f7149684fb5631345715",
+  "candidate_commit": "d75fb908a9893fd40b21112f62af16d32027bbe1",
+  "control_method": "Actual Chrome DOM/control events and pointer actions; genuine Tab/Enter export activation. Race controls pause actual HTTP requests/responses through CDP Fetch. Date/select setup uses DOM values plus input/change events. Author test bodies and calendar formatter are not imported.",
+  "selected_check": "edited as-of, revert and actual refreshed report",
+  "receiver_revision": "v2: only the as-of expectation is corrected against independently executed original engine; v1 failures retained",
+  "free_bytes_before": 901857280,
+  "baseline_server": {
+    "pid": 25349,
+    "url": "http://127.0.0.1:63078",
+    "source": "/Users/me/pt-calendar-browser-review-58d79b68c9e4/baseline/pt_auth",
+    "fixture": "/Users/me/pt-calendar-browser-review-58d79b68c9e4/browser-asof-v2/baseline-fixture",
+    "clinic_timezone": "America/Los_Angeles"
+  },
+  "candidate_server": {
+    "pid": 25385,
+    "url": "http://127.0.0.1:63081",
+    "source": "/Users/me/pt-calendar-browser-review-58d79b68c9e4/candidate/pt_auth",
+    "fixture": "/Users/me/pt-calendar-browser-review-58d79b68c9e4/browser-asof-v2/candidate-fixture",
+    "clinic_timezone": "America/Los_Angeles"
+  },
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/154.0.8037.98",
+    "revision": "@b859317bf11f6be47f9b7799ec690a0a42a1fb33",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+    "jsVersion": "15.4.80.20"
+  },
+  "browser_pid": 25416,
+  "source_after": {
+    "baseline": [
+      {
+        "path": "ptauth/__init__.py",
+        "bytes": 311,
+        "sha256": "71e1527f153c607b679485e4954af1b3ec6a843b041562eb07f4d36e08fd231c",
+        "mode": 420
+      },
+      {
+        "path": "ptauth/__main__.py",
+        "bytes": 57,
+        "sha256": "4b1afbca74a10abc3cff7b4e5a11b558bf619e45b89709faf9225a474a2a250f",
+        "mode": 420
+      },
+      {
+        "path": "ptauth/cli.py",
+        "bytes": 3618,
+        "sha256": "ec368a77a8c96e68a86718150bc35138ce5cdbd621b51988daf3568e3d342222",
+        "mode": 420
+      },
+      {
+        "path": "ptauth/data.py",
+        "bytes": 10283,
+        "sha256": "eeab8ab5b2b72524148969de0d13b27126cc64c4ec79b68a147b51b25a3741e2",
+        "mode": 420
+      },
+      {
+        "path": "ptauth/engine.py",
+        "bytes": 16057,
+        "sha256": "bfa7049e9b133d654ce947b135c17ac401bd7b1fcd76350bdb10de5b7a1ad1f7",
+        "mode": 420
+      },
+      {
+        "path": "ptauth/report.py",
+        "bytes": 10086,
+        "sha256": "794cf0a631b0f1a33ea85df4de387be0ce12d2744e8c8cb1308a61ce99516740",
+        "mode": 420
+      },
+      {
+        "path": "ptauth/synth.py",
+        "bytes": 8873,
+        "sha256": "b82a34447e43dacbe46ed06e60b693ed216e87f15892ae297c682aa5a3f139fd",
+        "mode": 420
+      },
+      {
+        "path": "ptauth/ui.html",
+        "bytes": 12468,
+        "sha256": "c94b54f51fbdedc6fe19bb36ac8e74973c834fc5a0ffa6b474d63eb61edc61c4",
+        "mode": 420
+      },
+      {
+        "path": "ptauth/web.py",
+        "bytes": 6239,
+        "sha256": "2f7d01cda0bb42e907d135d4a34cedb655b780c646cbe01ed4050ab7c11b2b23",
+        "mode": 420
+      },
+      {
+        "path": "README.md",
+        "bytes": 16098,
+        "sha256": "93c5ec2693f80c4312557a73aa7ccbcff2792b7b603bd98d4bec7866a9cc1e6f",
+        "mode": 420
+      }
+    ],
+    "candidate": [
+      {
+        "path": "evidence/clinic-timezone-86776bb3cdb8/authored-input/authorizations.csv",
+        "bytes": 118,
+        "sha256": "091587c00fdb6dab64984748dc4422231e56925ffedebea6f2b51f6b2e5c443b",
+        "mode": 420
+      },
+      {
+        "path": "evidence/clinic-timezone-86776bb3cdb8/authored-input/patients.csv",
+        "bytes": 82,
+        "sha256": "e75fd0cb276418bdafc7137132932fe6173b4d75c1ae66ecd74df3e1e77641b2",
+        "mode": 420
+      },
+      {
+        "path": "evidence/clinic-timezone-86776bb3cdb8/authored-input/payers.csv",
+        "bytes": 174,
+        "sha256": "f51ccd856655e80fae682c091cd4d798c8212697106371338c497082c53b9459",
+        "mode": 420
+      },
+      {
+        "path": "evidence/clinic-timezone-86776bb3cdb8/authored-input/schedule.csv",
+        "bytes": 154,
+        "sha256": "8ff27d51aa43d7c8ccd0c0b284a4f85a3a8643134ad905a0d5d87f0ec7eda7af",
+        "mode": 420
+      },
+      {
+        "path": "evidence/clinic-timezone-86776bb3cdb8/baseline-author-tests.log",
+        "bytes": 28530,
+        "sha256": "9222d392f8608d14172cc07e3fa0bb82d2cdb59bbd8d017b5e437e0c182ece4e",
+        "mode": 420
+      },
+      {
+        "path": "evidence/clinic-timezone-86776bb3cdb8/baseline-host-drift.json",
+        "bytes": 2954,
+        "sha256": "a06121c47b0c8d6f53e45f10df83f006e49c341da4d0eb9649ee7fa6b67fc5b3",
+        "mode": 420
+      },
+      {
+        "path": "evidence/clinic-timezone-86776bb3cdb8/candidate-tests.log",
+        "bytes": 515,
+        "sha256": "94dc4d9edab7d886625a06c1aa519868bc6c82dfe54b01ef7b4de7231dddbf4e",
+        "mode": 420
+      },
+      {
+        "path": "evidence/clinic-timezone-86776bb3cdb8/final-tests.log",
+        "bytes": 529,
+        "sha256": "849edbeb9d82eb7fc519a258a7d1ff1285f4a3908481d18d6d046126a6d7bd6a",
+        "mode": 420
+      },
+      {
+        "path": "evidence/clinic-timezone-86776bb3cdb8/other-project-gates.json",
+        "bytes": 715,
+        "sha256": "a97968e56fdc27387aed2897ce00e901046e4cb996ec2ad8f704d8e868ebbd22",
+        "mode": 420
+      },
+      {
+        "path": "evidence/clinic-timezone-86776bb3cdb8/README.md",
+        "bytes": 7992,
+        "sha256": "d70e94e2575a8bdfe0a49ca7bdb19f848be994f2fc6c0188575d224017962d87",
+        "mode": 420
+      },
+      {
+        "path": "evidence/clinic-timezone-86776bb3cdb8/receiving/artifact-paths.json",
+        "bytes": 257,
+        "sha256": "78cdfa606c8d4d6dd32f93a4468a8c1b3c5aacaed809ad338e858967756ddbd1",
+        "mode": 420
+      },
+      {
+        "path": "evidence/clinic-timezone-86776bb3cdb8/receiving/baseline-cache-control-receipt.json",
+        "bytes": 624,
+        "sha256": "5336c287cc606d03b073ccc096fe6c68a0853f6ace1c5881fbf65791c504cb68",
+        "mode": 420
+      },
+      {
+        "path": "evidence/clinic-timezone-86776bb3cdb8/receiving/baseline-cache-control.log",
+        "bytes": 1926,
+        "sha256": "8f5d2329162e479387fb80b2591a1a64dfa6bdb39467d1326bd1b96c682aa9e4",
+        "mode": 420
+      },
+      {
+        "path": "evidence/clinic-timezone-86776bb3cdb8/receiving/baseline-host-drift-inputs/authorizations.csv",
+        "bytes": 121,
+        "sha256": "0cb56f784fcaecb2a7e6a4b11eeca6dbd5272ec6b11b3b460e3ecc6255b8aa96",
+        "mode": 420
+      },
+      {
+        "path": "evidence/clinic-timezone-86776bb3cdb8/receiving/baseline-host-drift-inputs/patients.csv",
+        "bytes": 87,
+        "sha256": "f1b7f9cdb4840dcc611b436d554b8e1a310b1695ffeef7b7a867ea34f99a3cbd",
+        "mode": 420
+      },
+      {
+        "path": "evidence/clinic-timezone-86776bb3cdb8/receiving/baseline-host-drift-inputs/payers.csv",
+        "bytes": 174,
+        "sha256": "f51ccd856655e80fae682c091cd4d798c8212697106371338c497082c53b9459",
+        "mode": 420
+      },
+      {
+        "path": "evidence/clinic-timezone-86776bb3cdb8/receiving/baseline-host-drift-inputs/schedule.csv",
+        "bytes": 157,
+        "sha256": "0ca5db90521333ab1fded9e85bb33d387063f574611211fbc66a5ccf290d85e1",
+        "mode": 420
+      },
+      {
+        "path": "evidence/clinic-timezone-86776bb3cdb8/receiving/baseline-host-drift.json",
+        "bytes": 2774,
+        "sha256": "6faed10831515d44275e7c08ee38c1a1903d6a745e7527271eeaf4770c3b0e8c",
+        "mode": 420
+      },
+      {
+        "path": "evidence/clinic-timezone-86776bb3cdb8/receiving/candidate-independent-receipt.json",
+        "bytes": 592,
+        "sha256": "0f8194305fcaab2175feb181e1a1ecdfb57dc96abe6d2e67ed87dee5ed559caa",
+        "mode": 420
+      },
+      {
+        "path": "evidence/clinic-timezone-86776bb3cdb8/receiving/candidate-independent.log",
+        "bytes": 99,
+        "sha256": "6f6c11e74c311c9bd5050efd758133d8040f8cf24cac656c019d407810e5356e",
+        "mode": 420
+      },
+      {
+        "path": "evidence/clinic-timezone-86776bb3cdb8/receiving/candidate-source-manifest.json",
+        "bytes": 22281,
+        "sha256": "3ec0ea55f16c11fc6a801dc34917b783e02df5d1be55f626e3dd6d73efb0fb65",
+        "mode": 420
+      },
+      {
+        "path": "evidence/clinic-timezone-86776bb3cdb8/receiving/file-hashes.json",
+        "bytes": 2152,
+        "sha256": "bf05387f174e6b60eeb3dc1d5bd27ff6aac921b48fd5cd24e3d85bd6c05ca3a6",
+        "mode": 420
+      },
+      {
+        "path": "evidence/clinic-timezone-86776bb3cdb8/receiving/live-main.json",
+        "bytes": 349,
+        "sha256": "c0f9b79d2af4937c71ac4cac35dd8909b8d0f9c6d0c2a9dd4dee5807e1d46dc5",
+        "mode": 420
+      },
+      {
+        "path": "evidence/clinic-timezone-86776bb3cdb8/receiving/REVIEW.md",
+        "bytes": 6378,
+        "sha256": "8e698cbbe260a714379f418a1d5b6f7ebebd1a442c5806140d82b44dfed1592c",
+        "mode": 420
+      },
+      {
+        "path": "evidence/clinic-timezone-86776bb3cdb8/receiving/source-preservation.json",
+        "bytes": 1648,
+        "sha256": "a94cfc10436c69ceacb45f6bb2d70d86aec8c68b7de50fe4e8e1513e3c024857",
+        "mode": 420
+      },
+      {
+        "path": "evidence/clinic-timezone-86776bb3cdb8/receiving/test_receiving_timezone.py.txt",
+        "bytes": 11789,
+        "sha256": "99304b0324fe13c62be3bc4685e938b8efb0ffd7cbbb739f7c49bebaa8466ead",
+        "mode": 420
+      },
+      {
+        "path": "evidence/clinic-timezone-86776bb3cdb8/severe-lint.log",
+        "bytes": 19,
+        "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+        "mode": 420
+      },
+      {
+        "path": "evidence/clinic-timezone-86776bb3cdb8/source-receipt.json",
+        "bytes": 5067,
+        "sha256": "0ebef94d3926e8943f68438a9d4be1750224b227034f3c4af714a27f86dd9cab",
+        "mode": 420
+      },
+      {
+        "path": "HARDENING.md",
+        "bytes": 11058,
+        "sha256": "660150926267145f95caf941efe9a5db4e3a0964229fdc330dea23718faea0f9",
+        "mode": 420
+      },
+      {
+        "path": "ptauth/__init__.py",
+        "bytes": 311,
+        "sha256": "71e1527f153c607b679485e4954af1b3ec6a843b041562eb07f4d36e08fd231c",
+        "mode": 420
+      },
+      {
+        "path": "ptauth/__main__.py",
+        "bytes": 57,
+        "sha256": "4b1afbca74a10abc3cff7b4e5a11b558bf619e45b89709faf9225a474a2a250f",
+        "mode": 420
+      },
+      {
+        "path": "ptauth/calendar_ui.js",
+        "bytes": 8448,
+        "sha256": "b91fe76b947f381b2fa0835646fc664bf7eaa4474631ae3c9e5cb3968b9cdf3a",
+        "mode": 420
+      },
+      {
+        "path": "ptauth/cli.py",
+        "bytes": 4913,
+        "sha256": "b3c8052b0be06b50f6b534585bf27e5a3ddaa1d7cfd20fc21840461fb8e9c2ed",
+        "mode": 420
+      },
+      {
+        "path": "ptauth/data.py",
+        "bytes": 10283,
+        "sha256": "eeab8ab5b2b72524148969de0d13b27126cc64c4ec79b68a147b51b25a3741e2",
+        "mode": 420
+      },
+      {
+        "path": "ptauth/engine.py",
+        "bytes": 16057,
+        "sha256": "bfa7049e9b133d654ce947b135c17ac401bd7b1fcd76350bdb10de5b7a1ad1f7",
+        "mode": 420
+      },
+      {
+        "path": "ptauth/report.py",
+        "bytes": 10086,
+        "sha256": "794cf0a631b0f1a33ea85df4de387be0ce12d2744e8c8cb1308a61ce99516740",
+        "mode": 420
+      },
+      {
+        "path": "ptauth/synth.py",
+        "bytes": 8873,
+        "sha256": "b82a34447e43dacbe46ed06e60b693ed216e87f15892ae297c682aa5a3f139fd",
+        "mode": 420
+      },
+      {
+        "path": "ptauth/ui.html",
+        "bytes": 14769,
+        "sha256": "20dd667868f3fdaeba30404e158afd9d352d8ec14be445b006e3f6b633ede2f0",
+        "mode": 420
+      },
+      {
+        "path": "ptauth/web.py",
+        "bytes": 8633,
+        "sha256": "18a5f6e889f2a5d7e0e3704989f041681252df3ee0cb29e3c356aff560fd2967",
+        "mode": 420
+      },
+      {
+        "path": "ptauth/worklist_calendar.py",
+        "bytes": 13750,
+        "sha256": "89751f1de5548ced34a59c296d0edf1eda06a38bdb935be3e7c3c8b2ae5d55c0",
+        "mode": 420
+      },
+      {
+        "path": "README.md",
+        "bytes": 20307,
+        "sha256": "309f158b4ae6bf3ab5fdf8befeac6a3095d3424bc2b62d3a7da37955ee15e1e8",
+        "mode": 420
+      },
+      {
+        "path": "sample_data/authorizations.csv",
+        "bytes": 2990,
+        "sha256": "306cae3c27895d2b81978d4cf3115e867b8853edb4939ec8f7e733a7f27b0657",
+        "mode": 420
+      },
+      {
+        "path": "sample_data/expected.json",
+        "bytes": 3482,
+        "sha256": "0652052b6f37ce068cb77d4b8cde0f5a75d9b275be51b05f570c35a60a8a6d02",
+        "mode": 420
+      },
+      {
+        "path": "sample_data/patients.csv",
+        "bytes": 2333,
+        "sha256": "1dd9bc97889ca4a2e46e19804841d4af29ada284ede22d328370d20fb520e6e5",
+        "mode": 420
+      },
+      {
+        "path": "sample_data/payers.csv",
+        "bytes": 904,
+        "sha256": "81f143eed15c9ce613ee7cf372e51d6223a44700c877cc42d283a824d30900ed",
+        "mode": 420
+      },
+      {
+        "path": "sample_data/README_SYNTHETIC.txt",
+        "bytes": 262,
+        "sha256": "2a7e8be2b866866b2280df867a71ce18d57946b188ae9c9bb9d4af631b5f859a",
+        "mode": 420
+      },
+      {
+        "path": "sample_data/schedule.csv",
+        "bytes": 71520,
+        "sha256": "a5f9177b2e0fb9b4397a83839961d11c947e74cc2f13d5de29a31f39254e5198",
+        "mode": 420
+      },
+      {
+        "path": "tests/browser/visit_status_review.test.cjs",
+        "bytes": 12006,
+        "sha256": "a5543e92597b9e1bd1d7bb036547438abb60a93a8eca7745019c6b4c3b333f8f",
+        "mode": 420
+      },
+      {
+        "path": "tests/conftest.py",
+        "bytes": 102,
+        "sha256": "d8b2869aa8eac2206b490e4b76f49d6511a6da1c99506a96dc15caada93562a8",
+        "mode": 420
+      },
+      {
+        "path": "tests/test_clinic_timezone.py",
+        "bytes": 12481,
+        "sha256": "4590aaf4c3a880326e63a453038d39caa8c1613f163b754040210144a65cda05",
+        "mode": 420
+      },
+      {
+        "path": "tests/test_ptauth_hardening.py",
+        "bytes": 13114,
+        "sha256": "1b0499736cb42b428acd2e9015918a4243128f37e73d63c6a064d40e1f285c48",
+        "mode": 420
+      },
+      {
+        "path": "tests/test_ptauth.py",
+        "bytes": 7991,
+        "sha256": "4017335edc551349534ba74017460d097c7e3216be06bd286ac159882780eba2",
+        "mode": 420
+      },
+      {
+        "path": "tests/test_receiving_timezone.py",
+        "bytes": 11789,
+        "sha256": "99304b0324fe13c62be3bc4685e938b8efb0ffd7cbbb739f7c49bebaa8466ead",
+        "mode": 420
+      },
+      {
+        "path": "tests/test_visit_status_review.py",
+        "bytes": 9712,
+        "sha256": "698026dd625a13346bceb3695904f4d0604c70136ede2697b42547d184ca26db",
+        "mode": 420
+      },
+      {
+        "path": "tests/test_worklist_calendar.py",
+        "bytes": 20398,
+        "sha256": "083b3f29409e0e4fe4c55d2c93744740baba7d24fc3c82ec12137b0d5f981b2b",
+        "mode": 420
+      }
+    ]
+  },
+  "source_preserved": true,
+  "fixture_template_preserved": true,
+  "ended_at": "2026-10-08T13:46:59.487Z",
+  "checks": [
+    {
+      "name": "edited as-of, revert and actual refreshed report",
+      "status": "pass",
+      "empty_refreshed_report": {
+        "summary": "0 all-day event(s) · 0 excluded item(s)",
+        "context": "0 currently filtered item(s); report as of 2026-11-02. Clinic time zone: America/Los_Angeles. 0 undated; 0 approved/n/a (exclusion reasons can overlap).",
+        "status": "No dated open/submitted items in this selection. No calendar will be created.",
+        "disabled": true,
+        "button": "Download calendar (.ics)",
+        "shown": "0 of 0 items",
+        "asof": "2026-11-02",
+        "query": "",
+        "clinic": "",
+        "states": "",
+        "keys": [],
+        "lines": [],
+        "focused": {
+          "id": "",
+          "text": "\nSYNTHETIC DATA — NOT REAL PATIENTS · proof of concept · nothing is sent to any payer\n\n  P",
+          "download": false
+        }
+      },
+      "eligible_refreshed_report": {
+        "summary": "3 all-day event(s) · 2 excluded item(s)",
+        "context": "5 currently filtered item(s); report as of 2026-10-30. Clinic time zone: America/Los_Angeles. 2 undated; 0 approved/n/a (exclusion reasons can overlap).",
+        "status": "Uses recorded submit-by dates only. Review these items before downloading.",
+        "disabled": false,
+        "button": "Download 3 event(s) (.ics)",
+        "shown": "5 of 7 items",
+        "asof": "2026-10-30",
+        "query": "",
+        "clinic": "",
+        "states": "",
+        "keys": [
+          "PT1005|PTEST|",
+          "PT1006|PTEST|",
+          "PT1001|PTEST|AUTH-PT1001",
+          "PT1002|PTEST|AUTH-PT1002",
+          "PT1007|PTEST|AUTH-PT1007"
+        ],
+        "lines": [
+          "Include · 2026-10-31 · PT1001 · Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\\literal · AUTH-PT1001 · East · open",
+          "Include · 2026-11-01 · PT1002 · Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\\literal · AUTH-PT1002 · West · submitted",
+          "Include · 2026-11-04 · PT1007 · Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\\literal · AUTH-PT1007 · East · open",
+          "Exclude · PT1005 · no auth · no recorded submit-by date",
+          "Exclude · PT1006 · no auth · no recorded submit-by date"
+        ],
+        "focused": {
+          "id": "",
+          "text": "\nSYNTHETIC DATA — NOT REAL PATIENTS · proof of concept · nothing is sent to any payer\n\n  P",
+          "download": false
+        }
+      },
+      "original_engine_oracle_sha256": "2daef3d2c256108a174667eba1034b3f68035b9dba156a118cd5961f409dd48e",
+      "download": "fresh-reviewed-october-30",
+      "screenshot": {
+        "path": "fresh-asof-reviewed.png",
+        "bytes": 177401,
+        "sha256": "3d702a802d85392018d4b8fcca1bde0ee6e40fba9b5a75f6eec1a7b54b0207a2",
+        "width": 1280,
+        "height": 900
+      },
+      "no_download_during_edit_or_empty_review": true,
+      "v1_preserved_failure": "The original check expected an enabled export after all synthetic visits. The unchanged original engine independently confirms an empty worklist, now explicitly required."
+    }
+  ],
+  "downloads": [
+    {
+      "label": "fresh-reviewed-october-30",
+      "guid": "0998809b-9678-49bd-b30c-fb958ded1a8a",
+      "suggested_filename": "ptauth-submit-by.ics",
+      "state": "completed",
+      "native_path": "/Users/me/pt-calendar-browser-review-58d79b68c9e4/browser-asof-v2/downloads/0998809b-9678-49bd-b30c-fb958ded1a8a",
+      "received_bytes": 4258,
+      "bytes": 4258,
+      "sha256": "1431e2000c2ff1e9906da2406bfc0471a6e83de07622fa4279f8727024f24dd2",
+      "artifact": "fresh-reviewed-october-30.ics",
+      "begin_utc": "2026-10-08T13:46:58.989Z",
+      "end_utc": "2026-10-08T13:46:59.053Z",
+      "content": {
+        "events": [
+          {
+            "key": "PT1001|PTEST|AUTH-PT1001",
+            "uid": "3f6ca0c8eb7562bfadc1ac5d3d3bee98407740e850f73eebdc3fb44c84d370be@ptauth.workflow-checks.invalid",
+            "date": "2026-10-31",
+            "staff_state": "open",
+            "stamp": "20261008T134659Z",
+            "properties": [
+              "UID",
+              "DTSTAMP",
+              "DTSTART;VALUE=DATE",
+              "SUMMARY",
+              "DESCRIPTION",
+              "TRANSP"
+            ]
+          },
+          {
+            "key": "PT1002|PTEST|AUTH-PT1002",
+            "uid": "07a926811c7e1cfd700cf112d58f69c5f761bb5296713c04765d7821072f2870@ptauth.workflow-checks.invalid",
+            "date": "2026-11-01",
+            "staff_state": "submitted",
+            "stamp": "20261008T134659Z",
+            "properties": [
+              "UID",
+              "DTSTAMP",
+              "DTSTART;VALUE=DATE",
+              "SUMMARY",
+              "DESCRIPTION",
+              "TRANSP"
+            ]
+          },
+          {
+            "key": "PT1007|PTEST|AUTH-PT1007",
+            "uid": "ad08afd6b60834e6135aa59168b19b255b71de9c943762c036345089155f0371@ptauth.workflow-checks.invalid",
+            "date": "2026-11-04",
+            "staff_state": "open",
+            "stamp": "20261008T134659Z",
+            "properties": [
+              "UID",
+              "DTSTAMP",
+              "DTSTART;VALUE=DATE",
+              "SUMMARY",
+              "DESCRIPTION",
+              "TRANSP"
+            ]
+          }
+        ],
+        "uids": {
+          "PT1001|PTEST|AUTH-PT1001": "3f6ca0c8eb7562bfadc1ac5d3d3bee98407740e850f73eebdc3fb44c84d370be@ptauth.workflow-checks.invalid",
+          "PT1002|PTEST|AUTH-PT1002": "07a926811c7e1cfd700cf112d58f69c5f761bb5296713c04765d7821072f2870@ptauth.workflow-checks.invalid",
+          "PT1007|PTEST|AUTH-PT1007": "ad08afd6b60834e6135aa59168b19b255b71de9c943762c036345089155f0371@ptauth.workflow-checks.invalid"
+        },
+        "physical_lines": 74,
+        "folded_lines": 45,
+        "max_line_octets": 75
+      }
+    }
+  ],
+  "mutations": [],
+  "exceptions": [],
+  "dialogs": [],
+  "transport": [],
+  "child_exits": [
+    {
+      "label": "baseline",
+      "pid": 25349,
+      "code": null,
+      "signal": "SIGTERM"
+    },
+    {
+      "label": "candidate",
+      "pid": 25385,
+      "code": null,
+      "signal": "SIGTERM"
+    },
+    {
+      "label": "chrome",
+      "pid": 25416,
+      "code": 0,
+      "signal": null
+    }
+  ],
+  "source_before": {
+    "baseline": [
+      {
+        "path": "ptauth/__init__.py",
+        "bytes": 311,
+        "sha256": "71e1527f153c607b679485e4954af1b3ec6a843b041562eb07f4d36e08fd231c",
+        "mode": 420
+      },
+      {
+        "path": "ptauth/__main__.py",
+        "bytes": 57,
+        "sha256": "4b1afbca74a10abc3cff7b4e5a11b558bf619e45b89709faf9225a474a2a250f",
+        "mode": 420
+      },
+      {
+        "path": "ptauth/cli.py",
+        "bytes": 3618,
+        "sha256": "ec368a77a8c96e68a86718150bc35138ce5cdbd621b51988daf3568e3d342222",
+        "mode": 420
+      },
+      {
+        "path": "ptauth/data.py",
+        "bytes": 10283,
+        "sha256": "eeab8ab5b2b72524148969de0d13b27126cc64c4ec79b68a147b51b25a3741e2",
+        "mode": 420
+      },
+      {
+        "path": "ptauth/engine.py",
+        "bytes": 16057,
+        "sha256": "bfa7049e9b133d654ce947b135c17ac401bd7b1fcd76350bdb10de5b7a1ad1f7",
+        "mode": 420
+      },
+      {
+        "path": "ptauth/report.py",
+        "bytes": 10086,
+        "sha256": "794cf0a631b0f1a33ea85df4de387be0ce12d2744e8c8cb1308a61ce99516740",
+        "mode": 420
+      },
+      {
+        "path": "ptauth/synth.py",
+        "bytes": 8873,
+        "sha256": "b82a34447e43dacbe46ed06e60b693ed216e87f15892ae297c682aa5a3f139fd",
+        "mode": 420
+      },
+      {
+        "path": "ptauth/ui.html",
+        "bytes": 12468,
+        "sha256": "c94b54f51fbdedc6fe19bb36ac8e74973c834fc5a0ffa6b474d63eb61edc61c4",
+        "mode": 420
+      },
+      {
+        "path": "ptauth/web.py",
+        "bytes": 6239,
+        "sha256": "2f7d01cda0bb42e907d135d4a34cedb655b780c646cbe01ed4050ab7c11b2b23",
+        "mode": 420
+      },
+      {
+        "path": "README.md",
+        "bytes": 16098,
+        "sha256": "93c5ec2693f80c4312557a73aa7ccbcff2792b7b603bd98d4bec7866a9cc1e6f",
+        "mode": 420
+      }
+    ],
+    "candidate": [
+      {
+        "path": "evidence/clinic-timezone-86776bb3cdb8/authored-input/authorizations.csv",
+        "bytes": 118,
+        "sha256": "091587c00fdb6dab64984748dc4422231e56925ffedebea6f2b51f6b2e5c443b",
+        "mode": 420
+      },
+      {
+        "path": "evidence/clinic-timezone-86776bb3cdb8/authored-input/patients.csv",
+        "bytes": 82,
+        "sha256": "e75fd0cb276418bdafc7137132932fe6173b4d75c1ae66ecd74df3e1e77641b2",
+        "mode": 420
+      },
+      {
+        "path": "evidence/clinic-timezone-86776bb3cdb8/authored-input/payers.csv",
+        "bytes": 174,
+        "sha256": "f51ccd856655e80fae682c091cd4d798c8212697106371338c497082c53b9459",
+        "mode": 420
+      },
+      {
+        "path": "evidence/clinic-timezone-86776bb3cdb8/authored-input/schedule.csv",
+        "bytes": 154,
+        "sha256": "8ff27d51aa43d7c8ccd0c0b284a4f85a3a8643134ad905a0d5d87f0ec7eda7af",
+        "mode": 420
+      },
+      {
+        "path": "evidence/clinic-timezone-86776bb3cdb8/baseline-author-tests.log",
+        "bytes": 28530,
+        "sha256": "9222d392f8608d14172cc07e3fa0bb82d2cdb59bbd8d017b5e437e0c182ece4e",
+        "mode": 420
+      },
+      {
+        "path": "evidence/clinic-timezone-86776bb3cdb8/baseline-host-drift.json",
+        "bytes": 2954,
+        "sha256": "a06121c47b0c8d6f53e45f10df83f006e49c341da4d0eb9649ee7fa6b67fc5b3",
+        "mode": 420
+      },
+      {
+        "path": "evidence/clinic-timezone-86776bb3cdb8/candidate-tests.log",
+        "bytes": 515,
+        "sha256": "94dc4d9edab7d886625a06c1aa519868bc6c82dfe54b01ef7b4de7231dddbf4e",
+        "mode": 420
+      },
+      {
+        "path": "evidence/clinic-timezone-86776bb3cdb8/final-tests.log",
+        "bytes": 529,
+        "sha256": "849edbeb9d82eb7fc519a258a7d1ff1285f4a3908481d18d6d046126a6d7bd6a",
+        "mode": 420
+      },
+      {
+        "path": "evidence/clinic-timezone-86776bb3cdb8/other-project-gates.json",
+        "bytes": 715,
+        "sha256": "a97968e56fdc27387aed2897ce00e901046e4cb996ec2ad8f704d8e868ebbd22",
+        "mode": 420
+      },
+      {
+        "path": "evidence/clinic-timezone-86776bb3cdb8/README.md",
+        "bytes": 7992,
+        "sha256": "d70e94e2575a8bdfe0a49ca7bdb19f848be994f2fc6c0188575d224017962d87",
+        "mode": 420
+      },
+      {
+        "path": "evidence/clinic-timezone-86776bb3cdb8/receiving/artifact-paths.json",
+        "bytes": 257,
+        "sha256": "78cdfa606c8d4d6dd32f93a4468a8c1b3c5aacaed809ad338e858967756ddbd1",
+        "mode": 420
+      },
+      {
+        "path": "evidence/clinic-timezone-86776bb3cdb8/receiving/baseline-cache-control-receipt.json",
+        "bytes": 624,
+        "sha256": "5336c287cc606d03b073ccc096fe6c68a0853f6ace1c5881fbf65791c504cb68",
+        "mode": 420
+      },
+      {
+        "path": "evidence/clinic-timezone-86776bb3cdb8/receiving/baseline-cache-control.log",
+        "bytes": 1926,
+        "sha256": "8f5d2329162e479387fb80b2591a1a64dfa6bdb39467d1326bd1b96c682aa9e4",
+        "mode": 420
+      },
+      {
+        "path": "evidence/clinic-timezone-86776bb3cdb8/receiving/baseline-host-drift-inputs/authorizations.csv",
+        "bytes": 121,
+        "sha256": "0cb56f784fcaecb2a7e6a4b11eeca6dbd5272ec6b11b3b460e3ecc6255b8aa96",
+        "mode": 420
+      },
+      {
+        "path": "evidence/clinic-timezone-86776bb3cdb8/receiving/baseline-host-drift-inputs/patients.csv",
+        "bytes": 87,
+        "sha256": "f1b7f9cdb4840dcc611b436d554b8e1a310b1695ffeef7b7a867ea34f99a3cbd",
+        "mode": 420
+      },
+      {
+        "path": "evidence/clinic-timezone-86776bb3cdb8/receiving/baseline-host-drift-inputs/payers.csv",
+        "bytes": 174,
+        "sha256": "f51ccd856655e80fae682c091cd4d798c8212697106371338c497082c53b9459",
+        "mode": 420
+      },
+      {
+        "path": "evidence/clinic-timezone-86776bb3cdb8/receiving/baseline-host-drift-inputs/schedule.csv",
+        "bytes": 157,
+        "sha256": "0ca5db90521333ab1fded9e85bb33d387063f574611211fbc66a5ccf290d85e1",
+        "mode": 420
+      },
+      {
+        "path": "evidence/clinic-timezone-86776bb3cdb8/receiving/baseline-host-drift.json",
+        "bytes": 2774,
+        "sha256": "6faed10831515d44275e7c08ee38c1a1903d6a745e7527271eeaf4770c3b0e8c",
+        "mode": 420
+      },
+      {
+        "path": "evidence/clinic-timezone-86776bb3cdb8/receiving/candidate-independent-receipt.json",
+        "bytes": 592,
+        "sha256": "0f8194305fcaab2175feb181e1a1ecdfb57dc96abe6d2e67ed87dee5ed559caa",
+        "mode": 420
+      },
+      {
+        "path": "evidence/clinic-timezone-86776bb3cdb8/receiving/candidate-independent.log",
+        "bytes": 99,
+        "sha256": "6f6c11e74c311c9bd5050efd758133d8040f8cf24cac656c019d407810e5356e",
+        "mode": 420
+      },
+      {
+        "path": "evidence/clinic-timezone-86776bb3cdb8/receiving/candidate-source-manifest.json",
+        "bytes": 22281,
+        "sha256": "3ec0ea55f16c11fc6a801dc34917b783e02df5d1be55f626e3dd6d73efb0fb65",
+        "mode": 420
+      },
+      {
+        "path": "evidence/clinic-timezone-86776bb3cdb8/receiving/file-hashes.json",
+        "bytes": 2152,
+        "sha256": "bf05387f174e6b60eeb3dc1d5bd27ff6aac921b48fd5cd24e3d85bd6c05ca3a6",
+        "mode": 420
+      },
+      {
+        "path": "evidence/clinic-timezone-86776bb3cdb8/receiving/live-main.json",
+        "bytes": 349,
+        "sha256": "c0f9b79d2af4937c71ac4cac35dd8909b8d0f9c6d0c2a9dd4dee5807e1d46dc5",
+        "mode": 420
+      },
+      {
+        "path": "evidence/clinic-timezone-86776bb3cdb8/receiving/REVIEW.md",
+        "bytes": 6378,
+        "sha256": "8e698cbbe260a714379f418a1d5b6f7ebebd1a442c5806140d82b44dfed1592c",
+        "mode": 420
+      },
+      {
+        "path": "evidence/clinic-timezone-86776bb3cdb8/receiving/source-preservation.json",
+        "bytes": 1648,
+        "sha256": "a94cfc10436c69ceacb45f6bb2d70d86aec8c68b7de50fe4e8e1513e3c024857",
+        "mode": 420
+      },
+      {
+        "path": "evidence/clinic-timezone-86776bb3cdb8/receiving/test_receiving_timezone.py.txt",
+        "bytes": 11789,
+        "sha256": "99304b0324fe13c62be3bc4685e938b8efb0ffd7cbbb739f7c49bebaa8466ead",
+        "mode": 420
+      },
+      {
+        "path": "evidence/clinic-timezone-86776bb3cdb8/severe-lint.log",
+        "bytes": 19,
+        "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+        "mode": 420
+      },
+      {
+        "path": "evidence/clinic-timezone-86776bb3cdb8/source-receipt.json",
+        "bytes": 5067,
+        "sha256": "0ebef94d3926e8943f68438a9d4be1750224b227034f3c4af714a27f86dd9cab",
+        "mode": 420
+      },
+      {
+        "path": "HARDENING.md",
+        "bytes": 11058,
+        "sha256": "660150926267145f95caf941efe9a5db4e3a0964229fdc330dea23718faea0f9",
+        "mode": 420
+      },
+      {
+        "path": "ptauth/__init__.py",
+        "bytes": 311,
+        "sha256": "71e1527f153c607b679485e4954af1b3ec6a843b041562eb07f4d36e08fd231c",
+        "mode": 420
+      },
+      {
+        "path": "ptauth/__main__.py",
+        "bytes": 57,
+        "sha256": "4b1afbca74a10abc3cff7b4e5a11b558bf619e45b89709faf9225a474a2a250f",
+        "mode": 420
+      },
+      {
+        "path": "ptauth/calendar_ui.js",
+        "bytes": 8448,
+        "sha256": "b91fe76b947f381b2fa0835646fc664bf7eaa4474631ae3c9e5cb3968b9cdf3a",
+        "mode": 420
+      },
+      {
+        "path": "ptauth/cli.py",
+        "bytes": 4913,
+        "sha256": "b3c8052b0be06b50f6b534585bf27e5a3ddaa1d7cfd20fc21840461fb8e9c2ed",
+        "mode": 420
+      },
+      {
+        "path": "ptauth/data.py",
+        "bytes": 10283,
+        "sha256": "eeab8ab5b2b72524148969de0d13b27126cc64c4ec79b68a147b51b25a3741e2",
+        "mode": 420
+      },
+      {
+        "path": "ptauth/engine.py",
+        "bytes": 16057,
+        "sha256": "bfa7049e9b133d654ce947b135c17ac401bd7b1fcd76350bdb10de5b7a1ad1f7",
+        "mode": 420
+      },
+      {
+        "path": "ptauth/report.py",
+        "bytes": 10086,
+        "sha256": "794cf0a631b0f1a33ea85df4de387be0ce12d2744e8c8cb1308a61ce99516740",
+        "mode": 420
+      },
+      {
+        "path": "ptauth/synth.py",
+        "bytes": 8873,
+        "sha256": "b82a34447e43dacbe46ed06e60b693ed216e87f15892ae297c682aa5a3f139fd",
+        "mode": 420
+      },
+      {
+        "path": "ptauth/ui.html",
+        "bytes": 14769,
+        "sha256": "20dd667868f3fdaeba30404e158afd9d352d8ec14be445b006e3f6b633ede2f0",
+        "mode": 420
+      },
+      {
+        "path": "ptauth/web.py",
+        "bytes": 8633,
+        "sha256": "18a5f6e889f2a5d7e0e3704989f041681252df3ee0cb29e3c356aff560fd2967",
+        "mode": 420
+      },
+      {
+        "path": "ptauth/worklist_calendar.py",
+        "bytes": 13750,
+        "sha256": "89751f1de5548ced34a59c296d0edf1eda06a38bdb935be3e7c3c8b2ae5d55c0",
+        "mode": 420
+      },
+      {
+        "path": "README.md",
+        "bytes": 20307,
+        "sha256": "309f158b4ae6bf3ab5fdf8befeac6a3095d3424bc2b62d3a7da37955ee15e1e8",
+        "mode": 420
+      },
+      {
+        "path": "sample_data/authorizations.csv",
+        "bytes": 2990,
+        "sha256": "306cae3c27895d2b81978d4cf3115e867b8853edb4939ec8f7e733a7f27b0657",
+        "mode": 420
+      },
+      {
+        "path": "sample_data/expected.json",
+        "bytes": 3482,
+        "sha256": "0652052b6f37ce068cb77d4b8cde0f5a75d9b275be51b05f570c35a60a8a6d02",
+        "mode": 420
+      },
+      {
+        "path": "sample_data/patients.csv",
+        "bytes": 2333,
+        "sha256": "1dd9bc97889ca4a2e46e19804841d4af29ada284ede22d328370d20fb520e6e5",
+        "mode": 420
+      },
+      {
+        "path": "sample_data/payers.csv",
+        "bytes": 904,
+        "sha256": "81f143eed15c9ce613ee7cf372e51d6223a44700c877cc42d283a824d30900ed",
+        "mode": 420
+      },
+      {
+        "path": "sample_data/README_SYNTHETIC.txt",
+        "bytes": 262,
+        "sha256": "2a7e8be2b866866b2280df867a71ce18d57946b188ae9c9bb9d4af631b5f859a",
+        "mode": 420
+      },
+      {
+        "path": "sample_data/schedule.csv",
+        "bytes": 71520,
+        "sha256": "a5f9177b2e0fb9b4397a83839961d11c947e74cc2f13d5de29a31f39254e5198",
+        "mode": 420
+      },
+      {
+        "path": "tests/browser/visit_status_review.test.cjs",
+        "bytes": 12006,
+        "sha256": "a5543e92597b9e1bd1d7bb036547438abb60a93a8eca7745019c6b4c3b333f8f",
+        "mode": 420
+      },
+      {
+        "path": "tests/conftest.py",
+        "bytes": 102,
+        "sha256": "d8b2869aa8eac2206b490e4b76f49d6511a6da1c99506a96dc15caada93562a8",
+        "mode": 420
+      },
+      {
+        "path": "tests/test_clinic_timezone.py",
+        "bytes": 12481,
+        "sha256": "4590aaf4c3a880326e63a453038d39caa8c1613f163b754040210144a65cda05",
+        "mode": 420
+      },
+      {
+        "path": "tests/test_ptauth_hardening.py",
+        "bytes": 13114,
+        "sha256": "1b0499736cb42b428acd2e9015918a4243128f37e73d63c6a064d40e1f285c48",
+        "mode": 420
+      },
+      {
+        "path": "tests/test_ptauth.py",
+        "bytes": 7991,
+        "sha256": "4017335edc551349534ba74017460d097c7e3216be06bd286ac159882780eba2",
+        "mode": 420
+      },
+      {
+        "path": "tests/test_receiving_timezone.py",
+        "bytes": 11789,
+        "sha256": "99304b0324fe13c62be3bc4685e938b8efb0ffd7cbbb739f7c49bebaa8466ead",
+        "mode": 420
+      },
+      {
+        "path": "tests/test_visit_status_review.py",
+        "bytes": 9712,
+        "sha256": "698026dd625a13346bceb3695904f4d0604c70136ede2697b42547d184ca26db",
+        "mode": 420
+      },
+      {
+        "path": "tests/test_worklist_calendar.py",
+        "bytes": 20398,
+        "sha256": "083b3f29409e0e4fe4c55d2c93744740baba7d24fc3c82ec12137b0d5f981b2b",
+        "mode": 420
+      }
+    ]
+  },
+  "fixture_template": [
+    {
+      "path": "data/authorizations.csv",
+      "bytes": 374,
+      "sha256": "5dd5d1fefb3e14ca0b0b900f6e452d93cfcc31882b9cdbd231f5e27f2d77f546",
+      "mode": 420
+    },
+    {
+      "path": "data/expected.json",
+      "bytes": 43,
+      "sha256": "6af5c908df574a88e6a257880155d5cda7542c67528d3548dcb736d1a9bc5984",
+      "mode": 420
+    },
+    {
+      "path": "data/patients.csv",
+      "bytes": 335,
+      "sha256": "8eaabdd8c167b96f529e0c8cab36772f233609188229ebb169e2c76d5a6c0b7d",
+      "mode": 420
+    },
+    {
+      "path": "data/payers.csv",
+      "bytes": 358,
+      "sha256": "7945074d84b642f19682e54a5765bd12743bc92d7d1edb8c8b9be2585e0784a8",
+      "mode": 420
+    },
+    {
+      "path": "data/schedule.csv",
+      "bytes": 692,
+      "sha256": "d621ab89ff22087e60e0fef7a95b5e7ec14dab6c1b80da5f08f5edf3d56f2da3",
+      "mode": 420
+    },
+    {
+      "path": "fixture-description.json",
+      "bytes": 6508,
+      "sha256": "fdc34f746d14f5bbc6e2b54cb0a3afefc400f0d8642a40c63ff31d995cc43e35",
+      "mode": 420
+    },
+    {
+      "path": "manifest.json",
+      "bytes": 2002,
+      "sha256": "f8a01589d951efeb8260d9c0295e32217a09f8c10f7735d4313da452b4637484",
+      "mode": 420
+    },
+    {
+      "path": "out/audit.jsonl",
+      "bytes": 321,
+      "sha256": "a084f846cbf13671c59d32587f9fb8181a913555ddc5f465fa9999e1e26401a6",
+      "mode": 420
+    },
+    {
+      "path": "out/digest.html",
+      "bytes": 7443,
+      "sha256": "e1e19c5df269b3870847894e971238eab71f7b6db3989258d8af57593acdd4bc",
+      "mode": 420
+    },
+    {
+      "path": "out/ledger.csv",
+      "bytes": 601,
+      "sha256": "9f6f1b01f90d8e6587838cf02909bc394b58c095e4d5b639a698f417d9b0c311",
+      "mode": 420
+    },
+    {
+      "path": "out/summary.json",
+      "bytes": 11268,
+      "sha256": "7992741e2535c87591e1237eb51cfc667cdf2fbf25c8e4e875a5dd59ba0a3ec3",
+      "mode": 420
+    },
+    {
+      "path": "out/visit_status_review.csv",
+      "bytes": 125,
+      "sha256": "9cb3e3e82e30935f57448ed826dbd8dab78e39355e3bebba59c478fa355ee170",
+      "mode": 420
+    },
+    {
+      "path": "out/work_state.json",
+      "bytes": 657,
+      "sha256": "2348a7fecbc2e7d096dc1f1b8f5724e75e99628f1446a8aa9f4f06a72cd1d59d",
+      "mode": 420
+    },
+    {
+      "path": "out/worklist.csv",
+      "bytes": 2432,
+      "sha256": "817ccc3e5885e01a43462c1422dd56ad82e1a7b3c10ad117842b65e8db56ed81",
+      "mode": 420
+    }
+  ],
+  "free_bytes_after": 896286720,
+  "passed": 1,
+  "failed": 0,
+  "status": "pass"
+}

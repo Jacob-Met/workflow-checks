@@ -1,0 +1,43 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Workflow Checks//Synthetic PT handoff v1//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:b519a830038d98e8d6c09139063f18516fa44b86458a76df75c1f29d1f6bdfc8@ptauth
+ .workflow-checks.invalid
+DTSTAMP:20270101T063019Z
+DTSTART;VALUE=DATE:20240229
+SUMMARY:[SYNTHETIC] P1 authorization review — default
+DESCRIPTION:SYNTHETIC INDEPENDENT RECEIVER — no real patient data\nAdmini
+ strative submit-by review\; no payer submission or staff-state change.\nWo
+ rk-item key: default|review-payer|review-auth\nPatient: default — Synthe
+ tic receiver\nPayer: review-payer — Fictional payer\nAuthorization: revi
+ ew-auth\nClinic: Synthetic clinic\nPriority: P1\nRecorded submit-by: 2024-
+ 02-29\nAuthorization end: 2027-02-28\nNext visit: 2026-12-21\nStaff state:
+  open\nStaff note: \nStaff state recorded at: unrecorded\nReport as of: 20
+ 26-10-08\nReport generated at (as recorded): 2020-01-02T03:04:05+00:00\nCl
+ inic time zone (context\; all-day date unchanged): America/New_York\nReaso
+ ns:\nRecorded reason\nDetails:\nRecorded detail\nChecklist:\nRecorded chec
+ klist\nSource evidence:\nsource.csv: row 3
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:b51c73d3c349090e89f5f7fed43ce69b7ed54736bd74ceeb590c15bfb4e264a4@ptauth
+ .workflow-checks.invalid
+DTSTAMP:20270101T063019Z
+DTSTART;VALUE=DATE:20260308
+SUMMARY:[SYNTHETIC] P1 authorization review — submitted
+DESCRIPTION:SYNTHETIC INDEPENDENT RECEIVER — no real patient data\nAdmini
+ strative submit-by review\; no payer submission or staff-state change.\nWo
+ rk-item key: submitted|review-payer|review-auth\nPatient: submitted — Sy
+ nthetic receiver\nPayer: review-payer — Fictional payer\nAuthorization: 
+ review-auth\nClinic: Synthetic clinic\nPriority: P1\nRecorded submit-by: 2
+ 026-03-08\nAuthorization end: 2027-02-28\nNext visit: 2026-12-21\nStaff st
+ ate: submitted\nStaff note: Awaiting an answer\nStaff state recorded at: o
+ riginal time\nReport as of: 2026-10-08\nReport generated at (as recorded):
+  2020-01-02T03:04:05+00:00\nClinic time zone (context\; all-day date uncha
+ nged): America/New_York\nReasons:\nRecorded reason\nDetails:\nRecorded det
+ ail\nChecklist:\nRecorded checklist\nSource evidence:\nsource.csv: row 3
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

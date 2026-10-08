@@ -1,0 +1,7 @@
+{
+  "kind": "receiver_setup_correction",
+  "failed_before_extract": true,
+  "error": "RuntimeError: unexpected archive member pt_auth type b'5'",
+  "reason": "First validator refused ordinary directory entries. Revised validator accepts only directory prefixes of expected regular files; links and other types remain rejected.",
+  "candidate_failure": false
+}

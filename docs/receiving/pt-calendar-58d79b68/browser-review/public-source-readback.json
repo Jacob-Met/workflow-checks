@@ -1,0 +1,346 @@
+{
+  "schema": "pt_calendar.public_source_receiving.v1",
+  "repository": "Jacob-Met/workflow-checks",
+  "native_commit": "d75fb908a9893fd40b21112f62af16d32027bbe1",
+  "published_commit": "a68a667f3610153618c6cc8952c72abe980d89aa",
+  "tree": "94074bd3d39705fced23629038ab79057e943aff",
+  "parents": [
+    "9e931fa9f42033bf2368f7149684fb5631345715"
+  ],
+  "full_tree_entries": 406,
+  "pt_files": 55,
+  "pt_files_exact": true,
+  "checks": [
+    {
+      "path": "pt_auth/HARDENING.md",
+      "sha": "49db3a3e425e2ecb6c36b000daf95874dbf88cd9",
+      "mode": "100644",
+      "matches": true
+    },
+    {
+      "path": "pt_auth/README.md",
+      "sha": "c499e9540c509c57b89232c739e8d280e835a6ad",
+      "mode": "100644",
+      "matches": true
+    },
+    {
+      "path": "pt_auth/evidence/clinic-timezone-86776bb3cdb8/README.md",
+      "sha": "becfc3cdcb7da57b5dc6c9309e4fe1c3e377bd18",
+      "mode": "100644",
+      "matches": true
+    },
+    {
+      "path": "pt_auth/evidence/clinic-timezone-86776bb3cdb8/authored-input/authorizations.csv",
+      "sha": "71f6c8f3b9df8559203f7b92b94a4c9c43f2e8cb",
+      "mode": "100644",
+      "matches": true
+    },
+    {
+      "path": "pt_auth/evidence/clinic-timezone-86776bb3cdb8/authored-input/patients.csv",
+      "sha": "3d5d64a4aca5ed619597b621c5ac6a0791b1f876",
+      "mode": "100644",
+      "matches": true
+    },
+    {
+      "path": "pt_auth/evidence/clinic-timezone-86776bb3cdb8/authored-input/payers.csv",
+      "sha": "e48f0222283217ba8cbbe629f43b363063ebd4a2",
+      "mode": "100644",
+      "matches": true
+    },
+    {
+      "path": "pt_auth/evidence/clinic-timezone-86776bb3cdb8/authored-input/schedule.csv",
+      "sha": "823ea4552478df0da5fde245cbd402720148cf0f",
+      "mode": "100644",
+      "matches": true
+    },
+    {
+      "path": "pt_auth/evidence/clinic-timezone-86776bb3cdb8/baseline-author-tests.log",
+      "sha": "1ab2b79cb7f281eff6b52341cdc7864e77d98157",
+      "mode": "100644",
+      "matches": true
+    },
+    {
+      "path": "pt_auth/evidence/clinic-timezone-86776bb3cdb8/baseline-host-drift.json",
+      "sha": "0fbbdae13da416f33b169b279339fc8172a5a5ff",
+      "mode": "100644",
+      "matches": true
+    },
+    {
+      "path": "pt_auth/evidence/clinic-timezone-86776bb3cdb8/candidate-tests.log",
+      "sha": "eba089371d34e9f0b2883211dad1d1dc7a138de3",
+      "mode": "100644",
+      "matches": true
+    },
+    {
+      "path": "pt_auth/evidence/clinic-timezone-86776bb3cdb8/final-tests.log",
+      "sha": "cce724f8354acb8c6cea7f275bab9362cd0361f3",
+      "mode": "100644",
+      "matches": true
+    },
+    {
+      "path": "pt_auth/evidence/clinic-timezone-86776bb3cdb8/other-project-gates.json",
+      "sha": "5fe874085912c00adec8b51e7b21d5e53ef2782d",
+      "mode": "100644",
+      "matches": true
+    },
+    {
+      "path": "pt_auth/evidence/clinic-timezone-86776bb3cdb8/receiving/REVIEW.md",
+      "sha": "70d9829fdcbeb1eb4c3e8232463c247a52bb85cb",
+      "mode": "100644",
+      "matches": true
+    },
+    {
+      "path": "pt_auth/evidence/clinic-timezone-86776bb3cdb8/receiving/artifact-paths.json",
+      "sha": "8dbf10db7e11a1892b6a92849a9cd6780dca11a2",
+      "mode": "100644",
+      "matches": true
+    },
+    {
+      "path": "pt_auth/evidence/clinic-timezone-86776bb3cdb8/receiving/baseline-cache-control-receipt.json",
+      "sha": "69738f59edcf06af6d9f16b783e08e66199547b1",
+      "mode": "100644",
+      "matches": true
+    },
+    {
+      "path": "pt_auth/evidence/clinic-timezone-86776bb3cdb8/receiving/baseline-cache-control.log",
+      "sha": "1ee489dc9be68e7b6002c5697bab45bcb097d99a",
+      "mode": "100644",
+      "matches": true
+    },
+    {
+      "path": "pt_auth/evidence/clinic-timezone-86776bb3cdb8/receiving/baseline-host-drift-inputs/authorizations.csv",
+      "sha": "7325c49743edc12cc1c4e1cabd12a12c562c9e44",
+      "mode": "100644",
+      "matches": true
+    },
+    {
+      "path": "pt_auth/evidence/clinic-timezone-86776bb3cdb8/receiving/baseline-host-drift-inputs/patients.csv",
+      "sha": "44cd97382ce50416593db433bdd71d655032d7b4",
+      "mode": "100644",
+      "matches": true
+    },
+    {
+      "path": "pt_auth/evidence/clinic-timezone-86776bb3cdb8/receiving/baseline-host-drift-inputs/payers.csv",
+      "sha": "e48f0222283217ba8cbbe629f43b363063ebd4a2",
+      "mode": "100644",
+      "matches": true
+    },
+    {
+      "path": "pt_auth/evidence/clinic-timezone-86776bb3cdb8/receiving/baseline-host-drift-inputs/schedule.csv",
+      "sha": "5438715ca58735920cf2caf5945180da3ac2ac77",
+      "mode": "100644",
+      "matches": true
+    },
+    {
+      "path": "pt_auth/evidence/clinic-timezone-86776bb3cdb8/receiving/baseline-host-drift.json",
+      "sha": "9e0ca1f00770607f8d354e957057479da41f5e02",
+      "mode": "100644",
+      "matches": true
+    },
+    {
+      "path": "pt_auth/evidence/clinic-timezone-86776bb3cdb8/receiving/candidate-independent-receipt.json",
+      "sha": "e93d0c905b114f5338c2b040e377953cbabe91b1",
+      "mode": "100644",
+      "matches": true
+    },
+    {
+      "path": "pt_auth/evidence/clinic-timezone-86776bb3cdb8/receiving/candidate-independent.log",
+      "sha": "ebe60a3da435181ca489ed7ac34aee87a7927ab4",
+      "mode": "100644",
+      "matches": true
+    },
+    {
+      "path": "pt_auth/evidence/clinic-timezone-86776bb3cdb8/receiving/candidate-source-manifest.json",
+      "sha": "14ea254bc78ed24b60dc90a7810c894c36c45598",
+      "mode": "100644",
+      "matches": true
+    },
+    {
+      "path": "pt_auth/evidence/clinic-timezone-86776bb3cdb8/receiving/file-hashes.json",
+      "sha": "75137b86d82f5d4c9052075434961ef61d52f550",
+      "mode": "100644",
+      "matches": true
+    },
+    {
+      "path": "pt_auth/evidence/clinic-timezone-86776bb3cdb8/receiving/live-main.json",
+      "sha": "3e8ebfaf8788168eb72ada1a79673f9688be035b",
+      "mode": "100644",
+      "matches": true
+    },
+    {
+      "path": "pt_auth/evidence/clinic-timezone-86776bb3cdb8/receiving/source-preservation.json",
+      "sha": "4f42256f1bdbd875cbc3e163daeba67ca8e92314",
+      "mode": "100644",
+      "matches": true
+    },
+    {
+      "path": "pt_auth/evidence/clinic-timezone-86776bb3cdb8/receiving/test_receiving_timezone.py.txt",
+      "sha": "18105410825b731e4475067d5e62124ea0cf4deb",
+      "mode": "100644",
+      "matches": true
+    },
+    {
+      "path": "pt_auth/evidence/clinic-timezone-86776bb3cdb8/severe-lint.log",
+      "sha": "1f5f344d054fae10f39140fb7199c99321d9190a",
+      "mode": "100644",
+      "matches": true
+    },
+    {
+      "path": "pt_auth/evidence/clinic-timezone-86776bb3cdb8/source-receipt.json",
+      "sha": "4ec46c888c2b9668947d476f67351ac4d16e965d",
+      "mode": "100644",
+      "matches": true
+    },
+    {
+      "path": "pt_auth/ptauth/__init__.py",
+      "sha": "a6f4545ac17e2578317ef694f7bb548489f6c71c",
+      "mode": "100644",
+      "matches": true
+    },
+    {
+      "path": "pt_auth/ptauth/__main__.py",
+      "sha": "3c93dd90cf357624c77ab3589ef2b201868c181e",
+      "mode": "100644",
+      "matches": true
+    },
+    {
+      "path": "pt_auth/ptauth/calendar_ui.js",
+      "sha": "a6ba45ec85c28f7fd80d7e2fdd32ac62e96daa99",
+      "mode": "100644",
+      "matches": true
+    },
+    {
+      "path": "pt_auth/ptauth/cli.py",
+      "sha": "b80869a8fe1c9310762a77f45bde939ff5e03b01",
+      "mode": "100644",
+      "matches": true
+    },
+    {
+      "path": "pt_auth/ptauth/data.py",
+      "sha": "19a2a1b79eff6d2753507eebf3bf78011ddaaa87",
+      "mode": "100644",
+      "matches": true
+    },
+    {
+      "path": "pt_auth/ptauth/engine.py",
+      "sha": "39c97f35d61ff949b5c2381f0ad60d7af8d74226",
+      "mode": "100644",
+      "matches": true
+    },
+    {
+      "path": "pt_auth/ptauth/report.py",
+      "sha": "608626d57918e4d43fca2fc14421063d35b49cfc",
+      "mode": "100644",
+      "matches": true
+    },
+    {
+      "path": "pt_auth/ptauth/synth.py",
+      "sha": "2ff6a2548bf55a812cfa62e397442a0d3f7debbb",
+      "mode": "100644",
+      "matches": true
+    },
+    {
+      "path": "pt_auth/ptauth/ui.html",
+      "sha": "6749bbf24c91e43e639c5455768f263b18e04507",
+      "mode": "100644",
+      "matches": true
+    },
+    {
+      "path": "pt_auth/ptauth/web.py",
+      "sha": "7e5d38f4cf8c33f4b9c91bd3c3d929fcfa0f80b3",
+      "mode": "100644",
+      "matches": true
+    },
+    {
+      "path": "pt_auth/ptauth/worklist_calendar.py",
+      "sha": "e125f9ed77343fcc3d82e6d6f25a7296b0463aa7",
+      "mode": "100644",
+      "matches": true
+    },
+    {
+      "path": "pt_auth/sample_data/README_SYNTHETIC.txt",
+      "sha": "943c3d0e2436abd6c1f3dcb6ef7b7f1aabaff90f",
+      "mode": "100644",
+      "matches": true
+    },
+    {
+      "path": "pt_auth/sample_data/authorizations.csv",
+      "sha": "036f7b276e3e09252afb886ad451531f51ada844",
+      "mode": "100644",
+      "matches": true
+    },
+    {
+      "path": "pt_auth/sample_data/expected.json",
+      "sha": "21177a89ac5c24c9faf79746550165a3a170d08a",
+      "mode": "100644",
+      "matches": true
+    },
+    {
+      "path": "pt_auth/sample_data/patients.csv",
+      "sha": "e67323b68d1ac9ee4a901dc3ef70a95384ba5000",
+      "mode": "100644",
+      "matches": true
+    },
+    {
+      "path": "pt_auth/sample_data/payers.csv",
+      "sha": "1853837e82048ac11698b4ad5bb6eeb055d56038",
+      "mode": "100644",
+      "matches": true
+    },
+    {
+      "path": "pt_auth/sample_data/schedule.csv",
+      "sha": "24a395250f5318004bab4f168c3ca237189ab354",
+      "mode": "100644",
+      "matches": true
+    },
+    {
+      "path": "pt_auth/tests/browser/visit_status_review.test.cjs",
+      "sha": "3fbc4bd1dcbbc1db11e40aeda589753f0328310c",
+      "mode": "100644",
+      "matches": true
+    },
+    {
+      "path": "pt_auth/tests/conftest.py",
+      "sha": "e4c2fd4ff87c63061fb6a10f0fb01228c46c0875",
+      "mode": "100644",
+      "matches": true
+    },
+    {
+      "path": "pt_auth/tests/test_clinic_timezone.py",
+      "sha": "2d5d43e389dc886f4a2a3bed9f536858be06d5f0",
+      "mode": "100644",
+      "matches": true
+    },
+    {
+      "path": "pt_auth/tests/test_ptauth.py",
+      "sha": "172f5fef3ccaa02e60b7ea11bfbcdac08c01d51c",
+      "mode": "100644",
+      "matches": true
+    },
+    {
+      "path": "pt_auth/tests/test_ptauth_hardening.py",
+      "sha": "4b8b689e31ed003e4b0755ae399355e4a19e5c71",
+      "mode": "100644",
+      "matches": true
+    },
+    {
+      "path": "pt_auth/tests/test_receiving_timezone.py",
+      "sha": "18105410825b731e4475067d5e62124ea0cf4deb",
+      "mode": "100644",
+      "matches": true
+    },
+    {
+      "path": "pt_auth/tests/test_visit_status_review.py",
+      "sha": "8bea7e9286cd3142f375de6a3d7bc08b57b75ef3",
+      "mode": "100644",
+      "matches": true
+    },
+    {
+      "path": "pt_auth/tests/test_worklist_calendar.py",
+      "sha": "99334636ddb2a051e1d50686934b4bf308d2be58",
+      "mode": "100644",
+      "matches": true
+    }
+  ],
+  "source_of_readback": "Direct independent GitHub Git commit and recursive tree API readback"
+}

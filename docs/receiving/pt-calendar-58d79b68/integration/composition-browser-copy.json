@@ -1,0 +1,17 @@
+{
+  "recorded_at": "2026-10-08T14:41:20.954Z",
+  "source": "/home/jacob/pt-calendar-composition-browser-review-58d79b68c9e4",
+  "native_source": "33432db05b9def1a249650c79571402400c18d15",
+  "files": 43,
+  "manifest_files": 42,
+  "bytes": 584641,
+  "manifest_sha256": "2fe58c53ad26fd03efa6deb3a0cbfb560fe959aca58db5ee2e54c6b92de277ce",
+  "all_copied_bytes_modes_exact": true,
+  "archive": {
+    "path": "composition-browser-review.tar.gz",
+    "bytes": 342120,
+    "sha256": "e8eb91af165f3ab8957fb682b717a9a35289e15ac8552236d237e8fb4dcfa4b1",
+    "git_blob": "ed1b7007b26bcee1ff2c083ab40730b6c0b7c13e"
+  },
+  "source_unchanged": true
+}

@@ -1,0 +1,2575 @@
+{
+  "schema": "pt_calendar.owned_cache_reclaim.v1",
+  "timestamp": "2026-10-08T13:42:35.620Z",
+  "authority": "Root authorized cleanup of own inactive reproducible QA .godot caches; preserve sources, captures, logs and failures.",
+  "directories": [
+    "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot",
+    "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot",
+    "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot",
+    "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot"
+  ],
+  "active_owned_godot_processes": [],
+  "files": [
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/.gdignore",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/editor/Main.tscn-folding-4a24720ee5e787dbe30abc634fa3679d.cfg",
+      "bytes": 2204,
+      "sha256": "78e81838c391f9a97f9976c70fcfef90d8b456a0efa13e366e0dcc449595e985"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/editor/filesystem_cache10",
+      "bytes": 25459,
+      "sha256": "96f82087ce28d6ed39546c8297c12fdbbca6781ec1e5d0ed2c5ff684a0f16bdc"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/editor/project_metadata.cfg",
+      "bytes": 161,
+      "sha256": "7676d6f9713922675c4c69eebcbe619876e79857b03f9383d546cb53c5e41fea"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/global_script_class_cache.cfg",
+      "bytes": 3023,
+      "sha256": "d4e9c6347f409a4e93f9ed41be17cad3372c5daa76493cb19205de3fed9dd83b"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/07_hybrid_hint_red_L.png-583ebf766882c48cb819597c4fc508a3.ctex",
+      "bytes": 124,
+      "sha256": "aa527acabe70c8700f1e996f28f0ace3bff4c8d5d53ce9d0dc7755f56df4cef5"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/07_hybrid_hint_red_L.png-583ebf766882c48cb819597c4fc508a3.md5",
+      "bytes": 91,
+      "sha256": "94ae64706967c20b62aa87c5b8f0b957409c4f5cd7c8222fc3e14c9b79d3e964"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/actor_idle_hint_v1_keepout46.png-b2671b0537a8541cac8d4e229349bb31.ctex",
+      "bytes": 500,
+      "sha256": "bcae66725fb65f5312b8f42e7266480f3dacfbc4f1bd06f62e1ea8a2a4c3a81a"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/actor_idle_hint_v1_keepout46.png-b2671b0537a8541cac8d4e229349bb31.md5",
+      "bytes": 91,
+      "sha256": "fea7de66d2d6ebbdd8dfffa819ab371a65a10689e236fab79f5fa969b6990e4a"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/actor_idle_hint_v2.png-2e71a0649fd98236a2eaf66f7a1c5f63.ctex",
+      "bytes": 522,
+      "sha256": "a83756f01d4d9020bcd58322335355d201c91e2e9036bb9da7acb1bb7a3e2c41"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/actor_idle_hint_v2.png-2e71a0649fd98236a2eaf66f7a1c5f63.md5",
+      "bytes": 91,
+      "sha256": "ce9c70c3441f8e1616b95e5c4855bec34620e949b34f844cfd1c391c073a867d"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/actors.png-c409099f953fc6aca62704f9aed539f2.ctex",
+      "bytes": 5524,
+      "sha256": "9c54044d4d88b05a5b35eae93db251bbf85b1a0d8c589970c7c9dd955f68db6f"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/actors.png-c409099f953fc6aca62704f9aed539f2.md5",
+      "bytes": 91,
+      "sha256": "5f42445a977c4dd6183f674fa1db9479a51ed4cf30128516ffad8448a37d43dd"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/bleed_floor_sheet.png-6c67dbea8f45b828fe2906feba9fda65.ctex",
+      "bytes": 174,
+      "sha256": "fe19aa2cf7eef7c9aa4603a83c992887a24bf9cd1807b9e14a7eab16fb7406a2"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/bleed_floor_sheet.png-6c67dbea8f45b828fe2906feba9fda65.md5",
+      "bytes": 91,
+      "sha256": "bab020271c436540e526fe7406c3a2149a5df05964b67c648892c56d94a23b1f"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/bleed_floor_v1_schematic_mud.png-43ffaaa553a7af4158a8ae303c9c530b.ctex",
+      "bytes": 1586,
+      "sha256": "24112c85040d0a1499f9aff5cb0bcb3322605cb22f2010eb1ddabc17ad8ef801"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/bleed_floor_v1_schematic_mud.png-43ffaaa553a7af4158a8ae303c9c530b.md5",
+      "bytes": 91,
+      "sha256": "558899d2e5a554ee0b3036e8ee2b4699250a18e6c0458b83ffc23b936b571386"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/bleed_floor_v4_map_schematic.png-17bf125c13c6971a2e34e799dc0132fc.ctex",
+      "bytes": 1166,
+      "sha256": "d69cc48fca540d52ac782d2f323ec396ea42447507337b370b8e44ee30727898"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/bleed_floor_v4_map_schematic.png-17bf125c13c6971a2e34e799dc0132fc.md5",
+      "bytes": 91,
+      "sha256": "f7038c4b9589af7b713b7170add99e54ed029e22ceb9d514e1a92e4f1b947b04"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/bleed_floor_v5_noise_blobs.png-08e4fad14c740cb9aa326f035c90a866.ctex",
+      "bytes": 1778,
+      "sha256": "e6fcaa233f6b5fe9b348715445691b0982f42059590dc5fca03ced9eaad9f777"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/bleed_floor_v5_noise_blobs.png-08e4fad14c740cb9aa326f035c90a866.md5",
+      "bytes": 91,
+      "sha256": "46ba41517bf7f167445ff9bd6fd9c0680d026a571717043c46a60a40f120359e"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/bleed_wall_sheet.png-1406a0656e0dbe1e1bce118a1dcb6fc2.ctex",
+      "bytes": 226,
+      "sha256": "f5f116be03dbdb86029bbfbe87b643c9b51df533b08a34f5a44224fbeff2a457"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/bleed_wall_sheet.png-1406a0656e0dbe1e1bce118a1dcb6fc2.md5",
+      "bytes": 91,
+      "sha256": "e01dddd8706143b68e447a7c873cf6373d58b56ac6d34f981c0343acac40153d"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/body_or_arc.png-29cff629ac596c2e5f94a5d703a2a0d2.ctex",
+      "bytes": 576,
+      "sha256": "bae4228f528a79fc1f3c921d473ac6ce6b2e3a8be1b0d51ac2b88c2959c70834"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/body_or_arc.png-29cff629ac596c2e5f94a5d703a2a0d2.md5",
+      "bytes": 91,
+      "sha256": "4a7e5768887f995af2b0817f9a8af509aea971cae5447c316e99d384cd35cd8e"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/body_or_arc.png-4202da7f25d66a4a803b5503e251ead1.ctex",
+      "bytes": 556,
+      "sha256": "c51fc5952f5a23fedb23975d1c6277c5f464a2f1e91bd3800d3cb8634154068a"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/body_or_arc.png-4202da7f25d66a4a803b5503e251ead1.md5",
+      "bytes": 91,
+      "sha256": "945e9cc408c2e1bebfa5b7c5e9b86afe86967128240e73064e4ac3ce07ddb8e3"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/body_or_arc.png-49bc1ad0b1c2efd56c6b931dde206692.ctex",
+      "bytes": 410,
+      "sha256": "b579a4ec436c625dba550c65a9c5d043ef1dc3d667ac871946ce28667b7359ec"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/body_or_arc.png-49bc1ad0b1c2efd56c6b931dde206692.md5",
+      "bytes": 91,
+      "sha256": "04bb724b65c91101b35bcbfadb0b457bb7feed7a12c3f6733e040d0f6640e835"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/circuit_node_v1.png-3b24bfa1c18d899d9d0882d8ad8d719f.ctex",
+      "bytes": 474,
+      "sha256": "4621e149ff010d596e933ecd890534c1f7d9ae8084bb68045179d1506504f650"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/circuit_node_v1.png-3b24bfa1c18d899d9d0882d8ad8d719f.md5",
+      "bytes": 91,
+      "sha256": "a6f0714f2938de74793193e3e266d180bb705fab115fc50887d7af24dd575935"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/circuit_node_v2.png-5db2e5d0b61b1428483e2bf626a6edb3.ctex",
+      "bytes": 436,
+      "sha256": "9e5e722657355697fc009193d558c69c627d7c27723ff3ea14bde434d01182c9"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/circuit_node_v2.png-5db2e5d0b61b1428483e2bf626a6edb3.md5",
+      "bytes": 91,
+      "sha256": "17ec3bcc97abba774eb46ff8fb6e2030c97184789757821c9f97a3c4143517b8"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/combo_heli_march_storm_still.png-0f7c77e6f130904d684e05af226d975e.ctex",
+      "bytes": 558,
+      "sha256": "3ec191c799c4d1378a59eed1d0a3ab79e3cda8d308efd0e600dd6f1a3de60f33"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/combo_heli_march_storm_still.png-0f7c77e6f130904d684e05af226d975e.md5",
+      "bytes": 91,
+      "sha256": "8ed6cf913fb745d75c270f9b9b9d2fd7689b9ab2b4afdbc92e24cebb63181af3"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/combo_heli_seq_oracle_still.png-3ee69693b46c0434ae15ad3a19b88d98.ctex",
+      "bytes": 494,
+      "sha256": "28bf6ccde1653c260d7fcd58c64442c18912e2f5f41fb7b145963e2191ce5fd8"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/combo_heli_seq_oracle_still.png-3ee69693b46c0434ae15ad3a19b88d98.md5",
+      "bytes": 91,
+      "sha256": "bd997d9dc6286bb7a40848c1daca61b60828e248363142739d003b2582e9f8b6"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/combo_march_seq_edict_still.png-2d7548ee3d580a7be0d6cd3bf27d4f7c.ctex",
+      "bytes": 528,
+      "sha256": "939e82654483f9fe5b9578a351b059a88f367cc05149b5fc53ef03262bb92bdd"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/combo_march_seq_edict_still.png-2d7548ee3d580a7be0d6cd3bf27d4f7c.md5",
+      "bytes": 91,
+      "sha256": "3c982fa6bae9d7ca02df1e2d56a64b4a9c2008da5f915a9898f84d7fc2b7644f"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/enemies.png-2d210a91acf956205d552681c2a2dfe9.ctex",
+      "bytes": 8712,
+      "sha256": "15827bf4f8596129bfed0ac03f9abfa62b25bec5be07c7090108fcacda7bf067"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/enemies.png-2d210a91acf956205d552681c2a2dfe9.md5",
+      "bytes": 91,
+      "sha256": "5351039b790afbfeb27c3b84b6a5c10ada93bb5b2178d20201801987704e34e9"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/enemies_sil.png-6325954954ca9f4a2f13391b93091b6b.ctex",
+      "bytes": 3578,
+      "sha256": "d1a863016ad391e2ecf8f578fe8db338dc0ac81ed6fc79e834ff1188d30ff997"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/enemies_sil.png-6325954954ca9f4a2f13391b93091b6b.md5",
+      "bytes": 91,
+      "sha256": "fbb7a7f94249cdfe6a8f8bd85325420b0c0987d1c7971de9e8c6129cd4fb33c5"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/enemy_grunt_v1.png-29cc531f7a0336ada7819edde5b86656.ctex",
+      "bytes": 538,
+      "sha256": "9fb88585fe6958d56a0b5ac72db3cfb3643666f825214ee3a29b66fd53478029"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/enemy_grunt_v1.png-29cc531f7a0336ada7819edde5b86656.md5",
+      "bytes": 91,
+      "sha256": "a724b79154db803351ec0f924751afb7a15c71686ff04423dd764ab7c4b856b7"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/enemy_grunt_v2.png-73e850c9fadd889f27ff74e96e2d32e3.ctex",
+      "bytes": 586,
+      "sha256": "14daa6cddcbadfff9d5faf656125273f99f3b7ca4f18f328aea661a9bc0ccd53"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/enemy_grunt_v2.png-73e850c9fadd889f27ff74e96e2d32e3.md5",
+      "bytes": 91,
+      "sha256": "cea201eaf711c51ba66b416588c260d587206a685cec12f8799eb23de8dee80c"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/entity_catalog.png-3270e8e40522e807e0cd1c5fa1fa0cff.ctex",
+      "bytes": 191264,
+      "sha256": "73d570d83c72424c2ba9dded7fc65cbfae77ee41e82b8c103c2d675ef9679434"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/entity_catalog.png-3270e8e40522e807e0cd1c5fa1fa0cff.md5",
+      "bytes": 91,
+      "sha256": "5ba75d0360830056a9c9c5f798131ec852896d28af06885e31bcfbbe7ddd863f"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/entity_catalog_sil.png-4e510d93dd65ec0c4b92583dcdabe164.ctex",
+      "bytes": 65694,
+      "sha256": "38c80e16730bd47f1d9b15995878e76a48e9bce6ad99757e116e4fb34ed51a1b"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/entity_catalog_sil.png-4e510d93dd65ec0c4b92583dcdabe164.md5",
+      "bytes": 91,
+      "sha256": "4b8578596d5c1565332c7030a48d3078f6c447a1b0e8584060da3fa4f6d39c35"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/floor_rubble_v1.png-384bf516c54c8419dc33a0029c0ff58e.ctex",
+      "bytes": 658,
+      "sha256": "bb45cd47285fde58987e8a3d135d01df7d7d2b7812395e9d290db33ee0c97851"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/floor_rubble_v1.png-384bf516c54c8419dc33a0029c0ff58e.md5",
+      "bytes": 91,
+      "sha256": "a350925bf2e61bfb09d2418f7bfdd3bffa75c75f42dbbd4ee172476e66ac409f"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/floor_rubble_v1_icon_lump.png-958d4c1da13f1281fb3718ac7f0e35d0.ctex",
+      "bytes": 658,
+      "sha256": "bb45cd47285fde58987e8a3d135d01df7d7d2b7812395e9d290db33ee0c97851"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/floor_rubble_v1_icon_lump.png-958d4c1da13f1281fb3718ac7f0e35d0.md5",
+      "bytes": 91,
+      "sha256": "a350925bf2e61bfb09d2418f7bfdd3bffa75c75f42dbbd4ee172476e66ac409f"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/floor_rubble_v2.png-cfa1e595e96790aca170491456e98bc7.ctex",
+      "bytes": 508,
+      "sha256": "5948d1af281b9273d2002ee2665032a0ff735287f59591a019c26f4f8e16c6fd"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/floor_rubble_v2.png-cfa1e595e96790aca170491456e98bc7.md5",
+      "bytes": 91,
+      "sha256": "91966bdf8f0376bbc7f134e0f9fc9de6ac267f08434b339785eefa0b53b0cb26"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/floor_rubble_v2_icon_like.png-8e347239f7664070c3ad87da046478ca.ctex",
+      "bytes": 508,
+      "sha256": "5948d1af281b9273d2002ee2665032a0ff735287f59591a019c26f4f8e16c6fd"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/floor_rubble_v2_icon_like.png-8e347239f7664070c3ad87da046478ca.md5",
+      "bytes": 91,
+      "sha256": "91966bdf8f0376bbc7f134e0f9fc9de6ac267f08434b339785eefa0b53b0cb26"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/floor_rubble_v3_blob.png-84df2855dad1853e454df9a452ff7a2e.ctex",
+      "bytes": 500,
+      "sha256": "06864183583bfb405907f84ff0668a263ddfc2279c003c2d1067c077aa71f931"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/floor_rubble_v3_blob.png-84df2855dad1853e454df9a452ff7a2e.md5",
+      "bytes": 91,
+      "sha256": "4ad925bc401bb5bbd30992158e82ee4177e599ed8ff7e8a3e1a91778c6b22197"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/floor_rubble_v4_float10.png-b18b6e7c60250b1305caf58bd311713c.ctex",
+      "bytes": 674,
+      "sha256": "fb6533a92e53117f9ddd1f31818b7e0bc59130b27ef0983d2bffd3310c1c2bdc"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/floor_rubble_v4_float10.png-b18b6e7c60250b1305caf58bd311713c.md5",
+      "bytes": 91,
+      "sha256": "5edf05e62af2b77a25b7b011dc756a891b296bce73ffa85e044d2cf72a453433"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/floor_rubble_v5.png-e81c9aed357e9cdc16d7392972de2615.ctex",
+      "bytes": 670,
+      "sha256": "6e74964be41adb65e05a75e34744265a769140aaf4db7a1e8d39b93db0cb5a0d"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/floor_rubble_v5.png-e81c9aed357e9cdc16d7392972de2615.md5",
+      "bytes": 91,
+      "sha256": "9a0bc04525d93884625e957e9323675600ef61693a57852eae1b190c4173e6bf"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/helix_carbine_v1.png-9aa8d283c13d2be62d383878dddfb2dd.ctex",
+      "bytes": 360,
+      "sha256": "885a523b6563074f3b9eca2a98065eeda2e47cd1d4738df6ce88b53c0f5b9715"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/helix_carbine_v1.png-9aa8d283c13d2be62d383878dddfb2dd.md5",
+      "bytes": 91,
+      "sha256": "c8fe5ee3454de3db5ec83bc633e0647252e60f87f5a29b60eb68c11615ce4026"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/helix_carbine_v2.png-258cdfca67f2bf6e0cfcfb21f9d67968.ctex",
+      "bytes": 450,
+      "sha256": "4f81caaa82ec8dd1bd8b806aac5c4e64f7cba921487f7669e830a87ab7591cf1"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/helix_carbine_v2.png-258cdfca67f2bf6e0cfcfb21f9d67968.md5",
+      "bytes": 91,
+      "sha256": "ff58b7572b52b2453fc33e9b97726ace1012690f2efd1c5914040b46353e696d"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/helix_muzzle_flash_v1.png-202484a037f247c4bd97e761cfebfcf2.ctex",
+      "bytes": 594,
+      "sha256": "507a0f9fc49e6c8c31342caa64ea6eebd7ed3dd3c179319f6d67853c9314fa81"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/helix_muzzle_flash_v1.png-202484a037f247c4bd97e761cfebfcf2.md5",
+      "bytes": 91,
+      "sha256": "b9c23a08373403fee08ab98dfac48bae654dc9250e2e2488a0a0d8c40f583763"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/hit_spark_v1.png-b89b90334b36e76b8af7b79dbb0a160b.ctex",
+      "bytes": 518,
+      "sha256": "4a28ac2ed75aabe32a28f7aea60a0ad5ad0a1a28f3ea41c682904fc0e55a6af8"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/hit_spark_v1.png-b89b90334b36e76b8af7b79dbb0a160b.md5",
+      "bytes": 91,
+      "sha256": "441058d163d3a2a3d40ec737b0e287a9a4c388e11ca24d5f3db0a13f14a08213"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/hit_spark_v2.png-6128b3d36fb2b340cd1c5dd36d6d1806.ctex",
+      "bytes": 658,
+      "sha256": "7aad2fdedd886a94492b5e1af7a74a96ac38f0c93f915b2b119d45419d1a88e1"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/hit_spark_v2.png-6128b3d36fb2b340cd1c5dd36d6d1806.md5",
+      "bytes": 91,
+      "sha256": "4c434ec05f1cec046f0e90d77f059918e4864fa36217b6efc173a303e3fccdc5"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/hit_spark_v2_sheet.png-614e15105ca0ec38040f5e4b532ae992.ctex",
+      "bytes": 1624,
+      "sha256": "455fa09e5a88b41729e4de7ab062ceb3e19ebc2b8a4410b058da2a2c1d927439"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/hit_spark_v2_sheet.png-614e15105ca0ec38040f5e4b532ae992.md5",
+      "bytes": 91,
+      "sha256": "92cd4ba3e8a0668fbcc0eb639da0d237ca11cc125f20224a5d59f2318863c53f"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex",
+      "bytes": 148,
+      "sha256": "98f134eb72cb129daf462e44de0c4bd135743569efe28737adc35a740d88d611"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.md5",
+      "bytes": 91,
+      "sha256": "87156d2e9729e653f6801e4e63ca6a3be1bb83d8904f5fa4e42a8cce152acc7e"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/impact.png-442b71b2d28d6fea25a1760e5e8f1cdc.ctex",
+      "bytes": 518,
+      "sha256": "91b104e1870e4eba6923ccc7fd76c4e186a73dc5d6975adfb53c3b9579a310b9"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/impact.png-442b71b2d28d6fea25a1760e5e8f1cdc.md5",
+      "bytes": 91,
+      "sha256": "caee929df0871ab199bee25d2caeaa00112d029f2da759a9a8473a7b4a78bb5a"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/impact.png-707edb4dadeefc27469ae5b2d027c4ee.ctex",
+      "bytes": 520,
+      "sha256": "565cd3f16d8fc687e76b04fbc9f12080c75e1ce8cd522ee84cb7f40d5b448417"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/impact.png-707edb4dadeefc27469ae5b2d027c4ee.md5",
+      "bytes": 91,
+      "sha256": "12c61ff59121bbb77b5404712213229c577a8e6434587e2d86936abe6577d2fb"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/impact.png-ef4ed21ff663f81fe4837839c4754067.ctex",
+      "bytes": 512,
+      "sha256": "a0c85c0696c416a5769318ead894b5ff1683a291664df2e4247918aaa907b6dc"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/impact.png-ef4ed21ff663f81fe4837839c4754067.md5",
+      "bytes": 91,
+      "sha256": "413168bd0e1c8f7c942a1d2128c29e88a28869304f5c5e4e9d9685d08154a85e"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/interactables.png-c89c505488656a03a566ef551e41ef8b.ctex",
+      "bytes": 4180,
+      "sha256": "7ed917bbc676bbfd9bc17db9e792c3017aa17357a92b95bd372dc05e79045231"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/interactables.png-c89c505488656a03a566ef551e41ef8b.md5",
+      "bytes": 91,
+      "sha256": "8fc739fd8ed7c054a06268a4599ab72e9e9159eaab6514163fb979737e358459"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/interactables_sil.png-fd6902ebf16bb43e4082a3e357438488.ctex",
+      "bytes": 1278,
+      "sha256": "6f90d3d743462e7e46a958c284532e50d287bcdd41a2fff8e8ebabf99bec992d"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/interactables_sil.png-fd6902ebf16bb43e4082a3e357438488.md5",
+      "bytes": 91,
+      "sha256": "6dafa54caf4f2376ef41c6763a178d8317f5ae9acca08c6f765ac93072d4f367"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/march_greatblade_v1.png-81a7e18c2675753c35971b2513a880f1.ctex",
+      "bytes": 464,
+      "sha256": "1b5f4f553a25a84f42ec92bed7f59b1b51f320b95ad4b6d7cb49bff75dd426eb"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/march_greatblade_v1.png-81a7e18c2675753c35971b2513a880f1.md5",
+      "bytes": 91,
+      "sha256": "ed6b087b85f5059dfd3744c7c11142fa38a4d3d45278312cb2b4b6d15f6bbdf4"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/march_greatblade_v2.png-39907c3f428106f6f32f1f3dbe08ea37.ctex",
+      "bytes": 522,
+      "sha256": "21cf886b8019b4adda3aa47e80fb1b1c4be789a3081a1ab850bbcf9c674e4c57"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/march_greatblade_v2.png-39907c3f428106f6f32f1f3dbe08ea37.md5",
+      "bytes": 91,
+      "sha256": "1964d86ce1f771d177bc93b48f671a2a13476a0fb0cd4d9c3c9bdac6a31004f0"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/march_slash_arc_v1.png-5f2a52119e48d6604558d653c190b73e.ctex",
+      "bytes": 408,
+      "sha256": "f067951b0f0f71113490dff272685387013fe707d3309de8807a5932c75ffa9d"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/march_slash_arc_v1.png-5f2a52119e48d6604558d653c190b73e.md5",
+      "bytes": 91,
+      "sha256": "b5abd82d42fe1c31aefbbcb43ccfc6db8ba4634d7b74cc312ea6e0a5c40e3833"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/march_slash_arc_v3.png-b315f8e281cc2d5fdc905738c9e1addb.ctex",
+      "bytes": 342,
+      "sha256": "779f6c0bcd65dde3ca8eb0656c61852baa34d37cdc4cb0743eb61c42d42dd59b"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/march_slash_arc_v3.png-b315f8e281cc2d5fdc905738c9e1addb.md5",
+      "bytes": 91,
+      "sha256": "7ea6b9e31c380f6bf06e1bc58c2fbab3d84ca90e4c1176dec203022b1e373d3d"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/march_slash_arc_v4.png-08689ea48ae5f8cae3967f830ccd200e.ctex",
+      "bytes": 330,
+      "sha256": "9382dedb324ebafa1ef9ddc56337ca28f226827c650124bbd9a75d8960f0d52c"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/march_slash_arc_v4.png-08689ea48ae5f8cae3967f830ccd200e.md5",
+      "bytes": 91,
+      "sha256": "1d96540540dbbdac9563d677ca553c30f22effaf9dd750a2200944bdf5ecfce4"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/muzzle_or_plant.png-580ca90431719e71d41867c5132bf2f5.ctex",
+      "bytes": 372,
+      "sha256": "e2da1174d5a1fb23291f3d888aa939c6730f956ec0d5b873a326cd0d0a424c16"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/muzzle_or_plant.png-580ca90431719e71d41867c5132bf2f5.md5",
+      "bytes": 91,
+      "sha256": "615b173657f4213a70eca944d506362b8b5dbe3f533d90647b5cf67cb88be7c9"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/muzzle_or_plant.png-a55d7efcb9d4b499ef13910eaa9378ff.ctex",
+      "bytes": 340,
+      "sha256": "08b200925f0fa3b3d9058469b0c5534870bdeb33ea9680f2402300e33fb3dcbf"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/muzzle_or_plant.png-a55d7efcb9d4b499ef13910eaa9378ff.md5",
+      "bytes": 91,
+      "sha256": "361fa87646304bc19d233e19fb28d63dc7c0d13f9d7cb01ed0f789772bd23aec"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/muzzle_or_plant.png-d1463970fb858470ebfa3241f81a13d4.ctex",
+      "bytes": 432,
+      "sha256": "9637553581e1f11d152af871e53b792ab7ea9d857e74fb15de838cd0d9bcb7e1"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/muzzle_or_plant.png-d1463970fb858470ebfa3241f81a13d4.md5",
+      "bytes": 91,
+      "sha256": "8218648e4865aaeff159b02e9138a23c0c039a7073201e3352961781f2d9ee30"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/sequence_crest_hit_v1.png-19f22cb4bc49e5f4a894034c049db5c3.ctex",
+      "bytes": 610,
+      "sha256": "3f3b5825b2950f6e59cee38c8132b3ed085ffd658f09683521a131deb23ce872"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/sequence_crest_hit_v1.png-19f22cb4bc49e5f4a894034c049db5c3.md5",
+      "bytes": 91,
+      "sha256": "c65de67d7fdb27dff9db2d5dc6fea3d5f068ce86dd64d8ca6a162f579549c56b"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/sequence_crozier_v1.png-b41cd7c2110897573540df0b6b798f66.ctex",
+      "bytes": 368,
+      "sha256": "cafd2bcefeb76df76ddf7be6eaae6e93d9c663f77f68ce76d393122a148db176"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/sequence_crozier_v1.png-b41cd7c2110897573540df0b6b798f66.md5",
+      "bytes": 91,
+      "sha256": "960393d42ed054111e9fae14c26e2cfbe1c8afa1104e2267156b79d3c106b54f"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/sequence_crozier_v2.png-0e126a50282c9efd8143e0efbe386e40.ctex",
+      "bytes": 398,
+      "sha256": "8b5fdbc461c675aed71e970a2aa262e349dfa4ca069f9963931fcb66050ca1f9"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/sequence_crozier_v2.png-0e126a50282c9efd8143e0efbe386e40.md5",
+      "bytes": 91,
+      "sha256": "c7d0a1b65d0d82791c9fb5b628d240c74385f3b556e211e9d9120a22f31494d8"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/sequence_telegraph_v1_caret.png-75357edce3f6d0e38d369a46e3ce37d2.ctex",
+      "bytes": 456,
+      "sha256": "1edb1525e7545b5bbce7379651ee6f2122cd008d30c7299c33015d82920a9b19"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/sequence_telegraph_v1_caret.png-75357edce3f6d0e38d369a46e3ce37d2.md5",
+      "bytes": 91,
+      "sha256": "d38778ec844b0c4c70bddc6388046e5b63e0a6b70225fc654801389a1ba8d4c7"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/sequence_telegraph_v2.png-7b40ab01261cac39133d9fa56bab4319.ctex",
+      "bytes": 578,
+      "sha256": "ca88a3a45ffade66bd87242dc8e0e6c18b4abe59aba1a549151578d101f64f2a"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/sequence_telegraph_v2.png-7b40ab01261cac39133d9fa56bab4319.md5",
+      "bytes": 91,
+      "sha256": "057f19ab3bb2822a7a0941fd729b3dd1283df3b01ff336dcfe798d63fa67c1a1"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/silhouette_board.png-941a8e5cf3c7eb98d843509a02011ad4.ctex",
+      "bytes": 2612,
+      "sha256": "6b0fbb9d96c58316a09282ca053c43a940af6759be883726ff9863a90a8c738d"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/silhouette_board.png-941a8e5cf3c7eb98d843509a02011ad4.md5",
+      "bytes": 91,
+      "sha256": "a321e9feeea78abaca195ad473fdd4fdb7f517b6ca647009515786dddf3df541"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/still.png-7af7dc8f6dddc51d7adf0a76dcf9fe3a.ctex",
+      "bytes": 494,
+      "sha256": "28bf6ccde1653c260d7fcd58c64442c18912e2f5f41fb7b145963e2191ce5fd8"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/still.png-7af7dc8f6dddc51d7adf0a76dcf9fe3a.md5",
+      "bytes": 91,
+      "sha256": "bd997d9dc6286bb7a40848c1daca61b60828e248363142739d003b2582e9f8b6"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/still.png-a626e233fa745ad33914c05bb675edcf.ctex",
+      "bytes": 528,
+      "sha256": "939e82654483f9fe5b9578a351b059a88f367cc05149b5fc53ef03262bb92bdd"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/still.png-a626e233fa745ad33914c05bb675edcf.md5",
+      "bytes": 91,
+      "sha256": "3c982fa6bae9d7ca02df1e2d56a64b4a9c2008da5f915a9898f84d7fc2b7644f"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/tiles.png-3559b9b5bdd751e100d182ba34da090e.ctex",
+      "bytes": 1380,
+      "sha256": "745f76ca63ff85a5713c4c556e05989c3ed9b21b063fdf248ab09a3a53502801"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/tiles.png-3559b9b5bdd751e100d182ba34da090e.md5",
+      "bytes": 91,
+      "sha256": "9ac332c209e0dd0f6ddd3ed630f58c0f1c10ef0fa8613ec6e46a698782f15ad5"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/weapons.png-d13b9884490ca4800dc777c6256e77ad.ctex",
+      "bytes": 2608,
+      "sha256": "f97d1962c8ac20ed25d5741bb100cd50f2efa753ced4d1043fd574dc96e6c9d4"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/weapons.png-d13b9884490ca4800dc777c6256e77ad.md5",
+      "bytes": 91,
+      "sha256": "e05d60fcd5855948ddb95c75e80b5a24223510b334edc56a5ed859b65dbef450"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/weapons_sil.png-87a60ae58cb77b8dd3b894eb36e2da2b.ctex",
+      "bytes": 932,
+      "sha256": "6cb397d7e35765af43cc092e16a09a0450d780c1a1c1af3cb74cb328aec3734d"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/imported/weapons_sil.png-87a60ae58cb77b8dd3b894eb36e2da2b.md5",
+      "bytes": 91,
+      "sha256": "5a20b87ffe03e44fccbcfbec9bede42d0be7da5ec7a1c1c7318c2085609a339f"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v1/game/.godot/uid_cache.bin",
+      "bytes": 6968,
+      "sha256": "e36bd52c822d85d0584534793357b10e9b8551505f564e3d54f99c57865f5cfb"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/.gdignore",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/editor/Main.tscn-folding-4a24720ee5e787dbe30abc634fa3679d.cfg",
+      "bytes": 2204,
+      "sha256": "78e81838c391f9a97f9976c70fcfef90d8b456a0efa13e366e0dcc449595e985"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/editor/filesystem_cache10",
+      "bytes": 25459,
+      "sha256": "11a9aebe28dc80e1975a91608c0b6126071142fe1dc4b689bbdcc972f9f8a695"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/editor/project_metadata.cfg",
+      "bytes": 161,
+      "sha256": "7676d6f9713922675c4c69eebcbe619876e79857b03f9383d546cb53c5e41fea"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/global_script_class_cache.cfg",
+      "bytes": 3023,
+      "sha256": "d4e9c6347f409a4e93f9ed41be17cad3372c5daa76493cb19205de3fed9dd83b"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/07_hybrid_hint_red_L.png-583ebf766882c48cb819597c4fc508a3.ctex",
+      "bytes": 124,
+      "sha256": "aa527acabe70c8700f1e996f28f0ace3bff4c8d5d53ce9d0dc7755f56df4cef5"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/07_hybrid_hint_red_L.png-583ebf766882c48cb819597c4fc508a3.md5",
+      "bytes": 91,
+      "sha256": "94ae64706967c20b62aa87c5b8f0b957409c4f5cd7c8222fc3e14c9b79d3e964"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/actor_idle_hint_v1_keepout46.png-b2671b0537a8541cac8d4e229349bb31.ctex",
+      "bytes": 500,
+      "sha256": "bcae66725fb65f5312b8f42e7266480f3dacfbc4f1bd06f62e1ea8a2a4c3a81a"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/actor_idle_hint_v1_keepout46.png-b2671b0537a8541cac8d4e229349bb31.md5",
+      "bytes": 91,
+      "sha256": "fea7de66d2d6ebbdd8dfffa819ab371a65a10689e236fab79f5fa969b6990e4a"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/actor_idle_hint_v2.png-2e71a0649fd98236a2eaf66f7a1c5f63.ctex",
+      "bytes": 522,
+      "sha256": "a83756f01d4d9020bcd58322335355d201c91e2e9036bb9da7acb1bb7a3e2c41"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/actor_idle_hint_v2.png-2e71a0649fd98236a2eaf66f7a1c5f63.md5",
+      "bytes": 91,
+      "sha256": "ce9c70c3441f8e1616b95e5c4855bec34620e949b34f844cfd1c391c073a867d"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/actors.png-c409099f953fc6aca62704f9aed539f2.ctex",
+      "bytes": 5524,
+      "sha256": "9c54044d4d88b05a5b35eae93db251bbf85b1a0d8c589970c7c9dd955f68db6f"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/actors.png-c409099f953fc6aca62704f9aed539f2.md5",
+      "bytes": 91,
+      "sha256": "5f42445a977c4dd6183f674fa1db9479a51ed4cf30128516ffad8448a37d43dd"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/bleed_floor_sheet.png-6c67dbea8f45b828fe2906feba9fda65.ctex",
+      "bytes": 174,
+      "sha256": "fe19aa2cf7eef7c9aa4603a83c992887a24bf9cd1807b9e14a7eab16fb7406a2"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/bleed_floor_sheet.png-6c67dbea8f45b828fe2906feba9fda65.md5",
+      "bytes": 91,
+      "sha256": "bab020271c436540e526fe7406c3a2149a5df05964b67c648892c56d94a23b1f"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/bleed_floor_v1_schematic_mud.png-43ffaaa553a7af4158a8ae303c9c530b.ctex",
+      "bytes": 1586,
+      "sha256": "24112c85040d0a1499f9aff5cb0bcb3322605cb22f2010eb1ddabc17ad8ef801"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/bleed_floor_v1_schematic_mud.png-43ffaaa553a7af4158a8ae303c9c530b.md5",
+      "bytes": 91,
+      "sha256": "558899d2e5a554ee0b3036e8ee2b4699250a18e6c0458b83ffc23b936b571386"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/bleed_floor_v4_map_schematic.png-17bf125c13c6971a2e34e799dc0132fc.ctex",
+      "bytes": 1166,
+      "sha256": "d69cc48fca540d52ac782d2f323ec396ea42447507337b370b8e44ee30727898"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/bleed_floor_v4_map_schematic.png-17bf125c13c6971a2e34e799dc0132fc.md5",
+      "bytes": 91,
+      "sha256": "f7038c4b9589af7b713b7170add99e54ed029e22ceb9d514e1a92e4f1b947b04"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/bleed_floor_v5_noise_blobs.png-08e4fad14c740cb9aa326f035c90a866.ctex",
+      "bytes": 1778,
+      "sha256": "e6fcaa233f6b5fe9b348715445691b0982f42059590dc5fca03ced9eaad9f777"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/bleed_floor_v5_noise_blobs.png-08e4fad14c740cb9aa326f035c90a866.md5",
+      "bytes": 91,
+      "sha256": "46ba41517bf7f167445ff9bd6fd9c0680d026a571717043c46a60a40f120359e"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/bleed_wall_sheet.png-1406a0656e0dbe1e1bce118a1dcb6fc2.ctex",
+      "bytes": 226,
+      "sha256": "f5f116be03dbdb86029bbfbe87b643c9b51df533b08a34f5a44224fbeff2a457"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/bleed_wall_sheet.png-1406a0656e0dbe1e1bce118a1dcb6fc2.md5",
+      "bytes": 91,
+      "sha256": "e01dddd8706143b68e447a7c873cf6373d58b56ac6d34f981c0343acac40153d"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/body_or_arc.png-29cff629ac596c2e5f94a5d703a2a0d2.ctex",
+      "bytes": 576,
+      "sha256": "bae4228f528a79fc1f3c921d473ac6ce6b2e3a8be1b0d51ac2b88c2959c70834"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/body_or_arc.png-29cff629ac596c2e5f94a5d703a2a0d2.md5",
+      "bytes": 91,
+      "sha256": "4a7e5768887f995af2b0817f9a8af509aea971cae5447c316e99d384cd35cd8e"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/body_or_arc.png-4202da7f25d66a4a803b5503e251ead1.ctex",
+      "bytes": 556,
+      "sha256": "c51fc5952f5a23fedb23975d1c6277c5f464a2f1e91bd3800d3cb8634154068a"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/body_or_arc.png-4202da7f25d66a4a803b5503e251ead1.md5",
+      "bytes": 91,
+      "sha256": "945e9cc408c2e1bebfa5b7c5e9b86afe86967128240e73064e4ac3ce07ddb8e3"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/body_or_arc.png-49bc1ad0b1c2efd56c6b931dde206692.ctex",
+      "bytes": 410,
+      "sha256": "b579a4ec436c625dba550c65a9c5d043ef1dc3d667ac871946ce28667b7359ec"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/body_or_arc.png-49bc1ad0b1c2efd56c6b931dde206692.md5",
+      "bytes": 91,
+      "sha256": "04bb724b65c91101b35bcbfadb0b457bb7feed7a12c3f6733e040d0f6640e835"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/circuit_node_v1.png-3b24bfa1c18d899d9d0882d8ad8d719f.ctex",
+      "bytes": 474,
+      "sha256": "4621e149ff010d596e933ecd890534c1f7d9ae8084bb68045179d1506504f650"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/circuit_node_v1.png-3b24bfa1c18d899d9d0882d8ad8d719f.md5",
+      "bytes": 91,
+      "sha256": "a6f0714f2938de74793193e3e266d180bb705fab115fc50887d7af24dd575935"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/circuit_node_v2.png-5db2e5d0b61b1428483e2bf626a6edb3.ctex",
+      "bytes": 436,
+      "sha256": "9e5e722657355697fc009193d558c69c627d7c27723ff3ea14bde434d01182c9"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/circuit_node_v2.png-5db2e5d0b61b1428483e2bf626a6edb3.md5",
+      "bytes": 91,
+      "sha256": "17ec3bcc97abba774eb46ff8fb6e2030c97184789757821c9f97a3c4143517b8"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/combo_heli_march_storm_still.png-0f7c77e6f130904d684e05af226d975e.ctex",
+      "bytes": 558,
+      "sha256": "3ec191c799c4d1378a59eed1d0a3ab79e3cda8d308efd0e600dd6f1a3de60f33"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/combo_heli_march_storm_still.png-0f7c77e6f130904d684e05af226d975e.md5",
+      "bytes": 91,
+      "sha256": "8ed6cf913fb745d75c270f9b9b9d2fd7689b9ab2b4afdbc92e24cebb63181af3"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/combo_heli_seq_oracle_still.png-3ee69693b46c0434ae15ad3a19b88d98.ctex",
+      "bytes": 494,
+      "sha256": "28bf6ccde1653c260d7fcd58c64442c18912e2f5f41fb7b145963e2191ce5fd8"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/combo_heli_seq_oracle_still.png-3ee69693b46c0434ae15ad3a19b88d98.md5",
+      "bytes": 91,
+      "sha256": "bd997d9dc6286bb7a40848c1daca61b60828e248363142739d003b2582e9f8b6"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/combo_march_seq_edict_still.png-2d7548ee3d580a7be0d6cd3bf27d4f7c.ctex",
+      "bytes": 528,
+      "sha256": "939e82654483f9fe5b9578a351b059a88f367cc05149b5fc53ef03262bb92bdd"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/combo_march_seq_edict_still.png-2d7548ee3d580a7be0d6cd3bf27d4f7c.md5",
+      "bytes": 91,
+      "sha256": "3c982fa6bae9d7ca02df1e2d56a64b4a9c2008da5f915a9898f84d7fc2b7644f"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/enemies.png-2d210a91acf956205d552681c2a2dfe9.ctex",
+      "bytes": 8712,
+      "sha256": "15827bf4f8596129bfed0ac03f9abfa62b25bec5be07c7090108fcacda7bf067"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/enemies.png-2d210a91acf956205d552681c2a2dfe9.md5",
+      "bytes": 91,
+      "sha256": "5351039b790afbfeb27c3b84b6a5c10ada93bb5b2178d20201801987704e34e9"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/enemies_sil.png-6325954954ca9f4a2f13391b93091b6b.ctex",
+      "bytes": 3578,
+      "sha256": "d1a863016ad391e2ecf8f578fe8db338dc0ac81ed6fc79e834ff1188d30ff997"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/enemies_sil.png-6325954954ca9f4a2f13391b93091b6b.md5",
+      "bytes": 91,
+      "sha256": "fbb7a7f94249cdfe6a8f8bd85325420b0c0987d1c7971de9e8c6129cd4fb33c5"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/enemy_grunt_v1.png-29cc531f7a0336ada7819edde5b86656.ctex",
+      "bytes": 538,
+      "sha256": "9fb88585fe6958d56a0b5ac72db3cfb3643666f825214ee3a29b66fd53478029"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/enemy_grunt_v1.png-29cc531f7a0336ada7819edde5b86656.md5",
+      "bytes": 91,
+      "sha256": "a724b79154db803351ec0f924751afb7a15c71686ff04423dd764ab7c4b856b7"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/enemy_grunt_v2.png-73e850c9fadd889f27ff74e96e2d32e3.ctex",
+      "bytes": 586,
+      "sha256": "14daa6cddcbadfff9d5faf656125273f99f3b7ca4f18f328aea661a9bc0ccd53"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/enemy_grunt_v2.png-73e850c9fadd889f27ff74e96e2d32e3.md5",
+      "bytes": 91,
+      "sha256": "cea201eaf711c51ba66b416588c260d587206a685cec12f8799eb23de8dee80c"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/entity_catalog.png-3270e8e40522e807e0cd1c5fa1fa0cff.ctex",
+      "bytes": 191264,
+      "sha256": "73d570d83c72424c2ba9dded7fc65cbfae77ee41e82b8c103c2d675ef9679434"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/entity_catalog.png-3270e8e40522e807e0cd1c5fa1fa0cff.md5",
+      "bytes": 91,
+      "sha256": "5ba75d0360830056a9c9c5f798131ec852896d28af06885e31bcfbbe7ddd863f"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/entity_catalog_sil.png-4e510d93dd65ec0c4b92583dcdabe164.ctex",
+      "bytes": 65694,
+      "sha256": "38c80e16730bd47f1d9b15995878e76a48e9bce6ad99757e116e4fb34ed51a1b"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/entity_catalog_sil.png-4e510d93dd65ec0c4b92583dcdabe164.md5",
+      "bytes": 91,
+      "sha256": "4b8578596d5c1565332c7030a48d3078f6c447a1b0e8584060da3fa4f6d39c35"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/floor_rubble_v1.png-384bf516c54c8419dc33a0029c0ff58e.ctex",
+      "bytes": 658,
+      "sha256": "bb45cd47285fde58987e8a3d135d01df7d7d2b7812395e9d290db33ee0c97851"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/floor_rubble_v1.png-384bf516c54c8419dc33a0029c0ff58e.md5",
+      "bytes": 91,
+      "sha256": "a350925bf2e61bfb09d2418f7bfdd3bffa75c75f42dbbd4ee172476e66ac409f"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/floor_rubble_v1_icon_lump.png-958d4c1da13f1281fb3718ac7f0e35d0.ctex",
+      "bytes": 658,
+      "sha256": "bb45cd47285fde58987e8a3d135d01df7d7d2b7812395e9d290db33ee0c97851"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/floor_rubble_v1_icon_lump.png-958d4c1da13f1281fb3718ac7f0e35d0.md5",
+      "bytes": 91,
+      "sha256": "a350925bf2e61bfb09d2418f7bfdd3bffa75c75f42dbbd4ee172476e66ac409f"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/floor_rubble_v2.png-cfa1e595e96790aca170491456e98bc7.ctex",
+      "bytes": 508,
+      "sha256": "5948d1af281b9273d2002ee2665032a0ff735287f59591a019c26f4f8e16c6fd"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/floor_rubble_v2.png-cfa1e595e96790aca170491456e98bc7.md5",
+      "bytes": 91,
+      "sha256": "91966bdf8f0376bbc7f134e0f9fc9de6ac267f08434b339785eefa0b53b0cb26"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/floor_rubble_v2_icon_like.png-8e347239f7664070c3ad87da046478ca.ctex",
+      "bytes": 508,
+      "sha256": "5948d1af281b9273d2002ee2665032a0ff735287f59591a019c26f4f8e16c6fd"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/floor_rubble_v2_icon_like.png-8e347239f7664070c3ad87da046478ca.md5",
+      "bytes": 91,
+      "sha256": "91966bdf8f0376bbc7f134e0f9fc9de6ac267f08434b339785eefa0b53b0cb26"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/floor_rubble_v3_blob.png-84df2855dad1853e454df9a452ff7a2e.ctex",
+      "bytes": 500,
+      "sha256": "06864183583bfb405907f84ff0668a263ddfc2279c003c2d1067c077aa71f931"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/floor_rubble_v3_blob.png-84df2855dad1853e454df9a452ff7a2e.md5",
+      "bytes": 91,
+      "sha256": "4ad925bc401bb5bbd30992158e82ee4177e599ed8ff7e8a3e1a91778c6b22197"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/floor_rubble_v4_float10.png-b18b6e7c60250b1305caf58bd311713c.ctex",
+      "bytes": 674,
+      "sha256": "fb6533a92e53117f9ddd1f31818b7e0bc59130b27ef0983d2bffd3310c1c2bdc"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/floor_rubble_v4_float10.png-b18b6e7c60250b1305caf58bd311713c.md5",
+      "bytes": 91,
+      "sha256": "5edf05e62af2b77a25b7b011dc756a891b296bce73ffa85e044d2cf72a453433"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/floor_rubble_v5.png-e81c9aed357e9cdc16d7392972de2615.ctex",
+      "bytes": 670,
+      "sha256": "6e74964be41adb65e05a75e34744265a769140aaf4db7a1e8d39b93db0cb5a0d"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/floor_rubble_v5.png-e81c9aed357e9cdc16d7392972de2615.md5",
+      "bytes": 91,
+      "sha256": "9a0bc04525d93884625e957e9323675600ef61693a57852eae1b190c4173e6bf"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/helix_carbine_v1.png-9aa8d283c13d2be62d383878dddfb2dd.ctex",
+      "bytes": 360,
+      "sha256": "885a523b6563074f3b9eca2a98065eeda2e47cd1d4738df6ce88b53c0f5b9715"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/helix_carbine_v1.png-9aa8d283c13d2be62d383878dddfb2dd.md5",
+      "bytes": 91,
+      "sha256": "c8fe5ee3454de3db5ec83bc633e0647252e60f87f5a29b60eb68c11615ce4026"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/helix_carbine_v2.png-258cdfca67f2bf6e0cfcfb21f9d67968.ctex",
+      "bytes": 450,
+      "sha256": "4f81caaa82ec8dd1bd8b806aac5c4e64f7cba921487f7669e830a87ab7591cf1"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/helix_carbine_v2.png-258cdfca67f2bf6e0cfcfb21f9d67968.md5",
+      "bytes": 91,
+      "sha256": "ff58b7572b52b2453fc33e9b97726ace1012690f2efd1c5914040b46353e696d"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/helix_muzzle_flash_v1.png-202484a037f247c4bd97e761cfebfcf2.ctex",
+      "bytes": 594,
+      "sha256": "507a0f9fc49e6c8c31342caa64ea6eebd7ed3dd3c179319f6d67853c9314fa81"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/helix_muzzle_flash_v1.png-202484a037f247c4bd97e761cfebfcf2.md5",
+      "bytes": 91,
+      "sha256": "b9c23a08373403fee08ab98dfac48bae654dc9250e2e2488a0a0d8c40f583763"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/hit_spark_v1.png-b89b90334b36e76b8af7b79dbb0a160b.ctex",
+      "bytes": 518,
+      "sha256": "4a28ac2ed75aabe32a28f7aea60a0ad5ad0a1a28f3ea41c682904fc0e55a6af8"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/hit_spark_v1.png-b89b90334b36e76b8af7b79dbb0a160b.md5",
+      "bytes": 91,
+      "sha256": "441058d163d3a2a3d40ec737b0e287a9a4c388e11ca24d5f3db0a13f14a08213"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/hit_spark_v2.png-6128b3d36fb2b340cd1c5dd36d6d1806.ctex",
+      "bytes": 658,
+      "sha256": "7aad2fdedd886a94492b5e1af7a74a96ac38f0c93f915b2b119d45419d1a88e1"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/hit_spark_v2.png-6128b3d36fb2b340cd1c5dd36d6d1806.md5",
+      "bytes": 91,
+      "sha256": "4c434ec05f1cec046f0e90d77f059918e4864fa36217b6efc173a303e3fccdc5"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/hit_spark_v2_sheet.png-614e15105ca0ec38040f5e4b532ae992.ctex",
+      "bytes": 1624,
+      "sha256": "455fa09e5a88b41729e4de7ab062ceb3e19ebc2b8a4410b058da2a2c1d927439"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/hit_spark_v2_sheet.png-614e15105ca0ec38040f5e4b532ae992.md5",
+      "bytes": 91,
+      "sha256": "92cd4ba3e8a0668fbcc0eb639da0d237ca11cc125f20224a5d59f2318863c53f"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex",
+      "bytes": 148,
+      "sha256": "98f134eb72cb129daf462e44de0c4bd135743569efe28737adc35a740d88d611"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.md5",
+      "bytes": 91,
+      "sha256": "87156d2e9729e653f6801e4e63ca6a3be1bb83d8904f5fa4e42a8cce152acc7e"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/impact.png-442b71b2d28d6fea25a1760e5e8f1cdc.ctex",
+      "bytes": 518,
+      "sha256": "91b104e1870e4eba6923ccc7fd76c4e186a73dc5d6975adfb53c3b9579a310b9"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/impact.png-442b71b2d28d6fea25a1760e5e8f1cdc.md5",
+      "bytes": 91,
+      "sha256": "caee929df0871ab199bee25d2caeaa00112d029f2da759a9a8473a7b4a78bb5a"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/impact.png-707edb4dadeefc27469ae5b2d027c4ee.ctex",
+      "bytes": 520,
+      "sha256": "565cd3f16d8fc687e76b04fbc9f12080c75e1ce8cd522ee84cb7f40d5b448417"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/impact.png-707edb4dadeefc27469ae5b2d027c4ee.md5",
+      "bytes": 91,
+      "sha256": "12c61ff59121bbb77b5404712213229c577a8e6434587e2d86936abe6577d2fb"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/impact.png-ef4ed21ff663f81fe4837839c4754067.ctex",
+      "bytes": 512,
+      "sha256": "a0c85c0696c416a5769318ead894b5ff1683a291664df2e4247918aaa907b6dc"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/impact.png-ef4ed21ff663f81fe4837839c4754067.md5",
+      "bytes": 91,
+      "sha256": "413168bd0e1c8f7c942a1d2128c29e88a28869304f5c5e4e9d9685d08154a85e"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/interactables.png-c89c505488656a03a566ef551e41ef8b.ctex",
+      "bytes": 4180,
+      "sha256": "7ed917bbc676bbfd9bc17db9e792c3017aa17357a92b95bd372dc05e79045231"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/interactables.png-c89c505488656a03a566ef551e41ef8b.md5",
+      "bytes": 91,
+      "sha256": "8fc739fd8ed7c054a06268a4599ab72e9e9159eaab6514163fb979737e358459"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/interactables_sil.png-fd6902ebf16bb43e4082a3e357438488.ctex",
+      "bytes": 1278,
+      "sha256": "6f90d3d743462e7e46a958c284532e50d287bcdd41a2fff8e8ebabf99bec992d"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/interactables_sil.png-fd6902ebf16bb43e4082a3e357438488.md5",
+      "bytes": 91,
+      "sha256": "6dafa54caf4f2376ef41c6763a178d8317f5ae9acca08c6f765ac93072d4f367"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/march_greatblade_v1.png-81a7e18c2675753c35971b2513a880f1.ctex",
+      "bytes": 464,
+      "sha256": "1b5f4f553a25a84f42ec92bed7f59b1b51f320b95ad4b6d7cb49bff75dd426eb"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/march_greatblade_v1.png-81a7e18c2675753c35971b2513a880f1.md5",
+      "bytes": 91,
+      "sha256": "ed6b087b85f5059dfd3744c7c11142fa38a4d3d45278312cb2b4b6d15f6bbdf4"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/march_greatblade_v2.png-39907c3f428106f6f32f1f3dbe08ea37.ctex",
+      "bytes": 522,
+      "sha256": "21cf886b8019b4adda3aa47e80fb1b1c4be789a3081a1ab850bbcf9c674e4c57"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/march_greatblade_v2.png-39907c3f428106f6f32f1f3dbe08ea37.md5",
+      "bytes": 91,
+      "sha256": "1964d86ce1f771d177bc93b48f671a2a13476a0fb0cd4d9c3c9bdac6a31004f0"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/march_slash_arc_v1.png-5f2a52119e48d6604558d653c190b73e.ctex",
+      "bytes": 408,
+      "sha256": "f067951b0f0f71113490dff272685387013fe707d3309de8807a5932c75ffa9d"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/march_slash_arc_v1.png-5f2a52119e48d6604558d653c190b73e.md5",
+      "bytes": 91,
+      "sha256": "b5abd82d42fe1c31aefbbcb43ccfc6db8ba4634d7b74cc312ea6e0a5c40e3833"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/march_slash_arc_v3.png-b315f8e281cc2d5fdc905738c9e1addb.ctex",
+      "bytes": 342,
+      "sha256": "779f6c0bcd65dde3ca8eb0656c61852baa34d37cdc4cb0743eb61c42d42dd59b"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/march_slash_arc_v3.png-b315f8e281cc2d5fdc905738c9e1addb.md5",
+      "bytes": 91,
+      "sha256": "7ea6b9e31c380f6bf06e1bc58c2fbab3d84ca90e4c1176dec203022b1e373d3d"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/march_slash_arc_v4.png-08689ea48ae5f8cae3967f830ccd200e.ctex",
+      "bytes": 330,
+      "sha256": "9382dedb324ebafa1ef9ddc56337ca28f226827c650124bbd9a75d8960f0d52c"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/march_slash_arc_v4.png-08689ea48ae5f8cae3967f830ccd200e.md5",
+      "bytes": 91,
+      "sha256": "1d96540540dbbdac9563d677ca553c30f22effaf9dd750a2200944bdf5ecfce4"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/muzzle_or_plant.png-580ca90431719e71d41867c5132bf2f5.ctex",
+      "bytes": 372,
+      "sha256": "e2da1174d5a1fb23291f3d888aa939c6730f956ec0d5b873a326cd0d0a424c16"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/muzzle_or_plant.png-580ca90431719e71d41867c5132bf2f5.md5",
+      "bytes": 91,
+      "sha256": "615b173657f4213a70eca944d506362b8b5dbe3f533d90647b5cf67cb88be7c9"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/muzzle_or_plant.png-a55d7efcb9d4b499ef13910eaa9378ff.ctex",
+      "bytes": 340,
+      "sha256": "08b200925f0fa3b3d9058469b0c5534870bdeb33ea9680f2402300e33fb3dcbf"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/muzzle_or_plant.png-a55d7efcb9d4b499ef13910eaa9378ff.md5",
+      "bytes": 91,
+      "sha256": "361fa87646304bc19d233e19fb28d63dc7c0d13f9d7cb01ed0f789772bd23aec"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/muzzle_or_plant.png-d1463970fb858470ebfa3241f81a13d4.ctex",
+      "bytes": 432,
+      "sha256": "9637553581e1f11d152af871e53b792ab7ea9d857e74fb15de838cd0d9bcb7e1"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/muzzle_or_plant.png-d1463970fb858470ebfa3241f81a13d4.md5",
+      "bytes": 91,
+      "sha256": "8218648e4865aaeff159b02e9138a23c0c039a7073201e3352961781f2d9ee30"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/sequence_crest_hit_v1.png-19f22cb4bc49e5f4a894034c049db5c3.ctex",
+      "bytes": 610,
+      "sha256": "3f3b5825b2950f6e59cee38c8132b3ed085ffd658f09683521a131deb23ce872"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/sequence_crest_hit_v1.png-19f22cb4bc49e5f4a894034c049db5c3.md5",
+      "bytes": 91,
+      "sha256": "c65de67d7fdb27dff9db2d5dc6fea3d5f068ce86dd64d8ca6a162f579549c56b"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/sequence_crozier_v1.png-b41cd7c2110897573540df0b6b798f66.ctex",
+      "bytes": 368,
+      "sha256": "cafd2bcefeb76df76ddf7be6eaae6e93d9c663f77f68ce76d393122a148db176"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/sequence_crozier_v1.png-b41cd7c2110897573540df0b6b798f66.md5",
+      "bytes": 91,
+      "sha256": "960393d42ed054111e9fae14c26e2cfbe1c8afa1104e2267156b79d3c106b54f"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/sequence_crozier_v2.png-0e126a50282c9efd8143e0efbe386e40.ctex",
+      "bytes": 398,
+      "sha256": "8b5fdbc461c675aed71e970a2aa262e349dfa4ca069f9963931fcb66050ca1f9"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/sequence_crozier_v2.png-0e126a50282c9efd8143e0efbe386e40.md5",
+      "bytes": 91,
+      "sha256": "c7d0a1b65d0d82791c9fb5b628d240c74385f3b556e211e9d9120a22f31494d8"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/sequence_telegraph_v1_caret.png-75357edce3f6d0e38d369a46e3ce37d2.ctex",
+      "bytes": 456,
+      "sha256": "1edb1525e7545b5bbce7379651ee6f2122cd008d30c7299c33015d82920a9b19"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/sequence_telegraph_v1_caret.png-75357edce3f6d0e38d369a46e3ce37d2.md5",
+      "bytes": 91,
+      "sha256": "d38778ec844b0c4c70bddc6388046e5b63e0a6b70225fc654801389a1ba8d4c7"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/sequence_telegraph_v2.png-7b40ab01261cac39133d9fa56bab4319.ctex",
+      "bytes": 578,
+      "sha256": "ca88a3a45ffade66bd87242dc8e0e6c18b4abe59aba1a549151578d101f64f2a"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/sequence_telegraph_v2.png-7b40ab01261cac39133d9fa56bab4319.md5",
+      "bytes": 91,
+      "sha256": "057f19ab3bb2822a7a0941fd729b3dd1283df3b01ff336dcfe798d63fa67c1a1"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/silhouette_board.png-941a8e5cf3c7eb98d843509a02011ad4.ctex",
+      "bytes": 2612,
+      "sha256": "6b0fbb9d96c58316a09282ca053c43a940af6759be883726ff9863a90a8c738d"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/silhouette_board.png-941a8e5cf3c7eb98d843509a02011ad4.md5",
+      "bytes": 91,
+      "sha256": "a321e9feeea78abaca195ad473fdd4fdb7f517b6ca647009515786dddf3df541"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/still.png-7af7dc8f6dddc51d7adf0a76dcf9fe3a.ctex",
+      "bytes": 494,
+      "sha256": "28bf6ccde1653c260d7fcd58c64442c18912e2f5f41fb7b145963e2191ce5fd8"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/still.png-7af7dc8f6dddc51d7adf0a76dcf9fe3a.md5",
+      "bytes": 91,
+      "sha256": "bd997d9dc6286bb7a40848c1daca61b60828e248363142739d003b2582e9f8b6"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/still.png-a626e233fa745ad33914c05bb675edcf.ctex",
+      "bytes": 528,
+      "sha256": "939e82654483f9fe5b9578a351b059a88f367cc05149b5fc53ef03262bb92bdd"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/still.png-a626e233fa745ad33914c05bb675edcf.md5",
+      "bytes": 91,
+      "sha256": "3c982fa6bae9d7ca02df1e2d56a64b4a9c2008da5f915a9898f84d7fc2b7644f"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/tiles.png-3559b9b5bdd751e100d182ba34da090e.ctex",
+      "bytes": 1380,
+      "sha256": "745f76ca63ff85a5713c4c556e05989c3ed9b21b063fdf248ab09a3a53502801"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/tiles.png-3559b9b5bdd751e100d182ba34da090e.md5",
+      "bytes": 91,
+      "sha256": "9ac332c209e0dd0f6ddd3ed630f58c0f1c10ef0fa8613ec6e46a698782f15ad5"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/weapons.png-d13b9884490ca4800dc777c6256e77ad.ctex",
+      "bytes": 2608,
+      "sha256": "f97d1962c8ac20ed25d5741bb100cd50f2efa753ced4d1043fd574dc96e6c9d4"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/weapons.png-d13b9884490ca4800dc777c6256e77ad.md5",
+      "bytes": 91,
+      "sha256": "e05d60fcd5855948ddb95c75e80b5a24223510b334edc56a5ed859b65dbef450"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/weapons_sil.png-87a60ae58cb77b8dd3b894eb36e2da2b.ctex",
+      "bytes": 932,
+      "sha256": "6cb397d7e35765af43cc092e16a09a0450d780c1a1c1af3cb74cb328aec3734d"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/imported/weapons_sil.png-87a60ae58cb77b8dd3b894eb36e2da2b.md5",
+      "bytes": 91,
+      "sha256": "5a20b87ffe03e44fccbcfbec9bede42d0be7da5ec7a1c1c7318c2085609a339f"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v2/game/.godot/uid_cache.bin",
+      "bytes": 6968,
+      "sha256": "5a123f47213365e897ddf50e41266399dd0c69d48c85429d60dc96c237087b9f"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/.gdignore",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/editor/Main.tscn-folding-4a24720ee5e787dbe30abc634fa3679d.cfg",
+      "bytes": 2204,
+      "sha256": "78e81838c391f9a97f9976c70fcfef90d8b456a0efa13e366e0dcc449595e985"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/editor/filesystem_cache10",
+      "bytes": 25459,
+      "sha256": "44ccd32de4dd39fbf8148460066b2b6689f0ea1ef2e07ec8eacab752e68a24a6"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/editor/project_metadata.cfg",
+      "bytes": 161,
+      "sha256": "7676d6f9713922675c4c69eebcbe619876e79857b03f9383d546cb53c5e41fea"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/global_script_class_cache.cfg",
+      "bytes": 3023,
+      "sha256": "d4e9c6347f409a4e93f9ed41be17cad3372c5daa76493cb19205de3fed9dd83b"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/07_hybrid_hint_red_L.png-583ebf766882c48cb819597c4fc508a3.ctex",
+      "bytes": 124,
+      "sha256": "aa527acabe70c8700f1e996f28f0ace3bff4c8d5d53ce9d0dc7755f56df4cef5"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/07_hybrid_hint_red_L.png-583ebf766882c48cb819597c4fc508a3.md5",
+      "bytes": 91,
+      "sha256": "94ae64706967c20b62aa87c5b8f0b957409c4f5cd7c8222fc3e14c9b79d3e964"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/actor_idle_hint_v1_keepout46.png-b2671b0537a8541cac8d4e229349bb31.ctex",
+      "bytes": 500,
+      "sha256": "bcae66725fb65f5312b8f42e7266480f3dacfbc4f1bd06f62e1ea8a2a4c3a81a"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/actor_idle_hint_v1_keepout46.png-b2671b0537a8541cac8d4e229349bb31.md5",
+      "bytes": 91,
+      "sha256": "fea7de66d2d6ebbdd8dfffa819ab371a65a10689e236fab79f5fa969b6990e4a"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/actor_idle_hint_v2.png-2e71a0649fd98236a2eaf66f7a1c5f63.ctex",
+      "bytes": 522,
+      "sha256": "a83756f01d4d9020bcd58322335355d201c91e2e9036bb9da7acb1bb7a3e2c41"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/actor_idle_hint_v2.png-2e71a0649fd98236a2eaf66f7a1c5f63.md5",
+      "bytes": 91,
+      "sha256": "ce9c70c3441f8e1616b95e5c4855bec34620e949b34f844cfd1c391c073a867d"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/actors.png-c409099f953fc6aca62704f9aed539f2.ctex",
+      "bytes": 5524,
+      "sha256": "9c54044d4d88b05a5b35eae93db251bbf85b1a0d8c589970c7c9dd955f68db6f"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/actors.png-c409099f953fc6aca62704f9aed539f2.md5",
+      "bytes": 91,
+      "sha256": "5f42445a977c4dd6183f674fa1db9479a51ed4cf30128516ffad8448a37d43dd"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/bleed_floor_sheet.png-6c67dbea8f45b828fe2906feba9fda65.ctex",
+      "bytes": 174,
+      "sha256": "fe19aa2cf7eef7c9aa4603a83c992887a24bf9cd1807b9e14a7eab16fb7406a2"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/bleed_floor_sheet.png-6c67dbea8f45b828fe2906feba9fda65.md5",
+      "bytes": 91,
+      "sha256": "bab020271c436540e526fe7406c3a2149a5df05964b67c648892c56d94a23b1f"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/bleed_floor_v1_schematic_mud.png-43ffaaa553a7af4158a8ae303c9c530b.ctex",
+      "bytes": 1586,
+      "sha256": "24112c85040d0a1499f9aff5cb0bcb3322605cb22f2010eb1ddabc17ad8ef801"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/bleed_floor_v1_schematic_mud.png-43ffaaa553a7af4158a8ae303c9c530b.md5",
+      "bytes": 91,
+      "sha256": "558899d2e5a554ee0b3036e8ee2b4699250a18e6c0458b83ffc23b936b571386"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/bleed_floor_v4_map_schematic.png-17bf125c13c6971a2e34e799dc0132fc.ctex",
+      "bytes": 1166,
+      "sha256": "d69cc48fca540d52ac782d2f323ec396ea42447507337b370b8e44ee30727898"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/bleed_floor_v4_map_schematic.png-17bf125c13c6971a2e34e799dc0132fc.md5",
+      "bytes": 91,
+      "sha256": "f7038c4b9589af7b713b7170add99e54ed029e22ceb9d514e1a92e4f1b947b04"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/bleed_floor_v5_noise_blobs.png-08e4fad14c740cb9aa326f035c90a866.ctex",
+      "bytes": 1778,
+      "sha256": "e6fcaa233f6b5fe9b348715445691b0982f42059590dc5fca03ced9eaad9f777"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/bleed_floor_v5_noise_blobs.png-08e4fad14c740cb9aa326f035c90a866.md5",
+      "bytes": 91,
+      "sha256": "46ba41517bf7f167445ff9bd6fd9c0680d026a571717043c46a60a40f120359e"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/bleed_wall_sheet.png-1406a0656e0dbe1e1bce118a1dcb6fc2.ctex",
+      "bytes": 226,
+      "sha256": "f5f116be03dbdb86029bbfbe87b643c9b51df533b08a34f5a44224fbeff2a457"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/bleed_wall_sheet.png-1406a0656e0dbe1e1bce118a1dcb6fc2.md5",
+      "bytes": 91,
+      "sha256": "e01dddd8706143b68e447a7c873cf6373d58b56ac6d34f981c0343acac40153d"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/body_or_arc.png-29cff629ac596c2e5f94a5d703a2a0d2.ctex",
+      "bytes": 576,
+      "sha256": "bae4228f528a79fc1f3c921d473ac6ce6b2e3a8be1b0d51ac2b88c2959c70834"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/body_or_arc.png-29cff629ac596c2e5f94a5d703a2a0d2.md5",
+      "bytes": 91,
+      "sha256": "4a7e5768887f995af2b0817f9a8af509aea971cae5447c316e99d384cd35cd8e"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/body_or_arc.png-4202da7f25d66a4a803b5503e251ead1.ctex",
+      "bytes": 556,
+      "sha256": "c51fc5952f5a23fedb23975d1c6277c5f464a2f1e91bd3800d3cb8634154068a"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/body_or_arc.png-4202da7f25d66a4a803b5503e251ead1.md5",
+      "bytes": 91,
+      "sha256": "945e9cc408c2e1bebfa5b7c5e9b86afe86967128240e73064e4ac3ce07ddb8e3"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/body_or_arc.png-49bc1ad0b1c2efd56c6b931dde206692.ctex",
+      "bytes": 410,
+      "sha256": "b579a4ec436c625dba550c65a9c5d043ef1dc3d667ac871946ce28667b7359ec"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/body_or_arc.png-49bc1ad0b1c2efd56c6b931dde206692.md5",
+      "bytes": 91,
+      "sha256": "04bb724b65c91101b35bcbfadb0b457bb7feed7a12c3f6733e040d0f6640e835"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/circuit_node_v1.png-3b24bfa1c18d899d9d0882d8ad8d719f.ctex",
+      "bytes": 474,
+      "sha256": "4621e149ff010d596e933ecd890534c1f7d9ae8084bb68045179d1506504f650"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/circuit_node_v1.png-3b24bfa1c18d899d9d0882d8ad8d719f.md5",
+      "bytes": 91,
+      "sha256": "a6f0714f2938de74793193e3e266d180bb705fab115fc50887d7af24dd575935"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/circuit_node_v2.png-5db2e5d0b61b1428483e2bf626a6edb3.ctex",
+      "bytes": 436,
+      "sha256": "9e5e722657355697fc009193d558c69c627d7c27723ff3ea14bde434d01182c9"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/circuit_node_v2.png-5db2e5d0b61b1428483e2bf626a6edb3.md5",
+      "bytes": 91,
+      "sha256": "17ec3bcc97abba774eb46ff8fb6e2030c97184789757821c9f97a3c4143517b8"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/combo_heli_march_storm_still.png-0f7c77e6f130904d684e05af226d975e.ctex",
+      "bytes": 558,
+      "sha256": "3ec191c799c4d1378a59eed1d0a3ab79e3cda8d308efd0e600dd6f1a3de60f33"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/combo_heli_march_storm_still.png-0f7c77e6f130904d684e05af226d975e.md5",
+      "bytes": 91,
+      "sha256": "8ed6cf913fb745d75c270f9b9b9d2fd7689b9ab2b4afdbc92e24cebb63181af3"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/combo_heli_seq_oracle_still.png-3ee69693b46c0434ae15ad3a19b88d98.ctex",
+      "bytes": 494,
+      "sha256": "28bf6ccde1653c260d7fcd58c64442c18912e2f5f41fb7b145963e2191ce5fd8"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/combo_heli_seq_oracle_still.png-3ee69693b46c0434ae15ad3a19b88d98.md5",
+      "bytes": 91,
+      "sha256": "bd997d9dc6286bb7a40848c1daca61b60828e248363142739d003b2582e9f8b6"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/combo_march_seq_edict_still.png-2d7548ee3d580a7be0d6cd3bf27d4f7c.ctex",
+      "bytes": 528,
+      "sha256": "939e82654483f9fe5b9578a351b059a88f367cc05149b5fc53ef03262bb92bdd"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/combo_march_seq_edict_still.png-2d7548ee3d580a7be0d6cd3bf27d4f7c.md5",
+      "bytes": 91,
+      "sha256": "3c982fa6bae9d7ca02df1e2d56a64b4a9c2008da5f915a9898f84d7fc2b7644f"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/enemies.png-2d210a91acf956205d552681c2a2dfe9.ctex",
+      "bytes": 8712,
+      "sha256": "15827bf4f8596129bfed0ac03f9abfa62b25bec5be07c7090108fcacda7bf067"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/enemies.png-2d210a91acf956205d552681c2a2dfe9.md5",
+      "bytes": 91,
+      "sha256": "5351039b790afbfeb27c3b84b6a5c10ada93bb5b2178d20201801987704e34e9"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/enemies_sil.png-6325954954ca9f4a2f13391b93091b6b.ctex",
+      "bytes": 3578,
+      "sha256": "d1a863016ad391e2ecf8f578fe8db338dc0ac81ed6fc79e834ff1188d30ff997"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/enemies_sil.png-6325954954ca9f4a2f13391b93091b6b.md5",
+      "bytes": 91,
+      "sha256": "fbb7a7f94249cdfe6a8f8bd85325420b0c0987d1c7971de9e8c6129cd4fb33c5"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/enemy_grunt_v1.png-29cc531f7a0336ada7819edde5b86656.ctex",
+      "bytes": 538,
+      "sha256": "9fb88585fe6958d56a0b5ac72db3cfb3643666f825214ee3a29b66fd53478029"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/enemy_grunt_v1.png-29cc531f7a0336ada7819edde5b86656.md5",
+      "bytes": 91,
+      "sha256": "a724b79154db803351ec0f924751afb7a15c71686ff04423dd764ab7c4b856b7"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/enemy_grunt_v2.png-73e850c9fadd889f27ff74e96e2d32e3.ctex",
+      "bytes": 586,
+      "sha256": "14daa6cddcbadfff9d5faf656125273f99f3b7ca4f18f328aea661a9bc0ccd53"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/enemy_grunt_v2.png-73e850c9fadd889f27ff74e96e2d32e3.md5",
+      "bytes": 91,
+      "sha256": "cea201eaf711c51ba66b416588c260d587206a685cec12f8799eb23de8dee80c"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/entity_catalog.png-3270e8e40522e807e0cd1c5fa1fa0cff.ctex",
+      "bytes": 191264,
+      "sha256": "73d570d83c72424c2ba9dded7fc65cbfae77ee41e82b8c103c2d675ef9679434"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/entity_catalog.png-3270e8e40522e807e0cd1c5fa1fa0cff.md5",
+      "bytes": 91,
+      "sha256": "5ba75d0360830056a9c9c5f798131ec852896d28af06885e31bcfbbe7ddd863f"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/entity_catalog_sil.png-4e510d93dd65ec0c4b92583dcdabe164.ctex",
+      "bytes": 65694,
+      "sha256": "38c80e16730bd47f1d9b15995878e76a48e9bce6ad99757e116e4fb34ed51a1b"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/entity_catalog_sil.png-4e510d93dd65ec0c4b92583dcdabe164.md5",
+      "bytes": 91,
+      "sha256": "4b8578596d5c1565332c7030a48d3078f6c447a1b0e8584060da3fa4f6d39c35"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/floor_rubble_v1.png-384bf516c54c8419dc33a0029c0ff58e.ctex",
+      "bytes": 658,
+      "sha256": "bb45cd47285fde58987e8a3d135d01df7d7d2b7812395e9d290db33ee0c97851"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/floor_rubble_v1.png-384bf516c54c8419dc33a0029c0ff58e.md5",
+      "bytes": 91,
+      "sha256": "a350925bf2e61bfb09d2418f7bfdd3bffa75c75f42dbbd4ee172476e66ac409f"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/floor_rubble_v1_icon_lump.png-958d4c1da13f1281fb3718ac7f0e35d0.ctex",
+      "bytes": 658,
+      "sha256": "bb45cd47285fde58987e8a3d135d01df7d7d2b7812395e9d290db33ee0c97851"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/floor_rubble_v1_icon_lump.png-958d4c1da13f1281fb3718ac7f0e35d0.md5",
+      "bytes": 91,
+      "sha256": "a350925bf2e61bfb09d2418f7bfdd3bffa75c75f42dbbd4ee172476e66ac409f"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/floor_rubble_v2.png-cfa1e595e96790aca170491456e98bc7.ctex",
+      "bytes": 508,
+      "sha256": "5948d1af281b9273d2002ee2665032a0ff735287f59591a019c26f4f8e16c6fd"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/floor_rubble_v2.png-cfa1e595e96790aca170491456e98bc7.md5",
+      "bytes": 91,
+      "sha256": "91966bdf8f0376bbc7f134e0f9fc9de6ac267f08434b339785eefa0b53b0cb26"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/floor_rubble_v2_icon_like.png-8e347239f7664070c3ad87da046478ca.ctex",
+      "bytes": 508,
+      "sha256": "5948d1af281b9273d2002ee2665032a0ff735287f59591a019c26f4f8e16c6fd"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/floor_rubble_v2_icon_like.png-8e347239f7664070c3ad87da046478ca.md5",
+      "bytes": 91,
+      "sha256": "91966bdf8f0376bbc7f134e0f9fc9de6ac267f08434b339785eefa0b53b0cb26"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/floor_rubble_v3_blob.png-84df2855dad1853e454df9a452ff7a2e.ctex",
+      "bytes": 500,
+      "sha256": "06864183583bfb405907f84ff0668a263ddfc2279c003c2d1067c077aa71f931"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/floor_rubble_v3_blob.png-84df2855dad1853e454df9a452ff7a2e.md5",
+      "bytes": 91,
+      "sha256": "4ad925bc401bb5bbd30992158e82ee4177e599ed8ff7e8a3e1a91778c6b22197"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/floor_rubble_v4_float10.png-b18b6e7c60250b1305caf58bd311713c.ctex",
+      "bytes": 674,
+      "sha256": "fb6533a92e53117f9ddd1f31818b7e0bc59130b27ef0983d2bffd3310c1c2bdc"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/floor_rubble_v4_float10.png-b18b6e7c60250b1305caf58bd311713c.md5",
+      "bytes": 91,
+      "sha256": "5edf05e62af2b77a25b7b011dc756a891b296bce73ffa85e044d2cf72a453433"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/floor_rubble_v5.png-e81c9aed357e9cdc16d7392972de2615.ctex",
+      "bytes": 670,
+      "sha256": "6e74964be41adb65e05a75e34744265a769140aaf4db7a1e8d39b93db0cb5a0d"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/floor_rubble_v5.png-e81c9aed357e9cdc16d7392972de2615.md5",
+      "bytes": 91,
+      "sha256": "9a0bc04525d93884625e957e9323675600ef61693a57852eae1b190c4173e6bf"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/helix_carbine_v1.png-9aa8d283c13d2be62d383878dddfb2dd.ctex",
+      "bytes": 360,
+      "sha256": "885a523b6563074f3b9eca2a98065eeda2e47cd1d4738df6ce88b53c0f5b9715"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/helix_carbine_v1.png-9aa8d283c13d2be62d383878dddfb2dd.md5",
+      "bytes": 91,
+      "sha256": "c8fe5ee3454de3db5ec83bc633e0647252e60f87f5a29b60eb68c11615ce4026"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/helix_carbine_v2.png-258cdfca67f2bf6e0cfcfb21f9d67968.ctex",
+      "bytes": 450,
+      "sha256": "4f81caaa82ec8dd1bd8b806aac5c4e64f7cba921487f7669e830a87ab7591cf1"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/helix_carbine_v2.png-258cdfca67f2bf6e0cfcfb21f9d67968.md5",
+      "bytes": 91,
+      "sha256": "ff58b7572b52b2453fc33e9b97726ace1012690f2efd1c5914040b46353e696d"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/helix_muzzle_flash_v1.png-202484a037f247c4bd97e761cfebfcf2.ctex",
+      "bytes": 594,
+      "sha256": "507a0f9fc49e6c8c31342caa64ea6eebd7ed3dd3c179319f6d67853c9314fa81"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/helix_muzzle_flash_v1.png-202484a037f247c4bd97e761cfebfcf2.md5",
+      "bytes": 91,
+      "sha256": "b9c23a08373403fee08ab98dfac48bae654dc9250e2e2488a0a0d8c40f583763"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/hit_spark_v1.png-b89b90334b36e76b8af7b79dbb0a160b.ctex",
+      "bytes": 518,
+      "sha256": "4a28ac2ed75aabe32a28f7aea60a0ad5ad0a1a28f3ea41c682904fc0e55a6af8"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/hit_spark_v1.png-b89b90334b36e76b8af7b79dbb0a160b.md5",
+      "bytes": 91,
+      "sha256": "441058d163d3a2a3d40ec737b0e287a9a4c388e11ca24d5f3db0a13f14a08213"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/hit_spark_v2.png-6128b3d36fb2b340cd1c5dd36d6d1806.ctex",
+      "bytes": 658,
+      "sha256": "7aad2fdedd886a94492b5e1af7a74a96ac38f0c93f915b2b119d45419d1a88e1"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/hit_spark_v2.png-6128b3d36fb2b340cd1c5dd36d6d1806.md5",
+      "bytes": 91,
+      "sha256": "4c434ec05f1cec046f0e90d77f059918e4864fa36217b6efc173a303e3fccdc5"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/hit_spark_v2_sheet.png-614e15105ca0ec38040f5e4b532ae992.ctex",
+      "bytes": 1624,
+      "sha256": "455fa09e5a88b41729e4de7ab062ceb3e19ebc2b8a4410b058da2a2c1d927439"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/hit_spark_v2_sheet.png-614e15105ca0ec38040f5e4b532ae992.md5",
+      "bytes": 91,
+      "sha256": "92cd4ba3e8a0668fbcc0eb639da0d237ca11cc125f20224a5d59f2318863c53f"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex",
+      "bytes": 148,
+      "sha256": "98f134eb72cb129daf462e44de0c4bd135743569efe28737adc35a740d88d611"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.md5",
+      "bytes": 91,
+      "sha256": "87156d2e9729e653f6801e4e63ca6a3be1bb83d8904f5fa4e42a8cce152acc7e"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/impact.png-442b71b2d28d6fea25a1760e5e8f1cdc.ctex",
+      "bytes": 518,
+      "sha256": "91b104e1870e4eba6923ccc7fd76c4e186a73dc5d6975adfb53c3b9579a310b9"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/impact.png-442b71b2d28d6fea25a1760e5e8f1cdc.md5",
+      "bytes": 91,
+      "sha256": "caee929df0871ab199bee25d2caeaa00112d029f2da759a9a8473a7b4a78bb5a"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/impact.png-707edb4dadeefc27469ae5b2d027c4ee.ctex",
+      "bytes": 520,
+      "sha256": "565cd3f16d8fc687e76b04fbc9f12080c75e1ce8cd522ee84cb7f40d5b448417"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/impact.png-707edb4dadeefc27469ae5b2d027c4ee.md5",
+      "bytes": 91,
+      "sha256": "12c61ff59121bbb77b5404712213229c577a8e6434587e2d86936abe6577d2fb"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/impact.png-ef4ed21ff663f81fe4837839c4754067.ctex",
+      "bytes": 512,
+      "sha256": "a0c85c0696c416a5769318ead894b5ff1683a291664df2e4247918aaa907b6dc"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/impact.png-ef4ed21ff663f81fe4837839c4754067.md5",
+      "bytes": 91,
+      "sha256": "413168bd0e1c8f7c942a1d2128c29e88a28869304f5c5e4e9d9685d08154a85e"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/interactables.png-c89c505488656a03a566ef551e41ef8b.ctex",
+      "bytes": 4180,
+      "sha256": "7ed917bbc676bbfd9bc17db9e792c3017aa17357a92b95bd372dc05e79045231"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/interactables.png-c89c505488656a03a566ef551e41ef8b.md5",
+      "bytes": 91,
+      "sha256": "8fc739fd8ed7c054a06268a4599ab72e9e9159eaab6514163fb979737e358459"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/interactables_sil.png-fd6902ebf16bb43e4082a3e357438488.ctex",
+      "bytes": 1278,
+      "sha256": "6f90d3d743462e7e46a958c284532e50d287bcdd41a2fff8e8ebabf99bec992d"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/interactables_sil.png-fd6902ebf16bb43e4082a3e357438488.md5",
+      "bytes": 91,
+      "sha256": "6dafa54caf4f2376ef41c6763a178d8317f5ae9acca08c6f765ac93072d4f367"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/march_greatblade_v1.png-81a7e18c2675753c35971b2513a880f1.ctex",
+      "bytes": 464,
+      "sha256": "1b5f4f553a25a84f42ec92bed7f59b1b51f320b95ad4b6d7cb49bff75dd426eb"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/march_greatblade_v1.png-81a7e18c2675753c35971b2513a880f1.md5",
+      "bytes": 91,
+      "sha256": "ed6b087b85f5059dfd3744c7c11142fa38a4d3d45278312cb2b4b6d15f6bbdf4"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/march_greatblade_v2.png-39907c3f428106f6f32f1f3dbe08ea37.ctex",
+      "bytes": 522,
+      "sha256": "21cf886b8019b4adda3aa47e80fb1b1c4be789a3081a1ab850bbcf9c674e4c57"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/march_greatblade_v2.png-39907c3f428106f6f32f1f3dbe08ea37.md5",
+      "bytes": 91,
+      "sha256": "1964d86ce1f771d177bc93b48f671a2a13476a0fb0cd4d9c3c9bdac6a31004f0"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/march_slash_arc_v1.png-5f2a52119e48d6604558d653c190b73e.ctex",
+      "bytes": 408,
+      "sha256": "f067951b0f0f71113490dff272685387013fe707d3309de8807a5932c75ffa9d"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/march_slash_arc_v1.png-5f2a52119e48d6604558d653c190b73e.md5",
+      "bytes": 91,
+      "sha256": "b5abd82d42fe1c31aefbbcb43ccfc6db8ba4634d7b74cc312ea6e0a5c40e3833"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/march_slash_arc_v3.png-b315f8e281cc2d5fdc905738c9e1addb.ctex",
+      "bytes": 342,
+      "sha256": "779f6c0bcd65dde3ca8eb0656c61852baa34d37cdc4cb0743eb61c42d42dd59b"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/march_slash_arc_v3.png-b315f8e281cc2d5fdc905738c9e1addb.md5",
+      "bytes": 91,
+      "sha256": "7ea6b9e31c380f6bf06e1bc58c2fbab3d84ca90e4c1176dec203022b1e373d3d"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/march_slash_arc_v4.png-08689ea48ae5f8cae3967f830ccd200e.ctex",
+      "bytes": 330,
+      "sha256": "9382dedb324ebafa1ef9ddc56337ca28f226827c650124bbd9a75d8960f0d52c"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/march_slash_arc_v4.png-08689ea48ae5f8cae3967f830ccd200e.md5",
+      "bytes": 91,
+      "sha256": "1d96540540dbbdac9563d677ca553c30f22effaf9dd750a2200944bdf5ecfce4"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/muzzle_or_plant.png-580ca90431719e71d41867c5132bf2f5.ctex",
+      "bytes": 372,
+      "sha256": "e2da1174d5a1fb23291f3d888aa939c6730f956ec0d5b873a326cd0d0a424c16"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/muzzle_or_plant.png-580ca90431719e71d41867c5132bf2f5.md5",
+      "bytes": 91,
+      "sha256": "615b173657f4213a70eca944d506362b8b5dbe3f533d90647b5cf67cb88be7c9"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/muzzle_or_plant.png-a55d7efcb9d4b499ef13910eaa9378ff.ctex",
+      "bytes": 340,
+      "sha256": "08b200925f0fa3b3d9058469b0c5534870bdeb33ea9680f2402300e33fb3dcbf"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/muzzle_or_plant.png-a55d7efcb9d4b499ef13910eaa9378ff.md5",
+      "bytes": 91,
+      "sha256": "361fa87646304bc19d233e19fb28d63dc7c0d13f9d7cb01ed0f789772bd23aec"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/muzzle_or_plant.png-d1463970fb858470ebfa3241f81a13d4.ctex",
+      "bytes": 432,
+      "sha256": "9637553581e1f11d152af871e53b792ab7ea9d857e74fb15de838cd0d9bcb7e1"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/muzzle_or_plant.png-d1463970fb858470ebfa3241f81a13d4.md5",
+      "bytes": 91,
+      "sha256": "8218648e4865aaeff159b02e9138a23c0c039a7073201e3352961781f2d9ee30"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/sequence_crest_hit_v1.png-19f22cb4bc49e5f4a894034c049db5c3.ctex",
+      "bytes": 610,
+      "sha256": "3f3b5825b2950f6e59cee38c8132b3ed085ffd658f09683521a131deb23ce872"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/sequence_crest_hit_v1.png-19f22cb4bc49e5f4a894034c049db5c3.md5",
+      "bytes": 91,
+      "sha256": "c65de67d7fdb27dff9db2d5dc6fea3d5f068ce86dd64d8ca6a162f579549c56b"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/sequence_crozier_v1.png-b41cd7c2110897573540df0b6b798f66.ctex",
+      "bytes": 368,
+      "sha256": "cafd2bcefeb76df76ddf7be6eaae6e93d9c663f77f68ce76d393122a148db176"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/sequence_crozier_v1.png-b41cd7c2110897573540df0b6b798f66.md5",
+      "bytes": 91,
+      "sha256": "960393d42ed054111e9fae14c26e2cfbe1c8afa1104e2267156b79d3c106b54f"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/sequence_crozier_v2.png-0e126a50282c9efd8143e0efbe386e40.ctex",
+      "bytes": 398,
+      "sha256": "8b5fdbc461c675aed71e970a2aa262e349dfa4ca069f9963931fcb66050ca1f9"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/sequence_crozier_v2.png-0e126a50282c9efd8143e0efbe386e40.md5",
+      "bytes": 91,
+      "sha256": "c7d0a1b65d0d82791c9fb5b628d240c74385f3b556e211e9d9120a22f31494d8"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/sequence_telegraph_v1_caret.png-75357edce3f6d0e38d369a46e3ce37d2.ctex",
+      "bytes": 456,
+      "sha256": "1edb1525e7545b5bbce7379651ee6f2122cd008d30c7299c33015d82920a9b19"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/sequence_telegraph_v1_caret.png-75357edce3f6d0e38d369a46e3ce37d2.md5",
+      "bytes": 91,
+      "sha256": "d38778ec844b0c4c70bddc6388046e5b63e0a6b70225fc654801389a1ba8d4c7"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/sequence_telegraph_v2.png-7b40ab01261cac39133d9fa56bab4319.ctex",
+      "bytes": 578,
+      "sha256": "ca88a3a45ffade66bd87242dc8e0e6c18b4abe59aba1a549151578d101f64f2a"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/sequence_telegraph_v2.png-7b40ab01261cac39133d9fa56bab4319.md5",
+      "bytes": 91,
+      "sha256": "057f19ab3bb2822a7a0941fd729b3dd1283df3b01ff336dcfe798d63fa67c1a1"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/silhouette_board.png-941a8e5cf3c7eb98d843509a02011ad4.ctex",
+      "bytes": 2612,
+      "sha256": "6b0fbb9d96c58316a09282ca053c43a940af6759be883726ff9863a90a8c738d"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/silhouette_board.png-941a8e5cf3c7eb98d843509a02011ad4.md5",
+      "bytes": 91,
+      "sha256": "a321e9feeea78abaca195ad473fdd4fdb7f517b6ca647009515786dddf3df541"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/still.png-7af7dc8f6dddc51d7adf0a76dcf9fe3a.ctex",
+      "bytes": 494,
+      "sha256": "28bf6ccde1653c260d7fcd58c64442c18912e2f5f41fb7b145963e2191ce5fd8"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/still.png-7af7dc8f6dddc51d7adf0a76dcf9fe3a.md5",
+      "bytes": 91,
+      "sha256": "bd997d9dc6286bb7a40848c1daca61b60828e248363142739d003b2582e9f8b6"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/still.png-a626e233fa745ad33914c05bb675edcf.ctex",
+      "bytes": 528,
+      "sha256": "939e82654483f9fe5b9578a351b059a88f367cc05149b5fc53ef03262bb92bdd"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/still.png-a626e233fa745ad33914c05bb675edcf.md5",
+      "bytes": 91,
+      "sha256": "3c982fa6bae9d7ca02df1e2d56a64b4a9c2008da5f915a9898f84d7fc2b7644f"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/tiles.png-3559b9b5bdd751e100d182ba34da090e.ctex",
+      "bytes": 1380,
+      "sha256": "745f76ca63ff85a5713c4c556e05989c3ed9b21b063fdf248ab09a3a53502801"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/tiles.png-3559b9b5bdd751e100d182ba34da090e.md5",
+      "bytes": 91,
+      "sha256": "9ac332c209e0dd0f6ddd3ed630f58c0f1c10ef0fa8613ec6e46a698782f15ad5"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/weapons.png-d13b9884490ca4800dc777c6256e77ad.ctex",
+      "bytes": 2608,
+      "sha256": "f97d1962c8ac20ed25d5741bb100cd50f2efa753ced4d1043fd574dc96e6c9d4"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/weapons.png-d13b9884490ca4800dc777c6256e77ad.md5",
+      "bytes": 91,
+      "sha256": "e05d60fcd5855948ddb95c75e80b5a24223510b334edc56a5ed859b65dbef450"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/weapons_sil.png-87a60ae58cb77b8dd3b894eb36e2da2b.ctex",
+      "bytes": 932,
+      "sha256": "6cb397d7e35765af43cc092e16a09a0450d780c1a1c1af3cb74cb328aec3734d"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/imported/weapons_sil.png-87a60ae58cb77b8dd3b894eb36e2da2b.md5",
+      "bytes": 91,
+      "sha256": "5a20b87ffe03e44fccbcfbec9bede42d0be7da5ec7a1c1c7318c2085609a339f"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v3/game/.godot/uid_cache.bin",
+      "bytes": 6968,
+      "sha256": "045961058790e644cd7fcabdfecdeef701678cd41f4c91a34e5927588c14788e"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/.gdignore",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/editor/Main.tscn-folding-4a24720ee5e787dbe30abc634fa3679d.cfg",
+      "bytes": 2204,
+      "sha256": "78e81838c391f9a97f9976c70fcfef90d8b456a0efa13e366e0dcc449595e985"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/editor/filesystem_cache10",
+      "bytes": 25532,
+      "sha256": "5d83d02c1d2e9a1c6cf58d81abb5892d723a1b8c8724cf7165e6bf91e1dbb151"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/editor/project_metadata.cfg",
+      "bytes": 161,
+      "sha256": "7676d6f9713922675c4c69eebcbe619876e79857b03f9383d546cb53c5e41fea"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/global_script_class_cache.cfg",
+      "bytes": 3023,
+      "sha256": "d4e9c6347f409a4e93f9ed41be17cad3372c5daa76493cb19205de3fed9dd83b"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/07_hybrid_hint_red_L.png-583ebf766882c48cb819597c4fc508a3.ctex",
+      "bytes": 124,
+      "sha256": "aa527acabe70c8700f1e996f28f0ace3bff4c8d5d53ce9d0dc7755f56df4cef5"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/07_hybrid_hint_red_L.png-583ebf766882c48cb819597c4fc508a3.md5",
+      "bytes": 91,
+      "sha256": "94ae64706967c20b62aa87c5b8f0b957409c4f5cd7c8222fc3e14c9b79d3e964"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/actor_idle_hint_v1_keepout46.png-b2671b0537a8541cac8d4e229349bb31.ctex",
+      "bytes": 500,
+      "sha256": "bcae66725fb65f5312b8f42e7266480f3dacfbc4f1bd06f62e1ea8a2a4c3a81a"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/actor_idle_hint_v1_keepout46.png-b2671b0537a8541cac8d4e229349bb31.md5",
+      "bytes": 91,
+      "sha256": "fea7de66d2d6ebbdd8dfffa819ab371a65a10689e236fab79f5fa969b6990e4a"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/actor_idle_hint_v2.png-2e71a0649fd98236a2eaf66f7a1c5f63.ctex",
+      "bytes": 522,
+      "sha256": "a83756f01d4d9020bcd58322335355d201c91e2e9036bb9da7acb1bb7a3e2c41"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/actor_idle_hint_v2.png-2e71a0649fd98236a2eaf66f7a1c5f63.md5",
+      "bytes": 91,
+      "sha256": "ce9c70c3441f8e1616b95e5c4855bec34620e949b34f844cfd1c391c073a867d"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/actors.png-c409099f953fc6aca62704f9aed539f2.ctex",
+      "bytes": 5524,
+      "sha256": "9c54044d4d88b05a5b35eae93db251bbf85b1a0d8c589970c7c9dd955f68db6f"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/actors.png-c409099f953fc6aca62704f9aed539f2.md5",
+      "bytes": 91,
+      "sha256": "5f42445a977c4dd6183f674fa1db9479a51ed4cf30128516ffad8448a37d43dd"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/bleed_floor_sheet.png-6c67dbea8f45b828fe2906feba9fda65.ctex",
+      "bytes": 174,
+      "sha256": "fe19aa2cf7eef7c9aa4603a83c992887a24bf9cd1807b9e14a7eab16fb7406a2"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/bleed_floor_sheet.png-6c67dbea8f45b828fe2906feba9fda65.md5",
+      "bytes": 91,
+      "sha256": "bab020271c436540e526fe7406c3a2149a5df05964b67c648892c56d94a23b1f"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/bleed_floor_v1_schematic_mud.png-43ffaaa553a7af4158a8ae303c9c530b.ctex",
+      "bytes": 1586,
+      "sha256": "24112c85040d0a1499f9aff5cb0bcb3322605cb22f2010eb1ddabc17ad8ef801"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/bleed_floor_v1_schematic_mud.png-43ffaaa553a7af4158a8ae303c9c530b.md5",
+      "bytes": 91,
+      "sha256": "558899d2e5a554ee0b3036e8ee2b4699250a18e6c0458b83ffc23b936b571386"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/bleed_floor_v4_map_schematic.png-17bf125c13c6971a2e34e799dc0132fc.ctex",
+      "bytes": 1166,
+      "sha256": "d69cc48fca540d52ac782d2f323ec396ea42447507337b370b8e44ee30727898"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/bleed_floor_v4_map_schematic.png-17bf125c13c6971a2e34e799dc0132fc.md5",
+      "bytes": 91,
+      "sha256": "f7038c4b9589af7b713b7170add99e54ed029e22ceb9d514e1a92e4f1b947b04"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/bleed_floor_v5_noise_blobs.png-08e4fad14c740cb9aa326f035c90a866.ctex",
+      "bytes": 1778,
+      "sha256": "e6fcaa233f6b5fe9b348715445691b0982f42059590dc5fca03ced9eaad9f777"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/bleed_floor_v5_noise_blobs.png-08e4fad14c740cb9aa326f035c90a866.md5",
+      "bytes": 91,
+      "sha256": "46ba41517bf7f167445ff9bd6fd9c0680d026a571717043c46a60a40f120359e"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/bleed_wall_sheet.png-1406a0656e0dbe1e1bce118a1dcb6fc2.ctex",
+      "bytes": 226,
+      "sha256": "f5f116be03dbdb86029bbfbe87b643c9b51df533b08a34f5a44224fbeff2a457"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/bleed_wall_sheet.png-1406a0656e0dbe1e1bce118a1dcb6fc2.md5",
+      "bytes": 91,
+      "sha256": "e01dddd8706143b68e447a7c873cf6373d58b56ac6d34f981c0343acac40153d"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/body_or_arc.png-29cff629ac596c2e5f94a5d703a2a0d2.ctex",
+      "bytes": 576,
+      "sha256": "bae4228f528a79fc1f3c921d473ac6ce6b2e3a8be1b0d51ac2b88c2959c70834"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/body_or_arc.png-29cff629ac596c2e5f94a5d703a2a0d2.md5",
+      "bytes": 91,
+      "sha256": "4a7e5768887f995af2b0817f9a8af509aea971cae5447c316e99d384cd35cd8e"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/body_or_arc.png-4202da7f25d66a4a803b5503e251ead1.ctex",
+      "bytes": 556,
+      "sha256": "c51fc5952f5a23fedb23975d1c6277c5f464a2f1e91bd3800d3cb8634154068a"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/body_or_arc.png-4202da7f25d66a4a803b5503e251ead1.md5",
+      "bytes": 91,
+      "sha256": "945e9cc408c2e1bebfa5b7c5e9b86afe86967128240e73064e4ac3ce07ddb8e3"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/body_or_arc.png-49bc1ad0b1c2efd56c6b931dde206692.ctex",
+      "bytes": 410,
+      "sha256": "b579a4ec436c625dba550c65a9c5d043ef1dc3d667ac871946ce28667b7359ec"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/body_or_arc.png-49bc1ad0b1c2efd56c6b931dde206692.md5",
+      "bytes": 91,
+      "sha256": "04bb724b65c91101b35bcbfadb0b457bb7feed7a12c3f6733e040d0f6640e835"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/circuit_node_v1.png-3b24bfa1c18d899d9d0882d8ad8d719f.ctex",
+      "bytes": 474,
+      "sha256": "4621e149ff010d596e933ecd890534c1f7d9ae8084bb68045179d1506504f650"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/circuit_node_v1.png-3b24bfa1c18d899d9d0882d8ad8d719f.md5",
+      "bytes": 91,
+      "sha256": "a6f0714f2938de74793193e3e266d180bb705fab115fc50887d7af24dd575935"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/circuit_node_v2.png-5db2e5d0b61b1428483e2bf626a6edb3.ctex",
+      "bytes": 436,
+      "sha256": "9e5e722657355697fc009193d558c69c627d7c27723ff3ea14bde434d01182c9"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/circuit_node_v2.png-5db2e5d0b61b1428483e2bf626a6edb3.md5",
+      "bytes": 91,
+      "sha256": "17ec3bcc97abba774eb46ff8fb6e2030c97184789757821c9f97a3c4143517b8"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/combo_heli_march_storm_still.png-0f7c77e6f130904d684e05af226d975e.ctex",
+      "bytes": 558,
+      "sha256": "3ec191c799c4d1378a59eed1d0a3ab79e3cda8d308efd0e600dd6f1a3de60f33"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/combo_heli_march_storm_still.png-0f7c77e6f130904d684e05af226d975e.md5",
+      "bytes": 91,
+      "sha256": "8ed6cf913fb745d75c270f9b9b9d2fd7689b9ab2b4afdbc92e24cebb63181af3"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/combo_heli_seq_oracle_still.png-3ee69693b46c0434ae15ad3a19b88d98.ctex",
+      "bytes": 494,
+      "sha256": "28bf6ccde1653c260d7fcd58c64442c18912e2f5f41fb7b145963e2191ce5fd8"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/combo_heli_seq_oracle_still.png-3ee69693b46c0434ae15ad3a19b88d98.md5",
+      "bytes": 91,
+      "sha256": "bd997d9dc6286bb7a40848c1daca61b60828e248363142739d003b2582e9f8b6"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/combo_march_seq_edict_still.png-2d7548ee3d580a7be0d6cd3bf27d4f7c.ctex",
+      "bytes": 528,
+      "sha256": "939e82654483f9fe5b9578a351b059a88f367cc05149b5fc53ef03262bb92bdd"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/combo_march_seq_edict_still.png-2d7548ee3d580a7be0d6cd3bf27d4f7c.md5",
+      "bytes": 91,
+      "sha256": "3c982fa6bae9d7ca02df1e2d56a64b4a9c2008da5f915a9898f84d7fc2b7644f"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/enemies.png-2d210a91acf956205d552681c2a2dfe9.ctex",
+      "bytes": 8712,
+      "sha256": "15827bf4f8596129bfed0ac03f9abfa62b25bec5be07c7090108fcacda7bf067"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/enemies.png-2d210a91acf956205d552681c2a2dfe9.md5",
+      "bytes": 91,
+      "sha256": "5351039b790afbfeb27c3b84b6a5c10ada93bb5b2178d20201801987704e34e9"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/enemies_sil.png-6325954954ca9f4a2f13391b93091b6b.ctex",
+      "bytes": 3578,
+      "sha256": "d1a863016ad391e2ecf8f578fe8db338dc0ac81ed6fc79e834ff1188d30ff997"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/enemies_sil.png-6325954954ca9f4a2f13391b93091b6b.md5",
+      "bytes": 91,
+      "sha256": "fbb7a7f94249cdfe6a8f8bd85325420b0c0987d1c7971de9e8c6129cd4fb33c5"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/enemy_grunt_v1.png-29cc531f7a0336ada7819edde5b86656.ctex",
+      "bytes": 538,
+      "sha256": "9fb88585fe6958d56a0b5ac72db3cfb3643666f825214ee3a29b66fd53478029"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/enemy_grunt_v1.png-29cc531f7a0336ada7819edde5b86656.md5",
+      "bytes": 91,
+      "sha256": "a724b79154db803351ec0f924751afb7a15c71686ff04423dd764ab7c4b856b7"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/enemy_grunt_v2.png-73e850c9fadd889f27ff74e96e2d32e3.ctex",
+      "bytes": 586,
+      "sha256": "14daa6cddcbadfff9d5faf656125273f99f3b7ca4f18f328aea661a9bc0ccd53"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/enemy_grunt_v2.png-73e850c9fadd889f27ff74e96e2d32e3.md5",
+      "bytes": 91,
+      "sha256": "cea201eaf711c51ba66b416588c260d587206a685cec12f8799eb23de8dee80c"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/entity_catalog.png-3270e8e40522e807e0cd1c5fa1fa0cff.ctex",
+      "bytes": 191264,
+      "sha256": "73d570d83c72424c2ba9dded7fc65cbfae77ee41e82b8c103c2d675ef9679434"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/entity_catalog.png-3270e8e40522e807e0cd1c5fa1fa0cff.md5",
+      "bytes": 91,
+      "sha256": "5ba75d0360830056a9c9c5f798131ec852896d28af06885e31bcfbbe7ddd863f"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/entity_catalog_sil.png-4e510d93dd65ec0c4b92583dcdabe164.ctex",
+      "bytes": 65694,
+      "sha256": "38c80e16730bd47f1d9b15995878e76a48e9bce6ad99757e116e4fb34ed51a1b"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/entity_catalog_sil.png-4e510d93dd65ec0c4b92583dcdabe164.md5",
+      "bytes": 91,
+      "sha256": "4b8578596d5c1565332c7030a48d3078f6c447a1b0e8584060da3fa4f6d39c35"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/floor_rubble_v1.png-384bf516c54c8419dc33a0029c0ff58e.ctex",
+      "bytes": 658,
+      "sha256": "bb45cd47285fde58987e8a3d135d01df7d7d2b7812395e9d290db33ee0c97851"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/floor_rubble_v1.png-384bf516c54c8419dc33a0029c0ff58e.md5",
+      "bytes": 91,
+      "sha256": "a350925bf2e61bfb09d2418f7bfdd3bffa75c75f42dbbd4ee172476e66ac409f"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/floor_rubble_v1_icon_lump.png-958d4c1da13f1281fb3718ac7f0e35d0.ctex",
+      "bytes": 658,
+      "sha256": "bb45cd47285fde58987e8a3d135d01df7d7d2b7812395e9d290db33ee0c97851"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/floor_rubble_v1_icon_lump.png-958d4c1da13f1281fb3718ac7f0e35d0.md5",
+      "bytes": 91,
+      "sha256": "a350925bf2e61bfb09d2418f7bfdd3bffa75c75f42dbbd4ee172476e66ac409f"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/floor_rubble_v2.png-cfa1e595e96790aca170491456e98bc7.ctex",
+      "bytes": 508,
+      "sha256": "5948d1af281b9273d2002ee2665032a0ff735287f59591a019c26f4f8e16c6fd"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/floor_rubble_v2.png-cfa1e595e96790aca170491456e98bc7.md5",
+      "bytes": 91,
+      "sha256": "91966bdf8f0376bbc7f134e0f9fc9de6ac267f08434b339785eefa0b53b0cb26"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/floor_rubble_v2_icon_like.png-8e347239f7664070c3ad87da046478ca.ctex",
+      "bytes": 508,
+      "sha256": "5948d1af281b9273d2002ee2665032a0ff735287f59591a019c26f4f8e16c6fd"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/floor_rubble_v2_icon_like.png-8e347239f7664070c3ad87da046478ca.md5",
+      "bytes": 91,
+      "sha256": "91966bdf8f0376bbc7f134e0f9fc9de6ac267f08434b339785eefa0b53b0cb26"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/floor_rubble_v3_blob.png-84df2855dad1853e454df9a452ff7a2e.ctex",
+      "bytes": 500,
+      "sha256": "06864183583bfb405907f84ff0668a263ddfc2279c003c2d1067c077aa71f931"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/floor_rubble_v3_blob.png-84df2855dad1853e454df9a452ff7a2e.md5",
+      "bytes": 91,
+      "sha256": "4ad925bc401bb5bbd30992158e82ee4177e599ed8ff7e8a3e1a91778c6b22197"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/floor_rubble_v4_float10.png-b18b6e7c60250b1305caf58bd311713c.ctex",
+      "bytes": 674,
+      "sha256": "fb6533a92e53117f9ddd1f31818b7e0bc59130b27ef0983d2bffd3310c1c2bdc"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/floor_rubble_v4_float10.png-b18b6e7c60250b1305caf58bd311713c.md5",
+      "bytes": 91,
+      "sha256": "5edf05e62af2b77a25b7b011dc756a891b296bce73ffa85e044d2cf72a453433"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/floor_rubble_v5.png-e81c9aed357e9cdc16d7392972de2615.ctex",
+      "bytes": 670,
+      "sha256": "6e74964be41adb65e05a75e34744265a769140aaf4db7a1e8d39b93db0cb5a0d"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/floor_rubble_v5.png-e81c9aed357e9cdc16d7392972de2615.md5",
+      "bytes": 91,
+      "sha256": "9a0bc04525d93884625e957e9323675600ef61693a57852eae1b190c4173e6bf"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/helix_carbine_v1.png-9aa8d283c13d2be62d383878dddfb2dd.ctex",
+      "bytes": 360,
+      "sha256": "885a523b6563074f3b9eca2a98065eeda2e47cd1d4738df6ce88b53c0f5b9715"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/helix_carbine_v1.png-9aa8d283c13d2be62d383878dddfb2dd.md5",
+      "bytes": 91,
+      "sha256": "c8fe5ee3454de3db5ec83bc633e0647252e60f87f5a29b60eb68c11615ce4026"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/helix_carbine_v2.png-258cdfca67f2bf6e0cfcfb21f9d67968.ctex",
+      "bytes": 450,
+      "sha256": "4f81caaa82ec8dd1bd8b806aac5c4e64f7cba921487f7669e830a87ab7591cf1"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/helix_carbine_v2.png-258cdfca67f2bf6e0cfcfb21f9d67968.md5",
+      "bytes": 91,
+      "sha256": "ff58b7572b52b2453fc33e9b97726ace1012690f2efd1c5914040b46353e696d"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/helix_muzzle_flash_v1.png-202484a037f247c4bd97e761cfebfcf2.ctex",
+      "bytes": 594,
+      "sha256": "507a0f9fc49e6c8c31342caa64ea6eebd7ed3dd3c179319f6d67853c9314fa81"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/helix_muzzle_flash_v1.png-202484a037f247c4bd97e761cfebfcf2.md5",
+      "bytes": 91,
+      "sha256": "b9c23a08373403fee08ab98dfac48bae654dc9250e2e2488a0a0d8c40f583763"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/hit_spark_v1.png-b89b90334b36e76b8af7b79dbb0a160b.ctex",
+      "bytes": 518,
+      "sha256": "4a28ac2ed75aabe32a28f7aea60a0ad5ad0a1a28f3ea41c682904fc0e55a6af8"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/hit_spark_v1.png-b89b90334b36e76b8af7b79dbb0a160b.md5",
+      "bytes": 91,
+      "sha256": "441058d163d3a2a3d40ec737b0e287a9a4c388e11ca24d5f3db0a13f14a08213"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/hit_spark_v2.png-6128b3d36fb2b340cd1c5dd36d6d1806.ctex",
+      "bytes": 658,
+      "sha256": "7aad2fdedd886a94492b5e1af7a74a96ac38f0c93f915b2b119d45419d1a88e1"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/hit_spark_v2.png-6128b3d36fb2b340cd1c5dd36d6d1806.md5",
+      "bytes": 91,
+      "sha256": "4c434ec05f1cec046f0e90d77f059918e4864fa36217b6efc173a303e3fccdc5"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/hit_spark_v2_sheet.png-614e15105ca0ec38040f5e4b532ae992.ctex",
+      "bytes": 1624,
+      "sha256": "455fa09e5a88b41729e4de7ab062ceb3e19ebc2b8a4410b058da2a2c1d927439"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/hit_spark_v2_sheet.png-614e15105ca0ec38040f5e4b532ae992.md5",
+      "bytes": 91,
+      "sha256": "92cd4ba3e8a0668fbcc0eb639da0d237ca11cc125f20224a5d59f2318863c53f"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex",
+      "bytes": 148,
+      "sha256": "98f134eb72cb129daf462e44de0c4bd135743569efe28737adc35a740d88d611"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.md5",
+      "bytes": 91,
+      "sha256": "87156d2e9729e653f6801e4e63ca6a3be1bb83d8904f5fa4e42a8cce152acc7e"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/impact.png-442b71b2d28d6fea25a1760e5e8f1cdc.ctex",
+      "bytes": 518,
+      "sha256": "91b104e1870e4eba6923ccc7fd76c4e186a73dc5d6975adfb53c3b9579a310b9"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/impact.png-442b71b2d28d6fea25a1760e5e8f1cdc.md5",
+      "bytes": 91,
+      "sha256": "caee929df0871ab199bee25d2caeaa00112d029f2da759a9a8473a7b4a78bb5a"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/impact.png-707edb4dadeefc27469ae5b2d027c4ee.ctex",
+      "bytes": 520,
+      "sha256": "565cd3f16d8fc687e76b04fbc9f12080c75e1ce8cd522ee84cb7f40d5b448417"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/impact.png-707edb4dadeefc27469ae5b2d027c4ee.md5",
+      "bytes": 91,
+      "sha256": "12c61ff59121bbb77b5404712213229c577a8e6434587e2d86936abe6577d2fb"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/impact.png-ef4ed21ff663f81fe4837839c4754067.ctex",
+      "bytes": 512,
+      "sha256": "a0c85c0696c416a5769318ead894b5ff1683a291664df2e4247918aaa907b6dc"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/impact.png-ef4ed21ff663f81fe4837839c4754067.md5",
+      "bytes": 91,
+      "sha256": "413168bd0e1c8f7c942a1d2128c29e88a28869304f5c5e4e9d9685d08154a85e"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/interactables.png-c89c505488656a03a566ef551e41ef8b.ctex",
+      "bytes": 4180,
+      "sha256": "7ed917bbc676bbfd9bc17db9e792c3017aa17357a92b95bd372dc05e79045231"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/interactables.png-c89c505488656a03a566ef551e41ef8b.md5",
+      "bytes": 91,
+      "sha256": "8fc739fd8ed7c054a06268a4599ab72e9e9159eaab6514163fb979737e358459"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/interactables_sil.png-fd6902ebf16bb43e4082a3e357438488.ctex",
+      "bytes": 1278,
+      "sha256": "6f90d3d743462e7e46a958c284532e50d287bcdd41a2fff8e8ebabf99bec992d"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/interactables_sil.png-fd6902ebf16bb43e4082a3e357438488.md5",
+      "bytes": 91,
+      "sha256": "6dafa54caf4f2376ef41c6763a178d8317f5ae9acca08c6f765ac93072d4f367"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/march_greatblade_v1.png-81a7e18c2675753c35971b2513a880f1.ctex",
+      "bytes": 464,
+      "sha256": "1b5f4f553a25a84f42ec92bed7f59b1b51f320b95ad4b6d7cb49bff75dd426eb"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/march_greatblade_v1.png-81a7e18c2675753c35971b2513a880f1.md5",
+      "bytes": 91,
+      "sha256": "ed6b087b85f5059dfd3744c7c11142fa38a4d3d45278312cb2b4b6d15f6bbdf4"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/march_greatblade_v2.png-39907c3f428106f6f32f1f3dbe08ea37.ctex",
+      "bytes": 522,
+      "sha256": "21cf886b8019b4adda3aa47e80fb1b1c4be789a3081a1ab850bbcf9c674e4c57"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/march_greatblade_v2.png-39907c3f428106f6f32f1f3dbe08ea37.md5",
+      "bytes": 91,
+      "sha256": "1964d86ce1f771d177bc93b48f671a2a13476a0fb0cd4d9c3c9bdac6a31004f0"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/march_slash_arc_v1.png-5f2a52119e48d6604558d653c190b73e.ctex",
+      "bytes": 408,
+      "sha256": "f067951b0f0f71113490dff272685387013fe707d3309de8807a5932c75ffa9d"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/march_slash_arc_v1.png-5f2a52119e48d6604558d653c190b73e.md5",
+      "bytes": 91,
+      "sha256": "b5abd82d42fe1c31aefbbcb43ccfc6db8ba4634d7b74cc312ea6e0a5c40e3833"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/march_slash_arc_v3.png-b315f8e281cc2d5fdc905738c9e1addb.ctex",
+      "bytes": 342,
+      "sha256": "779f6c0bcd65dde3ca8eb0656c61852baa34d37cdc4cb0743eb61c42d42dd59b"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/march_slash_arc_v3.png-b315f8e281cc2d5fdc905738c9e1addb.md5",
+      "bytes": 91,
+      "sha256": "7ea6b9e31c380f6bf06e1bc58c2fbab3d84ca90e4c1176dec203022b1e373d3d"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/march_slash_arc_v4.png-08689ea48ae5f8cae3967f830ccd200e.ctex",
+      "bytes": 330,
+      "sha256": "9382dedb324ebafa1ef9ddc56337ca28f226827c650124bbd9a75d8960f0d52c"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/march_slash_arc_v4.png-08689ea48ae5f8cae3967f830ccd200e.md5",
+      "bytes": 91,
+      "sha256": "1d96540540dbbdac9563d677ca553c30f22effaf9dd750a2200944bdf5ecfce4"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/muzzle_or_plant.png-580ca90431719e71d41867c5132bf2f5.ctex",
+      "bytes": 372,
+      "sha256": "e2da1174d5a1fb23291f3d888aa939c6730f956ec0d5b873a326cd0d0a424c16"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/muzzle_or_plant.png-580ca90431719e71d41867c5132bf2f5.md5",
+      "bytes": 91,
+      "sha256": "615b173657f4213a70eca944d506362b8b5dbe3f533d90647b5cf67cb88be7c9"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/muzzle_or_plant.png-a55d7efcb9d4b499ef13910eaa9378ff.ctex",
+      "bytes": 340,
+      "sha256": "08b200925f0fa3b3d9058469b0c5534870bdeb33ea9680f2402300e33fb3dcbf"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/muzzle_or_plant.png-a55d7efcb9d4b499ef13910eaa9378ff.md5",
+      "bytes": 91,
+      "sha256": "361fa87646304bc19d233e19fb28d63dc7c0d13f9d7cb01ed0f789772bd23aec"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/muzzle_or_plant.png-d1463970fb858470ebfa3241f81a13d4.ctex",
+      "bytes": 432,
+      "sha256": "9637553581e1f11d152af871e53b792ab7ea9d857e74fb15de838cd0d9bcb7e1"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/muzzle_or_plant.png-d1463970fb858470ebfa3241f81a13d4.md5",
+      "bytes": 91,
+      "sha256": "8218648e4865aaeff159b02e9138a23c0c039a7073201e3352961781f2d9ee30"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/sequence_crest_hit_v1.png-19f22cb4bc49e5f4a894034c049db5c3.ctex",
+      "bytes": 610,
+      "sha256": "3f3b5825b2950f6e59cee38c8132b3ed085ffd658f09683521a131deb23ce872"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/sequence_crest_hit_v1.png-19f22cb4bc49e5f4a894034c049db5c3.md5",
+      "bytes": 91,
+      "sha256": "c65de67d7fdb27dff9db2d5dc6fea3d5f068ce86dd64d8ca6a162f579549c56b"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/sequence_crozier_v1.png-b41cd7c2110897573540df0b6b798f66.ctex",
+      "bytes": 368,
+      "sha256": "cafd2bcefeb76df76ddf7be6eaae6e93d9c663f77f68ce76d393122a148db176"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/sequence_crozier_v1.png-b41cd7c2110897573540df0b6b798f66.md5",
+      "bytes": 91,
+      "sha256": "960393d42ed054111e9fae14c26e2cfbe1c8afa1104e2267156b79d3c106b54f"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/sequence_crozier_v2.png-0e126a50282c9efd8143e0efbe386e40.ctex",
+      "bytes": 398,
+      "sha256": "8b5fdbc461c675aed71e970a2aa262e349dfa4ca069f9963931fcb66050ca1f9"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/sequence_crozier_v2.png-0e126a50282c9efd8143e0efbe386e40.md5",
+      "bytes": 91,
+      "sha256": "c7d0a1b65d0d82791c9fb5b628d240c74385f3b556e211e9d9120a22f31494d8"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/sequence_telegraph_v1_caret.png-75357edce3f6d0e38d369a46e3ce37d2.ctex",
+      "bytes": 456,
+      "sha256": "1edb1525e7545b5bbce7379651ee6f2122cd008d30c7299c33015d82920a9b19"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/sequence_telegraph_v1_caret.png-75357edce3f6d0e38d369a46e3ce37d2.md5",
+      "bytes": 91,
+      "sha256": "d38778ec844b0c4c70bddc6388046e5b63e0a6b70225fc654801389a1ba8d4c7"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/sequence_telegraph_v2.png-7b40ab01261cac39133d9fa56bab4319.ctex",
+      "bytes": 578,
+      "sha256": "ca88a3a45ffade66bd87242dc8e0e6c18b4abe59aba1a549151578d101f64f2a"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/sequence_telegraph_v2.png-7b40ab01261cac39133d9fa56bab4319.md5",
+      "bytes": 91,
+      "sha256": "057f19ab3bb2822a7a0941fd729b3dd1283df3b01ff336dcfe798d63fa67c1a1"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/silhouette_board.png-941a8e5cf3c7eb98d843509a02011ad4.ctex",
+      "bytes": 2612,
+      "sha256": "6b0fbb9d96c58316a09282ca053c43a940af6759be883726ff9863a90a8c738d"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/silhouette_board.png-941a8e5cf3c7eb98d843509a02011ad4.md5",
+      "bytes": 91,
+      "sha256": "a321e9feeea78abaca195ad473fdd4fdb7f517b6ca647009515786dddf3df541"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/still.png-7af7dc8f6dddc51d7adf0a76dcf9fe3a.ctex",
+      "bytes": 494,
+      "sha256": "28bf6ccde1653c260d7fcd58c64442c18912e2f5f41fb7b145963e2191ce5fd8"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/still.png-7af7dc8f6dddc51d7adf0a76dcf9fe3a.md5",
+      "bytes": 91,
+      "sha256": "bd997d9dc6286bb7a40848c1daca61b60828e248363142739d003b2582e9f8b6"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/still.png-a626e233fa745ad33914c05bb675edcf.ctex",
+      "bytes": 528,
+      "sha256": "939e82654483f9fe5b9578a351b059a88f367cc05149b5fc53ef03262bb92bdd"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/still.png-a626e233fa745ad33914c05bb675edcf.md5",
+      "bytes": 91,
+      "sha256": "3c982fa6bae9d7ca02df1e2d56a64b4a9c2008da5f915a9898f84d7fc2b7644f"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/tiles.png-3559b9b5bdd751e100d182ba34da090e.ctex",
+      "bytes": 1380,
+      "sha256": "745f76ca63ff85a5713c4c556e05989c3ed9b21b063fdf248ab09a3a53502801"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/tiles.png-3559b9b5bdd751e100d182ba34da090e.md5",
+      "bytes": 91,
+      "sha256": "9ac332c209e0dd0f6ddd3ed630f58c0f1c10ef0fa8613ec6e46a698782f15ad5"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/weapons.png-d13b9884490ca4800dc777c6256e77ad.ctex",
+      "bytes": 2608,
+      "sha256": "f97d1962c8ac20ed25d5741bb100cd50f2efa753ced4d1043fd574dc96e6c9d4"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/weapons.png-d13b9884490ca4800dc777c6256e77ad.md5",
+      "bytes": 91,
+      "sha256": "e05d60fcd5855948ddb95c75e80b5a24223510b334edc56a5ed859b65dbef450"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/weapons_sil.png-87a60ae58cb77b8dd3b894eb36e2da2b.ctex",
+      "bytes": 932,
+      "sha256": "6cb397d7e35765af43cc092e16a09a0450d780c1a1c1af3cb74cb328aec3734d"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/imported/weapons_sil.png-87a60ae58cb77b8dd3b894eb36e2da2b.md5",
+      "bytes": 91,
+      "sha256": "5a20b87ffe03e44fccbcfbec9bede42d0be7da5ec7a1c1c7318c2085609a339f"
+    },
+    {
+      "path": "/Users/me/ashen-keyboard-controls-58d79b68c9e4-proof/native-v4/game/.godot/uid_cache.bin",
+      "bytes": 6968,
+      "sha256": "f0304239f3d3e1ef1dbb7e416f5db34af6ead856c15ee74c20a75e2d03983983"
+    }
+  ],
+  "free_before": 146767872
+}

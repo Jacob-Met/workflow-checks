@@ -1,0 +1,23 @@
+{
+  "schema": "hamon.independent_composition_review.v1",
+  "reviewer": "chatgpt:58d79b68c9e4:root",
+  "recorded_at": "2026-10-08T14:33:25.815697+00:00",
+  "source_commit": "33432db05b9def1a249650c79571402400c18d15",
+  "current_parent": "ea6ff4da45c038dd7440f83dc34d61ab245e1e52",
+  "before_sha256": "25cac361af6bf20b93d017586087db0457669ba386ae47144db184f235e9037c",
+  "after_sha256": "55cdcce692418e4746128b76a5a02c50b08704db4a3228575af1b167d940f2ae",
+  "test_body_and_all_helpers_after_boot_exact": true,
+  "tail_sha256": "e00afd2654c3b913a51651367c9e3c9d491cabba004eb5a474ba3605924a156d",
+  "observed_diff": "--- canonical-authored-harness\n+++ composed-bootstrap\n@@ -8,6 +8,9 @@\n const uiPath = process.env.PTAUTH_UI_SOURCE || path.join(__dirname, \"../../ptauth/ui.html\");\n const html = fs.readFileSync(uiPath, \"utf8\");\n const script = html.slice(html.indexOf(\"<script>\") + 8, html.lastIndexOf(\"</script>\"));\n+const calendarPath = path.join(path.dirname(uiPath), \"calendar_ui.js\");\n+const calendarScript = html.includes('<script src=\"/calendar_ui.js\"></script>')\n+  ? fs.readFileSync(calendarPath, \"utf8\") : null;\n if (!process.env.PTAUTH_UI_SUMMARY) throw new Error(\"PTAUTH_UI_SUMMARY must name an authored report\");\n const original = JSON.parse(fs.readFileSync(process.env.PTAUTH_UI_SUMMARY, \"utf8\"));\n const clone = value => JSON.parse(JSON.stringify(value));\n@@ -18,6 +21,10 @@\n   const element = selector => {\n     if (!elements.has(selector)) elements.set(selector, {\n       value: \"\", innerHTML: \"\", textContent: \"\", disabled: false, dataset: {},\n+      addEventListener(name, handler) { this[\"on\" + name] = handler; },\n+      querySelector(child) { return element(selector + \" \" + child); },\n+      replaceChildren(...nodes) { this.children = nodes; },\n+      append(node) { (this.children ||= []).push(node); },\n       classList: {states: {}, toggle(name, on) { this.states[name] = on; }}\n     });\n     return elements.get(selector);\n@@ -32,6 +39,7 @@\n   const context = vm.createContext({\n     document: {\n       querySelector: element,\n+      createElement() { return {textContent: \"\"}; },\n       querySelectorAll(selector) {\n         if (selector === \"#tabs button\") return buttons;\n         if (selector === \"main > section\") return sections;\n@@ -46,6 +54,10 @@\n     },\n     alert(message) { throw new Error(message); }\n   });\n+  context.window = context;\n+  if (calendarScript !== null) {\n+    vm.runInContext(calendarScript, context, {filename: calendarPath, timeout: 1000});\n+  }\n   vm.runInContext(script, context, {filename: uiPath, timeout: 1000});\n   await new Promise(setImmediate);\n   return {element, buttons, sections, calls, context};\n",
+  "finding": "The authored VM harness now loads the exact declared external calendar module before the existing inline UI, presents window as its global and adds only required DOM adapter methods. No observed prior expectation, assertion or test behavior is weakened. This qualifies the test bootstrap adjustment; actual combined browser/download behavior remains a separate Mac reviewer gate.",
+  "author_reverse_differential_record": {
+    "status": 0,
+    "stdout": "",
+    "stderr": "Falling back to direct application...\nFalling back to direct application...\nApplied patch to 'pt_auth/ptauth/web.py' cleanly.\nApplied patch to 'pt_auth/ptauth/ui.html' cleanly.\nApplied patch to 'pt_auth/ptauth/cli.py' cleanly.\nFalling back to direct application...\nApplied patch to 'pt_auth/README.md' cleanly.\n",
+    "result_tree": "b470f3578107ce412bb0a66cd4bf835902bfede4",
+    "expected_tree": "b470f3578107ce412bb0a66cd4bf835902bfede4",
+    "exact_parent_restored": true,
+    "method": "Restore only the test bootstrap blob, then reverse the original calendar patch through a separate cached three-way index. Qualified source worktree is not changed."
+  },
+  "scope": "Read-only source/diff review; no production mutation or repeated semantic test claim."
+}

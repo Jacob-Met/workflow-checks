@@ -1,0 +1,9 @@
+{
+  "kind": "receiver_resource_gate",
+  "source_or_browser_failure": false,
+  "browser_started": false,
+  "failed_action": "Write independent 34518-byte browser_receiver.mjs via RDC",
+  "error": "ENOSPC: no space left on device",
+  "later_write_and_syntax_check_succeeded": true,
+  "owned_reclaim_receipt": "owned-cache-reclaim-v1.json"
+}

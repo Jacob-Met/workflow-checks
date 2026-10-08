@@ -1,0 +1,29 @@
+{
+  "recorded_at": "2026-10-08T14:45:04.742Z",
+  "canonical_parent": "5a70e458ed455d47ef672ed9b5a614ec59812f0c",
+  "parent_tree": "86f234b92173176c7f3c8ae4e1e4d5d3c41d36fd",
+  "qualified_pt_parent": "ea6ff4da45c038dd7440f83dc34d61ab245e1e52",
+  "canonical_parent_pt_tree": "00cf75f3152dca6b15915c720a904c2227497351",
+  "qualified_parent_pt_tree": "00cf75f3152dca6b15915c720a904c2227497351",
+  "exact_pre_calendar_pt_parent": true,
+  "qualified_native_source": "33432db05b9def1a249650c79571402400c18d15",
+  "qualified_pt_tree": "46ea80e968210b2f8ef694ba2704c8e1a95f9ccb",
+  "intermediate_runtime_tree": "dbab8e4057bb80cdef0a76d3e8ee2a02a61412dd",
+  "owned_changed_paths": [
+    "pt_auth/README.md",
+    "pt_auth/ptauth/calendar_ui.js",
+    "pt_auth/ptauth/cli.py",
+    "pt_auth/ptauth/ui.html",
+    "pt_auth/ptauth/web.py",
+    "pt_auth/ptauth/worklist_calendar.py",
+    "pt_auth/tests/browser/uncovered_review.test.cjs",
+    "pt_auth/tests/test_worklist_calendar.py"
+  ],
+  "latest_unrelated_change": "Utility worksheet PR36; copied from canonical parent without modification.",
+  "gate": "Exact same PT runtime/tests as independently received source; fresh final-head and merge-ref hosted CI remain required.",
+  "fetch": {
+    "status": 0,
+    "stdout": "",
+    "stderr": "From https://github.com/Jacob-Met/workflow-checks\n * [new ref]         5a70e458ed455d47ef672ed9b5a614ec59812f0c -> final-canonical-parent\n"
+  }
+}

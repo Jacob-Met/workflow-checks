@@ -1,0 +1,699 @@
+[
+  {
+    "name": "original real worklist has no calendar handoff",
+    "status": "pass",
+    "state": {
+      "shown": "5 of 7 items",
+      "asof": "2026-10-31",
+      "query": "",
+      "clinic": "",
+      "states": "",
+      "keys": [
+        "PT1001|PTEST|AUTH-PT1001",
+        "PT1005|PTEST|",
+        "PT1006|PTEST|",
+        "PT1002|PTEST|AUTH-PT1002",
+        "PT1007|PTEST|AUTH-PT1007"
+      ],
+      "lines": [],
+      "focused": {
+        "id": "",
+        "text": "\nSYNTHETIC DATA — NOT REAL PATIENTS · proof of concept · nothing is sent to any payer\n\n  P",
+        "download": false
+      }
+    },
+    "screenshot": {
+      "path": "baseline-worklist.png",
+      "bytes": 153436,
+      "sha256": "1796e119aecb80df79607c9f6c779ce9fd1643b4412413109b6c89ed1798dc9f",
+      "width": 1280,
+      "height": 900
+    },
+    "boundary": "Actual original UI, no handoff control, no file created"
+  },
+  {
+    "name": "default review and actual keyboard download",
+    "status": "pass",
+    "state": {
+      "summary": "3 all-day event(s) · 2 excluded item(s)",
+      "context": "5 currently filtered item(s); report as of 2026-10-31. Clinic time zone: America/Los_Angeles. 2 undated; 0 approved/n/a (exclusion reasons can overlap).",
+      "status": "Uses recorded submit-by dates only. Review these items before downloading.",
+      "disabled": false,
+      "button": "Download 3 event(s) (.ics)",
+      "shown": "5 of 7 items",
+      "asof": "2026-10-31",
+      "query": "",
+      "clinic": "",
+      "states": "",
+      "keys": [
+        "PT1001|PTEST|AUTH-PT1001",
+        "PT1005|PTEST|",
+        "PT1006|PTEST|",
+        "PT1002|PTEST|AUTH-PT1002",
+        "PT1007|PTEST|AUTH-PT1007"
+      ],
+      "lines": [
+        "Include · 2026-10-31 · PT1001 · Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\\literal · AUTH-PT1001 · East · open",
+        "Include · 2026-11-01 · PT1002 · Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\\literal · AUTH-PT1002 · West · submitted",
+        "Include · 2026-11-04 · PT1007 · Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\\literal · AUTH-PT1007 · East · open",
+        "Exclude · PT1005 · no auth · no recorded submit-by date",
+        "Exclude · PT1006 · no auth · no recorded submit-by date"
+      ],
+      "focused": {
+        "id": "",
+        "text": "\nSYNTHETIC DATA — NOT REAL PATIENTS · proof of concept · nothing is sent to any payer\n\n  P",
+        "download": false
+      }
+    },
+    "focus_path": [
+      {
+        "id": "asof",
+        "text": "",
+        "download": false
+      },
+      {
+        "id": "asof",
+        "text": "",
+        "download": false
+      },
+      {
+        "id": "asof",
+        "text": "",
+        "download": false
+      },
+      {
+        "id": "asof",
+        "text": "",
+        "download": false
+      },
+      {
+        "id": "run",
+        "text": "Run worklist",
+        "download": false
+      },
+      {
+        "id": "seed",
+        "text": "",
+        "download": false
+      },
+      {
+        "id": "gen",
+        "text": "New synthetic clinic",
+        "download": false
+      },
+      {
+        "id": "",
+        "text": "Daily worklist",
+        "download": false
+      },
+      {
+        "id": "",
+        "text": "Visit status review",
+        "download": false
+      },
+      {
+        "id": "",
+        "text": "Auth ledger",
+        "download": false
+      },
+      {
+        "id": "",
+        "text": "Digest & exports",
+        "download": false
+      },
+      {
+        "id": "fp",
+        "text": "All prioritiesP1P2P3",
+        "download": false
+      },
+      {
+        "id": "fc",
+        "text": "All clinicsEastWest",
+        "download": false
+      },
+      {
+        "id": "fs",
+        "text": "Open + in progressAll states",
+        "download": false
+      },
+      {
+        "id": "q",
+        "text": "",
+        "download": false
+      },
+      {
+        "id": "",
+        "text": "Download 3 event(s) (.ics)",
+        "download": true
+      }
+    ],
+    "screenshot": {
+      "path": "desktop-keyboard-focus.png",
+      "bytes": 175271,
+      "sha256": "055dba360622bd1b89fe84a47652e6def690c644da8b90846c051bdeb4e815c2",
+      "width": 1280,
+      "height": 900
+    },
+    "download": "default-keyboard"
+  },
+  {
+    "name": "all-state exclusions and repeat identities",
+    "status": "pass",
+    "state": {
+      "summary": "3 all-day event(s) · 4 excluded item(s)",
+      "context": "7 currently filtered item(s); report as of 2026-10-31. Clinic time zone: America/Los_Angeles. 2 undated; 2 approved/n/a (exclusion reasons can overlap).",
+      "status": "Uses recorded submit-by dates only. Review these items before downloading.",
+      "disabled": false,
+      "button": "Download 3 event(s) (.ics)",
+      "shown": "7 of 7 items",
+      "asof": "2026-10-31",
+      "query": "",
+      "clinic": "",
+      "states": "all",
+      "keys": [
+        "PT1001|PTEST|AUTH-PT1001",
+        "PT1005|PTEST|",
+        "PT1006|PTEST|",
+        "PT1002|PTEST|AUTH-PT1002",
+        "PT1003|PTEST|AUTH-PT1003",
+        "PT1004|PTEST|AUTH-PT1004",
+        "PT1007|PTEST|AUTH-PT1007"
+      ],
+      "lines": [
+        "Include · 2026-10-31 · PT1001 · Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\\literal · AUTH-PT1001 · East · open",
+        "Include · 2026-11-01 · PT1002 · Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\\literal · AUTH-PT1002 · West · submitted",
+        "Include · 2026-11-04 · PT1007 · Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\\literal · AUTH-PT1007 · East · open",
+        "Exclude · PT1005 · no auth · no recorded submit-by date",
+        "Exclude · PT1006 · no auth · no recorded submit-by date",
+        "Exclude · PT1003 · AUTH-PT1003 · staff state approved",
+        "Exclude · PT1004 · AUTH-PT1004 · staff state n/a"
+      ],
+      "focused": {
+        "id": "",
+        "text": "\nSYNTHETIC DATA — NOT REAL PATIENTS · proof of concept · nothing is sent to any payer\n\n  P",
+        "download": false
+      }
+    },
+    "screenshot": {
+      "path": "desktop-reviewed-exclusions.png",
+      "bytes": 187906,
+      "sha256": "5ade9893e3d0512befc7e34c16aaa9ab1eb212ab4fc1b472c2b7c2e002b7683c",
+      "width": 1280,
+      "height": 900
+    },
+    "download": "all-states"
+  },
+  {
+    "name": "actual text and clinic filters preserve distinct same-name keys",
+    "status": "pass",
+    "state": {
+      "summary": "1 all-day event(s) · 0 excluded item(s)",
+      "context": "1 currently filtered item(s); report as of 2026-10-31. Clinic time zone: America/Los_Angeles. 0 undated; 0 approved/n/a (exclusion reasons can overlap).",
+      "status": "Downloaded 1 all-day event(s). Review in your calendar app; later downloads do not remove prior imports.",
+      "disabled": false,
+      "button": "Download 1 event(s) (.ics)",
+      "shown": "1 of 7 items",
+      "asof": "2026-10-31",
+      "query": "Shared",
+      "clinic": "East",
+      "states": "",
+      "keys": [
+        "PT1001|PTEST|AUTH-PT1001"
+      ],
+      "lines": [
+        "Include · 2026-10-31 · PT1001 · Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\\literal · AUTH-PT1001 · East · open"
+      ],
+      "focused": {
+        "id": "",
+        "text": "\nSYNTHETIC DATA — NOT REAL PATIENTS · proof of concept · nothing is sent to any payer\n\n  P",
+        "download": false
+      }
+    },
+    "downloads": [
+      "same-name-two-clinics",
+      "same-name-east"
+    ]
+  },
+  {
+    "name": "empty eligible selection refuses a misleading download",
+    "status": "pass",
+    "state": {
+      "summary": "0 all-day event(s) · 2 excluded item(s)",
+      "context": "2 currently filtered item(s); report as of 2026-10-31. Clinic time zone: America/Los_Angeles. 2 undated; 0 approved/n/a (exclusion reasons can overlap).",
+      "status": "No dated open/submitted items in this selection. No calendar will be created.",
+      "disabled": true,
+      "button": "Download calendar (.ics)",
+      "shown": "2 of 7 items",
+      "asof": "2026-10-31",
+      "query": "Undated",
+      "clinic": "",
+      "states": "",
+      "keys": [
+        "PT1005|PTEST|",
+        "PT1006|PTEST|"
+      ],
+      "lines": [
+        "Exclude · PT1005 · no auth · no recorded submit-by date",
+        "Exclude · PT1006 · no auth · no recorded submit-by date"
+      ],
+      "focused": {
+        "id": "q",
+        "text": "",
+        "download": false
+      }
+    },
+    "recovered": {
+      "summary": "3 all-day event(s) · 2 excluded item(s)",
+      "context": "5 currently filtered item(s); report as of 2026-10-31. Clinic time zone: America/Los_Angeles. 2 undated; 0 approved/n/a (exclusion reasons can overlap).",
+      "status": "Uses recorded submit-by dates only. Review these items before downloading.",
+      "disabled": false,
+      "button": "Download 3 event(s) (.ics)",
+      "shown": "5 of 7 items",
+      "asof": "2026-10-31",
+      "query": "",
+      "clinic": "",
+      "states": "",
+      "keys": [
+        "PT1001|PTEST|AUTH-PT1001",
+        "PT1005|PTEST|",
+        "PT1006|PTEST|",
+        "PT1002|PTEST|AUTH-PT1002",
+        "PT1007|PTEST|AUTH-PT1007"
+      ],
+      "lines": [
+        "Include · 2026-10-31 · PT1001 · Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\\literal · AUTH-PT1001 · East · open",
+        "Include · 2026-11-01 · PT1002 · Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\\literal · AUTH-PT1002 · West · submitted",
+        "Include · 2026-11-04 · PT1007 · Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\\literal · AUTH-PT1007 · East · open",
+        "Exclude · PT1005 · no auth · no recorded submit-by date",
+        "Exclude · PT1006 · no auth · no recorded submit-by date"
+      ],
+      "focused": {
+        "id": "q",
+        "text": "",
+        "download": false
+      }
+    },
+    "unexpected_downloads": 0
+  },
+  {
+    "name": "390px real panel and literal review text",
+    "status": "pass",
+    "screenshot": {
+      "path": "narrow-390-review.png",
+      "bytes": 91759,
+      "sha256": "0374c0b7c7fb8409362a084e44c957de00cb6dbd5ccb5fa94e9136daa6de9219",
+      "width": 390,
+      "height": 844
+    },
+    "dimensions": {
+      "viewport": 390,
+      "panel": {
+        "left": 20,
+        "right": 370,
+        "width": 350
+      },
+      "button": {
+        "left": 38,
+        "right": 231.921875,
+        "width": 193.921875
+      },
+      "htmlInjected": 0,
+      "statusRole": "status",
+      "statusLive": "polite",
+      "text": "Submit-by calendar handoff\n3 all-day event(s) · 2 excluded item(s)\nDownload 3 event(s) (.ics)\n\n5 currently filtered item(s); report as of 2026-10-31. Clinic time zone: America/Los_Angeles. 2 undated; 0 approved/n/a (exclusion reasons can overlap).\n\nSingle-day, all-day reminders for recorded submit-by dates. Includes dated open/submitted items in the current filters. Exporting does not change staff status or submit anything to a payer.\n\nReview included and excluded items\nInclude · 2026-10-31 · PT1001 · Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\\literal · AUTH-PT1001 · East · open\nInclude · 2026-11-01 · PT1002 · Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\\literal · AUTH-PT1002 · West · submitted\nInclude · 2026-11-04 · PT1007 · Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\\literal · AUTH-PT1007 · East · open\nExclude · PT1005 · no auth · no recorded submit-by date\nExclude · PT1006 · no auth · no recorded submit-by date\n\nUses recorded submit-by dates only. Review these items before downloading.\n\nRepeated exports keep the same event identity for the same authorization period, clinic and recorded zone. Calendar apps handle repeat imports differently; a new download does not remove earlier imports. Review the file in your calendar app."
+    },
+    "scope": "Panel at exact 390px viewport; not a full application accessibility audit"
+  },
+  {
+    "name": "edited as-of, revert and actual refreshed report",
+    "status": "fail",
+    "error": "Error: Timed out: refreshed reviewed as-of\n    at until (file:///Users/me/pt-calendar-browser-review-58d79b68c9e4/browser_receiver.mjs:62:8)\n    at async file:///Users/me/pt-calendar-browser-review-58d79b68c9e4/browser_receiver.mjs:347:3\n    at async check (file:///Users/me/pt-calendar-browser-review-58d79b68c9e4/browser_receiver.mjs:228:19)\n    at async file:///Users/me/pt-calendar-browser-review-58d79b68c9e4/browser_receiver.mjs:342:2"
+  },
+  {
+    "name": "pending real refresh blocks export and accepts current filters",
+    "status": "pass",
+    "state": {
+      "summary": "2 all-day event(s) · 0 excluded item(s)",
+      "context": "2 currently filtered item(s); report as of 2026-10-31. Clinic time zone: America/Los_Angeles. 0 undated; 0 approved/n/a (exclusion reasons can overlap).",
+      "status": "Uses recorded submit-by dates only. Review these items before downloading.",
+      "disabled": false,
+      "button": "Download 2 event(s) (.ics)",
+      "shown": "2 of 7 items",
+      "asof": "2026-10-31",
+      "query": "Shared",
+      "clinic": "",
+      "states": "",
+      "keys": [
+        "PT1001|PTEST|AUTH-PT1001",
+        "PT1002|PTEST|AUTH-PT1002"
+      ],
+      "lines": [
+        "Include · 2026-10-31 · PT1001 · Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\\literal · AUTH-PT1001 · East · open",
+        "Include · 2026-11-01 · PT1002 · Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\\literal · AUTH-PT1002 · West · submitted"
+      ],
+      "focused": {
+        "id": "q",
+        "text": "",
+        "download": false
+      }
+    },
+    "held_status": "request not sent",
+    "download": "after-pending-refresh"
+  },
+  {
+    "name": "pending real staff-state save blocks export then reviews new state",
+    "status": "pass",
+    "state": {
+      "summary": "2 all-day event(s) · 2 excluded item(s)",
+      "context": "4 currently filtered item(s); report as of 2026-10-31. Clinic time zone: America/Los_Angeles. 2 undated; 0 approved/n/a (exclusion reasons can overlap).",
+      "status": "Uses recorded submit-by dates only. Review these items before downloading.",
+      "disabled": false,
+      "button": "Download 2 event(s) (.ics)",
+      "shown": "4 of 7 items",
+      "asof": "2026-10-31",
+      "query": "",
+      "clinic": "",
+      "states": "",
+      "keys": [
+        "PT1001|PTEST|AUTH-PT1001",
+        "PT1005|PTEST|",
+        "PT1006|PTEST|",
+        "PT1002|PTEST|AUTH-PT1002"
+      ],
+      "lines": [
+        "Include · 2026-10-31 · PT1001 · Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\\literal · AUTH-PT1001 · East · open",
+        "Include · 2026-11-01 · PT1002 · Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\\literal · AUTH-PT1002 · West · submitted",
+        "Exclude · PT1005 · no auth · no recorded submit-by date",
+        "Exclude · PT1006 · no auth · no recorded submit-by date"
+      ],
+      "focused": {
+        "id": "",
+        "text": "\nSYNTHETIC DATA — NOT REAL PATIENTS · proof of concept · nothing is sent to any payer\n\n  P",
+        "download": false
+      }
+    },
+    "download": "after-reviewed-state",
+    "legitimate_state_write": true
+  },
+  {
+    "name": "failed real refresh leaves calendar unavailable and next refresh recovers",
+    "status": "pass",
+    "failed": {
+      "summary": "Calendar unavailable",
+      "context": "",
+      "status": "Failed to fetch Refresh the worklist before exporting.",
+      "disabled": true,
+      "button": "Download calendar (.ics)",
+      "shown": "5 of 7 items",
+      "asof": "2026-10-31",
+      "query": "",
+      "clinic": "",
+      "states": "",
+      "keys": [
+        "PT1001|PTEST|AUTH-PT1001",
+        "PT1005|PTEST|",
+        "PT1006|PTEST|",
+        "PT1002|PTEST|AUTH-PT1002",
+        "PT1007|PTEST|AUTH-PT1007"
+      ],
+      "lines": [],
+      "focused": {
+        "id": "",
+        "text": "\nSYNTHETIC DATA — NOT REAL PATIENTS · proof of concept · nothing is sent to any payer\n\n  P",
+        "download": false
+      }
+    },
+    "recovered": {
+      "summary": "3 all-day event(s) · 2 excluded item(s)",
+      "context": "5 currently filtered item(s); report as of 2026-10-31. Clinic time zone: America/Los_Angeles. 2 undated; 0 approved/n/a (exclusion reasons can overlap).",
+      "status": "Uses recorded submit-by dates only. Review these items before downloading.",
+      "disabled": false,
+      "button": "Download 3 event(s) (.ics)",
+      "shown": "5 of 7 items",
+      "asof": "2026-10-31",
+      "query": "",
+      "clinic": "",
+      "states": "",
+      "keys": [
+        "PT1001|PTEST|AUTH-PT1001",
+        "PT1005|PTEST|",
+        "PT1006|PTEST|",
+        "PT1002|PTEST|AUTH-PT1002",
+        "PT1007|PTEST|AUTH-PT1007"
+      ],
+      "lines": [
+        "Include · 2026-10-31 · PT1001 · Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\\literal · AUTH-PT1001 · East · open",
+        "Include · 2026-11-01 · PT1002 · Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\\literal · AUTH-PT1002 · West · submitted",
+        "Include · 2026-11-04 · PT1007 · Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\\literal · AUTH-PT1007 · East · open",
+        "Exclude · PT1005 · no auth · no recorded submit-by date",
+        "Exclude · PT1006 · no auth · no recorded submit-by date"
+      ],
+      "focused": {
+        "id": "",
+        "text": "\nSYNTHETIC DATA — NOT REAL PATIENTS · proof of concept · nothing is sent to any payer\n\n  P",
+        "download": false
+      }
+    },
+    "intentional_transport_failure": true
+  },
+  {
+    "name": "saved-report drift rejects earlier snapshot and replacement must be reviewed",
+    "status": "pass",
+    "rejected": {
+      "summary": "Calendar unavailable",
+      "context": "",
+      "status": "Report or staff state changed; refresh the worklist before exporting Refresh the worklist before exporting.",
+      "disabled": true,
+      "button": "Download calendar (.ics)",
+      "shown": "5 of 7 items",
+      "asof": "2026-10-31",
+      "query": "",
+      "clinic": "",
+      "states": "",
+      "keys": [
+        "PT1001|PTEST|AUTH-PT1001",
+        "PT1005|PTEST|",
+        "PT1006|PTEST|",
+        "PT1002|PTEST|AUTH-PT1002",
+        "PT1007|PTEST|AUTH-PT1007"
+      ],
+      "lines": [],
+      "focused": {
+        "id": "",
+        "text": "\nSYNTHETIC DATA — NOT REAL PATIENTS · proof of concept · nothing is sent to any payer\n\n  P",
+        "download": false
+      }
+    },
+    "download": "after-reviewed-report-drift"
+  },
+  {
+    "name": "saved staff-state drift rejects snapshot until actual replacement review",
+    "status": "pass",
+    "rejected": {
+      "summary": "Calendar unavailable",
+      "context": "",
+      "status": "Report or staff state changed; refresh the worklist before exporting Refresh the worklist before exporting.",
+      "disabled": true,
+      "button": "Download calendar (.ics)",
+      "shown": "5 of 7 items",
+      "asof": "2026-10-31",
+      "query": "",
+      "clinic": "",
+      "states": "",
+      "keys": [
+        "PT1001|PTEST|AUTH-PT1001",
+        "PT1005|PTEST|",
+        "PT1006|PTEST|",
+        "PT1002|PTEST|AUTH-PT1002",
+        "PT1007|PTEST|AUTH-PT1007"
+      ],
+      "lines": [],
+      "focused": {
+        "id": "",
+        "text": "\nSYNTHETIC DATA — NOT REAL PATIENTS · proof of concept · nothing is sent to any payer\n\n  P",
+        "download": false
+      }
+    },
+    "download": "after-reviewed-state-drift"
+  },
+  {
+    "name": "late actual success retired by filter change cannot download or replace status",
+    "status": "pass",
+    "review_after_change": {
+      "summary": "2 all-day event(s) · 0 excluded item(s)",
+      "context": "2 currently filtered item(s); report as of 2026-10-31. Clinic time zone: America/Los_Angeles. 0 undated; 0 approved/n/a (exclusion reasons can overlap).",
+      "status": "Uses recorded submit-by dates only. Review these items before downloading.",
+      "disabled": false,
+      "button": "Download 2 event(s) (.ics)",
+      "shown": "2 of 7 items",
+      "asof": "2026-10-31",
+      "query": "Shared",
+      "clinic": "",
+      "states": "",
+      "keys": [
+        "PT1001|PTEST|AUTH-PT1001",
+        "PT1002|PTEST|AUTH-PT1002"
+      ],
+      "lines": [
+        "Include · 2026-10-31 · PT1001 · Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\\literal · AUTH-PT1001 · East · open",
+        "Include · 2026-11-01 · PT1002 · Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\\literal · AUTH-PT1002 · West · submitted"
+      ],
+      "focused": {
+        "id": "q",
+        "text": "",
+        "download": false
+      }
+    },
+    "releaseResult": "already aborted or retired: {\"code\":-32602,\"message\":\"Invalid InterceptionId.\"}",
+    "unexpected_downloads": 0,
+    "download": "after-retired-success"
+  },
+  {
+    "name": "late actual 409 retired by filter change cannot replace newer status",
+    "status": "pass",
+    "review_after_change": {
+      "summary": "2 all-day event(s) · 0 excluded item(s)",
+      "context": "2 currently filtered item(s); report as of 2026-10-31. Clinic time zone: America/Los_Angeles. 0 undated; 0 approved/n/a (exclusion reasons can overlap).",
+      "status": "Uses recorded submit-by dates only. Review these items before downloading.",
+      "disabled": false,
+      "button": "Download 2 event(s) (.ics)",
+      "shown": "2 of 7 items",
+      "asof": "2026-10-31",
+      "query": "Shared",
+      "clinic": "",
+      "states": "",
+      "keys": [
+        "PT1001|PTEST|AUTH-PT1001",
+        "PT1002|PTEST|AUTH-PT1002"
+      ],
+      "lines": [
+        "Include · 2026-10-31 · PT1001 · Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\\literal · AUTH-PT1001 · East · open",
+        "Include · 2026-11-01 · PT1002 · Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\\literal · AUTH-PT1002 · West · submitted"
+      ],
+      "focused": {
+        "id": "q",
+        "text": "",
+        "download": false
+      }
+    },
+    "releaseResult": "already aborted or retired: {\"code\":-32602,\"message\":\"Invalid InterceptionId.\"}",
+    "unexpected_downloads": 0,
+    "download": "after-retired-failure"
+  },
+  {
+    "name": "late actual success retired by as-of edit remains unavailable",
+    "status": "pass",
+    "retired_state": {
+      "summary": "Calendar unavailable",
+      "context": "",
+      "status": "The as-of date has changed. Run worklist to review that date before exporting.",
+      "disabled": true,
+      "button": "Download calendar (.ics)",
+      "shown": "5 of 7 items",
+      "asof": "2026-11-02",
+      "query": "",
+      "clinic": "",
+      "states": "",
+      "keys": [
+        "PT1001|PTEST|AUTH-PT1001",
+        "PT1005|PTEST|",
+        "PT1006|PTEST|",
+        "PT1002|PTEST|AUTH-PT1002",
+        "PT1007|PTEST|AUTH-PT1007"
+      ],
+      "lines": [],
+      "focused": {
+        "id": "",
+        "text": "\nSYNTHETIC DATA — NOT REAL PATIENTS · proof of concept · nothing is sent to any payer\n\n  P",
+        "download": false
+      }
+    },
+    "recovered": {
+      "summary": "3 all-day event(s) · 2 excluded item(s)",
+      "context": "5 currently filtered item(s); report as of 2026-10-31. Clinic time zone: America/Los_Angeles. 2 undated; 0 approved/n/a (exclusion reasons can overlap).",
+      "status": "Uses recorded submit-by dates only. Review these items before downloading.",
+      "disabled": false,
+      "button": "Download 3 event(s) (.ics)",
+      "shown": "5 of 7 items",
+      "asof": "2026-10-31",
+      "query": "",
+      "clinic": "",
+      "states": "",
+      "keys": [
+        "PT1001|PTEST|AUTH-PT1001",
+        "PT1005|PTEST|",
+        "PT1006|PTEST|",
+        "PT1002|PTEST|AUTH-PT1002",
+        "PT1007|PTEST|AUTH-PT1007"
+      ],
+      "lines": [
+        "Include · 2026-10-31 · PT1001 · Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\\literal · AUTH-PT1001 · East · open",
+        "Include · 2026-11-01 · PT1002 · Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\\literal · AUTH-PT1002 · West · submitted",
+        "Include · 2026-11-04 · PT1007 · Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\\literal · AUTH-PT1007 · East · open",
+        "Exclude · PT1005 · no auth · no recorded submit-by date",
+        "Exclude · PT1006 · no auth · no recorded submit-by date"
+      ],
+      "focused": {
+        "id": "",
+        "text": "\nSYNTHETIC DATA — NOT REAL PATIENTS · proof of concept · nothing is sent to any payer\n\n  P",
+        "download": false
+      }
+    },
+    "unexpected_downloads": 0
+  },
+  {
+    "name": "initial real summary pending is unavailable until exact report arrives",
+    "status": "pass",
+    "pending": {
+      "summary": "Calendar unavailable",
+      "context": "",
+      "status": "Loading the worklist…",
+      "disabled": true,
+      "button": "Download calendar (.ics)",
+      "shown": "",
+      "asof": "",
+      "query": "",
+      "clinic": "",
+      "states": "",
+      "keys": [],
+      "lines": [],
+      "focused": {
+        "id": "",
+        "text": "\nSYNTHETIC DATA — NOT REAL PATIENTS · proof of concept · nothing is sent to any payer\n\n  P",
+        "download": false
+      }
+    },
+    "accepted": {
+      "summary": "3 all-day event(s) · 2 excluded item(s)",
+      "context": "5 currently filtered item(s); report as of 2026-10-31. Clinic time zone: America/Los_Angeles. 2 undated; 0 approved/n/a (exclusion reasons can overlap).",
+      "status": "Uses recorded submit-by dates only. Review these items before downloading.",
+      "disabled": false,
+      "button": "Download 3 event(s) (.ics)",
+      "shown": "5 of 7 items",
+      "asof": "2026-10-31",
+      "query": "",
+      "clinic": "",
+      "states": "",
+      "keys": [
+        "PT1001|PTEST|AUTH-PT1001",
+        "PT1005|PTEST|",
+        "PT1006|PTEST|",
+        "PT1002|PTEST|AUTH-PT1002",
+        "PT1007|PTEST|AUTH-PT1007"
+      ],
+      "lines": [
+        "Include · 2026-10-31 · PT1001 · Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\\literal · AUTH-PT1001 · East · open",
+        "Include · 2026-11-01 · PT1002 · Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\\literal · AUTH-PT1002 · West · submitted",
+        "Include · 2026-11-04 · PT1007 · Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\\literal · AUTH-PT1007 · East · open",
+        "Exclude · PT1005 · no auth · no recorded submit-by date",
+        "Exclude · PT1006 · no auth · no recorded submit-by date"
+      ],
+      "focused": {
+        "id": "",
+        "text": "\nSYNTHETIC DATA — NOT REAL PATIENTS · proof of concept · nothing is sent to any payer\n\n  P",
+        "download": false
+      }
+    },
+    "actual_response_status": 200
+  }
+]

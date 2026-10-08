@@ -1,0 +1,44 @@
+diff --git a/pt_auth/tests/browser/uncovered_review.test.cjs b/pt_auth/tests/browser/uncovered_review.test.cjs
+index 01f44c8..4093e4b 100644
+--- a/pt_auth/tests/browser/uncovered_review.test.cjs
++++ b/pt_auth/tests/browser/uncovered_review.test.cjs
+@@ -8,6 +8,9 @@ const {test} = require("node:test");
+ const uiPath = process.env.PTAUTH_UI_SOURCE || path.join(__dirname, "../../ptauth/ui.html");
+ const html = fs.readFileSync(uiPath, "utf8");
+ const script = html.slice(html.indexOf("<script>") + 8, html.lastIndexOf("</script>"));
++const calendarPath = path.join(path.dirname(uiPath), "calendar_ui.js");
++const calendarScript = html.includes('<script src="/calendar_ui.js"></script>')
++  ? fs.readFileSync(calendarPath, "utf8") : null;
+ if (!process.env.PTAUTH_UI_SUMMARY) throw new Error("PTAUTH_UI_SUMMARY must name an authored report");
+ const original = JSON.parse(fs.readFileSync(process.env.PTAUTH_UI_SUMMARY, "utf8"));
+ const clone = value => JSON.parse(JSON.stringify(value));
+@@ -18,6 +21,10 @@ async function boot(input = original) {
+   const element = selector => {
+     if (!elements.has(selector)) elements.set(selector, {
+       value: "", innerHTML: "", textContent: "", disabled: false, dataset: {},
++      addEventListener(name, handler) { this["on" + name] = handler; },
++      querySelector(child) { return element(selector + " " + child); },
++      replaceChildren(...nodes) { this.children = nodes; },
++      append(node) { (this.children ||= []).push(node); },
+       classList: {states: {}, toggle(name, on) { this.states[name] = on; }}
+     });
+     return elements.get(selector);
+@@ -32,6 +39,7 @@ async function boot(input = original) {
+   const context = vm.createContext({
+     document: {
+       querySelector: element,
++      createElement() { return {textContent: ""}; },
+       querySelectorAll(selector) {
+         if (selector === "#tabs button") return buttons;
+         if (selector === "main > section") return sections;
+@@ -46,6 +54,10 @@ async function boot(input = original) {
+     },
+     alert(message) { throw new Error(message); }
+   });
++  context.window = context;
++  if (calendarScript !== null) {
++    vm.runInContext(calendarScript, context, {filename: calendarPath, timeout: 1000});
++  }
+   vm.runInContext(script, context, {filename: uiPath, timeout: 1000});
+   await new Promise(setImmediate);
+   return {element, buttons, sections, calls, context};

@@ -1,4 +1,4 @@
-"""CLI: python -m ptauth <generate|run|serve> ..."""
+"""CLI: python -m ptauth <generate|run|calendar|serve> ..."""
 from __future__ import annotations
 
 import argparse
@@ -19,6 +19,12 @@ def main(argv=None) -> int:
     r.add_argument("--data", default="sample_data")
     r.add_argument("--out", default="out")
     r.add_argument("--as-of", default=None, help="YYYY-MM-DD (default: sample's as_of, else today)")
+    cal = sub.add_parser("calendar", help="export dated open/submitted items from a saved report")
+    cal.add_argument("--report", default="out", help="existing report directory; never runs the engine")
+    cal.add_argument("--output", required=True, help="new .ics file (existing paths are refused)")
+    cal.add_argument("--priority", choices=("P1", "P2", "P3"))
+    cal.add_argument("--clinic", help="exact recorded clinic name")
+    cal.add_argument("--key", action="append", help="exact work-item key; repeat to select several")
     s = sub.add_parser("serve", help="local UI on 127.0.0.1")
     s.add_argument("--data", default="sample_data")
     s.add_argument("--out", default="out")
@@ -58,6 +64,20 @@ def main(argv=None) -> int:
         print(f"{c['uncovered_scheduled'] + c['unauthorized_done']} uncovered visits to inspect: "
               f"{Path(a.out) / 'uncovered_visits.csv'}")
         print(f"digest: {Path(a.out) / 'digest.html'}")
+        return 0
+    if a.cmd == "calendar":
+        import json
+        from .worklist_calendar import (CalendarInputError, calendar_metadata, load_report,
+                                        prepare_calendar, render_calendar, write_calendar)
+        try:
+            plan = prepare_calendar(load_report(Path(a.report)), a.key,
+                                    priority=a.priority, clinic=a.clinic)
+            content = render_calendar(plan)
+            write_calendar(Path(a.output), content)
+        except (CalendarInputError, OSError) as e:
+            print(f"ERROR: {e}", file=sys.stderr)
+            return 2
+        print(json.dumps({**calendar_metadata(plan), "output": str(Path(a.output))}, ensure_ascii=False))
         return 0
     if a.cmd == "serve":
         from .data import InputError

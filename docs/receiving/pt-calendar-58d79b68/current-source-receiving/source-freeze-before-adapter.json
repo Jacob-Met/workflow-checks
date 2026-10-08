@@ -1,0 +1,47 @@
+{
+  "recorded_at": "2026-10-08T14:23:09.774Z",
+  "native_commit": "880d6198cf4f9999e4aa05e3fbd744701b38f500",
+  "tree": "7e95c0bfc639927ee4aa782ead1173105694bb93",
+  "parent": "ea6ff4da45c038dd7440f83dc34d61ab245e1e52",
+  "feature": "a68a667f3610153618c6cc8952c72abe980d89aa",
+  "pt_tree": "bab4b59e9fc4627b5c2ece94abfb37a074ad58a1",
+  "gate": "new shared source seam; receiving pending",
+  "files": [
+    {
+      "path": "pt_auth/ptauth/ui.html",
+      "bytes": 18655,
+      "sha256": "a59df72e1edf5075e513047eb4000e94a87bf1dbcde8d243547944c283bbd492",
+      "blob": "ec2e198ee1873c41981d201c78a63dbccc13afad"
+    },
+    {
+      "path": "pt_auth/ptauth/cli.py",
+      "bytes": 5071,
+      "sha256": "cd4e5ed987b6ae686de687eabbb69007ab9cda8204ec41ebb25185f864321585",
+      "blob": "559c0a76effa2204041e9318e9869a6c7389f50d"
+    },
+    {
+      "path": "pt_auth/ptauth/web.py",
+      "bytes": 8633,
+      "sha256": "18a5f6e889f2a5d7e0e3704989f041681252df3ee0cb29e3c356aff560fd2967",
+      "blob": "7e5d38f4cf8c33f4b9c91bd3c3d929fcfa0f80b3"
+    },
+    {
+      "path": "pt_auth/ptauth/calendar_ui.js",
+      "bytes": 8448,
+      "sha256": "b91fe76b947f381b2fa0835646fc664bf7eaa4474631ae3c9e5cb3968b9cdf3a",
+      "blob": "a6ba45ec85c28f7fd80d7e2fdd32ac62e96daa99"
+    },
+    {
+      "path": "pt_auth/ptauth/worklist_calendar.py",
+      "bytes": 13750,
+      "sha256": "89751f1de5548ced34a59c296d0edf1eda06a38bdb935be3e7c3c8b2ae5d55c0",
+      "blob": "e125f9ed77343fcc3d82e6d6f25a7296b0463aa7"
+    },
+    {
+      "path": "pt_auth/tests/browser/uncovered_review.test.cjs",
+      "bytes": 8415,
+      "sha256": "25cac361af6bf20b93d017586087db0457669ba386ae47144db184f235e9037c",
+      "blob": "01f44c8e4f0cf909ac894c3b9f4469e89db7298e"
+    }
+  ]
+}

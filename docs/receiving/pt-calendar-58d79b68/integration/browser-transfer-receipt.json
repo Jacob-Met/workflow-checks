@@ -1,0 +1,181 @@
+{
+  "schema": "pt_calendar.independent_transfer_receipt.v1",
+  "timestamp": "2026-10-08T14:19:04.040Z",
+  "archive": {
+    "path": "/home/jacob/pt-calendar-browser-review-58d79b68c9e4/native-browser-review.json.gz",
+    "bytes": 1146656,
+    "sha256": "c296acea68f36d63f071d71aaefc2b803002b21af84282a69b1a81d7ccb1feb4",
+    "git_blob": "8512427ed4b87de2d9611cea66c69f707aad03a4",
+    "repository": "Jacob-Met/workflow-checks",
+    "git_connector_create_blob_returned_exact_native_identity": true
+  },
+  "packet": {
+    "path": "/home/jacob/pt-calendar-browser-review-58d79b68c9e4/packet",
+    "files": 112,
+    "manifest_files": 110,
+    "manifest_sha256": "6da0e9179229ced9b4ce3b362ab1f755d8b754387260d9c99fccdade3b79b807",
+    "conscience_receipt_sha256": "21e1fdfa769cfb0cf8711e3f15e42f8ee18862fb9c9cb2cf8516f7ae07313ec6",
+    "all_bytes_modes_reverified": true
+  },
+  "source_mac_root": "/Users/me/pt-calendar-browser-review-58d79b68c9e4",
+  "mac_archive_writes": 0,
+  "mac_later_receipt_write": {
+    "result": "ENOSPC",
+    "native_conscience_already_durable": [
+      4160,
+      4161
+    ],
+    "exact_receipt_preserved_in_receiving_packet": true
+  },
+  "thinkpad_partial_failure": {
+    "error": "ENOSPC: no space left on device, write",
+    "bytes_before": 294912,
+    "bytes_after": 294912,
+    "ordinary_free_bytes": 0,
+    "all_nine_prefix_chunks_verified": true,
+    "resumed_only_after_root_owned_cache_cleanup": true
+  },
+  "interactive_transport_adapter": [
+    {
+      "kind": "RDC_interactive_input_acknowledgement_regex_limit",
+      "offsets": [
+        0,
+        32768
+      ],
+      "exact_error": "Invalid regular expression: Regular expression too large",
+      "native_effect": "Both 32 KiB chunks were written; absolute process history and independent native chunk hashes confirmed65536 bytes before any further write.",
+      "adaptation": "Closed only owned receiving REPL; continue exact offset/hash-checked writes through ordinary native start_process, avoiding the interactive echo-filter limit. Mac sender remains read-only."
+    }
+  ],
+  "writes": [
+    {
+      "offset": 0,
+      "bytes": 32768,
+      "next": 32768
+    },
+    {
+      "offset": 32768,
+      "bytes": 32768,
+      "next": 65536
+    },
+    {
+      "kind": "written",
+      "offset": 65536,
+      "bytes": 32768,
+      "next": 98304
+    },
+    {
+      "kind": "written",
+      "offset": 98304,
+      "bytes": 65536,
+      "next": 163840,
+      "chunks": 2
+    },
+    {
+      "kind": "written",
+      "offset": 163840,
+      "bytes": 65536,
+      "next": 229376,
+      "chunks": 2
+    },
+    {
+      "kind": "written",
+      "offset": 229376,
+      "bytes": 65536,
+      "next": 294912,
+      "chunks": 2
+    },
+    {
+      "kind": "written",
+      "offset": 294912,
+      "bytes": 65536,
+      "next": 360448,
+      "chunks": 2
+    },
+    {
+      "kind": "written",
+      "offset": 360448,
+      "bytes": 65536,
+      "next": 425984,
+      "chunks": 2
+    },
+    {
+      "kind": "written",
+      "offset": 425984,
+      "bytes": 65536,
+      "next": 491520,
+      "chunks": 2
+    },
+    {
+      "kind": "written",
+      "offset": 491520,
+      "bytes": 65536,
+      "next": 557056,
+      "chunks": 2
+    },
+    {
+      "kind": "written",
+      "offset": 557056,
+      "bytes": 65536,
+      "next": 622592,
+      "chunks": 2
+    },
+    {
+      "kind": "written",
+      "offset": 622592,
+      "bytes": 65536,
+      "next": 688128,
+      "chunks": 2
+    },
+    {
+      "kind": "written",
+      "offset": 688128,
+      "bytes": 65536,
+      "next": 753664,
+      "chunks": 2
+    },
+    {
+      "kind": "written",
+      "offset": 753664,
+      "bytes": 65536,
+      "next": 819200,
+      "chunks": 2
+    },
+    {
+      "kind": "written",
+      "offset": 819200,
+      "bytes": 65536,
+      "next": 884736,
+      "chunks": 2
+    },
+    {
+      "kind": "written",
+      "offset": 884736,
+      "bytes": 65536,
+      "next": 950272,
+      "chunks": 2
+    },
+    {
+      "kind": "written",
+      "offset": 950272,
+      "bytes": 65536,
+      "next": 1015808,
+      "chunks": 2
+    },
+    {
+      "kind": "written",
+      "offset": 1015808,
+      "bytes": 65536,
+      "next": 1081344,
+      "chunks": 2
+    },
+    {
+      "kind": "written",
+      "offset": 1081344,
+      "bytes": 65312,
+      "next": 1146656,
+      "chunks": 2
+    }
+  ],
+  "source_browser_or_tests_repeated": false
+}

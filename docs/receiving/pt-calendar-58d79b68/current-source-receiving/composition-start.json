@@ -1,0 +1,707 @@
+{
+  "recorded_at": "2026-10-08T14:20:47.297Z",
+  "current_parent": "ea6ff4da45c038dd7440f83dc34d61ab245e1e52",
+  "parent_tree": "b470f3578107ce412bb0a66cd4bf835902bfede4",
+  "original_calendar_feature": "d75fb908a9893fd40b21112f62af16d32027bbe1",
+  "materialized_pt_files": 115,
+  "source_pt_manifest": [
+    {
+      "path": "pt_auth/HARDENING.md",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "49db3a3e425e2ecb6c36b000daf95874dbf88cd9"
+    },
+    {
+      "path": "pt_auth/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "43c517674b03403156323078b089441ecdd488ff"
+    },
+    {
+      "path": "pt_auth/evidence/clinic-timezone-86776bb3cdb8/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "becfc3cdcb7da57b5dc6c9309e4fe1c3e377bd18"
+    },
+    {
+      "path": "pt_auth/evidence/clinic-timezone-86776bb3cdb8/authored-input/authorizations.csv",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "71f6c8f3b9df8559203f7b92b94a4c9c43f2e8cb"
+    },
+    {
+      "path": "pt_auth/evidence/clinic-timezone-86776bb3cdb8/authored-input/patients.csv",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "3d5d64a4aca5ed619597b621c5ac6a0791b1f876"
+    },
+    {
+      "path": "pt_auth/evidence/clinic-timezone-86776bb3cdb8/authored-input/payers.csv",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "e48f0222283217ba8cbbe629f43b363063ebd4a2"
+    },
+    {
+      "path": "pt_auth/evidence/clinic-timezone-86776bb3cdb8/authored-input/schedule.csv",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "823ea4552478df0da5fde245cbd402720148cf0f"
+    },
+    {
+      "path": "pt_auth/evidence/clinic-timezone-86776bb3cdb8/baseline-author-tests.log",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "1ab2b79cb7f281eff6b52341cdc7864e77d98157"
+    },
+    {
+      "path": "pt_auth/evidence/clinic-timezone-86776bb3cdb8/baseline-host-drift.json",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "0fbbdae13da416f33b169b279339fc8172a5a5ff"
+    },
+    {
+      "path": "pt_auth/evidence/clinic-timezone-86776bb3cdb8/candidate-tests.log",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "eba089371d34e9f0b2883211dad1d1dc7a138de3"
+    },
+    {
+      "path": "pt_auth/evidence/clinic-timezone-86776bb3cdb8/final-tests.log",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "cce724f8354acb8c6cea7f275bab9362cd0361f3"
+    },
+    {
+      "path": "pt_auth/evidence/clinic-timezone-86776bb3cdb8/other-project-gates.json",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "5fe874085912c00adec8b51e7b21d5e53ef2782d"
+    },
+    {
+      "path": "pt_auth/evidence/clinic-timezone-86776bb3cdb8/receiving/REVIEW.md",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "70d9829fdcbeb1eb4c3e8232463c247a52bb85cb"
+    },
+    {
+      "path": "pt_auth/evidence/clinic-timezone-86776bb3cdb8/receiving/artifact-paths.json",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "8dbf10db7e11a1892b6a92849a9cd6780dca11a2"
+    },
+    {
+      "path": "pt_auth/evidence/clinic-timezone-86776bb3cdb8/receiving/baseline-cache-control-receipt.json",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "69738f59edcf06af6d9f16b783e08e66199547b1"
+    },
+    {
+      "path": "pt_auth/evidence/clinic-timezone-86776bb3cdb8/receiving/baseline-cache-control.log",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "1ee489dc9be68e7b6002c5697bab45bcb097d99a"
+    },
+    {
+      "path": "pt_auth/evidence/clinic-timezone-86776bb3cdb8/receiving/baseline-host-drift-inputs/authorizations.csv",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "7325c49743edc12cc1c4e1cabd12a12c562c9e44"
+    },
+    {
+      "path": "pt_auth/evidence/clinic-timezone-86776bb3cdb8/receiving/baseline-host-drift-inputs/patients.csv",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "44cd97382ce50416593db433bdd71d655032d7b4"
+    },
+    {
+      "path": "pt_auth/evidence/clinic-timezone-86776bb3cdb8/receiving/baseline-host-drift-inputs/payers.csv",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "e48f0222283217ba8cbbe629f43b363063ebd4a2"
+    },
+    {
+      "path": "pt_auth/evidence/clinic-timezone-86776bb3cdb8/receiving/baseline-host-drift-inputs/schedule.csv",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "5438715ca58735920cf2caf5945180da3ac2ac77"
+    },
+    {
+      "path": "pt_auth/evidence/clinic-timezone-86776bb3cdb8/receiving/baseline-host-drift.json",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "9e0ca1f00770607f8d354e957057479da41f5e02"
+    },
+    {
+      "path": "pt_auth/evidence/clinic-timezone-86776bb3cdb8/receiving/candidate-independent-receipt.json",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "e93d0c905b114f5338c2b040e377953cbabe91b1"
+    },
+    {
+      "path": "pt_auth/evidence/clinic-timezone-86776bb3cdb8/receiving/candidate-independent.log",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "ebe60a3da435181ca489ed7ac34aee87a7927ab4"
+    },
+    {
+      "path": "pt_auth/evidence/clinic-timezone-86776bb3cdb8/receiving/candidate-source-manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "14ea254bc78ed24b60dc90a7810c894c36c45598"
+    },
+    {
+      "path": "pt_auth/evidence/clinic-timezone-86776bb3cdb8/receiving/file-hashes.json",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "75137b86d82f5d4c9052075434961ef61d52f550"
+    },
+    {
+      "path": "pt_auth/evidence/clinic-timezone-86776bb3cdb8/receiving/live-main.json",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "3e8ebfaf8788168eb72ada1a79673f9688be035b"
+    },
+    {
+      "path": "pt_auth/evidence/clinic-timezone-86776bb3cdb8/receiving/source-preservation.json",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "4f42256f1bdbd875cbc3e163daeba67ca8e92314"
+    },
+    {
+      "path": "pt_auth/evidence/clinic-timezone-86776bb3cdb8/receiving/test_receiving_timezone.py.txt",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "18105410825b731e4475067d5e62124ea0cf4deb"
+    },
+    {
+      "path": "pt_auth/evidence/clinic-timezone-86776bb3cdb8/severe-lint.log",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "1f5f344d054fae10f39140fb7199c99321d9190a"
+    },
+    {
+      "path": "pt_auth/evidence/clinic-timezone-86776bb3cdb8/source-receipt.json",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "4ec46c888c2b9668947d476f67351ac4d16e965d"
+    },
+    {
+      "path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/COPYMANIFEST.json",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "2717204f80b970ef63bd8afc723607b38372c58f"
+    },
+    {
+      "path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/PUBLICATION-ALLOWLIST.txt",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "a0d528750f5115a64f81fc04f04b605afdbe6bfc"
+    },
+    {
+      "path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "b7d0a734d1f6730b47789d3d009570f35af99b52"
+    },
+    {
+      "path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/AUTHOR.md",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "e64fbfcf8e45d717dcbb17a4f36735a5a10ac429"
+    },
+    {
+      "path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/PUBLICATION-ALLOWLIST.txt",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "9664cbb61b2d957b8951d1521fb8524f80dd6a19"
+    },
+    {
+      "path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/PUBLICATION-MANIFEST.json",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "c2148cd58eef5c5a21bcc914f9eced0c62742de5"
+    },
+    {
+      "path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/baseline-manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "23ac44fc997e6f2523b86640d517b6fdd9ba3b46"
+    },
+    {
+      "path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/baseline/authored-baseline.json",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "53f1019345a5526576ec7a7f8aac66add94f800e"
+    },
+    {
+      "path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/baseline/cli-result.json",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "ba602c59fb5338795ed003705b8dd7b553bc34a0"
+    },
+    {
+      "path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/baseline/inline-ui.json",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "bc7b5a38adc03cc92aa58061b1aa4e1fca5ed50c"
+    },
+    {
+      "path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/baseline/shipped-workflow.json",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "a9eb8831afe4f13cfcae30b49db2c2f9c236482a"
+    },
+    {
+      "path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/candidate-manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "afadcfae9d6d795dd2da57e30e5fddc5103ed3a6"
+    },
+    {
+      "path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/candidate.patch",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "b345a6a15fd2bc0038251a721e22a1004b3282c0"
+    },
+    {
+      "path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/example-after/digest.html",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "35dfb4409b4193e7785f2c6e56dd3352526552d1"
+    },
+    {
+      "path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/example-after/summary.json",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "4220d4e55a744780a56793b0a1950cef7f4e96aa"
+    },
+    {
+      "path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/example-after/uncovered_visits.csv",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "3f099e83e594d4d6cbeceb810b4a8a8aaa84fdb0"
+    },
+    {
+      "path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/example-before/digest.html",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "b908045a1eae8be0050b3ee935471062814c01d7"
+    },
+    {
+      "path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/example-before/summary.json",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "f308e52c0269430a59a212bfc1c027ef61d5ea8a"
+    },
+    {
+      "path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/fixtures/authored-input/authorizations.csv",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "1a22901fe9756eabacaad5dfdcf0e346c4a3ad24"
+    },
+    {
+      "path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/fixtures/authored-input/patients.csv",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "898c86ed68aef612c77761956324a511a481bbe1"
+    },
+    {
+      "path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/fixtures/authored-input/payers.csv",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "51c3d6bbd7d0987acb4ebc675b3a2cb01cbfd220"
+    },
+    {
+      "path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/fixtures/authored-input/schedule.csv",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "f7125aea958eed2af05b0d4c3a63c57716b440d8"
+    },
+    {
+      "path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/historical/probe-ui.mjs.source",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "6e5880e414a479dffa7e820969a6e46049f27c5e"
+    },
+    {
+      "path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/historical/qualify_candidate.py.source",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "259d23374e0a2e17df1a938f4a0cd41e9536e602"
+    },
+    {
+      "path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/historical/verify_preservation.py.source",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "0471640a7347743ab14773b503f5d8bf8a07d4ec"
+    },
+    {
+      "path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/qualification/baseline-normal.stderr.txt",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "ce34b0821261ce2c8c5c78164bc2c17c0838672e"
+    },
+    {
+      "path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/qualification/baseline-normal.stdout.txt",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/qualification/baseline-ui.stderr.txt",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/qualification/baseline-ui.stdout.txt",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "688a947ca7324bd6880e67a7c6c0fcde1e1de1a8"
+    },
+    {
+      "path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/qualification/candidate-normal.stderr.txt",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "141e791f7ea938ddcdfb1bc77ac2dbaadbd495d3"
+    },
+    {
+      "path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/qualification/candidate-normal.stdout.txt",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/qualification/candidate-optimized.stderr.txt",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "609e9fd2e3ac597f346f13cd7d62b02c84ba0279"
+    },
+    {
+      "path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/qualification/candidate-optimized.stdout.txt",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/qualification/candidate-ui.stderr.txt",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/qualification/candidate-ui.stdout.txt",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "56670aa7b6db1ad94f5ab9efb405fc7e2593fdc8"
+    },
+    {
+      "path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/qualification/generated-output-cleanup.json",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "c4ac2392d07e679399bed153fbb2869475ed2b77"
+    },
+    {
+      "path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/qualification/preservation.json",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "dc30dbe7c24f9540d9ee8c14cc54b2738395d724"
+    },
+    {
+      "path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/qualification/receipt.json",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "e80c2fde111168bd4dad2fcd215400568bea8868"
+    },
+    {
+      "path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/author/source-preconditions.json",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "fbc4e96512c448f7db087abec9d5974fa5b3812b"
+    },
+    {
+      "path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/distribution/PUBLICATION-ALLOWLIST.txt",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "bd82a12816a93e12a165e2cf347a2074748db469"
+    },
+    {
+      "path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/distribution/REVIEW.md",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "ec757f3ecde8cb79c931a5252df1b1edd33d8447"
+    },
+    {
+      "path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/distribution/receipt.json",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "cc1fd85ac94abfa7ca8beeff5eb55d269f5f6154"
+    },
+    {
+      "path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/distribution/source-readback.json",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "590da77ed11c3bcba96872e3c613f0a0c4b9d6e8"
+    },
+    {
+      "path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/independent/PUBLICATION-MANIFEST.json",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "c57ac45d12f99fd522cfe620ddb59d77528de54f"
+    },
+    {
+      "path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/independent/REVIEW.md",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "3f0f2787c7b7922da4acfe16cb8c078f7220f47c"
+    },
+    {
+      "path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/independent/authored-input/authorizations.csv",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "a833066c0e052d4f0cb27c2c77bd14ef6d8930e4"
+    },
+    {
+      "path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/independent/authored-input/patients.csv",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "8f63a08c2b916ccc5f92c56d18a291aecc1412ef"
+    },
+    {
+      "path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/independent/authored-input/payers.csv",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "02b2550928094c1c34acb646e8ff1c3052949c8d"
+    },
+    {
+      "path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/independent/authored-input/schedule.csv",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "c653b9734253ebd7f4b63f701b21467078ce4081"
+    },
+    {
+      "path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/independent/browser-input.json",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "22a221be4102740e8d02bca913f69e98cdca8618"
+    },
+    {
+      "path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/independent/inline-receipt.json",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "9117b8403ad7c84f717b003e17bdf6408fedf999"
+    },
+    {
+      "path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/independent/publication-allowlist.json",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "d258e07723009e8ec032adb116f99176e99e0046"
+    },
+    {
+      "path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/independent/rejected-harnesses/inline-v1.cjs",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "e96d9c57976d164ced9ec62b2b48e58268974328"
+    },
+    {
+      "path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/independent/rejected-harnesses/inline-v1.json",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "b8c835db75de0a75403743ec23e9b11f2bef7212"
+    },
+    {
+      "path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/independent/report-receipt.json",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "ae2e54f471c9a8a531be9ea6f3a35149e90685be"
+    },
+    {
+      "path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/independent/review-receipt.json",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "790269ec2dd4d6b9b6bc301f38be5f8b529765a8"
+    },
+    {
+      "path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/independent/review_inline.cjs",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "5cde86b23118d51c07179470e056599ba5b9d1a9"
+    },
+    {
+      "path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/independent/review_reports.py",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "fd7196955c6afa42a0c5d2616028042aa5179d00"
+    },
+    {
+      "path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/independent/review_ui.cjs",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "56ea8f9c6c829c1fb65e66dc1e47bb98e0d37591"
+    },
+    {
+      "path": "pt_auth/evidence/uncovered-visits-dc13ebf4687f/independent/serve_fixture.py",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "c3bfcf7f999d6f8efb955dfac282691869202e28"
+    },
+    {
+      "path": "pt_auth/ptauth/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "a6f4545ac17e2578317ef694f7bb548489f6c71c"
+    },
+    {
+      "path": "pt_auth/ptauth/__main__.py",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "3c93dd90cf357624c77ab3589ef2b201868c181e"
+    },
+    {
+      "path": "pt_auth/ptauth/cli.py",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "1012ba6c759e95b0c14de0e9c00bb4cbb73562ea"
+    },
+    {
+      "path": "pt_auth/ptauth/data.py",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "19a2a1b79eff6d2753507eebf3bf78011ddaaa87"
+    },
+    {
+      "path": "pt_auth/ptauth/engine.py",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "39c97f35d61ff949b5c2381f0ad60d7af8d74226"
+    },
+    {
+      "path": "pt_auth/ptauth/report.py",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "2ce82b1712e5c6fc03374d38996eceddf31782f0"
+    },
+    {
+      "path": "pt_auth/ptauth/synth.py",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "2ff6a2548bf55a812cfa62e397442a0d3f7debbb"
+    },
+    {
+      "path": "pt_auth/ptauth/ui.html",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "3bd3bbe67f3a6b9536b7e99b8ef52b2d1fa048db"
+    },
+    {
+      "path": "pt_auth/ptauth/uncovered.py",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "9ab21781c4116dd0b9b76ac0116868898f3ee7d4"
+    },
+    {
+      "path": "pt_auth/ptauth/web.py",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "71d17ec9642798a5e7df56ab7c2bdbab8d061352"
+    },
+    {
+      "path": "pt_auth/sample_data/README_SYNTHETIC.txt",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "943c3d0e2436abd6c1f3dcb6ef7b7f1aabaff90f"
+    },
+    {
+      "path": "pt_auth/sample_data/authorizations.csv",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "036f7b276e3e09252afb886ad451531f51ada844"
+    },
+    {
+      "path": "pt_auth/sample_data/expected.json",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "21177a89ac5c24c9faf79746550165a3a170d08a"
+    },
+    {
+      "path": "pt_auth/sample_data/patients.csv",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "e67323b68d1ac9ee4a901dc3ef70a95384ba5000"
+    },
+    {
+      "path": "pt_auth/sample_data/payers.csv",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "1853837e82048ac11698b4ad5bb6eeb055d56038"
+    },
+    {
+      "path": "pt_auth/sample_data/schedule.csv",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "24a395250f5318004bab4f168c3ca237189ab354"
+    },
+    {
+      "path": "pt_auth/tests/browser/uncovered_review.test.cjs",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "01f44c8e4f0cf909ac894c3b9f4469e89db7298e"
+    },
+    {
+      "path": "pt_auth/tests/browser/visit_status_review.test.cjs",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "3fbc4bd1dcbbc1db11e40aeda589753f0328310c"
+    },
+    {
+      "path": "pt_auth/tests/conftest.py",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "e4c2fd4ff87c63061fb6a10f0fb01228c46c0875"
+    },
+    {
+      "path": "pt_auth/tests/test_clinic_timezone.py",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "2d5d43e389dc886f4a2a3bed9f536858be06d5f0"
+    },
+    {
+      "path": "pt_auth/tests/test_ptauth.py",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "172f5fef3ccaa02e60b7ea11bfbcdac08c01d51c"
+    },
+    {
+      "path": "pt_auth/tests/test_ptauth_hardening.py",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "4b8b689e31ed003e4b0755ae399355e4a19e5c71"
+    },
+    {
+      "path": "pt_auth/tests/test_receiving_timezone.py",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "18105410825b731e4475067d5e62124ea0cf4deb"
+    },
+    {
+      "path": "pt_auth/tests/test_uncovered_review.py",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "15f167e3af34056f6558be4672446b35eabb5f4d"
+    },
+    {
+      "path": "pt_auth/tests/test_visit_status_review.py",
+      "mode": "100644",
+      "type": "blob",
+      "blob": "8bea7e9286cd3142f375de6a3d7bc08b57b75ef3"
+    }
+  ],
+  "patch_sha256": "1c68a3ee978f014a18dbaa7f0227847329938121510e1214dcedbba0dbefff94",
+  "apply_check": {
+    "status": 1,
+    "stdout": "",
+    "stderr": "error: pt_auth/README.md: does not match index\nerror: pt_auth/ptauth/cli.py: does not match index\nerror: pt_auth/ptauth/ui.html: does not match index\nerror: pt_auth/ptauth/web.py: does not match index\n"
+  },
+  "work": "/dev/shm/pt-calendar-integration-58d79b68c9e4/current-composition",
+  "index": "/dev/shm/pt-calendar-integration-58d79b68c9e4/publication-v2.index"
+}

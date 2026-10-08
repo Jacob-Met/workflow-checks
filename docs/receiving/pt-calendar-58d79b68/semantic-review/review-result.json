@@ -1,0 +1,25 @@
+{
+  "recorded_at": "2026-10-08T13:46:29.819059+00:00",
+  "verdict": "qualified_exact_v2_semantics_and_saved_report_cli",
+  "source_public_commit": "a68a667f3610153618c6cc8952c72abe980d89aa",
+  "native_source": "d75fb908a9893fd40b21112f62af16d32027bbe1",
+  "source_tree": "94074bd3d39705fced23629038ab79057e943aff",
+  "formatter_sha256": "89751f1de5548ced34a59c296d0edf1eda06a38bdb935be3e7c3c8b2ae5d55c0",
+  "reviewer": "chatgpt:58d79b68c9e4:root",
+  "tests": 18,
+  "passed": 18,
+  "failures": 0,
+  "skips": 0,
+  "source_unchanged": true,
+  "test_sha256": "ae92c57d11337a794149e1bacdbb15ec2966d1427aab99f45d6f0dbfb99ae261",
+  "spec_sha256": "4386db6a20665cdcfc90b4d9365f1ca29bf722b44b4ea1c1f5d8ee35176da66d",
+  "log_sha256": "c85d0f2954b85c23e463da8b72b2dfdc885f454566d85098c78e7f8c804420d3",
+  "primary_reference": "https://www.rfc-editor.org/rfc/rfc5545.html",
+  "limits": [
+    "No actual-browser/current-UI receiving in this lane",
+    "No payer-rule or clinical correctness validation",
+    "No calendar-client import/update/deduplication acceptance",
+    "No implementation/integration/deployment changes"
+  ],
+  "native_receipt_added_after_manifest": true
+}

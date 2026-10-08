@@ -1,0 +1,2 @@
+payer_id,payer_name,requires_auth,reauth_visits_before,reauth_days_before,turnaround_days,annual_visit_limit,counts_evals,checklist
+PTEST,"Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\literal",Y,2,14,2,100,Y,"Check dates, review; carefully|Verify \ records|Retain Ω evidence"

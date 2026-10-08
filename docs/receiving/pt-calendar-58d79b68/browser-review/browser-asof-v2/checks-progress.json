@@ -1,0 +1,67 @@
+[
+  {
+    "name": "edited as-of, revert and actual refreshed report",
+    "status": "pass",
+    "empty_refreshed_report": {
+      "summary": "0 all-day event(s) · 0 excluded item(s)",
+      "context": "0 currently filtered item(s); report as of 2026-11-02. Clinic time zone: America/Los_Angeles. 0 undated; 0 approved/n/a (exclusion reasons can overlap).",
+      "status": "No dated open/submitted items in this selection. No calendar will be created.",
+      "disabled": true,
+      "button": "Download calendar (.ics)",
+      "shown": "0 of 0 items",
+      "asof": "2026-11-02",
+      "query": "",
+      "clinic": "",
+      "states": "",
+      "keys": [],
+      "lines": [],
+      "focused": {
+        "id": "",
+        "text": "\nSYNTHETIC DATA — NOT REAL PATIENTS · proof of concept · nothing is sent to any payer\n\n  P",
+        "download": false
+      }
+    },
+    "eligible_refreshed_report": {
+      "summary": "3 all-day event(s) · 2 excluded item(s)",
+      "context": "5 currently filtered item(s); report as of 2026-10-30. Clinic time zone: America/Los_Angeles. 2 undated; 0 approved/n/a (exclusion reasons can overlap).",
+      "status": "Uses recorded submit-by dates only. Review these items before downloading.",
+      "disabled": false,
+      "button": "Download 3 event(s) (.ics)",
+      "shown": "5 of 7 items",
+      "asof": "2026-10-30",
+      "query": "",
+      "clinic": "",
+      "states": "",
+      "keys": [
+        "PT1005|PTEST|",
+        "PT1006|PTEST|",
+        "PT1001|PTEST|AUTH-PT1001",
+        "PT1002|PTEST|AUTH-PT1002",
+        "PT1007|PTEST|AUTH-PT1007"
+      ],
+      "lines": [
+        "Include · 2026-10-31 · PT1001 · Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\\literal · AUTH-PT1001 · East · open",
+        "Include · 2026-11-01 · PT1002 · Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\\literal · AUTH-PT1002 · West · submitted",
+        "Include · 2026-11-04 · PT1007 · Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\\literal · AUTH-PT1007 · East · open",
+        "Exclude · PT1005 · no auth · no recorded submit-by date",
+        "Exclude · PT1006 · no auth · no recorded submit-by date"
+      ],
+      "focused": {
+        "id": "",
+        "text": "\nSYNTHETIC DATA — NOT REAL PATIENTS · proof of concept · nothing is sent to any payer\n\n  P",
+        "download": false
+      }
+    },
+    "original_engine_oracle_sha256": "2daef3d2c256108a174667eba1034b3f68035b9dba156a118cd5961f409dd48e",
+    "download": "fresh-reviewed-october-30",
+    "screenshot": {
+      "path": "fresh-asof-reviewed.png",
+      "bytes": 177401,
+      "sha256": "3d702a802d85392018d4b8fcca1bde0ee6e40fba9b5a75f6eec1a7b54b0207a2",
+      "width": 1280,
+      "height": 900
+    },
+    "no_download_during_edit_or_empty_review": true,
+    "v1_preserved_failure": "The original check expected an enabled export after all synthetic visits. The unchanged original engine independently confirms an empty worklist, now explicitly required."
+  }
+]

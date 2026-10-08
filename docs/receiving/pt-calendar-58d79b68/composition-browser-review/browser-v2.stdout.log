@@ -1,0 +1,6 @@
+{"check":"legacy report to real combined Run while calendar stays pending","status":"pass"}
+{"check":"uncovered filters and actual all-CSV ignore calendar worklist filters","status":"pass"}
+{"check":"staff work state does not hide an uncovered appointment or change its all-CSV","status":"pass"}
+{"check":"return to calendar completes exact current filtered ICS with new report fields","status":"pass"}
+{"check":"combined report drift refuses stale calendar and real Run restores current export","status":"pass"}
+{"status":"pass","passed":5,"failed":0,"downloads":3,"exceptions":0,"output":"/home/jacob/pt-calendar-composition-browser-review-58d79b68c9e4/browser-v2"}

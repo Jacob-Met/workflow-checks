@@ -1,0 +1,16 @@
+{
+  "files": 74,
+  "manifest_sha256": "c617368ad4761333b9fcff883005e7bb372662380dea2c8ce4098999423df26e",
+  "uncompressed_file_bytes": 715900,
+  "archive": {
+    "path": "/home/jacob/workflow-checks-pt-calendar-proof-58d79b68-producer-v2.tar.gz",
+    "files": 76,
+    "bytes": 215277,
+    "sha256": "fa79ce904bd754815fef2e8dcf4b63e108cf0cc46ea63452cfebd83453366a69"
+  },
+  "receipt": {
+    "seq": 4140,
+    "event_id": "cev_9945c25978544dfb8e971e21",
+    "event_hash": "0f4b1ef58e59b8519b0a445594ada1ff45665cc11b1d6c8e713446c0058a7bcd"
+  }
+}
