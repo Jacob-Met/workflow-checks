@@ -29,10 +29,14 @@ def main(argv=None) -> int:
     review_report = sub.add_parser("review-report", help="read or print a saved review worksheet as HTML")
     review_report.add_argument("--worksheet", type=Path, required=True, help="saved uwatch-review-v1 CSV worksheet")
     review_report.add_argument("--out", type=Path, required=True, help="new HTML path in an existing directory; never replaces a file")
+    from . import worksheet
+    worksheet.add_parser(sub)
     desk = sub.add_parser("review-desk", help="edit current review notes in a local browser desk")
     desk.add_argument("--worksheet", type=Path, required=True, help="saved native review CSV; read-only")
     desk.add_argument("--port", type=int, default=0, help="loopback port; 0 selects an available port")
     a = ap.parse_args(argv)
+    if a.cmd == "worksheet":
+        return worksheet.run(a)
     if a.cmd == "review-desk":
         from .review_desk import serve
         try:

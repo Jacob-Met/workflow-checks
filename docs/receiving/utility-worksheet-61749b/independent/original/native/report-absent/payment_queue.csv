@@ -1,0 +1,2 @@
+bill_id,account_no,property,utility,vendor,invoice,amount_due,due_date,status,evidence
+A-SEP,RECV-A,Authored A,gas,Example A,A-SEP-INV,100.0,2026-10-20,QUEUED_FOR_APPROVAL (not paid),bills.csv:4

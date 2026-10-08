@@ -1,0 +1,93 @@
+{
+  "schema": "utility-worksheet-independent-receiving-v1",
+  "decision": "accepted",
+  "reviewer": "engine_state",
+  "author": "delivery_path",
+  "source_parent": "a5fd61b0c361c8a9b8a6737b33ecc9efab46e0ad",
+  "source_tree": "5ac515d24c722128f04b7ae343fb7c3e369a06c9",
+  "authored_scope": [
+    {
+      "path": "utility_watch/README.md",
+      "bytes": 13170,
+      "git_blob": "a3b376c1739d4ccf5f1b3bc1b8affd2137351084",
+      "sha256": "8674ab82c0891b611a2c33bd8d5434bc347a1ce08c2f1bb3812976440eab4109",
+      "mode": "100644"
+    },
+    {
+      "path": "utility_watch/docs/worksheet-cli.md",
+      "bytes": 6044,
+      "git_blob": "31ce5972fa7d9318922cb08b7423e6b908f7ebd5",
+      "sha256": "b843af2e765f4a9a4cbe10d269e2b86aaf6c1836b158f3abe80b9c5b84578221",
+      "mode": "100644"
+    },
+    {
+      "path": "utility_watch/tests/test_worksheet_cli.py",
+      "bytes": 19455,
+      "git_blob": "4963d459c3c41e02fa04bf30495c1b9883db26de",
+      "sha256": "7f34553faab1a45bcb901bcfc51ea4fe6fd8f474d4061d3c95afba3aa6af88a1",
+      "mode": "100644"
+    },
+    {
+      "path": "utility_watch/uwatch/cli.py",
+      "bytes": 3567,
+      "git_blob": "c1490f867ac077818e7c22bff719f9dbed8ce500",
+      "sha256": "e9da048a729bab5e4baa6056df5de9eecfdd4b5815ac708b1f303ae803c47134",
+      "mode": "100644"
+    },
+    {
+      "path": "utility_watch/uwatch/worksheet.py",
+      "bytes": 7789,
+      "git_blob": "d8880f1f33115c8589ad0a91b87ef5619ae95964",
+      "sha256": "827f7ba7d6eba19d07f18bc202a50b8283bf2b4a6b9b9247046a0441a1d845fa",
+      "mode": "100644"
+    }
+  ],
+  "findings": [
+    "All worksheet rows and manifest validate through unchanged native review._previous before list filtering or row selection.",
+    "Only an exact current row_id can be selected. No bill/finding ID alias or historical identity is accepted.",
+    "Annotation publishes raw original row dictionaries with only the selected review_status/reviewer/note replaced; protected seals, integrity manifest, row order, history and other reviewers retain cell values.",
+    "Output uses the unchanged native review._publish: complete staging file, flush/fsync, hard-link publication without overwrite, best-effort stage cleanup. Author fault cases retained and inspected, not rerun by reviewer.",
+    "Independent native absent-to-returned fixture proves identical finding/evidence uses a fresh open row ID, refuses original historical ID, accepts a new explicit annotation and retains it through real review --previous.",
+    "Changed receiving engine scopes native bill decision keys by account; reviewed worksheet module, CLI, tests, guide and native validator/publisher remain byte-identical. Only focused receiver repeated for this concrete dependency change."
+  ],
+  "qualification": {
+    "original": {
+      "parent": "9e931fa9f42033bf2368f7149684fb5631345715",
+      "receipt": "original/native/receipt.json",
+      "pin": {
+        "bytes": 31824,
+        "sha256": "14d6824292995ef1eca1bc76b9daf2f8ab1d3e3661bc22dc53b76b7c0ad7ab1c",
+        "git_blob": "9d0d7967348716f0f3e79ef232bdfab768d9fd21"
+      },
+      "commands": 14,
+      "checks": 16
+    },
+    "current": {
+      "parent": "a5fd61b0c361c8a9b8a6737b33ecc9efab46e0ad",
+      "receipt": "native/receipt.json",
+      "pin": {
+        "bytes": 32486,
+        "sha256": "9a2f03d09421a53b14b67fb72e473ec49f2003bc511be53ff9dd2eb0945a3a93",
+        "git_blob": "8f4800574ebe0bec9c97d15e128acb72570b4dd8"
+      },
+      "commands": 14,
+      "checks": 16
+    },
+    "harness": {
+      "bytes": 11455,
+      "sha256": "8170ca79c7ed3a30dd67426667cde072058e14ef215a118492228ebed337ba23",
+      "git_blob": "9b56dd2e9bbf3a0a0c9cf74a455eb0dd1a8a00b7"
+    },
+    "author_suite_reexecuted_by_reviewer": false,
+    "production_changes_by_reviewer": false,
+    "mocked_calls": 0,
+    "full_saved_inputs_preserved": true
+  },
+  "limits": [
+    "Worksheet listing/annotation observes a saved report; it does not refresh or authenticate live source evidence, reviewer identity, completeness or payment authority.",
+    "Canonical UTF-8 CSV encoding may differ while all unselected cells remain exact; byte preservation applies to original input files.",
+    "Observed source-byte comparison is not an editor lock or adversarial path-swap guarantee; output no-overwrite uses native publisher.",
+    "No browser, financial account, external service, runtime installation, financial action, live portfolio or broad suite receiving claim.",
+    "An initial RAM harness write hit ENOSPC before any native scenario executed; only an owned reconstructible, already-published Uma tree request was reclaimed. Both retained native runs subsequently completed without failure."
+  ]
+}

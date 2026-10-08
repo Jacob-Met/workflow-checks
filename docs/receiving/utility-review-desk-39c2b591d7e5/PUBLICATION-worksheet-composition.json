@@ -1,0 +1,22 @@
+{
+  "schema": "hamon.utility-desk.worksheet-cli-composition.v1",
+  "at": "2026-10-08T16:02:20.576Z",
+  "reviewer": "estate-39c2b591d7e5/root",
+  "current_base": "4f434591c166fc7d3ea7831e52edafe6c23d8843",
+  "current_base_tree": "b9935837bf6ee5377a2ed9d1e3b025762502d4a2",
+  "shared_cli_base": "125339ec63eeb7c4989c9b240c01202555dce573",
+  "previous_public_head": "34c982d33e0c97a39e5ac90d3d2f0cd2003b9206",
+  "previous_tree": "c0d066e5ae5f52ce5d39e5afe4f53b5a7d49312b",
+  "upstream": "PR35 worksheet list/annotate plus unchanged PR47 Freight batch",
+  "current_delta_note": "Later4f434591 differs from125339ec only in Freight batch source/evidence. The reviewed current Utility CLI and README are identical.",
+  "inverse_proofs": {
+    "removing_exact_three_line_desk_parser_and_eight_line_dispatch_recovers_complete_current_cli": true,
+    "removing_exact_desk_readme_paragraph_recovers_complete_current_readme": true
+  },
+  "parser_insertion": "    desk = sub.add_parser(\"review-desk\", help=\"edit current review notes in a local browser desk\")\r\n    desk.add_argument(\"--worksheet\", type=Path, required=True, help=\"saved native review CSV; read-only\")\r\n    desk.add_argument(\"--port\", type=int, default=0, help=\"loopback port; 0 selects an available port\")\r\n",
+  "dispatch_insertion": "    if a.cmd == \"review-desk\":\r\n        from .review_desk import serve\r\n        try:\r\n            serve(a.worksheet, a.port)\r\n        except (OSError, ValueError, KeyError) as exc:\r\n            print(f\"uwatch: review desk error: {exc}\", file=sys.stderr)\r\n            return 2\r\n        return 0\r\n",
+  "readme_insertion": "Edit notes in the local review desk\r\n\r\nRun `python -m uwatch review-desk --worksheet review-1.csv`, then open the printed\r\nloopback URL on the same computer. Select a current finding and edit its status, reviewer\r\nand note. **Download edited worksheet** keeps every finding and its protected evidence\r\nin a new CSV, including rows outside the current filter and unchanged history. The selected\r\nfile is read-only; edits stay in the page until you download a copy.\r\n\r\nUse the downloaded file as `--previous` in the existing review command when reconciling\r\na new export. Opening the desk does not recheck bills or reconcile a newer report.\r\nSee [Review desk](docs/review-desk.md) for the complete workflow and native checks.\r\n\r\n### ",
+  "unchanged": "All four desk runtime files, native review validator, engine, printable renderer and all current worksheet implementation/tests remain exact. All other current source and prior receiving paths are preserved.",
+  "preparation_failure": "Initial in-memory selector expected review_desk, while inspected source uses desk; it threw before any source or tree write. Corrected selector is validated by complete inverse comparison.",
+  "verification_boundary": "New command interoperability is receiving independently against this exact union. Prior browser and native results keep original source pins. Fresh hosted checks qualify the public assembly; no broad native or browser repeat."
+}

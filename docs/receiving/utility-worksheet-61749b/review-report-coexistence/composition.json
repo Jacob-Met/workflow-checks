@@ -1,0 +1,230 @@
+{
+  "schema": "utility-review-report-composition-v1",
+  "old_branch_head": "9483f0a7226fecbd25fc428a217c34da0f2167d0",
+  "receiving_main": "5a70e458ed455d47ef672ed9b5a614ec59812f0c",
+  "receiving_tree": "86f234b92173176c7f3c8ae4e1e4d5d3c41d36fd",
+  "owner_merge_pr": 36,
+  "change": "Only original four worksheet registration and dispatch lines inserted into exact current owner CLI; CRLF retained. Removing exactly those four lines restores complete current owner CLI.",
+  "owner_cli": {
+    "bytes": 4350,
+    "git_blob": "27bfe687d071ff045bd5642f6408413c8cc6a805",
+    "sha256": "d7e223edf55790642b011f8159d113da0433416c6344c6be255037d558dd9c45"
+  },
+  "composed_cli": {
+    "bytes": 4473,
+    "git_blob": "034935eeb633ecf68bfda4c5dd1181c7931880e6",
+    "sha256": "80cb716a37aa810c63ad69916ab293fcbfd83a44b51570d013339c0b217c7cb3"
+  },
+  "all_four_other_authored_files_unchanged": true,
+  "source": [
+    {
+      "path": "utility_watch/HARDENING.md",
+      "bytes": 4105,
+      "git_blob": "4c621a673ddd9d7211bb9b0436f7b4bbebf7c856",
+      "sha256": "db44c2f8aeb1199aa7ba2036ab5759ae65209d47cfd41d54e765836246fa50f8",
+      "mode": "100644",
+      "ownership": "current parent exact"
+    },
+    {
+      "path": "utility_watch/README.md",
+      "bytes": 13170,
+      "git_blob": "a3b376c1739d4ccf5f1b3bc1b8affd2137351084",
+      "sha256": "8674ab82c0891b611a2c33bd8d5434bc347a1ce08c2f1bb3812976440eab4109",
+      "mode": "100644",
+      "ownership": "worksheet candidate"
+    },
+    {
+      "path": "utility_watch/docs/review-report.md",
+      "bytes": 4603,
+      "git_blob": "2a676d0ae4cecc8c45d8c3a371701c8748bdc977",
+      "sha256": "8ae387b4401ec2653779b59aeb7d7c44b9bb319f299ab6cf74195ea64aac5d0d",
+      "mode": "100644",
+      "ownership": "current parent exact"
+    },
+    {
+      "path": "utility_watch/docs/worksheet-cli.md",
+      "bytes": 6044,
+      "git_blob": "31ce5972fa7d9318922cb08b7423e6b908f7ebd5",
+      "sha256": "b843af2e765f4a9a4cbe10d269e2b86aaf6c1836b158f3abe80b9c5b84578221",
+      "mode": "100644",
+      "ownership": "worksheet candidate"
+    },
+    {
+      "path": "utility_watch/sample_data/README_SYNTHETIC.txt",
+      "bytes": 170,
+      "git_blob": "237579a904d7b7b605f78ed122c97140c6f06003",
+      "sha256": "ef34519e3f46f3e19bd8554620b07cbc13850c6b5cd6337508bf47cf01d536b4",
+      "mode": "100644",
+      "ownership": "current parent exact"
+    },
+    {
+      "path": "utility_watch/sample_data/accounts.csv",
+      "bytes": 2802,
+      "git_blob": "8524a01938d9dfa3b9a0d05676a64e31e921ea8e",
+      "sha256": "58518376e0a67bf1a31f76e754020307a42330a87d3d7a538e6ccbb947d97958",
+      "mode": "100644",
+      "ownership": "current parent exact"
+    },
+    {
+      "path": "utility_watch/sample_data/bills.csv",
+      "bytes": 27296,
+      "git_blob": "21eca3e9265e3bdeacb668e1ff602121f96edda6",
+      "sha256": "1b8f6897703b42723e17e6089867634e04e7c609c0a578f33636fb9dda321e4e",
+      "mode": "100644",
+      "ownership": "current parent exact"
+    },
+    {
+      "path": "utility_watch/sample_data/expected.json",
+      "bytes": 899,
+      "git_blob": "0016cf0754d112b3a55a0ede42e6999aee17a847",
+      "sha256": "222dd41aa5f5f20be0f08ea31bf7e8ca656cd56720b694b4380ce6f418df445c",
+      "mode": "100644",
+      "ownership": "current parent exact"
+    },
+    {
+      "path": "utility_watch/sample_data/occupancy.csv",
+      "bytes": 564,
+      "git_blob": "4396760f366c95f09343ce3e778beb7abd80bea0",
+      "sha256": "0f77598a53f50162ef28059c88be91798f918e57e66eaa0a1f1d79880512cb6e",
+      "mode": "100644",
+      "ownership": "current parent exact"
+    },
+    {
+      "path": "utility_watch/sample_data/payments.csv",
+      "bytes": 12113,
+      "git_blob": "7f94d9c67855bc0def8b515b2b55450f9d65631e",
+      "sha256": "86cf78324cd395e86200ec205f49fe73afa2984306ab6ccd2e5cf71261710853",
+      "mode": "100644",
+      "ownership": "current parent exact"
+    },
+    {
+      "path": "utility_watch/tests/test_account_bill_keys.py",
+      "bytes": 6460,
+      "git_blob": "00f833a02d17b7a757a7d028846f5c6012cddd17",
+      "sha256": "cc15ba0c7fa92f401677403a95a5e73b1788ee976726f36cbe6447b2e20837f3",
+      "mode": "100644",
+      "ownership": "current parent exact"
+    },
+    {
+      "path": "utility_watch/tests/test_numeric_csv.py",
+      "bytes": 3424,
+      "git_blob": "2e63820b66001b2cf35590ca8f41270ce84f7500",
+      "sha256": "d6128ec39491994185f9aabfe374caeb80ca13cbdbdc1fabe68b3eba567b65a2",
+      "mode": "100644",
+      "ownership": "current parent exact"
+    },
+    {
+      "path": "utility_watch/tests/test_report.py",
+      "bytes": 7083,
+      "git_blob": "a4480762868831bdafef1bf52e94a1cc68e31e43",
+      "sha256": "affe575fedaa7619520a6b23b63649e76029881a0a5641d6cc7d2900d150bc4f",
+      "mode": "100644",
+      "ownership": "current parent exact"
+    },
+    {
+      "path": "utility_watch/tests/test_review.py",
+      "bytes": 19251,
+      "git_blob": "0308086a88c256bd5ad5fe2a9b2868c118ee52ec",
+      "sha256": "f0c645af21d4f9af0539697c3e2dca26a197fc1284b943cd12d42e9500099155",
+      "mode": "100644",
+      "ownership": "current parent exact"
+    },
+    {
+      "path": "utility_watch/tests/test_review_report.py",
+      "bytes": 10866,
+      "git_blob": "9ea0860c27a77ed8c67f8349525ec452e8a523b8",
+      "sha256": "6d48681bbfd4c4725b4aa6a191f04ed9f2fa4fd6beca0799f5265fb50210d7d5",
+      "mode": "100644",
+      "ownership": "current parent exact"
+    },
+    {
+      "path": "utility_watch/tests/test_uwatch.py",
+      "bytes": 15469,
+      "git_blob": "1a71129311c88af32bb4abf0d633e5fcc496ab78",
+      "sha256": "0638976cdfc928d8bd3980fb24fe18c24ef814c7f8c5e7612c8c02fb2b8f339a",
+      "mode": "100644",
+      "ownership": "current parent exact"
+    },
+    {
+      "path": "utility_watch/tests/test_worksheet_cli.py",
+      "bytes": 19455,
+      "git_blob": "4963d459c3c41e02fa04bf30495c1b9883db26de",
+      "sha256": "7f34553faab1a45bcb901bcfc51ea4fe6fd8f474d4061d3c95afba3aa6af88a1",
+      "mode": "100644",
+      "ownership": "worksheet candidate"
+    },
+    {
+      "path": "utility_watch/uwatch/__init__.py",
+      "bytes": 60,
+      "git_blob": "7074157fb1710370668c2a0ad5217cd10cfe3618",
+      "sha256": "a0332cb0878fcdfd02d1651f9a46c299ca0279996c6e5723d49311228c597a57",
+      "mode": "100644",
+      "ownership": "current parent exact"
+    },
+    {
+      "path": "utility_watch/uwatch/__main__.py",
+      "bytes": 53,
+      "git_blob": "823d40a6bf41beb59790ce83476b359f76f4b1ec",
+      "sha256": "26c55ee4277631c49b2312533d7514a815ec2c3de08f48b0a9dea8946d8f8933",
+      "mode": "100644",
+      "ownership": "current parent exact"
+    },
+    {
+      "path": "utility_watch/uwatch/cli.py",
+      "bytes": 4473,
+      "git_blob": "034935eeb633ecf68bfda4c5dd1181c7931880e6",
+      "sha256": "80cb716a37aa810c63ad69916ab293fcbfd83a44b51570d013339c0b217c7cb3",
+      "mode": "100644",
+      "ownership": "worksheet candidate"
+    },
+    {
+      "path": "utility_watch/uwatch/engine.py",
+      "bytes": 21280,
+      "git_blob": "b764a1f45ba718b31f7841e2c2f61d16a7fef5e9",
+      "sha256": "ff0dc3a473235c55639e4373e3b5a4c786a0cd9ae7badd2be9113f39a4efd3d0",
+      "mode": "100644",
+      "ownership": "current parent exact"
+    },
+    {
+      "path": "utility_watch/uwatch/report.py",
+      "bytes": 12382,
+      "git_blob": "ee2fcabd2026b4224c3cdfc51890f71762a9ef0f",
+      "sha256": "dc43c4fbbef72204a9dc9c5d7e4d3883900e96daf26c725f10fe22d4721540db",
+      "mode": "100644",
+      "ownership": "current parent exact"
+    },
+    {
+      "path": "utility_watch/uwatch/review.py",
+      "bytes": 15534,
+      "git_blob": "2475217ce9c073c39756f9fa3926342cd83f7254",
+      "sha256": "f9f730ca45140436704d9823eafcfb58fb3922c5d0bf93a21a63f31347c947de",
+      "mode": "100644",
+      "ownership": "current parent exact"
+    },
+    {
+      "path": "utility_watch/uwatch/review_report.py",
+      "bytes": 8457,
+      "git_blob": "be869a940436172253c0a6d5020ba24860f1a7eb",
+      "sha256": "4462088141b21c990ce5b949a9c683f68f647ae83bdba0eaa1409730e442f856",
+      "mode": "100644",
+      "ownership": "current parent exact"
+    },
+    {
+      "path": "utility_watch/uwatch/synth.py",
+      "bytes": 13194,
+      "git_blob": "0d5c8137b3790bd062609ce4725beda63db9e58d",
+      "sha256": "8573a65a8c5907ebedda24c47183f60f258e895bae0a2656bb582ada9217209d",
+      "mode": "100644",
+      "ownership": "current parent exact"
+    },
+    {
+      "path": "utility_watch/uwatch/worksheet.py",
+      "bytes": 7789,
+      "git_blob": "d8880f1f33115c8589ad0a91b87ef5619ae95964",
+      "sha256": "827f7ba7d6eba19d07f18bc202a50b8283bf2b4a6b9b9247046a0441a1d845fa",
+      "mode": "100644",
+      "ownership": "worksheet candidate"
+    }
+  ],
+  "untouched_current_parent_inputs": 21
+}

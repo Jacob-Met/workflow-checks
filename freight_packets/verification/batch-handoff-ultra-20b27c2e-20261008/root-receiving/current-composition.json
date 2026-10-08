@@ -1,0 +1,390 @@
+{
+  "schema": "freight-batch-current-composition.v1",
+  "worker": "ultra-20b27c2e-20261008",
+  "recorded_at_utc": "2026-10-08T15:51:22.240231+00:00",
+  "primary": "125339ec63eeb7c4989c9b240c01202555dce573",
+  "primary_tree": "e3a3501d60ee8f301f9d45ea15d0d324b814e59a",
+  "primary_leaves": 1068,
+  "tree_complete": true,
+  "no_AGENTS_HALT_WORKSTREAMS": true,
+  "qualified_native_base": "5b12dcd4c3a2c09d6602b2313e2bb556ac5997f7",
+  "qualified_native_tree": "e16dd0815e252c7e1715545999918f303bc823af",
+  "all27_native_baseline_paths_still_exact": [
+    {
+      "path": ".github/workflows/tests.yml",
+      "bytes": 695,
+      "sha256": "521a133de92677bbdd8a9693c4d7fb9e6d14ce2dd19fdf841a41f558f0bddec9",
+      "git_blob": "d72b89ae3efb2963fbe7386021f467e82a8e1f2e",
+      "transport_extra_lf_removed": false
+    },
+    {
+      "path": "freight_packets/HARDENING.md",
+      "bytes": 6821,
+      "sha256": "221e184d4e84d60f9827465c8d7910c6e5e1bf19d817bc0af8fc769e1c965226",
+      "git_blob": "b6efb226aeef5c67012676a5a3782bb5a90bb327",
+      "transport_extra_lf_removed": false
+    },
+    {
+      "path": "freight_packets/README.md",
+      "bytes": 15699,
+      "sha256": "a8152465bff0efd8bf52af275a92acffa0ec1300593b9a20620dd155ffe8645b",
+      "git_blob": "da5f0289076248be51bbe8336bdf6837b5f76681",
+      "transport_extra_lf_removed": false
+    },
+    {
+      "path": "freight_packets/freightpkt/__init__.py",
+      "bytes": 245,
+      "sha256": "f9364708963fa65b54aae5174a816c45df417fe7d93971c3b0ff046278929706",
+      "git_blob": "a7804a1379966afd1e6143a92cf08c1b25f7abfe",
+      "transport_extra_lf_removed": false
+    },
+    {
+      "path": "freight_packets/freightpkt/__main__.py",
+      "bytes": 57,
+      "sha256": "4b1afbca74a10abc3cff7b4e5a11b558bf619e45b89709faf9225a474a2a250f",
+      "git_blob": "3c93dd90cf357624c77ab3589ef2b201868c181e",
+      "transport_extra_lf_removed": false
+    },
+    {
+      "path": "freight_packets/freightpkt/cli.py",
+      "bytes": 2672,
+      "sha256": "268ced979f2863c2dac85b9e950c70e3818c827f222522f6374b4ecdcb9b8f15",
+      "git_blob": "a64a4d60816654595b1767ff9f96cd2cd9c49c32",
+      "transport_extra_lf_removed": false
+    },
+    {
+      "path": "freight_packets/freightpkt/detention.py",
+      "bytes": 6574,
+      "sha256": "31ca31fd3210ff680bc83291916e39ea19b82580c3a090720556afd4ef0cd76b",
+      "git_blob": "b275165bce2ac5162fb49eab54674c11f13bfd2f",
+      "transport_extra_lf_removed": false
+    },
+    {
+      "path": "freight_packets/freightpkt/fines.py",
+      "bytes": 11074,
+      "sha256": "6009e9c9e8d23556e98d9d2606ffac60073597dda50026209155039ec5efcdac",
+      "git_blob": "0b0f70344f3f2f1d58d524fc1ec6e67a51b495cb",
+      "transport_extra_lf_removed": false
+    },
+    {
+      "path": "freight_packets/freightpkt/handoff.py",
+      "bytes": 7082,
+      "sha256": "413290d887d045b96dd1639c34b9c769f0e730beb28dce06c654a0df36cf1a02",
+      "git_blob": "bdcb63507b57d07eed1a6598d7d37d5f5d9db802",
+      "transport_extra_lf_removed": false
+    },
+    {
+      "path": "freight_packets/freightpkt/ingest.py",
+      "bytes": 11001,
+      "sha256": "1179675d011d55781c6de3ae806b905698df2a21fcc621ea788d73c6e29d6276",
+      "git_blob": "dad18f470035318241a9c432326d1f4bafa26edf",
+      "transport_extra_lf_removed": false
+    },
+    {
+      "path": "freight_packets/freightpkt/invoice_match.py",
+      "bytes": 5285,
+      "sha256": "37a9e0801de948c3b558ca7c9846b3d0eb76ec062703ee3e5132df273ff569ab",
+      "git_blob": "584bb09b92335a350d9880f55b786baba1960941",
+      "transport_extra_lf_removed": false
+    },
+    {
+      "path": "freight_packets/freightpkt/models.py",
+      "bytes": 2758,
+      "sha256": "8a24ed2cca6f45aa8a47d793620b0e2e4d573ec92209954d3f3156795e3f0e05",
+      "git_blob": "5087874944b6ee195111f30e98e9e9e5a8394fd1",
+      "transport_extra_lf_removed": false
+    },
+    {
+      "path": "freight_packets/freightpkt/packet.py",
+      "bytes": 7707,
+      "sha256": "1a2742168a27d52f5999823c409346bf7023ebb6442b2d0088f4c676609aefb3",
+      "git_blob": "3ee637afba32600f5e109e930086b7a4be46b989",
+      "transport_extra_lf_removed": false
+    },
+    {
+      "path": "freight_packets/freightpkt/pdf.py",
+      "bytes": 1671,
+      "sha256": "c4876c50eb46c152b71690a53d32463798925c543da06434012aeba833590129",
+      "git_blob": "6e68ce008548c9a5f6473d38616ca52b7aa5d580",
+      "transport_extra_lf_removed": false
+    },
+    {
+      "path": "freight_packets/freightpkt/pipeline.py",
+      "bytes": 11327,
+      "sha256": "0cd5cf1fedd32ae97bf169a82357ef7e0e72339791503d415aefccde7c621dd8",
+      "git_blob": "b0962d25557eaf84ad7595d64ea7ef834c2e2a58",
+      "transport_extra_lf_removed": false
+    },
+    {
+      "path": "freight_packets/freightpkt/ratecon.py",
+      "bytes": 4518,
+      "sha256": "c9684e8a7eed867b015bcad8fda90e7f06452f0ca310202ec3bb8287d4064c43",
+      "git_blob": "c1f148e62d2b215d11511311782a57b8272fed03",
+      "transport_extra_lf_removed": false
+    },
+    {
+      "path": "freight_packets/freightpkt/synth.py",
+      "bytes": 18300,
+      "sha256": "721cdad09373b047ac0d3cd0f721154cb17366d87edd6bf34224a97b817eef24",
+      "git_blob": "646ee6ec3336eb237c2b4717c15f448230605196",
+      "transport_extra_lf_removed": false
+    },
+    {
+      "path": "freight_packets/freightpkt/ui.html",
+      "bytes": 19485,
+      "sha256": "cdc52a196a480df2db210870487bab84e248cf69278fb27cefbc78a89b2ad0e3",
+      "git_blob": "75a50d1750025795ebdf44da691f994481d34f62",
+      "transport_extra_lf_removed": false
+    },
+    {
+      "path": "freight_packets/freightpkt/web.py",
+      "bytes": 14840,
+      "sha256": "ff4d2ef9dac9fa96e29525453a3dde1b4cf8d8852e62ec00d7e7c59b137719c7",
+      "git_blob": "e26f84ff9e0d3475c910f681d80e19256f70eccc",
+      "transport_extra_lf_removed": false
+    },
+    {
+      "path": "freight_packets/tests/conftest.py",
+      "bytes": 102,
+      "sha256": "d8b2869aa8eac2206b490e4b76f49d6511a6da1c99506a96dc15caada93562a8",
+      "git_blob": "e4c2fd4ff87c63061fb6a10f0fb01228c46c0875",
+      "transport_extra_lf_removed": false
+    },
+    {
+      "path": "freight_packets/tests/review_browser_smoke.cjs",
+      "bytes": 7512,
+      "sha256": "b4fba55fd2f0654fb20ff982925d826c820f6c9379625d22556c91a2f0d6b61a",
+      "git_blob": "7a1f3dc268dd3d02867957425cbf5ee1eabc82b8",
+      "transport_extra_lf_removed": false
+    },
+    {
+      "path": "freight_packets/tests/test_fines.py",
+      "bytes": 6430,
+      "sha256": "698c586648212e693d246d72b83fccd1e36b4beed00f413553fd5aacb9eaa374",
+      "git_blob": "6d46848b04068425705b4c3319923d636f68ab6b",
+      "transport_extra_lf_removed": false
+    },
+    {
+      "path": "freight_packets/tests/test_freight.py",
+      "bytes": 8764,
+      "sha256": "a91ba14b3af6f4109edafbe90b78a6eacc24ecdb34e0655940f4b5f73e2b137d",
+      "git_blob": "8539ae8a71e00f1ff19507626c809bbebffd81e3",
+      "transport_extra_lf_removed": false
+    },
+    {
+      "path": "freight_packets/tests/test_freight_hardening.py",
+      "bytes": 8986,
+      "sha256": "415cb3b4e2f7c4076335426d3fc81c527744cb963a1248235ba576ed5be03d46",
+      "git_blob": "e7f6fdc9d68f714130a990b681be030aa5a71d2e",
+      "transport_extra_lf_removed": false
+    },
+    {
+      "path": "freight_packets/tests/test_invoice_header_consistency.py",
+      "bytes": 10564,
+      "sha256": "1fda13d4c63ce4e2c311323db1995bd663a660c4637bc93bfded460ee2ae57d8",
+      "git_blob": "8edd399bddc85e8e4d349e00d638ccc5272b465e",
+      "transport_extra_lf_removed": false
+    },
+    {
+      "path": "freight_packets/tests/test_review_decisions.py",
+      "bytes": 13210,
+      "sha256": "dbb9cb57c88e8cec39406730847996a8347dc071d4de67be9fe7b9732801568d",
+      "git_blob": "0fc6e22e7dc8b7e60d9712e69750fd5c71e3241b",
+      "transport_extra_lf_removed": false
+    },
+    {
+      "path": "freight_packets/tests/test_review_handoff.py",
+      "bytes": 15907,
+      "sha256": "efb6061ccee7773fcf2149e8cc6489add4ee2210e0305a2d98801e130683a45b",
+      "git_blob": "a30c83740f7ad5f6e4cdb47eb467567fead6a606",
+      "transport_extra_lf_removed": false
+    }
+  ],
+  "three_current_inverse_proofs": [
+    {
+      "path": "freight_packets/freightpkt/web.py",
+      "removed_span_counts": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "restored_primary_git_blob": "e26f84ff9e0d3475c910f681d80e19256f70eccc",
+      "candidate_sha256": "fa0becc51604ecbec4b59613439064527db0a3915f183e1949d3b326e8fccfce",
+      "candidate_git_blob": "9215adc3241f722344a452b4f789a4a5b59a25ec"
+    },
+    {
+      "path": "freight_packets/freightpkt/ui.html",
+      "removed_span_counts": [
+        1,
+        1,
+        1
+      ],
+      "restored_primary_git_blob": "75a50d1750025795ebdf44da691f994481d34f62",
+      "candidate_sha256": "497510e8c9491b5b6b74d0ae9b863c95a3b2bdad5431fe408dccdc28c6f45573",
+      "candidate_git_blob": "4fd22753daf54da4d0a04c1202429b79cbada7de"
+    },
+    {
+      "path": "freight_packets/README.md",
+      "removed_span_counts": [
+        1
+      ],
+      "restored_primary_git_blob": "da5f0289076248be51bbe8336bdf6837b5f76681",
+      "candidate_sha256": "9c7941d0207b4acf70c8f6fc488e5e7257645a71224e14b9c77bee63e9e8b6aa",
+      "candidate_git_blob": "249ee104175f1d36cc5b39abad5be02bc53e85be"
+    }
+  ],
+  "freight_paths_changed_by_current_owners": [],
+  "unowned_primary_leaves": 1065,
+  "expected_total_leaves": 1115,
+  "original45_payloads_retained": true,
+  "root_export_identity": {
+    "bytes": 3627704,
+    "sha256": "eb1d3e0e373dccceeb8a661d0bc449e11d713f6f7a2a388dcb8846992c59ff5f",
+    "git_blob": "18a8d4f60685c385006e3cc2538ea48a52d1d527"
+  },
+  "original_manifest_identity": {
+    "bytes": 19963,
+    "sha256": "c7992a0949d853033a231dfd102238cf21628be877b050d9dcdaf1a66cef6fa0",
+    "git_blob": "f8a95448f1746a9e88faf4b4c6750111d75cffb7"
+  },
+  "archive_and_bundle_receiving": {
+    "author_archive": {
+      "bytes": 2814175,
+      "files": 340
+    },
+    "device": "0e3d582f-e25b-44b2-8418-9639fc4e4e33",
+    "executed_product_or_recorded_code": false,
+    "independent_bundles": [
+      {
+        "bytes": 159081,
+        "files": 46,
+        "path": "recorded-fixture.json"
+      },
+      {
+        "bytes": 819507,
+        "files": 19,
+        "path": "recorded-native.json"
+      },
+      {
+        "bytes": 291790,
+        "files": 20,
+        "path": "recorded-browser.json"
+      },
+      {
+        "bytes": 605567,
+        "files": 21,
+        "path": "recorded-artifacts.json"
+      }
+    ],
+    "independent_bytes": 1875945,
+    "independent_files": 106,
+    "outer_files": [
+      {
+        "bytes": 1543908,
+        "git_blob": "ac2ead10077f827d884633bcba397714616769fb",
+        "path": "/private/tmp/ultra-20b27c2e-memory-freight-batch/publication/runs.zip",
+        "sha256": "60c2425eb74dde1b7bd3d51f3ceed3a6cd9e6b61cfee788edb74968c041f6129"
+      },
+      {
+        "bytes": 83045,
+        "git_blob": "3261a53800bad82e1368875fc03855d2b8ada9fa",
+        "path": "/private/tmp/ultra-20b27c2e-memory-freight-batch/publication/runs-manifest.json",
+        "sha256": "067f8817a7997a78a761228522586191edc8f5ead8d9a5b48545e4fbd8f48f28"
+      },
+      {
+        "bytes": 361839,
+        "git_blob": "47532cc06abc856e503e7a1adcbb6595838d8cea",
+        "path": "/tmp/ultra-20b27c2e-runtime-freight-review/packet/recorded-artifacts.json",
+        "sha256": "e814e138cb2ffcc57e58f27420594de4d38db3ee41b9669a562f53e3616ad57d"
+      },
+      {
+        "bytes": 69934,
+        "git_blob": "df48e4795886dd7e0d2292ef522f1ebcd00c2d74",
+        "path": "/tmp/ultra-20b27c2e-runtime-freight-review/packet/recorded-browser.json",
+        "sha256": "4c52e6c777feb7fbab9d004a9ead9987acff646d3a508e6375b73d119a6640cb"
+      },
+      {
+        "bytes": 73208,
+        "git_blob": "c9303313535f5f20a236c49e7c3275e295517198",
+        "path": "/tmp/ultra-20b27c2e-runtime-freight-review/packet/recorded-fixture.json",
+        "sha256": "9f87acbebe34c875dc38cc35b5ee85493eca0b1c055b0b67d7ec398ecc58c75b"
+      },
+      {
+        "bytes": 141748,
+        "git_blob": "a133fff17c74462600c4a0b7439863da00293f9f",
+        "path": "/tmp/ultra-20b27c2e-runtime-freight-review/packet/recorded-native.json",
+        "sha256": "5d863f832688548a221ed7bbb6fd0afc6a0a4b000dab20e960f3a9ca583dd0e2"
+      }
+    ],
+    "python": "3.13.7 (v3.13.7:bcee1c32211, Aug 14 2025, 19:10:51) [Clang 16.0.0 (clang-1600.0.26.6)]",
+    "recorded_at_utc": "2026-10-08T15:51:22.240231+00:00",
+    "schema": "freight-batch-root-evidence-receiving.v1",
+    "wrote_files": false
+  },
+  "hosted_gate": {
+    "workflow": ".github/workflows/tests.yml",
+    "blob": "d72b89ae3efb2963fbe7386021f467e82a8e1f2e",
+    "python": [
+      "3.10",
+      "3.12"
+    ],
+    "steps": [
+      "freight_packets:python -m pytest -q",
+      "pt_auth:python -m pytest -q",
+      "utility_watch:python -m pytest -q"
+    ],
+    "state": "pending on the published current tree"
+  },
+  "feature_files": [
+    {
+      "path": "freight_packets/freightpkt/web.py",
+      "original_blob": "e26f84ff9e0d3475c910f681d80e19256f70eccc",
+      "git_blob": "9215adc3241f722344a452b4f789a4a5b59a25ec",
+      "sha256": "fa0becc51604ecbec4b59613439064527db0a3915f183e1949d3b326e8fccfce",
+      "bytes": 16343
+    },
+    {
+      "path": "freight_packets/freightpkt/ui.html",
+      "original_blob": "75a50d1750025795ebdf44da691f994481d34f62",
+      "git_blob": "4fd22753daf54da4d0a04c1202429b79cbada7de",
+      "sha256": "497510e8c9491b5b6b74d0ae9b863c95a3b2bdad5431fe408dccdc28c6f45573",
+      "bytes": 19723
+    },
+    {
+      "path": "freight_packets/freightpkt/batch_handoff.py",
+      "original_blob": null,
+      "git_blob": "2ae68efdfe0c0c45135e2a5764749a5444da62d7",
+      "sha256": "70e4ab57e9ccf13962a01719661f9db2f4a1bfd1599ff9b30d02d9e374f3fe7d",
+      "bytes": 6160
+    },
+    {
+      "path": "freight_packets/freightpkt/batch_handoff_ui.js",
+      "original_blob": null,
+      "git_blob": "40f39412a16fe496afcc9b57e0ba3e03775ec303",
+      "sha256": "bd300f25abf279ca16f11bddc4bf4c277f4e99b9146b5321904ecc82afaaca18",
+      "bytes": 10806
+    },
+    {
+      "path": "freight_packets/tests/test_review_batch.py",
+      "original_blob": null,
+      "git_blob": "56c76edb6954675c023d5c637ecaa648fa9f5485",
+      "sha256": "e2706b0e6e0d25d80be8ad18477109a276ed75879773328eb45c85cd1c4bbdfb",
+      "bytes": 14262
+    },
+    {
+      "path": "freight_packets/README.md",
+      "original_blob": "da5f0289076248be51bbe8336bdf6837b5f76681",
+      "git_blob": "249ee104175f1d36cc5b39abad5be02bc53e85be",
+      "sha256": "9c7941d0207b4acf70c8f6fc488e5e7257645a71224e14b9c77bee63e9e8b6aa",
+      "bytes": 17742
+    },
+    {
+      "path": "freight_packets/tests/review_batch_browser.cjs",
+      "original_blob": null,
+      "git_blob": "b33085c70eab78634dbc955d7d07ea4e2ace3e7c",
+      "sha256": "e66740675a8444d441e833db5b416fd52959edd9a923d825187dd82b831fa795",
+      "bytes": 15552
+    }
+  ]
+}

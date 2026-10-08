@@ -1,0 +1,153 @@
+{
+  "schema": "freight-batch-native-probe.v1",
+  "python": "3.13.7 (v3.13.7:bcee1c32211, Aug 14 2025, 19:10:51) [Clang 16.0.0 (clang-1600.0.26.6)]",
+  "source_root": "/tmp/ultra-20b27c2e-memory-freight-batch/baseline",
+  "base_commit": "5b12dcd4c3a2c09d6602b2313e2bb556ac5997f7",
+  "fixture": {
+    "loads": 8,
+    "seed": 7,
+    "selected": [
+      {
+        "load_id": "LD260900",
+        "evidence_version": "0f19e001f430d6f9089883492a46be2709741f404447f9943ee2ff20bdc9b0b0",
+        "review_version": "85d49e3db7cf6a2e777951165fa1fa25e6f04c056182836a2a6388b8d7287123"
+      },
+      {
+        "load_id": "LD260907",
+        "evidence_version": "03eacd8cc9afad3570ab3c1c6a62f745ced062f8c1233c67b2dec130544a7241",
+        "review_version": "46a88a847122762be58c578fd00b8122dc411f1b72be5faa2c47a10d4c1ec396"
+      },
+      {
+        "load_id": "LD260914",
+        "evidence_version": "bd6d31132e3462f2457cbc5a2c96f56d9f789bd96af555bd4ae10f583ebfcef3",
+        "review_version": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+      }
+    ]
+  },
+  "single_load_controls": [
+    {
+      "load_id": "LD260900",
+      "bytes": 5251,
+      "sha256": "0caab36a7ab5bda54900be36464c4bd7b02e62c56166faae0542256b34117aa4",
+      "members": [
+        "index.html",
+        "packet.html",
+        "evidence.json",
+        "review.json",
+        "manifest.json"
+      ],
+      "review_state": "current"
+    },
+    {
+      "load_id": "LD260907",
+      "bytes": 5462,
+      "sha256": "c5add9b65bc62ada6fe800b879331b5f7b57ea68d05667b90d6a17fca9213f9a",
+      "members": [
+        "index.html",
+        "packet.html",
+        "evidence.json",
+        "review.json",
+        "manifest.json"
+      ],
+      "review_state": "current"
+    },
+    {
+      "load_id": "LD260914",
+      "bytes": 5034,
+      "sha256": "9f4e7e53a720e981de9e49b62afc3154d2dedb91accfffba78206cb870720dff",
+      "members": [
+        "index.html",
+        "packet.html",
+        "evidence.json",
+        "review.json",
+        "manifest.json"
+      ],
+      "review_state": null
+    }
+  ],
+  "batch": {
+    "status": 404,
+    "content_type": "application/json",
+    "bytes": 22,
+    "sha256": "edc3eb965bbb9f431defb60c6a5610cc050bbb9e8a8765dff9cb380efe2f0aa0",
+    "members": [],
+    "non_zip_body": "{\"error\": \"not found\"}"
+  },
+  "checks": {
+    "three_existing_single_load_bundles": true,
+    "existing_inputs_outputs_unchanged": true,
+    "batch_endpoint_returns_zip": false,
+    "chosen_loads_in_requested_order": false,
+    "readable_batch_cover": false
+  },
+  "source_io_before": {
+    "data/README_SYNTHETIC.txt": "618c294869b73ef0a74771bd5e9bef65225b33b251ad394c3a91275b8fcf3616",
+    "data/carrier_invoices.csv": "fd7f7184a3da06edd6dc5dde77d1e5d353021a5a4c04f8c8d5cd46f38a55e500",
+    "data/disputes.csv": "0b86c24f93a057292dac5decfb3043c420bdba19c6dbd3aa4015d69a65b103d7",
+    "data/documents.csv": "f7edc8ab95db71b4209cde7195944b92b17a954edf1755e9fe88ec5767693420",
+    "data/expected.json": "e5d35977b0edca466974e12652f04ca6ba30eb84af6606ae40a07ab0f7ce6898",
+    "data/fines_schedule.csv": "b00ec42105ab1258b2a37274f0cb1dad18a9f403af6dba740493e96e22846985",
+    "data/loads.csv": "3973d25133ba4c3fc8ba8f3c80d849884709e0f99d2496149556be343b8c063e",
+    "data/ratecons/RC-48000.txt": "cfc46fde355277cea67a6465845897935f843ccf63f183e7ea78028e0f440e2a",
+    "data/ratecons/RC-48001.txt": "6516601927e2683ffce7df2cdba6eae14a6aae7a39b8be77739b99a42a6c7148",
+    "data/ratecons/RC-48002.txt": "439c98fc31e1edd3a1324a07b8e175a1056caa4a3cf006b8c716d5aa4c36af87",
+    "data/ratecons/RC-48003.txt": "860031b7863a39a1cf568636dd7c44e130a0ddc59c88197f350e2af5333d80ec",
+    "data/ratecons/RC-48004.txt": "3089e36760ba52b8b2516d0638b74a3070af7dcfb20fbc8fc40d7e5500f32cf4",
+    "data/ratecons/RC-48005.txt": "e0f7c1821be81f382797b8cb9b40cdad5d01b36ec1d92535d6a1888003cf022e",
+    "data/ratecons/RC-48006.txt": "5c87925580b25de12d86196d7a97cce92065dc4aaae9c6450fd2bfc65415299e",
+    "data/ratecons/RC-48007.txt": "650c0c4fbe8a0bb6a20c528d0058fd658bdaaa8777bb4a3c3473476927618ef7",
+    "data/telematics.csv": "3b0f0b6de080bbdd79880341627004bc53546e61d3841c6a524b96085f674043",
+    "data/telematics_extra.json": "bac69db1861689d9c26048091c2bae02346f2283cc8e4a1e08c92474f0abebf2",
+    "data/tracking_stops.csv": "9efdafd3912930c84d21d5a9cd8bf5f3cf89e301dff31abce4f6109e68c71c8f",
+    "out/audit.jsonl": "c6cf46d92ee528281ff94ba00d7012b90abb0f3049278c2ae40dc33a32c96992",
+    "out/decisions.json": "5e828200c7e4f455490e98ca28775f78261fca76ef8ce587e3ffae38de5c02c5",
+    "out/detention_claims.csv": "12631d039714f69c380d0452e9addf889a960ebcec3a592af9ba8f36937f5ca5",
+    "out/exceptions.csv": "9f32ea7e17c8d2b47eb5dbeba3c83682fc896a4062138c946d9a75aff3ae21dd",
+    "out/fines.csv": "d7cdaf4164098f6d41c63cc8a2ad0cf3b509c183fa78879d51d8f63c46e065c6",
+    "out/invoice_flags.csv": "cf7b3d9fef5feb9731e117aff0cadb258b8052ac0541ca1e751cac810a51ffa1",
+    "out/packets/LD260900.html": "f076100ae83fb0fddc3a2ad8b4be44a8f1bedf619619bbedfbb9ada0c1c7d104",
+    "out/packets/LD260907.html": "ae419fecc772c8e54fd7db512a780f551e3e71fb7b6dbfa14923b074c2205c7d",
+    "out/packets/LD260914.html": "b3390386763cb730e897be617010fa7d0ef817d7446d731f926df94041a507eb",
+    "out/packets/LD260921.html": "c99db5b9c4f1ec17c2545a62097bfdea75664a3a8d685d82265277eaf5beb416",
+    "out/packets/LD260928.html": "adc755f2ab2c831f57dbff215310b8c74b86155d443f9e5feea3f8dc309359bc",
+    "out/packets/LD260935.html": "cdfe872d2fc6602c3feb1bb75447522ce980b5a10608c47b3a2bd4e3eae8b5f2",
+    "out/packets/LD260949.html": "1a6c270c73ee12a0de124913877b7c0ff62aac2089ec6ffb22f40e17c13c6e55",
+    "out/settlement.csv": "671fecfda46545f6a5b7469c2b199e92271b8c90ca3d326bce2cea78e031c5fc",
+    "out/summary.json": "d604332d2329998c918062867a0224ed1d8fa4f1262da2a890a50221a0388248"
+  },
+  "source_io_after": {
+    "data/README_SYNTHETIC.txt": "618c294869b73ef0a74771bd5e9bef65225b33b251ad394c3a91275b8fcf3616",
+    "data/carrier_invoices.csv": "fd7f7184a3da06edd6dc5dde77d1e5d353021a5a4c04f8c8d5cd46f38a55e500",
+    "data/disputes.csv": "0b86c24f93a057292dac5decfb3043c420bdba19c6dbd3aa4015d69a65b103d7",
+    "data/documents.csv": "f7edc8ab95db71b4209cde7195944b92b17a954edf1755e9fe88ec5767693420",
+    "data/expected.json": "e5d35977b0edca466974e12652f04ca6ba30eb84af6606ae40a07ab0f7ce6898",
+    "data/fines_schedule.csv": "b00ec42105ab1258b2a37274f0cb1dad18a9f403af6dba740493e96e22846985",
+    "data/loads.csv": "3973d25133ba4c3fc8ba8f3c80d849884709e0f99d2496149556be343b8c063e",
+    "data/ratecons/RC-48000.txt": "cfc46fde355277cea67a6465845897935f843ccf63f183e7ea78028e0f440e2a",
+    "data/ratecons/RC-48001.txt": "6516601927e2683ffce7df2cdba6eae14a6aae7a39b8be77739b99a42a6c7148",
+    "data/ratecons/RC-48002.txt": "439c98fc31e1edd3a1324a07b8e175a1056caa4a3cf006b8c716d5aa4c36af87",
+    "data/ratecons/RC-48003.txt": "860031b7863a39a1cf568636dd7c44e130a0ddc59c88197f350e2af5333d80ec",
+    "data/ratecons/RC-48004.txt": "3089e36760ba52b8b2516d0638b74a3070af7dcfb20fbc8fc40d7e5500f32cf4",
+    "data/ratecons/RC-48005.txt": "e0f7c1821be81f382797b8cb9b40cdad5d01b36ec1d92535d6a1888003cf022e",
+    "data/ratecons/RC-48006.txt": "5c87925580b25de12d86196d7a97cce92065dc4aaae9c6450fd2bfc65415299e",
+    "data/ratecons/RC-48007.txt": "650c0c4fbe8a0bb6a20c528d0058fd658bdaaa8777bb4a3c3473476927618ef7",
+    "data/telematics.csv": "3b0f0b6de080bbdd79880341627004bc53546e61d3841c6a524b96085f674043",
+    "data/telematics_extra.json": "bac69db1861689d9c26048091c2bae02346f2283cc8e4a1e08c92474f0abebf2",
+    "data/tracking_stops.csv": "9efdafd3912930c84d21d5a9cd8bf5f3cf89e301dff31abce4f6109e68c71c8f",
+    "out/audit.jsonl": "c6cf46d92ee528281ff94ba00d7012b90abb0f3049278c2ae40dc33a32c96992",
+    "out/decisions.json": "5e828200c7e4f455490e98ca28775f78261fca76ef8ce587e3ffae38de5c02c5",
+    "out/detention_claims.csv": "12631d039714f69c380d0452e9addf889a960ebcec3a592af9ba8f36937f5ca5",
+    "out/exceptions.csv": "9f32ea7e17c8d2b47eb5dbeba3c83682fc896a4062138c946d9a75aff3ae21dd",
+    "out/fines.csv": "d7cdaf4164098f6d41c63cc8a2ad0cf3b509c183fa78879d51d8f63c46e065c6",
+    "out/invoice_flags.csv": "cf7b3d9fef5feb9731e117aff0cadb258b8052ac0541ca1e751cac810a51ffa1",
+    "out/packets/LD260900.html": "f076100ae83fb0fddc3a2ad8b4be44a8f1bedf619619bbedfbb9ada0c1c7d104",
+    "out/packets/LD260907.html": "ae419fecc772c8e54fd7db512a780f551e3e71fb7b6dbfa14923b074c2205c7d",
+    "out/packets/LD260914.html": "b3390386763cb730e897be617010fa7d0ef817d7446d731f926df94041a507eb",
+    "out/packets/LD260921.html": "c99db5b9c4f1ec17c2545a62097bfdea75664a3a8d685d82265277eaf5beb416",
+    "out/packets/LD260928.html": "adc755f2ab2c831f57dbff215310b8c74b86155d443f9e5feea3f8dc309359bc",
+    "out/packets/LD260935.html": "cdfe872d2fc6602c3feb1bb75447522ce980b5a10608c47b3a2bd4e3eae8b5f2",
+    "out/packets/LD260949.html": "1a6c270c73ee12a0de124913877b7c0ff62aac2089ec6ffb22f40e17c13c6e55",
+    "out/settlement.csv": "671fecfda46545f6a5b7469c2b199e92271b8c90ca3d326bce2cea78e031c5fc",
+    "out/summary.json": "d604332d2329998c918062867a0224ed1d8fa4f1262da2a890a50221a0388248"
+  }
+}

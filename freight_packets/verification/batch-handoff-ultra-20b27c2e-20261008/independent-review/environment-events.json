@@ -1,0 +1,32 @@
+[
+  {
+    "event": "local primary-source receipt creation failed",
+    "tool": "apply_patch",
+    "path": "/dev/shm/ultra-20b27c2e-runtime-freight-review/primary-source.json",
+    "error": "Failed to write file",
+    "observed_failed_bytes": 0,
+    "observed_tmpfs_free": 0,
+    "observed_overlay_free": 0,
+    "contract_or_probe_written": false,
+    "candidate_opened": false,
+    "recovery": "owned native review namespace on approved Mac",
+    "native_free_bytes_after_directory_creation": 7894179840
+  },
+  {
+    "classification": "receiver fixture cardinality assumption, before candidate inspection",
+    "source_expected_behavior": "Native pipeline only drafts detention/late-arrival packets",
+    "generated_loads": 8,
+    "actual_packets": 5,
+    "missing_ratecon_exceptions": 0,
+    "recovery": "Increase native generated source loads to 16; retain all genuine packet outputs and require at least eight before establishing review states",
+    "retained_probe_sha256": "9d35c2ca79183c0551a8014a1b55918f67f0ba97be7e145607eec9932de37a9e"
+  },
+  {
+    "classification": "pre-execution reviewer harness initialization correction",
+    "candidate_or_author_tests_read": false,
+    "change": "Initialize held-response gate to null, matching its strict empty-state check; all behavior assertions unchanged",
+    "before_sha256": "46af3216bdd5b959779c136ae9fc47bf755d3d890d0f80655e40ef37993b32d3",
+    "after_sha256": "2e29d593f2f6b530a13d3aee2685f1cb01cd86778009ee854901d0cdb8fedad2",
+    "initial_version_retained": "/tmp/ultra-20b27c2e-runtime-freight-review/pre-execution-browser-v1/independent_freight_browser.cjs"
+  }
+]

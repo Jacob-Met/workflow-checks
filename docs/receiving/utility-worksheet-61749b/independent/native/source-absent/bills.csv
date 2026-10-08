@@ -1,0 +1,5 @@
+bill_id,account_no,vendor_invoice_no,period_start,period_end,usage,usage_unit,amount,late_fee,prior_balance,due_date,received_date
+A-BASE,RECV-A,A-BASE-INV,2025-09-01,2025-09-30,100,therm,100,0,0,2025-10-20,2025-10-01
+B-BASE,RECV-B,B-BASE-INV,2025-09-01,2025-09-30,100,therm,100,0,0,2025-10-20,2025-10-01
+A-SEP,RECV-A,A-SEP-INV,2026-09-01,2026-09-30,100,therm,100,0,0,2026-10-20,2026-10-01
+B-SEP,RECV-B,B-SEP-INV,2026-09-01,2026-09-30,100,therm,100,5,0,2026-10-20,2026-10-01
