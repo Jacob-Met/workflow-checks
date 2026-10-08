@@ -1,0 +1,32 @@
+{
+  "result": "BLOCKED_BEFORE_BROWSER",
+  "device": "d55b2499-5e82-4805-819a-d0d7ddea1efe",
+  "preflight": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Process started with PID 2709540 (shell: /bin/bash)\nInitial output:\n{\"uid\": 1000, \"free\": 127516672, \"script_bytes\": 15995, \"script_sha256\": \"33e54f8fc867910a1aedb1f7fb0c5267ffde82da97b9a3ffdf75bdb26329aca8\", \"syntax_rc\": 0, \"syntax_stderr\": \"\", \"current\": 14, \"history\": 1, \"expected_bytes\": 13225}\n"
+      },
+      {
+        "type": "text",
+        "text": "\n[executed on device: hamon-thinkpad (d55b2499-5e82-4805-819a-d0d7ddea1efe)]"
+      }
+    ],
+    "isError": false
+  },
+  "launch": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Process started with PID 2711382 (shell: /bin/bash)\nInitial output:\nfile:///home/jacob/hamon-e04-utility-review-z8yisrmp/evidence/browser_review_report.mjs:26\nif (available < 64 * 1024 * 1024) throw new Error('Fixture needs 64 MiB profile headroom; available=' + available);\n                                        ^\n\nError: Fixture needs 64 MiB profile headroom; available=0\n    at file:///home/jacob/hamon-e04-utility-review-z8yisrmp/evidence/browser_review_report.mjs:26:41\n\nNode.js v22.22.1\n"
+      },
+      {
+        "type": "text",
+        "text": "\n[executed on device: hamon-thinkpad (d55b2499-5e82-4805-819a-d0d7ddea1efe)]"
+      }
+    ],
+    "isError": false
+  },
+  "limits": "The script refused at its capacity gate before creating any profile or browser. This is not a browser/print qualification result."
+}
+

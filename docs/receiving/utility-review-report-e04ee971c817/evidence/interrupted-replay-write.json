@@ -1,0 +1,18 @@
+{
+  "native_namespace": "/home/jacob/hamon-e04-utility-review-z8yisrmp",
+  "failed_write": "ENOSPC while writing evidence/replay_optimized_destination.py",
+  "retained_draft": {
+    "path": "evidence/replay_optimized_destination.py",
+    "bytes": 0,
+    "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+  },
+  "launcher": {
+    "pid": 2626110,
+    "exit_code": 0,
+    "output_bytes": 0,
+    "meaning": "Empty draft executed no tests. Its process exit is not a qualification pass."
+  },
+  "restored_intended_source": "evidence/replay_optimized_destination_restored.py",
+  "original_optimized_receipt": "evidence/candidate-optimized.json",
+  "status": "single interrupted method still pending replay at mirror creation"
+}

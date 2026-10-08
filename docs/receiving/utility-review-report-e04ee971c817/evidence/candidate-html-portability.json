@@ -1,0 +1,22 @@
+{
+  "result": "PASS",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "-B",
+    "-m",
+    "uwatch",
+    "review-report",
+    "--worksheet",
+    "/dev/shm/hamon-development-utility-review-report-e04ee971c817/evidence/native-review-with-history.csv",
+    "--out",
+    "/dev/shm/hamon-development-utility-review-report-e04ee971c817/evidence/example-saved-review.html"
+  ],
+  "returncode": 0,
+  "stdout": "review report: 14 current findings; 1 prior findings\nworksheet SHA256: d9305edacc7e94a7ac076809a9e0c7cab1ce0ba557616be9afd8a86b8b783ddd\nreport: /dev/shm/hamon-development-utility-review-report-e04ee971c817/evidence/example-saved-review.html\n",
+  "stderr": "",
+  "html_sha256": "6ba4c1eaeb71c6eece6a52229bd53e16ebc1b2dd87926c6025cb997feef0a653",
+  "html_bytes": 21880,
+  "native_3_14_output_byte_equality": true,
+  "worksheet_preserved": true
+}
