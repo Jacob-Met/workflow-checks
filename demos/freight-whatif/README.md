@@ -18,6 +18,8 @@ Open **http://127.0.0.1:8765/**. Stop with Ctrl-C. Use `--port 8877` if needed.
 
 The release ZIP under `dist/` is self-contained. Extract it into a new directory and run `python3 tools/serve.py` there. Runtime uses browser modules and the Python standard library; no package installation, external font, API key or network service is needed. A local HTTP server is required because browsers restrict module loading from `file://`.
 
+The currently checked-in ZIP is the historical five-file release and does not include Open saved record; use the source workbench above for this draft feature until a verified replacement ZIP is published.
+
 ## Use the workbench
 
 Choose Long dwell, Within free time, Late arrival or Missing departure. Loading a case establishes a fresh baseline. Change arrival/departure or invoice charges to see the review update; expand Rate confirmation to adjust free time, late grace, increments, hourly rate or cap.
@@ -28,7 +30,29 @@ Blank arrival/departure means missing tracking evidence. A missing, reversed or 
 
 Invalid dates, negative or malformed charges, fractional cents and out-of-range terms pause both the review and download until corrected. Blank invoice header means the line sum; a supplied header is compared exactly with that sum. Blank cap means no cap; an explicit zero is a zero cap. Zero truck-ordered-not-used omits that optional line.
 
-Download record exports the current valid inputs/results, the loaded baseline, comparison, synthetic contract and exact canonical source pins. Edits stay in page memory and reset on refresh.
+Download record exports the current valid inputs/results, the loaded baseline, comparison, synthetic contract and exact canonical source pins. Edits stay in page memory and reset on refresh. Use **Open saved record** to resume a downloaded record through the review described below.
+
+## Resume a saved record
+
+Choose **Open saved record**, select a JSON record previously downloaded from this Freight demo, and review the filename, export timestamp, matched rule source, starting case and all sixteen inputs. The preview shows a fresh calculation while leaving the current scenario, its baseline and its download state intact. **Replace current scenario** discards the current draft and commits the complete admitted replacement. **Cancel** preserves the draft, including incomplete or invalid text. Reset case then returns to the imported record's canonical starting case.
+
+Opening a file does not save it to browser storage, send it to a service or approve any payment. Keep a downloaded record if you want to resume it after closing the page. A table preview or saved result is not a signature or evidence of live source freshness.
+
+Only the existing `workflow-checks.freight-whatif.v1` envelope is supported. Its synthetic marker, exact rule provenance and contract, canonical loaded preset and baseline, and all sixteen current input fields must match this demo's contract. Both baseline and current results and their comparison are recomputed with the unchanged model; any inconsistent stored result, flag, evidence field, total or comparison refuses the entire file. The importer does not salvage fields from an incompatible record.
+
+The file limit is **1 MiB (1,048,576 UTF-8 bytes)**, including JSON whitespace and an optional single leading BOM. JSON object-key order and CRLF formatting are accepted; array order matters. MIME type and extension are hints, not record identity. Unknown fields and nonfinite numbers are refused. The export timestamp must be the canonical four-digit-year UTC ISO form emitted by the exporter, with no age or future-time cutoff. Ordinary JSON parsing semantics apply to repeated member names.
+
+Null and zero remain distinct: a blank stop cap means no cap, a zero cap remains zero, and a blank invoice header means automatic line sum. Whole cents, civil-minute times and booleans use the existing model's validation. Missing tracking, incomplete rate confirmation, late arrival and invoice disagreements remain valid demo scenarios when their saved calculations are coherent; opening does not impose a new business rule.
+
+Editing the scenario, resetting or changing its starting case retires an open preview or pending read. Inputs are checked again before preview and replacement, including raw value changes while the file chooser is open. A newer selection supersedes an earlier read; an old success or error cannot revive or clear the newer review.
+
+Saved-record resume is the additive source contribution [#60](https://github.com/Jacob-Met/workflow-checks/issues/60). Its maintained admission checks run with:
+
+```sh
+node --test demos/freight-whatif/tests/scenario-record.test.mjs
+```
+
+The original engine, model parity, layout, installer and delivery qualification below retain their original authorship and source boundaries. New receiving evidence is reported separately; these historical results are not relabeled as an importer run.
 
 ## Boundaries
 
@@ -109,7 +133,7 @@ After stopping the server:
 python3 demos/freight-whatif/tools/install.py rollback --target /your/new/freight-site
 ```
 
-The installation manifest pins all five files. Rollback refuses edited content, unexpected files and symlinks. It removes only a matching installation; it does not overwrite, restore or clean other application directories. No shared webroot or background service is activated by these commands.
+The installation manifest pins all six files. Rollback refuses edited content, unexpected files and symlinks. It removes only a matching installation; it does not overwrite, restore or clean other application directories. No shared webroot or background service is activated by these commands.
 
 ## Package
 
@@ -121,8 +145,8 @@ python3 demos/freight-whatif/tools/package.py \
   --receipt /absolute/path/to/new-output/bundle-receipt.json
 ```
 
-The deterministic ZIP contains the five site files, loopback server, installer, usage instructions, original MIT LICENSE and manifest. The stylesheet also carries the exact license notice so an installed static copy retains it. Every archived file is read back and checked against the bytes used to build it.
+The deterministic ZIP contains the six site files, loopback server, installer, usage instructions, original MIT LICENSE and manifest. The stylesheet also carries the exact license notice so an installed static copy retains it. Every archived file is read back and checked against the bytes used to build it.
 
 ## Contribution provenance
 
-This is a new external contribution under Jacob's HAMON mandate, recorded in #17. The historical native `build-demo-freight-whatif` attempt (`goal_8c6afc4d23d24dceb103`) was reconciled failed after read-only activity. It was not resumed, requeued or represented as successful. All new project writes and tests took place in an exclusive Mac checkout, respecting that objective's no-ThinkPad-project-writes boundary. Native coordination is a contributor record, not a worker registration or goal lease.
+The original #17 contribution was made under Jacob's HAMON mandate. The historical native `build-demo-freight-whatif` attempt (`goal_8c6afc4d23d24dceb103`) was reconciled failed after read-only activity. It was not resumed, requeued or represented as successful. All new project writes and tests took place in an exclusive Mac checkout, respecting that objective's no-ThinkPad-project-writes boundary. Native coordination is a contributor record, not a worker registration or goal lease.
