@@ -1,0 +1,62 @@
+test_blank_account_keeps_existing_required_error (test_account_identity.AccountIdentityTests.test_blank_account_keeps_existing_required_error) ... ok
+test_bom_reordered_multiline_records_report_physical_rows (test_account_identity.AccountIdentityTests.test_bom_reordered_multiline_records_report_physical_rows) ... FAIL
+test_cli_conflicting_duplicate_preserves_previous_outputs (test_account_identity.AccountIdentityTests.test_cli_conflicting_duplicate_preserves_previous_outputs) ... FAIL
+test_distinct_case_and_shared_bill_ids_keep_existing_behavior (test_account_identity.AccountIdentityTests.test_distinct_case_and_shared_bill_ids_keep_existing_behavior) ... ok
+test_empty_rows_do_not_create_duplicate_accounts (test_account_identity.AccountIdentityTests.test_empty_rows_do_not_create_duplicate_accounts) ... ok
+test_identical_duplicate_is_still_ambiguous (test_account_identity.AccountIdentityTests.test_identical_duplicate_is_still_ambiguous) ... FAIL
+test_missing_column_keeps_reader_error (test_account_identity.AccountIdentityTests.test_missing_column_keeps_reader_error) ... ok
+test_single_trimmed_account_retains_normalized_identity (test_account_identity.AccountIdentityTests.test_single_trimmed_account_retains_normalized_identity) ... ok
+test_whitespace_normalized_duplicate_is_rejected (test_account_identity.AccountIdentityTests.test_whitespace_normalized_duplicate_is_rejected) ... FAIL
+
+======================================================================
+FAIL: test_bom_reordered_multiline_records_report_physical_rows (test_account_identity.AccountIdentityTests.test_bom_reordered_multiline_records_report_physical_rows)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/me/workflow-utility-duplicate-account-8ef1dfe65b8f-20261008/baseline/utility_watch/tests/test_account_identity.py", line 123, in test_bom_reordered_multiline_records_report_physical_rows
+    self.assert_duplicate(later=4, earlier=3)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/Users/me/workflow-utility-duplicate-account-8ef1dfe65b8f-20261008/baseline/utility_watch/tests/test_account_identity.py", line 83, in assert_duplicate
+    with self.assertRaises(ValueError) as caught:
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_cli_conflicting_duplicate_preserves_previous_outputs (test_account_identity.AccountIdentityTests.test_cli_conflicting_duplicate_preserves_previous_outputs)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/me/workflow-utility-duplicate-account-8ef1dfe65b8f-20261008/baseline/utility_watch/tests/test_account_identity.py", line 102, in test_cli_conflicting_duplicate_preserves_previous_outputs
+    self.assertEqual(repeated.returncode, 2, repeated.stdout + repeated.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 != 2 : as_of 2024-02-01: 1 accounts, 2 bills; 0 flags {}; 0 exceptions; 1 bills ($60.00) queued for approval (not paid)
+naive trailing-3 rule would add 0 seasonal false flags
+report: /tmp/uwatch account identity 0gyav14o/out/report.html
+
+
+======================================================================
+FAIL: test_identical_duplicate_is_still_ambiguous (test_account_identity.AccountIdentityTests.test_identical_duplicate_is_still_ambiguous)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/me/workflow-utility-duplicate-account-8ef1dfe65b8f-20261008/baseline/utility_watch/tests/test_account_identity.py", line 112, in test_identical_duplicate_is_still_ambiguous
+    self.assert_duplicate()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/me/workflow-utility-duplicate-account-8ef1dfe65b8f-20261008/baseline/utility_watch/tests/test_account_identity.py", line 83, in assert_duplicate
+    with self.assertRaises(ValueError) as caught:
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_whitespace_normalized_duplicate_is_rejected (test_account_identity.AccountIdentityTests.test_whitespace_normalized_duplicate_is_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/me/workflow-utility-duplicate-account-8ef1dfe65b8f-20261008/baseline/utility_watch/tests/test_account_identity.py", line 116, in test_whitespace_normalized_duplicate_is_rejected
+    self.assert_duplicate()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/me/workflow-utility-duplicate-account-8ef1dfe65b8f-20261008/baseline/utility_watch/tests/test_account_identity.py", line 83, in assert_duplicate
+    with self.assertRaises(ValueError) as caught:
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.134s
+
+FAILED (failures=4)

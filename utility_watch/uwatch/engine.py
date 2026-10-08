@@ -132,6 +132,10 @@ def load(data: Path):
     for i, r in _rows(data / "accounts.csv", account_fields):
         if not r["account_no"]:
             raise ValueError(f"accounts.csv:{i}: account_no is blank")
+        if r["account_no"] in accounts:
+            first_row = accounts[r["account_no"]]["_row"]
+            raise ValueError(f"accounts.csv:{i}: duplicate account_no; "
+                             f"first declared at accounts.csv:{first_row}")
         r["utility"] = r["utility"].casefold()
         r["scope"] = r["scope"].casefold()
         r["cycle"] = r["cycle"].casefold()

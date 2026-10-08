@@ -1,0 +1,200 @@
+{
+  "repository": "Jacob-Met/workflow-checks",
+  "base": "125339ec63eeb7c4989c9b240c01202555dce573",
+  "native_source_baseline": {
+    "utility_watch/uwatch/__init__.py": {
+      "git_blob_sha": "7074157fb1710370668c2a0ad5217cd10cfe3618",
+      "sha256": "a0332cb0878fcdfd02d1651f9a46c299ca0279996c6e5723d49311228c597a57"
+    },
+    "utility_watch/uwatch/__main__.py": {
+      "git_blob_sha": "823d40a6bf41beb59790ce83476b359f76f4b1ec",
+      "sha256": "26c55ee4277631c49b2312533d7514a815ec2c3de08f48b0a9dea8946d8f8933"
+    },
+    "utility_watch/uwatch/cli.py": {
+      "git_blob_sha": "034935eeb633ecf68bfda4c5dd1181c7931880e6",
+      "sha256": "80cb716a37aa810c63ad69916ab293fcbfd83a44b51570d013339c0b217c7cb3"
+    },
+    "utility_watch/uwatch/engine.py": {
+      "git_blob_sha": "b764a1f45ba718b31f7841e2c2f61d16a7fef5e9",
+      "sha256": "ff0dc3a473235c55639e4373e3b5a4c786a0cd9ae7badd2be9113f39a4efd3d0"
+    },
+    "utility_watch/uwatch/report.py": {
+      "git_blob_sha": "ee2fcabd2026b4224c3cdfc51890f71762a9ef0f",
+      "sha256": "dc43c4fbbef72204a9dc9c5d7e4d3883900e96daf26c725f10fe22d4721540db"
+    },
+    "utility_watch/uwatch/review.py": {
+      "git_blob_sha": "2475217ce9c073c39756f9fa3926342cd83f7254",
+      "sha256": "f9f730ca45140436704d9823eafcfb58fb3922c5d0bf93a21a63f31347c947de"
+    },
+    "utility_watch/uwatch/review_report.py": {
+      "git_blob_sha": "be869a940436172253c0a6d5020ba24860f1a7eb",
+      "sha256": "4462088141b21c990ce5b949a9c683f68f647ae83bdba0eaa1409730e442f856"
+    },
+    "utility_watch/uwatch/synth.py": {
+      "git_blob_sha": "0d5c8137b3790bd062609ce4725beda63db9e58d",
+      "sha256": "8573a65a8c5907ebedda24c47183f60f258e895bae0a2656bb582ada9217209d"
+    },
+    "utility_watch/uwatch/worksheet.py": {
+      "git_blob_sha": "d8880f1f33115c8589ad0a91b87ef5619ae95964",
+      "sha256": "827f7ba7d6eba19d07f18bc202a50b8283bf2b4a6b9b9247046a0441a1d845fa"
+    }
+  },
+  "native_source_candidate": {
+    "utility_watch/uwatch/__init__.py": {
+      "git_blob_sha": "7074157fb1710370668c2a0ad5217cd10cfe3618",
+      "sha256": "a0332cb0878fcdfd02d1651f9a46c299ca0279996c6e5723d49311228c597a57"
+    },
+    "utility_watch/uwatch/__main__.py": {
+      "git_blob_sha": "823d40a6bf41beb59790ce83476b359f76f4b1ec",
+      "sha256": "26c55ee4277631c49b2312533d7514a815ec2c3de08f48b0a9dea8946d8f8933"
+    },
+    "utility_watch/uwatch/cli.py": {
+      "git_blob_sha": "034935eeb633ecf68bfda4c5dd1181c7931880e6",
+      "sha256": "80cb716a37aa810c63ad69916ab293fcbfd83a44b51570d013339c0b217c7cb3"
+    },
+    "utility_watch/uwatch/engine.py": {
+      "sha256": "8d61b55e88415275ffe1c5edca6f914f10c4f47f6cfd9d0b56ba76854f6f1180"
+    },
+    "utility_watch/uwatch/report.py": {
+      "git_blob_sha": "ee2fcabd2026b4224c3cdfc51890f71762a9ef0f",
+      "sha256": "dc43c4fbbef72204a9dc9c5d7e4d3883900e96daf26c725f10fe22d4721540db"
+    },
+    "utility_watch/uwatch/review.py": {
+      "git_blob_sha": "2475217ce9c073c39756f9fa3926342cd83f7254",
+      "sha256": "f9f730ca45140436704d9823eafcfb58fb3922c5d0bf93a21a63f31347c947de"
+    },
+    "utility_watch/uwatch/review_report.py": {
+      "git_blob_sha": "be869a940436172253c0a6d5020ba24860f1a7eb",
+      "sha256": "4462088141b21c990ce5b949a9c683f68f647ae83bdba0eaa1409730e442f856"
+    },
+    "utility_watch/uwatch/synth.py": {
+      "git_blob_sha": "0d5c8137b3790bd062609ce4725beda63db9e58d",
+      "sha256": "8573a65a8c5907ebedda24c47183f60f258e895bae0a2656bb582ada9217209d"
+    },
+    "utility_watch/uwatch/worksheet.py": {
+      "git_blob_sha": "d8880f1f33115c8589ad0a91b87ef5619ae95964",
+      "sha256": "827f7ba7d6eba19d07f18bc202a50b8283bf2b4a6b9b9247046a0441a1d845fa"
+    }
+  },
+  "github_sources": {
+    "utility_watch/uwatch/__init__.py": {
+      "git_blob_sha": "7074157fb1710370668c2a0ad5217cd10cfe3618",
+      "url": "https://github.com/Jacob-Met/workflow-checks/blob/125339ec63eeb7c4989c9b240c01202555dce573/utility_watch/uwatch/__init__.py"
+    },
+    "utility_watch/uwatch/__main__.py": {
+      "git_blob_sha": "823d40a6bf41beb59790ce83476b359f76f4b1ec",
+      "url": "https://github.com/Jacob-Met/workflow-checks/blob/125339ec63eeb7c4989c9b240c01202555dce573/utility_watch/uwatch/__main__.py"
+    },
+    "utility_watch/uwatch/cli.py": {
+      "git_blob_sha": "034935eeb633ecf68bfda4c5dd1181c7931880e6",
+      "url": "https://github.com/Jacob-Met/workflow-checks/blob/125339ec63eeb7c4989c9b240c01202555dce573/utility_watch/uwatch/cli.py"
+    },
+    "utility_watch/uwatch/engine.py": {
+      "git_blob_sha": "b764a1f45ba718b31f7841e2c2f61d16a7fef5e9",
+      "url": "https://github.com/Jacob-Met/workflow-checks/blob/125339ec63eeb7c4989c9b240c01202555dce573/utility_watch/uwatch/engine.py"
+    },
+    "utility_watch/uwatch/report.py": {
+      "git_blob_sha": "ee2fcabd2026b4224c3cdfc51890f71762a9ef0f",
+      "url": "https://github.com/Jacob-Met/workflow-checks/blob/125339ec63eeb7c4989c9b240c01202555dce573/utility_watch/uwatch/report.py"
+    },
+    "utility_watch/uwatch/review.py": {
+      "git_blob_sha": "2475217ce9c073c39756f9fa3926342cd83f7254",
+      "url": "https://github.com/Jacob-Met/workflow-checks/blob/125339ec63eeb7c4989c9b240c01202555dce573/utility_watch/uwatch/review.py"
+    },
+    "utility_watch/uwatch/review_report.py": {
+      "git_blob_sha": "be869a940436172253c0a6d5020ba24860f1a7eb",
+      "url": "https://github.com/Jacob-Met/workflow-checks/blob/125339ec63eeb7c4989c9b240c01202555dce573/utility_watch/uwatch/review_report.py"
+    },
+    "utility_watch/uwatch/synth.py": {
+      "git_blob_sha": "0d5c8137b3790bd062609ce4725beda63db9e58d",
+      "url": "https://github.com/Jacob-Met/workflow-checks/blob/125339ec63eeb7c4989c9b240c01202555dce573/utility_watch/uwatch/synth.py"
+    },
+    "utility_watch/uwatch/worksheet.py": {
+      "git_blob_sha": "d8880f1f33115c8589ad0a91b87ef5619ae95964",
+      "url": "https://github.com/Jacob-Met/workflow-checks/blob/125339ec63eeb7c4989c9b240c01202555dce573/utility_watch/uwatch/worksheet.py"
+    }
+  },
+  "fixtures": {
+    "valid": {
+      "accounts.csv": "d01755abd21ddfda28c3edf658e2ca924ff6fd47054c0964dd42d874c24adf7d",
+      "bills.csv": "400d8d82af179c92db3af76f33ca6467fa8e0ee3e3a3ae7bf27aa2d6531206ec",
+      "occupancy.csv": "a5d1a56715792e6c974f8999a3b428b6090b5f4369d87d89ecb98e2b55b8450a",
+      "payments.csv": "29c7cb3eae40c96c9800e6359acacfb1d1928c3c7a65981c55e01485501f7300"
+    },
+    "shared_bill_id": {
+      "accounts.csv": "6975b5dbfed4ce2270a68375e50f5f7be46991e1b3727dc900da4e1ffda37c61",
+      "bills.csv": "b60532c0a0bcc4a289ae00bb1831528baea28f1addbc54bddc39c9e2d30be8ee",
+      "occupancy.csv": "a5d1a56715792e6c974f8999a3b428b6090b5f4369d87d89ecb98e2b55b8450a",
+      "payments.csv": "29c7cb3eae40c96c9800e6359acacfb1d1928c3c7a65981c55e01485501f7300"
+    },
+    "case_distinct": {
+      "accounts.csv": "87148486f42b8f8d71e341720df441face16c7f11e8fb396dc58a51a4d0c27c9",
+      "bills.csv": "8821a53259c01b192671bf4a70aeedfe6c9596e318b11850dcac9555bf4ba165",
+      "occupancy.csv": "a5d1a56715792e6c974f8999a3b428b6090b5f4369d87d89ecb98e2b55b8450a",
+      "payments.csv": "29c7cb3eae40c96c9800e6359acacfb1d1928c3c7a65981c55e01485501f7300"
+    },
+    "duplicate_exact": {
+      "accounts.csv": "3515e78d0adf67c6d1ce28da6549b7ea925a1aadee96fe2d26cdf164f8c04e32",
+      "bills.csv": "400d8d82af179c92db3af76f33ca6467fa8e0ee3e3a3ae7bf27aa2d6531206ec",
+      "occupancy.csv": "a5d1a56715792e6c974f8999a3b428b6090b5f4369d87d89ecb98e2b55b8450a",
+      "payments.csv": "29c7cb3eae40c96c9800e6359acacfb1d1928c3c7a65981c55e01485501f7300"
+    },
+    "duplicate_conflict": {
+      "accounts.csv": "49a79daf338fbca90bd587574b3488685dfe40ccc8540a4e87dd166a28d70a63",
+      "bills.csv": "400d8d82af179c92db3af76f33ca6467fa8e0ee3e3a3ae7bf27aa2d6531206ec",
+      "occupancy.csv": "a5d1a56715792e6c974f8999a3b428b6090b5f4369d87d89ecb98e2b55b8450a",
+      "payments.csv": "29c7cb3eae40c96c9800e6359acacfb1d1928c3c7a65981c55e01485501f7300"
+    },
+    "duplicate_reverse": {
+      "accounts.csv": "5a0dae0f69d66f4aae24d579c6c6f457554a7f1bbb2295945a354c93ecc724e7",
+      "bills.csv": "400d8d82af179c92db3af76f33ca6467fa8e0ee3e3a3ae7bf27aa2d6531206ec",
+      "occupancy.csv": "a5d1a56715792e6c974f8999a3b428b6090b5f4369d87d89ecb98e2b55b8450a",
+      "payments.csv": "29c7cb3eae40c96c9800e6359acacfb1d1928c3c7a65981c55e01485501f7300"
+    },
+    "duplicate_whitespace": {
+      "accounts.csv": "f59787884a5d5507634279ed6ebe48951d5b6da372a2c2df2d04a1d2e023887c",
+      "bills.csv": "400d8d82af179c92db3af76f33ca6467fa8e0ee3e3a3ae7bf27aa2d6531206ec",
+      "occupancy.csv": "a5d1a56715792e6c974f8999a3b428b6090b5f4369d87d89ecb98e2b55b8450a",
+      "payments.csv": "29c7cb3eae40c96c9800e6359acacfb1d1928c3c7a65981c55e01485501f7300"
+    },
+    "duplicate_multiline": {
+      "accounts.csv": "eef83de83331e07f4648a8591336c2b61730c32199c4530d66ad5dc309e2f535",
+      "bills.csv": "400d8d82af179c92db3af76f33ca6467fa8e0ee3e3a3ae7bf27aa2d6531206ec",
+      "occupancy.csv": "a5d1a56715792e6c974f8999a3b428b6090b5f4369d87d89ecb98e2b55b8450a",
+      "payments.csv": "29c7cb3eae40c96c9800e6359acacfb1d1928c3c7a65981c55e01485501f7300"
+    },
+    "blank_account": {
+      "accounts.csv": "8c039e404a3d28aaeb0de4a625ad8d7f026763d6a71a1374fc2a961c3762d7ae",
+      "bills.csv": "400d8d82af179c92db3af76f33ca6467fa8e0ee3e3a3ae7bf27aa2d6531206ec",
+      "occupancy.csv": "a5d1a56715792e6c974f8999a3b428b6090b5f4369d87d89ecb98e2b55b8450a",
+      "payments.csv": "29c7cb3eae40c96c9800e6359acacfb1d1928c3c7a65981c55e01485501f7300"
+    }
+  },
+  "fixture_bytes_frozen": true,
+  "receiver_sha256": "8cb6ebf47ad456bae8a92417892be121ac94058326e09bf3b7bfb7614afb2c9b",
+  "receiver_frozen": true,
+  "candidate_engine_git_blob": "dd1b752972b74232090ed602d11b84759bda19e3",
+  "scope": "Only isolated Windows source and synthetic receiving cases. No deployed worker configurations, services, generated CSVs, or reports included.",
+  "duplicate_physical_rows": {
+    "duplicate_exact": [
+      2,
+      3
+    ],
+    "duplicate_conflict": [
+      2,
+      3
+    ],
+    "duplicate_reverse": [
+      2,
+      3
+    ],
+    "duplicate_whitespace": [
+      2,
+      3
+    ],
+    "duplicate_multiline": [
+      3,
+      6
+    ]
+  }
+}
