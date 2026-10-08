@@ -1,0 +1,72 @@
+"""Receive the frozen CSV-header repair through actual Windows CLI processes."""
+from pathlib import Path
+import csv,datetime,hashlib,json,os,platform,shutil,subprocess,sys
+ROOT=Path(__file__).resolve().parent
+assert os.name=="nt" and platform.node().upper()=="DESKTOP-LA7CMTA"
+source=ROOT/"source"; runroot=ROOT/"cli-candidate"
+assert not runroot.exists()
+assert shutil.disk_usage(ROOT).free>20*1024*1024
+git=shutil.which("git") or r"C:\Program Files\Git\cmd\git.exe"
+assert subprocess.check_output([git,"-C",str(source),"rev-parse","HEAD"],text=True).strip()=="d9ab19be7e2fd1742ad90889c41aff3d0c93f00f"
+runroot.mkdir(); evidence=runroot/"evidence";evidence.mkdir()
+sha=lambda b:hashlib.sha256(b).hexdigest()
+paths=subprocess.check_output([git,"-C",str(source),"ls-files","-z"]).decode().split("\0")
+paths=[p for p in paths if p]
+def source_map():return {p:sha((source/p).read_bytes()) for p in paths}
+def file_map(p):return {f.relative_to(p).as_posix():sha(f.read_bytes()) for f in sorted(p.rglob("*")) if f.is_file()}
+before_source=source_map()
+env=dict(os.environ)
+for key in ("PYTHONPATH","PYTHONHOME"):env.pop(key,None)
+env.update(PYTHONDONTWRITEBYTECODE="1",PYTHONIOENCODING="utf-8",TEMP=str(ROOT/"tmp"),TMP=str(ROOT/"tmp"))
+calls=[]
+def call(label,args):
+    argv=[sys.executable,"-S","-B","-X","utf8","-m","freightpkt",*args]
+    p=subprocess.run(argv,cwd=source/"freight_packets",env=env,capture_output=True,timeout=40)
+    (evidence/(label+".stdout.txt")).write_bytes(p.stdout)
+    (evidence/(label+".stderr.txt")).write_bytes(p.stderr)
+    calls.append({"label":label,"argv":argv,"cwd":str(source/"freight_packets"),"returncode":p.returncode,
+                  "stdout_sha256":sha(p.stdout),"stderr_sha256":sha(p.stderr)})
+    return p
+ordinary=runroot/"ordinary-input"
+g=call("generate",["generate","--out",str(ordinary),"--loads","24","--seed","7"])
+assert g.returncode==0,g.stderr.decode(errors="replace")
+with (ordinary/"loads.csv").open(newline="",encoding="utf-8-sig") as fh:rows=list(csv.reader(fh))
+header=rows[0];li=header.index("load_id");pi=header.index("pod_received")
+missing=[row[li] for row in rows[1:] if row[pi]=="N"]
+assert missing==["LD261054"],missing
+target=missing[0];duplicate=runroot/"duplicate-header-input";shutil.copytree(ordinary,duplicate)
+with (duplicate/"loads.csv").open("w",newline="",encoding="utf-8") as fh:
+    w=csv.writer(fh);w.writerow(header+["pod_received"])
+    for row in rows[1:]:w.writerow(row+["Y" if row[li]==target else row[pi]])
+before_inputs={"ordinary":file_map(ordinary),"duplicate_header":file_map(duplicate)}
+out=runroot/"out"
+valid=call("ordinary",["run","--data",str(ordinary),"--out",str(out)])
+assert valid.returncode==0,valid.stderr.decode(errors="replace")
+summary=json.loads((out/"summary.json").read_text(encoding="utf-8"))
+settlement=next(x for x in summary["settlements"] if x["load_id"]==target)
+assert settlement["status"]=="HOLD" and "MISSING_POD" in settlement["hold_reasons"]
+output_before=file_map(out)
+refused=call("duplicate_header",["run","--data",str(duplicate),"--out",str(out)])
+output_after=file_map(out); after_inputs={"ordinary":file_map(ordinary),"duplicate_header":file_map(duplicate)};after_source=source_map()
+diagnostic=refused.stderr.decode(errors="replace")
+retained=json.loads((out/"summary.json").read_text(encoding="utf-8"))
+retained_settlement=next(x for x in retained["settlements"] if x["load_id"]==target)
+checks={"ordinary_exit_zero":valid.returncode==0,"duplicate_exit_one":refused.returncode==1,
+        "diagnostic_names_input_and_columns":"loads.csv: duplicate CSV header 'pod_received' in columns 6 ('pod_received') and 9" in diagnostic,
+        "all_prior_output_bytes_preserved":output_before==output_after,"all_input_bytes_preserved":before_inputs==after_inputs,
+        "all_source_bytes_preserved":before_source==after_source,"missing_pod_hold_preserved":retained_settlement==settlement}
+report={"schema":"freight-csv-headers.windows-cli-candidate.v1","observed_utc":datetime.datetime.now(datetime.timezone.utc).isoformat(),
+        "host":platform.node(),"platform":platform.platform(),"python":sys.version,"executable":sys.executable,
+        "actor":"NT AUTHORITY\\SYSTEM (direct RDC)","namespace":str(runroot),
+        "native_source_commit":"d9ab19be7e2fd1742ad90889c41aff3d0c93f00f","native_source_tree":"fb7647c0f8c6ae5403df5f9ab0c4dbf5cfde1a81",
+        "source_import_public_pin":"76e6175d91320ac816cee019df969c0f0e1bbfc7",
+        "source_note":"Explicit partial-source continuation plus three owned repair paths; not current full main.",
+        "target_load_id":target,"calls":calls,"settlement_before":settlement,"settlement_after":retained_settlement,
+        "source_hashes_before":before_source,"source_hashes_after":after_source,"input_hashes_before":before_inputs,"input_hashes_after":after_inputs,
+        "output_hashes_before":output_before,"output_hashes_after":output_after,"checks":checks,"passed":all(checks.values()),
+        "synthetic_inputs_only":True,"installation_or_service_change":False}
+(evidence/"report.json").write_text(json.dumps(report,indent=2)+"\n",encoding="utf-8")
+print(json.dumps({"passed":report["passed"],"returncodes":[c["returncode"] for c in calls],"checks":checks,
+                  "retained_files":len(output_after),"input_files":sum(len(x) for x in before_inputs.values()),"source_files":len(before_source),
+                  "settlement":settlement,"report_sha256":sha((evidence/"report.json").read_bytes())},indent=2))
+sys.exit(0 if report["passed"] else 1)

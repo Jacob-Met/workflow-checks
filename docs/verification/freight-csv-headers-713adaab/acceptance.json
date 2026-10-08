@@ -1,0 +1,71 @@
+{
+  "schema": "freight-csv-headers.acceptance.v1",
+  "observed_utc": "2026-10-08T19:06:15.317070+00:00",
+  "issue": "https://github.com/Jacob-Met/workflow-checks/issues/51",
+  "actor": "chatgpt:/root/migration_execution",
+  "native_conscience_claim_seq": 4833,
+  "original_ingest_blob": "dad18f470035318241a9c432326d1f4bafa26edf",
+  "candidate_native_commit": "d9ab19be7e2fd1742ad90889c41aff3d0c93f00f",
+  "candidate_native_tree": "fb7647c0f8c6ae5403df5f9ab0c4dbf5cfde1a81",
+  "candidate_ingest_sha256": "7cf7d63f0ddff76a99f0094bdb86204ac8384cd3d613556037566c162bf0adff",
+  "frozen_test_sha256": "0ad850988184c584972968840ea0accf0e9c508f184509a392eea7981de864af",
+  "paired_windows": {
+    "tests_run": [
+      12,
+      12
+    ],
+    "failure_entries": [
+      16,
+      0
+    ],
+    "failed_methods_before": 6,
+    "errors": [
+      0,
+      0
+    ],
+    "skips": [
+      0,
+      0
+    ],
+    "source_preserved": [
+      true,
+      true
+    ],
+    "baseline_report_sha256": "343d42aff557348a6124c4a7d550240af45911e864499fd885dfded54020c6ac",
+    "candidate_report_sha256": "217f13283422a2231cdb1a59d08882f2d524423b01360a758bc7c3c8c69b96a0"
+  },
+  "actual_windows_cli": {
+    "returncodes": [
+      0,
+      0,
+      1
+    ],
+    "checks": {
+      "ordinary_exit_zero": true,
+      "duplicate_exit_one": true,
+      "diagnostic_names_input_and_columns": true,
+      "all_prior_output_bytes_preserved": true,
+      "all_input_bytes_preserved": true,
+      "all_source_bytes_preserved": true,
+      "missing_pod_hold_preserved": true
+    },
+    "report_sha256": "31e10a47653760dddb3080ec9d2eb07e4685cdfdb2936d4247b0752f4e32ba0e",
+    "prior_artifacts": 22,
+    "inputs": 68,
+    "source_files": 36
+  },
+  "mac_before_report_sha256": "c40d85227e15f9eb0fa581237ae831fa9f883587b31312fd2d07d5c7047dee8c",
+  "mac_original_full_custody": "Original inputs/outputs/raw process streams remain on the unavailable Mac; this packet preserves its exact report and driver, not complete recovery.",
+  "native_windows_identity": "NT AUTHORITY\\SYSTEM through direct RDC; distinct from earlier minec SSH receiving",
+  "interpreter_installed": false,
+  "source_is_partial_import": true,
+  "full_current_main_qualification": false,
+  "hosted_ci": "pending exact published head",
+  "independent_review": "pending",
+  "no_real_data": true,
+  "no_payment": true,
+  "no_installation": true,
+  "no_service_change": true,
+  "no_firmware": true,
+  "no_cutover": true
+}

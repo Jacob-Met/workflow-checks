@@ -1,0 +1,7 @@
+{
+  "tool": "mcp__codex_apps__remote_desktop_commander_write_file",
+  "path": "/Users/me/Developer/workflow-checks-csv-header-713adaab/run-gates.py",
+  "observed_error": "ENOSPC: no space left on device, open '/Users/me/Developer/workflow-checks-csv-header-713adaab/run-gates.py'",
+  "driver_invoked": false,
+  "pytest_environment_used": false
+}

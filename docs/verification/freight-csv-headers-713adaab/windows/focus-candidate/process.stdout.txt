@@ -1,0 +1,13 @@
+{
+  "stage": "focus-candidate",
+  "tests_run": 12,
+  "failure_entries": 0,
+  "failed_methods": [],
+  "errors": 0,
+  "skips": 0,
+  "successful": true,
+  "source_unchanged": true,
+  "report_sha256": "217f13283422a2231cdb1a59d08882f2d524423b01360a758bc7c3c8c69b96a0",
+  "first_failure": null,
+  "new_test_sha256": "0ad850988184c584972968840ea0accf0e9c508f184509a392eea7981de864af"
+}
