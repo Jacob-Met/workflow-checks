@@ -1,0 +1,22 @@
+{
+  "files": [
+    "review_reports.py",
+    "report-receipt.json",
+    "review_inline.cjs",
+    "inline-receipt.json",
+    "serve_fixture.py",
+    "browser-input.json",
+    "review_ui.cjs",
+    "rejected-harnesses/inline-v1.cjs",
+    "rejected-harnesses/inline-v1.json",
+    "authored-input/patients.csv",
+    "authored-input/payers.csv",
+    "authored-input/authorizations.csv",
+    "authored-input/schedule.csv",
+    "review-receipt.json",
+    "REVIEW.md",
+    "publication-allowlist.json",
+    "PUBLICATION-MANIFEST.json"
+  ],
+  "convention": "The manifest binds all files including this allowlist except the manifest itself; its hash is in the handoff."
+}

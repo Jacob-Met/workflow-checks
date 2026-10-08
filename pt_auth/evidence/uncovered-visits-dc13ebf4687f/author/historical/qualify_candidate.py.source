@@ -1,0 +1,40 @@
+from pathlib import Path
+import hashlib,json,os,subprocess,sys
+root=Path('/dev/shm/pt-uncovered-visits-dc13ebf4687f')
+candidate=root/'candidate'; baseline=root/'baseline'
+evidence=root/'qualification';evidence.mkdir(exist_ok=False)
+def pins(base):
+ return {str(p.relative_to(base)):hashlib.sha256(p.read_bytes()).hexdigest()
+         for p in sorted((base/'pt_auth').rglob('*')) if p.is_file() and '__pycache__' not in p.parts}
+before=pins(candidate); before_base=pins(baseline)
+results=[]
+suite=[sys.executable,'-B','-m','unittest','discover','-s','tests','-p','test_uncovered_review.py','-v']
+for label,cmd,src,expected in [
+ ('baseline-normal',suite,baseline/'pt_auth',1),
+ ('candidate-normal',suite,candidate/'pt_auth',0),
+ ('candidate-optimized',[sys.executable,'-B','-O',*suite[2:]],candidate/'pt_auth',0)]:
+ env=dict(os.environ,PTAUTH_TEST_TMP=str(root/'test-work'),PTAUTH_TEST_SOURCE=str(src))
+ r=subprocess.run(cmd,cwd=candidate/'pt_auth',env=env,capture_output=True,text=True,timeout=30)
+ (evidence/(label+'.stdout.txt')).write_text(r.stdout)
+ (evidence/(label+'.stderr.txt')).write_text(r.stderr)
+ ok=(r.returncode!=0 if expected else r.returncode==0)
+ results.append({'label':label,'command':cmd,'source':str(src),'returncode':r.returncode,'expected_nonzero':bool(expected),'expected_contract':ok})
+ if not ok: raise RuntimeError(label+' failed its expected contract: '+r.stderr)
+node=os.environ.get('CODEX_PRIMARY_RUNTIME_NODE') or 'node'
+for label,src,expected in [('baseline-ui',baseline,1),('candidate-ui',candidate,0)]:
+ cmd=[node,'--test',str(candidate/'pt_auth/tests/browser/uncovered_review.test.cjs')]
+ env=dict(os.environ,PTAUTH_UI_SOURCE=str(src/'pt_auth/ptauth/ui.html'),
+          PTAUTH_UI_SUMMARY=str(root/'candidate-first-output/summary.json'))
+ r=subprocess.run(cmd,env=env,capture_output=True,text=True,timeout=20)
+ (evidence/(label+'.stdout.txt')).write_text(r.stdout)
+ (evidence/(label+'.stderr.txt')).write_text(r.stderr)
+ ok=(r.returncode!=0 if expected else r.returncode==0)
+ results.append({'label':label,'command':cmd,'ui_source':str(src/'pt_auth/ptauth/ui.html'),'returncode':r.returncode,'expected_nonzero':bool(expected),'expected_contract':ok})
+ if not ok: raise RuntimeError(label+' failed its expected contract')
+if pins(candidate)!=before or pins(baseline)!=before_base: raise RuntimeError('source changed while testing')
+receipt={'repository':'Jacob-Met/workflow-checks','baseline_head':'9e931fa9f42033bf2368f7149684fb5631345715',
+ 'candidate_files':before,'baseline_files':before_base,'runs':results,'source_unchanged':True,
+ 'interpretation':'9 new Python unittest methods, including the7-case Node UI child, pass in normal and optimized Python. Original source retains expected feature failures. Separate UI comparison uses identical authored candidate summary with exact original/candidate inline scripts.',
+ 'limits':['No pytest installation or full inherited97-case suite was run','Node UI check has authored DOM/API boundaries; no browser or layout claim','All input/state is synthetic and local; existing ephemeral loopback HTTP app only']}
+(evidence/'receipt.json').write_text(json.dumps(receipt,indent=2)+'\n')
+print(json.dumps({'runs':results,'source_unchanged':True,'receipt_sha256':hashlib.sha256((evidence/'receipt.json').read_bytes()).hexdigest()},indent=2))

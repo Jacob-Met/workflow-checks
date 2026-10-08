@@ -1,0 +1,41 @@
+{
+  "recorded_at_utc": "2026-10-08T13:35:29.930392+00:00",
+  "repository": "Jacob-Met/workflow-checks",
+  "observed_main": "9e931fa9f42033bf2368f7149684fb5631345715",
+  "observed_tree": "0b0c903801f432968e9cdfb1f1fa134cecc37217",
+  "candidate_head": "9676a5a20f3adab0ccf46e31e3052de04f50d267",
+  "candidate_manifest_sha256": "46a503ccdd0c793cc1ad4ec1759e6d615c12c67e7aec8fad93cff2f55e8dadab",
+  "metadata_files_bound": 6,
+  "candidate_source_paths_bound": 7,
+  "supported_runtime": "Python 3.10+ source checkout; existing optional IANA database dependency unchanged",
+  "ci_entry": "python -m pytest -q in pt_auth, Python 3.10 and 3.12 matrix",
+  "node_ci_limit": "No PT-specific Node installation/pin; the focused Node child explicitly skips when node is absent. No CI result is inferred.",
+  "packaging_blocker_found": false,
+  "static_site_limit": "Same CLI writes all report outputs to docs/pt; current index links digest/worklist, no new named CSV link or interactive UI deployment claimed.",
+  "actions": "Read-only source/metadata and exact hashes; no install/build/runtime/behavior suite/deletion or repository edits",
+  "files": [
+    {
+      "path": "REVIEW.md",
+      "size": 4883,
+      "sha256": "c990cccb9f50094484f7620aa5936ed8fb8993555f99dc55e1de06f02804d0dd",
+      "git_blob": "ec757f3ecde8cb79c931a5252df1b1edd33d8447"
+    },
+    {
+      "path": "source-readback.json",
+      "size": 20719,
+      "sha256": "634f7eb0fdfad7aa9a970f1438933cc355411cd391907a954cd0b0a535b73ae8",
+      "git_blob": "590da77ed11c3bcba96872e3c613f0a0c4b9d6e8"
+    }
+  ],
+  "allowlist": {
+    "path": "PUBLICATION-ALLOWLIST.txt",
+    "size": 31,
+    "sha256": "84e45151574e9cbadd421627cbe1a626be279899b8379bb8852435bf9a7841ea",
+    "git_blob": "bd82a12816a93e12a165e2cf347a2074748db469"
+  },
+  "carriers": [
+    "PUBLICATION-ALLOWLIST.txt",
+    "receipt.json"
+  ],
+  "write_precursor": "The initial source-readback write failed with ENOSPC and left an empty file; this complete write was performed and verified after capacity returned. No partial source artifact is claimed."
+}

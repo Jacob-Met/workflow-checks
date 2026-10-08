@@ -1,0 +1,16 @@
+visit_id,patient_id,visit_date,clinic,therapist,payer_id,status,visit_type
+"U6,""quoted""",PT-A,2026-10-13,"Visit-only & 雪
+Floor 2","Therapist ""Q"", Ω",PAY-A,scheduled,re-eval
+D-FUTURE,PT-A,2026-10-22,South,"Therapist ""Q"", Ω",PAY-A,completed,treatment
+U3,PT-A,2026-10-10,,"Therapist ""Q"", Ω",PAY-A,scheduled,treatment
+P-PAST,PT-A,2026-10-08T00:30:00+02:00,Status-only,"Therapist ""Q"", Ω",PAY-A,scheduled,treatment
+U1,PT-A,2026-10-08,Satellite,"Therapist ""Q"", Ω",PAY-A,scheduled,treatment
+FREE,PT-C,2026-10-12,No-auth clinic,"Therapist ""Q"", Ω",PAY-FREE,scheduled,treatment
+"U5-<b data-pt-canary=""visit"">雪</b>",PT-A,2026-10-12,South,"Therapist ""Q"", Ω",PAY-A,scheduled,treatment
+D-PAST,PT-A,2026-10-01,Satellite,"Therapist ""Q"", Ω",PAY-A,completed,treatment
+U4,PT-A,2026-10-11,South,"Therapist ""Q"", Ω",PAY-A,scheduled,treatment
+CANCELLED,PT-A,2026-10-09,Satellite,"Therapist ""Q"", Ω",PAY-A,cancelled,treatment
+U2,PT-A,2026-10-09,South,"Therapist ""Q"", Ω",PAY-A,scheduled,treatment
+UNKNOWN,PT-C,2026-10-14,Unknown clinic,"Therapist ""Q"", Ω",PAY-MISSING,scheduled,treatment
+COVERED,PT-B,2026-10-10,Covered clinic,"Therapist ""Q"", Ω",PAY-A,scheduled,treatment
+NO-SHOW,PT-A,2026-10-11,Satellite,"Therapist ""Q"", Ω",PAY-A,no_show,treatment

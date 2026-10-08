@@ -1,0 +1,21 @@
+{
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "-B",
+    "-m",
+    "ptauth",
+    "run",
+    "--data",
+    "sample_data",
+    "--out",
+    "/dev/shm/pt-uncovered-visits-dc13ebf4687f/probe-output",
+    "--as-of",
+    "2026-09-28",
+    "--clinic-timezone",
+    "UTC"
+  ],
+  "cwd": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/baseline/pt_auth",
+  "returncode": 0,
+  "stdout": "[SYNTHETIC] as_of 2026-09-28: 40 patients, 842 visits, 46 auths\nclinic time zone: UTC\nworklist: 26 items (P1 11, P2 15, P3 0); 194 scheduled visits uncovered; 2 completed w/o auth\n  P1 SYN-1014 PAY-MA    AUTH-70039  UNCOVERED_VISIT,REAUTH_BY_VISITS   submit_by=2026-09-23\n  P1 SYN-1038 PAY-COMM1 AUTH-70111  UNCOVERED_VISIT,REAUTH_BY_DATE     submit_by=2026-09-26\n  P1 SYN-1037 PAY-COMM2 AUTH-70108  UNCOVERED_VISIT,REAUTH_BY_VISITS   submit_by=2026-09-27\n  P1 SYN-1026 PAY-COMM1 AUTH-70075  UNCOVERED_VISIT,REAUTH_BY_VISITS   submit_by=2026-09-27\n  P1 SYN-1023 PAY-COMM1 AUTH-70066  UNCOVERED_VISIT,REAUTH_BY_DATE     submit_by=2026-09-28\n  P1 SYN-1025 PAY-COMM2 AUTH-70072  UNCOVERED_VISIT,REAUTH_BY_DATE     submit_by=2026-09-29\n  P1 SYN-1027 PAY-COMM1 AUTH-70078  UNCOVERED_VISIT,REAUTH_BY_DATE     submit_by=2026-09-29\n  P1 SYN-1028 PAY-COMM2 AUTH-70081  UNCOVERED_VISIT,REAUTH_BY_VISITS   submit_by=2026-09-29\n  P1 SYN-1030 PAY-COMM2 AUTH-70087  UNCOVERED_VISIT,REAUTH_BY_DATE     submit_by=2026-09-30\n  P1 SYN-1024 PAY-WC    AUTH-70069  UNCOVERED_VISIT,REAUTH_BY_VISITS   submit_by=2026-11-17\n  P1 SYN-1005 PAY-COMM1 AUTH-70012  UNAUTHORIZED_DONE,UNCOVERED_VISIT  submit_by=-\n  P2 SYN-1017 PAY-MA    AUTH-70048  UNCOVERED_VISIT,REAUTH_BY_DATE     submit_by=2026-09-29\n  ... 14 more in /dev/shm/pt-uncovered-visits-dc13ebf4687f/probe-output/worklist.csv\n0 past scheduled visits need status review: /dev/shm/pt-uncovered-visits-dc13ebf4687f/probe-output/visit_status_review.csv\ndigest: /dev/shm/pt-uncovered-visits-dc13ebf4687f/probe-output/digest.html\n",
+  "stderr": ""
+}

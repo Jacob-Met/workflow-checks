@@ -1,0 +1,136 @@
+{
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "-B",
+    "-m",
+    "ptauth",
+    "run",
+    "--data",
+    "/dev/shm/pt-uncovered-visits-dc13ebf4687f/authored-input",
+    "--out",
+    "/dev/shm/pt-uncovered-visits-dc13ebf4687f/authored-output",
+    "--as-of",
+    "2026-10-08",
+    "--clinic-timezone",
+    "UTC"
+  ],
+  "returncode": 0,
+  "stdout": "[SYNTHETIC] as_of 2026-10-08: 3 patients, 13 visits, 2 auths\nclinic time zone: UTC\nworklist: 2 items (P1 1, P2 1, P3 0); 6 scheduled visits uncovered; 2 completed w/o auth\n  P1 SYN-A PAY-A     AUTH-OLD    UNAUTHORIZED_DONE,UNCOVERED_VISIT  submit_by=-\n  P2 SYN-B PAY-A     AUTH-COVERED REAUTH_BY_VISITS                   submit_by=2026-10-28\n1 past scheduled visits need status review: /dev/shm/pt-uncovered-visits-dc13ebf4687f/authored-output/visit_status_review.csv\ndigest: /dev/shm/pt-uncovered-visits-dc13ebf4687f/authored-output/digest.html\n",
+  "stderr": "",
+  "counts": {
+    "patients": 3,
+    "visits": 13,
+    "auths": 2,
+    "worklist": 2,
+    "p1": 1,
+    "p2": 1,
+    "p3": 0,
+    "uncovered_scheduled": 6,
+    "unauthorized_done": 2,
+    "past_scheduled": 1
+  },
+  "uncovered": [
+    {
+      "visit_id": "V-DONE-1",
+      "patient_id": "SYN-A",
+      "date": "2026-10-01",
+      "status": "completed",
+      "payer_id": "PAY-A"
+    },
+    {
+      "visit_id": "V-DONE-2",
+      "patient_id": "SYN-A",
+      "date": "2026-10-02",
+      "status": "completed",
+      "payer_id": "PAY-A"
+    },
+    {
+      "visit_id": "V-PAST-SCHEDULED",
+      "patient_id": "SYN-A",
+      "date": "2026-10-03",
+      "status": "scheduled",
+      "payer_id": "PAY-A"
+    },
+    {
+      "visit_id": "V-UPCOMING-1",
+      "patient_id": "SYN-A",
+      "date": "2026-10-08",
+      "status": "scheduled",
+      "payer_id": "PAY-A"
+    },
+    {
+      "visit_id": "V-UPCOMING-2",
+      "patient_id": "SYN-A",
+      "date": "2026-10-09",
+      "status": "scheduled",
+      "payer_id": "PAY-A"
+    },
+    {
+      "visit_id": "V-UPCOMING-3",
+      "patient_id": "SYN-A",
+      "date": "2026-10-10",
+      "status": "scheduled",
+      "payer_id": "PAY-A"
+    },
+    {
+      "visit_id": "V-UPCOMING-4",
+      "patient_id": "SYN-A",
+      "date": "2026-10-11",
+      "status": "scheduled",
+      "payer_id": "PAY-A"
+    },
+    {
+      "visit_id": "V-UPCOMING-5",
+      "patient_id": "SYN-A",
+      "date": "2026-10-12",
+      "status": "scheduled",
+      "payer_id": "PAY-A"
+    },
+    {
+      "visit_id": "V-UPCOMING-6",
+      "patient_id": "SYN-A",
+      "date": "2026-10-13",
+      "status": "scheduled",
+      "payer_id": "PAY-A"
+    }
+  ],
+  "worklist_details": [
+    [
+      "6 scheduled visit(s) outside any approved auth, first 2026-10-08 (V-UPCOMING-1, V-UPCOMING-2, V-UPCOMING-3, V-UPCOMING-4 ...)",
+      "completed visit 2026-10-01 (V-DONE-1) had no covering approved auth",
+      "completed visit 2026-10-02 (V-DONE-2) had no covering approved auth"
+    ],
+    [
+      "2 of 2 visits left (payer threshold 2)"
+    ]
+  ],
+  "uncovered_ids_missing_from_digest": [
+    "V-UPCOMING-5",
+    "V-UPCOMING-6"
+  ],
+  "past_status_review": [
+    "V-PAST-SCHEDULED"
+  ],
+  "input_files": [
+    {
+      "path": "authorizations.csv",
+      "size": 185,
+      "sha256": "799416fc5be487772717e243d94a381c277f76f9adcd36b5d97c493528411ddb"
+    },
+    {
+      "path": "patients.csv",
+      "size": 203,
+      "sha256": "84a2b4c63f18523dfd199d05384a4936e1e114c9d0cc543a564b6fdc45cd3f23"
+    },
+    {
+      "path": "payers.csv",
+      "size": 225,
+      "sha256": "61e1d6aa25e01147f495e7a99a285cb4b9d36653a4927190c9fe0c038156d0a2"
+    },
+    {
+      "path": "schedule.csv",
+      "size": 1113,
+      "sha256": "ef86bef593070f9c79001ec4ce21e58618a487d66919a7f4ebbefdcc2e02c15c"
+    }
+  ]
+}

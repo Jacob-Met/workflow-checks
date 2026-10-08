@@ -1,0 +1,153 @@
+{
+  "baseline": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/baseline/pt_auth",
+  "candidate": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate/pt_auth",
+  "data": "/dev/shm/work-portability-pt-uncovered-review-dc13ebf4687f/authored-input",
+  "empty_data": "/dev/shm/work-portability-pt-uncovered-review-dc13ebf4687f/empty-input",
+  "outputs": {
+    "baseline": "/dev/shm/work-portability-pt-uncovered-review-dc13ebf4687f/baseline-output",
+    "candidate": "/dev/shm/work-portability-pt-uncovered-review-dc13ebf4687f/candidate-output",
+    "empty": "/dev/shm/work-portability-pt-uncovered-review-dc13ebf4687f/empty-output",
+    "legacy": "/dev/shm/work-portability-pt-uncovered-review-dc13ebf4687f/legacy-output"
+  },
+  "expected": [
+    {
+      "visit_id": "D-PAST",
+      "visit_date": "2026-10-01",
+      "status": "completed",
+      "patient_id": "PT-A",
+      "patient_name": "Zoë <b data-pt-canary=\"patient\">雪</b> & \"A\"",
+      "clinic": "Satellite",
+      "therapist": "Therapist \"Q\", Ω",
+      "payer_id": "PAY-A",
+      "payer_name": "Known & <i data-pt-canary=\"payer\">Plan</i>",
+      "payer_rules_known": true,
+      "visit_type": "treatment",
+      "evidence": "schedule.csv:row10"
+    },
+    {
+      "visit_id": "U1",
+      "visit_date": "2026-10-08",
+      "status": "scheduled",
+      "patient_id": "PT-A",
+      "patient_name": "Zoë <b data-pt-canary=\"patient\">雪</b> & \"A\"",
+      "clinic": "Satellite",
+      "therapist": "Therapist \"Q\", Ω",
+      "payer_id": "PAY-A",
+      "payer_name": "Known & <i data-pt-canary=\"payer\">Plan</i>",
+      "payer_rules_known": true,
+      "visit_type": "treatment",
+      "evidence": "schedule.csv:row7"
+    },
+    {
+      "visit_id": "U2",
+      "visit_date": "2026-10-09",
+      "status": "scheduled",
+      "patient_id": "PT-A",
+      "patient_name": "Zoë <b data-pt-canary=\"patient\">雪</b> & \"A\"",
+      "clinic": "South",
+      "therapist": "Therapist \"Q\", Ω",
+      "payer_id": "PAY-A",
+      "payer_name": "Known & <i data-pt-canary=\"payer\">Plan</i>",
+      "payer_rules_known": true,
+      "visit_type": "treatment",
+      "evidence": "schedule.csv:row13"
+    },
+    {
+      "visit_id": "U3",
+      "visit_date": "2026-10-10",
+      "status": "scheduled",
+      "patient_id": "PT-A",
+      "patient_name": "Zoë <b data-pt-canary=\"patient\">雪</b> & \"A\"",
+      "clinic": "",
+      "therapist": "Therapist \"Q\", Ω",
+      "payer_id": "PAY-A",
+      "payer_name": "Known & <i data-pt-canary=\"payer\">Plan</i>",
+      "payer_rules_known": true,
+      "visit_type": "treatment",
+      "evidence": "schedule.csv:row5"
+    },
+    {
+      "visit_id": "U4",
+      "visit_date": "2026-10-11",
+      "status": "scheduled",
+      "patient_id": "PT-A",
+      "patient_name": "Zoë <b data-pt-canary=\"patient\">雪</b> & \"A\"",
+      "clinic": "South",
+      "therapist": "Therapist \"Q\", Ω",
+      "payer_id": "PAY-A",
+      "payer_name": "Known & <i data-pt-canary=\"payer\">Plan</i>",
+      "payer_rules_known": true,
+      "visit_type": "treatment",
+      "evidence": "schedule.csv:row11"
+    },
+    {
+      "visit_id": "U5-<b data-pt-canary=\"visit\">雪</b>",
+      "visit_date": "2026-10-12",
+      "status": "scheduled",
+      "patient_id": "PT-A",
+      "patient_name": "Zoë <b data-pt-canary=\"patient\">雪</b> & \"A\"",
+      "clinic": "South",
+      "therapist": "Therapist \"Q\", Ω",
+      "payer_id": "PAY-A",
+      "payer_name": "Known & <i data-pt-canary=\"payer\">Plan</i>",
+      "payer_rules_known": true,
+      "visit_type": "treatment",
+      "evidence": "schedule.csv:row9"
+    },
+    {
+      "visit_id": "U6,\"quoted\"",
+      "visit_date": "2026-10-13",
+      "status": "scheduled",
+      "patient_id": "PT-A",
+      "patient_name": "Zoë <b data-pt-canary=\"patient\">雪</b> & \"A\"",
+      "clinic": "Visit-only & 雪\nFloor 2",
+      "therapist": "Therapist \"Q\", Ω",
+      "payer_id": "PAY-A",
+      "payer_name": "Known & <i data-pt-canary=\"payer\">Plan</i>",
+      "payer_rules_known": true,
+      "visit_type": "re-eval",
+      "evidence": "schedule.csv:row3"
+    },
+    {
+      "visit_id": "UNKNOWN",
+      "visit_date": "2026-10-14",
+      "status": "scheduled",
+      "patient_id": "PT-C",
+      "patient_name": "",
+      "clinic": "Unknown clinic",
+      "therapist": "Therapist \"Q\", Ω",
+      "payer_id": "PAY-MISSING",
+      "payer_name": "",
+      "payer_rules_known": false,
+      "visit_type": "treatment",
+      "evidence": "schedule.csv:row14"
+    },
+    {
+      "visit_id": "D-FUTURE",
+      "visit_date": "2026-10-22",
+      "status": "completed",
+      "patient_id": "PT-A",
+      "patient_name": "Zoë <b data-pt-canary=\"patient\">雪</b> & \"A\"",
+      "clinic": "South",
+      "therapist": "Therapist \"Q\", Ω",
+      "payer_id": "PAY-A",
+      "payer_name": "Known & <i data-pt-canary=\"payer\">Plan</i>",
+      "payer_rules_known": true,
+      "visit_type": "treatment",
+      "evidence": "schedule.csv:row4"
+    }
+  ],
+  "state": {
+    "PT-A|PAY-A|OLD-A": {
+      "state": "approved",
+      "note": "Authored staff note: 雪 & \"unchanged\"",
+      "at": "2026-10-07T09:00:00+00:00"
+    }
+  },
+  "special_clinic": "Visit-only & 雪\nFloor 2",
+  "u5": "U5-<b data-pt-canary=\"visit\">雪</b>",
+  "u6": "U6,\"quoted\"",
+  "patient_name": "Zoë <b data-pt-canary=\"patient\">雪</b> & \"A\"",
+  "payer_name": "Known & <i data-pt-canary=\"payer\">Plan</i>",
+  "therapist": "Therapist \"Q\", Ω"
+}

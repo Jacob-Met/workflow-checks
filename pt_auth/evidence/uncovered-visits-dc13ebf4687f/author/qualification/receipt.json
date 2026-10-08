@@ -1,0 +1,131 @@
+{
+  "repository": "Jacob-Met/workflow-checks",
+  "baseline_head": "9e931fa9f42033bf2368f7149684fb5631345715",
+  "candidate_files": {
+    "pt_auth/README.md": "17ee483cb2e24393f1ed4b501e2164c289cfb7310891a1bc510cc283f13b4879",
+    "pt_auth/ptauth/__init__.py": "71e1527f153c607b679485e4954af1b3ec6a843b041562eb07f4d36e08fd231c",
+    "pt_auth/ptauth/__main__.py": "4b1afbca74a10abc3cff7b4e5a11b558bf619e45b89709faf9225a474a2a250f",
+    "pt_auth/ptauth/cli.py": "55cce5ca33abc027f8f7c2afe1ae3eae32b9412d612b41d3c72a4037f1933a96",
+    "pt_auth/ptauth/data.py": "eeab8ab5b2b72524148969de0d13b27126cc64c4ec79b68a147b51b25a3741e2",
+    "pt_auth/ptauth/engine.py": "bfa7049e9b133d654ce947b135c17ac401bd7b1fcd76350bdb10de5b7a1ad1f7",
+    "pt_auth/ptauth/report.py": "20cbc86e153b9af5151fd3e74cb370298de4692c81b3546a214eb2cfa8307df7",
+    "pt_auth/ptauth/synth.py": "b82a34447e43dacbe46ed06e60b693ed216e87f15892ae297c682aa5a3f139fd",
+    "pt_auth/ptauth/ui.html": "fddb0d6e5fe587f961ac602660161728195ff5904966a54577f8d4dcfcd41242",
+    "pt_auth/ptauth/uncovered.py": "21e92509df706e504a8630f3383ea4fe98d03047d2e4b070f3fdd188d995350e",
+    "pt_auth/ptauth/web.py": "2f7d01cda0bb42e907d135d4a34cedb655b780c646cbe01ed4050ab7c11b2b23",
+    "pt_auth/sample_data/authorizations.csv": "306cae3c27895d2b81978d4cf3115e867b8853edb4939ec8f7e733a7f27b0657",
+    "pt_auth/sample_data/expected.json": "0652052b6f37ce068cb77d4b8cde0f5a75d9b275be51b05f570c35a60a8a6d02",
+    "pt_auth/sample_data/patients.csv": "1dd9bc97889ca4a2e46e19804841d4af29ada284ede22d328370d20fb520e6e5",
+    "pt_auth/sample_data/payers.csv": "81f143eed15c9ce613ee7cf372e51d6223a44700c877cc42d283a824d30900ed",
+    "pt_auth/sample_data/schedule.csv": "a5f9177b2e0fb9b4397a83839961d11c947e74cc2f13d5de29a31f39254e5198",
+    "pt_auth/tests/browser/uncovered_review.test.cjs": "25cac361af6bf20b93d017586087db0457669ba386ae47144db184f235e9037c",
+    "pt_auth/tests/test_uncovered_review.py": "df3e9acdba7db9449988f66c0b9796cec0c7e59d354d9436fbe57737927338fb"
+  },
+  "baseline_files": {
+    "pt_auth/ptauth/__init__.py": "71e1527f153c607b679485e4954af1b3ec6a843b041562eb07f4d36e08fd231c",
+    "pt_auth/ptauth/__main__.py": "4b1afbca74a10abc3cff7b4e5a11b558bf619e45b89709faf9225a474a2a250f",
+    "pt_auth/ptauth/cli.py": "ec368a77a8c96e68a86718150bc35138ce5cdbd621b51988daf3568e3d342222",
+    "pt_auth/ptauth/data.py": "eeab8ab5b2b72524148969de0d13b27126cc64c4ec79b68a147b51b25a3741e2",
+    "pt_auth/ptauth/engine.py": "bfa7049e9b133d654ce947b135c17ac401bd7b1fcd76350bdb10de5b7a1ad1f7",
+    "pt_auth/ptauth/report.py": "794cf0a631b0f1a33ea85df4de387be0ce12d2744e8c8cb1308a61ce99516740",
+    "pt_auth/ptauth/synth.py": "b82a34447e43dacbe46ed06e60b693ed216e87f15892ae297c682aa5a3f139fd",
+    "pt_auth/ptauth/ui.html": "c94b54f51fbdedc6fe19bb36ac8e74973c834fc5a0ffa6b474d63eb61edc61c4",
+    "pt_auth/ptauth/web.py": "2f7d01cda0bb42e907d135d4a34cedb655b780c646cbe01ed4050ab7c11b2b23",
+    "pt_auth/sample_data/authorizations.csv": "306cae3c27895d2b81978d4cf3115e867b8853edb4939ec8f7e733a7f27b0657",
+    "pt_auth/sample_data/expected.json": "0652052b6f37ce068cb77d4b8cde0f5a75d9b275be51b05f570c35a60a8a6d02",
+    "pt_auth/sample_data/patients.csv": "1dd9bc97889ca4a2e46e19804841d4af29ada284ede22d328370d20fb520e6e5",
+    "pt_auth/sample_data/payers.csv": "81f143eed15c9ce613ee7cf372e51d6223a44700c877cc42d283a824d30900ed",
+    "pt_auth/sample_data/schedule.csv": "a5f9177b2e0fb9b4397a83839961d11c947e74cc2f13d5de29a31f39254e5198"
+  },
+  "runs": [
+    {
+      "label": "baseline-normal",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_uncovered_review.py",
+        "-v"
+      ],
+      "source": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/baseline/pt_auth",
+      "returncode": 1,
+      "expected_nonzero": true,
+      "expected_contract": true
+    },
+    {
+      "label": "candidate-normal",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_uncovered_review.py",
+        "-v"
+      ],
+      "source": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate/pt_auth",
+      "returncode": 0,
+      "expected_nonzero": false,
+      "expected_contract": true
+    },
+    {
+      "label": "candidate-optimized",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "-O",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_uncovered_review.py",
+        "-v"
+      ],
+      "source": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate/pt_auth",
+      "returncode": 0,
+      "expected_nonzero": false,
+      "expected_contract": true
+    },
+    {
+      "label": "baseline-ui",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "--test",
+        "/dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate/pt_auth/tests/browser/uncovered_review.test.cjs"
+      ],
+      "ui_source": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/baseline/pt_auth/ptauth/ui.html",
+      "returncode": 1,
+      "expected_nonzero": true,
+      "expected_contract": true
+    },
+    {
+      "label": "candidate-ui",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "--test",
+        "/dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate/pt_auth/tests/browser/uncovered_review.test.cjs"
+      ],
+      "ui_source": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate/pt_auth/ptauth/ui.html",
+      "returncode": 0,
+      "expected_nonzero": false,
+      "expected_contract": true
+    }
+  ],
+  "source_unchanged": true,
+  "interpretation": "9 new Python unittest methods, including the7-case Node UI child, pass in normal and optimized Python. Original source retains expected feature failures. Separate UI comparison uses identical authored candidate summary with exact original/candidate inline scripts.",
+  "limits": [
+    "No pytest installation or full inherited97-case suite was run",
+    "Node UI check has authored DOM/API boundaries; no browser or layout claim",
+    "All input/state is synthetic and local; existing ephemeral loopback HTTP app only"
+  ]
+}

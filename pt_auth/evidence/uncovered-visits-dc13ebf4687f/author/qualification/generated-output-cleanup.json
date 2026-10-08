@@ -1,0 +1,43 @@
+{
+  "purpose": "Free only regenerable generated shipped-candidate output after exact hashes and original CSV equality were recorded. Frozen source, fixtures, original outputs and qualification receipts remain unchanged.",
+  "removed_generated_files": [
+    {
+      "path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate-shipped-output/audit.jsonl",
+      "size": 281,
+      "sha256": "6e1813b7d9bd45dc9dd5502b20d60a7ebe14d0872037506d670e61b36240260f"
+    },
+    {
+      "path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate-shipped-output/digest.html",
+      "size": 79198,
+      "sha256": "0d6d4bbe45afb01c65964c164d21fd981d458b96a1a5d6022e14903d1cc122ca"
+    },
+    {
+      "path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate-shipped-output/ledger.csv",
+      "size": 3746,
+      "sha256": "ee571c8339864dc97d217e7b31a358fc9b06609328c1790076e81c530be93d96"
+    },
+    {
+      "path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate-shipped-output/summary.json",
+      "size": 170131,
+      "sha256": "b16d2b77eed1ec9a2e597ba65190431037fe147085edfed8c359d9f71dc4a869"
+    },
+    {
+      "path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate-shipped-output/uncovered_visits.csv",
+      "size": 31101,
+      "sha256": "adef91b6f7086f8f4e192a6267a84ad9e63b437e51b62df115a133497422a8ec"
+    },
+    {
+      "path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate-shipped-output/visit_status_review.csv",
+      "size": 125,
+      "sha256": "9cb3e3e82e30935f57448ed826dbd8dab78e39355e3bebba59c478fa355ee170"
+    },
+    {
+      "path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate-shipped-output/worklist.csv",
+      "size": 14972,
+      "sha256": "73a95f16776325610d3d4049db7313407dd904f39ac2e375335a5705b392a9be"
+    }
+  ],
+  "preservation_receipt_sha256": "fc0ae0c57ebe5fbe218069621db02fe36490acd17ab0da6ef87065fca0574408",
+  "source": "one candidate CLI run recorded in preservation.json; no new test or application run",
+  "free_bytes_after_removal": 888832
+}

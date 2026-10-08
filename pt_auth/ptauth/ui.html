@@ -40,7 +40,7 @@ small{color:var(--mut)}.hidden{display:none}tr.done{opacity:.55}details ul{margi
 </header>
 <main>
   <div class="cards" id="cards"></div>
-  <div class="tabs" id="tabs"><button data-t="work" class="on">Daily worklist</button><button data-t="review">Visit status review</button><button data-t="ledger">Auth ledger</button><button data-t="files">Digest &amp; exports</button></div>
+  <div class="tabs" id="tabs"><button data-t="work" class="on">Daily worklist</button><button data-t="uncovered">Uncovered visits</button><button data-t="review">Visit status review</button><button data-t="ledger">Auth ledger</button><button data-t="files">Digest &amp; exports</button></div>
   <section id="t-work">
     <div class="filters">
       <select id="fp"><option value="">All priorities</option><option>P1</option><option>P2</option><option>P3</option></select>
@@ -50,6 +50,18 @@ small{color:var(--mut)}.hidden{display:none}tr.done{opacity:.55}details ul{margi
       <small id="shown"></small>
     </div>
     <div id="work"></div>
+  </section>
+  <section id="t-uncovered" class="hidden">
+    <h2>Uncovered visits</h2>
+    <p id="uc-note"></p>
+    <div class="filters" id="uc-filters">
+      <label>Recorded status <select id="uc-status"><option value="">Scheduled + completed</option><option value="scheduled">Upcoming scheduled</option><option value="completed">Completed</option></select></label>
+      <label>Visit clinic <select id="uc-clinic"><option value="">All visit clinics</option></select></label>
+      <label>Search <input type="search" id="uc-search" placeholder="patient / visit / payer"></label>
+    </div>
+    <p id="uc-shown" class="review-count" aria-live="polite"></p>
+    <div id="uc-rows"></div>
+    <p id="uc-export"></p>
   </section>
   <section id="t-review" class="hidden"></section>
   <section id="t-ledger" class="hidden"></section>
@@ -105,6 +117,7 @@ function render() {
     S.states = await api("/api/state", {key: sel.dataset.k, state: sel.value}); render();
   });
 
+  renderUncoveredReview();
   const review = S.visit_status_review;
   $("#t-review").innerHTML = `<h2>Past appointments still marked scheduled</h2>` + (review == null
     ? `<p>Run worklist to build the visit-status review for this saved report.</p>`
@@ -126,10 +139,50 @@ function render() {
       <td>${l.remaining}</td><td style="color:${l.remaining_after_scheduled < 0 ? "#b91c1c" : "inherit"}">${l.remaining_after_scheduled}</td>
       <td>${l.days_left}</td><td>${esc(l.status)}</td></tr>`).join("")}</table>`;
   $("#t-files").innerHTML = `<ul><li><a href="/out/digest.html" target="_blank">Daily digest (printable HTML)</a></li>
-    ${["worklist.csv", "ledger.csv", ...(review == null ? [] : ["visit_status_review.csv"]), "summary.json", "audit.jsonl"].map(f => `<li><a href="/out/${f}" download>${f}</a></li>`).join("")}</ul>
+    ${["worklist.csv", "ledger.csv", ...(review == null ? [] : ["visit_status_review.csv"]), ...(Array.isArray(S.uncovered_review) ? ["uncovered_visits.csv"] : []), "summary.json", "audit.jsonl"].map(f => `<li><a href="/out/${f}" download>${f}</a></li>`).join("")}</ul>
     <p><small>Generated ${esc(S.generated_at)} for as-of date ${esc(S.as_of)}.
     Clinic time zone: ${esc(S.clinic_timezone || "unrecorded")}.</small></p>`;
 }
+
+function renderUncoveredReview() {
+  if (!S) return;
+  const review = S.uncovered_review;
+  const available = Array.isArray(review);
+  ["#uc-status", "#uc-clinic", "#uc-search"].forEach(id => $(id).disabled = !available);
+  $("#uc-note").textContent = available ? S.uncovered_review_note : "Run worklist to build uncovered-visit details for this saved report.";
+  if (!available) {
+    $("#uc-shown").textContent = "";
+    $("#uc-rows").innerHTML = "";
+    $("#uc-export").innerHTML = "";
+    return;
+  }
+  const clinicKey = name => JSON.stringify(name);
+  const clinics = [...new Set(review.map(row => row.clinic))].sort();
+  const previousClinic = $("#uc-clinic").value;
+  $("#uc-clinic").innerHTML = '<option value="">All visit clinics</option>' + clinics.map(name =>
+    `<option value="${esc(clinicKey(name))}">${esc(name || "Unrecorded clinic")}</option>`).join("");
+  $("#uc-clinic").value = clinics.some(name => clinicKey(name) === previousClinic) ? previousClinic : "";
+  const status = $("#uc-status").value, clinic = $("#uc-clinic").value;
+  const query = $("#uc-search").value.toLowerCase();
+  const rows = review.filter(row => (!status || row.status === status)
+    && (!clinic || clinicKey(row.clinic) === clinic)
+    && (!query || [row.visit_id, row.patient_id, row.patient_name, row.payer_id, row.payer_name].join(" ").toLowerCase().includes(query)));
+  $("#uc-shown").textContent = `${rows.length} of ${review.length} appointments · as of ${S.as_of}`;
+  $("#uc-rows").innerHTML = rows.length ? `<div class="review-table" tabindex="0" role="region" aria-label="Uncovered appointments"><table>
+    <thead><tr><th scope="col">Visit / type</th><th scope="col">Date</th><th scope="col">Recorded status</th><th scope="col">Patient</th><th scope="col">Visit clinic</th><th scope="col">Therapist</th><th scope="col">Payer</th><th scope="col">Source row</th></tr></thead><tbody>${
+    rows.map(row => `<tr><td><b>${esc(row.visit_id)}</b><br><small>${esc(row.visit_type)}</small></td>
+      <td>${esc(row.visit_date)}</td><td>${esc(row.status)}</td>
+      <td>${esc(row.patient_name || "Name unavailable")}<br><small>${esc(row.patient_id)}</small></td>
+      <td>${esc(row.clinic || "Unrecorded")}</td><td>${esc(row.therapist || "Unrecorded")}</td>
+      <td>${esc(row.payer_name || "Name unavailable")}<br><small>${esc(row.payer_id)}${row.payer_rules_known ? "" : "<br>Rules unavailable"}</small></td>
+      <td>${esc(row.evidence || "Unrecorded")}</td></tr>`).join("")}</tbody></table></div>`
+    : (review.length ? "<p>No appointments match these filters.</p>" : "<p>No appointments are in this review for this report.</p>");
+  $("#uc-export").innerHTML = '<a href="/out/uncovered_visits.csv" download>Download all uncovered visits CSV</a> <small>Complete review; independent of these filters.</small>';
+}
+$("#uc-status").onchange = renderUncoveredReview;
+$("#uc-clinic").onchange = renderUncoveredReview;
+$("#uc-search").oninput = renderUncoveredReview;
+
 document.querySelectorAll("#tabs button").forEach(b => b.onclick = () => {
   document.querySelectorAll("#tabs button").forEach(x => x.classList.toggle("on", x === b));
   document.querySelectorAll("main > section").forEach(s => s.classList.toggle("hidden", s.id !== "t-" + b.dataset.t));

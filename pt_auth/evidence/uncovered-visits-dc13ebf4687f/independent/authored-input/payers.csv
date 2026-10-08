@@ -1,0 +1,3 @@
+payer_id,payer_name,requires_auth,reauth_visits_before,reauth_days_before,turnaround_days,annual_visit_limit,counts_evals,checklist
+PAY-A,"Known & <i data-pt-canary=""payer"">Plan</i>",Y,0,0,0,,Y,Auth record|Visit record
+PAY-FREE,No-auth control,N,0,0,0,,Y,

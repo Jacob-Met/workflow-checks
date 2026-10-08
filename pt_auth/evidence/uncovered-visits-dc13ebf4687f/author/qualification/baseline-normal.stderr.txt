@@ -1,0 +1,242 @@
+test_actual_cli_reports_complete_export (test_uncovered_review.UncoveredReviewTests.test_actual_cli_reports_complete_export) ... FAIL
+test_actual_inline_ui_through_node (test_uncovered_review.UncoveredReviewTests.test_actual_inline_ui_through_node) ... FAIL
+test_clinic_timezone_already_controls_the_review_date (test_uncovered_review.UncoveredReviewTests.test_clinic_timezone_already_controls_the_review_date) ... ERROR
+test_complete_review_matches_the_existing_engine_and_source_rows (test_uncovered_review.UncoveredReviewTests.test_complete_review_matches_the_existing_engine_and_source_rows) ... ERROR
+test_csv_and_print_preserve_all_rows_and_literal_multiline_context (test_uncovered_review.UncoveredReviewTests.test_csv_and_print_preserve_all_rows_and_literal_multiline_context) ... ERROR
+test_existing_http_csv_and_staff_states_keep_the_review_independent (test_uncovered_review.UncoveredReviewTests.test_existing_http_csv_and_staff_states_keep_the_review_independent) ... ERROR
+test_latest_source_corrections_clear_review_without_hiding_past_status (test_uncovered_review.UncoveredReviewTests.test_latest_source_corrections_clear_review_without_hiding_past_status) ... ERROR
+test_older_printable_summary_requests_rerun_instead_of_false_zero (test_uncovered_review.UncoveredReviewTests.test_older_printable_summary_requests_rerun_instead_of_false_zero) ... /opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/csv.py:124: ResourceWarning: unclosed <socket.socket [closed] fd=4, family=2, type=1, proto=6>
+  d = dict(zip(self.fieldnames, row))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+FAIL
+test_unknown_context_and_future_completed_keep_recorded_facts (test_uncovered_review.UncoveredReviewTests.test_unknown_context_and_future_completed_keep_recorded_facts) ... ERROR
+
+======================================================================
+ERROR: test_clinic_timezone_already_controls_the_review_date (test_uncovered_review.UncoveredReviewTests.test_clinic_timezone_already_controls_the_review_date)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate/pt_auth/tests/test_uncovered_review.py", line 147, in test_clinic_timezone_already_controls_the_review_date
+    self.assertEqual([v["visit_id"] for v in utc["uncovered_review"]], ["V-ZONE"])
+                                             ~~~^^^^^^^^^^^^^^^^^^^^
+KeyError: 'uncovered_review'
+
+======================================================================
+ERROR: test_complete_review_matches_the_existing_engine_and_source_rows (test_uncovered_review.UncoveredReviewTests.test_complete_review_matches_the_existing_engine_and_source_rows)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate/pt_auth/tests/test_uncovered_review.py", line 63, in test_complete_review_matches_the_existing_engine_and_source_rows
+    rows = summary["uncovered_review"]
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^
+KeyError: 'uncovered_review'
+
+======================================================================
+ERROR: test_csv_and_print_preserve_all_rows_and_literal_multiline_context (test_uncovered_review.UncoveredReviewTests.test_csv_and_print_preserve_all_rows_and_literal_multiline_context)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate/pt_auth/tests/test_uncovered_review.py", line 92, in test_csv_and_print_preserve_all_rows_and_literal_multiline_context
+    rows = self.csv_rows(out / "uncovered_visits.csv")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate/pt_auth/tests/test_uncovered_review.py", line 52, in csv_rows
+    with path.open(newline="", encoding="utf-8") as stream:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/dev/shm/pt-uncovered-visits-dc13ebf4687f/test-work/pt-uncovered-6efesi4n/out-1/uncovered_visits.csv'
+
+======================================================================
+ERROR: test_existing_http_csv_and_staff_states_keep_the_review_independent (test_uncovered_review.UncoveredReviewTests.test_existing_http_csv_and_staff_states_keep_the_review_independent)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate/pt_auth/tests/test_uncovered_review.py", line 180, in test_existing_http_csv_and_staff_states_keep_the_review_independent
+    exported = get("/out/uncovered_visits.csv")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate/pt_auth/tests/test_uncovered_review.py", line 177, in get
+    with opener.open(base + route, timeout=5) as response:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/urllib/request.py", line 521, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/urllib/request.py", line 630, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/urllib/request.py", line 559, in error
+    return self._call_chain(*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/urllib/request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/urllib/request.py", line 639, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 404: Not Found
+
+======================================================================
+ERROR: test_latest_source_corrections_clear_review_without_hiding_past_status (test_uncovered_review.UncoveredReviewTests.test_latest_source_corrections_clear_review_without_hiding_past_status)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate/pt_auth/tests/test_uncovered_review.py", line 120, in test_latest_source_corrections_clear_review_without_hiding_past_status
+    self.assertEqual(len(first["uncovered_review"]), 8)
+                         ~~~~~^^^^^^^^^^^^^^^^^^^^
+KeyError: 'uncovered_review'
+
+======================================================================
+ERROR: test_unknown_context_and_future_completed_keep_recorded_facts (test_uncovered_review.UncoveredReviewTests.test_unknown_context_and_future_completed_keep_recorded_facts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate/pt_auth/tests/test_uncovered_review.py", line 109, in test_unknown_context_and_future_completed_keep_recorded_facts
+    row = next(r for r in summary["uncovered_review"] if r["visit_id"] == "V-UNKNOWN")
+                          ~~~~~~~^^^^^^^^^^^^^^^^^^^^
+KeyError: 'uncovered_review'
+
+======================================================================
+FAIL: test_actual_cli_reports_complete_export (test_uncovered_review.UncoveredReviewTests.test_actual_cli_reports_complete_export)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate/pt_auth/tests/test_uncovered_review.py", line 207, in test_actual_cli_reports_complete_export
+    self.assertIn("8 uncovered visits to inspect: ", child.stdout)
+AssertionError: '8 uncovered visits to inspect: ' not found in '[SYNTHETIC] as_of 2026-10-08: 3 patients, 13 visits, 2 auths\nclinic time zone: UTC\nworklist: 2 items (P1 1, P2 1, P3 0); 6 scheduled visits uncovered; 2 completed w/o auth\n  P1 SYN-A PAY-A     AUTH-OLD    UNAUTHORIZED_DONE,UNCOVERED_VISIT  submit_by=-\n  P2 SYN-B PAY-A     AUTH-COVERED REAUTH_BY_VISITS                   submit_by=2026-10-28\n1 past scheduled visits need status review: /dev/shm/pt-uncovered-visits-dc13ebf4687f/test-work/pt-uncovered-wpfgjz33/cli-output/visit_status_review.csv\ndigest: /dev/shm/pt-uncovered-visits-dc13ebf4687f/test-work/pt-uncovered-wpfgjz33/cli-output/digest.html\n'
+
+======================================================================
+FAIL: test_actual_inline_ui_through_node (test_uncovered_review.UncoveredReviewTests.test_actual_inline_ui_through_node)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate/pt_auth/tests/test_uncovered_review.py", line 219, in test_actual_inline_ui_through_node
+    self.assertEqual(child.returncode, 0, child.stdout + child.stderr)
+AssertionError: 1 != 0 : ✖ the complete review is reachable and contains all eight appointments (10.057071ms)
+✖ recorded-status filtering keeps complete scheduled and completed groups (5.3903ms)
+✖ actual blank clinic and literal search combine without colliding with All (0.736959ms)
+✖ field text stays escaped in rows and clinic option attributes (0.410328ms)
+✖ CSV link stays explicitly complete and independent of filters (3.931905ms)
+✖ old saved summaries require a rerun while a recorded empty review is zero (2.276605ms)
+✖ staff approval and worklist filters do not hide or mutate the visit review (2.803298ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 0
+ℹ fail 7
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 137.444014
+
+✖ failing tests:
+
+test at tests/browser/uncovered_review.test.cjs:64:1
+✖ the complete review is reachable and contains all eight appointments (10.057071ms)
+  AssertionError [ERR_ASSERTION]: missing Uncovered visits navigation
+      at TestContext.<anonymous> (/dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate/pt_auth/tests/browser/uncovered_review.test.cjs:67:10)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests/browser/uncovered_review.test.cjs:80:1
+✖ recorded-status filtering keeps complete scheduled and completed groups (5.3903ms)
+  AssertionError [ERR_ASSERTION]: #uc-status has no handler
+  + actual - expected
+  
+  + 'undefined'
+  - 'function'
+  
+      at change (/dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate/pt_auth/tests/browser/uncovered_review.test.cjs:56:10)
+      at TestContext.<anonymous> (/dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate/pt_auth/tests/browser/uncovered_review.test.cjs:82:3)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 'undefined',
+    expected: 'function',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/browser/uncovered_review.test.cjs:92:1
+✖ actual blank clinic and literal search combine without colliding with All (0.736959ms)
+  TypeError: Cannot read properties of undefined (reading 'at')
+      at TestContext.<anonymous> (/dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate/pt_auth/tests/browser/uncovered_review.test.cjs:94:26)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+
+test at tests/browser/uncovered_review.test.cjs:110:1
+✖ field text stays escaped in rows and clinic option attributes (0.410328ms)
+  TypeError: Cannot read properties of undefined (reading '0')
+      at TestContext.<anonymous> (/dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate/pt_auth/tests/browser/uncovered_review.test.cjs:112:37)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+
+test at tests/browser/uncovered_review.test.cjs:129:1
+✖ CSV link stays explicitly complete and independent of filters (3.931905ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /href="\/out\/uncovered_visits.csv" download/. Input:
+  
+  ''
+  
+      at TestContext.<anonymous> (/dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate/pt_auth/tests/browser/uncovered_review.test.cjs:132:10)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '',
+    expected: /href="\/out\/uncovered_visits.csv" download/,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests/browser/uncovered_review.test.cjs:141:1
+✖ old saved summaries require a rerun while a recorded empty review is zero (2.276605ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /Run worklist/. Input:
+  
+  ''
+  
+      at TestContext.<anonymous> (/dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate/pt_auth/tests/browser/uncovered_review.test.cjs:146:10)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '',
+    expected: /Run worklist/,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests/browser/uncovered_review.test.cjs:159:1
+✖ staff approval and worklist filters do not hide or mutate the visit review (2.803298ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /^8 of 8 appointments/. Input:
+  
+  ''
+  
+      at TestContext.<anonymous> (/dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate/pt_auth/tests/browser/uncovered_review.test.cjs:168:10)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '',
+    expected: /^8 of 8 appointments/,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+
+======================================================================
+FAIL: test_older_printable_summary_requests_rerun_instead_of_false_zero (test_uncovered_review.UncoveredReviewTests.test_older_printable_summary_requests_rerun_instead_of_false_zero)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate/pt_auth/tests/test_uncovered_review.py", line 160, in test_older_printable_summary_requests_rerun_instead_of_false_zero
+    self.assertIn("Run worklist to build uncovered-visit details for this saved report.", printable)
+AssertionError: 'Run worklist to build uncovered-visit details for this saved report.' not found in '<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Auth worklist 2026-10-08</title>\n<style>body{font:13px/1.4 system-ui,Segoe UI,Arial,sans-serif;margin:20px;color:#1b1f24}\n.banner{background:#fde2e1;border:1px solid #c0392b;padding:8px 12px;font-weight:700;border-radius:6px}\ntable{border-collapse:collapse;width:100%}th,td{border:1px solid #ccd;padding:4px 6px;vertical-align:top;text-align:left}\nth{background:#eef1f5}tr.P1 td:first-child{background:#fde2e1}tr.P2 td:first-child{background:#fff4ce}\nsmall{color:#666}.ck{border:1px solid #ccd;border-radius:6px;padding:6px 10px;margin:6px 0;break-inside:avoid}\n.ck ul{margin:4px 0;padding-left:18px;list-style:none}</style></head><body>\n<div class="banner">SYNTHETIC DATA - NOT REAL PATIENTS. Proof of concept; payer rules are placeholders. Nothing is submitted to any payer.</div>\n<h1>Daily authorization worklist &mdash; 2026-10-08</h1>\n<p>Clinic time zone: <b>UTC</b>.\nDates and times without an offset keep their written calendar date.</p>\n<p>1 act-today (P1) &middot; 1 this week (P2) &middot; 0 heads-up (P3) &middot;\n6 scheduled visits outside an approved auth &middot; 2 completed visits without auth</p>\n<table><tr><th>Pri</th><th>Patient</th><th>Clinic</th><th>Payer / auth</th><th>Reason</th><th>Used / auth\'d</th>\n<th>Auth end</th><th>Next visit</th><th>Submit by</th><th>Detail</th></tr><tr class=\'P1\'><td><b>P1</b></td><td>Test &lt;A&gt; &amp; &quot;café&quot;<br><small>SYN-A</small></td><td>Home clinic (synthetic)</td><td>Placeholder &lt;A&gt; &amp; plan<br><small>AUTH-OLD</small></td><td>UNAUTHORIZED_DONE<br>UNCOVERED_VISIT</td><td>1 / 1</td><td>2026-09-30<br><small>-8 d</small></td><td>2026-10-08</td><td>-</td><td><small>6 scheduled visit(s) outside any approved auth, first 2026-10-08 (V-UPCOMING-1, V-UPCOMING-2, V-UPCOMING-3, V-UPCOMING-4 ...)<br>completed visit 2026-10-01 (V-DONE-1) had no covering approved auth<br>completed visit 2026-10-02 (V-DONE-2) had no covering approved auth</small></td></tr><tr class=\'P2\'><td><b>P2</b></td><td>Test Covered<br><small>SYN-B</small></td><td>Other clinic (synthetic)</td><td>Placeholder &lt;A&gt; &amp; plan<br><small>AUTH-COVERED</small></td><td>REAUTH_BY_VISITS</td><td>0 / 2</td><td>2026-10-31<br><small>23 d</small></td><td>2026-10-09</td><td>2026-10-28</td><td><small>2 of 2 visits left (payer threshold 2)</small></td></tr></table>\n<h2>Re-auth packet checklists (pre-filled from payer rules table)</h2><div class=\'ck\'><b>Test &lt;A&gt; &amp; &quot;café&quot;</b> &middot; Placeholder &lt;A&gt; &amp; plan &middot; AUTH-OLD<ul><li>&#9744; Auth request</li></ul></div><div class=\'ck\'><b>Test Covered</b> &middot; Placeholder &lt;A&gt; &amp; plan &middot; AUTH-COVERED<ul><li>&#9744; Auth request</li></ul></div>\n<h2>Visit status review &mdash; past appointments still marked scheduled</h2>\n<p>Review these past dates in the source schedule, correct their status there, then run again. Any authorization visit shown below stays reserved until the corrected export is loaded.</p><table><tr><th>Visit</th><th>Date</th><th>Patient</th><th>Clinic</th><th>Payer</th><th>Reserved auth</th><th>Source row</th></tr><tr><td>V-PAST-SCHEDULED</td><td>2026-10-03<br><small>5 days ago</small></td><td>Test &lt;A&gt; &amp; &quot;café&quot;<br><small>SYN-A</small></td><td>Actual clinic &lt;A&gt;</td><td>Placeholder &lt;A&gt; &amp; plan<br><small>PAY-A</small></td><td>None<br><small>No approved authorization visit allocated</small></td><td>schedule.csv:row5</td></tr></table>\n</body></html>'
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.872s
+
+FAILED (failures=3, errors=6)

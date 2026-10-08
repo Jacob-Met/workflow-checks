@@ -1,0 +1,321 @@
+{
+  "status": "accepted_source_cli_report_and_exact_inline_real_http",
+  "frozen_at_utc": "2026-10-08T13:47:58.003578+00:00",
+  "repository": "Jacob-Met/workflow-checks",
+  "scope_issue": 26,
+  "upstream": "9e931fa9f42033bf2368f7149684fb5631345715",
+  "tree": "0b0c903801f432968e9cdfb1f1fa134cecc37217",
+  "candidate": "9676a5a20f3adab0ccf46e31e3052de04f50d267",
+  "local_partial_baseline": "d67c6087ab5fae717be2eec08f131d2c80b539f6",
+  "ancestry": "Exact partial reconstruction; local commits are not upstream ancestry.",
+  "candidate_manifest": {
+    "original_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/candidate-manifest.json",
+    "size": 2527,
+    "sha256": "46a503ccdd0c793cc1ad4ec1759e6d615c12c67e7aec8fad93cff2f55e8dadab",
+    "git_blob": "afadcfae9d6d795dd2da57e30e5fddc5103ed3a6"
+  },
+  "baseline_manifest": {
+    "original_path": "/dev/shm/pt-uncovered-visits-dc13ebf4687f/baseline-manifest.json",
+    "size": 3238,
+    "sha256": "6390ba36accd23bd14edb6dbd1b943f1fb4a6fae2ce1a3786d5ddce3c80b761c",
+    "git_blob": "23ac44fc997e6f2523b86640d517b6fdd9ba3b46"
+  },
+  "upstream_tree_binding": {
+    "repository": "Jacob-Met/workflow-checks",
+    "upstream": "9e931fa9f42033bf2368f7149684fb5631345715",
+    "tree": "0b0c903801f432968e9cdfb1f1fa134cecc37217",
+    "truncated": false,
+    "instruction_paths": [],
+    "exact_existing_inputs": [
+      {
+        "path": "pt_auth/ptauth/__init__.py",
+        "sha": "a6f4545ac17e2578317ef694f7bb548489f6c71c"
+      },
+      {
+        "path": "pt_auth/ptauth/__main__.py",
+        "sha": "3c93dd90cf357624c77ab3589ef2b201868c181e"
+      },
+      {
+        "path": "pt_auth/ptauth/cli.py",
+        "sha": "b79a054cd4140b523d901d8109fc11a5958f91d2"
+      },
+      {
+        "path": "pt_auth/ptauth/data.py",
+        "sha": "19a2a1b79eff6d2753507eebf3bf78011ddaaa87"
+      },
+      {
+        "path": "pt_auth/ptauth/engine.py",
+        "sha": "39c97f35d61ff949b5c2381f0ad60d7af8d74226"
+      },
+      {
+        "path": "pt_auth/ptauth/report.py",
+        "sha": "608626d57918e4d43fca2fc14421063d35b49cfc"
+      },
+      {
+        "path": "pt_auth/ptauth/synth.py",
+        "sha": "2ff6a2548bf55a812cfa62e397442a0d3f7debbb"
+      },
+      {
+        "path": "pt_auth/ptauth/ui.html",
+        "sha": "98bbca10a6341b8e76251e6f1fca65a8689a9db0"
+      },
+      {
+        "path": "pt_auth/ptauth/web.py",
+        "sha": "71d17ec9642798a5e7df56ab7c2bdbab8d061352"
+      },
+      {
+        "path": "pt_auth/sample_data/authorizations.csv",
+        "sha": "036f7b276e3e09252afb886ad451531f51ada844"
+      },
+      {
+        "path": "pt_auth/sample_data/expected.json",
+        "sha": "21177a89ac5c24c9faf79746550165a3a170d08a"
+      },
+      {
+        "path": "pt_auth/sample_data/patients.csv",
+        "sha": "e67323b68d1ac9ee4a901dc3ef70a95384ba5000"
+      },
+      {
+        "path": "pt_auth/sample_data/payers.csv",
+        "sha": "1853837e82048ac11698b4ad5bb6eeb055d56038"
+      },
+      {
+        "path": "pt_auth/sample_data/schedule.csv",
+        "sha": "24a395250f5318004bab4f168c3ca237189ab354"
+      },
+      {
+        "path": "pt_auth/README.md",
+        "sha": "0dd3d4c7c83ac33d4099286e7785de111c8f19de"
+      }
+    ],
+    "new_paths_absent": [
+      "pt_auth/ptauth/uncovered.py",
+      "pt_auth/tests/test_uncovered_review.py",
+      "pt_auth/tests/browser/uncovered_review.test.cjs"
+    ],
+    "mismatches": [],
+    "wrongly_present": []
+  },
+  "review_inputs": [
+    {
+      "path": "review_reports.py",
+      "size": 17373,
+      "sha256": "5a3894fa60c2000952070534a42c1ad216dbedfc571c679eee2c8b7059bc8fee",
+      "git_blob": "fd7196955c6afa42a0c5d2616028042aa5179d00"
+    },
+    {
+      "path": "report-receipt.json",
+      "size": 23540,
+      "sha256": "f1e865aaa190bb766dbb6dfaa37fba92eff491765fc5cce40b48062e2055d801",
+      "git_blob": "ae2e54f471c9a8a531be9ea6f3a35149e90685be"
+    },
+    {
+      "path": "review_inline.cjs",
+      "size": 16670,
+      "sha256": "d40f61c47ba55084d9d6bde75056a1edeaab6eb17e65562b039f63a0155257ed",
+      "git_blob": "5cde86b23118d51c07179470e056599ba5b9d1a9"
+    },
+    {
+      "path": "inline-receipt.json",
+      "size": 17585,
+      "sha256": "cb4196732fb4b1a75416ddd8fbe922f140528afe135f5a221cb6a0ecb0e90d25",
+      "git_blob": "9117b8403ad7c84f717b003e17bdf6408fedf999"
+    },
+    {
+      "path": "serve_fixture.py",
+      "size": 2001,
+      "sha256": "99c0e4d9457932e232bce81559ccdccb1df2e19ccda8b7cf6b3b49a0539ff134",
+      "git_blob": "c3bfcf7f999d6f8efb955dfac282691869202e28"
+    },
+    {
+      "path": "browser-input.json",
+      "size": 5453,
+      "sha256": "4b734b6c6aea4d93a4a39eead3ca574a9dfe16cea5620531ec6c9e21c338bf4a",
+      "git_blob": "22a221be4102740e8d02bca913f69e98cdca8618"
+    },
+    {
+      "path": "review_ui.cjs",
+      "size": 17573,
+      "sha256": "1ef3f7c70151875d6eb2cddd34a05c7857ded2e20574df2e6432db3fad08803e",
+      "git_blob": "56ea8f9c6c829c1fb65e66dc1e47bb98e0d37591"
+    },
+    {
+      "path": "rejected-harnesses/inline-v1.cjs",
+      "size": 16627,
+      "sha256": "a06af05f7d8e59142d64c353b45cd0efa3bc7e403df10db34825b6658808ebdf",
+      "git_blob": "e96d9c57976d164ced9ec62b2b48e58268974328"
+    },
+    {
+      "path": "rejected-harnesses/inline-v1.json",
+      "size": 4745,
+      "sha256": "7f923df944cdf4699a95dd8cb4fa2fa37ffd3965a097e7ee512855b5b1a519ee",
+      "git_blob": "b8c835db75de0a75403743ec23e9b11f2bef7212"
+    },
+    {
+      "path": "authored-input/patients.csv",
+      "size": 194,
+      "sha256": "664ec8d3b7f05fea2151b36736d96f436f235573bcb979cadb1c739d7c7c7ca6",
+      "git_blob": "8f63a08c2b916ccc5f92c56d18a291aecc1412ef"
+    },
+    {
+      "path": "authored-input/payers.csv",
+      "size": 261,
+      "sha256": "06d24625edf5c5d0b8fae796769b887b85daaec3fb488c14fb204edce57715c8",
+      "git_blob": "02b2550928094c1c34acb646e8ff1c3052949c8d"
+    },
+    {
+      "path": "authored-input/authorizations.csv",
+      "size": 178,
+      "sha256": "e0ba56fe428e30b09da26c36607325a2a1f6d9ce28309560120c86dc097a1085",
+      "git_blob": "a833066c0e052d4f0cb27c2c77bd14ef6d8930e4"
+    },
+    {
+      "path": "authored-input/schedule.csv",
+      "size": 1286,
+      "sha256": "40c75d38597239c953f11277e8a7d590083ed3ad95a29db076c863169bf6060b",
+      "git_blob": "c653b9734253ebd7f4b63f701b21467078ce4081"
+    }
+  ],
+  "observations": {
+    "report_recorded_checks": 73,
+    "inline_recorded_checks": 73,
+    "actual_cli_processes": 3,
+    "pure_legacy_renderer_processes": 1,
+    "actual_app_instances": 4,
+    "successful_local_http_requests": [
+      {
+        "label": "baseline",
+        "request": "GET",
+        "path": "/"
+      },
+      {
+        "label": "baseline",
+        "request": "GET",
+        "path": "/api/summary"
+      },
+      {
+        "label": "candidate",
+        "request": "GET",
+        "path": "/"
+      },
+      {
+        "label": "candidate",
+        "request": "GET",
+        "path": "/api/summary"
+      },
+      {
+        "label": "candidate",
+        "request": "GET",
+        "path": "/out/uncovered_visits.csv"
+      },
+      {
+        "label": "legacy",
+        "request": "GET",
+        "path": "/"
+      },
+      {
+        "label": "legacy",
+        "request": "GET",
+        "path": "/api/summary"
+      },
+      {
+        "label": "legacy",
+        "request": "POST",
+        "path": "/api/run"
+      },
+      {
+        "label": "empty",
+        "request": "GET",
+        "path": "/"
+      },
+      {
+        "label": "empty",
+        "request": "GET",
+        "path": "/api/summary"
+      }
+    ],
+    "eligible_appointment_count": 9,
+    "upcoming_scheduled": 7,
+    "recorded_completed": 2,
+    "separate_past_scheduled": 1,
+    "raw_uncovered_count": 10,
+    "baseline_missing_ids": [
+      "U5-<b data-pt-canary=\"visit\">雪</b>",
+      "U6,\"quoted\""
+    ],
+    "changed_input_controls": [
+      "future recorded completion",
+      "UTC timestamp date conversion",
+      "actual vs home clinic",
+      "blank clinic",
+      "unknown actual payer vs known primary",
+      "blank names",
+      "Unicode/literal HTML",
+      "CSV comma/quote/newline",
+      "physical source row",
+      "approved staff state"
+    ],
+    "old_summary_fields_preserved_except_clock_and_additive_fields": true,
+    "old_csv_byte_streams_preserved": [
+      "worklist.csv",
+      "ledger.csv",
+      "visit_status_review.csv"
+    ],
+    "old_printable_raw_bytes_preserved": {
+      "removed_only_additive_review_section": true,
+      "baseline": {
+        "size": 3647,
+        "sha256": "71273f646f085bb8a307bae64005c445e3eefe42f16b209072016bf8977eb1b2",
+        "git_blob": "236650ef303b686f334105b8ad956521cae04ba5"
+      }
+    },
+    "existing_rendered_sections_preserved": [
+      "cards",
+      "worklist",
+      "visit status review",
+      "ledger"
+    ],
+    "existing_export_actions_preserved": true,
+    "one_visible_row_still_exports_all_nine_exact_csv_rows": {
+      "bytes": 1910,
+      "sha256": "d2808753a8858e1da5bfa92752732671340643d19e67cd54cf5ed6f4d39d9a43",
+      "ui_rows": 1,
+      "csv_rows": 9,
+      "method": "actual Node HTTP GET from emitted link, not a browser download"
+    },
+    "actual_legacy_run_upgrades_report_and_keeps_state": true,
+    "explicit_empty_separate_from_missing_review": true,
+    "all_tracked_source_bytes_unchanged": true,
+    "external_or_disallowed_operational_attempts": [],
+    "all_local_fixture_servers_closed": true
+  },
+  "retained_failure": {
+    "program": "rejected-harnesses/inline-v1.cjs",
+    "receipt": "rejected-harnesses/inline-v1.json",
+    "reached_candidate": false,
+    "completed_custody_checks": 4,
+    "static_diagnosis": "The authored DOM tag allowlist omitted baseline small#shown.",
+    "raw_error_limit": "The final expected-POST assertion overwrote the primary exception; the raw receipt preserves that secondary assertion only.",
+    "correction": "Recognize source elements carrying IDs and preserve primary exceptions.",
+    "source_change": false
+  },
+  "browser_qualification": {
+    "status": "not_executed_capacity_gate_unmet",
+    "program": "review_ui.cjs",
+    "syntax_check_exit": 0,
+    "minimum_headroom_bytes": 100663296,
+    "observed_free_shm_bytes": [
+      200704,
+      6676480
+    ],
+    "observed_free_root_bytes": 0,
+    "native_dom_layout_keyboard_browser_download_qualified": false
+  },
+  "limits": [
+    "All inputs are authored synthetic data; no live account/provider/clinical route was used.",
+    "The unchanged engine determines eligibility; no new clinical or payer correctness claim.",
+    "Inline execution uses an explicit authored DOM seam, with real local App HTTP and real report generation.",
+    "No inherited scientific/clinical/application suite rerun and no browser receiving claim.",
+    "Historical fixed-root, one-shot review programs; legacy output was advanced and requires a fresh authored baseline for another rehearsal."
+  ]
+}
