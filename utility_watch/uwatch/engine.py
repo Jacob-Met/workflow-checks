@@ -111,6 +111,8 @@ def _rows(path: Path, required: list[str]):
         missing = [name for name in required if name not in headers]
         if missing:
             raise ValueError(f"{path.name}: missing required column(s): {', '.join(missing)}")
+        if len(headers) != len(set(headers)):
+            raise ValueError(f"{path.name}: duplicate CSV column names")
         for raw in reader:
             row_number = reader.line_num
             if None in raw:
