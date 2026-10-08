@@ -1,0 +1,33 @@
+{
+  "schema": "ptauth-whatif.parity-pins.v1",
+  "python_source_commit": "2f1e5f777197eedd69d51a4d81c0da744b65ad88",
+  "python_inputs": [
+    {
+      "path": "pt_auth/ptauth/engine.py",
+      "bytes": 16057,
+      "git_blob": "39c97f35d61ff949b5c2381f0ad60d7af8d74226",
+      "sha256": "bfa7049e9b133d654ce947b135c17ac401bd7b1fcd76350bdb10de5b7a1ad1f7"
+    },
+    {
+      "path": "pt_auth/ptauth/data.py",
+      "bytes": 10283,
+      "git_blob": "19a2a1b79eff6d2753507eebf3bf78011ddaaa87",
+      "sha256": "eeab8ab5b2b72524148969de0d13b27126cc64c4ec79b68a147b51b25a3741e2"
+    },
+    {
+      "path": "pt_auth/ptauth/__init__.py",
+      "bytes": 311,
+      "git_blob": "a6f4545ac17e2578317ef694f7bb548489f6c71c",
+      "sha256": "71e1527f153c607b679485e4954af1b3ec6a843b041562eb07f4d36e08fd231c"
+    }
+  ],
+  "model": {
+    "path": "model.mjs",
+    "sha256": "c71fe28b6c70c72127acbcb6ebfdf3e99d7e4b0a75ed73a7afb7b4ee3fd662f9"
+  },
+  "corpus": {
+    "path": "cases.jsonl",
+    "sha256": "21ccfcace933dec7a047f9efb2464ec14e6b8ca8663775aafa37571a0221a324",
+    "cases": 150
+  }
+}
