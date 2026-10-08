@@ -85,9 +85,9 @@
     },
     {
       "path": "delivery/README.md",
-      "bytes": 5072,
-      "sha256": "942ea3016b274771b9b17229012d9e361592e9b660a74c83e9f42b309a6ff3e2",
-      "git_blob": "a30349897840f0533cd0b2156e55eb0161d40a8d",
+      "bytes": 5149,
+      "sha256": "4f057c56d14621406a69c464e40667ce87e5ff861a3af876d670ddfd28283460",
+      "git_blob": "6eb30ece3286eac64fb9ae5eb576672fa83e7c65",
       "mode": "100644",
       "role": "final-delivery-explanation"
     },
@@ -99,5 +99,12 @@
       "mode": "100644",
       "role": "supplemental-final-receipt"
     }
-  ]
+  ],
+  "publication_correction": {
+    "reason": "Distinguish the Git merge-commit timestamp from GitHub PR merged_at. Supplemental JSON receipt already preserved the correct merged_at.",
+    "git_commit_timestamp": "2026-10-08T20:03:03Z",
+    "github_pr_merged_at": "2026-10-08T20:03:04Z",
+    "previous_evidence_commit": "4b187a509e6d1297f3ab10e5d1e1ab0a09477fcb",
+    "qualified_source_or_original_artifact_changed": false
+  }
 }
