@@ -1,0 +1,50 @@
+{
+  "schema": "hamon.utility-desk.disjoint-base-composition.v1",
+  "at": "2026-10-08T15:37:58.508Z",
+  "reviewer": "estate-39c2b591d7e5/root",
+  "previous_public_head": "f7127fa6af0eede8ef3570f69dca80bb5eae0d4e",
+  "previous_public_tree": "cbc406cef4b56119e9cc26defec75bd0b2d1cb29",
+  "previous_actual_ci_checkout": "cd5e6e797e9e994c90ca8ecadfafd404f5b85ccc",
+  "current_main": "21d08a16674fcd7403c28b2e9e678e3817d43f29",
+  "current_main_tree": "1d64a8c5335e53e7be2960a2cbc4e77f581d9140",
+  "current_main_leaves": 958,
+  "delta": [
+    {
+      "path": "docs/demos/freight-whatif/app.mjs",
+      "before": null,
+      "after": "6fe0b0409c2d652dbdc6cecda2fe97b4f63e23be",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/demos/freight-whatif/data.mjs",
+      "before": null,
+      "after": "b4ee752139693744b8f05c930865e505e2ddf236",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/demos/freight-whatif/index.html",
+      "before": null,
+      "after": "e6e8d6d757c2d51a666b267946d2544f2564a80a",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/demos/freight-whatif/model.mjs",
+      "before": null,
+      "after": "6b97e2c54e4283707913e13459f47cbd43f81137",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "docs/demos/freight-whatif/styles.css",
+      "before": null,
+      "after": "1200d3b98a958a080f0899b91d8975494328401e",
+      "mode": "100644",
+      "type": "blob"
+    }
+  ],
+  "source_result": "All five changes are new files in the distinct Freight what-if demo route. Existing Utility Watch, PT, Freight Python, workflow and prior contribution source/receiving files are unchanged.",
+  "composition": "Add the complete accepted Freight demo subtree unchanged and this source-review record to the previous qualified proposal; preserve both public parents. No native or browser test is repeated. New hosted PR CI will name its actual checkout."
+}
