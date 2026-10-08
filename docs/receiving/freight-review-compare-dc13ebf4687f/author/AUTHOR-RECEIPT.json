@@ -1,0 +1,161 @@
+{
+  "schema": "freight-review-comparison-author-receipt.v1",
+  "status": "author qualification complete; independent source/API/HTML review accepted",
+  "repository": "Jacob-Met/workflow-checks",
+  "scope": {
+    "issue": 50,
+    "central_comment": 6064049643,
+    "baseline": {
+      "head": "125339ec63eeb7c4989c9b240c01202555dce573",
+      "tree": "e3a3501d60ee8f301f9d45ea15d0d324b814e59a"
+    },
+    "paths": [
+      "freight_packets/README.md",
+      "freight_packets/REVIEW_COMPARE.md",
+      "freight_packets/freightpkt/review_compare.py",
+      "freight_packets/tests/test_review_compare.py"
+    ]
+  },
+  "candidate": {
+    "source_carrier": {
+      "path": "/dev/shm/freight-review-compare-dc13ebf4687f/source-carrier.json",
+      "bytes": 57422,
+      "git_blob": "2d35b4969dc2eb51c5870e4fbe7025eb76423642",
+      "sha256": "14882de031e421460183b40c67d8bfb1429a6e008d65ba7b4c11973c3421bfd2"
+    },
+    "files": {
+      "freight_packets/README.md": {
+        "bytes": 16402,
+        "git_blob": "afabddbfa95fb6c86ce60a3e5abeb6b069f10aa5",
+        "sha256": "d920fc7a9faac770e295d252301c84c2c7d181ddbcf2572429c57837174e82f0"
+      },
+      "freight_packets/REVIEW_COMPARE.md": {
+        "bytes": 6433,
+        "git_blob": "5d2029f365e3d57bcced9a170231b2a458091a35",
+        "sha256": "184f7c693fd2d70d5b1c1613e2cbc3a0f510f4ba98cf0cd0380a942d0877354f"
+      },
+      "freight_packets/freightpkt/review_compare.py": {
+        "bytes": 15201,
+        "git_blob": "0d32c0574bda267f7066ec6ee673f15eefdaefde",
+        "sha256": "cd0d7b45fe4f1f80023049acfb649a752e73ed1df58cd73d814735e9ddeebe21"
+      },
+      "freight_packets/tests/test_review_compare.py": {
+        "bytes": 16159,
+        "git_blob": "c16f6fd4f06542b40f776332de87ce5f0b89c44f",
+        "sha256": "3fa0c6f12821527f9592b82606542ba8ef253423b8719978762bb4f4e77dd31f"
+      }
+    },
+    "sparse_source_root": "/dev/shm/freight-review-compare-dc13ebf4687f/candidate",
+    "unchanged_dependencies": {
+      "freight_packets/freightpkt/__init__.py": "a7804a1379966afd1e6143a92cf08c1b25f7abfe",
+      "freight_packets/freightpkt/handoff.py": "bdcb63507b57d07eed1a6598d7d37d5f5d9db802"
+    }
+  },
+  "qualification": {
+    "pure_methods_each_mode": 9,
+    "actual_filesystem_methods_each_mode": 3,
+    "modes": [
+      "normal",
+      "optimized"
+    ],
+    "total_distinct_product_methods_each_mode": 12,
+    "skipped_selected_methods": 0,
+    "main_io_model": {
+      "calls_each_mode": 9,
+      "checks_each_mode": 44,
+      "real_io": false
+    },
+    "actual_stock_module": {
+      "calls": 1,
+      "returncode": 0,
+      "cwd": "/tmp",
+      "receipt_path": "/dev/shm/freight-review-compare-dc13ebf4687f/receiving-tmp/module-entry/receipt.json",
+      "report_path": "/dev/shm/freight-review-compare-dc13ebf4687f/receiving-tmp/module-entry/comparison.html",
+      "report_bytes": 9042,
+      "report_sha256": "ad0b265b7f7abc5368e35bf02749bbbdb4759f9bc47b09f10f30b08433c68c3e",
+      "all_ten_checks_pass": true
+    },
+    "claims": "The nine pure methods and three filesystem methods are distinct selections; earlier zero-space/model receipts remain separately labelled."
+  },
+  "preimplementation": {
+    "original_receipt": {
+      "bytes": 20565,
+      "sha256": "a6f488b791a13b023448c58c7a5c318fc030b70c7860ec91bc033b86bfa2e352",
+      "git_blob": "4f95b9e7366358a92ce9d14162c0a2f8a8010523"
+    },
+    "extension_receipt": {
+      "bytes": 19621,
+      "sha256": "410e60a3190a604376448e4354e50674ed476645eeb222a540e120e3780c3bec",
+      "git_blob": "673dfbc045a51f821e3fe4ed1eacf40b13a29f33"
+    },
+    "failures_retained": [
+      "Initial extension-driver SyntaxError before execution",
+      "Structured tool-value lone-surrogate serialization refusal; successful raw native JSON unchanged",
+      "Evidence transport stdout truncation: advertised79061bytes, returned59077characters; excluded before handoff, exact full carrier regenerated from unchanged24texts"
+    ]
+  },
+  "author_evidence": {
+    "status": "physical",
+    "decoded_files": 24,
+    "decoded": {
+      "bytes": 184971,
+      "git_blob": "6cbcbf29e0784e5773ed36084e388f78410c2b13",
+      "sha256": "377a083c0585daca73c91ecf043ba0744fd0dcb396419c39650760690e37e87e"
+    },
+    "compressed_carrier": {
+      "path": "/dev/shm/freight-review-compare-dc13ebf4687f/author-evidence.zlib-base64",
+      "bytes": 79061,
+      "git_blob": "f73fc588e8e032bd6adb512d25fec1c4d9a5f20c",
+      "sha256": "49a663683f7111b38e4f8155eb119ed99f85d8a1c237c55a767861b7d25486f5"
+    },
+    "format": "base64(zlib(UTF-8 JSON map logical path -> exact UTF-8 text)) with final LF",
+    "remaining_physical_references": {
+      "source-carrier.json": "/dev/shm/freight-review-compare-dc13ebf4687f/source-carrier.json",
+      "baseline/__init__.py.source": "/dev/shm/freight-review-compare-dc13ebf4687f/candidate/freight_packets/freightpkt/__init__.py",
+      "baseline/handoff.py.source": "/dev/shm/freight-review-compare-dc13ebf4687f/candidate/freight_packets/freightpkt/handoff.py",
+      "qualification/stock-module-receipt.json": "/dev/shm/freight-review-compare-dc13ebf4687f/receiving-tmp/module-entry/receipt.json",
+      "qualification/comparison.html": "/dev/shm/freight-review-compare-dc13ebf4687f/receiving-tmp/module-entry/comparison.html"
+    },
+    "note": "The first compressed-carrier stdout was truncated and excluded after its returned length disagreed with the computed pin. All original logical texts stayed intact. The identical complete carrier was regenerated, written exclusively and read back at its full79,061-byte pin; source and behavior tests were not rerun."
+  },
+  "limits": [
+    "No GUI/keyboard/graphical/print receiving.",
+    "No App, source pipeline, provider, account, live Freight data or estate action.",
+    "No Git object/branch/PR publication by author.",
+    "Output is exclusive after validation/rendering; later write failure can retain a partial new file.",
+    "Source currentness/README coexistence must be rechecked by root at receiving."
+  ],
+  "packaging_note": "One metadata-helper attempt used unavailable structuredClone and stopped before any tool or file operation; ordinary JSON cloning completed the same metadata preparation.",
+  "supersedes_unpublished_author_receipt": {
+    "sha256": "40f6e058bbb460624d9460f25c5aba4e341866ebb2c45c14fd0c69605035cd9e",
+    "reason": "Evidence carrier changed from incomplete stdout representation to verified physical representation; source/qualification unchanged."
+  },
+  "independent_review": {
+    "worker": "portability_delivery",
+    "receipt_bytes": 17497,
+    "receipt_sha256": "7b594740b80f7b4124a9e8cf2655064ffb4f8b392c8d6257641aa071a96c2b52",
+    "checks": 497,
+    "native_producer_contrasts": 7,
+    "refusals": 6,
+    "source_pin": "0d32c0574bda267f7066ec6ee673f15eefdaefde",
+    "result": "No product blocker or source correction; reviewer actual-file gate refused at zero free bytes, so author native receiving remains separately attributed.",
+    "attribution": "Reported directly by the independent reviewer; its final packet is separate."
+  },
+  "local_metadata": {
+    "status": "final receipt/allowlist/manifest retained as exact in-memory text",
+    "excluded_partial": {
+      "bytes": 0,
+      "exists": true,
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "path": "/dev/shm/freight-review-compare-dc13ebf4687f/AUTHOR-RECEIPT.json",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reason": "Renewed ENOSPC left the attempted local AUTHOR-RECEIPT.json empty; it is never a publication source.",
+    "transport_recovered": "The full evidence carrier is physical and verified; only small final metadata is memory-only."
+  },
+  "packaging_failures": [
+    "Unavailable structuredClone stopped a metadata attempt before tool/file work; JSON cloning used next.",
+    "Strict base64 decoder initially rejected the transport's documented final LF before metadata writes; decoding now removes exactly that LF after full carrier pin verification.",
+    "Renewed ENOSPC left a zero-byte metadata file, explicitly excluded."
+  ]
+}

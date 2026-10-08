@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Saved freight review comparison — SYN-REVIEW-17</title><style>
+body{font:16px/1.5 system-ui,sans-serif;color:#1b1f24;max-width:1100px;margin:2rem auto;padding:0 1rem}
+h1{font-size:1.8rem}h2{margin-top:2rem}h3{font-size:1.05rem}.notice{background:#fff4ce;padding:1rem}
+table{border-collapse:collapse;width:100%;margin:1rem 0}th,td{border:1px solid #bbc3ce;padding:.5rem;text-align:left;vertical-align:top}
+th{background:#eef1f5}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f5f7fa;padding:.8rem;font-size:.85rem}
+code,td{overflow-wrap:anywhere}.records{padding-left:1.5rem}.records li{break-inside:avoid}
+.copies{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}nav a{display:inline-block;padding:.45rem}
+a:focus-visible{outline:3px solid #245fa3;outline-offset:2px}
+@media(max-width:650px){.copies{grid-template-columns:1fr}body{padding:0 .6rem}th,td{padding:.3rem;font-size:.85rem}}
+@media print{body{max-width:none;margin:0;font-size:10pt}nav{display:none}pre{background:white}h2,h3{break-after:avoid}.copies{display:block}}
+</style></head>
+<body><h1>Saved freight review comparison</h1><h2>Load SYN-REVIEW-17</h2>
+<p class="notice">Copy A and Copy B are the supplied order, not an inferred chronology.
+Recorded review state belongs to each retained copy; this report establishes no current approval.
+Nothing is sent, filed, invoiced or paid.</p>
+<p>Evidence identity: <strong>different</strong>.
+Saved review identity: <strong>different</strong>.</p>
+<p>Records are compared by their complete native JSON values. Equal duplicates retain occurrence counts.
+Rows are not paired by stop number, invoice, position or guessed identity.</p>
+<nav aria-label="Comparison sections"><a href="#identities">Copy identities</a><a href="#reviews">Saved reviews</a><a href="#stops">stops</a><a href="#flags">flags</a><a href="#fines">fines</a><a href="#settlements">settlements</a><a href="#exceptions">exceptions</a><a href="#packets">packets</a></nav>
+<h2>Record counts</h2><table><thead><tr><th>Section</th><th>Copy A</th><th>Copy B</th><th>Unchanged</th><th>Only A</th><th>Only B</th></tr></thead>
+<tbody><tr><th><a href="#stops">stops</a></th><td>1</td><td>1</td><td>0</td><td>1</td><td>1</td></tr><tr><th><a href="#flags">flags</a></th><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><th><a href="#fines">fines</a></th><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><th><a href="#settlements">settlements</a></th><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><th><a href="#exceptions">exceptions</a></th><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><th><a href="#packets">packets</a></th><td>1</td><td>1</td><td>1</td><td>0</td><td>0</td></tr></tbody></table>
+<section id="reviews"><h2>Saved review and history</h2><p>Complete recorded values are shown below.
+A recorded approval in one copy does not approve changed evidence in the other.</p>
+<div class="copies"><article><h3>Copy A</h3><p>Recorded state: <code>&quot;current&quot;</code><br>Recorded decision: <code>&quot;approve&quot;</code></p><pre>{
+  &quot;at&quot;: &quot;2026-10-02T09:00:00Z&quot;,
+  &quot;decision&quot;: &quot;approve&quot;,
+  &quot;evidence_version&quot;: &quot;1176ea550c1076bdb210280edb755fe470afe36f52ec99939a70e87ac134bf75&quot;,
+  &quot;history&quot;: [],
+  &quot;note&quot;: &quot;Verified authored tracking row7; Ω &lt;literal&gt;.&quot;,
+  &quot;review_state&quot;: &quot;current&quot;
+}</pre></article><article><h3>Copy B</h3><p>Recorded state: <code>&quot;stale&quot;</code><br>Recorded decision: <code>&quot;approve&quot;</code></p><pre>{
+  &quot;at&quot;: &quot;2026-10-02T09:00:00Z&quot;,
+  &quot;decision&quot;: &quot;approve&quot;,
+  &quot;evidence_version&quot;: &quot;1176ea550c1076bdb210280edb755fe470afe36f52ec99939a70e87ac134bf75&quot;,
+  &quot;history&quot;: [],
+  &quot;note&quot;: &quot;Verified authored tracking row7; Ω &lt;literal&gt;.&quot;,
+  &quot;review_state&quot;: &quot;stale&quot;
+}</pre></article></div></section>
+<section id="stops"><h2>stops</h2><h3>Only in Copy A (1 occurrences)</h3><ol class="records"><li><p>Occurrences: <strong>1</strong></p><pre>{
+  &quot;departure&quot;: &quot;2026-10-01T12:30:00-05:00&quot;,
+  &quot;evidence&quot;: [
+    &quot;tracking.csv:row7&quot;
+  ],
+  &quot;load_id&quot;: &quot;SYN-REVIEW-17&quot;,
+  &quot;stop&quot;: &quot;Warehouse Δ &lt;North&gt;&quot;
+}</pre></li></ol><h3>Only in Copy B (1 occurrences)</h3><ol class="records"><li><p>Occurrences: <strong>1</strong></p><pre>{
+  &quot;departure&quot;: &quot;2026-10-01T14:00:00-05:00&quot;,
+  &quot;evidence&quot;: [
+    &quot;tracking.csv:row7&quot;
+  ],
+  &quot;load_id&quot;: &quot;SYN-REVIEW-17&quot;,
+  &quot;stop&quot;: &quot;Warehouse Δ &lt;North&gt;&quot;
+}</pre></li></ol><h3>Unchanged (0 occurrences)</h3><p>None.</p></section><section id="flags"><h2>flags</h2><h3>Only in Copy A (0 occurrences)</h3><p>None.</p><h3>Only in Copy B (0 occurrences)</h3><p>None.</p><h3>Unchanged (0 occurrences)</h3><p>None.</p></section><section id="fines"><h2>fines</h2><h3>Only in Copy A (0 occurrences)</h3><p>None.</p><h3>Only in Copy B (0 occurrences)</h3><p>None.</p><h3>Unchanged (0 occurrences)</h3><p>None.</p></section><section id="settlements"><h2>settlements</h2><h3>Only in Copy A (0 occurrences)</h3><p>None.</p><h3>Only in Copy B (0 occurrences)</h3><p>None.</p><h3>Unchanged (0 occurrences)</h3><p>None.</p></section><section id="exceptions"><h2>exceptions</h2><h3>Only in Copy A (0 occurrences)</h3><p>None.</p><h3>Only in Copy B (0 occurrences)</h3><p>None.</p><h3>Unchanged (0 occurrences)</h3><p>None.</p></section><section id="packets"><h2>packets</h2><h3>Only in Copy A (0 occurrences)</h3><p>None.</p><h3>Only in Copy B (0 occurrences)</h3><p>None.</p><h3>Unchanged (1 occurrences)</h3><ol class="records"><li><p>Occurrences: <strong>1</strong></p><pre>{
+  &quot;customer&quot;: &quot;Authored carrier &lt;not real&gt;&quot;,
+  &quot;file&quot;: &quot;packets/SYN-REVIEW-17.html&quot;,
+  &quot;load_id&quot;: &quot;SYN-REVIEW-17&quot;
+}</pre></li></ol></section>
+<section id="identities"><h2>Copy identities</h2><table><thead><tr><th>Identity</th><th>Copy A</th><th>Copy B</th></tr></thead>
+<tbody><tr><th>Source path</th><td>/dev/shm/freight-review-compare-dc13ebf4687f/receiving-tmp/module-entry/A.zip</td><td>/dev/shm/freight-review-compare-dc13ebf4687f/receiving-tmp/module-entry/B.zip</td></tr><tr><th>ZIP bytes</th><td>2884</td><td>2918</td></tr><tr><th>ZIP SHA-256</th><td>e2e4d6f6e5b3640978fe38076c9cd8987b2c0e31878d99a764a4a8e6262479c8</td><td>ded626c2cccca663e9cddf6d6b112e68a476539dcc69fe3cc473fe74b2b3e68c</td></tr><tr><th>Packet SHA-256</th><td>73707bdb5b5499a270832d6491ce2fc61a9e30ec68cbe2ecad01a8cf6eac8443</td><td>cf8971d406d891f6183658b5d06a77c4d15877d6dbb8d8bbdc11b703698f2c4c</td></tr><tr><th>Evidence version</th><td>1176ea550c1076bdb210280edb755fe470afe36f52ec99939a70e87ac134bf75</td><td>e9fea8e9ea7116a2854144ef3fe8cf9c74799d15d01af6c3f64235e5fd0b20b7</td></tr><tr><th>Saved review version</th><td>d11fffed353ea1353d8aed7c83fbe664edd8002926e00963a2bbb1f495eb716e</td><td>49f16cd9e6f489f480668f64cbe5ad5d299522c9acdc53384c2b76ef357ebc9e</td></tr></tbody></table>
+<h3>Exact payload member bindings</h3><p>ZIP container or cover bytes can differ even when evidence and saved review identities are the same.</p>
+<table><thead><tr><th>Member</th><th>Copy A</th><th>Copy B</th><th>Comparison</th></tr></thead><tbody><tr><th>index.html</th><td>2343 bytes<br><code>b2e1dddf8abcd550a6a34d0d41ba7a62574a6c7698d240e580a7921d6e2f1c3d</code></td><td>2346 bytes<br><code>ba70fc6b1cc63ebf50c376a240900ba1f97b2b0973a1cb1243379eb9472111cd</code></td><td>Changed bytes</td></tr><tr><th>packet.html</th><td>88 bytes<br><code>73707bdb5b5499a270832d6491ce2fc61a9e30ec68cbe2ecad01a8cf6eac8443</code></td><td>88 bytes<br><code>cf8971d406d891f6183658b5d06a77c4d15877d6dbb8d8bbdc11b703698f2c4c</code></td><td>Changed bytes</td></tr><tr><th>evidence.json</th><td>562 bytes<br><code>aac0a31da2cee727b30496081af7d72a672c9a51c0504b8c78c481958fe80340</code></td><td>562 bytes<br><code>eb622c97f28d9bb397d1b853c8f2154dc55176786d9a3d9a5f10498d1d59be73</code></td><td>Changed bytes</td></tr><tr><th>review.json</th><td>540 bytes<br><code>594f6fe1367319c16df62dbd3afe7e57751213111f7dea36f31fad16674b941b</code></td><td>538 bytes<br><code>74312bc23cb2924d7d596579c48437f83e558f830e9e0727f9de256a35e2d6e9</code></td><td>Changed bytes</td></tr></tbody></table>
+<p>Both manifests and their canonical content bindings were checked. These checks establish internal consistency,
+not authenticated authorship or freshness. The original ZIP inputs remain the source copies.</p></section>
+<p>No supplied packet or cover HTML is embedded or executed. Original input files and any changes made after
+these snapshots are outside this comparison. Use the browser's Print command to print the complete report.</p>
+</body></html>

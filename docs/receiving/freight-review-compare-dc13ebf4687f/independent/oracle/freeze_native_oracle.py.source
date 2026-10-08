@@ -1,0 +1,109 @@
+import base64,collections,copy,hashlib,io,json,sys,types,zipfile
+from datetime import datetime,timezone
+cfg=json.loads(sys.argv[1])
+def sha(b): return hashlib.sha256(b).hexdigest()
+def git(b): return hashlib.sha1(b"blob "+str(len(b)).encode()+b"\0"+b).hexdigest()
+def canonical(v): return json.dumps(v,sort_keys=True,separators=(",",":"),ensure_ascii=True,allow_nan=False)
+pins={}
+for key,expected in (("handoff","bdcb63507b57d07eed1a6598d7d37d5f5d9db802"),("init","a7804a1379966afd1e6143a92cf08c1b25f7abfe")):
+    b=cfg[key].encode(); assert git(b)==expected,(key,git(b))
+    pins[key]={"bytes":len(b),"sha256":sha(b),"git_blob":git(b)}
+producer=types.ModuleType("observed_native_handoff")
+exec(compile(cfg["handoff"],"baseline/freightpkt/handoff.py","exec"),producer.__dict__)
+sections=("stops","flags","fines","settlements","exceptions","packets")
+load_id='ORACLE-\u6771<&>"'
+literal='literal <img src=x onerror=alert(1)> & "\'\n=SUM(1,2) \u00e9 e\u0301 \u6771'
+packet_a=b'<!doctype html><html><body><h1>Authored departure 13:05</h1><script data-packet-only>authored_marker()</script></body></html>'
+packet_b=packet_a.replace(b"13:05",b"14:40")
+stop={"load_id":load_id,"stop":"Fixture dock","arrival":"2026-10-07T10:00:00+00:00","departure":"2026-10-07T13:05:00+00:00","evidence":"authored-tracking.csv:row13","unknown":{"typed":[0,False,None,"0"],"text":literal}}
+shared={"load_id":load_id,"stop":"Shared literal","evidence":"authored-tracking.csv:row18","literal":literal,"unknown":{"b":2,"a":{"kept":True}}}
+def evidence(packet,stops):
+    d={"schema":"freight-review.v1","packet_sha256":sha(packet),
+       "stops":copy.deepcopy(stops),
+       "flags":[{"load_id":load_id,"code":"LITERAL<&>","evidence":"authored-invoices.csv:row5","unknown":{"literal":literal}}],
+       "fines":[],"settlements":[{"load_id":load_id,"net_payable":0,"source":"authored-invoices.csv:row5"}],
+       "exceptions":[],"packets":[{"load_id":load_id,"file":"packets/fixture.html"}]}
+    for section in sections: d[section].sort(key=lambda x:json.dumps(x,sort_keys=True,separators=(",",":"),ensure_ascii=False,allow_nan=False))
+    return d
+def evidence_id(e): return sha(json.dumps(e,sort_keys=True,separators=(",",":"),ensure_ascii=False,allow_nan=False).encode())
+ea=evidence(packet_a,[stop,shared]); eva=evidence_id(ea)
+review_a={"decision":"approve","at":"2037-08-09T10:00:00+00:00","note":literal+"\nlegacy surrogate:\ud800","evidence_version":eva,"review_state":"current","history":[{"decision":"adjust","at":"2037-08-08T09:00:00+00:00","note":"older "+literal,"evidence_version":"0"*64,"unknown":{"types":[0,False,None]}}],"unknown_saved":{"text":"keep all fields","types":[0,False,None]}}
+stale=copy.deepcopy(review_a);stale["review_state"]="stale"
+changed_stop=copy.deepcopy(stop); changed_stop["departure"]="2026-10-07T14:40:00+00:00"
+eb=evidence(packet_b,[changed_stop,shared])
+bundles={}; views={}
+def build(key,packet,e,r):
+    ev=evidence_id(e); rv=producer.review_version(r)
+    raw=producer.build_bundle(load_id,packet,e,r,ev,rv)
+    assert raw==producer.build_bundle(load_id,packet,e,r,ev,rv)
+    with zipfile.ZipFile(io.BytesIO(raw)) as z:
+        names=z.namelist(); members={n:z.read(n) for n in names}
+    assert names==["index.html","packet.html","evidence.json","review.json","manifest.json"]
+    manifest=json.loads(members["manifest.json"]); saved=json.loads(members["review.json"])
+    assert manifest["load_id"]==load_id==saved["load_id"]
+    assert manifest["evidence_version"]==saved["evidence_version"]==ev
+    assert manifest["review_version"]==saved["review_version"]==rv
+    assert json.loads(members["evidence.json"])==e
+    assert canonical(saved["review"])==canonical(r)
+    assert set(x["path"] for x in manifest["files"])==set(names)-{"manifest.json"}
+    for row in manifest["files"]:
+        assert row["bytes"]==len(members[row["path"]]) and row["sha256"]==sha(members[row["path"]])
+    bundles[key]=raw
+    views[key]={"zip_sha256":sha(raw),"zip_bytes":len(raw),"evidence_version":ev,"review_version":rv,
+        "packet_sha256":sha(packet),"members":{n:{"bytes":len(b),"sha256":sha(b)} for n,b in members.items()},
+        "evidence":e,"saved_review":r}
+build("a",packet_a,ea,review_a);build("departure",packet_b,eb,stale)
+dupe={"load_id":load_id,"kind":"repeated","evidence":"authored-tracking.csv:row99","literal":literal}
+build("dupes_a",packet_a,evidence(packet_a,[dupe,dupe,shared]),None)
+build("dupes_b",packet_a,evidence(packet_a,[dupe,dupe,dupe,dupe,shared]),None)
+types_a=[{"load_id":load_id,"value":v,"evidence":"authored-values.csv:row1"} for v in (0,False,None,0.0,"0")]
+types_b=[{"load_id":load_id,"value":v,"evidence":"authored-values.csv:row1"} for v in (False,False,None,-0.0,"0")]
+build("types_a",packet_a,evidence(packet_a,types_a),None)
+build("types_b",packet_a,evidence(packet_a,types_b),None)
+build("packet_only",packet_b,evidence(packet_b,[stop,shared]),stale)
+review_b=copy.deepcopy(review_a);review_b["at"]="1999-01-02T03:04:05+00:00";review_b["note"]="Earlier timestamp remains supplied B\n"+literal;review_b["unknown_saved"]["types"]=[False,0,None]
+build("review_only",packet_a,ea,review_b)
+with zipfile.ZipFile(io.BytesIO(bundles["a"])) as z: old={n:z.read(n) for n in z.namelist()}
+o=io.BytesIO()
+with zipfile.ZipFile(o,"w",compression=zipfile.ZIP_STORED) as z:
+    z.comment=b"authored repack: payload unchanged"
+    for n,data in reversed(list(old.items())):
+        item=zipfile.ZipInfo(n,date_time=(2040,2,3,4,5,6));item.external_attr=0o100644<<16;z.writestr(item,data)
+bundles["container_only"]=o.getvalue();views["container_only"]=copy.deepcopy(views["a"])
+views["container_only"].update(zip_sha256=sha(o.getvalue()),zip_bytes=len(o.getvalue()))
+assert bundles["container_only"]!=bundles["a"]
+def delta(a,b):
+    ca=collections.Counter(canonical(r) for r in a)
+    cb=collections.Counter(canonical(r) for r in b)
+    return {"a_only":dict(ca-cb),"b_only":dict(cb-ca),"unchanged":dict(ca&cb),
+       "a_count":len(a),"b_count":len(b),"a_only_count":sum((ca-cb).values()),"b_only_count":sum((cb-ca).values()),"unchanged_count":sum((ca&cb).values())}
+pairs=[("same","a","a"),("changed_departure","a","departure"),("duplicates","dupes_a","dupes_b"),("literal_types","types_a","types_b"),("packet_only","a","packet_only"),("review_only","a","review_only"),("container_only","a","container_only")]
+expected={}
+for label,ka,kb in pairs:
+    a,b=views[ka],views[kb]
+    expected[label]={"a":ka,"b":kb,"same_load":load_id,
+       "same_container":a["zip_sha256"]==b["zip_sha256"],"same_packet":a["packet_sha256"]==b["packet_sha256"],
+       "same_evidence":a["evidence_version"]==b["evidence_version"],"same_review":a["review_version"]==b["review_version"],
+       "a_review":a["saved_review"],"b_review":b["saved_review"],
+       "sections":{s:delta(a["evidence"][s],b["evidence"][s]) for s in sections}}
+assert expected["duplicates"]["sections"]["stops"]["a_only_count"]==0
+assert expected["duplicates"]["sections"]["stops"]["b_only_count"]==2
+assert expected["duplicates"]["sections"]["stops"]["unchanged_count"]==3
+t=expected["literal_types"]["sections"]["stops"]
+assert (t["a_only_count"],t["b_only_count"],t["unchanged_count"])==(2,2,3)
+d=expected["changed_departure"]["sections"]["stops"]
+assert (d["a_count"],d["b_count"],d["a_only_count"],d["b_only_count"],d["unchanged_count"])==(2,2,1,1,1)
+receipt={"schema":"independent-freight-native-oracle.v1","frozen_at":datetime.now(timezone.utc).isoformat(),
+ "source_base":cfg["base"],"tree":cfg["tree"],"source_pins":pins,
+ "scope":"Exact original stdlib handoff producer executed in memory before candidate/test read. Authored values only; no App/server, source-file or browser call.",
+ "views":views,"expected":expected,
+ "receiving_intent":["Match every native manifest/member/evidence/review identity and complete saved values.",
+ "Count exact canonical JSON record occurrences rather than set or Python loose numeric equality.",
+ "Keep supplied A/B order; earlier recorded timestamp in B is not chronology or current approval.",
+ "Reject both-side malformed bindings, different loads, missing/extra/duplicate archive members; never embed supplied HTML.",
+ "Validate and render both supplied copies before output creation; preserve existing output and both inputs.",
+ "Qualify actual exclusive file publication only if bounded authored filesystem capacity permits; retain partial new-file failure limitation."]}
+encoded=(json.dumps(receipt,sort_keys=True,indent=2,ensure_ascii=True,allow_nan=False)+"\n").encode()
+result={"oracle":receipt,"oracle_text":encoded.decode(),"oracle_pin":{"bytes":len(encoded),"sha256":sha(encoded),"git_blob":git(encoded)},
+        "bundles_base64":{k:base64.b64encode(v).decode() for k,v in bundles.items()}}
+print(json.dumps(result,ensure_ascii=True,separators=(",",":")))

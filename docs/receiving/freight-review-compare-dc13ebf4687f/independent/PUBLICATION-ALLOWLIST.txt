@@ -1,0 +1,12 @@
+PUBLICATION-MANIFEST.json
+REVIEW.md
+author-native-readback.json
+oracle/freeze_native_oracle.py.source
+oracle/input.json
+receiving/input.json
+receiving/receipt.json
+receiving/review_comparison.py.source
+rejected/reviewer-v1-output.txt
+rejected/reviewer-v1-to-v2.patch
+run-observations.json
+source-review.json

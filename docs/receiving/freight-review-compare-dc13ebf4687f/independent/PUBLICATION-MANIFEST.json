@@ -1,0 +1,86 @@
+{
+  "carrier_convention": "Manifest binds the eleven input files. Allowlist lists those inputs plus manifest; each carrier excludes itself to avoid circular hashes.",
+  "files": [
+    {
+      "bytes": 4707,
+      "git_blob": "c1b1339771bdbf37932f857546042fcfb213e04d",
+      "path": "REVIEW.md",
+      "sha256": "cd10a520341549a4fc6020bbbeb468ea35376af955bdfc3014eb3eaeb832b0ef"
+    },
+    {
+      "bytes": 6905,
+      "git_blob": "d7da779676323d59adbe43508ddf972a88e9993d",
+      "path": "author-native-readback.json",
+      "sha256": "50b10de549519800fe9baa955d5862bdc4ea2befd8101038a7c57135e72d4c45"
+    },
+    {
+      "bytes": 8813,
+      "git_blob": "1f92b0fce701f9f8fbf4e5053a958e25fd4c1695",
+      "path": "oracle/freeze_native_oracle.py.source",
+      "sha256": "4d793ca94dcb41c7e217baec15fd3d60c57f662836689387687304ac55eca63f"
+    },
+    {
+      "bytes": 7835,
+      "git_blob": "38cdc0fcf5ee20bdf16607923fb8ebb8a57a3bec",
+      "path": "oracle/input.json",
+      "sha256": "c6a52eaf37cc37f44ceb55077a403942c5ba23d46332e6e9fa1ec8a845a990d3"
+    },
+    {
+      "bytes": 50092,
+      "git_blob": "aa4ce76be397288ba1ff30ebd56c179859091bdf",
+      "path": "receiving/input.json",
+      "sha256": "4aa024a545d76f3ec5d4af3d9a53fbe856d42f560e377b5c72501ef64d8d7d4e"
+    },
+    {
+      "bytes": 17497,
+      "git_blob": "e13c4ff6c7a23e2eca1c051866f4ca47b9e6a710",
+      "path": "receiving/receipt.json",
+      "sha256": "7b594740b80f7b4124a9e8cf2655064ffb4f8b392c8d6257641aa071a96c2b52"
+    },
+    {
+      "bytes": 15836,
+      "git_blob": "5acee316cdd792bf481c9bc31a21586402e4c3f0",
+      "path": "receiving/review_comparison.py.source",
+      "sha256": "1cde5cdaca895779ef773507a5a363159d2588880b6a08c04c44750d93a33585"
+    },
+    {
+      "bytes": 214,
+      "git_blob": "5deb563e17c41691cee7d29fcb30322da7678474",
+      "path": "rejected/reviewer-v1-output.txt",
+      "sha256": "cf55c845e06f71af1871716599082f622a6b7b04a6be2634e5600eca99df0a0c"
+    },
+    {
+      "bytes": 797,
+      "git_blob": "6aa0f06f29e47191709c363357b79e885dfe4377",
+      "path": "rejected/reviewer-v1-to-v2.patch",
+      "sha256": "64ddac421d26366bf66f5aa9ef9f048c164b5597d61ce5b81e16416a97d1a52b"
+    },
+    {
+      "bytes": 2027,
+      "git_blob": "061882ac7b19afddd4787a0043469757f3f4dc55",
+      "path": "run-observations.json",
+      "sha256": "c1981abf589dff7fa8753c452ebc317e74a6ae04aebab17d5662130d4498abf2"
+    },
+    {
+      "bytes": 4266,
+      "git_blob": "7b4413e23e4dc669a678417f9156bf1befca1446",
+      "path": "source-review.json",
+      "sha256": "8fe296b8b27d9f5baf99b606e42e5c10c3bf969684305233d2a6b526f0b95d7d"
+    }
+  ],
+  "negative_driver": {
+    "accepted_v2": {
+      "bytes": 15836,
+      "git_blob": "5acee316cdd792bf481c9bc31a21586402e4c3f0",
+      "sha256": "1cde5cdaca895779ef773507a5a363159d2588880b6a08c04c44750d93a33585"
+    },
+    "reconstruct": "Apply the retained unified diff in reverse to receiving/review_comparison.py.source.",
+    "reconstructed_v1": {
+      "bytes": 15764,
+      "git_blob": "60bcae24d737df3687c0719747978e99d91aa478",
+      "sha256": "2841c6728c33bd6b43cae2cd00d02521709b88834788bf43712aaec87cab86ba"
+    }
+  },
+  "schema": "freight-independent-publication-manifest.v1",
+  "source_runtime_git_blob": "0d32c0574bda267f7066ec6ee673f15eefdaefde"
+}

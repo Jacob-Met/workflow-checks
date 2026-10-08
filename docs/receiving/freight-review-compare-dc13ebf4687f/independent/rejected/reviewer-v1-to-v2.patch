@@ -1,0 +1,12 @@
+--- rejected/review_comparison_v1.py.source
++++ receiving/review_comparison.py.source
+@@ -86,7 +86,8 @@
+     check(set(parser.sections)=={"reviews","identities",*c.SECTIONS},label+" all six report sections")
+     got_table=parser.tables[0]
+     want_table=[["Section","Copy A","Copy B","Unchanged","Only A","Only B"]]
+-    for section,want in expected["sections"].items():
++    for section in ("stops","flags","fines","settlements","exceptions","packets"):
++        want=expected["sections"][section]
+         want_table.append([section,str(want["a_count"]),str(want["b_count"]),str(want["unchanged_count"]),str(want["a_only_count"]),str(want["b_only_count"])])
+     check(got_table==want_table,label+" actual rendered counts")
+     review_pres=[x for x in parser.pres if x["section"]=="reviews"]

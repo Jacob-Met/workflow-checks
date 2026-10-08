@@ -1,0 +1,473 @@
+{
+  "assembled_at": "2026-10-08 16:55:33 UTC",
+  "assembly_control_correction": "The first read-only assembly expected the author allowlist to name its manifest and refused before any output; actual author convention lists30 payloads, with manifest and allowlist separately bound. That exact convention is now checked; no frozen input changed.",
+  "bindings": [
+    {
+      "bytes": 4306,
+      "git_blob": "42bbeafccd75f2f7987c7a47e2b05eb95e9e4567",
+      "repo_path": "docs/receiving/freight-review-compare-dc13ebf4687f/PUBLICATION-ALLOWLIST.txt",
+      "role": "assembly carrier",
+      "sha256": "99bae39db379a63c0bb201cbad07c79ac6bca9b6fdb3de130881b4a4d35e547c",
+      "source_kind": "inline_utf8"
+    },
+    {
+      "bytes": 3967,
+      "git_blob": "ac8326e95e30655481fb3594e7b5cbba903e7357",
+      "repo_path": "docs/receiving/freight-review-compare-dc13ebf4687f/README.md",
+      "role": "assembly entry",
+      "sha256": "021512783fb861578e629c366afa16cd433f12743f1484836d36c865193e6154",
+      "source_kind": "inline_utf8"
+    },
+    {
+      "bytes": 8124,
+      "git_blob": "631c9378edfebacc6b1c7930c816e29dd30c3399",
+      "repo_path": "docs/receiving/freight-review-compare-dc13ebf4687f/author/AUTHOR-RECEIPT.json",
+      "role": "author evidence",
+      "sha256": "8f76a699ac910555b73a453d0e5dbdfa66544f67c270ddafed175e07c8047855",
+      "source_kind": "inline_utf8"
+    },
+    {
+      "bytes": 964,
+      "git_blob": "45f348323e8b208e3cd86a0cf3232c190b074ca6",
+      "repo_path": "docs/receiving/freight-review-compare-dc13ebf4687f/author/PUBLICATION-ALLOWLIST.txt",
+      "role": "author carrier",
+      "sha256": "d4870c476c8f11d27d813e54e29198616816834980383fa4d67aec559d46ff7f",
+      "source_kind": "inline_utf8"
+    },
+    {
+      "bytes": 22625,
+      "git_blob": "3bd3bd9fb920b3c9bf5deb3f5a6ca428fa8606b6",
+      "repo_path": "docs/receiving/freight-review-compare-dc13ebf4687f/author/PUBLICATION-MANIFEST.json",
+      "role": "author carrier",
+      "sha256": "16d588c62f9ff6853b2b49c814872959bbab2083e7cb79d814ced45501d4adce",
+      "source_kind": "inline_utf8"
+    },
+    {
+      "bytes": 4965,
+      "git_blob": "8d45f223613f2e0e0bea245cb0b0083645085514",
+      "repo_path": "docs/receiving/freight-review-compare-dc13ebf4687f/author/README.md",
+      "role": "author evidence",
+      "sha256": "6572d98fc8eafdafa257ed98d367fd83f38a4d8daadec0c0fa99eab27a7535db",
+      "source_kind": "inline_utf8"
+    },
+    {
+      "bytes": 5164,
+      "git_blob": "af0bb4c00b3e4e2a85763c8ea709c5cb941d738b",
+      "repo_path": "docs/receiving/freight-review-compare-dc13ebf4687f/author/SOURCE.json",
+      "role": "author evidence",
+      "sha256": "c79173744f4f8029592aa771d95df0b9cbc354538c9825083eaa3596d7af38d8",
+      "source_kind": "inline_utf8"
+    },
+    {
+      "bytes": 6821,
+      "git_blob": "b6efb226aeef5c67012676a5a3782bb5a90bb327",
+      "repo_path": "docs/receiving/freight-review-compare-dc13ebf4687f/author/baseline/HARDENING.md.source",
+      "role": "author evidence",
+      "sha256": "221e184d4e84d60f9827465c8d7910c6e5e1bf19d817bc0af8fc769e1c965226",
+      "source_kind": "inline_utf8"
+    },
+    {
+      "bytes": 15699,
+      "git_blob": "da5f0289076248be51bbe8336bdf6837b5f76681",
+      "repo_path": "docs/receiving/freight-review-compare-dc13ebf4687f/author/baseline/README.md.source",
+      "role": "author evidence",
+      "sha256": "a8152465bff0efd8bf52af275a92acffa0ec1300593b9a20620dd155ffe8645b",
+      "source_kind": "inline_utf8"
+    },
+    {
+      "bytes": 245,
+      "git_blob": "a7804a1379966afd1e6143a92cf08c1b25f7abfe",
+      "repo_path": "docs/receiving/freight-review-compare-dc13ebf4687f/author/baseline/__init__.py.source",
+      "role": "author evidence",
+      "sha256": "f9364708963fa65b54aae5174a816c45df417fe7d93971c3b0ff046278929706",
+      "source_kind": "physical"
+    },
+    {
+      "bytes": 7082,
+      "git_blob": "bdcb63507b57d07eed1a6598d7d37d5f5d9db802",
+      "repo_path": "docs/receiving/freight-review-compare-dc13ebf4687f/author/baseline/handoff.py.source",
+      "role": "author evidence",
+      "sha256": "413290d887d045b96dd1639c34b9c769f0e730beb28dce06c654a0df36cf1a02",
+      "source_kind": "physical"
+    },
+    {
+      "bytes": 695,
+      "git_blob": "d72b89ae3efb2963fbe7386021f467e82a8e1f2e",
+      "repo_path": "docs/receiving/freight-review-compare-dc13ebf4687f/author/baseline/tests.yml.source",
+      "role": "author evidence",
+      "sha256": "521a133de92677bbdd8a9693c4d7fb9e6d14ce2dd19fdf841a41f558f0bddec9",
+      "source_kind": "inline_utf8"
+    },
+    {
+      "bytes": 15303,
+      "git_blob": "0e5f4ef2eb321a84bab9e94022ce17053b48ff53",
+      "repo_path": "docs/receiving/freight-review-compare-dc13ebf4687f/author/before/extension-driver.py.source",
+      "role": "author evidence",
+      "sha256": "e5c9a02813fdf3487082dc15e84d3e0fcd3f7d9f05bc10b0db927abaf644b6c7",
+      "source_kind": "inline_utf8"
+    },
+    {
+      "bytes": 19621,
+      "git_blob": "673dfbc045a51f821e3fe4ed1eacf40b13a29f33",
+      "repo_path": "docs/receiving/freight-review-compare-dc13ebf4687f/author/before/extension-receipt.json",
+      "role": "author evidence",
+      "sha256": "410e60a3190a604376448e4354e50674ed476645eeb222a540e120e3780c3bec",
+      "source_kind": "inline_utf8"
+    },
+    {
+      "bytes": 2887,
+      "git_blob": "7a758d5de1eea3bf432f6f320a1afa473caf92bf",
+      "repo_path": "docs/receiving/freight-review-compare-dc13ebf4687f/author/before/frozen-oracle.json",
+      "role": "author evidence",
+      "sha256": "6f9eec905735ea9a946de8e1fdc114e597f6d22f9427d2ae0eee9b77afed14de",
+      "source_kind": "inline_utf8"
+    },
+    {
+      "bytes": 2758,
+      "git_blob": "6825311e58aa49cd7401f4c4c6dad5255d5a4b79",
+      "repo_path": "docs/receiving/freight-review-compare-dc13ebf4687f/author/before/input-output-contract.json",
+      "role": "author evidence",
+      "sha256": "9a631207608047978f2219ffca2f49184e10b6a57e992ae1521e6542c62bdb57",
+      "source_kind": "inline_utf8"
+    },
+    {
+      "bytes": 17305,
+      "git_blob": "c2a37b826e7c0b875d6aef8226b569a101998acd",
+      "repo_path": "docs/receiving/freight-review-compare-dc13ebf4687f/author/before/original-driver.py.source",
+      "role": "author evidence",
+      "sha256": "95bfc5f7f027486bf8b9c5438ccd70209c7648ab8e17f4744a1446741a648e0b",
+      "source_kind": "inline_utf8"
+    },
+    {
+      "bytes": 20565,
+      "git_blob": "4f95b9e7366358a92ce9d14162c0a2f8a8010523",
+      "repo_path": "docs/receiving/freight-review-compare-dc13ebf4687f/author/before/original-receipt.json",
+      "role": "author evidence",
+      "sha256": "a6f488b791a13b023448c58c7a5c318fc030b70c7860ec91bc033b86bfa2e352",
+      "source_kind": "inline_utf8"
+    },
+    {
+      "bytes": 15243,
+      "git_blob": "8b8965ef174ac4961e55a00b7caf69a2edcb7f9e",
+      "repo_path": "docs/receiving/freight-review-compare-dc13ebf4687f/author/before/rejected/extension-driver-v1.py.source",
+      "role": "author evidence",
+      "sha256": "12e56f9c8b87d0250f77d08ce1c4269aa50664b4f690a46b537daa970cefb79c",
+      "source_kind": "inline_utf8"
+    },
+    {
+      "bytes": 213,
+      "git_blob": "dd08073279178d791cc8776a9a63451eb9c58f91",
+      "repo_path": "docs/receiving/freight-review-compare-dc13ebf4687f/author/before/rejected/python-output.txt",
+      "role": "author evidence",
+      "sha256": "0efe9ae32fbc312467b97e154694cb05b478508c69288bc1e8f408f6c71f073e",
+      "source_kind": "inline_utf8"
+    },
+    {
+      "bytes": 538,
+      "git_blob": "0239247c87d01fbcadb4feddf3c08488cfb0d2cf",
+      "repo_path": "docs/receiving/freight-review-compare-dc13ebf4687f/author/before/rejected/structured-carrier-note.json",
+      "role": "author evidence",
+      "sha256": "69aeab4d2a0eedc3603ee45141b766fbe8efc731ffe3085700c3aab4b2b4d845",
+      "source_kind": "inline_utf8"
+    },
+    {
+      "bytes": 1170,
+      "git_blob": "128c9b1a8d1f5d7c1b20660a7812324b1a43f6e8",
+      "repo_path": "docs/receiving/freight-review-compare-dc13ebf4687f/author/candidate-manifest.json",
+      "role": "author evidence",
+      "sha256": "9efc49b73e85fcb680ed18d016f1e7a16958466aebabb47db4dfbe30d1e0552d",
+      "source_kind": "inline_utf8"
+    },
+    {
+      "bytes": 9042,
+      "git_blob": "33f6a82c9e5bd8e7e165f236a4b8e0dc07f01796",
+      "repo_path": "docs/receiving/freight-review-compare-dc13ebf4687f/author/qualification/comparison.html",
+      "role": "author evidence",
+      "sha256": "ad0b265b7f7abc5368e35bf02749bbbdb4759f9bc47b09f10f30b08433c68c3e",
+      "source_kind": "physical"
+    },
+    {
+      "bytes": 7884,
+      "git_blob": "396c2cd14d3ec5a82a6b46c244acf222f6d934b4",
+      "repo_path": "docs/receiving/freight-review-compare-dc13ebf4687f/author/qualification/main-model-normal.json",
+      "role": "author evidence",
+      "sha256": "82ca1790170e900f8c8496d6db3a2b0fcd707885b249e2642408adbaf2ea2169",
+      "source_kind": "inline_utf8"
+    },
+    {
+      "bytes": 7884,
+      "git_blob": "abf8185475416bb7bfdaa34ac6d3b3c1a9917055",
+      "repo_path": "docs/receiving/freight-review-compare-dc13ebf4687f/author/qualification/main-model-optimized.json",
+      "role": "author evidence",
+      "sha256": "2059073bb95e51eb38b365d3d3eae56ea4ab7fb44a6c0d0dd310ea90d22aa64c",
+      "source_kind": "inline_utf8"
+    },
+    {
+      "bytes": 2365,
+      "git_blob": "18bf10adc2c885a242daffe35f21216c41d70a41",
+      "repo_path": "docs/receiving/freight-review-compare-dc13ebf4687f/author/qualification/materialization.json",
+      "role": "author evidence",
+      "sha256": "17c1771b3c8febc07ddaa1772dbca3855a763fb48a323a497a60a99c23f7224e",
+      "source_kind": "inline_utf8"
+    },
+    {
+      "bytes": 2482,
+      "git_blob": "4fe89f9fc3c4758c153526f6de9383aae127d7a2",
+      "repo_path": "docs/receiving/freight-review-compare-dc13ebf4687f/author/qualification/native-filesystem-driver.py.source",
+      "role": "author evidence",
+      "sha256": "49b66dff0506b95018e22d19ff2efc95e3fb032880f3a04819c649eff0a4e2b3",
+      "source_kind": "inline_utf8"
+    },
+    {
+      "bytes": 3158,
+      "git_blob": "ab90ad955f9be2fd6ea12342a4f164fa739101ea",
+      "repo_path": "docs/receiving/freight-review-compare-dc13ebf4687f/author/qualification/native-filesystem-normal.json",
+      "role": "author evidence",
+      "sha256": "1e91ed385677c07afb3240c4c65532719489c39fdf22e97d0bc50232f385e646",
+      "source_kind": "inline_utf8"
+    },
+    {
+      "bytes": 3158,
+      "git_blob": "e9d97a4a2336200e81e53dba4d67d0b320cab26a",
+      "repo_path": "docs/receiving/freight-review-compare-dc13ebf4687f/author/qualification/native-filesystem-optimized.json",
+      "role": "author evidence",
+      "sha256": "94ea0d18887fdeb27bdd6605f08ca3db6c400af3e0efc3dec292c24b6f6506d9",
+      "source_kind": "inline_utf8"
+    },
+    {
+      "bytes": 3132,
+      "git_blob": "edd4a5869a2590cae4c1bdc5517626ffbb4a1569",
+      "repo_path": "docs/receiving/freight-review-compare-dc13ebf4687f/author/qualification/pure-normal.json",
+      "role": "author evidence",
+      "sha256": "3f38cc3ef1b180e0c8bcbaae745f9b60757fc79a998a5755651632c6e816a741",
+      "source_kind": "inline_utf8"
+    },
+    {
+      "bytes": 3132,
+      "git_blob": "491aa7a2a9fd079caf4d562273aea48953ccd3cb",
+      "repo_path": "docs/receiving/freight-review-compare-dc13ebf4687f/author/qualification/pure-optimized.json",
+      "role": "author evidence",
+      "sha256": "2da94f9c5ac1791181f50d6854968322bc2e865bef0d82fbfc847adf0dd311f1",
+      "source_kind": "inline_utf8"
+    },
+    {
+      "bytes": 10572,
+      "git_blob": "4a5a59552f1f1384b9d784c5097edc8cc4cf475f",
+      "repo_path": "docs/receiving/freight-review-compare-dc13ebf4687f/author/qualification/stock-module-driver.py.source",
+      "role": "author evidence",
+      "sha256": "fc8ba6714aefdbfc2f6edf3ebbf765c4afb18c9a4193edb3e1a4b4aea0476636",
+      "source_kind": "inline_utf8"
+    },
+    {
+      "bytes": 3952,
+      "git_blob": "b1c82387097ce29fabfbd4e0c9dd5d6cadfc5039",
+      "repo_path": "docs/receiving/freight-review-compare-dc13ebf4687f/author/qualification/stock-module-receipt.json",
+      "role": "author evidence",
+      "sha256": "7187ba81aa2f9d77ba829e1aef203c02385a80046c013190e86a81845347200d",
+      "source_kind": "physical"
+    },
+    {
+      "bytes": 57422,
+      "git_blob": "2d35b4969dc2eb51c5870e4fbe7025eb76423642",
+      "repo_path": "docs/receiving/freight-review-compare-dc13ebf4687f/author/source-carrier.json",
+      "role": "author evidence",
+      "sha256": "14882de031e421460183b40c67d8bfb1429a6e008d65ba7b4c11973c3421bfd2",
+      "source_kind": "physical"
+    },
+    {
+      "bytes": 308,
+      "git_blob": "49fbc81984445e0f8eb6ba6824a7deba14a313ac",
+      "repo_path": "docs/receiving/freight-review-compare-dc13ebf4687f/independent/PUBLICATION-ALLOWLIST.txt",
+      "role": "independent evidence",
+      "sha256": "cb760127beeb55627f7e33fe91d8b692b11986ef1b69a01c9017c4eee3d58400",
+      "source_kind": "inline_utf8"
+    },
+    {
+      "bytes": 3285,
+      "git_blob": "802f046c9d88261ac07fe27f8aed311823d74857",
+      "repo_path": "docs/receiving/freight-review-compare-dc13ebf4687f/independent/PUBLICATION-MANIFEST.json",
+      "role": "independent evidence",
+      "sha256": "d9683cc8aa6679347ec254f1867e846300024df84c663ccac254a566793cd664",
+      "source_kind": "inline_utf8"
+    },
+    {
+      "bytes": 4707,
+      "git_blob": "c1b1339771bdbf37932f857546042fcfb213e04d",
+      "repo_path": "docs/receiving/freight-review-compare-dc13ebf4687f/independent/REVIEW.md",
+      "role": "independent evidence",
+      "sha256": "cd10a520341549a4fc6020bbbeb468ea35376af955bdfc3014eb3eaeb832b0ef",
+      "source_kind": "inline_utf8"
+    },
+    {
+      "bytes": 6905,
+      "git_blob": "d7da779676323d59adbe43508ddf972a88e9993d",
+      "repo_path": "docs/receiving/freight-review-compare-dc13ebf4687f/independent/author-native-readback.json",
+      "role": "independent evidence",
+      "sha256": "50b10de549519800fe9baa955d5862bdc4ea2befd8101038a7c57135e72d4c45",
+      "source_kind": "inline_utf8"
+    },
+    {
+      "bytes": 8813,
+      "git_blob": "1f92b0fce701f9f8fbf4e5053a958e25fd4c1695",
+      "repo_path": "docs/receiving/freight-review-compare-dc13ebf4687f/independent/oracle/freeze_native_oracle.py.source",
+      "role": "independent evidence",
+      "sha256": "4d793ca94dcb41c7e217baec15fd3d60c57f662836689387687304ac55eca63f",
+      "source_kind": "inline_utf8"
+    },
+    {
+      "bytes": 7835,
+      "git_blob": "38cdc0fcf5ee20bdf16607923fb8ebb8a57a3bec",
+      "repo_path": "docs/receiving/freight-review-compare-dc13ebf4687f/independent/oracle/input.json",
+      "role": "independent evidence",
+      "sha256": "c6a52eaf37cc37f44ceb55077a403942c5ba23d46332e6e9fa1ec8a845a990d3",
+      "source_kind": "inline_utf8"
+    },
+    {
+      "bytes": 50092,
+      "git_blob": "aa4ce76be397288ba1ff30ebd56c179859091bdf",
+      "repo_path": "docs/receiving/freight-review-compare-dc13ebf4687f/independent/receiving/input.json",
+      "role": "independent evidence",
+      "sha256": "4aa024a545d76f3ec5d4af3d9a53fbe856d42f560e377b5c72501ef64d8d7d4e",
+      "source_kind": "inline_utf8"
+    },
+    {
+      "bytes": 17497,
+      "git_blob": "e13c4ff6c7a23e2eca1c051866f4ca47b9e6a710",
+      "repo_path": "docs/receiving/freight-review-compare-dc13ebf4687f/independent/receiving/receipt.json",
+      "role": "independent evidence",
+      "sha256": "7b594740b80f7b4124a9e8cf2655064ffb4f8b392c8d6257641aa071a96c2b52",
+      "source_kind": "inline_utf8"
+    },
+    {
+      "bytes": 15836,
+      "git_blob": "5acee316cdd792bf481c9bc31a21586402e4c3f0",
+      "repo_path": "docs/receiving/freight-review-compare-dc13ebf4687f/independent/receiving/review_comparison.py.source",
+      "role": "independent evidence",
+      "sha256": "1cde5cdaca895779ef773507a5a363159d2588880b6a08c04c44750d93a33585",
+      "source_kind": "inline_utf8"
+    },
+    {
+      "bytes": 214,
+      "git_blob": "5deb563e17c41691cee7d29fcb30322da7678474",
+      "repo_path": "docs/receiving/freight-review-compare-dc13ebf4687f/independent/rejected/reviewer-v1-output.txt",
+      "role": "independent evidence",
+      "sha256": "cf55c845e06f71af1871716599082f622a6b7b04a6be2634e5600eca99df0a0c",
+      "source_kind": "inline_utf8"
+    },
+    {
+      "bytes": 797,
+      "git_blob": "6aa0f06f29e47191709c363357b79e885dfe4377",
+      "repo_path": "docs/receiving/freight-review-compare-dc13ebf4687f/independent/rejected/reviewer-v1-to-v2.patch",
+      "role": "independent evidence",
+      "sha256": "64ddac421d26366bf66f5aa9ef9f048c164b5597d61ce5b81e16416a97d1a52b",
+      "source_kind": "inline_utf8"
+    },
+    {
+      "bytes": 2027,
+      "git_blob": "061882ac7b19afddd4787a0043469757f3f4dc55",
+      "repo_path": "docs/receiving/freight-review-compare-dc13ebf4687f/independent/run-observations.json",
+      "role": "independent evidence",
+      "sha256": "c1981abf589dff7fa8753c452ebc317e74a6ae04aebab17d5662130d4498abf2",
+      "source_kind": "inline_utf8"
+    },
+    {
+      "bytes": 4266,
+      "git_blob": "7b4413e23e4dc669a678417f9156bf1befca1446",
+      "repo_path": "docs/receiving/freight-review-compare-dc13ebf4687f/independent/source-review.json",
+      "role": "independent evidence",
+      "sha256": "8fe296b8b27d9f5baf99b606e42e5c10c3bf969684305233d2a6b526f0b95d7d",
+      "source_kind": "inline_utf8"
+    },
+    {
+      "bytes": 18445,
+      "git_blob": "74be13c2b761ba20d1365732e33c29cebe1ab9c8",
+      "repo_path": "freight_packets/README.md",
+      "role": "product README composition",
+      "sha256": "1154d6c1063749f9e1ed92c7e1a36048014cff03e0af5d5e8c92bf034c3eab9e",
+      "source_kind": "inline_utf8"
+    },
+    {
+      "bytes": 6433,
+      "git_blob": "5d2029f365e3d57bcced9a170231b2a458091a35",
+      "repo_path": "freight_packets/REVIEW_COMPARE.md",
+      "role": "product",
+      "sha256": "184f7c693fd2d70d5b1c1613e2cbc3a0f510f4ba98cf0cd0380a942d0877354f",
+      "source_kind": "physical"
+    },
+    {
+      "bytes": 15201,
+      "git_blob": "0d32c0574bda267f7066ec6ee673f15eefdaefde",
+      "repo_path": "freight_packets/freightpkt/review_compare.py",
+      "role": "product",
+      "sha256": "cd0d7b45fe4f1f80023049acfb649a752e73ed1df58cd73d814735e9ddeebe21",
+      "source_kind": "physical"
+    },
+    {
+      "bytes": 16159,
+      "git_blob": "c16f6fd4f06542b40f776332de87ce5f0b89c44f",
+      "repo_path": "freight_packets/tests/test_review_compare.py",
+      "role": "product",
+      "sha256": "3fa0c6f12821527f9592b82606542ba8ef253423b8719978762bb4f4e77dd31f",
+      "source_kind": "physical"
+    }
+  ],
+  "carrier_convention": "This manifest binds the50 payload files and the allowlist, excluding itself. The allowlist names50 payloads plus this manifest, excluding itself. The outer publication map binds all52.",
+  "ci_blob": "d72b89ae3efb2963fbe7386021f467e82a8e1f2e",
+  "inventory": {
+    "assembly_carriers": 2,
+    "assembly_entry": 1,
+    "author_with_carriers": 32,
+    "independent_with_carriers": 13,
+    "products": 4,
+    "publication_files": 52
+  },
+  "limits": [
+    "No behavior rerun; receiving runtime/dependencies and CI inputs remained exact.",
+    "No live or real Freight data. No GUI, keyboard, graphical layout or actual print receiving.",
+    "Independent reviewer actual-file gate refused; author real-module and filesystem evidence remain separately attributed.",
+    "No filesystem copy or source write; virtual content is frozen inline and existing physical inputs remain references.",
+    "Current parent/readme/absence preconditions must still hold at publication. No branch, commit or PR was created by this assembly."
+  ],
+  "readme_composition": {
+    "accepted_section": {
+      "bytes": 703,
+      "git_blob": "3b6b648e9a3b39cb0e02b24c168449689ebdaf78",
+      "sha256": "e7cff0fc60e6daddf1c91f125335202842dd63de7f908d780e5b051bd74c66b0"
+    },
+    "current_prefix_preserved": true,
+    "frozen_original_author_readme_retained": true,
+    "output": {
+      "bytes": 18445,
+      "git_blob": "74be13c2b761ba20d1365732e33c29cebe1ab9c8",
+      "sha256": "1154d6c1063749f9e1ed92c7e1a36048014cff03e0af5d5e8c92bf034c3eab9e"
+    },
+    "preimage": {
+      "bytes": 17742,
+      "git_blob": "249ee104175f1d36cc5b39abad5be02bc53e85be",
+      "sha256": "9c7941d0207b4acf70c8f6fc488e5e7257645a71224e14b9c77bee63e9e8b6aa"
+    }
+  },
+  "receiving_main": {
+    "branch": "main",
+    "commit_date": "2026-10-08T16:32:04Z",
+    "head": "76e6175d91320ac816cee019df969c0f0e1bbfc7",
+    "tree": "256483cd5c7cbb3731e5a6c322a117900ab24b65",
+    "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/branches/main"
+  },
+  "repository": "Jacob-Met/workflow-checks",
+  "retained_failures": [
+    "original missing CLI route",
+    "author extension and transport failures",
+    "reviewer original table-order assertion",
+    "excluded empty local AUTHOR-RECEIPT.json"
+  ],
+  "schema": "freight-review-compare-copy.v1",
+  "source_scope": {
+    "central_comment": 6064049643,
+    "issue": 50
+  },
+  "unchanged_receiving_dependencies": {
+    "freight_packets/freightpkt/__init__.py": "a7804a1379966afd1e6143a92cf08c1b25f7abfe",
+    "freight_packets/freightpkt/handoff.py": "bdcb63507b57d07eed1a6598d7d37d5f5d9db802"
+  }
+}

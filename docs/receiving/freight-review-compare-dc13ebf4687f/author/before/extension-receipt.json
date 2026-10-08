@@ -1,0 +1,317 @@
+{
+  "blocked_attempts": [],
+  "calls": {
+    "candidate": 0,
+    "unchanged_build_bundle": 2
+  },
+  "cases": {
+    "A": {
+      "evidence": {
+        "exceptions": [],
+        "fines": [],
+        "flags": [
+          {
+            "amount": 0,
+            "load_id": "SYN-REVIEW-MULTIPLICITY",
+            "source": "invoice.csv:row4"
+          },
+          {
+            "amount": false,
+            "load_id": "SYN-REVIEW-MULTIPLICITY",
+            "source": "invoice.csv:row4"
+          },
+          {
+            "amount": null,
+            "load_id": "SYN-REVIEW-MULTIPLICITY",
+            "source": "invoice.csv:row4"
+          }
+        ],
+        "packet_sha256": "b3dd090626f729fc5046c6431952e6e10827850c768dc91c3653cecf3c81397e",
+        "packets": [
+          {
+            "detention_cents": 0,
+            "file": "packets/kept-native-name.html",
+            "load_id": "SYN-REVIEW-MULTIPLICITY"
+          }
+        ],
+        "schema": "freight-review.v1",
+        "settlements": [],
+        "stops": [
+          {
+            "departure": "2026-10-01T12:30:00-05:00",
+            "evidence": [
+              "tracking.csv:row7"
+            ],
+            "load_id": "SYN-REVIEW-MULTIPLICITY",
+            "stop": 1
+          },
+          {
+            "departure": "2026-10-01T12:30:00-05:00",
+            "evidence": [
+              "tracking.csv:row7"
+            ],
+            "load_id": "SYN-REVIEW-MULTIPLICITY",
+            "stop": 1
+          },
+          {
+            "departure": "2026-10-01T12:30:00-05:00",
+            "evidence": [
+              "tracking.csv:row7"
+            ],
+            "load_id": "SYN-REVIEW-MULTIPLICITY",
+            "stop": 1
+          },
+          {
+            "departure": null,
+            "evidence": [
+              "tracking.csv:row8"
+            ],
+            "extension": {
+              "false_value": false,
+              "nullable": null,
+              "text": "caf\u00e9 \u65e5\u672c\u8a9e <script>alert(\"literal\")</script> & \nline two",
+              "zero": 0
+            },
+            "load_id": "SYN-REVIEW-MULTIPLICITY",
+            "stop": "Warehouse \u0394 <North>"
+          }
+        ]
+      },
+      "manifest": {
+        "evidence_version": "047c2e6a2ba08d656511302f0ab1bcd9f5bd649eeb2eb245a5d83e15bc1843d2",
+        "files": [
+          {
+            "bytes": 2506,
+            "path": "index.html",
+            "sha256": "b605b4bf5441222d90c9ddc4612df7d1b704874d8467a2058025131915695ce1"
+          },
+          {
+            "bytes": 87,
+            "path": "packet.html",
+            "sha256": "b3dd090626f729fc5046c6431952e6e10827850c768dc91c3653cecf3c81397e"
+          },
+          {
+            "bytes": 1618,
+            "path": "evidence.json",
+            "sha256": "69b6cbd1f3b7586fdfea876bace59dc6b1bf7c7dab55bcd83f211698b2a462f2"
+          },
+          {
+            "bytes": 725,
+            "path": "review.json",
+            "sha256": "54ba0db8cacbb6726e183c45ee0557767fea424ae3e8763d47879bc7bf36f2f6"
+          }
+        ],
+        "load_id": "SYN-REVIEW-MULTIPLICITY",
+        "review_version": "8c185a033639147c871e8b401da7f20605d9522b9fa2f3092f27d23548146241",
+        "schema": "freight-review-bundle.v1"
+      },
+      "review": {
+        "at": "2026-10-02T09:00:00Z",
+        "decision": "approve",
+        "evidence_version": "047c2e6a2ba08d656511302f0ab1bcd9f5bd649eeb2eb245a5d83e15bc1843d2",
+        "history": [
+          {
+            "at": "2026-10-01T09:00:00Z",
+            "decision": "adjust",
+            "evidence_version": null,
+            "note": "line1\nline2 & \"quoted\""
+          }
+        ],
+        "note": "SYNTHETIC caf\u00e9 <img src=x onerror=\"literal\"> \ud800",
+        "review_state": "current"
+      },
+      "zip_base64": "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",
+      "zip_bytes": 3240,
+      "zip_sha256": "50a87cb18f9a0ade3ac70913758c37ddf91d4a6afd6057b104e4369b6adce404"
+    },
+    "B": {
+      "evidence": {
+        "exceptions": [],
+        "fines": [],
+        "flags": [
+          {
+            "amount": 0,
+            "load_id": "SYN-REVIEW-MULTIPLICITY",
+            "source": "invoice.csv:row4"
+          },
+          {
+            "amount": false,
+            "load_id": "SYN-REVIEW-MULTIPLICITY",
+            "source": "invoice.csv:row4"
+          },
+          {
+            "amount": null,
+            "load_id": "SYN-REVIEW-MULTIPLICITY",
+            "source": "invoice.csv:row4"
+          }
+        ],
+        "packet_sha256": "b3dd090626f729fc5046c6431952e6e10827850c768dc91c3653cecf3c81397e",
+        "packets": [
+          {
+            "detention_cents": 0,
+            "file": "packets/kept-native-name.html",
+            "load_id": "SYN-REVIEW-MULTIPLICITY"
+          }
+        ],
+        "schema": "freight-review.v1",
+        "settlements": [],
+        "stops": [
+          {
+            "departure": "2026-10-01T12:30:00-05:00",
+            "evidence": [
+              "tracking.csv:row7"
+            ],
+            "load_id": "SYN-REVIEW-MULTIPLICITY",
+            "stop": 1
+          },
+          {
+            "departure": null,
+            "evidence": [
+              "tracking.csv:row8"
+            ],
+            "extension": {
+              "false_value": false,
+              "nullable": null,
+              "text": "caf\u00e9 \u65e5\u672c\u8a9e <script>alert(\"literal\")</script> & \nline two",
+              "zero": 0
+            },
+            "load_id": "SYN-REVIEW-MULTIPLICITY",
+            "stop": "Warehouse \u0394 <North>"
+          }
+        ]
+      },
+      "manifest": {
+        "evidence_version": "667d0483514c80766ef53e584c684de5cefe1a89640b7e02d6d5ed9e60995d5a",
+        "files": [
+          {
+            "bytes": 2509,
+            "path": "index.html",
+            "sha256": "f92cd2b8fabf7a36ea3ae7c466a874a40b5fb75a8757383df96ca67352e79957"
+          },
+          {
+            "bytes": 87,
+            "path": "packet.html",
+            "sha256": "b3dd090626f729fc5046c6431952e6e10827850c768dc91c3653cecf3c81397e"
+          },
+          {
+            "bytes": 1262,
+            "path": "evidence.json",
+            "sha256": "eec7b06dffe65b28528a0f3283ecab3406f094956f0bf63ab9d76e1c345c1830"
+          },
+          {
+            "bytes": 723,
+            "path": "review.json",
+            "sha256": "9a3b9b7fef4a6187a4e4770d922a2d027ccb12e1358096f606d9d78ebcde44a1"
+          }
+        ],
+        "load_id": "SYN-REVIEW-MULTIPLICITY",
+        "review_version": "d5c41ed7e58d2f6ab716ed4a5a000ac29cbac3155b109b333df565e1f056a6de",
+        "schema": "freight-review-bundle.v1"
+      },
+      "review": {
+        "at": "2026-10-02T09:00:00Z",
+        "decision": "approve",
+        "evidence_version": "047c2e6a2ba08d656511302f0ab1bcd9f5bd649eeb2eb245a5d83e15bc1843d2",
+        "history": [
+          {
+            "at": "2026-10-01T09:00:00Z",
+            "decision": "adjust",
+            "evidence_version": null,
+            "note": "line1\nline2 & \"quoted\""
+          }
+        ],
+        "note": "SYNTHETIC caf\u00e9 <img src=x onerror=\"literal\"> \ud800",
+        "review_state": "stale"
+      },
+      "zip_base64": "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",
+      "zip_bytes": 3262,
+      "zip_sha256": "21c65044a9901095f27ca478e57605316afb6c4bffa15bd3dc728c6fd5b3abe8"
+    }
+  },
+  "contract": {
+    "baseline": {
+      "head": "125339ec63eeb7c4989c9b240c01202555dce573",
+      "tree": "e3a3501d60ee8f301f9d45ea15d0d324b814e59a"
+    },
+    "decisive_cases": [
+      {
+        "expect": "All six sections have zero A-only/B-only records; identical evidence/review/packet identities; no inferred later copy",
+        "name": "same-copy"
+      },
+      {
+        "expect": "One A-only old stop and one B-only new stop retain tracking.csv:row7, copied old approval stays recorded stale in B, packet digest changes",
+        "name": "departure-and-stale-review"
+      },
+      {
+        "expect": "Three identical stop records in A and one in B produce two A-only occurrences and one unchanged occurrence; another identical literal stop stays unchanged",
+        "name": "multiplicity"
+      },
+      {
+        "expect": "Exact records containing amount 0, false and null remain three distinct unchanged records; nested unknown fields, markup, Unicode, newline, note/history and surrogate text are preserved as escaped data",
+        "name": "typed-literal-values"
+      },
+      {
+        "expect": "Malformed member/schema/digest/selected-load or mismatched load refuses before output; existing output file remains untouched",
+        "name": "refusals"
+      }
+    ],
+    "original_before": {
+      "bytes": 20565,
+      "git_blob": "4f95b9e7366358a92ce9d14162c0a2f8a8010523",
+      "sha256": "a6f488b791a13b023448c58c7a5c318fc030b70c7860ec91bc033b86bfa2e352"
+    },
+    "repository": "Jacob-Met/workflow-checks",
+    "selection": {
+      "input_contract": "Exact five unique native v1 ZIP members, content-bound by the existing manifest, evidence digest, packet digest and review digest",
+      "output_contract": "Complete self-contained HTML created exclusively only after both inputs validate and report rendering finishes; supplied packet/index HTML never executed or injected; no source reprocessing or review action",
+      "row_contract": "Exact canonical native JSON record identity, preserving multiplicity and JSON distinctions such as false versus zero",
+      "same_load": "Require exact same nonempty string load ID; differing IDs refuse before output creation",
+      "sides": "Supplied Copy A and Copy B, with no inferred chronology or current approval"
+    },
+    "source_fence": {
+      "additive": [
+        "freight_packets/README.md"
+      ],
+      "new": [
+        "freight_packets/freightpkt/review_compare.py",
+        "freight_packets/tests/test_review_compare.py",
+        "freight_packets/REVIEW_COMPARE.md"
+      ],
+      "preserved": [
+        "freight_packets/freightpkt/handoff.py",
+        "freight_packets/freightpkt/web.py",
+        "freight_packets/freightpkt/ui.html",
+        "freight_packets/freightpkt/cli.py",
+        "freight_packets/freightpkt/pipeline.py",
+        "all detention/invoice/fines/settlement/decision semantics",
+        ".github/workflows/tests.yml"
+      ]
+    },
+    "status": "preimplementation oracle; product not edited",
+    "version": 1
+  },
+  "limits": [
+    "No product implementation or GUI was exercised.",
+    "No output writer or source pipeline was invoked.",
+    "Original 20565-byte before receipt preserved separately."
+  ],
+  "observed": {
+    "flags": {
+      "canonical_distinct": 3,
+      "python_value_set_distinct": 2
+    },
+    "packet_digest_changed": false,
+    "review_A": "current",
+    "review_B": "stale",
+    "stops": {
+      "A": 4,
+      "B": 2,
+      "only_A": 2,
+      "only_B": 0,
+      "unchanged": 2
+    }
+  },
+  "source_git_blob": "bdcb63507b57d07eed1a6598d7d37d5f5d9db802",
+  "source_sha256": "413290d887d045b96dd1639c34b9c769f0e730beb28dce06c654a0df36cf1a02",
+  "status": "native producer preimplementation oracle frozen"
+}

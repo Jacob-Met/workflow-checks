@@ -1,0 +1,291 @@
+{
+  "before_sha256": "a6f488b791a13b023448c58c7a5c318fc030b70c7860ec91bc033b86bfa2e352",
+  "blocked_attempts": [],
+  "checks": 44,
+  "extension_sha256": "410e60a3190a604376448e4354e50674ed476645eeb222a540e120e3780c3bec",
+  "limits": [
+    "Path read_bytes/open use an explicit in-memory I/O model; kernel exclusivity and actual output-file publication are unqualified here.",
+    "Real argparse/main/native ZIP/canonical hash/record renderer/HTMLParser ran from exact source bytes.",
+    "No source pipeline, App, real browser, transport or estate action."
+  ],
+  "main_calls": 9,
+  "native_build_bundle_additional_calls": 1,
+  "optimize": 1,
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "runs": [
+    {
+      "events": [
+        [
+          "read",
+          "/authored/A.zip"
+        ],
+        [
+          "read",
+          "/authored/B.zip"
+        ],
+        [
+          "open",
+          "/authored/report.html",
+          "xb"
+        ],
+        [
+          "enter",
+          "/authored/report.html"
+        ],
+        [
+          "write",
+          8588
+        ],
+        [
+          "close",
+          "/authored/report.html"
+        ]
+      ],
+      "input_sha256": {
+        "/authored/A.zip": "e2e4d6f6e5b3640978fe38076c9cd8987b2c0e31878d99a764a4a8e6262479c8",
+        "/authored/B.zip": "e2e4d6f6e5b3640978fe38076c9cd8987b2c0e31878d99a764a4a8e6262479c8"
+      },
+      "name": "same_copy",
+      "output_bytes": 8588,
+      "output_sha256": "b8bfe1bfe7bacfea7e248bbda2f1e5f3fd37341efc8e41cd0b31ec7397cf5a0c",
+      "rc": 0,
+      "stderr": "",
+      "stdout": "Comparison written: /authored/report.html\n"
+    },
+    {
+      "events": [
+        [
+          "read",
+          "/authored/A.zip"
+        ],
+        [
+          "read",
+          "/authored/B.zip"
+        ],
+        [
+          "open",
+          "/authored/report.html",
+          "xb"
+        ],
+        [
+          "enter",
+          "/authored/report.html"
+        ],
+        [
+          "write",
+          8918
+        ],
+        [
+          "close",
+          "/authored/report.html"
+        ]
+      ],
+      "input_sha256": {
+        "/authored/A.zip": "e2e4d6f6e5b3640978fe38076c9cd8987b2c0e31878d99a764a4a8e6262479c8",
+        "/authored/B.zip": "ded626c2cccca663e9cddf6d6b112e68a476539dcc69fe3cc473fe74b2b3e68c"
+      },
+      "name": "changed_departure",
+      "output_bytes": 8918,
+      "output_sha256": "91f93ce338f8959550a855274971ac5df7f7b47c6fc513bc3679ea215f60dc97",
+      "rc": 0,
+      "stderr": "",
+      "stdout": "Comparison written: /authored/report.html\n"
+    },
+    {
+      "events": [
+        [
+          "read",
+          "/authored/A.zip"
+        ],
+        [
+          "read",
+          "/authored/B.zip"
+        ],
+        [
+          "open",
+          "/authored/report.html",
+          "xb"
+        ],
+        [
+          "enter",
+          "/authored/report.html"
+        ],
+        [
+          "write",
+          10506
+        ],
+        [
+          "close",
+          "/authored/report.html"
+        ]
+      ],
+      "input_sha256": {
+        "/authored/A.zip": "50a87cb18f9a0ade3ac70913758c37ddf91d4a6afd6057b104e4369b6adce404",
+        "/authored/B.zip": "21c65044a9901095f27ca478e57605316afb6c4bffa15bd3dc728c6fd5b3abe8"
+      },
+      "name": "multiplicity_literals",
+      "output_bytes": 10506,
+      "output_sha256": "d6bb201a0e60d1aa016a79d088aa3c20d64edb0a81942e1b94fff68ac23e584b",
+      "rc": 0,
+      "stderr": "",
+      "stdout": "Comparison written: /authored/report.html\n"
+    },
+    {
+      "events": [
+        [
+          "read",
+          "/authored/A.zip"
+        ],
+        [
+          "read",
+          "/authored/B.zip"
+        ]
+      ],
+      "input_sha256": {
+        "/authored/A.zip": "e2e4d6f6e5b3640978fe38076c9cd8987b2c0e31878d99a764a4a8e6262479c8",
+        "/authored/B.zip": "a3989126344744ef800dbc88bf7e744853f3f2eac75c9ab3301f4e845ef22078"
+      },
+      "name": "bad_second",
+      "rc": 2,
+      "stderr": "review comparison: cannot read native ZIP members: File is not a zip file\n",
+      "stdout": ""
+    },
+    {
+      "events": [
+        [
+          "read",
+          "/authored/A.zip"
+        ],
+        [
+          "read",
+          "/authored/B.zip"
+        ]
+      ],
+      "input_sha256": {
+        "/authored/A.zip": "e2e4d6f6e5b3640978fe38076c9cd8987b2c0e31878d99a764a4a8e6262479c8",
+        "/authored/B.zip": "c4ff58ad3dd776abc93098f13821f77320521a28360178b9823cdc00286210c3"
+      },
+      "name": "different_load",
+      "rc": 2,
+      "stderr": "review comparison: copies have different load IDs; no comparison was written\n",
+      "stdout": ""
+    },
+    {
+      "events": [
+        [
+          "read",
+          "/authored/A.zip"
+        ],
+        [
+          "read",
+          "/authored/B.zip"
+        ],
+        [
+          "open",
+          "/authored/report.html",
+          "xb"
+        ]
+      ],
+      "input_sha256": {
+        "/authored/A.zip": "e2e4d6f6e5b3640978fe38076c9cd8987b2c0e31878d99a764a4a8e6262479c8",
+        "/authored/B.zip": "ded626c2cccca663e9cddf6d6b112e68a476539dcc69fe3cc473fe74b2b3e68c",
+        "/authored/report.html": "c276ff08c8d8f58468c557ce9519a90a3fa06c04db1343d81854883c74e971cf"
+      },
+      "name": "existing_output",
+      "output_bytes": 13,
+      "output_sha256": "c276ff08c8d8f58468c557ce9519a90a3fa06c04db1343d81854883c74e971cf",
+      "rc": 2,
+      "stderr": "review comparison: /authored/report.html\n",
+      "stdout": ""
+    },
+    {
+      "events": [
+        [
+          "read",
+          "/authored/A.zip"
+        ],
+        [
+          "read",
+          "/authored/B.zip"
+        ],
+        [
+          "open",
+          "/authored/report.html",
+          "xb"
+        ],
+        [
+          "enter",
+          "/authored/report.html"
+        ],
+        [
+          "write",
+          8918
+        ],
+        [
+          "close",
+          "/authored/report.html"
+        ]
+      ],
+      "input_sha256": {
+        "/authored/A.zip": "e2e4d6f6e5b3640978fe38076c9cd8987b2c0e31878d99a764a4a8e6262479c8",
+        "/authored/B.zip": "ded626c2cccca663e9cddf6d6b112e68a476539dcc69fe3cc473fe74b2b3e68c"
+      },
+      "name": "partial_write",
+      "output_bytes": 16,
+      "output_sha256": "48e8fe8937b8492a5ea862106b8269004ef2943b47214be4f9fd7198879fc9ac",
+      "rc": 2,
+      "stderr": "review comparison: authored partial-write failure\n",
+      "stdout": ""
+    },
+    {
+      "events": [
+        [
+          "read",
+          "/authored/A.zip"
+        ],
+        [
+          "read",
+          "/authored/B.zip"
+        ],
+        [
+          "open",
+          "/authored/report.html",
+          "xb"
+        ]
+      ],
+      "input_sha256": {
+        "/authored/A.zip": "e2e4d6f6e5b3640978fe38076c9cd8987b2c0e31878d99a764a4a8e6262479c8",
+        "/authored/B.zip": "ded626c2cccca663e9cddf6d6b112e68a476539dcc69fe3cc473fe74b2b3e68c",
+        "/authored/report.html": "48e8fe8937b8492a5ea862106b8269004ef2943b47214be4f9fd7198879fc9ac"
+      },
+      "name": "partial_retry",
+      "output_bytes": 16,
+      "output_sha256": "48e8fe8937b8492a5ea862106b8269004ef2943b47214be4f9fd7198879fc9ac",
+      "rc": 2,
+      "stderr": "review comparison: /authored/report.html\n",
+      "stdout": ""
+    },
+    {
+      "events": [
+        [
+          "read",
+          "/authored/A.zip"
+        ],
+        [
+          "read",
+          "/authored/B.zip"
+        ]
+      ],
+      "input_sha256": {
+        "/authored/A.zip": "e2e4d6f6e5b3640978fe38076c9cd8987b2c0e31878d99a764a4a8e6262479c8",
+        "/authored/B.zip": "ded626c2cccca663e9cddf6d6b112e68a476539dcc69fe3cc473fe74b2b3e68c"
+      },
+      "name": "render_refusal",
+      "rc": 2,
+      "stderr": "review comparison: authored render refusal\n",
+      "stdout": ""
+    }
+  ],
+  "source_sha256": "cd0d7b45fe4f1f80023049acfb649a752e73ed1df58cd73d814735e9ddeebe21",
+  "status": "pass"
+}

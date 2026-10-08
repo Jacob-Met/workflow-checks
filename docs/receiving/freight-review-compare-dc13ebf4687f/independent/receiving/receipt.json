@@ -1,0 +1,704 @@
+{
+  "candidate_carrier": {
+    "bytes": 57422,
+    "git_blob": "2d35b4969dc2eb51c5870e4fbe7025eb76423642",
+    "sha256": "14882de031e421460183b40c67d8bfb1429a6e008d65ba7b4c11973c3421bfd2"
+  },
+  "checks": 497,
+  "finished_at": "2026-10-08T16:31:56.720090+00:00",
+  "limits": [
+    "No author test body/suite or original broad pipeline suite executed by this review.",
+    "All data is authored; no App/server, live files, browser, rendering/printing or provider invocation.",
+    "Input reads remain complete in-memory snapshots; no concurrent mutation or archive resource cap claimed.",
+    "Existing targets are exclusively refused; partial new output after later storage failure remains the documented author-tested limitation.",
+    "Normal CPython only for independent checks; author reports optimized qualification separately."
+  ],
+  "optimized": false,
+  "oracle": {
+    "bytes": 64371,
+    "git_blob": "73f5f57bcec05d84f8d9553cfda55a4ad8f0810d",
+    "sha256": "330f8969404d3987f1e01c204dfa36c192e8440e9d4af48c0b4003b5578d4de1"
+  },
+  "oracle_frozen_at": "2026-10-08T16:21:58.767374+00:00",
+  "original_source_base": "125339ec63eeb7c4989c9b240c01202555dce573",
+  "physical": {
+    "available_at_gate": 0,
+    "calls": [],
+    "fixed_floor": 98304,
+    "scope": "deferred; below fixed 96 KiB disposable receiving floor",
+    "writes": 0
+  },
+  "refusals": {
+    "different_valid_load": {
+      "message": "copies have different load IDs; no comparison was written",
+      "type": "BundleError",
+      "zip": {
+        "bytes": 2910,
+        "git_blob": "9f67993b9d2eeb43fcc82abad0a20d1c1bb00a9c",
+        "sha256": "ce4105c4c63d7853801a61b6c9e19e1f4bdc84c5e941ac324a2b26f21e753a8a"
+      }
+    },
+    "duplicate_native_json_key": {
+      "message": "manifest.json is not unambiguous UTF-8 JSON: JSON object has a duplicate key",
+      "type": "BundleError",
+      "zip": {
+        "bytes": 3378,
+        "git_blob": "ddbf12178f3c72c90caa087f9332fb90e1a49ae3",
+        "sha256": "f5ae3e6f9179f7a6a64121f0a66f343a3d1fca025aad3db07e1161ae8af736c6"
+      }
+    },
+    "extra_traversal_member": {
+      "message": "bundle must have exactly five unique native members",
+      "type": "BundleError",
+      "zip": {
+        "bytes": 3522,
+        "git_blob": "61215f49a3fc9b165f255ef439b0c0028fbd4af1",
+        "sha256": "8efb2341b95733b5628300b2766b66876acd090c3caf265ea8f9a56028d0b774"
+      }
+    },
+    "manifest_rebound_but_evidence_stale": {
+      "message": "invalid native content identity: evidence does not match its canonical version",
+      "type": "BundleError",
+      "zip": {
+        "bytes": 3380,
+        "git_blob": "aaa657c19c2c8b03d5e5921c1317f96aaf722a2a",
+        "sha256": "27d29117545f90ec68532252cff8a15b325cbec9b054586ec58400c555284339"
+      }
+    },
+    "manifest_rebound_but_review_stale": {
+      "message": "invalid native content identity: saved review does not match its canonical version",
+      "type": "BundleError",
+      "zip": {
+        "bytes": 3365,
+        "git_blob": "c100d31bbdfeaec19a6ab8fdf5495f1a574a5398",
+        "sha256": "d675263c62b491d912d1abbf877b8e6c6a187c1669140ffb14e065dc6b10602d"
+      }
+    },
+    "unbound_payload": {
+      "message": "packet.html does not match its manifest binding",
+      "type": "BundleError",
+      "zip": {
+        "bytes": 3384,
+        "git_blob": "e2788383b94c008669c894221b0765a58341f846",
+        "sha256": "e6e0bdc39d011b59723f18150f9b994d1ae75215586fc47bfefd0542bf34866b"
+      }
+    }
+  },
+  "results": {
+    "changed_departure": {
+      "both_complete_reviews": true,
+      "counts": {
+        "exceptions": {
+          "a_count": 0,
+          "a_only_count": 0,
+          "b_count": 0,
+          "b_only_count": 0,
+          "unchanged_count": 0
+        },
+        "fines": {
+          "a_count": 0,
+          "a_only_count": 0,
+          "b_count": 0,
+          "b_only_count": 0,
+          "unchanged_count": 0
+        },
+        "flags": {
+          "a_count": 1,
+          "a_only_count": 0,
+          "b_count": 1,
+          "b_only_count": 0,
+          "unchanged_count": 1
+        },
+        "packets": {
+          "a_count": 1,
+          "a_only_count": 0,
+          "b_count": 1,
+          "b_only_count": 0,
+          "unchanged_count": 1
+        },
+        "settlements": {
+          "a_count": 1,
+          "a_only_count": 0,
+          "b_count": 1,
+          "b_only_count": 0,
+          "unchanged_count": 1
+        },
+        "stops": {
+          "a_count": 2,
+          "a_only_count": 1,
+          "b_count": 2,
+          "b_only_count": 1,
+          "unchanged_count": 1
+        }
+      },
+      "html": {
+        "bytes": 12050,
+        "git_blob": "36e858eae2882c8b3063b0468fb355ec3ae45cd1",
+        "sha256": "1965d4aa333f8dbbd98713e3643183d0aa3219c1311bc4795a927e3a8aa28eea"
+      },
+      "only_internal_links": true,
+      "pre_blocks": 8,
+      "tags": [
+        "a",
+        "article",
+        "body",
+        "br",
+        "code",
+        "div",
+        "h1",
+        "h2",
+        "h3",
+        "head",
+        "html",
+        "li",
+        "meta",
+        "nav",
+        "ol",
+        "p",
+        "pre",
+        "section",
+        "strong",
+        "style",
+        "table",
+        "tbody",
+        "td",
+        "th",
+        "thead",
+        "title",
+        "tr"
+      ]
+    },
+    "container_only": {
+      "both_complete_reviews": true,
+      "counts": {
+        "exceptions": {
+          "a_count": 0,
+          "a_only_count": 0,
+          "b_count": 0,
+          "b_only_count": 0,
+          "unchanged_count": 0
+        },
+        "fines": {
+          "a_count": 0,
+          "a_only_count": 0,
+          "b_count": 0,
+          "b_only_count": 0,
+          "unchanged_count": 0
+        },
+        "flags": {
+          "a_count": 1,
+          "a_only_count": 0,
+          "b_count": 1,
+          "b_only_count": 0,
+          "unchanged_count": 1
+        },
+        "packets": {
+          "a_count": 1,
+          "a_only_count": 0,
+          "b_count": 1,
+          "b_only_count": 0,
+          "unchanged_count": 1
+        },
+        "settlements": {
+          "a_count": 1,
+          "a_only_count": 0,
+          "b_count": 1,
+          "b_only_count": 0,
+          "unchanged_count": 1
+        },
+        "stops": {
+          "a_count": 2,
+          "a_only_count": 0,
+          "b_count": 2,
+          "b_only_count": 0,
+          "unchanged_count": 2
+        }
+      },
+      "html": {
+        "bytes": 11407,
+        "git_blob": "306703823157394d10a4c382695ebd13fecb02b8",
+        "sha256": "8100081d5697d46210fb7dc8cce3e36a5650615695db8f906463a350682b5e7d"
+      },
+      "only_internal_links": true,
+      "pre_blocks": 7,
+      "tags": [
+        "a",
+        "article",
+        "body",
+        "br",
+        "code",
+        "div",
+        "h1",
+        "h2",
+        "h3",
+        "head",
+        "html",
+        "li",
+        "meta",
+        "nav",
+        "ol",
+        "p",
+        "pre",
+        "section",
+        "strong",
+        "style",
+        "table",
+        "tbody",
+        "td",
+        "th",
+        "thead",
+        "title",
+        "tr"
+      ]
+    },
+    "duplicates": {
+      "both_complete_reviews": true,
+      "counts": {
+        "exceptions": {
+          "a_count": 0,
+          "a_only_count": 0,
+          "b_count": 0,
+          "b_only_count": 0,
+          "unchanged_count": 0
+        },
+        "fines": {
+          "a_count": 0,
+          "a_only_count": 0,
+          "b_count": 0,
+          "b_only_count": 0,
+          "unchanged_count": 0
+        },
+        "flags": {
+          "a_count": 1,
+          "a_only_count": 0,
+          "b_count": 1,
+          "b_only_count": 0,
+          "unchanged_count": 1
+        },
+        "packets": {
+          "a_count": 1,
+          "a_only_count": 0,
+          "b_count": 1,
+          "b_only_count": 0,
+          "unchanged_count": 1
+        },
+        "settlements": {
+          "a_count": 1,
+          "a_only_count": 0,
+          "b_count": 1,
+          "b_only_count": 0,
+          "unchanged_count": 1
+        },
+        "stops": {
+          "a_count": 3,
+          "a_only_count": 0,
+          "b_count": 5,
+          "b_only_count": 2,
+          "unchanged_count": 3
+        }
+      },
+      "html": {
+        "bytes": 9285,
+        "git_blob": "7668e151c6157c7220f6de94563277f096954778",
+        "sha256": "ff2dbb9968db892b729470a657abd64adbb970216dfc0e4965ce2425d0ecac11"
+      },
+      "only_internal_links": true,
+      "pre_blocks": 8,
+      "tags": [
+        "a",
+        "article",
+        "body",
+        "br",
+        "code",
+        "div",
+        "h1",
+        "h2",
+        "h3",
+        "head",
+        "html",
+        "li",
+        "meta",
+        "nav",
+        "ol",
+        "p",
+        "pre",
+        "section",
+        "strong",
+        "style",
+        "table",
+        "tbody",
+        "td",
+        "th",
+        "thead",
+        "title",
+        "tr"
+      ]
+    },
+    "literal_types": {
+      "both_complete_reviews": true,
+      "counts": {
+        "exceptions": {
+          "a_count": 0,
+          "a_only_count": 0,
+          "b_count": 0,
+          "b_only_count": 0,
+          "unchanged_count": 0
+        },
+        "fines": {
+          "a_count": 0,
+          "a_only_count": 0,
+          "b_count": 0,
+          "b_only_count": 0,
+          "unchanged_count": 0
+        },
+        "flags": {
+          "a_count": 1,
+          "a_only_count": 0,
+          "b_count": 1,
+          "b_only_count": 0,
+          "unchanged_count": 1
+        },
+        "packets": {
+          "a_count": 1,
+          "a_only_count": 0,
+          "b_count": 1,
+          "b_only_count": 0,
+          "unchanged_count": 1
+        },
+        "settlements": {
+          "a_count": 1,
+          "a_only_count": 0,
+          "b_count": 1,
+          "b_only_count": 0,
+          "unchanged_count": 1
+        },
+        "stops": {
+          "a_count": 5,
+          "a_only_count": 2,
+          "b_count": 5,
+          "b_only_count": 2,
+          "unchanged_count": 3
+        }
+      },
+      "html": {
+        "bytes": 9638,
+        "git_blob": "9d771b11fb7cf2916ed414c591b1110e09c15832",
+        "sha256": "3271daeac7054997b2ec4597627a22bff94a70a4abc116afe2d49e67f62671d9"
+      },
+      "only_internal_links": true,
+      "pre_blocks": 12,
+      "tags": [
+        "a",
+        "article",
+        "body",
+        "br",
+        "code",
+        "div",
+        "h1",
+        "h2",
+        "h3",
+        "head",
+        "html",
+        "li",
+        "meta",
+        "nav",
+        "ol",
+        "p",
+        "pre",
+        "section",
+        "strong",
+        "style",
+        "table",
+        "tbody",
+        "td",
+        "th",
+        "thead",
+        "title",
+        "tr"
+      ]
+    },
+    "packet_only": {
+      "both_complete_reviews": true,
+      "counts": {
+        "exceptions": {
+          "a_count": 0,
+          "a_only_count": 0,
+          "b_count": 0,
+          "b_only_count": 0,
+          "unchanged_count": 0
+        },
+        "fines": {
+          "a_count": 0,
+          "a_only_count": 0,
+          "b_count": 0,
+          "b_only_count": 0,
+          "unchanged_count": 0
+        },
+        "flags": {
+          "a_count": 1,
+          "a_only_count": 0,
+          "b_count": 1,
+          "b_only_count": 0,
+          "unchanged_count": 1
+        },
+        "packets": {
+          "a_count": 1,
+          "a_only_count": 0,
+          "b_count": 1,
+          "b_only_count": 0,
+          "unchanged_count": 1
+        },
+        "settlements": {
+          "a_count": 1,
+          "a_only_count": 0,
+          "b_count": 1,
+          "b_only_count": 0,
+          "unchanged_count": 1
+        },
+        "stops": {
+          "a_count": 2,
+          "a_only_count": 0,
+          "b_count": 2,
+          "b_only_count": 0,
+          "unchanged_count": 2
+        }
+      },
+      "html": {
+        "bytes": 11425,
+        "git_blob": "1aedb252d9b98d1cc8928a79aa9e27eb9b5ce15f",
+        "sha256": "7c22b93725280b6fbfd410aab34c053d49960030734e7f76b7fb5cc803897f35"
+      },
+      "only_internal_links": true,
+      "pre_blocks": 7,
+      "tags": [
+        "a",
+        "article",
+        "body",
+        "br",
+        "code",
+        "div",
+        "h1",
+        "h2",
+        "h3",
+        "head",
+        "html",
+        "li",
+        "meta",
+        "nav",
+        "ol",
+        "p",
+        "pre",
+        "section",
+        "strong",
+        "style",
+        "table",
+        "tbody",
+        "td",
+        "th",
+        "thead",
+        "title",
+        "tr"
+      ]
+    },
+    "review_only": {
+      "both_complete_reviews": true,
+      "counts": {
+        "exceptions": {
+          "a_count": 0,
+          "a_only_count": 0,
+          "b_count": 0,
+          "b_only_count": 0,
+          "unchanged_count": 0
+        },
+        "fines": {
+          "a_count": 0,
+          "a_only_count": 0,
+          "b_count": 0,
+          "b_only_count": 0,
+          "unchanged_count": 0
+        },
+        "flags": {
+          "a_count": 1,
+          "a_only_count": 0,
+          "b_count": 1,
+          "b_only_count": 0,
+          "unchanged_count": 1
+        },
+        "packets": {
+          "a_count": 1,
+          "a_only_count": 0,
+          "b_count": 1,
+          "b_only_count": 0,
+          "unchanged_count": 1
+        },
+        "settlements": {
+          "a_count": 1,
+          "a_only_count": 0,
+          "b_count": 1,
+          "b_only_count": 0,
+          "unchanged_count": 1
+        },
+        "stops": {
+          "a_count": 2,
+          "a_only_count": 0,
+          "b_count": 2,
+          "b_only_count": 0,
+          "unchanged_count": 2
+        }
+      },
+      "html": {
+        "bytes": 11431,
+        "git_blob": "6380cedb8f44e76bf6ccdda4eaf384d2c74b3c7b",
+        "sha256": "335c8167f6775b541996765e55e0b169dc371cb848d5ef2088095e22ab62c15d"
+      },
+      "only_internal_links": true,
+      "pre_blocks": 7,
+      "tags": [
+        "a",
+        "article",
+        "body",
+        "br",
+        "code",
+        "div",
+        "h1",
+        "h2",
+        "h3",
+        "head",
+        "html",
+        "li",
+        "meta",
+        "nav",
+        "ol",
+        "p",
+        "pre",
+        "section",
+        "strong",
+        "style",
+        "table",
+        "tbody",
+        "td",
+        "th",
+        "thead",
+        "title",
+        "tr"
+      ]
+    },
+    "same": {
+      "both_complete_reviews": true,
+      "counts": {
+        "exceptions": {
+          "a_count": 0,
+          "a_only_count": 0,
+          "b_count": 0,
+          "b_only_count": 0,
+          "unchanged_count": 0
+        },
+        "fines": {
+          "a_count": 0,
+          "a_only_count": 0,
+          "b_count": 0,
+          "b_only_count": 0,
+          "unchanged_count": 0
+        },
+        "flags": {
+          "a_count": 1,
+          "a_only_count": 0,
+          "b_count": 1,
+          "b_only_count": 0,
+          "unchanged_count": 1
+        },
+        "packets": {
+          "a_count": 1,
+          "a_only_count": 0,
+          "b_count": 1,
+          "b_only_count": 0,
+          "unchanged_count": 1
+        },
+        "settlements": {
+          "a_count": 1,
+          "a_only_count": 0,
+          "b_count": 1,
+          "b_only_count": 0,
+          "unchanged_count": 1
+        },
+        "stops": {
+          "a_count": 2,
+          "a_only_count": 0,
+          "b_count": 2,
+          "b_only_count": 0,
+          "unchanged_count": 2
+        }
+      },
+      "html": {
+        "bytes": 11407,
+        "git_blob": "43913fc75d709bb6bec73b577a5351b5d031ff73",
+        "sha256": "e69b8080052fe47315d11e5c9680f71c75f366dcf163754aea86af7cac10c482"
+      },
+      "only_internal_links": true,
+      "pre_blocks": 7,
+      "tags": [
+        "a",
+        "article",
+        "body",
+        "br",
+        "code",
+        "div",
+        "h1",
+        "h2",
+        "h3",
+        "head",
+        "html",
+        "li",
+        "meta",
+        "nav",
+        "ol",
+        "p",
+        "pre",
+        "section",
+        "strong",
+        "style",
+        "table",
+        "tbody",
+        "td",
+        "th",
+        "thead",
+        "title",
+        "tr"
+      ]
+    }
+  },
+  "runtime": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "schema": "independent-freight-comparison-receiving.v1",
+  "source": {
+    "README.md": {
+      "bytes": 16402,
+      "git_blob": "afabddbfa95fb6c86ce60a3e5abeb6b069f10aa5",
+      "sha256": "d920fc7a9faac770e295d252301c84c2c7d181ddbcf2572429c57837174e82f0"
+    },
+    "REVIEW_COMPARE.md": {
+      "bytes": 6433,
+      "git_blob": "5d2029f365e3d57bcced9a170231b2a458091a35",
+      "sha256": "184f7c693fd2d70d5b1c1613e2cbc3a0f510f4ba98cf0cd0380a942d0877354f"
+    },
+    "freightpkt/__init__.py": {
+      "bytes": 245,
+      "git_blob": "a7804a1379966afd1e6143a92cf08c1b25f7abfe",
+      "sha256": "f9364708963fa65b54aae5174a816c45df417fe7d93971c3b0ff046278929706"
+    },
+    "freightpkt/handoff.py": {
+      "bytes": 7082,
+      "git_blob": "bdcb63507b57d07eed1a6598d7d37d5f5d9db802",
+      "sha256": "413290d887d045b96dd1639c34b9c769f0e730beb28dce06c654a0df36cf1a02"
+    },
+    "freightpkt/review_compare.py": {
+      "bytes": 15201,
+      "git_blob": "0d32c0574bda267f7066ec6ee673f15eefdaefde",
+      "sha256": "cd0d7b45fe4f1f80023049acfb649a752e73ed1df58cd73d814735e9ddeebe21"
+    },
+    "tests/test_review_compare.py": {
+      "bytes": 16159,
+      "git_blob": "c16f6fd4f06542b40f776332de87ce5f0b89c44f",
+      "sha256": "3fa0c6f12821527f9592b82606542ba8ef253423b8719978762bb4f4e77dd31f"
+    }
+  }
+}

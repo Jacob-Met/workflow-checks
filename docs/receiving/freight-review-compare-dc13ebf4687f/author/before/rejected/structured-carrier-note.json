@@ -1,0 +1,7 @@
+{
+  "status": "tool structured-value serialization refusal after successful native execution",
+  "observed_error": "failed to serialize JavaScript value: unexpected end of hex escape at line 1 column 2275",
+  "trigger": "storing the JSON-decoded receipt, which contained an authored legacy lone-surrogate note, as a structured value",
+  "resolution": "retain exact successful raw JSON and store only surrogate-free metadata; no normalization of native source data",
+  "scope": "carrier-only failure; candidate code not yet implemented"
+}

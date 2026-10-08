@@ -1,0 +1,200 @@
+import ast,base64,collections,copy,gzip,hashlib,io,json,os,pathlib,subprocess,sys,time,zipfile
+from datetime import datetime,timezone
+from html.parser import HTMLParser
+cfg=json.loads(sys.argv[1])
+def sha(b): return hashlib.sha256(b).hexdigest()
+def git(b): return hashlib.sha1(b"blob "+str(len(b)).encode()+b"\0"+b).hexdigest()
+def pin(b): return {"bytes":len(b),"sha256":sha(b),"git_blob":git(b)}
+def canon(v): return json.dumps(v,sort_keys=True,separators=(",",":"),ensure_ascii=True,allow_nan=False)
+checks=0
+def check(value,label):
+    global checks
+    checks+=1
+    if not value: raise AssertionError(label)
+oracle_raw=gzip.decompress(base64.b64decode(cfg["oracle_gzip_base64"]))
+check(pin(oracle_raw)==cfg["oracle_pin"],"sealed original oracle")
+oracle=json.loads(oracle_raw)
+bundles={k:base64.b64decode(v) for k,v in cfg["bundles_base64"].items()}
+for k,raw in bundles.items():
+    check(sha(raw)==oracle["views"][k]["zip_sha256"] and len(raw)==oracle["views"][k]["zip_bytes"],"sealed native bundle "+k)
+root=pathlib.Path(cfg["candidate"])
+carrier_raw=pathlib.Path(cfg["carrier"]).read_bytes()
+check(sha(carrier_raw)=="14882de031e421460183b40c67d8bfb1429a6e008d65ba7b4c11973c3421bfd2","frozen carrier")
+carrier=json.loads(carrier_raw)
+source_before={}
+for p in root.rglob("*"):
+    if p.is_file():source_before[str(p.relative_to(root))]=pin(p.read_bytes())
+for path,text in carrier["outputs"].items():
+    check((root.parent/path).read_bytes()==text.encode(),"carrier/source parity "+path)
+for path,expected in carrier["preconditions"]["dependencies"].items():
+    check(pin((root.parent/path).read_bytes())["git_blob"]==expected,"unchanged producer dependency "+path)
+runtime=root/"freightpkt/review_compare.py"
+check(source_before["freightpkt/review_compare.py"]["git_blob"]=="0d32c0574bda267f7066ec6ee673f15eefdaefde","frozen runtime")
+tree=ast.parse(runtime.read_bytes())
+imports=[ast.dump(n,include_attributes=False) for n in tree.body if isinstance(n,(ast.Import,ast.ImportFrom))]
+check(not any(any(word in item for word in ("pipeline","web","socket","requests","subprocess","urllib")) for item in imports),"no operational dependency imports")
+sys.path.insert(0,str(root))
+from freightpkt import review_compare as c
+from freightpkt import handoff
+check(pathlib.Path(c.__file__)==runtime,"actual selected candidate import")
+check(pathlib.Path(handoff.__file__)==root/"freightpkt/handoff.py","actual unchanged producer import")
+class Page(HTMLParser):
+    def __init__(self):
+        super().__init__(convert_charrefs=True);self.sections=[];self.current=None;self.pres=[];self.pre=None;self.tables=[];self.table=None;self.row=None;self.cell=None;self.tags=[];self.links=[];self.badattrs=[]
+    def handle_starttag(self,tag,attrs):
+        d=dict(attrs);self.tags.append(tag)
+        if tag=="section":self.sections.append(d.get("id"));self.current=d.get("id")
+        if tag=="pre":self.pre={"section":self.current,"text":""}
+        if tag=="table":self.table=[]
+        if tag=="tr":self.row=[]
+        if tag in ("th","td"):self.cell=""
+        if "href" in d:self.links.append(d["href"])
+        if any(k.startswith("on") or k in ("src","srcdoc","action") for k in d):self.badattrs.append((tag,d))
+    def handle_endtag(self,tag):
+        if tag=="pre":self.pres.append(self.pre);self.pre=None
+        if tag in ("th","td") and self.row is not None:self.row.append(self.cell);self.cell=None
+        if tag=="tr":self.table.append(self.row);self.row=None
+        if tag=="table":self.tables.append(self.table);self.table=None
+        if tag=="section":self.current=None
+    def handle_data(self,data):
+        if self.pre is not None:self.pre["text"]+=data
+        if self.cell is not None:self.cell+=data
+def report_check(label,expected):
+    akey,bkey=expected["a"],expected["b"]
+    va,vb=oracle["views"][akey],oracle["views"][bkey]
+    a=c.decode_bundle(bundles[akey],'supplied A <&>"')
+    b=c.decode_bundle(bundles[bkey],'supplied B <&>"')
+    before=canon([a.manifest,a.evidence,a.review,b.manifest,b.evidence,b.review])
+    for copy_,view in ((a,va),(b,vb)):
+        check(copy_.zip_sha256==view["zip_sha256"] and copy_.zip_bytes==view["zip_bytes"],label+" source identity")
+        check(canon(copy_.evidence)==canon(view["evidence"]),label+" complete native evidence")
+        check(canon(copy_.review["review"])==canon(view["saved_review"]),label+" complete saved review/history")
+        for row in copy_.manifest["files"]:
+            check(row["bytes"]==view["members"][row["path"]]["bytes"] and row["sha256"]==view["members"][row["path"]]["sha256"],label+" native member "+row["path"])
+    observed={}
+    for section,want in expected["sections"].items():
+        got=c.record_changes(a.evidence[section],b.evidence[section])
+        for actual_name,oracle_name in (("only_a","a_only"),("only_b","b_only"),("unchanged","unchanged")):
+            rows={canon(x["record"]):x["count"] for x in got[actual_name]}
+            check(rows==want[oracle_name],label+" exact values/multiplicity "+section+"/"+actual_name)
+        check(got["a_count"]==want["a_count"] and got["b_count"]==want["b_count"],label+" full row totals "+section)
+        observed[section]={k:want[k] for k in ("a_count","b_count","a_only_count","b_only_count","unchanged_count")}
+    text=c.render_comparison(a,b); encoded=text.encode()
+    parser=Page();parser.feed(text);parser.close()
+    check(not ({"script","iframe","object","embed","img","form"}&set(parser.tags)) and not parser.badattrs,label+" no supplied executable/resource element")
+    check(all(x.startswith("#") and x[1:] in parser.sections for x in parser.links),label+" only existing internal anchors")
+    check(set(parser.sections)=={"reviews","identities",*c.SECTIONS},label+" all six report sections")
+    got_table=parser.tables[0]
+    want_table=[["Section","Copy A","Copy B","Unchanged","Only A","Only B"]]
+    for section in ("stops","flags","fines","settlements","exceptions","packets"):
+        want=expected["sections"][section]
+        want_table.append([section,str(want["a_count"]),str(want["b_count"]),str(want["unchanged_count"]),str(want["a_only_count"]),str(want["b_only_count"])])
+    check(got_table==want_table,label+" actual rendered counts")
+    review_pres=[x for x in parser.pres if x["section"]=="reviews"]
+    check(len(review_pres)==2,label+" two complete saved objects")
+    for rendered,want in zip(review_pres,(expected["a_review"],expected["b_review"])):
+        check(canon(json.loads(rendered["text"]))==canon(want),label+" literal complete review in supplied order")
+    for section,want in expected["sections"].items():
+        got_pre=collections.Counter(canon(json.loads(x["text"])) for x in parser.pres if x["section"]==section)
+        want_pre=collections.Counter(key for group in ("a_only","b_only","unchanged") for key in want[group])
+        check(got_pre==want_pre,label+" literal full rendered records "+section)
+    identity=dict((r[0],r[1:]) for r in parser.tables[1][1:])
+    for label_,key in (("ZIP SHA-256","zip_sha256"),("Packet SHA-256","packet_sha256"),("Evidence version","evidence_version"),("Saved review version","review_version")):
+        check(identity[label_]==[va[key],vb[key]],label+" rendered identity "+label_)
+    check(identity["Source path"]==['supplied A <&>"','supplied B <&>"'],label+" escaped literal labels")
+    for row in parser.tables[2][1:]:
+        name=row[0]
+        for col,view in ((1,va),(2,vb)):
+            check(str(view["members"][name]["bytes"])+" bytes"+view["members"][name]["sha256"]==row[col],label+" rendered member "+name)
+    check("this report establishes no current approval" in text and "not an inferred chronology" in text,label+" scope attribution")
+    check("authored_marker()" not in text and "data-packet-only" not in text,label+" packet HTML not embedded")
+    check(canon([a.manifest,a.evidence,a.review,b.manifest,b.evidence,b.review])==before,label+" no report mutation")
+    return {"html":pin(encoded),"counts":observed,"pre_blocks":len(parser.pres),"tags":sorted(set(parser.tags)),"both_complete_reviews":True,"only_internal_links":True}
+results={}
+for label,expected in oracle["expected"].items():
+    results[label]=report_check(label,expected)
+def unpack(raw):
+    with zipfile.ZipFile(io.BytesIO(raw)) as z:return {n:z.read(n) for n in z.namelist()}
+def repack(members):
+    out=io.BytesIO()
+    with zipfile.ZipFile(out,"w",compression=zipfile.ZIP_DEFLATED) as z:
+        for n,b in members.items():z.writestr(n,b)
+    return out.getvalue()
+def jsonbytes(value):return (json.dumps(value,sort_keys=True,indent=2,ensure_ascii=True,allow_nan=False)+"\n").encode()
+def rebind(members,name,data):
+    members=dict(members);members[name]=data;m=json.loads(members["manifest.json"])
+    for row in m["files"]:
+        if row["path"]==name:row.update(bytes=len(data),sha256=sha(data))
+    members["manifest.json"]=jsonbytes(m)
+    return members
+base_members=unpack(bundles["a"])
+mutations={}
+bad=dict(base_members);bad["packet.html"]+=b"\nchanged";mutations["unbound_payload"]=repack(bad)
+bad_e=json.loads(base_members["evidence.json"]);bad_e["stops"][0]["departure"]="2088-01-01T00:00:00+00:00"
+mutations["manifest_rebound_but_evidence_stale"]=repack(rebind(base_members,"evidence.json",jsonbytes(bad_e)))
+bad_r=json.loads(base_members["review.json"]);bad_r["review"]["note"]="changed saved literal <&>"
+mutations["manifest_rebound_but_review_stale"]=repack(rebind(base_members,"review.json",jsonbytes(bad_r)))
+bad=dict(base_members);m=bad["manifest.json"].decode();bad["manifest.json"]=m.replace('  "schema": "freight-review-bundle.v1"','  "schema": "freight-review-bundle.v1",\n  "schema": "freight-review-bundle.v1"').encode()
+mutations["duplicate_native_json_key"]=repack(bad)
+bad=dict(base_members);bad["../authored-outside.txt"]=b"must never be extracted";mutations["extra_traversal_member"]=repack(bad)
+refusals={}
+for label,raw in mutations.items():
+    try:c.decode_bundle(raw,label)
+    except c.BundleError as error:refusals[label]={"type":type(error).__name__,"message":str(error),"zip":pin(raw)}
+    else:raise AssertionError(label+" accepted")
+    check(True,label+" refuses")
+other_e=copy.deepcopy(oracle["views"]["a"]["evidence"])
+for section in c.SECTIONS:
+    for row in other_e[section]:row["load_id"]="OTHER-AUTHORED-LOAD"
+other_ev=sha(json.dumps(other_e,sort_keys=True,separators=(",",":"),ensure_ascii=False,allow_nan=False).encode())
+other=handoff.build_bundle("OTHER-AUTHORED-LOAD",base_members["packet.html"],other_e,None,other_ev,handoff.review_version(None))
+try:c.render_comparison(c.decode_bundle(bundles["a"]),c.decode_bundle(other))
+except c.BundleError as error:refusals["different_valid_load"]={"type":type(error).__name__,"message":str(error),"zip":pin(other)}
+else:raise AssertionError("different valid load accepted")
+check(True,"different internally valid loads refuse")
+physical={"scope":"not yet attempted","calls":[]}
+qa=pathlib.Path(cfg["root"]);available=os.statvfs("/dev/shm").f_bavail*os.statvfs("/dev/shm").f_frsize
+physical["available_at_gate"]=available;physical["fixed_floor"]=98304
+if available<98304:
+    physical.update(scope="deferred; below fixed 96 KiB disposable receiving floor",writes=0)
+else:
+    try:
+        qa.mkdir(mode=0o700)
+        a_path=qa/"Authored A \u6771.zip";b_path=qa/"Authored B \u6771.zip";bad_path=qa/"stale-binding.zip"
+        for p,raw in ((a_path,bundles["a"]),(b_path,bundles["departure"]),(bad_path,mutations["manifest_rebound_but_evidence_stale"])):
+            with p.open("xb") as f:f.write(raw)
+        def file_identity(p):
+            b=p.read_bytes();s=p.stat();return {**pin(b),"inode":s.st_ino,"mtime_ns":s.st_mtime_ns}
+        initial={str(p):file_identity(p) for p in (a_path,b_path,bad_path)}
+        output=qa/"actual comparison.html"
+        env=os.environ.copy();env["PYTHONPATH"]=str(root);env["PYTHONDONTWRITEBYTECODE"]="1"
+        def cli(b,out,label):
+            command=[sys.executable,"-B","-S","-m","freightpkt.review_compare",str(a_path),str(b),"--out",str(out)]
+            run=subprocess.run(command,cwd="/tmp",env=env,stdin=subprocess.DEVNULL,stdout=subprocess.PIPE,stderr=subprocess.PIPE,timeout=15)
+            row={"label":label,"command":command,"cwd":"/tmp","exit":run.returncode,"stdout":run.stdout.decode("utf-8"),"stderr":run.stderr.decode("utf-8")}
+            physical["calls"].append(row);return run
+        run=cli(b_path,output,"actual module creates complete report")
+        check(run.returncode==0,"actual -m success")
+        expected=c.render_comparison(c.decode_bundle(bundles["a"],str(a_path)),c.decode_bundle(bundles["departure"],str(b_path))).encode()
+        check(output.read_bytes()==expected,"actual -m complete exact rendered bytes")
+        output_before=file_identity(output)
+        run=cli(bad_path,output,"invalid second copy precedes existing-output refusal")
+        check(run.returncode==2 and b"canonical version" in run.stderr,"actual invalid second-copy refusal")
+        check(file_identity(output)==output_before,"existing output preserved after invalid input")
+        new_absent=qa/"must-not-exist.html"
+        run=cli(bad_path,new_absent,"invalid second copy creates no new output")
+        check(run.returncode==2 and not new_absent.exists(),"actual invalid input no creation")
+        run=cli(b_path,output,"valid inputs refuse occupied destination")
+        check(run.returncode==2 and b"File exists" in run.stderr,"kernel existing-output refusal")
+        check(file_identity(output)==output_before,"complete old output preserved on valid retry")
+        run=cli(b_path,a_path,"input path cannot be replaced")
+        check(run.returncode==2 and b"File exists" in run.stderr,"kernel input-target refusal")
+        check({str(p):file_identity(p) for p in (a_path,b_path,bad_path)}==initial,"all authored inputs bytes/inode/mtime unchanged")
+        physical.update(scope="five actual CPython -B -S -m invocations; stock filesystem, no mocked Path I/O",root=str(qa),inputs=initial,report=output_before,all_inputs_unchanged=True,existing_output_unchanged=True,new_invalid_output_absent=True)
+    except OSError as error:
+        physical.update(scope="actual setup/storage failure; retained any authored partials",error_type=type(error).__name__,error=str(error))
+source_after={str(p.relative_to(root)):pin(p.read_bytes()) for p in root.rglob("*") if p.is_file()}
+check(source_after==source_before,"all six frozen candidate/dependency source files unchanged")
+receipt={"schema":"independent-freight-comparison-receiving.v1","finished_at":datetime.now(timezone.utc).isoformat(),"runtime":sys.version,"optimized":bool(sys.flags.optimize),"checks":checks,"oracle":cfg["oracle_pin"],"oracle_frozen_at":oracle["frozen_at"],"candidate_carrier":pin(carrier_raw),"source":source_before,"original_source_base":oracle["source_base"],"results":results,"refusals":refusals,"physical":physical,"limits":["No author test body/suite or original broad pipeline suite executed by this review.","All data is authored; no App/server, live files, browser, rendering/printing or provider invocation.","Input reads remain complete in-memory snapshots; no concurrent mutation or archive resource cap claimed.","Existing targets are exclusively refused; partial new output after later storage failure remains the documented author-tested limitation.","Normal CPython only for independent checks; author reports optimized qualification separately."]}
+encoded=(json.dumps(receipt,sort_keys=True,indent=2,ensure_ascii=True)+"\n").encode()
+print(json.dumps({"receipt_text":encoded.decode(),"receipt_pin":pin(encoded),"summary":{"checks":checks,"cases":list(results),"refusals":list(refusals),"physical":physical["scope"],"actual_cli_calls":len(physical["calls"]),"all_source_unchanged":True}},ensure_ascii=True,separators=(",",":")))

@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "status": "preimplementation oracle; product not edited",
+  "repository": "Jacob-Met/workflow-checks",
+  "baseline": {
+    "head": "125339ec63eeb7c4989c9b240c01202555dce573",
+    "tree": "e3a3501d60ee8f301f9d45ea15d0d324b814e59a"
+  },
+  "original_before": {
+    "bytes": 20565,
+    "sha256": "a6f488b791a13b023448c58c7a5c318fc030b70c7860ec91bc033b86bfa2e352",
+    "git_blob": "4f95b9e7366358a92ce9d14162c0a2f8a8010523"
+  },
+  "selection": {
+    "sides": "Supplied Copy A and Copy B, with no inferred chronology or current approval",
+    "same_load": "Require exact same nonempty string load ID; differing IDs refuse before output creation",
+    "input_contract": "Exact five unique native v1 ZIP members, content-bound by the existing manifest, evidence digest, packet digest and review digest",
+    "row_contract": "Exact canonical native JSON record identity, preserving multiplicity and JSON distinctions such as false versus zero",
+    "output_contract": "Complete self-contained HTML created exclusively only after both inputs validate and report rendering finishes; supplied packet/index HTML never executed or injected; no source reprocessing or review action"
+  },
+  "decisive_cases": [
+    {
+      "name": "same-copy",
+      "expect": "All six sections have zero A-only/B-only records; identical evidence/review/packet identities; no inferred later copy"
+    },
+    {
+      "name": "departure-and-stale-review",
+      "expect": "One A-only old stop and one B-only new stop retain tracking.csv:row7, copied old approval stays recorded stale in B, packet digest changes"
+    },
+    {
+      "name": "multiplicity",
+      "expect": "Three identical stop records in A and one in B produce two A-only occurrences and one unchanged occurrence; another identical literal stop stays unchanged"
+    },
+    {
+      "name": "typed-literal-values",
+      "expect": "Exact records containing amount 0, false and null remain three distinct unchanged records; nested unknown fields, markup, Unicode, newline, note/history and surrogate text are preserved as escaped data"
+    },
+    {
+      "name": "refusals",
+      "expect": "Malformed member/schema/digest/selected-load or mismatched load refuses before output; existing output file remains untouched"
+    }
+  ],
+  "source_fence": {
+    "new": [
+      "freight_packets/freightpkt/review_compare.py",
+      "freight_packets/tests/test_review_compare.py",
+      "freight_packets/REVIEW_COMPARE.md"
+    ],
+    "additive": [
+      "freight_packets/README.md"
+    ],
+    "preserved": [
+      "freight_packets/freightpkt/handoff.py",
+      "freight_packets/freightpkt/web.py",
+      "freight_packets/freightpkt/ui.html",
+      "freight_packets/freightpkt/cli.py",
+      "freight_packets/freightpkt/pipeline.py",
+      "all detention/invoice/fines/settlement/decision semantics",
+      ".github/workflows/tests.yml"
+    ]
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "schema": "freight-comparison-independent-source-review.v1",
+  "result": "accepted for ordinary source integration, bounded as recorded",
+  "baseline": {
+    "repository": "Jacob-Met/workflow-checks",
+    "commit": "125339ec63eeb7c4989c9b240c01202555dce573",
+    "tree": "e3a3501d60ee8f301f9d45ea15d0d324b814e59a",
+    "complete_tree_entries": 1248,
+    "agents_files": 0
+  },
+  "claim": "https://github.com/Jacob-Met/workflow-checks/issues/50",
+  "source_carrier": {
+    "sha256": "14882de031e421460183b40c67d8bfb1429a6e008d65ba7b4c11973c3421bfd2",
+    "git_blob": "2d35b4969dc2eb51c5870e4fbe7025eb76423642"
+  },
+  "readme": {
+    "readme_additive_only": true,
+    "preimage_sha256": "a8152465bff0efd8bf52af275a92acffa0ec1300593b9a20620dd155ffe8645b",
+    "preimage_git_blob": "da5f0289076248be51bbe8336bdf6837b5f76681",
+    "insertion": [
+      {
+        "op": "insert",
+        "old_range": [
+          155,
+          155
+        ],
+        "new_range": [
+          155,
+          159
+        ],
+        "old": "",
+        "new": "\r\n## Compare two retained review copies\r\n\r\nFrom `freight_packets`, run `python -m freightpkt.review_compare COPY_A.zip COPY_B.zip --out comparison.html` to create a new self-contained comparison of two existing per-load saved-review ZIPs. The report shows complete native evidence records with duplicate counts, both saved review histories, and exact source identities. A and B retain the supplied order; no current approval is inferred. Both inputs are validated before exclusive output creation, and existing files are never replaced. No review, packet-generation or payment action is taken. See [REVIEW_COMPARE.md](REVIEW_COMPARE.md) for the accepted format, full behavior and write-failure limits.\r\n"
+      }
+    ],
+    "test_method_names_only": [
+      "test_same_copy_and_changed_departure_preserve_stale_review",
+      "test_multiplicity_and_json_type_distinctions",
+      "test_literal_text_unknown_fields_and_history_never_become_markup",
+      "test_review_only_and_cover_only_changes_stay_separate",
+      "test_non_native_member_sets_and_corrupt_archives_are_refused",
+      "test_manifest_paths_sizes_and_hashes_are_required",
+      "test_rebound_files_cannot_bypass_native_content_identity",
+      "test_duplicate_json_keys_nonfinite_values_and_bad_shapes_are_refused",
+      "test_cli_checks_both_inputs_and_load_ids_before_any_output",
+      "test_cli_creates_complete_new_report_and_preserves_existing_bytes",
+      "test_output_failure_retains_partial_new_file_and_refuses_later_replacement",
+      "test_cli_help_and_argument_refusal_do_not_read_files"
+    ],
+    "author_test_body_not_executed": true
+  },
+  "reviewed_contract": [
+    "Exactly five uniquely named ZIP members; never extracted or embedded.",
+    "All four payload sizes/hashes, native top-level schemas/load and canonical evidence/review identities are checked.",
+    "Counter keys use canonical JSON strings, preserving full records and duplicate occurrences without Python loose numeric equality.",
+    "Saved views remain complete and are attributed to supplied A/B; recorded timestamps are not reordered or elevated to current approval.",
+    "Main reads and validates both copies and renders complete UTF-8 before Path.open('xb'); no mkdir, pointer, App or pipeline action.",
+    "Runtime imports only standard library and unchanged native handoff.review_version."
+  ],
+  "limits": [
+    "Source read confirms exclusive creation order; this reviewer made no physical output attempt because the fixed 96 KiB floor saw zero available bytes.",
+    "Author's separate physical results are attributed and linked by exact readback, not relabeled independent execution.",
+    "No authenticated authorship, freshness, input locking, archive resource bound or actual graphical/printing acceptance."
+  ],
+  "author_stock_module_receipt": {
+    "path": "/dev/shm/freight-review-compare-dc13ebf4687f/receiving-tmp/module-entry/receipt.json",
+    "bytes": 3952,
+    "sha256": "7187ba81aa2f9d77ba829e1aef203c02385a80046c013190e86a81845347200d"
+  },
+  "independent_receipt": {
+    "bytes": 17497,
+    "sha256": "7b594740b80f7b4124a9e8cf2655064ffb4f8b392c8d6257641aa071a96c2b52",
+    "git_blob": "e13c4ff6c7a23e2eca1c051866f4ca47b9e6a710"
+  }
+}
