@@ -1,67 +1,186 @@
-"""Local review UI: stdlib http.server, one HTML page, no CDN, binds 127.0.0.1.
+"""Local review UI: stdlib http.server, no CDN, binds 127.0.0.1.
 
-Endpoints
-  GET  /                      single-page app
-  GET  /api/summary           latest run summary + reviewer decisions
-  POST /api/run               re-run the pipeline on the data dir
-  POST /api/generate          regenerate synthetic data {"seed": int, "loads": int}
-  POST /api/decision          {"load_id", "decision": approve|reject|adjust, "note"}
-  GET  /out/<path>            packets / CSVs from the output dir
+Reviewer decisions bind to the generated per-load evidence displayed by the UI.
+Inputs must be rerun before reviewing their new results; nothing is sent or paid.
 """
 from __future__ import annotations
 
+import hashlib
 import json
 import mimetypes
+import os
+import tempfile
+import threading
 from datetime import datetime, timezone
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
+from urllib.parse import parse_qs, unquote, urlsplit
 
 from .pipeline import audit, run
 
 UI = Path(__file__).with_name("ui.html")
+REVIEW_SECTIONS = ("stops", "flags", "fines", "settlements", "exceptions", "packets")
+
+
+class ReviewConflict(ValueError):
+    """The client has not reviewed the current generated packet."""
+
+
+def _canonical(value) -> str:
+    return json.dumps(value, sort_keys=True, separators=(",", ":"), ensure_ascii=False, allow_nan=False)
 
 
 class App:
     def __init__(self, data_dir: Path, out_dir: Path):
         self.data_dir, self.out_dir = Path(data_dir), Path(out_dir)
+        # One local server: a review must not race its own pipeline or another review.
+        self._lock = threading.RLock()
 
     @property
     def decisions_path(self) -> Path:
         return self.out_dir / "decisions.json"
 
-    def decisions(self) -> dict:
+    def _read_decisions(self) -> dict:
         p = self.decisions_path
-        return json.loads(p.read_text(encoding="utf-8")) if p.exists() else {}
+        decisions = json.loads(p.read_text(encoding="utf-8")) if p.exists() else {}
+        if not isinstance(decisions, dict) or any(not isinstance(d, dict) for d in decisions.values()):
+            raise ValueError("saved reviews are not a valid decision map")
+        return decisions
+
+    def _evidence_versions(self, summary: dict) -> dict:
+        versions = {}
+        for packet in summary["packets"]:
+            load_id = packet["load_id"]
+            target = (self.out_dir / packet["file"]).resolve()
+            if self.out_dir.resolve() not in target.parents:
+                continue
+            try:
+                packet_hash = hashlib.sha256(target.read_bytes()).hexdigest()
+            except OSError:
+                # A remaining summary row or old decision is not evidence of a readable packet.
+                continue
+            evidence = {
+                "schema": "freight-review.v1",
+                "packet_sha256": packet_hash,
+                **{section: sorted(
+                    (r for r in summary.get(section, []) if r.get("load_id") == load_id),
+                    key=_canonical,
+                ) for section in REVIEW_SECTIONS},
+            }
+            versions[load_id] = hashlib.sha256(_canonical(evidence).encode("utf-8")).hexdigest()
+        return versions
+
+    def _decision_view(self, versions: dict) -> dict:
+        result = {}
+        for load_id, decision in self._read_decisions().items():
+            if decision.get("decision") == "clear":
+                state = "cleared"
+            elif load_id not in versions:
+                state = "missing"
+            elif not decision.get("evidence_version"):
+                state = "unbound"
+            elif decision["evidence_version"] != versions[load_id]:
+                state = "stale"
+            else:
+                state = "current"
+            result[load_id] = {**decision, "review_state": state}
+        return result
 
     def summary(self) -> dict:
-        p = self.out_dir / "summary.json"
-        if not p.exists():
-            if not (self.data_dir / "loads.csv").exists():
-                from .synth import generate
-                generate(self.data_dir)
+        with self._lock:
+            p = self.out_dir / "summary.json"
+            if not p.exists():
+                if not (self.data_dir / "loads.csv").exists():
+                    from .synth import generate
+                    generate(self.data_dir)
+                run(self.data_dir, self.out_dir, run_by="web")
+            summary = json.loads(p.read_text(encoding="utf-8"))
+            versions = self._evidence_versions(summary)
+            summary["evidence_versions"] = versions
+            summary["decisions"] = self._decision_view(versions)
+            return summary
+
+    def rerun(self) -> dict:
+        with self._lock:
             run(self.data_dir, self.out_dir, run_by="web")
-        s = json.loads(p.read_text(encoding="utf-8"))
-        s["decisions"] = self.decisions()
-        return s
+            return self.summary()
+
+    def regenerate(self, loads: int, seed: int) -> dict:
+        from .synth import generate
+        with self._lock:
+            generate(self.data_dir, loads, seed)
+            # Retain the prior reviews; changed/missing packets cannot inherit them.
+            return self.rerun()
+
+    def _write_decisions(self, decisions: dict) -> None:
+        temporary = None
+        try:
+            with tempfile.NamedTemporaryFile(mode="w", encoding="utf-8", dir=self.out_dir,
+                                             prefix=".decisions-", suffix=".tmp", delete=False) as file:
+                temporary = Path(file.name)
+                json.dump(decisions, file, indent=2)
+                file.write("\n")
+                file.flush()
+                os.fsync(file.fileno())
+            os.replace(temporary, self.decisions_path)
+        finally:
+            if temporary is not None:
+                temporary.unlink(missing_ok=True)
 
     def decide(self, body: dict) -> dict:
-        lid, dec = str(body.get("load_id", "")), str(body.get("decision", ""))
-        if dec not in ("approve", "reject", "adjust", "clear"):
+        if not isinstance(body, dict):
+            raise ValueError("review must be a JSON object")
+        load_id, decision = body.get("load_id"), body.get("decision")
+        if not isinstance(load_id, str) or not load_id:
+            raise ValueError("load_id must identify a current packet")
+        if decision not in ("approve", "reject", "adjust", "clear"):
             raise ValueError("decision must be approve|reject|adjust|clear")
-        d = self.decisions()
-        if dec == "clear":
-            d.pop(lid, None)
-        else:
-            d[lid] = {"decision": dec, "note": str(body.get("note", ""))[:500],
-                      "at": datetime.now(timezone.utc).isoformat(timespec="seconds")}
-        self.decisions_path.write_text(json.dumps(d, indent=2), encoding="utf-8")
-        audit(self.out_dir, "reviewer_decision", load_id=lid, decision=dec, note=body.get("note", ""))
-        return d
+        expected = body.get("evidence_version")
+        if not isinstance(expected, str) or len(expected) != 64:
+            raise ValueError("evidence_version is required; reload the packet before reviewing")
+        note = body.get("note", "")
+        if not isinstance(note, str):
+            raise ValueError("reviewer note must be text")
+        note = note[:500]
+        with self._lock:
+            versions = self.summary()["evidence_versions"]
+            if load_id not in versions:
+                raise ValueError("load is not a current readable packet; reload before reviewing")
+            if expected != versions[load_id]:
+                raise ReviewConflict("packet evidence changed; reload and review it before saving")
+            decisions = self._read_decisions()
+            previous = decisions.get(load_id)
+            history = list(previous.get("history", [])) if previous else []
+            if previous:
+                history.append({k: v for k, v in previous.items() if k != "history"})
+            record = {
+                "decision": decision, "note": note,
+                "at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+                "evidence_version": versions[load_id],
+                "history": history,
+            }
+            decisions[load_id] = record
+            self._write_decisions(decisions)
+            audit(self.out_dir, "reviewer_decision", load_id=load_id, decision=decision,
+                  note=note, evidence_version=versions[load_id])
+            return self._decision_view(versions)
+
+    def output(self, relative: str, expected: str | None = None) -> tuple[Path, bytes]:
+        with self._lock:
+            target = (self.out_dir / relative).resolve()
+            if self.out_dir.resolve() not in target.parents or not target.is_file():
+                raise FileNotFoundError
+            if expected is not None:
+                summary = self.summary()
+                packet = next((p for p in summary["packets"] if p["file"] == relative), None)
+                if packet is None or summary["evidence_versions"].get(packet["load_id"]) != expected:
+                    raise ReviewConflict("packet evidence changed; reload the review page")
+            return target, target.read_bytes()
 
 
 def make_handler(app: App):
     class H(BaseHTTPRequestHandler):
-        def log_message(self, fmt, *args):  # quiet
+        def log_message(self, fmt, *args):
             pass
 
         def _send(self, code, body: bytes, ctype="application/json"):
@@ -76,42 +195,51 @@ def make_handler(app: App):
             self._send(code, json.dumps(obj, default=str).encode())
 
         def do_GET(self):
-            path = self.path.split("?", 1)[0]
-            if path == "/":
-                return self._send(200, UI.read_bytes(), "text/html; charset=utf-8")
-            if path == "/api/summary":
-                return self._json(app.summary())
-            if path.startswith("/out/"):
-                target = (app.out_dir / path[5:]).resolve()
-                if app.out_dir.resolve() not in target.parents or not target.is_file():
-                    return self._send(404, b"not found", "text/plain")
-                ctype = mimetypes.guess_type(target.name)[0] or "application/octet-stream"
-                if ctype.startswith("text/"):
-                    ctype += "; charset=utf-8"
-                return self._send(200, target.read_bytes(), ctype)
+            url = urlsplit(self.path)
+            path = unquote(url.path)
+            try:
+                if path == "/":
+                    return self._send(200, UI.read_bytes(), "text/html; charset=utf-8")
+                if path == "/api/summary":
+                    return self._json(app.summary())
+                if path.startswith("/out/"):
+                    versions = parse_qs(url.query, keep_blank_values=True).get("evidence_version")
+                    if versions is not None and len(versions) != 1:
+                        raise ValueError("one evidence_version is required")
+                    target, content = app.output(path[5:], versions[0] if versions else None)
+                    ctype = mimetypes.guess_type(target.name)[0] or "application/octet-stream"
+                    if ctype.startswith("text/"):
+                        ctype += "; charset=utf-8"
+                    return self._send(200, content, ctype)
+            except FileNotFoundError:
+                return self._send(404, b"not found", "text/plain")
+            except ReviewConflict as error:
+                return self._send(409, str(error).encode(), "text/plain; charset=utf-8")
+            except (ValueError, KeyError, TypeError) as error:
+                return self._json({"error": str(error)}, 400)
+            except OSError:
+                return self._json({"error": "could not read the local review files"}, 500)
             self._send(404, b"not found", "text/plain")
 
         def do_POST(self):
-            n = int(self.headers.get("Content-Length") or 0)
             try:
+                n = int(self.headers.get("Content-Length") or 0)
                 body = json.loads(self.rfile.read(n) or b"{}")
-            except json.JSONDecodeError:
-                return self._json({"error": "bad json"}, 400)
-            try:
+                if not isinstance(body, dict):
+                    raise ValueError("request must be a JSON object")
                 if self.path == "/api/run":
-                    run(app.data_dir, app.out_dir, run_by="web")
-                    return self._json(app.summary())
+                    return self._json(app.rerun())
                 if self.path == "/api/generate":
-                    from .synth import generate
-                    generate(app.data_dir, int(body.get("loads", 24)), int(body.get("seed", 7)))
-                    if app.decisions_path.exists():
-                        app.decisions_path.unlink()
-                    run(app.data_dir, app.out_dir, run_by="web")
-                    return self._json(app.summary())
+                    return self._json(app.regenerate(int(body.get("loads", 24)), int(body.get("seed", 7))))
                 if self.path == "/api/decision":
                     return self._json(app.decide(body))
-            except (ValueError, KeyError) as e:
-                return self._json({"error": str(e)}, 400)
+            except ReviewConflict as error:
+                return self._json({"error": str(error)}, 409)
+            except (ValueError, KeyError, TypeError) as error:
+                return self._json({"error": str(error)}, 400)
+            except OSError:
+                # A post-save audit failure may leave a saved review. Inspect; never auto-retry it.
+                return self._json({"error": "could not complete the update; reload to inspect the saved review"}, 500)
             self._json({"error": "not found"}, 404)
 
     return H
@@ -119,7 +247,7 @@ def make_handler(app: App):
 
 def serve(data_dir: Path, out_dir: Path, port: int = 8765) -> None:
     app = App(data_dir, out_dir)
-    app.summary()  # make sure there is something to show
+    app.summary()
     srv = ThreadingHTTPServer(("127.0.0.1", port), make_handler(app))
     print(f"Freight packet review UI: http://127.0.0.1:{port}/  (Ctrl+C to stop)")
     try:

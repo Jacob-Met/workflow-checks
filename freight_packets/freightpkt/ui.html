@@ -14,7 +14,7 @@ button.pri{background:var(--acc);color:#fff;border-color:var(--acc)}button:disab
 main{padding:16px 20px;max-width:1300px;margin:0 auto}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:14px}
 .card{background:#fff;border:1px solid var(--line);border-radius:8px;padding:10px 12px}.card b{display:block;font-size:22px}.card span{color:var(--mut);font-size:12px}
-.tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);margin-bottom:10px}
+.tabs{display:flex;overflow-x:auto;gap:4px;border-bottom:1px solid var(--line);margin-bottom:10px}
 .tabs button{border:none;border-bottom:3px solid transparent;border-radius:0;background:none;padding:8px 12px}
 .tabs button.on{border-bottom-color:var(--acc);font-weight:600}
 table{border-collapse:collapse;width:100%;background:#fff;border:1px solid var(--line)}th,td{padding:6px 8px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
@@ -22,7 +22,9 @@ th{background:#eef1f5;font-size:12px;text-transform:uppercase;letter-spacing:.03
 td.n{text-align:right;font-variant-numeric:tabular-nums}tr.sel{background:#eef4ff}tr.click{cursor:pointer}tr.click:hover{background:#f3f6fb}
 .tag{display:inline-block;padding:1px 7px;border-radius:10px;font-size:12px;font-weight:600}
 .detention,.approve{background:var(--okb);color:var(--ok)}.late_arrival,.reject{background:var(--badb);color:var(--bad)}
-.exception,.adjust{background:var(--warnb);color:var(--warn)}.ok{background:#eef1f5;color:#333}
+.exception,.adjust,.stale,.unbound,.missing{background:var(--warnb);color:var(--warn)}
+.review-status{padding:8px 10px;background:var(--warnb);border-radius:6px;margin:8px 0}.review-history{margin:8px 0}.ok{background:#eef1f5;color:#333}
+.split>div{min-width:0;overflow-wrap:anywhere}
 .split{display:grid;grid-template-columns:minmax(360px,1fr) 1.4fr;gap:14px}
 iframe{width:100%;height:72vh;border:1px solid var(--line);border-radius:8px;background:#fff}
 .bar{display:flex;gap:6px;align-items:center;margin:8px 0;flex-wrap:wrap}input[type=text]{flex:1;min-width:160px;padding:5px 8px;border:1px solid var(--line);border-radius:6px}
@@ -58,7 +60,7 @@ const $ = s => document.querySelector(s);
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const money = c => c == null ? "-" : (c < 0 ? "-" : "") + "$" + (Math.abs(c) / 100).toLocaleString("en-US", {minimumFractionDigits: 2});
 const t = s => s ? s.replace("T", " ").slice(0, 16) : "-";
-let S = null, selected = null;
+let S = null, selected = null, reviewBusy = false, reviewFeedback = null;
 
 async function api(path, body) {
   const r = await fetch(path, body === undefined ? {} : {method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify(body)});
@@ -70,7 +72,7 @@ async function load(p) { S = await p; render(); }
 
 function render() {
   const c = S.counts, d = S.decisions || {};
-  const approved = S.packets.filter(p => (d[p.load_id] || {}).decision === "approve").reduce((a, p) => a + p.detention_cents, 0);
+  const approved = S.packets.filter(p => d[p.load_id]?.decision === "approve" && d[p.load_id]?.review_state === "current").reduce((a, p) => a + p.detention_cents, 0);
   $("#cards").innerHTML = [
     [c.loads, "loads"], [c.events, "geofence events"], [money(S.detention_total_cents), "detention supported"],
     [money(approved), "approved by reviewer"], [c.packets, "draft packets"], [c.invoice_flags, "invoice flags"],
@@ -81,25 +83,52 @@ function render() {
   ].map(([v, l]) => `<div class="card"><b>${esc(v)}</b><span>${esc(l)}</span></div>`).join("");
 
   // packets
-  if (!selected && S.packets.length) selected = S.packets[0].load_id;
+  if (!S.packets.some(p => p.load_id === selected)) selected = S.packets[0]?.load_id || null;
   const rows = S.packets.map(p => {
     const dec = d[p.load_id];
     return `<tr class="click ${p.load_id === selected ? "sel" : ""}" data-l="${esc(p.load_id)}"><td><b>${esc(p.load_id)}</b></td>
       <td class="n">${money(p.detention_cents)}</td><td>${p.late_stops.length ? '<span class="tag late_arrival">late</span>' : ""}</td>
-      <td>${dec ? `<span class="tag ${dec.decision}">${esc(dec.decision)}</span>` : '<small>pending</small>'}</td></tr>`;
+      <td>${dec && dec.review_state !== "cleared" ? (dec.review_state === "current" ? `<span class="tag ${esc(dec.decision)}">${esc(dec.decision)}</span>` : '<span class="tag stale">review again</span>') : '<small>pending</small>'}</td></tr>`;
   }).join("");
   const dec = d[selected] || {};
+  const version = S.evidence_versions?.[selected];
+  const packetUrl = "/out/packets/" + encodeURIComponent(selected) + ".html?evidence_version=" + encodeURIComponent(version || "");
+  const notices = {
+    stale: "This packet or its supporting reports changed. The previous decision is retained but does not apply to this evidence. Review the current packet before saving a new decision.",
+    unbound: "This older decision has no recorded evidence version. Review the current packet before saving a new decision.",
+    missing: "The packet evidence is unavailable. Its previous decision is retained but does not apply.",
+  };
+  const notice = (reviewFeedback?.loadId === selected ? reviewFeedback.message : null) || notices[dec.review_state] || (!version && selected ? "The current packet is unavailable. Re-run the pipeline before reviewing." : "");
+  const history = dec.history || [];
   $("#t-packets").innerHTML = `<div class="split"><div><table><tr><th>Load</th><th>Detention</th><th>Late</th><th>Review</th></tr>${rows}</table></div>
     <div>${selected ? `<div class="bar"><b>${esc(selected)}</b>
       <input type="text" id="note" placeholder="reviewer note (optional)" value="${esc(dec.note || "")}">
-      <button data-d="approve">Approve</button><button data-d="adjust">Needs adjust</button><button data-d="reject">Reject</button><button data-d="clear">Clear</button>
-      <a href="/out/packets/${encodeURIComponent(selected)}.html" target="_blank">open</a></div>
-      <iframe src="/out/packets/${encodeURIComponent(selected)}.html"></iframe>
-      <small>Decisions are recorded locally (decisions.json + audit.jsonl). Nothing is sent.</small>` : "<p>No packets.</p>"}</div></div>`;
+      <button data-d="approve" ${!version || reviewBusy ? "disabled" : ""}>Approve</button><button data-d="adjust" ${!version || reviewBusy ? "disabled" : ""}>Needs adjust</button><button data-d="reject" ${!version || reviewBusy ? "disabled" : ""}>Reject</button><button data-d="clear" ${!version || reviewBusy ? "disabled" : ""}>Clear</button>
+      <a href="${esc(packetUrl)}" target="_blank">open</a></div>
+      <p id="review-status" role="status" ${notice ? 'class="review-status"' : 'class="hidden"'}>${esc(notice)}</p>
+      ${dec.decision && dec.decision !== "clear" ? `<p><small>${dec.review_state === "current" ? "Current" : "Previous"} decision: ${esc(dec.decision)} · ${esc(dec.at)}${dec.note ? " · " + esc(dec.note) : ""}</small></p>` : ""}
+      ${version ? `<iframe src="${esc(packetUrl)}" title="Draft packet for ${esc(selected)}"></iframe>` : "<p>Packet preview unavailable.</p>"}
+      ${history.length ? `<details class="review-history"><summary>Previous reviews (${history.length})</summary><ol>${[...history].reverse().map(r => `<li>${esc(r.decision)} · ${esc(r.at)}${r.note ? " · " + esc(r.note) : ""}</li>`).join("")}</ol></details>` : ""}
+      <small>Only decisions for the current evidence count as approved. Reviews and previous notes are retained locally in decisions.json; saved updates are logged in audit.jsonl. Nothing is sent.</small>` : "<p>No packets.</p>"}</div></div>`;
   document.querySelectorAll("#t-packets tr[data-l]").forEach(tr => tr.onclick = () => { selected = tr.dataset.l; render(); });
   document.querySelectorAll("#t-packets button[data-d]").forEach(b => b.onclick = async () => {
-    S.decisions = await api("/api/decision", {load_id: selected, decision: b.dataset.d, note: $("#note").value});
-    render();
+    if (reviewBusy) return;
+    const loadId = selected, note = $("#note").value, expected = S.evidence_versions?.[loadId];
+    reviewBusy = true;
+    document.querySelectorAll("#t-packets button[data-d]").forEach(button => button.disabled = true);
+    try {
+      await api("/api/decision", {load_id: loadId, decision: b.dataset.d, note, evidence_version: expected});
+      reviewFeedback = null;
+      await load(api("/api/summary"));
+    } catch (error) {
+      reviewFeedback = {loadId, message: error.message};
+      // Refresh after a conflict or uncertain write; never resubmit the review automatically.
+      try { await load(api("/api/summary")); } catch (_) {}
+    } finally {
+      reviewBusy = false;
+      render();
+      if (reviewFeedback?.loadId === selected && selected === loadId && $("#note")) $("#note").value = note;
+    }
   });
 
   $("#t-flags").innerHTML = `<table><tr><th>Load</th><th>Invoice</th><th>Carrier</th><th>Flag</th><th>Detail</th><th>Variance</th><th>Evidence</th></tr>${

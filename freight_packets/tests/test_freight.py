@@ -193,7 +193,8 @@ def test_web_ui_serves(e2e, tmp_path):
         s = json.loads(urllib.request.urlopen(base + "/api/summary").read())
         lid = s["packets"][0]["load_id"]
         req = urllib.request.Request(base + "/api/decision", method="POST",
-                                     data=json.dumps({"load_id": lid, "decision": "approve"}).encode(),
+                                     data=json.dumps({"load_id": lid, "decision": "approve",
+                                                      "evidence_version": s["evidence_versions"][lid]}).encode(),
                                      headers={"Content-Type": "application/json"})
         dec = json.loads(urllib.request.urlopen(req).read())
         assert dec[lid]["decision"] == "approve"
