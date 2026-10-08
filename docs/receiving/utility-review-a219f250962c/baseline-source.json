@@ -1,0 +1,126 @@
+{
+  "kind": "exact Utility Watch subtree materialization; not a full repository checkout",
+  "canonical_commit": "2f1e5f777197eedd69d51a4d81c0da744b65ad88",
+  "canonical_tree": "86e6201872d2f2400537b84a50f026a1335a8c3d",
+  "files": [
+    {
+      "path": "utility_watch/HARDENING.md",
+      "git_blob": "2033a69d8ae5daf24e68e017ed20c6a4dd863397",
+      "sha256": "bff8d8594cc7554742fb4d9d12826e3babef47d66787f892794d874dfa5e77c0",
+      "bytes": 3894,
+      "mode": "100644"
+    },
+    {
+      "path": "utility_watch/README.md",
+      "git_blob": "bdae68b2590e37331d9f63d389101cc739c243b5",
+      "sha256": "820eea23c7e7110535d4558ebb0f82e1ae124f6f999856e29ff2e110d191b1cd",
+      "bytes": 7046,
+      "mode": "100644"
+    },
+    {
+      "path": "utility_watch/tests/test_uwatch.py",
+      "git_blob": "1a71129311c88af32bb4abf0d633e5fcc496ab78",
+      "sha256": "0638976cdfc928d8bd3980fb24fe18c24ef814c7f8c5e7612c8c02fb2b8f339a",
+      "bytes": 15469,
+      "mode": "100644"
+    },
+    {
+      "path": "utility_watch/uwatch/__main__.py",
+      "git_blob": "823d40a6bf41beb59790ce83476b359f76f4b1ec",
+      "sha256": "26c55ee4277631c49b2312533d7514a815ec2c3de08f48b0a9dea8946d8f8933",
+      "bytes": 53,
+      "mode": "100644"
+    },
+    {
+      "path": "utility_watch/uwatch/cli.py",
+      "git_blob": "150c80c4d7aa8043a5095143101e3a8311c3068d",
+      "sha256": "5b5a215cf6cda457829aa238b05b672df3074d5d6f28528622fddc697b1cd353",
+      "bytes": 2348,
+      "mode": "100644"
+    },
+    {
+      "path": "utility_watch/uwatch/engine.py",
+      "git_blob": "9deb205ad468381ffc91716f0d7ae6ab88d76f2a",
+      "sha256": "48c968584d0494ee5fb0538fc7d4c685c2cc3128a45c33f57c2079234cdb7775",
+      "bytes": 21072,
+      "mode": "100644"
+    },
+    {
+      "path": "utility_watch/uwatch/report.py",
+      "git_blob": "ee2fcabd2026b4224c3cdfc51890f71762a9ef0f",
+      "sha256": "dc43c4fbbef72204a9dc9c5d7e4d3883900e96daf26c725f10fe22d4721540db",
+      "bytes": 12382,
+      "mode": "100644"
+    },
+    {
+      "path": "utility_watch/sample_data/README_SYNTHETIC.txt",
+      "git_blob": "237579a904d7b7b605f78ed122c97140c6f06003",
+      "sha256": "ef34519e3f46f3e19bd8554620b07cbc13850c6b5cd6337508bf47cf01d536b4",
+      "bytes": 170,
+      "mode": "100644"
+    },
+    {
+      "path": "utility_watch/sample_data/accounts.csv",
+      "git_blob": "8524a01938d9dfa3b9a0d05676a64e31e921ea8e",
+      "sha256": "58518376e0a67bf1a31f76e754020307a42330a87d3d7a538e6ccbb947d97958",
+      "bytes": 2802,
+      "mode": "100644"
+    },
+    {
+      "path": "utility_watch/sample_data/bills.csv",
+      "git_blob": "21eca3e9265e3bdeacb668e1ff602121f96edda6",
+      "sha256": "1b8f6897703b42723e17e6089867634e04e7c609c0a578f33636fb9dda321e4e",
+      "bytes": 27296,
+      "mode": "100644"
+    },
+    {
+      "path": "utility_watch/sample_data/expected.json",
+      "git_blob": "0016cf0754d112b3a55a0ede42e6999aee17a847",
+      "sha256": "222dd41aa5f5f20be0f08ea31bf7e8ca656cd56720b694b4380ce6f418df445c",
+      "bytes": 899,
+      "mode": "100644"
+    },
+    {
+      "path": "utility_watch/sample_data/occupancy.csv",
+      "git_blob": "4396760f366c95f09343ce3e778beb7abd80bea0",
+      "sha256": "0f77598a53f50162ef28059c88be91798f918e57e66eaa0a1f1d79880512cb6e",
+      "bytes": 564,
+      "mode": "100644"
+    },
+    {
+      "path": "utility_watch/sample_data/payments.csv",
+      "git_blob": "7f94d9c67855bc0def8b515b2b55450f9d65631e",
+      "sha256": "86cf78324cd395e86200ec205f49fe73afa2984306ab6ccd2e5cf71261710853",
+      "bytes": 12113,
+      "mode": "100644"
+    },
+    {
+      "path": "utility_watch/tests/test_numeric_csv.py",
+      "git_blob": "2e63820b66001b2cf35590ca8f41270ce84f7500",
+      "sha256": "d6128ec39491994185f9aabfe374caeb80ca13cbdbdc1fabe68b3eba567b65a2",
+      "bytes": 3424,
+      "mode": "100644"
+    },
+    {
+      "path": "utility_watch/tests/test_report.py",
+      "git_blob": "a4480762868831bdafef1bf52e94a1cc68e31e43",
+      "sha256": "affe575fedaa7619520a6b23b63649e76029881a0a5641d6cc7d2900d150bc4f",
+      "bytes": 7083,
+      "mode": "100644"
+    },
+    {
+      "path": "utility_watch/uwatch/__init__.py",
+      "git_blob": "7074157fb1710370668c2a0ad5217cd10cfe3618",
+      "sha256": "a0332cb0878fcdfd02d1651f9a46c299ca0279996c6e5723d49311228c597a57",
+      "bytes": 60,
+      "mode": "100644"
+    },
+    {
+      "path": "utility_watch/uwatch/synth.py",
+      "git_blob": "0d5c8137b3790bd062609ce4725beda63db9e58d",
+      "sha256": "8573a65a8c5907ebedda24c47183f60f258e895bae0a2656bb582ada9217209d",
+      "bytes": 13194,
+      "mode": "100644"
+    }
+  ]
+}

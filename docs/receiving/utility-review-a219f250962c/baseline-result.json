@@ -1,0 +1,34 @@
+{
+  "canonical_commit": "2f1e5f777197eedd69d51a4d81c0da744b65ad88",
+  "local_base_commit": "906f1e058e41bee015a58466d5eee9f14ed71394",
+  "native_command": [
+    "uv",
+    "run",
+    "--no-project",
+    "--offline",
+    "--with",
+    "pytest==9.1.1",
+    "python",
+    "-B",
+    "-m",
+    "pytest",
+    "-p",
+    "no:cacheprovider",
+    "-q",
+    "utility_watch/tests"
+  ],
+  "native_exit_code": 0,
+  "review_command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "-B",
+    "-m",
+    "uwatch",
+    "review",
+    "--help"
+  ],
+  "review_exit_code": 2,
+  "review_stdout": "",
+  "review_stderr": "usage: uwatch [-h] {generate,run} ...\nuwatch: error: argument cmd: invalid choice: 'review' (choose from generate, run)\n",
+  "source_writes": 0,
+  "provider_effects": 0
+}

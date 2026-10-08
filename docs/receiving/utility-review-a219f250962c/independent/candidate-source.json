@@ -1,0 +1,33 @@
+{
+  "commit": "e2e91f12bc69690b1ea63f4cc68a9784110cc9a0",
+  "tree": "7a10a9bc24c12f59b8a9431202406ee27a08c042",
+  "canonical_base": "2f1e5f777197eedd69d51a4d81c0da744b65ad88",
+  "canonical_base_tree": "86e6201872d2f2400537b84a50f026a1335a8c3d",
+  "local_scoped_base": "906f1e058e41bee015a58466d5eee9f14ed71394",
+  "changed_files": [
+    "docs/receiving/utility-review-a219f250962c/README.md",
+    "docs/receiving/utility-review-a219f250962c/baseline-native.log",
+    "docs/receiving/utility-review-a219f250962c/baseline-result.json",
+    "docs/receiving/utility-review-a219f250962c/baseline-source.json",
+    "docs/receiving/utility-review-a219f250962c/candidate-native.log",
+    "docs/receiving/utility-review-a219f250962c/candidate-result.json",
+    "docs/receiving/utility-review-a219f250962c/cli-roundtrip/result.json",
+    "docs/receiving/utility-review-a219f250962c/cli-roundtrip/review-1.csv",
+    "docs/receiving/utility-review-a219f250962c/cli-roundtrip/review-2.csv",
+    "docs/receiving/utility-review-a219f250962c/cli-roundtrip/review-3.csv",
+    "docs/receiving/utility-review-a219f250962c/verify_cli.py",
+    "utility_watch/README.md",
+    "utility_watch/tests/test_review.py",
+    "utility_watch/uwatch/cli.py",
+    "utility_watch/uwatch/review.py"
+  ],
+  "source_sha256": {
+    "utility_watch/uwatch/review.py": "f9f730ca45140436704d9823eafcfb58fb3922c5d0bf93a21a63f31347c947de",
+    "utility_watch/uwatch/cli.py": "0f8e6947baaadccc86c1f7d8cd0dd542b88d81b9b1990cc3aab7cbfcf3beb08d",
+    "utility_watch/tests/test_review.py": "f0c645af21d4f9af0539697c3e2dca26a197fc1284b943cd12d42e9500099155",
+    "utility_watch/README.md": "3a2d5a7295947dbca173f82e548832d42622de27d5808275cd265b37c58774d1"
+  },
+  "worktree_clean": true,
+  "native_test_exit": 0,
+  "native_tests": 81
+}

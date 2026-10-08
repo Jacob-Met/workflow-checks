@@ -1,0 +1,1173 @@
+{
+  "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+  "commit_at_start": "e2e91f12bc69690b1ea63f4cc68a9784110cc9a0",
+  "commit_at_end": "e2e91f12bc69690b1ea63f4cc68a9784110cc9a0",
+  "source_sha256": {
+    "uwatch/review.py": "f9f730ca45140436704d9823eafcfb58fb3922c5d0bf93a21a63f31347c947de",
+    "uwatch/synth.py": "8573a65a8c5907ebedda24c47183f60f258e895bae0a2656bb582ada9217209d",
+    "uwatch/__init__.py": "a0332cb0878fcdfd02d1651f9a46c299ca0279996c6e5723d49311228c597a57",
+    "uwatch/report.py": "dc43c4fbbef72204a9dc9c5d7e4d3883900e96daf26c725f10fe22d4721540db",
+    "uwatch/engine.py": "48c968584d0494ee5fb0538fc7d4c685c2cc3128a45c33f57c2079234cdb7775",
+    "uwatch/cli.py": "0f8e6947baaadccc86c1f7d8cd0dd542b88d81b9b1990cc3aab7cbfcf3beb08d",
+    "uwatch/__main__.py": "26c55ee4277631c49b2312533d7514a815ec2c3de08f48b0a9dea8946d8f8933"
+  },
+  "source_unchanged_during_review": true,
+  "synthetic_inputs_only": true,
+  "actual_cli_invocations": 66,
+  "tests": 10,
+  "failures": 0,
+  "errors": 0,
+  "successful": true,
+  "executions": [
+    {
+      "case": "test_actual_run_cli_remains_identical_to_original_native_source",
+      "arguments": [
+        "run",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_actual_run_cli_remains_identical_to_original_native_source/data",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_actual_run_cli_remains_identical_to_original_native_source/report",
+        "--as-of",
+        "2026-10-08",
+        "--eval-from",
+        "2026-09-01"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 0,
+      "stdout": "as_of 2026-10-08: 4 accounts, 12 bills; 2 flags {'MISSING_BILL': 1, 'RATE_CHANGE': 1}; 1 exceptions; 1 bills ($100.00) queued for approval (not paid)\nnaive trailing-3 rule would add 0 seasonal false flags\nreport: /dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_actual_run_cli_remains_identical_to_original_native_source/report/report.html\n",
+      "stderr": ""
+    },
+    {
+      "case": "test_actual_run_cli_remains_identical_to_original_native_source",
+      "arguments": [
+        "run",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_actual_run_cli_remains_identical_to_original_native_source/data",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_actual_run_cli_remains_identical_to_original_native_source/original-native-report",
+        "--as-of",
+        "2026-10-08",
+        "--eval-from",
+        "2026-09-01"
+      ],
+      "source": "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_actual_run_cli_remains_identical_to_original_native_source/baseline/utility_watch",
+      "exit": 0,
+      "stdout": "as_of 2026-10-08: 4 accounts, 12 bills; 2 flags {'MISSING_BILL': 1, 'RATE_CHANGE': 1}; 1 exceptions; 1 bills ($100.00) queued for approval (not paid)\nnaive trailing-3 rule would add 0 seasonal false flags\nreport: /dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_actual_run_cli_remains_identical_to_original_native_source/original-native-report/report.html\n",
+      "stderr": ""
+    },
+    {
+      "case": "test_annotation_integrity_and_status_refusals",
+      "arguments": [
+        "run",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_annotation_integrity_and_status_refusals/data",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_annotation_integrity_and_status_refusals/report",
+        "--as-of",
+        "2026-10-08",
+        "--eval-from",
+        "2026-09-01"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 0,
+      "stdout": "as_of 2026-10-08: 4 accounts, 12 bills; 2 flags {'MISSING_BILL': 1, 'RATE_CHANGE': 1}; 1 exceptions; 1 bills ($100.00) queued for approval (not paid)\nnaive trailing-3 rule would add 0 seasonal false flags\nreport: /dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_annotation_integrity_and_status_refusals/report/report.html\n",
+      "stderr": ""
+    },
+    {
+      "case": "test_annotation_integrity_and_status_refusals",
+      "arguments": [
+        "review",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_annotation_integrity_and_status_refusals/data",
+        "--report",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_annotation_integrity_and_status_refusals/report/summary.json",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_annotation_integrity_and_status_refusals/review-1.csv"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 0,
+      "stdout": "review: 3 current findings {'open': 3}; 0 historical rows; annotations do not change payment eligibility\nworksheet: /dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_annotation_integrity_and_status_refusals/review-1.csv\n",
+      "stderr": ""
+    },
+    {
+      "case": "test_annotation_integrity_and_status_refusals",
+      "arguments": [
+        "review",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_annotation_integrity_and_status_refusals/data",
+        "--report",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_annotation_integrity_and_status_refusals/report/summary.json",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_annotation_integrity_and_status_refusals/review-2.csv",
+        "--previous",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_annotation_integrity_and_status_refusals/protected.csv"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 2,
+      "stdout": "",
+      "stderr": "uwatch: review error: worksheet:2: protected finding columns changed; edit only review_status, reviewer, note\n"
+    },
+    {
+      "case": "test_annotation_integrity_and_status_refusals",
+      "arguments": [
+        "review",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_annotation_integrity_and_status_refusals/data",
+        "--report",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_annotation_integrity_and_status_refusals/report/summary.json",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_annotation_integrity_and_status_refusals/review-3.csv",
+        "--previous",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_annotation_integrity_and_status_refusals/missing_row.csv"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 2,
+      "stdout": "",
+      "stderr": "uwatch: review error: previous worksheet: manifest mismatch; a row was removed, added or changed\n"
+    },
+    {
+      "case": "test_annotation_integrity_and_status_refusals",
+      "arguments": [
+        "review",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_annotation_integrity_and_status_refusals/data",
+        "--report",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_annotation_integrity_and_status_refusals/report/summary.json",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_annotation_integrity_and_status_refusals/review-4.csv",
+        "--previous",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_annotation_integrity_and_status_refusals/duplicate_row.csv"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 2,
+      "stdout": "",
+      "stderr": "uwatch: review error: worksheet:6: invalid or duplicate row identity\n"
+    },
+    {
+      "case": "test_annotation_integrity_and_status_refusals",
+      "arguments": [
+        "review",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_annotation_integrity_and_status_refusals/data",
+        "--report",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_annotation_integrity_and_status_refusals/report/summary.json",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_annotation_integrity_and_status_refusals/review-5.csv",
+        "--previous",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_annotation_integrity_and_status_refusals/missing_manifest.csv"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 2,
+      "stdout": "",
+      "stderr": "uwatch: review error: previous worksheet: exactly one integrity manifest is required\n"
+    },
+    {
+      "case": "test_annotation_integrity_and_status_refusals",
+      "arguments": [
+        "review",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_annotation_integrity_and_status_refusals/data",
+        "--report",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_annotation_integrity_and_status_refusals/report/summary.json",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_annotation_integrity_and_status_refusals/review-6.csv",
+        "--previous",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_annotation_integrity_and_status_refusals/bad_status.csv"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 2,
+      "stdout": "",
+      "stderr": "uwatch: review error: worksheet:2: review_status must be open, in_progress or reviewed\n"
+    },
+    {
+      "case": "test_annotation_integrity_and_status_refusals",
+      "arguments": [
+        "review",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_annotation_integrity_and_status_refusals/data",
+        "--report",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_annotation_integrity_and_status_refusals/report/summary.json",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_annotation_integrity_and_status_refusals/review-7.csv",
+        "--previous",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_annotation_integrity_and_status_refusals/no_reviewer.csv"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 2,
+      "stdout": "",
+      "stderr": "uwatch: review error: worksheet:2: a non-open review needs both reviewer and note\n"
+    },
+    {
+      "case": "test_annotation_integrity_and_status_refusals",
+      "arguments": [
+        "review",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_annotation_integrity_and_status_refusals/data",
+        "--report",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_annotation_integrity_and_status_refusals/report/summary.json",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_annotation_integrity_and_status_refusals/review-8.csv",
+        "--previous",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_annotation_integrity_and_status_refusals/no_note.csv"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 2,
+      "stdout": "",
+      "stderr": "uwatch: review error: worksheet:3: a non-open review needs both reviewer and note\n"
+    },
+    {
+      "case": "test_changed_absent_and_returning_evidence_never_resurrects_review",
+      "arguments": [
+        "run",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_changed_absent_and_returning_evidence_never_resurrects_review/data",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_changed_absent_and_returning_evidence_never_resurrects_review/report",
+        "--as-of",
+        "2026-10-08",
+        "--eval-from",
+        "2026-09-01"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 0,
+      "stdout": "as_of 2026-10-08: 4 accounts, 12 bills; 2 flags {'MISSING_BILL': 1, 'RATE_CHANGE': 1}; 1 exceptions; 1 bills ($100.00) queued for approval (not paid)\nnaive trailing-3 rule would add 0 seasonal false flags\nreport: /dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_changed_absent_and_returning_evidence_never_resurrects_review/report/report.html\n",
+      "stderr": ""
+    },
+    {
+      "case": "test_changed_absent_and_returning_evidence_never_resurrects_review",
+      "arguments": [
+        "review",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_changed_absent_and_returning_evidence_never_resurrects_review/data",
+        "--report",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_changed_absent_and_returning_evidence_never_resurrects_review/report/summary.json",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_changed_absent_and_returning_evidence_never_resurrects_review/review-1.csv"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 0,
+      "stdout": "review: 3 current findings {'open': 3}; 0 historical rows; annotations do not change payment eligibility\nworksheet: /dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_changed_absent_and_returning_evidence_never_resurrects_review/review-1.csv\n",
+      "stderr": ""
+    },
+    {
+      "case": "test_changed_absent_and_returning_evidence_never_resurrects_review",
+      "arguments": [
+        "run",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_changed_absent_and_returning_evidence_never_resurrects_review/data",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_changed_absent_and_returning_evidence_never_resurrects_review/report",
+        "--as-of",
+        "2026-10-08",
+        "--eval-from",
+        "2026-09-01"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 0,
+      "stdout": "as_of 2026-10-08: 4 accounts, 12 bills; 2 flags {'MISSING_BILL': 1, 'RATE_CHANGE': 1}; 1 exceptions; 1 bills ($100.00) queued for approval (not paid)\nnaive trailing-3 rule would add 0 seasonal false flags\nreport: /dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_changed_absent_and_returning_evidence_never_resurrects_review/report/report.html\n",
+      "stderr": ""
+    },
+    {
+      "case": "test_changed_absent_and_returning_evidence_never_resurrects_review",
+      "arguments": [
+        "review",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_changed_absent_and_returning_evidence_never_resurrects_review/data",
+        "--report",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_changed_absent_and_returning_evidence_never_resurrects_review/report/summary.json",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_changed_absent_and_returning_evidence_never_resurrects_review/review-2.csv",
+        "--previous",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_changed_absent_and_returning_evidence_never_resurrects_review/review-1.csv"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 0,
+      "stdout": "review: 3 current findings {'open': 3}; 1 historical rows; annotations do not change payment eligibility\nworksheet: /dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_changed_absent_and_returning_evidence_never_resurrects_review/review-2.csv\n",
+      "stderr": ""
+    },
+    {
+      "case": "test_changed_absent_and_returning_evidence_never_resurrects_review",
+      "arguments": [
+        "run",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_changed_absent_and_returning_evidence_never_resurrects_review/data",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_changed_absent_and_returning_evidence_never_resurrects_review/report",
+        "--as-of",
+        "2026-10-08",
+        "--eval-from",
+        "2026-09-01"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 0,
+      "stdout": "as_of 2026-10-08: 4 accounts, 12 bills; 1 flags {'MISSING_BILL': 1}; 1 exceptions; 2 bills ($200.00) queued for approval (not paid)\nnaive trailing-3 rule would add 0 seasonal false flags\nreport: /dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_changed_absent_and_returning_evidence_never_resurrects_review/report/report.html\n",
+      "stderr": ""
+    },
+    {
+      "case": "test_changed_absent_and_returning_evidence_never_resurrects_review",
+      "arguments": [
+        "review",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_changed_absent_and_returning_evidence_never_resurrects_review/data",
+        "--report",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_changed_absent_and_returning_evidence_never_resurrects_review/report/summary.json",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_changed_absent_and_returning_evidence_never_resurrects_review/review-3.csv",
+        "--previous",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_changed_absent_and_returning_evidence_never_resurrects_review/review-2.csv"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 0,
+      "stdout": "review: 2 current findings {'open': 2}; 2 historical rows; annotations do not change payment eligibility\nworksheet: /dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_changed_absent_and_returning_evidence_never_resurrects_review/review-3.csv\n",
+      "stderr": ""
+    },
+    {
+      "case": "test_changed_absent_and_returning_evidence_never_resurrects_review",
+      "arguments": [
+        "run",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_changed_absent_and_returning_evidence_never_resurrects_review/data",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_changed_absent_and_returning_evidence_never_resurrects_review/report",
+        "--as-of",
+        "2026-10-08",
+        "--eval-from",
+        "2026-09-01"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 0,
+      "stdout": "as_of 2026-10-08: 4 accounts, 12 bills; 2 flags {'MISSING_BILL': 1, 'RATE_CHANGE': 1}; 1 exceptions; 1 bills ($100.00) queued for approval (not paid)\nnaive trailing-3 rule would add 0 seasonal false flags\nreport: /dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_changed_absent_and_returning_evidence_never_resurrects_review/report/report.html\n",
+      "stderr": ""
+    },
+    {
+      "case": "test_changed_absent_and_returning_evidence_never_resurrects_review",
+      "arguments": [
+        "review",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_changed_absent_and_returning_evidence_never_resurrects_review/data",
+        "--report",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_changed_absent_and_returning_evidence_never_resurrects_review/report/summary.json",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_changed_absent_and_returning_evidence_never_resurrects_review/review-4.csv",
+        "--previous",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_changed_absent_and_returning_evidence_never_resurrects_review/review-3.csv"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 0,
+      "stdout": "review: 3 current findings {'open': 3}; 2 historical rows; annotations do not change payment eligibility\nworksheet: /dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_changed_absent_and_returning_evidence_never_resurrects_review/review-4.csv\n",
+      "stderr": ""
+    },
+    {
+      "case": "test_existing_reserved_and_symlink_outputs_remain_untouched",
+      "arguments": [
+        "run",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_existing_reserved_and_symlink_outputs_remain_untouched/data",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_existing_reserved_and_symlink_outputs_remain_untouched/report",
+        "--as-of",
+        "2026-10-08",
+        "--eval-from",
+        "2026-09-01"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 0,
+      "stdout": "as_of 2026-10-08: 4 accounts, 12 bills; 2 flags {'MISSING_BILL': 1, 'RATE_CHANGE': 1}; 1 exceptions; 1 bills ($100.00) queued for approval (not paid)\nnaive trailing-3 rule would add 0 seasonal false flags\nreport: /dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_existing_reserved_and_symlink_outputs_remain_untouched/report/report.html\n",
+      "stderr": ""
+    },
+    {
+      "case": "test_existing_reserved_and_symlink_outputs_remain_untouched",
+      "arguments": [
+        "review",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_existing_reserved_and_symlink_outputs_remain_untouched/data",
+        "--report",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_existing_reserved_and_symlink_outputs_remain_untouched/report/summary.json",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_existing_reserved_and_symlink_outputs_remain_untouched/review-1.csv"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 0,
+      "stdout": "review: 3 current findings {'open': 3}; 0 historical rows; annotations do not change payment eligibility\nworksheet: /dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_existing_reserved_and_symlink_outputs_remain_untouched/review-1.csv\n",
+      "stderr": ""
+    },
+    {
+      "case": "test_existing_reserved_and_symlink_outputs_remain_untouched",
+      "arguments": [
+        "review",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_existing_reserved_and_symlink_outputs_remain_untouched/data",
+        "--report",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_existing_reserved_and_symlink_outputs_remain_untouched/report/summary.json",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_existing_reserved_and_symlink_outputs_remain_untouched/data/accounts.csv",
+        "--previous",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_existing_reserved_and_symlink_outputs_remain_untouched/review-1.csv"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 2,
+      "stdout": "",
+      "stderr": "uwatch: review error: --out must name a new worksheet; source, reports and previous review cannot be replaced\n"
+    },
+    {
+      "case": "test_existing_reserved_and_symlink_outputs_remain_untouched",
+      "arguments": [
+        "review",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_existing_reserved_and_symlink_outputs_remain_untouched/data",
+        "--report",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_existing_reserved_and_symlink_outputs_remain_untouched/report/summary.json",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_existing_reserved_and_symlink_outputs_remain_untouched/data/bills.csv",
+        "--previous",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_existing_reserved_and_symlink_outputs_remain_untouched/review-1.csv"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 2,
+      "stdout": "",
+      "stderr": "uwatch: review error: --out must name a new worksheet; source, reports and previous review cannot be replaced\n"
+    },
+    {
+      "case": "test_existing_reserved_and_symlink_outputs_remain_untouched",
+      "arguments": [
+        "review",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_existing_reserved_and_symlink_outputs_remain_untouched/data",
+        "--report",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_existing_reserved_and_symlink_outputs_remain_untouched/report/summary.json",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_existing_reserved_and_symlink_outputs_remain_untouched/data/occupancy.csv",
+        "--previous",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_existing_reserved_and_symlink_outputs_remain_untouched/review-1.csv"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 2,
+      "stdout": "",
+      "stderr": "uwatch: review error: --out must name a new worksheet; source, reports and previous review cannot be replaced\n"
+    },
+    {
+      "case": "test_existing_reserved_and_symlink_outputs_remain_untouched",
+      "arguments": [
+        "review",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_existing_reserved_and_symlink_outputs_remain_untouched/data",
+        "--report",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_existing_reserved_and_symlink_outputs_remain_untouched/report/summary.json",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_existing_reserved_and_symlink_outputs_remain_untouched/data/payments.csv",
+        "--previous",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_existing_reserved_and_symlink_outputs_remain_untouched/review-1.csv"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 2,
+      "stdout": "",
+      "stderr": "uwatch: review error: --out must name a new worksheet; source, reports and previous review cannot be replaced\n"
+    },
+    {
+      "case": "test_existing_reserved_and_symlink_outputs_remain_untouched",
+      "arguments": [
+        "review",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_existing_reserved_and_symlink_outputs_remain_untouched/data",
+        "--report",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_existing_reserved_and_symlink_outputs_remain_untouched/report/summary.json",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_existing_reserved_and_symlink_outputs_remain_untouched/data/expected.json",
+        "--previous",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_existing_reserved_and_symlink_outputs_remain_untouched/review-1.csv"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 2,
+      "stdout": "",
+      "stderr": "uwatch: review error: --out must name a new worksheet; source, reports and previous review cannot be replaced\n"
+    },
+    {
+      "case": "test_existing_reserved_and_symlink_outputs_remain_untouched",
+      "arguments": [
+        "review",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_existing_reserved_and_symlink_outputs_remain_untouched/data",
+        "--report",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_existing_reserved_and_symlink_outputs_remain_untouched/report/summary.json",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_existing_reserved_and_symlink_outputs_remain_untouched/report/summary.json",
+        "--previous",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_existing_reserved_and_symlink_outputs_remain_untouched/review-1.csv"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 2,
+      "stdout": "",
+      "stderr": "uwatch: review error: --out must name a new worksheet; source, reports and previous review cannot be replaced\n"
+    },
+    {
+      "case": "test_existing_reserved_and_symlink_outputs_remain_untouched",
+      "arguments": [
+        "review",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_existing_reserved_and_symlink_outputs_remain_untouched/data",
+        "--report",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_existing_reserved_and_symlink_outputs_remain_untouched/report/summary.json",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_existing_reserved_and_symlink_outputs_remain_untouched/report/flags.csv",
+        "--previous",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_existing_reserved_and_symlink_outputs_remain_untouched/review-1.csv"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 2,
+      "stdout": "",
+      "stderr": "uwatch: review error: --out must name a new worksheet; source, reports and previous review cannot be replaced\n"
+    },
+    {
+      "case": "test_existing_reserved_and_symlink_outputs_remain_untouched",
+      "arguments": [
+        "review",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_existing_reserved_and_symlink_outputs_remain_untouched/data",
+        "--report",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_existing_reserved_and_symlink_outputs_remain_untouched/report/summary.json",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_existing_reserved_and_symlink_outputs_remain_untouched/report/exceptions.csv",
+        "--previous",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_existing_reserved_and_symlink_outputs_remain_untouched/review-1.csv"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 2,
+      "stdout": "",
+      "stderr": "uwatch: review error: --out must name a new worksheet; source, reports and previous review cannot be replaced\n"
+    },
+    {
+      "case": "test_existing_reserved_and_symlink_outputs_remain_untouched",
+      "arguments": [
+        "review",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_existing_reserved_and_symlink_outputs_remain_untouched/data",
+        "--report",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_existing_reserved_and_symlink_outputs_remain_untouched/report/summary.json",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_existing_reserved_and_symlink_outputs_remain_untouched/report/payment_queue.csv",
+        "--previous",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_existing_reserved_and_symlink_outputs_remain_untouched/review-1.csv"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 2,
+      "stdout": "",
+      "stderr": "uwatch: review error: --out must name a new worksheet; source, reports and previous review cannot be replaced\n"
+    },
+    {
+      "case": "test_existing_reserved_and_symlink_outputs_remain_untouched",
+      "arguments": [
+        "review",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_existing_reserved_and_symlink_outputs_remain_untouched/data",
+        "--report",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_existing_reserved_and_symlink_outputs_remain_untouched/report/summary.json",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_existing_reserved_and_symlink_outputs_remain_untouched/report/report.html",
+        "--previous",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_existing_reserved_and_symlink_outputs_remain_untouched/review-1.csv"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 2,
+      "stdout": "",
+      "stderr": "uwatch: review error: --out must name a new worksheet; source, reports and previous review cannot be replaced\n"
+    },
+    {
+      "case": "test_existing_reserved_and_symlink_outputs_remain_untouched",
+      "arguments": [
+        "review",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_existing_reserved_and_symlink_outputs_remain_untouched/data",
+        "--report",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_existing_reserved_and_symlink_outputs_remain_untouched/report/summary.json",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_existing_reserved_and_symlink_outputs_remain_untouched/report/audit.jsonl",
+        "--previous",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_existing_reserved_and_symlink_outputs_remain_untouched/review-1.csv"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 2,
+      "stdout": "",
+      "stderr": "uwatch: review error: --out must name a new worksheet; source, reports and previous review cannot be replaced\n"
+    },
+    {
+      "case": "test_existing_reserved_and_symlink_outputs_remain_untouched",
+      "arguments": [
+        "review",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_existing_reserved_and_symlink_outputs_remain_untouched/data",
+        "--report",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_existing_reserved_and_symlink_outputs_remain_untouched/report/summary.json",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_existing_reserved_and_symlink_outputs_remain_untouched/review-1.csv",
+        "--previous",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_existing_reserved_and_symlink_outputs_remain_untouched/review-1.csv"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 2,
+      "stdout": "",
+      "stderr": "uwatch: review error: --out must name a new worksheet; source, reports and previous review cannot be replaced\n"
+    },
+    {
+      "case": "test_existing_reserved_and_symlink_outputs_remain_untouched",
+      "arguments": [
+        "review",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_existing_reserved_and_symlink_outputs_remain_untouched/data",
+        "--report",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_existing_reserved_and_symlink_outputs_remain_untouched/report/summary.json",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_existing_reserved_and_symlink_outputs_remain_untouched/owned-by-another-review.csv",
+        "--previous",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_existing_reserved_and_symlink_outputs_remain_untouched/review-1.csv"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 2,
+      "stdout": "",
+      "stderr": "uwatch: review error: --out must name a new worksheet; source, reports and previous review cannot be replaced\n"
+    },
+    {
+      "case": "test_existing_reserved_and_symlink_outputs_remain_untouched",
+      "arguments": [
+        "review",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_existing_reserved_and_symlink_outputs_remain_untouched/data",
+        "--report",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_existing_reserved_and_symlink_outputs_remain_untouched/report/summary.json",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_existing_reserved_and_symlink_outputs_remain_untouched/dangling-review.csv",
+        "--previous",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_existing_reserved_and_symlink_outputs_remain_untouched/review-1.csv"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 2,
+      "stdout": "",
+      "stderr": "uwatch: review error: --out must name a new worksheet, not a symbolic link\n"
+    },
+    {
+      "case": "test_fresh_findings_and_unchanged_native_queue",
+      "arguments": [
+        "run",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_fresh_findings_and_unchanged_native_queue/data",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_fresh_findings_and_unchanged_native_queue/report",
+        "--as-of",
+        "2026-10-08",
+        "--eval-from",
+        "2026-09-01"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 0,
+      "stdout": "as_of 2026-10-08: 4 accounts, 12 bills; 2 flags {'MISSING_BILL': 1, 'RATE_CHANGE': 1}; 1 exceptions; 1 bills ($100.00) queued for approval (not paid)\nnaive trailing-3 rule would add 0 seasonal false flags\nreport: /dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_fresh_findings_and_unchanged_native_queue/report/report.html\n",
+      "stderr": ""
+    },
+    {
+      "case": "test_fresh_findings_and_unchanged_native_queue",
+      "arguments": [
+        "review",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_fresh_findings_and_unchanged_native_queue/data",
+        "--report",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_fresh_findings_and_unchanged_native_queue/report/summary.json",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_fresh_findings_and_unchanged_native_queue/review-1.csv"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 0,
+      "stdout": "review: 3 current findings {'open': 3}; 0 historical rows; annotations do not change payment eligibility\nworksheet: /dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_fresh_findings_and_unchanged_native_queue/review-1.csv\n",
+      "stderr": ""
+    },
+    {
+      "case": "test_multiline_unicode_notes_and_column_row_reorder",
+      "arguments": [
+        "run",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_multiline_unicode_notes_and_column_row_reorder/data",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_multiline_unicode_notes_and_column_row_reorder/report",
+        "--as-of",
+        "2026-10-08",
+        "--eval-from",
+        "2026-09-01"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 0,
+      "stdout": "as_of 2026-10-08: 4 accounts, 12 bills; 2 flags {'MISSING_BILL': 1, 'RATE_CHANGE': 1}; 1 exceptions; 1 bills ($100.00) queued for approval (not paid)\nnaive trailing-3 rule would add 0 seasonal false flags\nreport: /dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_multiline_unicode_notes_and_column_row_reorder/report/report.html\n",
+      "stderr": ""
+    },
+    {
+      "case": "test_multiline_unicode_notes_and_column_row_reorder",
+      "arguments": [
+        "review",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_multiline_unicode_notes_and_column_row_reorder/data",
+        "--report",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_multiline_unicode_notes_and_column_row_reorder/report/summary.json",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_multiline_unicode_notes_and_column_row_reorder/review-1.csv"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 0,
+      "stdout": "review: 3 current findings {'open': 3}; 0 historical rows; annotations do not change payment eligibility\nworksheet: /dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_multiline_unicode_notes_and_column_row_reorder/review-1.csv\n",
+      "stderr": ""
+    },
+    {
+      "case": "test_multiline_unicode_notes_and_column_row_reorder",
+      "arguments": [
+        "review",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_multiline_unicode_notes_and_column_row_reorder/data",
+        "--report",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_multiline_unicode_notes_and_column_row_reorder/report/summary.json",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_multiline_unicode_notes_and_column_row_reorder/review-2.csv",
+        "--previous",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_multiline_unicode_notes_and_column_row_reorder/review-1.csv"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 0,
+      "stdout": "review: 3 current findings {'reviewed': 2, 'open': 1}; 0 historical rows; annotations do not change payment eligibility\nworksheet: /dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_multiline_unicode_notes_and_column_row_reorder/review-2.csv\n",
+      "stderr": ""
+    },
+    {
+      "case": "test_other_account_change_preserves_exact_account_note",
+      "arguments": [
+        "run",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_other_account_change_preserves_exact_account_note/data",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_other_account_change_preserves_exact_account_note/report",
+        "--as-of",
+        "2026-10-08",
+        "--eval-from",
+        "2026-09-01"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 0,
+      "stdout": "as_of 2026-10-08: 4 accounts, 12 bills; 2 flags {'MISSING_BILL': 1, 'RATE_CHANGE': 1}; 1 exceptions; 1 bills ($100.00) queued for approval (not paid)\nnaive trailing-3 rule would add 0 seasonal false flags\nreport: /dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_other_account_change_preserves_exact_account_note/report/report.html\n",
+      "stderr": ""
+    },
+    {
+      "case": "test_other_account_change_preserves_exact_account_note",
+      "arguments": [
+        "review",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_other_account_change_preserves_exact_account_note/data",
+        "--report",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_other_account_change_preserves_exact_account_note/report/summary.json",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_other_account_change_preserves_exact_account_note/review-1.csv"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 0,
+      "stdout": "review: 3 current findings {'open': 3}; 0 historical rows; annotations do not change payment eligibility\nworksheet: /dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_other_account_change_preserves_exact_account_note/review-1.csv\n",
+      "stderr": ""
+    },
+    {
+      "case": "test_other_account_change_preserves_exact_account_note",
+      "arguments": [
+        "run",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_other_account_change_preserves_exact_account_note/data",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_other_account_change_preserves_exact_account_note/report",
+        "--as-of",
+        "2026-10-08",
+        "--eval-from",
+        "2026-09-01"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 0,
+      "stdout": "as_of 2026-10-08: 4 accounts, 12 bills; 2 flags {'MISSING_BILL': 1, 'RATE_CHANGE': 1}; 1 exceptions; 1 bills ($101.00) queued for approval (not paid)\nnaive trailing-3 rule would add 0 seasonal false flags\nreport: /dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_other_account_change_preserves_exact_account_note/report/report.html\n",
+      "stderr": ""
+    },
+    {
+      "case": "test_other_account_change_preserves_exact_account_note",
+      "arguments": [
+        "review",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_other_account_change_preserves_exact_account_note/data",
+        "--report",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_other_account_change_preserves_exact_account_note/report/summary.json",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_other_account_change_preserves_exact_account_note/review-2.csv",
+        "--previous",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_other_account_change_preserves_exact_account_note/review-1.csv"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 0,
+      "stdout": "review: 3 current findings {'open': 2, 'reviewed': 1}; 0 historical rows; annotations do not change payment eligibility\nworksheet: /dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_other_account_change_preserves_exact_account_note/review-2.csv\n",
+      "stderr": ""
+    },
+    {
+      "case": "test_source_ambiguity_and_csv_corruption_refuse",
+      "arguments": [
+        "run",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_source_ambiguity_and_csv_corruption_refuse/data",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_source_ambiguity_and_csv_corruption_refuse/report",
+        "--as-of",
+        "2026-10-08",
+        "--eval-from",
+        "2026-09-01"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 0,
+      "stdout": "as_of 2026-10-08: 4 accounts, 12 bills; 2 flags {'MISSING_BILL': 1, 'RATE_CHANGE': 1}; 1 exceptions; 1 bills ($100.00) queued for approval (not paid)\nnaive trailing-3 rule would add 0 seasonal false flags\nreport: /dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_source_ambiguity_and_csv_corruption_refuse/report/report.html\n",
+      "stderr": ""
+    },
+    {
+      "case": "test_source_ambiguity_and_csv_corruption_refuse",
+      "arguments": [
+        "review",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_source_ambiguity_and_csv_corruption_refuse/data",
+        "--report",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_source_ambiguity_and_csv_corruption_refuse/report/summary.json",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_source_ambiguity_and_csv_corruption_refuse/review-1.csv"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 2,
+      "stdout": "",
+      "stderr": "uwatch: review error: accounts.csv:6: duplicate account identity is ambiguous for review\n"
+    },
+    {
+      "case": "test_source_ambiguity_and_csv_corruption_refuse",
+      "arguments": [
+        "review",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_source_ambiguity_and_csv_corruption_refuse/data",
+        "--report",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_source_ambiguity_and_csv_corruption_refuse/report/summary.json",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_source_ambiguity_and_csv_corruption_refuse/review-2.csv"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 2,
+      "stdout": "",
+      "stderr": "uwatch: review error: accounts.csv: missing or duplicate CSV headers\n"
+    },
+    {
+      "case": "test_source_ambiguity_and_csv_corruption_refuse",
+      "arguments": [
+        "review",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_source_ambiguity_and_csv_corruption_refuse/data",
+        "--report",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_source_ambiguity_and_csv_corruption_refuse/report/summary.json",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_source_ambiguity_and_csv_corruption_refuse/review-3.csv"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 2,
+      "stdout": "",
+      "stderr": "uwatch: review error: malformed CSV: unexpected end of data\n"
+    },
+    {
+      "case": "test_stale_or_malformed_report_refuses_before_publication",
+      "arguments": [
+        "run",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_stale_or_malformed_report_refuses_before_publication/data",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_stale_or_malformed_report_refuses_before_publication/report",
+        "--as-of",
+        "2026-10-08",
+        "--eval-from",
+        "2026-09-01"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 0,
+      "stdout": "as_of 2026-10-08: 4 accounts, 12 bills; 2 flags {'MISSING_BILL': 1, 'RATE_CHANGE': 1}; 1 exceptions; 1 bills ($100.00) queued for approval (not paid)\nnaive trailing-3 rule would add 0 seasonal false flags\nreport: /dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_stale_or_malformed_report_refuses_before_publication/report/report.html\n",
+      "stderr": ""
+    },
+    {
+      "case": "test_stale_or_malformed_report_refuses_before_publication",
+      "arguments": [
+        "review",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_stale_or_malformed_report_refuses_before_publication/data",
+        "--report",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_stale_or_malformed_report_refuses_before_publication/report/summary.json",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_stale_or_malformed_report_refuses_before_publication/review-1.csv"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 2,
+      "stdout": "",
+      "stderr": "uwatch: review error: report does not match the source export/current checks (flags_detail); regenerate it with uwatch run\n"
+    },
+    {
+      "case": "test_stale_or_malformed_report_refuses_before_publication",
+      "arguments": [
+        "review",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_stale_or_malformed_report_refuses_before_publication/data",
+        "--report",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_stale_or_malformed_report_refuses_before_publication/invalid-0.json",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_stale_or_malformed_report_refuses_before_publication/review-2.csv"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 2,
+      "stdout": "",
+      "stderr": "uwatch: review error: report does not match the source export/current checks (payment_queue); regenerate it with uwatch run\n"
+    },
+    {
+      "case": "test_stale_or_malformed_report_refuses_before_publication",
+      "arguments": [
+        "review",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_stale_or_malformed_report_refuses_before_publication/data",
+        "--report",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_stale_or_malformed_report_refuses_before_publication/invalid-1.json",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_stale_or_malformed_report_refuses_before_publication/review-3.csv"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 2,
+      "stdout": "",
+      "stderr": "uwatch: review error: report does not match the source export/current checks (bills); regenerate it with uwatch run\n"
+    },
+    {
+      "case": "test_stale_or_malformed_report_refuses_before_publication",
+      "arguments": [
+        "review",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_stale_or_malformed_report_refuses_before_publication/data",
+        "--report",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_stale_or_malformed_report_refuses_before_publication/invalid-2.json",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_stale_or_malformed_report_refuses_before_publication/review-4.csv"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 2,
+      "stdout": "",
+      "stderr": "uwatch: review error: report does not match the source export/current checks (flags); regenerate it with uwatch run\n"
+    },
+    {
+      "case": "test_stale_or_malformed_report_refuses_before_publication",
+      "arguments": [
+        "review",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_stale_or_malformed_report_refuses_before_publication/data",
+        "--report",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_stale_or_malformed_report_refuses_before_publication/invalid-3.json",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_stale_or_malformed_report_refuses_before_publication/review-5.csv"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 2,
+      "stdout": "",
+      "stderr": "uwatch: review error: report does not match the source export/current checks (flags_detail); regenerate it with uwatch run\n"
+    },
+    {
+      "case": "test_stale_or_malformed_report_refuses_before_publication",
+      "arguments": [
+        "review",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_stale_or_malformed_report_refuses_before_publication/data",
+        "--report",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_stale_or_malformed_report_refuses_before_publication/invalid-4.json",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_stale_or_malformed_report_refuses_before_publication/review-6.csv"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 2,
+      "stdout": "",
+      "stderr": "uwatch: review error: duplicate JSON key: 'flags'\n"
+    },
+    {
+      "case": "test_stale_or_malformed_report_refuses_before_publication",
+      "arguments": [
+        "review",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_stale_or_malformed_report_refuses_before_publication/data",
+        "--report",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_stale_or_malformed_report_refuses_before_publication/invalid-5.json",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_stale_or_malformed_report_refuses_before_publication/review-7.csv"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 2,
+      "stdout": "",
+      "stderr": "uwatch: review error: nonfinite JSON value: NaN\n"
+    },
+    {
+      "case": "test_stale_or_malformed_report_refuses_before_publication",
+      "arguments": [
+        "review",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_stale_or_malformed_report_refuses_before_publication/data",
+        "--report",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_stale_or_malformed_report_refuses_before_publication/invalid-6.json",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_stale_or_malformed_report_refuses_before_publication/review-8.csv"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 2,
+      "stdout": "",
+      "stderr": "uwatch: review error: report as_of must be an ISO date\n"
+    },
+    {
+      "case": "test_unrounded_current_and_historical_facts_invalidate_note",
+      "arguments": [
+        "run",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_unrounded_current_and_historical_facts_invalidate_note/data",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_unrounded_current_and_historical_facts_invalidate_note/report",
+        "--as-of",
+        "2026-10-08",
+        "--eval-from",
+        "2026-09-01"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 0,
+      "stdout": "as_of 2026-10-08: 4 accounts, 12 bills; 2 flags {'MISSING_BILL': 1, 'RATE_CHANGE': 1}; 1 exceptions; 1 bills ($100.00) queued for approval (not paid)\nnaive trailing-3 rule would add 0 seasonal false flags\nreport: /dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_unrounded_current_and_historical_facts_invalidate_note/report/report.html\n",
+      "stderr": ""
+    },
+    {
+      "case": "test_unrounded_current_and_historical_facts_invalidate_note",
+      "arguments": [
+        "run",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_unrounded_current_and_historical_facts_invalidate_note/data",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_unrounded_current_and_historical_facts_invalidate_note/report",
+        "--as-of",
+        "2026-10-08",
+        "--eval-from",
+        "2026-09-01"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 0,
+      "stdout": "as_of 2026-10-08: 4 accounts, 12 bills; 2 flags {'MISSING_BILL': 1, 'RATE_CHANGE': 1}; 1 exceptions; 1 bills ($100.00) queued for approval (not paid)\nnaive trailing-3 rule would add 0 seasonal false flags\nreport: /dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_unrounded_current_and_historical_facts_invalidate_note/report/report.html\n",
+      "stderr": ""
+    },
+    {
+      "case": "test_unrounded_current_and_historical_facts_invalidate_note",
+      "arguments": [
+        "review",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_unrounded_current_and_historical_facts_invalidate_note/data",
+        "--report",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_unrounded_current_and_historical_facts_invalidate_note/report/summary.json",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_unrounded_current_and_historical_facts_invalidate_note/review-1.csv"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 0,
+      "stdout": "review: 3 current findings {'open': 3}; 0 historical rows; annotations do not change payment eligibility\nworksheet: /dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_unrounded_current_and_historical_facts_invalidate_note/review-1.csv\n",
+      "stderr": ""
+    },
+    {
+      "case": "test_unrounded_current_and_historical_facts_invalidate_note",
+      "arguments": [
+        "run",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_unrounded_current_and_historical_facts_invalidate_note/data",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_unrounded_current_and_historical_facts_invalidate_note/rounded-9",
+        "--as-of",
+        "2026-10-08",
+        "--eval-from",
+        "2026-09-01"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 0,
+      "stdout": "as_of 2026-10-08: 4 accounts, 12 bills; 2 flags {'MISSING_BILL': 1, 'RATE_CHANGE': 1}; 1 exceptions; 1 bills ($100.00) queued for approval (not paid)\nnaive trailing-3 rule would add 0 seasonal false flags\nreport: /dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_unrounded_current_and_historical_facts_invalidate_note/rounded-9/report.html\n",
+      "stderr": ""
+    },
+    {
+      "case": "test_unrounded_current_and_historical_facts_invalidate_note",
+      "arguments": [
+        "review",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_unrounded_current_and_historical_facts_invalidate_note/data",
+        "--report",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_unrounded_current_and_historical_facts_invalidate_note/report/summary.json",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_unrounded_current_and_historical_facts_invalidate_note/review-2.csv",
+        "--previous",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_unrounded_current_and_historical_facts_invalidate_note/review-1.csv"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 0,
+      "stdout": "review: 3 current findings {'open': 3}; 1 historical rows; annotations do not change payment eligibility\nworksheet: /dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_unrounded_current_and_historical_facts_invalidate_note/review-2.csv\n",
+      "stderr": ""
+    },
+    {
+      "case": "test_unrounded_current_and_historical_facts_invalidate_note",
+      "arguments": [
+        "run",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_unrounded_current_and_historical_facts_invalidate_note/data",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_unrounded_current_and_historical_facts_invalidate_note/report",
+        "--as-of",
+        "2026-10-08",
+        "--eval-from",
+        "2026-09-01"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 0,
+      "stdout": "as_of 2026-10-08: 4 accounts, 12 bills; 2 flags {'MISSING_BILL': 1, 'RATE_CHANGE': 1}; 1 exceptions; 1 bills ($100.00) queued for approval (not paid)\nnaive trailing-3 rule would add 0 seasonal false flags\nreport: /dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_unrounded_current_and_historical_facts_invalidate_note/report/report.html\n",
+      "stderr": ""
+    },
+    {
+      "case": "test_unrounded_current_and_historical_facts_invalidate_note",
+      "arguments": [
+        "review",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_unrounded_current_and_historical_facts_invalidate_note/data",
+        "--report",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_unrounded_current_and_historical_facts_invalidate_note/report/summary.json",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_unrounded_current_and_historical_facts_invalidate_note/review-3.csv"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 0,
+      "stdout": "review: 3 current findings {'open': 3}; 0 historical rows; annotations do not change payment eligibility\nworksheet: /dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_unrounded_current_and_historical_facts_invalidate_note/review-3.csv\n",
+      "stderr": ""
+    },
+    {
+      "case": "test_unrounded_current_and_historical_facts_invalidate_note",
+      "arguments": [
+        "run",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_unrounded_current_and_historical_facts_invalidate_note/data",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_unrounded_current_and_historical_facts_invalidate_note/rounded-3",
+        "--as-of",
+        "2026-10-08",
+        "--eval-from",
+        "2026-09-01"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 0,
+      "stdout": "as_of 2026-10-08: 4 accounts, 12 bills; 2 flags {'MISSING_BILL': 1, 'RATE_CHANGE': 1}; 1 exceptions; 1 bills ($100.00) queued for approval (not paid)\nnaive trailing-3 rule would add 0 seasonal false flags\nreport: /dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_unrounded_current_and_historical_facts_invalidate_note/rounded-3/report.html\n",
+      "stderr": ""
+    },
+    {
+      "case": "test_unrounded_current_and_historical_facts_invalidate_note",
+      "arguments": [
+        "review",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_unrounded_current_and_historical_facts_invalidate_note/data",
+        "--report",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_unrounded_current_and_historical_facts_invalidate_note/report/summary.json",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_unrounded_current_and_historical_facts_invalidate_note/review-4.csv",
+        "--previous",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_unrounded_current_and_historical_facts_invalidate_note/review-3.csv"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 0,
+      "stdout": "review: 3 current findings {'open': 3}; 1 historical rows; annotations do not change payment eligibility\nworksheet: /dev/shm/utility-watch-independent-a219f250962c/run-1791458628991837980/test_unrounded_current_and_historical_facts_invalidate_note/review-4.csv\n",
+      "stderr": ""
+    }
+  ]
+}

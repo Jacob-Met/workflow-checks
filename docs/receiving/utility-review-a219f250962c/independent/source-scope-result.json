@@ -1,0 +1,48 @@
+{
+  "commit": "e2e91f12bc69690b1ea63f4cc68a9784110cc9a0",
+  "tree": "7a10a9bc24c12f59b8a9431202406ee27a08c042",
+  "local_scoped_base": "906f1e058e41bee015a58466d5eee9f14ed71394",
+  "canonical_base": "2f1e5f777197eedd69d51a4d81c0da744b65ad88",
+  "changed_paths": [
+    "docs/receiving/utility-review-a219f250962c/README.md",
+    "docs/receiving/utility-review-a219f250962c/baseline-native.log",
+    "docs/receiving/utility-review-a219f250962c/baseline-result.json",
+    "docs/receiving/utility-review-a219f250962c/baseline-source.json",
+    "docs/receiving/utility-review-a219f250962c/candidate-native.log",
+    "docs/receiving/utility-review-a219f250962c/candidate-result.json",
+    "docs/receiving/utility-review-a219f250962c/cli-roundtrip/result.json",
+    "docs/receiving/utility-review-a219f250962c/cli-roundtrip/review-1.csv",
+    "docs/receiving/utility-review-a219f250962c/cli-roundtrip/review-2.csv",
+    "docs/receiving/utility-review-a219f250962c/cli-roundtrip/review-3.csv",
+    "docs/receiving/utility-review-a219f250962c/verify_cli.py",
+    "utility_watch/README.md",
+    "utility_watch/tests/test_review.py",
+    "utility_watch/uwatch/cli.py",
+    "utility_watch/uwatch/review.py"
+  ],
+  "protected_native_paths_unchanged": [
+    "utility_watch/HARDENING.md",
+    "utility_watch/tests/test_uwatch.py",
+    "utility_watch/uwatch/__main__.py",
+    "utility_watch/uwatch/engine.py",
+    "utility_watch/uwatch/report.py",
+    "utility_watch/sample_data/README_SYNTHETIC.txt",
+    "utility_watch/sample_data/accounts.csv",
+    "utility_watch/sample_data/bills.csv",
+    "utility_watch/sample_data/expected.json",
+    "utility_watch/sample_data/occupancy.csv",
+    "utility_watch/sample_data/payments.csv",
+    "utility_watch/tests/test_numeric_csv.py",
+    "utility_watch/tests/test_report.py",
+    "utility_watch/uwatch/__init__.py",
+    "utility_watch/uwatch/synth.py"
+  ],
+  "candidate_source_sha256": {
+    "utility_watch/uwatch/review.py": "f9f730ca45140436704d9823eafcfb58fb3922c5d0bf93a21a63f31347c947de",
+    "utility_watch/uwatch/cli.py": "0f8e6947baaadccc86c1f7d8cd0dd542b88d81b9b1990cc3aab7cbfcf3beb08d",
+    "utility_watch/tests/test_review.py": "f0c645af21d4f9af0539697c3e2dca26a197fc1284b943cd12d42e9500099155",
+    "utility_watch/README.md": "3a2d5a7295947dbca173f82e548832d42622de27d5808275cd265b37c58774d1"
+  },
+  "clean_frozen_source": true,
+  "production_boundary": "New uwatch/review.py plus additive cli.py parser/dispatch; native engine/report/generator/tests/data unchanged."
+}

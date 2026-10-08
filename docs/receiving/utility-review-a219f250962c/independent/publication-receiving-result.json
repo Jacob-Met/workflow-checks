@@ -1,0 +1,586 @@
+{
+  "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+  "commit": "e2e91f12bc69690b1ea63f4cc68a9784110cc9a0",
+  "source_sha256": {
+    "uwatch/review.py": "f9f730ca45140436704d9823eafcfb58fb3922c5d0bf93a21a63f31347c947de",
+    "uwatch/synth.py": "8573a65a8c5907ebedda24c47183f60f258e895bae0a2656bb582ada9217209d",
+    "uwatch/__init__.py": "a0332cb0878fcdfd02d1651f9a46c299ca0279996c6e5723d49311228c597a57",
+    "uwatch/report.py": "dc43c4fbbef72204a9dc9c5d7e4d3883900e96daf26c725f10fe22d4721540db",
+    "uwatch/engine.py": "48c968584d0494ee5fb0538fc7d4c685c2cc3128a45c33f57c2079234cdb7775",
+    "uwatch/cli.py": "0f8e6947baaadccc86c1f7d8cd0dd542b88d81b9b1990cc3aab7cbfcf3beb08d",
+    "uwatch/__main__.py": "26c55ee4277631c49b2312533d7514a815ec2c3de08f48b0a9dea8946d8f8933"
+  },
+  "source_unchanged_during_review": true,
+  "synthetic_inputs_only": true,
+  "actual_cli_invocations": 23,
+  "controlled_fault_cases": 8,
+  "tests": 3,
+  "failures": 0,
+  "errors": 0,
+  "successful": true,
+  "executions": [
+    {
+      "case": "io_fsync",
+      "arguments": [
+        "run",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/io_fsync/data",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/io_fsync/report",
+        "--as-of",
+        "2026-10-08",
+        "--eval-from",
+        "2026-09-01"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 0,
+      "stdout": "as_of 2026-10-08: 4 accounts, 12 bills; 2 flags {'MISSING_BILL': 1, 'RATE_CHANGE': 1}; 1 exceptions; 1 bills ($100.00) queued for approval (not paid)\nnaive trailing-3 rule would add 0 seasonal false flags\nreport: /dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/io_fsync/report/report.html\n",
+      "stderr": ""
+    },
+    {
+      "case": "io_fsync",
+      "arguments": [
+        "review",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/io_fsync/data",
+        "--report",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/io_fsync/report/summary.json",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/io_fsync/review-1.csv"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 0,
+      "stdout": "review: 3 current findings {'open': 3}; 0 historical rows; annotations do not change payment eligibility\nworksheet: /dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/io_fsync/review-1.csv\n",
+      "stderr": ""
+    },
+    {
+      "case": "io_fsync",
+      "arguments": [
+        "review",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/io_fsync/data",
+        "--report",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/io_fsync/report/summary.json",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/io_fsync/new-review.csv",
+        "--previous",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/io_fsync/review-1.csv"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "injection": {
+        "hook": "fsync",
+        "arguments": [
+          "review",
+          "--data",
+          "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/io_fsync/data",
+          "--report",
+          "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/io_fsync/report/summary.json",
+          "--out",
+          "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/io_fsync/new-review.csv",
+          "--previous",
+          "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/io_fsync/review-1.csv"
+        ],
+        "events": "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/io_fsync/injection-events.json"
+      },
+      "events": [
+        "injected_fsync_failure"
+      ],
+      "exit": 2,
+      "stdout": "",
+      "stderr": "uwatch: review error: independent synthetic fsync failure\n"
+    },
+    {
+      "case": "io_unlink",
+      "arguments": [
+        "run",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/io_unlink/data",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/io_unlink/report",
+        "--as-of",
+        "2026-10-08",
+        "--eval-from",
+        "2026-09-01"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 0,
+      "stdout": "as_of 2026-10-08: 4 accounts, 12 bills; 2 flags {'MISSING_BILL': 1, 'RATE_CHANGE': 1}; 1 exceptions; 1 bills ($100.00) queued for approval (not paid)\nnaive trailing-3 rule would add 0 seasonal false flags\nreport: /dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/io_unlink/report/report.html\n",
+      "stderr": ""
+    },
+    {
+      "case": "io_unlink",
+      "arguments": [
+        "review",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/io_unlink/data",
+        "--report",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/io_unlink/report/summary.json",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/io_unlink/review-1.csv"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 0,
+      "stdout": "review: 3 current findings {'open': 3}; 0 historical rows; annotations do not change payment eligibility\nworksheet: /dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/io_unlink/review-1.csv\n",
+      "stderr": ""
+    },
+    {
+      "case": "io_unlink",
+      "arguments": [
+        "review",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/io_unlink/data",
+        "--report",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/io_unlink/report/summary.json",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/io_unlink/new-review.csv",
+        "--previous",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/io_unlink/review-1.csv"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "injection": {
+        "hook": "unlink",
+        "arguments": [
+          "review",
+          "--data",
+          "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/io_unlink/data",
+          "--report",
+          "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/io_unlink/report/summary.json",
+          "--out",
+          "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/io_unlink/new-review.csv",
+          "--previous",
+          "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/io_unlink/review-1.csv"
+        ],
+        "events": "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/io_unlink/injection-events.json"
+      },
+      "events": [
+        "injected_post_publication_cleanup_failure"
+      ],
+      "exit": 0,
+      "stdout": "review: 3 current findings {'open': 2, 'reviewed': 1}; 0 historical rows; annotations do not change payment eligibility\nworksheet: /dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/io_unlink/new-review.csv\n",
+      "stderr": ""
+    },
+    {
+      "case": "io_unlink",
+      "arguments": [
+        "review",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/io_unlink/data",
+        "--report",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/io_unlink/report/summary.json",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/io_unlink/received-complete.csv",
+        "--previous",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/io_unlink/new-review.csv"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 0,
+      "stdout": "review: 3 current findings {'open': 2, 'reviewed': 1}; 0 historical rows; annotations do not change payment eligibility\nworksheet: /dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/io_unlink/received-complete.csv\n",
+      "stderr": ""
+    },
+    {
+      "case": "observed_source",
+      "arguments": [
+        "run",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/observed_source/data",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/observed_source/report",
+        "--as-of",
+        "2026-10-08",
+        "--eval-from",
+        "2026-09-01"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 0,
+      "stdout": "as_of 2026-10-08: 4 accounts, 12 bills; 2 flags {'MISSING_BILL': 1, 'RATE_CHANGE': 1}; 1 exceptions; 1 bills ($100.00) queued for approval (not paid)\nnaive trailing-3 rule would add 0 seasonal false flags\nreport: /dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/observed_source/report/report.html\n",
+      "stderr": ""
+    },
+    {
+      "case": "observed_source",
+      "arguments": [
+        "review",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/observed_source/data",
+        "--report",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/observed_source/report/summary.json",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/observed_source/review-1.csv"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 0,
+      "stdout": "review: 3 current findings {'open': 3}; 0 historical rows; annotations do not change payment eligibility\nworksheet: /dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/observed_source/review-1.csv\n",
+      "stderr": ""
+    },
+    {
+      "case": "observed_source",
+      "arguments": [
+        "review",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/observed_source/data",
+        "--report",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/observed_source/report/summary.json",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/observed_source/new-review.csv",
+        "--previous",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/observed_source/review-1.csv"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "injection": {
+        "hook": "check",
+        "mutation": "write",
+        "target": "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/observed_source/data/bills.csv",
+        "content_hex": "62696c6c5f69642c6163636f756e745f6e6f2c76656e646f725f696e766f6963655f6e6f2c706572696f645f73746172742c706572696f645f656e642c75736167652c75736167655f756e69742c616d6f756e742c6c6174655f6665652c7072696f725f62616c616e63652c6475655f646174652c72656365697665645f646174650d0a524154452d412d323032352d30392c524154452d412c494e562d524154452d412d323032352d30392c323032352d30392d30312c323032352d30392d33302c3130302e302c6b57682c3130302e302c302c302c323032362d31302d33302c323032362d31302d30310d0a524154452d412d323032362d30332c524154452d412c494e562d524154452d412d323032362d30332c323032362d30332d30312c323032362d30332d33312c3130302e302c6b57682c3130302e302c302c302c323032362d31302d33302c323032362d31302d30310d0a524154452d412d323032362d30342c524154452d412c494e562d524154452d412d323032362d30342c323032362d30342d30312c323032362d30342d33302c3130302e302c6b57682c3130302e302c302c302c323032362d31302d33302c323032362d31302d30310d0a524154452d412d323032362d30352c524154452d412c494e562d524154452d412d323032362d30352c323032362d30352d30312c323032362d30352d33312c3130302e302c6b57682c3130302e302c302c302c323032362d31302d33302c323032362d31302d30310d0a524154452d412d323032362d30362c524154452d412c494e562d524154452d412d323032362d30362c323032362d30362d30312c323032362d30362d33302c3130302e302c6b57682c3130302e302c302c302c323032362d31302d33302c323032362d31302d30310d0a524154452d412d323032362d30372c524154452d412c494e562d524154452d412d323032362d30372c323032362d30372d30312c323032362d30372d33312c3130302e302c6b57682c3130302e302c302c302c323032362d31302d33302c323032362d31302d30310d0a524154452d412d323032362d30382c524154452d412c494e562d524154452d412d323032362d30382c323032362d30382d30312c323032362d30382d33312c3130302e302c6b57682c3130302e302c302c302c323032362d31302d33302c323032362d31302d30310d0a524154452d412d323032362d30392c524154452d412c494e562d524154452d412d323032362d30392c323032362d30392d30312c323032362d30392d33302c3130302e302c6b57682c3135302e302c302c302c323032362d31302d33302c323032362d31302d30310d0a434c45414e2d422d323032352d30392c434c45414e2d422c494e562d434c45414e2d422d323032352d30392c323032352d30392d30312c323032352d30392d33302c3130302e302c6b57682c3130302e302c302c302c323032362d31302d33302c323032362d31302d30310d0a434c45414e2d422d323032362d30392c434c45414e2d422c494e562d434c45414e2d422d323032362d30392c323032362d30392d30312c323032362d30392d33302c3130302e302c6b57682c3130302e302c302c302c323032362d31302d33302c323032362d31302d30310d0a4d495353494e472d432d323032362d30372c4d495353494e472d432c494e562d4d495353494e472d432d323032362d30372c323032362d30372d30312c323032362d30372d33312c3130302e302c6b57682c3130302e302c302c302c323032362d31302d33302c323032362d31302d30310d0a4558434550542d442d323032362d30392c4558434550542d442c494e562d4558434550542d442d323032362d30392c323032362d30392d30312c323032362d30392d33302c3130302e302c6b57682c3130302e302c302c302c323032362d31302d33302c323032362d31302d30310d0a0a",
+        "arguments": [
+          "review",
+          "--data",
+          "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/observed_source/data",
+          "--report",
+          "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/observed_source/report/summary.json",
+          "--out",
+          "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/observed_source/new-review.csv",
+          "--previous",
+          "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/observed_source/review-1.csv"
+        ],
+        "events": "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/observed_source/injection-events.json"
+      },
+      "events": [
+        "actual_native_check_returned",
+        "foreign_writer_mutated_input"
+      ],
+      "exit": 2,
+      "stdout": "",
+      "stderr": "uwatch: review error: input changed during review: bills.csv; inspect and run again\n"
+    },
+    {
+      "case": "observed_report",
+      "arguments": [
+        "run",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/observed_report/data",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/observed_report/report",
+        "--as-of",
+        "2026-10-08",
+        "--eval-from",
+        "2026-09-01"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 0,
+      "stdout": "as_of 2026-10-08: 4 accounts, 12 bills; 2 flags {'MISSING_BILL': 1, 'RATE_CHANGE': 1}; 1 exceptions; 1 bills ($100.00) queued for approval (not paid)\nnaive trailing-3 rule would add 0 seasonal false flags\nreport: /dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/observed_report/report/report.html\n",
+      "stderr": ""
+    },
+    {
+      "case": "observed_report",
+      "arguments": [
+        "review",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/observed_report/data",
+        "--report",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/observed_report/report/summary.json",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/observed_report/review-1.csv"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 0,
+      "stdout": "review: 3 current findings {'open': 3}; 0 historical rows; annotations do not change payment eligibility\nworksheet: /dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/observed_report/review-1.csv\n",
+      "stderr": ""
+    },
+    {
+      "case": "observed_report",
+      "arguments": [
+        "review",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/observed_report/data",
+        "--report",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/observed_report/report/summary.json",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/observed_report/new-review.csv",
+        "--previous",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/observed_report/review-1.csv"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "injection": {
+        "hook": "check",
+        "mutation": "write",
+        "target": "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/observed_report/report/summary.json",
+        "content_hex": "7b0a202261735f6f66223a2022323032362d31302d3038222c0a20226576616c5f66726f6d223a2022323032362d30392d3031222c0a2022646174615f6d6f6465223a2022636c69656e745f637376222c0a20226163636f756e7473223a20342c0a202262696c6c73223a2031322c0a2022666c616773223a20322c0a202262795f636f6465223a207b0a2020224d495353494e475f42494c4c223a20312c0a202022524154455f4348414e4745223a20310a207d2c0a2022657863657074696f6e73223a20312c0a20227061796d656e745f7175657565223a20312c0a20227061796d656e745f71756575655f746f74616c223a203130302e302c0a20226e616976655f747261696c696e67335f68697473223a205b5d2c0a2022666c6167735f64657461696c223a205b0a20207b0a202020226b6579223a20224d495353494e472d433a323032362d30392d3031222c0a202020226163636f756e745f6e6f223a20224d495353494e472d43222c0a2020202270726f7065727479223a2022496e646570656e64656e742054657272616365222c0a202020227574696c697479223a2022656c656374726963222c0a20202022636f6465223a20224d495353494e475f42494c4c222c0a2020202264657461696c223a20226e6f2062696c6c20666f722073657276696365206d6f6e746820323032362d30393b20636865636b2076656e646f7220706f7274616c202f206d61696c206265666f72652061206c61746520666565206c616e6473222c0a2020202265766964656e6365223a205b0a20202020226163636f756e74732e6373763a34220a2020205d0a20207d2c0a20207b0a202020226b6579223a2022524154452d412d323032362d3039222c0a202020226163636f756e745f6e6f223a2022524154452d41222c0a2020202270726f7065727479223a2022496e646570656e64656e742054657272616365222c0a202020227574696c697479223a2022656c656374726963222c0a20202022636f6465223a2022524154455f4348414e4745222c0a2020202264657461696c223a202224312e353030302f6b576820767320747261696c696e67206d656469616e2024312e30303030202878312e3530293b20636865636b207461726966662f7261746520706c616e222c0a2020202265766964656e6365223a205b0a202020202262696c6c732e6373763a39220a2020205d0a20207d0a205d2c0a2022657863657074696f6e735f64657461696c223a205b0a20207b0a202020226b6579223a20224558434550542d442d323032362d3039222c0a202020226163636f756e745f6e6f223a20224558434550542d44222c0a20202022726561736f6e223a20224e4f5f424153454c494e45222c0a2020202264657461696c223a20226e6f2073616d652d6d6f6e74682062696c6c206c61737420796561723b207573616765206e6f74206a7564676564222c0a2020202265766964656e6365223a205b0a202020202262696c6c732e6373763a3133220a2020205d0a20207d0a205d2c0a20227061796d656e745f71756575655f64657461696c223a205b0a20207b0a2020202262696c6c5f6964223a2022434c45414e2d422d323032362d3039222c0a202020226163636f756e745f6e6f223a2022434c45414e2d42222c0a2020202270726f7065727479223a2022496e646570656e64656e742054657272616365222c0a202020227574696c697479223a2022656c656374726963222c0a2020202276656e646f72223a202246696374696f6e616c2076656e646f72222c0a20202022696e766f696365223a2022494e562d434c45414e2d422d323032362d3039222c0a20202022616d6f756e745f647565223a203130302e302c0a202020226475655f64617465223a2022323032362d31302d3330222c0a20202022737461747573223a20225155455545445f464f525f415050524f56414c20286e6f74207061696429222c0a2020202265766964656e6365223a202262696c6c732e6373763a3131220a20207d0a205d0a7d0a",
+        "arguments": [
+          "review",
+          "--data",
+          "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/observed_report/data",
+          "--report",
+          "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/observed_report/report/summary.json",
+          "--out",
+          "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/observed_report/new-review.csv",
+          "--previous",
+          "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/observed_report/review-1.csv"
+        ],
+        "events": "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/observed_report/injection-events.json"
+      },
+      "events": [
+        "actual_native_check_returned",
+        "foreign_writer_mutated_input"
+      ],
+      "exit": 2,
+      "stdout": "",
+      "stderr": "uwatch: review error: input changed during review: summary.json; inspect and run again\n"
+    },
+    {
+      "case": "observed_marker",
+      "arguments": [
+        "run",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/observed_marker/data",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/observed_marker/report",
+        "--as-of",
+        "2026-10-08",
+        "--eval-from",
+        "2026-09-01"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 0,
+      "stdout": "as_of 2026-10-08: 4 accounts, 12 bills; 2 flags {'MISSING_BILL': 1, 'RATE_CHANGE': 1}; 1 exceptions; 1 bills ($100.00) queued for approval (not paid)\nnaive trailing-3 rule would add 0 seasonal false flags\nreport: /dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/observed_marker/report/report.html\n",
+      "stderr": ""
+    },
+    {
+      "case": "observed_marker",
+      "arguments": [
+        "review",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/observed_marker/data",
+        "--report",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/observed_marker/report/summary.json",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/observed_marker/review-1.csv"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 0,
+      "stdout": "review: 3 current findings {'open': 3}; 0 historical rows; annotations do not change payment eligibility\nworksheet: /dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/observed_marker/review-1.csv\n",
+      "stderr": ""
+    },
+    {
+      "case": "observed_marker",
+      "arguments": [
+        "review",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/observed_marker/data",
+        "--report",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/observed_marker/report/summary.json",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/observed_marker/new-review.csv",
+        "--previous",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/observed_marker/review-1.csv"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "injection": {
+        "hook": "check",
+        "mutation": "write",
+        "target": "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/observed_marker/data/expected.json",
+        "content_hex": "7b7d0a",
+        "arguments": [
+          "review",
+          "--data",
+          "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/observed_marker/data",
+          "--report",
+          "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/observed_marker/report/summary.json",
+          "--out",
+          "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/observed_marker/new-review.csv",
+          "--previous",
+          "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/observed_marker/review-1.csv"
+        ],
+        "events": "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/observed_marker/injection-events.json"
+      },
+      "events": [
+        "actual_native_check_returned",
+        "foreign_writer_mutated_input"
+      ],
+      "exit": 2,
+      "stdout": "",
+      "stderr": "uwatch: review error: input changed during review: expected.json; inspect and run again\n"
+    },
+    {
+      "case": "observed_previous",
+      "arguments": [
+        "run",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/observed_previous/data",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/observed_previous/report",
+        "--as-of",
+        "2026-10-08",
+        "--eval-from",
+        "2026-09-01"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 0,
+      "stdout": "as_of 2026-10-08: 4 accounts, 12 bills; 2 flags {'MISSING_BILL': 1, 'RATE_CHANGE': 1}; 1 exceptions; 1 bills ($100.00) queued for approval (not paid)\nnaive trailing-3 rule would add 0 seasonal false flags\nreport: /dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/observed_previous/report/report.html\n",
+      "stderr": ""
+    },
+    {
+      "case": "observed_previous",
+      "arguments": [
+        "review",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/observed_previous/data",
+        "--report",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/observed_previous/report/summary.json",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/observed_previous/review-1.csv"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 0,
+      "stdout": "review: 3 current findings {'open': 3}; 0 historical rows; annotations do not change payment eligibility\nworksheet: /dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/observed_previous/review-1.csv\n",
+      "stderr": ""
+    },
+    {
+      "case": "observed_previous",
+      "arguments": [
+        "review",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/observed_previous/data",
+        "--report",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/observed_previous/report/summary.json",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/observed_previous/new-review.csv",
+        "--previous",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/observed_previous/review-1.csv"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "injection": {
+        "hook": "combine",
+        "mutation": "write",
+        "target": "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/observed_previous/review-1.csv",
+        "content_hex": "7265766965775f7374617475732c72657669657765722c6e6f74652c726f775f73746174652c6b696e642c6163636f756e745f6e6f2c66696e64696e675f6b65792c636f64652c70726f70657274792c7574696c6974792c64657461696c2c65766964656e63652c61735f6f662c6576616c5f66726f6d2c646174615f6d6f64652c726f775f69642c66696e64696e675f69642c65766964656e63655f76657273696f6e2c7265636f72645f7368613235360d0a6f70656e2c2c2c63757272656e742c657863657074696f6e2c4558434550542d442c4558434550542d442d323032362d30392c4e4f5f424153454c494e452c496e646570656e64656e7420546572726163652c656c6563747269632c6e6f2073616d652d6d6f6e74682062696c6c206c61737420796561723b207573616765206e6f74206a75646765642c225b222262696c6c732e6373763a313322225d222c323032362d31302d30382c323032362d30392d30312c636c69656e745f6373762c31356139356238353162313334636461383430623562633362396536306264352c306462333331386631303731373731373034396265393936333039323765613634323139333136643135376139393434353865333239633039666565396339332c643835373063613262303734313730666661396564343861303235313831396663333738613865383237366664393135613133376537323862313766336264352c643063393065336436663430613438363334343438653663666339633739303463323330623764643262363464643636376263656663306635313037393565300d0a6f70656e2c2c2c63757272656e742c666c61672c4d495353494e472d432c4d495353494e472d433a323032362d30392d30312c4d495353494e475f42494c4c2c496e646570656e64656e7420546572726163652c656c6563747269632c6e6f2062696c6c20666f722073657276696365206d6f6e746820323032362d30393b20636865636b2076656e646f7220706f7274616c202f206d61696c206265666f72652061206c61746520666565206c616e64732c225b22226163636f756e74732e6373763a3422225d222c323032362d31302d30382c323032362d30392d30312c636c69656e745f6373762c63383065656261306564353834363932396362613839396637623363363765632c616465656136303835303636386534623564613837326263326464343634333834363733633965353266646337363136653261653831373034653630363165622c313066363232653237306266616564623732316537376566323638303165636438363138613166616537616663633437646366356564326533333338306437622c346262666161303566323731326461616439643763616230383662353639343736646539316134333530386132633936343166633862643062626232323436360d0a72657669657765642c2020496e646570656e64656e7420726576696577657220202c5072696f7220616e6e6f746174696f6e206d757374206e6f7420626520656d697474656420616761696e737420636f6e63757272656e742065766964656e63652e2c63757272656e742c666c61672c524154452d412c524154452d412d323032362d30392c524154455f4348414e47452c496e646570656e64656e7420546572726163652c656c6563747269632c24312e353030302f6b576820767320747261696c696e67206d656469616e2024312e30303030202878312e3530293b20636865636b207461726966662f7261746520706c616e2c225b222262696c6c732e6373763a3922225d222c323032362d31302d30382c323032362d30392d30312c636c69656e745f6373762c32313663616665306634623934353030613965663539326631323435666265382c626564373433316665386461323665343533363761643163663566343163613235396463353937343663323961386661353837623335636133656639343234332c316365623962383165343432633334353835343761656661326464373764323837306166393038343065393333373566333834343834643464376166336330362c333763316133363032373233373631343735363166663764666363393666326636373839333262386634373166343739343730626333333730316638323237650d0a2c2c2c6d616e69666573742c776f726b73686565742c2c7577617463682d7265766965772d76312c332c2c2c2245646974206f6e6c79207265766965775f7374617475732c20726576696577657220616e64206e6f7465206f6e2066696e64696e6720726f77733b206b6565702074686973206d616e69666573742e222c5b5d2c323032362d31302d30382c323032362d30392d30312c636c69656e745f6373762c6d616e69666573742c646537343166663639306336663834383265396463653335633133356134653761316631633535316564316237636163373265323733323432316530656236362c666134346533623563363436333534343665366165613036663762346265623634356563356266653038306631396436623336643932323665653464653230302c336231633436356161366630646139393730356533626234636138333164373938343761326530613764316135656365316431343262643665386133376635650d0a0a",
+        "arguments": [
+          "review",
+          "--data",
+          "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/observed_previous/data",
+          "--report",
+          "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/observed_previous/report/summary.json",
+          "--out",
+          "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/observed_previous/new-review.csv",
+          "--previous",
+          "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/observed_previous/review-1.csv"
+        ],
+        "events": "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/observed_previous/injection-events.json"
+      },
+      "events": [
+        "actual_reconciliation_returned",
+        "foreign_writer_mutated_input"
+      ],
+      "exit": 2,
+      "stdout": "",
+      "stderr": "uwatch: review error: input changed during review: review-1.csv; inspect and run again\n"
+    },
+    {
+      "case": "raced_file",
+      "arguments": [
+        "run",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/raced_file/data",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/raced_file/report",
+        "--as-of",
+        "2026-10-08",
+        "--eval-from",
+        "2026-09-01"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 0,
+      "stdout": "as_of 2026-10-08: 4 accounts, 12 bills; 2 flags {'MISSING_BILL': 1, 'RATE_CHANGE': 1}; 1 exceptions; 1 bills ($100.00) queued for approval (not paid)\nnaive trailing-3 rule would add 0 seasonal false flags\nreport: /dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/raced_file/report/report.html\n",
+      "stderr": ""
+    },
+    {
+      "case": "raced_file",
+      "arguments": [
+        "review",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/raced_file/data",
+        "--report",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/raced_file/report/summary.json",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/raced_file/new-review.csv"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "injection": {
+        "hook": "link",
+        "rival_kind": "file",
+        "rival_hex": "496e646570656e64656e7420636f6d706574696e6720777269746572206f776e7320746869732065786163742064657374696e6174696f6e2e0a",
+        "rival_target": "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/raced_file/data/bills.csv",
+        "arguments": [
+          "review",
+          "--data",
+          "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/raced_file/data",
+          "--report",
+          "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/raced_file/report/summary.json",
+          "--out",
+          "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/raced_file/new-review.csv"
+        ],
+        "events": "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/raced_file/injection-events.json"
+      },
+      "events": [
+        "completed_temporary_output_present",
+        "foreign_writer_claimed_destination"
+      ],
+      "exit": 2,
+      "stdout": "",
+      "stderr": "uwatch: review error: [Errno 17] File exists: '/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/raced_file/.uwatch-review-pwxvh7xw.csv' -> '/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/raced_file/new-review.csv'\n"
+    },
+    {
+      "case": "raced_symlink",
+      "arguments": [
+        "run",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/raced_symlink/data",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/raced_symlink/report",
+        "--as-of",
+        "2026-10-08",
+        "--eval-from",
+        "2026-09-01"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "exit": 0,
+      "stdout": "as_of 2026-10-08: 4 accounts, 12 bills; 2 flags {'MISSING_BILL': 1, 'RATE_CHANGE': 1}; 1 exceptions; 1 bills ($100.00) queued for approval (not paid)\nnaive trailing-3 rule would add 0 seasonal false flags\nreport: /dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/raced_symlink/report/report.html\n",
+      "stderr": ""
+    },
+    {
+      "case": "raced_symlink",
+      "arguments": [
+        "review",
+        "--data",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/raced_symlink/data",
+        "--report",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/raced_symlink/report/summary.json",
+        "--out",
+        "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/raced_symlink/new-review.csv"
+      ],
+      "source": "/dev/shm/utility-review-a219f250962c/utility_watch",
+      "injection": {
+        "hook": "link",
+        "rival_kind": "symlink",
+        "rival_hex": "496e646570656e64656e7420636f6d706574696e6720777269746572206f776e7320746869732065786163742064657374696e6174696f6e2e0a",
+        "rival_target": "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/raced_symlink/data/bills.csv",
+        "arguments": [
+          "review",
+          "--data",
+          "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/raced_symlink/data",
+          "--report",
+          "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/raced_symlink/report/summary.json",
+          "--out",
+          "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/raced_symlink/new-review.csv"
+        ],
+        "events": "/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/raced_symlink/injection-events.json"
+      },
+      "events": [
+        "completed_temporary_output_present",
+        "foreign_writer_claimed_destination"
+      ],
+      "exit": 2,
+      "stdout": "",
+      "stderr": "uwatch: review error: [Errno 17] File exists: '/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/raced_symlink/.uwatch-review-1y12l413.csv' -> '/dev/shm/utility-watch-independent-a219f250962c/run-1791459199868273550/raced_symlink/new-review.csv'\n"
+    }
+  ],
+  "boundary": "Actual CLI and original checker/combiner/link. Only synthetic foreign writer or selected I/O fault injected; stable source export required."
+}

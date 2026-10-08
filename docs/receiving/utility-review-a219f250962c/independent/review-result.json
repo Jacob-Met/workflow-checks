@@ -1,0 +1,36 @@
+{
+  "disposition": "ACCEPT",
+  "reviewer": "estate_authority independent source/CLI receiving",
+  "commit": "e2e91f12bc69690b1ea63f4cc68a9784110cc9a0",
+  "tree": "7a10a9bc24c12f59b8a9431202406ee27a08c042",
+  "source_sha256": {
+    "utility_watch/uwatch/review.py": "f9f730ca45140436704d9823eafcfb58fb3922c5d0bf93a21a63f31347c947de",
+    "utility_watch/uwatch/cli.py": "0f8e6947baaadccc86c1f7d8cd0dd542b88d81b9b1990cc3aab7cbfcf3beb08d",
+    "utility_watch/tests/test_review.py": "f0c645af21d4f9af0539697c3e2dca26a197fc1284b943cd12d42e9500099155",
+    "utility_watch/README.md": "3a2d5a7295947dbca173f82e548832d42622de27d5808275cd265b37c58774d1"
+  },
+  "behavioral_groups": 13,
+  "actual_cli_invocations": 89,
+  "failures": 0,
+  "errors": 0,
+  "fault_injection_cases": 8,
+  "portability_only_additional_group": 1,
+  "portability_only_additional_cli_invocations": 2,
+  "source_unchanged": true,
+  "unchanged_native_leaf_count": 15,
+  "changed_paths": 15,
+  "required_receiving_scope": "Apply additive leaves on a reconciled full canonical repository, never replace it with this 17-file materialization.",
+  "limits": [
+    "All test inputs are synthetic; no live client data or payment action was used.",
+    "Stable source exports are required; observed byte changes refuse publication, without a multi-file writer lock.",
+    "Review status does not alter flags, payment eligibility, queue or engine semantics.",
+    "Worksheet checksums detect editing mistakes, not reviewer identity or malicious resigning.",
+    "Historical source values require retaining the source export; the worksheet retains finding text, pointers, identity and annotations."
+  ],
+  "evidence": [
+    "cli-receiving-result.json",
+    "publication-receiving-result.json",
+    "portability-result.json",
+    "source-scope-result.json"
+  ]
+}
