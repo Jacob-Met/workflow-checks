@@ -22,6 +22,18 @@ Anything the rules cannot judge (a new account with no same-month history, a uni
 
 Outputs: `flags.csv`, `exceptions.csv`, `payment_queue.csv`, `report.html` (single self-contained file), `summary.json`, and an append-only `audit.jsonl` with a file:row evidence pointer for every decision.
 
+## Review the HTML report
+
+Open `report.html` directly in a browser. The three summary cards jump to flags, unresolved
+exceptions, and the payment-approval queue. Flags are grouped by property; select a property
+heading (or focus it and press Enter or Space) to open or close its records. All start open.
+
+Each record includes its account, bill or expected period, and source CSV rows. Payment records
+also show the vendor, invoice, amount, due date and unchanged not-paid status, in the engine's
+due-date order. Source rows count the CSV header as row 1. Use the companion CSV and audit
+files when following up; closing a property only changes the view and does not save review
+progress or approve anything. The report works offline with JavaScript disabled.
+
 ## Run it
 
 ```powershell
