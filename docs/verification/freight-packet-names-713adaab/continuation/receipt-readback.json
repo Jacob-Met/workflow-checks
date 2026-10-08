@@ -1,0 +1,73 @@
+{
+  "schema": "freight-packet-names.receipt-readback.v1",
+  "report_sha256": "d7fdd900f31c210a1946f5e59d4c528383e041ea6dad8759689090d5bf8da1d9",
+  "native_source_commit": "5f7c0b7692563f8ee7c006aeda35a3083c590460",
+  "source_files": 31,
+  "source_maps_equal": true,
+  "cases": [
+    {
+      "name": "ordinary",
+      "returncode": 0,
+      "input_files": 18,
+      "input_maps_equal": true,
+      "rule_projection_equal": true,
+      "report_maps_equal": true,
+      "report_files": 14,
+      "all_packets_regular": true,
+      "casefold_names_distinct": true,
+      "physical_alias_count": 0,
+      "consumer_count": 1,
+      "all_consumers_match": true,
+      "filenames": [
+        {
+          "load_id": "LD260900",
+          "file": "packets/LD260900.html"
+        }
+      ]
+    },
+    {
+      "name": "case-pair",
+      "returncode": 0,
+      "input_files": 18,
+      "input_maps_equal": true,
+      "rule_projection_equal": true,
+      "report_maps_equal": true,
+      "report_files": 14,
+      "all_packets_regular": true,
+      "casefold_names_distinct": true,
+      "physical_alias_count": 0,
+      "consumer_count": 2,
+      "all_consumers_match": true,
+      "filenames": [
+        {
+          "load_id": "LD260900",
+          "file": "packets/~4732f5b4898333a8a3c7607e91bb2aa39aba40b5dabf987b85b9f58299061264.html"
+        },
+        {
+          "load_id": "ld260900",
+          "file": "packets/~558a413ace70e6f61314b3cd32f4944eaeaa6181186ee5b626028c4d5d0ca21e.html"
+        }
+      ]
+    },
+    {
+      "name": "nul-device",
+      "returncode": 0,
+      "input_files": 18,
+      "input_maps_equal": true,
+      "rule_projection_equal": true,
+      "report_maps_equal": true,
+      "report_files": 14,
+      "all_packets_regular": true,
+      "casefold_names_distinct": true,
+      "physical_alias_count": 0,
+      "consumer_count": 1,
+      "all_consumers_match": true,
+      "filenames": [
+        {
+          "load_id": "NUL",
+          "file": "packets/~ae6de1827cfc8111a6e049e80d19a5ca25f0d8e018e879286eab9919ab642f01.html"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+"""Isolated original-source Windows filename receiving; synthetic inputs only."""
+from pathlib import Path
+import datetime, hashlib, json, os, platform, shutil, subprocess, sys
+
+ROOT = Path(__file__).resolve().parent
+assert os.name == "nt" and platform.node().upper() == "DESKTOP-LA7CMTA"
+assert ROOT.parent == Path(os.environ["TEMP"]).resolve()
+assert ROOT.name.startswith("hamon-freight-packet-names-713adaab-")
+assert sys.version_info[:2] == (3, 11)
+SOURCE = ROOT / "source"
+EVIDENCE = ROOT / "evidence"
+EVIDENCE.mkdir(exist_ok=False)
+manifest = json.loads((ROOT / "source-manifest.json").read_text(encoding="utf-8"))
+def digest(raw): return hashlib.sha256(raw).hexdigest()
+def hashes(root):
+    return {p.relative_to(root).as_posix(): digest(p.read_bytes())
+            for p in sorted(root.rglob("*")) if p.is_file()}
+source_before = hashes(SOURCE)
+expected = {r["path"]: r["sha256"] for r in manifest["files"]}
+assert source_before == expected
+env = dict(os.environ)
+env.pop("PYTHONPATH", None); env.pop("PYTHONHOME", None)
+env.update(PYTHONDONTWRITEBYTECODE="1", PYTHONIOENCODING="utf-8")
+commands = []
+def run(label, args):
+    argv = [sys.executable, "-B", "-m", "freightpkt", *args]
+    proc = subprocess.run(argv, cwd=SOURCE / "freight_packets", env=env,
+                          capture_output=True, timeout=30)
+    (EVIDENCE / (label + ".stdout.txt")).write_bytes(proc.stdout)
+    (EVIDENCE / (label + ".stderr.txt")).write_bytes(proc.stderr)
+    record = {"label": label, "argv": argv, "cwd": str(SOURCE / "freight_packets"),
+              "returncode": proc.returncode, "stdout_sha256": digest(proc.stdout),
+              "stderr_sha256": digest(proc.stderr),
+              "environment": {"PYTHONPATH": "removed", "PYTHONHOME": "removed",
+                              "PYTHONDONTWRITEBYTECODE": "1", "PYTHONIOENCODING": "utf-8"}}
+    commands.append(record)
+    return record
+fixture = ROOT / "fixture"
+generated = run("generate", ["generate", "--out", str(fixture), "--loads", "8", "--seed", "7"])
+assert generated["returncode"] == 0
+cases = []
+for name, old_id, new_id in [("ordinary", None, None),
+                             ("case-pair", "LD260907", "ld260900"),
+                             ("nul-device", "LD260900", "NUL")]:
+    case = ROOT / name; case.mkdir()
+    data = case / "data"; out = case / "out"
+    shutil.copytree(fixture, data)
+    replacements = []
+    if old_id is not None:
+        for p in sorted(data.rglob("*")):
+            if p.is_file():
+                raw = p.read_bytes()
+                count = raw.count(old_id.encode("utf-8"))
+                if count:
+                    updated = raw.replace(old_id.encode("utf-8"), new_id.encode("utf-8"))
+                    p.write_bytes(updated)
+                    replacements.append({"path": p.relative_to(data).as_posix(),
+                                         "occurrences": count, "before_sha256": digest(raw),
+                                         "after_sha256": digest(updated)})
+    before = hashes(data)
+    command = run(name, ["run", "--data", str(data), "--out", str(out)])
+    summary_path = out / "summary.json"
+    summary = json.loads(summary_path.read_text(encoding="utf-8")) if summary_path.is_file() else None
+    actual = {p.name: {"bytes": p.stat().st_size, "sha256": digest(p.read_bytes())}
+              for p in sorted((out / "packets").iterdir()) if p.is_file()}
+    declared = []
+    for packet in summary["packets"] if summary else []:
+        name_path = out / packet["file"]
+        declared.append({**packet, "exists": name_path.exists(), "is_file": name_path.is_file()})
+    pair_paths = [out / "packets" / "LD260900.html", out / "packets" / "ld260900.html"]
+    pair_samefile = pair_paths[0].samefile(pair_paths[1]) if all(p.is_file() for p in pair_paths) else None
+    after = hashes(data)
+    cases.append({"name": name, "command": command, "replacement": {"from": old_id, "to": new_id,
+                  "files": replacements}, "input_hashes_before": before, "input_hashes_after": after,
+                  "inputs_unchanged": before == after, "summary_counts": summary["counts"] if summary else None,
+                  "summary_sha256": digest(summary_path.read_bytes()) if summary else None,
+                  "declared_packets": declared, "actual_packet_files": actual,
+                  "case_pair_same_physical_file": pair_samefile,
+                  "missing_declared_files": [p["file"] for p in declared if not p["is_file"]],
+                  "output_hashes": hashes(out)})
+source_after = hashes(SOURCE)
+ordinary, pair, nul = cases
+observations = {
+    "ordinary_control_pass": ordinary["command"]["returncode"] == 0
+       and len(ordinary["declared_packets"]) == 7
+       and len(ordinary["actual_packet_files"]) == 7
+       and not ordinary["missing_declared_files"],
+    "case_pair_silent_collision": pair["command"]["returncode"] == 0
+       and len(pair["declared_packets"]) == 7
+       and len(pair["actual_packet_files"]) == 6
+       and pair["case_pair_same_physical_file"] is True,
+    "nul_silent_missing_packet": nul["command"]["returncode"] == 0
+       and len(nul["declared_packets"]) == 7
+       and len(nul["actual_packet_files"]) == 6
+       and "packets/NUL.html" in nul["missing_declared_files"],
+    "source_unchanged": source_before == source_after,
+    "all_inputs_unchanged": all(c["inputs_unchanged"] for c in cases),
+}
+report = {"schema": "workflow-checks.freight-packet-names.windows-baseline.v1",
+          "observed_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(),
+          "host": platform.node(), "platform": platform.platform(), "python": sys.version,
+          "executable": sys.executable, "namespace": str(ROOT),
+          "source_commit": manifest["source_commit"], "source_tree": manifest["source_tree"],
+          "source_manifest_sha256": digest((ROOT / "source-manifest.json").read_bytes()),
+          "driver_sha256": digest(Path(__file__).read_bytes()),
+          "source_hashes_before": source_before, "source_hashes_after": source_after,
+          "generator": generated, "cases": cases, "observations": observations,
+          "synthetic_inputs_only": True, "production_service_invoked": False,
+          "interpretation": "Original-source negative receiving; a zero wrapper exit confirms the stated defect witness, not product correctness."}
+(EVIDENCE / "report.json").write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
+print(json.dumps({"host": report["host"], "python": sys.version.split()[0], "namespace": str(ROOT),
+                  "source_commit": report["source_commit"], "observations": observations,
+                  "returncodes": [c["command"]["returncode"] for c in cases],
+                  "packet_counts": [[len(c["declared_packets"]), len(c["actual_packet_files"])] for c in cases],
+                  "report_sha256": digest((EVIDENCE / "report.json").read_bytes())}))
+sys.exit(0 if all(observations.values()) else 3)
