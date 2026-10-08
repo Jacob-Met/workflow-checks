@@ -1,0 +1,17 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\minec\AppData\Local\Temp\hamon-freight-csv-headers-713adaab-eaac9c5260964a5491ec5b6cbd6426e3\source\freight_packets\freightpkt\__main__.py", line 5, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "C:\Users\minec\AppData\Local\Temp\hamon-freight-csv-headers-713adaab-eaac9c5260964a5491ec5b6cbd6426e3\source\freight_packets\freightpkt\cli.py", line 39, in main
+    s = run(Path(a.data), Path(a.out))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minec\AppData\Local\Temp\hamon-freight-csv-headers-713adaab-eaac9c5260964a5491ec5b6cbd6426e3\source\freight_packets\freightpkt\pipeline.py", line 47, in run
+    loads = {l.load_id: l for l in ingest.load_loads(data_dir / "loads.csv")}
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minec\AppData\Local\Temp\hamon-freight-csv-headers-713adaab-eaac9c5260964a5491ec5b6cbd6426e3\source\freight_packets\freightpkt\ingest.py", line 153, in load_loads
+    _check_csv_headers(reader, path)
+  File "C:\Users\minec\AppData\Local\Temp\hamon-freight-csv-headers-713adaab-eaac9c5260964a5491ec5b6cbd6426e3\source\freight_packets\freightpkt\ingest.py", line 86, in _check_csv_headers
+    raise ValueError(
+ValueError: loads.csv: duplicate CSV header 'pod_received' in columns 6 ('pod_received') and 9

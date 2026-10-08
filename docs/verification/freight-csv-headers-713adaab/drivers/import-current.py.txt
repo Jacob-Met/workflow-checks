@@ -1,0 +1,75 @@
+"""Import exact current Freight bytes into a distinct Windows receiving namespace."""
+from pathlib import Path
+import datetime,hashlib,json,os,platform,shutil,subprocess,sys
+ROOT=Path(__file__).resolve().parent
+assert os.name=="nt" and platform.node().upper()=="DESKTOP-LA7CMTA"
+assert ROOT.name=="hamon-freight-csv-headers-713adaab-eaac9c5260964a5491ec5b6cbd6426e3"
+assert shutil.disk_usage(ROOT).free>15*1024*1024
+source=ROOT/"source"
+assert not source.exists()
+payload=json.loads((ROOT/"source-transfer.json").read_text(encoding="utf-8-sig"))
+transferred={x["path"]:x for x in payload["transferred_files"]}
+old=ROOT.parent
+candidates=[
+ old/"hamon-freight-packet-names-713adaab-fixed-87da595f4f5048d0bb28108ba7a7fbe3"/"source",
+ old/"hamon-freight-packet-names-713adaab-e2c62ff09de544df82ce01963ada15a5"/"source",
+]
+def blob(raw):return hashlib.sha1(b"blob "+str(len(raw)).encode()+b"\0"+raw).hexdigest()
+def digest(raw):return hashlib.sha256(raw).hexdigest()
+records=[]
+for item in payload["files"]:
+    p=item["path"];raw=None;origin=None
+    for candidate in candidates:
+        f=candidate/p
+        if f.is_file():
+            b=f.read_bytes()
+            if len(b)==item["size"] and blob(b)==item["sha"]:
+                raw=b;origin=str(f);break
+    if raw is None and p in transferred:
+        b=transferred[p]["content"].encode("utf-8")
+        assert len(b)==item["size"] and blob(b)==item["sha"],(p,len(b),blob(b))
+        raw=b;origin="Pinned GitHub blob through connector transfer"
+    assert raw is not None,("missing exact source",p)
+    dest=source/p;dest.parent.mkdir(parents=True,exist_ok=True);dest.write_bytes(raw)
+    records.append({"path":p,"bytes":len(raw),"git_blob":blob(raw),"sha256":digest(raw),"origin":origin})
+claim=payload["mac_claim_text"].encode("utf-8")
+assert digest(claim)==payload["mac_claim_sha256"]
+cp=source/"docs/verification/freight-csv-headers-713adaab/source-claim.json"
+cp.parent.mkdir(parents=True);cp.write_bytes(claim)
+retained=ROOT/"retained-mac";retained.mkdir()
+before=payload["mac_before_text"].encode("utf-8")
+assert digest(before)==payload["mac_before_sha256"]
+(retained/"before-report.json").write_bytes(before)
+(retained/"before-driver.py.txt").write_bytes(payload["mac_before_driver"].encode("utf-8"))
+(retained/"write-failure.json").write_text(json.dumps(payload["mac_write_failure"],indent=2)+"\n",encoding="utf-8")
+(retained/"native-source-import-tool.json").write_text(json.dumps(payload["mac_native_source_import"],indent=2)+"\n",encoding="utf-8")
+git=shutil.which("git")
+if git is None:
+    usual=Path(r"C:\Program Files\Git\cmd\git.exe")
+    if usual.is_file():git=str(usual)
+git_commands=[]
+def git_call(args):
+    p=subprocess.run([git,*args],cwd=source,capture_output=True,text=True,timeout=30)
+    git_commands.append({"argv":[git,*args],"returncode":p.returncode,"stdout":p.stdout,"stderr":p.stderr})
+    if p.returncode:raise RuntimeError(p.stderr)
+    return p.stdout.strip()
+native={}
+if git:
+    git_call(["init","-q","-b","fix/freight-csv-headers-713adaab"])
+    git_call(["config","core.autocrlf","false"])
+    git_call(["add","-f","--",*[x["path"] for x in records],"docs/verification/freight-csv-headers-713adaab/source-claim.json"])
+    git_call(["-c","user.name=ChatGPT migration_execution","-c","user.email=chatgpt-713adaab@users.noreply.github.com","commit","-q","-m","Import exact Mac-claimed current Freight source closure"])
+    native={"baseline_commit":git_call(["rev-parse","HEAD"]),"baseline_tree":git_call(["rev-parse","HEAD^{tree}"])}
+    assert native["baseline_tree"]=="aa9f5226870800e59ba8fdda7f5e6709b1669f2a",native
+test=source/"freight_packets/tests/test_csv_header_admission.py"
+test.write_bytes(payload["test_source"].encode("utf-8"))
+if git:
+    git_call(["add","-f","--","freight_packets/tests/test_csv_header_admission.py"])
+    git_call(["-c","user.name=ChatGPT migration_execution","-c","user.email=chatgpt-713adaab@users.noreply.github.com","commit","-q","-m","Freeze duplicate-column regression before changing the input reader"])
+    native.update(test_commit=git_call(["rev-parse","HEAD"]),test_tree=git_call(["rev-parse","HEAD^{tree}"]),status=git_call(["status","--porcelain"]))
+for item in records:
+    if item["origin"]!="Pinned GitHub blob through connector transfer":
+        assert digest(Path(item["origin"]).read_bytes())==item["sha256"]
+report={"schema":"freight-csv-headers-windows-continuation/1","observed_utc":datetime.datetime.now(datetime.timezone.utc).isoformat(),"host":platform.node(),"platform":platform.platform(),"python":sys.version,"executable":sys.executable,"identity":"NT AUTHORITY\\SYSTEM (direct RDC route)","namespace":str(ROOT),"source":str(source),"upstream_commit":payload["upstream_commit"],"upstream_tree":payload["upstream_tree"],"partial_source_files":records,"source_file_count":len(records),"source_bytes":sum(x["bytes"] for x in records),"inherited_source_files_unchanged":True,"mac_native_partial_commit":"735f8b4016f204046e60ec2346d1eb59bd490c64","mac_native_partial_tree":"aa9f5226870800e59ba8fdda7f5e6709b1669f2a","native_git":native,"git_executable":git,"git_commands":git_commands,"new_test_sha256":digest(test.read_bytes()),"mac_claim_sha256":digest(claim),"mac_before_report_sha256":digest(before),"mac_receiving_recovery_limit":"The exact earlier Mac report and driver are copied. The earlier full Mac input/output files remain in their original namespace; they are not claimed copied by this import.","live_inputs_or_services_changed":False,"credentials_or_connection_configuration_moved":False,"free_bytes":shutil.disk_usage(ROOT).free}
+coord=ROOT/"coordination";coord.mkdir();(coord/"windows-import.json").write_text(json.dumps(report,indent=2)+"\n",encoding="utf-8")
+print(json.dumps({k:v for k,v in report.items() if k not in ("partial_source_files","git_commands")},indent=2))

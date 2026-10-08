@@ -1,0 +1,52 @@
+from pathlib import Path
+import csv,datetime,hashlib,io,json,os,platform,shutil,subprocess,sys
+r=Path('/Users/me/Developer/workflow-checks-csv-header-713adaab')
+assert not r.exists(), 'New private discovery namespace required'
+s=Path('/Users/me/Developer/workflow-checks-packet-names-713adaab/source')
+assert shutil.disk_usage(s).free > 15*1024*1024
+assert subprocess.check_output(['git','-C',str(s),'rev-parse','HEAD'],text=True).strip()=='bc55915e596aea9ce86e5bc6e141ee11991e9943'
+raw=(s/'freight_packets/freightpkt/ingest.py').read_bytes()
+assert hashlib.sha1(b'blob '+str(len(raw)).encode()+b'\0'+raw).hexdigest()=='dad18f470035318241a9c432326d1f4bafa26edf'
+r.mkdir(); e=r/'before-evidence'; e.mkdir()
+manifest=json.loads((s/'docs/verification/freight-packet-names-713adaab/source/candidate-manifest.json').read_text())
+def digest(p): return hashlib.sha256(p.read_bytes()).hexdigest()
+def source_map(): return {x['path']:digest(s/x['path']) for x in manifest['files']}
+def file_map(p): return {f.relative_to(p).as_posix():digest(f) for f in sorted(p.rglob('*')) if f.is_file()}
+before_source=source_map()
+env=dict(os.environ)
+for k in ('PYTHONPATH','PYTHONHOME'): env.pop(k,None)
+env.update(PYTHONDONTWRITEBYTECODE='1',PYTHONIOENCODING='utf-8')
+calls=[]
+def call(label,args):
+    cmd=[sys.executable,'-B','-m','freightpkt',*args]
+    p=subprocess.run(cmd,cwd=s/'freight_packets',env=env,capture_output=True,timeout=30)
+    (e/(label+'.stdout.txt')).write_bytes(p.stdout);(e/(label+'.stderr.txt')).write_bytes(p.stderr)
+    row={'label':label,'argv':cmd,'cwd':str(s/'freight_packets'),'returncode':p.returncode,'stdout_sha256':hashlib.sha256(p.stdout).hexdigest(),'stderr_sha256':hashlib.sha256(p.stderr).hexdigest()}
+    calls.append(row)
+    return p
+original=r/'original-input'
+g=call('generate',['generate','--out',str(original),'--loads','24','--seed','7'])
+assert g.returncode==0, g.stderr.decode(errors='replace')
+rows=list(csv.reader(io.StringIO((original/'loads.csv').read_text(encoding='utf-8-sig'))))
+header=rows[0];pi=header.index('pod_received');li=header.index('load_id')
+missing=[row[li] for row in rows[1:] if row[pi]=='N']
+assert len(missing)==1, missing
+target=missing[0]
+duplicate=r/'duplicate-header-input';shutil.copytree(original,duplicate)
+with (duplicate/'loads.csv').open('w',newline='',encoding='utf-8') as fh:
+    writer=csv.writer(fh);writer.writerow(header+['pod_received'])
+    for row in rows[1:]: writer.writerow(row+['Y' if row[li]==target else row[pi]])
+assert list(csv.reader(io.StringIO((duplicate/'loads.csv').read_text())))[0].count('pod_received')==2
+before_inputs={'ordinary':file_map(original),'duplicate_header':file_map(duplicate)}
+results=[]
+for label,data in [('ordinary',original),('duplicate_header',duplicate)]:
+    out=r/(label+'-out')
+    p=call(label,['run','--data',str(data),'--out',str(out)])
+    summary=json.loads((out/'summary.json').read_text()) if (out/'summary.json').exists() else None
+    target_flags=[f for f in summary.get('flags',[]) if f.get('load_id')==target] if summary else None
+    target_settlement=[f for f in summary.get('settlements',[]) if f.get('load_id')==target] if summary and isinstance(summary.get('settlements'),list) else None
+    results.append({'case':label,'returncode':p.returncode,'summary_sha256':digest(out/'summary.json') if summary else None,'summary_keys':sorted(summary) if summary else [],'counts':summary.get('counts') if summary else None,'target_flags':target_flags,'target_settlement':target_settlement,'output_files':file_map(out)})
+after_source=source_map();after_inputs={'ordinary':file_map(original),'duplicate_header':file_map(duplicate)}
+report={'schema':'freight-duplicate-csv-header.before.v1','observed_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'host':platform.node(),'platform':platform.platform(),'python':sys.version,'executable':sys.executable,'namespace':str(r),'source_native_partial_commit':'bc55915e596aea9ce86e5bc6e141ee11991e9943','source_public_candidate':'0430dc6f41bb2f668070e718b142a735eda5dd3d','ingest_git_blob':'dad18f470035318241a9c432326d1f4bafa26edf','current_input_module_pin_verified_at_main':'035c2562d89593dab6174e7717f3ffd738cfc575','source_note':'Source remains the existing independently qualified packet-filename candidate. Only the unchanged input module is the new discovery target; this is not a current-full-main receiving claim.','target_load_id':target,'source_hashes_before':before_source,'source_hashes_after':after_source,'input_hashes_before':before_inputs,'input_hashes_after':after_inputs,'source_unchanged':before_source==after_source,'inputs_unchanged':before_inputs==after_inputs,'fixture_change':'Append a second pod_received column. Preserve the original N cell and give that row Y in the duplicated column; every other appended cell equals its original.','calls':calls,'results':results,'source_edits':False,'installation_or_service_change':False,'synthetic_inputs_only':True}
+(e/'report.json').write_text(json.dumps(report,indent=2)+'\n')
+print(json.dumps({'report':str(e/'report.json'),'sha256':digest(e/'report.json'),'target':target,'source_unchanged':report['source_unchanged'],'inputs_unchanged':report['inputs_unchanged'],'results':[{k:v for k,v in x.items() if k not in ('output_files','summary_keys')} for x in results],'free_bytes':shutil.disk_usage(r).free},indent=2))

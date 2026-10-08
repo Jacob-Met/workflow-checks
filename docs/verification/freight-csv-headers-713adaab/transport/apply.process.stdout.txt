@@ -1,0 +1,24 @@
+{
+  "schema": "freight-csv-headers-source-repair/1",
+  "observed_utc": "2026-10-08T19:00:00.986709+00:00",
+  "baseline_native_commit": "690827796354da066e3c0e16820c1aed5678462e",
+  "test_only_native_commit": "6111a94356901c75f3274182f411d40ab61e31c6",
+  "candidate_native_commit": "d9ab19be7e2fd1742ad90889c41aff3d0c93f00f",
+  "candidate_native_tree": "fb7647c0f8c6ae5403df5f9ab0c4dbf5cfde1a81",
+  "old_ingest_git_blob": "dad18f470035318241a9c432326d1f4bafa26edf",
+  "ingest_sha256": "7cf7d63f0ddff76a99f0094bdb86204ac8384cd3d613556037566c162bf0adff",
+  "ingest_git_blob": "0a6500637d7153da4468114c14b6a61051b272a0",
+  "test_sha256": "0ad850988184c584972968840ea0accf0e9c508f184509a392eea7981de864af",
+  "guide_sha256": "ee4aba01484205d9900c7cda0a24e10b3adb46043595051deb38ea1166fb8571",
+  "patch_sha256": "0645c3401d01b3c11a68551308277bbbbd692741d01161193fdf7685f43dcba0",
+  "patch_bytes": 15749,
+  "crlf_preserved": true,
+  "whitespace_check": "git -c core.whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol diff --check 690827796354da066e3c0e16820c1aed5678462e HEAD: 0",
+  "changed_paths": [
+    "freight_packets/CSV_HEADERS.md",
+    "freight_packets/freightpkt/ingest.py",
+    "freight_packets/tests/test_csv_header_admission.py"
+  ],
+  "status": "",
+  "free_bytes": 461528514560
+}

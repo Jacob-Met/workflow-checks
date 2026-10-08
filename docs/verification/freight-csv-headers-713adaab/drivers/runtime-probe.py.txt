@@ -1,0 +1,2 @@
+import json,platform,sys,tempfile
+print(json.dumps({'host':platform.node(),'python':sys.version,'executable':sys.executable,'temp':tempfile.gettempdir()}))

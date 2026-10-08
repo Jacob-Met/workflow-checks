@@ -1,0 +1,46 @@
+"""Run the frozen maintained CSV-admission suite with native unittest."""
+from pathlib import Path
+import datetime,hashlib,json,os,platform,shutil,sys,unittest
+ROOT=Path(__file__).resolve().parent
+assert os.name=="nt" and platform.node().upper()=="DESKTOP-LA7CMTA"
+label=sys.argv[1]
+assert label in ("focus-baseline","focus-candidate")
+e=ROOT/"gates"/label
+assert not e.exists()
+e.mkdir(parents=True)
+tmp=ROOT/"tmp";tmp.mkdir(exist_ok=True)
+os.environ["TEMP"]=str(tmp);os.environ["TMP"]=str(tmp)
+source=ROOT/"source"
+paths=[x["path"] for x in json.loads((ROOT/"source-transfer.json").read_text(encoding="utf-8-sig"))["files"]]
+paths.append("freight_packets/tests/test_csv_header_admission.py")
+def hashes():
+    return {p:hashlib.sha256((source/p).read_bytes()).hexdigest() for p in paths}
+before=hashes()
+sys.path.insert(0,str(source/"freight_packets"))
+suite=unittest.TestLoader().discover(str(source/"freight_packets/tests"),pattern="test_csv_header_admission.py")
+runner=unittest.TextTestRunner(verbosity=2)
+result=runner.run(suite)
+failures=[{"id":test.id(),"traceback":tb} for test,tb in result.failures]
+errors=[{"id":test.id(),"traceback":tb} for test,tb in result.errors]
+skips=[{"id":test.id(),"reason":why} for test,why in result.skipped]
+failed_methods=sorted({x["id"].split(" (",1)[0] for x in failures})
+after=hashes()
+report={"schema":"freight-csv-headers-native-unittest/1","stage":label,
+        "observed_utc":datetime.datetime.now(datetime.timezone.utc).isoformat(),
+        "host":platform.node(),"platform":platform.platform(),"python":sys.version,
+        "executable":sys.executable,"identity":"NT AUTHORITY\\SYSTEM (direct RDC route)",
+        "argv":sys.argv,"isolation_flags":{"isolated":sys.flags.isolated,"no_site":sys.flags.no_site,"dont_write_bytecode":sys.dont_write_bytecode},
+        "source":str(source),"tmp":str(tmp),"tests_run":result.testsRun,
+        "failure_entries":failures,"failed_methods":failed_methods,"error_entries":errors,
+        "skipped":skips,"successful":result.wasSuccessful(),
+        "expected_process_exit":0 if result.wasSuccessful() else 1,
+        "source_hashes_before":before,"source_hashes_after":after,"source_unchanged":before==after,
+        "free_bytes":shutil.disk_usage(ROOT).free,"installation_or_service_change":False}
+(e/"report.json").write_text(json.dumps(report,indent=2)+"\n",encoding="utf-8")
+print(json.dumps({"stage":label,"tests_run":result.testsRun,"failure_entries":len(failures),
+                  "failed_methods":failed_methods,"errors":len(errors),"skips":len(skips),
+                  "successful":result.wasSuccessful(),"source_unchanged":before==after,
+                  "report_sha256":hashlib.sha256((e/"report.json").read_bytes()).hexdigest(),
+                  "first_failure":failures[0]["traceback"].splitlines()[-1] if failures else None,
+                  "new_test_sha256":before["freight_packets/tests/test_csv_header_admission.py"]},indent=2))
+sys.exit(0 if result.wasSuccessful() else 1)

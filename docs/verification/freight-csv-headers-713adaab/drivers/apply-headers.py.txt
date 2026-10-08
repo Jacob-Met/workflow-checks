@@ -1,0 +1,55 @@
+"""Apply the bounded header-admission repair to the frozen current source."""
+from pathlib import Path
+import datetime,hashlib,json,shutil,subprocess,sys
+ROOT=Path(__file__).resolve().parent
+source=ROOT/"source"
+p=source/"freight_packets/freightpkt/ingest.py"
+old=p.read_bytes()
+def digest(raw):return hashlib.sha256(raw).hexdigest()
+def blob(raw):return hashlib.sha1(b"blob "+str(len(raw)).encode()+b"\0"+raw).hexdigest()
+assert blob(old)=="dad18f470035318241a9c432326d1f4bafa26edf"
+assert old.count(b"\r\n")==old.count(b"\n"),"Preserve the original CRLF convention"
+test=source/"freight_packets/tests/test_csv_header_admission.py"
+assert digest(test.read_bytes())=="0ad850988184c584972968840ea0accf0e9c508f184509a392eea7981de864af"
+text=old.decode("utf-8")
+helper="def _check_csv_headers(\n    reader: csv.DictReader, path: Path, *, normalize: bool = False\n) -> None:\n    \"\"\"Reject column names that this reader would silently collapse.\"\"\"\n    seen: dict[str, tuple[str, int]] = {}\n    for column, name in enumerate(reader.fieldnames or [], start=1):\n        key = name.strip().lower() if normalize else name\n        if key in seen:\n            first_name, first_column = seen[key]\n            raise ValueError(\n                f\"{path.name}: duplicate CSV header {name!r} in columns \"\n                f\"{first_column} ({first_name!r}) and {column}\"\n            )\n        seen[key] = (name, column)\n\n\n".replace("\n","\r\n")
+marker="def _resolve_headers(fieldnames: list[str]) -> dict[str, str]:"
+assert text.count(marker)==1
+text=text.replace(marker,helper+marker)
+old_tele="            reader = csv.DictReader(fh)\r\n            h = _resolve_headers(reader.fieldnames or [])"
+new_tele="            reader = csv.DictReader(fh)\r\n            _check_csv_headers(reader, path, normalize=True)\r\n            h = _resolve_headers(reader.fieldnames or [])"
+assert text.count(old_tele)==1;text=text.replace(old_tele,new_tele)
+old_track="        reader = csv.DictReader(fh)\r\n        lower = {f.strip().lower(): f for f in (reader.fieldnames or [])}"
+new_track="        reader = csv.DictReader(fh)\r\n        _check_csv_headers(reader, path, normalize=True)\r\n        lower = {f.strip().lower(): f for f in (reader.fieldnames or [])}"
+assert text.count(old_track)==1;text=text.replace(old_track,new_track)
+old_fixed="        for i, r in enumerate(csv.DictReader(fh), start=2):"
+new_fixed="        reader = csv.DictReader(fh)\r\n        _check_csv_headers(reader, path)\r\n        for i, r in enumerate(reader, start=2):"
+assert text.count(old_fixed)==2;text=text.replace(old_fixed,new_fixed)
+new=text.encode("utf-8")
+assert new.count(b"_check_csv_headers(reader, path")==4
+assert new.count(b"\r\n")==new.count(b"\n")
+compile(text,str(p),"exec")
+p.write_bytes(new)
+guide=source/"freight_packets/CSV_HEADERS.md"
+assert not guide.exists()
+guide.write_bytes("# Freight CSV column admission\n\nFreight refuses repeated column names before these CSV readers construct their data rows. A mapping with two columns called `pod_received`, for example, would otherwise keep only the later value. That can remove a missing-document hold even though the first cell still says N.\n\nThe error names the input file, the conflicting column names and their one-based column positions. Correct the source export so that the intended column is unambiguous, then rerun the existing command. Freight does not choose between conflicting cells or merge them.\n\n| Input reader | Header comparison |\n| --- | --- |\n| Load records (`loads.csv`) | Exact column names |\n| Carrier invoices (`carrier_invoices.csv`) | Exact column names |\n| Geofence telematics CSV | Existing whitespace trimming and lowercase comparison |\n| Tracking-stop CSV | Existing whitespace trimming and lowercase comparison |\n\nThus `Time` and ` time ` conflict in a geofence export. Fixed-schema load and invoice readers retain their existing exact-name behavior: an extra column called `POD_RECEIVED` is not the `pod_received` input. Ordinary distinct extra columns remain accepted. Where a template includes different supported aliases, the existing alias priority still selects the field; this check does not change that selection.\n\nCSV quoting and the existing UTF-8 BOM handling are preserved. Even equal cell values or a header-only file do not make repeated column names unambiguous. The check concerns the parsed header fields, so a quoted comma in a column name is handled by the standard CSV reader.\n\nValue trimming, timestamps, amounts, multiline invoice grouping, load identity, eligibility and settlement calculations keep their existing contracts. A refused header does not replace the previous report files. The ordinary run may still create its output directories before input validation; this is not a directory transaction or a snapshot across changing input files.\n\nThis admission applies to the four CSV entrypoints in `freightpkt.ingest`. Telematics JSON and the separate fines, document and dispute loaders retain their existing behavior. It does not add missing-column, row-shape or new value-validation rules.\n\nThe maintained regression is `tests/test_csv_header_admission.py`. Its product control retains a synthetic missing-POD settlement on HOLD and verifies that an ambiguous rerun leaves every prior report artifact and the input bytes intact.\n".encode("utf-8"))
+git=shutil.which("git") or r"C:\Program Files\Git\cmd\git.exe"
+def call(args):
+    q=subprocess.run([git,*args],cwd=source,capture_output=True,timeout=30)
+    if q.returncode:raise RuntimeError(q.stderr.decode(errors="replace"))
+    return q.stdout
+call(["add","-f","--","freight_packets/freightpkt/ingest.py","freight_packets/CSV_HEADERS.md"])
+call(["-c","user.name=ChatGPT migration_execution","-c","user.email=chatgpt-713adaab@users.noreply.github.com","commit","-q","-m","Reject ambiguous Freight CSV columns before mapping rows"])
+call(["-c","core.whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol","diff","--check","690827796354da066e3c0e16820c1aed5678462e","HEAD"])
+patch=call(["diff","--no-ext-diff","690827796354da066e3c0e16820c1aed5678462e","HEAD","--","freight_packets/freightpkt/ingest.py","freight_packets/tests/test_csv_header_admission.py","freight_packets/CSV_HEADERS.md"])
+coord=ROOT/"coordination";(coord/"candidate.patch").write_bytes(patch)
+report={"schema":"freight-csv-headers-source-repair/1","observed_utc":datetime.datetime.now(datetime.timezone.utc).isoformat(),
+        "baseline_native_commit":"690827796354da066e3c0e16820c1aed5678462e","test_only_native_commit":"6111a94356901c75f3274182f411d40ab61e31c6",
+        "candidate_native_commit":call(["rev-parse","HEAD"]).decode().strip(),"candidate_native_tree":call(["rev-parse","HEAD^{tree}"]).decode().strip(),
+        "old_ingest_git_blob":blob(old),"ingest_sha256":digest(new),"ingest_git_blob":blob(new),"test_sha256":digest(test.read_bytes()),
+        "guide_sha256":digest(guide.read_bytes()),"patch_sha256":digest(patch),"patch_bytes":len(patch),
+        "crlf_preserved":True,"whitespace_check":"git -c core.whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol diff --check 690827796354da066e3c0e16820c1aed5678462e HEAD: 0",
+        "changed_paths":call(["diff","--name-only","690827796354da066e3c0e16820c1aed5678462e","HEAD"]).decode().splitlines(),
+        "status":call(["status","--porcelain"]).decode(),"free_bytes":shutil.disk_usage(ROOT).free}
+(coord/"source-repair.json").write_text(json.dumps(report,indent=2)+"\n",encoding="utf-8")
+print(json.dumps(report,indent=2))

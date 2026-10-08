@@ -1,0 +1,17 @@
+test_alias_readers_reject_their_existing_strip_lower_collisions (test_csv_header_admission.CsvHeaderAdmissionTests.test_alias_readers_reject_their_existing_strip_lower_collisions) ... ok
+test_ambiguous_pod_refuses_before_replacing_prior_reports (test_csv_header_admission.CsvHeaderAdmissionTests.test_ambiguous_pod_refuses_before_replacing_prior_reports) ... ok
+test_bom_and_existing_alias_header_normalization_are_preserved (test_csv_header_admission.CsvHeaderAdmissionTests.test_bom_and_existing_alias_header_normalization_are_preserved) ... ok
+test_distinct_alias_priority_is_preserved (test_csv_header_admission.CsvHeaderAdmissionTests.test_distinct_alias_priority_is_preserved) ... ok
+test_duplicate_headers_are_refused_by_all_four_csv_readers (test_csv_header_admission.CsvHeaderAdmissionTests.test_duplicate_headers_are_refused_by_all_four_csv_readers) ... ok
+test_duplicate_headers_are_rejected_even_without_data_rows (test_csv_header_admission.CsvHeaderAdmissionTests.test_duplicate_headers_are_rejected_even_without_data_rows) ... ok
+test_equal_values_do_not_make_duplicate_columns_unambiguous (test_csv_header_admission.CsvHeaderAdmissionTests.test_equal_values_do_not_make_duplicate_columns_unambiguous) ... ok
+test_existing_duplicate_load_identity_refusal_is_preserved (test_csv_header_admission.CsvHeaderAdmissionTests.test_existing_duplicate_load_identity_refusal_is_preserved) ... ok
+test_fixed_schema_readers_keep_exact_extra_column_names (test_csv_header_admission.CsvHeaderAdmissionTests.test_fixed_schema_readers_keep_exact_extra_column_names) ... ok
+test_quoted_headers_are_checked_as_parsed_csv_fields (test_csv_header_admission.CsvHeaderAdmissionTests.test_quoted_headers_are_checked_as_parsed_csv_fields) ... ok
+test_telematics_json_remains_unchanged (test_csv_header_admission.CsvHeaderAdmissionTests.test_telematics_json_remains_unchanged) ... ok
+test_valid_multiline_invoice_keeps_existing_group_and_money_rules (test_csv_header_admission.CsvHeaderAdmissionTests.test_valid_multiline_invoice_keeps_existing_group_and_money_rules) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 1.783s
+
+OK

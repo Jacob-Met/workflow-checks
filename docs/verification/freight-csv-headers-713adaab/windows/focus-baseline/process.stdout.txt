@@ -1,0 +1,20 @@
+{
+  "stage": "focus-baseline",
+  "tests_run": 12,
+  "failure_entries": 16,
+  "failed_methods": [
+    "test_csv_header_admission.CsvHeaderAdmissionTests.test_alias_readers_reject_their_existing_strip_lower_collisions",
+    "test_csv_header_admission.CsvHeaderAdmissionTests.test_ambiguous_pod_refuses_before_replacing_prior_reports",
+    "test_csv_header_admission.CsvHeaderAdmissionTests.test_duplicate_headers_are_refused_by_all_four_csv_readers",
+    "test_csv_header_admission.CsvHeaderAdmissionTests.test_duplicate_headers_are_rejected_even_without_data_rows",
+    "test_csv_header_admission.CsvHeaderAdmissionTests.test_equal_values_do_not_make_duplicate_columns_unambiguous",
+    "test_csv_header_admission.CsvHeaderAdmissionTests.test_quoted_headers_are_checked_as_parsed_csv_fields"
+  ],
+  "errors": 0,
+  "skips": 0,
+  "successful": false,
+  "source_unchanged": true,
+  "report_sha256": "343d42aff557348a6124c4a7d550240af45911e864499fd885dfded54020c6ac",
+  "first_failure": "AssertionError: ValueError not raised",
+  "new_test_sha256": "0ad850988184c584972968840ea0accf0e9c508f184509a392eea7981de864af"
+}
