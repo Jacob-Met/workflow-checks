@@ -17,6 +17,8 @@ main{padding:16px 20px;max-width:1400px;margin:0 auto}
 .card{background:#fff;border:1px solid var(--line);border-radius:8px;padding:10px 12px}.card b{display:block;font-size:22px}.card span{color:var(--mut);font-size:12px}
 .tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);margin-bottom:10px}
 .tabs button{border:none;border-bottom:3px solid transparent;border-radius:0;background:none;padding:8px 12px}.tabs button.on{border-bottom-color:var(--acc);font-weight:600}
+.tabs{flex-wrap:wrap}.review-table{overflow-x:auto}.review-table:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+.review-count{font-weight:600}#t-review h2{font-size:18px;margin:10px 0 4px}
 .filters{display:flex;gap:8px;margin:8px 0;flex-wrap:wrap;align-items:center}
 table{border-collapse:collapse;width:100%;background:#fff;border:1px solid var(--line)}
 th,td{padding:6px 8px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
@@ -38,7 +40,7 @@ small{color:var(--mut)}.hidden{display:none}tr.done{opacity:.55}details ul{margi
 </header>
 <main>
   <div class="cards" id="cards"></div>
-  <div class="tabs" id="tabs"><button data-t="work" class="on">Daily worklist</button><button data-t="ledger">Auth ledger</button><button data-t="files">Digest &amp; exports</button></div>
+  <div class="tabs" id="tabs"><button data-t="work" class="on">Daily worklist</button><button data-t="review">Visit status review</button><button data-t="ledger">Auth ledger</button><button data-t="files">Digest &amp; exports</button></div>
   <section id="t-work">
     <div class="filters">
       <select id="fp"><option value="">All priorities</option><option>P1</option><option>P2</option><option>P3</option></select>
@@ -49,6 +51,7 @@ small{color:var(--mut)}.hidden{display:none}tr.done{opacity:.55}details ul{margi
     </div>
     <div id="work"></div>
   </section>
+  <section id="t-review" class="hidden"></section>
   <section id="t-ledger" class="hidden"></section>
   <section id="t-files" class="hidden"></section>
   <div class="note"><small><b>Rules:</b> P1 = act today (visit outside auth within 7 days, submit-by date passed, completed visit without auth);
@@ -79,7 +82,7 @@ function render() {
   const c = S.counts, st = S.states || {};
   const done = S.worklist.filter(w => ["submitted", "approved", "n/a"].includes((st[w.key] || {}).state)).length;
   $("#cards").innerHTML = [[c.p1, "P1 act today"], [c.p2, "P2 this week"], [c.p3, "P3 heads-up"], [c.uncovered_scheduled, "scheduled visits outside auth"],
-    [c.unauthorized_done, "completed visits w/o auth"], [`${done}/${c.worklist}`, "items worked"], [c.patients, "synthetic patients"], [c.auths, "auths tracked"]]
+    [c.unauthorized_done, "completed visits w/o auth"], [c.past_scheduled ?? "—", "past scheduled visits"], [`${done}/${c.worklist}`, "items worked"], [c.patients, "synthetic patients"], [c.auths, "auths tracked"]]
     .map(([v, l]) => `<div class="card"><b>${esc(v)}</b><span>${esc(l)}</span></div>`).join("");
 
   const fp = $("#fp").value, fc = $("#fc").value, fs = $("#fs").value, q = $("#q").value.toLowerCase();
@@ -102,13 +105,28 @@ function render() {
     S.states = await api("/api/state", {key: sel.dataset.k, state: sel.value}); render();
   });
 
+  const review = S.visit_status_review;
+  $("#t-review").innerHTML = `<h2>Past appointments still marked scheduled</h2>` + (review == null
+    ? `<p>Run worklist to build the visit-status review for this saved report.</p>`
+    : `<p>${esc(S.visit_status_review_note)}</p><p class="review-count">${review.length} appointment(s) to reconcile &middot; oldest first &middot; as of ${esc(S.as_of)}</p>`
+      + (review.length ? `<div class="review-table" tabindex="0" role="region" aria-label="Past scheduled appointments"><table>
+        <thead><tr><th scope="col">Visit / type</th><th scope="col">Date</th><th scope="col">Patient</th><th scope="col">Visit clinic</th><th scope="col">Payer</th><th scope="col">Reserved auth</th><th scope="col">Source row</th></tr></thead><tbody>${
+        review.map(r => `<tr><td><b>${esc(r.visit_id)}</b><br><small>${esc(r.visit_type)}</small></td>
+          <td>${esc(r.visit_date)}<br><small>${esc(r.days_since)} days ago</small></td>
+          <td>${esc(r.patient_name)}<br><small>${esc(r.patient_id)}</small></td><td>${esc(r.clinic)}</td>
+          <td>${esc(r.payer_name)}<br><small>${esc(r.payer_id)}</small></td>
+          <td>${esc(r.auth_no || "None")}<br><small>${esc(r.capacity_note)}</small></td>
+          <td>${esc(r.evidence)}</td></tr>`).join("")}</tbody></table></div>`
+        : `<p>No past appointments remain marked scheduled.</p>`)
+      + `<p><a href="/out/visit_status_review.csv" download>Download visit status review CSV</a></p>`);
+
   $("#t-ledger").innerHTML = `<table><tr><th>Auth</th><th>Patient</th><th>Payer</th><th>Window</th><th>Authorized</th><th>Used</th><th>Scheduled</th><th>Remaining</th><th>After sched.</th><th>Days left</th><th>Status</th></tr>${
     S.ledger.map(l => `<tr><td>${esc(l.auth_no)}</td><td>${esc(l.patient_name)} <small>${esc(l.patient_id)}</small></td><td>${esc(l.payer_id)}</td>
       <td>${esc(l.start)} &rarr; ${esc(l.end)}</td><td>${l.authorized}</td><td>${l.used}${meter(l.used, l.authorized)}</td><td>${l.scheduled}</td>
       <td>${l.remaining}</td><td style="color:${l.remaining_after_scheduled < 0 ? "#b91c1c" : "inherit"}">${l.remaining_after_scheduled}</td>
       <td>${l.days_left}</td><td>${esc(l.status)}</td></tr>`).join("")}</table>`;
   $("#t-files").innerHTML = `<ul><li><a href="/out/digest.html" target="_blank">Daily digest (printable HTML)</a></li>
-    ${["worklist.csv", "ledger.csv", "summary.json", "audit.jsonl"].map(f => `<li><a href="/out/${f}" download>${f}</a></li>`).join("")}</ul>
+    ${["worklist.csv", "ledger.csv", ...(review == null ? [] : ["visit_status_review.csv"]), "summary.json", "audit.jsonl"].map(f => `<li><a href="/out/${f}" download>${f}</a></li>`).join("")}</ul>
     <p><small>Generated ${esc(S.generated_at)} for as-of date ${esc(S.as_of)}.
     Clinic time zone: ${esc(S.clinic_timezone || "unrecorded")}.</small></p>`;
 }

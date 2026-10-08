@@ -32,7 +32,8 @@ This was built for multi-clinic outpatient PT groups where an authorization spec
    - Auths that already have a successor auth (approved or pending, starting no earlier and ending later) are not re-flagged, because that work is already in progress.
    - Self-pay and no-auth payers are never flagged for authorization. Only `ANNUAL_LIMIT` can apply to them, if the payer has a cap.
    - **Messy exports are handled or rejected, never guessed.** The loaders accept a BOM or cp1252 encoding, "Visit Date" style headers, blank and comma-only rows, date+time values, and common status spellings. A visit repeated across appended exports counts once. Anything they can't interpret (for example an unknown status, a day-first date, or a blank visit count) stops the run with the file, line and reason. See `HARDENING.md`.
-4. **Writes outputs.** It writes `worklist.csv`, `ledger.csv`, `digest.html` (a printable daily digest with checklists), `summary.json`, and `audit.jsonl`.
+4. **Shows past appointments needing status reconciliation.** A separate visit-status review lists past dates still marked scheduled, with the visit ID, clinic, source row and actual authorization reservation. Staff correct the source schedule and rerun; authorization calculations continue using the recorded statuses.
+5. **Writes outputs.** It writes `worklist.csv`, `ledger.csv`, `visit_status_review.csv`, `digest.html` (a printable daily digest with checklists and visit-status review), `summary.json`, and `audit.jsonl`.
 
 The runtime uses the Python 3.10+ standard library. Tests use `pytest`.
 Named clinic time zones use the system's IANA database. On a system without
@@ -93,10 +94,21 @@ The UI is a single page with no CDN, bound to 127.0.0.1 only. It has:
 - summary cards
 - a worklist filterable by priority, clinic and search, with visit meters and expandable checklists
 - a per-item status (open / submitted / approved / n/a), saved to `work_state.json` and the audit log
+- a **Visit status review** tab with every past scheduled appointment, independent of authorization work-item states
 - an auth ledger tab
 - a digest and exports tab
 - an **as-of date** picker to show how the worklist changes day to day
 - a "New synthetic clinic" generator
+
+## Reconcile past scheduled visits
+
+Open **Visit status review** after running the worklist. It lists appointments strictly before the selected **as-of** date that still have a scheduled status, oldest first. Today's and future appointments are excluded. Appended exports use the latest row for each visit ID, matching the ledger's existing rule.
+
+Each row shows the visit date, days elapsed, patient, visit clinic, payer, exact `schedule.csv` source row, and any approved authorization currently reserving a visit. Reused authorization numbers show the actual period from the ledger. No-auth payers and excluded evaluations remain visible for status reconciliation, with their exemption stated; this does not create authorization alerts for them.
+
+Check the source appointment record, correct its status in the next export, and choose **Run worklist** again. A corrected completion, cancellation or no-show leaves this review through the existing status rules. Until then, any existing authorization reservation remains in the ledger. The review has no approval control: marking an authorization work item approved or n/a cannot hide these appointments.
+
+The same complete list is in `visit_status_review.csv`, `summary.json` and the printable digest. The CLI prints its count and CSV path. If the UI opens an older saved summary, it asks for a rerun before showing a count or offering the new export.
 
 ## Verification
 
@@ -120,8 +132,11 @@ The generator writes `expected.json`, an answer key computed from the seeded aut
 - Completed visits without an auth and pending auths are all caught.
 - "Clean" patients are **never** flagged.
 - Unit tests cover the rules: thresholds, successors, eval exclusion, annual cap, and self-pay.
+- Visit-status tests exercise real CSV/report/CLI boundaries, source-row evidence, latest-row corrections, date boundaries, exemptions, reused authorization periods, preserved ledger counts and clearing a completed review.
 
 I also checked the answer key manually on 5 more seeds (1, 2, 3, 99 and 1234, with 80 patients each). All matched.
+
+Optional browser receiving uses the actual local Python HTTP app with Node, Playwright and an installed Chromium. From `pt_auth`, run `node --test tests/browser/visit_status_review.test.cjs`; set `PTAUTH_TEST_PYTHON` or `PTAUTH_BROWSER_EXECUTABLE` if those executables are not the defaults. The test downloads no browser. It checks keyboard access at a 390px viewport, source evidence and CSV/printable exports, staff-state independence, corrected-export reruns, older saved summaries and the selected clinic-zone date boundary. These browser checks add no runtime dependency; named clinic zones use the time-zone data described above.
 
 ## 2-minute demo script (screen-record)
 

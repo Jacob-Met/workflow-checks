@@ -59,9 +59,16 @@ Output / CLI
 
 Guard tests that already passed (kept as regressions): BOM header, ISO / `M/D/YYYY` / `M/D/YY` dates, leap day (`2/29/2028` end date inclusive), cancelled/no-show never consume an auth, zero-visit auth leaves every visit uncovered at P1, visit on the auth end date is covered and the next day is not, an auth ending today is still live, amended auth row supersedes the earlier one.
 
+## Visit-status review follow-up (2026-10-08)
+
+Past dates still marked scheduled now have a separate read-only review in the UI, printable digest, CSV and JSON, plus a CLI count. It preserves source-row evidence and shows the actual authorization reservation, including reused authorization periods. Staff correct the source export and rerun; the tracker does not infer attendance or release reserved visits. Authorization approval states cannot hide this review. Reasonless P3 placeholders are omitted after the existing rules finish, preserving their authorization context when an annual-limit alert applies.
+
+The new `tests/test_visit_status_review.py` covers the real CSV/report/CLI boundary, latest-row corrections, date boundaries, exemptions and clearing the review while preserving ledger rules. `tests/browser/visit_status_review.test.cjs` exercises the actual local HTTP app and browser. The original source produced no review output and seven feature tests failed. A separate receiving control caught an early-filter regression that dropped annual-limit authorization context; filtering only after all rules finish preserves it.
+
+The corrected feature passed 63 PT tests and four actual Chromium groups before the concurrent clinic-timezone feature arrived. Their composition passes 97 PT tests, with one optional upstream Python/Playwright browser case skipped, plus five actual Chromium groups through Node/Playwright. Added CLI and actual-browser controls verify that the same timestamp enters this review according to the selected clinic calendar date, with the zone retained on rerun. The timezone source, existing tests and receiving evidence are preserved.
+
 ## Still open (not fixed; decide with the clinic)
 
-- **Stale "scheduled" rows in the past** (never checked out or cancelled) still consume auth capacity, but they are not surfaced. They could be undocumented or unbilled visits and deserve their own worklist code.
 - **Duplicate auth numbers** are resolved by a heuristic (overlapping = amendment, later row wins). Nothing tells staff this happened; a "data warnings" panel in the digest/UI would help.
 - **Day-first dates** (`DD/MM/YYYY`) are rejected, not auto-detected. This is deliberate, because detection is ambiguous.
 - **Numeric ids** drop leading zeros (`001234` = `1234`) to survive Excel. That would merge two genuinely different patients whose ids differ only by leading zeros.
