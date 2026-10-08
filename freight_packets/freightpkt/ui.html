@@ -61,6 +61,7 @@ const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt
 const money = c => c == null ? "-" : (c < 0 ? "-" : "") + "$" + (Math.abs(c) / 100).toLocaleString("en-US", {minimumFractionDigits: 2});
 const t = s => s ? s.replace("T", " ").slice(0, 16) : "-";
 let S = null, selected = null, reviewBusy = false, reviewFeedback = null;
+let bundleController = null, bundleView = 0;
 
 async function api(path, body) {
   const r = await fetch(path, body === undefined ? {} : {method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify(body)});
@@ -71,6 +72,9 @@ async function api(path, body) {
 async function load(p) { S = await p; render(); }
 
 function render() {
+  bundleController?.abort();
+  bundleController = null;
+  const currentBundleView = ++bundleView;
   const c = S.counts, d = S.decisions || {};
   const approved = S.packets.filter(p => d[p.load_id]?.decision === "approve" && d[p.load_id]?.review_state === "current").reduce((a, p) => a + p.detention_cents, 0);
   $("#cards").innerHTML = [
@@ -104,7 +108,10 @@ function render() {
     <div>${selected ? `<div class="bar"><b>${esc(selected)}</b>
       <input type="text" id="note" placeholder="reviewer note (optional)" value="${esc(dec.note || "")}">
       <button data-d="approve" ${!version || reviewBusy ? "disabled" : ""}>Approve</button><button data-d="adjust" ${!version || reviewBusy ? "disabled" : ""}>Needs adjust</button><button data-d="reject" ${!version || reviewBusy ? "disabled" : ""}>Reject</button><button data-d="clear" ${!version || reviewBusy ? "disabled" : ""}>Clear</button>
-      <a href="${esc(packetUrl)}" target="_blank">open</a></div>
+      <a href="${esc(packetUrl)}" target="_blank">open</a>
+      <button id="download-review-bundle" ${!version || reviewBusy ? "disabled" : ""}>Download saved review</button>
+      <button id="cancel-review-bundle" class="hidden">Cancel download</button></div>
+      <p id="bundle-status" role="status"><small>The bundle includes this packet and its saved review. Unsaved note edits are not included.</small></p>
       <p id="review-status" role="status" ${notice ? 'class="review-status"' : 'class="hidden"'}>${esc(notice)}</p>
       ${dec.decision && dec.decision !== "clear" ? `<p><small>${dec.review_state === "current" ? "Current" : "Previous"} decision: ${esc(dec.decision)} · ${esc(dec.at)}${dec.note ? " · " + esc(dec.note) : ""}</small></p>` : ""}
       ${version ? `<iframe src="${esc(packetUrl)}" title="Draft packet for ${esc(selected)}"></iframe>` : "<p>Packet preview unavailable.</p>"}
@@ -113,6 +120,7 @@ function render() {
   document.querySelectorAll("#t-packets tr[data-l]").forEach(tr => tr.onclick = () => { selected = tr.dataset.l; render(); });
   document.querySelectorAll("#t-packets button[data-d]").forEach(b => b.onclick = async () => {
     if (reviewBusy) return;
+    bundleController?.abort();
     const loadId = selected, note = $("#note").value, expected = S.evidence_versions?.[loadId];
     reviewBusy = true;
     document.querySelectorAll("#t-packets button[data-d]").forEach(button => button.disabled = true);
@@ -127,9 +135,75 @@ function render() {
     } finally {
       reviewBusy = false;
       render();
-      if (reviewFeedback?.loadId === selected && selected === loadId && $("#note")) $("#note").value = note;
+      if (reviewFeedback?.loadId === selected && selected === loadId && $("#note")) {
+        $("#note").value = note;
+        $("#note").dispatchEvent(new Event("input"));
+      }
     }
   });
+
+  const bundleButton = $("#download-review-bundle");
+  if (bundleButton) {
+    const loadId = selected, expected = version, savedVersion = S.review_versions?.[selected];
+    const savedNote = dec.note || "";
+    const noteChanged = () => $("#note")?.value !== savedNote;
+    const message = text => { if (bundleView === currentBundleView) $("#bundle-status").textContent = text; };
+    const updateButton = () => {
+      if (bundleView === currentBundleView) bundleButton.disabled = !expected || !savedVersion || reviewBusy || !!bundleController || noteChanged();
+    };
+    $("#note").addEventListener("input", () => {
+      bundleController?.abort();
+      message(noteChanged() ? "Save or undo the note changes before downloading the saved review."
+                            : "The bundle includes this packet and its saved review.");
+      updateButton();
+    });
+    $("#cancel-review-bundle").onclick = () => bundleController?.abort();
+    bundleButton.onclick = async () => {
+      if (reviewBusy || bundleController || !expected || !savedVersion || noteChanged()) return;
+      const controller = new AbortController();
+      bundleController = controller;
+      const active = () => bundleView === currentBundleView && selected === loadId && bundleController === controller;
+      updateButton();
+      $("#cancel-review-bundle").classList.remove("hidden");
+      message("Preparing the saved review bundle…");
+      let objectUrl, link;
+      try {
+        const query = new URLSearchParams({load_id: loadId, evidence_version: expected, review_version: savedVersion});
+        const response = await fetch("/api/review-bundle?" + query, {signal: controller.signal});
+        if (!response.ok) {
+          const text = await response.text();
+          let detail = text;
+          try { detail = JSON.parse(text).error || text; } catch (_) {}
+          throw new Error(detail || "The saved review could not be downloaded.");
+        }
+        const blob = await response.blob();
+        if (!active() || controller.signal.aborted || noteChanged() || reviewBusy) return;
+        if (response.headers.get("Content-Type")?.split(";")[0] !== "application/zip") throw new Error("The server did not return a review bundle.");
+        const filename = /filename="([A-Za-z0-9_.-]+\.zip)"/.exec(response.headers.get("Content-Disposition") || "")?.[1];
+        if (!filename) throw new Error("The review bundle has no download filename.");
+        objectUrl = URL.createObjectURL(blob);
+        link = document.createElement("a");
+        link.href = objectUrl;
+        link.download = filename;
+        document.body.append(link);
+        link.click();
+        message("Saved review downloaded. Unzip it and open index.html to review the packet and saved decision.");
+      } catch (error) {
+        if (active()) message(controller.signal.aborted
+          ? (noteChanged() ? "Save or undo the note changes before downloading the saved review." : "Download canceled. The saved review is unchanged.")
+          : error.message + " Reload the page to inspect current evidence; no download was made.");
+      } finally {
+        link?.remove();
+        if (objectUrl) setTimeout(() => URL.revokeObjectURL(objectUrl), 1000);
+        if (active()) {
+          bundleController = null;
+          $("#cancel-review-bundle").classList.add("hidden");
+          updateButton();
+        }
+      }
+    };
+    updateButton();
+  }
 
   $("#t-flags").innerHTML = `<table><tr><th>Load</th><th>Invoice</th><th>Carrier</th><th>Flag</th><th>Detail</th><th>Variance</th><th>Evidence</th></tr>${
     S.flags.map(f => `<tr><td>${esc(f.load_id)}</td><td>${esc(f.invoice_no)}</td><td>${esc(f.carrier)}</td><td><span class="tag exception">${esc(f.code)}</span></td>
@@ -166,7 +240,12 @@ document.querySelectorAll("#tabs button").forEach(b => b.onclick = () => {
   document.querySelectorAll("#tabs button").forEach(x => x.classList.toggle("on", x === b));
   document.querySelectorAll("main > section").forEach(s => s.classList.toggle("hidden", s.id !== "t-" + b.dataset.t));
 });
-async function busy(btn, fn) { btn.disabled = true; try { await fn(); } catch (e) { alert(e.message); } btn.disabled = false; }
+async function busy(btn, fn) {
+  bundleController?.abort();
+  btn.disabled = true;
+  try { await fn(); } catch (e) { alert(e.message); }
+  btn.disabled = false;
+}
 $("#run").onclick = e => busy(e.target, () => load(api("/api/run", {})));
 $("#gen").onclick = e => busy(e.target, () => { selected = null; return load(api("/api/generate", {seed: +$("#seed").value || 7})); });
 load(api("/api/summary"));

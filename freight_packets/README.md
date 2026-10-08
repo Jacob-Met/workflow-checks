@@ -64,6 +64,34 @@ The browser submits the evidence version it displayed. A stale browser receives 
 
 The local server serializes its own pipeline runs and review updates, and replaces the decision file atomically. Run one server per output directory; do not run the CLI or another writer against that directory while reviewing. This is local draft review, not payment approval or a multi-user production service.
 
+### Downloading one saved review
+
+In the Packets tab, choose a load and use **Download saved review**. Unzip the
+file and open `index.html` for a readable cover with the saved decision, note,
+previous reviews and links to the original packet. Save or undo a note edit
+before downloading; text that has not been saved is not silently exported.
+**Cancel download** stops a pending browser download without changing a review.
+
+The ZIP contains exactly one load's generated packet, its six supporting report
+sections, and its saved decision/history. The JSON retains the original
+file:row references and the same packet/report evidence version used by the
+review app. A separate identity binds the exact saved review that was displayed,
+including its history. `manifest.json` records the member sizes and SHA-256
+checksums. Other loads, global decisions/audit files and original input files
+are not included.
+
+The server takes the snapshot under its existing review lock. If either the
+shown evidence or saved review changes before export, it refuses the download;
+reload and inspect the current record before trying again. A missing or
+unreadable packet cannot be bundled. The browser also discards a pending reply
+when the selected view or note changes. A refused, canceled or failed download
+does not write a decision or automatically retry.
+
+Unreviewed, cleared, stale and older unbound reviews remain distinct on the
+cover. An earlier approval is not presented as approval of changed evidence.
+The original packet remains a draft, and the bundle is a snapshot: later app
+changes do not update it. Nothing is sent, filed, invoiced or paid.
+
 ## Verification
 
 The freight test suite includes real local HTTP checks for unchanged and changed evidence, stale clients, missing packets, legacy decisions, history, concurrent reviews and failed writes. An optional browser check runs with an installed Playwright and Chromium: `node tests/review_browser_smoke.cjs` from `freight_packets`. Set `BROWSER_BIN` for an existing Chromium executable and `PYTHON` if the interpreter is not named `python3`. It uses a disposable synthetic fixture and local server, and retains its screenshots and receipt under the process temporary directory.

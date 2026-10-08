@@ -1,0 +1,1214 @@
+{
+  "schema": "freight-handoff-publication-results.v1",
+  "scope": "Synthetic native local app and browser receiving; separate gates, not an aggregate.",
+  "baseline": {
+    "source_root": "/dev/shm/freight-review-handoff-9e05c01af69c/baseline/freight_packets",
+    "selected_load": "LD260900",
+    "evidence_version": "0f19e001f430d6f9089883492a46be2709741f404447f9943ee2ff20bdc9b0b0",
+    "saved_review": {
+      "decision": "approve",
+      "note": "Selected-load saved review",
+      "at": "2026-10-08T11:05:46+00:00",
+      "evidence_version": "0f19e001f430d6f9089883492a46be2709741f404447f9943ee2ff20bdc9b0b0",
+      "history": [],
+      "review_state": "current"
+    },
+    "native_http_status": 404,
+    "response_text": "not found",
+    "expected_download_status": 200,
+    "download_control_present": false,
+    "data_and_output_unchanged_by_get": true,
+    "source_pipeline_generated_synthetic_inputs": true,
+    "feature_available": false
+  },
+  "producer": {
+    "first_12_method_http_suite": {
+      "passed": true,
+      "raw_log": "producer-evidence/candidate-handoff-tests.log"
+    },
+    "v1_added_missing_summary_regression": {
+      "passed": false,
+      "native_status": 200,
+      "expected_status": 404,
+      "note": "New regression source with v1 production bytes; separate from the original 12-method freeze.",
+      "raw_log": "producer-evidence/candidate-v1-missing-summary-regression.log"
+    },
+    "final_complete_pytest": {
+      "passed": true,
+      "test_methods": 71,
+      "subtests": 15,
+      "inherited_methods": 58,
+      "new_methods": 13,
+      "raw_output": ".......................................................................                                                           [100%]\n71 passed, 15 subtests passed in 11.10s\n"
+    }
+  },
+  "independent_receiving": {
+    "attribution": "estate_work; separate source pin and unchanged 10-method black-box carrier",
+    "v1": {
+      "passed": false,
+      "methods": 10,
+      "passing": 9,
+      "counterexample": "independent-receiving/evidence/candidate-v1-missing-summary-counterexample.json",
+      "raw_output": "{\n  \"source_root\": \"/dev/shm/freight-review-receiving-9e05c01af69c-estate/candidate-v1/freight_packets\",\n  \"source_web_sha256\": \"b1d5d8df8af4b0a2844158ec19f5effabdae9b32b10ad747374378d2f1387724\",\n  \"source_handoff_sha256\": \"413290d887d045b96dd1639c34b9c769f0e730beb28dce06c654a0df36cf1a02\",\n  \"methods\": 10,\n  \"failures\": 1,\n  \"errors\": 0\n}\ntest_accepted_unicode_and_surrogate_notes_are_exact_json_and_readable_html (__main__.HandoffReceiving.test_accepted_unicode_and_surrogate_notes_are_exact_json_and_readable_html) ... ok\ntest_missing_current_summary_is_refused_without_regenerating_outputs (__main__.HandoffReceiving.test_missing_current_summary_is_refused_without_regenerating_outputs) ... FAIL\ntest_missing_packet_or_unknown_load_produces_no_bundle (__main__.HandoffReceiving.test_missing_packet_or_unknown_load_produces_no_bundle) ... ok\ntest_native_unreviewed_unbound_cleared_and_rejected_states_are_preserved (__main__.HandoffReceiving.test_native_unreviewed_unbound_cleared_and_rejected_states_are_preserved) ... ok\ntest_other_load_and_run_metadata_changes_keep_selected_snapshot (__main__.HandoffReceiving.test_other_load_and_run_metadata_changes_keep_selected_snapshot) ... ok\ntest_other_load_evidence_and_review_tokens_cannot_select_a_mixed_snapshot (__main__.HandoffReceiving.test_other_load_evidence_and_review_tokens_cannot_select_a_mixed_snapshot) ... ok\ntest_query_fields_are_single_nonempty_values (__main__.HandoffReceiving.test_query_fields_are_single_nonempty_values) ... ok\ntest_same_evidence_changed_saved_review_refuses_old_link (__main__.HandoffReceiving.test_same_evidence_changed_saved_review_refuses_old_link) ... ok\ntest_selected_packet_and_report_changes_refuse_stale_evidence (__main__.HandoffReceiving.test_selected_packet_and_report_changes_refuse_stale_evidence) ... ok\ntest_selected_packet_reports_history_and_http_headers_match_exactly (__main__.HandoffReceiving.test_selected_packet_reports_history_and_http_headers_match_exactly) ... ok\n\n======================================================================\nFAIL: test_missing_current_summary_is_refused_without_regenerating_outputs (__main__.HandoffReceiving.test_missing_current_summary_is_refused_without_regenerating_outputs)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/dev/shm/freight-review-receiving-9e05c01af69c-estate/receive_handoff.py\", line 337, in test_missing_current_summary_is_refused_without_regenerating_outputs\n    self.download(params, expected=404)\n  File \"/dev/shm/freight-review-receiving-9e05c01af69c-estate/receive_handoff.py\", line 150, in download\n    self.assertEqual(changed, [], \"A download must not generate or alter source/output/review files\")\nAssertionError: Lists differ: ['out/audit.jsonl', 'out/summary.json'] != []\n\nFirst list contains 2 additional elements.\nFirst extra element 0:\n'out/audit.jsonl'\n\n- ['out/audit.jsonl', 'out/summary.json']\n+ [] : A download must not generate or alter source/output/review files\n\n----------------------------------------------------------------------\nRan 10 tests in 0.806s\n\nFAILED (failures=1)\n"
+    },
+    "v2": {
+      "passed": true,
+      "methods": 10,
+      "passing": 10,
+      "raw_output": "{\n  \"source_root\": \"/dev/shm/freight-review-receiving-9e05c01af69c-estate/candidate-v2/freight_packets\",\n  \"source_web_sha256\": \"ff4d2ef9dac9fa96e29525453a3dde1b4cf8d8852e62ec00d7e7c59b137719c7\",\n  \"source_handoff_sha256\": \"413290d887d045b96dd1639c34b9c769f0e730beb28dce06c654a0df36cf1a02\",\n  \"methods\": 10,\n  \"failures\": 0,\n  \"errors\": 0\n}\ntest_accepted_unicode_and_surrogate_notes_are_exact_json_and_readable_html (__main__.HandoffReceiving.test_accepted_unicode_and_surrogate_notes_are_exact_json_and_readable_html) ... ok\ntest_missing_current_summary_is_refused_without_regenerating_outputs (__main__.HandoffReceiving.test_missing_current_summary_is_refused_without_regenerating_outputs) ... ok\ntest_missing_packet_or_unknown_load_produces_no_bundle (__main__.HandoffReceiving.test_missing_packet_or_unknown_load_produces_no_bundle) ... ok\ntest_native_unreviewed_unbound_cleared_and_rejected_states_are_preserved (__main__.HandoffReceiving.test_native_unreviewed_unbound_cleared_and_rejected_states_are_preserved) ... ok\ntest_other_load_and_run_metadata_changes_keep_selected_snapshot (__main__.HandoffReceiving.test_other_load_and_run_metadata_changes_keep_selected_snapshot) ... ok\ntest_other_load_evidence_and_review_tokens_cannot_select_a_mixed_snapshot (__main__.HandoffReceiving.test_other_load_evidence_and_review_tokens_cannot_select_a_mixed_snapshot) ... ok\ntest_query_fields_are_single_nonempty_values (__main__.HandoffReceiving.test_query_fields_are_single_nonempty_values) ... ok\ntest_same_evidence_changed_saved_review_refuses_old_link (__main__.HandoffReceiving.test_same_evidence_changed_saved_review_refuses_old_link) ... ok\ntest_selected_packet_and_report_changes_refuse_stale_evidence (__main__.HandoffReceiving.test_selected_packet_and_report_changes_refuse_stale_evidence) ... ok\ntest_selected_packet_reports_history_and_http_headers_match_exactly (__main__.HandoffReceiving.test_selected_packet_reports_history_and_http_headers_match_exactly) ... ok\n\n----------------------------------------------------------------------\nRan 10 tests in 0.874s\n\nOK\n"
+    }
+  },
+  "browser": {
+    "candidate_v1": {
+      "schema": "freight-handoff-browser.v1",
+      "source": "/Users/me/freight-review-handoff-qa-9e05c01af69c-v1/candidate/freight_packets",
+      "captured_at": "2026-10-08T11:32:33.946Z",
+      "server": {
+        "base_url": "http://127.0.0.1:55090",
+        "source": "/Users/me/freight-review-handoff-qa-9e05c01af69c-v1/candidate/freight_packets",
+        "state": "/Users/me/freight-review-handoff-qa-9e05c01af69c-v1/browser-state",
+        "python": "3.13.7 (main, Aug 25 2025, 17:22:49) [Clang 17.0.0 (clang-1700.0.13.5)]",
+        "source_files": [
+          {
+            "path": "freightpkt/__init__.py",
+            "sha256": "f9364708963fa65b54aae5174a816c45df417fe7d93971c3b0ff046278929706"
+          },
+          {
+            "path": "freightpkt/__main__.py",
+            "sha256": "4b1afbca74a10abc3cff7b4e5a11b558bf619e45b89709faf9225a474a2a250f"
+          },
+          {
+            "path": "freightpkt/cli.py",
+            "sha256": "268ced979f2863c2dac85b9e950c70e3818c827f222522f6374b4ecdcb9b8f15"
+          },
+          {
+            "path": "freightpkt/detention.py",
+            "sha256": "31ca31fd3210ff680bc83291916e39ea19b82580c3a090720556afd4ef0cd76b"
+          },
+          {
+            "path": "freightpkt/fines.py",
+            "sha256": "6009e9c9e8d23556e98d9d2606ffac60073597dda50026209155039ec5efcdac"
+          },
+          {
+            "path": "freightpkt/handoff.py",
+            "sha256": "413290d887d045b96dd1639c34b9c769f0e730beb28dce06c654a0df36cf1a02"
+          },
+          {
+            "path": "freightpkt/ingest.py",
+            "sha256": "1d5fb49d5656819c2b857a4d3d45f288b38885e109f0504992786714fe65382b"
+          },
+          {
+            "path": "freightpkt/invoice_match.py",
+            "sha256": "37a9e0801de948c3b558ca7c9846b3d0eb76ec062703ee3e5132df273ff569ab"
+          },
+          {
+            "path": "freightpkt/models.py",
+            "sha256": "8a24ed2cca6f45aa8a47d793620b0e2e4d573ec92209954d3f3156795e3f0e05"
+          },
+          {
+            "path": "freightpkt/packet.py",
+            "sha256": "1a2742168a27d52f5999823c409346bf7023ebb6442b2d0088f4c676609aefb3"
+          },
+          {
+            "path": "freightpkt/pdf.py",
+            "sha256": "c4876c50eb46c152b71690a53d32463798925c543da06434012aeba833590129"
+          },
+          {
+            "path": "freightpkt/pipeline.py",
+            "sha256": "0cd5cf1fedd32ae97bf169a82357ef7e0e72339791503d415aefccde7c621dd8"
+          },
+          {
+            "path": "freightpkt/ratecon.py",
+            "sha256": "c9684e8a7eed867b015bcad8fda90e7f06452f0ca310202ec3bb8287d4064c43"
+          },
+          {
+            "path": "freightpkt/synth.py",
+            "sha256": "721cdad09373b047ac0d3cd0f721154cb17366d87edd6bf34224a97b817eef24"
+          },
+          {
+            "path": "freightpkt/ui.html",
+            "sha256": "eb7862c3f1552a1fe675988cc539965cd03374e3bc21b3001bda9beb5392a182"
+          },
+          {
+            "path": "freightpkt/web.py",
+            "sha256": "b1d5d8df8af4b0a2844158ec19f5effabdae9b32b10ad747374378d2f1387724"
+          }
+        ],
+        "fixture": {
+          "generator": "freightpkt.synth.generate",
+          "n_loads": 24,
+          "seed": 7,
+          "pipeline": "freightpkt.pipeline.run",
+          "external_requests": false
+        }
+      },
+      "chromium": "/Users/me/Library/Caches/ms-playwright/chromium_headless_shell-1243/chrome-headless-shell-mac-arm64/chrome-headless-shell",
+      "node": "v26.3.0",
+      "passed": false,
+      "checks": [
+        {
+          "name": "01 unreviewed native ZIP and read-only state",
+          "passed": true,
+          "milliseconds": 210,
+          "downloads": 1,
+          "detail": {
+            "passed": true,
+            "archive": "unreviewed.zip",
+            "bytes": 5048,
+            "sha256": "2a9cce17c93a1c589b07b196e7f9c60ffcd2a574a97af873a14427a124610113",
+            "load_id": "LD260900",
+            "evidence_version": "0f19e001f430d6f9089883492a46be2709741f404447f9943ee2ff20bdc9b0b0",
+            "review_version": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "review_state": "unreviewed",
+            "members": [
+              {
+                "path": "index.html",
+                "bytes": 2138,
+                "sha256": "c7b0fdf36b4629b24f32d0fc2906739776383e327bc13e44716049482b9e8ac1"
+              },
+              {
+                "path": "packet.html",
+                "bytes": 5580,
+                "sha256": "f076100ae83fb0fddc3a2ad8b4be44a8f1bedf619619bbedfbb9ada0c1c7d104"
+              },
+              {
+                "path": "evidence.json",
+                "bytes": 2265,
+                "sha256": "efcb9ecd3ac76d4109c020cef3e30704751362588e5dd46398dae7b9aa2adafb"
+              },
+              {
+                "path": "review.json",
+                "bytes": 266,
+                "sha256": "4f53028d18dd23a5e1e4b1cae6c6b1c31fdff9a6183cee9ff0508122d19822c7"
+              },
+              {
+                "path": "manifest.json",
+                "bytes": 847,
+                "sha256": "d6acd8b4b3972ec68d671014640c0cc1fa37ab9a1e01488f39d7d53a842b0292"
+              }
+            ]
+          }
+        },
+        {
+          "name": "02 unsaved note gate, undo, save and readable offline cover",
+          "passed": true,
+          "milliseconds": 430,
+          "downloads": 1,
+          "detail": {
+            "passed": true,
+            "archive": "saved-review.zip",
+            "bytes": 5292,
+            "sha256": "11e43300f8df042983b9c044ca66dfc661eb9e2f7efadbac6d3e74856be365c1",
+            "load_id": "LD260900",
+            "evidence_version": "0f19e001f430d6f9089883492a46be2709741f404447f9943ee2ff20bdc9b0b0",
+            "review_version": "aaea068d0daadeaea147d8dac7e7f1b793a3a1c912722566a206de4432aff8be",
+            "review_state": "current",
+            "members": [
+              {
+                "path": "index.html",
+                "bytes": 2374,
+                "sha256": "1f6ae06990ce144107adb844081f14fb01f7b1aae593e8b6be97e4b45b3a5de7"
+              },
+              {
+                "path": "packet.html",
+                "bytes": 5580,
+                "sha256": "f076100ae83fb0fddc3a2ad8b4be44a8f1bedf619619bbedfbb9ada0c1c7d104"
+              },
+              {
+                "path": "evidence.json",
+                "bytes": 2265,
+                "sha256": "efcb9ecd3ac76d4109c020cef3e30704751362588e5dd46398dae7b9aa2adafb"
+              },
+              {
+                "path": "review.json",
+                "bytes": 573,
+                "sha256": "a5130fc614474bb93f2d9748d179f61cf392a3f86ec9e997654838d18431c794"
+              },
+              {
+                "path": "manifest.json",
+                "bytes": 847,
+                "sha256": "326953d22cf3d36a7da25c352b3f32409b4d25bd42e451b616fca83b14a54b67"
+              }
+            ]
+          }
+        },
+        {
+          "name": "03 same accepted snapshot gives identical ZIP bytes",
+          "passed": true,
+          "milliseconds": 227,
+          "downloads": 2,
+          "detail": {
+            "first": "11e43300f8df042983b9c044ca66dfc661eb9e2f7efadbac6d3e74856be365c1",
+            "second": "11e43300f8df042983b9c044ca66dfc661eb9e2f7efadbac6d3e74856be365c1"
+          }
+        },
+        {
+          "name": "04 selected history retained and other load excluded",
+          "passed": true,
+          "milliseconds": 208,
+          "downloads": 1,
+          "detail": {
+            "passed": true,
+            "archive": "history.zip",
+            "bytes": 5429,
+            "sha256": "a4d6e789d54e57146d2e0f8e40d6ebf9c58291c245266764d66dba4cdc8f9a4a",
+            "load_id": "LD260900",
+            "evidence_version": "0f19e001f430d6f9089883492a46be2709741f404447f9943ee2ff20bdc9b0b0",
+            "review_version": "90e1f1ddb4c49477befe31585cec9c699cddaf20cd6d275fbede8acdfe55a78a",
+            "review_state": "current",
+            "members": [
+              {
+                "path": "index.html",
+                "bytes": 2579,
+                "sha256": "40a64f526ebaed33d3dde7be315a941746d1344e2912ef98c2593283e554852e"
+              },
+              {
+                "path": "packet.html",
+                "bytes": 5580,
+                "sha256": "f076100ae83fb0fddc3a2ad8b4be44a8f1bedf619619bbedfbb9ada0c1c7d104"
+              },
+              {
+                "path": "evidence.json",
+                "bytes": 2265,
+                "sha256": "efcb9ecd3ac76d4109c020cef3e30704751362588e5dd46398dae7b9aa2adafb"
+              },
+              {
+                "path": "review.json",
+                "bytes": 834,
+                "sha256": "94655efec0a6345d0b3e522044b5002ff7df19f7c25e52fb41b52dc682ea01e7"
+              },
+              {
+                "path": "manifest.json",
+                "bytes": 847,
+                "sha256": "1ba5ac67feb0981f294d617d13850a7cd93c6fc262459d72b551ae24610179ca"
+              }
+            ]
+          }
+        },
+        {
+          "name": "05 newer saved review rejects old visible download and reload recovers",
+          "passed": true,
+          "milliseconds": 187,
+          "downloads": 1,
+          "detail": {
+            "passed": true,
+            "archive": "newer-review.zip",
+            "bytes": 5482,
+            "sha256": "e2017b7a5e8423542dd4fb1943c3adefc63e42af84d3e3411178591e16301335",
+            "load_id": "LD260900",
+            "evidence_version": "0f19e001f430d6f9089883492a46be2709741f404447f9943ee2ff20bdc9b0b0",
+            "review_version": "b7c5d996f4a758eb418ba5d57f4567ea51cdba22f94c2f12a9d2f9424c308084",
+            "review_state": "current",
+            "members": [
+              {
+                "path": "index.html",
+                "bytes": 2788,
+                "sha256": "afd46ad21b1c11bbb1f19961950bfb58c6b47dd0d9ceb2a421a027a97ff0a445"
+              },
+              {
+                "path": "packet.html",
+                "bytes": 5580,
+                "sha256": "f076100ae83fb0fddc3a2ad8b4be44a8f1bedf619619bbedfbb9ada0c1c7d104"
+              },
+              {
+                "path": "evidence.json",
+                "bytes": 2265,
+                "sha256": "efcb9ecd3ac76d4109c020cef3e30704751362588e5dd46398dae7b9aa2adafb"
+              },
+              {
+                "path": "review.json",
+                "bytes": 1074,
+                "sha256": "05a9f0d47ffcf71bb4060b76c20940fe67758ecdc435c6dc0acf145a2fc8efb2"
+              },
+              {
+                "path": "manifest.json",
+                "bytes": 848,
+                "sha256": "ed196d7007fb09d79ed9a7f9a7f027d950ced03bbcafb416bb87aa9a6f170806"
+              }
+            ]
+          }
+        },
+        {
+          "name": "06 cancel suppresses delayed genuine response and recovers",
+          "passed": true,
+          "milliseconds": 300,
+          "downloads": 1,
+          "detail": {
+            "delayed": {
+              "actual_native_status": 200,
+              "attempted_delivery": true,
+              "delivery_error": null
+            },
+            "recovered": {
+              "passed": true,
+              "archive": "cancel-recovery.zip",
+              "bytes": 5482,
+              "sha256": "e2017b7a5e8423542dd4fb1943c3adefc63e42af84d3e3411178591e16301335",
+              "load_id": "LD260900",
+              "evidence_version": "0f19e001f430d6f9089883492a46be2709741f404447f9943ee2ff20bdc9b0b0",
+              "review_version": "b7c5d996f4a758eb418ba5d57f4567ea51cdba22f94c2f12a9d2f9424c308084",
+              "review_state": "current",
+              "members": [
+                {
+                  "path": "index.html",
+                  "bytes": 2788,
+                  "sha256": "afd46ad21b1c11bbb1f19961950bfb58c6b47dd0d9ceb2a421a027a97ff0a445"
+                },
+                {
+                  "path": "packet.html",
+                  "bytes": 5580,
+                  "sha256": "f076100ae83fb0fddc3a2ad8b4be44a8f1bedf619619bbedfbb9ada0c1c7d104"
+                },
+                {
+                  "path": "evidence.json",
+                  "bytes": 2265,
+                  "sha256": "efcb9ecd3ac76d4109c020cef3e30704751362588e5dd46398dae7b9aa2adafb"
+                },
+                {
+                  "path": "review.json",
+                  "bytes": 1074,
+                  "sha256": "05a9f0d47ffcf71bb4060b76c20940fe67758ecdc435c6dc0acf145a2fc8efb2"
+                },
+                {
+                  "path": "manifest.json",
+                  "bytes": 848,
+                  "sha256": "ed196d7007fb09d79ed9a7f9a7f027d950ced03bbcafb416bb87aa9a6f170806"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "07 selection change suppresses late old-load response",
+          "passed": true,
+          "milliseconds": 330,
+          "downloads": 1,
+          "detail": {
+            "delayed": {
+              "actual_native_status": 200,
+              "attempted_delivery": true,
+              "delivery_error": null
+            },
+            "recovered": {
+              "passed": true,
+              "archive": "other-selected.zip",
+              "bytes": 5486,
+              "sha256": "31dde2c49046d253fa5c25b774ee8547d3eef35913ce2ed609059070fb3ed8b4",
+              "load_id": "LD260907",
+              "evidence_version": "03eacd8cc9afad3570ab3c1c6a62f745ced062f8c1233c67b2dec130544a7241",
+              "review_version": "7d3d1e4fe3cb44482e6827b98c75c385352f318c8c9925d43a73e498bc4cc0b2",
+              "review_state": "current",
+              "members": [
+                {
+                  "path": "index.html",
+                  "bytes": 2321,
+                  "sha256": "b18b00df8c399f8c90f408ca4eaf05cab7fae8e16f6d54b2d2e6ea81b3e49cea"
+                },
+                {
+                  "path": "packet.html",
+                  "bytes": 5235,
+                  "sha256": "ae419fecc772c8e54fd7db512a780f551e3e71fb7b6dbfa14923b074c2205c7d"
+                },
+                {
+                  "path": "evidence.json",
+                  "bytes": 3147,
+                  "sha256": "6ff79983bd6cd74878b7a98d6b5895d0a01439a0ac457779066710d13352c3d2"
+                },
+                {
+                  "path": "review.json",
+                  "bytes": 526,
+                  "sha256": "4bfd3f7c103563bf86eec2a4244e221bc1b29d86335a3519b63c566fca03035c"
+                },
+                {
+                  "path": "manifest.json",
+                  "bytes": 847,
+                  "sha256": "5c8ccfa6f0fe97e8d68cf34cdd29b0fba804e3bf6595729ef36877c2d431ca56"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "08 note edit cancels delayed response and undo re-enables",
+          "passed": true,
+          "milliseconds": 240,
+          "downloads": 0,
+          "detail": {
+            "actual_native_status": 200,
+            "attempted_delivery": true,
+            "delivery_error": null
+          }
+        },
+        {
+          "name": "09 pipeline rerun cancels pending prior gesture",
+          "passed": true,
+          "milliseconds": 365,
+          "downloads": 1,
+          "detail": {
+            "passed": true,
+            "archive": "rerun-current.zip",
+            "bytes": 5482,
+            "sha256": "e2017b7a5e8423542dd4fb1943c3adefc63e42af84d3e3411178591e16301335",
+            "load_id": "LD260900",
+            "evidence_version": "0f19e001f430d6f9089883492a46be2709741f404447f9943ee2ff20bdc9b0b0",
+            "review_version": "b7c5d996f4a758eb418ba5d57f4567ea51cdba22f94c2f12a9d2f9424c308084",
+            "review_state": "current",
+            "members": [
+              {
+                "path": "index.html",
+                "bytes": 2788,
+                "sha256": "afd46ad21b1c11bbb1f19961950bfb58c6b47dd0d9ceb2a421a027a97ff0a445"
+              },
+              {
+                "path": "packet.html",
+                "bytes": 5580,
+                "sha256": "f076100ae83fb0fddc3a2ad8b4be44a8f1bedf619619bbedfbb9ada0c1c7d104"
+              },
+              {
+                "path": "evidence.json",
+                "bytes": 2265,
+                "sha256": "efcb9ecd3ac76d4109c020cef3e30704751362588e5dd46398dae7b9aa2adafb"
+              },
+              {
+                "path": "review.json",
+                "bytes": 1074,
+                "sha256": "05a9f0d47ffcf71bb4060b76c20940fe67758ecdc435c6dc0acf145a2fc8efb2"
+              },
+              {
+                "path": "manifest.json",
+                "bytes": 848,
+                "sha256": "ed196d7007fb09d79ed9a7f9a7f027d950ced03bbcafb416bb87aa9a6f170806"
+              }
+            ]
+          }
+        },
+        {
+          "name": "10 failed decision preserves unsaved note and keeps download held",
+          "passed": false,
+          "milliseconds": 182,
+          "error": "AssertionError [ERR_ASSERTION]: Restored unsaved note must leave the displayed download control disabled\n\nfalse !== true\n",
+          "stack": "AssertionError [ERR_ASSERTION]: Restored unsaved note must leave the displayed download control disabled\n\nfalse !== true\n\n    at /Users/me/freight-review-handoff-qa-9e05c01af69c-v1/browser_handoff.cjs:262:14\n    at async runCheck (/Users/me/freight-review-handoff-qa-9e05c01af69c-v1/browser_handoff.cjs:118:20)\n    at async /Users/me/freight-review-handoff-qa-9e05c01af69c-v1/browser_handoff.cjs:249:5",
+          "screenshot": "10-failed-decision-preserves-unsaved-note-and-keeps-download-held-failure.png"
+        },
+        {
+          "name": "11 native missing-packet response produces no download",
+          "passed": true,
+          "milliseconds": 78,
+          "downloads": 0,
+          "detail": {
+            "status": 404,
+            "downloads": 0
+          }
+        }
+      ],
+      "page_errors": [],
+      "downloads": [
+        {
+          "filename": "freight-review-LD260900-0f19e001f430.zip",
+          "at": "2026-10-08T11:32:31.323Z"
+        },
+        {
+          "filename": "freight-review-LD260900-0f19e001f430.zip",
+          "at": "2026-10-08T11:32:31.527Z"
+        },
+        {
+          "filename": "freight-review-LD260900-0f19e001f430.zip",
+          "at": "2026-10-08T11:32:31.876Z"
+        },
+        {
+          "filename": "freight-review-LD260900-0f19e001f430.zip",
+          "at": "2026-10-08T11:32:31.976Z"
+        },
+        {
+          "filename": "freight-review-LD260900-0f19e001f430.zip",
+          "at": "2026-10-08T11:32:32.194Z"
+        },
+        {
+          "filename": "freight-review-LD260900-0f19e001f430.zip",
+          "at": "2026-10-08T11:32:32.387Z"
+        },
+        {
+          "filename": "freight-review-LD260900-0f19e001f430.zip",
+          "at": "2026-10-08T11:32:32.685Z"
+        },
+        {
+          "filename": "freight-review-LD260907-03eacd8cc9af.zip",
+          "at": "2026-10-08T11:32:33.017Z"
+        },
+        {
+          "filename": "freight-review-LD260900-0f19e001f430.zip",
+          "at": "2026-10-08T11:32:33.620Z"
+        }
+      ],
+      "bundle_requests": [
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:55090/api/review-bundle?load_id=LD260900&evidence_version=0f19e001f430d6f9089883492a46be2709741f404447f9943ee2ff20bdc9b0b0&review_version=74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+        },
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:55090/api/review-bundle?load_id=LD260900&evidence_version=0f19e001f430d6f9089883492a46be2709741f404447f9943ee2ff20bdc9b0b0&review_version=aaea068d0daadeaea147d8dac7e7f1b793a3a1c912722566a206de4432aff8be"
+        },
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:55090/api/review-bundle?load_id=LD260900&evidence_version=0f19e001f430d6f9089883492a46be2709741f404447f9943ee2ff20bdc9b0b0&review_version=aaea068d0daadeaea147d8dac7e7f1b793a3a1c912722566a206de4432aff8be"
+        },
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:55090/api/review-bundle?load_id=LD260900&evidence_version=0f19e001f430d6f9089883492a46be2709741f404447f9943ee2ff20bdc9b0b0&review_version=aaea068d0daadeaea147d8dac7e7f1b793a3a1c912722566a206de4432aff8be"
+        },
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:55090/api/review-bundle?load_id=LD260900&evidence_version=0f19e001f430d6f9089883492a46be2709741f404447f9943ee2ff20bdc9b0b0&review_version=90e1f1ddb4c49477befe31585cec9c699cddaf20cd6d275fbede8acdfe55a78a"
+        },
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:55090/api/review-bundle?load_id=LD260900&evidence_version=0f19e001f430d6f9089883492a46be2709741f404447f9943ee2ff20bdc9b0b0&review_version=90e1f1ddb4c49477befe31585cec9c699cddaf20cd6d275fbede8acdfe55a78a"
+        },
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:55090/api/review-bundle?load_id=LD260900&evidence_version=0f19e001f430d6f9089883492a46be2709741f404447f9943ee2ff20bdc9b0b0&review_version=b7c5d996f4a758eb418ba5d57f4567ea51cdba22f94c2f12a9d2f9424c308084"
+        },
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:55090/api/review-bundle?load_id=LD260900&evidence_version=0f19e001f430d6f9089883492a46be2709741f404447f9943ee2ff20bdc9b0b0&review_version=b7c5d996f4a758eb418ba5d57f4567ea51cdba22f94c2f12a9d2f9424c308084"
+        },
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:55090/api/review-bundle?load_id=LD260900&evidence_version=0f19e001f430d6f9089883492a46be2709741f404447f9943ee2ff20bdc9b0b0&review_version=b7c5d996f4a758eb418ba5d57f4567ea51cdba22f94c2f12a9d2f9424c308084"
+        },
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:55090/api/review-bundle?load_id=LD260900&evidence_version=0f19e001f430d6f9089883492a46be2709741f404447f9943ee2ff20bdc9b0b0&review_version=b7c5d996f4a758eb418ba5d57f4567ea51cdba22f94c2f12a9d2f9424c308084"
+        },
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:55090/api/review-bundle?load_id=LD260907&evidence_version=03eacd8cc9afad3570ab3c1c6a62f745ced062f8c1233c67b2dec130544a7241&review_version=7d3d1e4fe3cb44482e6827b98c75c385352f318c8c9925d43a73e498bc4cc0b2"
+        },
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:55090/api/review-bundle?load_id=LD260900&evidence_version=0f19e001f430d6f9089883492a46be2709741f404447f9943ee2ff20bdc9b0b0&review_version=b7c5d996f4a758eb418ba5d57f4567ea51cdba22f94c2f12a9d2f9424c308084"
+        },
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:55090/api/review-bundle?load_id=LD260900&evidence_version=0f19e001f430d6f9089883492a46be2709741f404447f9943ee2ff20bdc9b0b0&review_version=b7c5d996f4a758eb418ba5d57f4567ea51cdba22f94c2f12a9d2f9424c308084"
+        },
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:55090/api/review-bundle?load_id=LD260900&evidence_version=0f19e001f430d6f9089883492a46be2709741f404447f9943ee2ff20bdc9b0b0&review_version=b7c5d996f4a758eb418ba5d57f4567ea51cdba22f94c2f12a9d2f9424c308084"
+        },
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:55090/api/review-bundle?load_id=LD260900&evidence_version=e2b8fbac438c1c9804a693a1676c5b03f6e0e2664dff7ee9df3f8818ca7b30ae&review_version=09e04303abe408795219fc96d9c991e9280e8d01292b56e8c2ef54bfdb62ee59"
+        }
+      ],
+      "server_stderr": "",
+      "limits": [
+        "Synthetic native seed7 fixture; seed8 change is through native API.",
+        "Disposable local server and fresh headless browser context; no external provider or user browser.",
+        "Delayed-response cases receive genuine native ZIP bytes through a browser route before holding delivery.",
+        "No assertion of distributed writers, remote sending, payment, or any change to freight calculation rules."
+      ]
+    },
+    "candidate_v2": {
+      "schema": "freight-handoff-browser.v1",
+      "source": "/Users/me/freight-review-handoff-qa-9e05c01af69c-v2/candidate/freight_packets",
+      "captured_at": "2026-10-08T11:45:55.671Z",
+      "server": {
+        "base_url": "http://127.0.0.1:56860",
+        "source": "/Users/me/freight-review-handoff-qa-9e05c01af69c-v2/candidate/freight_packets",
+        "state": "/Users/me/freight-review-handoff-qa-9e05c01af69c-v2/browser-state",
+        "python": "3.13.7 (main, Aug 25 2025, 17:22:49) [Clang 17.0.0 (clang-1700.0.13.5)]",
+        "source_files": [
+          {
+            "path": "freightpkt/__init__.py",
+            "sha256": "f9364708963fa65b54aae5174a816c45df417fe7d93971c3b0ff046278929706"
+          },
+          {
+            "path": "freightpkt/__main__.py",
+            "sha256": "4b1afbca74a10abc3cff7b4e5a11b558bf619e45b89709faf9225a474a2a250f"
+          },
+          {
+            "path": "freightpkt/cli.py",
+            "sha256": "268ced979f2863c2dac85b9e950c70e3818c827f222522f6374b4ecdcb9b8f15"
+          },
+          {
+            "path": "freightpkt/detention.py",
+            "sha256": "31ca31fd3210ff680bc83291916e39ea19b82580c3a090720556afd4ef0cd76b"
+          },
+          {
+            "path": "freightpkt/fines.py",
+            "sha256": "6009e9c9e8d23556e98d9d2606ffac60073597dda50026209155039ec5efcdac"
+          },
+          {
+            "path": "freightpkt/handoff.py",
+            "sha256": "413290d887d045b96dd1639c34b9c769f0e730beb28dce06c654a0df36cf1a02"
+          },
+          {
+            "path": "freightpkt/ingest.py",
+            "sha256": "1d5fb49d5656819c2b857a4d3d45f288b38885e109f0504992786714fe65382b"
+          },
+          {
+            "path": "freightpkt/invoice_match.py",
+            "sha256": "37a9e0801de948c3b558ca7c9846b3d0eb76ec062703ee3e5132df273ff569ab"
+          },
+          {
+            "path": "freightpkt/models.py",
+            "sha256": "8a24ed2cca6f45aa8a47d793620b0e2e4d573ec92209954d3f3156795e3f0e05"
+          },
+          {
+            "path": "freightpkt/packet.py",
+            "sha256": "1a2742168a27d52f5999823c409346bf7023ebb6442b2d0088f4c676609aefb3"
+          },
+          {
+            "path": "freightpkt/pdf.py",
+            "sha256": "c4876c50eb46c152b71690a53d32463798925c543da06434012aeba833590129"
+          },
+          {
+            "path": "freightpkt/pipeline.py",
+            "sha256": "0cd5cf1fedd32ae97bf169a82357ef7e0e72339791503d415aefccde7c621dd8"
+          },
+          {
+            "path": "freightpkt/ratecon.py",
+            "sha256": "c9684e8a7eed867b015bcad8fda90e7f06452f0ca310202ec3bb8287d4064c43"
+          },
+          {
+            "path": "freightpkt/synth.py",
+            "sha256": "721cdad09373b047ac0d3cd0f721154cb17366d87edd6bf34224a97b817eef24"
+          },
+          {
+            "path": "freightpkt/ui.html",
+            "sha256": "cdc52a196a480df2db210870487bab84e248cf69278fb27cefbc78a89b2ad0e3"
+          },
+          {
+            "path": "freightpkt/web.py",
+            "sha256": "ff4d2ef9dac9fa96e29525453a3dde1b4cf8d8852e62ec00d7e7c59b137719c7"
+          }
+        ],
+        "fixture": {
+          "generator": "freightpkt.synth.generate",
+          "n_loads": 24,
+          "seed": 7,
+          "pipeline": "freightpkt.pipeline.run",
+          "external_requests": false
+        }
+      },
+      "chromium": "/Users/me/Library/Caches/ms-playwright/chromium_headless_shell-1243/chrome-headless-shell-mac-arm64/chrome-headless-shell",
+      "node": "v26.3.0",
+      "passed": true,
+      "checks": [
+        {
+          "name": "01 unreviewed native ZIP and read-only state",
+          "passed": true,
+          "milliseconds": 240,
+          "downloads": 1,
+          "detail": {
+            "passed": true,
+            "archive": "unreviewed.zip",
+            "bytes": 5048,
+            "sha256": "2a9cce17c93a1c589b07b196e7f9c60ffcd2a574a97af873a14427a124610113",
+            "load_id": "LD260900",
+            "evidence_version": "0f19e001f430d6f9089883492a46be2709741f404447f9943ee2ff20bdc9b0b0",
+            "review_version": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "review_state": "unreviewed",
+            "members": [
+              {
+                "path": "index.html",
+                "bytes": 2138,
+                "sha256": "c7b0fdf36b4629b24f32d0fc2906739776383e327bc13e44716049482b9e8ac1"
+              },
+              {
+                "path": "packet.html",
+                "bytes": 5580,
+                "sha256": "f076100ae83fb0fddc3a2ad8b4be44a8f1bedf619619bbedfbb9ada0c1c7d104"
+              },
+              {
+                "path": "evidence.json",
+                "bytes": 2265,
+                "sha256": "efcb9ecd3ac76d4109c020cef3e30704751362588e5dd46398dae7b9aa2adafb"
+              },
+              {
+                "path": "review.json",
+                "bytes": 266,
+                "sha256": "4f53028d18dd23a5e1e4b1cae6c6b1c31fdff9a6183cee9ff0508122d19822c7"
+              },
+              {
+                "path": "manifest.json",
+                "bytes": 847,
+                "sha256": "d6acd8b4b3972ec68d671014640c0cc1fa37ab9a1e01488f39d7d53a842b0292"
+              }
+            ]
+          }
+        },
+        {
+          "name": "02 unsaved note gate, undo, save and readable offline cover",
+          "passed": true,
+          "milliseconds": 434,
+          "downloads": 1,
+          "detail": {
+            "passed": true,
+            "archive": "saved-review.zip",
+            "bytes": 5296,
+            "sha256": "686bfc1a581e5b5a72fadc8058ad7a297a083dc4ee10ebcab38be643401f6f89",
+            "load_id": "LD260900",
+            "evidence_version": "0f19e001f430d6f9089883492a46be2709741f404447f9943ee2ff20bdc9b0b0",
+            "review_version": "ce8c23eca68efd2213ba53855ba405b250661fa438419c2d677739fe752005a3",
+            "review_state": "current",
+            "members": [
+              {
+                "path": "index.html",
+                "bytes": 2374,
+                "sha256": "eb3099a162544b5943d8f970ed672a561c81d21d403e3a2ea40031ca622063fd"
+              },
+              {
+                "path": "packet.html",
+                "bytes": 5580,
+                "sha256": "f076100ae83fb0fddc3a2ad8b4be44a8f1bedf619619bbedfbb9ada0c1c7d104"
+              },
+              {
+                "path": "evidence.json",
+                "bytes": 2265,
+                "sha256": "efcb9ecd3ac76d4109c020cef3e30704751362588e5dd46398dae7b9aa2adafb"
+              },
+              {
+                "path": "review.json",
+                "bytes": 573,
+                "sha256": "2d2fc911b7a2cd1d869751f91b38224c4c4212d4d21a3cfa5df20a468457eccf"
+              },
+              {
+                "path": "manifest.json",
+                "bytes": 847,
+                "sha256": "8e629468d074e61b533dc1cd70aeaf222c7de9b18606b34c821b2c0c90cac009"
+              }
+            ]
+          }
+        },
+        {
+          "name": "03 same accepted snapshot gives identical ZIP bytes",
+          "passed": true,
+          "milliseconds": 222,
+          "downloads": 2,
+          "detail": {
+            "first": "686bfc1a581e5b5a72fadc8058ad7a297a083dc4ee10ebcab38be643401f6f89",
+            "second": "686bfc1a581e5b5a72fadc8058ad7a297a083dc4ee10ebcab38be643401f6f89"
+          }
+        },
+        {
+          "name": "04 selected history retained and other load excluded",
+          "passed": true,
+          "milliseconds": 191,
+          "downloads": 1,
+          "detail": {
+            "passed": true,
+            "archive": "history.zip",
+            "bytes": 5425,
+            "sha256": "53d933823956fe1f0a85d973cc4af3b4f07d780d888b111bd3537944e17a59bf",
+            "load_id": "LD260900",
+            "evidence_version": "0f19e001f430d6f9089883492a46be2709741f404447f9943ee2ff20bdc9b0b0",
+            "review_version": "5a246703d848383fd28906870324fb71c4e007283307af792e1c3dbc19471ec8",
+            "review_state": "current",
+            "members": [
+              {
+                "path": "index.html",
+                "bytes": 2579,
+                "sha256": "202517facbc96752022ac91e8d479a9c210437f4a09d679ae467ec83cdbbda36"
+              },
+              {
+                "path": "packet.html",
+                "bytes": 5580,
+                "sha256": "f076100ae83fb0fddc3a2ad8b4be44a8f1bedf619619bbedfbb9ada0c1c7d104"
+              },
+              {
+                "path": "evidence.json",
+                "bytes": 2265,
+                "sha256": "efcb9ecd3ac76d4109c020cef3e30704751362588e5dd46398dae7b9aa2adafb"
+              },
+              {
+                "path": "review.json",
+                "bytes": 834,
+                "sha256": "2d7974c995936bae79c838bd0f40b61dc52c0e44f35c9f33f80c213f7219036e"
+              },
+              {
+                "path": "manifest.json",
+                "bytes": 847,
+                "sha256": "be27cc6be0287553022936c5bb60ba47c7d25efc5b9daf74c82b88c4c72c0d96"
+              }
+            ]
+          }
+        },
+        {
+          "name": "05 newer saved review rejects old visible download and reload recovers",
+          "passed": true,
+          "milliseconds": 230,
+          "downloads": 1,
+          "detail": {
+            "passed": true,
+            "archive": "newer-review.zip",
+            "bytes": 5471,
+            "sha256": "f4366e79e32a6029f3f96ffc0470dc950f263665f85bab0784b965a1b4986e83",
+            "load_id": "LD260900",
+            "evidence_version": "0f19e001f430d6f9089883492a46be2709741f404447f9943ee2ff20bdc9b0b0",
+            "review_version": "fb2e1c9cb4607ad1df1ec60efb673e5e26734d65c82c18903d5e69d5badfa940",
+            "review_state": "current",
+            "members": [
+              {
+                "path": "index.html",
+                "bytes": 2788,
+                "sha256": "ffb68924ca74787fd4cd3f40efc4120325d6cadcf051d5f952dbd5bec4a85a6a"
+              },
+              {
+                "path": "packet.html",
+                "bytes": 5580,
+                "sha256": "f076100ae83fb0fddc3a2ad8b4be44a8f1bedf619619bbedfbb9ada0c1c7d104"
+              },
+              {
+                "path": "evidence.json",
+                "bytes": 2265,
+                "sha256": "efcb9ecd3ac76d4109c020cef3e30704751362588e5dd46398dae7b9aa2adafb"
+              },
+              {
+                "path": "review.json",
+                "bytes": 1074,
+                "sha256": "4641c8303f80f7ce99461e546a29cbdc9099117a1b4f0ba1b82aced109a7c5a0"
+              },
+              {
+                "path": "manifest.json",
+                "bytes": 848,
+                "sha256": "e0543098a684444d2a699ddad0586cd87478f6ea0fd9ae5bedd0d6d35990dbe6"
+              }
+            ]
+          }
+        },
+        {
+          "name": "06 cancel suppresses delayed genuine response and recovers",
+          "passed": true,
+          "milliseconds": 320,
+          "downloads": 1,
+          "detail": {
+            "delayed": {
+              "actual_native_status": 200,
+              "attempted_delivery": true,
+              "delivery_error": null
+            },
+            "recovered": {
+              "passed": true,
+              "archive": "cancel-recovery.zip",
+              "bytes": 5471,
+              "sha256": "f4366e79e32a6029f3f96ffc0470dc950f263665f85bab0784b965a1b4986e83",
+              "load_id": "LD260900",
+              "evidence_version": "0f19e001f430d6f9089883492a46be2709741f404447f9943ee2ff20bdc9b0b0",
+              "review_version": "fb2e1c9cb4607ad1df1ec60efb673e5e26734d65c82c18903d5e69d5badfa940",
+              "review_state": "current",
+              "members": [
+                {
+                  "path": "index.html",
+                  "bytes": 2788,
+                  "sha256": "ffb68924ca74787fd4cd3f40efc4120325d6cadcf051d5f952dbd5bec4a85a6a"
+                },
+                {
+                  "path": "packet.html",
+                  "bytes": 5580,
+                  "sha256": "f076100ae83fb0fddc3a2ad8b4be44a8f1bedf619619bbedfbb9ada0c1c7d104"
+                },
+                {
+                  "path": "evidence.json",
+                  "bytes": 2265,
+                  "sha256": "efcb9ecd3ac76d4109c020cef3e30704751362588e5dd46398dae7b9aa2adafb"
+                },
+                {
+                  "path": "review.json",
+                  "bytes": 1074,
+                  "sha256": "4641c8303f80f7ce99461e546a29cbdc9099117a1b4f0ba1b82aced109a7c5a0"
+                },
+                {
+                  "path": "manifest.json",
+                  "bytes": 848,
+                  "sha256": "e0543098a684444d2a699ddad0586cd87478f6ea0fd9ae5bedd0d6d35990dbe6"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "07 selection change suppresses late old-load response",
+          "passed": true,
+          "milliseconds": 333,
+          "downloads": 1,
+          "detail": {
+            "delayed": {
+              "actual_native_status": 200,
+              "attempted_delivery": true,
+              "delivery_error": null
+            },
+            "recovered": {
+              "passed": true,
+              "archive": "other-selected.zip",
+              "bytes": 5483,
+              "sha256": "8077151f75559dd66d57b6cfe4670b04236dddfe9d191ec6f52f2264a8618015",
+              "load_id": "LD260907",
+              "evidence_version": "03eacd8cc9afad3570ab3c1c6a62f745ced062f8c1233c67b2dec130544a7241",
+              "review_version": "f0330bb6ebd27dd2fe1502fa713d0d00a82293f7970d82692abb9509ccd1be73",
+              "review_state": "current",
+              "members": [
+                {
+                  "path": "index.html",
+                  "bytes": 2321,
+                  "sha256": "b66f5614064a812e53481decfb9808e4e64b6bf52f98ce2f0e4ce5b271afb7ee"
+                },
+                {
+                  "path": "packet.html",
+                  "bytes": 5235,
+                  "sha256": "ae419fecc772c8e54fd7db512a780f551e3e71fb7b6dbfa14923b074c2205c7d"
+                },
+                {
+                  "path": "evidence.json",
+                  "bytes": 3147,
+                  "sha256": "6ff79983bd6cd74878b7a98d6b5895d0a01439a0ac457779066710d13352c3d2"
+                },
+                {
+                  "path": "review.json",
+                  "bytes": 526,
+                  "sha256": "5df656413935fa62eb1bddef7ea360262b863d12507a803bb30733003d7525f7"
+                },
+                {
+                  "path": "manifest.json",
+                  "bytes": 847,
+                  "sha256": "fd742ce2090632adfc2f6e3ec1909fb89442e2b3131abbf2916465fcd93af3da"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "08 note edit cancels delayed response and undo re-enables",
+          "passed": true,
+          "milliseconds": 241,
+          "downloads": 0,
+          "detail": {
+            "actual_native_status": 200,
+            "attempted_delivery": true,
+            "delivery_error": null
+          }
+        },
+        {
+          "name": "09 pipeline rerun cancels pending prior gesture",
+          "passed": true,
+          "milliseconds": 412,
+          "downloads": 1,
+          "detail": {
+            "passed": true,
+            "archive": "rerun-current.zip",
+            "bytes": 5471,
+            "sha256": "f4366e79e32a6029f3f96ffc0470dc950f263665f85bab0784b965a1b4986e83",
+            "load_id": "LD260900",
+            "evidence_version": "0f19e001f430d6f9089883492a46be2709741f404447f9943ee2ff20bdc9b0b0",
+            "review_version": "fb2e1c9cb4607ad1df1ec60efb673e5e26734d65c82c18903d5e69d5badfa940",
+            "review_state": "current",
+            "members": [
+              {
+                "path": "index.html",
+                "bytes": 2788,
+                "sha256": "ffb68924ca74787fd4cd3f40efc4120325d6cadcf051d5f952dbd5bec4a85a6a"
+              },
+              {
+                "path": "packet.html",
+                "bytes": 5580,
+                "sha256": "f076100ae83fb0fddc3a2ad8b4be44a8f1bedf619619bbedfbb9ada0c1c7d104"
+              },
+              {
+                "path": "evidence.json",
+                "bytes": 2265,
+                "sha256": "efcb9ecd3ac76d4109c020cef3e30704751362588e5dd46398dae7b9aa2adafb"
+              },
+              {
+                "path": "review.json",
+                "bytes": 1074,
+                "sha256": "4641c8303f80f7ce99461e546a29cbdc9099117a1b4f0ba1b82aced109a7c5a0"
+              },
+              {
+                "path": "manifest.json",
+                "bytes": 848,
+                "sha256": "e0543098a684444d2a699ddad0586cd87478f6ea0fd9ae5bedd0d6d35990dbe6"
+              }
+            ]
+          }
+        },
+        {
+          "name": "10 failed decision preserves unsaved note and keeps download held",
+          "passed": true,
+          "milliseconds": 241,
+          "downloads": 1,
+          "detail": {
+            "passed": true,
+            "archive": "stale-saved-review.zip",
+            "bytes": 5481,
+            "sha256": "921340a2e7592cb10b94d426cd0169e22982cec4bf127c47ffbd916cf3f70753",
+            "load_id": "LD260900",
+            "evidence_version": "e2b8fbac438c1c9804a693a1676c5b03f6e0e2664dff7ee9df3f8818ca7b30ae",
+            "review_version": "5f3cd5e4ef27db46a6e64c3a73f6fbe218366fb8470b24a9f2556ab47b4c4980",
+            "review_state": "stale",
+            "members": [
+              {
+                "path": "index.html",
+                "bytes": 2791,
+                "sha256": "3ec471ac0bbb6294defc1327ce2e4d736dc12b1a153a28eb94a1568a40ddaa03"
+              },
+              {
+                "path": "packet.html",
+                "bytes": 5420,
+                "sha256": "35a770101d2eb3cf39198e868376cb787850ae1f25520814bbbca8c8293bd097"
+              },
+              {
+                "path": "evidence.json",
+                "bytes": 2140,
+                "sha256": "b58f27c88ff36fe5a8622f7c429b275f70870bd7d2e7e17dabca1d37c0af1c50"
+              },
+              {
+                "path": "review.json",
+                "bytes": 1072,
+                "sha256": "1e4cbb927e0c9318f2db968a1bf642bb9013b302dda6c74358ab181860fcd158"
+              },
+              {
+                "path": "manifest.json",
+                "bytes": 848,
+                "sha256": "93f0c185cd3e9318422746d3786b2cab8b45f6f95096b5325c1dd114e454863e"
+              }
+            ]
+          }
+        },
+        {
+          "name": "11 native missing-packet response produces no download",
+          "passed": true,
+          "milliseconds": 81,
+          "downloads": 0,
+          "detail": {
+            "status": 404,
+            "downloads": 0
+          }
+        }
+      ],
+      "page_errors": [],
+      "downloads": [
+        {
+          "filename": "freight-review-LD260900-0f19e001f430.zip",
+          "at": "2026-10-08T11:45:52.863Z"
+        },
+        {
+          "filename": "freight-review-LD260900-0f19e001f430.zip",
+          "at": "2026-10-08T11:45:53.093Z"
+        },
+        {
+          "filename": "freight-review-LD260900-0f19e001f430.zip",
+          "at": "2026-10-08T11:45:53.443Z"
+        },
+        {
+          "filename": "freight-review-LD260900-0f19e001f430.zip",
+          "at": "2026-10-08T11:45:53.544Z"
+        },
+        {
+          "filename": "freight-review-LD260900-0f19e001f430.zip",
+          "at": "2026-10-08T11:45:53.732Z"
+        },
+        {
+          "filename": "freight-review-LD260900-0f19e001f430.zip",
+          "at": "2026-10-08T11:45:53.968Z"
+        },
+        {
+          "filename": "freight-review-LD260900-0f19e001f430.zip",
+          "at": "2026-10-08T11:45:54.289Z"
+        },
+        {
+          "filename": "freight-review-LD260907-03eacd8cc9af.zip",
+          "at": "2026-10-08T11:45:54.624Z"
+        },
+        {
+          "filename": "freight-review-LD260900-0f19e001f430.zip",
+          "at": "2026-10-08T11:45:55.268Z"
+        },
+        {
+          "filename": "freight-review-LD260900-e2b8fbac438c.zip",
+          "at": "2026-10-08T11:45:55.493Z"
+        }
+      ],
+      "bundle_requests": [
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:56860/api/review-bundle?load_id=LD260900&evidence_version=0f19e001f430d6f9089883492a46be2709741f404447f9943ee2ff20bdc9b0b0&review_version=74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+        },
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:56860/api/review-bundle?load_id=LD260900&evidence_version=0f19e001f430d6f9089883492a46be2709741f404447f9943ee2ff20bdc9b0b0&review_version=ce8c23eca68efd2213ba53855ba405b250661fa438419c2d677739fe752005a3"
+        },
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:56860/api/review-bundle?load_id=LD260900&evidence_version=0f19e001f430d6f9089883492a46be2709741f404447f9943ee2ff20bdc9b0b0&review_version=ce8c23eca68efd2213ba53855ba405b250661fa438419c2d677739fe752005a3"
+        },
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:56860/api/review-bundle?load_id=LD260900&evidence_version=0f19e001f430d6f9089883492a46be2709741f404447f9943ee2ff20bdc9b0b0&review_version=ce8c23eca68efd2213ba53855ba405b250661fa438419c2d677739fe752005a3"
+        },
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:56860/api/review-bundle?load_id=LD260900&evidence_version=0f19e001f430d6f9089883492a46be2709741f404447f9943ee2ff20bdc9b0b0&review_version=5a246703d848383fd28906870324fb71c4e007283307af792e1c3dbc19471ec8"
+        },
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:56860/api/review-bundle?load_id=LD260900&evidence_version=0f19e001f430d6f9089883492a46be2709741f404447f9943ee2ff20bdc9b0b0&review_version=5a246703d848383fd28906870324fb71c4e007283307af792e1c3dbc19471ec8"
+        },
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:56860/api/review-bundle?load_id=LD260900&evidence_version=0f19e001f430d6f9089883492a46be2709741f404447f9943ee2ff20bdc9b0b0&review_version=fb2e1c9cb4607ad1df1ec60efb673e5e26734d65c82c18903d5e69d5badfa940"
+        },
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:56860/api/review-bundle?load_id=LD260900&evidence_version=0f19e001f430d6f9089883492a46be2709741f404447f9943ee2ff20bdc9b0b0&review_version=fb2e1c9cb4607ad1df1ec60efb673e5e26734d65c82c18903d5e69d5badfa940"
+        },
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:56860/api/review-bundle?load_id=LD260900&evidence_version=0f19e001f430d6f9089883492a46be2709741f404447f9943ee2ff20bdc9b0b0&review_version=fb2e1c9cb4607ad1df1ec60efb673e5e26734d65c82c18903d5e69d5badfa940"
+        },
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:56860/api/review-bundle?load_id=LD260900&evidence_version=0f19e001f430d6f9089883492a46be2709741f404447f9943ee2ff20bdc9b0b0&review_version=fb2e1c9cb4607ad1df1ec60efb673e5e26734d65c82c18903d5e69d5badfa940"
+        },
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:56860/api/review-bundle?load_id=LD260907&evidence_version=03eacd8cc9afad3570ab3c1c6a62f745ced062f8c1233c67b2dec130544a7241&review_version=f0330bb6ebd27dd2fe1502fa713d0d00a82293f7970d82692abb9509ccd1be73"
+        },
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:56860/api/review-bundle?load_id=LD260900&evidence_version=0f19e001f430d6f9089883492a46be2709741f404447f9943ee2ff20bdc9b0b0&review_version=fb2e1c9cb4607ad1df1ec60efb673e5e26734d65c82c18903d5e69d5badfa940"
+        },
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:56860/api/review-bundle?load_id=LD260900&evidence_version=0f19e001f430d6f9089883492a46be2709741f404447f9943ee2ff20bdc9b0b0&review_version=fb2e1c9cb4607ad1df1ec60efb673e5e26734d65c82c18903d5e69d5badfa940"
+        },
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:56860/api/review-bundle?load_id=LD260900&evidence_version=0f19e001f430d6f9089883492a46be2709741f404447f9943ee2ff20bdc9b0b0&review_version=fb2e1c9cb4607ad1df1ec60efb673e5e26734d65c82c18903d5e69d5badfa940"
+        },
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:56860/api/review-bundle?load_id=LD260900&evidence_version=e2b8fbac438c1c9804a693a1676c5b03f6e0e2664dff7ee9df3f8818ca7b30ae&review_version=5f3cd5e4ef27db46a6e64c3a73f6fbe218366fb8470b24a9f2556ab47b4c4980"
+        },
+        {
+          "method": "GET",
+          "url": "http://127.0.0.1:56860/api/review-bundle?load_id=LD260900&evidence_version=e2b8fbac438c1c9804a693a1676c5b03f6e0e2664dff7ee9df3f8818ca7b30ae&review_version=5f3cd5e4ef27db46a6e64c3a73f6fbe218366fb8470b24a9f2556ab47b4c4980"
+        }
+      ],
+      "server_stderr": "",
+      "limits": [
+        "Synthetic native seed7 fixture; seed8 change is through native API.",
+        "Disposable local server and fresh headless browser context; no external provider or user browser.",
+        "Delayed-response cases receive genuine native ZIP bytes through a browser route before holding delivery.",
+        "No assertion of distributed writers, remote sending, payment, or any change to freight calculation rules."
+      ]
+    }
+  },
+  "evidence_archive": {
+    "path": "docs/verification/freight-handoff-9e05-20261008/evidence.tar.gz",
+    "bytes": 1861010,
+    "sha256": "ffcf4e6d53727c1b8047e5d90dfbcb65e13248ba76bf3fd39931f2c64e99c24b",
+    "git_blob": "137f5d221d651b6694bc6851c0b219f7007457b4"
+  }
+}

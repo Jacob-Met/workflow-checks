@@ -17,6 +17,7 @@ from pathlib import Path
 from urllib.parse import parse_qs, unquote, urlsplit
 
 from .pipeline import audit, run
+from .handoff import build_bundle, bundle_filename, review_version
 
 UI = Path(__file__).with_name("ui.html")
 REVIEW_SECTIONS = ("stops", "flags", "fines", "settlements", "exceptions", "packets")
@@ -98,6 +99,10 @@ class App:
             versions = self._evidence_versions(summary)
             summary["evidence_versions"] = versions
             summary["decisions"] = self._decision_view(versions)
+            summary["review_versions"] = {
+                packet["load_id"]: review_version(summary["decisions"].get(packet["load_id"]))
+                for packet in summary["packets"]
+            }
             return summary
 
     def rerun(self) -> dict:
@@ -165,6 +170,37 @@ class App:
                   note=note, evidence_version=versions[load_id])
             return self._decision_view(versions)
 
+    def review_bundle(self, load_id: str, expected: str, saved_version: str) -> tuple[str, bytes]:
+        if not isinstance(load_id, str) or not load_id:
+            raise ValueError("load_id must identify a current packet")
+        for value in (expected, saved_version):
+            if not isinstance(value, str) or len(value) != 64 or any(c not in "0123456789abcdef" for c in value):
+                raise ValueError("current evidence_version and review_version are required")
+        with self._lock:
+            # Downloading never invokes summary()'s first-run pipeline initializer.
+            if not (self.out_dir / "summary.json").is_file():
+                raise FileNotFoundError("the generated summary is unavailable")
+            summary = self.summary()
+            matches = [p for p in summary["packets"] if p["load_id"] == load_id]
+            if len(matches) != 1 or load_id not in summary["evidence_versions"]:
+                raise FileNotFoundError("load is not a current readable packet")
+            if expected != summary["evidence_versions"][load_id]:
+                raise ReviewConflict("packet evidence changed; reload the review page before downloading")
+            saved_review = summary["decisions"].get(load_id)
+            if saved_version != review_version(saved_review):
+                raise ReviewConflict("saved review changed; reload the review page before downloading")
+            _, packet = self.output(matches[0]["file"], expected)
+            evidence = {
+                "schema": "freight-review.v1",
+                "packet_sha256": hashlib.sha256(packet).hexdigest(),
+                **{section: sorted(
+                    (row for row in summary.get(section, []) if row.get("load_id") == load_id),
+                    key=_canonical,
+                ) for section in REVIEW_SECTIONS},
+            }
+            content = build_bundle(load_id, packet, evidence, saved_review, expected, saved_version)
+            return bundle_filename(load_id, expected), content
+
     def output(self, relative: str, expected: str | None = None) -> tuple[Path, bytes]:
         with self._lock:
             target = (self.out_dir / relative).resolve()
@@ -183,11 +219,13 @@ def make_handler(app: App):
         def log_message(self, fmt, *args):
             pass
 
-        def _send(self, code, body: bytes, ctype="application/json"):
+        def _send(self, code, body: bytes, ctype="application/json", download=None):
             self.send_response(code)
             self.send_header("Content-Type", ctype)
             self.send_header("Content-Length", str(len(body)))
             self.send_header("Cache-Control", "no-store")
+            if download is not None:
+                self.send_header("Content-Disposition", f'attachment; filename="{download}"')
             self.end_headers()
             self.wfile.write(body)
 
@@ -202,6 +240,16 @@ def make_handler(app: App):
                     return self._send(200, UI.read_bytes(), "text/html; charset=utf-8")
                 if path == "/api/summary":
                     return self._json(app.summary())
+                if path == "/api/review-bundle":
+                    query = parse_qs(url.query, keep_blank_values=True)
+                    values = []
+                    for field in ("load_id", "evidence_version", "review_version"):
+                        supplied = query.get(field, [])
+                        if len(supplied) != 1 or not supplied[0]:
+                            raise ValueError("one " + field + " is required")
+                        values.append(supplied[0])
+                    filename, content = app.review_bundle(*values)
+                    return self._send(200, content, "application/zip", download=filename)
                 if path.startswith("/out/"):
                     versions = parse_qs(url.query, keep_blank_values=True).get("evidence_version")
                     if versions is not None and len(versions) != 1:
