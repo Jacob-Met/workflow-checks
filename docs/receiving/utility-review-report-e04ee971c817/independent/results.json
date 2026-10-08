@@ -1,0 +1,413 @@
+{
+  "result": "PASS",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "conditions": 62,
+  "failed_conditions": 0,
+  "actual_cli_children": 6,
+  "families": [
+    {
+      "name": "saved_attribution",
+      "result": "PASS",
+      "conditions": 13
+    },
+    {
+      "name": "one_read_snapshot",
+      "result": "PASS",
+      "conditions": 6
+    },
+    {
+      "name": "exclusive_publication",
+      "result": "PASS",
+      "conditions": 7
+    },
+    {
+      "name": "late_invalid_history",
+      "result": "PASS",
+      "conditions": 3
+    }
+  ],
+  "source_pins": {
+    "utility_watch/uwatch/review_report.py": {
+      "git_blob": "be869a940436172253c0a6d5020ba24860f1a7eb",
+      "sha256": "4462088141b21c990ce5b949a9c683f68f647ae83bdba0eaa1409730e442f856",
+      "bytes": 8457
+    },
+    "utility_watch/uwatch/cli.py": {
+      "git_blob": "27bfe687d071ff045bd5642f6408413c8cc6a805",
+      "sha256": "d7e223edf55790642b011f8159d113da0433416c6344c6be255037d558dd9c45",
+      "bytes": 4350
+    },
+    "utility_watch/tests/test_review_report.py": {
+      "git_blob": "9ea0860c27a77ed8c67f8349525ec452e8a523b8",
+      "sha256": "6d48681bbfd4c4725b4aa6a191f04ed9f2fa4fd6beca0799f5265fb50210d7d5",
+      "bytes": 10866
+    },
+    "utility_watch/docs/review-report.md": {
+      "git_blob": "2a676d0ae4cecc8c45d8c3a371701c8748bdc977",
+      "sha256": "8ae387b4401ec2653779b59aeb7d7c44b9bb319f299ab6cf74195ea64aac5d0d",
+      "bytes": 4603
+    },
+    "utility_watch/uwatch/report.py": {
+      "git_blob": "ee2fcabd2026b4224c3cdfc51890f71762a9ef0f",
+      "sha256": "dc43c4fbbef72204a9dc9c5d7e4d3883900e96daf26c725f10fe22d4721540db",
+      "bytes": 12382
+    },
+    "utility_watch/uwatch/review.py": {
+      "git_blob": "2475217ce9c073c39756f9fa3926342cd83f7254",
+      "sha256": "f9f730ca45140436704d9823eafcfb58fb3922c5d0bf93a21a63f31347c947de",
+      "bytes": 15534
+    },
+    "utility_watch/uwatch/__init__.py": {
+      "git_blob": "7074157fb1710370668c2a0ad5217cd10cfe3618",
+      "sha256": "a0332cb0878fcdfd02d1651f9a46c299ca0279996c6e5723d49311228c597a57",
+      "bytes": 60
+    },
+    "utility_watch/uwatch/__main__.py": {
+      "git_blob": "823d40a6bf41beb59790ce83476b359f76f4b1ec",
+      "sha256": "26c55ee4277631c49b2312533d7514a815ec2c3de08f48b0a9dea8946d8f8933",
+      "bytes": 53
+    },
+    "utility_watch/uwatch/engine.py": {
+      "git_blob": "9deb205ad468381ffc91716f0d7ae6ab88d76f2a",
+      "sha256": "48c968584d0494ee5fb0538fc7d4c685c2cc3128a45c33f57c2079234cdb7775",
+      "bytes": 21072
+    },
+    "utility_watch/uwatch/synth.py": {
+      "git_blob": "0d5c8137b3790bd062609ce4725beda63db9e58d",
+      "sha256": "8573a65a8c5907ebedda24c47183f60f258e895bae0a2656bb582ada9217209d",
+      "bytes": 13194
+    }
+  },
+  "fixtures": {
+    "native_input": {
+      "git_blob": "29f06b63581545f6abe508a2708fc37e349e58f8",
+      "sha256": "d9305edacc7e94a7ac076809a9e0c7cab1ce0ba557616be9afd8a86b8b783ddd",
+      "bytes": 7301
+    },
+    "reordered_bom_input": {
+      "git_blob": "f1f8e6b477077dcd19d48fab86a79b096a1ef6cc",
+      "sha256": "577bf08cf9317d009e632d2a701cdbdd5585a31561fc28835cb541f3336ffe25",
+      "bytes": 7419
+    },
+    "prior_row_id": "db32ae3893484484be611d4481d22270",
+    "current_row_id": "c7fdbd5b652f477da1bdf9c8b35666d1",
+    "saved_html": {
+      "git_blob": "41793491293c7754d78734152651bcbdda12f73a",
+      "sha256": "f4b46a1971167240fd397c907aa280c2f513b7fd2c8334eebdf27856af8ae058",
+      "bytes": 21969
+    }
+  },
+  "hook_sha256": "f73f21dd5ee27a87cd8a20fcaa738fd668106e8003cad83bebccfec2d94619bb",
+  "children": [
+    {
+      "mode": "direct package CLI",
+      "package": "baseline",
+      "returncode": 2,
+      "stdout": "",
+      "stderr": "usage: uwatch [-h] {generate,run,review} ...\nuwatch: error: argument cmd: invalid choice: 'review-report' (choose from generate, run, review)\n"
+    },
+    {
+      "mode": "direct package CLI",
+      "package": "candidate",
+      "returncode": 0,
+      "stdout": "review report: 14 current findings; 1 prior findings\nworksheet SHA256: 577bf08cf9317d009e632d2a701cdbdd5585a31561fc28835cb541f3336ffe25\nreport: /dev/shm/hamon-estate-operations-utility-receiving-e04ee971c817/utility-independent-bt242rgp/saved_attribution/saved.html\n",
+      "stderr": ""
+    },
+    {
+      "mode": "later-save",
+      "package": "candidate",
+      "returncode": 0,
+      "stdout": "review report: 14 current findings; 1 prior findings\nworksheet SHA256: d9305edacc7e94a7ac076809a9e0c7cab1ce0ba557616be9afd8a86b8b783ddd\nreport: /dev/shm/hamon-estate-operations-utility-receiving-e04ee971c817/utility-independent-bt242rgp/one_read_snapshot/earlier-snapshot.html\n",
+      "stderr": "",
+      "hook": {
+        "competing_creates": 0,
+        "input_reads": 1,
+        "publication_link_calls": 1,
+        "simulated_external_saves": 1
+      }
+    },
+    {
+      "mode": "competing-create",
+      "package": "candidate",
+      "returncode": 2,
+      "stdout": "",
+      "stderr": "uwatch: review report error: [Errno 17] File exists: '/dev/shm/hamon-estate-operations-utility-receiving-e04ee971c817/utility-independent-bt242rgp/exclusive_publication/.uwatch-review-report-iebjtrsu.html' -> '/dev/shm/hamon-estate-operations-utility-receiving-e04ee971c817/utility-independent-bt242rgp/exclusive_publication/competing.html'\n",
+      "hook": {
+        "competing_creates": 1,
+        "input_reads": 1,
+        "publication_link_calls": 1,
+        "simulated_external_saves": 0
+      }
+    },
+    {
+      "mode": "direct package CLI",
+      "package": "candidate",
+      "returncode": 2,
+      "stdout": "",
+      "stderr": "uwatch: review report error: --out must name a new HTML file; existing destinations cannot be replaced\n"
+    },
+    {
+      "mode": "direct package CLI",
+      "package": "candidate",
+      "returncode": 2,
+      "stdout": "",
+      "stderr": "uwatch: review report error: worksheet:17: review_status must be open, in_progress or reviewed\n"
+    }
+  ],
+  "checks": [
+    {
+      "name": "complete primary native tree pin",
+      "pass": true
+    },
+    {
+      "name": "frozen author manifest identity",
+      "pass": true
+    },
+    {
+      "name": "frozen candidate pin: utility_watch/uwatch/review_report.py",
+      "pass": true
+    },
+    {
+      "name": "frozen candidate pin: utility_watch/uwatch/cli.py",
+      "pass": true
+    },
+    {
+      "name": "frozen candidate pin: utility_watch/tests/test_review_report.py",
+      "pass": true
+    },
+    {
+      "name": "frozen candidate pin: utility_watch/docs/review-report.md",
+      "pass": true
+    },
+    {
+      "name": "frozen candidate pin: utility_watch/uwatch/report.py",
+      "pass": true
+    },
+    {
+      "name": "native support bound to primary tree: utility_watch/uwatch/report.py",
+      "pass": true
+    },
+    {
+      "name": "frozen candidate pin: utility_watch/uwatch/review.py",
+      "pass": true
+    },
+    {
+      "name": "native support bound to primary tree: utility_watch/uwatch/review.py",
+      "pass": true
+    },
+    {
+      "name": "frozen candidate pin: utility_watch/uwatch/__init__.py",
+      "pass": true
+    },
+    {
+      "name": "native support bound to primary tree: utility_watch/uwatch/__init__.py",
+      "pass": true
+    },
+    {
+      "name": "frozen candidate pin: utility_watch/uwatch/__main__.py",
+      "pass": true
+    },
+    {
+      "name": "native support bound to primary tree: utility_watch/uwatch/__main__.py",
+      "pass": true
+    },
+    {
+      "name": "frozen candidate pin: utility_watch/uwatch/engine.py",
+      "pass": true
+    },
+    {
+      "name": "native support bound to primary tree: utility_watch/uwatch/engine.py",
+      "pass": true
+    },
+    {
+      "name": "frozen candidate pin: utility_watch/uwatch/synth.py",
+      "pass": true
+    },
+    {
+      "name": "native support bound to primary tree: utility_watch/uwatch/synth.py",
+      "pass": true
+    },
+    {
+      "name": "baseline CLI bound to primary tree",
+      "pass": true
+    },
+    {
+      "name": "remove only new parser/dispatch and doc label recovers exact native CRLF CLI",
+      "pass": true
+    },
+    {
+      "name": "native CRLF CLI retained",
+      "pass": true
+    },
+    {
+      "name": "actual captured native worksheet pin",
+      "pass": true
+    },
+    {
+      "name": "before-image actual CLI refuses missing saved-view capability",
+      "pass": true
+    },
+    {
+      "name": "actual native CLI accepts BOM/reordered columns and mid-file manifest",
+      "pass": true
+    },
+    {
+      "name": "all saved current/history row identities appear once",
+      "pass": true
+    },
+    {
+      "name": "every record stays in its actual current/history section",
+      "pass": true
+    },
+    {
+      "name": "prior Unicode/HTML-like quoted CRLF annotations remain exact text",
+      "pass": true
+    },
+    {
+      "name": "current finding keeps its own status/reviewer/note",
+      "pass": true
+    },
+    {
+      "name": "prior reviewed annotation is not counted as current reviewed",
+      "pass": true
+    },
+    {
+      "name": "protected identity/evidence version matches each saved row",
+      "pass": true
+    },
+    {
+      "name": "raw BOM/reordered bytes identity appears in page and CLI",
+      "pass": true
+    },
+    {
+      "name": "escaped worksheet basename remains visible",
+      "pass": true
+    },
+    {
+      "name": "HTML-like annotation creates no active element or external resource",
+      "pass": true
+    },
+    {
+      "name": "saved worksheet remains byte-identical",
+      "pass": true
+    },
+    {
+      "name": "successful publication leaves only the intended HTML",
+      "pass": true
+    },
+    {
+      "name": "one-read race still succeeds",
+      "pass": true
+    },
+    {
+      "name": "exactly one input read and one simulated external save",
+      "pass": true
+    },
+    {
+      "name": "report and CLI bind the original exact bytes, not a later save",
+      "pass": true
+    },
+    {
+      "name": "original saved reviewer/note remains in the completed snapshot",
+      "pass": true
+    },
+    {
+      "name": "later fixture save remains intact on disk",
+      "pass": true
+    },
+    {
+      "name": "only one exclusive publication was attempted",
+      "pass": true
+    },
+    {
+      "name": "actual exclusive link refuses a real late competing creator",
+      "pass": true
+    },
+    {
+      "name": "late creator bytes are not overwritten by partial or completed HTML",
+      "pass": true
+    },
+    {
+      "name": "refused publication reports no success",
+      "pass": true
+    },
+    {
+      "name": "late collision cleans its temporary output and preserves input",
+      "pass": true
+    },
+    {
+      "name": "input hardlink destination is refused through actual CLI",
+      "pass": true
+    },
+    {
+      "name": "input hardlink identity and bytes stay unchanged",
+      "pass": true
+    },
+    {
+      "name": "alias refusal leaves no temporary sidefile",
+      "pass": true
+    },
+    {
+      "name": "invalid late history status is refused",
+      "pass": true
+    },
+    {
+      "name": "no partial current-only report or temporary output is published",
+      "pass": true
+    },
+    {
+      "name": "invalid worksheet and preexisting output are preserved exactly",
+      "pass": true
+    },
+    {
+      "name": "author source/support unchanged after receiving: utility_watch/uwatch/review_report.py",
+      "pass": true
+    },
+    {
+      "name": "author source/support unchanged after receiving: utility_watch/uwatch/cli.py",
+      "pass": true
+    },
+    {
+      "name": "author source/support unchanged after receiving: utility_watch/tests/test_review_report.py",
+      "pass": true
+    },
+    {
+      "name": "author source/support unchanged after receiving: utility_watch/docs/review-report.md",
+      "pass": true
+    },
+    {
+      "name": "author source/support unchanged after receiving: utility_watch/uwatch/report.py",
+      "pass": true
+    },
+    {
+      "name": "author source/support unchanged after receiving: utility_watch/uwatch/review.py",
+      "pass": true
+    },
+    {
+      "name": "author source/support unchanged after receiving: utility_watch/uwatch/__init__.py",
+      "pass": true
+    },
+    {
+      "name": "author source/support unchanged after receiving: utility_watch/uwatch/__main__.py",
+      "pass": true
+    },
+    {
+      "name": "author source/support unchanged after receiving: utility_watch/uwatch/engine.py",
+      "pass": true
+    },
+    {
+      "name": "author source/support unchanged after receiving: utility_watch/uwatch/synth.py",
+      "pass": true
+    },
+    {
+      "name": "captured native fixture unchanged",
+      "pass": true
+    }
+  ],
+  "limits": [
+    "No author test or browser/print suite was imported or rerun.",
+    "The snapshot and collision children execute the actual module entry with explicitly described local race hooks.",
+    "Source and captured worksheet are frozen inputs. Temporary case files are disposable and removed.",
+    "This receives the frozen HTML/CLI source. Accepted current-engine composition is separately qualified by the author."
+  ]
+}

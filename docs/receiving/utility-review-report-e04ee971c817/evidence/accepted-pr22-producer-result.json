@@ -1,0 +1,224 @@
+{
+  "schema": "uwatch-cli-receiving-v1",
+  "result": "PASS",
+  "seed": 11,
+  "python": "3.12.14",
+  "commands": [
+    {
+      "argv": [
+        "generate",
+        "--out",
+        "/dev/shm/uwatch-cli-receiving-utr6_878/data",
+        "--seed",
+        "11"
+      ],
+      "exit": 0,
+      "stdout": "SYNTHETIC data written to /dev/shm/uwatch-cli-receiving-utr6_878/data: 12 seeded anomalies, 9 seasonal decoys, answer key in expected.json\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "run",
+        "--data",
+        "/dev/shm/uwatch-cli-receiving-utr6_878/data",
+        "--out",
+        "/dev/shm/uwatch-cli-receiving-utr6_878/report"
+      ],
+      "exit": 0,
+      "stdout": "[SYNTHETIC] as_of 2026-09-28: 31 accounts, 274 bills; 12 flags {'USAGE_SPIKE': 2, 'RATE_CHANGE': 1, 'LATE_FEE_OR_PAST_DUE': 1, 'PERIOD_OVERLAP': 1, 'MISSING_BILL': 1, 'DUPLICATE_BILL': 1, 'VACANT_UNIT_USAGE': 2, 'PAYMENT_MISMATCH': 2, 'UNPAID_PAST_DUE': 1}; 2 exceptions; 12 bills ($39,821.07) queued for approval (not paid)\nnaive trailing-3 rule would add 5 seasonal false flags\nreport: /dev/shm/uwatch-cli-receiving-utr6_878/report/report.html\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "review",
+        "--data",
+        "/dev/shm/uwatch-cli-receiving-utr6_878/data",
+        "--report",
+        "/dev/shm/uwatch-cli-receiving-utr6_878/report/summary.json",
+        "--out",
+        "/dev/shm/utility-review-a219f250962c/docs/receiving/utility-review-a219f250962c/cli-roundtrip/review-1.csv"
+      ],
+      "exit": 0,
+      "stdout": "review: 14 current findings {'open': 14}; 0 historical rows; annotations do not change payment eligibility\nworksheet: /dev/shm/utility-review-a219f250962c/docs/receiving/utility-review-a219f250962c/cli-roundtrip/review-1.csv\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "review",
+        "--data",
+        "/dev/shm/uwatch-cli-receiving-utr6_878/data",
+        "--report",
+        "/dev/shm/uwatch-cli-receiving-utr6_878/report/summary.json",
+        "--previous",
+        "/dev/shm/utility-review-a219f250962c/docs/receiving/utility-review-a219f250962c/cli-roundtrip/review-1.csv",
+        "--out",
+        "/dev/shm/utility-review-a219f250962c/docs/receiving/utility-review-a219f250962c/cli-roundtrip/review-2.csv"
+      ],
+      "exit": 0,
+      "stdout": "review: 14 current findings {'open': 13, 'reviewed': 1}; 0 historical rows; annotations do not change payment eligibility\nworksheet: /dev/shm/utility-review-a219f250962c/docs/receiving/utility-review-a219f250962c/cli-roundtrip/review-2.csv\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "review",
+        "--data",
+        "/dev/shm/uwatch-cli-receiving-utr6_878/data",
+        "--report",
+        "/dev/shm/uwatch-cli-receiving-utr6_878/report/summary.json",
+        "--previous",
+        "/dev/shm/utility-review-a219f250962c/docs/receiving/utility-review-a219f250962c/cli-roundtrip/review-2.csv",
+        "--out",
+        "/dev/shm/utility-review-a219f250962c/docs/receiving/utility-review-a219f250962c/cli-roundtrip/must-not-publish.csv"
+      ],
+      "exit": 2,
+      "stdout": "",
+      "stderr": "uwatch: review error: report does not match the source export/current checks (flags_detail); regenerate it with uwatch run\n"
+    },
+    {
+      "argv": [
+        "run",
+        "--data",
+        "/dev/shm/uwatch-cli-receiving-utr6_878/data",
+        "--out",
+        "/dev/shm/uwatch-cli-receiving-utr6_878/report"
+      ],
+      "exit": 0,
+      "stdout": "[SYNTHETIC] as_of 2026-09-28: 31 accounts, 274 bills; 12 flags {'USAGE_SPIKE': 2, 'RATE_CHANGE': 1, 'LATE_FEE_OR_PAST_DUE': 1, 'PERIOD_OVERLAP': 1, 'MISSING_BILL': 1, 'DUPLICATE_BILL': 1, 'VACANT_UNIT_USAGE': 2, 'PAYMENT_MISMATCH': 2, 'UNPAID_PAST_DUE': 1}; 2 exceptions; 12 bills ($39,821.07) queued for approval (not paid)\nnaive trailing-3 rule would add 5 seasonal false flags\nreport: /dev/shm/uwatch-cli-receiving-utr6_878/report/report.html\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "review",
+        "--data",
+        "/dev/shm/uwatch-cli-receiving-utr6_878/data",
+        "--report",
+        "/dev/shm/uwatch-cli-receiving-utr6_878/report/summary.json",
+        "--previous",
+        "/dev/shm/utility-review-a219f250962c/docs/receiving/utility-review-a219f250962c/cli-roundtrip/review-2.csv",
+        "--out",
+        "/dev/shm/utility-review-a219f250962c/docs/receiving/utility-review-a219f250962c/cli-roundtrip/review-3.csv"
+      ],
+      "exit": 0,
+      "stdout": "review: 14 current findings {'open': 14}; 1 historical rows; annotations do not change payment eligibility\nworksheet: /dev/shm/utility-review-a219f250962c/docs/receiving/utility-review-a219f250962c/cli-roundtrip/review-3.csv\n",
+      "stderr": ""
+    }
+  ],
+  "native_summary": {
+    "data_mode": "synthetic",
+    "flags": 12,
+    "exceptions": 2,
+    "payment_queue": 12,
+    "payment_queue_total": 39821.07
+  },
+  "initial_source_and_report_sha256": {
+    "data/README_SYNTHETIC.txt": "70ac39efa93a35be384266a58ce157bc862edc817822f86457cd65d507858611",
+    "data/expected.json": "56eafdb5ae9525b8b36037e6a475ad908dffb62214ae7bb99af029989a21ad63",
+    "data/payments.csv": "86cf78324cd395e86200ec205f49fe73afa2984306ab6ccd2e5cf71261710853",
+    "data/occupancy.csv": "0f77598a53f50162ef28059c88be91798f918e57e66eaa0a1f1d79880512cb6e",
+    "data/bills.csv": "1b8f6897703b42723e17e6089867634e04e7c609c0a578f33636fb9dda321e4e",
+    "data/accounts.csv": "58518376e0a67bf1a31f76e754020307a42330a87d3d7a538e6ccbb947d97958",
+    "report/report.html": "3981e2e29fb52e15bccdda8737e7b6936ed978b4726c6b55fb54b6852e90af2d",
+    "report/summary.json": "0114b87ccc46441ee87bdc66a04ffebef8c06d742580f1a2c0f00f3883e94391",
+    "report/audit.jsonl": "94c400236652a6a9f610fed308f128724e99bd52bf864de22978a512e3b49129",
+    "report/payment_queue.csv": "61183cd2f847548f1f27138156c9b058fee0a1a4fab17910f469c6d497b1e991",
+    "report/exceptions.csv": "7360ed7db451b317608619b028d9332247fd201c7c71850786284a76a75950f0",
+    "report/flags.csv": "a9237d4a32c95acbaa4b752d7d20df6d59729ca90e5cb7ef85755d8798ce37a3"
+  },
+  "review_only_file_bytes_unchanged": true,
+  "stale_report_exit": 2,
+  "stale_output_absent": true,
+  "annotation_before": {
+    "review_status": "reviewed",
+    "reviewer": "Zoë 李",
+    "note": "Statement reviewed.\nVendor says \"credit next month\"; keep the hold.",
+    "row_state": "current",
+    "kind": "flag",
+    "account_no": "SYN-7005",
+    "finding_key": "B50087",
+    "code": "LATE_FEE_OR_PAST_DUE",
+    "property": "Bayou Flats (synthetic)",
+    "utility": "electric",
+    "detail": "late fee $179.02, prior balance $3,222.36 on the bill",
+    "evidence": "[\"bills.csv:88\"]",
+    "as_of": "2026-09-28",
+    "eval_from": "2026-03-01",
+    "data_mode": "synthetic",
+    "row_id": "473c780683c54630a0f68ee7d58a471a",
+    "finding_id": "a8ae5d25bdd085f56c3f65fd9fe9cca2c6fac0f7f340099a41868ff95bd3aecf",
+    "evidence_version": "030b7f6b169c53467b46271e32d840bf4786e50362c016fdce7d0190d9e9dd74",
+    "record_sha256": "566dddbbd71710da0d1ebf7586df6652b008a8a76e3ee2e157075b154f9f6d9d"
+  },
+  "annotation_unchanged": {
+    "review_status": "reviewed",
+    "reviewer": "Zoë 李",
+    "note": "Statement reviewed.\nVendor says \"credit next month\"; keep the hold.",
+    "row_state": "current",
+    "kind": "flag",
+    "account_no": "SYN-7005",
+    "finding_key": "B50087",
+    "code": "LATE_FEE_OR_PAST_DUE",
+    "property": "Bayou Flats (synthetic)",
+    "utility": "electric",
+    "detail": "late fee $179.02, prior balance $3,222.36 on the bill",
+    "evidence": "[\"bills.csv:88\"]",
+    "as_of": "2026-09-28",
+    "eval_from": "2026-03-01",
+    "data_mode": "synthetic",
+    "row_id": "473c780683c54630a0f68ee7d58a471a",
+    "finding_id": "a8ae5d25bdd085f56c3f65fd9fe9cca2c6fac0f7f340099a41868ff95bd3aecf",
+    "evidence_version": "030b7f6b169c53467b46271e32d840bf4786e50362c016fdce7d0190d9e9dd74",
+    "record_sha256": "566dddbbd71710da0d1ebf7586df6652b008a8a76e3ee2e157075b154f9f6d9d"
+  },
+  "changed_historical": {
+    "review_status": "reviewed",
+    "reviewer": "Zoë 李",
+    "note": "Statement reviewed.\nVendor says \"credit next month\"; keep the hold.",
+    "row_state": "changed",
+    "kind": "flag",
+    "account_no": "SYN-7005",
+    "finding_key": "B50087",
+    "code": "LATE_FEE_OR_PAST_DUE",
+    "property": "Bayou Flats (synthetic)",
+    "utility": "electric",
+    "detail": "late fee $179.02, prior balance $3,222.36 on the bill",
+    "evidence": "[\"bills.csv:88\"]",
+    "as_of": "2026-09-28",
+    "eval_from": "2026-03-01",
+    "data_mode": "synthetic",
+    "row_id": "473c780683c54630a0f68ee7d58a471a",
+    "finding_id": "a8ae5d25bdd085f56c3f65fd9fe9cca2c6fac0f7f340099a41868ff95bd3aecf",
+    "evidence_version": "030b7f6b169c53467b46271e32d840bf4786e50362c016fdce7d0190d9e9dd74",
+    "record_sha256": "153a6c4bb7aee64e09efcee8e9f9871081a8b10690baed940992297c7996f134"
+  },
+  "changed_current": {
+    "review_status": "open",
+    "reviewer": "",
+    "note": "",
+    "row_state": "current",
+    "kind": "flag",
+    "account_no": "SYN-7005",
+    "finding_key": "B50087",
+    "code": "LATE_FEE_OR_PAST_DUE",
+    "property": "Bayou Flats (synthetic)",
+    "utility": "electric",
+    "detail": "late fee $180.02, prior balance $3,222.36 on the bill",
+    "evidence": "[\"bills.csv:88\"]",
+    "as_of": "2026-09-28",
+    "eval_from": "2026-03-01",
+    "data_mode": "synthetic",
+    "row_id": "72997c61de3642b4b8de7043aa85bfdf",
+    "finding_id": "a8ae5d25bdd085f56c3f65fd9fe9cca2c6fac0f7f340099a41868ff95bd3aecf",
+    "evidence_version": "1246e951133f24fc7f39cb65dbf864c2da70196ac249d5358f83654c98bb75da",
+    "record_sha256": "4e81aa1e0f35bfc214f6a6ce55a5902bb129a8eef84037b15dbcaef95f741ad2"
+  },
+  "source_files": {
+    "uwatch/review.py": "f9f730ca45140436704d9823eafcfb58fb3922c5d0bf93a21a63f31347c947de",
+    "uwatch/synth.py": "8573a65a8c5907ebedda24c47183f60f258e895bae0a2656bb582ada9217209d",
+    "uwatch/__init__.py": "a0332cb0878fcdfd02d1651f9a46c299ca0279996c6e5723d49311228c597a57",
+    "uwatch/report.py": "dc43c4fbbef72204a9dc9c5d7e4d3883900e96daf26c725f10fe22d4721540db",
+    "uwatch/engine.py": "48c968584d0494ee5fb0538fc7d4c685c2cc3128a45c33f57c2079234cdb7775",
+    "uwatch/cli.py": "0f8e6947baaadccc86c1f7d8cd0dd542b88d81b9b1990cc3aab7cbfcf3beb08d",
+    "uwatch/__main__.py": "26c55ee4277631c49b2312533d7514a815ec2c3de08f48b0a9dea8946d8f8933"
+  },
+  "external_calls": "none; native Python CLI, synthetic input only"
+}

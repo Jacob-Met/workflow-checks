@@ -1,0 +1,1167 @@
+{
+  "result": "PASS",
+  "node": "v22.22.1",
+  "browser": "Chromium 153.0.8010.47 snap",
+  "uid": 1000,
+  "profile_parent": "/home/jacob/snap/chromium/common",
+  "profile": "hamon-utility-review-e04ee-WKng1R",
+  "available_before": 115003392,
+  "html": {
+    "sha256": "6ba4c1eaeb71c6eece6a52229bd53e16ebc1b2dd87926c6025cb997feef0a653",
+    "bytes": 21880
+  },
+  "worksheet": {
+    "sha256": "d9305edacc7e94a7ac076809a9e0c7cab1ce0ba557616be9afd8a86b8b783ddd",
+    "bytes": 7301
+  },
+  "checks": [
+    {
+      "name": "title",
+      "ok": true,
+      "actual": "Utility Watch saved review",
+      "expected": "Utility Watch saved review"
+    },
+    {
+      "name": "current/native worksheet count",
+      "ok": true,
+      "actual": 14,
+      "expected": 14
+    },
+    {
+      "name": "historical/native worksheet count",
+      "ok": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "no active elements in saved HTML",
+      "ok": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "no user-controlled event attributes",
+      "ok": true,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "name": "only in-document navigation",
+      "ok": true,
+      "actual": [
+        "#current",
+        "#history"
+      ],
+      "expected": [
+        "#current",
+        "#history"
+      ]
+    },
+    {
+      "name": "desktop has no horizontal document overflow",
+      "ok": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "snapshot contains exact input digest",
+      "ok": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "synthetic snapshot notice",
+      "ok": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "exact finding row IDs/order",
+      "ok": true,
+      "actual": [
+        "row-ae82a457526b410aaac95cedd09332f3",
+        "row-30e4aa7015ea4aba9b6edb54786614e2",
+        "row-c7fdbd5b652f477da1bdf9c8b35666d1",
+        "row-09fa37c78c414487ad22b7bedbab3eac",
+        "row-a5ac0f1d12dc459a982e5738253dec6a",
+        "row-12f074809e644c28b63c57b9e20cf5ed",
+        "row-e063d45e9c0b4174a25e8392f532dedf",
+        "row-19e2bfd2448c45de81b7bb7393ac9c6f",
+        "row-a308c51a04784d8e81d63f8b096fb03e",
+        "row-2422004565664de5b19fda5d7b84346a",
+        "row-237b006bc2c844b0ba9fb7c04010062b",
+        "row-93ea15d535f44815aec79ad4df330910",
+        "row-6f82e990ee424f268ce4bfda493edd15",
+        "row-d166a09fdd3e4a5c946e743f4d6f9a1d",
+        "row-db32ae3893484484be611d4481d22270"
+      ],
+      "expected": [
+        "row-ae82a457526b410aaac95cedd09332f3",
+        "row-30e4aa7015ea4aba9b6edb54786614e2",
+        "row-c7fdbd5b652f477da1bdf9c8b35666d1",
+        "row-09fa37c78c414487ad22b7bedbab3eac",
+        "row-a5ac0f1d12dc459a982e5738253dec6a",
+        "row-12f074809e644c28b63c57b9e20cf5ed",
+        "row-e063d45e9c0b4174a25e8392f532dedf",
+        "row-19e2bfd2448c45de81b7bb7393ac9c6f",
+        "row-a308c51a04784d8e81d63f8b096fb03e",
+        "row-2422004565664de5b19fda5d7b84346a",
+        "row-237b006bc2c844b0ba9fb7c04010062b",
+        "row-93ea15d535f44815aec79ad4df330910",
+        "row-6f82e990ee424f268ce4bfda493edd15",
+        "row-d166a09fdd3e4a5c946e743f4d6f9a1d",
+        "row-db32ae3893484484be611d4481d22270"
+      ]
+    },
+    {
+      "name": "row 0 state/section",
+      "ok": true,
+      "actual": [
+        "current",
+        "current"
+      ],
+      "expected": [
+        "current",
+        "current"
+      ]
+    },
+    {
+      "name": "row 0 reviewer and saved note",
+      "ok": true,
+      "actual": [
+        "Unassigned",
+        "No note recorded"
+      ],
+      "expected": [
+        "Unassigned",
+        "No note recorded"
+      ]
+    },
+    {
+      "name": "row 0 source evidence pointers",
+      "ok": true,
+      "actual": [
+        "bills.csv:274"
+      ],
+      "expected": [
+        "bills.csv:274"
+      ]
+    },
+    {
+      "name": "row 0 identity values",
+      "ok": true,
+      "actual": [
+        "ae82a457526b410aaac95cedd09332f3",
+        "d88d084506c12343fcb51ca5228bcf1a47e161af26ac7b026735e8269ea9c444",
+        "65e1fe43e3519c301e715c1cfde6f0439d4f6c5634516c051ad5c095a5e21d30",
+        "51b767263c8ac399ddb50fe34e17d351a89f8898d4c4ed1282f5b38f5ecaa467"
+      ],
+      "expected": [
+        "ae82a457526b410aaac95cedd09332f3",
+        "d88d084506c12343fcb51ca5228bcf1a47e161af26ac7b026735e8269ea9c444",
+        "65e1fe43e3519c301e715c1cfde6f0439d4f6c5634516c051ad5c095a5e21d30",
+        "51b767263c8ac399ddb50fe34e17d351a89f8898d4c4ed1282f5b38f5ecaa467"
+      ]
+    },
+    {
+      "name": "row 0 finding detail",
+      "ok": true,
+      "actual": "no same-month bill last year; usage not judged",
+      "expected": "no same-month bill last year; usage not judged"
+    },
+    {
+      "name": "row 1 state/section",
+      "ok": true,
+      "actual": [
+        "current",
+        "current"
+      ],
+      "expected": [
+        "current",
+        "current"
+      ]
+    },
+    {
+      "name": "row 1 reviewer and saved note",
+      "ok": true,
+      "actual": [
+        "Unassigned",
+        "No note recorded"
+      ],
+      "expected": [
+        "Unassigned",
+        "No note recorded"
+      ]
+    },
+    {
+      "name": "row 1 source evidence pointers",
+      "ok": true,
+      "actual": [
+        "bills.csv:275"
+      ],
+      "expected": [
+        "bills.csv:275"
+      ]
+    },
+    {
+      "name": "row 1 identity values",
+      "ok": true,
+      "actual": [
+        "30e4aa7015ea4aba9b6edb54786614e2",
+        "8a76bbc9da4b23c468cb4c9d7a9728cecc05d3173e3f460f6a0b1b4b1c134ec4",
+        "e6bdc15bac17eb59343475a9f9315497f038cf4adb0b69c66eca71b7d1b6caac",
+        "1dd07987c752dd516111ad18b6de36cf66c4c885cd9c3848d4b18a89e7ed7ddc"
+      ],
+      "expected": [
+        "30e4aa7015ea4aba9b6edb54786614e2",
+        "8a76bbc9da4b23c468cb4c9d7a9728cecc05d3173e3f460f6a0b1b4b1c134ec4",
+        "e6bdc15bac17eb59343475a9f9315497f038cf4adb0b69c66eca71b7d1b6caac",
+        "1dd07987c752dd516111ad18b6de36cf66c4c885cd9c3848d4b18a89e7ed7ddc"
+      ]
+    },
+    {
+      "name": "row 1 finding detail",
+      "ok": true,
+      "actual": "no same-month bill last year; usage not judged",
+      "expected": "no same-month bill last year; usage not judged"
+    },
+    {
+      "name": "row 2 state/section",
+      "ok": true,
+      "actual": [
+        "current",
+        "current"
+      ],
+      "expected": [
+        "current",
+        "current"
+      ]
+    },
+    {
+      "name": "row 2 reviewer and saved note",
+      "ok": true,
+      "actual": [
+        "Unassigned",
+        "No note recorded"
+      ],
+      "expected": [
+        "Unassigned",
+        "No note recorded"
+      ]
+    },
+    {
+      "name": "row 2 source evidence pointers",
+      "ok": true,
+      "actual": [
+        "bills.csv:88"
+      ],
+      "expected": [
+        "bills.csv:88"
+      ]
+    },
+    {
+      "name": "row 2 identity values",
+      "ok": true,
+      "actual": [
+        "c7fdbd5b652f477da1bdf9c8b35666d1",
+        "a8ae5d25bdd085f56c3f65fd9fe9cca2c6fac0f7f340099a41868ff95bd3aecf",
+        "1246e951133f24fc7f39cb65dbf864c2da70196ac249d5358f83654c98bb75da",
+        "63bcadb794a965c598ed6607db3ea2aeeb0dd99ce73984a75deeeb7b4e6dc5d9"
+      ],
+      "expected": [
+        "c7fdbd5b652f477da1bdf9c8b35666d1",
+        "a8ae5d25bdd085f56c3f65fd9fe9cca2c6fac0f7f340099a41868ff95bd3aecf",
+        "1246e951133f24fc7f39cb65dbf864c2da70196ac249d5358f83654c98bb75da",
+        "63bcadb794a965c598ed6607db3ea2aeeb0dd99ce73984a75deeeb7b4e6dc5d9"
+      ]
+    },
+    {
+      "name": "row 2 finding detail",
+      "ok": true,
+      "actual": "late fee $180.02, prior balance $3,222.36 on the bill",
+      "expected": "late fee $180.02, prior balance $3,222.36 on the bill"
+    },
+    {
+      "name": "row 3 state/section",
+      "ok": true,
+      "actual": [
+        "current",
+        "current"
+      ],
+      "expected": [
+        "current",
+        "current"
+      ]
+    },
+    {
+      "name": "row 3 reviewer and saved note",
+      "ok": true,
+      "actual": [
+        "Unassigned",
+        "No note recorded"
+      ],
+      "expected": [
+        "Unassigned",
+        "No note recorded"
+      ]
+    },
+    {
+      "name": "row 3 source evidence pointers",
+      "ok": true,
+      "actual": [
+        "bills.csv:108",
+        "bills.csv:107"
+      ],
+      "expected": [
+        "bills.csv:108",
+        "bills.csv:107"
+      ]
+    },
+    {
+      "name": "row 3 identity values",
+      "ok": true,
+      "actual": [
+        "09fa37c78c414487ad22b7bedbab3eac",
+        "c22b61037a6aa0667cd20a17257d1694a11f6fcc456d79db0deb61eb1e42a327",
+        "1c6778eb2e39eed7e6040898d3f040193ce9cf1bbf86a91ce0edc2ac705ad77e",
+        "3ce991e7d9064c7e6bc2bc39882c083b9b66118e71613b5eae5c7b8e4e63b845"
+      ],
+      "expected": [
+        "09fa37c78c414487ad22b7bedbab3eac",
+        "c22b61037a6aa0667cd20a17257d1694a11f6fcc456d79db0deb61eb1e42a327",
+        "1c6778eb2e39eed7e6040898d3f040193ce9cf1bbf86a91ce0edc2ac705ad77e",
+        "3ce991e7d9064c7e6bc2bc39882c083b9b66118e71613b5eae5c7b8e4e63b845"
+      ]
+    },
+    {
+      "name": "row 3 finding detail",
+      "ok": true,
+      "actual": "service period 2026-06-22..2026-07-31 overlaps prior bill B50106 (2026-06-01..2026-06-30); 9 days may be billed twice",
+      "expected": "service period 2026-06-22..2026-07-31 overlaps prior bill B50106 (2026-06-01..2026-06-30); 9 days may be billed twice"
+    },
+    {
+      "name": "row 4 state/section",
+      "ok": true,
+      "actual": [
+        "current",
+        "current"
+      ],
+      "expected": [
+        "current",
+        "current"
+      ]
+    },
+    {
+      "name": "row 4 reviewer and saved note",
+      "ok": true,
+      "actual": [
+        "Unassigned",
+        "No note recorded"
+      ],
+      "expected": [
+        "Unassigned",
+        "No note recorded"
+      ]
+    },
+    {
+      "name": "row 4 source evidence pointers",
+      "ok": true,
+      "actual": [
+        "bills.csv:126",
+        "payments.csv:120",
+        "payments.csv:121"
+      ],
+      "expected": [
+        "bills.csv:126",
+        "payments.csv:120",
+        "payments.csv:121"
+      ]
+    },
+    {
+      "name": "row 4 identity values",
+      "ok": true,
+      "actual": [
+        "a5ac0f1d12dc459a982e5738253dec6a",
+        "d9031301ff8ef36e560faf1ada796cd19ef0c178991cd51093b123aeaecf6cc2",
+        "8a51a885b31c4f031bb97b14219f7d154120125515c17a0079a202cce0e8c6a8",
+        "78aaaf7753ff120461b0b1f1fea0ea5de10e8d8db5a1489fe3c93ab703bd33be"
+      ],
+      "expected": [
+        "a5ac0f1d12dc459a982e5738253dec6a",
+        "d9031301ff8ef36e560faf1ada796cd19ef0c178991cd51093b123aeaecf6cc2",
+        "8a51a885b31c4f031bb97b14219f7d154120125515c17a0079a202cce0e8c6a8",
+        "78aaaf7753ff120461b0b1f1fea0ea5de10e8d8db5a1489fe3c93ab703bd33be"
+      ]
+    },
+    {
+      "name": "row 4 finding detail",
+      "ok": true,
+      "actual": "owed $4,232.12; 2 payment(s) totalling $8,464.24",
+      "expected": "owed $4,232.12; 2 payment(s) totalling $8,464.24"
+    },
+    {
+      "name": "row 5 state/section",
+      "ok": true,
+      "actual": [
+        "current",
+        "current"
+      ],
+      "expected": [
+        "current",
+        "current"
+      ]
+    },
+    {
+      "name": "row 5 reviewer and saved note",
+      "ok": true,
+      "actual": [
+        "Unassigned",
+        "No note recorded"
+      ],
+      "expected": [
+        "Unassigned",
+        "No note recorded"
+      ]
+    },
+    {
+      "name": "row 5 source evidence pointers",
+      "ok": true,
+      "actual": [
+        "bills.csv:143",
+        "payments.csv:137"
+      ],
+      "expected": [
+        "bills.csv:143",
+        "payments.csv:137"
+      ]
+    },
+    {
+      "name": "row 5 identity values",
+      "ok": true,
+      "actual": [
+        "12f074809e644c28b63c57b9e20cf5ed",
+        "4941ae7ef35524a3c915c3c959855e9e492024e395fb8510b5a84831fcc952e6",
+        "64c75f6f7adc60879d5f51a76244a6445a8c0a583f493d4ccd38ca6e40a50bec",
+        "340a6cdc4458a980adf2f9b6e9bd2c79c5dae3fb46dc4f8bc68327082b1b6876"
+      ],
+      "expected": [
+        "12f074809e644c28b63c57b9e20cf5ed",
+        "4941ae7ef35524a3c915c3c959855e9e492024e395fb8510b5a84831fcc952e6",
+        "64c75f6f7adc60879d5f51a76244a6445a8c0a583f493d4ccd38ca6e40a50bec",
+        "340a6cdc4458a980adf2f9b6e9bd2c79c5dae3fb46dc4f8bc68327082b1b6876"
+      ]
+    },
+    {
+      "name": "row 5 finding detail",
+      "ok": true,
+      "actual": "owed $1,258.66; 1 payment(s) totalling $1,108.66",
+      "expected": "owed $1,258.66; 1 payment(s) totalling $1,108.66"
+    },
+    {
+      "name": "row 6 state/section",
+      "ok": true,
+      "actual": [
+        "current",
+        "current"
+      ],
+      "expected": [
+        "current",
+        "current"
+      ]
+    },
+    {
+      "name": "row 6 reviewer and saved note",
+      "ok": true,
+      "actual": [
+        "Unassigned",
+        "No note recorded"
+      ],
+      "expected": [
+        "Unassigned",
+        "No note recorded"
+      ]
+    },
+    {
+      "name": "row 6 source evidence pointers",
+      "ok": true,
+      "actual": [
+        "bills.csv:243",
+        "occupancy.csv:5"
+      ],
+      "expected": [
+        "bills.csv:243",
+        "occupancy.csv:5"
+      ]
+    },
+    {
+      "name": "row 6 identity values",
+      "ok": true,
+      "actual": [
+        "e063d45e9c0b4174a25e8392f532dedf",
+        "529a3f36d44aee91514f08c62292785b3445bf3f759d92fc4c6112792b026229",
+        "4171848c33929c5891b556f6a86bc5c3d7a6b54b3aab4ee4b8aa384d2eaab747",
+        "f890735001b976ff64742e7fcc0ccf33f1f994191a5506d0e4008ebd3d7d8b99"
+      ],
+      "expected": [
+        "e063d45e9c0b4174a25e8392f532dedf",
+        "529a3f36d44aee91514f08c62292785b3445bf3f759d92fc4c6112792b026229",
+        "4171848c33929c5891b556f6a86bc5c3d7a6b54b3aab4ee4b8aa384d2eaab747",
+        "f890735001b976ff64742e7fcc0ccf33f1f994191a5506d0e4008ebd3d7d8b99"
+      ]
+    },
+    {
+      "name": "row 6 finding detail",
+      "ok": true,
+      "actual": "unit 201 vacant; 0.360 kgal/day vs standby ceiling 0.05 (possible leak or running equipment)",
+      "expected": "unit 201 vacant; 0.360 kgal/day vs standby ceiling 0.05 (possible leak or running equipment)"
+    },
+    {
+      "name": "row 7 state/section",
+      "ok": true,
+      "actual": [
+        "current",
+        "current"
+      ],
+      "expected": [
+        "current",
+        "current"
+      ]
+    },
+    {
+      "name": "row 7 reviewer and saved note",
+      "ok": true,
+      "actual": [
+        "Unassigned",
+        "No note recorded"
+      ],
+      "expected": [
+        "Unassigned",
+        "No note recorded"
+      ]
+    },
+    {
+      "name": "row 7 source evidence pointers",
+      "ok": true,
+      "actual": [
+        "bills.csv:244",
+        "occupancy.csv:5"
+      ],
+      "expected": [
+        "bills.csv:244",
+        "occupancy.csv:5"
+      ]
+    },
+    {
+      "name": "row 7 identity values",
+      "ok": true,
+      "actual": [
+        "19e2bfd2448c45de81b7bb7393ac9c6f",
+        "621220d51b5233f83f93dcdfd11c37cc32cac06436647ed021add4b3d8bef6ab",
+        "534924da630bfee93e6fafef54ca21bca83082969678333bea7cc4561803705b",
+        "18ab65d3e2acd2b0bd479ff737c661ae96ad96763c3a6cb7bde3438a2cb52b8f"
+      ],
+      "expected": [
+        "19e2bfd2448c45de81b7bb7393ac9c6f",
+        "621220d51b5233f83f93dcdfd11c37cc32cac06436647ed021add4b3d8bef6ab",
+        "534924da630bfee93e6fafef54ca21bca83082969678333bea7cc4561803705b",
+        "18ab65d3e2acd2b0bd479ff737c661ae96ad96763c3a6cb7bde3438a2cb52b8f"
+      ]
+    },
+    {
+      "name": "row 7 finding detail",
+      "ok": true,
+      "actual": "unit 201 vacant; 0.360 kgal/day vs standby ceiling 0.05 (possible leak or running equipment)",
+      "expected": "unit 201 vacant; 0.360 kgal/day vs standby ceiling 0.05 (possible leak or running equipment)"
+    },
+    {
+      "name": "row 8 state/section",
+      "ok": true,
+      "actual": [
+        "current",
+        "current"
+      ],
+      "expected": [
+        "current",
+        "current"
+      ]
+    },
+    {
+      "name": "row 8 reviewer and saved note",
+      "ok": true,
+      "actual": [
+        "Unassigned",
+        "No note recorded"
+      ],
+      "expected": [
+        "Unassigned",
+        "No note recorded"
+      ]
+    },
+    {
+      "name": "row 8 source evidence pointers",
+      "ok": true,
+      "actual": [
+        "bills.csv:33",
+        "bills.csv:21"
+      ],
+      "expected": [
+        "bills.csv:33",
+        "bills.csv:21"
+      ]
+    },
+    {
+      "name": "row 8 identity values",
+      "ok": true,
+      "actual": [
+        "a308c51a04784d8e81d63f8b096fb03e",
+        "62a09e474177d99c7cec574b1b56c2c869ac4941c8cfd0be6842e62a0b207fa4",
+        "887fe4a19af86a078c2204ea0321ae7045837d6a37d1fb99585276b8200536e9",
+        "138375084c38a4e5c06b65feedf1811a0943b09bcba02c81d6c006efd9869722"
+      ],
+      "expected": [
+        "a308c51a04784d8e81d63f8b096fb03e",
+        "62a09e474177d99c7cec574b1b56c2c869ac4941c8cfd0be6842e62a0b207fa4",
+        "887fe4a19af86a078c2204ea0321ae7045837d6a37d1fb99585276b8200536e9",
+        "138375084c38a4e5c06b65feedf1811a0943b09bcba02c81d6c006efd9869722"
+      ]
+    },
+    {
+      "name": "row 8 finding detail",
+      "ok": true,
+      "actual": "92.7 therm/day vs 49.4 same month last year (x1.88)",
+      "expected": "92.7 therm/day vs 49.4 same month last year (x1.88)"
+    },
+    {
+      "name": "row 9 state/section",
+      "ok": true,
+      "actual": [
+        "current",
+        "current"
+      ],
+      "expected": [
+        "current",
+        "current"
+      ]
+    },
+    {
+      "name": "row 9 reviewer and saved note",
+      "ok": true,
+      "actual": [
+        "Unassigned",
+        "No note recorded"
+      ],
+      "expected": [
+        "Unassigned",
+        "No note recorded"
+      ]
+    },
+    {
+      "name": "row 9 source evidence pointers",
+      "ok": true,
+      "actual": [
+        "bills.csv:51",
+        "bills.csv:39"
+      ],
+      "expected": [
+        "bills.csv:51",
+        "bills.csv:39"
+      ]
+    },
+    {
+      "name": "row 9 identity values",
+      "ok": true,
+      "actual": [
+        "2422004565664de5b19fda5d7b84346a",
+        "de9534d5b38877324df29740622af1699ed1c696e6914586b321f2c607667e96",
+        "4fb9535f7919b3a259f7fb0317ce3d8b757803415aaf640515f343dab4448e2b",
+        "2c2028af02504967d4dc0fe993d61e509377f1350572febb1927da8d5d77d97f"
+      ],
+      "expected": [
+        "2422004565664de5b19fda5d7b84346a",
+        "de9534d5b38877324df29740622af1699ed1c696e6914586b321f2c607667e96",
+        "4fb9535f7919b3a259f7fb0317ce3d8b757803415aaf640515f343dab4448e2b",
+        "2c2028af02504967d4dc0fe993d61e509377f1350572febb1927da8d5d77d97f"
+      ]
+    },
+    {
+      "name": "row 9 finding detail",
+      "ok": true,
+      "actual": "17.9 kgal/day vs 10.0 same month last year (x1.79)",
+      "expected": "17.9 kgal/day vs 10.0 same month last year (x1.79)"
+    },
+    {
+      "name": "row 10 state/section",
+      "ok": true,
+      "actual": [
+        "current",
+        "current"
+      ],
+      "expected": [
+        "current",
+        "current"
+      ]
+    },
+    {
+      "name": "row 10 reviewer and saved note",
+      "ok": true,
+      "actual": [
+        "Unassigned",
+        "No note recorded"
+      ],
+      "expected": [
+        "Unassigned",
+        "No note recorded"
+      ]
+    },
+    {
+      "name": "row 10 source evidence pointers",
+      "ok": true,
+      "actual": [
+        "bills.csv:69"
+      ],
+      "expected": [
+        "bills.csv:69"
+      ]
+    },
+    {
+      "name": "row 10 identity values",
+      "ok": true,
+      "actual": [
+        "237b006bc2c844b0ba9fb7c04010062b",
+        "a3266d25613b99a1d4d0c7b6f593820e471070964fc145b686f168f8007e3174",
+        "545ae01b18f3e0110e7ded95b12a74140b5710c8f469bcdb2844b29360b6a0e6",
+        "c03d6590c60d0aaccbb22d732fad25492180f305cacbf4ba1c02e9ce618fefdc"
+      ],
+      "expected": [
+        "237b006bc2c844b0ba9fb7c04010062b",
+        "a3266d25613b99a1d4d0c7b6f593820e471070964fc145b686f168f8007e3174",
+        "545ae01b18f3e0110e7ded95b12a74140b5710c8f469bcdb2844b29360b6a0e6",
+        "c03d6590c60d0aaccbb22d732fad25492180f305cacbf4ba1c02e9ce618fefdc"
+      ]
+    },
+    {
+      "name": "row 10 finding detail",
+      "ok": true,
+      "actual": "$123.7817/pull vs trailing median $92.0173 (x1.35); check tariff/rate plan",
+      "expected": "$123.7817/pull vs trailing median $92.0173 (x1.35); check tariff/rate plan"
+    },
+    {
+      "name": "row 11 state/section",
+      "ok": true,
+      "actual": [
+        "current",
+        "current"
+      ],
+      "expected": [
+        "current",
+        "current"
+      ]
+    },
+    {
+      "name": "row 11 reviewer and saved note",
+      "ok": true,
+      "actual": [
+        "Unassigned",
+        "No note recorded"
+      ],
+      "expected": [
+        "Unassigned",
+        "No note recorded"
+      ]
+    },
+    {
+      "name": "row 11 source evidence pointers",
+      "ok": true,
+      "actual": [
+        "accounts.csv:10"
+      ],
+      "expected": [
+        "accounts.csv:10"
+      ]
+    },
+    {
+      "name": "row 11 identity values",
+      "ok": true,
+      "actual": [
+        "93ea15d535f44815aec79ad4df330910",
+        "db4bab6bbdd93b3367d16e49239e88294c8ed976e5862b4f7bf336486efa13c8",
+        "f6aada553ec5a3a4b0ccfb52fe1a9f34a7288b8c126170becaf2a5c95053cde3",
+        "0a0a07dc112a1a1534613caae8a14869b76a25c5ce2b8b9180f3a424c21a8dca"
+      ],
+      "expected": [
+        "93ea15d535f44815aec79ad4df330910",
+        "db4bab6bbdd93b3367d16e49239e88294c8ed976e5862b4f7bf336486efa13c8",
+        "f6aada553ec5a3a4b0ccfb52fe1a9f34a7288b8c126170becaf2a5c95053cde3",
+        "0a0a07dc112a1a1534613caae8a14869b76a25c5ce2b8b9180f3a424c21a8dca"
+      ]
+    },
+    {
+      "name": "row 11 finding detail",
+      "ok": true,
+      "actual": "no bill for service month 2026-04; check vendor portal / mail before a late fee lands",
+      "expected": "no bill for service month 2026-04; check vendor portal / mail before a late fee lands"
+    },
+    {
+      "name": "row 12 state/section",
+      "ok": true,
+      "actual": [
+        "current",
+        "current"
+      ],
+      "expected": [
+        "current",
+        "current"
+      ]
+    },
+    {
+      "name": "row 12 reviewer and saved note",
+      "ok": true,
+      "actual": [
+        "Unassigned",
+        "No note recorded"
+      ],
+      "expected": [
+        "Unassigned",
+        "No note recorded"
+      ]
+    },
+    {
+      "name": "row 12 source evidence pointers",
+      "ok": true,
+      "actual": [
+        "bills.csv:179"
+      ],
+      "expected": [
+        "bills.csv:179"
+      ]
+    },
+    {
+      "name": "row 12 identity values",
+      "ok": true,
+      "actual": [
+        "6f82e990ee424f268ce4bfda493edd15",
+        "fcfb60b086fcbf0c5b883f7bd17e23ae800409e5786cc1a471b0685021b00b17",
+        "e2d45648f2a7885a648ed07c69d577a0a27509d00b0fefe44e04ae58754e470b",
+        "74f4372d4bcd7e1f29ced573baed0b68dbc5490e4615fb006dfe313aa2737c89"
+      ],
+      "expected": [
+        "6f82e990ee424f268ce4bfda493edd15",
+        "fcfb60b086fcbf0c5b883f7bd17e23ae800409e5786cc1a471b0685021b00b17",
+        "e2d45648f2a7885a648ed07c69d577a0a27509d00b0fefe44e04ae58754e470b",
+        "74f4372d4bcd7e1f29ced573baed0b68dbc5490e4615fb006dfe313aa2737c89"
+      ]
+    },
+    {
+      "name": "row 12 finding detail",
+      "ok": true,
+      "actual": "due 2026-09-06, no payment on file",
+      "expected": "due 2026-09-06, no payment on file"
+    },
+    {
+      "name": "row 13 state/section",
+      "ok": true,
+      "actual": [
+        "current",
+        "current"
+      ],
+      "expected": [
+        "current",
+        "current"
+      ]
+    },
+    {
+      "name": "row 13 reviewer and saved note",
+      "ok": true,
+      "actual": [
+        "Unassigned",
+        "No note recorded"
+      ],
+      "expected": [
+        "Unassigned",
+        "No note recorded"
+      ]
+    },
+    {
+      "name": "row 13 source evidence pointers",
+      "ok": true,
+      "actual": [
+        "bills.csv:214",
+        "bills.csv:213"
+      ],
+      "expected": [
+        "bills.csv:214",
+        "bills.csv:213"
+      ]
+    },
+    {
+      "name": "row 13 identity values",
+      "ok": true,
+      "actual": [
+        "d166a09fdd3e4a5c946e743f4d6f9a1d",
+        "794c90fb655f81192788e6a943b1bd584e81297fbf9043b8c6a5e0713211476c",
+        "fbe1ca0eec6cc85b7609910fd86ce4bda4d8ab31d5d93737891cee860512a50b",
+        "4ece42edb3411d28415b97eb6bfff42d569fc67e7bf1ed430a375ef666e7d2f4"
+      ],
+      "expected": [
+        "d166a09fdd3e4a5c946e743f4d6f9a1d",
+        "794c90fb655f81192788e6a943b1bd584e81297fbf9043b8c6a5e0713211476c",
+        "fbe1ca0eec6cc85b7609910fd86ce4bda4d8ab31d5d93737891cee860512a50b",
+        "4ece42edb3411d28415b97eb6bfff42d569fc67e7bf1ed430a375ef666e7d2f4"
+      ]
+    },
+    {
+      "name": "row 13 finding detail",
+      "ok": true,
+      "actual": "same invoice number as B50212 (HAUL-50212); hold, do not pay twice",
+      "expected": "same invoice number as B50212 (HAUL-50212); hold, do not pay twice"
+    },
+    {
+      "name": "row 14 state/section",
+      "ok": true,
+      "actual": [
+        "changed",
+        "history"
+      ],
+      "expected": [
+        "changed",
+        "history"
+      ]
+    },
+    {
+      "name": "row 14 reviewer and saved note",
+      "ok": true,
+      "actual": [
+        "Zoë 李 <AP>",
+        "Vendor says \"credit next month\".\nRetain the hold; <script>must remain text</script>."
+      ],
+      "expected": [
+        "Zoë 李 <AP>",
+        "Vendor says \"credit next month\".\nRetain the hold; <script>must remain text</script>."
+      ]
+    },
+    {
+      "name": "row 14 source evidence pointers",
+      "ok": true,
+      "actual": [
+        "bills.csv:88"
+      ],
+      "expected": [
+        "bills.csv:88"
+      ]
+    },
+    {
+      "name": "row 14 identity values",
+      "ok": true,
+      "actual": [
+        "db32ae3893484484be611d4481d22270",
+        "a8ae5d25bdd085f56c3f65fd9fe9cca2c6fac0f7f340099a41868ff95bd3aecf",
+        "030b7f6b169c53467b46271e32d840bf4786e50362c016fdce7d0190d9e9dd74",
+        "049b17ed1a98f2cdec7df552d57663f335633296aebbbf57c150a278d4cd585a"
+      ],
+      "expected": [
+        "db32ae3893484484be611d4481d22270",
+        "a8ae5d25bdd085f56c3f65fd9fe9cca2c6fac0f7f340099a41868ff95bd3aecf",
+        "030b7f6b169c53467b46271e32d840bf4786e50362c016fdce7d0190d9e9dd74",
+        "049b17ed1a98f2cdec7df552d57663f335633296aebbbf57c150a278d4cd585a"
+      ]
+    },
+    {
+      "name": "row 14 finding detail",
+      "ok": true,
+      "actual": "late fee $179.02, prior balance $3,222.36 on the bill",
+      "expected": "late fee $179.02, prior balance $3,222.36 on the bill"
+    },
+    {
+      "name": "native prior annotation is retained only in history",
+      "ok": true,
+      "actual": [
+        "changed"
+      ],
+      "expected": [
+        "changed"
+      ]
+    },
+    {
+      "name": "literal HTML-like note is text",
+      "ok": true,
+      "actual": "Vendor says \"credit next month\".\nRetain the hold; <script>must remain text</script>.",
+      "expected": "Vendor says \"credit next month\".\nRetain the hold; <script>must remain text</script>."
+    },
+    {
+      "name": "mobile width",
+      "ok": true,
+      "actual": 390,
+      "expected": 390
+    },
+    {
+      "name": "mobile has no horizontal document overflow",
+      "ok": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "mobile retains every finding",
+      "ok": true,
+      "actual": 15,
+      "expected": 15
+    },
+    {
+      "name": "mobile field definitions use one column",
+      "ok": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "print omits navigation",
+      "ok": true,
+      "actual": "none",
+      "expected": "none"
+    },
+    {
+      "name": "print retains visible identity blocks",
+      "ok": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "print retains exact saved notes",
+      "ok": true,
+      "actual": [
+        "No note recorded",
+        "No note recorded",
+        "No note recorded",
+        "No note recorded",
+        "No note recorded",
+        "No note recorded",
+        "No note recorded",
+        "No note recorded",
+        "No note recorded",
+        "No note recorded",
+        "No note recorded",
+        "No note recorded",
+        "No note recorded",
+        "No note recorded",
+        "Vendor says \"credit next month\".\nRetain the hold; <script>must remain text</script>."
+      ],
+      "expected": [
+        "No note recorded",
+        "No note recorded",
+        "No note recorded",
+        "No note recorded",
+        "No note recorded",
+        "No note recorded",
+        "No note recorded",
+        "No note recorded",
+        "No note recorded",
+        "No note recorded",
+        "No note recorded",
+        "No note recorded",
+        "No note recorded",
+        "No note recorded",
+        "Vendor says \"credit next month\".\nRetain the hold; <script>must remain text</script>."
+      ]
+    },
+    {
+      "name": "print has no horizontal document overflow",
+      "ok": true,
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "real Chromium PDF header",
+      "ok": true,
+      "actual": "%PDF-",
+      "expected": "%PDF-"
+    },
+    {
+      "name": "real Chromium PDF EOF",
+      "ok": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "printed PDF retains history section",
+      "ok": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "printed PDF retains literal note",
+      "ok": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "printed PDF retains reviewer",
+      "ok": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "no page runtime exceptions",
+      "ok": true,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "name": "no page resource loading failures",
+      "ok": true,
+      "actual": [],
+      "expected": []
+    },
+    {
+      "name": "all observed page requests are fixture loopback",
+      "ok": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "served HTML remains byte exact",
+      "ok": true,
+      "actual": "6ba4c1eaeb71c6eece6a52229bd53e16ebc1b2dd87926c6025cb997feef0a653",
+      "expected": "6ba4c1eaeb71c6eece6a52229bd53e16ebc1b2dd87926c6025cb997feef0a653"
+    },
+    {
+      "name": "saved worksheet remains byte exact",
+      "ok": true,
+      "actual": "d9305edacc7e94a7ac076809a9e0c7cab1ce0ba557616be9afd8a86b8b783ddd",
+      "expected": "d9305edacc7e94a7ac076809a9e0c7cab1ce0ba557616be9afd8a86b8b783ddd"
+    }
+  ],
+  "artifacts": {
+    "browser-desktop.png": {
+      "bytes": 105750,
+      "sha256": "e5b093cbbb073abe2450a5619351af13357cd5249128fc97939f8f74e38b4f98"
+    },
+    "browser-history.png": {
+      "bytes": 128675,
+      "sha256": "f1b45cf01601b5a972f70593aa94f7ab348d669a8b94bc8712c42f395a20b074"
+    },
+    "browser-mobile.png": {
+      "bytes": 70810,
+      "sha256": "5d21445ae276d527cf7b8a69ec5cda3debd7b0dad25e127937a05f5c84161c67"
+    },
+    "browser-print.pdf": {
+      "bytes": 214691,
+      "sha256": "2d9be862627eec786afafe3834775920a68d93ff64c2b34b51881513ed7a8c16"
+    },
+    "browser-print-text.txt": {
+      "bytes": 12078,
+      "sha256": "531ec1436a3fa6428573d514a3f3734e563a115591b73a42ad82ac81f31d11bf"
+    }
+  },
+  "observed_page_requests": [
+    "http://127.0.0.1:46661/saved-review.html",
+    "http://127.0.0.1:46661/favicon.ico"
+  ],
+  "limits": [
+    "Synthetic captured worksheet only.",
+    "Observed page requests are loopback; no claim about every Chromium background operation.",
+    "Print is the existing installed Chromium, not every browser or physical printer."
+  ],
+  "cleanup": {
+    "profile_removed": true,
+    "owned_browser_exited": true,
+    "error": null
+  }
+}

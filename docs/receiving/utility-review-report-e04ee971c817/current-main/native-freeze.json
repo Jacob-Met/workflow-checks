@@ -1,0 +1,28 @@
+{
+  "root": "/home/jacob/hamon-e04-utility-current-r12ut6_6",
+  "uid": 1000,
+  "git_commit": "4f025e0995134e3d8d7c6778992c2760fa4541f5",
+  "files": {
+    "current-source-pins.json": {
+      "git_blob": "24251b0c6765a9eed5ffd0ece2597949a01d6c5c",
+      "sha256": "d40aa224a27f01abe2fbe7d6990392a5ad7a66655fab7db886c9116af8512fa6",
+      "bytes": 3194
+    },
+    "evidence/receive_current_dependency.py": {
+      "git_blob": "e33b0848b2c5f8d05f392fcefd17e72828b3acf2",
+      "sha256": "da75c88219e1a9c87485f1719bebf78cab7f3fa5547466b8828a828ee213e4c0",
+      "bytes": 4422
+    },
+    "evidence/current-dependency-results.json": {
+      "git_blob": "a164d1dcc4c6f807d36bcf011d4ed94934ed22f7",
+      "sha256": "ec86cdeb1f33f2a8baed5f838fb552531184cf4c3bd3ee1429cb149187f6c6ab",
+      "bytes": 4536
+    },
+    "evidence/current-review.html": {
+      "git_blob": "b260dc278ee0a5cff2033a2a9cfa4da498e120a8",
+      "sha256": "6ba4c1eaeb71c6eece6a52229bd53e16ebc1b2dd87926c6025cb997feef0a653",
+      "bytes": 21880
+    }
+  },
+  "status": ""
+}

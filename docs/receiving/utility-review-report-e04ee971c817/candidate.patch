@@ -1,0 +1,518 @@
+diff --git a/utility_watch/docs/review-report.md b/utility_watch/docs/review-report.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..2a676d0ae4cecc8c45d8c3a371701c8748bdc977
+--- /dev/null
++++ b/utility_watch/docs/review-report.md
+@@ -0,0 +1,86 @@
++# Read and print saved Utility Watch reviews
++
++`uwatch review-report` turns a saved review worksheet into one self-contained HTML file.
++Open it in a browser to read or print the recorded findings, reviewer names, notes and evidence
++without navigating the worksheet's protected CSV columns.
++
++From the `utility_watch` directory:
++
++```powershell
++python -m uwatch review-report --worksheet "review-2.csv" --out "saved-review.html"
++```
++
++The input is the `uwatch-review-v1` worksheet created by the existing `uwatch review` command.
++An edited worksheet can be viewed directly after it has been saved as UTF-8 CSV. The viewer
++uses the same native worksheet validator as `uwatch review --previous`; it checks the manifest,
++protected fields, statuses and required annotations before creating output. It accepts the
++native UTF-8 BOM and row/column ordering rules.
++
++## What the page shows
++
++- **Current findings** show each saved status, reviewer and note, with counts for Open,
++  In progress and Reviewed.
++- **Prior findings** retain changed and absent rows separately. An earlier reviewed note
++  does not appear as the current finding's annotation.
++- Each finding includes its account, bill or expected-period key, code, description,
++  property, utility, recorded report dates, source-row pointers and native identity fields.
++- The header identifies the worksheet by filename and SHA256 of the exact bytes read.
++  The page carries the native synthetic/client data label and remains readable without
++  JavaScript, a server, a network connection or external assets.
++
++Use the browser's Print action to print or save a PDF. The print styles retain the notes
++and identifiers. Long notes and quoted line breaks remain readable; text from the worksheet
++is escaped as text, including names or notes that resemble HTML.
++
++## Saved review and current source
++
++This page is a snapshot of the saved worksheet. Its dates are the recorded report dates,
++not a new check time. The viewer does not load a source export, rerun the checker, reconcile
++old notes, change a worksheet, write audit records or alter payment eligibility.
++
++A Reviewed status records a person's follow-up. A changed row records earlier evidence;
++an absent row was not present in the later report or evaluation window. Neither establishes
++that a bill was resolved or paid. Reviewer names and notes are user-entered. The native
++worksheet checksums detect editing mistakes; they are not signatures or authentication.
++
++After the underlying export changes, use the existing commands to produce and reconcile
++a new worksheet, then view that file:
++
++```powershell
++python -m uwatch run --data sample_data --out out
++python -m uwatch review --data sample_data --report out/summary.json --previous review-2.csv --out review-3.csv
++python -m uwatch review-report --worksheet review-3.csv --out review-3.html
++```
++
++Keep a source export with its report when you need to revisit the underlying historical
++values. The HTML includes recorded row pointers and evidence identities, not those source
++files. Finish saving the worksheet before exporting a view; the SHA256 identifies the
++snapshot read by that command and does not promise that a later edit has been included.
++
++## Output lifecycle
++
++`--out` must be a new path in an existing directory. Existing regular files, directories,
++symbolic links and the input worksheet cannot be replaced. Choose a new name when exporting
++an updated view. The command does not create missing parent directories.
++
++A successful command exits with status 0 and reports the current/prior counts, worksheet
++SHA256 and output path. Invalid input or an output error exits with status 2 and does not
++publish an incomplete HTML file. Publication follows the native review writer's approach:
++write and close a temporary file in the output directory, then create the destination with
++an exclusive hard link. A competing creator keeps its destination; unsupported hard links
++cause an error. Cleanup failure may leave a uniquely named temporary file, but does not
++remove an existing destination or turn a completed publication into a failure.
++
++## Focused verification
++
++The new consumer tests use Python's standard library and also run under the existing pytest
++collection:
++
++```powershell
++python -m unittest discover -s tests -p test_review_report.py -v
++```
++
++They cover current/history attribution, multiline and HTML-like notes, native validation,
++an empty worksheet, the actual CLI with producer/external-call tripwires, existing destinations
++and controlled publication failures. The checker, original HTML report and reconciliation
++rules remain unchanged.
+diff --git a/utility_watch/tests/test_review_report.py b/utility_watch/tests/test_review_report.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..9ea0860c27a77ed8c67f8349525ec452e8a523b8
+--- /dev/null
++++ b/utility_watch/tests/test_review_report.py
+@@ -0,0 +1,229 @@
++"""Native worksheet-to-HTML consumer checks; no external services or test dependencies."""
++from __future__ import annotations
++
++import csv
++import hashlib
++import io
++import json
++import os
++import subprocess
++import sys
++import tempfile
++import unittest
++from html.parser import HTMLParser
++from pathlib import Path
++from unittest import mock
++
++from uwatch import review
++from uwatch import review_report
++
++
++class ReportReader(HTMLParser):
++    def __init__(self):
++        super().__init__(convert_charrefs=True)
++        self.records = {}
++        self.active = None
++        self.tags = []
++        self.attributes = []
++
++    def handle_starttag(self, tag, attrs):
++        self.tags.append(tag)
++        self.attributes.extend(attrs)
++        if tag == "article":
++            fields = dict(attrs)
++            self.active = fields["id"]
++            self.records[self.active] = {"state": fields["data-row-state"], "text": ""}
++
++    def handle_endtag(self, tag):
++        if tag == "article":
++            self.active = None
++
++    def handle_data(self, data):
++        if self.active is not None:
++            self.records[self.active]["text"] += data
++
++
++def finding(number, *, state="current", status="open", account="A-1", key="B-1",
++            reviewer="", note="", kind="flag", code="USAGE_SPIKE"):
++    row = dict.fromkeys(review.COLUMNS, "")
++    row.update(
++        review_status=status, reviewer=reviewer, note=note, row_state=state,
++        kind=kind, account_no=account, finding_key=key, code=code,
++        property="Cypress <Court> & Annex", utility="electric",
++        detail='Recorded 150 < 200 units; preserve the "original" description.',
++        evidence='["bills.csv:2","accounts.csv:1"]',
++        as_of="2026-09-28", eval_from="2026-03-01", data_mode="synthetic",
++        row_id=f"{number:032x}", evidence_version=review._digest(["fixture", number]),
++    )
++    row["finding_id"] = review._identity(row)
++    return review._seal(row)
++
++
++def worksheet(rows, *, mode="synthetic"):
++    metadata = {"as_of": "2026-09-28", "eval_from": "2026-03-01", "data_mode": mode}
++    stream = io.StringIO(newline="")
++    writer = csv.DictWriter(stream, fieldnames=review.COLUMNS, lineterminator="\r\n")
++    writer.writeheader()
++    writer.writerows([*rows, review._manifest(rows, metadata)])
++    return b"\xef\xbb\xbf" + stream.getvalue().encode("utf-8")
++
++
++class ReviewReportTests(unittest.TestCase):
++    def setUp(self):
++        self.tmp = tempfile.TemporaryDirectory(prefix="uwatch-review-report-test-")
++        self.addCleanup(self.tmp.cleanup)
++        self.root = Path(self.tmp.name)
++        self.source = self.root / "notes <team> & Zoë.csv"
++        self.rows = [
++            finding(1),
++            finding(2, account="A-2", key="B-2", kind="exception", code="NO_BASELINE",
++                    status="in_progress", reviewer="Mina", note="Asked for the earlier bill."),
++            finding(3, account="A-3", key="B-3", status="reviewed", reviewer="Kai",
++                    note="Recorded follow-up; eligibility is unchanged."),
++            finding(4, state="changed", status="reviewed", reviewer="Zoë 李 <AP>",
++                    note='Old evidence only.\r\nVendor says "credit next month".'),
++            finding(5, state="absent", account="A-4", key="B-4", status="in_progress",
++                    reviewer="Rae", note="Keep this prior note even if it returns."),
++        ]
++        self.raw = worksheet(self.rows)
++        self.source.write_bytes(self.raw)
++
++    def test_current_and_historical_annotations_remain_separate(self):
++        document, result = review_report.render_html(self.raw, self.source.name)
++        parsed = ReportReader()
++        parsed.feed(document)
++        self.assertEqual(result["current"], 3)
++        self.assertEqual(result["history"], 2)
++        self.assertEqual(result["statuses"], {"open": 1, "in_progress": 1, "reviewed": 1})
++        self.assertEqual(len(parsed.records), len(self.rows))
++        for row in self.rows:
++            record = parsed.records["row-" + row["row_id"]]
++            self.assertEqual(record["state"], row["row_state"])
++            for field in ("account_no", "finding_key", "code", "property", "utility", "detail",
++                          "as_of", "eval_from", "data_mode", "row_id", "finding_id",
++                          "evidence_version", "record_sha256"):
++                self.assertIn(row[field], record["text"], field)
++            for pointer in json.loads(row["evidence"]):
++                self.assertIn(pointer, record["text"])
++            if row["reviewer"]:
++                self.assertIn(row["reviewer"], record["text"])
++            if row["note"]:
++                self.assertIn(row["note"], record["text"])
++        current = parsed.records["row-" + self.rows[0]["row_id"]]["text"]
++        self.assertIn("Open", current)
++        self.assertNotIn("Old evidence only", current)
++        self.assertNotIn("Zoë", current)
++        self.assertIn("absence does not establish resolution or payment", document)
++        self.assertIn(hashlib.sha256(self.raw).hexdigest(), document)
++
++    def test_native_cli_exports_without_rechecking_or_changing_inputs(self):
++        tripwires = """import runpy,socket,subprocess,sys
++import uwatch.engine as engine
++import uwatch.review as review
++import uwatch.synth as synth
++def forbidden(*args,**kwargs): raise AssertionError('unexpected producer/external effect')
++engine.run=engine.check=engine.load=review.reconcile=synth.generate=forbidden
++socket.socket=subprocess.Popen=forbidden
++sys.argv=['uwatch',*sys.argv[1:]]
++runpy.run_module('uwatch',run_name='__main__')
++"""
++        output = self.root / "saved notes.html"
++        command = [sys.executable]
++        if sys.flags.optimize:
++            command.append("-O")
++        command += ["-B", "-c", tripwires, "review-report", "--worksheet", str(self.source), "--out", str(output)]
++        completed = subprocess.run(command, cwd=Path(__file__).resolve().parents[1],
++                                   capture_output=True, text=True, timeout=15)
++        self.assertEqual(completed.returncode, 0, completed.stderr)
++        self.assertEqual(completed.stderr, "")
++        self.assertIn(hashlib.sha256(self.raw).hexdigest(), completed.stdout)
++        self.assertEqual(self.source.read_bytes(), self.raw)
++        self.assertEqual(set(self.root.iterdir()), {self.source, output})
++        parsed = ReportReader()
++        parsed.feed(output.read_bytes().decode("utf-8"))
++        self.assertEqual(len(parsed.records), len(self.rows))
++
++    def test_html_keeps_user_text_inert_and_multiline(self):
++        note = '<script>alert("review")</script>\r\n<img src="https://invalid.example/x"> & line 2'
++        row = finding(6, status="reviewed", reviewer='"><iframe>Zoë 李', note=note)
++        raw = worksheet([row])
++        document, _ = review_report.render_html(raw, '"><script>worksheet.csv')
++        parsed = ReportReader()
++        parsed.feed(document)
++        record = parsed.records["row-" + row["row_id"]]["text"]
++        self.assertIn(note, record)
++        self.assertIn(row["reviewer"], record)
++        self.assertFalse(set(parsed.tags) & {"script", "iframe", "img", "form", "input", "button"})
++        self.assertFalse(any(name.lower().startswith("on") for name, _ in parsed.attributes))
++        self.assertTrue(all(not value or value.startswith("#") for name, value in parsed.attributes if name == "href"))
++        self.assertIn("white-space:pre-wrap", document)
++        self.assertIn("@media print", document)
++
++    def test_empty_native_worksheet_has_explicit_sections(self):
++        raw = worksheet([], mode="client_csv")
++        self.source.write_bytes(raw)
++        output = self.root / "empty.html"
++        result = review_report.export_html(self.source, output)
++        document = output.read_text(encoding="utf-8")
++        self.assertEqual((result["current"], result["history"]), (0, 0))
++        self.assertEqual(result["data_mode"], "client_csv")
++        self.assertIn("No current findings in this worksheet", document)
++        self.assertIn("No prior findings retained in this worksheet", document)
++        self.assertIn("SAVED REVIEW", document)
++        self.assertNotIn("SYNTHETIC DATA", document)
++        self.assertIn("2026-09-28", document)
++        self.assertEqual(self.source.read_bytes(), raw)
++
++    def test_invalid_native_worksheets_publish_nothing(self):
++        bad_review = finding(7, status="reviewed", reviewer="", note="Missing reviewer")
++        inputs = [
++            self.raw.replace(b"USAGE_SPIKE", b"ALTERED_CODE", 1),
++            worksheet([bad_review]),
++            b"\xffnot utf-8",
++        ]
++        for index, raw in enumerate(inputs):
++            with self.subTest(index=index):
++                self.source.write_bytes(raw)
++                output = self.root / f"invalid-{index}.html"
++                before = set(self.root.iterdir())
++                with self.assertRaises(ValueError):
++                    review_report.export_html(self.source, output)
++                self.assertEqual(set(self.root.iterdir()), before)
++                self.assertEqual(self.source.read_bytes(), raw)
++
++    def test_existing_destinations_and_source_are_preserved(self):
++        existing = self.root / "existing.html"
++        existing.write_bytes(b"keep existing")
++        directory = self.root / "directory"
++        directory.mkdir()
++        for output in (existing, self.source, directory):
++            with self.subTest(output=output.name):
++                with self.assertRaises(ValueError):
++                    review_report.export_html(self.source, output)
++                self.assertEqual(existing.read_bytes(), b"keep existing")
++                self.assertEqual(self.source.read_bytes(), self.raw)
++                self.assertTrue(directory.is_dir())
++        dangling = self.root / "dangling.html"
++        try:
++            dangling.symlink_to(self.root / "absent-target.html")
++        except (OSError, NotImplementedError) as exc:
++            self.skipTest(f"symlinks unavailable: {exc}")
++        with self.assertRaises(ValueError):
++            review_report.export_html(self.source, dangling)
++        self.assertTrue(dangling.is_symlink())
++        self.assertFalse((self.root / "absent-target.html").exists())
++
++    def test_publication_failures_leave_incomplete_output_unpublished(self):
++        for function in ("fsync", "link"):
++            with self.subTest(function=function):
++                output = self.root / f"{function}.html"
++                before = set(self.root.iterdir())
++                with mock.patch.object(review_report.os, function, side_effect=OSError("controlled publication failure")):
++                    with self.assertRaises(OSError):
++                        review_report.export_html(self.source, output)
++                self.assertEqual(set(self.root.iterdir()), before)
++                self.assertEqual(self.source.read_bytes(), self.raw)
++
++
++if __name__ == "__main__":
++    unittest.main()
+diff --git a/utility_watch/uwatch/cli.py b/utility_watch/uwatch/cli.py
+index 8655fdb7cd1e4735ece1da1727b68af6401e40a8..27bfe687d071ff045bd5642f6408413c8cc6a805 100644
+--- a/utility_watch/uwatch/cli.py
++++ b/utility_watch/uwatch/cli.py
+@@ -1,4 +1,4 @@
+-"""CLI: python -m uwatch <generate|run|review> ..."""
++"""CLI: python -m uwatch <generate|run|review|review-report> ..."""
+ from __future__ import annotations
+ 
+ import argparse
+@@ -26,7 +26,21 @@ def main(argv=None) -> int:
+     review.add_argument("--report", type=Path, required=True, help="native summary.json from uwatch run")
+     review.add_argument("--previous", type=Path, help="completed prior review worksheet (optional)")
+     review.add_argument("--out", type=Path, required=True, help="new review CSV path; never replaces an existing file")
++    review_report = sub.add_parser("review-report", help="read or print a saved review worksheet as HTML")
++    review_report.add_argument("--worksheet", type=Path, required=True, help="saved uwatch-review-v1 CSV worksheet")
++    review_report.add_argument("--out", type=Path, required=True, help="new HTML path in an existing directory; never replaces a file")
+     a = ap.parse_args(argv)
++    if a.cmd == "review-report":
++        from .review_report import export_html
++        try:
++            result = export_html(a.worksheet, a.out)
++        except (OSError, ValueError, KeyError) as exc:
++            print(f"uwatch: review report error: {exc}", file=sys.stderr)
++            return 2
++        print(f"review report: {result['current']} current findings; {result['history']} prior findings")
++        print(f"worksheet SHA256: {result['worksheet_sha256']}")
++        print(f"report: {a.out}")
++        return 0
+     if a.cmd == "generate":
+         from .synth import generate
+         exp = generate(Path(a.out), a.seed, a.as_of)
+diff --git a/utility_watch/uwatch/review_report.py b/utility_watch/uwatch/review_report.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..be869a940436172253c0a6d5020ba24860f1a7eb
+--- /dev/null
++++ b/utility_watch/uwatch/review_report.py
+@@ -0,0 +1,153 @@
++"""Read-only HTML snapshots of native Utility Watch review worksheets."""
++from __future__ import annotations
++
++import csv
++import hashlib
++import html
++import json
++import os
++import tempfile
++from collections import Counter
++from pathlib import Path
++
++from .report import LABEL
++from .review import STATUSES, _csv, _previous
++
++_STATUS = {"open": "Open", "in_progress": "In progress", "reviewed": "Reviewed"}
++_STATE = {
++    "current": "Current finding",
++    "changed": "Prior finding: evidence changed",
++    "absent": "Prior finding: absent from the later report",
++}
++_STYLE = """
++:root{color-scheme:light;font:16px/1.5 system-ui,sans-serif;color:#152b36;background:#f4f6f7}
++body{margin:0 auto;max-width:1040px;padding:28px}
++h1{font-size:2rem;line-height:1.15;margin:.2em 0}
++h2{margin:1.8em 0 .6em}h3{font-size:1.1rem;margin:.2em 0 .8em}
++a{color:#155c75}nav{display:flex;gap:20px;margin:18px 0}
++.snapshot{padding:14px 18px;background:#e5eef1;border-left:4px solid #34778b}
++.counts{font-weight:600}.finding{margin:16px 0;padding:20px;border:1px solid #bfccd2;
++border-radius:8px;background:white}
++.state{font-size:.85rem;font-weight:700;color:#415865;margin:0 0 6px}
++dl{display:grid;grid-template-columns:minmax(125px,1fr) minmax(0,4fr);gap:5px 16px;margin:12px 0}
++dt{font-weight:600}dd{margin:0;min-width:0;overflow-wrap:anywhere}
++.multiline{white-space:pre-wrap}.identities{font-size:.72rem;color:#475c67}
++.identities dd,code{font-family:ui-monospace,monospace;overflow-wrap:anywhere}
++ul{padding-left:24px}.source{font-size:.85rem;overflow-wrap:anywhere}
++.empty{padding:16px;border:1px dashed #93a6b0}footer{margin-top:28px;font-size:.85rem}
++@media(max-width:600px){body{padding:14px}.finding{padding:14px}dl{grid-template-columns:1fr;gap:2px}
++dd{margin-bottom:8px}.identities{font-size:.7rem}}
++@media print{:root{background:white;color:black;font-size:10pt}body{max-width:none;padding:0}
++nav{display:none}a{color:inherit}.finding{border-radius:0;margin:10pt 0;padding:10pt}
++h2,h3,.state,dt{break-after:avoid}dd,.multiline{overflow:visible}.identities{font-size:7pt}
++.snapshot{background:white;border:1px solid #777}}
++"""
++
++
++def _text(value: str) -> str:
++    # Character references retain a quoted CSV carriage return in the parsed HTML text.
++    return html.escape(value, quote=True).replace("\r", "&#13;")
++
++
++def _fields(fields: list[tuple[str, str]], css: str = "") -> str:
++    return f'<dl class="{css}">' + "".join(
++        f"<dt>{_text(label)}</dt><dd>{_text(value)}</dd>" for label, value in fields
++    ) + "</dl>"
++
++
++def _record(row: dict) -> str:
++    title = LABEL.get(row["code"], row["code"]) if row["kind"] == "flag" else row["code"]
++    context = _fields([
++        ("Account", row["account_no"]), ("Bill or period", row["finding_key"]),
++        ("Property", row["property"] or "Not recorded"), ("Utility", row["utility"] or "Not recorded"),
++        ("Kind / code", f'{row["kind"]} / {row["code"]}'),
++        ("Report as of", row["as_of"]), ("Evaluation from", row["eval_from"]),
++        ("Data mode", row["data_mode"]),
++    ])
++    review = (
++        "<dl><dt>Review status</dt>"
++        f'<dd>{_STATUS[row["review_status"]]}</dd><dt>Reviewer</dt>'
++        f'<dd class="multiline">{_text(row["reviewer"]) if row["reviewer"] else "Unassigned"}</dd>'
++        f'<dt>Note</dt><dd class="multiline">{_text(row["note"]) if row["note"] else "No note recorded"}</dd></dl>'
++    )
++    evidence = "".join(f"<li><code>{_text(value)}</code></li>" for value in json.loads(row["evidence"]))
++    identities = _fields([
++        ("Worksheet row ID", row["row_id"]), ("Finding ID", row["finding_id"]),
++        ("Evidence version", row["evidence_version"]), ("Protected record SHA256", row["record_sha256"]),
++    ], "identities")
++    return (
++        f'<article class="finding" id="row-{row["row_id"]}" data-row-state="{row["row_state"]}">'
++        f'<p class="state">{_STATE[row["row_state"]]}</p><h3>{_text(title)}</h3>'
++        + context + f'<p class="multiline">{_text(row["detail"])}</p>' + review
++        + "<h4>Recorded source rows</h4><ul>" + evidence + "</ul>" + identities + "</article>"
++    )
++
++
++def render_html(raw: bytes, worksheet_name: str) -> tuple[str, dict]:
++    """Validate the existing worksheet format and render the exact saved snapshot."""
++    try:
++        rows = _previous(raw)
++        # The native validator has already checked the unique, complete manifest.
++        manifest = next(row for _, row in _csv(raw, "worksheet")[1] if row["row_state"] == "manifest")
++    except csv.Error as exc:
++        raise ValueError(f"malformed CSV: {exc}") from exc
++
++    current = [row for row in rows if row["row_state"] == "current"]
++    history = [row for row in rows if row["row_state"] != "current"]
++    statuses = Counter(row["review_status"] for row in current)
++    digest = hashlib.sha256(raw).hexdigest()
++    counts = " · ".join(f"{_STATUS[status]}: {statuses[status]}" for status in STATUSES)
++    current_html = "".join(_record(row) for row in current) or '<p class="empty">No current findings in this worksheet.</p>'
++    history_html = "".join(_record(row) for row in history) or '<p class="empty">No prior findings retained in this worksheet.</p>'
++    mode = "SYNTHETIC DATA" if manifest["data_mode"] == "synthetic" else "SAVED REVIEW"
++    document = (
++        '<!doctype html><html lang="en"><head><meta charset="utf-8">'
++        '<meta name="viewport" content="width=device-width,initial-scale=1">'
++        '<title>Utility Watch saved review</title><style>' + _STYLE + '</style></head><body>'
++        '<header><p>UTILITY WATCH</p><h1>Saved review worksheet</h1>'
++        f'<p>Report as of {_text(manifest["as_of"])} · Evaluation from {_text(manifest["eval_from"])}</p>'
++        f'<div class="snapshot"><b>{mode} · Read-only snapshot</b>'
++        '<p>This view records the saved worksheet. It does not recheck the source export or establish '
++        'that these findings are still current. Reviewer names and notes are user-entered; '
++        'worksheet checksums are integrity checks, not signatures.</p></div>'
++        f'<p class="source">Worksheet: {_text(worksheet_name)}<br>Worksheet SHA256: <code>{digest}</code></p>'
++        '<nav aria-label="Review sections"><a href="#current">Current findings</a>'
++        '<a href="#history">Prior findings</a></nav></header><main>'
++        f'<section id="current" aria-labelledby="current-heading"><h2 id="current-heading">Current findings ({len(current)})</h2>'
++        f'<p class="counts">{counts}</p>' + current_html + '</section>'
++        f'<section id="history" aria-labelledby="history-heading"><h2 id="history-heading">Prior findings ({len(history)})</h2>'
++        '<p>Changed rows retain the review of earlier evidence. Absent rows were not present in the later '
++        'report or evaluation window; absence does not establish resolution or payment. '
++        'Prior annotations do not apply to a current finding.</p>' + history_html + '</section></main>'
++        '<footer>A Reviewed status records human follow-up. It does not clear a checker flag, approve an '
++        'invoice or change payment eligibility. Keep the worksheet and its source exports for further review.</footer>'
++        '</body></html>\n'
++    )
++    return document, {"current": len(current), "history": len(history),
++                      "statuses": {status: statuses[status] for status in STATUSES},
++                      "worksheet_sha256": digest, "data_mode": manifest["data_mode"]}
++
++
++def export_html(worksheet: Path, out: Path) -> dict:
++    """Publish one complete new HTML file without replacing any existing destination."""
++    worksheet, out = Path(worksheet), Path(out)
++    if not worksheet.is_file():
++        raise ValueError("--worksheet must name an existing saved worksheet file")
++    document, result = render_html(worksheet.read_bytes(), worksheet.name)
++    if out.is_symlink() or out.exists():
++        raise ValueError("--out must name a new HTML file; existing destinations cannot be replaced")
++
++    # Match the native review writer's complete-new-file publication contract.
++    fd, temporary = tempfile.mkstemp(prefix=".uwatch-review-report-", suffix=".html", dir=out.parent)
++    try:
++        with os.fdopen(fd, "w", encoding="utf-8", newline="\n") as target:
++            target.write(document)
++            target.flush()
++            os.fsync(target.fileno())
++        os.link(temporary, out)
++    finally:
++        try:
++            os.unlink(temporary)
++        except OSError:
++            pass
++    return result

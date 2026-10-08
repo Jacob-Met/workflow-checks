@@ -1,0 +1,10 @@
+{
+  "result": "ENVIRONMENT_INTERRUPTION_BEFORE_RECEIVING",
+  "location": "/dev/shm/hamon-development-utility-review-report-composition-e04ee971c817",
+  "operation": "initial selected-current-source staging",
+  "exception": "OSError: [Errno 28] No space left on device",
+  "observed_partial_file": "candidate/utility_watch/uwatch/review_report.py",
+  "observed_bytes": 0,
+  "observed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "limits": "No qualifier was launched from this incomplete local snapshot. The actual one-child composition was executed and committed in the separate ordinary native user namespace. This directory is being restored as a byte-verified mirror of those already received source/evidence files; it is not an additional execution claim."
+}

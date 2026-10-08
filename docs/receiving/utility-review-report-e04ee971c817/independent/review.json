@@ -1,0 +1,136 @@
+{
+  "disposition": "PASS",
+  "blocking_findings": [],
+  "reviewer": "estate-e04ee971c817 / estate_operations, independent of Development author",
+  "repository": "Jacob-Met/workflow-checks",
+  "author_freeze": "5462fb43238a3d49b97a6e6bbb006ac2e1940b84",
+  "frozen_native_ref": "9e931fa9f42033bf2368f7149684fb5631345715",
+  "frozen_native_tree": "0b0c903801f432968e9cdfb1f1fa134cecc37217",
+  "primary_source_binding": "Complete primary GitHub tree 0b0c903801f432968e9cdfb1f1fa134cecc37217, 403 entries, not truncated. Baseline CLI and six native support identities independently matched.",
+  "independent_receiving": {
+    "conditions": 62,
+    "behavior_conditions": 29,
+    "source_and_immutability_conditions": 33,
+    "failures": 0,
+    "actual_cli_children": 6,
+    "families": [
+      {
+        "name": "saved_attribution",
+        "result": "PASS",
+        "conditions": 13
+      },
+      {
+        "name": "one_read_snapshot",
+        "result": "PASS",
+        "conditions": 6
+      },
+      {
+        "name": "exclusive_publication",
+        "result": "PASS",
+        "conditions": 7
+      },
+      {
+        "name": "late_invalid_history",
+        "result": "PASS",
+        "conditions": 3
+      }
+    ],
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "result_file": "results.json"
+  },
+  "findings": [
+    "The actual native before-image CLI refuses review-report; the candidate consumes the saved native worksheet without reconstructing a source report.",
+    "A BOM, reversed columns, reversed finding order and manifest in the middle retain every current/history identity; prior reviewed annotations remain separate from current in-progress notes and counts.",
+    "Unicode, quoted HTML-like text and CSV CRLF values remain literal parsed text. No active element or external asset is introduced by those annotations.",
+    "A simulated later save occurs after the single input read. The completed HTML and CLI bind the original exact byte digest; the later saved file remains intact.",
+    "A real competing destination created immediately before os.link receives no overwrite. The CLI returns 2, publishes no success receipt and removes its temporary output. An input hardlink alias is also refused with inode and bytes preserved.",
+    "An invalid final history status fails before any partial current-only HTML or new sidefile is published, preserving the invalid input and a previous complete output.",
+    "Removing only the new parser block, dispatch branch and docstring command label recovers exact original CRLF CLI bytes. All ten candidate/support pins and captured input remained unchanged."
+  ],
+  "candidate_files": {
+    "utility_watch/uwatch/review_report.py": {
+      "git_blob": "be869a940436172253c0a6d5020ba24860f1a7eb",
+      "sha256": "4462088141b21c990ce5b949a9c683f68f647ae83bdba0eaa1409730e442f856",
+      "bytes": 8457
+    },
+    "utility_watch/uwatch/cli.py": {
+      "git_blob": "27bfe687d071ff045bd5642f6408413c8cc6a805",
+      "sha256": "d7e223edf55790642b011f8159d113da0433416c6344c6be255037d558dd9c45",
+      "bytes": 4350
+    },
+    "utility_watch/tests/test_review_report.py": {
+      "git_blob": "9ea0860c27a77ed8c67f8349525ec452e8a523b8",
+      "sha256": "6d48681bbfd4c4725b4aa6a191f04ed9f2fa4fd6beca0799f5265fb50210d7d5",
+      "bytes": 10866
+    },
+    "utility_watch/docs/review-report.md": {
+      "git_blob": "2a676d0ae4cecc8c45d8c3a371701c8748bdc977",
+      "sha256": "8ae387b4401ec2653779b59aeb7d7c44b9bb319f299ab6cf74195ea64aac5d0d",
+      "bytes": 4603
+    }
+  },
+  "native_support_files": {
+    "utility_watch/uwatch/report.py": {
+      "git_blob": "ee2fcabd2026b4224c3cdfc51890f71762a9ef0f",
+      "sha256": "dc43c4fbbef72204a9dc9c5d7e4d3883900e96daf26c725f10fe22d4721540db",
+      "bytes": 12382
+    },
+    "utility_watch/uwatch/review.py": {
+      "git_blob": "2475217ce9c073c39756f9fa3926342cd83f7254",
+      "sha256": "f9f730ca45140436704d9823eafcfb58fb3922c5d0bf93a21a63f31347c947de",
+      "bytes": 15534
+    },
+    "utility_watch/uwatch/__init__.py": {
+      "git_blob": "7074157fb1710370668c2a0ad5217cd10cfe3618",
+      "sha256": "a0332cb0878fcdfd02d1651f9a46c299ca0279996c6e5723d49311228c597a57",
+      "bytes": 60
+    },
+    "utility_watch/uwatch/__main__.py": {
+      "git_blob": "823d40a6bf41beb59790ce83476b359f76f4b1ec",
+      "sha256": "26c55ee4277631c49b2312533d7514a815ec2c3de08f48b0a9dea8946d8f8933",
+      "bytes": 53
+    },
+    "utility_watch/uwatch/engine.py": {
+      "git_blob": "9deb205ad468381ffc91716f0d7ae6ab88d76f2a",
+      "sha256": "48c968584d0494ee5fb0538fc7d4c685c2cc3128a45c33f57c2079234cdb7775",
+      "bytes": 21072
+    },
+    "utility_watch/uwatch/synth.py": {
+      "git_blob": "0d5c8137b3790bd062609ce4725beda63db9e58d",
+      "sha256": "8573a65a8c5907ebedda24c47183f60f258e895bae0a2656bb582ada9217209d",
+      "bytes": 13194
+    }
+  },
+  "accepted_current_dependency": {
+    "ref": "a5fd61b0c361c8a9b8a6737b33ecc9efab46e0ad",
+    "tree": "5ac515d24c722128f04b7ae343fb7c3e369a06c9",
+    "engine_blob": "b764a1f45ba718b31f7841e2c2f61d16a7fef5e9",
+    "engine_sha256": "ff0dc3a473235c55639e4373e3b5a4c786a0cd9ae7badd2be9113f39a4efd3d0",
+    "independent_static_check": "Primary exact engine file fetched and hashed. Every byte and module AST node outside check is preserved; only the separately accepted account/bill membership policy in check differs.",
+    "native_author_composition_commit": "4f025e0995134e3d8d7c6778992c2760fa4541f5",
+    "native_author_receiving": "Separate actual native Python 3.14 one-child/9-condition control passes with checker/reconciliation/generator/socket/subprocess entry tripwires. The HTML is byte-identical. This receiving was inspected, not rerun or relabeled as independent.",
+    "inspected_packet_files": {
+      "current-source-pins.json": {
+        "git_blob": "24251b0c6765a9eed5ffd0ece2597949a01d6c5c",
+        "sha256": "d40aa224a27f01abe2fbe7d6990392a5ad7a66655fab7db886c9116af8512fa6",
+        "bytes": 3194
+      },
+      "evidence/receive_current_dependency.py": {
+        "git_blob": "e33b0848b2c5f8d05f392fcefd17e72828b3acf2",
+        "sha256": "da75c88219e1a9c87485f1719bebf78cab7f3fa5547466b8828a828ee213e4c0",
+        "bytes": 4422
+      },
+      "evidence/current-dependency-results.json": {
+        "git_blob": "a164d1dcc4c6f807d36bcf011d4ed94934ed22f7",
+        "sha256": "ec86cdeb1f33f2a8baed5f838fb552531184cf4c3bd3ee1429cb149187f6c6ab",
+        "bytes": 4536
+      }
+    }
+  },
+  "limits": [
+    "No author seven-method or 105-condition browser/print suite was imported or repeated.",
+    "Four direct package CLI children and two actual-module-entry children with explicit local race hooks were run on disposable files only.",
+    "The independent dynamic suite uses the frozen support snapshot; current engine compatibility is the separately pinned native control plus this primary source audit. The engine account/hold policy itself is outside this receiving.",
+    "Publication still needs current source/ownership gates, the actual repository CI and actual-first-parent preservation. No installed/live deployment, source export lookup or payment effect is claimed."
+  ]
+}

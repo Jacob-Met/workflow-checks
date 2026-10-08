@@ -1,0 +1,34 @@
+{
+  "result": "FAIL",
+  "optimized": 1,
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "test": "test_review_report.ReviewReportTests.test_existing_destinations_and_source_are_preserved",
+  "tests_run": 1,
+  "failures": 0,
+  "errors": 1,
+  "skips": 0,
+  "log": "test_existing_destinations_and_source_are_preserved (test_review_report.ReviewReportTests.test_existing_destinations_and_source_are_preserved) ... ERROR\n\n======================================================================\nERROR: test_existing_destinations_and_source_are_preserved (test_review_report.ReviewReportTests.test_existing_destinations_and_source_are_preserved)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/dev/shm/hamon-development-utility-review-report-e04ee971c817/candidate/utility_watch/tests/test_review_report.py\", line 73, in setUp\n    self.tmp = tempfile.TemporaryDirectory(prefix=\"uwatch-review-report-test-\")\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/tempfile.py\", line 886, in __init__\n    self.name = mkdtemp(suffix, prefix, dir)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/tempfile.py\", line 384, in mkdtemp\n    _os.mkdir(file, 0o700)\nFileNotFoundError: [Errno 2] No such file or directory: '/dev/shm/hamon-development-utility-review-report-e04ee971c817/temporary-tests/uwatch-review-report-test-dffiuu92'\n\n----------------------------------------------------------------------\nRan 1 test in 0.001s\n\nFAILED (errors=1)\n",
+  "candidate_files": {
+    "utility_watch/uwatch/review_report.py": {
+      "git_blob": "be869a940436172253c0a6d5020ba24860f1a7eb",
+      "sha256": "4462088141b21c990ce5b949a9c683f68f647ae83bdba0eaa1409730e442f856",
+      "bytes": 8457
+    },
+    "utility_watch/uwatch/cli.py": {
+      "git_blob": "27bfe687d071ff045bd5642f6408413c8cc6a805",
+      "sha256": "d7e223edf55790642b011f8159d113da0433416c6344c6be255037d558dd9c45",
+      "bytes": 4350
+    },
+    "utility_watch/tests/test_review_report.py": {
+      "git_blob": "9ea0860c27a77ed8c67f8349525ec452e8a523b8",
+      "sha256": "6d48681bbfd4c4725b4aa6a191f04ed9f2fa4fd6beca0799f5265fb50210d7d5",
+      "bytes": 10866
+    },
+    "utility_watch/docs/review-report.md": {
+      "git_blob": "2a676d0ae4cecc8c45d8c3a371701c8748bdc977",
+      "sha256": "8ae387b4401ec2653779b59aeb7d7c44b9bb319f299ab6cf74195ea64aac5d0d",
+      "bytes": 4603
+    }
+  },
+  "reason": "Only this fixture was interrupted by real ENOSPC before product invocation. The original seven-method optimized receipt is retained unchanged; its other six methods passed."
+}

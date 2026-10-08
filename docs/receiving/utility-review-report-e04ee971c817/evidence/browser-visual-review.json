@@ -1,0 +1,40 @@
+{
+  "result": "PASS",
+  "kind": "manual visual inspection after native automated browser/print receiving",
+  "candidate_source": {
+    "utility_watch/uwatch/review_report.py": "be869a940436172253c0a6d5020ba24860f1a7eb",
+    "utility_watch/uwatch/cli.py": "27bfe687d071ff045bd5642f6408413c8cc6a805"
+  },
+  "artifacts": {
+    "browser-desktop.png": {
+      "bytes": 105750,
+      "sha256": "e5b093cbbb073abe2450a5619351af13357cd5249128fc97939f8f74e38b4f98"
+    },
+    "browser-history.png": {
+      "bytes": 128675,
+      "sha256": "f1b45cf01601b5a972f70593aa94f7ab348d669a8b94bc8712c42f395a20b074"
+    },
+    "browser-mobile.png": {
+      "bytes": 70810,
+      "sha256": "5d21445ae276d527cf7b8a69ec5cda3debd7b0dad25e127937a05f5c84161c67"
+    },
+    "browser-print.pdf": {
+      "bytes": 214691,
+      "sha256": "2d9be862627eec786afafe3834775920a68d93ff64c2b34b51881513ed7a8c16"
+    },
+    "browser-print-text.txt": {
+      "bytes": 12078,
+      "sha256": "531ec1436a3fa6428573d514a3f3734e563a115591b73a42ad82ac81f31d11bf"
+    }
+  },
+  "observations": [
+    "Desktop capture has a readable worksheet header, exact source digest and current counts with a separate finding card.",
+    "Historical capture retains Zoë 李 <AP> and the literal <script> text as part of the prior note; identities and source-row evidence are visible.",
+    "Mobile capture wraps the digest and metadata within the viewport and preserves single-column fields."
+  ],
+  "limits": [
+    "These are three captured viewports, not an accessibility audit or exhaustive browser/device coverage.",
+    "No new automated conditions are added to the original 105-condition receipt."
+  ]
+}
+
