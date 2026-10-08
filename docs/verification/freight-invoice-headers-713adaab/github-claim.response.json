@@ -1,0 +1,39 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "Action completed."
+    }
+  ],
+  "structuredContent": {
+    "issue": {
+      "url": "https://github.com/Jacob-Met/workflow-checks/issues/28",
+      "title": "Reject conflicting repeated headers within a multiline freight invoice",
+      "issue_number": 28,
+      "body": "## Scoped source contribution — estate-713adaab / migration_execution\n\nA multiline carrier invoice repeats its carrier, invoice date and invoice total on each CSV row. The current loader retains only the first row's header and silently discards conflicting headers on later lines. Reordering an ambiguous invoice can therefore change its reported carrier, fine deadline and READY settlement.\n\n### Actual reproduction\n\nFrozen current main: `9e931fa9f42033bf2368f7149684fb5631345715`; `freight_packets/freightpkt/ingest.py` blob `9c2baa4377ee5c6564c9bb12c40953b336107201`.\n\nSeven fictional CSV fixtures were executed through the unchanged actual `python -m freightpkt run` CLI. Every command returns 0:\n- Reversing two rows with different carriers changes the READY settlement's carrier.\n- Reversing rows with invoice dates 2026-09-01 and 2026-09-10 changes the authored dispute from late to in-window, the synthetic fine from 10,000 cents to zero, and net payable from 100,000 to 110,000 cents.\n- Reversing conflicting totals makes `TOTAL_MISMATCH` appear or disappear.\n- The coherent multiline control retains its existing result.\n\nAll inputs and the 27-file inspected source closure remain unchanged. Original command/output/input/report custody is at `/home/jacob/hamon-estate-discovery-713adaab-20261008/1306-freight-header-baseline`; baseline report SHA256 `51dc206b6a10dd303f1e954cdb1a2fc36d40bc172c1712ff031eda81919f32fa`. These are synthetic draft results, with no real payment or external action.\n\n### Exact implementation boundary\n\nReject inconsistent repeated headers within the existing `(invoice_no, load_id)` group, identifying the affected fields and both source records before the pipeline appends audit or replaces existing report files.\n\nOwned paths:\n- `freight_packets/freightpkt/ingest.py`: only `load_invoices`.\n- New `freight_packets/tests/test_invoice_header_consistency.py`.\n- Narrow additive explanation in `freight_packets/README.md` and `HARDENING.md`.\n- Unique `docs/verification/freight-invoice-headers-713adaab/` evidence.\n\nRetain valid multiline invoices, nonadjacent grouping, distinct load/invoice groups, and only existing normalization: trimmed strings and the existing monetary parser. No new carrier aliases, date interpretation, grouping key, monetary conversion, detention/fine/settlement policy, CSV result schema or review behavior is claimed.\n\nCurrent Freight review/download PR23 is merged and received; its UI/web/handoff source remains untouched. Freight demo/CI, PT #26/#27, Utility #24/#25, shared landing/CI and installed services remain with their owners.\n\n### Ownership and receiving\n\nThe fresh project issue/PR/source read still pins the same loader. Bounded native overlap found no matching goal; external coverage is explicitly incomplete, so the related top-level coordination records and current linked project claims were also read. No repeated-invoice-header owner was found. Root approved this bounded defect repair after the real reproduction.\n\nSmall source and receiver preparation use private `/dev/shm/chatgpt-freight-invoice-headers-713adaab` because ThinkPad persistent storage is full. Qualification will retain the paired original/candidate evidence and actual Windows CPython 3.11 receiving in a private Temp namespace. Root will independently review the exact candidate and results before expected-head integration. No live source, service, data, firmware or cutover operation is part of this claim.\n",
+      "state": "open",
+      "user": {
+        "login": "Jacob-Met",
+        "name": "Jacob-Met",
+        "email": null,
+        "avatar_url": "https://avatars.githubusercontent.com/u/150724801?v=4",
+        "id": 150724801
+      },
+      "assignees": null,
+      "labels": null,
+      "milestone": null,
+      "state_reason": null,
+      "comments": 0,
+      "created_at": "2026-10-08T13:08:45Z",
+      "updated_at": "2026-10-08T13:08:45Z",
+      "closed_at": null,
+      "display_url": "https://github.com/Jacob-Met/workflow-checks/issues/28",
+      "display_title": "Reject conflicting repeated headers within a multiline freight invoice"
+    },
+    "url": "https://github.com/Jacob-Met/workflow-checks/issues/28",
+    "title": "Reject conflicting repeated headers within a multiline freight invoice",
+    "display_url": "https://github.com/Jacob-Met/workflow-checks/issues/28",
+    "display_title": "Reject conflicting repeated headers within a multiline freight invoice"
+  },
+  "isError": false
+}

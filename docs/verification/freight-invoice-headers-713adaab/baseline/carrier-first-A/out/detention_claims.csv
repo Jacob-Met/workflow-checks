@@ -1,0 +1,1 @@
+claim_id,load_id,customer,stop,kind,facility,appointment,arrival,departure,dwell_min,free_min,billable_min,rate_per_hr,amount,capped,arrival_evidence,departure_evidence,ratecon

@@ -1,0 +1,20 @@
+{
+  "repository": "Jacob-Met/workflow-checks",
+  "source_commit": "9e931fa9f42033bf2368f7149684fb5631345715",
+  "sample_path": "freight_packets/sample_data/carrier_invoices.csv",
+  "sample_git_blob": "3227b2431efede89856a6f7613261c1a33f6d2bb",
+  "sample_sha256": "606c65142fb30e7a721cb77c57bf6d7cc9e9d46b964ea3531305ad97396a2637",
+  "sample_bytes": 5866,
+  "rows": 76,
+  "invoice_load_groups": 25,
+  "multiline_groups": 25,
+  "blank_header_values": {
+    "carrier": 0,
+    "invoice_date": 0,
+    "invoice_total": 0
+  },
+  "inconsistent_groups": 0,
+  "original_docs": "README declares one row per invoice line but does not explicitly specify blank continuation header inheritance. Neither original README nor HARDENING documents that convention.",
+  "source_producer": "synth.py writes complete carrier, invoice date and total on each invoice row; unchanged original tests consume generated multiline data.",
+  "boundary": "This repair codifies the existing shipped producer/sample repeated-header format. It does change former silent acceptance of contradictory or omitted continuation headers; no promise of arbitrary undocumented AP-export conventions or new blank-field inference."
+}

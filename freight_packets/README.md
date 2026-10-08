@@ -136,3 +136,20 @@ This was checked on seeds 7 and 11 in the tests, and on 1, 2, 3, 99 and 1234 man
 - **Carrier invoice feed.** An AP export or an invoices inbox. Also a tolerance policy for mismatches (for example, ±$1).
 - **Output target.** The packet template the customer or broker accepts (their claim form or email format). Also where approved packets go: a TMS accessorial line, the customer portal, or email drafts. The PoC never sends.
 - **Access and ops.** Where it runs (their VM or M365 tenant), who approves, retention for the audit log, and a weekly accuracy check against their analyst's manual totals for the first month.
+
+
+## Consistent headers for multiline invoices
+
+Every line with the same trimmed `invoice_no` and `load_id` must repeat the
+same `carrier`, `invoice_date`, and `invoice_total`. Carrier and date strings
+are compared after the loader's existing surrounding-whitespace trim. Totals
+are compared in cents using the existing money parser, so `$1,100.00` and
+`1100` still agree. Carrier aliases, case changes and different date spellings
+are not inferred to be equivalent.
+
+A conflicting repeated header stops the run with a `ValueError` naming the
+fields, invoice/load and first/conflicting CSV record references. Correct
+those source records before running again. The conflict is detected during
+input loading, before any audit append or replacement of existing packet and
+report files. Valid nonadjacent invoice lines still combine, and different
+invoice/load groups retain their existing behavior.

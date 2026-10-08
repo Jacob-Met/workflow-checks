@@ -1,0 +1,3 @@
+invoice_no,load_id,carrier,invoice_date,invoice_total,line_code,line_amount
+SYN-INV,SYN-L1,Fictional Carrier A,2026-09-01,999.00,FUEL,100.00
+SYN-INV,SYN-L1,Fictional Carrier A,2026-09-01,1100.00,LINEHAUL,1000.00

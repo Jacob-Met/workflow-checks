@@ -1,0 +1,9 @@
+{
+    "launcher":  "C:\\Windows\\py.exe",
+    "finished_utc":  "2026-10-08T13:24:18.0063734Z",
+    "arguments":  "-3.11 -I -S -B -X utf8 \"C:\\Users\\minec\\AppData\\Local\\Temp\\hamon-freight-headers-713adaab-fb3a2ca166494553ba685bb70cf11acb\\receive_freight_headers.py\" --qa-root \"C:\\Users\\minec\\AppData\\Local\\Temp\\hamon-freight-headers-713adaab-fb3a2ca166494553ba685bb70cf11acb\"",
+    "driver_sha256":  "27d8987856a5f4fe3e2bd03304ffbc53ee818ecfb22427b8adc979971569568f",
+    "started_utc":  "2026-10-08T13:24:15.9719048Z",
+    "source_bundle_sha256":  "4332367b24e1fda29ae7955a3439a12cf6b880d526ee59b7d4b13829526260f1",
+    "inner_qualification_exit_code":  0
+}

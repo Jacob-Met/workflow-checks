@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\minec\AppData\Local\Temp\hamon-freight-headers-713adaab-fb3a2ca166494553ba685bb70cf11acb\source\freight_packets\freightpkt\__main__.py", line 5, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "C:\Users\minec\AppData\Local\Temp\hamon-freight-headers-713adaab-fb3a2ca166494553ba685bb70cf11acb\source\freight_packets\freightpkt\cli.py", line 39, in main
+    s = run(Path(a.data), Path(a.out))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minec\AppData\Local\Temp\hamon-freight-headers-713adaab-fb3a2ca166494553ba685bb70cf11acb\source\freight_packets\freightpkt\pipeline.py", line 57, in run
+    invoices = ingest.load_invoices(data_dir / "carrier_invoices.csv") \
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\minec\AppData\Local\Temp\hamon-freight-headers-713adaab-fb3a2ca166494553ba685bb70cf11acb\source\freight_packets\freightpkt\ingest.py", line 249, in load_invoices
+    raise ValueError(
+ValueError: conflicting invoice header carrier for invoice 'SYN-INV' on load 'SYN-L1': carrier_invoices.csv:row2 and carrier_invoices.csv:row3

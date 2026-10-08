@@ -1,0 +1,24 @@
+{
+  "started_utc": "2026-10-08T13:17:58.121589+00:00",
+  "finished_utc": "2026-10-08T13:17:59.235931+00:00",
+  "argv": [
+    "/usr/bin/python3",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_invoice_header_consistency.py",
+    "-v"
+  ],
+  "cwd": "/dev/shm/chatgpt-freight-invoice-headers-713adaab/source/freight_packets",
+  "returncode": 0,
+  "source_sha256": "1179675d011d55781c6de3ae806b905698df2a21fcc621ea788d73c6e29d6276",
+  "test_sha256": "1fda13d4c63ce4e2c311323db1995bd663a660c4637bc93bfded460ee2ae57d8",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "5048d8053c18fb79bf2bf711ee9a52caf83351596454f78dec7941f0baf6f40d",
+  "python": "3.14.4 (main, Aug 20 2026, 10:41:58) [GCC 15.2.0]",
+  "tmpdir": "/dev/shm/chatgpt-freight-invoice-headers-713adaab/fixtures"
+}

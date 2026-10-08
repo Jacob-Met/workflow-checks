@@ -1,0 +1,4 @@
+events=2 loads=1 stops=1
+detention stops=0  total=$0.00  late arrivals=0  exceptions=0
+invoice flags=1  packets=0  -> /home/jacob/hamon-estate-discovery-713adaab-20261008/1306-freight-header-baseline/total-first-999/out
+  [TOTAL_MISMATCH] SYN-L1 inv SYN-INV: header total $999.00 != line sum $1,100.00

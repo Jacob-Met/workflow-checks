@@ -1,0 +1,6 @@
+{
+    "archive_sha256":  "9af189a2abf3102c02ca6d33d44ac494c974fc84d09744af8269e0a34f9ce8b1",
+    "namespace":  "C:\\Users\\minec\\AppData\\Local\\Temp\\hamon-freight-headers-713adaab-fb3a2ca166494553ba685bb70cf11acb",
+    "archive_bytes":  21235,
+    "qualification_exit_code":  0
+}

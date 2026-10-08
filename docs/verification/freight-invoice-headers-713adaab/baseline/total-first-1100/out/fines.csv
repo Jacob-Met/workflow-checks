@@ -1,0 +1,2 @@
+fine_id,load_id,carrier,code,amount,detail,notice_date,dispute_deadline,status,dispute_note,evidence
+FINE-3390D2F2AF,SYN-L1,Fictional Carrier A,MISSING_PICKUP_PHOTOS,$100.00,no pickup photos on file,2026-09-01,2026-09-08,dispute_late,disputed 2026-09-10 after window closed 2026-09-08: Authored fixture only,documents.csv (no PICKUP_PHOTOS row);fines_schedule.csv:row2;disputes.csv:row2

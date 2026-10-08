@@ -1,0 +1,46 @@
+{
+  "source_gate": {
+    "argv": [
+      "git",
+      "-c",
+      "core.whitespace=cr-at-eol",
+      "diff",
+      "--cached",
+      "--check",
+      "--",
+      "freight_packets/freightpkt/ingest.py",
+      "freight_packets/tests/test_invoice_header_consistency.py",
+      "freight_packets/README.md",
+      "freight_packets/HARDENING.md"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "earlier_all_payload_check": {
+    "returncode": 2,
+    "observation": "Six expected raw-evidence whitespace reports; no source/guide whitespace reports.",
+    "paths": [
+      {
+        "path": "newtests-baseline/stderr.txt",
+        "lines": [
+          2,
+          9,
+          12,
+          15
+        ],
+        "reason": "Exact original unittest progress output ends those lines with a space."
+      },
+      {
+        "path": "source-changes.patch",
+        "lines": [
+          54,
+          55
+        ],
+        "reason": "Archived original-CRLF patch includes context blank lines."
+      }
+    ],
+    "raw_evidence_sanitized": false
+  },
+  "purpose": "Source style is checked without altering exact negative receipts or patch bytes for an incidental evidence whitespace rule."
+}

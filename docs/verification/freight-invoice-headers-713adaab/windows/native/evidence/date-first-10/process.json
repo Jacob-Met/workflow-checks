@@ -1,0 +1,32 @@
+{
+  "name": "date-first-10",
+  "started_utc": "2026-10-08T13:24:16.684923+00:00",
+  "finished_utc": "2026-10-08T13:24:16.792019+00:00",
+  "argv": [
+    "C:\\Users\\minec\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\python.exe",
+    "-B",
+    "-m",
+    "freightpkt",
+    "run",
+    "--data",
+    "C:\\Users\\minec\\AppData\\Local\\Temp\\hamon-freight-headers-713adaab-fb3a2ca166494553ba685bb70cf11acb\\input\\date-first-10\\data",
+    "--out",
+    "C:\\Users\\minec\\AppData\\Local\\Temp\\hamon-freight-headers-713adaab-fb3a2ca166494553ba685bb70cf11acb\\reports"
+  ],
+  "cwd": "C:\\Users\\minec\\AppData\\Local\\Temp\\hamon-freight-headers-713adaab-fb3a2ca166494553ba685bb70cf11acb\\source\\freight_packets",
+  "returncode": 1,
+  "expected_returncode": 1,
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "53f66f03f424292eeba3343d928e60350c1b8a83766014ff705135107bd69690",
+  "output_hashes": {
+    "audit.jsonl": "9547d07d85700cfa1f2c8220d7d8185dd1f843a1065dcee1d11e876753081c84",
+    "detention_claims.csv": "071c7ef82ab4249580aa8ca6a9167c5db1140fba70c99b83f1176c824c712ba1",
+    "exceptions.csv": "3d03cb15ec6db6a964ae9a25b71f6566e18f274b725e2d59cb13137a04342eca",
+    "fines.csv": "e88ab98a25991b66cdd876729f35cd63a90c8eabb991f01cd9ab00b77b797424",
+    "invoice_flags.csv": "b228f13695de7b12707838f096c3c96ca14e961abbca0f994a28f59c8189df1d",
+    "settlement.csv": "e78ca8f05a7665c966e55cfed370fdfbe7f0563580be967caaa35b676bbe99b6",
+    "summary.json": "13ddc4e234b19b87544d1416ebd138209f4bf73a963d353a14c95706a20edcaa"
+  },
+  "inputs_unchanged": true,
+  "previous_outputs_unchanged": true
+}

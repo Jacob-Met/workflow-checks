@@ -1,0 +1,102 @@
+{
+  "generated_at": "2026-10-08T12:59:03",
+  "data_dir": "/home/jacob/hamon-estate-discovery-713adaab-20261008/1306-freight-header-baseline/total-first-999/data",
+  "counts": {
+    "events": 2,
+    "loads": 1,
+    "stops": 1,
+    "detention_stops": 0,
+    "late_arrivals": 0,
+    "exceptions": 0,
+    "invoices": 1,
+    "invoice_flags": 1,
+    "packets": 0,
+    "fines": 1,
+    "settlement_ready": 1,
+    "settlement_hold": 0
+  },
+  "fines_total_cents": 10000,
+  "net_payable_ready_cents": 100000,
+  "fines": [
+    {
+      "load_id": "SYN-L1",
+      "carrier": "Fictional Carrier A",
+      "code": "MISSING_PICKUP_PHOTOS",
+      "amount_cents": 10000,
+      "detail": "no pickup photos on file",
+      "notice_date": "2026-09-01",
+      "dispute_deadline": "2026-09-08",
+      "status": "dispute_late",
+      "dispute_note": "disputed 2026-09-10 after window closed 2026-09-08: Authored fixture only",
+      "evidence": [
+        "documents.csv (no PICKUP_PHOTOS row)",
+        "fines_schedule.csv:row2",
+        "disputes.csv:row2"
+      ],
+      "fine_id": "FINE-3390D2F2AF",
+      "deducted_cents": 10000
+    }
+  ],
+  "settlements": [
+    {
+      "invoice_no": "SYN-INV",
+      "load_id": "SYN-L1",
+      "carrier": "Fictional Carrier A",
+      "invoiced_cents": 110000,
+      "approved_cents": 110000,
+      "fines_cents": 10000,
+      "net_cents": 100000,
+      "status": "READY",
+      "hold_reasons": [],
+      "notes": [
+        "header total differs from line sum; settled on lines"
+      ],
+      "evidence": [
+        "carrier_invoices.csv:row2",
+        "RC-SYN.txt"
+      ]
+    }
+  ],
+  "detention_total_cents": 0,
+  "detention_total": "$0.00",
+  "stops": [
+    {
+      "load_id": "SYN-L1",
+      "stop_index": 1,
+      "kind": "pickup",
+      "facility": "Fictional Dock",
+      "appointment": "2026-09-01T10:00:00",
+      "arrival": "2026-09-01T10:00:00",
+      "departure": "2026-09-01T11:00:00",
+      "arrival_src": "tracking.csv:row2",
+      "departure_src": "tracking.csv:row2",
+      "dwell_minutes": 60,
+      "clock_start": "2026-09-01T10:00:00",
+      "free_minutes": 120,
+      "over_free_minutes": 0,
+      "billable_minutes": 0,
+      "amount_cents": 0,
+      "capped": false,
+      "status": "ok",
+      "notes": [],
+      "claim_id": "DET-31B17F41ED"
+    }
+  ],
+  "flags": [
+    {
+      "invoice_no": "SYN-INV",
+      "load_id": "SYN-L1",
+      "carrier": "Fictional Carrier A",
+      "code": "TOTAL_MISMATCH",
+      "detail": "header total $999.00 != line sum $1,100.00",
+      "invoiced_cents": 99900,
+      "expected_cents": 110000,
+      "evidence": [
+        "carrier_invoices.csv:row2"
+      ],
+      "variance_cents": -10100
+    }
+  ],
+  "exceptions": [],
+  "packets": []
+}

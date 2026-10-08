@@ -1,0 +1,25 @@
+{
+  "started_utc": "2026-10-08T13:15:08.208735+00:00",
+  "finished_utc": "2026-10-08T13:15:08.901945+00:00",
+  "argv": [
+    "/usr/bin/python3",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_invoice_header_consistency.py",
+    "-v"
+  ],
+  "cwd": "/dev/shm/chatgpt-freight-invoice-headers-713adaab/baseline-source/freight_packets",
+  "returncode": 1,
+  "tests_run": 8,
+  "summary": "FAILED (failures=14)",
+  "source_sha256": "1d5fb49d5656819c2b857a4d3d45f288b38885e109f0504992786714fe65382b",
+  "test_sha256": "1fda13d4c63ce4e2c311323db1995bd663a660c4637bc93bfded460ee2ae57d8",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "848b8723c935ca059ec871339290d5ff465418eeef43688f3a90a6d790ec03d9",
+  "native_python": "3.14.4 (main, Aug 20 2026, 10:41:58) [GCC 15.2.0]"
+}
