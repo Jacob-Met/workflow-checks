@@ -4,6 +4,8 @@
 
 Built for multifamily operators who pay utility bills across a portfolio and staff a person to catch problems by hand. That job typically means verifying charges against prior billing periods, flagging unusual spikes, duplicate charges or billing errors, paying on time to avoid late fees, monitoring consumption trends, and handling service transfers at move-in and move-out.
 
+To inspect the actual CSV records cited by one flag or exception, use the [source-evidence reader](docs/source-evidence.md).
+
 ## What it checks (deterministic rules, no model calls)
 
 | Code | What it catches | Baseline / rule |
