@@ -1,0 +1,159 @@
+{
+  "source_commit": "9e931fa9f42033bf2368f7149684fb5631345715",
+  "sha": "0b0c903801f432968e9cdfb1f1fa134cecc37217",
+  "truncated": false,
+  "tree": [
+    {
+      "path": "utility_watch/HARDENING.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2033a69d8ae5daf24e68e017ed20c6a4dd863397",
+      "size": 3894,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/2033a69d8ae5daf24e68e017ed20c6a4dd863397"
+    },
+    {
+      "path": "utility_watch/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3672e6c365a3e7771df148ae168708af3f5d1d4f",
+      "size": 11774,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/3672e6c365a3e7771df148ae168708af3f5d1d4f"
+    },
+    {
+      "path": "utility_watch/sample_data/README_SYNTHETIC.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "237579a904d7b7b605f78ed122c97140c6f06003",
+      "size": 170,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/237579a904d7b7b605f78ed122c97140c6f06003"
+    },
+    {
+      "path": "utility_watch/sample_data/accounts.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8524a01938d9dfa3b9a0d05676a64e31e921ea8e",
+      "size": 2802,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/8524a01938d9dfa3b9a0d05676a64e31e921ea8e"
+    },
+    {
+      "path": "utility_watch/sample_data/bills.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "21eca3e9265e3bdeacb668e1ff602121f96edda6",
+      "size": 27296,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/21eca3e9265e3bdeacb668e1ff602121f96edda6"
+    },
+    {
+      "path": "utility_watch/sample_data/expected.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0016cf0754d112b3a55a0ede42e6999aee17a847",
+      "size": 899,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/0016cf0754d112b3a55a0ede42e6999aee17a847"
+    },
+    {
+      "path": "utility_watch/sample_data/occupancy.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4396760f366c95f09343ce3e778beb7abd80bea0",
+      "size": 564,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/4396760f366c95f09343ce3e778beb7abd80bea0"
+    },
+    {
+      "path": "utility_watch/sample_data/payments.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7f94d9c67855bc0def8b515b2b55450f9d65631e",
+      "size": 12113,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/7f94d9c67855bc0def8b515b2b55450f9d65631e"
+    },
+    {
+      "path": "utility_watch/tests/test_numeric_csv.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2e63820b66001b2cf35590ca8f41270ce84f7500",
+      "size": 3424,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/2e63820b66001b2cf35590ca8f41270ce84f7500"
+    },
+    {
+      "path": "utility_watch/tests/test_report.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a4480762868831bdafef1bf52e94a1cc68e31e43",
+      "size": 7083,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/a4480762868831bdafef1bf52e94a1cc68e31e43"
+    },
+    {
+      "path": "utility_watch/tests/test_review.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0308086a88c256bd5ad5fe2a9b2868c118ee52ec",
+      "size": 19251,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/0308086a88c256bd5ad5fe2a9b2868c118ee52ec"
+    },
+    {
+      "path": "utility_watch/tests/test_uwatch.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1a71129311c88af32bb4abf0d633e5fcc496ab78",
+      "size": 15469,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/1a71129311c88af32bb4abf0d633e5fcc496ab78"
+    },
+    {
+      "path": "utility_watch/uwatch/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7074157fb1710370668c2a0ad5217cd10cfe3618",
+      "size": 60,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/7074157fb1710370668c2a0ad5217cd10cfe3618"
+    },
+    {
+      "path": "utility_watch/uwatch/__main__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "823d40a6bf41beb59790ce83476b359f76f4b1ec",
+      "size": 53,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/823d40a6bf41beb59790ce83476b359f76f4b1ec"
+    },
+    {
+      "path": "utility_watch/uwatch/cli.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8655fdb7cd1e4735ece1da1727b68af6401e40a8",
+      "size": 3444,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/8655fdb7cd1e4735ece1da1727b68af6401e40a8"
+    },
+    {
+      "path": "utility_watch/uwatch/engine.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9deb205ad468381ffc91716f0d7ae6ab88d76f2a",
+      "size": 21072,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/9deb205ad468381ffc91716f0d7ae6ab88d76f2a"
+    },
+    {
+      "path": "utility_watch/uwatch/report.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ee2fcabd2026b4224c3cdfc51890f71762a9ef0f",
+      "size": 12382,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/ee2fcabd2026b4224c3cdfc51890f71762a9ef0f"
+    },
+    {
+      "path": "utility_watch/uwatch/review.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2475217ce9c073c39756f9fa3926342cd83f7254",
+      "size": 15534,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/2475217ce9c073c39756f9fa3926342cd83f7254"
+    },
+    {
+      "path": "utility_watch/uwatch/synth.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0d5c8137b3790bd062609ce4725beda63db9e58d",
+      "size": 13194,
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/blobs/0d5c8137b3790bd062609ce4725beda63db9e58d"
+    }
+  ]
+}

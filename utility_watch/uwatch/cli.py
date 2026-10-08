@@ -26,7 +26,11 @@ def main(argv=None) -> int:
     review.add_argument("--report", type=Path, required=True, help="native summary.json from uwatch run")
     review.add_argument("--previous", type=Path, help="completed prior review worksheet (optional)")
     review.add_argument("--out", type=Path, required=True, help="new review CSV path; never replaces an existing file")
+    from . import worksheet
+    worksheet.add_parser(sub)
     a = ap.parse_args(argv)
+    if a.cmd == "worksheet":
+        return worksheet.run(a)
     if a.cmd == "generate":
         from .synth import generate
         exp = generate(Path(a.out), a.seed, a.as_of)

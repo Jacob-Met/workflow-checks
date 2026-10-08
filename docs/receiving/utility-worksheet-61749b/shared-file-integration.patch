@@ -1,0 +1,43 @@
+--- a/utility_watch/uwatch/cli.py
++++ b/utility_watch/uwatch/cli.py
+@@ -26,7 +26,11 @@
+     review.add_argument("--report", type=Path, required=True, help="native summary.json from uwatch run")
+     review.add_argument("--previous", type=Path, help="completed prior review worksheet (optional)")
+     review.add_argument("--out", type=Path, required=True, help="new review CSV path; never replaces an existing file")
++    from . import worksheet
++    worksheet.add_parser(sub)
+     a = ap.parse_args(argv)
++    if a.cmd == "worksheet":
++        return worksheet.run(a)
+     if a.cmd == "generate":
+         from .synth import generate
+         exp = generate(Path(a.out), a.seed, a.as_of)
+--- a/utility_watch/README.md
++++ b/utility_watch/README.md
+@@ -106,6 +106,26 @@
+ The command only reads source/report/previous files and publishes a complete new worksheet.
+ The checker, original report, audit log, and payment queue keep their existing semantics.
+ 
++## Enter review notes from the terminal
++
++Use the same saved worksheet without editing its protected columns:
++
++```powershell
++python -m uwatch worksheet list --worksheet review-1.csv
++python -m uwatch worksheet annotate --worksheet review-1.csv --row-id ROW_ID_FROM_LIST --status in_progress --reviewer "Alex" --note "Asked the vendor to check this invoice." --out review-2.csv
++```
++
++Select an exact current row ID from the list and explicitly supply status, reviewer
++and note. The command validates the whole worksheet, changes only those three
++cells on the selected row, and publishes a new file. All other annotations,
++history, protected values and original files are preserved. Listing supports
++exact account/status filters, historical rows and JSON output.
++
++These are annotations on the saved report, not a fresh check of source data.
++Continue with the existing `review --previous review-2.csv` command when
++reconciling against a new export. See [terminal worksheet controls](docs/worksheet-cli.md)
++for complete examples, intentional clearing, literal notes and failure behavior.
++
+ ## Run it
+ 
+ ```powershell

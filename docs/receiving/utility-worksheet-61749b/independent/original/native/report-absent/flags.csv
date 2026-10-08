@@ -1,0 +1,2 @@
+key,property,utility,account_no,code,detail,evidence
+B-SEP,Authored B,gas,RECV-B,LATE_FEE_OR_PAST_DUE,"late fee $5.00, prior balance $0.00 on the bill",bills.csv:5

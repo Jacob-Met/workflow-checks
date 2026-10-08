@@ -1,0 +1,13 @@
+bill_id,account_no,property,utility,vendor,invoice,amount_due,due_date,status,evidence
+B50090,SYN-7005,Bayou Flats (synthetic),electric,Metro Power Co (placeholder),METR-50090,5809.56,2026-10-03,QUEUED_FOR_APPROVAL (not paid),bills.csv:91
+B50018,SYN-7001,Cypress Court (synthetic),electric,Metro Power Co (placeholder),METR-50018,7056.0,2026-10-04,QUEUED_FOR_APPROVAL (not paid),bills.csv:19
+B50108,SYN-7006,Bayou Flats (synthetic),gas,Gulf Gas Utility (placeholder),GULF-50108,1022.79,2026-10-06,QUEUED_FOR_APPROVAL (not paid),bills.csv:109
+B50161,SYN-7009,Gaylord Ridge (synthetic),electric,Metro Power Co (placeholder),METR-50161,7504.19,2026-10-06,QUEUED_FOR_APPROVAL (not paid),bills.csv:162
+B50126,SYN-7007,Bayou Flats (synthetic),water,City Water Dept (placeholder),CITY-50126,4155.1,2026-10-08,QUEUED_FOR_APPROVAL (not paid),bills.csv:127
+B50197,SYN-7011,Gaylord Ridge (synthetic),water,City Water Dept (placeholder),CITY-50197,4338.24,2026-10-08,QUEUED_FOR_APPROVAL (not paid),bills.csv:198
+B50036,SYN-7002,Cypress Court (synthetic),gas,Gulf Gas Utility (placeholder),GULF-50036,1015.72,2026-10-09,QUEUED_FOR_APPROVAL (not paid),bills.csv:37
+B50179,SYN-7010,Gaylord Ridge (synthetic),gas,Gulf Gas Utility (placeholder),GULF-50179,948.34,2026-10-09,QUEUED_FOR_APPROVAL (not paid),bills.csv:180
+B50054,SYN-7003,Cypress Court (synthetic),water,City Water Dept (placeholder),CITY-50054,4248.69,2026-10-10,QUEUED_FOR_APPROVAL (not paid),bills.csv:55
+B50144,SYN-7008,Bayou Flats (synthetic),trash,Haul-Rite Waste (placeholder),HAUL-50144,1246.39,2026-10-11,QUEUED_FOR_APPROVAL (not paid),bills.csv:145
+B50072,SYN-7004,Cypress Court (synthetic),trash,Haul-Rite Waste (placeholder),HAUL-50072,1472.55,2026-10-13,QUEUED_FOR_APPROVAL (not paid),bills.csv:73
+B50216,SYN-7012,Gaylord Ridge (synthetic),trash,Haul-Rite Waste (placeholder),HAUL-50216,1003.5,2026-10-15,QUEUED_FOR_APPROVAL (not paid),bills.csv:217
