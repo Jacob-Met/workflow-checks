@@ -1,0 +1,22 @@
+{
+  "workflow": ".github/workflows/tests.yml",
+  "executed_source": "2946f7754c921a9e670ba48d325d634665f50e94",
+  "qualified_source": "5222ac0e38d2b48631c527770afa3d6d951e0a6a",
+  "command": "/workspace/scratch/86776bb3cdb8/product-delivery/venv/bin/python -B -m pytest -q",
+  "groups": [
+    {
+      "working_directory": "freight_packets",
+      "exit_code": 0,
+      "passed": 41,
+      "seconds": 0.81,
+      "base_and_executed_and_final_subtree": "b80dd2a9dce900cf0f8ea4cb8af9df892fa800fd"
+    },
+    {
+      "working_directory": "utility_watch",
+      "exit_code": 0,
+      "passed": 34,
+      "seconds": 0.7,
+      "base_and_executed_and_final_subtree": "e0c4d58449500b91794f1fb498c9e0909bf9269c"
+    }
+  ]
+}

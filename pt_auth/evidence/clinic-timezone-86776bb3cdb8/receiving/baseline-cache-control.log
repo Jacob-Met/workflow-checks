@@ -1,0 +1,36 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_ test_actual_serve_refreshes_zone_cache_retaining_reviewed_day_then_reuses_it[local_moved_host] _
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-189/test_actual_serve_refreshes_zo0')
+cache_kind = 'local_moved_host'
+
+    @pytest.mark.parametrize("cache_kind", [
+        "different_named",
+        "missing_provenance",
+        pytest.param("local_moved_host", marks=pytest.mark.skipif(
+            not hasattr(time, "tzset"), reason="Host TZ substitution requires POSIX time.tzset",
+        )),
+    ])
+    def test_actual_serve_refreshes_zone_cache_retaining_reviewed_day_then_reuses_it(tmp_path, cache_kind):
+        data = write_clinic(tmp_path / "data")
+        out = tmp_path / "out"
+        producer_zone = "UTC" if cache_kind != "local_moved_host" else None
+        result = run_cli(data, out, producer_zone, "UTC")
+        assert result.returncode == 0, result.stderr
+        assert summary(out)["counts"]["uncovered_scheduled"] == 1
+        if cache_kind == "missing_provenance":
+            previous = summary(out)
+            previous.pop("clinic_timezone", None)
+            (out / "summary.json").write_text(json.dumps(previous), encoding="utf-8")
+        zone = None if cache_kind == "local_moved_host" else PACIFIC
+        with serve_cli(data, out, tmp_path, zone, PACIFIC) as base:
+            current = get_json(base)
+            assert current["as_of"] == AS_OF
+>           assert current["counts"]["uncovered_scheduled"] == 0
+E           assert 1 == 0
+
+test_receiving_timezone.py:198: AssertionError
+=========================== short test summary info ============================
+FAILED test_receiving_timezone.py::test_actual_serve_refreshes_zone_cache_retaining_reviewed_day_then_reuses_it[local_moved_host]
+1 failed, 13 deselected in 0.26s

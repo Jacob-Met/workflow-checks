@@ -1,0 +1,411 @@
+FFFFFFFFFFFFFFFFFFF                                                      [100%]
+=================================== FAILURES ===================================
+_ test_cli_named_clinic_zone_determines_coverage_independently_of_host[America/Los_Angeles-0-UTC] _
+
+clinic = PosixPath('/tmp/pytest-of-root/pytest-188/test_cli_named_clinic_zone_det0/data')
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-188/test_cli_named_clinic_zone_det0')
+host_timezone = 'UTC', clinic_timezone = 'America/Los_Angeles', uncovered = 0
+
+    @pytest.mark.parametrize("host_timezone", ["UTC", "America/New_York", PACIFIC])
+    @pytest.mark.parametrize("clinic_timezone,uncovered", [(PACIFIC, 0), ("UTC", 1)])
+    def test_cli_named_clinic_zone_determines_coverage_independently_of_host(
+        clinic, tmp_path, host_timezone, clinic_timezone, uncovered,
+    ):
+        out = tmp_path / "out"
+        result = cli(clinic, out, "--clinic-timezone", clinic_timezone, host_timezone=host_timezone)
+>       assert result.returncode == 0, result.stderr
+E       AssertionError: usage: ptauth [-h] {generate,run,serve} ...
+E         ptauth: error: unrecognized arguments: --clinic-timezone America/Los_Angeles
+E         
+E       assert 2 == 0
+E        +  where 2 = CompletedProcess(args=['/workspace/scratch/86776bb3cdb8/product-delivery/venv/bin/python', '-B', '-m', 'ptauth', 'run'... ptauth [-h] {generate,run,serve} ...\nptauth: error: unrecognized arguments: --clinic-timezone America/Los_Angeles\n').returncode
+
+pt_auth/tests/test_clinic_timezone.py:71: AssertionError
+_ test_cli_named_clinic_zone_determines_coverage_independently_of_host[America/Los_Angeles-0-America/New_York] _
+
+clinic = PosixPath('/tmp/pytest-of-root/pytest-188/test_cli_named_clinic_zone_det1/data')
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-188/test_cli_named_clinic_zone_det1')
+host_timezone = 'America/New_York', clinic_timezone = 'America/Los_Angeles'
+uncovered = 0
+
+    @pytest.mark.parametrize("host_timezone", ["UTC", "America/New_York", PACIFIC])
+    @pytest.mark.parametrize("clinic_timezone,uncovered", [(PACIFIC, 0), ("UTC", 1)])
+    def test_cli_named_clinic_zone_determines_coverage_independently_of_host(
+        clinic, tmp_path, host_timezone, clinic_timezone, uncovered,
+    ):
+        out = tmp_path / "out"
+        result = cli(clinic, out, "--clinic-timezone", clinic_timezone, host_timezone=host_timezone)
+>       assert result.returncode == 0, result.stderr
+E       AssertionError: usage: ptauth [-h] {generate,run,serve} ...
+E         ptauth: error: unrecognized arguments: --clinic-timezone America/Los_Angeles
+E         
+E       assert 2 == 0
+E        +  where 2 = CompletedProcess(args=['/workspace/scratch/86776bb3cdb8/product-delivery/venv/bin/python', '-B', '-m', 'ptauth', 'run'... ptauth [-h] {generate,run,serve} ...\nptauth: error: unrecognized arguments: --clinic-timezone America/Los_Angeles\n').returncode
+
+pt_auth/tests/test_clinic_timezone.py:71: AssertionError
+_ test_cli_named_clinic_zone_determines_coverage_independently_of_host[America/Los_Angeles-0-America/Los_Angeles] _
+
+clinic = PosixPath('/tmp/pytest-of-root/pytest-188/test_cli_named_clinic_zone_det2/data')
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-188/test_cli_named_clinic_zone_det2')
+host_timezone = 'America/Los_Angeles', clinic_timezone = 'America/Los_Angeles'
+uncovered = 0
+
+    @pytest.mark.parametrize("host_timezone", ["UTC", "America/New_York", PACIFIC])
+    @pytest.mark.parametrize("clinic_timezone,uncovered", [(PACIFIC, 0), ("UTC", 1)])
+    def test_cli_named_clinic_zone_determines_coverage_independently_of_host(
+        clinic, tmp_path, host_timezone, clinic_timezone, uncovered,
+    ):
+        out = tmp_path / "out"
+        result = cli(clinic, out, "--clinic-timezone", clinic_timezone, host_timezone=host_timezone)
+>       assert result.returncode == 0, result.stderr
+E       AssertionError: usage: ptauth [-h] {generate,run,serve} ...
+E         ptauth: error: unrecognized arguments: --clinic-timezone America/Los_Angeles
+E         
+E       assert 2 == 0
+E        +  where 2 = CompletedProcess(args=['/workspace/scratch/86776bb3cdb8/product-delivery/venv/bin/python', '-B', '-m', 'ptauth', 'run'... ptauth [-h] {generate,run,serve} ...\nptauth: error: unrecognized arguments: --clinic-timezone America/Los_Angeles\n').returncode
+
+pt_auth/tests/test_clinic_timezone.py:71: AssertionError
+_ test_cli_named_clinic_zone_determines_coverage_independently_of_host[UTC-1-UTC] _
+
+clinic = PosixPath('/tmp/pytest-of-root/pytest-188/test_cli_named_clinic_zone_det3/data')
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-188/test_cli_named_clinic_zone_det3')
+host_timezone = 'UTC', clinic_timezone = 'UTC', uncovered = 1
+
+    @pytest.mark.parametrize("host_timezone", ["UTC", "America/New_York", PACIFIC])
+    @pytest.mark.parametrize("clinic_timezone,uncovered", [(PACIFIC, 0), ("UTC", 1)])
+    def test_cli_named_clinic_zone_determines_coverage_independently_of_host(
+        clinic, tmp_path, host_timezone, clinic_timezone, uncovered,
+    ):
+        out = tmp_path / "out"
+        result = cli(clinic, out, "--clinic-timezone", clinic_timezone, host_timezone=host_timezone)
+>       assert result.returncode == 0, result.stderr
+E       AssertionError: usage: ptauth [-h] {generate,run,serve} ...
+E         ptauth: error: unrecognized arguments: --clinic-timezone UTC
+E         
+E       assert 2 == 0
+E        +  where 2 = CompletedProcess(args=['/workspace/scratch/86776bb3cdb8/product-delivery/venv/bin/python', '-B', '-m', 'ptauth', 'run'..., stderr='usage: ptauth [-h] {generate,run,serve} ...\nptauth: error: unrecognized arguments: --clinic-timezone UTC\n').returncode
+
+pt_auth/tests/test_clinic_timezone.py:71: AssertionError
+_ test_cli_named_clinic_zone_determines_coverage_independently_of_host[UTC-1-America/New_York] _
+
+clinic = PosixPath('/tmp/pytest-of-root/pytest-188/test_cli_named_clinic_zone_det4/data')
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-188/test_cli_named_clinic_zone_det4')
+host_timezone = 'America/New_York', clinic_timezone = 'UTC', uncovered = 1
+
+    @pytest.mark.parametrize("host_timezone", ["UTC", "America/New_York", PACIFIC])
+    @pytest.mark.parametrize("clinic_timezone,uncovered", [(PACIFIC, 0), ("UTC", 1)])
+    def test_cli_named_clinic_zone_determines_coverage_independently_of_host(
+        clinic, tmp_path, host_timezone, clinic_timezone, uncovered,
+    ):
+        out = tmp_path / "out"
+        result = cli(clinic, out, "--clinic-timezone", clinic_timezone, host_timezone=host_timezone)
+>       assert result.returncode == 0, result.stderr
+E       AssertionError: usage: ptauth [-h] {generate,run,serve} ...
+E         ptauth: error: unrecognized arguments: --clinic-timezone UTC
+E         
+E       assert 2 == 0
+E        +  where 2 = CompletedProcess(args=['/workspace/scratch/86776bb3cdb8/product-delivery/venv/bin/python', '-B', '-m', 'ptauth', 'run'..., stderr='usage: ptauth [-h] {generate,run,serve} ...\nptauth: error: unrecognized arguments: --clinic-timezone UTC\n').returncode
+
+pt_auth/tests/test_clinic_timezone.py:71: AssertionError
+_ test_cli_named_clinic_zone_determines_coverage_independently_of_host[UTC-1-America/Los_Angeles] _
+
+clinic = PosixPath('/tmp/pytest-of-root/pytest-188/test_cli_named_clinic_zone_det5/data')
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-188/test_cli_named_clinic_zone_det5')
+host_timezone = 'America/Los_Angeles', clinic_timezone = 'UTC', uncovered = 1
+
+    @pytest.mark.parametrize("host_timezone", ["UTC", "America/New_York", PACIFIC])
+    @pytest.mark.parametrize("clinic_timezone,uncovered", [(PACIFIC, 0), ("UTC", 1)])
+    def test_cli_named_clinic_zone_determines_coverage_independently_of_host(
+        clinic, tmp_path, host_timezone, clinic_timezone, uncovered,
+    ):
+        out = tmp_path / "out"
+        result = cli(clinic, out, "--clinic-timezone", clinic_timezone, host_timezone=host_timezone)
+>       assert result.returncode == 0, result.stderr
+E       AssertionError: usage: ptauth [-h] {generate,run,serve} ...
+E         ptauth: error: unrecognized arguments: --clinic-timezone UTC
+E         
+E       assert 2 == 0
+E        +  where 2 = CompletedProcess(args=['/workspace/scratch/86776bb3cdb8/product-delivery/venv/bin/python', '-B', '-m', 'ptauth', 'run'..., stderr='usage: ptauth [-h] {generate,run,serve} ...\nptauth: error: unrecognized arguments: --clinic-timezone UTC\n').returncode
+
+pt_auth/tests/test_clinic_timezone.py:71: AssertionError
+___________ test_auth_timestamps_and_visits_use_the_same_clinic_zone ___________
+
+clinic = PosixPath('/tmp/pytest-of-root/pytest-188/test_auth_timestamps_and_visit0/data')
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-188/test_auth_timestamps_and_visit0')
+
+    def test_auth_timestamps_and_visits_use_the_same_clinic_zone(clinic, tmp_path):
+        (clinic / "authorizations.csv").write_text(
+            "auth_no,patient_id,payer_id,visits_authorized,start_date,end_date,status\n"
+            "A1,SYN-1,P,10,2026-09-28T07:00:00Z,2026-09-29T06:59:00Z,approved\n"
+        )
+>       summary = report.run(clinic, tmp_path / "out", AS_OF, clinic_timezone=PACIFIC)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: run() got an unexpected keyword argument 'clinic_timezone'
+
+pt_auth/tests/test_clinic_timezone.py:87: TypeError
+__ test_named_zone_uses_historical_offset_and_preserves_dates_without_offsets __
+
+clinic = PosixPath('/tmp/pytest-of-root/pytest-188/test_named_zone_uses_historica0/data')
+
+    def test_named_zone_uses_historical_offset_and_preserves_dates_without_offsets(clinic):
+        path = clinic / "schedule.csv"
+        header = path.read_text().splitlines()[0]
+        values = [
+            ("2026-01-16T07:30:00Z", date(2026, 1, 15)),
+            ("2026-07-16T07:30:00Z", date(2026, 7, 16)),
+            ("2026-11-01T08:30:00Z", date(2026, 11, 1)),
+            ("2026-11-01T09:30:00Z", date(2026, 11, 1)),
+            ("2026-03-08T02:30:00", date(2026, 3, 8)),
+            ("2026-09-28", date(2026, 9, 28)),
+            ("9/28/2026 11:30 PM", date(2026, 9, 28)),
+        ]
+        rows = [f"V{i},SYN-1,{raw},Clinic (synthetic),Test PT,P,scheduled,treatment" for i, (raw, _) in enumerate(values)]
+        path.write_text(header + "\n" + "\n".join(rows) + "\n")
+>       visits = data.load_visits(path, clinic_tz=ZoneInfo(PACIFIC))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: load_visits() got an unexpected keyword argument 'clinic_tz'
+
+pt_auth/tests/test_clinic_timezone.py:107: TypeError
+_________ test_parallel_reports_keep_their_own_zone_and_legacy_default _________
+
+clinic = PosixPath('/tmp/pytest-of-root/pytest-188/test_parallel_reports_keep_the0/data')
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-188/test_parallel_reports_keep_the0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7f7754101730>
+
+    def test_parallel_reports_keep_their_own_zone_and_legacy_default(clinic, tmp_path, monkeypatch):
+        monkeypatch.setattr(data, "CLINIC_TZ", timezone.utc)
+    
+        def run_for(zone):
+            return report.run(clinic, tmp_path / zone.replace("/", "_"), AS_OF, clinic_timezone=zone)
+    
+        with ThreadPoolExecutor(max_workers=2) as pool:
+>           pacific, utc = list(pool.map(run_for, [PACIFIC, "UTC"]))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+pt_auth/tests/test_clinic_timezone.py:118: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/concurrent/futures/_base.py:619: in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/concurrent/futures/_base.py:317: in _result_or_cancel
+    return fut.result(timeout)
+           ^^^^^^^^^^^^^^^^^^^
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/concurrent/futures/_base.py:449: in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/concurrent/futures/_base.py:401: in __get_result
+    raise self._exception
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/concurrent/futures/thread.py:59: in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+zone = 'America/Los_Angeles'
+
+    def run_for(zone):
+>       return report.run(clinic, tmp_path / zone.replace("/", "_"), AS_OF, clinic_timezone=zone)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: run() got an unexpected keyword argument 'clinic_timezone'
+
+pt_auth/tests/test_clinic_timezone.py:115: TypeError
+_____ test_invalid_zone_refuses_cli_before_changing_any_report[Not/A_Zone] _____
+
+clinic = PosixPath('/tmp/pytest-of-root/pytest-188/test_invalid_zone_refuses_cli_0/data')
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-188/test_invalid_zone_refuses_cli_0')
+name = 'Not/A_Zone'
+
+    @pytest.mark.parametrize("name", ["Not/A_Zone", "", "../UTC", "/etc/passwd"])
+    def test_invalid_zone_refuses_cli_before_changing_any_report(clinic, tmp_path, name):
+        out = tmp_path / "out"
+        out.mkdir()
+        (out / "summary.json").write_text("previous reviewed summary\n")
+        (out / "audit.jsonl").write_text("previous audit\n")
+        before = {p.name: p.read_bytes() for p in out.iterdir()}
+        result = cli(clinic, out, "--clinic-timezone", name)
+        assert result.returncode == 2
+>       assert "clinic time zone" in result.stderr.lower()
+E       AssertionError: assert 'clinic time zone' in 'usage: ptauth [-h] {generate,run,serve} ...\nptauth: error: unrecognized arguments: --clinic-timezone not/a_zone\n'
+E        +  where 'usage: ptauth [-h] {generate,run,serve} ...\nptauth: error: unrecognized arguments: --clinic-timezone not/a_zone\n' = <built-in method lower of str object at 0x7f7753f3c210>()
+E        +    where <built-in method lower of str object at 0x7f7753f3c210> = 'usage: ptauth [-h] {generate,run,serve} ...\nptauth: error: unrecognized arguments: --clinic-timezone Not/A_Zone\n'.lower
+E        +      where 'usage: ptauth [-h] {generate,run,serve} ...\nptauth: error: unrecognized arguments: --clinic-timezone Not/A_Zone\n' = CompletedProcess(args=['/workspace/scratch/86776bb3cdb8/product-delivery/venv/bin/python', '-B', '-m', 'ptauth', 'run'...r='usage: ptauth [-h] {generate,run,serve} ...\nptauth: error: unrecognized arguments: --clinic-timezone Not/A_Zone\n').stderr
+
+pt_auth/tests/test_clinic_timezone.py:134: AssertionError
+__________ test_invalid_zone_refuses_cli_before_changing_any_report[] __________
+
+clinic = PosixPath('/tmp/pytest-of-root/pytest-188/test_invalid_zone_refuses_cli_1/data')
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-188/test_invalid_zone_refuses_cli_1')
+name = ''
+
+    @pytest.mark.parametrize("name", ["Not/A_Zone", "", "../UTC", "/etc/passwd"])
+    def test_invalid_zone_refuses_cli_before_changing_any_report(clinic, tmp_path, name):
+        out = tmp_path / "out"
+        out.mkdir()
+        (out / "summary.json").write_text("previous reviewed summary\n")
+        (out / "audit.jsonl").write_text("previous audit\n")
+        before = {p.name: p.read_bytes() for p in out.iterdir()}
+        result = cli(clinic, out, "--clinic-timezone", name)
+        assert result.returncode == 2
+>       assert "clinic time zone" in result.stderr.lower()
+E       AssertionError: assert 'clinic time zone' in 'usage: ptauth [-h] {generate,run,serve} ...\nptauth: error: unrecognized arguments: --clinic-timezone \n'
+E        +  where 'usage: ptauth [-h] {generate,run,serve} ...\nptauth: error: unrecognized arguments: --clinic-timezone \n' = <built-in method lower of str object at 0x7f7753fa8390>()
+E        +    where <built-in method lower of str object at 0x7f7753fa8390> = 'usage: ptauth [-h] {generate,run,serve} ...\nptauth: error: unrecognized arguments: --clinic-timezone \n'.lower
+E        +      where 'usage: ptauth [-h] {generate,run,serve} ...\nptauth: error: unrecognized arguments: --clinic-timezone \n' = CompletedProcess(args=['/workspace/scratch/86776bb3cdb8/product-delivery/venv/bin/python', '-B', '-m', 'ptauth', 'run'...='', stderr='usage: ptauth [-h] {generate,run,serve} ...\nptauth: error: unrecognized arguments: --clinic-timezone \n').stderr
+
+pt_auth/tests/test_clinic_timezone.py:134: AssertionError
+_______ test_invalid_zone_refuses_cli_before_changing_any_report[../UTC] _______
+
+clinic = PosixPath('/tmp/pytest-of-root/pytest-188/test_invalid_zone_refuses_cli_2/data')
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-188/test_invalid_zone_refuses_cli_2')
+name = '../UTC'
+
+    @pytest.mark.parametrize("name", ["Not/A_Zone", "", "../UTC", "/etc/passwd"])
+    def test_invalid_zone_refuses_cli_before_changing_any_report(clinic, tmp_path, name):
+        out = tmp_path / "out"
+        out.mkdir()
+        (out / "summary.json").write_text("previous reviewed summary\n")
+        (out / "audit.jsonl").write_text("previous audit\n")
+        before = {p.name: p.read_bytes() for p in out.iterdir()}
+        result = cli(clinic, out, "--clinic-timezone", name)
+        assert result.returncode == 2
+>       assert "clinic time zone" in result.stderr.lower()
+E       AssertionError: assert 'clinic time zone' in 'usage: ptauth [-h] {generate,run,serve} ...\nptauth: error: unrecognized arguments: --clinic-timezone ../utc\n'
+E        +  where 'usage: ptauth [-h] {generate,run,serve} ...\nptauth: error: unrecognized arguments: --clinic-timezone ../utc\n' = <built-in method lower of str object at 0x7f7753f3c490>()
+E        +    where <built-in method lower of str object at 0x7f7753f3c490> = 'usage: ptauth [-h] {generate,run,serve} ...\nptauth: error: unrecognized arguments: --clinic-timezone ../UTC\n'.lower
+E        +      where 'usage: ptauth [-h] {generate,run,serve} ...\nptauth: error: unrecognized arguments: --clinic-timezone ../UTC\n' = CompletedProcess(args=['/workspace/scratch/86776bb3cdb8/product-delivery/venv/bin/python', '-B', '-m', 'ptauth', 'run'...tderr='usage: ptauth [-h] {generate,run,serve} ...\nptauth: error: unrecognized arguments: --clinic-timezone ../UTC\n').stderr
+
+pt_auth/tests/test_clinic_timezone.py:134: AssertionError
+____ test_invalid_zone_refuses_cli_before_changing_any_report[/etc/passwd] _____
+
+clinic = PosixPath('/tmp/pytest-of-root/pytest-188/test_invalid_zone_refuses_cli_3/data')
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-188/test_invalid_zone_refuses_cli_3')
+name = '/etc/passwd'
+
+    @pytest.mark.parametrize("name", ["Not/A_Zone", "", "../UTC", "/etc/passwd"])
+    def test_invalid_zone_refuses_cli_before_changing_any_report(clinic, tmp_path, name):
+        out = tmp_path / "out"
+        out.mkdir()
+        (out / "summary.json").write_text("previous reviewed summary\n")
+        (out / "audit.jsonl").write_text("previous audit\n")
+        before = {p.name: p.read_bytes() for p in out.iterdir()}
+        result = cli(clinic, out, "--clinic-timezone", name)
+        assert result.returncode == 2
+>       assert "clinic time zone" in result.stderr.lower()
+E       AssertionError: assert 'clinic time zone' in 'usage: ptauth [-h] {generate,run,serve} ...\nptauth: error: unrecognized arguments: --clinic-timezone /etc/passwd\n'
+E        +  where 'usage: ptauth [-h] {generate,run,serve} ...\nptauth: error: unrecognized arguments: --clinic-timezone /etc/passwd\n' = <built-in method lower of str object at 0x7f7753f3cfd0>()
+E        +    where <built-in method lower of str object at 0x7f7753f3cfd0> = 'usage: ptauth [-h] {generate,run,serve} ...\nptauth: error: unrecognized arguments: --clinic-timezone /etc/passwd\n'.lower
+E        +      where 'usage: ptauth [-h] {generate,run,serve} ...\nptauth: error: unrecognized arguments: --clinic-timezone /etc/passwd\n' = CompletedProcess(args=['/workspace/scratch/86776bb3cdb8/product-delivery/venv/bin/python', '-B', '-m', 'ptauth', 'run'...='usage: ptauth [-h] {generate,run,serve} ...\nptauth: error: unrecognized arguments: --clinic-timezone /etc/passwd\n').stderr
+
+pt_auth/tests/test_clinic_timezone.py:134: AssertionError
+__________ test_serve_refuses_invalid_zone_before_creating_or_binding __________
+
+clinic = PosixPath('/tmp/pytest-of-root/pytest-188/test_serve_refuses_invalid_zon0/data')
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-188/test_serve_refuses_invalid_zon0')
+
+    def test_serve_refuses_invalid_zone_before_creating_or_binding(clinic, tmp_path):
+        out = tmp_path / "out"
+        result = subprocess.run(
+            [sys.executable, "-B", "-m", "ptauth", "serve", "--data", str(clinic),
+             "--out", str(out), "--port", "0", "--clinic-timezone", "Not/A_Zone"],
+            cwd=PACKAGE_ROOT, capture_output=True, text=True, timeout=5,
+        )
+        assert result.returncode == 2
+>       assert "clinic time zone" in result.stderr.lower() and "Traceback" not in result.stderr
+E       AssertionError: assert ('clinic time zone' in 'usage: ptauth [-h] {generate,run,serve} ...\nptauth: error: unrecognized arguments: --clinic-timezone not/a_zone\n')
+E        +  where 'usage: ptauth [-h] {generate,run,serve} ...\nptauth: error: unrecognized arguments: --clinic-timezone not/a_zone\n' = <built-in method lower of str object at 0x7f7753f3cb70>()
+E        +    where <built-in method lower of str object at 0x7f7753f3cb70> = 'usage: ptauth [-h] {generate,run,serve} ...\nptauth: error: unrecognized arguments: --clinic-timezone Not/A_Zone\n'.lower
+E        +      where 'usage: ptauth [-h] {generate,run,serve} ...\nptauth: error: unrecognized arguments: --clinic-timezone Not/A_Zone\n' = CompletedProcess(args=['/workspace/scratch/86776bb3cdb8/product-delivery/venv/bin/python', '-B', '-m', 'ptauth', 'serv...r='usage: ptauth [-h] {generate,run,serve} ...\nptauth: error: unrecognized arguments: --clinic-timezone Not/A_Zone\n').stderr
+
+pt_auth/tests/test_clinic_timezone.py:150: AssertionError
+_________ test_named_zone_controls_default_today_when_no_sample_as_of __________
+
+clinic = PosixPath('/tmp/pytest-of-root/pytest-188/test_named_zone_controls_defau0/data')
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-188/test_named_zone_controls_defau0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7f7754101940>
+
+    def test_named_zone_controls_default_today_when_no_sample_as_of(clinic, tmp_path, monkeypatch):
+        class FixedClock(datetime):
+            @classmethod
+            def now(cls, tz=None):
+                instant = datetime(2026, 9, 29, 1, 30, tzinfo=timezone.utc)
+                return instant.astimezone(tz)
+    
+        monkeypatch.setattr(report, "datetime", FixedClock)
+>       summary = report.run(clinic, tmp_path / "out", clinic_timezone=PACIFIC)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: run() got an unexpected keyword argument 'clinic_timezone'
+
+pt_auth/tests/test_clinic_timezone.py:162: TypeError
+_______ test_cached_summary_cannot_speak_for_another_or_unrecorded_zone ________
+
+clinic = PosixPath('/tmp/pytest-of-root/pytest-188/test_cached_summary_cannot_spe0/data')
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-188/test_cached_summary_cannot_spe0')
+
+    def test_cached_summary_cannot_speak_for_another_or_unrecorded_zone(clinic, tmp_path):
+        out = tmp_path / "out"
+>       previous = report.run(clinic, out, AS_OF, clinic_timezone="UTC")
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: run() got an unexpected keyword argument 'clinic_timezone'
+
+pt_auth/tests/test_clinic_timezone.py:168: TypeError
+___________ test_actual_http_run_and_digest_keep_server_clinic_zone ____________
+
+clinic = PosixPath('/tmp/pytest-of-root/pytest-188/test_actual_http_run_and_diges0/data')
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-188/test_actual_http_run_and_diges0')
+
+    def test_actual_http_run_and_digest_keep_server_clinic_zone(clinic, tmp_path):
+>       app = App(clinic, tmp_path / "out", clinic_timezone=PACIFIC)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: App.__init__() got an unexpected keyword argument 'clinic_timezone'
+
+pt_auth/tests/test_clinic_timezone.py:198: TypeError
+___________ test_unavailable_zone_database_explains_how_to_supply_it ___________
+
+clinic = PosixPath('/tmp/pytest-of-root/pytest-188/test_unavailable_zone_database0/data')
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-188/test_unavailable_zone_database0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7f77540fef60>
+
+    def test_unavailable_zone_database_explains_how_to_supply_it(clinic, tmp_path, monkeypatch):
+        from zoneinfo import ZoneInfoNotFoundError
+    
+        def missing(_):
+            raise ZoneInfoNotFoundError("authored missing database")
+    
+>       monkeypatch.setattr(data, "ZoneInfo", missing)
+E       AttributeError: <module 'ptauth.data' from '/workspace/scratch/86776bb3cdb8/product-delivery/workflow-baseline/pt_auth/ptauth/data.py'> has no attribute 'ZoneInfo'
+
+pt_auth/tests/test_clinic_timezone.py:220: AttributeError
+______ test_actual_browser_displays_clinic_zone_with_coverage_and_digest _______
+
+clinic = PosixPath('/tmp/pytest-of-root/pytest-188/test_actual_browser_displays_c0/data')
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-188/test_actual_browser_displays_c0')
+
+    @pytest.mark.skipif(not os.environ.get("PTAUTH_TEST_CHROME"), reason="set PTAUTH_TEST_CHROME for isolated browser qualification")
+    def test_actual_browser_displays_clinic_zone_with_coverage_and_digest(clinic, tmp_path):
+        from playwright.sync_api import expect, sync_playwright
+    
+>       app = App(clinic, tmp_path / "out", clinic_timezone=PACIFIC)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: App.__init__() got an unexpected keyword argument 'clinic_timezone'
+
+pt_auth/tests/test_clinic_timezone.py:230: TypeError
+=========================== short test summary info ============================
+FAILED pt_auth/tests/test_clinic_timezone.py::test_cli_named_clinic_zone_determines_coverage_independently_of_host[America/Los_Angeles-0-UTC]
+FAILED pt_auth/tests/test_clinic_timezone.py::test_cli_named_clinic_zone_determines_coverage_independently_of_host[America/Los_Angeles-0-America/New_York]
+FAILED pt_auth/tests/test_clinic_timezone.py::test_cli_named_clinic_zone_determines_coverage_independently_of_host[America/Los_Angeles-0-America/Los_Angeles]
+FAILED pt_auth/tests/test_clinic_timezone.py::test_cli_named_clinic_zone_determines_coverage_independently_of_host[UTC-1-UTC]
+FAILED pt_auth/tests/test_clinic_timezone.py::test_cli_named_clinic_zone_determines_coverage_independently_of_host[UTC-1-America/New_York]
+FAILED pt_auth/tests/test_clinic_timezone.py::test_cli_named_clinic_zone_determines_coverage_independently_of_host[UTC-1-America/Los_Angeles]
+FAILED pt_auth/tests/test_clinic_timezone.py::test_auth_timestamps_and_visits_use_the_same_clinic_zone
+FAILED pt_auth/tests/test_clinic_timezone.py::test_named_zone_uses_historical_offset_and_preserves_dates_without_offsets
+FAILED pt_auth/tests/test_clinic_timezone.py::test_parallel_reports_keep_their_own_zone_and_legacy_default
+FAILED pt_auth/tests/test_clinic_timezone.py::test_invalid_zone_refuses_cli_before_changing_any_report[Not/A_Zone]
+FAILED pt_auth/tests/test_clinic_timezone.py::test_invalid_zone_refuses_cli_before_changing_any_report[]
+FAILED pt_auth/tests/test_clinic_timezone.py::test_invalid_zone_refuses_cli_before_changing_any_report[../UTC]
+FAILED pt_auth/tests/test_clinic_timezone.py::test_invalid_zone_refuses_cli_before_changing_any_report[/etc/passwd]
+FAILED pt_auth/tests/test_clinic_timezone.py::test_serve_refuses_invalid_zone_before_creating_or_binding
+FAILED pt_auth/tests/test_clinic_timezone.py::test_named_zone_controls_default_today_when_no_sample_as_of
+FAILED pt_auth/tests/test_clinic_timezone.py::test_cached_summary_cannot_speak_for_another_or_unrecorded_zone
+FAILED pt_auth/tests/test_clinic_timezone.py::test_actual_http_run_and_digest_keep_server_clinic_zone
+FAILED pt_auth/tests/test_clinic_timezone.py::test_unavailable_zone_database_explains_how_to_supply_it
+FAILED pt_auth/tests/test_clinic_timezone.py::test_actual_browser_displays_clinic_zone_with_coverage_and_digest
+19 failed in 0.75s
