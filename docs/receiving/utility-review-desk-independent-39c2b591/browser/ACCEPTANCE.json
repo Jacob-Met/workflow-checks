@@ -1,0 +1,69 @@
+{
+  "schema": "hamon.utility_desk.independent_acceptance.v1",
+  "decision": "accept frozen saved-worksheet consumer",
+  "candidate_commit": "fa057a67c428fb6ccd1517e7f9eb51d946ab12d6",
+  "candidate_tree": "9124788f2224f99f153642754c6dc832ed4762c2",
+  "original_base": "9e931fa9f42033bf2368f7149684fb5631345715",
+  "product_source_leaves": 355,
+  "product_source_modified": false,
+  "actual_browser": true,
+  "groups_passed": 6,
+  "groups_total": 6,
+  "checks": [
+    "The independently produced worksheet exposes all three current row identities and both inspectable, read-only historical rows",
+    "A non-open status without its note refuses delivery and preserves the in-page current-row edits and all history",
+    "Exact row/account identity survives filtering: two same-key accounts retain distinct edits and literal markup stays textarea text",
+    "The real filtered-view download contains every current/history/manifest row and passes the unchanged original native worksheet loader",
+    "An observed change to the disposable selected source produces HTTP 409, saves no file and retains the pending in-page amendment",
+    "Restoring admitted source bytes permits retry; the amended real download reconciles through the original native command without changing source, history or report"
+  ],
+  "node": "v22.22.1",
+  "browser": "Chromium 153.0.8010.47 snap",
+  "real_downloads": [
+    {
+      "label": "filtered-complete",
+      "bytes": 3064,
+      "sha256": "05250dd0342243de5bf931e39d8350513c1efd65051130e2cbb01552e791923c",
+      "suggestedFilename": "utility-review-edited.csv"
+    },
+    {
+      "label": "restored-source",
+      "bytes": 3111,
+      "sha256": "58ce0c6bbb4914777a00333264221f4e5f904198b5aff6841487820d413c5fb5",
+      "suggestedFilename": "utility-review-edited.csv"
+    }
+  ],
+  "observed_download_statuses": [
+    200,
+    409,
+    200
+  ],
+  "original_native_loader_acceptance": true,
+  "original_native_reconciliation_count": 1,
+  "reconciliation_exit": 0,
+  "complete_row_counts": {
+    "current": 3,
+    "historical": 2,
+    "manifest": 1
+  },
+  "mobile_viewport": {
+    "width": 390,
+    "height": 844,
+    "document_width": 390
+  },
+  "screenshots_visually_inspected": 3,
+  "application_exceptions": 0,
+  "server_stderr_bytes": 0,
+  "receiver_stderr_bytes": 0,
+  "chromium_stderr_bytes": 3891,
+  "product_failures_found": 0,
+  "retained_prior_candidate_failure": "Receiver v3 filename-count assumption; five groups passed and recovery download completed. No product change. Its first raw download was replaced before archival; the final run archives both real artifacts.",
+  "preparation_failures_preserved": true,
+  "newer_engine_reconciliation_qualified": false,
+  "public_pr_ci_or_merge_claimed": false,
+  "raw_file_count": 146,
+  "raw_container_sha256": "970acbb98ada68f1d9ca6a33aafdf357264d81b05302ee4625102570a686d151",
+  "scope_owner": "Root handles guarded publication/integration. Production owns current-main source/CLI composition.",
+  "historical_ancestry_claimed": false,
+  "portable_snapshot_history": "A separately rooted source snapshot preserves the exact executed source tree; original native lineage and missing older parent remain separately recorded."
+}
