@@ -1,0 +1,271 @@
+{
+  "schema": "hamon.utility_desk.author_receiving.v1",
+  "original": {
+    "base": "9e931fa9f42033bf2368f7149684fb5631345715",
+    "head": "fa057a67c428fb6ccd1517e7f9eb51d946ab12d6",
+    "tree": "9124788f2224f99f153642754c6dc832ed4762c2",
+    "files": [
+      {
+        "path": "utility_watch/README.md",
+        "bytes": 12505,
+        "sha256": "1c8936811303dde79078e4c92c2550fcf0e52b0df6efb8ee9786e8373e21bc3b",
+        "blob": "35b9a3a7e0a63da6f76d25e13ba894173ad37326"
+      },
+      {
+        "path": "utility_watch/docs/review-desk.md",
+        "bytes": 5050,
+        "sha256": "ead8e6217b498d87d153f094797afc45610a0c9e61350e112bf643ca8baa5735",
+        "blob": "ac74106dc53fe79591d0daf21913ba834124ee27"
+      },
+      {
+        "path": "utility_watch/tests/review_desk_browser.mjs",
+        "bytes": 20841,
+        "sha256": "9d4284d04c709092686df6fda439734795dfaf94fb99141eb68b0c42e17d5432",
+        "blob": "b4cb971eabeff58009db221826cca9385265c0d1"
+      },
+      {
+        "path": "utility_watch/tests/review_desk_fixture.py",
+        "bytes": 3947,
+        "sha256": "a280b548cb6f86cd99bba9116aa9c9d75e75c0ad60861a1faa355b37e6012815",
+        "blob": "a5b0d8bed3af39871f9e0c0ea890801d85b8448d"
+      },
+      {
+        "path": "utility_watch/tests/test_review_desk.py",
+        "bytes": 11216,
+        "sha256": "72284ab0dfb8823d9b7b87045d7d089d31e12739b8f190da4faad2ded7dfa970",
+        "blob": "28ef51ca603c2b432b08cf93789574f2cf279f42"
+      },
+      {
+        "path": "utility_watch/uwatch/cli.py",
+        "bytes": 4051,
+        "sha256": "c6103920d86f9c5854e2b015680923fa6cceb6e4c0a7504acb897d79eeecfb47",
+        "blob": "3300d1c40338b759eebe9dd948c806cf99be8077"
+      },
+      {
+        "path": "utility_watch/uwatch/review_desk.css",
+        "bytes": 5841,
+        "sha256": "935cd31f18bc44c92163232ce48e5f9e9d1f6ee569a44db952ea95e8059ffac2",
+        "blob": "26b2ca2eec1f266ac8547fc7835984ac6c859975"
+      },
+      {
+        "path": "utility_watch/uwatch/review_desk.html",
+        "bytes": 5592,
+        "sha256": "388b97577c67d72c07dc8eba3a1e95f23fe65dae11388051bd702f9fa381c2f9",
+        "blob": "f6e0b60f5df4211a9aaa2e81a1a2b94b0bfa181b"
+      },
+      {
+        "path": "utility_watch/uwatch/review_desk.js",
+        "bytes": 11598,
+        "sha256": "9eec8cbf49cf96c72ec2cdbe21cecb73b8af19897f806ae9642bcbf67f3fb619",
+        "blob": "942140e8e22cca0d27109cb6ccb53280c7673848"
+      },
+      {
+        "path": "utility_watch/uwatch/review_desk.py",
+        "bytes": 11194,
+        "sha256": "fcb790242359977dd80bda918eae27d4b34d4820b2f11f602a543de1d32aaa48",
+        "blob": "873b375de871916cfb597985b78c097e86f44ee3"
+      }
+    ]
+  },
+  "current": {
+    "base": "5a70e458ed455d47ef672ed9b5a614ec59812f0c",
+    "head": "65c306d1138d57ceb0fbcb7829addbd36da832d8",
+    "tree": "12266e043adaeb99d49c42a5191dfdf5efdbe92b",
+    "parents": [
+      "fa057a67c428fb6ccd1517e7f9eb51d946ab12d6",
+      "5a70e458ed455d47ef672ed9b5a614ec59812f0c"
+    ],
+    "files": [
+      {
+        "path": "utility_watch/README.md",
+        "blob": "d316b05bf415383bb9f9c014fa81936094db3b3e",
+        "sha256": "0f778e0d6e9b226d2ae5d5c3fe707cb2c8ca48bfa6554105426458af71d56def",
+        "bytes": 12799
+      },
+      {
+        "path": "utility_watch/docs/review-desk.md",
+        "blob": "ac74106dc53fe79591d0daf21913ba834124ee27",
+        "sha256": "ead8e6217b498d87d153f094797afc45610a0c9e61350e112bf643ca8baa5735",
+        "bytes": 5050
+      },
+      {
+        "path": "utility_watch/tests/review_desk_browser.mjs",
+        "blob": "b4cb971eabeff58009db221826cca9385265c0d1",
+        "sha256": "9d4284d04c709092686df6fda439734795dfaf94fb99141eb68b0c42e17d5432",
+        "bytes": 20841
+      },
+      {
+        "path": "utility_watch/tests/review_desk_fixture.py",
+        "blob": "a5b0d8bed3af39871f9e0c0ea890801d85b8448d",
+        "sha256": "a280b548cb6f86cd99bba9116aa9c9d75e75c0ad60861a1faa355b37e6012815",
+        "bytes": 3947
+      },
+      {
+        "path": "utility_watch/tests/test_review_desk.py",
+        "blob": "28ef51ca603c2b432b08cf93789574f2cf279f42",
+        "sha256": "72284ab0dfb8823d9b7b87045d7d089d31e12739b8f190da4faad2ded7dfa970",
+        "bytes": 11216
+      },
+      {
+        "path": "utility_watch/uwatch/cli.py",
+        "blob": "699ac93ec755192c00c94782f4cd0c4f14e2e5a9",
+        "sha256": "e89b0103f919d48226257b35e2653e6e17cc0e5020072986646f908e7d237a6d",
+        "bytes": 4957
+      },
+      {
+        "path": "utility_watch/uwatch/review_desk.css",
+        "blob": "26b2ca2eec1f266ac8547fc7835984ac6c859975",
+        "sha256": "935cd31f18bc44c92163232ce48e5f9e9d1f6ee569a44db952ea95e8059ffac2",
+        "bytes": 5841
+      },
+      {
+        "path": "utility_watch/uwatch/review_desk.html",
+        "blob": "f6e0b60f5df4211a9aaa2e81a1a2b94b0bfa181b",
+        "sha256": "388b97577c67d72c07dc8eba3a1e95f23fe65dae11388051bd702f9fa381c2f9",
+        "bytes": 5592
+      },
+      {
+        "path": "utility_watch/uwatch/review_desk.js",
+        "blob": "942140e8e22cca0d27109cb6ccb53280c7673848",
+        "sha256": "9eec8cbf49cf96c72ec2cdbe21cecb73b8af19897f806ae9642bcbf67f3fb619",
+        "bytes": 11598
+      },
+      {
+        "path": "utility_watch/uwatch/review_desk.py",
+        "blob": "873b375de871916cfb597985b78c097e86f44ee3",
+        "sha256": "fcb790242359977dd80bda918eae27d4b34d4820b2f11f602a543de1d32aaa48",
+        "bytes": 11194
+      }
+    ]
+  },
+  "protectedCurrentBaseLeaves": 709,
+  "productDeltaPaths": [
+    "utility_watch/README.md",
+    "utility_watch/docs/review-desk.md",
+    "utility_watch/tests/review_desk_browser.mjs",
+    "utility_watch/tests/review_desk_fixture.py",
+    "utility_watch/tests/test_review_desk.py",
+    "utility_watch/uwatch/cli.py",
+    "utility_watch/uwatch/review_desk.css",
+    "utility_watch/uwatch/review_desk.html",
+    "utility_watch/uwatch/review_desk.js",
+    "utility_watch/uwatch/review_desk.py"
+  ],
+  "rootSourceReview": {
+    "path": "author/evidence/root-source-review-v1.json",
+    "sha256": "79d0b76bce7b38e36b81dcbc7263f8ceb558329f9127e682b795cc15df8b617d"
+  },
+  "independent": {
+    "publicationBytes": 981515,
+    "publicationSha256": "3e0ce23bcd076543ec1c0ad6c7ed4e3505ca0bc5be55f4ce42db8c4864249677",
+    "namespace": "docs/receiving/utility-review-desk-independent-39c2b591/browser",
+    "namespaceTree": "40da89515984c2c05282b4f216df68f140635d1c",
+    "receivingCommit": "8b0fa8321f1bb1867e679ba3c9b0e3c98bcf5c8d",
+    "receivingTree": "5a10f2c8de1145aaebc22a71277fdfbf591fe43a",
+    "candidateCommit": "fa057a67c428fb6ccd1517e7f9eb51d946ab12d6",
+    "candidateTree": "9124788f2224f99f153642754c6dc832ed4762c2",
+    "verifiedFiles": 9,
+    "verifiedRawFiles": 146,
+    "handoff": {
+      "schema": "hamon.utility_desk.independent_handoff.v1",
+      "decision": "accepted on exact frozen source tree",
+      "candidate_commit": "fa057a67c428fb6ccd1517e7f9eb51d946ab12d6",
+      "candidate_tree": "9124788f2224f99f153642754c6dc832ed4762c2",
+      "original_partial_native_receiving_commit": "f0d8f432b8ba8a207bb41f754d0a1910471a48ea",
+      "receiving_commit": "8b0fa8321f1bb1867e679ba3c9b0e3c98bcf5c8d",
+      "receiving_tree": "5a10f2c8de1145aaebc22a71277fdfbf591fe43a",
+      "namespace": "docs/receiving/utility-review-desk-independent-39c2b591/browser",
+      "namespace_tree": "40da89515984c2c05282b4f216df68f140635d1c",
+      "portable_source_snapshot_commit": "137e99d971aac561e0a58bab51a1c23076b54754",
+      "portable_receiving_snapshot_commit": "0a2ba90b4ef557b39466fa852c9f4eb3766bc6e2",
+      "snapshot_history_distinct_from_original": true,
+      "historical_boundary": {
+        "schema": "hamon.utility_desk.partial_history_boundary.v1",
+        "native_author_shallow_file": "/home/jacob/utility-review-desk-39c2b591-Ym2XPN/repository/.git/shallow",
+        "observed_author_shallow_contents": "9e931fa9f42033bf2368f7149684fb5631345715\n",
+        "own_candidate_shallow_file_exists": false,
+        "own_receiving_shallow_file_exists": false,
+        "missing_older_parent": "65461ca8f6bd636cd85c0086210ccb1e6837fbee",
+        "source_commit": "fa057a67c428fb6ccd1517e7f9eb51d946ab12d6",
+        "source_tree": "9124788f2224f99f153642754c6dc832ed4762c2",
+        "verified_source_leaves": 355,
+        "original_native_receiving_commit": "f0d8f432b8ba8a207bb41f754d0a1910471a48ea",
+        "action": "Retain original partial native lineage without alteration; create separately rooted complete source and receiving snapshots for portable transport.",
+        "scope": "Complete source-tree receiving is unchanged. No claim of earlier public ancestry, no native metadata repair, no behavior rerun."
+      },
+      "source_leaves_preserved": 355,
+      "receiving_leaves": 364,
+      "receiving_root": "/home/jacob/hamon-utility-desk-consumer-39c2b591-2u812s1j/receiving-v1",
+      "publication_root": "/home/jacob/hamon-utility-desk-consumer-39c2b591-2u812s1j/publication-v1",
+      "raw_root": "/home/jacob/hamon-utility-desk-consumer-39c2b591-2u812s1j/sealed-raw-v1",
+      "raw_files": 146,
+      "raw_file_bytes": 1257745,
+      "raw_container_sha256": "970acbb98ada68f1d9ca6a33aafdf357264d81b05302ee4625102570a686d151",
+      "decoder_verified_files": 146,
+      "snapshot_clone_source_tree": "9124788f2224f99f153642754c6dc832ed4762c2",
+      "snapshot_clone_fsck_exit": 0,
+      "bundle": {
+        "path": "/home/jacob/hamon-utility-desk-consumer-39c2b591-2u812s1j/utility-desk-independent-receiving.bundle",
+        "bytes": 5659673,
+        "sha256": "be90735f639ae844596726f6840b81fb32a401fc2cbe613fefa30f0c3ce7c020"
+      },
+      "publication": {
+        "path": "/home/jacob/hamon-utility-desk-consumer-39c2b591-2u812s1j/publication.json",
+        "files": 9,
+        "bytes": 981515,
+        "sha256": "3e0ce23bcd076543ec1c0ad6c7ed4e3505ca0bc5be55f4ce42db8c4864249677"
+      },
+      "status": "",
+      "whitespace_exit": 0,
+      "finished_utc": "2026-10-08T14:47:50Z"
+    }
+  },
+  "renderer": {
+    "commit": "7830b6914cea9ddc3e5b2237c5c8b3b77122edb0",
+    "files": 7,
+    "scope": "about:blank only; no product pages"
+  },
+  "rawEvidence": {
+    "fileCount": 100,
+    "jsonSha256": "d2abf281efc15410e71f8fba364d8630cac928f385d7ef838478f530f9c1d259",
+    "encodedSha256": "5ea10e6925590f07f303a2af43188371c7ece143628cdc6fcf795badb328211f"
+  },
+  "nativeHistory": {
+    "at": "2026-10-08T14:47:17.615Z",
+    "repositories": [
+      {
+        "repo": "/home/jacob/utility-review-desk-39c2b591-Ym2XPN/repository",
+        "head": "fa057a67c428fb6ccd1517e7f9eb51d946ab12d6",
+        "isShallow": "true",
+        "shallowBoundary": "9e931fa9f42033bf2368f7149684fb5631345715\n",
+        "historicalParent": {
+          "sha": "65461ca8f6bd636cd85c0086210ccb1e6837fbee",
+          "status": 128,
+          "stdout": "",
+          "stderr": "fatal: Not a valid object name 65461ca8f6bd636cd85c0086210ccb1e6837fbee^{commit}\n"
+        }
+      },
+      {
+        "repo": "/home/jacob/utility-review-desk-39c2b591-Ym2XPN/composition-5a70e458",
+        "head": "65c306d1138d57ceb0fbcb7829addbd36da832d8",
+        "isShallow": "true",
+        "shallowBoundary": "9e931fa9f42033bf2368f7149684fb5631345715\n9e931fa9f42033bf2368f7149684fb5631345715\n",
+        "historicalParent": {
+          "sha": "65461ca8f6bd636cd85c0086210ccb1e6837fbee",
+          "status": 128,
+          "stdout": "",
+          "stderr": "fatal: Not a valid object name 65461ca8f6bd636cd85c0086210ccb1e6837fbee^{commit}\n"
+        }
+      }
+    ],
+    "claim": "Exact source trees and recorded commits are retained. These native repositories do not assert a complete historical ancestry before the listed boundary. Public integration uses the existing upstream base and exact new file tree."
+  },
+  "qualification": {
+    "originalBaseline": "81 passed; missing command exits 2",
+    "authoredNative": "9 groups; complete original-base suite 90 passed",
+    "authoredBrowser": "9 actual groups on fa057a67, source unchanged",
+    "independentBrowser": "6 actual groups on fa057a67; separate original-native fixture/validator",
+    "currentComposition": "24 tests and 16 subtests; four groups with five actual CLI children and real HTTP",
+    "browserOnCurrentComposition": "Not rerun. Desk runtime and validator are identical; current CLI/engine/print closure is independently recorded."
+  }
+}

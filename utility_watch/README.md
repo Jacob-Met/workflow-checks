@@ -77,6 +77,18 @@ with status 0 and reports current/historical row counts. An input or reconciliat
 with status 2 and leaves the requested output unpublished. An existing output, source file,
 report file, prior worksheet, or symbolic-link destination is never replaced.
 
+### Edit notes in the local review desk
+
+Run `python -m uwatch review-desk --worksheet review-1.csv`, then open the printed
+loopback URL on the same computer. Select a current finding and edit its status, reviewer
+and note. **Download edited worksheet** keeps every finding and its protected evidence
+in a new CSV, including rows outside the current filter and unchanged history. The selected
+file is read-only; edits stay in the page until you download a copy.
+
+Use the downloaded file as `--previous` in the existing review command when reconciling
+a new export. Opening the desk does not recheck bills or reconcile a newer report.
+See [Review desk](docs/review-desk.md) for the complete workflow and native checks.
+
 ### What carries forward
 
 | `row_state` | How to use it |

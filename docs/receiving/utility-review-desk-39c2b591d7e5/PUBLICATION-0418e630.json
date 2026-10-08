@@ -1,0 +1,160 @@
+{
+  "schema": "hamon.utility-desk.publication-composition.v1",
+  "reviewer": "estate-39c2b591d7e5/root",
+  "at": "2026-10-08T15:14:11.480Z",
+  "qualified_native_product": {
+    "commit": "65c306d1138d57ceb0fbcb7829addbd36da832d8",
+    "tree": "12266e043adaeb99d49c42a5191dfdf5efdbe92b"
+  },
+  "qualified_native_receiving": {
+    "commit": "2d6c2b3d1aa4a48ec03905530ac90d40a976791a",
+    "tree": "1fd289c1adea48e54e7e3e7bde25ece82a53ee3f",
+    "leaves": 734,
+    "published_tree_object_matches_native": true
+  },
+  "qualified_base": {
+    "commit": "5a70e458ed455d47ef672ed9b5a614ec59812f0c",
+    "tree": "86f234b92173176c7f3c8ae4e1e4d5d3c41d36fd",
+    "leaves": 711
+  },
+  "current_base": {
+    "commit": "0418e6308d886d0678ace759a9b984c1d06ac54d",
+    "tree": "92c62093a0bd4d86e8a518a50cb2869d809cbe63",
+    "leaves": 953,
+    "parent": "5a70e458ed455d47ef672ed9b5a614ec59812f0c",
+    "change": "PT calendar PR41 only"
+  },
+  "delta": {
+    "paths": 247,
+    "modified": 5,
+    "added": 242,
+    "deleted": 0,
+    "product": [
+      {
+        "path": "pt_auth/README.md",
+        "before": "43c517674b03403156323078b089441ecdd488ff",
+        "after": "2c6440e7f9bdbc9f4d15e60d05b5626921d35cef",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "pt_auth/ptauth/cli.py",
+        "before": "1012ba6c759e95b0c14de0e9c00bb4cbb73562ea",
+        "after": "559c0a76effa2204041e9318e9869a6c7389f50d",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "pt_auth/ptauth/ui.html",
+        "before": "3bd3bbe67f3a6b9536b7e99b8ef52b2d1fa048db",
+        "after": "ec2e198ee1873c41981d201c78a63dbccc13afad",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "pt_auth/ptauth/web.py",
+        "before": "71d17ec9642798a5e7df56ab7c2bdbab8d061352",
+        "after": "7e5d38f4cf8c33f4b9c91bd3c3d929fcfa0f80b3",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "pt_auth/tests/browser/uncovered_review.test.cjs",
+        "before": "01f44c8e4f0cf909ac894c3b9f4469e89db7298e",
+        "after": "4093e4b85569cf1422fe440cf55e83addd324c9f",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "pt_auth/ptauth/calendar_ui.js",
+        "before": null,
+        "after": "a6ba45ec85c28f7fd80d7e2fdd32ac62e96daa99",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "pt_auth/ptauth/worklist_calendar.py",
+        "before": null,
+        "after": "e125f9ed77343fcc3d82e6d6f25a7296b0463aa7",
+        "mode": "100644",
+        "type": "blob"
+      },
+      {
+        "path": "pt_auth/tests/test_worklist_calendar.py",
+        "before": null,
+        "after": "99334636ddb2a051e1d50686934b4bf308d2be58",
+        "mode": "100644",
+        "type": "blob"
+      }
+    ],
+    "incoming_subtrees": [
+      {
+        "path": "pt_auth",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "46ea80e968210b2f8ef694ba2704c8e1a95f9ccb"
+      },
+      {
+        "path": "docs/receiving/pt-calendar-58d79b68",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "e8bc692cddde67d9a81ee29ea6a5ade4d52fdcfc"
+      }
+    ],
+    "contribution_overlap": []
+  },
+  "unchanged_executed_source": [
+    {
+      "path": "utility_watch",
+      "leaves": 23,
+      "exactToQualifiedBase": true
+    },
+    {
+      "path": ".github/workflows",
+      "leaves": 2,
+      "exactToQualifiedBase": true
+    },
+    {
+      "path": "freight_packets",
+      "leaves": 62,
+      "exactToQualifiedBase": true
+    }
+  ],
+  "publication": {
+    "method": "Receive the exact native 734-leaf tree via ordinary GitHub tree creation, then adopt both complete current PT subtrees and append this source-review record. Normal public commit is parented on actual current0418e630; native snapshot ancestry remains separately identified.",
+    "contributed_paths": [
+      "docs/receiving/utility-review-desk-39c2b591d7e5/RAW_EVIDENCE.json.gz.b64",
+      "docs/receiving/utility-review-desk-39c2b591d7e5/RAW_EVIDENCE_MANIFEST.json",
+      "docs/receiving/utility-review-desk-39c2b591d7e5/README.md",
+      "docs/receiving/utility-review-desk-39c2b591d7e5/SOURCE.json",
+      "docs/receiving/utility-review-desk-39c2b591d7e5/receive-current-composition.py",
+      "docs/receiving/utility-review-desk-39c2b591d7e5/unpack-receiving.py",
+      "docs/receiving/utility-review-desk-independent-39c2b591/browser/ACCEPTANCE.json",
+      "docs/receiving/utility-review-desk-independent-39c2b591/browser/RAW_EVIDENCE.json.gz.b64",
+      "docs/receiving/utility-review-desk-independent-39c2b591/browser/RAW_EVIDENCE_MANIFEST.json",
+      "docs/receiving/utility-review-desk-independent-39c2b591/browser/REPLAY.md",
+      "docs/receiving/utility-review-desk-independent-39c2b591/browser/REVIEW.md",
+      "docs/receiving/utility-review-desk-independent-39c2b591/browser/SOURCE.json",
+      "docs/receiving/utility-review-desk-independent-39c2b591/browser/unpack-receiving.py",
+      "docs/receiving/utility-review-desk-independent-39c2b591/browser/utility-desk-consumer-v4.mjs",
+      "docs/receiving/utility-review-desk-independent-39c2b591/browser/verify-downloaded-worksheet.py",
+      "utility_watch/README.md",
+      "utility_watch/docs/review-desk.md",
+      "utility_watch/tests/review_desk_browser.mjs",
+      "utility_watch/tests/review_desk_fixture.py",
+      "utility_watch/tests/test_review_desk.py",
+      "utility_watch/uwatch/cli.py",
+      "utility_watch/uwatch/review_desk.css",
+      "utility_watch/uwatch/review_desk.html",
+      "utility_watch/uwatch/review_desk.js",
+      "utility_watch/uwatch/review_desk.py"
+    ],
+    "source_edits_for_current_base": 0,
+    "expected_preserved_current_leaves": 951,
+    "expected_contribution_paths": 25,
+    "expected_total_leaves": 977,
+    "final_full_tree_readback_required": true
+  },
+  "verification_boundary": "Prior native/browser results retain their exact pins. This is disjoint source composition, with no repeated native/browser run. The normal Python3.10/3.12 PR workflows qualify the assembled public tree.",
+  "history_boundary": "The native fa/65/2d lineage retains its documented older shallow boundary. Separately rooted complete-tree bundles preserve the exact source/evidence trees; the public commit retains current GitHub ancestry."
+}

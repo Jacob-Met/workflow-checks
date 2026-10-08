@@ -1,0 +1,83 @@
+{
+  "schema": 1,
+  "kind": "publication-evidence-append",
+  "repository": "Jacob-Met/workflow-checks",
+  "pr": 45,
+  "parentHead": "7a9ac0a8d3ea93bbe7ebc25c6f226924d2357ee8",
+  "additionalPublicParent": "035c2562d89593dab6174e7717f3ffd738cfc575",
+  "sourceComposition": {
+    "upstream": "035c2562d89593dab6174e7717f3ffd738cfc575",
+    "baseTree": "9a09c867c4adabe393b631c3c981e61fcbffc38a",
+    "hostedCommit": "54626f06498b4eb93e4efe4627a4c0873a4569e6",
+    "hostedTree": "881e97dd2821a1b9a981632de82c4d276642624d",
+    "leafCount": 1157,
+    "preservedCurrentLeaves": 1129,
+    "ownedUnchangedExceptReadme": 27,
+    "readmeInverseExact": true,
+    "cli": "e6cf74b3614eea534264c5c159cd8276aa045245",
+    "readme": "16e696cc5d4fe57d584acae0f749a585f1015f51",
+    "engine": "dd1b752972b74232090ed602d11b84759bda19e3"
+  },
+  "hostedGate": {
+    "run": 37805963004,
+    "event": "pull_request",
+    "checkout": "54626f06498b4eb93e4efe4627a4c0873a4569e6",
+    "tree": "881e97dd2821a1b9a981632de82c4d276642624d",
+    "python": [
+      "3.10",
+      "3.12"
+    ],
+    "each": {
+      "freight": "91 passed, 39 subtests",
+      "pt": "125 passed, 1 skipped, 45 subtests",
+      "utility": "128 passed, 36 subtests"
+    }
+  },
+  "independentInterop": {
+    "native_root": "/Users/me/hamon-utility-interop-39c2b591-nw60sufe",
+    "namespace": "docs/receiving/utility-review-desk-independent-39c2b591/worksheet-coexistence",
+    "public_commit": "7a9ac0a8d3ea93bbe7ebc25c6f226924d2357ee8",
+    "public_tree": "4a50b0dff8488c14385d38187e6a45ccddd952a2",
+    "selected_source_snapshot": "e847764eb2413e16538fa6b5cd6077b96f0514e5",
+    "selected_source_tree": "9b0670049a07d5fb4460caab632bdaea0eafe610",
+    "artifact_commit": "0bca3a4d9d40ea11d090ab6636ec875f29f702a4",
+    "artifact_tree": "45b4e32d4119af187854441baf04bc7e49105d49",
+    "publication": {
+      "path": "/Users/me/hamon-utility-interop-39c2b591-nw60sufe/publication.json",
+      "entries": 9,
+      "bytes": 385517,
+      "sha256": "52333c5e8bef2f449a4eae690c146e4bc191da0ffb477ce902b0fc3dda4fedac"
+    },
+    "bundle": {
+      "path": "/Users/me/hamon-utility-interop-39c2b591-nw60sufe/utility-interop-independent-receiving.bundle",
+      "bytes": 368241,
+      "sha256": "e7e62e0f9f82852ae8c5e02e5a200fc96b0d3958212f637d6c460c27464a96f4",
+      "verified": true,
+      "closure": "independently rooted selected package/source and receiving graphs; not unrelated public repo history"
+    },
+    "raw": {
+      "files": 90,
+      "bytes": 549359,
+      "container_sha256": "ed2bd9cbd95182384c40b48bc8cdf2271adb004b6ecc8879f6d79c36435bb45a",
+      "gzip_sha256": "b3432056d4023b4a25ff66578e0c50cab4c3f8887994f56338a6dfb2f676a67b",
+      "decoder_byte_exact": true
+    },
+    "checks": 6,
+    "cli_children": 6,
+    "all_child_stderr_empty": true,
+    "source_unchanged": true
+  },
+  "upstreamChanges": {
+    "since4f": "19 Utility paths: additive duplicate-account input guard, README, tests and receiving evidence. All current base leaves retained except owned README/CLI additions.",
+    "guard": "Duplicate-account rejection is preserved exactly from upstream; the earlier six-child interoperability result remains attributed to public 7a9ac0a8 with prior engine. Fresh hosted checkout 54626f06 executed the composed source with current guard."
+  },
+  "append": {
+    "newIndependentEntries": 9,
+    "sourceChanges": 0,
+    "rootBinderEntries": 1
+  },
+  "limits": [
+    "This append adds evidence only on the exact already executed hosted tree.",
+    "Earlier author/browser and native interoperability executions retain their original source identities; they are not claimed as whole-tree native runs on this new publication."
+  ]
+}

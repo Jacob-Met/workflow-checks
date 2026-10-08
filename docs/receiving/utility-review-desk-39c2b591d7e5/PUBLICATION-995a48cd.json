@@ -1,0 +1,60 @@
+{
+  "schema": 1,
+  "kind": "current-native-cli-composition",
+  "repository": "Jacob-Met/workflow-checks",
+  "pr": 45,
+  "parentHead": "5362522c024c9101d47f1cad547cda12e18ad04e",
+  "additionalPublicParent": "995a48cd92ebf1202fea08e08f90c7ce010ca424",
+  "currentBaseTree": "3f50ec92b2dcf5c0d3351f0687eb1dbc7f5c0f05",
+  "priorExecutedTree": "12cb09f5040e561587fe98db889b25d5f1744717",
+  "priorHosted": {
+    "event": "push",
+    "run": 37808355577,
+    "checkout": "5362522c024c9101d47f1cad547cda12e18ad04e",
+    "python": [
+      "3.10",
+      "3.12"
+    ],
+    "result": "Both success. Each Freight91+39 subtests, PT125+45 subtests/one skip, Utility128+36 subtests."
+  },
+  "upstreamDelta": [
+    {
+      "path": "utility_watch/README.md",
+      "old": "d7dbe01e09181e481eab3cf78e47d06c396f4da4",
+      "new": "f248fda29519b98f5a22a5fa70c58082e403c421"
+    },
+    {
+      "path": "utility_watch/docs/source-evidence.md",
+      "new": "ffbb1f0f08ce957b2cc591355c0abae6447ef6e2"
+    },
+    {
+      "path": "utility_watch/tests/test_evidence.py",
+      "new": "1e5564eb487c8e7e8b1a8ddf900d4df461e576ae"
+    },
+    {
+      "path": "utility_watch/uwatch/cli.py",
+      "old": "034935eeb633ecf68bfda4c5dd1181c7931880e6",
+      "new": "53344db8aca97ce67875fdcad54268038255a5b5"
+    },
+    {
+      "path": "utility_watch/uwatch/evidence.py",
+      "new": "9fba5e38b07f13c0db7b69cf5f4c3d4e620a8048"
+    }
+  ],
+  "sourcePreservation": {
+    "unrelatedCurrentBaseLeaves": 1132,
+    "acceptedDeskRuntimeAssetsUnchanged": 4,
+    "priorContributedPathsUnchanged": 36,
+    "cliInverseExact": true,
+    "readmeInverseExact": true,
+    "cliBlob": "c764e1c5ebab01bf1a02c11cd5d1604ff04667c1",
+    "readmeBlob": "0887f672611b4bda56eac4373676bfb3748e18a1",
+    "engineBlob": "dd1b752972b74232090ed602d11b84759bda19e3",
+    "worksheetBlob": "d8880f1f33115c8589ad0a91b87ef5619ae95964",
+    "evidenceCommandPreserved": true
+  },
+  "limits": [
+    "The prior six-child independent interoperability execution remains attributed to public7a9ac0a8; this new CLI insertion union requires and will receive fresh hosted checks.",
+    "No browser or broad native replay is inferred from source equivalence. The entire current upstream evidence command and all other current source are preserved."
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "schema": "hamon.utility_desk.independent_source_binding.v1",
+  "received_utc": "2026-10-08T14:31:05.663381+00:00",
+  "native_author_commit": "fa057a67c428fb6ccd1517e7f9eb51d946ab12d6",
+  "candidate_commit": "fa057a67c428fb6ccd1517e7f9eb51d946ab12d6",
+  "candidate_tree": "9124788f2224f99f153642754c6dc832ed4762c2",
+  "source": "/home/jacob/hamon-utility-desk-consumer-39c2b591-2u812s1j/candidate-source",
+  "base": "9e931fa9f42033bf2368f7149684fb5631345715",
+  "source_leaves": 355,
+  "changed_paths": [
+    "utility_watch/README.md",
+    "utility_watch/docs/review-desk.md",
+    "utility_watch/tests/review_desk_browser.mjs",
+    "utility_watch/tests/review_desk_fixture.py",
+    "utility_watch/tests/test_review_desk.py",
+    "utility_watch/uwatch/cli.py",
+    "utility_watch/uwatch/review_desk.css",
+    "utility_watch/uwatch/review_desk.html",
+    "utility_watch/uwatch/review_desk.js",
+    "utility_watch/uwatch/review_desk.py"
+  ],
+  "protected_base_leaves": 345,
+  "author_manifest_sha256": "72d4fd24f573233bef4b7618538407b84a643674d983572c13e65868e865f5c1",
+  "native_bundle": {
+    "path": "/home/jacob/utility-review-desk-39c2b591-Ym2XPN/product.bundle",
+    "bytes": 4961979,
+    "sha256": "38820c6207a47e77191d8cb9fda4febd82adb16f1cc8f449ac957fcd8937e3ed"
+  },
+  "method": "Read-only clone of verified complete author bundle; exact frozen checkout; every working-tree byte matched to Git and all changed files matched to the author manifest.",
+  "candidate_status": "",
+  "fixture_sha256": "a5390288a46c24876c44589d331ed110995ba922bb3ad5825356472ecb740ff7",
+  "no_additional_renderer_probe": true,
+  "executed_product_sha256": {
+    "uwatch/__init__.py": "a0332cb0878fcdfd02d1651f9a46c299ca0279996c6e5723d49311228c597a57",
+    "uwatch/__main__.py": "26c55ee4277631c49b2312533d7514a815ec2c3de08f48b0a9dea8946d8f8933",
+    "uwatch/cli.py": "c6103920d86f9c5854e2b015680923fa6cceb6e4c0a7504acb897d79eeecfb47",
+    "uwatch/engine.py": "48c968584d0494ee5fb0538fc7d4c685c2cc3128a45c33f57c2079234cdb7775",
+    "uwatch/review.py": "f9f730ca45140436704d9823eafcfb58fb3922c5d0bf93a21a63f31347c947de",
+    "uwatch/review_desk.py": "fcb790242359977dd80bda918eae27d4b34d4820b2f11f602a543de1d32aaa48",
+    "uwatch/review_desk.html": "388b97577c67d72c07dc8eba3a1e95f23fe65dae11388051bd702f9fa381c2f9",
+    "uwatch/review_desk.js": "9eec8cbf49cf96c72ec2cdbe21cecb73b8af19897f806ae9642bcbf67f3fb619",
+    "uwatch/review_desk.css": "935cd31f18bc44c92163232ce48e5f9e9d1f6ee569a44db952ea95e8059ffac2"
+  },
+  "raw_full_leaf_manifest": "CANDIDATE_SOURCE.json",
+  "raw_container_sha256": "970acbb98ada68f1d9ca6a33aafdf357264d81b05302ee4625102570a686d151",
+  "final_source_status": "",
+  "current_main_reconciliation": "Not covered: candidate engine is original 9e931fa9. Later main composition is owned by the product author.",
+  "historical_boundary": {
+    "schema": "hamon.utility_desk.partial_history_boundary.v1",
+    "native_author_shallow_file": "/home/jacob/utility-review-desk-39c2b591-Ym2XPN/repository/.git/shallow",
+    "observed_author_shallow_contents": "9e931fa9f42033bf2368f7149684fb5631345715\n",
+    "own_candidate_shallow_file_exists": false,
+    "own_receiving_shallow_file_exists": false,
+    "missing_older_parent": "65461ca8f6bd636cd85c0086210ccb1e6837fbee",
+    "source_commit": "fa057a67c428fb6ccd1517e7f9eb51d946ab12d6",
+    "source_tree": "9124788f2224f99f153642754c6dc832ed4762c2",
+    "verified_source_leaves": 355,
+    "original_native_receiving_commit": "f0d8f432b8ba8a207bb41f754d0a1910471a48ea",
+    "action": "Retain original partial native lineage without alteration; create separately rooted complete source and receiving snapshots for portable transport.",
+    "scope": "Complete source-tree receiving is unchanged. No claim of earlier public ancestry, no native metadata repair, no behavior rerun."
+  }
+}

@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Utility Watch · Review desk</title>
+  <link rel="stylesheet" href="/review_desk.css">
+  <script src="/review_desk.js" defer></script>
+</head>
+<body>
+  <header class="masthead">
+    <a class="wordmark" href="/">Utility Watch <span>Review desk</span></a>
+    <span class="local-label">Local worksheet</span>
+  </header>
+  <main>
+    <section class="intro">
+      <p class="eyebrow">FOLLOW-UP WORKSHEET</p>
+      <h1>Keep the finding.<br>Record the follow-up.</h1>
+      <p class="lead">Assign a reviewer, add context and track the work on current findings.
+        The checker’s evidence stays attached to every row.</p>
+      <p id="source" class="source">Loading the selected worksheet…</p>
+      <p class="boundary">These are saved findings, not a new bill check.
+        Marking a row reviewed does not clear a flag or approve payment.</p>
+    </section>
+
+    <p id="load-error" class="error" role="alert" hidden></p>
+    <noscript><p class="error">This editor needs JavaScript. You can still edit the permitted
+      CSV columns using the existing worksheet instructions.</p></noscript>
+
+    <section id="desk" hidden aria-label="Worksheet editor">
+      <div id="counts" class="counts" aria-label="Current finding counts"></div>
+      <div class="save-bar">
+        <div>
+          <strong id="change-count">No in-page changes.</strong>
+          <p>Download includes every current and historical row, regardless of filters.
+            Choose a new file to keep this copy.</p>
+        </div>
+        <button id="download" class="primary" type="button">Download edited worksheet</button>
+      </div>
+      <p id="download-status" class="notice" role="status" aria-live="polite"></p>
+      <p id="download-error" class="error" role="alert" hidden></p>
+      <div id="validation" class="error" hidden>
+        <span id="validation-text"></span>
+        <button id="show-invalid" type="button">Open first incomplete review</button>
+      </div>
+
+      <div class="workspace">
+        <section class="finding-panel" aria-labelledby="findings-title">
+          <h2 id="findings-title">Current findings</h2>
+          <div class="filters">
+            <label for="search">Find a record</label>
+            <input id="search" type="search" autocomplete="off"
+              placeholder="Account, bill, property, note…">
+            <label for="status-filter">Review status</label>
+            <select id="status-filter">
+              <option value="">All statuses</option>
+              <option value="open">Open</option>
+              <option value="in_progress">In progress</option>
+              <option value="reviewed">Reviewed</option>
+            </select>
+            <button id="clear-filters" class="quiet" type="button">Clear filters</button>
+          </div>
+          <p id="match-count" class="muted" role="status"></p>
+          <div id="findings" class="finding-list"></div>
+        </section>
+
+        <section class="editor-panel" aria-labelledby="selected-title">
+          <p id="empty-editor" class="empty">There are no current findings in this worksheet.
+            Historical rows remain available below.</p>
+          <div id="selected" hidden>
+            <p id="selected-outside" class="notice" hidden>This selected finding is outside
+              the current filter. Your edits remain available here.</p>
+            <p id="selected-property" class="eyebrow"></p>
+            <h2 id="selected-title"></h2>
+            <dl id="selected-identity" class="identity"></dl>
+            <p id="selected-detail" class="finding-detail"></p>
+            <details class="evidence">
+              <summary>Recorded evidence and identity</summary>
+              <dl id="selected-evidence" class="identity evidence-values"></dl>
+            </details>
+            <fieldset id="annotation-fields">
+              <legend>Human review</legend>
+              <label for="review-status">Review status</label>
+              <select id="review-status">
+                <option value="open">Open</option>
+                <option value="in_progress">In progress</option>
+                <option value="reviewed">Reviewed</option>
+              </select>
+              <label for="reviewer">Reviewer</label>
+              <input id="reviewer" type="text" autocomplete="off">
+              <label for="note">Note</label>
+              <textarea id="note" rows="7"></textarea>
+              <p class="muted">In progress and reviewed need both a reviewer and a note.</p>
+              <button id="reset-row" class="quiet" type="button">Reset this row’s edits</button>
+            </fieldset>
+          </div>
+        </section>
+      </div>
+
+      <details id="history" class="history">
+        <summary id="history-title">Historical findings</summary>
+        <p>Changed and absent rows retain their saved review. They cannot be edited here.
+          Absent does not mean resolved or paid. Historical notes never supply a current review.</p>
+        <div id="history-list"></div>
+      </details>
+      <footer>
+        <p>Keep the downloaded CSV to continue later. This page does not autosave, and the
+          selected worksheet is read-only. To reconcile a newer source export, use the
+          existing <code>uwatch review --previous</code> command with your downloaded file.</p>
+        <p>Reviewer names and worksheet checksums are not signatures or authentication.</p>
+      </footer>
+    </section>
+  </main>
+</body>
+</html>

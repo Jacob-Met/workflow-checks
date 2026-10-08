@@ -1,0 +1,346 @@
+{
+  "base": {
+    "repository": "Jacob-Met/workflow-checks",
+    "public_commit": "125339ec63eeb7c4989c9b240c01202555dce573",
+    "public_tree": "e3a3501d60ee8f301f9d45ea15d0d324b814e59a",
+    "scope": "complete current utility_watch/uwatch package only; not a full-repository snapshot or public ancestry",
+    "agents": [],
+    "native_snapshot": "2a25152c8f1c51f97a3c3e786a8396f6a9288766",
+    "native_selected_tree": "c9ada58bd9752b89401249b7e6d48951e2e67485",
+    "source_files": [
+      {
+        "path": "utility_watch/uwatch/__init__.py",
+        "sha": "7074157fb1710370668c2a0ad5217cd10cfe3618",
+        "size": 60,
+        "mode": "100644",
+        "sha256": "a0332cb0878fcdfd02d1651f9a46c299ca0279996c6e5723d49311228c597a57"
+      },
+      {
+        "path": "utility_watch/uwatch/__main__.py",
+        "sha": "823d40a6bf41beb59790ce83476b359f76f4b1ec",
+        "size": 53,
+        "mode": "100644",
+        "sha256": "26c55ee4277631c49b2312533d7514a815ec2c3de08f48b0a9dea8946d8f8933"
+      },
+      {
+        "path": "utility_watch/uwatch/cli.py",
+        "sha": "034935eeb633ecf68bfda4c5dd1181c7931880e6",
+        "size": 4473,
+        "mode": "100644",
+        "sha256": "80cb716a37aa810c63ad69916ab293fcbfd83a44b51570d013339c0b217c7cb3"
+      },
+      {
+        "path": "utility_watch/uwatch/engine.py",
+        "sha": "b764a1f45ba718b31f7841e2c2f61d16a7fef5e9",
+        "size": 21280,
+        "mode": "100644",
+        "sha256": "ff0dc3a473235c55639e4373e3b5a4c786a0cd9ae7badd2be9113f39a4efd3d0"
+      },
+      {
+        "path": "utility_watch/uwatch/report.py",
+        "sha": "ee2fcabd2026b4224c3cdfc51890f71762a9ef0f",
+        "size": 12382,
+        "mode": "100644",
+        "sha256": "dc43c4fbbef72204a9dc9c5d7e4d3883900e96daf26c725f10fe22d4721540db"
+      },
+      {
+        "path": "utility_watch/uwatch/review.py",
+        "sha": "2475217ce9c073c39756f9fa3926342cd83f7254",
+        "size": 15534,
+        "mode": "100644",
+        "sha256": "f9f730ca45140436704d9823eafcfb58fb3922c5d0bf93a21a63f31347c947de"
+      },
+      {
+        "path": "utility_watch/uwatch/review_report.py",
+        "sha": "be869a940436172253c0a6d5020ba24860f1a7eb",
+        "size": 8457,
+        "mode": "100644",
+        "sha256": "4462088141b21c990ce5b949a9c683f68f647ae83bdba0eaa1409730e442f856"
+      },
+      {
+        "path": "utility_watch/uwatch/synth.py",
+        "sha": "0d5c8137b3790bd062609ce4725beda63db9e58d",
+        "size": 13194,
+        "mode": "100644",
+        "sha256": "8573a65a8c5907ebedda24c47183f60f258e895bae0a2656bb582ada9217209d"
+      },
+      {
+        "path": "utility_watch/uwatch/worksheet.py",
+        "sha": "d8880f1f33115c8589ad0a91b87ef5619ae95964",
+        "size": 7789,
+        "mode": "100644",
+        "sha256": "827f7ba7d6eba19d07f18bc202a50b8283bf2b4a6b9b9247046a0441a1d845fa"
+      }
+    ],
+    "python": "3.13.7 (v3.13.7:bcee1c32211, Aug 14 2025, 19:10:51) [Clang 16.0.0 (clang-1600.0.26.6)]",
+    "executable": "/usr/local/bin/python3"
+  },
+  "candidate": {
+    "repository": "Jacob-Met/workflow-checks",
+    "public_commit": "7a9ac0a8d3ea93bbe7ebc25c6f226924d2357ee8",
+    "public_tree": "4a50b0dff8488c14385d38187e6a45ccddd952a2",
+    "public_parents": [
+      "34c982d33e0c97a39e5ac90d3d2f0cd2003b9206",
+      "4f434591c166fc7d3ea7831e52edafe6c23d8843"
+    ],
+    "receiving_base": "125339ec63eeb7c4989c9b240c01202555dce573",
+    "current_public_base": "4f434591c166fc7d3ea7831e52edafe6c23d8843",
+    "scope": "Complete current Utility runtime package selection only. Public full-tree provenance is bound but not reconstructed; local Git ancestry is a separate closed source snapshot.",
+    "files": [
+      {
+        "path": "utility_watch/uwatch/__init__.py",
+        "sha": "7074157fb1710370668c2a0ad5217cd10cfe3618",
+        "size": 60,
+        "mode": "100644",
+        "sha256": "a0332cb0878fcdfd02d1651f9a46c299ca0279996c6e5723d49311228c597a57"
+      },
+      {
+        "path": "utility_watch/uwatch/__main__.py",
+        "sha": "823d40a6bf41beb59790ce83476b359f76f4b1ec",
+        "size": 53,
+        "mode": "100644",
+        "sha256": "26c55ee4277631c49b2312533d7514a815ec2c3de08f48b0a9dea8946d8f8933"
+      },
+      {
+        "path": "utility_watch/uwatch/cli.py",
+        "sha": "e6cf74b3614eea534264c5c159cd8276aa045245",
+        "size": 5080,
+        "mode": "100644",
+        "sha256": "99412f80cece07373b274b91a100bf074ada3cc13508df4c6e7ba818854df7d8"
+      },
+      {
+        "path": "utility_watch/uwatch/engine.py",
+        "sha": "b764a1f45ba718b31f7841e2c2f61d16a7fef5e9",
+        "size": 21280,
+        "mode": "100644",
+        "sha256": "ff0dc3a473235c55639e4373e3b5a4c786a0cd9ae7badd2be9113f39a4efd3d0"
+      },
+      {
+        "path": "utility_watch/uwatch/report.py",
+        "sha": "ee2fcabd2026b4224c3cdfc51890f71762a9ef0f",
+        "size": 12382,
+        "mode": "100644",
+        "sha256": "dc43c4fbbef72204a9dc9c5d7e4d3883900e96daf26c725f10fe22d4721540db"
+      },
+      {
+        "path": "utility_watch/uwatch/review.py",
+        "sha": "2475217ce9c073c39756f9fa3926342cd83f7254",
+        "size": 15534,
+        "mode": "100644",
+        "sha256": "f9f730ca45140436704d9823eafcfb58fb3922c5d0bf93a21a63f31347c947de"
+      },
+      {
+        "path": "utility_watch/uwatch/review_desk.css",
+        "sha": "26b2ca2eec1f266ac8547fc7835984ac6c859975",
+        "size": 5841,
+        "mode": "100644",
+        "sha256": "935cd31f18bc44c92163232ce48e5f9e9d1f6ee569a44db952ea95e8059ffac2"
+      },
+      {
+        "path": "utility_watch/uwatch/review_desk.html",
+        "sha": "f6e0b60f5df4211a9aaa2e81a1a2b94b0bfa181b",
+        "size": 5592,
+        "mode": "100644",
+        "sha256": "388b97577c67d72c07dc8eba3a1e95f23fe65dae11388051bd702f9fa381c2f9"
+      },
+      {
+        "path": "utility_watch/uwatch/review_desk.js",
+        "sha": "942140e8e22cca0d27109cb6ccb53280c7673848",
+        "size": 11598,
+        "mode": "100644",
+        "sha256": "9eec8cbf49cf96c72ec2cdbe21cecb73b8af19897f806ae9642bcbf67f3fb619"
+      },
+      {
+        "path": "utility_watch/uwatch/review_desk.py",
+        "sha": "873b375de871916cfb597985b78c097e86f44ee3",
+        "size": 11194,
+        "mode": "100644",
+        "sha256": "fcb790242359977dd80bda918eae27d4b34d4820b2f11f602a543de1d32aaa48"
+      },
+      {
+        "path": "utility_watch/uwatch/review_report.py",
+        "sha": "be869a940436172253c0a6d5020ba24860f1a7eb",
+        "size": 8457,
+        "mode": "100644",
+        "sha256": "4462088141b21c990ce5b949a9c683f68f647ae83bdba0eaa1409730e442f856"
+      },
+      {
+        "path": "utility_watch/uwatch/synth.py",
+        "sha": "0d5c8137b3790bd062609ce4725beda63db9e58d",
+        "size": 13194,
+        "mode": "100644",
+        "sha256": "8573a65a8c5907ebedda24c47183f60f258e895bae0a2656bb582ada9217209d"
+      },
+      {
+        "path": "utility_watch/uwatch/worksheet.py",
+        "sha": "d8880f1f33115c8589ad0a91b87ef5619ae95964",
+        "size": 7789,
+        "mode": "100644",
+        "sha256": "827f7ba7d6eba19d07f18bc202a50b8283bf2b4a6b9b9247046a0441a1d845fa"
+      }
+    ],
+    "native_snapshot": "e847764eb2413e16538fa6b5cd6077b96f0514e5",
+    "native_selected_tree": "9b0670049a07d5fb4460caab632bdaea0eafe610",
+    "unchanged_base_leaves": [
+      "utility_watch/uwatch/__init__.py",
+      "utility_watch/uwatch/__main__.py",
+      "utility_watch/uwatch/engine.py",
+      "utility_watch/uwatch/report.py",
+      "utility_watch/uwatch/review.py",
+      "utility_watch/uwatch/review_report.py",
+      "utility_watch/uwatch/synth.py",
+      "utility_watch/uwatch/worksheet.py"
+    ],
+    "cli_inverse_restores_base": true,
+    "accepted_desk_assets_exact": true,
+    "status": ""
+  },
+  "after_execution": {
+    "baseline": {
+      "snapshot": "2a25152c8f1c51f97a3c3e786a8396f6a9288766",
+      "selected_tree": "c9ada58bd9752b89401249b7e6d48951e2e67485",
+      "files": [
+        {
+          "path": "utility_watch/uwatch/__init__.py",
+          "bytes": 60,
+          "sha256": "a0332cb0878fcdfd02d1651f9a46c299ca0279996c6e5723d49311228c597a57",
+          "git_blob": "7074157fb1710370668c2a0ad5217cd10cfe3618"
+        },
+        {
+          "path": "utility_watch/uwatch/__main__.py",
+          "bytes": 53,
+          "sha256": "26c55ee4277631c49b2312533d7514a815ec2c3de08f48b0a9dea8946d8f8933",
+          "git_blob": "823d40a6bf41beb59790ce83476b359f76f4b1ec"
+        },
+        {
+          "path": "utility_watch/uwatch/cli.py",
+          "bytes": 4473,
+          "sha256": "80cb716a37aa810c63ad69916ab293fcbfd83a44b51570d013339c0b217c7cb3",
+          "git_blob": "034935eeb633ecf68bfda4c5dd1181c7931880e6"
+        },
+        {
+          "path": "utility_watch/uwatch/engine.py",
+          "bytes": 21280,
+          "sha256": "ff0dc3a473235c55639e4373e3b5a4c786a0cd9ae7badd2be9113f39a4efd3d0",
+          "git_blob": "b764a1f45ba718b31f7841e2c2f61d16a7fef5e9"
+        },
+        {
+          "path": "utility_watch/uwatch/report.py",
+          "bytes": 12382,
+          "sha256": "dc43c4fbbef72204a9dc9c5d7e4d3883900e96daf26c725f10fe22d4721540db",
+          "git_blob": "ee2fcabd2026b4224c3cdfc51890f71762a9ef0f"
+        },
+        {
+          "path": "utility_watch/uwatch/review.py",
+          "bytes": 15534,
+          "sha256": "f9f730ca45140436704d9823eafcfb58fb3922c5d0bf93a21a63f31347c947de",
+          "git_blob": "2475217ce9c073c39756f9fa3926342cd83f7254"
+        },
+        {
+          "path": "utility_watch/uwatch/review_report.py",
+          "bytes": 8457,
+          "sha256": "4462088141b21c990ce5b949a9c683f68f647ae83bdba0eaa1409730e442f856",
+          "git_blob": "be869a940436172253c0a6d5020ba24860f1a7eb"
+        },
+        {
+          "path": "utility_watch/uwatch/synth.py",
+          "bytes": 13194,
+          "sha256": "8573a65a8c5907ebedda24c47183f60f258e895bae0a2656bb582ada9217209d",
+          "git_blob": "0d5c8137b3790bd062609ce4725beda63db9e58d"
+        },
+        {
+          "path": "utility_watch/uwatch/worksheet.py",
+          "bytes": 7789,
+          "sha256": "827f7ba7d6eba19d07f18bc202a50b8283bf2b4a6b9b9247046a0441a1d845fa",
+          "git_blob": "d8880f1f33115c8589ad0a91b87ef5619ae95964"
+        }
+      ],
+      "status": ""
+    },
+    "candidate": {
+      "snapshot": "e847764eb2413e16538fa6b5cd6077b96f0514e5",
+      "selected_tree": "9b0670049a07d5fb4460caab632bdaea0eafe610",
+      "files": [
+        {
+          "path": "utility_watch/uwatch/__init__.py",
+          "bytes": 60,
+          "sha256": "a0332cb0878fcdfd02d1651f9a46c299ca0279996c6e5723d49311228c597a57",
+          "git_blob": "7074157fb1710370668c2a0ad5217cd10cfe3618"
+        },
+        {
+          "path": "utility_watch/uwatch/__main__.py",
+          "bytes": 53,
+          "sha256": "26c55ee4277631c49b2312533d7514a815ec2c3de08f48b0a9dea8946d8f8933",
+          "git_blob": "823d40a6bf41beb59790ce83476b359f76f4b1ec"
+        },
+        {
+          "path": "utility_watch/uwatch/cli.py",
+          "bytes": 5080,
+          "sha256": "99412f80cece07373b274b91a100bf074ada3cc13508df4c6e7ba818854df7d8",
+          "git_blob": "e6cf74b3614eea534264c5c159cd8276aa045245"
+        },
+        {
+          "path": "utility_watch/uwatch/engine.py",
+          "bytes": 21280,
+          "sha256": "ff0dc3a473235c55639e4373e3b5a4c786a0cd9ae7badd2be9113f39a4efd3d0",
+          "git_blob": "b764a1f45ba718b31f7841e2c2f61d16a7fef5e9"
+        },
+        {
+          "path": "utility_watch/uwatch/report.py",
+          "bytes": 12382,
+          "sha256": "dc43c4fbbef72204a9dc9c5d7e4d3883900e96daf26c725f10fe22d4721540db",
+          "git_blob": "ee2fcabd2026b4224c3cdfc51890f71762a9ef0f"
+        },
+        {
+          "path": "utility_watch/uwatch/review.py",
+          "bytes": 15534,
+          "sha256": "f9f730ca45140436704d9823eafcfb58fb3922c5d0bf93a21a63f31347c947de",
+          "git_blob": "2475217ce9c073c39756f9fa3926342cd83f7254"
+        },
+        {
+          "path": "utility_watch/uwatch/review_desk.css",
+          "bytes": 5841,
+          "sha256": "935cd31f18bc44c92163232ce48e5f9e9d1f6ee569a44db952ea95e8059ffac2",
+          "git_blob": "26b2ca2eec1f266ac8547fc7835984ac6c859975"
+        },
+        {
+          "path": "utility_watch/uwatch/review_desk.html",
+          "bytes": 5592,
+          "sha256": "388b97577c67d72c07dc8eba3a1e95f23fe65dae11388051bd702f9fa381c2f9",
+          "git_blob": "f6e0b60f5df4211a9aaa2e81a1a2b94b0bfa181b"
+        },
+        {
+          "path": "utility_watch/uwatch/review_desk.js",
+          "bytes": 11598,
+          "sha256": "9eec8cbf49cf96c72ec2cdbe21cecb73b8af19897f806ae9642bcbf67f3fb619",
+          "git_blob": "942140e8e22cca0d27109cb6ccb53280c7673848"
+        },
+        {
+          "path": "utility_watch/uwatch/review_desk.py",
+          "bytes": 11194,
+          "sha256": "fcb790242359977dd80bda918eae27d4b34d4820b2f11f602a543de1d32aaa48",
+          "git_blob": "873b375de871916cfb597985b78c097e86f44ee3"
+        },
+        {
+          "path": "utility_watch/uwatch/review_report.py",
+          "bytes": 8457,
+          "sha256": "4462088141b21c990ce5b949a9c683f68f647ae83bdba0eaa1409730e442f856",
+          "git_blob": "be869a940436172253c0a6d5020ba24860f1a7eb"
+        },
+        {
+          "path": "utility_watch/uwatch/synth.py",
+          "bytes": 13194,
+          "sha256": "8573a65a8c5907ebedda24c47183f60f258e895bae0a2656bb582ada9217209d",
+          "git_blob": "0d5c8137b3790bd062609ce4725beda63db9e58d"
+        },
+        {
+          "path": "utility_watch/uwatch/worksheet.py",
+          "bytes": 7789,
+          "sha256": "827f7ba7d6eba19d07f18bc202a50b8283bf2b4a6b9b9247046a0441a1d845fa",
+          "git_blob": "d8880f1f33115c8589ad0a91b87ef5619ae95964"
+        }
+      ],
+      "status": ""
+    }
+  }
+}

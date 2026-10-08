@@ -39,7 +39,18 @@ def main(argv=None) -> int:
     evidence.add_argument("--key", required=True, help="exact finding key (bill ID or missing-period key)")
     evidence.add_argument("--code", required=True, help="exact flag code or exception reason")
     evidence.add_argument("--out", type=Path, required=True, help="new JSON file in an existing directory")
+    desk = sub.add_parser("review-desk", help="edit current review notes in a local browser desk")
+    desk.add_argument("--worksheet", type=Path, required=True, help="saved native review CSV; read-only")
+    desk.add_argument("--port", type=int, default=0, help="loopback port; 0 selects an available port")
     a = ap.parse_args(argv)
+    if a.cmd == "review-desk":
+        from .review_desk import serve
+        try:
+            serve(a.worksheet, a.port)
+        except (OSError, ValueError, KeyError) as exc:
+            print(f"uwatch: review desk error: {exc}", file=sys.stderr)
+            return 2
+        return 0
     if a.cmd == "worksheet":
         return worksheet.run(a)
     if a.cmd == "review-report":
