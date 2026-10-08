@@ -48,6 +48,8 @@ def main(argv=None) -> int:
                   f"{','.join(x['reasons']):<34} submit_by={x['submit_by'] or '-'}")
         if len(s["worklist"]) > 12:
             print(f"  ... {len(s['worklist']) - 12} more in {a.out}/worklist.csv")
+        print(f"{c['past_scheduled']} past scheduled visits need status review: "
+              f"{Path(a.out) / 'visit_status_review.csv'}")
         print(f"digest: {Path(a.out) / 'digest.html'}")
         return 0
     if a.cmd == "serve":

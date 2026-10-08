@@ -2,6 +2,7 @@
 
   worklist.csv          the daily worklist (one row per patient/payer/auth item)
   ledger.csv            every auth: authorized / used / scheduled / remaining / days left
+  visit_status_review.csv past dates still marked scheduled, with allocation and source rows
   digest.html           printable daily digest (worklist + re-auth checklists)
   summary.json          everything, for the web UI
   audit.jsonl           append-only log of each run and reviewer action
@@ -10,16 +11,19 @@ from __future__ import annotations
 
 import csv
 import json
-from dataclasses import asdict
+from dataclasses import asdict, fields
 from datetime import date, datetime, timezone
 from html import escape
 from pathlib import Path
 
 from . import data
-from .engine import build_worklist
+from .engine import VisitStatusItem, build_visit_status_review, build_worklist
 
 BANNER = ("SYNTHETIC DATA - NOT REAL PATIENTS. Proof of concept; payer rules are placeholders. "
           "Nothing is submitted to any payer.")
+VISIT_STATUS_NOTE = ("Review these past dates in the source schedule, correct their status there, "
+                     "then run again. Any authorization visit shown below stays reserved until "
+                     "the corrected export is loaded.")
 
 
 def _j(o):
@@ -45,6 +49,7 @@ def run(data_dir: Path, out_dir: Path, as_of: date | None = None, run_by: str = 
     payers = data.load_payers(data_dir / "payers.csv")
     patients = data.load_patients(data_dir / "patients.csv")
     items, ledgers, uncovered = build_worklist(visits, auths, payers, patients, as_of)
+    status_review = [asdict(row) for row in build_visit_status_review(visits, ledgers, payers, patients, as_of)]
 
     ledger_rows = []
     for led in sorted(ledgers.values(), key=lambda l: (l.auth.patient_id, l.auth.start)):
@@ -78,14 +83,20 @@ def run(data_dir: Path, out_dir: Path, as_of: date | None = None, run_by: str = 
             w = csv.DictWriter(fh, fieldnames=list(ledger_rows[0].keys()))
             w.writeheader()
             w.writerows(ledger_rows)
+    with (out_dir / "visit_status_review.csv").open("w", newline="", encoding="utf-8") as fh:
+        w = csv.DictWriter(fh, fieldnames=[f.name for f in fields(VisitStatusItem)])
+        w.writeheader()
+        w.writerows(status_review)
 
     counts = {"patients": len(patients), "visits": len(visits), "auths": len(auths),
               "worklist": len(items), "p1": sum(i.priority == "P1" for i in items),
               "p2": sum(i.priority == "P2" for i in items), "p3": sum(i.priority == "P3" for i in items),
               "uncovered_scheduled": sum(1 for v in uncovered if v.status == "scheduled" and v.visit_date >= as_of),
-              "unauthorized_done": sum(1 for v in uncovered if v.status == "completed")}
+              "unauthorized_done": sum(1 for v in uncovered if v.status == "completed"),
+              "past_scheduled": len(status_review)}
     summary = {"banner": BANNER, "as_of": as_of, "generated_at": datetime.now().isoformat(timespec="seconds"),
                "counts": counts, "worklist": wl, "ledger": ledger_rows,
+               "visit_status_review": status_review, "visit_status_review_note": VISIT_STATUS_NOTE,
                "uncovered": [{"visit_id": v.visit_id, "patient_id": v.patient_id, "date": v.visit_date,
                               "status": v.status, "payer_id": v.payer_id} for v in uncovered]}
     (out_dir / "summary.json").write_text(json.dumps(summary, indent=2, default=_j), encoding="utf-8")
@@ -96,6 +107,17 @@ def run(data_dir: Path, out_dir: Path, as_of: date | None = None, run_by: str = 
 
 def render_digest(s: dict) -> str:
     e = escape
+    status_rows = "".join(
+        f"<tr><td>{e(x['visit_id'])}</td><td>{x['visit_date']}<br><small>{x['days_since']} days ago</small></td>"
+        f"<td>{e(x['patient_name'])}<br><small>{e(x['patient_id'])}</small></td><td>{e(x['clinic'])}</td>"
+        f"<td>{e(x['payer_name'])}<br><small>{e(x['payer_id'])}</small></td>"
+        f"<td>{e(x['auth_no'] or 'None')}<br><small>{e(x['capacity_note'])}</small></td>"
+        f"<td>{e(x['evidence'])}</td></tr>" for x in s.get("visit_status_review", []))
+    status_table = ("<table><tr><th>Visit</th><th>Date</th><th>Patient</th><th>Clinic</th>"
+                    "<th>Payer</th><th>Reserved auth</th><th>Source row</th></tr>" + status_rows + "</table>"
+                    if status_rows else "<p>No past appointments remain marked scheduled.</p>")
+    if "visit_status_review" not in s:
+        status_table = "<p>Run worklist to build the visit-status review for this saved report.</p>"
     rows = "".join(
         f"<tr class='{x['priority']}'><td><b>{x['priority']}</b></td><td>{e(x['patient_name'])}<br><small>{e(x['patient_id'])}</small></td>"
         f"<td>{e(x['clinic'])}</td><td>{e(x['payer_name'])}<br><small>{e(x['auth_no'])}</small></td>"
@@ -123,4 +145,6 @@ small{{color:#666}}.ck{{border:1px solid #ccd;border-radius:6px;padding:6px 10px
 <table><tr><th>Pri</th><th>Patient</th><th>Clinic</th><th>Payer / auth</th><th>Reason</th><th>Used / auth'd</th>
 <th>Auth end</th><th>Next visit</th><th>Submit by</th><th>Detail</th></tr>{rows}</table>
 <h2>Re-auth packet checklists (pre-filled from payer rules table)</h2>{checklists or '<p>None.</p>'}
+<h2>Visit status review &mdash; past appointments still marked scheduled</h2>
+<p>{e(VISIT_STATUS_NOTE)}</p>{status_table}
 </body></html>"""

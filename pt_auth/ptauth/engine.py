@@ -101,6 +101,22 @@ class WorkItem:
         return f"{self.patient_id}|{self.payer_id}|{self.auth_no}"
 
 
+@dataclass
+class VisitStatusItem:
+    visit_id: str
+    patient_id: str
+    patient_name: str
+    clinic: str
+    payer_id: str
+    payer_name: str
+    visit_date: date
+    days_since: int
+    visit_type: str
+    auth_no: str
+    capacity_note: str
+    evidence: str
+
+
 def _counts(v: Visit, rule: PayerRule | None) -> bool:
     return not (v.visit_type == "eval" and rule is not None and not rule.counts_evals)
 
@@ -139,6 +155,37 @@ def build_ledger(visits: list[Visit], auths: list[Auth], payers: dict[str, Payer
         else:
             home.scheduled.append(v)
     return ledgers, uncovered
+
+
+def build_visit_status_review(visits: list[Visit], ledgers: dict[str, AuthLedger],
+                              payers: dict[str, PayerRule], patients: dict[str, Patient],
+                              as_of: date) -> list[VisitStatusItem]:
+    """Project past scheduled CSV visits and their actual existing ledger allocation.
+
+    CSV visit IDs are required; the same last-row rule used by the ledger applies.
+    This review never changes a visit status or an authorization reservation.
+    """
+    reserved = {v.visit_id: led.auth.auth_no for led in ledgers.values() for v in led.scheduled}
+    rows = []
+    for v in sorted(_dedupe_visits(visits), key=lambda v: (v.visit_date, v.patient_id, v.visit_id)):
+        if v.status != "scheduled" or v.visit_date >= as_of:
+            continue
+        patient, rule = patients.get(v.patient_id), payers.get(v.payer_id)
+        auth_no = reserved.get(v.visit_id, "")
+        if auth_no:
+            note = "Reserves one authorized visit"
+        elif rule is not None and not rule.requires_auth:
+            note = "Payer does not require authorization"
+        elif not _counts(v, rule):
+            note = "Evaluation excluded by payer rule"
+        else:
+            note = "No approved authorization visit allocated"
+        rows.append(VisitStatusItem(
+            v.visit_id, v.patient_id, patient.display_name if patient else v.patient_id,
+            v.clinic or (patient.clinic if patient else ""), v.payer_id,
+            rule.payer_name if rule else v.payer_id, v.visit_date, (as_of - v.visit_date).days,
+            v.visit_type, auth_no, note, v.source_row))
+    return rows
 
 
 PRIO_ORDER = {"P1": 0, "P2": 1, "P3": 2}
@@ -183,6 +230,8 @@ def build_worklist(visits: list[Visit], auths: list[Auth], payers: dict[str, Pay
     # 1) uncovered visits
     unc_by_item: dict[str, list[Visit]] = {}
     for v in uncovered:
+        if v.status == "scheduled" and v.visit_date < as_of:
+            continue  # shown separately in the visit-status review
         pending = next((a for a in auths if a.status == "pending" and a.patient_id == v.patient_id
                         and a.payer_id == v.payer_id and a.covers(v.visit_date)), None)
         # attach to the pending auth, else the patient's most recent approved auth,
@@ -198,8 +247,6 @@ def build_worklist(visits: list[Visit], auths: list[Auth], payers: dict[str, Pay
             it.detail.append(f"completed visit {v.visit_date} ({v.visit_id}) had no covering approved auth")
             bump(it, "P1")
             continue
-        if v.visit_date < as_of:
-            continue  # stale scheduled row in the past; not actionable
         code = "PENDING_FOLLOWUP" if pending else "UNCOVERED_VISIT"
         if code not in it.reasons:
             it.reasons.append(code)
