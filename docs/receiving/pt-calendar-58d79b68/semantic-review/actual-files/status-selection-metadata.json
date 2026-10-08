@@ -1,0 +1,37 @@
+{
+  "format": "ptauth-submit-by-v1",
+  "snapshot": "9956883d85bb3067caff6e2e20a04f29d20d595f5b5e84dfaf35b72f13035e01",
+  "as_of": "2026-10-08",
+  "clinic_timezone": "America/New_York",
+  "selected": 5,
+  "events": 2,
+  "excluded": [
+    {
+      "key": "approved|review-payer|review-auth",
+      "patient_id": "approved",
+      "state": "approved",
+      "reasons": [
+        "completed_state"
+      ]
+    },
+    {
+      "key": "not-applicable|review-payer|review-auth",
+      "patient_id": "not-applicable",
+      "state": "n/a",
+      "reasons": [
+        "undated",
+        "completed_state"
+      ]
+    },
+    {
+      "key": "undated|review-payer|review-auth",
+      "patient_id": "undated",
+      "state": "open",
+      "reasons": [
+        "undated"
+      ]
+    }
+  ],
+  "undated": 2,
+  "completed_state": 2
+}

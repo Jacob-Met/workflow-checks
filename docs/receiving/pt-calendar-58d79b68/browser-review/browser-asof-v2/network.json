@@ -1,0 +1,141 @@
+[
+  {
+    "phase": "edited as-of, revert and actual refreshed report",
+    "event": "request",
+    "sessionId": "9540A41F768D243A1EF03844A77E140F",
+    "requestId": "4D106AE79DB5B871C93E6FFF1ED8A4D2",
+    "method": "GET",
+    "url": "http://127.0.0.1:63081/"
+  },
+  {
+    "phase": "edited as-of, revert and actual refreshed report",
+    "event": "response",
+    "sessionId": "9540A41F768D243A1EF03844A77E140F",
+    "requestId": "4D106AE79DB5B871C93E6FFF1ED8A4D2",
+    "url": "http://127.0.0.1:63081/",
+    "status": 200,
+    "mimeType": "text/html"
+  },
+  {
+    "phase": "edited as-of, revert and actual refreshed report",
+    "event": "request",
+    "sessionId": "9540A41F768D243A1EF03844A77E140F",
+    "requestId": "25566.2",
+    "method": "GET",
+    "url": "http://127.0.0.1:63081/calendar_ui.js"
+  },
+  {
+    "phase": "edited as-of, revert and actual refreshed report",
+    "event": "request",
+    "sessionId": "9540A41F768D243A1EF03844A77E140F",
+    "requestId": "25566.4",
+    "method": "GET",
+    "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJXaW5kb3dUZXh0IiBkPSJNMjAgM2gtMVYxaC0ydjJIN1YxSDV2Mkg0Yy0xLjEgMC0yIC45LTIgMnYxNmMwIDEuMS45IDIgMiAyaDE2YzEuMSAwIDItLjkgMi0yVjVjMC0xLjEtLjktMi0yLTJ6bTAgMThINFY4aDE2djEzeiIvPjxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiLz48L3N2Zz4="
+  },
+  {
+    "phase": "edited as-of, revert and actual refreshed report",
+    "event": "response",
+    "sessionId": "9540A41F768D243A1EF03844A77E140F",
+    "requestId": "25566.4",
+    "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJXaW5kb3dUZXh0IiBkPSJNMjAgM2gtMVYxaC0ydjJIN1YxSDV2Mkg0Yy0xLjEgMC0yIC45LTIgMnYxNmMwIDEuMS45IDIgMiAyaDE2YzEuMSAwIDItLjkgMi0yVjVjMC0xLjEtLjktMi0yLTJ6bTAgMThINFY4aDE2djEzeiIvPjxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiLz48L3N2Zz4=",
+    "status": 200,
+    "mimeType": "image/svg+xml"
+  },
+  {
+    "phase": "edited as-of, revert and actual refreshed report",
+    "event": "response",
+    "sessionId": "9540A41F768D243A1EF03844A77E140F",
+    "requestId": "25566.2",
+    "url": "http://127.0.0.1:63081/calendar_ui.js",
+    "status": 200,
+    "mimeType": "text/javascript"
+  },
+  {
+    "phase": "edited as-of, revert and actual refreshed report",
+    "event": "request",
+    "sessionId": "9540A41F768D243A1EF03844A77E140F",
+    "requestId": "25566.5",
+    "method": "GET",
+    "url": "http://127.0.0.1:63081/api/summary"
+  },
+  {
+    "phase": "edited as-of, revert and actual refreshed report",
+    "event": "response",
+    "sessionId": "9540A41F768D243A1EF03844A77E140F",
+    "requestId": "25566.5",
+    "url": "http://127.0.0.1:63081/api/summary",
+    "status": 200,
+    "mimeType": "application/json"
+  },
+  {
+    "phase": "edited as-of, revert and actual refreshed report",
+    "event": "request",
+    "sessionId": "9540A41F768D243A1EF03844A77E140F",
+    "requestId": "25566.6",
+    "method": "GET",
+    "url": "http://127.0.0.1:63081/favicon.ico"
+  },
+  {
+    "phase": "edited as-of, revert and actual refreshed report",
+    "event": "response",
+    "sessionId": "9540A41F768D243A1EF03844A77E140F",
+    "requestId": "25566.6",
+    "url": "http://127.0.0.1:63081/favicon.ico",
+    "status": 404,
+    "mimeType": "text/plain"
+  },
+  {
+    "phase": "edited as-of, revert and actual refreshed report",
+    "event": "request",
+    "sessionId": "9540A41F768D243A1EF03844A77E140F",
+    "requestId": "25566.7",
+    "method": "POST",
+    "url": "http://127.0.0.1:63081/api/run",
+    "postData": "{\"as_of\":\"2026-11-02\"}"
+  },
+  {
+    "phase": "edited as-of, revert and actual refreshed report",
+    "event": "response",
+    "sessionId": "9540A41F768D243A1EF03844A77E140F",
+    "requestId": "25566.7",
+    "url": "http://127.0.0.1:63081/api/run",
+    "status": 200,
+    "mimeType": "application/json"
+  },
+  {
+    "phase": "edited as-of, revert and actual refreshed report",
+    "event": "request",
+    "sessionId": "9540A41F768D243A1EF03844A77E140F",
+    "requestId": "25566.8",
+    "method": "POST",
+    "url": "http://127.0.0.1:63081/api/run",
+    "postData": "{\"as_of\":\"2026-10-30\"}"
+  },
+  {
+    "phase": "edited as-of, revert and actual refreshed report",
+    "event": "response",
+    "sessionId": "9540A41F768D243A1EF03844A77E140F",
+    "requestId": "25566.8",
+    "url": "http://127.0.0.1:63081/api/run",
+    "status": 200,
+    "mimeType": "application/json"
+  },
+  {
+    "phase": "edited as-of, revert and actual refreshed report",
+    "event": "request",
+    "sessionId": "9540A41F768D243A1EF03844A77E140F",
+    "requestId": "25566.9",
+    "method": "POST",
+    "url": "http://127.0.0.1:63081/api/calendar",
+    "postData": "{\"snapshot\":\"300267a494deab357084441a757b16d3a9505c37465a9a24046cf1ece9807897\",\"keys\":[\"PT1005|PTEST|\",\"PT1006|PTEST|\",\"PT1001|PTEST|AUTH-PT1001\",\"PT1002|PTEST|AUTH-PT1002\",\"PT1007|PTEST|AUTH-PT1007\"]}"
+  },
+  {
+    "phase": "edited as-of, revert and actual refreshed report",
+    "event": "response",
+    "sessionId": "9540A41F768D243A1EF03844A77E140F",
+    "requestId": "25566.9",
+    "url": "http://127.0.0.1:63081/api/calendar",
+    "status": 200,
+    "mimeType": "text/calendar"
+  }
+]

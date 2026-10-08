@@ -1,0 +1,15 @@
+{
+  "recorded_at": "2026-10-08T13:42:07.898607+00:00",
+  "source": "a68a667f3610153618c6cc8952c72abe980d89aa",
+  "formatter_sha256": "89751f1de5548ced34a59c296d0edf1eda06a38bdb935be3e7c3c8b2ae5d55c0",
+  "command": [
+    "python3",
+    "-B",
+    "test_semantics_v1.py"
+  ],
+  "exit": 0,
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "c85d0f2954b85c23e463da8b72b2dfdc885f454566d85098c78e7f8c804420d3",
+  "test_sha256": "ae92c57d11337a794149e1bacdbb15ec2966d1427aab99f45d6f0dbfb99ae261",
+  "source_unchanged": true
+}

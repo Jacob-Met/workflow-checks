@@ -1,0 +1,39 @@
+{
+  "inspected": [
+    {
+      "path": "pt_auth/README.md",
+      "hash": "43c517674b03403156323078b089441ecdd488ff",
+      "index": "100644 43c517674b03403156323078b089441ecdd488ff 0\tpt_auth/README.md"
+    },
+    {
+      "path": "pt_auth/ptauth/cli.py",
+      "hash": "1012ba6c759e95b0c14de0e9c00bb4cbb73562ea",
+      "index": "100644 1012ba6c759e95b0c14de0e9c00bb4cbb73562ea 0\tpt_auth/ptauth/cli.py"
+    },
+    {
+      "path": "pt_auth/ptauth/ui.html",
+      "hash": "3bd3bbe67f3a6b9536b7e99b8ef52b2d1fa048db",
+      "index": "100644 3bd3bbe67f3a6b9536b7e99b8ef52b2d1fa048db 0\tpt_auth/ptauth/ui.html"
+    },
+    {
+      "path": "pt_auth/ptauth/web.py",
+      "hash": "71d17ec9642798a5e7df56ab7c2bdbab8d061352",
+      "index": "100644 71d17ec9642798a5e7df56ab7c2bdbab8d061352 0\tpt_auth/ptauth/web.py"
+    }
+  ],
+  "core_autocrlf": {
+    "status": 1,
+    "value": ""
+  },
+  "refresh": {
+    "status": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "tree_after_refresh": "b470f3578107ce412bb0a66cd4bf835902bfede4",
+  "apply_check": {
+    "status": 1,
+    "stdout": "",
+    "stderr": "error: patch failed: pt_auth/ptauth/cli.py:57\nerror: pt_auth/ptauth/cli.py: patch does not apply\nerror: patch failed: pt_auth/ptauth/ui.html:49\nerror: pt_auth/ptauth/ui.html: patch does not apply\n"
+  }
+}

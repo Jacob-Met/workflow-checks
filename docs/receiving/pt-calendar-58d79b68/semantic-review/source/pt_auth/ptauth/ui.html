@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PT Authorization Tracker (PoC, synthetic data)</title>
+<style>
+:root{--ink:#1b1f24;--mut:#5b6573;--line:#d7dce3;--bg:#f6f7f9;--acc:#0f766e}
+*{box-sizing:border-box}body{margin:0;font:14px/1.45 system-ui,Segoe UI,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+.syn{background:#b91c1c;color:#fff;text-align:center;font-weight:700;padding:6px;letter-spacing:.02em}
+header{background:#0b2e2b;color:#fff;padding:12px 20px;display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+header h1{font-size:17px;margin:0}.sp{flex:1}
+button,select,input{font:inherit}button{border:1px solid var(--line);background:#fff;border-radius:6px;padding:5px 11px;cursor:pointer}
+button.pri{background:var(--acc);color:#fff;border-color:var(--acc)}
+main{padding:16px 20px;max-width:1400px;margin:0 auto}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:14px}
+.card{background:#fff;border:1px solid var(--line);border-radius:8px;padding:10px 12px}.card b{display:block;font-size:22px}.card span{color:var(--mut);font-size:12px}
+.tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);margin-bottom:10px}
+.tabs button{border:none;border-bottom:3px solid transparent;border-radius:0;background:none;padding:8px 12px}.tabs button.on{border-bottom-color:var(--acc);font-weight:600}
+.tabs{flex-wrap:wrap}.review-table{overflow-x:auto}.review-table:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+.review-count{font-weight:600}#t-review h2{font-size:18px;margin:10px 0 4px}
+.filters{display:flex;gap:8px;margin:8px 0;flex-wrap:wrap;align-items:center}
+table{border-collapse:collapse;width:100%;background:#fff;border:1px solid var(--line)}
+th,td{padding:6px 8px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:#eef1f5;font-size:12px;text-transform:uppercase;letter-spacing:.03em;color:var(--mut)}
+.p{font-weight:700;padding:1px 7px;border-radius:10px;font-size:12px}.P1{background:#fde2e1;color:#8a1111}.P2{background:#fff4ce;color:#6b5200}.P3{background:#e0f2fe;color:#075985}
+.r{display:inline-block;font-size:11px;background:#eef1f5;border-radius:4px;padding:0 5px;margin:1px}
+.meter{height:8px;background:#eef1f5;border-radius:4px;overflow:hidden;width:110px;margin-top:3px}.meter span{display:block;height:100%}
+small{color:var(--mut)}.hidden{display:none}tr.done{opacity:.55}details ul{margin:4px 0;padding-left:18px}
+.note{background:#fff;border:1px solid var(--line);border-radius:8px;padding:10px 14px;margin-top:14px}
+.calendar-panel{background:#fff;border:1px solid var(--line);border-left:4px solid var(--acc);border-radius:8px;padding:14px;margin:12px 0 16px;overflow-wrap:anywhere}
+.calendar-panel h2{font-size:16px;margin:0 0 6px}.calendar-head{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap}
+.calendar-panel p{margin:6px 0}.calendar-panel details{margin-top:8px}.calendar-panel li{margin:4px 0}
+.calendar-panel button:disabled{opacity:.55;cursor:not-allowed}.calendar-status{min-height:1.45em;color:var(--mut)}
+#work{overflow-x:auto}#work:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+</style>
+</head>
+<body>
+<div class="syn">SYNTHETIC DATA &mdash; NOT REAL PATIENTS &middot; proof of concept &middot; nothing is sent to any payer</div>
+<header>
+  <h1>PT Authorization &amp; Visit-Limit Tracker</h1><span class="sp"></span>
+  <span id="timezone"></span>
+  <label>as of <input type="date" id="asof"></label><button id="run" class="pri">Run worklist</button>
+  <label style="font-size:12px">seed <input id="seed" type="number" value="21" style="width:60px"></label><button id="gen">New synthetic clinic</button>
+</header>
+<main>
+  <div class="cards" id="cards"></div>
+  <div class="tabs" id="tabs"><button data-t="work" class="on">Daily worklist</button><button data-t="review">Visit status review</button><button data-t="ledger">Auth ledger</button><button data-t="files">Digest &amp; exports</button></div>
+  <section id="t-work">
+    <div class="filters">
+      <select id="fp"><option value="">All priorities</option><option>P1</option><option>P2</option><option>P3</option></select>
+      <select id="fc"><option value="">All clinics</option></select>
+      <select id="fs"><option value="">Open + in progress</option><option value="all">All states</option></select>
+      <input id="q" placeholder="search patient / payer / auth" style="padding:5px 8px;border:1px solid var(--line);border-radius:6px;min-width:220px">
+      <small id="shown"></small>
+    </div>
+    <aside id="calendar" class="calendar-panel" aria-labelledby="calendar-title">
+      <div class="calendar-head"><div><h2 id="calendar-title">Submit-by calendar handoff</h2><b data-calendar-summary>Loading worklist…</b></div>
+        <button class="pri" data-calendar-download disabled>Download calendar (.ics)</button></div>
+      <p data-calendar-context></p>
+      <p><small>Single-day, all-day reminders for recorded submit-by dates. Includes dated open/submitted items in the current filters. Exporting does not change staff status or submit anything to a payer.</small></p>
+      <details data-calendar-details hidden><summary>Review included and excluded items</summary><ul data-calendar-list></ul></details>
+      <p class="calendar-status" data-calendar-status role="status" aria-live="polite"></p>
+      <p><small>Repeated exports keep the same event identity for the same authorization period, clinic and recorded zone. Calendar apps handle repeat imports differently; a new download does not remove earlier imports. Review the file in your calendar app.</small></p>
+    </aside>
+    <div id="work" tabindex="0" role="region" aria-label="Daily worklist"></div>
+  </section>
+  <section id="t-review" class="hidden"></section>
+  <section id="t-ledger" class="hidden"></section>
+  <section id="t-files" class="hidden"></section>
+  <div class="note"><small><b>Rules:</b> P1 = act today (visit outside auth within 7 days, submit-by date passed, completed visit without auth);
+  P2 = this week (re-auth threshold hit by visits or days, pending auth needs follow-up); P3 = heads-up (annual visit cap).
+  Submit-by = earlier of auth end or the visit that exhausts the auth, minus the payer's turnaround days. Thresholds come from the payer rules table (placeholders).</small></div>
+</main>
+<script src="/calendar_ui.js"></script>
+<script>
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+let S = null;
+const calendar = PTWorklistCalendar.create($("#calendar"), $("#asof"));
+async function api(path, body) {
+  const r = await fetch(path, body === undefined ? {} : {method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify(body)});
+  const j = await r.json(); if (!r.ok) throw new Error(j.error || r.status); return j;
+}
+async function load(p, ticket = calendar.beginChange()) {
+  try { S = await p; $("#asof").value = S.as_of; fillClinics(); render(ticket); }
+  catch (e) { calendar.fail(ticket, e.message); throw e; }
+}
+function fillClinics() {
+  const cur = $("#fc").value, cl = [...new Set(S.worklist.map(w => w.clinic).filter(Boolean))].sort();
+  $("#fc").innerHTML = '<option value="">All clinics</option>' + cl.map(c => `<option ${c === cur ? "selected" : ""}>${esc(c)}</option>`).join("");
+}
+function meter(used, auth) {
+  if (auth == null) return "";
+  const pct = Math.min(100, Math.round(100 * (used || 0) / Math.max(auth, 1)));
+  const col = pct >= 90 ? "#dc2626" : pct >= 70 ? "#d97706" : "#0f766e";
+  return `<div class="meter"><span style="width:${pct}%;background:${col}"></span></div>`;
+}
+function render(calendarTicket) {
+  $("#timezone").textContent = `Clinic time zone: ${S.clinic_timezone || "unrecorded"}`;
+  const c = S.counts, st = S.states || {};
+  const done = S.worklist.filter(w => ["submitted", "approved", "n/a"].includes((st[w.key] || {}).state)).length;
+  $("#cards").innerHTML = [[c.p1, "P1 act today"], [c.p2, "P2 this week"], [c.p3, "P3 heads-up"], [c.uncovered_scheduled, "scheduled visits outside auth"],
+    [c.unauthorized_done, "completed visits w/o auth"], [c.past_scheduled ?? "—", "past scheduled visits"], [`${done}/${c.worklist}`, "items worked"], [c.patients, "synthetic patients"], [c.auths, "auths tracked"]]
+    .map(([v, l]) => `<div class="card"><b>${esc(v)}</b><span>${esc(l)}</span></div>`).join("");
+
+  const fp = $("#fp").value, fc = $("#fc").value, fs = $("#fs").value, q = $("#q").value.toLowerCase();
+  const rows = S.worklist.filter(w => (!fp || w.priority === fp) && (!fc || w.clinic === fc)
+    && (fs === "all" || !["approved", "n/a"].includes((st[w.key] || {}).state))
+    && (!q || [w.patient_id, w.patient_name, w.payer_name, w.auth_no].join(" ").toLowerCase().includes(q)));
+  $("#shown").textContent = `${rows.length} of ${S.worklist.length} items`;
+  calendar.update(S, rows, calendarTicket);
+  $("#work").innerHTML = `<table><tr><th>Pri</th><th>Patient</th><th>Payer / auth</th><th>Why</th><th>Visits</th><th>Auth end</th><th>Next visit</th><th>Submit by</th><th>Re-auth checklist</th><th>Status</th></tr>${
+    rows.map(w => { const s = (st[w.key] || {}).state || "open"; return `<tr class="${["approved", "n/a"].includes(s) ? "done" : ""}">
+      <td><span class="p ${w.priority}">${w.priority}</span></td>
+      <td><b>${esc(w.patient_name)}</b><br><small>${esc(w.patient_id)} &middot; ${esc(w.clinic)}</small></td>
+      <td>${esc(w.payer_name)}<br><small>${esc(w.auth_no || "no auth")}</small></td>
+      <td>${w.reasons.map(r => `<span class="r">${esc(r)}</span>`).join("")}<br><small>${w.detail.slice(0, 3).map(esc).join("<br>")}${w.detail.length > 3 ? `<br>+${w.detail.length - 3} more` : ""}</small></td>
+      <td>${w.visits_used ?? "-"} / ${w.visits_authorized ?? "-"}${meter(w.visits_used, w.visits_authorized)}<small>${w.scheduled_in_window != null ? w.scheduled_in_window + " sched. in auth" : ""}</small></td>
+      <td>${esc(w.auth_end || "-")}<br><small>${w.days_left != null ? w.days_left + " days" : ""}</small></td>
+      <td>${esc(w.next_visit || "-")}</td><td><b>${esc(w.submit_by || "-")}</b></td>
+      <td>${w.checklist.length ? `<details><summary>${w.checklist.length} items</summary><ul>${w.checklist.map(x => `<li>&#9744; ${esc(x)}</li>`).join("")}</ul></details>` : "<small>-</small>"}</td>
+      <td><select data-k="${esc(w.key)}">${["open", "submitted", "approved", "n/a"].map(o => `<option ${o === s ? "selected" : ""}>${o}</option>`).join("")}</select></td></tr>`; }).join("")}</table>`;
+  document.querySelectorAll("#work select[data-k]").forEach(sel => sel.onchange = async () => {
+    const ticket = calendar.beginChange("Saving staff status…");
+    try {
+      S.states = await api("/api/state", {key: sel.dataset.k, state: sel.value});
+      await load(api("/api/summary"), ticket);
+    } catch (e) { calendar.fail(ticket, e.message); alert(e.message); }
+  });
+
+  const review = S.visit_status_review;
+  $("#t-review").innerHTML = `<h2>Past appointments still marked scheduled</h2>` + (review == null
+    ? `<p>Run worklist to build the visit-status review for this saved report.</p>`
+    : `<p>${esc(S.visit_status_review_note)}</p><p class="review-count">${review.length} appointment(s) to reconcile &middot; oldest first &middot; as of ${esc(S.as_of)}</p>`
+      + (review.length ? `<div class="review-table" tabindex="0" role="region" aria-label="Past scheduled appointments"><table>
+        <thead><tr><th scope="col">Visit / type</th><th scope="col">Date</th><th scope="col">Patient</th><th scope="col">Visit clinic</th><th scope="col">Payer</th><th scope="col">Reserved auth</th><th scope="col">Source row</th></tr></thead><tbody>${
+        review.map(r => `<tr><td><b>${esc(r.visit_id)}</b><br><small>${esc(r.visit_type)}</small></td>
+          <td>${esc(r.visit_date)}<br><small>${esc(r.days_since)} days ago</small></td>
+          <td>${esc(r.patient_name)}<br><small>${esc(r.patient_id)}</small></td><td>${esc(r.clinic)}</td>
+          <td>${esc(r.payer_name)}<br><small>${esc(r.payer_id)}</small></td>
+          <td>${esc(r.auth_no || "None")}<br><small>${esc(r.capacity_note)}</small></td>
+          <td>${esc(r.evidence)}</td></tr>`).join("")}</tbody></table></div>`
+        : `<p>No past appointments remain marked scheduled.</p>`)
+      + `<p><a href="/out/visit_status_review.csv" download>Download visit status review CSV</a></p>`);
+
+  $("#t-ledger").innerHTML = `<table><tr><th>Auth</th><th>Patient</th><th>Payer</th><th>Window</th><th>Authorized</th><th>Used</th><th>Scheduled</th><th>Remaining</th><th>After sched.</th><th>Days left</th><th>Status</th></tr>${
+    S.ledger.map(l => `<tr><td>${esc(l.auth_no)}</td><td>${esc(l.patient_name)} <small>${esc(l.patient_id)}</small></td><td>${esc(l.payer_id)}</td>
+      <td>${esc(l.start)} &rarr; ${esc(l.end)}</td><td>${l.authorized}</td><td>${l.used}${meter(l.used, l.authorized)}</td><td>${l.scheduled}</td>
+      <td>${l.remaining}</td><td style="color:${l.remaining_after_scheduled < 0 ? "#b91c1c" : "inherit"}">${l.remaining_after_scheduled}</td>
+      <td>${l.days_left}</td><td>${esc(l.status)}</td></tr>`).join("")}</table>`;
+  $("#t-files").innerHTML = `<ul><li><a href="/out/digest.html" target="_blank">Daily digest (printable HTML)</a></li>
+    ${["worklist.csv", "ledger.csv", ...(review == null ? [] : ["visit_status_review.csv"]), "summary.json", "audit.jsonl"].map(f => `<li><a href="/out/${f}" download>${f}</a></li>`).join("")}</ul>
+    <p><small>Generated ${esc(S.generated_at)} for as-of date ${esc(S.as_of)}.
+    Clinic time zone: ${esc(S.clinic_timezone || "unrecorded")}.</small></p>`;
+}
+document.querySelectorAll("#tabs button").forEach(b => b.onclick = () => {
+  document.querySelectorAll("#tabs button").forEach(x => x.classList.toggle("on", x === b));
+  document.querySelectorAll("main > section").forEach(s => s.classList.toggle("hidden", s.id !== "t-" + b.dataset.t));
+});
+["#fp", "#fc", "#fs"].forEach(id => $(id).onchange = () => render()); $("#q").oninput = () => render();
+async function busy(btn, fn) { btn.disabled = true; try { await fn(); } catch (e) { alert(e.message); } btn.disabled = false; }
+$("#run").onclick = e => busy(e.target, () => load(api("/api/run", {as_of: $("#asof").value})));
+$("#gen").onclick = e => busy(e.target, () => load(api("/api/generate", {seed: +$("#seed").value || 21})));
+load(api("/api/summary")).catch(() => {});
+</script>
+</body>
+</html>

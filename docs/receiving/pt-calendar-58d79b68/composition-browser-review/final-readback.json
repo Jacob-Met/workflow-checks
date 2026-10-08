@@ -1,0 +1,53 @@
+{
+  "recordedAt": "2026-10-08T14:36:43.033Z",
+  "sourceCommit": "33432db05b9def1a249650c79571402400c18d15",
+  "parent": "ea6ff4da45c038dd7440f83dc34d61ab245e1e52",
+  "tree": "92f2df0d4bf1f6955f46449b04f2fb191e0bd2ea",
+  "ptTree": "46ea80e968210b2f8ef694ba2704c8e1a95f9ccb",
+  "sourceFilesVerified": 118,
+  "resultSha256": "6a51b463456e7064d5e4b4c78d2528700093118a507abeec6bbc91cb43813266",
+  "status": "pass",
+  "passed": 5,
+  "failed": 0,
+  "exceptions": 0,
+  "downloads": [
+    {
+      "label": "all-uncovered-from-filtered-view",
+      "artifact": "all-uncovered-from-filtered-view.csv",
+      "bytes": 618,
+      "sha256": "96bcf7e9ffff67a98e06e4de07135e02be79e4a0a1fb07bfa9cfc1111d92abc2",
+      "type": "csv"
+    },
+    {
+      "label": "combined-filtered-calendar",
+      "artifact": "combined-filtered-calendar.ics",
+      "bytes": 1484,
+      "sha256": "d4135331908681010944a1ab80bffc9c46523ad0d810d63f31052fd68907dedc",
+      "type": "ics"
+    },
+    {
+      "label": "combined-current-after-refusal",
+      "artifact": "combined-current-after-refusal.ics",
+      "bytes": 4258,
+      "sha256": "9ceca53c281aa8ca4d3cec8f568cf1ccb94d76eaa8c492708e7344346e147d83",
+      "type": "ics"
+    }
+  ],
+  "sourcePreserved": true,
+  "fixtureTemplatePreserved": true,
+  "childExits": [
+    {
+      "label": "candidate",
+      "pid": 3202654,
+      "code": null,
+      "signal": "SIGTERM"
+    },
+    {
+      "label": "chrome",
+      "pid": 3202659,
+      "code": 0,
+      "signal": null
+    }
+  ],
+  "free": 42895585280
+}

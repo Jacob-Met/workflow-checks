@@ -1,0 +1,274 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Workflow Checks//Synthetic PT handoff v1//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:829cbfefd2cdeae7334da912b405ce9fd1be927206b65646f31508fcf973624d@ptauth
+ .workflow-checks.invalid
+DTSTAMP:20270101T063019Z
+DTSTART;VALUE=DATE:20240229
+SUMMARY:[SYNTHETIC] P1 authorization review — unicode-漢🧪漢🧪漢
+ 🧪漢🧪漢🧪漢🧪漢🧪漢🧪漢🧪漢🧪漢🧪漢🧪漢🧪
+ 漢🧪漢🧪漢🧪漢🧪漢🧪漢🧪漢🧪
+DESCRIPTION:SYNTHETIC INDEPENDENT RECEIVER — no real patient data\nAdmini
+ strative submit-by review\; no payer submission or staff-state change.\nWo
+ rk-item key: unicode-漢🧪漢🧪漢🧪漢🧪漢🧪漢🧪漢🧪漢
+ 🧪漢🧪漢🧪漢🧪漢🧪漢🧪漢🧪漢🧪漢🧪漢🧪漢🧪
+ 漢🧪漢🧪|review-payer|review-auth\nPatient: unicode-漢🧪漢🧪
+ 漢🧪漢🧪漢🧪漢🧪漢🧪漢🧪漢🧪漢🧪漢🧪漢🧪漢
+ 🧪漢🧪漢🧪漢🧪漢🧪漢🧪漢🧪漢🧪 — é漢🧪: value
+ \; next\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪:
+  value\; next\, last\\literal	é漢🧪: value\; next\, last\\literal	é
+ 漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last\\lite
+ ral	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last
+ \\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\
+ , last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: value\;
+  next\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: v
+ alue\; next\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢
+ 🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last\\literal
+ 	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last\\l
+ iteral	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, l
+ ast\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; ne
+ xt\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: valu
+ e\; next\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪
+ : value\; next\, last\\literal	é漢🧪: value\; next\, last\\literal	é
+ 漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last\\lite
+ ral	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last
+ \\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\
+ , last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: value\;
+  next\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: v
+ alue\; next\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢
+ 🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last\\literal
+ 	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last\\l
+ iteral	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, l
+ ast\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; ne
+ xt\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: valu
+ e\; next\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪
+ : value\; next\, last\\literal	é漢🧪: value\; next\, last\\literal	é
+ 漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last\\lite
+ ral	é漢🧪: value\; next\, last\\literal	\nBEGIN:VEVENT\nATTENDEE:mailt
+ o:injected@example.invalid\nEND:VEVENT\nPayer: review-payer — é漢🧪:
+  value\; next\, last\\literal	é漢🧪: value\; next\, last\\literal	é
+ 漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last\\lite
+ ral	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last
+ \\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\
+ , last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: value\;
+  next\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: v
+ alue\; next\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢
+ 🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last\\literal
+ 	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last\\l
+ iteral	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, l
+ ast\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; ne
+ xt\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: valu
+ e\; next\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪
+ : value\; next\, last\\literal	é漢🧪: value\; next\, last\\literal	é
+ 漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last\\lite
+ ral	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last
+ \\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\
+ , last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: value\;
+  next\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: v
+ alue\; next\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢
+ 🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last\\literal
+ 	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last\\l
+ iteral	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, l
+ ast\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; ne
+ xt\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: valu
+ e\; next\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪
+ : value\; next\, last\\literal	é漢🧪: value\; next\, last\\literal	é
+ 漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last\\lite
+ ral	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last
+ \\literal	é漢🧪: value\; next\, last\\literal	\nBEGIN:VEVENT\nATTENDEE
+ :mailto:injected@example.invalid\nEND:VEVENT\nAuthorization: review-auth\n
+ Clinic: é漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, 
+ last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; n
+ ext\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: val
+ ue\; next\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢
+ 🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last\\literal
+ 	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last\\l
+ iteral	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, l
+ ast\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; ne
+ xt\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: valu
+ e\; next\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪
+ : value\; next\, last\\literal	é漢🧪: value\; next\, last\\literal	é
+ 漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last\\lite
+ ral	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last
+ \\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\
+ , last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: value\;
+  next\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: v
+ alue\; next\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢
+ 🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last\\literal
+ 	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last\\l
+ iteral	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, l
+ ast\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; ne
+ xt\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: valu
+ e\; next\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪
+ : value\; next\, last\\literal	é漢🧪: value\; next\, last\\literal	é
+ 漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last\\lite
+ ral	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last
+ \\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\
+ , last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: value\;
+  next\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: v
+ alue\; next\, last\\literal	é漢🧪: value\; next\, last\\literal	\nBEGI
+ N:VEVENT\nATTENDEE:mailto:injected@example.invalid\nEND:VEVENT\nPriority: 
+ P1\nRecorded submit-by: 2024-02-29\nAuthorization end: 2027-02-28\nNext vi
+ sit: 2026-12-21\nStaff state: submitted\nStaff note: é漢🧪: value\; ne
+ xt\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: valu
+ e\; next\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪
+ : value\; next\, last\\literal	é漢🧪: value\; next\, last\\literal	é
+ 漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last\\lite
+ ral	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last
+ \\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\
+ , last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: value\;
+  next\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: v
+ alue\; next\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢
+ 🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last\\literal
+ 	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last\\l
+ iteral	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, l
+ ast\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; ne
+ xt\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: valu
+ e\; next\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪
+ : value\; next\, last\\literal	é漢🧪: value\; next\, last\\literal	é
+ 漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last\\lite
+ ral	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last
+ \\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\
+ , last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: value\;
+  next\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: v
+ alue\; next\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢
+ 🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last\\literal
+ 	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last\\l
+ iteral	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, l
+ ast\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; ne
+ xt\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: valu
+ e\; next\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪
+ : value\; next\, last\\literal	é漢🧪: value\; next\, last\\literal	é
+ 漢🧪: value\; next\, last\\literal	\nBEGIN:VEVENT\nATTENDEE:mailto:inje
+ cted@example.invalid\nEND:VEVENT\nStaff state recorded at: unrecorded\nRep
+ ort as of: 2026-10-08\nReport generated at (as recorded): 2020-01-02T03:04
+ :05+00:00\nClinic time zone (context\; all-day date unchanged): America/Ne
+ w_York\nReasons:\né漢🧪: value\; next\, last\\literal	é漢🧪: value
+ \; next\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪:
+  value\; next\, last\\literal	é漢🧪: value\; next\, last\\literal	é
+ 漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last\\lite
+ ral	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last
+ \\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\
+ , last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: value\;
+  next\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: v
+ alue\; next\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢
+ 🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last\\literal
+ 	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last\\l
+ iteral	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, l
+ ast\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; ne
+ xt\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: valu
+ e\; next\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪
+ : value\; next\, last\\literal	é漢🧪: value\; next\, last\\literal	é
+ 漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last\\lite
+ ral	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last
+ \\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\
+ , last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: value\;
+  next\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: v
+ alue\; next\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢
+ 🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last\\literal
+ 	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last\\l
+ iteral	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, l
+ ast\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; ne
+ xt\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: valu
+ e\; next\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪
+ : value\; next\, last\\literal	é漢🧪: value\; next\, last\\literal	é
+ 漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last\\lite
+ ral	\nBEGIN:VEVENT\nATTENDEE:mailto:injected@example.invalid\nEND:VEVENT\n
+ Details:\né漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\
+ , last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: value\;
+  next\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: v
+ alue\; next\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢
+ 🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last\\literal
+ 	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last\\l
+ iteral	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, l
+ ast\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; ne
+ xt\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: valu
+ e\; next\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪
+ : value\; next\, last\\literal	é漢🧪: value\; next\, last\\literal	é
+ 漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last\\lite
+ ral	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last
+ \\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\
+ , last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: value\;
+  next\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: v
+ alue\; next\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢
+ 🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last\\literal
+ 	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last\\l
+ iteral	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, l
+ ast\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; ne
+ xt\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: valu
+ e\; next\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪
+ : value\; next\, last\\literal	é漢🧪: value\; next\, last\\literal	é
+ 漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last\\lite
+ ral	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last
+ \\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\
+ , last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: value\;
+  next\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: v
+ alue\; next\, last\\literal	é漢🧪: value\; next\, last\\literal	\nBEGI
+ N:VEVENT\nATTENDEE:mailto:injected@example.invalid\nEND:VEVENT\nChecklist:
+ \né漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last\\
+ literal	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, 
+ last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; n
+ ext\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: val
+ ue\; next\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢
+ 🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last\\literal
+ 	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last\\l
+ iteral	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, l
+ ast\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; ne
+ xt\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: valu
+ e\; next\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪
+ : value\; next\, last\\literal	é漢🧪: value\; next\, last\\literal	é
+ 漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last\\lite
+ ral	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last
+ \\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\
+ , last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: value\;
+  next\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: v
+ alue\; next\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢
+ 🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last\\literal
+ 	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last\\l
+ iteral	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, l
+ ast\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; ne
+ xt\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: valu
+ e\; next\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪
+ : value\; next\, last\\literal	é漢🧪: value\; next\, last\\literal	é
+ 漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last\\lite
+ ral	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last
+ \\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\
+ , last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: value\;
+  next\, last\\literal	é漢🧪: value\; next\, last\\literal	\nBEGIN:VEVE
+ NT\nATTENDEE:mailto:injected@example.invalid\nEND:VEVENT\nSource evidence:
+ \né漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last\\
+ literal	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, 
+ last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; n
+ ext\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: val
+ ue\; next\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢
+ 🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last\\literal
+ 	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last\\l
+ iteral	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, l
+ ast\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; ne
+ xt\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: valu
+ e\; next\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪
+ : value\; next\, last\\literal	é漢🧪: value\; next\, last\\literal	é
+ 漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last\\lite
+ ral	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last
+ \\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\
+ , last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: value\;
+  next\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: v
+ alue\; next\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢
+ 🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last\\literal
+ 	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last\\l
+ iteral	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, l
+ ast\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; ne
+ xt\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: valu
+ e\; next\, last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪
+ : value\; next\, last\\literal	é漢🧪: value\; next\, last\\literal	é
+ 漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last\\lite
+ ral	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\, last
+ \\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: value\; next\
+ , last\\literal	é漢🧪: value\; next\, last\\literal	é漢🧪: value\;
+  next\, last\\literal	é漢🧪: value\; next\, last\\literal	\nBEGIN:VEVE
+ NT\nATTENDEE:mailto:injected@example.invalid\nEND:VEVENT
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

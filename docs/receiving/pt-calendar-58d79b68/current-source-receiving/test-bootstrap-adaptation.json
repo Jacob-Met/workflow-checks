@@ -1,0 +1,11 @@
+{
+  "recorded_at": "2026-10-08T14:24:13.343Z",
+  "path": "pt_auth/tests/browser/uncovered_review.test.cjs",
+  "before_sha256": "25cac361af6bf20b93d017586087db0457669ba386ae47144db184f235e9037c",
+  "after_sha256": "55cdcce692418e4746128b76a5a02c50b08704db4a3228575af1b167d940f2ae",
+  "original_failure": "PTWorklistCalendar is not defined: the earlier authored DOM harness loaded only the inline app script.",
+  "adaptation": "Load the exact declared external calendar module before the inline script, expose the same window global, and add required DOM adapter methods. No production source workaround.",
+  "all_existing_assertions_and_helpers_after_boot_byte_identical": true,
+  "seven_existing_test_bodies_byte_identical": true,
+  "scope": "Explicit authored DOM/API unit; actual browser/download composition is a separate receiving gate."
+}

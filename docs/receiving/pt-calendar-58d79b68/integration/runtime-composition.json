@@ -1,0 +1,28 @@
+{
+  "recorded_at": "2026-10-08T14:15:58.236Z",
+  "canonical_parent": "5b12dcd4c3a2c09d6602b2313e2bb556ac5997f7",
+  "canonical_parent_tree": "e16dd0815e252c7e1715545999918f303bc823af",
+  "native_qualified_feature": "d75fb908a9893fd40b21112f62af16d32027bbe1",
+  "published_qualified_feature": "a68a667f3610153618c6cc8952c72abe980d89aa",
+  "qualified_original_feature_tree": "94074bd3d39705fced23629038ab79057e943aff",
+  "canonical_parent_files": 568,
+  "intermediate_runtime_tree": "179611ef26fd155ba5fd31cfa4ee523e086bab18",
+  "intermediate_runtime_files": 571,
+  "qualified_pt_tree": "9529aeabf19e070552cc733d2b5a3728fa48df1d",
+  "received_pt_tree": "9529aeabf19e070552cc733d2b5a3728fa48df1d",
+  "exact_qualified_pt_package": true,
+  "feature_changed_leaves": [
+    "pt_auth/README.md",
+    "pt_auth/ptauth/calendar_ui.js",
+    "pt_auth/ptauth/cli.py",
+    "pt_auth/ptauth/ui.html",
+    "pt_auth/ptauth/web.py",
+    "pt_auth/ptauth/worklist_calendar.py",
+    "pt_auth/tests/test_worklist_calendar.py"
+  ],
+  "all_unrelated_parent_leaves_preserved": 564,
+  "unrelated_mismatches": [],
+  "receiving_boundary": "Current parent PT subtree is byte/mode identical to the qualified original parent. No PT source/test/dependency change. Native author and independent tests are not rerun; final hosted CI and merge-tree readback remain required.",
+  "earlier_owner_boundary": "Issue26 retains uncovered-visit projection/CSV/tab/search; its additive shared-file hooks were disclosed in comments6060941404/6061034405. Current canonical PT subtree has no overlapping source drift.",
+  "workspace": "Bounded owned native RAM Git namespace with read-only original objects; no second full checkout."
+}

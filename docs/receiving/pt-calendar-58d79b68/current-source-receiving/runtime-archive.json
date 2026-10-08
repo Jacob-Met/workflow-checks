@@ -1,0 +1,9 @@
+{
+  "path": "/dev/shm/pt-calendar-integration-58d79b68c9e4/composition-v2/pt-current-runtime.tar.gz",
+  "bytes": 209429,
+  "sha256": "7a10b232573853d15d3d17ae82d185162c16ab751bf62017fb25f287a3227234",
+  "native_commit": "33432db05b9def1a249650c79571402400c18d15",
+  "tree": "92f2df0d4bf1f6955f46449b04f2fb191e0bd2ea",
+  "pt_files": 118,
+  "source_freeze": "/dev/shm/pt-calendar-integration-58d79b68c9e4/composition-v2/source-freeze-v2.json"
+}

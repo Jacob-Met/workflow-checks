@@ -1,0 +1,11 @@
+{
+  "recordedAt": "2026-10-08T14:34:56.156Z",
+  "driverSha256": "e75d0618483a9ff8e0c5a2b79191b17f6dca1a6553f8cbd0c5bd5983675eb992",
+  "sourceCommit": "33432db05b9def1a249650c79571402400c18d15",
+  "sourceFilesVerified": 118,
+  "sourceFreezeSha256": "b9a365611cda4444ede91c1e55724a0eacb93c91f8bf85cfe43a4222e83701b6",
+  "node": "v22.22.1",
+  "python": "/usr/bin/python3",
+  "chrome": "/usr/bin/chromium-browser",
+  "setupNegative": "Read-only initial baseline path probe returned ENOENT because the sealed evidence packet intentionally contains source pins rather than duplicated source. No browser was started; the narrow driver now accepts only the exact current candidate source and original-engine fixture. Initial driver retained unexecuted."
+}

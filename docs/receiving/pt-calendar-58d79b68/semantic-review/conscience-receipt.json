@@ -1,0 +1,19 @@
+{
+  "recorded_at": "2026-10-08T13:47:17.155998+00:00",
+  "original_claim": 4142,
+  "manifest_sha256": "bf8d65ea7bf2a3aa8a9b46850860fc2b77fe91626e518205d7cb8add72e6bb0d",
+  "result": {
+    "seq": 4151,
+    "event_id": "cev_b74ffcac290f4720b5143326",
+    "event_type": "conscience.decision",
+    "actor": "chatgpt:58d79b68c9e4:root"
+  },
+  "claim_completion": {
+    "seq": 4152,
+    "event_id": "cev_5e7b31840aa644398ad3b389",
+    "event_type": "conscience.decision",
+    "actor": "chatgpt:58d79b68c9e4:root"
+  },
+  "scope": "Independent date/identity/ICS/CLI receiving only",
+  "source_public_commit": "a68a667f3610153618c6cc8952c72abe980d89aa"
+}

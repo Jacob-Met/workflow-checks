@@ -1,0 +1,307 @@
+[
+  {
+    "name": "legacy report to real combined Run while calendar stays pending",
+    "status": "pass",
+    "legacy": {
+      "uc": "Run worklist to build uncovered-visit details for this saved report.",
+      "disabled": true
+    },
+    "current": {
+      "summary": "1 all-day event(s) · 0 excluded item(s)",
+      "context": "1 currently filtered item(s); report as of 2026-10-31. Clinic time zone: America/Los_Angeles. 0 undated; 0 approved/n/a (exclusion reasons can overlap).",
+      "status": "Uses recorded submit-by dates only. Review these items before downloading.",
+      "disabled": false,
+      "button": "Download 1 event(s) (.ics)",
+      "shown": "1 of 7 items",
+      "asof": "2026-10-31",
+      "query": "Shared",
+      "clinic": "East",
+      "states": "",
+      "keys": [
+        "PT1001|PTEST|AUTH-PT1001"
+      ],
+      "lines": [
+        "Include · 2026-10-31 · PT1001 · Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\\literal · AUTH-PT1001 · East · open"
+      ],
+      "focused": {
+        "id": "q",
+        "text": "",
+        "download": false
+      }
+    },
+    "uncovered_ids": [
+      "VISIT-PT1005",
+      "VISIT-PT1006"
+    ],
+    "screenshot": {
+      "path": "combined-calendar-desktop.png",
+      "bytes": 145194,
+      "sha256": "a703ee5fd30e1d98d11dd2c8d230e42d757ca55adefe8aa7fbd895d6b10abfd7",
+      "width": 1280,
+      "height": 900
+    }
+  },
+  {
+    "name": "uncovered filters and actual all-CSV ignore calendar worklist filters",
+    "status": "pass",
+    "defaultReview": {
+      "shown": "2 of 2 appointments · as of 2026-10-31",
+      "note": "These appointments have no covering approved authorization in this report: scheduled visits on or after the as-of date, and visits recorded as completed. Check the referenced source rows and authorization worklist. Past appointments still marked scheduled remain in Visit status review. This view does not change attendance, authorization rules or staff work states.",
+      "rows": [
+        "VISIT-PT1005treatment\n      2026-11-01scheduled\n      Undated openPT1005\n      EastSYNTHETIC\n      Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\\literalPTEST\n      schedule.csv:row6",
+        "VISIT-PT1006treatment\n      2026-11-01scheduled\n      Undated submittedPT1006\n      WestSYNTHETIC\n      Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\\literalPTEST\n      schedule.csv:row7"
+      ],
+      "status": "",
+      "clinic": "",
+      "query": "",
+      "exportText": "Download all uncovered visits CSV Complete review; independent of these filters.",
+      "hidden": false
+    },
+    "filtered": {
+      "shown": "1 of 2 appointments · as of 2026-10-31",
+      "note": "These appointments have no covering approved authorization in this report: scheduled visits on or after the as-of date, and visits recorded as completed. Check the referenced source rows and authorization worklist. Past appointments still marked scheduled remain in Visit status review. This view does not change attendance, authorization rules or staff work states.",
+      "rows": [
+        "VISIT-PT1006treatment\n      2026-11-01scheduled\n      Undated submittedPT1006\n      WestSYNTHETIC\n      Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\\literalPTEST\n      schedule.csv:row7"
+      ],
+      "status": "",
+      "clinic": "\"West\"",
+      "query": "Undated",
+      "exportText": "Download all uncovered visits CSV Complete review; independent of these filters.",
+      "hidden": false
+    },
+    "csv": {
+      "label": "all-uncovered-from-filtered-view",
+      "type": "csv",
+      "guid": "6210bff0-d87f-48cf-8a02-7971a0b7b059",
+      "suggested_filename": "uncovered_visits.csv",
+      "state": "completed",
+      "bytes": 618,
+      "sha256": "96bcf7e9ffff67a98e06e4de07135e02be79e4a0a1fb07bfa9cfc1111d92abc2",
+      "artifact": "all-uncovered-from-filtered-view.csv",
+      "rows": [
+        {
+          "visit_id": "VISIT-PT1005",
+          "visit_date": "2026-11-01",
+          "status": "scheduled",
+          "patient_id": "PT1005",
+          "patient_name": "Undated open",
+          "clinic": "East",
+          "therapist": "SYNTHETIC",
+          "payer_id": "PTEST",
+          "payer_name": "Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\\literal",
+          "payer_rules_known": "True",
+          "visit_type": "treatment",
+          "evidence": "schedule.csv:row6"
+        },
+        {
+          "visit_id": "VISIT-PT1006",
+          "visit_date": "2026-11-01",
+          "status": "scheduled",
+          "patient_id": "PT1006",
+          "patient_name": "Undated submitted",
+          "clinic": "West",
+          "therapist": "SYNTHETIC",
+          "payer_id": "PTEST",
+          "payer_name": "Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\\literal",
+          "payer_rules_known": "True",
+          "visit_type": "treatment",
+          "evidence": "schedule.csv:row7"
+        }
+      ]
+    },
+    "screenshot": {
+      "path": "combined-uncovered-390.png",
+      "bytes": 72900,
+      "sha256": "800b6a1e4ab79267505caa95832f74b0ded5e4ab84aef3cef47ef77a66058d05",
+      "width": 390,
+      "height": 844
+    },
+    "dimensions": {
+      "viewport": 390,
+      "left": 20,
+      "right": 355,
+      "tabVisible": true,
+      "injected": 0
+    },
+    "worklist_preserved": {
+      "summary": "1 all-day event(s) · 0 excluded item(s)",
+      "context": "1 currently filtered item(s); report as of 2026-10-31. Clinic time zone: America/Los_Angeles. 0 undated; 0 approved/n/a (exclusion reasons can overlap).",
+      "status": "Uses recorded submit-by dates only. Review these items before downloading.",
+      "disabled": false,
+      "button": "Download 1 event(s) (.ics)",
+      "shown": "1 of 7 items",
+      "asof": "2026-10-31",
+      "query": "Shared",
+      "clinic": "East",
+      "states": "",
+      "keys": [
+        "PT1001|PTEST|AUTH-PT1001"
+      ],
+      "lines": [
+        "Include · 2026-10-31 · PT1001 · Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\\literal · AUTH-PT1001 · East · open"
+      ],
+      "focused": {
+        "id": "uc-search",
+        "text": "",
+        "download": false
+      }
+    }
+  },
+  {
+    "name": "staff work state does not hide an uncovered appointment or change its all-CSV",
+    "status": "pass",
+    "work": {
+      "summary": "3 all-day event(s) · 1 excluded item(s)",
+      "context": "4 currently filtered item(s); report as of 2026-10-31. Clinic time zone: America/Los_Angeles. 1 undated; 0 approved/n/a (exclusion reasons can overlap).",
+      "status": "Uses recorded submit-by dates only. Review these items before downloading.",
+      "disabled": false,
+      "button": "Download 3 event(s) (.ics)",
+      "shown": "4 of 7 items",
+      "asof": "2026-10-31",
+      "query": "",
+      "clinic": "",
+      "states": "",
+      "keys": [
+        "PT1001|PTEST|AUTH-PT1001",
+        "PT1006|PTEST|",
+        "PT1002|PTEST|AUTH-PT1002",
+        "PT1007|PTEST|AUTH-PT1007"
+      ],
+      "lines": [
+        "Include · 2026-10-31 · PT1001 · Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\\literal · AUTH-PT1001 · East · open",
+        "Include · 2026-11-01 · PT1002 · Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\\literal · AUTH-PT1002 · West · submitted",
+        "Include · 2026-11-04 · PT1007 · Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\\literal · AUTH-PT1007 · East · open",
+        "Exclude · PT1006 · no auth · no recorded submit-by date"
+      ],
+      "focused": {
+        "id": "",
+        "text": "Uncovered visits",
+        "download": false
+      }
+    },
+    "uncovered": {
+      "shown": "2 of 2 appointments · as of 2026-10-31",
+      "note": "These appointments have no covering approved authorization in this report: scheduled visits on or after the as-of date, and visits recorded as completed. Check the referenced source rows and authorization worklist. Past appointments still marked scheduled remain in Visit status review. This view does not change attendance, authorization rules or staff work states.",
+      "rows": [
+        "VISIT-PT1005treatment\n      2026-11-01scheduled\n      Undated openPT1005\n      EastSYNTHETIC\n      Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\\literalPTEST\n      schedule.csv:row6",
+        "VISIT-PT1006treatment\n      2026-11-01scheduled\n      Undated submittedPT1006\n      WestSYNTHETIC\n      Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\\literalPTEST\n      schedule.csv:row7"
+      ],
+      "status": "",
+      "clinic": "",
+      "query": "Undated",
+      "exportText": "Download all uncovered visits CSV Complete review; independent of these filters.",
+      "hidden": false
+    },
+    "staff_state": {
+      "state": "approved",
+      "note": "",
+      "at": "2026-10-08T14:35:06+00:00"
+    },
+    "csv_unchanged": true
+  },
+  {
+    "name": "return to calendar completes exact current filtered ICS with new report fields",
+    "status": "pass",
+    "state": {
+      "summary": "1 all-day event(s) · 0 excluded item(s)",
+      "context": "1 currently filtered item(s); report as of 2026-10-31. Clinic time zone: America/Los_Angeles. 0 undated; 0 approved/n/a (exclusion reasons can overlap).",
+      "status": "Uses recorded submit-by dates only. Review these items before downloading.",
+      "disabled": false,
+      "button": "Download 1 event(s) (.ics)",
+      "shown": "1 of 7 items",
+      "asof": "2026-10-31",
+      "query": "Shared",
+      "clinic": "East",
+      "states": "",
+      "keys": [
+        "PT1001|PTEST|AUTH-PT1001"
+      ],
+      "lines": [
+        "Include · 2026-10-31 · PT1001 · Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\\literal · AUTH-PT1001 · East · open"
+      ],
+      "focused": {
+        "id": "q",
+        "text": "",
+        "download": false
+      }
+    },
+    "download": "combined-filtered-calendar",
+    "screenshot": {
+      "path": "combined-calendar-390.png",
+      "bytes": 76690,
+      "sha256": "5cf2eaed98bfec2bcbcb1485fff38568e36a25a270b7c3053b4dc9e938d5b6a6",
+      "width": 390,
+      "height": 844
+    },
+    "new_uncovered_fields_present": true
+  },
+  {
+    "name": "combined report drift refuses stale calendar and real Run restores current export",
+    "status": "pass",
+    "rejected": {
+      "summary": "Calendar unavailable",
+      "context": "",
+      "status": "Report or staff state changed; refresh the worklist before exporting Refresh the worklist before exporting.",
+      "disabled": true,
+      "button": "Download calendar (.ics)",
+      "shown": "1 of 7 items",
+      "asof": "2026-10-31",
+      "query": "Shared",
+      "clinic": "East",
+      "states": "",
+      "keys": [
+        "PT1001|PTEST|AUTH-PT1001"
+      ],
+      "lines": [],
+      "focused": {
+        "id": "",
+        "text": "\nSYNTHETIC DATA — NOT REAL PATIENTS · proof of concept · nothing is sent to any payer\n\n  P",
+        "download": false
+      }
+    },
+    "current": {
+      "summary": "3 all-day event(s) · 1 excluded item(s)",
+      "context": "4 currently filtered item(s); report as of 2026-10-31. Clinic time zone: America/Los_Angeles. 1 undated; 0 approved/n/a (exclusion reasons can overlap).",
+      "status": "Uses recorded submit-by dates only. Review these items before downloading.",
+      "disabled": false,
+      "button": "Download 3 event(s) (.ics)",
+      "shown": "4 of 7 items",
+      "asof": "2026-10-31",
+      "query": "",
+      "clinic": "",
+      "states": "",
+      "keys": [
+        "PT1001|PTEST|AUTH-PT1001",
+        "PT1006|PTEST|",
+        "PT1002|PTEST|AUTH-PT1002",
+        "PT1007|PTEST|AUTH-PT1007"
+      ],
+      "lines": [
+        "Include · 2026-10-31 · PT1001 · Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\\literal · AUTH-PT1001 · East · open",
+        "Include · 2026-11-01 · PT1002 · Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\\literal · AUTH-PT1002 · West · submitted",
+        "Include · 2026-11-04 · PT1007 · Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\\literal · AUTH-PT1007 · East · open",
+        "Exclude · PT1006 · no auth · no recorded submit-by date"
+      ],
+      "focused": {
+        "id": "q",
+        "text": "",
+        "download": false
+      }
+    },
+    "download": "combined-current-after-refusal",
+    "uncovered": {
+      "shown": "2 of 2 appointments · as of 2026-10-31",
+      "note": "These appointments have no covering approved authorization in this report: scheduled visits on or after the as-of date, and visits recorded as completed. Check the referenced source rows and authorization worklist. Past appointments still marked scheduled remain in Visit status review. This view does not change attendance, authorization rules or staff work states.",
+      "rows": [
+        "VISIT-PT1005treatment\n      2026-11-01scheduled\n      Undated openPT1005\n      EastSYNTHETIC\n      Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\\literalPTEST\n      schedule.csv:row6",
+        "VISIT-PT1006treatment\n      2026-11-01scheduled\n      Undated submittedPT1006\n      WestSYNTHETIC\n      Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\\literalPTEST\n      schedule.csv:row7"
+      ],
+      "status": "",
+      "clinic": "",
+      "query": "Undated",
+      "exportText": "Download all uncovered visits CSV Complete review; independent of these filters.",
+      "hidden": false
+    },
+    "actual_stale_status": 409
+  }
+]

@@ -1,0 +1,77 @@
+{
+  "repository": "Jacob-Met/workflow-checks",
+  "stage": "immutable evidence blobs only; no branch/ref movement",
+  "created": [
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/browser-asof-v2/fresh-asof-reviewed.png",
+      "blob": "0c4cbc4d2e107a84a9bb867e9e4c3ad107df2caa",
+      "sha256": "3d702a802d85392018d4b8fcca1bde0ee6e40fba9b5a75f6eec1a7b54b0207a2",
+      "bytes": 177401,
+      "returned_sha": "0c4cbc4d2e107a84a9bb867e9e4c3ad107df2caa"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/browser-v1/baseline-worklist.png",
+      "blob": "d4cdb3c1a98989540da1fb7d612a2e40c6973b47",
+      "sha256": "1796e119aecb80df79607c9f6c779ce9fd1643b4412413109b6c89ed1798dc9f",
+      "bytes": 153436,
+      "returned_sha": "d4cdb3c1a98989540da1fb7d612a2e40c6973b47"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/browser-v1/desktop-keyboard-focus.png",
+      "blob": "af9641625463d90df96fb51338f3c1dfe8c5eca4",
+      "sha256": "055dba360622bd1b89fe84a47652e6def690c644da8b90846c051bdeb4e815c2",
+      "bytes": 175271,
+      "returned_sha": "af9641625463d90df96fb51338f3c1dfe8c5eca4"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/browser-v1/desktop-reviewed-exclusions.png",
+      "blob": "fc2dfb27588d1bcc3ff589752091d8c3dfc8f693",
+      "sha256": "5ade9893e3d0512befc7e34c16aaa9ab1eb212ab4fc1b472c2b7c2e002b7683c",
+      "bytes": 187906,
+      "returned_sha": "fc2dfb27588d1bcc3ff589752091d8c3dfc8f693"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/browser-v1/failure-7.png",
+      "blob": "4ea5adf2001efcc119d5a6ebf4ccece53067de28",
+      "sha256": "0fd2dc392845d905a15246bf88c76e04ff4f37869eb19178e183a611ab852726",
+      "bytes": 130495,
+      "returned_sha": "4ea5adf2001efcc119d5a6ebf4ccece53067de28"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/browser-review/browser-v1/narrow-390-review.png",
+      "blob": "0e0737ff87c6db60545bae4204711518f9adf0ab",
+      "sha256": "0374c0b7c7fb8409362a084e44c957de00cb6dbd5ccb5fa94e9136daa6de9219",
+      "bytes": 91759,
+      "returned_sha": "0e0737ff87c6db60545bae4204711518f9adf0ab"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/current-source-receiving/pt-current-runtime.tar.gz",
+      "blob": "952dac775b9df9bbf7b343ff2a5a028e955a3bbc",
+      "sha256": "7a10b232573853d15d3d17ae82d185162c16ab751bf62017fb25f287a3227234",
+      "bytes": 209429,
+      "returned_sha": "952dac775b9df9bbf7b343ff2a5a028e955a3bbc"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/producer-v2/native-producer-v2.tar.gz",
+      "blob": "17e3a91c192bd95c396f85f985bf4f43214c4e5e",
+      "sha256": "fa79ce904bd754815fef2e8dcf4b63e108cf0cc46ea63452cfebd83453366a69",
+      "bytes": 215277,
+      "returned_sha": "17e3a91c192bd95c396f85f985bf4f43214c4e5e"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/semantic-review.tar.gz",
+      "blob": "0d31d0ab809686ddfd65b6e52a988ddbae04394d",
+      "sha256": "07166d7bc271a320940d1a5a01ef479e4d4513738a49c7b5c6ec6cae9c408641",
+      "bytes": 48538,
+      "returned_sha": "0d31d0ab809686ddfd65b6e52a988ddbae04394d"
+    }
+  ],
+  "independent_browser_archive": {
+    "blob": "8512427ed4b87de2d9611cea66c69f707aad03a4",
+    "sha256": "c296acea68f36d63f071d71aaefc2b803002b21af84282a69b1a81d7ccb1feb4",
+    "bytes": 1146656,
+    "creator": "chatgpt:58d79b68c9e4:mac_estate"
+  },
+  "all_returned_blob_ids_exact_native": true,
+  "recorded_at": "2026-10-08T14:35:45.465Z"
+}

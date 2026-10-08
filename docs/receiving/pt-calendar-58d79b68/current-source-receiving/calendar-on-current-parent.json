@@ -1,0 +1,22 @@
+{
+  "command": [
+    "python3",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_worklist_calendar.py",
+    "-v"
+  ],
+  "cwd": "/dev/shm/pt-calendar-integration-58d79b68c9e4/current-composition/pt_auth",
+  "source": "880d6198cf4f9999e4aa05e3fbd744701b38f500",
+  "began": "2026-10-08T14:23:09.817Z",
+  "finished": "2026-10-08T14:23:11.317Z",
+  "status": 0,
+  "signal": null,
+  "stdout": "",
+  "stderr": "test_actual_date_is_all_day_without_invented_time_or_rules (test_worklist_calendar.CalendarFormatTests.test_actual_date_is_all_day_without_invented_time_or_rules) ... ok\ntest_dates_at_century_end_and_dst_boundaries_are_not_shifted (test_worklist_calendar.CalendarFormatTests.test_dates_at_century_end_and_dst_boundaries_are_not_shifted) ... ok\ntest_exclusions_are_explicit_and_counts_can_overlap (test_worklist_calendar.CalendarFormatTests.test_exclusions_are_explicit_and_counts_can_overlap) ... ok\ntest_invalid_or_missing_dates_do_not_fall_back_to_next_visit (test_worklist_calendar.CalendarFormatTests.test_invalid_or_missing_dates_do_not_fall_back_to_next_visit) ... ok\ntest_malformed_unselected_rows_cannot_be_hidden_by_filtering (test_worklist_calendar.CalendarFormatTests.test_malformed_unselected_rows_cannot_be_hidden_by_filtering) ... ok\ntest_optional_native_patient_name_and_clinic_remain_blank (test_worklist_calendar.CalendarFormatTests.test_optional_native_patient_name_and_clinic_remain_blank) ... ok\ntest_prepared_export_is_isolated_from_later_caller_mutation (test_worklist_calendar.CalendarFormatTests.test_prepared_export_is_isolated_from_later_caller_mutation) ... ok\ntest_selection_uses_canonical_keys_priority_and_exact_clinic (test_worklist_calendar.CalendarFormatTests.test_selection_uses_canonical_keys_priority_and_exact_clinic) ... ok\ntest_uid_is_stable_across_filter_date_status_and_report_time_changes (test_worklist_calendar.CalendarFormatTests.test_uid_is_stable_across_filter_date_status_and_report_time_changes) ... ok\ntest_unicode_escaping_folding_and_source_text_round_trip (test_worklist_calendar.CalendarFormatTests.test_unicode_escaping_folding_and_source_text_round_trip) ... ok\ntest_utc_export_time_is_actual_aware_input_not_naive_report_time (test_worklist_calendar.CalendarFormatTests.test_utc_export_time_is_actual_aware_input_not_naive_report_time) ... ok\ntest_bad_json_duplicate_fields_nonfinite_and_symlink_are_refused (test_worklist_calendar.SavedReportTests.test_bad_json_duplicate_fields_nonfinite_and_symlink_are_refused) ... ok\ntest_changed_pair_is_refused_at_read_boundary (test_worklist_calendar.SavedReportTests.test_changed_pair_is_refused_at_read_boundary) ... ok\ntest_cli_real_output_and_changed_inputs_preserve_saved_files (test_worklist_calendar.SavedReportTests.test_cli_real_output_and_changed_inputs_preserve_saved_files) ... ok\ntest_cli_refusals_have_no_stdout_or_output_and_preserve_existing_destinations (test_worklist_calendar.SavedReportTests.test_cli_refusals_have_no_stdout_or_output_and_preserve_existing_destinations) ... ok\ntest_exclusive_publication_preserves_a_racing_writer_and_cleans_own_stage (test_worklist_calendar.SavedReportTests.test_exclusive_publication_preserves_a_racing_writer_and_cleans_own_stage) ... ok\ntest_existing_report_read_is_nonmutating_and_missing_report_is_not_created (test_worklist_calendar.SavedReportTests.test_existing_report_read_is_nonmutating_and_missing_report_is_not_created) ... ok\ntest_real_http_snapshot_download_and_changed_staff_state_refusal (test_worklist_calendar.SavedReportTests.test_real_http_snapshot_download_and_changed_staff_state_refusal) ... ok\ntest_report_drift_during_render_and_malformed_snapshot_are_refused (test_worklist_calendar.SavedReportTests.test_report_drift_during_render_and_malformed_snapshot_are_refused) ... ok\n\n----------------------------------------------------------------------\nRan 19 tests in 1.143s\n\nOK\n"
+}

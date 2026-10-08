@@ -1,0 +1,114 @@
+{
+  "files": [
+    {
+      "path": "apply-three-way.json",
+      "bytes": 386,
+      "sha256": "7a44942e35ec7327fcebf506e08313f3c67478201906950213bf2fd7df771271",
+      "mode": 436
+    },
+    {
+      "path": "calendar-on-current-parent.json",
+      "bytes": 3930,
+      "sha256": "5894a344e310a08d3516498c5f432b31988e8302fe97527826fd011eb7d2d0bf",
+      "mode": 436
+    },
+    {
+      "path": "composition-start.json",
+      "bytes": 24187,
+      "sha256": "b0f1cd25c2d86231913ac1edd9b59534b3da64ab6579f474c2c3489b9b691350",
+      "mode": 436
+    },
+    {
+      "path": "current-parent-source.patch",
+      "bytes": 65675,
+      "sha256": "c8e22179d83a084c0de7799554c8db8d4852de5dedb78b51a5dc7f337154936f",
+      "mode": 436
+    },
+    {
+      "path": "durable-source-receipt.json",
+      "bytes": 510,
+      "sha256": "8f09ae76eb4b38a7efda994fdd747e088e0bf0c8e8f2a6a2085b5ff31e9f4d24",
+      "mode": 436
+    },
+    {
+      "path": "fetch-parent.json",
+      "bytes": 185,
+      "sha256": "f4161e9310363a952b22f73c0e432c3e3f9ef0fb8e941a8abeb391e145ed6497",
+      "mode": 436
+    },
+    {
+      "path": "index-refresh-and-check.json",
+      "bytes": 1293,
+      "sha256": "577c8d00b0701907f9d72193453cd2cf0888566845ca1af93921613aa622c0eb",
+      "mode": 436
+    },
+    {
+      "path": "original-calendar.patch",
+      "bytes": 63314,
+      "sha256": "1c68a3ee978f014a18dbaa7f0227847329938121510e1214dcedbba0dbefff94",
+      "mode": 436
+    },
+    {
+      "path": "pt-current-runtime.tar.gz",
+      "bytes": 209429,
+      "sha256": "7a10b232573853d15d3d17ae82d185162c16ab751bf62017fb25f287a3227234",
+      "mode": 420
+    },
+    {
+      "path": "reverse-differential-preservation.json",
+      "bytes": 704,
+      "sha256": "d8d387702fe05d11be5283977eb2ac3db187f8bf73b13c84caeed169fa074c64",
+      "mode": 436
+    },
+    {
+      "path": "runtime-archive.json",
+      "bytes": 443,
+      "sha256": "04e98dc2db7c75cd7c38173ff998a214cf4ec1b7029ee895c4581599203ed937",
+      "mode": 420
+    },
+    {
+      "path": "source-freeze-before-adapter.json",
+      "bytes": 1742,
+      "sha256": "5d698c6283fe820b725a1463ecd90e29a821ac8cc49c42eddcadf3ee50fc6dc3",
+      "mode": 436
+    },
+    {
+      "path": "source-freeze-v2.json",
+      "bytes": 37503,
+      "sha256": "b9a365611cda4444ede91c1e55724a0eacb93c91f8bf85cfe43a4222e83701b6",
+      "mode": 420
+    },
+    {
+      "path": "test-bootstrap-adaptation.json",
+      "bytes": 844,
+      "sha256": "945ae9f9b76a4e93effea45e3b12eb74a20a0839ff60750eb480b2a68da531b4",
+      "mode": 420
+    },
+    {
+      "path": "test-bootstrap.patch",
+      "bytes": 2403,
+      "sha256": "f7e0156a10162f390cc67275f1c2598de5ec3b7b826afdbc34f997790d10c981",
+      "mode": 436
+    },
+    {
+      "path": "uncovered-after-adapter.json",
+      "bytes": 2039,
+      "sha256": "94846eb4d06bbe1dfe82629ebecbaeb8e21bb9d8d92be79e0f443af433820997",
+      "mode": 436
+    },
+    {
+      "path": "uncovered-before-adapter.json",
+      "bytes": 11632,
+      "sha256": "6d06b363f6f83e8262839b24f005f1b94be984242d1c159eae1e03ea8f099dc5",
+      "mode": 436
+    },
+    {
+      "path": "uncovered-review-before-adapter.cjs",
+      "bytes": 8415,
+      "sha256": "25cac361af6bf20b93d017586087db0457669ba386ae47144db184f235e9037c",
+      "mode": 420
+    }
+  ],
+  "excluded_reproducible_private_index": "reverse-receiving.index",
+  "native_commit": "33432db05b9def1a249650c79571402400c18d15"
+}

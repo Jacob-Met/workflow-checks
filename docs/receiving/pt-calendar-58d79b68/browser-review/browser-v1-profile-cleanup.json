@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-10-08T13:45:37.100Z",
+  "profile": "/Users/me/pt-calendar-browser-review-58d79b68c9e4/browser-v1/profile",
+  "observed_chrome_exit": {
+    "label": "chrome",
+    "pid": 2360,
+    "code": 0,
+    "signal": null
+  },
+  "matching_active_processes": 0,
+  "source_downloads_screenshots_logs_and_result_preserved": true,
+  "reason": "Reproducible isolated profile cache after completed native receiving; make room for targeted as-of replay."
+}

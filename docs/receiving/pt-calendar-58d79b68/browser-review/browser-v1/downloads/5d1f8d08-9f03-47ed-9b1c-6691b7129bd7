@@ -1,0 +1,74 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Workflow Checks//Synthetic PT handoff v1//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:3f6ca0c8eb7562bfadc1ac5d3d3bee98407740e850f73eebdc3fb44c84d370be@ptauth
+ .workflow-checks.invalid
+DTSTAMP:20261008T134325Z
+DTSTART;VALUE=DATE:20261031
+SUMMARY:[SYNTHETIC] P1 authorization review — PT1001
+DESCRIPTION:SYNTHETIC DATA - NOT REAL PATIENTS. Proof of concept\; payer ru
+ les are placeholders. Nothing is submitted to any payer.\nAdministrative s
+ ubmit-by review\; no payer submission or staff-state change.\nWork-item ke
+ y: PT1001|PTEST|AUTH-PT1001\nPatient: PT1001 — Shared Léo <literal>\, c
+ are\;group 😀\nPayer: PTEST — Payer Review\, α\; Plan 💠💠💠
+ 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠
+ 💠💠💠💠\\literal\nAuthorization: AUTH-PT1001\nClinic: East\nPrior
+ ity: P1\nRecorded submit-by: 2026-10-31\nAuthorization end: 2026-11-02\nNe
+ xt visit: 2026-11-01\nStaff state: open\nStaff note: \nStaff state recorde
+ d at: unrecorded\nReport as of: 2026-10-31\nReport generated at (as record
+ ed): 2026-10-08T06:29:09\nClinic time zone (context\; all-day date unchang
+ ed): America/Los_Angeles\nReasons:\nREAUTH_BY_DATE\nDetails:\nauth ends 20
+ 26-11-02 (2 days)\; 1 visit(s) still scheduled\nChecklist:\nCheck dates\, 
+ review\; carefully\nVerify \\ records\nRetain Ω evidence\nSource evidence
+ :\nauthorizations.csv:row2
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:07a926811c7e1cfd700cf112d58f69c5f761bb5296713c04765d7821072f2870@ptauth
+ .workflow-checks.invalid
+DTSTAMP:20261008T134325Z
+DTSTART;VALUE=DATE:20261101
+SUMMARY:[SYNTHETIC] P2 authorization review — PT1002
+DESCRIPTION:SYNTHETIC DATA - NOT REAL PATIENTS. Proof of concept\; payer ru
+ les are placeholders. Nothing is submitted to any payer.\nAdministrative s
+ ubmit-by review\; no payer submission or staff-state change.\nWork-item ke
+ y: PT1002|PTEST|AUTH-PT1002\nPatient: PT1002 — Shared Léo <literal>\, c
+ are\;group 😀\nPayer: PTEST — Payer Review\, α\; Plan 💠💠💠
+ 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠
+ 💠💠💠💠\\literal\nAuthorization: AUTH-PT1002\nClinic: West\nPrior
+ ity: P2\nRecorded submit-by: 2026-11-01\nAuthorization end: 2026-11-03\nNe
+ xt visit: 2026-11-01\nStaff state: submitted\nStaff note: Synthetic review
+ ed\, waiting\; Ω\\notes\nSecond line\nStaff state recorded at: 2026-10-01
+ T12:00:00+00:00\nReport as of: 2026-10-31\nReport generated at (as recorde
+ d): 2026-10-08T06:29:09\nClinic time zone (context\; all-day date unchange
+ d): America/Los_Angeles\nReasons:\nREAUTH_BY_DATE\nDetails:\nauth ends 202
+ 6-11-03 (3 days)\; 1 visit(s) still scheduled\nChecklist:\nCheck dates\, r
+ eview\; carefully\nVerify \\ records\nRetain Ω evidence\nSource evidence:
+ \nauthorizations.csv:row3
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ad08afd6b60834e6135aa59168b19b255b71de9c943762c036345089155f0371@ptauth
+ .workflow-checks.invalid
+DTSTAMP:20261008T134325Z
+DTSTART;VALUE=DATE:20261105
+SUMMARY:[SYNTHETIC] P2 authorization review — PT1007
+DESCRIPTION:SYNTHETIC DATA - NOT REAL PATIENTS. Proof of concept\; payer ru
+ les are placeholders. Nothing is submitted to any payer.\nAdministrative s
+ ubmit-by review\; no payer submission or staff-state change.\nWork-item ke
+ y: PT1007|PTEST|AUTH-PT1007\nPatient: PT1007 — Current note Ω\nPayer: P
+ TEST — Payer Review\, α\; Plan 💠💠💠💠💠💠💠💠💠💠
+ 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\\literal\nAut
+ horization: AUTH-PT1007\nClinic: East\nPriority: P2\nRecorded submit-by: 2
+ 026-11-05\nAuthorization end: 2026-11-06\nNext visit: 2026-11-01\nStaff st
+ ate: open\nStaff note: \nStaff state recorded at: unrecorded\nReport as of
+ : 2026-10-31\nReport generated at (as recorded): 2026-10-08T06:29:09\nClin
+ ic time zone (context\; all-day date unchanged): America/Los_Angeles\nReas
+ ons:\nREAUTH_BY_DATE\nDetails:\nauth ends 2026-11-06 (6 days)\; 1 visit(s)
+  still scheduled\nChecklist:\nCheck dates\, review\; carefully\nVerify \\ 
+ records\nRetain Ω evidence\nSource evidence:\nauthorizations.csv:row6
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

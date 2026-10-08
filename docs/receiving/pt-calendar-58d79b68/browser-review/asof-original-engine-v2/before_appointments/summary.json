@@ -1,0 +1,339 @@
+{
+  "banner": "SYNTHETIC DATA - NOT REAL PATIENTS. Proof of concept; payer rules are placeholders. Nothing is submitted to any payer.",
+  "as_of": "2026-10-30",
+  "generated_at": "2026-10-08T06:45:07",
+  "clinic_timezone": "America/Los_Angeles",
+  "counts": {
+    "patients": 7,
+    "visits": 7,
+    "auths": 5,
+    "worklist": 7,
+    "p1": 2,
+    "p2": 5,
+    "p3": 0,
+    "uncovered_scheduled": 2,
+    "unauthorized_done": 0,
+    "past_scheduled": 0
+  },
+  "worklist": [
+    {
+      "patient_id": "PT1005",
+      "patient_name": "Undated open",
+      "clinic": "East",
+      "payer_id": "PTEST",
+      "payer_name": "Payer Review, \u03b1; Plan \ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\\literal",
+      "auth_no": "",
+      "priority": "P1",
+      "reasons": [
+        "UNCOVERED_VISIT"
+      ],
+      "detail": [
+        "1 scheduled visit(s) outside any approved auth, first 2026-11-01 (VISIT-PT1005)"
+      ],
+      "visits_used": null,
+      "visits_authorized": null,
+      "visits_remaining": null,
+      "scheduled_in_window": null,
+      "auth_end": null,
+      "days_left": null,
+      "next_visit": "2026-11-01",
+      "submit_by": null,
+      "checklist": [
+        "Check dates, review; carefully",
+        "Verify \\ records",
+        "Retain \u03a9 evidence"
+      ],
+      "evidence": [
+        "schedule.csv:row6"
+      ],
+      "key": "PT1005|PTEST|"
+    },
+    {
+      "patient_id": "PT1006",
+      "patient_name": "Undated submitted",
+      "clinic": "West",
+      "payer_id": "PTEST",
+      "payer_name": "Payer Review, \u03b1; Plan \ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\\literal",
+      "auth_no": "",
+      "priority": "P1",
+      "reasons": [
+        "UNCOVERED_VISIT"
+      ],
+      "detail": [
+        "1 scheduled visit(s) outside any approved auth, first 2026-11-01 (VISIT-PT1006)"
+      ],
+      "visits_used": null,
+      "visits_authorized": null,
+      "visits_remaining": null,
+      "scheduled_in_window": null,
+      "auth_end": null,
+      "days_left": null,
+      "next_visit": "2026-11-01",
+      "submit_by": null,
+      "checklist": [
+        "Check dates, review; carefully",
+        "Verify \\ records",
+        "Retain \u03a9 evidence"
+      ],
+      "evidence": [
+        "schedule.csv:row7"
+      ],
+      "key": "PT1006|PTEST|"
+    },
+    {
+      "patient_id": "PT1001",
+      "patient_name": "Shared L\u00e9o <literal>, care;group \ud83d\ude00",
+      "clinic": "East",
+      "payer_id": "PTEST",
+      "payer_name": "Payer Review, \u03b1; Plan \ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\\literal",
+      "auth_no": "AUTH-PT1001",
+      "priority": "P2",
+      "reasons": [
+        "REAUTH_BY_DATE"
+      ],
+      "detail": [
+        "auth ends 2026-11-02 (3 days); 1 visit(s) still scheduled"
+      ],
+      "visits_used": 0,
+      "visits_authorized": 10,
+      "visits_remaining": 10,
+      "scheduled_in_window": 1,
+      "auth_end": "2026-11-02",
+      "days_left": 3,
+      "next_visit": "2026-11-01",
+      "submit_by": "2026-10-31",
+      "checklist": [
+        "Check dates, review; carefully",
+        "Verify \\ records",
+        "Retain \u03a9 evidence"
+      ],
+      "evidence": [
+        "authorizations.csv:row2"
+      ],
+      "key": "PT1001|PTEST|AUTH-PT1001"
+    },
+    {
+      "patient_id": "PT1002",
+      "patient_name": "Shared L\u00e9o <literal>, care;group \ud83d\ude00",
+      "clinic": "West",
+      "payer_id": "PTEST",
+      "payer_name": "Payer Review, \u03b1; Plan \ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\\literal",
+      "auth_no": "AUTH-PT1002",
+      "priority": "P2",
+      "reasons": [
+        "REAUTH_BY_DATE"
+      ],
+      "detail": [
+        "auth ends 2026-11-03 (4 days); 1 visit(s) still scheduled"
+      ],
+      "visits_used": 0,
+      "visits_authorized": 10,
+      "visits_remaining": 10,
+      "scheduled_in_window": 1,
+      "auth_end": "2026-11-03",
+      "days_left": 4,
+      "next_visit": "2026-11-01",
+      "submit_by": "2026-11-01",
+      "checklist": [
+        "Check dates, review; carefully",
+        "Verify \\ records",
+        "Retain \u03a9 evidence"
+      ],
+      "evidence": [
+        "authorizations.csv:row3"
+      ],
+      "key": "PT1002|PTEST|AUTH-PT1002"
+    },
+    {
+      "patient_id": "PT1003",
+      "patient_name": "Approved review",
+      "clinic": "East",
+      "payer_id": "PTEST",
+      "payer_name": "Payer Review, \u03b1; Plan \ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\\literal",
+      "auth_no": "AUTH-PT1003",
+      "priority": "P2",
+      "reasons": [
+        "REAUTH_BY_DATE"
+      ],
+      "detail": [
+        "auth ends 2026-11-04 (5 days); 1 visit(s) still scheduled"
+      ],
+      "visits_used": 0,
+      "visits_authorized": 10,
+      "visits_remaining": 10,
+      "scheduled_in_window": 1,
+      "auth_end": "2026-11-04",
+      "days_left": 5,
+      "next_visit": "2026-11-01",
+      "submit_by": "2026-11-02",
+      "checklist": [
+        "Check dates, review; carefully",
+        "Verify \\ records",
+        "Retain \u03a9 evidence"
+      ],
+      "evidence": [
+        "authorizations.csv:row4"
+      ],
+      "key": "PT1003|PTEST|AUTH-PT1003"
+    },
+    {
+      "patient_id": "PT1004",
+      "patient_name": "N/A review",
+      "clinic": "West",
+      "payer_id": "PTEST",
+      "payer_name": "Payer Review, \u03b1; Plan \ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\\literal",
+      "auth_no": "AUTH-PT1004",
+      "priority": "P2",
+      "reasons": [
+        "REAUTH_BY_DATE"
+      ],
+      "detail": [
+        "auth ends 2026-11-05 (6 days); 1 visit(s) still scheduled"
+      ],
+      "visits_used": 0,
+      "visits_authorized": 10,
+      "visits_remaining": 10,
+      "scheduled_in_window": 1,
+      "auth_end": "2026-11-05",
+      "days_left": 6,
+      "next_visit": "2026-11-01",
+      "submit_by": "2026-11-03",
+      "checklist": [
+        "Check dates, review; carefully",
+        "Verify \\ records",
+        "Retain \u03a9 evidence"
+      ],
+      "evidence": [
+        "authorizations.csv:row5"
+      ],
+      "key": "PT1004|PTEST|AUTH-PT1004"
+    },
+    {
+      "patient_id": "PT1007",
+      "patient_name": "Current note \u03a9",
+      "clinic": "East",
+      "payer_id": "PTEST",
+      "payer_name": "Payer Review, \u03b1; Plan \ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\ud83d\udca0\\literal",
+      "auth_no": "AUTH-PT1007",
+      "priority": "P2",
+      "reasons": [
+        "REAUTH_BY_DATE"
+      ],
+      "detail": [
+        "auth ends 2026-11-06 (7 days); 1 visit(s) still scheduled"
+      ],
+      "visits_used": 0,
+      "visits_authorized": 10,
+      "visits_remaining": 10,
+      "scheduled_in_window": 1,
+      "auth_end": "2026-11-06",
+      "days_left": 7,
+      "next_visit": "2026-11-01",
+      "submit_by": "2026-11-04",
+      "checklist": [
+        "Check dates, review; carefully",
+        "Verify \\ records",
+        "Retain \u03a9 evidence"
+      ],
+      "evidence": [
+        "authorizations.csv:row6"
+      ],
+      "key": "PT1007|PTEST|AUTH-PT1007"
+    }
+  ],
+  "ledger": [
+    {
+      "auth_no": "AUTH-PT1001",
+      "patient_id": "PT1001",
+      "patient_name": "Shared L\u00e9o <literal>, care;group \ud83d\ude00",
+      "payer_id": "PTEST",
+      "start": "2026-10-01",
+      "end": "2026-11-02",
+      "authorized": 10,
+      "used": 0,
+      "scheduled": 1,
+      "remaining": 10,
+      "remaining_after_scheduled": 9,
+      "days_left": 3,
+      "status": "active"
+    },
+    {
+      "auth_no": "AUTH-PT1002",
+      "patient_id": "PT1002",
+      "patient_name": "Shared L\u00e9o <literal>, care;group \ud83d\ude00",
+      "payer_id": "PTEST",
+      "start": "2026-10-01",
+      "end": "2026-11-03",
+      "authorized": 10,
+      "used": 0,
+      "scheduled": 1,
+      "remaining": 10,
+      "remaining_after_scheduled": 9,
+      "days_left": 4,
+      "status": "active"
+    },
+    {
+      "auth_no": "AUTH-PT1003",
+      "patient_id": "PT1003",
+      "patient_name": "Approved review",
+      "payer_id": "PTEST",
+      "start": "2026-10-01",
+      "end": "2026-11-04",
+      "authorized": 10,
+      "used": 0,
+      "scheduled": 1,
+      "remaining": 10,
+      "remaining_after_scheduled": 9,
+      "days_left": 5,
+      "status": "active"
+    },
+    {
+      "auth_no": "AUTH-PT1004",
+      "patient_id": "PT1004",
+      "patient_name": "N/A review",
+      "payer_id": "PTEST",
+      "start": "2026-10-01",
+      "end": "2026-11-05",
+      "authorized": 10,
+      "used": 0,
+      "scheduled": 1,
+      "remaining": 10,
+      "remaining_after_scheduled": 9,
+      "days_left": 6,
+      "status": "active"
+    },
+    {
+      "auth_no": "AUTH-PT1007",
+      "patient_id": "PT1007",
+      "patient_name": "Current note \u03a9",
+      "payer_id": "PTEST",
+      "start": "2026-10-01",
+      "end": "2026-11-06",
+      "authorized": 10,
+      "used": 0,
+      "scheduled": 1,
+      "remaining": 10,
+      "remaining_after_scheduled": 9,
+      "days_left": 7,
+      "status": "active"
+    }
+  ],
+  "visit_status_review": [],
+  "visit_status_review_note": "Review these past dates in the source schedule, correct their status there, then run again. Any authorization visit shown below stays reserved until the corrected export is loaded.",
+  "uncovered": [
+    {
+      "visit_id": "VISIT-PT1005",
+      "patient_id": "PT1005",
+      "date": "2026-11-01",
+      "status": "scheduled",
+      "payer_id": "PTEST"
+    },
+    {
+      "visit_id": "VISIT-PT1006",
+      "patient_id": "PT1006",
+      "date": "2026-11-01",
+      "status": "scheduled",
+      "payer_id": "PTEST"
+    }
+  ]
+}

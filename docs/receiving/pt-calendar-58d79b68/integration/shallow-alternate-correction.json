@@ -1,0 +1,10 @@
+{
+  "original_source_boundary": "9e931fa9f42033bf2368f7149684fb5631345715\na5fd61b0c361c8a9b8a6737b33ecc9efab46e0ad\na68a667f3610153618c6cc8952c72abe980d89aa\n",
+  "prior_owned_boundary": null,
+  "combined": [
+    "9e931fa9f42033bf2368f7149684fb5631345715",
+    "a5fd61b0c361c8a9b8a6737b33ecc9efab46e0ad",
+    "a68a667f3610153618c6cc8952c72abe980d89aa"
+  ],
+  "basis": "An alternate object directory does not import its source repository shallow boundaries. Copy their exact native metadata into this isolated RAM repository; do not fetch missing history or change original repository."
+}

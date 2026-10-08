@@ -1,0 +1,212 @@
+{
+  "schema": "pt_calendar.independent_fixture.v1",
+  "synthetic_only": true,
+  "baseline_commit": "9e931fa9f42033bf2368f7149684fb5631345715",
+  "baseline_engine_sha256": "bfa7049e9b133d654ce947b135c17ac401bd7b1fcd76350bdb10de5b7a1ad1f7",
+  "as_of": "2026-10-31",
+  "clinic_timezone": "America/Los_Angeles",
+  "rows": [
+    {
+      "key": "PT1001|PTEST|AUTH-PT1001",
+      "patient_id": "PT1001",
+      "patient_name": "Shared Léo <literal>, care;group 😀",
+      "payer_id": "PTEST",
+      "payer_name": "Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\\literal",
+      "auth_no": "AUTH-PT1001",
+      "clinic": "East",
+      "auth_end": "2026-11-02",
+      "submit_by": "2026-10-31",
+      "staff_state": "open",
+      "detail": [
+        "auth ends 2026-11-02 (2 days); 1 visit(s) still scheduled"
+      ],
+      "reasons": [
+        "REAUTH_BY_DATE"
+      ],
+      "evidence": [
+        "authorizations.csv:row2"
+      ],
+      "checklist": [
+        "Check dates, review; carefully",
+        "Verify \\ records",
+        "Retain Ω evidence"
+      ],
+      "eligible": true
+    },
+    {
+      "key": "PT1005|PTEST|",
+      "patient_id": "PT1005",
+      "patient_name": "Undated open",
+      "payer_id": "PTEST",
+      "payer_name": "Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\\literal",
+      "auth_no": "",
+      "clinic": "East",
+      "auth_end": null,
+      "submit_by": null,
+      "staff_state": "open",
+      "detail": [
+        "1 scheduled visit(s) outside any approved auth, first 2026-11-01 (VISIT-PT1005)"
+      ],
+      "reasons": [
+        "UNCOVERED_VISIT"
+      ],
+      "evidence": [
+        "schedule.csv:row6"
+      ],
+      "checklist": [
+        "Check dates, review; carefully",
+        "Verify \\ records",
+        "Retain Ω evidence"
+      ],
+      "eligible": false
+    },
+    {
+      "key": "PT1006|PTEST|",
+      "patient_id": "PT1006",
+      "patient_name": "Undated submitted",
+      "payer_id": "PTEST",
+      "payer_name": "Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\\literal",
+      "auth_no": "",
+      "clinic": "West",
+      "auth_end": null,
+      "submit_by": null,
+      "staff_state": "submitted",
+      "detail": [
+        "1 scheduled visit(s) outside any approved auth, first 2026-11-01 (VISIT-PT1006)"
+      ],
+      "reasons": [
+        "UNCOVERED_VISIT"
+      ],
+      "evidence": [
+        "schedule.csv:row7"
+      ],
+      "checklist": [
+        "Check dates, review; carefully",
+        "Verify \\ records",
+        "Retain Ω evidence"
+      ],
+      "eligible": false
+    },
+    {
+      "key": "PT1002|PTEST|AUTH-PT1002",
+      "patient_id": "PT1002",
+      "patient_name": "Shared Léo <literal>, care;group 😀",
+      "payer_id": "PTEST",
+      "payer_name": "Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\\literal",
+      "auth_no": "AUTH-PT1002",
+      "clinic": "West",
+      "auth_end": "2026-11-03",
+      "submit_by": "2026-11-01",
+      "staff_state": "submitted",
+      "detail": [
+        "auth ends 2026-11-03 (3 days); 1 visit(s) still scheduled"
+      ],
+      "reasons": [
+        "REAUTH_BY_DATE"
+      ],
+      "evidence": [
+        "authorizations.csv:row3"
+      ],
+      "checklist": [
+        "Check dates, review; carefully",
+        "Verify \\ records",
+        "Retain Ω evidence"
+      ],
+      "eligible": true
+    },
+    {
+      "key": "PT1003|PTEST|AUTH-PT1003",
+      "patient_id": "PT1003",
+      "patient_name": "Approved review",
+      "payer_id": "PTEST",
+      "payer_name": "Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\\literal",
+      "auth_no": "AUTH-PT1003",
+      "clinic": "East",
+      "auth_end": "2026-11-04",
+      "submit_by": "2026-11-02",
+      "staff_state": "approved",
+      "detail": [
+        "auth ends 2026-11-04 (4 days); 1 visit(s) still scheduled"
+      ],
+      "reasons": [
+        "REAUTH_BY_DATE"
+      ],
+      "evidence": [
+        "authorizations.csv:row4"
+      ],
+      "checklist": [
+        "Check dates, review; carefully",
+        "Verify \\ records",
+        "Retain Ω evidence"
+      ],
+      "eligible": false
+    },
+    {
+      "key": "PT1004|PTEST|AUTH-PT1004",
+      "patient_id": "PT1004",
+      "patient_name": "N/A review",
+      "payer_id": "PTEST",
+      "payer_name": "Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\\literal",
+      "auth_no": "AUTH-PT1004",
+      "clinic": "West",
+      "auth_end": "2026-11-05",
+      "submit_by": "2026-11-03",
+      "staff_state": "n/a",
+      "detail": [
+        "auth ends 2026-11-05 (5 days); 1 visit(s) still scheduled"
+      ],
+      "reasons": [
+        "REAUTH_BY_DATE"
+      ],
+      "evidence": [
+        "authorizations.csv:row5"
+      ],
+      "checklist": [
+        "Check dates, review; carefully",
+        "Verify \\ records",
+        "Retain Ω evidence"
+      ],
+      "eligible": false
+    },
+    {
+      "key": "PT1007|PTEST|AUTH-PT1007",
+      "patient_id": "PT1007",
+      "patient_name": "Current note Ω",
+      "payer_id": "PTEST",
+      "payer_name": "Payer Review, α; Plan 💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠💠\\literal",
+      "auth_no": "AUTH-PT1007",
+      "clinic": "East",
+      "auth_end": "2026-11-06",
+      "submit_by": "2026-11-04",
+      "staff_state": "open",
+      "detail": [
+        "auth ends 2026-11-06 (6 days); 1 visit(s) still scheduled"
+      ],
+      "reasons": [
+        "REAUTH_BY_DATE"
+      ],
+      "evidence": [
+        "authorizations.csv:row6"
+      ],
+      "checklist": [
+        "Check dates, review; carefully",
+        "Verify \\ records",
+        "Retain Ω evidence"
+      ],
+      "eligible": true
+    }
+  ],
+  "expected_all_state_counts": {
+    "visible": 7,
+    "eligible": 3,
+    "undated": 2,
+    "completed": 2
+  },
+  "expected_default_counts": {
+    "visible": 5,
+    "eligible": 3,
+    "undated": 2,
+    "completed": 0
+  },
+  "method": "Independent authored CSVs; exact original engine generates the saved report. Expected dates and staff subsets are explicit. No candidate formatter or author tests are imported."
+}

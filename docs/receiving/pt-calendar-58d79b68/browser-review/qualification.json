@@ -1,0 +1,179 @@
+{
+  "schema": "pt_calendar.independent_browser_qualification.v1",
+  "timestamp": "2026-10-08T13:55:03.886Z",
+  "verdict": "qualified_at_frozen_browser_server_source_scope",
+  "reviewer": "chatgpt:58d79b68c9e4:mac_estate",
+  "repository": "Jacob-Met/workflow-checks",
+  "issue": 27,
+  "source": {
+    "baseline": "9e931fa9f42033bf2368f7149684fb5631345715",
+    "native": "d75fb908a9893fd40b21112f62af16d32027bbe1",
+    "published": "a68a667f3610153618c6cc8952c72abe980d89aa",
+    "tree": "94074bd3d39705fced23629038ab79057e943aff",
+    "pt_files": 55,
+    "all_native_and_published_blobs_modes_exact": true
+  },
+  "runtime": {
+    "node": "v26.3.0",
+    "python": "Python 3.13.7",
+    "chrome": "Chrome/154.0.8037.98",
+    "platform": "darwin",
+    "arch": "arm64",
+    "actual_local_browser": true,
+    "headless": true
+  },
+  "execution": {
+    "historical": {
+      "passed": 15,
+      "failed": 1,
+      "report": "browser-v1/result.json",
+      "sha256": "1b91dae855a5a60f9a39e5bb94f9275670cfac9f5dc79b8f0f9aff0f11592f5d"
+    },
+    "targeted": {
+      "passed": 1,
+      "failed": 0,
+      "report": "browser-asof-v2/result.json",
+      "sha256": "aafb68e2d42f05079169f47989c41919210de7abacb79244247a288fead92c0e"
+    },
+    "historical_failure_is_receiver_expectation": true,
+    "candidate_source_changed_during_review": false,
+    "full_suite_not_repeated": true,
+    "combined_groups": [
+      {
+        "name": "original real worklist has no calendar handoff",
+        "status": "pass",
+        "evidence": "browser-v1/result.json"
+      },
+      {
+        "name": "default review and actual keyboard download",
+        "status": "pass",
+        "evidence": "browser-v1/result.json"
+      },
+      {
+        "name": "all-state exclusions and repeat identities",
+        "status": "pass",
+        "evidence": "browser-v1/result.json"
+      },
+      {
+        "name": "actual text and clinic filters preserve distinct same-name keys",
+        "status": "pass",
+        "evidence": "browser-v1/result.json"
+      },
+      {
+        "name": "empty eligible selection refuses a misleading download",
+        "status": "pass",
+        "evidence": "browser-v1/result.json"
+      },
+      {
+        "name": "390px real panel and literal review text",
+        "status": "pass",
+        "evidence": "browser-v1/result.json"
+      },
+      {
+        "name": "pending real refresh blocks export and accepts current filters",
+        "status": "pass",
+        "evidence": "browser-v1/result.json"
+      },
+      {
+        "name": "pending real staff-state save blocks export then reviews new state",
+        "status": "pass",
+        "evidence": "browser-v1/result.json"
+      },
+      {
+        "name": "failed real refresh leaves calendar unavailable and next refresh recovers",
+        "status": "pass",
+        "evidence": "browser-v1/result.json"
+      },
+      {
+        "name": "saved-report drift rejects earlier snapshot and replacement must be reviewed",
+        "status": "pass",
+        "evidence": "browser-v1/result.json"
+      },
+      {
+        "name": "saved staff-state drift rejects snapshot until actual replacement review",
+        "status": "pass",
+        "evidence": "browser-v1/result.json"
+      },
+      {
+        "name": "late actual success retired by filter change cannot download or replace status",
+        "status": "pass",
+        "evidence": "browser-v1/result.json"
+      },
+      {
+        "name": "late actual 409 retired by filter change cannot replace newer status",
+        "status": "pass",
+        "evidence": "browser-v1/result.json"
+      },
+      {
+        "name": "late actual success retired by as-of edit remains unavailable",
+        "status": "pass",
+        "evidence": "browser-v1/result.json"
+      },
+      {
+        "name": "initial real summary pending is unavailable until exact report arrives",
+        "status": "pass",
+        "evidence": "browser-v1/result.json"
+      },
+      {
+        "name": "edited as-of, revert and actual refreshed report",
+        "status": "pass",
+        "evidence": "browser-asof-v2/result.json",
+        "historical_failure_preserved": true
+      }
+    ],
+    "completed_downloads": 11,
+    "browser_exceptions": 0,
+    "all_successful_downloads_checked_for_full_fixture_preservation": true,
+    "all_executed_source_and_fixture_template_preserved": true
+  },
+  "negative_evidence": [
+    {
+      "path": "browser-v1/failure-7.png",
+      "kind": "receiver_expectation",
+      "disposition": "Original engine independently confirms empty November 2 worklist; targeted corrected group passes on unchanged source."
+    },
+    {
+      "path": "receiver-archive-preflight-v1.json",
+      "kind": "receiver_archive_validator",
+      "disposition": "Ordinary directory prefixes admitted before exact regular-file verification/extraction."
+    },
+    {
+      "path": "prelaunch-enospc-v1.json",
+      "kind": "resource",
+      "disposition": "No browser launched during failure; owned inactive reproducible caches reclaimed with receipts."
+    },
+    {
+      "path": "blind-freeze.json",
+      "kind": "metadata_correction",
+      "disposition": "Original coordination inventory count retained; active v2 corrects six unreadable records and makes no inference about their contents."
+    }
+  ],
+  "visual_receiving": {
+    "reviewer_inspected": [
+      "browser-v1/desktop-keyboard-focus.png",
+      "browser-v1/desktop-reviewed-exclusions.png",
+      "browser-v1/narrow-390-review.png",
+      "browser-v1/failure-7.png"
+    ],
+    "desktop": [
+      1280,
+      900
+    ],
+    "narrow": [
+      390,
+      844
+    ],
+    "native_Tab_Enter_export": true,
+    "scope": "Calendar panel/current disclosures/focus at these actual viewports; no application-wide accessibility claim."
+  },
+  "boundaries": [
+    "Full calendar/date/UID/RFC semantic acceptance remains with root.",
+    "No calendar app import, OS dialog, account, payer action, provider deduplication/update/cancellation or full repository build.",
+    "No later-parent execution claim; public source equivalence is exact Git-tree readback.",
+    "Implementation and integration remain with existing source owners; no source edits or merge performed by this receiver."
+  ],
+  "native_review_root": "/Users/me/pt-calendar-browser-review-58d79b68c9e4",
+  "claim_key": "claim:pt-calendar-browser-review-58d79b68c9e4",
+  "claim_receipt": 4126,
+  "public_review_claim": "https://github.com/Jacob-Met/workflow-checks/issues/27#issuecomment-6060815525"
+}

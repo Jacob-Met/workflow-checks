@@ -1,0 +1,36 @@
+{
+  "repository": "Jacob-Met/workflow-checks",
+  "recorded_at": "2026-10-08T14:45:04.748Z",
+  "created": [
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/combined-calendar-390.png",
+      "blob": "6c627707a079b7dfcfd8e1d16878abe8d8389120",
+      "sha256": "5cf2eaed98bfec2bcbcb1485fff38568e36a25a270b7c3053b4dc9e938d5b6a6",
+      "bytes": 76690,
+      "returned_sha": "6c627707a079b7dfcfd8e1d16878abe8d8389120"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/combined-calendar-desktop.png",
+      "blob": "82a9b1fb19704e0b46bb38e4c5ebb41cd973a245",
+      "sha256": "a703ee5fd30e1d98d11dd2c8d230e42d757ca55adefe8aa7fbd895d6b10abfd7",
+      "bytes": 145194,
+      "returned_sha": "82a9b1fb19704e0b46bb38e4c5ebb41cd973a245"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/composition-browser-review/browser-v2/combined-uncovered-390.png",
+      "blob": "32afd87a6a8a2a545f4e90fc35bda81a7e9b4a48",
+      "sha256": "800b6a1e4ab79267505caa95832f74b0ded5e4ab84aef3cef47ef77a66058d05",
+      "bytes": 72900,
+      "returned_sha": "32afd87a6a8a2a545f4e90fc35bda81a7e9b4a48"
+    },
+    {
+      "path": "docs/receiving/pt-calendar-58d79b68/composition-browser-review.tar.gz",
+      "blob": "ed1b7007b26bcee1ff2c083ab40730b6c0b7c13e",
+      "sha256": "e8eb91af165f3ab8957fb682b717a9a35289e15ac8552236d237e8fb4dcfa4b1",
+      "bytes": 342120,
+      "returned_sha": "ed1b7007b26bcee1ff2c083ab40730b6c0b7c13e"
+    }
+  ],
+  "all_returned_blob_ids_exact_native": true,
+  "stage": "immutable evidence objects; no branch movement"
+}

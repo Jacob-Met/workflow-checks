@@ -1,0 +1,11 @@
+{
+  "ok": true,
+  "commit": "d75fb908a9893fd40b21112f62af16d32027bbe1",
+  "tree": "94074bd3d39705fced23629038ab79057e943aff",
+  "files": 55,
+  "bytes": 394886,
+  "archive_sha256": "cbdc09043d8c05299d468d7582534c9f3eca873e43e256d0dfafe36f11f9de48",
+  "all_file_hashes_blobs_modes_verified": true,
+  "source_test_bodies_not_read_as_oracle": true,
+  "free_bytes": 328515584
+}

@@ -1,0 +1,1584 @@
+[
+  {
+    "phase": "original real worklist has no calendar handoff",
+    "event": "request",
+    "sessionId": "3A5DB543575872B2F1DCAAF307AAB0A9",
+    "requestId": "01B81EC97CAE88BECF4FB380DE0DBC83",
+    "method": "GET",
+    "url": "http://127.0.0.1:62442/"
+  },
+  {
+    "phase": "original real worklist has no calendar handoff",
+    "event": "response",
+    "sessionId": "3A5DB543575872B2F1DCAAF307AAB0A9",
+    "requestId": "01B81EC97CAE88BECF4FB380DE0DBC83",
+    "url": "http://127.0.0.1:62442/",
+    "status": 200,
+    "mimeType": "text/html"
+  },
+  {
+    "phase": "original real worklist has no calendar handoff",
+    "event": "request",
+    "sessionId": "3A5DB543575872B2F1DCAAF307AAB0A9",
+    "requestId": "2432.2",
+    "method": "GET",
+    "url": "http://127.0.0.1:62442/api/summary"
+  },
+  {
+    "phase": "original real worklist has no calendar handoff",
+    "event": "request",
+    "sessionId": "3A5DB543575872B2F1DCAAF307AAB0A9",
+    "requestId": "2432.3",
+    "method": "GET",
+    "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJXaW5kb3dUZXh0IiBkPSJNMjAgM2gtMVYxaC0ydjJIN1YxSDV2Mkg0Yy0xLjEgMC0yIC45LTIgMnYxNmMwIDEuMS45IDIgMiAyaDE2YzEuMSAwIDItLjkgMi0yVjVjMC0xLjEtLjktMi0yLTJ6bTAgMThINFY4aDE2djEzeiIvPjxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiLz48L3N2Zz4="
+  },
+  {
+    "phase": "original real worklist has no calendar handoff",
+    "event": "response",
+    "sessionId": "3A5DB543575872B2F1DCAAF307AAB0A9",
+    "requestId": "2432.3",
+    "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJXaW5kb3dUZXh0IiBkPSJNMjAgM2gtMVYxaC0ydjJIN1YxSDV2Mkg0Yy0xLjEgMC0yIC45LTIgMnYxNmMwIDEuMS45IDIgMiAyaDE2YzEuMSAwIDItLjkgMi0yVjVjMC0xLjEtLjktMi0yLTJ6bTAgMThINFY4aDE2djEzeiIvPjxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiLz48L3N2Zz4=",
+    "status": 200,
+    "mimeType": "image/svg+xml"
+  },
+  {
+    "phase": "original real worklist has no calendar handoff",
+    "event": "response",
+    "sessionId": "3A5DB543575872B2F1DCAAF307AAB0A9",
+    "requestId": "2432.2",
+    "url": "http://127.0.0.1:62442/api/summary",
+    "status": 200,
+    "mimeType": "application/json"
+  },
+  {
+    "phase": "original real worklist has no calendar handoff",
+    "event": "request",
+    "sessionId": "3A5DB543575872B2F1DCAAF307AAB0A9",
+    "requestId": "2432.4",
+    "method": "GET",
+    "url": "http://127.0.0.1:62442/favicon.ico"
+  },
+  {
+    "phase": "original real worklist has no calendar handoff",
+    "event": "response",
+    "sessionId": "3A5DB543575872B2F1DCAAF307AAB0A9",
+    "requestId": "2432.4",
+    "url": "http://127.0.0.1:62442/favicon.ico",
+    "status": 404,
+    "mimeType": "text/plain"
+  },
+  {
+    "phase": "default review and actual keyboard download",
+    "event": "request",
+    "sessionId": "EBA45CC35CC2F2638D83C5D007C681FC",
+    "requestId": "1BB33CD90B328AB892FED43F3DA2DFA2",
+    "method": "GET",
+    "url": "http://127.0.0.1:62443/"
+  },
+  {
+    "phase": "default review and actual keyboard download",
+    "event": "response",
+    "sessionId": "EBA45CC35CC2F2638D83C5D007C681FC",
+    "requestId": "1BB33CD90B328AB892FED43F3DA2DFA2",
+    "url": "http://127.0.0.1:62443/",
+    "status": 200,
+    "mimeType": "text/html"
+  },
+  {
+    "phase": "default review and actual keyboard download",
+    "event": "request",
+    "sessionId": "EBA45CC35CC2F2638D83C5D007C681FC",
+    "requestId": "2449.2",
+    "method": "GET",
+    "url": "http://127.0.0.1:62443/calendar_ui.js"
+  },
+  {
+    "phase": "default review and actual keyboard download",
+    "event": "request",
+    "sessionId": "EBA45CC35CC2F2638D83C5D007C681FC",
+    "requestId": "2449.4",
+    "method": "GET",
+    "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJXaW5kb3dUZXh0IiBkPSJNMjAgM2gtMVYxaC0ydjJIN1YxSDV2Mkg0Yy0xLjEgMC0yIC45LTIgMnYxNmMwIDEuMS45IDIgMiAyaDE2YzEuMSAwIDItLjkgMi0yVjVjMC0xLjEtLjktMi0yLTJ6bTAgMThINFY4aDE2djEzeiIvPjxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiLz48L3N2Zz4="
+  },
+  {
+    "phase": "default review and actual keyboard download",
+    "event": "response",
+    "sessionId": "EBA45CC35CC2F2638D83C5D007C681FC",
+    "requestId": "2449.4",
+    "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJXaW5kb3dUZXh0IiBkPSJNMjAgM2gtMVYxaC0ydjJIN1YxSDV2Mkg0Yy0xLjEgMC0yIC45LTIgMnYxNmMwIDEuMS45IDIgMiAyaDE2YzEuMSAwIDItLjkgMi0yVjVjMC0xLjEtLjktMi0yLTJ6bTAgMThINFY4aDE2djEzeiIvPjxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiLz48L3N2Zz4=",
+    "status": 200,
+    "mimeType": "image/svg+xml"
+  },
+  {
+    "phase": "default review and actual keyboard download",
+    "event": "response",
+    "sessionId": "EBA45CC35CC2F2638D83C5D007C681FC",
+    "requestId": "2449.2",
+    "url": "http://127.0.0.1:62443/calendar_ui.js",
+    "status": 200,
+    "mimeType": "text/javascript"
+  },
+  {
+    "phase": "default review and actual keyboard download",
+    "event": "request",
+    "sessionId": "EBA45CC35CC2F2638D83C5D007C681FC",
+    "requestId": "2449.5",
+    "method": "GET",
+    "url": "http://127.0.0.1:62443/api/summary"
+  },
+  {
+    "phase": "default review and actual keyboard download",
+    "event": "request",
+    "sessionId": "EBA45CC35CC2F2638D83C5D007C681FC",
+    "requestId": "2449.6",
+    "method": "GET",
+    "url": "http://127.0.0.1:62443/favicon.ico"
+  },
+  {
+    "phase": "default review and actual keyboard download",
+    "event": "response",
+    "sessionId": "EBA45CC35CC2F2638D83C5D007C681FC",
+    "requestId": "2449.5",
+    "url": "http://127.0.0.1:62443/api/summary",
+    "status": 200,
+    "mimeType": "application/json"
+  },
+  {
+    "phase": "default review and actual keyboard download",
+    "event": "response",
+    "sessionId": "EBA45CC35CC2F2638D83C5D007C681FC",
+    "requestId": "2449.6",
+    "url": "http://127.0.0.1:62443/favicon.ico",
+    "status": 404,
+    "mimeType": "text/plain"
+  },
+  {
+    "phase": "default review and actual keyboard download",
+    "event": "request",
+    "sessionId": "EBA45CC35CC2F2638D83C5D007C681FC",
+    "requestId": "2449.7",
+    "method": "POST",
+    "url": "http://127.0.0.1:62443/api/calendar",
+    "postData": "{\"snapshot\":\"b4d682a2e802ff49757dac3e6242632ab08591cf0b174f28d28004ae2bcaae99\",\"keys\":[\"PT1001|PTEST|AUTH-PT1001\",\"PT1005|PTEST|\",\"PT1006|PTEST|\",\"PT1002|PTEST|AUTH-PT1002\",\"PT1007|PTEST|AUTH-PT1007\"]}"
+  },
+  {
+    "phase": "default review and actual keyboard download",
+    "event": "response",
+    "sessionId": "EBA45CC35CC2F2638D83C5D007C681FC",
+    "requestId": "2449.7",
+    "url": "http://127.0.0.1:62443/api/calendar",
+    "status": 200,
+    "mimeType": "text/calendar"
+  },
+  {
+    "phase": "all-state exclusions and repeat identities",
+    "event": "request",
+    "sessionId": "C1B89C24E05CAEC5803D8D2A6DE514A6",
+    "requestId": "6CAC0B0C3DA4C2CAAE9C6B2C1E94485E",
+    "method": "GET",
+    "url": "http://127.0.0.1:62443/"
+  },
+  {
+    "phase": "all-state exclusions and repeat identities",
+    "event": "response",
+    "sessionId": "C1B89C24E05CAEC5803D8D2A6DE514A6",
+    "requestId": "6CAC0B0C3DA4C2CAAE9C6B2C1E94485E",
+    "url": "http://127.0.0.1:62443/",
+    "status": 200,
+    "mimeType": "text/html"
+  },
+  {
+    "phase": "all-state exclusions and repeat identities",
+    "event": "request",
+    "sessionId": "C1B89C24E05CAEC5803D8D2A6DE514A6",
+    "requestId": "2517.2",
+    "method": "GET",
+    "url": "http://127.0.0.1:62443/calendar_ui.js"
+  },
+  {
+    "phase": "all-state exclusions and repeat identities",
+    "event": "request",
+    "sessionId": "C1B89C24E05CAEC5803D8D2A6DE514A6",
+    "requestId": "2517.4",
+    "method": "GET",
+    "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJXaW5kb3dUZXh0IiBkPSJNMjAgM2gtMVYxaC0ydjJIN1YxSDV2Mkg0Yy0xLjEgMC0yIC45LTIgMnYxNmMwIDEuMS45IDIgMiAyaDE2YzEuMSAwIDItLjkgMi0yVjVjMC0xLjEtLjktMi0yLTJ6bTAgMThINFY4aDE2djEzeiIvPjxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiLz48L3N2Zz4="
+  },
+  {
+    "phase": "all-state exclusions and repeat identities",
+    "event": "response",
+    "sessionId": "C1B89C24E05CAEC5803D8D2A6DE514A6",
+    "requestId": "2517.4",
+    "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJXaW5kb3dUZXh0IiBkPSJNMjAgM2gtMVYxaC0ydjJIN1YxSDV2Mkg0Yy0xLjEgMC0yIC45LTIgMnYxNmMwIDEuMS45IDIgMiAyaDE2YzEuMSAwIDItLjkgMi0yVjVjMC0xLjEtLjktMi0yLTJ6bTAgMThINFY4aDE2djEzeiIvPjxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiLz48L3N2Zz4=",
+    "status": 200,
+    "mimeType": "image/svg+xml"
+  },
+  {
+    "phase": "all-state exclusions and repeat identities",
+    "event": "response",
+    "sessionId": "C1B89C24E05CAEC5803D8D2A6DE514A6",
+    "requestId": "2517.2",
+    "url": "http://127.0.0.1:62443/calendar_ui.js",
+    "status": 200,
+    "mimeType": "text/javascript"
+  },
+  {
+    "phase": "all-state exclusions and repeat identities",
+    "event": "request",
+    "sessionId": "C1B89C24E05CAEC5803D8D2A6DE514A6",
+    "requestId": "2517.5",
+    "method": "GET",
+    "url": "http://127.0.0.1:62443/api/summary"
+  },
+  {
+    "phase": "all-state exclusions and repeat identities",
+    "event": "response",
+    "sessionId": "C1B89C24E05CAEC5803D8D2A6DE514A6",
+    "requestId": "2517.5",
+    "url": "http://127.0.0.1:62443/api/summary",
+    "status": 200,
+    "mimeType": "application/json"
+  },
+  {
+    "phase": "all-state exclusions and repeat identities",
+    "event": "request",
+    "sessionId": "C1B89C24E05CAEC5803D8D2A6DE514A6",
+    "requestId": "2517.6",
+    "method": "POST",
+    "url": "http://127.0.0.1:62443/api/calendar",
+    "postData": "{\"snapshot\":\"b4d682a2e802ff49757dac3e6242632ab08591cf0b174f28d28004ae2bcaae99\",\"keys\":[\"PT1001|PTEST|AUTH-PT1001\",\"PT1005|PTEST|\",\"PT1006|PTEST|\",\"PT1002|PTEST|AUTH-PT1002\",\"PT1003|PTEST|AUTH-PT1003\",\"PT1004|PTEST|AUTH-PT1004\",\"PT1007|PTEST|AUTH-PT1007\"]}"
+  },
+  {
+    "phase": "all-state exclusions and repeat identities",
+    "event": "response",
+    "sessionId": "C1B89C24E05CAEC5803D8D2A6DE514A6",
+    "requestId": "2517.6",
+    "url": "http://127.0.0.1:62443/api/calendar",
+    "status": 200,
+    "mimeType": "text/calendar"
+  },
+  {
+    "phase": "actual text and clinic filters preserve distinct same-name keys",
+    "event": "request",
+    "sessionId": "587DBC89C3D2D64AF10754E900646645",
+    "requestId": "D0652BFF531E51CFBFE83DD2504802BA",
+    "method": "GET",
+    "url": "http://127.0.0.1:62443/"
+  },
+  {
+    "phase": "actual text and clinic filters preserve distinct same-name keys",
+    "event": "response",
+    "sessionId": "587DBC89C3D2D64AF10754E900646645",
+    "requestId": "D0652BFF531E51CFBFE83DD2504802BA",
+    "url": "http://127.0.0.1:62443/",
+    "status": 200,
+    "mimeType": "text/html"
+  },
+  {
+    "phase": "actual text and clinic filters preserve distinct same-name keys",
+    "event": "request",
+    "sessionId": "587DBC89C3D2D64AF10754E900646645",
+    "requestId": "2611.2",
+    "method": "GET",
+    "url": "http://127.0.0.1:62443/calendar_ui.js"
+  },
+  {
+    "phase": "actual text and clinic filters preserve distinct same-name keys",
+    "event": "request",
+    "sessionId": "587DBC89C3D2D64AF10754E900646645",
+    "requestId": "2611.4",
+    "method": "GET",
+    "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJXaW5kb3dUZXh0IiBkPSJNMjAgM2gtMVYxaC0ydjJIN1YxSDV2Mkg0Yy0xLjEgMC0yIC45LTIgMnYxNmMwIDEuMS45IDIgMiAyaDE2YzEuMSAwIDItLjkgMi0yVjVjMC0xLjEtLjktMi0yLTJ6bTAgMThINFY4aDE2djEzeiIvPjxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiLz48L3N2Zz4="
+  },
+  {
+    "phase": "actual text and clinic filters preserve distinct same-name keys",
+    "event": "response",
+    "sessionId": "587DBC89C3D2D64AF10754E900646645",
+    "requestId": "2611.4",
+    "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJXaW5kb3dUZXh0IiBkPSJNMjAgM2gtMVYxaC0ydjJIN1YxSDV2Mkg0Yy0xLjEgMC0yIC45LTIgMnYxNmMwIDEuMS45IDIgMiAyaDE2YzEuMSAwIDItLjkgMi0yVjVjMC0xLjEtLjktMi0yLTJ6bTAgMThINFY4aDE2djEzeiIvPjxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiLz48L3N2Zz4=",
+    "status": 200,
+    "mimeType": "image/svg+xml"
+  },
+  {
+    "phase": "actual text and clinic filters preserve distinct same-name keys",
+    "event": "response",
+    "sessionId": "587DBC89C3D2D64AF10754E900646645",
+    "requestId": "2611.2",
+    "url": "http://127.0.0.1:62443/calendar_ui.js",
+    "status": 200,
+    "mimeType": "text/javascript"
+  },
+  {
+    "phase": "actual text and clinic filters preserve distinct same-name keys",
+    "event": "request",
+    "sessionId": "587DBC89C3D2D64AF10754E900646645",
+    "requestId": "2611.5",
+    "method": "GET",
+    "url": "http://127.0.0.1:62443/api/summary"
+  },
+  {
+    "phase": "actual text and clinic filters preserve distinct same-name keys",
+    "event": "response",
+    "sessionId": "587DBC89C3D2D64AF10754E900646645",
+    "requestId": "2611.5",
+    "url": "http://127.0.0.1:62443/api/summary",
+    "status": 200,
+    "mimeType": "application/json"
+  },
+  {
+    "phase": "actual text and clinic filters preserve distinct same-name keys",
+    "event": "request",
+    "sessionId": "587DBC89C3D2D64AF10754E900646645",
+    "requestId": "2611.6",
+    "method": "POST",
+    "url": "http://127.0.0.1:62443/api/calendar",
+    "postData": "{\"snapshot\":\"b4d682a2e802ff49757dac3e6242632ab08591cf0b174f28d28004ae2bcaae99\",\"keys\":[\"PT1001|PTEST|AUTH-PT1001\",\"PT1002|PTEST|AUTH-PT1002\"]}"
+  },
+  {
+    "phase": "actual text and clinic filters preserve distinct same-name keys",
+    "event": "response",
+    "sessionId": "587DBC89C3D2D64AF10754E900646645",
+    "requestId": "2611.6",
+    "url": "http://127.0.0.1:62443/api/calendar",
+    "status": 200,
+    "mimeType": "text/calendar"
+  },
+  {
+    "phase": "actual text and clinic filters preserve distinct same-name keys",
+    "event": "request",
+    "sessionId": "587DBC89C3D2D64AF10754E900646645",
+    "requestId": "2611.7",
+    "method": "POST",
+    "url": "http://127.0.0.1:62443/api/calendar",
+    "postData": "{\"snapshot\":\"b4d682a2e802ff49757dac3e6242632ab08591cf0b174f28d28004ae2bcaae99\",\"keys\":[\"PT1001|PTEST|AUTH-PT1001\"]}"
+  },
+  {
+    "phase": "actual text and clinic filters preserve distinct same-name keys",
+    "event": "response",
+    "sessionId": "587DBC89C3D2D64AF10754E900646645",
+    "requestId": "2611.7",
+    "url": "http://127.0.0.1:62443/api/calendar",
+    "status": 200,
+    "mimeType": "text/calendar"
+  },
+  {
+    "phase": "empty eligible selection refuses a misleading download",
+    "event": "request",
+    "sessionId": "029B6AF291D31D691CB1E98CAF808F3D",
+    "requestId": "3F933F798651C4BA31DCBE63D16F2616",
+    "method": "GET",
+    "url": "http://127.0.0.1:62443/"
+  },
+  {
+    "phase": "empty eligible selection refuses a misleading download",
+    "event": "response",
+    "sessionId": "029B6AF291D31D691CB1E98CAF808F3D",
+    "requestId": "3F933F798651C4BA31DCBE63D16F2616",
+    "url": "http://127.0.0.1:62443/",
+    "status": 200,
+    "mimeType": "text/html"
+  },
+  {
+    "phase": "empty eligible selection refuses a misleading download",
+    "event": "request",
+    "sessionId": "029B6AF291D31D691CB1E98CAF808F3D",
+    "requestId": "2667.2",
+    "method": "GET",
+    "url": "http://127.0.0.1:62443/calendar_ui.js"
+  },
+  {
+    "phase": "empty eligible selection refuses a misleading download",
+    "event": "request",
+    "sessionId": "029B6AF291D31D691CB1E98CAF808F3D",
+    "requestId": "2667.4",
+    "method": "GET",
+    "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJXaW5kb3dUZXh0IiBkPSJNMjAgM2gtMVYxaC0ydjJIN1YxSDV2Mkg0Yy0xLjEgMC0yIC45LTIgMnYxNmMwIDEuMS45IDIgMiAyaDE2YzEuMSAwIDItLjkgMi0yVjVjMC0xLjEtLjktMi0yLTJ6bTAgMThINFY4aDE2djEzeiIvPjxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiLz48L3N2Zz4="
+  },
+  {
+    "phase": "empty eligible selection refuses a misleading download",
+    "event": "response",
+    "sessionId": "029B6AF291D31D691CB1E98CAF808F3D",
+    "requestId": "2667.4",
+    "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJXaW5kb3dUZXh0IiBkPSJNMjAgM2gtMVYxaC0ydjJIN1YxSDV2Mkg0Yy0xLjEgMC0yIC45LTIgMnYxNmMwIDEuMS45IDIgMiAyaDE2YzEuMSAwIDItLjkgMi0yVjVjMC0xLjEtLjktMi0yLTJ6bTAgMThINFY4aDE2djEzeiIvPjxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiLz48L3N2Zz4=",
+    "status": 200,
+    "mimeType": "image/svg+xml"
+  },
+  {
+    "phase": "empty eligible selection refuses a misleading download",
+    "event": "response",
+    "sessionId": "029B6AF291D31D691CB1E98CAF808F3D",
+    "requestId": "2667.2",
+    "url": "http://127.0.0.1:62443/calendar_ui.js",
+    "status": 200,
+    "mimeType": "text/javascript"
+  },
+  {
+    "phase": "empty eligible selection refuses a misleading download",
+    "event": "request",
+    "sessionId": "029B6AF291D31D691CB1E98CAF808F3D",
+    "requestId": "2667.5",
+    "method": "GET",
+    "url": "http://127.0.0.1:62443/api/summary"
+  },
+  {
+    "phase": "empty eligible selection refuses a misleading download",
+    "event": "response",
+    "sessionId": "029B6AF291D31D691CB1E98CAF808F3D",
+    "requestId": "2667.5",
+    "url": "http://127.0.0.1:62443/api/summary",
+    "status": 200,
+    "mimeType": "application/json"
+  },
+  {
+    "phase": "390px real panel and literal review text",
+    "event": "request",
+    "sessionId": "FE7F0970F036FA7E6180A1A4379E7EA9",
+    "requestId": "F9E06BA7230447B3C44A2EB64D6CF531",
+    "method": "GET",
+    "url": "http://127.0.0.1:62443/"
+  },
+  {
+    "phase": "390px real panel and literal review text",
+    "event": "response",
+    "sessionId": "FE7F0970F036FA7E6180A1A4379E7EA9",
+    "requestId": "F9E06BA7230447B3C44A2EB64D6CF531",
+    "url": "http://127.0.0.1:62443/",
+    "status": 200,
+    "mimeType": "text/html"
+  },
+  {
+    "phase": "390px real panel and literal review text",
+    "event": "request",
+    "sessionId": "FE7F0970F036FA7E6180A1A4379E7EA9",
+    "requestId": "2704.2",
+    "method": "GET",
+    "url": "http://127.0.0.1:62443/calendar_ui.js"
+  },
+  {
+    "phase": "390px real panel and literal review text",
+    "event": "request",
+    "sessionId": "FE7F0970F036FA7E6180A1A4379E7EA9",
+    "requestId": "2704.4",
+    "method": "GET",
+    "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJXaW5kb3dUZXh0IiBkPSJNMjAgM2gtMVYxaC0ydjJIN1YxSDV2Mkg0Yy0xLjEgMC0yIC45LTIgMnYxNmMwIDEuMS45IDIgMiAyaDE2YzEuMSAwIDItLjkgMi0yVjVjMC0xLjEtLjktMi0yLTJ6bTAgMThINFY4aDE2djEzeiIvPjxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiLz48L3N2Zz4="
+  },
+  {
+    "phase": "390px real panel and literal review text",
+    "event": "response",
+    "sessionId": "FE7F0970F036FA7E6180A1A4379E7EA9",
+    "requestId": "2704.4",
+    "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJXaW5kb3dUZXh0IiBkPSJNMjAgM2gtMVYxaC0ydjJIN1YxSDV2Mkg0Yy0xLjEgMC0yIC45LTIgMnYxNmMwIDEuMS45IDIgMiAyaDE2YzEuMSAwIDItLjkgMi0yVjVjMC0xLjEtLjktMi0yLTJ6bTAgMThINFY4aDE2djEzeiIvPjxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiLz48L3N2Zz4=",
+    "status": 200,
+    "mimeType": "image/svg+xml"
+  },
+  {
+    "phase": "390px real panel and literal review text",
+    "event": "response",
+    "sessionId": "FE7F0970F036FA7E6180A1A4379E7EA9",
+    "requestId": "2704.2",
+    "url": "http://127.0.0.1:62443/calendar_ui.js",
+    "status": 200,
+    "mimeType": "text/javascript"
+  },
+  {
+    "phase": "390px real panel and literal review text",
+    "event": "request",
+    "sessionId": "FE7F0970F036FA7E6180A1A4379E7EA9",
+    "requestId": "2704.5",
+    "method": "GET",
+    "url": "http://127.0.0.1:62443/api/summary"
+  },
+  {
+    "phase": "390px real panel and literal review text",
+    "event": "response",
+    "sessionId": "FE7F0970F036FA7E6180A1A4379E7EA9",
+    "requestId": "2704.5",
+    "url": "http://127.0.0.1:62443/api/summary",
+    "status": 200,
+    "mimeType": "application/json"
+  },
+  {
+    "phase": "edited as-of, revert and actual refreshed report",
+    "event": "request",
+    "sessionId": "F83549D173D08A28D8EEE2EE1DED0470",
+    "requestId": "F2D56FBC419B62D9DA4506ECB23D2CD2",
+    "method": "GET",
+    "url": "http://127.0.0.1:62443/"
+  },
+  {
+    "phase": "edited as-of, revert and actual refreshed report",
+    "event": "response",
+    "sessionId": "F83549D173D08A28D8EEE2EE1DED0470",
+    "requestId": "F2D56FBC419B62D9DA4506ECB23D2CD2",
+    "url": "http://127.0.0.1:62443/",
+    "status": 200,
+    "mimeType": "text/html"
+  },
+  {
+    "phase": "edited as-of, revert and actual refreshed report",
+    "event": "request",
+    "sessionId": "F83549D173D08A28D8EEE2EE1DED0470",
+    "requestId": "2746.2",
+    "method": "GET",
+    "url": "http://127.0.0.1:62443/calendar_ui.js"
+  },
+  {
+    "phase": "edited as-of, revert and actual refreshed report",
+    "event": "request",
+    "sessionId": "F83549D173D08A28D8EEE2EE1DED0470",
+    "requestId": "2746.4",
+    "method": "GET",
+    "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJXaW5kb3dUZXh0IiBkPSJNMjAgM2gtMVYxaC0ydjJIN1YxSDV2Mkg0Yy0xLjEgMC0yIC45LTIgMnYxNmMwIDEuMS45IDIgMiAyaDE2YzEuMSAwIDItLjkgMi0yVjVjMC0xLjEtLjktMi0yLTJ6bTAgMThINFY4aDE2djEzeiIvPjxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiLz48L3N2Zz4="
+  },
+  {
+    "phase": "edited as-of, revert and actual refreshed report",
+    "event": "response",
+    "sessionId": "F83549D173D08A28D8EEE2EE1DED0470",
+    "requestId": "2746.4",
+    "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJXaW5kb3dUZXh0IiBkPSJNMjAgM2gtMVYxaC0ydjJIN1YxSDV2Mkg0Yy0xLjEgMC0yIC45LTIgMnYxNmMwIDEuMS45IDIgMiAyaDE2YzEuMSAwIDItLjkgMi0yVjVjMC0xLjEtLjktMi0yLTJ6bTAgMThINFY4aDE2djEzeiIvPjxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiLz48L3N2Zz4=",
+    "status": 200,
+    "mimeType": "image/svg+xml"
+  },
+  {
+    "phase": "edited as-of, revert and actual refreshed report",
+    "event": "response",
+    "sessionId": "F83549D173D08A28D8EEE2EE1DED0470",
+    "requestId": "2746.2",
+    "url": "http://127.0.0.1:62443/calendar_ui.js",
+    "status": 200,
+    "mimeType": "text/javascript"
+  },
+  {
+    "phase": "edited as-of, revert and actual refreshed report",
+    "event": "request",
+    "sessionId": "F83549D173D08A28D8EEE2EE1DED0470",
+    "requestId": "2746.5",
+    "method": "GET",
+    "url": "http://127.0.0.1:62443/api/summary"
+  },
+  {
+    "phase": "edited as-of, revert and actual refreshed report",
+    "event": "response",
+    "sessionId": "F83549D173D08A28D8EEE2EE1DED0470",
+    "requestId": "2746.5",
+    "url": "http://127.0.0.1:62443/api/summary",
+    "status": 200,
+    "mimeType": "application/json"
+  },
+  {
+    "phase": "edited as-of, revert and actual refreshed report",
+    "event": "request",
+    "sessionId": "F83549D173D08A28D8EEE2EE1DED0470",
+    "requestId": "2746.6",
+    "method": "POST",
+    "url": "http://127.0.0.1:62443/api/run",
+    "postData": "{\"as_of\":\"2026-11-02\"}"
+  },
+  {
+    "phase": "edited as-of, revert and actual refreshed report",
+    "event": "response",
+    "sessionId": "F83549D173D08A28D8EEE2EE1DED0470",
+    "requestId": "2746.6",
+    "url": "http://127.0.0.1:62443/api/run",
+    "status": 200,
+    "mimeType": "application/json"
+  },
+  {
+    "phase": "pending real refresh blocks export and accepts current filters",
+    "event": "request",
+    "sessionId": "89B7608F6374BE41F3DFAA01312B9EF4",
+    "requestId": "4CB9A380E37C879A89F7F2C1EA879A5C",
+    "method": "GET",
+    "url": "http://127.0.0.1:62443/"
+  },
+  {
+    "phase": "pending real refresh blocks export and accepts current filters",
+    "event": "response",
+    "sessionId": "89B7608F6374BE41F3DFAA01312B9EF4",
+    "requestId": "4CB9A380E37C879A89F7F2C1EA879A5C",
+    "url": "http://127.0.0.1:62443/",
+    "status": 200,
+    "mimeType": "text/html"
+  },
+  {
+    "phase": "pending real refresh blocks export and accepts current filters",
+    "event": "request",
+    "sessionId": "89B7608F6374BE41F3DFAA01312B9EF4",
+    "requestId": "3862.2",
+    "method": "GET",
+    "url": "http://127.0.0.1:62443/calendar_ui.js"
+  },
+  {
+    "phase": "pending real refresh blocks export and accepts current filters",
+    "event": "request",
+    "sessionId": "89B7608F6374BE41F3DFAA01312B9EF4",
+    "requestId": "3862.4",
+    "method": "GET",
+    "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJXaW5kb3dUZXh0IiBkPSJNMjAgM2gtMVYxaC0ydjJIN1YxSDV2Mkg0Yy0xLjEgMC0yIC45LTIgMnYxNmMwIDEuMS45IDIgMiAyaDE2YzEuMSAwIDItLjkgMi0yVjVjMC0xLjEtLjktMi0yLTJ6bTAgMThINFY4aDE2djEzeiIvPjxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiLz48L3N2Zz4="
+  },
+  {
+    "phase": "pending real refresh blocks export and accepts current filters",
+    "event": "response",
+    "sessionId": "89B7608F6374BE41F3DFAA01312B9EF4",
+    "requestId": "3862.4",
+    "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJXaW5kb3dUZXh0IiBkPSJNMjAgM2gtMVYxaC0ydjJIN1YxSDV2Mkg0Yy0xLjEgMC0yIC45LTIgMnYxNmMwIDEuMS45IDIgMiAyaDE2YzEuMSAwIDItLjkgMi0yVjVjMC0xLjEtLjktMi0yLTJ6bTAgMThINFY4aDE2djEzeiIvPjxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiLz48L3N2Zz4=",
+    "status": 200,
+    "mimeType": "image/svg+xml"
+  },
+  {
+    "phase": "pending real refresh blocks export and accepts current filters",
+    "event": "response",
+    "sessionId": "89B7608F6374BE41F3DFAA01312B9EF4",
+    "requestId": "3862.2",
+    "url": "http://127.0.0.1:62443/calendar_ui.js",
+    "status": 200,
+    "mimeType": "text/javascript"
+  },
+  {
+    "phase": "pending real refresh blocks export and accepts current filters",
+    "event": "request",
+    "sessionId": "89B7608F6374BE41F3DFAA01312B9EF4",
+    "requestId": "3862.5",
+    "method": "GET",
+    "url": "http://127.0.0.1:62443/api/summary"
+  },
+  {
+    "phase": "pending real refresh blocks export and accepts current filters",
+    "event": "response",
+    "sessionId": "89B7608F6374BE41F3DFAA01312B9EF4",
+    "requestId": "3862.5",
+    "url": "http://127.0.0.1:62443/api/summary",
+    "status": 200,
+    "mimeType": "application/json"
+  },
+  {
+    "phase": "pending real refresh blocks export and accepts current filters",
+    "event": "request",
+    "sessionId": "89B7608F6374BE41F3DFAA01312B9EF4",
+    "requestId": "3862.6",
+    "method": "POST",
+    "url": "http://127.0.0.1:62443/api/run",
+    "postData": "{\"as_of\":\"2026-10-31\"}"
+  },
+  {
+    "phase": "pending real refresh blocks export and accepts current filters",
+    "event": "response",
+    "sessionId": "89B7608F6374BE41F3DFAA01312B9EF4",
+    "requestId": "3862.6",
+    "url": "http://127.0.0.1:62443/api/run",
+    "status": 200,
+    "mimeType": "application/json"
+  },
+  {
+    "phase": "pending real refresh blocks export and accepts current filters",
+    "event": "request",
+    "sessionId": "89B7608F6374BE41F3DFAA01312B9EF4",
+    "requestId": "3862.7",
+    "method": "POST",
+    "url": "http://127.0.0.1:62443/api/calendar",
+    "postData": "{\"snapshot\":\"d91ccee5157b9d7cea038092fee73075919971eea66add11fb32da06bfac5ffa\",\"keys\":[\"PT1001|PTEST|AUTH-PT1001\",\"PT1002|PTEST|AUTH-PT1002\"]}"
+  },
+  {
+    "phase": "pending real refresh blocks export and accepts current filters",
+    "event": "response",
+    "sessionId": "89B7608F6374BE41F3DFAA01312B9EF4",
+    "requestId": "3862.7",
+    "url": "http://127.0.0.1:62443/api/calendar",
+    "status": 200,
+    "mimeType": "text/calendar"
+  },
+  {
+    "phase": "pending real staff-state save blocks export then reviews new state",
+    "event": "request",
+    "sessionId": "9018E24BA65CFE9A99AB2A712DDEE5C9",
+    "requestId": "99892E26E14C50293355DC0C650C19A0",
+    "method": "GET",
+    "url": "http://127.0.0.1:62443/"
+  },
+  {
+    "phase": "pending real staff-state save blocks export then reviews new state",
+    "event": "response",
+    "sessionId": "9018E24BA65CFE9A99AB2A712DDEE5C9",
+    "requestId": "99892E26E14C50293355DC0C650C19A0",
+    "url": "http://127.0.0.1:62443/",
+    "status": 200,
+    "mimeType": "text/html"
+  },
+  {
+    "phase": "pending real staff-state save blocks export then reviews new state",
+    "event": "request",
+    "sessionId": "9018E24BA65CFE9A99AB2A712DDEE5C9",
+    "requestId": "3873.2",
+    "method": "GET",
+    "url": "http://127.0.0.1:62443/calendar_ui.js"
+  },
+  {
+    "phase": "pending real staff-state save blocks export then reviews new state",
+    "event": "request",
+    "sessionId": "9018E24BA65CFE9A99AB2A712DDEE5C9",
+    "requestId": "3873.4",
+    "method": "GET",
+    "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJXaW5kb3dUZXh0IiBkPSJNMjAgM2gtMVYxaC0ydjJIN1YxSDV2Mkg0Yy0xLjEgMC0yIC45LTIgMnYxNmMwIDEuMS45IDIgMiAyaDE2YzEuMSAwIDItLjkgMi0yVjVjMC0xLjEtLjktMi0yLTJ6bTAgMThINFY4aDE2djEzeiIvPjxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiLz48L3N2Zz4="
+  },
+  {
+    "phase": "pending real staff-state save blocks export then reviews new state",
+    "event": "response",
+    "sessionId": "9018E24BA65CFE9A99AB2A712DDEE5C9",
+    "requestId": "3873.4",
+    "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJXaW5kb3dUZXh0IiBkPSJNMjAgM2gtMVYxaC0ydjJIN1YxSDV2Mkg0Yy0xLjEgMC0yIC45LTIgMnYxNmMwIDEuMS45IDIgMiAyaDE2YzEuMSAwIDItLjkgMi0yVjVjMC0xLjEtLjktMi0yLTJ6bTAgMThINFY4aDE2djEzeiIvPjxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiLz48L3N2Zz4=",
+    "status": 200,
+    "mimeType": "image/svg+xml"
+  },
+  {
+    "phase": "pending real staff-state save blocks export then reviews new state",
+    "event": "response",
+    "sessionId": "9018E24BA65CFE9A99AB2A712DDEE5C9",
+    "requestId": "3873.2",
+    "url": "http://127.0.0.1:62443/calendar_ui.js",
+    "status": 200,
+    "mimeType": "text/javascript"
+  },
+  {
+    "phase": "pending real staff-state save blocks export then reviews new state",
+    "event": "request",
+    "sessionId": "9018E24BA65CFE9A99AB2A712DDEE5C9",
+    "requestId": "3873.5",
+    "method": "GET",
+    "url": "http://127.0.0.1:62443/api/summary"
+  },
+  {
+    "phase": "pending real staff-state save blocks export then reviews new state",
+    "event": "response",
+    "sessionId": "9018E24BA65CFE9A99AB2A712DDEE5C9",
+    "requestId": "3873.5",
+    "url": "http://127.0.0.1:62443/api/summary",
+    "status": 200,
+    "mimeType": "application/json"
+  },
+  {
+    "phase": "pending real staff-state save blocks export then reviews new state",
+    "event": "request",
+    "sessionId": "9018E24BA65CFE9A99AB2A712DDEE5C9",
+    "requestId": "3873.6",
+    "method": "POST",
+    "url": "http://127.0.0.1:62443/api/state",
+    "postData": "{\"key\":\"PT1007|PTEST|AUTH-PT1007\",\"state\":\"approved\"}"
+  },
+  {
+    "phase": "pending real staff-state save blocks export then reviews new state",
+    "event": "response",
+    "sessionId": "9018E24BA65CFE9A99AB2A712DDEE5C9",
+    "requestId": "3873.6",
+    "url": "http://127.0.0.1:62443/api/state",
+    "status": 200,
+    "mimeType": "application/json"
+  },
+  {
+    "phase": "pending real staff-state save blocks export then reviews new state",
+    "event": "request",
+    "sessionId": "9018E24BA65CFE9A99AB2A712DDEE5C9",
+    "requestId": "3873.7",
+    "method": "GET",
+    "url": "http://127.0.0.1:62443/api/summary"
+  },
+  {
+    "phase": "pending real staff-state save blocks export then reviews new state",
+    "event": "response",
+    "sessionId": "9018E24BA65CFE9A99AB2A712DDEE5C9",
+    "requestId": "3873.7",
+    "url": "http://127.0.0.1:62443/api/summary",
+    "status": 200,
+    "mimeType": "application/json"
+  },
+  {
+    "phase": "pending real staff-state save blocks export then reviews new state",
+    "event": "request",
+    "sessionId": "9018E24BA65CFE9A99AB2A712DDEE5C9",
+    "requestId": "3873.8",
+    "method": "POST",
+    "url": "http://127.0.0.1:62443/api/calendar",
+    "postData": "{\"snapshot\":\"281a7d05d954c6e2ace45ef255a3dabba14f2e3e8f608e19b93992e562d2908e\",\"keys\":[\"PT1001|PTEST|AUTH-PT1001\",\"PT1005|PTEST|\",\"PT1006|PTEST|\",\"PT1002|PTEST|AUTH-PT1002\"]}"
+  },
+  {
+    "phase": "pending real staff-state save blocks export then reviews new state",
+    "event": "response",
+    "sessionId": "9018E24BA65CFE9A99AB2A712DDEE5C9",
+    "requestId": "3873.8",
+    "url": "http://127.0.0.1:62443/api/calendar",
+    "status": 200,
+    "mimeType": "text/calendar"
+  },
+  {
+    "phase": "failed real refresh leaves calendar unavailable and next refresh recovers",
+    "event": "request",
+    "sessionId": "B072F4E0CA75556137514546540301D3",
+    "requestId": "2208E768EC5542FBB04FB9EB9DF16145",
+    "method": "GET",
+    "url": "http://127.0.0.1:62443/"
+  },
+  {
+    "phase": "failed real refresh leaves calendar unavailable and next refresh recovers",
+    "event": "response",
+    "sessionId": "B072F4E0CA75556137514546540301D3",
+    "requestId": "2208E768EC5542FBB04FB9EB9DF16145",
+    "url": "http://127.0.0.1:62443/",
+    "status": 200,
+    "mimeType": "text/html"
+  },
+  {
+    "phase": "failed real refresh leaves calendar unavailable and next refresh recovers",
+    "event": "request",
+    "sessionId": "B072F4E0CA75556137514546540301D3",
+    "requestId": "3889.2",
+    "method": "GET",
+    "url": "http://127.0.0.1:62443/calendar_ui.js"
+  },
+  {
+    "phase": "failed real refresh leaves calendar unavailable and next refresh recovers",
+    "event": "request",
+    "sessionId": "B072F4E0CA75556137514546540301D3",
+    "requestId": "3889.4",
+    "method": "GET",
+    "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJXaW5kb3dUZXh0IiBkPSJNMjAgM2gtMVYxaC0ydjJIN1YxSDV2Mkg0Yy0xLjEgMC0yIC45LTIgMnYxNmMwIDEuMS45IDIgMiAyaDE2YzEuMSAwIDItLjkgMi0yVjVjMC0xLjEtLjktMi0yLTJ6bTAgMThINFY4aDE2djEzeiIvPjxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiLz48L3N2Zz4="
+  },
+  {
+    "phase": "failed real refresh leaves calendar unavailable and next refresh recovers",
+    "event": "response",
+    "sessionId": "B072F4E0CA75556137514546540301D3",
+    "requestId": "3889.4",
+    "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJXaW5kb3dUZXh0IiBkPSJNMjAgM2gtMVYxaC0ydjJIN1YxSDV2Mkg0Yy0xLjEgMC0yIC45LTIgMnYxNmMwIDEuMS45IDIgMiAyaDE2YzEuMSAwIDItLjkgMi0yVjVjMC0xLjEtLjktMi0yLTJ6bTAgMThINFY4aDE2djEzeiIvPjxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiLz48L3N2Zz4=",
+    "status": 200,
+    "mimeType": "image/svg+xml"
+  },
+  {
+    "phase": "failed real refresh leaves calendar unavailable and next refresh recovers",
+    "event": "response",
+    "sessionId": "B072F4E0CA75556137514546540301D3",
+    "requestId": "3889.2",
+    "url": "http://127.0.0.1:62443/calendar_ui.js",
+    "status": 200,
+    "mimeType": "text/javascript"
+  },
+  {
+    "phase": "failed real refresh leaves calendar unavailable and next refresh recovers",
+    "event": "request",
+    "sessionId": "B072F4E0CA75556137514546540301D3",
+    "requestId": "3889.5",
+    "method": "GET",
+    "url": "http://127.0.0.1:62443/api/summary"
+  },
+  {
+    "phase": "failed real refresh leaves calendar unavailable and next refresh recovers",
+    "event": "response",
+    "sessionId": "B072F4E0CA75556137514546540301D3",
+    "requestId": "3889.5",
+    "url": "http://127.0.0.1:62443/api/summary",
+    "status": 200,
+    "mimeType": "application/json"
+  },
+  {
+    "phase": "failed real refresh leaves calendar unavailable and next refresh recovers",
+    "event": "request",
+    "sessionId": "B072F4E0CA75556137514546540301D3",
+    "requestId": "3889.6",
+    "method": "POST",
+    "url": "http://127.0.0.1:62443/api/run",
+    "postData": "{\"as_of\":\"2026-10-31\"}"
+  },
+  {
+    "phase": "failed real refresh leaves calendar unavailable and next refresh recovers",
+    "event": "request",
+    "sessionId": "B072F4E0CA75556137514546540301D3",
+    "requestId": "3889.7",
+    "method": "POST",
+    "url": "http://127.0.0.1:62443/api/run",
+    "postData": "{\"as_of\":\"2026-10-31\"}"
+  },
+  {
+    "phase": "failed real refresh leaves calendar unavailable and next refresh recovers",
+    "event": "response",
+    "sessionId": "B072F4E0CA75556137514546540301D3",
+    "requestId": "3889.7",
+    "url": "http://127.0.0.1:62443/api/run",
+    "status": 200,
+    "mimeType": "application/json"
+  },
+  {
+    "phase": "saved-report drift rejects earlier snapshot and replacement must be reviewed",
+    "event": "request",
+    "sessionId": "D0DD346EB25C639A54F78B1D9DF63523",
+    "requestId": "A3C52D0E0586FD58C6011A25842C0973",
+    "method": "GET",
+    "url": "http://127.0.0.1:62443/"
+  },
+  {
+    "phase": "saved-report drift rejects earlier snapshot and replacement must be reviewed",
+    "event": "response",
+    "sessionId": "D0DD346EB25C639A54F78B1D9DF63523",
+    "requestId": "A3C52D0E0586FD58C6011A25842C0973",
+    "url": "http://127.0.0.1:62443/",
+    "status": 200,
+    "mimeType": "text/html"
+  },
+  {
+    "phase": "saved-report drift rejects earlier snapshot and replacement must be reviewed",
+    "event": "request",
+    "sessionId": "D0DD346EB25C639A54F78B1D9DF63523",
+    "requestId": "3916.2",
+    "method": "GET",
+    "url": "http://127.0.0.1:62443/calendar_ui.js"
+  },
+  {
+    "phase": "saved-report drift rejects earlier snapshot and replacement must be reviewed",
+    "event": "request",
+    "sessionId": "D0DD346EB25C639A54F78B1D9DF63523",
+    "requestId": "3916.4",
+    "method": "GET",
+    "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJXaW5kb3dUZXh0IiBkPSJNMjAgM2gtMVYxaC0ydjJIN1YxSDV2Mkg0Yy0xLjEgMC0yIC45LTIgMnYxNmMwIDEuMS45IDIgMiAyaDE2YzEuMSAwIDItLjkgMi0yVjVjMC0xLjEtLjktMi0yLTJ6bTAgMThINFY4aDE2djEzeiIvPjxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiLz48L3N2Zz4="
+  },
+  {
+    "phase": "saved-report drift rejects earlier snapshot and replacement must be reviewed",
+    "event": "response",
+    "sessionId": "D0DD346EB25C639A54F78B1D9DF63523",
+    "requestId": "3916.4",
+    "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJXaW5kb3dUZXh0IiBkPSJNMjAgM2gtMVYxaC0ydjJIN1YxSDV2Mkg0Yy0xLjEgMC0yIC45LTIgMnYxNmMwIDEuMS45IDIgMiAyaDE2YzEuMSAwIDItLjkgMi0yVjVjMC0xLjEtLjktMi0yLTJ6bTAgMThINFY4aDE2djEzeiIvPjxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiLz48L3N2Zz4=",
+    "status": 200,
+    "mimeType": "image/svg+xml"
+  },
+  {
+    "phase": "saved-report drift rejects earlier snapshot and replacement must be reviewed",
+    "event": "response",
+    "sessionId": "D0DD346EB25C639A54F78B1D9DF63523",
+    "requestId": "3916.2",
+    "url": "http://127.0.0.1:62443/calendar_ui.js",
+    "status": 200,
+    "mimeType": "text/javascript"
+  },
+  {
+    "phase": "saved-report drift rejects earlier snapshot and replacement must be reviewed",
+    "event": "request",
+    "sessionId": "D0DD346EB25C639A54F78B1D9DF63523",
+    "requestId": "3916.5",
+    "method": "GET",
+    "url": "http://127.0.0.1:62443/api/summary"
+  },
+  {
+    "phase": "saved-report drift rejects earlier snapshot and replacement must be reviewed",
+    "event": "response",
+    "sessionId": "D0DD346EB25C639A54F78B1D9DF63523",
+    "requestId": "3916.5",
+    "url": "http://127.0.0.1:62443/api/summary",
+    "status": 200,
+    "mimeType": "application/json"
+  },
+  {
+    "phase": "saved-report drift rejects earlier snapshot and replacement must be reviewed",
+    "event": "request",
+    "sessionId": "D0DD346EB25C639A54F78B1D9DF63523",
+    "requestId": "3916.6",
+    "method": "POST",
+    "url": "http://127.0.0.1:62443/api/calendar",
+    "postData": "{\"snapshot\":\"b4d682a2e802ff49757dac3e6242632ab08591cf0b174f28d28004ae2bcaae99\",\"keys\":[\"PT1001|PTEST|AUTH-PT1001\",\"PT1005|PTEST|\",\"PT1006|PTEST|\",\"PT1002|PTEST|AUTH-PT1002\",\"PT1007|PTEST|AUTH-PT1007\"]}"
+  },
+  {
+    "phase": "saved-report drift rejects earlier snapshot and replacement must be reviewed",
+    "event": "response",
+    "sessionId": "D0DD346EB25C639A54F78B1D9DF63523",
+    "requestId": "3916.6",
+    "url": "http://127.0.0.1:62443/api/calendar",
+    "status": 409,
+    "mimeType": "application/json"
+  },
+  {
+    "phase": "saved-report drift rejects earlier snapshot and replacement must be reviewed",
+    "event": "request",
+    "sessionId": "D0DD346EB25C639A54F78B1D9DF63523",
+    "requestId": "967A4881CEFB57990975D79EBE543BDC",
+    "method": "GET",
+    "url": "http://127.0.0.1:62443/"
+  },
+  {
+    "phase": "saved-report drift rejects earlier snapshot and replacement must be reviewed",
+    "event": "response",
+    "sessionId": "D0DD346EB25C639A54F78B1D9DF63523",
+    "requestId": "967A4881CEFB57990975D79EBE543BDC",
+    "url": "http://127.0.0.1:62443/",
+    "status": 200,
+    "mimeType": "text/html"
+  },
+  {
+    "phase": "saved-report drift rejects earlier snapshot and replacement must be reviewed",
+    "event": "request",
+    "sessionId": "D0DD346EB25C639A54F78B1D9DF63523",
+    "requestId": "3916.8",
+    "method": "GET",
+    "url": "http://127.0.0.1:62443/calendar_ui.js"
+  },
+  {
+    "phase": "saved-report drift rejects earlier snapshot and replacement must be reviewed",
+    "event": "request",
+    "sessionId": "D0DD346EB25C639A54F78B1D9DF63523",
+    "requestId": "3916.10",
+    "method": "GET",
+    "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJXaW5kb3dUZXh0IiBkPSJNMjAgM2gtMVYxaC0ydjJIN1YxSDV2Mkg0Yy0xLjEgMC0yIC45LTIgMnYxNmMwIDEuMS45IDIgMiAyaDE2YzEuMSAwIDItLjkgMi0yVjVjMC0xLjEtLjktMi0yLTJ6bTAgMThINFY4aDE2djEzeiIvPjxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiLz48L3N2Zz4="
+  },
+  {
+    "phase": "saved-report drift rejects earlier snapshot and replacement must be reviewed",
+    "event": "response",
+    "sessionId": "D0DD346EB25C639A54F78B1D9DF63523",
+    "requestId": "3916.10",
+    "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJXaW5kb3dUZXh0IiBkPSJNMjAgM2gtMVYxaC0ydjJIN1YxSDV2Mkg0Yy0xLjEgMC0yIC45LTIgMnYxNmMwIDEuMS45IDIgMiAyaDE2YzEuMSAwIDItLjkgMi0yVjVjMC0xLjEtLjktMi0yLTJ6bTAgMThINFY4aDE2djEzeiIvPjxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiLz48L3N2Zz4=",
+    "status": 200,
+    "mimeType": "image/svg+xml"
+  },
+  {
+    "phase": "saved-report drift rejects earlier snapshot and replacement must be reviewed",
+    "event": "response",
+    "sessionId": "D0DD346EB25C639A54F78B1D9DF63523",
+    "requestId": "3916.8",
+    "url": "http://127.0.0.1:62443/calendar_ui.js",
+    "status": 200,
+    "mimeType": "text/javascript"
+  },
+  {
+    "phase": "saved-report drift rejects earlier snapshot and replacement must be reviewed",
+    "event": "request",
+    "sessionId": "D0DD346EB25C639A54F78B1D9DF63523",
+    "requestId": "3916.11",
+    "method": "GET",
+    "url": "http://127.0.0.1:62443/api/summary"
+  },
+  {
+    "phase": "saved-report drift rejects earlier snapshot and replacement must be reviewed",
+    "event": "response",
+    "sessionId": "D0DD346EB25C639A54F78B1D9DF63523",
+    "requestId": "3916.11",
+    "url": "http://127.0.0.1:62443/api/summary",
+    "status": 200,
+    "mimeType": "application/json"
+  },
+  {
+    "phase": "saved-report drift rejects earlier snapshot and replacement must be reviewed",
+    "event": "request",
+    "sessionId": "D0DD346EB25C639A54F78B1D9DF63523",
+    "requestId": "3916.12",
+    "method": "POST",
+    "url": "http://127.0.0.1:62443/api/calendar",
+    "postData": "{\"snapshot\":\"6f0c1ead1d7c358f8e16d8e9e5bbf9944de22996a980e858632ace538fb070a1\",\"keys\":[\"PT1001|PTEST|AUTH-PT1001\",\"PT1005|PTEST|\",\"PT1006|PTEST|\",\"PT1002|PTEST|AUTH-PT1002\",\"PT1007|PTEST|AUTH-PT1007\"]}"
+  },
+  {
+    "phase": "saved-report drift rejects earlier snapshot and replacement must be reviewed",
+    "event": "response",
+    "sessionId": "D0DD346EB25C639A54F78B1D9DF63523",
+    "requestId": "3916.12",
+    "url": "http://127.0.0.1:62443/api/calendar",
+    "status": 200,
+    "mimeType": "text/calendar"
+  },
+  {
+    "phase": "saved staff-state drift rejects snapshot until actual replacement review",
+    "event": "request",
+    "sessionId": "73BD9CD525FC07CE096C3653E62DB0B6",
+    "requestId": "94B2A219EB072887DED07812EA790919",
+    "method": "GET",
+    "url": "http://127.0.0.1:62443/"
+  },
+  {
+    "phase": "saved staff-state drift rejects snapshot until actual replacement review",
+    "event": "response",
+    "sessionId": "73BD9CD525FC07CE096C3653E62DB0B6",
+    "requestId": "94B2A219EB072887DED07812EA790919",
+    "url": "http://127.0.0.1:62443/",
+    "status": 200,
+    "mimeType": "text/html"
+  },
+  {
+    "phase": "saved staff-state drift rejects snapshot until actual replacement review",
+    "event": "request",
+    "sessionId": "73BD9CD525FC07CE096C3653E62DB0B6",
+    "requestId": "3961.2",
+    "method": "GET",
+    "url": "http://127.0.0.1:62443/calendar_ui.js"
+  },
+  {
+    "phase": "saved staff-state drift rejects snapshot until actual replacement review",
+    "event": "response",
+    "sessionId": "73BD9CD525FC07CE096C3653E62DB0B6",
+    "requestId": "3961.2",
+    "url": "http://127.0.0.1:62443/calendar_ui.js",
+    "status": 200,
+    "mimeType": "text/javascript"
+  },
+  {
+    "phase": "saved staff-state drift rejects snapshot until actual replacement review",
+    "event": "request",
+    "sessionId": "73BD9CD525FC07CE096C3653E62DB0B6",
+    "requestId": "3961.4",
+    "method": "GET",
+    "url": "http://127.0.0.1:62443/api/summary"
+  },
+  {
+    "phase": "saved staff-state drift rejects snapshot until actual replacement review",
+    "event": "request",
+    "sessionId": "73BD9CD525FC07CE096C3653E62DB0B6",
+    "requestId": "3961.5",
+    "method": "GET",
+    "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJXaW5kb3dUZXh0IiBkPSJNMjAgM2gtMVYxaC0ydjJIN1YxSDV2Mkg0Yy0xLjEgMC0yIC45LTIgMnYxNmMwIDEuMS45IDIgMiAyaDE2YzEuMSAwIDItLjkgMi0yVjVjMC0xLjEtLjktMi0yLTJ6bTAgMThINFY4aDE2djEzeiIvPjxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiLz48L3N2Zz4="
+  },
+  {
+    "phase": "saved staff-state drift rejects snapshot until actual replacement review",
+    "event": "response",
+    "sessionId": "73BD9CD525FC07CE096C3653E62DB0B6",
+    "requestId": "3961.5",
+    "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJXaW5kb3dUZXh0IiBkPSJNMjAgM2gtMVYxaC0ydjJIN1YxSDV2Mkg0Yy0xLjEgMC0yIC45LTIgMnYxNmMwIDEuMS45IDIgMiAyaDE2YzEuMSAwIDItLjkgMi0yVjVjMC0xLjEtLjktMi0yLTJ6bTAgMThINFY4aDE2djEzeiIvPjxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiLz48L3N2Zz4=",
+    "status": 200,
+    "mimeType": "image/svg+xml"
+  },
+  {
+    "phase": "saved staff-state drift rejects snapshot until actual replacement review",
+    "event": "response",
+    "sessionId": "73BD9CD525FC07CE096C3653E62DB0B6",
+    "requestId": "3961.4",
+    "url": "http://127.0.0.1:62443/api/summary",
+    "status": 200,
+    "mimeType": "application/json"
+  },
+  {
+    "phase": "saved staff-state drift rejects snapshot until actual replacement review",
+    "event": "request",
+    "sessionId": "73BD9CD525FC07CE096C3653E62DB0B6",
+    "requestId": "3961.6",
+    "method": "POST",
+    "url": "http://127.0.0.1:62443/api/calendar",
+    "postData": "{\"snapshot\":\"b4d682a2e802ff49757dac3e6242632ab08591cf0b174f28d28004ae2bcaae99\",\"keys\":[\"PT1001|PTEST|AUTH-PT1001\",\"PT1005|PTEST|\",\"PT1006|PTEST|\",\"PT1002|PTEST|AUTH-PT1002\",\"PT1007|PTEST|AUTH-PT1007\"]}"
+  },
+  {
+    "phase": "saved staff-state drift rejects snapshot until actual replacement review",
+    "event": "response",
+    "sessionId": "73BD9CD525FC07CE096C3653E62DB0B6",
+    "requestId": "3961.6",
+    "url": "http://127.0.0.1:62443/api/calendar",
+    "status": 409,
+    "mimeType": "application/json"
+  },
+  {
+    "phase": "saved staff-state drift rejects snapshot until actual replacement review",
+    "event": "request",
+    "sessionId": "73BD9CD525FC07CE096C3653E62DB0B6",
+    "requestId": "8E5F5060E035691A6B136588C4F41D4C",
+    "method": "GET",
+    "url": "http://127.0.0.1:62443/"
+  },
+  {
+    "phase": "saved staff-state drift rejects snapshot until actual replacement review",
+    "event": "response",
+    "sessionId": "73BD9CD525FC07CE096C3653E62DB0B6",
+    "requestId": "8E5F5060E035691A6B136588C4F41D4C",
+    "url": "http://127.0.0.1:62443/",
+    "status": 200,
+    "mimeType": "text/html"
+  },
+  {
+    "phase": "saved staff-state drift rejects snapshot until actual replacement review",
+    "event": "request",
+    "sessionId": "73BD9CD525FC07CE096C3653E62DB0B6",
+    "requestId": "3961.8",
+    "method": "GET",
+    "url": "http://127.0.0.1:62443/calendar_ui.js"
+  },
+  {
+    "phase": "saved staff-state drift rejects snapshot until actual replacement review",
+    "event": "request",
+    "sessionId": "73BD9CD525FC07CE096C3653E62DB0B6",
+    "requestId": "3961.10",
+    "method": "GET",
+    "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJXaW5kb3dUZXh0IiBkPSJNMjAgM2gtMVYxaC0ydjJIN1YxSDV2Mkg0Yy0xLjEgMC0yIC45LTIgMnYxNmMwIDEuMS45IDIgMiAyaDE2YzEuMSAwIDItLjkgMi0yVjVjMC0xLjEtLjktMi0yLTJ6bTAgMThINFY4aDE2djEzeiIvPjxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiLz48L3N2Zz4="
+  },
+  {
+    "phase": "saved staff-state drift rejects snapshot until actual replacement review",
+    "event": "response",
+    "sessionId": "73BD9CD525FC07CE096C3653E62DB0B6",
+    "requestId": "3961.10",
+    "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJXaW5kb3dUZXh0IiBkPSJNMjAgM2gtMVYxaC0ydjJIN1YxSDV2Mkg0Yy0xLjEgMC0yIC45LTIgMnYxNmMwIDEuMS45IDIgMiAyaDE2YzEuMSAwIDItLjkgMi0yVjVjMC0xLjEtLjktMi0yLTJ6bTAgMThINFY4aDE2djEzeiIvPjxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiLz48L3N2Zz4=",
+    "status": 200,
+    "mimeType": "image/svg+xml"
+  },
+  {
+    "phase": "saved staff-state drift rejects snapshot until actual replacement review",
+    "event": "response",
+    "sessionId": "73BD9CD525FC07CE096C3653E62DB0B6",
+    "requestId": "3961.8",
+    "url": "http://127.0.0.1:62443/calendar_ui.js",
+    "status": 200,
+    "mimeType": "text/javascript"
+  },
+  {
+    "phase": "saved staff-state drift rejects snapshot until actual replacement review",
+    "event": "request",
+    "sessionId": "73BD9CD525FC07CE096C3653E62DB0B6",
+    "requestId": "3961.11",
+    "method": "GET",
+    "url": "http://127.0.0.1:62443/api/summary"
+  },
+  {
+    "phase": "saved staff-state drift rejects snapshot until actual replacement review",
+    "event": "response",
+    "sessionId": "73BD9CD525FC07CE096C3653E62DB0B6",
+    "requestId": "3961.11",
+    "url": "http://127.0.0.1:62443/api/summary",
+    "status": 200,
+    "mimeType": "application/json"
+  },
+  {
+    "phase": "saved staff-state drift rejects snapshot until actual replacement review",
+    "event": "request",
+    "sessionId": "73BD9CD525FC07CE096C3653E62DB0B6",
+    "requestId": "3961.12",
+    "method": "POST",
+    "url": "http://127.0.0.1:62443/api/calendar",
+    "postData": "{\"snapshot\":\"41623f5c66244aaf59d0b8a1f47f9418c633455105ae88b5a967ead8f971202f\",\"keys\":[\"PT1005|PTEST|\",\"PT1006|PTEST|\",\"PT1002|PTEST|AUTH-PT1002\",\"PT1007|PTEST|AUTH-PT1007\"]}"
+  },
+  {
+    "phase": "saved staff-state drift rejects snapshot until actual replacement review",
+    "event": "response",
+    "sessionId": "73BD9CD525FC07CE096C3653E62DB0B6",
+    "requestId": "3961.12",
+    "url": "http://127.0.0.1:62443/api/calendar",
+    "status": 200,
+    "mimeType": "text/calendar"
+  },
+  {
+    "phase": "late actual success retired by filter change cannot download or replace status",
+    "event": "request",
+    "sessionId": "C3A6DDAA1AAD2D4D0C55E7C38B7991C8",
+    "requestId": "7A9E430B18B3F61F291BB09A49CB7298",
+    "method": "GET",
+    "url": "http://127.0.0.1:62443/"
+  },
+  {
+    "phase": "late actual success retired by filter change cannot download or replace status",
+    "event": "response",
+    "sessionId": "C3A6DDAA1AAD2D4D0C55E7C38B7991C8",
+    "requestId": "7A9E430B18B3F61F291BB09A49CB7298",
+    "url": "http://127.0.0.1:62443/",
+    "status": 200,
+    "mimeType": "text/html"
+  },
+  {
+    "phase": "late actual success retired by filter change cannot download or replace status",
+    "event": "request",
+    "sessionId": "C3A6DDAA1AAD2D4D0C55E7C38B7991C8",
+    "requestId": "3978.2",
+    "method": "GET",
+    "url": "http://127.0.0.1:62443/calendar_ui.js"
+  },
+  {
+    "phase": "late actual success retired by filter change cannot download or replace status",
+    "event": "request",
+    "sessionId": "C3A6DDAA1AAD2D4D0C55E7C38B7991C8",
+    "requestId": "3978.4",
+    "method": "GET",
+    "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJXaW5kb3dUZXh0IiBkPSJNMjAgM2gtMVYxaC0ydjJIN1YxSDV2Mkg0Yy0xLjEgMC0yIC45LTIgMnYxNmMwIDEuMS45IDIgMiAyaDE2YzEuMSAwIDItLjkgMi0yVjVjMC0xLjEtLjktMi0yLTJ6bTAgMThINFY4aDE2djEzeiIvPjxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiLz48L3N2Zz4="
+  },
+  {
+    "phase": "late actual success retired by filter change cannot download or replace status",
+    "event": "response",
+    "sessionId": "C3A6DDAA1AAD2D4D0C55E7C38B7991C8",
+    "requestId": "3978.4",
+    "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJXaW5kb3dUZXh0IiBkPSJNMjAgM2gtMVYxaC0ydjJIN1YxSDV2Mkg0Yy0xLjEgMC0yIC45LTIgMnYxNmMwIDEuMS45IDIgMiAyaDE2YzEuMSAwIDItLjkgMi0yVjVjMC0xLjEtLjktMi0yLTJ6bTAgMThINFY4aDE2djEzeiIvPjxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiLz48L3N2Zz4=",
+    "status": 200,
+    "mimeType": "image/svg+xml"
+  },
+  {
+    "phase": "late actual success retired by filter change cannot download or replace status",
+    "event": "response",
+    "sessionId": "C3A6DDAA1AAD2D4D0C55E7C38B7991C8",
+    "requestId": "3978.2",
+    "url": "http://127.0.0.1:62443/calendar_ui.js",
+    "status": 200,
+    "mimeType": "text/javascript"
+  },
+  {
+    "phase": "late actual success retired by filter change cannot download or replace status",
+    "event": "request",
+    "sessionId": "C3A6DDAA1AAD2D4D0C55E7C38B7991C8",
+    "requestId": "3978.5",
+    "method": "GET",
+    "url": "http://127.0.0.1:62443/api/summary"
+  },
+  {
+    "phase": "late actual success retired by filter change cannot download or replace status",
+    "event": "response",
+    "sessionId": "C3A6DDAA1AAD2D4D0C55E7C38B7991C8",
+    "requestId": "3978.5",
+    "url": "http://127.0.0.1:62443/api/summary",
+    "status": 200,
+    "mimeType": "application/json"
+  },
+  {
+    "phase": "late actual success retired by filter change cannot download or replace status",
+    "event": "request",
+    "sessionId": "C3A6DDAA1AAD2D4D0C55E7C38B7991C8",
+    "requestId": "3978.6",
+    "method": "POST",
+    "url": "http://127.0.0.1:62443/api/calendar",
+    "postData": "{\"snapshot\":\"b4d682a2e802ff49757dac3e6242632ab08591cf0b174f28d28004ae2bcaae99\",\"keys\":[\"PT1001|PTEST|AUTH-PT1001\",\"PT1005|PTEST|\",\"PT1006|PTEST|\",\"PT1002|PTEST|AUTH-PT1002\",\"PT1007|PTEST|AUTH-PT1007\"]}"
+  },
+  {
+    "phase": "late actual success retired by filter change cannot download or replace status",
+    "event": "request",
+    "sessionId": "C3A6DDAA1AAD2D4D0C55E7C38B7991C8",
+    "requestId": "3978.7",
+    "method": "POST",
+    "url": "http://127.0.0.1:62443/api/calendar",
+    "postData": "{\"snapshot\":\"b4d682a2e802ff49757dac3e6242632ab08591cf0b174f28d28004ae2bcaae99\",\"keys\":[\"PT1001|PTEST|AUTH-PT1001\",\"PT1002|PTEST|AUTH-PT1002\"]}"
+  },
+  {
+    "phase": "late actual success retired by filter change cannot download or replace status",
+    "event": "response",
+    "sessionId": "C3A6DDAA1AAD2D4D0C55E7C38B7991C8",
+    "requestId": "3978.7",
+    "url": "http://127.0.0.1:62443/api/calendar",
+    "status": 200,
+    "mimeType": "text/calendar"
+  },
+  {
+    "phase": "late actual 409 retired by filter change cannot replace newer status",
+    "event": "request",
+    "sessionId": "5FF66E01A2D9235DF48A32B7AE066B81",
+    "requestId": "56947C0B081FCDC0A2EB24C3408ED86E",
+    "method": "GET",
+    "url": "http://127.0.0.1:62443/"
+  },
+  {
+    "phase": "late actual 409 retired by filter change cannot replace newer status",
+    "event": "response",
+    "sessionId": "5FF66E01A2D9235DF48A32B7AE066B81",
+    "requestId": "56947C0B081FCDC0A2EB24C3408ED86E",
+    "url": "http://127.0.0.1:62443/",
+    "status": 200,
+    "mimeType": "text/html"
+  },
+  {
+    "phase": "late actual 409 retired by filter change cannot replace newer status",
+    "event": "request",
+    "sessionId": "5FF66E01A2D9235DF48A32B7AE066B81",
+    "requestId": "3980.2",
+    "method": "GET",
+    "url": "http://127.0.0.1:62443/calendar_ui.js"
+  },
+  {
+    "phase": "late actual 409 retired by filter change cannot replace newer status",
+    "event": "response",
+    "sessionId": "5FF66E01A2D9235DF48A32B7AE066B81",
+    "requestId": "3980.2",
+    "url": "http://127.0.0.1:62443/calendar_ui.js",
+    "status": 200,
+    "mimeType": "text/javascript"
+  },
+  {
+    "phase": "late actual 409 retired by filter change cannot replace newer status",
+    "event": "request",
+    "sessionId": "5FF66E01A2D9235DF48A32B7AE066B81",
+    "requestId": "3980.4",
+    "method": "GET",
+    "url": "http://127.0.0.1:62443/api/summary"
+  },
+  {
+    "phase": "late actual 409 retired by filter change cannot replace newer status",
+    "event": "request",
+    "sessionId": "5FF66E01A2D9235DF48A32B7AE066B81",
+    "requestId": "3980.5",
+    "method": "GET",
+    "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJXaW5kb3dUZXh0IiBkPSJNMjAgM2gtMVYxaC0ydjJIN1YxSDV2Mkg0Yy0xLjEgMC0yIC45LTIgMnYxNmMwIDEuMS45IDIgMiAyaDE2YzEuMSAwIDItLjkgMi0yVjVjMC0xLjEtLjktMi0yLTJ6bTAgMThINFY4aDE2djEzeiIvPjxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiLz48L3N2Zz4="
+  },
+  {
+    "phase": "late actual 409 retired by filter change cannot replace newer status",
+    "event": "response",
+    "sessionId": "5FF66E01A2D9235DF48A32B7AE066B81",
+    "requestId": "3980.5",
+    "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJXaW5kb3dUZXh0IiBkPSJNMjAgM2gtMVYxaC0ydjJIN1YxSDV2Mkg0Yy0xLjEgMC0yIC45LTIgMnYxNmMwIDEuMS45IDIgMiAyaDE2YzEuMSAwIDItLjkgMi0yVjVjMC0xLjEtLjktMi0yLTJ6bTAgMThINFY4aDE2djEzeiIvPjxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiLz48L3N2Zz4=",
+    "status": 200,
+    "mimeType": "image/svg+xml"
+  },
+  {
+    "phase": "late actual 409 retired by filter change cannot replace newer status",
+    "event": "response",
+    "sessionId": "5FF66E01A2D9235DF48A32B7AE066B81",
+    "requestId": "3980.4",
+    "url": "http://127.0.0.1:62443/api/summary",
+    "status": 200,
+    "mimeType": "application/json"
+  },
+  {
+    "phase": "late actual 409 retired by filter change cannot replace newer status",
+    "event": "request",
+    "sessionId": "5FF66E01A2D9235DF48A32B7AE066B81",
+    "requestId": "3980.6",
+    "method": "POST",
+    "url": "http://127.0.0.1:62443/api/calendar",
+    "postData": "{\"snapshot\":\"b4d682a2e802ff49757dac3e6242632ab08591cf0b174f28d28004ae2bcaae99\",\"keys\":[\"PT1001|PTEST|AUTH-PT1001\",\"PT1005|PTEST|\",\"PT1006|PTEST|\",\"PT1002|PTEST|AUTH-PT1002\",\"PT1007|PTEST|AUTH-PT1007\"]}"
+  },
+  {
+    "phase": "late actual 409 retired by filter change cannot replace newer status",
+    "event": "request",
+    "sessionId": "5FF66E01A2D9235DF48A32B7AE066B81",
+    "requestId": "3980.7",
+    "method": "POST",
+    "url": "http://127.0.0.1:62443/api/calendar",
+    "postData": "{\"snapshot\":\"b4d682a2e802ff49757dac3e6242632ab08591cf0b174f28d28004ae2bcaae99\",\"keys\":[\"PT1001|PTEST|AUTH-PT1001\",\"PT1002|PTEST|AUTH-PT1002\"]}"
+  },
+  {
+    "phase": "late actual 409 retired by filter change cannot replace newer status",
+    "event": "response",
+    "sessionId": "5FF66E01A2D9235DF48A32B7AE066B81",
+    "requestId": "3980.7",
+    "url": "http://127.0.0.1:62443/api/calendar",
+    "status": 200,
+    "mimeType": "text/calendar"
+  },
+  {
+    "phase": "late actual success retired by as-of edit remains unavailable",
+    "event": "request",
+    "sessionId": "D18F3EBD95B8329C858F19C7E8E0A57B",
+    "requestId": "4E1EC62C18EBAB8544C59E4B8D1058F5",
+    "method": "GET",
+    "url": "http://127.0.0.1:62443/"
+  },
+  {
+    "phase": "late actual success retired by as-of edit remains unavailable",
+    "event": "response",
+    "sessionId": "D18F3EBD95B8329C858F19C7E8E0A57B",
+    "requestId": "4E1EC62C18EBAB8544C59E4B8D1058F5",
+    "url": "http://127.0.0.1:62443/",
+    "status": 200,
+    "mimeType": "text/html"
+  },
+  {
+    "phase": "late actual success retired by as-of edit remains unavailable",
+    "event": "request",
+    "sessionId": "D18F3EBD95B8329C858F19C7E8E0A57B",
+    "requestId": "3983.2",
+    "method": "GET",
+    "url": "http://127.0.0.1:62443/calendar_ui.js"
+  },
+  {
+    "phase": "late actual success retired by as-of edit remains unavailable",
+    "event": "request",
+    "sessionId": "D18F3EBD95B8329C858F19C7E8E0A57B",
+    "requestId": "3983.4",
+    "method": "GET",
+    "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJXaW5kb3dUZXh0IiBkPSJNMjAgM2gtMVYxaC0ydjJIN1YxSDV2Mkg0Yy0xLjEgMC0yIC45LTIgMnYxNmMwIDEuMS45IDIgMiAyaDE2YzEuMSAwIDItLjkgMi0yVjVjMC0xLjEtLjktMi0yLTJ6bTAgMThINFY4aDE2djEzeiIvPjxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiLz48L3N2Zz4="
+  },
+  {
+    "phase": "late actual success retired by as-of edit remains unavailable",
+    "event": "response",
+    "sessionId": "D18F3EBD95B8329C858F19C7E8E0A57B",
+    "requestId": "3983.4",
+    "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJXaW5kb3dUZXh0IiBkPSJNMjAgM2gtMVYxaC0ydjJIN1YxSDV2Mkg0Yy0xLjEgMC0yIC45LTIgMnYxNmMwIDEuMS45IDIgMiAyaDE2YzEuMSAwIDItLjkgMi0yVjVjMC0xLjEtLjktMi0yLTJ6bTAgMThINFY4aDE2djEzeiIvPjxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiLz48L3N2Zz4=",
+    "status": 200,
+    "mimeType": "image/svg+xml"
+  },
+  {
+    "phase": "late actual success retired by as-of edit remains unavailable",
+    "event": "response",
+    "sessionId": "D18F3EBD95B8329C858F19C7E8E0A57B",
+    "requestId": "3983.2",
+    "url": "http://127.0.0.1:62443/calendar_ui.js",
+    "status": 200,
+    "mimeType": "text/javascript"
+  },
+  {
+    "phase": "late actual success retired by as-of edit remains unavailable",
+    "event": "request",
+    "sessionId": "D18F3EBD95B8329C858F19C7E8E0A57B",
+    "requestId": "3983.5",
+    "method": "GET",
+    "url": "http://127.0.0.1:62443/api/summary"
+  },
+  {
+    "phase": "late actual success retired by as-of edit remains unavailable",
+    "event": "response",
+    "sessionId": "D18F3EBD95B8329C858F19C7E8E0A57B",
+    "requestId": "3983.5",
+    "url": "http://127.0.0.1:62443/api/summary",
+    "status": 200,
+    "mimeType": "application/json"
+  },
+  {
+    "phase": "late actual success retired by as-of edit remains unavailable",
+    "event": "request",
+    "sessionId": "D18F3EBD95B8329C858F19C7E8E0A57B",
+    "requestId": "3983.6",
+    "method": "POST",
+    "url": "http://127.0.0.1:62443/api/calendar",
+    "postData": "{\"snapshot\":\"b4d682a2e802ff49757dac3e6242632ab08591cf0b174f28d28004ae2bcaae99\",\"keys\":[\"PT1001|PTEST|AUTH-PT1001\",\"PT1005|PTEST|\",\"PT1006|PTEST|\",\"PT1002|PTEST|AUTH-PT1002\",\"PT1007|PTEST|AUTH-PT1007\"]}"
+  },
+  {
+    "phase": "initial real summary pending is unavailable until exact report arrives",
+    "event": "request",
+    "sessionId": "EA78FFD5AE8A5A71A93152B46C20C23B",
+    "requestId": "E2B5DE0D071D07A6EEBAC16D9FB8BE58",
+    "method": "GET",
+    "url": "http://127.0.0.1:62443/"
+  },
+  {
+    "phase": "initial real summary pending is unavailable until exact report arrives",
+    "event": "response",
+    "sessionId": "EA78FFD5AE8A5A71A93152B46C20C23B",
+    "requestId": "E2B5DE0D071D07A6EEBAC16D9FB8BE58",
+    "url": "http://127.0.0.1:62443/",
+    "status": 200,
+    "mimeType": "text/html"
+  },
+  {
+    "phase": "initial real summary pending is unavailable until exact report arrives",
+    "event": "request",
+    "sessionId": "EA78FFD5AE8A5A71A93152B46C20C23B",
+    "requestId": "4038.2",
+    "method": "GET",
+    "url": "http://127.0.0.1:62443/calendar_ui.js"
+  },
+  {
+    "phase": "initial real summary pending is unavailable until exact report arrives",
+    "event": "request",
+    "sessionId": "EA78FFD5AE8A5A71A93152B46C20C23B",
+    "requestId": "4038.4",
+    "method": "GET",
+    "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJXaW5kb3dUZXh0IiBkPSJNMjAgM2gtMVYxaC0ydjJIN1YxSDV2Mkg0Yy0xLjEgMC0yIC45LTIgMnYxNmMwIDEuMS45IDIgMiAyaDE2YzEuMSAwIDItLjkgMi0yVjVjMC0xLjEtLjktMi0yLTJ6bTAgMThINFY4aDE2djEzeiIvPjxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiLz48L3N2Zz4="
+  },
+  {
+    "phase": "initial real summary pending is unavailable until exact report arrives",
+    "event": "response",
+    "sessionId": "EA78FFD5AE8A5A71A93152B46C20C23B",
+    "requestId": "4038.4",
+    "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJXaW5kb3dUZXh0IiBkPSJNMjAgM2gtMVYxaC0ydjJIN1YxSDV2Mkg0Yy0xLjEgMC0yIC45LTIgMnYxNmMwIDEuMS45IDIgMiAyaDE2YzEuMSAwIDItLjkgMi0yVjVjMC0xLjEtLjktMi0yLTJ6bTAgMThINFY4aDE2djEzeiIvPjxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiLz48L3N2Zz4=",
+    "status": 200,
+    "mimeType": "image/svg+xml"
+  },
+  {
+    "phase": "initial real summary pending is unavailable until exact report arrives",
+    "event": "response",
+    "sessionId": "EA78FFD5AE8A5A71A93152B46C20C23B",
+    "requestId": "4038.2",
+    "url": "http://127.0.0.1:62443/calendar_ui.js",
+    "status": 200,
+    "mimeType": "text/javascript"
+  },
+  {
+    "phase": "initial real summary pending is unavailable until exact report arrives",
+    "event": "request",
+    "sessionId": "EA78FFD5AE8A5A71A93152B46C20C23B",
+    "requestId": "4038.5",
+    "method": "GET",
+    "url": "http://127.0.0.1:62443/api/summary"
+  },
+  {
+    "phase": "initial real summary pending is unavailable until exact report arrives",
+    "event": "response",
+    "sessionId": "EA78FFD5AE8A5A71A93152B46C20C23B",
+    "requestId": "4038.5",
+    "url": "http://127.0.0.1:62443/api/summary",
+    "status": 200,
+    "mimeType": "application/json"
+  }
+]

@@ -1,0 +1,96 @@
+{
+  "recorded_at": "2026-10-08T13:38:02.673040+00:00",
+  "source_commit": "d75fb908a9893fd40b21112f62af16d32027bbe1",
+  "public_commit": "a68a667f3610153618c6cc8952c72abe980d89aa",
+  "files": [
+    {
+      "path": "pt_auth/ptauth/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "git_blob": "a6f4545ac17e2578317ef694f7bb548489f6c71c",
+      "bytes": 311,
+      "sha256": "71e1527f153c607b679485e4954af1b3ec6a843b041562eb07f4d36e08fd231c"
+    },
+    {
+      "path": "pt_auth/ptauth/__main__.py",
+      "mode": "100644",
+      "type": "blob",
+      "git_blob": "3c93dd90cf357624c77ab3589ef2b201868c181e",
+      "bytes": 57,
+      "sha256": "4b1afbca74a10abc3cff7b4e5a11b558bf619e45b89709faf9225a474a2a250f"
+    },
+    {
+      "path": "pt_auth/ptauth/calendar_ui.js",
+      "mode": "100644",
+      "type": "blob",
+      "git_blob": "a6ba45ec85c28f7fd80d7e2fdd32ac62e96daa99",
+      "bytes": 8448,
+      "sha256": "b91fe76b947f381b2fa0835646fc664bf7eaa4474631ae3c9e5cb3968b9cdf3a"
+    },
+    {
+      "path": "pt_auth/ptauth/cli.py",
+      "mode": "100644",
+      "type": "blob",
+      "git_blob": "b80869a8fe1c9310762a77f45bde939ff5e03b01",
+      "bytes": 4913,
+      "sha256": "b3c8052b0be06b50f6b534585bf27e5a3ddaa1d7cfd20fc21840461fb8e9c2ed"
+    },
+    {
+      "path": "pt_auth/ptauth/data.py",
+      "mode": "100644",
+      "type": "blob",
+      "git_blob": "19a2a1b79eff6d2753507eebf3bf78011ddaaa87",
+      "bytes": 10283,
+      "sha256": "eeab8ab5b2b72524148969de0d13b27126cc64c4ec79b68a147b51b25a3741e2"
+    },
+    {
+      "path": "pt_auth/ptauth/engine.py",
+      "mode": "100644",
+      "type": "blob",
+      "git_blob": "39c97f35d61ff949b5c2381f0ad60d7af8d74226",
+      "bytes": 16057,
+      "sha256": "bfa7049e9b133d654ce947b135c17ac401bd7b1fcd76350bdb10de5b7a1ad1f7"
+    },
+    {
+      "path": "pt_auth/ptauth/report.py",
+      "mode": "100644",
+      "type": "blob",
+      "git_blob": "608626d57918e4d43fca2fc14421063d35b49cfc",
+      "bytes": 10086,
+      "sha256": "794cf0a631b0f1a33ea85df4de387be0ce12d2744e8c8cb1308a61ce99516740"
+    },
+    {
+      "path": "pt_auth/ptauth/synth.py",
+      "mode": "100644",
+      "type": "blob",
+      "git_blob": "2ff6a2548bf55a812cfa62e397442a0d3f7debbb",
+      "bytes": 8873,
+      "sha256": "b82a34447e43dacbe46ed06e60b693ed216e87f15892ae297c682aa5a3f139fd"
+    },
+    {
+      "path": "pt_auth/ptauth/ui.html",
+      "mode": "100644",
+      "type": "blob",
+      "git_blob": "6749bbf24c91e43e639c5455768f263b18e04507",
+      "bytes": 14769,
+      "sha256": "20dd667868f3fdaeba30404e158afd9d352d8ec14be445b006e3f6b633ede2f0"
+    },
+    {
+      "path": "pt_auth/ptauth/web.py",
+      "mode": "100644",
+      "type": "blob",
+      "git_blob": "7e5d38f4cf8c33f4b9c91bd3c3d929fcfa0f80b3",
+      "bytes": 8633,
+      "sha256": "18a5f6e889f2a5d7e0e3704989f041681252df3ee0cb29e3c356aff560fd2967"
+    },
+    {
+      "path": "pt_auth/ptauth/worklist_calendar.py",
+      "mode": "100644",
+      "type": "blob",
+      "git_blob": "e125f9ed77343fcc3d82e6d6f25a7296b0463aa7",
+      "bytes": 13750,
+      "sha256": "89751f1de5548ced34a59c296d0edf1eda06a38bdb935be3e7c3c8b2ae5d55c0"
+    }
+  ],
+  "author_tests_not_copied_or_read": true
+}
