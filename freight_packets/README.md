@@ -56,7 +56,17 @@ The review UI is a single page with no CDN or external requests, and it binds to
 - tabs for Invoice flags, the Exception queue, All stops, and Downloads
 - a "Regenerate sample" button that takes a seed
 
+### Reviewing a changed packet
+
+A saved review applies to the generated packet and its per-load stops, invoice flags, fines, settlement and exceptions. The app records a deterministic evidence version covering those records and the actual packet bytes. Re-running unchanged data retains the review; a changed packet or supporting report shows **review again** and its earlier approval is excluded from the approved total. Changes to another load and the run timestamp do not invalidate an unchanged packet. Re-run the pipeline after editing source inputs so the new results can be reviewed.
+
+The browser submits the evidence version it displayed. A stale browser receives HTTP 409 and refreshes the packet for a new review; it never repeats the decision automatically. A missing or unreadable current packet cannot be approved. Older decisions without an evidence version require one new review. Previous decisions and notes remain in `decisions.json` history, including after Clear or sample regeneration; each saved update is also appended to `audit.jsonl` with its evidence version. A storage error asks the reviewer to reload and inspect the saved decision rather than assume the update succeeded or retry it.
+
+The local server serializes its own pipeline runs and review updates, and replaces the decision file atomically. Run one server per output directory; do not run the CLI or another writer against that directory while reviewing. This is local draft review, not payment approval or a multi-user production service.
+
 ## Verification
+
+The freight test suite includes real local HTTP checks for unchanged and changed evidence, stale clients, missing packets, legacy decisions, history, concurrent reviews and failed writes. An optional browser check runs with an installed Playwright and Chromium: `node tests/review_browser_smoke.cjs` from `freight_packets`. Set `BROWSER_BIN` for an existing Chromium executable and `PYTHON` if the interpreter is not named `python3`. It uses a disposable synthetic fixture and local server, and retains its screenshots and receipt under the process temporary directory.
 
 `sample_data/expected.json` is an answer key that the generator computes **independently** of the pipeline, from the seeded arrival and departure times. The tests assert three things:
 - The detention total and **every per-stop amount and status** match the answer key.
