@@ -303,7 +303,13 @@ def test_ambiguous_source_refuses_after_native_report_generation(tmp_path, mutat
     else:
         raw = (data / "accounts.csv").read_text()
         (data / "accounts.csv").write_text(raw.replace("common,,irregular", "common", 1))
-    engine.run(data, out, AS_OF, eval_from=EVAL_FROM)
+    if mutation == "duplicate-account":
+        before = snapshots(data, out, tmp_path)
+        with pytest.raises(ValueError, match="duplicate account_no"):
+            engine.run(data, out, AS_OF, eval_from=EVAL_FROM)
+        assert snapshots(data, out, tmp_path) == before
+    else:
+        engine.run(data, out, AS_OF, eval_from=EVAL_FROM)
     before = snapshots(data, out, tmp_path)
     with pytest.raises(ValueError):
         review.reconcile(data, out / "summary.json", tmp_path / "ambiguous.csv", first)

@@ -1,0 +1,14 @@
+test_blank_account_keeps_existing_required_error (test_account_identity.AccountIdentityTests.test_blank_account_keeps_existing_required_error) ... ok
+test_bom_reordered_multiline_records_report_physical_rows (test_account_identity.AccountIdentityTests.test_bom_reordered_multiline_records_report_physical_rows) ... ok
+test_cli_conflicting_duplicate_preserves_previous_outputs (test_account_identity.AccountIdentityTests.test_cli_conflicting_duplicate_preserves_previous_outputs) ... ok
+test_distinct_case_and_shared_bill_ids_keep_existing_behavior (test_account_identity.AccountIdentityTests.test_distinct_case_and_shared_bill_ids_keep_existing_behavior) ... ok
+test_empty_rows_do_not_create_duplicate_accounts (test_account_identity.AccountIdentityTests.test_empty_rows_do_not_create_duplicate_accounts) ... ok
+test_identical_duplicate_is_still_ambiguous (test_account_identity.AccountIdentityTests.test_identical_duplicate_is_still_ambiguous) ... ok
+test_missing_column_keeps_reader_error (test_account_identity.AccountIdentityTests.test_missing_column_keeps_reader_error) ... ok
+test_single_trimmed_account_retains_normalized_identity (test_account_identity.AccountIdentityTests.test_single_trimmed_account_retains_normalized_identity) ... ok
+test_whitespace_normalized_duplicate_is_rejected (test_account_identity.AccountIdentityTests.test_whitespace_normalized_duplicate_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.212s
+
+OK
