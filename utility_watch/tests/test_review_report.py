@@ -73,7 +73,8 @@ class ReviewReportTests(unittest.TestCase):
         self.tmp = tempfile.TemporaryDirectory(prefix="uwatch-review-report-test-")
         self.addCleanup(self.tmp.cleanup)
         self.root = Path(self.tmp.name)
-        self.source = self.root / "notes <team> & Zoë.csv"
+        # Keep real fixture names portable; adversarial labels are tested in memory.
+        self.source = self.root / "notes [team] & Zoë.csv"
         self.rows = [
             finding(1),
             finding(2, account="A-2", key="B-2", kind="exception", code="NO_BASELINE",
