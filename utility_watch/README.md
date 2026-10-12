@@ -195,6 +195,10 @@ the earlier successful run, so use the new command's exit status before treating
 
 `--as-of` defaults to today. `--eval-from` defaults to about six months before the review date. Use the first day of a month for `--eval-from`. Service periods crossing month boundaries are assigned to the month containing the most service days (ties use the ending month).
 
+Other evaluation-start days are refused with input-error status 2 before creating or replacing
+reports; correct the date to `YYYY-MM-01` and run again. The same rule applies to the effective
+`eval_from` in synthetic metadata. Direct engine `run` and `check` calls raise `ValueError`.
+
 Keep `expected.json` out of a client-data folder: that file marks generated sample data and supplies its fixed test dates.
 
 ## Verification
