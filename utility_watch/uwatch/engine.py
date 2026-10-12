@@ -10,6 +10,7 @@ import csv
 import json
 import math
 import statistics
+from calendar import monthrange
 from dataclasses import dataclass, field, asdict
 from datetime import date, datetime, timedelta
 from pathlib import Path
@@ -56,15 +57,28 @@ class Bill:
         its end month makes a Jan 1-Feb 1 bill look like a February bill and can
         create a false January missing-bill alert.
         """
+        if self.pe < self.ps:
+            raise ValueError("period_end is before period_start")
+        start_month = date(self.ps.year, self.ps.month, 1)
         end_month = date(self.pe.year, self.pe.month, 1)
-        month = date(self.ps.year, self.ps.month, 1)
-        candidates = []
-        while month <= end_month:
-            next_month = date(month.year + (month.month == 12), month.month % 12 + 1, 1)
-            days = (min(self.pe + timedelta(days=1), next_month) - max(self.ps, month)).days
-            candidates.append((days, month == end_month, month))
-            month = next_month
-        return max(candidates)[2]
+        if start_month == end_month:
+            return end_month
+
+        candidates = [
+            (monthrange(self.ps.year, self.ps.month)[1] - self.ps.day + 1, start_month),
+            (self.pe.day, end_month),
+        ]
+        # Every pair of consecutive full Gregorian months contains a 31-day
+        # month. The latest two interior months therefore include a latest
+        # maximum; earlier full months cannot improve it, even across years.
+        month = end_month
+        for _ in range(2):
+            month = _prev_month(month)
+            if month <= start_month:
+                break
+            candidates.append((monthrange(month.year, month.month)[1], month))
+        # Dates break equal day counts toward the latest month, as before.
+        return max(candidates)[1]
 
 
 @dataclass
