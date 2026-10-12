@@ -1,0 +1,12 @@
+{
+  "original_execution_parent": "86906f285cbef549b46677d9ad7c45d1ef4a9856",
+  "publication_parent": "df5f6fdd32ceb281212db626a200081aa78cdf51",
+  "incoming_paths": [
+    "utility_watch/README.md",
+    "utility_watch/tests/test_evaluation_month.py",
+    "utility_watch/uwatch/engine.py"
+  ],
+  "freight_package_tests_and_workflows_unchanged": true,
+  "candidate_pipeline_sha256": "c68d1ea8d853e9e0a05117e226e722663aac1f43ecd14db1f39c87e6a1dee627",
+  "qualification_attribution": "Original and candidate execution occurred before this later parent; all Freight and workflow input bytes are unchanged at the publication parent. Incoming Utility contribution is preserved, not requalified by these Freight tests."
+}

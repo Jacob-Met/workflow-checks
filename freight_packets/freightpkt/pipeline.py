@@ -142,17 +142,18 @@ def run(data_dir: Path, out_dir: Path, run_by: str = "cli") -> dict:
             audit(out_dir, "settlement_line", invoice_no=st.invoice_no, load_id=st.load_id,
                   approved_cents=st.approved_cents, fines_cents=st.fines_cents, net_cents=st.net_cents,
                   status=st.status, hold_reasons=st.hold_reasons)
-        _write_csv(out_dir / "fines.csv",
-                   ["fine_id", "load_id", "carrier", "code", "amount", "detail", "notice_date",
-                    "dispute_deadline", "status", "dispute_note", "evidence"],
-                   [[f.fine_id, f.load_id, f.carrier, f.code, money(f.amount_cents), f.detail, f.notice_date,
-                     f.dispute_deadline, f.status, f.dispute_note, ";".join(f.evidence)] for f in fines])
-        _write_csv(out_dir / "settlement.csv",
-                   ["invoice_no", "load_id", "carrier", "invoiced", "approved", "fines", "net_payable",
-                    "status", "hold_reasons", "notes", "evidence"],
-                   [[s.invoice_no, s.load_id, s.carrier, money(s.invoiced_cents), money(s.approved_cents),
-                     money(s.fines_cents), money(s.net_cents), s.status, ";".join(s.hold_reasons),
-                     "; ".join(s.notes), ";".join(s.evidence)] for s in settlements])
+    # Keep declared downloads current even when this run has no fines schedule.
+    _write_csv(out_dir / "fines.csv",
+               ["fine_id", "load_id", "carrier", "code", "amount", "detail", "notice_date",
+                "dispute_deadline", "status", "dispute_note", "evidence"],
+               [[f.fine_id, f.load_id, f.carrier, f.code, money(f.amount_cents), f.detail, f.notice_date,
+                 f.dispute_deadline, f.status, f.dispute_note, ";".join(f.evidence)] for f in fines])
+    _write_csv(out_dir / "settlement.csv",
+               ["invoice_no", "load_id", "carrier", "invoiced", "approved", "fines", "net_payable",
+                "status", "hold_reasons", "notes", "evidence"],
+               [[s.invoice_no, s.load_id, s.carrier, money(s.invoiced_cents), money(s.approved_cents),
+                 money(s.fines_cents), money(s.net_cents), s.status, ";".join(s.hold_reasons),
+                 "; ".join(s.notes), ";".join(s.evidence)] for s in settlements])
 
     _write_csv(out_dir / "detention_claims.csv",
                ["claim_id", "load_id", "customer", "stop", "kind", "facility", "appointment", "arrival",

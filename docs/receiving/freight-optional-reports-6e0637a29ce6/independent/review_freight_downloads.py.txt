@@ -1,0 +1,214 @@
+"""Independent scheduled/absent/restored freight CSV receiving over actual HTTP."""
+from __future__ import annotations
+
+import csv
+import hashlib
+from http.server import ThreadingHTTPServer
+import io
+import json
+from pathlib import Path
+import subprocess
+import sys
+import threading
+import urllib.error
+import urllib.request
+
+source = Path(sys.argv[1]).resolve()
+work = Path(sys.argv[2]).resolve()
+work.mkdir(parents=True, exist_ok=False)
+package = source / "freightpkt"
+pins = {str(p.relative_to(source)): hashlib.sha256(p.read_bytes()).hexdigest()
+        for p in sorted(package.rglob("*")) if p.is_file() and "__pycache__" not in p.parts}
+sys.path.insert(0, str(source))
+from freightpkt.web import App, make_handler
+
+records, commands = [], []
+data, out, fresh = work / "data", work / "out", work / "fresh"
+headers = {
+    "fines.csv": b"fine_id,load_id,carrier,code,amount,detail,notice_date,dispute_deadline,status,dispute_note,evidence\r\n",
+    "settlement.csv": b"invoice_no,load_id,carrier,invoiced,approved,fines,net_payable,status,hold_reasons,notes,evidence\r\n",
+}
+
+
+def require(condition, detail):
+    if not condition:
+        raise AssertionError(detail)
+
+
+def receive(name, callback):
+    try:
+        detail = callback()
+        records.append({"case": name, "passed": True, "detail": detail})
+    except Exception as exc:
+        records.append({"case": name, "passed": False,
+                        "error_type": type(exc).__name__, "error": str(exc)})
+
+
+def cli(*args):
+    entry = ("import runpy,sys; source=sys.argv.pop(1); sys.path.insert(0,source); "
+             "sys.argv[0]='freightpkt'; runpy.run_module('freightpkt',run_name='__main__')")
+    command = [sys.executable, "-I", "-B", "-c", entry, str(source), *map(str, args)]
+    proc = subprocess.run(command, cwd=work, capture_output=True, timeout=30)
+    commands.append({"argv": command, "returncode": proc.returncode,
+                     "stdout": proc.stdout.decode(), "stderr": proc.stderr.decode()})
+    require(proc.returncode == 0 and not proc.stderr, f"CLI failed: {proc.returncode}: {proc.stderr!r}")
+
+
+def request(base, path, body=None):
+    req = urllib.request.Request(base + path,
+                                 data=None if body is None else json.dumps(body).encode(),
+                                 headers={} if body is None else {"Content-Type": "application/json"})
+    try:
+        with urllib.request.urlopen(req, timeout=10) as response:
+            return response.status, dict(response.headers), response.read()
+    except urllib.error.HTTPError as error:
+        return error.code, dict(error.headers), error.read()
+
+
+def json_request(base, path, body=None):
+    status, _, content = request(base, path, body)
+    require(status == 200, f"HTTP {status}: {content!r}")
+    return json.loads(content)
+
+
+def current_download(base, name, expected):
+    status, metadata, raw = request(base, "/out/" + name)
+    require(status == 200, f"{name}: HTTP {status}")
+    require(raw == expected, f"{name}: expected {len(expected)} bytes, received {len(raw)} bytes")
+    require(metadata.get("Cache-Control") == "no-store", "Download became cacheable")
+    require(metadata.get("Content-Type", "").startswith("text/csv"), "Unexpected CSV content type")
+    rows = list(csv.reader(io.StringIO(raw.decode("utf-8"), newline="")))
+    return {"http_status": status, "bytes": len(raw), "data_rows": len(rows) - 1,
+            "sha256": hashlib.sha256(raw).hexdigest()}
+
+
+def unchanged_files(expected):
+    for name, raw in expected.items():
+        require((out / name).read_bytes() == raw, "Changed unrelated output " + name)
+    return {"files": len(expected)}
+
+
+def audit_increment(previous, *, scheduled):
+    now = (out / "audit.jsonl").read_bytes()
+    require(now.startswith(previous), "Prior audit bytes were replaced")
+    added = [json.loads(line) for line in now[len(previous):].splitlines()]
+    require(sum(row["action"] == "run_start" for row in added) == 1, "Missing or repeated run_start")
+    require(sum(row["action"] == "run_end" for row in added) == 1, "Missing or repeated run_end")
+    if not scheduled:
+        require(not any(row["action"] in ("fine_assessed", "settlement_line") for row in added),
+                "Absent schedule emitted assessment/settlement events")
+    else:
+        require(any(row["action"] == "fine_assessed" for row in added), "Restored schedule omitted fines")
+        require(any(row["action"] == "settlement_line" for row in added), "Restored schedule omitted settlements")
+    require(not any(row["action"] == "reviewer_decision" for row in added), "Rerun invented a review")
+    return {"prior_bytes": len(previous), "new_bytes": len(now), "appended_rows": len(added)}
+
+
+cli("generate", "--out", data, "--loads", "13", "--seed", "19")
+cli("run", "--data", data, "--out", out)
+initial = json.loads((out / "summary.json").read_bytes())
+baseline = {name: (out / name).read_bytes() for name in headers}
+require(initial["fines"] and initial["settlements"], "Independent scheduled fixture is not decisive")
+normalized = {key: value for key, value in initial.items() if key not in ("generated_at", "data_dir")}
+baseline_summary_sha = hashlib.sha256(json.dumps(normalized, sort_keys=True).encode()).hexdigest()
+unrelated = {name: (out / name).read_bytes() for name in ("detention_claims.csv", "invoice_flags.csv")}
+unrelated.update({str(p.relative_to(out)): p.read_bytes() for p in (out / "packets").glob("*")})
+(out / "receiver-sentinel.txt").write_bytes(b"unrelated receiver evidence\n")
+unrelated["receiver-sentinel.txt"] = (out / "receiver-sentinel.txt").read_bytes()
+schedule = (data / "fines_schedule.csv").read_bytes()
+server = ThreadingHTTPServer(("127.0.0.1", 0), make_handler(App(data, out)))
+worker = threading.Thread(target=server.serve_forever, daemon=True)
+worker.start()
+base = f"http://127.0.0.1:{server.server_port}"
+try:
+    summary = json_request(base, "/api/summary")
+    selected = next(p["load_id"] for p in summary["packets"]
+                    if any(row["load_id"] == p["load_id"] for row in summary["settlements"]))
+    decision = json_request(base, "/api/decision", {
+        "load_id": selected, "decision": "approve", "note": "authored independent receiving",
+        "evidence_version": summary["evidence_versions"][selected]})
+    require(decision[selected]["review_state"] == "current", "Initial real review did not bind")
+    saved_decisions = (out / "decisions.json").read_bytes()
+    before_downloads = (out / "audit.jsonl").read_bytes()
+    for name in headers:
+        receive("scheduled-http-" + name, lambda n=name: current_download(base, n, baseline[n]))
+    receive("downloads-do-not-append-audit", lambda: require(
+        (out / "audit.jsonl").read_bytes() == before_downloads, "Read appended audit"))
+
+    (data / "fines_schedule.csv").unlink()
+    before = (out / "audit.jsonl").read_bytes()
+    cli("run", "--data", data, "--out", out)
+    missing = json_request(base, "/api/summary")
+    receive("missing-schedule-current-summary-empty", lambda: require(
+        missing["fines"] == [] and missing["settlements"] == []
+        and missing["counts"]["fines"] == 0 and missing["counts"]["settlement_ready"] == 0
+        and missing["counts"]["settlement_hold"] == 0, "Current summary carries old calculations"))
+    for name in headers:
+        receive("missing-schedule-http-header-only-" + name, lambda n=name: current_download(base, n, headers[n]))
+    receive("missing-schedule-audit-append", lambda: audit_increment(before, scheduled=False))
+    receive("missing-schedule-saved-decision-preserved", lambda: require(
+        (out / "decisions.json").read_bytes() == saved_decisions, "Saved decision bytes changed"))
+    receive("missing-schedule-prior-review-stale", lambda: require(
+        missing["decisions"][selected]["review_state"] == "stale", "Changed evidence inherited current review"))
+    receive("missing-schedule-unrelated-output-preserved", lambda: unchanged_files(unrelated))
+
+    cli("run", "--data", data, "--out", fresh)
+    other = ThreadingHTTPServer(("127.0.0.1", 0), make_handler(App(data, fresh)))
+    other_worker = threading.Thread(target=other.serve_forever, daemon=True)
+    other_worker.start()
+    try:
+        fresh_base = f"http://127.0.0.1:{other.server_port}"
+        for name in headers:
+            receive("fresh-missing-schedule-http-header-only-" + name,
+                    lambda n=name: current_download(fresh_base, n, headers[n]))
+    finally:
+        other.shutdown()
+        other.server_close()
+        other_worker.join(timeout=5)
+
+    before = (out / "audit.jsonl").read_bytes()
+    cli("run", "--data", data, "--out", out)
+    for name in headers:
+        receive("repeated-missing-schedule-http-header-only-" + name,
+                lambda n=name: current_download(base, n, headers[n]))
+    receive("repeated-missing-schedule-audit-append", lambda: audit_increment(before, scheduled=False))
+
+    (data / "fines_schedule.csv").write_bytes(schedule)
+    before = (out / "audit.jsonl").read_bytes()
+    cli("run", "--data", data, "--out", out)
+    restored = json_request(base, "/api/summary")
+    for name in headers:
+        receive("restored-schedule-http-exact-original-" + name,
+                lambda n=name: current_download(base, n, baseline[n]))
+    receive("restored-schedule-audit-append", lambda: audit_increment(before, scheduled=True))
+    receive("restored-schedule-saved-decision-preserved", lambda: require(
+        (out / "decisions.json").read_bytes() == saved_decisions, "Restored run changed saved decision"))
+    receive("restored-schedule-review-current", lambda: require(
+        restored["decisions"][selected]["review_state"] == "current", "Restored exact evidence differs"))
+    receive("restored-schedule-unrelated-output-preserved", lambda: unchanged_files(unrelated))
+    receive("restored-schedule-current-summary-original", lambda: require(
+        {k: v for k, v in restored.items()
+         if k not in ("generated_at", "data_dir", "evidence_versions", "decisions", "review_versions")} == normalized,
+        "Restored summary calculations changed"))
+finally:
+    server.shutdown()
+    server.server_close()
+    worker.join(timeout=5)
+
+after = {str(p.relative_to(source)): hashlib.sha256(p.read_bytes()).hexdigest()
+         for p in sorted(package.rglob("*")) if p.is_file() and "__pycache__" not in p.parts}
+receive("source-package-preserved", lambda: require(pins == after, "Source package mutated"))
+receipt = {
+    "source": str(source), "work": str(work), "python": sys.version,
+    "receiver_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+    "source_pins": pins, "source_unchanged": pins == after,
+    "fixture": {"loads": 13, "seed": 19},
+    "scheduled_baseline": {"summary_sha256_excluding_generated_at_and_data_dir": baseline_summary_sha,
+                           "csv_sha256": {name: hashlib.sha256(raw).hexdigest() for name, raw in baseline.items()},
+                           "fines": len(initial["fines"]), "settlements": len(initial["settlements"])},
+    "checks": len(records), "passed": sum(bool(row["passed"]) for row in records),
+    "rows": records, "commands": commands,
+    "claim_limits": "Actual local CLI and HTTP downloads using authored fixture; no visual browser, production or payment claim.",
+}
+print(json.dumps(receipt, indent=2))
+raise SystemExit(0 if all(row["passed"] for row in records) else 1)

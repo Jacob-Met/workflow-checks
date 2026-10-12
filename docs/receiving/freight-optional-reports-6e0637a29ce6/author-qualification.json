@@ -1,0 +1,68 @@
+{
+  "schema_version": "freight-optional-report-qualification/v1",
+  "parent": "86906f285cbef549b46677d9ad7c45d1ef4a9856",
+  "source_sha256": {
+    "original": "e2c034fdc0032d47942a1e732c0737e603109678bac09ad17638c461ad23a8c9",
+    "candidate": "c68d1ea8d853e9e0a05117e226e722663aac1f43ecd14db1f39c87e6a1dee627"
+  },
+  "exact_inverse_restores_original": true,
+  "line_endings": {
+    "original_crlf": 207,
+    "candidate_crlf": 208,
+    "candidate_lone_lf": 0
+  },
+  "runtime": {
+    "python": "Python 3.12.14",
+    "pytest": "8.3.5"
+  },
+  "original_regressions": {
+    "failed": 3,
+    "passed": 0,
+    "receipt": "original-maintained-tests.txt",
+    "first_source": "original-maintained-test.py.txt"
+  },
+  "candidate_regressions": {
+    "passed": 3,
+    "failed": 0,
+    "fixtures": [
+      {
+        "loads": 12,
+        "seed": 5,
+        "first_run_without_schedule": true
+      },
+      {
+        "loads": 24,
+        "seed": 7,
+        "remove_restore_cli": true
+      },
+      {
+        "loads": 40,
+        "seed": 99,
+        "remove_restore_cli": true
+      }
+    ]
+  },
+  "complete_freight_suite": {
+    "passed": 128,
+    "failed": 0,
+    "elapsed_seconds": 20.06,
+    "command": "python -m pytest -q freight_packets/tests",
+    "execution_scope": "candidate production and initial maintained test; final test-only import layout/explicit check=False correction followed by the focused three-test pass"
+  },
+  "lint": {
+    "command": "ruff check freight_packets/tests/test_optional_report_refresh.py",
+    "final": "passed",
+    "initial_diagnostics": [
+      "I001 import layout",
+      "PLW1510 explicit subprocess.run check argument"
+    ],
+    "correction": "Test-only formatting plus explicit check=False; production unchanged"
+  },
+  "whitespace_check": {
+    "command": "git -c core.whitespace=cr-at-eol diff --check",
+    "result": "passed",
+    "initial_diagnostic": "Default Git whitespace check treats retained CRLF as trailing whitespace. Receiving option matches original file format; no repository configuration change.",
+    "scope": "Production diff before historical receipts were staged; final product/test/guide check uses the freight_packets path scope. Exact historical pytest output retains its original trailing spaces as evidence."
+  },
+  "scope": "Existing pipeline.py publication indentation only, new test/guide/evidence; no workflows or installed consumers changed"
+}

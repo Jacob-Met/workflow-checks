@@ -1,0 +1,31 @@
+{
+  "decision": "approve",
+  "scope": "Dedent existing current-run fines and settlement output writes; retain schedule computations",
+  "original_pipeline_sha256": "e2c034fdc0032d47942a1e732c0737e603109678bac09ad17638c461ad23a8c9",
+  "candidate_pipeline_sha256": "c68d1ea8d853e9e0a05117e226e722663aac1f43ecd14db1f39c87e6a1dee627",
+  "source_diff_paths": [
+    "freightpkt/pipeline.py"
+  ],
+  "scheduled_csv_and_normalized_summary_exact_parity": true,
+  "original_course": {
+    "checks": 23,
+    "passed": 17
+  },
+  "candidate_course": {
+    "checks": 23,
+    "passed": 23
+  },
+  "source_packages_preserved": true,
+  "receiver_sha256": "a2026fdd7b27dfcb4145dba1131df6d02c4eab1ade8989884acf1176f1114899",
+  "fixture": {
+    "loads": 13,
+    "seed": 19
+  },
+  "actual_consumer": "isolated public module CLI plus existing localhost HTTP handler",
+  "evidence": {
+    "freight-review-contract.json": "74e455927c80e8b854c468c63bc3a5494f6e244885f5ce7c00b2892281b6d17a",
+    "review_freight_downloads.py": "a2026fdd7b27dfcb4145dba1131df6d02c4eab1ade8989884acf1176f1114899",
+    "freight-original-review.json": "94a72b9be29afb4f9396f8478df15a50f2b925256340ee7d781f31648fbfc26f",
+    "freight-candidate-review.json": "a3d17ff69f4d3f8b3de9e7029b33e273d3c1b92b06ad7e9ca400e9bacec258e6"
+  }
+}

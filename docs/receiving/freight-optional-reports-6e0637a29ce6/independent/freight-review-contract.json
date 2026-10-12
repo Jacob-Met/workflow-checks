@@ -1,0 +1,16 @@
+{
+  "source_basis": "86906f285cbef549b46677d9ad7c45d1ef4a9856",
+  "original_pipeline_sha256": "e2c034fdc0032d47942a1e732c0737e603109678bac09ad17638c461ad23a8c9",
+  "candidate_read": false,
+  "independent_expectations": [
+    "Seed19,13-load fixture, chosen separately from author seed7,24-load fixture: with schedule, original and candidate exact CSV bytes and normalized summaries agree",
+    "Actual CLI on reused output: remove schedule, rerun successfully, summary fines and settlements empty; both HTTP /out/fines.csv and /out/settlement.csv return200 with declared literal header only",
+    "Fresh no-schedule output produces the same header-only CSV bytes as reused no-schedule output; repeated absent-schedule run remains coherent",
+    "Restore exact schedule, rerun successfully, both output CSV byte streams recover to original scheduled content",
+    "Actual localhost HTTP handler serves bytes matching current files and summary; downloads do not append audit records",
+    "Audit prior bytes remain a prefix; reruns append run_start/run_end and current fine/settlement events as appropriate",
+    "Use a real reviewer decision on a current packet before removing schedule; decision file remains byte-identical on rerun and stale/current evidence view follows changed/restored summary",
+    "Detention and invoice flag CSVs, packets and an unrelated sentinel file retain expected content; source package remains byte-identical"
+  ],
+  "claim_limits": "Local source/CLI/HTTP receiving only; authored fixture, no visual browser, production, payment or calibration claim. Independent freeze precedes opening candidate diff."
+}
