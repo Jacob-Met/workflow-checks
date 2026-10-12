@@ -1,0 +1,114 @@
+FFF                                                                      [100%]
+=================================== FAILURES ===================================
+_______ test_first_run_without_schedule_publishes_empty_optional_reports _______
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-136/test_first_run_without_schedul0')
+
+    def test_first_run_without_schedule_publishes_empty_optional_reports(tmp_path):
+        data, out = tmp_path / "data", tmp_path / "out"
+        generate(data, 12, 5)
+        (data / "fines_schedule.csv").unlink()
+        summary = run(data, out)
+    
+        assert summary["fines"] == [] and summary["settlements"] == []
+        app = App(data, out)
+        for name in REPORTS:
+>           _, raw = app.output(name)
+
+freight_packets/tests/test_optional_report_refresh.py:44: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <freightpkt.web.App object at 0x7f6cc4f56120>, relative = 'fines.csv'
+expected = None
+
+    def output(self, relative: str, expected: str | None = None) -> tuple[Path, bytes]:
+        with self._lock:
+            target = (self.out_dir / relative).resolve()
+            if self.out_dir.resolve() not in target.parents or not target.is_file():
+>               raise FileNotFoundError
+E               FileNotFoundError
+
+freight_packets/freightpkt/web.py:220: FileNotFoundError
+_____ test_real_cli_remove_and_restore_schedule_refreshes_downloads[7-24] ______
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-136/test_real_cli_remove_and_resto0')
+seed = 7, loads = 24
+
+    @pytest.mark.parametrize("seed,loads", [(7, 24), (99, 40)])
+    def test_real_cli_remove_and_restore_schedule_refreshes_downloads(tmp_path, seed, loads):
+        data, out = tmp_path / "data", tmp_path / "out"
+        generate(data, loads, seed)
+        schedule_path = data / "fines_schedule.csv"
+        schedule = schedule_path.read_bytes()
+        first = _cli(data, out)
+        original = {name: (out / name).read_bytes() for name in REPORTS}
+        assert all(len(_rows(raw)) > 1 for raw in original.values())
+        preserved = {
+            name: (out / name).read_bytes()
+            for name in ("detention_claims.csv", "invoice_flags.csv")
+        }
+        app = App(data, out)
+        current = app.summary()
+        load_id = current["packets"][0]["load_id"]
+        app.decide({"load_id": load_id, "decision": "approve", "note": "Retain this review",
+                    "evidence_version": current["evidence_versions"][load_id]})
+        decisions = app.decisions_path.read_bytes()
+        audit_prefix = (out / "audit.jsonl").read_bytes()
+        (out / "retained-review.txt").write_bytes(b"Unrelated saved review\n")
+    
+        schedule_path.unlink()
+        current = _cli(data, out)
+        assert current["fines"] == [] and current["settlements"] == []
+        for name, old in original.items():
+            _, raw = app.output(name)
+>           assert _rows(raw) == [_rows(old)[0]]
+E           AssertionError: assert [['fine_id', ...e', ...], ...] == [['fine_id', ...detail', ...]]
+E             
+E             Left contains 18 more items, first extra item: ['FINE-560112C4CD', 'LD260907', 'Caliche Carriers LLC', 'MISSING_DELIVERY_PHOTOS', '$50.00', 'no delivery photos on file', ...]
+E             Use -v to get more diff
+
+freight_packets/tests/test_optional_report_refresh.py:77: AssertionError
+_____ test_real_cli_remove_and_restore_schedule_refreshes_downloads[99-40] _____
+
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-136/test_real_cli_remove_and_resto1')
+seed = 99, loads = 40
+
+    @pytest.mark.parametrize("seed,loads", [(7, 24), (99, 40)])
+    def test_real_cli_remove_and_restore_schedule_refreshes_downloads(tmp_path, seed, loads):
+        data, out = tmp_path / "data", tmp_path / "out"
+        generate(data, loads, seed)
+        schedule_path = data / "fines_schedule.csv"
+        schedule = schedule_path.read_bytes()
+        first = _cli(data, out)
+        original = {name: (out / name).read_bytes() for name in REPORTS}
+        assert all(len(_rows(raw)) > 1 for raw in original.values())
+        preserved = {
+            name: (out / name).read_bytes()
+            for name in ("detention_claims.csv", "invoice_flags.csv")
+        }
+        app = App(data, out)
+        current = app.summary()
+        load_id = current["packets"][0]["load_id"]
+        app.decide({"load_id": load_id, "decision": "approve", "note": "Retain this review",
+                    "evidence_version": current["evidence_versions"][load_id]})
+        decisions = app.decisions_path.read_bytes()
+        audit_prefix = (out / "audit.jsonl").read_bytes()
+        (out / "retained-review.txt").write_bytes(b"Unrelated saved review\n")
+    
+        schedule_path.unlink()
+        current = _cli(data, out)
+        assert current["fines"] == [] and current["settlements"] == []
+        for name, old in original.items():
+            _, raw = app.output(name)
+>           assert _rows(raw) == [_rows(old)[0]]
+E           AssertionError: assert [['fine_id', ...e', ...], ...] == [['fine_id', ...detail', ...]]
+E             
+E             Left contains 22 more items, first extra item: ['FINE-560112C4CD', 'LD260907', 'Caliche Carriers LLC', 'MISSING_DELIVERY_PHOTOS', '$50.00', 'no delivery photos on file', ...]
+E             Use -v to get more diff
+
+freight_packets/tests/test_optional_report_refresh.py:77: AssertionError
+=========================== short test summary info ============================
+FAILED freight_packets/tests/test_optional_report_refresh.py::test_first_run_without_schedule_publishes_empty_optional_reports
+FAILED freight_packets/tests/test_optional_report_refresh.py::test_real_cli_remove_and_restore_schedule_refreshes_downloads[7-24]
+FAILED freight_packets/tests/test_optional_report_refresh.py::test_real_cli_remove_and_restore_schedule_refreshes_downloads[99-40]
+3 failed in 0.39s
