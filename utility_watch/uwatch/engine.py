@@ -200,6 +200,9 @@ def check(accounts, bills, occ, pays, as_of: date, eval_from: date, rules=None):
     # Exported bill IDs are local to their account.
     dup_ids = set()
     duplicate_hold_ids = set()
+    # These values belong to this invocation: Bill records can be edited before
+    # another check. Object identity also keeps repeated account-local IDs apart.
+    bill_months = {}
 
     def flag(b_or_key, acct, code, detail, ev):
         a = accounts[acct]
@@ -218,11 +221,14 @@ def check(accounts, bills, occ, pays, as_of: date, eval_from: date, rules=None):
                                    "evidence": [f"bills.csv:{b.row}"]})
             continue
         util, scope = a["utility"], a["scope"]
+        bill_months.update((id(b), b.month) for b in bl)
+        unit_keys = {id(b): _unit_key(b.unit) for b in bl} if scope != "unit" else {}
         seen_invoice = {}
         seen_period = {}
         overlap_anchor = None
         for b in bl:
-            in_eval = b.month >= eval_from
+            month = bill_months[id(b)]
+            in_eval = month >= eval_from
             # duplicates: same invoice number, or same period + amount
             period_key = (b.ps, b.pe, round(b.amount, 2))
             first_by_invoice = seen_invoice.get(b.invoice) if b.invoice else None
@@ -290,9 +296,11 @@ def check(accounts, bills, occ, pays, as_of: date, eval_from: date, rules=None):
                                   "house-meter bill for a unit not marked vacant")
                 continue
             # same month last year baseline
-            ly_all = [x for x in bl if x.month == date(b.month.year - 1, b.month.month, 1)
+            prior_year = date(month.year - 1, month.month, 1)
+            unit_key = unit_keys[id(b)]
+            ly_all = [x for x in bl if bill_months[id(x)] == prior_year
                       and (x.account_no, x.bill_id) not in dup_ids]
-            ly = [x for x in ly_all if _unit_key(x.unit) == _unit_key(b.unit)]
+            ly = [x for x in ly_all if unit_keys[id(x)] == unit_key]
             if ly_all and not ly:
                 add_exception(b, "USAGE_UNIT_CHANGED",
                               f"usage unit changed from {ly_all[0].unit or '(blank)'} to {b.unit or '(blank)'};"
@@ -308,8 +316,10 @@ def check(accounts, bills, occ, pays, as_of: date, eval_from: date, rules=None):
                          f"{b.per_day:,.1f} {b.unit}/day vs {base:,.1f} same month last year ({comparison})",
                          [f"bills.csv:{b.row}", f"bills.csv:{ly[0].row}"])
             # naive comparison, reported only
-            tr = [x for x in bl if (x.account_no, x.bill_id) not in dup_ids and _unit_key(x.unit) == _unit_key(b.unit)
-                  and _prev_month(b.month) >= x.month >= _prev_month(_prev_month(_prev_month(b.month)))]
+            trailing_end = _prev_month(month)
+            trailing_start = _prev_month(_prev_month(trailing_end))
+            tr = [x for x in bl if (x.account_no, x.bill_id) not in dup_ids and unit_keys[id(x)] == unit_key
+                  and trailing_end >= bill_months[id(x)] >= trailing_start]
             if len(tr) == 3:
                 avg = sum(x.per_day for x in tr) / 3
                 if avg and b.per_day / avg > rules["naive_trailing3_ratio"]:
@@ -318,8 +328,8 @@ def check(accounts, bills, occ, pays, as_of: date, eval_from: date, rules=None):
             if b.amount >= rules["rate_min_amount"] and b.usage > 0:
                 hist = [x.amount / x.usage for x in bl if x.usage > 0 and x.amount > 0
                         and (x.account_no, x.bill_id) not in dup_ids
-                        and _unit_key(x.unit) == _unit_key(b.unit)
-                        and b.month > x.month >= date(b.month.year - 1, b.month.month, 1)]
+                        and unit_keys[id(x)] == unit_key
+                        and month > bill_months[id(x)] >= prior_year]
                 if len(hist) >= 6:
                     med = statistics.median(hist)
                     r = (b.amount / b.usage) / med
@@ -330,8 +340,8 @@ def check(accounts, bills, occ, pays, as_of: date, eval_from: date, rules=None):
                              [f"bills.csv:{b.row}"])
         # missing months (common accounts, monthly cycle, from first bill to last full month)
         if scope == "common" and a.get("cycle", "monthly") == "monthly" and bl:
-            have = {x.month for x in bl}
-            m = max(bl[0].month, eval_from)
+            have = {bill_months[id(x)] for x in bl}
+            m = max(bill_months[id(bl[0])], eval_from)
             while m <= date(last_full.year, last_full.month, 1):
                 if m not in have:
                     flag(f"{acct}:{m.isoformat()}", acct, "MISSING_BILL",
@@ -348,7 +358,8 @@ def check(accounts, bills, occ, pays, as_of: date, eval_from: date, rules=None):
     flagged = {(f.account_no, f.key) for f in flags}
     excepted = {(e["account_no"], e["key"]) for e in exceptions}
     for b in bills:
-        if (b.account_no, b.bill_id) in duplicate_hold_ids or b.account_no not in accounts or b.month < eval_from:
+        if ((b.account_no, b.bill_id) in duplicate_hold_ids or b.account_no not in accounts
+                or bill_months[id(b)] < eval_from):
             continue
         owed = round(b.amount + b.late_fee + b.prior_balance, 2)
         if not b.invoice or b.amount < 0 or owed <= 0:
