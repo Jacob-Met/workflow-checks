@@ -184,7 +184,13 @@ def _prev_month(m: date) -> date:
     return date(m.year - (m.month == 1), (m.month - 2) % 12 + 1, 1)
 
 
+def _require_evaluation_month(eval_from: date) -> None:
+    if eval_from.day != 1:
+        raise ValueError("eval_from (--eval-from) must be the first day of a month; use YYYY-MM-01")
+
+
 def check(accounts, bills, occ, pays, as_of: date, eval_from: date, rules=None):
+    _require_evaluation_month(eval_from)
     rules = {**DEFAULT_RULES, **(rules or {})}
     flags, exceptions, naive_hits = [], [], []
     by_acct: dict[str, list[Bill]] = {}
@@ -372,12 +378,13 @@ def check(accounts, bills, occ, pays, as_of: date, eval_from: date, rules=None):
 def run(data: Path, out: Path, as_of: date | None = None, rules=None,
         eval_from: date | None = None) -> dict:
     data, out = Path(data), Path(out)
-    out.mkdir(parents=True, exist_ok=True)
     is_synthetic = (data / "expected.json").exists()
     meta = json.loads((data / "expected.json").read_text(encoding="utf-8")) if is_synthetic else {}
     as_of = as_of or (_d(meta["as_of"]) if meta.get("as_of") else date.today())
     eval_from = eval_from or (_d(meta["eval_from"]) if meta.get("eval_from") else
                               date(as_of.year - (as_of.month <= 6), (as_of.month - 7) % 12 + 1, 1))
+    _require_evaluation_month(eval_from)
+    out.mkdir(parents=True, exist_ok=True)
     accounts, bills, occ, pays = load(data)
     flags, exceptions, queue, naive = check(accounts, bills, occ, pays, as_of, eval_from, rules)
     with open(out / "flags.csv", "w", newline="", encoding="utf-8") as f:
