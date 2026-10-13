@@ -27,6 +27,8 @@ def main(argv=None) -> int:
 
     a = ap.parse_args(argv)
     if a.cmd == "generate":
+        if a.loads < 0:
+            ap.error("--loads must be nonnegative")
         from .synth import generate
         exp = generate(Path(a.out), a.loads, a.seed)
         print(f"wrote synthetic data to {a.out}: {a.loads} loads, "
