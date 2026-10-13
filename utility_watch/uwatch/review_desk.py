@@ -5,6 +5,7 @@ import csv
 import hashlib
 import io
 import json
+import os
 import secrets
 import stat
 from http.server import BaseHTTPRequestHandler, HTTPServer
@@ -29,9 +30,14 @@ class WorksheetChanged(ValueError):
 
 
 def _read_worksheet(path: Path) -> bytes:
+    def nonblocking_open(name, flags):
+        return os.open(name, flags | getattr(os, "O_NONBLOCK", 0))
+
     if not stat.S_ISREG(path.stat().st_mode):
         raise ValueError("the selected worksheet must be a regular file")
-    with path.open("rb") as source:
+    with open(path, "rb", opener=nonblocking_open) as source:
+        if not stat.S_ISREG(os.fstat(source.fileno()).st_mode):
+            raise ValueError("the selected worksheet must be a regular file")
         raw = source.read(MAX_WORKSHEET_BYTES + 1)
     if len(raw) > MAX_WORKSHEET_BYTES:
         raise ValueError("worksheet exceeds the 8 MiB desk limit")
