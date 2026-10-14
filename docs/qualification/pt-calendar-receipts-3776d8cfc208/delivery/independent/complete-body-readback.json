@@ -1,0 +1,18 @@
+{
+  "schema": "pt.calendar-kit.body-readback/1",
+  "commit": "88cfe3547b8437b587380a1e52b3ae6d44f0dd4f",
+  "packet_manifest": "0b2366833fae37d20c7a3768fabf1085bb4b405c",
+  "paths": 23,
+  "bytes": 94380,
+  "unique_blobs": 21,
+  "non_zip_unique_complete_equal": 20,
+  "manifest_complete_equal": true,
+  "zip": {
+    "path": "delivery/independent/actual-drive.zip",
+    "bytes": 13763,
+    "git_blob": "88b16fed1400cd08c65ec5f35fb3f1aa237178a5",
+    "sha256": "ff2e5208a60173a79f0b348452741b996d1293d69d8e0630709c8aedf2a95661",
+    "complete_base64_equal": true
+  },
+  "scope": "Read-only publication readback against the preserved actual Drive input and receiving files. No calendar rerun."
+}
