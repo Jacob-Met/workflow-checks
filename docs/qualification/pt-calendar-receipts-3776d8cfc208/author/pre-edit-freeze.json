@@ -1,0 +1,32 @@
+[
+  {
+    "path": "ORIGINAL_PROTOCOL.md",
+    "bytes": 2176,
+    "git_blob": "c21f49e39b57c878bc4b514b6f9a8f70104fe5e2"
+  },
+  {
+    "path": "observe_original.py",
+    "bytes": 6341,
+    "git_blob": "695b24d4c25ae169525fb742dd33fcec9e2e2cc8"
+  },
+  {
+    "path": "CONTRACT.md",
+    "bytes": 3836,
+    "git_blob": "66d113e6b6666854ed1fb714ee258fc35b00a2c3"
+  },
+  {
+    "path": "observer.stdout",
+    "bytes": 427,
+    "git_blob": "c09dccb721d57cf355e217e5796b3515dc741534"
+  },
+  {
+    "path": "observer.stderr",
+    "bytes": 0,
+    "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+  },
+  {
+    "path": "original-course/observation.json",
+    "bytes": 9421,
+    "git_blob": "efa39e08bee9110a6562b7308393d5a557377e15"
+  }
+]

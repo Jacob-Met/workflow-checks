@@ -1,0 +1,10 @@
+--- original/__main__.py
++++ candidate/__main__.py
+@@ -1,5 +1,5 @@
+ import sys
+ 
+-from .cli import main
++from .cli import _entrypoint
+ 
+-sys.exit(main())
++sys.exit(_entrypoint())

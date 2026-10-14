@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Workflow Checks//Synthetic PT handoff v1//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:3895e226cd450b60a316b4ed58a27dd61989b307bfc19626b13e0c0f96a3aafd@ptauth
+ .workflow-checks.invalid
+DTSTAMP:20261014T014604Z
+DTSTART;VALUE=DATE:20261020
+SUMMARY:[SYNTHETIC] P1 authorization review — SYN-009
+DESCRIPTION:SYNTHETIC authored receipt control\nAdministrative submit-by re
+ view\; no payer submission or staff-state change.\nWork-item key: SYN-009|
+ PAYER-雪|AUTH-7\nPatient: SYN-009 — Test Élodie 雪\nPayer: PAYER-雪 
+ — Fictional payer 雪\nAuthorization: AUTH-7\nClinic: Clinic Côte 雪 (
+ synthetic)\nPriority: P1\nRecorded submit-by: 2026-10-20\nAuthorization en
+ d: 2026-11-30\nNext visit: 2026-10-22\nStaff state: submitted\nStaff note:
+  Résumé\, café\; 雪\nSecond line\nStaff state recorded at: unrecorded\
+ nReport as of: 2026-10-14\nReport generated at (as recorded): 2026-10-14T0
+ 1:02:03Z\nClinic time zone (context\; all-day date unchanged): Europe/Pari
+ s\nReasons:\nAUTHORED_REVIEW\nDetails:\nLiteral <b>review</b>\nChecklist:\
+ nAuthored résumé\; not sent\nSource evidence:\nfictional.csv:row2
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

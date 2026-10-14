@@ -1,0 +1,14 @@
+{
+  "schema": "pt.calendar-receipts.manifest-order/1",
+  "scope": "Pre-build metadata-only sorting of six nested source records; all source and START payload bytes unchanged; no artifact previously built.",
+  "prior_git_blob": "d2ac8ea65b3750050b888c9abbe6a2106fb4fcb1",
+  "new_git_blob": "dfeb947f6c6a1fa161419f2c4823ff365e77b56a",
+  "paths": [
+    "CALENDAR_RECEIPTS.md",
+    "START_HERE.md",
+    "ptauth/__init__.py",
+    "ptauth/__main__.py",
+    "ptauth/cli.py",
+    "ptauth/worklist_calendar.py"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "schema": "pt.calendar-kit.receiver-freeze/1",
+  "protocol_blob": "2dd96e8350f4582296056a5d7c3513ceb0e72579",
+  "receiver_blob": "808f97813b45b1ab809c216aed6f8c51fcdbadef",
+  "chronology": "Frozen after reading maintained four-source calendar closure and original fictional report/receipt/calendar; before reading any ZIP, delivery START body or builder output. Source/START pins have been provided, no package body exposed.",
+  "syntax": "Python compile only passed; receiver and packaged source have not executed.",
+  "source_commit": "1bd30de4cecff7ee7564dccadf53561f3e21c284",
+  "expected_child_count": 1,
+  "runtime": "Local Linux Python3.10+ stdlib, explicitly recorded at invocation; no remote Windows/Tk/browser required.",
+  "timestamp_correction": "Root initially suggested full prior ICS equality. Maintained renderer independently read uses current UTC DTSTAMP, so protocol freezes single-line normalization with wall-clock invocation interval bound before package exposure. No clock or source alteration.",
+  "oracle_files": [
+    {
+      "path": "oracle/prior-calendar.ics",
+      "bytes": 1223,
+      "sha256": "2823830a636d0f511d05b94cbef5a6eb6f6e4093e43bff486ea86760cf389c1d",
+      "git_blob": "e6c6dd73e470ab29d8f6baa9c8d032e4f41fae8e"
+    },
+    {
+      "path": "oracle/prior-receipt.json",
+      "bytes": 497,
+      "sha256": "4954635cae7c2cce8b0044106905570431f0f6d81dfbfb3eb2b35cf9a6923785",
+      "git_blob": "ae5ca5f2557d7505045ac71c23ddb85f33b9f9ee"
+    },
+    {
+      "path": "oracle/summary.json",
+      "bytes": 1443,
+      "sha256": "da1ce4dbe8f52e82d0f1dae94a151d82a5b3a202a7ea7d494bc7527991a9d96c",
+      "git_blob": "a78876985055972f122725366a19ba8c9735ee1d"
+    },
+    {
+      "path": "oracle/work_state.json",
+      "bytes": 213,
+      "sha256": "d596f2a8bae347f5d8c59273d3b47a1edb354f2f256d3f909c14c7e95c889efe",
+      "git_blob": "091cf6cf96601fd5988e2f78dc119844a97343d0"
+    }
+  ]
+}

@@ -1,0 +1,383 @@
+{
+  "schema": "ptauth.calendar.qualification-payloads/1",
+  "files": [
+    {
+      "path": "docs/qualification/pt-calendar-receipts-3776d8cfc208/author/CALENDAR_RECEIPTS.initial.md",
+      "sha": "b9b71b5faf5b1e3b2c3f2593ef71d59d7f95e65e",
+      "bytes": 4424,
+      "sha256": "ea9c9d66cb46b519bbc563f5072f36b26a21f4a0018985ffbc120621fe4fa370"
+    },
+    {
+      "path": "docs/qualification/pt-calendar-receipts-3776d8cfc208/author/CALENDAR_RECEIPTS.md",
+      "sha": "a4a55efba02796069bbd974ab2d9de3060da5428",
+      "bytes": 4541,
+      "sha256": "379fa9fbc54694460d1809cde7eb7934c50e0257f27c474f1c918b5787da6485"
+    },
+    {
+      "path": "docs/qualification/pt-calendar-receipts-3776d8cfc208/author/CONTRACT.md",
+      "sha": "66d113e6b6666854ed1fb714ee258fc35b00a2c3",
+      "bytes": 3836,
+      "sha256": "c7a6fc996985e8301c4811dd22a20f876dfa03a4688e4b64ceddf607628e2ced"
+    },
+    {
+      "path": "docs/qualification/pt-calendar-receipts-3776d8cfc208/author/ORIGINAL_PROTOCOL.md",
+      "sha": "c21f49e39b57c878bc4b514b6f9a8f70104fe5e2",
+      "bytes": 2176,
+      "sha256": "bf3b5d9af7a9dfba0da277dc871584c6474ba448bdb2792f5a73cf1817a4244b"
+    },
+    {
+      "path": "docs/qualification/pt-calendar-receipts-3776d8cfc208/author/__main__.py.diff",
+      "sha": "bca26a2c4278091865f1323c32841070b16f5800",
+      "bytes": 186,
+      "sha256": "2c6e66e27731a8804deaa1f66e244cb16b5c6a7e539b80015a62beaaecf198e0"
+    },
+    {
+      "path": "docs/qualification/pt-calendar-receipts-3776d8cfc208/author/author-control-freeze.json",
+      "sha": "12fc7ee98ebfcfe0cfbe6aa1a731da8b46ebfd22",
+      "bytes": 2662,
+      "sha256": "7dc7841c26f96fb748710db164584425e4ec6c0cb122c8b4f08e997a2685bc34"
+    },
+    {
+      "path": "docs/qualification/pt-calendar-receipts-3776d8cfc208/author/candidate-freeze.json",
+      "sha": "a44b3283c41cc1461a20ee1803c2670fe8f364c9",
+      "bytes": 997,
+      "sha256": "d65114b4ddeed9116994f059d55aaeb953e5afa5d678c752ad077dfdf717d1f1"
+    },
+    {
+      "path": "docs/qualification/pt-calendar-receipts-3776d8cfc208/author/cli.py.diff",
+      "sha": "2a22b73a7abfbc7b937dcea6af1c9b6622f83672",
+      "bytes": 1669,
+      "sha256": "b381e882ad4010feacf9edb5a93bbbd6112715a057156ceb3bcd838ad4ff4413"
+    },
+    {
+      "path": "docs/qualification/pt-calendar-receipts-3776d8cfc208/author/guide-clarification.json",
+      "sha": "f77d2a44e6a0c84e5ba61b76971b7243bced536c",
+      "bytes": 538,
+      "sha256": "5b21024e2a2659500869c02b9f0732af4856809cd16449d6e93eedf7979d5b43"
+    },
+    {
+      "path": "docs/qualification/pt-calendar-receipts-3776d8cfc208/author/init-admission.json",
+      "sha": "d2ac1b2291e7a824174e7cb1fb087dd698ee17fa",
+      "bytes": 408,
+      "sha256": "7536afa912bae534168e76a4f742ecc6b19dfb40f6b5b33c8780b6a5d2ac8082"
+    },
+    {
+      "path": "docs/qualification/pt-calendar-receipts-3776d8cfc208/author/observe_original.py",
+      "sha": "695b24d4c25ae169525fb742dd33fcec9e2e2cc8",
+      "bytes": 6341,
+      "sha256": "cc8eb327f94aa840e860c35c429dbf6a74b16c487f7ecf4ee84001c7373b1eb4"
+    },
+    {
+      "path": "docs/qualification/pt-calendar-receipts-3776d8cfc208/author/observer.stderr",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/qualification/pt-calendar-receipts-3776d8cfc208/author/observer.stdout",
+      "sha": "c09dccb721d57cf355e217e5796b3515dc741534",
+      "bytes": 427,
+      "sha256": "56fbf3acedc96738c6612aa44ac5b4546cff0f3eab802faafedefbaf1fd89637"
+    },
+    {
+      "path": "docs/qualification/pt-calendar-receipts-3776d8cfc208/author/original/ptauth/__init__.py",
+      "sha": "a6f4545ac17e2578317ef694f7bb548489f6c71c",
+      "bytes": 311,
+      "sha256": "71e1527f153c607b679485e4954af1b3ec6a843b041562eb07f4d36e08fd231c"
+    },
+    {
+      "path": "docs/qualification/pt-calendar-receipts-3776d8cfc208/author/original/ptauth/__main__.py",
+      "sha": "3c93dd90cf357624c77ab3589ef2b201868c181e",
+      "bytes": 57,
+      "sha256": "4b1afbca74a10abc3cff7b4e5a11b558bf619e45b89709faf9225a474a2a250f"
+    },
+    {
+      "path": "docs/qualification/pt-calendar-receipts-3776d8cfc208/author/original/ptauth/cli.py",
+      "sha": "559c0a76effa2204041e9318e9869a6c7389f50d",
+      "bytes": 5071,
+      "sha256": "cd4e5ed987b6ae686de687eabbb69007ab9cda8204ec41ebb25185f864321585"
+    },
+    {
+      "path": "docs/qualification/pt-calendar-receipts-3776d8cfc208/author/original/ptauth/worklist_calendar.py",
+      "sha": "e125f9ed77343fcc3d82e6d6f25a7296b0463aa7",
+      "bytes": 13750,
+      "sha256": "89751f1de5548ced34a59c296d0edf1eda06a38bdb935be3e7c3c8b2ae5d55c0"
+    },
+    {
+      "path": "docs/qualification/pt-calendar-receipts-3776d8cfc208/author/original-course/ascii-output-\u96ea.ics",
+      "sha": "d956a60872a4e1898517315153bce18da9b0616e",
+      "bytes": 1164,
+      "sha256": "2f0c9b6c81f92bd046d0dc9ed97d3a822f1be2ae059f3a7edf18822e6b47db7c"
+    },
+    {
+      "path": "docs/qualification/pt-calendar-receipts-3776d8cfc208/author/original-course/ascii-output.stderr",
+      "sha": "a5253076664e8f750cb690bbd850a87683d497a1",
+      "bytes": 616,
+      "sha256": "0c4cb610dec5c327774710cdfee0e6152dc0becc717446932a20b728c27c98f6"
+    },
+    {
+      "path": "docs/qualification/pt-calendar-receipts-3776d8cfc208/author/original-course/ascii-output.stdout",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/qualification/pt-calendar-receipts-3776d8cfc208/author/original-course/canonical-closed-pipe-\u96ea.ics",
+      "sha": "d956a60872a4e1898517315153bce18da9b0616e",
+      "bytes": 1164,
+      "sha256": "2f0c9b6c81f92bd046d0dc9ed97d3a822f1be2ae059f3a7edf18822e6b47db7c"
+    },
+    {
+      "path": "docs/qualification/pt-calendar-receipts-3776d8cfc208/author/original-course/canonical-closed-pipe.stderr",
+      "sha": "167bb988bfd978d9340d8edda25406c0d297a1ce",
+      "bytes": 124,
+      "sha256": "c7593c086bf05d69ae91a2e061c8b9cc97906f0aa9a615c346e4f4b2fca74c4f"
+    },
+    {
+      "path": "docs/qualification/pt-calendar-receipts-3776d8cfc208/author/original-course/canonical-closed-pipe.stdout",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/qualification/pt-calendar-receipts-3776d8cfc208/author/original-course/cli-closed-pipe-\u96ea.ics",
+      "sha": "d956a60872a4e1898517315153bce18da9b0616e",
+      "bytes": 1164,
+      "sha256": "2f0c9b6c81f92bd046d0dc9ed97d3a822f1be2ae059f3a7edf18822e6b47db7c"
+    },
+    {
+      "path": "docs/qualification/pt-calendar-receipts-3776d8cfc208/author/original-course/cli-closed-pipe.stderr",
+      "sha": "167bb988bfd978d9340d8edda25406c0d297a1ce",
+      "bytes": 124,
+      "sha256": "c7593c086bf05d69ae91a2e061c8b9cc97906f0aa9a615c346e4f4b2fca74c4f"
+    },
+    {
+      "path": "docs/qualification/pt-calendar-receipts-3776d8cfc208/author/original-course/cli-closed-pipe.stdout",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/qualification/pt-calendar-receipts-3776d8cfc208/author/original-course/observation.json",
+      "sha": "efa39e08bee9110a6562b7308393d5a557377e15",
+      "bytes": 9421,
+      "sha256": "4ec8bc7660ef5b571ed092ad1478ec56531ea8f4adf42a0d4b418a93146da25b"
+    },
+    {
+      "path": "docs/qualification/pt-calendar-receipts-3776d8cfc208/author/original-course/ordinary-utf8-\u96ea.ics",
+      "sha": "d956a60872a4e1898517315153bce18da9b0616e",
+      "bytes": 1164,
+      "sha256": "2f0c9b6c81f92bd046d0dc9ed97d3a822f1be2ae059f3a7edf18822e6b47db7c"
+    },
+    {
+      "path": "docs/qualification/pt-calendar-receipts-3776d8cfc208/author/original-course/ordinary-utf8.stderr",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/qualification/pt-calendar-receipts-3776d8cfc208/author/original-course/ordinary-utf8.stdout",
+      "sha": "96a22c9bb2500d45551d6704ccb10bc2b3fe2ff8",
+      "bytes": 477,
+      "sha256": "8bb8e73f9c790c7f865aa6dc7dbd1d891f0bea6a920a169fe46a2e0485b8faa4"
+    },
+    {
+      "path": "docs/qualification/pt-calendar-receipts-3776d8cfc208/author/original-course/saved-report/summary.json",
+      "sha": "6b1fb1ba92e2f05b5dc060dfc09e24da10e2ffeb",
+      "bytes": 1326,
+      "sha256": "6eb4b2d0d656bf8f20755cf84674106eb5bf537a6a86d5ef35085beefca2bd59"
+    },
+    {
+      "path": "docs/qualification/pt-calendar-receipts-3776d8cfc208/author/original-course/saved-report/work_state.json",
+      "sha": "5e2c60dfa76dd3f0699c6263c0f881b1306bd7a5",
+      "bytes": 107,
+      "sha256": "9843186e7c46e7854dfa30018061e9952d9d46545f1d013e5464399ed2ab6155"
+    },
+    {
+      "path": "docs/qualification/pt-calendar-receipts-3776d8cfc208/author/pre-edit-freeze.json",
+      "sha": "e7966f5bc155a2d09f8ae2ef3d6b086ce894642e",
+      "bytes": 729,
+      "sha256": "e9f4a5e54eddd1e820a79c3944326db8dce530eda7424a236ae1bba85c931599"
+    },
+    {
+      "path": "docs/qualification/pt-calendar-receipts-3776d8cfc208/author/regression-candidate.stderr",
+      "sha": "d1cb9ada22b9ac68ed1bda1bc4bcc44b01a9e37c",
+      "bytes": 1480,
+      "sha256": "d94c476ed1037c0d87cd2bed8ecb81c1908b13a64d8c45cc34c33f12daf315fc"
+    },
+    {
+      "path": "docs/qualification/pt-calendar-receipts-3776d8cfc208/author/regression-candidate.stdout",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/qualification/pt-calendar-receipts-3776d8cfc208/author/regression-original.stderr",
+      "sha": "dee7fd2209e1f15b1f8e9cc1d10d734045ca3064",
+      "bytes": 7609,
+      "sha256": "6068a0db29a22fbc38344079c10711773bae2bb0258ed2deeb269353456f2223"
+    },
+    {
+      "path": "docs/qualification/pt-calendar-receipts-3776d8cfc208/author/regression-original.stdout",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/qualification/pt-calendar-receipts-3776d8cfc208/author/source-admission.json",
+      "sha": "865f2ee1bad9d85922c97568cee462bf08a9b589",
+      "bytes": 20960,
+      "sha256": "cf5754e9a834e9a4f69d7334cf13c84d7dc8bd5a8add8e5a43c745b8d2b6b574"
+    },
+    {
+      "path": "docs/qualification/pt-calendar-receipts-3776d8cfc208/author/test_calendar_receipt_output.py",
+      "sha": "3264d6566e4ce482b47e05b5161a4a35bc74df56",
+      "bytes": 8759,
+      "sha256": "faefd09f9a03becd100ca50d2ed7ed23a48d4f256fcecb23fab3680134d62c68"
+    },
+    {
+      "path": "docs/qualification/pt-calendar-receipts-3776d8cfc208/independent/PROTOCOL.md",
+      "sha": "82176f1e5647da26c986a6c91e407dd8cd5f515d",
+      "bytes": 2477,
+      "sha256": "765b41403a09e01254172e2e2e14457fe0c07010389890146a7bd095cdbf1910"
+    },
+    {
+      "path": "docs/qualification/pt-calendar-receipts-3776d8cfc208/independent/native-manifest.json",
+      "sha": "440a53aefb5727e992d7fd89b1cb725466d14b31",
+      "bytes": 5048,
+      "sha256": "830bc9e323ff295eea9f81be6fbe9064d6a846ab33c7d757341c088097c86e3e"
+    },
+    {
+      "path": "docs/qualification/pt-calendar-receipts-3776d8cfc208/independent/outer-observation.json",
+      "sha": "ed89c3dabee5299708d6ceb42dbe64995e74fab4",
+      "bytes": 1467,
+      "sha256": "1f75c7ea6e678f03847713478e4497e0d6f299efcf6812aea706f436dc7b1ecb"
+    },
+    {
+      "path": "docs/qualification/pt-calendar-receipts-3776d8cfc208/independent/pre-execution-amendment.json",
+      "sha": "edb1b76fe775f70719b5008f553659c6be8253bf",
+      "bytes": 755,
+      "sha256": "64d6ba03a920be59c92a201ee5dde93c582f6cc73dfaf4159ba6e1b69d77b2a8"
+    },
+    {
+      "path": "docs/qualification/pt-calendar-receipts-3776d8cfc208/independent/receive_cli.initial.py",
+      "sha": "3a22a750397790e8757ae4e591fc80aaa96efd6b",
+      "bytes": 8283,
+      "sha256": "95de887d2d6be94457911b0f9bee294b598b21ee700a74cf862f9e54fb3f4a85"
+    },
+    {
+      "path": "docs/qualification/pt-calendar-receipts-3776d8cfc208/independent/receive_cli.py",
+      "sha": "bccc907cc1476c35bccd24d4cfb5bcf595f55d82",
+      "bytes": 8379,
+      "sha256": "8d6fc841ffac539fab8b3008299777e0941db277a59fad09b926c1b6379850e0"
+    },
+    {
+      "path": "docs/qualification/pt-calendar-receipts-3776d8cfc208/independent/received-course/canonical-closed-\u96ea.ics",
+      "sha": "e6c6dd73e470ab29d8f6baa9c8d032e4f41fae8e",
+      "bytes": 1223,
+      "sha256": "2823830a636d0f511d05b94cbef5a6eb6f6e4093e43bff486ea86760cf389c1d"
+    },
+    {
+      "path": "docs/qualification/pt-calendar-receipts-3776d8cfc208/independent/received-course/canonical-closed.stderr",
+      "sha": "01e5bf9c53b5b411ada1c1f17f5d57d023d5453f",
+      "bytes": 114,
+      "sha256": "3c8dd68c0f1f23aa1e315b727fba7ed4020aba485f474f566e1358fef3eaf7e2"
+    },
+    {
+      "path": "docs/qualification/pt-calendar-receipts-3776d8cfc208/independent/received-course/canonical-closed.stdout",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/qualification/pt-calendar-receipts-3776d8cfc208/independent/received-course/canonical-utf8-\u96ea.ics",
+      "sha": "e6c6dd73e470ab29d8f6baa9c8d032e4f41fae8e",
+      "bytes": 1223,
+      "sha256": "2823830a636d0f511d05b94cbef5a6eb6f6e4093e43bff486ea86760cf389c1d"
+    },
+    {
+      "path": "docs/qualification/pt-calendar-receipts-3776d8cfc208/independent/received-course/canonical-utf8.stderr",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/qualification/pt-calendar-receipts-3776d8cfc208/independent/received-course/canonical-utf8.stdout",
+      "sha": "ae5ca5f2557d7505045ac71c23ddb85f33b9f9ee",
+      "bytes": 497,
+      "sha256": "4954635cae7c2cce8b0044106905570431f0f6d81dfbfb3eb2b35cf9a6923785"
+    },
+    {
+      "path": "docs/qualification/pt-calendar-receipts-3776d8cfc208/independent/received-course/direct-ascii-\u96ea.ics",
+      "sha": "e6c6dd73e470ab29d8f6baa9c8d032e4f41fae8e",
+      "bytes": 1223,
+      "sha256": "2823830a636d0f511d05b94cbef5a6eb6f6e4093e43bff486ea86760cf389c1d"
+    },
+    {
+      "path": "docs/qualification/pt-calendar-receipts-3776d8cfc208/independent/received-course/direct-ascii.stderr",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/qualification/pt-calendar-receipts-3776d8cfc208/independent/received-course/direct-ascii.stdout",
+      "sha": "ee1888b6c061a71b2fe68af3237a5af72b0b1ca5",
+      "bytes": 495,
+      "sha256": "f762f2b55707125023e1a9d0532d9033af16983d2e95569b52fa68f03544c979"
+    },
+    {
+      "path": "docs/qualification/pt-calendar-receipts-3776d8cfc208/independent/received-course/direct-closed-\u96ea.ics",
+      "sha": "e6c6dd73e470ab29d8f6baa9c8d032e4f41fae8e",
+      "bytes": 1223,
+      "sha256": "2823830a636d0f511d05b94cbef5a6eb6f6e4093e43bff486ea86760cf389c1d"
+    },
+    {
+      "path": "docs/qualification/pt-calendar-receipts-3776d8cfc208/independent/received-course/direct-closed.stderr",
+      "sha": "01e5bf9c53b5b411ada1c1f17f5d57d023d5453f",
+      "bytes": 114,
+      "sha256": "3c8dd68c0f1f23aa1e315b727fba7ed4020aba485f474f566e1358fef3eaf7e2"
+    },
+    {
+      "path": "docs/qualification/pt-calendar-receipts-3776d8cfc208/independent/received-course/direct-closed.stdout",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/qualification/pt-calendar-receipts-3776d8cfc208/independent/received-course/occupied-ascii-\u96ea.ics",
+      "sha": "c86b1c982d5a1e7b2789ddde74fb229e06746edc",
+      "bytes": 27,
+      "sha256": "eb2e8e73aeada884987b341c3dc9d28d2d5f4b51ffa267ef30fd1443c7e0085f"
+    },
+    {
+      "path": "docs/qualification/pt-calendar-receipts-3776d8cfc208/independent/received-course/occupied-ascii.stderr",
+      "sha": "49fb6aa8df524078fba976c90532f4916e5c9ab5",
+      "bytes": 135,
+      "sha256": "cb73bb7afe9d0ba429b77dd2bf2cc7d2a07ff105c66bb75f9a0c8c0cf9d62b4f"
+    },
+    {
+      "path": "docs/qualification/pt-calendar-receipts-3776d8cfc208/independent/received-course/occupied-ascii.stdout",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/qualification/pt-calendar-receipts-3776d8cfc208/independent/received-course/receiving.json",
+      "sha": "34cd90df4bfff806ddcb50217e1f9a70923aaad6",
+      "bytes": 14393,
+      "sha256": "ed1cbc45a6570111785961b04d88651f8d17ad64ca7944d39ee0c7035c9366b0"
+    },
+    {
+      "path": "docs/qualification/pt-calendar-receipts-3776d8cfc208/independent/received-course/saved-report/summary.json",
+      "sha": "a78876985055972f122725366a19ba8c9735ee1d",
+      "bytes": 1443,
+      "sha256": "da1ce4dbe8f52e82d0f1dae94a151d82a5b3a202a7ea7d494bc7527991a9d96c"
+    },
+    {
+      "path": "docs/qualification/pt-calendar-receipts-3776d8cfc208/independent/received-course/saved-report/work_state.json",
+      "sha": "091cf6cf96601fd5988e2f78dc119844a97343d0",
+      "bytes": 213,
+      "sha256": "d596f2a8bae347f5d8c59273d3b47a1edb354f2f256d3f909c14c7e95c889efe"
+    }
+  ]
+}

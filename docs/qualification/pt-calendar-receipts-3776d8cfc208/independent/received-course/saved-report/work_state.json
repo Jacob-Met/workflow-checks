@@ -1,0 +1,10 @@
+{
+  "SYN-009|PAYER-雪|AUTH-7": {
+    "state": "submitted",
+    "note": "Résumé, café; 雪\nSecond line"
+  },
+  "SYN-010|PAYER-雪|AUTH-8": {
+    "state": "approved",
+    "note": "Excluded authored item"
+  }
+}

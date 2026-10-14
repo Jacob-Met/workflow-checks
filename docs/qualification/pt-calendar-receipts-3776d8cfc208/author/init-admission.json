@@ -1,0 +1,4 @@
+{
+  "content": "\"\"\"PT authorization / visit-limit tracker (proof of concept).\r\n\r\nSYNTHETIC DATA ONLY. Stdlib-only. Produces a daily re-authorization worklist\r\nfrom a schedule export, an authorization log and a per-payer rules table.\r\nNothing is sent to payers; every output is a draft for staff.\r\n\"\"\"\r\n\r\n__version__ = \"0.1.0\"\r\n",
+  "sha": "a6f4545ac17e2578317ef694f7bb548489f6c71c"
+}

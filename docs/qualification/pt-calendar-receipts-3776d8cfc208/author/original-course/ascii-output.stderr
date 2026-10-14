@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/workspace/scratch/3776d8cfc208/pt-calendar-stdout-author/original/ptauth/__main__.py", line 5, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/workspace/scratch/3776d8cfc208/pt-calendar-stdout-author/original/ptauth/cli.py", line 80, in main
+    print(json.dumps({**calendar_metadata(plan), "output": str(Path(a.output))}, ensure_ascii=False))
+UnicodeEncodeError: 'ascii' codec can't encode character '\u96ea' in position 218: ordinal not in range(128)

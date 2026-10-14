@@ -1,0 +1,50 @@
+{
+  "banner": "SYNTHETIC DATA ONLY — authored fixture",
+  "as_of": "2026-10-14",
+  "generated_at": "2026-10-14T00:00:00Z",
+  "clinic_timezone": "UTC",
+  "worklist": [
+    {
+      "key": "DEMO-ONE|DEMO-PAYER|DEMO-AUTH",
+      "patient_id": "DEMO-ONE",
+      "patient_name": "Fictional calendar observation",
+      "payer_id": "DEMO-PAYER",
+      "payer_name": "Fictional payer",
+      "auth_no": "DEMO-AUTH",
+      "clinic": "Fictional clinic 雪",
+      "priority": "P1",
+      "submit_by": "2026-10-21",
+      "auth_end": "2026-10-31",
+      "next_visit": null,
+      "reasons": [
+        "Authored receipt test"
+      ],
+      "detail": [],
+      "checklist": [],
+      "evidence": [
+        "Authored fixture; no source records"
+      ]
+    },
+    {
+      "key": "DEMO-雪|DEMO-PAYER|DEMO-AUTH",
+      "patient_id": "DEMO-雪",
+      "patient_name": "Fictional calendar observation",
+      "payer_id": "DEMO-PAYER",
+      "payer_name": "Fictional payer",
+      "auth_no": "DEMO-AUTH",
+      "clinic": "Fictional clinic 雪",
+      "priority": "P1",
+      "submit_by": null,
+      "auth_end": "2026-10-31",
+      "next_visit": null,
+      "reasons": [
+        "Authored receipt test"
+      ],
+      "detail": [],
+      "checklist": [],
+      "evidence": [
+        "Authored fixture; no source records"
+      ]
+    }
+  ]
+}

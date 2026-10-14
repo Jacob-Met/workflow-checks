@@ -1,0 +1,40 @@
+{
+  "schema": "hamon.delivery-zip/1",
+  "files": [
+    {
+      "path": "pt_auth/CALENDAR_RECEIPTS.md",
+      "bytes": 4541,
+      "sha256": "379fa9fbc54694460d1809cde7eb7934c50e0257f27c474f1c918b5787da6485"
+    },
+    {
+      "path": "pt_auth/SOURCE_MANIFEST.json",
+      "bytes": 2473,
+      "sha256": "f8c3615e0e38be52b1d5f663c5fde5ed8b1a9298d9b067a6b7402801855b2bb5"
+    },
+    {
+      "path": "pt_auth/START_HERE.md",
+      "bytes": 4866,
+      "sha256": "ba604c3d114c001f4e983da5ed7a9944c24c66b095dbbd187ebbd35816fba980"
+    },
+    {
+      "path": "pt_auth/ptauth/__init__.py",
+      "bytes": 311,
+      "sha256": "71e1527f153c607b679485e4954af1b3ec6a843b041562eb07f4d36e08fd231c"
+    },
+    {
+      "path": "pt_auth/ptauth/__main__.py",
+      "bytes": 71,
+      "sha256": "712d5a98258176d09d165788048d34da033af45c04d14387d9e51de108db5669"
+    },
+    {
+      "path": "pt_auth/ptauth/cli.py",
+      "bytes": 5958,
+      "sha256": "c8eba88ff13df857bc6f28395cb8b65419e3d666c496d31952df644bf006a703"
+    },
+    {
+      "path": "pt_auth/ptauth/worklist_calendar.py",
+      "bytes": 13750,
+      "sha256": "89751f1de5548ced34a59c296d0edf1eda06a38bdb935be3e7c3c8b2ae5d55c0"
+    }
+  ]
+}
