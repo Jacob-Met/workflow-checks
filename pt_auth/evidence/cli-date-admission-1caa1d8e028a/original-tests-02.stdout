@@ -1,0 +1,319 @@
+FFFFFFFFF..                                                              [100%]
+=================================== FAILURES ===================================
+_________ test_invalid_explicit_run_date_preserves_previous_worklist[] _________
+
+tmp_path = PosixPath('/dev/shm/hamon-1caa-pt-date/original-test-temp-02/test_invalid_explicit_run_date0')
+data = PosixPath('/dev/shm/hamon-1caa-pt-date/original-test-temp-02/test_invalid_explicit_run_date0/fictional data')
+value = ''
+
+    @pytest.mark.parametrize("value", ["", " ", "2026-02-30", "not-a-date"])
+    def test_invalid_explicit_run_date_preserves_previous_worklist(tmp_path, data, value):
+        report = tmp_path / "saved report"
+        accepted = cli(
+            tmp_path, "run", "--data", data, "--out", report,
+            "--as-of", "2026-10-01", "--clinic-timezone", "UTC",
+        )
+        assert accepted.returncode == 0, accepted
+        assert json.loads((report / "summary.json").read_text(encoding="utf-8"))["as_of"] == "2026-10-01"
+        before = snapshot(tmp_path)
+    
+        refused = cli(
+            tmp_path, "run", "--data", data, "--out", report,
+            "--as-of", value, "--clinic-timezone", "UTC",
+        )
+    
+>       assert_usage_error(refused)
+
+tests/test_cli_date_admission.py:82: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+result = CompletedProcess(args=['/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python', '-m', 'ptauth', 'ru...ev/shm/hamon-1caa-pt-date/original-test-temp-02/test_invalid_explicit_run_date0/saved report/digest.html\n', stderr='')
+
+    def assert_usage_error(result):
+>       assert result.returncode == 2, result
+E       AssertionError: CompletedProcess(args=['/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python', '-m', 'ptauth', 'ru...ev/shm/hamon-1caa-pt-date/original-test-temp-02/test_invalid_explicit_run_date0/saved report/digest.html
+E         ', stderr='')
+E       assert 0 == 2
+E        +  where 0 = CompletedProcess(args=['/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python', '-m', 'ptauth', 'ru...ev/shm/hamon-1caa-pt-date/original-test-temp-02/test_invalid_explicit_run_date0/saved report/digest.html\n', stderr='').returncode
+
+tests/test_cli_date_admission.py:46: AssertionError
+________ test_invalid_explicit_run_date_preserves_previous_worklist[ ] _________
+
+tmp_path = PosixPath('/dev/shm/hamon-1caa-pt-date/original-test-temp-02/test_invalid_explicit_run_date1')
+data = PosixPath('/dev/shm/hamon-1caa-pt-date/original-test-temp-02/test_invalid_explicit_run_date1/fictional data')
+value = ' '
+
+    @pytest.mark.parametrize("value", ["", " ", "2026-02-30", "not-a-date"])
+    def test_invalid_explicit_run_date_preserves_previous_worklist(tmp_path, data, value):
+        report = tmp_path / "saved report"
+        accepted = cli(
+            tmp_path, "run", "--data", data, "--out", report,
+            "--as-of", "2026-10-01", "--clinic-timezone", "UTC",
+        )
+        assert accepted.returncode == 0, accepted
+        assert json.loads((report / "summary.json").read_text(encoding="utf-8"))["as_of"] == "2026-10-01"
+        before = snapshot(tmp_path)
+    
+        refused = cli(
+            tmp_path, "run", "--data", data, "--out", report,
+            "--as-of", value, "--clinic-timezone", "UTC",
+        )
+    
+>       assert_usage_error(refused)
+
+tests/test_cli_date_admission.py:82: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+result = CompletedProcess(args=['/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python', '-m', 'ptauth', 'ru...e,\n                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: Invalid isoformat string: \' \'\n')
+
+    def assert_usage_error(result):
+>       assert result.returncode == 2, result
+E       AssertionError: CompletedProcess(args=['/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python', '-m', 'ptauth', 'ru...e,
+E                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E         ValueError: Invalid isoformat string: \' \'
+E         ')
+E       assert 1 == 2
+E        +  where 1 = CompletedProcess(args=['/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python', '-m', 'ptauth', 'ru...e,\n                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: Invalid isoformat string: \' \'\n').returncode
+
+tests/test_cli_date_admission.py:46: AssertionError
+____ test_invalid_explicit_run_date_preserves_previous_worklist[2026-02-30] ____
+
+tmp_path = PosixPath('/dev/shm/hamon-1caa-pt-date/original-test-temp-02/test_invalid_explicit_run_date2')
+data = PosixPath('/dev/shm/hamon-1caa-pt-date/original-test-temp-02/test_invalid_explicit_run_date2/fictional data')
+value = '2026-02-30'
+
+    @pytest.mark.parametrize("value", ["", " ", "2026-02-30", "not-a-date"])
+    def test_invalid_explicit_run_date_preserves_previous_worklist(tmp_path, data, value):
+        report = tmp_path / "saved report"
+        accepted = cli(
+            tmp_path, "run", "--data", data, "--out", report,
+            "--as-of", "2026-10-01", "--clinic-timezone", "UTC",
+        )
+        assert accepted.returncode == 0, accepted
+        assert json.loads((report / "summary.json").read_text(encoding="utf-8"))["as_of"] == "2026-10-01"
+        before = snapshot(tmp_path)
+    
+        refused = cli(
+            tmp_path, "run", "--data", data, "--out", report,
+            "--as-of", value, "--clinic-timezone", "UTC",
+        )
+    
+>       assert_usage_error(refused)
+
+tests/test_cli_date_admission.py:82: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+result = CompletedProcess(args=['/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python', '-m', 'ptauth', 'ru...one,\n                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: day is out of range for month\n')
+
+    def assert_usage_error(result):
+>       assert result.returncode == 2, result
+E       AssertionError: CompletedProcess(args=['/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python', '-m', 'ptauth', 'ru...one,
+E                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E         ValueError: day is out of range for month
+E         ')
+E       assert 1 == 2
+E        +  where 1 = CompletedProcess(args=['/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python', '-m', 'ptauth', 'ru...one,\n                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: day is out of range for month\n').returncode
+
+tests/test_cli_date_admission.py:46: AssertionError
+____ test_invalid_explicit_run_date_preserves_previous_worklist[not-a-date] ____
+
+tmp_path = PosixPath('/dev/shm/hamon-1caa-pt-date/original-test-temp-02/test_invalid_explicit_run_date3')
+data = PosixPath('/dev/shm/hamon-1caa-pt-date/original-test-temp-02/test_invalid_explicit_run_date3/fictional data')
+value = 'not-a-date'
+
+    @pytest.mark.parametrize("value", ["", " ", "2026-02-30", "not-a-date"])
+    def test_invalid_explicit_run_date_preserves_previous_worklist(tmp_path, data, value):
+        report = tmp_path / "saved report"
+        accepted = cli(
+            tmp_path, "run", "--data", data, "--out", report,
+            "--as-of", "2026-10-01", "--clinic-timezone", "UTC",
+        )
+        assert accepted.returncode == 0, accepted
+        assert json.loads((report / "summary.json").read_text(encoding="utf-8"))["as_of"] == "2026-10-01"
+        before = snapshot(tmp_path)
+    
+        refused = cli(
+            tmp_path, "run", "--data", data, "--out", report,
+            "--as-of", value, "--clinic-timezone", "UTC",
+        )
+    
+>       assert_usage_error(refused)
+
+tests/test_cli_date_admission.py:82: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+result = CompletedProcess(args=['/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python', '-m', 'ptauth', 'ru...                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: Invalid isoformat string: \'not-a-date\'\n')
+
+    def assert_usage_error(result):
+>       assert result.returncode == 2, result
+E       AssertionError: CompletedProcess(args=['/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python', '-m', 'ptauth', 'ru...                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E         ValueError: Invalid isoformat string: \'not-a-date\'
+E         ')
+E       assert 1 == 2
+E        +  where 1 = CompletedProcess(args=['/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python', '-m', 'ptauth', 'ru...                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: Invalid isoformat string: \'not-a-date\'\n').returncode
+
+tests/test_cli_date_admission.py:46: AssertionError
+________ test_invalid_explicit_generator_date_preserves_existing_data[] ________
+
+tmp_path = PosixPath('/dev/shm/hamon-1caa-pt-date/original-test-temp-02/test_invalid_explicit_generato0')
+data = PosixPath('/dev/shm/hamon-1caa-pt-date/original-test-temp-02/test_invalid_explicit_generato0/fictional data')
+value = ''
+
+    @pytest.mark.parametrize("value", ["", " ", "2026-02-30"])
+    def test_invalid_explicit_generator_date_preserves_existing_data(tmp_path, data, value):
+        before = snapshot(tmp_path)
+    
+        refused = cli(
+            tmp_path, "generate", "--out", data, "--patients", "6", "--as-of", value,
+        )
+    
+>       assert_usage_error(refused)
+
+tests/test_cli_date_admission.py:94: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+result = CompletedProcess(args=['/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python', '-m', 'ptauth', 'ge...                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: Invalid isoformat string: \'\'\n')
+
+    def assert_usage_error(result):
+>       assert result.returncode == 2, result
+E       AssertionError: CompletedProcess(args=['/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python', '-m', 'ptauth', 'ge...                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E         ValueError: Invalid isoformat string: \'\'
+E         ')
+E       assert 1 == 2
+E        +  where 1 = CompletedProcess(args=['/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python', '-m', 'ptauth', 'ge...                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: Invalid isoformat string: \'\'\n').returncode
+
+tests/test_cli_date_admission.py:46: AssertionError
+_______ test_invalid_explicit_generator_date_preserves_existing_data[ ] ________
+
+tmp_path = PosixPath('/dev/shm/hamon-1caa-pt-date/original-test-temp-02/test_invalid_explicit_generato1')
+data = PosixPath('/dev/shm/hamon-1caa-pt-date/original-test-temp-02/test_invalid_explicit_generato1/fictional data')
+value = ' '
+
+    @pytest.mark.parametrize("value", ["", " ", "2026-02-30"])
+    def test_invalid_explicit_generator_date_preserves_existing_data(tmp_path, data, value):
+        before = snapshot(tmp_path)
+    
+        refused = cli(
+            tmp_path, "generate", "--out", data, "--patients", "6", "--as-of", value,
+        )
+    
+>       assert_usage_error(refused)
+
+tests/test_cli_date_admission.py:94: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+result = CompletedProcess(args=['/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python', '-m', 'ptauth', 'ge...                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: Invalid isoformat string: \' \'\n')
+
+    def assert_usage_error(result):
+>       assert result.returncode == 2, result
+E       AssertionError: CompletedProcess(args=['/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python', '-m', 'ptauth', 'ge...                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E         ValueError: Invalid isoformat string: \' \'
+E         ')
+E       assert 1 == 2
+E        +  where 1 = CompletedProcess(args=['/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python', '-m', 'ptauth', 'ge...                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: Invalid isoformat string: \' \'\n').returncode
+
+tests/test_cli_date_admission.py:46: AssertionError
+___ test_invalid_explicit_generator_date_preserves_existing_data[2026-02-30] ___
+
+tmp_path = PosixPath('/dev/shm/hamon-1caa-pt-date/original-test-temp-02/test_invalid_explicit_generato2')
+data = PosixPath('/dev/shm/hamon-1caa-pt-date/original-test-temp-02/test_invalid_explicit_generato2/fictional data')
+value = '2026-02-30'
+
+    @pytest.mark.parametrize("value", ["", " ", "2026-02-30"])
+    def test_invalid_explicit_generator_date_preserves_existing_data(tmp_path, data, value):
+        before = snapshot(tmp_path)
+    
+        refused = cli(
+            tmp_path, "generate", "--out", data, "--patients", "6", "--as-of", value,
+        )
+    
+>       assert_usage_error(refused)
+
+tests/test_cli_date_admission.py:94: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+result = CompletedProcess(args=['/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python', '-m', 'ptauth', 'ge...                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: day is out of range for month\n')
+
+    def assert_usage_error(result):
+>       assert result.returncode == 2, result
+E       AssertionError: CompletedProcess(args=['/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python', '-m', 'ptauth', 'ge...                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E         ValueError: day is out of range for month
+E         ')
+E       assert 1 == 2
+E        +  where 1 = CompletedProcess(args=['/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python', '-m', 'ptauth', 'ge...                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: day is out of range for month\n').returncode
+
+tests/test_cli_date_admission.py:46: AssertionError
+_____ test_empty_explicit_date_does_not_create_requested_output[generate] ______
+
+tmp_path = PosixPath('/dev/shm/hamon-1caa-pt-date/original-test-temp-02/test_empty_explicit_date_does_0')
+data = PosixPath('/dev/shm/hamon-1caa-pt-date/original-test-temp-02/test_empty_explicit_date_does_0/fictional data')
+command = 'generate'
+
+    @pytest.mark.parametrize("command", ["generate", "run"])
+    def test_empty_explicit_date_does_not_create_requested_output(tmp_path, data, command):
+        destination = tmp_path / "must remain absent"
+        arguments = [command, "--out", destination, "--as-of", ""]
+        if command == "run":
+            arguments += ["--data", data, "--clinic-timezone", "UTC"]
+        before = snapshot(tmp_path)
+    
+        refused = cli(tmp_path, *arguments)
+    
+>       assert_usage_error(refused)
+
+tests/test_cli_date_admission.py:108: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+result = CompletedProcess(args=['/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python', '-m', 'ptauth', 'ge...                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: Invalid isoformat string: \'\'\n')
+
+    def assert_usage_error(result):
+>       assert result.returncode == 2, result
+E       AssertionError: CompletedProcess(args=['/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python', '-m', 'ptauth', 'ge...                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E         ValueError: Invalid isoformat string: \'\'
+E         ')
+E       assert 1 == 2
+E        +  where 1 = CompletedProcess(args=['/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python', '-m', 'ptauth', 'ge...                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: Invalid isoformat string: \'\'\n').returncode
+
+tests/test_cli_date_admission.py:46: AssertionError
+________ test_empty_explicit_date_does_not_create_requested_output[run] ________
+
+tmp_path = PosixPath('/dev/shm/hamon-1caa-pt-date/original-test-temp-02/test_empty_explicit_date_does_1')
+data = PosixPath('/dev/shm/hamon-1caa-pt-date/original-test-temp-02/test_empty_explicit_date_does_1/fictional data')
+command = 'run'
+
+    @pytest.mark.parametrize("command", ["generate", "run"])
+    def test_empty_explicit_date_does_not_create_requested_output(tmp_path, data, command):
+        destination = tmp_path / "must remain absent"
+        arguments = [command, "--out", destination, "--as-of", ""]
+        if command == "run":
+            arguments += ["--data", data, "--clinic-timezone", "UTC"]
+        before = snapshot(tmp_path)
+    
+        refused = cli(tmp_path, *arguments)
+    
+>       assert_usage_error(refused)
+
+tests/test_cli_date_admission.py:108: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+result = CompletedProcess(args=['/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python', '-m', 'ptauth', 'ru.../hamon-1caa-pt-date/original-test-temp-02/test_empty_explicit_date_does_1/must remain absent/digest.html\n', stderr='')
+
+    def assert_usage_error(result):
+>       assert result.returncode == 2, result
+E       AssertionError: CompletedProcess(args=['/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python', '-m', 'ptauth', 'ru.../hamon-1caa-pt-date/original-test-temp-02/test_empty_explicit_date_does_1/must remain absent/digest.html
+E         ', stderr='')
+E       assert 0 == 2
+E        +  where 0 = CompletedProcess(args=['/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python', '-m', 'ptauth', 'ru.../hamon-1caa-pt-date/original-test-temp-02/test_empty_explicit_date_does_1/must remain absent/digest.html\n', stderr='').returncode
+
+tests/test_cli_date_admission.py:46: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_cli_date_admission.py::test_invalid_explicit_run_date_preserves_previous_worklist[]
+FAILED tests/test_cli_date_admission.py::test_invalid_explicit_run_date_preserves_previous_worklist[ ]
+FAILED tests/test_cli_date_admission.py::test_invalid_explicit_run_date_preserves_previous_worklist[2026-02-30]
+FAILED tests/test_cli_date_admission.py::test_invalid_explicit_run_date_preserves_previous_worklist[not-a-date]
+FAILED tests/test_cli_date_admission.py::test_invalid_explicit_generator_date_preserves_existing_data[]
+FAILED tests/test_cli_date_admission.py::test_invalid_explicit_generator_date_preserves_existing_data[ ]
+FAILED tests/test_cli_date_admission.py::test_invalid_explicit_generator_date_preserves_existing_data[2026-02-30]
+FAILED tests/test_cli_date_admission.py::test_empty_explicit_date_does_not_create_requested_output[generate]
+FAILED tests/test_cli_date_admission.py::test_empty_explicit_date_does_not_create_requested_output[run]
+9 failed, 2 passed in 1.54s

@@ -14,11 +14,11 @@ def main(argv=None) -> int:
     g.add_argument("--out", default="sample_data")
     g.add_argument("--patients", type=int, default=40)
     g.add_argument("--seed", type=int, default=21)
-    g.add_argument("--as-of", default="2026-09-28")
+    g.add_argument("--as-of", type=date.fromisoformat, default=date(2026, 9, 28))
     r = sub.add_parser("run", help="build ledger + daily worklist")
     r.add_argument("--data", default="sample_data")
     r.add_argument("--out", default="out")
-    r.add_argument("--as-of", default=None, help="YYYY-MM-DD (default: sample's as_of, else today)")
+    r.add_argument("--as-of", type=date.fromisoformat, default=None, help="YYYY-MM-DD (default: sample's as_of, else today)")
     cal = sub.add_parser("calendar", help="export dated open/submitted items from a saved report")
     cal.add_argument("--report", default="out", help="existing report directory; never runs the engine")
     cal.add_argument("--output", required=True, help="new .ics file (existing paths are refused)")
@@ -36,7 +36,7 @@ def main(argv=None) -> int:
 
     if a.cmd == "generate":
         from .synth import generate
-        exp = generate(Path(a.out), a.patients, a.seed, date.fromisoformat(a.as_of))
+        exp = generate(Path(a.out), a.patients, a.seed, a.as_of)
         print(f"SYNTHETIC data written to {a.out} ({a.patients} fake patients, as_of {a.as_of}); "
               f"seeded: {len(exp['uncovered_scheduled'])} uncovered visits, {len(exp['reauth_due'])} re-auths due")
         return 0
@@ -44,7 +44,7 @@ def main(argv=None) -> int:
         from .data import InputError
         from .report import run
         try:
-            s = run(Path(a.data), Path(a.out), date.fromisoformat(a.as_of) if a.as_of else None,
+            s = run(Path(a.data), Path(a.out), a.as_of,
                     clinic_timezone=a.clinic_timezone)
         except (InputError, FileNotFoundError) as e:
             print(f"ERROR: {e}\nCheck the input settings and files and run again; no outputs were written.", file=sys.stderr)

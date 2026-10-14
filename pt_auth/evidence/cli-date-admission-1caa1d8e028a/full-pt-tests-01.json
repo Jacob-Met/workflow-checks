@@ -1,0 +1,31 @@
+{
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "-m",
+    "pytest",
+    "-p",
+    "no:cacheprovider",
+    "-q",
+    "/dev/shm/hamon-1caa-pt-date/checkout/pt_auth/tests",
+    "--basetemp",
+    "/dev/shm/hamon-1caa-pt-date/full-pt-test-temp-01"
+  ],
+  "cwd": "/dev/shm/hamon-1caa-pt-date/checkout/pt_auth",
+  "exit_code": 0,
+  "seconds": 7.42290520700044,
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "dependency_paths": [
+    "/root/.cache/uv/archive-v0/i2i2XvoiuqTbbbi6",
+    "/root/.cache/uv/archive-v0/c7q2O3KOFy8VG7vJ",
+    "/root/.cache/uv/archive-v0/Kk0CyMj-vqzAIl8_",
+    "/root/.cache/uv/archive-v0/CIeDh_L1lL-4JNVo"
+  ],
+  "stdout_sha256": "4da7cf14bbcde89a3555c71cc5d430384d3f4b3972f8d8dee97c119019ca4fef",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "summary": [
+    ".............................s.......................................... [ 48%]",
+    "........................................................................ [ 97%]",
+    "...                                                                      [100%]",
+    "146 passed, 1 skipped in 7.06s"
+  ]
+}

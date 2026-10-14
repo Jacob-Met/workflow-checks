@@ -1,0 +1,80 @@
+{
+  "source_main": "d2b583ae9350b30aec1453e93797dc231888417d",
+  "actual_original_defect_reproduced": true,
+  "commands": [
+    {
+      "name": "generate",
+      "args": [
+        "generate",
+        "--out",
+        "/dev/shm/hamon-1caa-pt-date/baseline/data",
+        "--patients",
+        "6",
+        "--as-of",
+        "2026-09-28"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "470950719b038233dece22b4e05a48d5a94df80ea0edb63a6315cb67b7bb6379",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "traceback": false
+    },
+    {
+      "name": "explicit-date",
+      "args": [
+        "run",
+        "--data",
+        "/dev/shm/hamon-1caa-pt-date/baseline/data",
+        "--out",
+        "/dev/shm/hamon-1caa-pt-date/baseline/report",
+        "--as-of",
+        "2026-10-01",
+        "--clinic-timezone",
+        "UTC"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "e16ab21c81ec0df7579eb5c268aebc5570dd0e59d343b5ec9dac32ff31b62424",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "traceback": false
+    },
+    {
+      "name": "empty-date",
+      "args": [
+        "run",
+        "--data",
+        "/dev/shm/hamon-1caa-pt-date/baseline/data",
+        "--out",
+        "/dev/shm/hamon-1caa-pt-date/baseline/report",
+        "--as-of",
+        "",
+        "--clinic-timezone",
+        "UTC"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "bd92c61746bbd85054d70c55c2546afa2d016f090213c322b5b3c9fb11c3d606",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "traceback": false,
+      "before_as_of": "2026-10-01",
+      "after_as_of": "2026-09-28",
+      "prior_report_overwritten": true
+    },
+    {
+      "name": "invalid-date",
+      "args": [
+        "run",
+        "--data",
+        "/dev/shm/hamon-1caa-pt-date/baseline/data",
+        "--out",
+        "/dev/shm/hamon-1caa-pt-date/baseline/absent-invalid",
+        "--as-of",
+        "2026-02-30",
+        "--clinic-timezone",
+        "UTC"
+      ],
+      "exit_code": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "2192f432fa33a0b4e34d5966cff22e598483dba0f1b6c633639963a5f60d2fc5",
+      "traceback": true,
+      "output_absent": true
+    }
+  ]
+}

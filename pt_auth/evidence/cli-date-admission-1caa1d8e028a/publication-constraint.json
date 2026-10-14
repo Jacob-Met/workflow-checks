@@ -1,0 +1,41 @@
+{
+  "repository": "Jacob-Met/workflow-checks",
+  "observed_utc": "2026-10-13",
+  "source_main": "d2b583ae9350b30aec1453e93797dc231888417d",
+  "commit_message": "Merge reviewed Freight optional-report refresh (#100) [skip actions]\n\nIntegrate source 7257f6f94f22e8a1955a2d2b18b73b5380ed9dcd. Successful runs without a fines schedule now provide current header-only fines and settlement downloads. Scheduled calculations and unrelated reports remain unchanged.\n\nIndependent receiving approved the exact pipeline source after real CLI/HTTP original 17/23 versus candidate 23/23. The complete Freight suite passes 128/128. Independent package receiving verifies all source/evidence bytes and repeats the documented course. Current Utility Watch changes are retained.\n\nRoutine reviewed repository source integration under Jacob's continuing estate authorization. No Actions, Pages, installed-consumer mutation or payment operation. [skip actions]",
+  "pages_run": {
+    "id": 38314005867,
+    "name": "pages build and deployment",
+    "path": "dynamic/pages/pages-build-deployment",
+    "event": "dynamic",
+    "head_branch": "main",
+    "head_sha": "d2b583ae9350b30aec1453e93797dc231888417d",
+    "status": "completed",
+    "conclusion": "success",
+    "created_at": "2026-10-12T21:59:25Z",
+    "html_url": "https://github.com/Jacob-Met/workflow-checks/actions/runs/38314005867"
+  },
+  "workflow_files": [
+    {
+      "path": ".github/workflows/tests.yml",
+      "blob": "d72b89ae3efb2963fbe7386021f467e82a8e1f2e",
+      "events": [
+        "push",
+        "pull_request"
+      ]
+    },
+    {
+      "path": ".github/workflows/freight-whatif.yml",
+      "blob": "0c2981495c8167ea35cc87ac2ba41536f36ba18e",
+      "events": [
+        "push",
+        "pull_request",
+        "workflow_dispatch"
+      ],
+      "pt_paths_match": false
+    }
+  ],
+  "read_limitation": "Connected github_fetch does not accept /pages or /actions/workflows endpoints.",
+  "decision": "Do not merge this PT increment to main while the dynamic Pages action remains unresolved under the user's no-Actions constraint; preserve settings and workflows."
+}
+
