@@ -1,0 +1,31 @@
+{
+  "schema": "pt.ui.inline-resource-amendment/1",
+  "original_driver": "3f9906b118ad74f69f46df4e141a664a6f8c1288",
+  "successor_driver": "3d3c477e19731b0ce87c71e7390685c521f27cf0",
+  "original_native_receipt": "bcd9446cdf3e5e8246fe062e6e7198524ef9af34",
+  "original_outcome": {
+    "rdc_pid": 706302,
+    "exit_code": 1,
+    "runtime_seconds": 1.91,
+    "node_pid": 706369,
+    "node_elapsed_ns": 1817361729,
+    "reaped": true,
+    "outer_timeout": false,
+    "passed_ui_checks_before_refusal": 14,
+    "failed_check": "onlyOwnLoopbackGETRequests",
+    "downloads": 1,
+    "screenshots": 2,
+    "cleanup_checks": 2,
+    "input_custody_records": 33,
+    "input_custody_exact": true,
+    "browser_close_acknowledged": true,
+    "owned_browser_absent": true,
+    "launcher_exit": 0,
+    "server_reaped_and_absent": true,
+    "unsuccessful_group_cleanup": "already_absent"
+  },
+  "scope": "Exact one-expression predicate expansion admits only the observed inline data:image/svg+xml;base64 GET in addition to unchanged own-origin GET. External HTTP/HTTPS, own-origin POST, all other data URLs remain refused. Fetch gate, all other assertions, stimuli, source, fixed sample, bounds and cleanup remain exact. Inline image is not external HTTP traffic; no product failure or cause inference. No successor browser run yet.",
+  "old_expression": "r=>r.url.startsWith(origin+'/')&&r.method==='GET'",
+  "new_expression": "r=>(r.url.startsWith(origin+'/')||r.url===\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJXaW5kb3dUZXh0IiBkPSJNMjAgM2gtMVYxaC0ydjJIN1YxSDV2Mkg0Yy0xLjEgMC0yIC45LTIgMnYxNmMwIDEuMS45IDIgMiAyaDE2YzEuMSAwIDItLjkgMi0yVjVjMC0xLjEtLjktMi0yLTJ6bTAgMThINFY4aDE2djEzeiIvPjxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiLz48L3N2Zz4=\")&&r.method==='GET'",
+  "diff": "--- 3f990-original\n+++ successor\n@@ -166,7 +166,7 @@\n   check('390StimulusFitsAvailablePageWidth',narrow.innerWidth===390&&narrow.clientWidth>0&&narrow.clientWidth<=390&&narrow.contentWidth<=narrow.clientWidth,narrow);\n   check('narrowRetainsEightRowsAndScrollableReviewRegion',isDeepStrictEqual(await ucRows(),selected)&&await evaluate('document.querySelector(\"#uc-rows .review-table\").getAttribute(\"tabindex\")===\"0\"&&getComputedStyle(document.querySelector(\"#uc-rows .review-table\")).overflowX===\"auto\"'));\n   receipt.requests=events.filter(e=>e.method==='Network.requestWillBeSent').map(e=>({url:e.params.request.url,method:e.params.request.method}));\n-  check('onlyOwnLoopbackGETRequests',receipt.requests.length>0&&receipt.requests.every(r=>r.url.startsWith(origin+'/')&&r.method==='GET')&&networkErrors.length===0,receipt.requests);\n+  check('onlyOwnLoopbackGETRequests',receipt.requests.length>0&&receipt.requests.every(r=>(r.url.startsWith(origin+'/')||r.url===\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJXaW5kb3dUZXh0IiBkPSJNMjAgM2gtMVYxaC0ydjJIN1YxSDV2Mkg0Yy0xLjEgMC0yIC45LTIgMnYxNmMwIDEuMS45IDIgMiAyaDE2YzEuMSAwIDItLjkgMi0yVjVjMC0xLjEtLjktMi0yLTJ6bTAgMThINFY4aDE2djEzeiIvPjxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiLz48L3N2Zz4=\")&&r.method==='GET')&&networkErrors.length===0,receipt.requests);\n   receipt.javascriptExceptions=events.filter(e=>e.method==='Runtime.exceptionThrown').map(e=>e.params);\n   check('noUncaughtJavaScriptExceptions',receipt.javascriptExceptions.length===0);\n   check('exactlyOneExplicitDownload',events.filter(e=>e.method==='Browser.downloadWillBegin').length===1&&receipt.downloads.length===1);\n"
+}

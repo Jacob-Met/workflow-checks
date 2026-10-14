@@ -1,0 +1,140 @@
+{
+  "schema": "hamon.delivery-zip/1",
+  "files": [
+    {
+      "path": "LICENSE",
+      "bytes": 1070,
+      "sha256": "f6a3d0f7d08a7590f907c08d6127545ab44eff0d23b6074714ad3fb935b998bb"
+    },
+    {
+      "path": "SOURCE_MANIFEST.json",
+      "bytes": 10456,
+      "sha256": "49c986f5fbc7df111337ed2b8027d1eb878fc5c25f1f34c615ed81f2bbb0a1aa"
+    },
+    {
+      "path": "START_HERE.md",
+      "bytes": 7225,
+      "sha256": "77fc48e5768dbe14894bd48cf5457823e20c06d0c90bc40b0da225b07d0d1d4b"
+    },
+    {
+      "path": "pt_auth/CALENDAR_RECEIPTS.md",
+      "bytes": 4541,
+      "sha256": "379fa9fbc54694460d1809cde7eb7934c50e0257f27c474f1c918b5787da6485"
+    },
+    {
+      "path": "pt_auth/CSV_HEADERS.md",
+      "bytes": 2326,
+      "sha256": "463de2efe8189cd924a95caf670da27fe15a52e4df79409fec8a81f196591287"
+    },
+    {
+      "path": "pt_auth/HARDENING.md",
+      "bytes": 11058,
+      "sha256": "660150926267145f95caf941efe9a5db4e3a0964229fdc330dea23718faea0f9"
+    },
+    {
+      "path": "pt_auth/README.md",
+      "bytes": 23423,
+      "sha256": "dcdfefc4009aa5a03d49135639519b92f301a6f48468051fba7a6075836739a8"
+    },
+    {
+      "path": "pt_auth/ptauth/__init__.py",
+      "bytes": 311,
+      "sha256": "71e1527f153c607b679485e4954af1b3ec6a843b041562eb07f4d36e08fd231c"
+    },
+    {
+      "path": "pt_auth/ptauth/__main__.py",
+      "bytes": 71,
+      "sha256": "712d5a98258176d09d165788048d34da033af45c04d14387d9e51de108db5669"
+    },
+    {
+      "path": "pt_auth/ptauth/calendar_ui.js",
+      "bytes": 8448,
+      "sha256": "b91fe76b947f381b2fa0835646fc664bf7eaa4474631ae3c9e5cb3968b9cdf3a"
+    },
+    {
+      "path": "pt_auth/ptauth/cli.py",
+      "bytes": 5952,
+      "sha256": "995428dbf73b4e34ef7fd12093b4072f5015b10a85ce44e9c40d90cd02fd3cab"
+    },
+    {
+      "path": "pt_auth/ptauth/data.py",
+      "bytes": 10725,
+      "sha256": "b16d31711e678e3d25c9cf867098de93645298410985b96248e03ac3133adf19"
+    },
+    {
+      "path": "pt_auth/ptauth/engine.py",
+      "bytes": 16057,
+      "sha256": "bfa7049e9b133d654ce947b135c17ac401bd7b1fcd76350bdb10de5b7a1ad1f7"
+    },
+    {
+      "path": "pt_auth/ptauth/report.py",
+      "bytes": 10743,
+      "sha256": "20cbc86e153b9af5151fd3e74cb370298de4692c81b3546a214eb2cfa8307df7"
+    },
+    {
+      "path": "pt_auth/ptauth/synth.py",
+      "bytes": 8873,
+      "sha256": "b82a34447e43dacbe46ed06e60b693ed216e87f15892ae297c682aa5a3f139fd"
+    },
+    {
+      "path": "pt_auth/ptauth/ui.html",
+      "bytes": 18655,
+      "sha256": "a59df72e1edf5075e513047eb4000e94a87bf1dbcde8d243547944c283bbd492"
+    },
+    {
+      "path": "pt_auth/ptauth/uncovered.py",
+      "bytes": 4319,
+      "sha256": "21e92509df706e504a8630f3383ea4fe98d03047d2e4b070f3fdd188d995350e"
+    },
+    {
+      "path": "pt_auth/ptauth/web.py",
+      "bytes": 8633,
+      "sha256": "18a5f6e889f2a5d7e0e3704989f041681252df3ee0cb29e3c356aff560fd2967"
+    },
+    {
+      "path": "pt_auth/ptauth/worklist_calendar.py",
+      "bytes": 13750,
+      "sha256": "89751f1de5548ced34a59c296d0edf1eda06a38bdb935be3e7c3c8b2ae5d55c0"
+    },
+    {
+      "path": "pt_auth/sample_data/README_SYNTHETIC.txt",
+      "bytes": 262,
+      "sha256": "2a7e8be2b866866b2280df867a71ce18d57946b188ae9c9bb9d4af631b5f859a"
+    },
+    {
+      "path": "pt_auth/sample_data/authorizations.csv",
+      "bytes": 2990,
+      "sha256": "306cae3c27895d2b81978d4cf3115e867b8853edb4939ec8f7e733a7f27b0657"
+    },
+    {
+      "path": "pt_auth/sample_data/expected.json",
+      "bytes": 3482,
+      "sha256": "0652052b6f37ce068cb77d4b8cde0f5a75d9b275be51b05f570c35a60a8a6d02"
+    },
+    {
+      "path": "pt_auth/sample_data/patients.csv",
+      "bytes": 2333,
+      "sha256": "1dd9bc97889ca4a2e46e19804841d4af29ada284ede22d328370d20fb520e6e5"
+    },
+    {
+      "path": "pt_auth/sample_data/payers.csv",
+      "bytes": 904,
+      "sha256": "81f143eed15c9ce613ee7cf372e51d6223a44700c877cc42d283a824d30900ed"
+    },
+    {
+      "path": "pt_auth/sample_data/schedule.csv",
+      "bytes": 71520,
+      "sha256": "a5f9177b2e0fb9b4397a83839961d11c947e74cc2f13d5de29a31f39254e5198"
+    },
+    {
+      "path": "pt_auth/tests/test_calendar_receipt_output.py",
+      "bytes": 8759,
+      "sha256": "faefd09f9a03becd100ca50d2ed7ed23a48d4f256fcecb23fab3680134d62c68"
+    },
+    {
+      "path": "pt_auth/tests/test_cli_date_admission.py",
+      "bytes": 4814,
+      "sha256": "e99ab4925bece8148c5093929d4d13fae158ebc64571e7ac5f046ad4d6114ab4"
+    }
+  ]
+}

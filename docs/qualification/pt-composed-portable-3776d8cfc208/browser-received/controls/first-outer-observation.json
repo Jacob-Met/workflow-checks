@@ -1,0 +1,41 @@
+{
+  "schema": "pt.ui.first-outer-observation/1",
+  "scope": "Exact terminal metadata transcribed from collected RDC responses, separate from native child JSON. No replay.",
+  "device": "d55b2499-5e82-4805-819a-d0d7ddea1efe",
+  "stage": "/home/jacob/pt-ui-3776-dzz4rq7n/successor",
+  "identity": {
+    "rdc_pid": 705900,
+    "exit_code": 0,
+    "runtime_seconds": 0.07
+  },
+  "admission": {
+    "rdc_pid": 706181,
+    "exit_code": 0,
+    "runtime_seconds": 0.07,
+    "files": 5,
+    "bytes": 124935
+  },
+  "course": {
+    "rdc_pid": 706302,
+    "exit_code": 1,
+    "runtime_seconds": 1.91,
+    "node_pid": 706369,
+    "node_exit": 1,
+    "node_reaped": true,
+    "outer_timeout": false,
+    "node_elapsed_ns": 1817361729
+  },
+  "export": {
+    "rdc_pid": 707917,
+    "exit_code": 0,
+    "runtime_seconds": 0.18,
+    "files": 53,
+    "bytes": 973197,
+    "native_byte_ns_custody_exact": true,
+    "tar_bytes": 398131,
+    "tar_sha256": "7dae56d792db7e13c4239e26c4f80511c09d59ca784b63e595b4f94fc6e58748"
+  },
+  "receiving": "14 functional checks passed before one inline-resource classification assertion failed; two cleanup assertions passed. One complete CSV and two viewports retained. Receipt remains failed.",
+  "closure": "Browser.close acknowledged; browser706376 absent and launcher0. Server706382 terminated by SIGTERM, waited/reaped and absent. Outer failed-exit killpg reported already_absent; signal submission is not used as a general absence proof.",
+  "body_transport": "All53 native bodies match native manifest bytes/SHA256/Git; original ns retained from manifest, normalized local tar mtimes not compared."
+}

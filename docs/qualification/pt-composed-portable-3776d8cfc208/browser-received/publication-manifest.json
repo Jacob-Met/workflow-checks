@@ -1,0 +1,845 @@
+{
+  "schema": "pt.ui.publication-packet/1",
+  "files": [
+    {
+      "path": "first/PROTOCOL.md",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/first-native/PROTOCOL.md",
+      "bytes": 5176,
+      "sha256": "ed3ee9b18fcfc66309ba9ac9ca0bd2af7ef0c053fdc3bff8a621941a18b77145",
+      "git_blob": "6b9be3d8f1d9cac9ccb5d70d043b7768948c093f"
+    },
+    {
+      "path": "first/actual-drive.zip",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/first-native/actual-drive.zip",
+      "bytes": 77452,
+      "sha256": "ba9941d29489f584e3fcd0b7b379b9a4de57d1fb56bede960983450650d1bd43",
+      "git_blob": "facfbd93a4d7faa331c975021d48bd97986180fd"
+    },
+    {
+      "path": "first/admission.json",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/first-native/admission.json",
+      "bytes": 1402,
+      "sha256": "e7bb2cf7bc3468b547ba0d840233401e3ebee87e92a9668e7f13a60d7e326f1e",
+      "git_blob": "eeced4480c769d661d8c58e20a9d45bbebd9f0c3"
+    },
+    {
+      "path": "first/expected.json",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/first-native/expected.json",
+      "bytes": 17034,
+      "sha256": "8fd4c27ac21dc214d6c2dabab274aa18a74fdc8584ae7297cf3e3152640262cd",
+      "git_blob": "a072989cfab2f17e7c6b805a22e084b0c46ef703"
+    },
+    {
+      "path": "first/identity.json",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/first-native/identity.json",
+      "bytes": 214,
+      "sha256": "4b32772e2e9915a118fc8b6b4c67b22bc489e7c9597abac90f7a293da0181ee9",
+      "git_blob": "ea432f207604b5bf4cbc13eaf85f054b7971d3a2"
+    },
+    {
+      "path": "first/receive_ui.js",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/first-native/receive_ui.js",
+      "bytes": 20035,
+      "sha256": "7232d69d595dcd06c1de525941e57c7b21c95f370d5017bd368a154ee4828c2d",
+      "git_blob": "3f9906b118ad74f69f46df4e141a664a6f8c1288"
+    },
+    {
+      "path": "first/received-course/browser.stderr",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/first-native/received-course/browser.stderr",
+      "bytes": 3106,
+      "sha256": "88ca2c24b5979abbc1a364b9c50df0fd8de7e7fc1a272cb67f63b7b6addb6cb2",
+      "git_blob": "0dd077c4400f1ead8814fba4f22a756149d92617"
+    },
+    {
+      "path": "first/received-course/browser.stdout",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/first-native/received-course/browser.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "first/received-course/downloaded-uncovered-visits.csv",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/first-native/received-course/downloaded-uncovered-visits.csv",
+      "bytes": 31101,
+      "sha256": "adef91b6f7086f8f4e192a6267a84ad9e63b437e51b62df115a133497422a8ec",
+      "git_blob": "e750ad287278f3857be3684c8009d0afe7dd2a35"
+    },
+    {
+      "path": "first/received-course/extracted/LICENSE",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/first-native/received-course/extracted/LICENSE",
+      "bytes": 1070,
+      "sha256": "f6a3d0f7d08a7590f907c08d6127545ab44eff0d23b6074714ad3fb935b998bb",
+      "git_blob": "edb188254288b40f2895833e3647b7e0be34c962"
+    },
+    {
+      "path": "first/received-course/extracted/MANIFEST.json",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/first-native/received-course/extracted/MANIFEST.json",
+      "bytes": 4422,
+      "sha256": "86892c5bffe1b3a3ff3d240801d6c6f26aca108cbba54b23dd9231bf27a58d04",
+      "git_blob": "660e45d30ac528951b55ededd083e490fe211306"
+    },
+    {
+      "path": "first/received-course/extracted/SOURCE_MANIFEST.json",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/first-native/received-course/extracted/SOURCE_MANIFEST.json",
+      "bytes": 10456,
+      "sha256": "49c986f5fbc7df111337ed2b8027d1eb878fc5c25f1f34c615ed81f2bbb0a1aa",
+      "git_blob": "3045f338f985c279ba7ef065ea92ed258abf8689"
+    },
+    {
+      "path": "first/received-course/extracted/START_HERE.md",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/first-native/received-course/extracted/START_HERE.md",
+      "bytes": 7225,
+      "sha256": "77fc48e5768dbe14894bd48cf5457823e20c06d0c90bc40b0da225b07d0d1d4b",
+      "git_blob": "29376053ab58aa240c50bd71a275daf74b24afda"
+    },
+    {
+      "path": "first/received-course/extracted/pt_auth/CALENDAR_RECEIPTS.md",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/first-native/received-course/extracted/pt_auth/CALENDAR_RECEIPTS.md",
+      "bytes": 4541,
+      "sha256": "379fa9fbc54694460d1809cde7eb7934c50e0257f27c474f1c918b5787da6485",
+      "git_blob": "a4a55efba02796069bbd974ab2d9de3060da5428"
+    },
+    {
+      "path": "first/received-course/extracted/pt_auth/CSV_HEADERS.md",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/first-native/received-course/extracted/pt_auth/CSV_HEADERS.md",
+      "bytes": 2326,
+      "sha256": "463de2efe8189cd924a95caf670da27fe15a52e4df79409fec8a81f196591287",
+      "git_blob": "43e2605ab6e50694e3f0f0b3ebbabf0a87c6c3fe"
+    },
+    {
+      "path": "first/received-course/extracted/pt_auth/HARDENING.md",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/first-native/received-course/extracted/pt_auth/HARDENING.md",
+      "bytes": 11058,
+      "sha256": "660150926267145f95caf941efe9a5db4e3a0964229fdc330dea23718faea0f9",
+      "git_blob": "49db3a3e425e2ecb6c36b000daf95874dbf88cd9"
+    },
+    {
+      "path": "first/received-course/extracted/pt_auth/README.md",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/first-native/received-course/extracted/pt_auth/README.md",
+      "bytes": 23423,
+      "sha256": "dcdfefc4009aa5a03d49135639519b92f301a6f48468051fba7a6075836739a8",
+      "git_blob": "23fc8292665136a70b8aa8dde7bc08ab1d3b4f21"
+    },
+    {
+      "path": "first/received-course/extracted/pt_auth/ptauth/__init__.py",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/first-native/received-course/extracted/pt_auth/ptauth/__init__.py",
+      "bytes": 311,
+      "sha256": "71e1527f153c607b679485e4954af1b3ec6a843b041562eb07f4d36e08fd231c",
+      "git_blob": "a6f4545ac17e2578317ef694f7bb548489f6c71c"
+    },
+    {
+      "path": "first/received-course/extracted/pt_auth/ptauth/__main__.py",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/first-native/received-course/extracted/pt_auth/ptauth/__main__.py",
+      "bytes": 71,
+      "sha256": "712d5a98258176d09d165788048d34da033af45c04d14387d9e51de108db5669",
+      "git_blob": "07cf8abb5a559054d4487c65a3f9f7c992067cf5"
+    },
+    {
+      "path": "first/received-course/extracted/pt_auth/ptauth/calendar_ui.js",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/first-native/received-course/extracted/pt_auth/ptauth/calendar_ui.js",
+      "bytes": 8448,
+      "sha256": "b91fe76b947f381b2fa0835646fc664bf7eaa4474631ae3c9e5cb3968b9cdf3a",
+      "git_blob": "a6ba45ec85c28f7fd80d7e2fdd32ac62e96daa99"
+    },
+    {
+      "path": "first/received-course/extracted/pt_auth/ptauth/cli.py",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/first-native/received-course/extracted/pt_auth/ptauth/cli.py",
+      "bytes": 5952,
+      "sha256": "995428dbf73b4e34ef7fd12093b4072f5015b10a85ce44e9c40d90cd02fd3cab",
+      "git_blob": "8d6b43649bc6c142c28f71646485a31f6a6bbf55"
+    },
+    {
+      "path": "first/received-course/extracted/pt_auth/ptauth/data.py",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/first-native/received-course/extracted/pt_auth/ptauth/data.py",
+      "bytes": 10725,
+      "sha256": "b16d31711e678e3d25c9cf867098de93645298410985b96248e03ac3133adf19",
+      "git_blob": "886b2d75050f302acb101ab4f5bf8473b7573b8f"
+    },
+    {
+      "path": "first/received-course/extracted/pt_auth/ptauth/engine.py",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/first-native/received-course/extracted/pt_auth/ptauth/engine.py",
+      "bytes": 16057,
+      "sha256": "bfa7049e9b133d654ce947b135c17ac401bd7b1fcd76350bdb10de5b7a1ad1f7",
+      "git_blob": "39c97f35d61ff949b5c2381f0ad60d7af8d74226"
+    },
+    {
+      "path": "first/received-course/extracted/pt_auth/ptauth/report.py",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/first-native/received-course/extracted/pt_auth/ptauth/report.py",
+      "bytes": 10743,
+      "sha256": "20cbc86e153b9af5151fd3e74cb370298de4692c81b3546a214eb2cfa8307df7",
+      "git_blob": "2ce82b1712e5c6fc03374d38996eceddf31782f0"
+    },
+    {
+      "path": "first/received-course/extracted/pt_auth/ptauth/synth.py",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/first-native/received-course/extracted/pt_auth/ptauth/synth.py",
+      "bytes": 8873,
+      "sha256": "b82a34447e43dacbe46ed06e60b693ed216e87f15892ae297c682aa5a3f139fd",
+      "git_blob": "2ff6a2548bf55a812cfa62e397442a0d3f7debbb"
+    },
+    {
+      "path": "first/received-course/extracted/pt_auth/ptauth/ui.html",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/first-native/received-course/extracted/pt_auth/ptauth/ui.html",
+      "bytes": 18655,
+      "sha256": "a59df72e1edf5075e513047eb4000e94a87bf1dbcde8d243547944c283bbd492",
+      "git_blob": "ec2e198ee1873c41981d201c78a63dbccc13afad"
+    },
+    {
+      "path": "first/received-course/extracted/pt_auth/ptauth/uncovered.py",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/first-native/received-course/extracted/pt_auth/ptauth/uncovered.py",
+      "bytes": 4319,
+      "sha256": "21e92509df706e504a8630f3383ea4fe98d03047d2e4b070f3fdd188d995350e",
+      "git_blob": "9ab21781c4116dd0b9b76ac0116868898f3ee7d4"
+    },
+    {
+      "path": "first/received-course/extracted/pt_auth/ptauth/web.py",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/first-native/received-course/extracted/pt_auth/ptauth/web.py",
+      "bytes": 8633,
+      "sha256": "18a5f6e889f2a5d7e0e3704989f041681252df3ee0cb29e3c356aff560fd2967",
+      "git_blob": "7e5d38f4cf8c33f4b9c91bd3c3d929fcfa0f80b3"
+    },
+    {
+      "path": "first/received-course/extracted/pt_auth/ptauth/worklist_calendar.py",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/first-native/received-course/extracted/pt_auth/ptauth/worklist_calendar.py",
+      "bytes": 13750,
+      "sha256": "89751f1de5548ced34a59c296d0edf1eda06a38bdb935be3e7c3c8b2ae5d55c0",
+      "git_blob": "e125f9ed77343fcc3d82e6d6f25a7296b0463aa7"
+    },
+    {
+      "path": "first/received-course/extracted/pt_auth/sample_data/README_SYNTHETIC.txt",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/first-native/received-course/extracted/pt_auth/sample_data/README_SYNTHETIC.txt",
+      "bytes": 262,
+      "sha256": "2a7e8be2b866866b2280df867a71ce18d57946b188ae9c9bb9d4af631b5f859a",
+      "git_blob": "943c3d0e2436abd6c1f3dcb6ef7b7f1aabaff90f"
+    },
+    {
+      "path": "first/received-course/extracted/pt_auth/sample_data/authorizations.csv",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/first-native/received-course/extracted/pt_auth/sample_data/authorizations.csv",
+      "bytes": 2990,
+      "sha256": "306cae3c27895d2b81978d4cf3115e867b8853edb4939ec8f7e733a7f27b0657",
+      "git_blob": "036f7b276e3e09252afb886ad451531f51ada844"
+    },
+    {
+      "path": "first/received-course/extracted/pt_auth/sample_data/expected.json",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/first-native/received-course/extracted/pt_auth/sample_data/expected.json",
+      "bytes": 3482,
+      "sha256": "0652052b6f37ce068cb77d4b8cde0f5a75d9b275be51b05f570c35a60a8a6d02",
+      "git_blob": "21177a89ac5c24c9faf79746550165a3a170d08a"
+    },
+    {
+      "path": "first/received-course/extracted/pt_auth/sample_data/patients.csv",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/first-native/received-course/extracted/pt_auth/sample_data/patients.csv",
+      "bytes": 2333,
+      "sha256": "1dd9bc97889ca4a2e46e19804841d4af29ada284ede22d328370d20fb520e6e5",
+      "git_blob": "e67323b68d1ac9ee4a901dc3ef70a95384ba5000"
+    },
+    {
+      "path": "first/received-course/extracted/pt_auth/sample_data/payers.csv",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/first-native/received-course/extracted/pt_auth/sample_data/payers.csv",
+      "bytes": 904,
+      "sha256": "81f143eed15c9ce613ee7cf372e51d6223a44700c877cc42d283a824d30900ed",
+      "git_blob": "1853837e82048ac11698b4ad5bb6eeb055d56038"
+    },
+    {
+      "path": "first/received-course/extracted/pt_auth/sample_data/schedule.csv",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/first-native/received-course/extracted/pt_auth/sample_data/schedule.csv",
+      "bytes": 71520,
+      "sha256": "a5f9177b2e0fb9b4397a83839961d11c947e74cc2f13d5de29a31f39254e5198",
+      "git_blob": "24a395250f5318004bab4f168c3ca237189ab354"
+    },
+    {
+      "path": "first/received-course/extracted/pt_auth/tests/test_calendar_receipt_output.py",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/first-native/received-course/extracted/pt_auth/tests/test_calendar_receipt_output.py",
+      "bytes": 8759,
+      "sha256": "faefd09f9a03becd100ca50d2ed7ed23a48d4f256fcecb23fab3680134d62c68",
+      "git_blob": "3264d6566e4ce482b47e05b5161a4a35bc74df56"
+    },
+    {
+      "path": "first/received-course/extracted/pt_auth/tests/test_cli_date_admission.py",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/first-native/received-course/extracted/pt_auth/tests/test_cli_date_admission.py",
+      "bytes": 4814,
+      "sha256": "e99ab4925bece8148c5093929d4d13fae158ebc64571e7ac5f046ad4d6114ab4",
+      "git_blob": "faf307640652fb548dcb09a2cea0e226bb1b7689"
+    },
+    {
+      "path": "first/received-course/new-report/audit.jsonl",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/first-native/received-course/new-report/audit.jsonl",
+      "bytes": 281,
+      "sha256": "c4f1854613bb9e317c9b360cb2a7e9467eaecad944a35552c872f601b856a48b",
+      "git_blob": "fff9138bc1fea47c1c9332275c0eeef711ff8a8c"
+    },
+    {
+      "path": "first/received-course/new-report/digest.html",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/first-native/received-course/new-report/digest.html",
+      "bytes": 79198,
+      "sha256": "0d6d4bbe45afb01c65964c164d21fd981d458b96a1a5d6022e14903d1cc122ca",
+      "git_blob": "78dae5546640494818381584d4b285388c856239"
+    },
+    {
+      "path": "first/received-course/new-report/ledger.csv",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/first-native/received-course/new-report/ledger.csv",
+      "bytes": 3746,
+      "sha256": "ee571c8339864dc97d217e7b31a358fc9b06609328c1790076e81c530be93d96",
+      "git_blob": "d49dee32ca8620cd20f7b0c7ef263281dce1d4db"
+    },
+    {
+      "path": "first/received-course/new-report/summary.json",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/first-native/received-course/new-report/summary.json",
+      "bytes": 170131,
+      "sha256": "71ebf48bba8158e15bd38e2c837047a9dbb0982acc1c9080063e33e0cbbd6c83",
+      "git_blob": "53d1d540f40051cbd32d0bad622420939ba84f6e"
+    },
+    {
+      "path": "first/received-course/new-report/uncovered_visits.csv",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/first-native/received-course/new-report/uncovered_visits.csv",
+      "bytes": 31101,
+      "sha256": "adef91b6f7086f8f4e192a6267a84ad9e63b437e51b62df115a133497422a8ec",
+      "git_blob": "e750ad287278f3857be3684c8009d0afe7dd2a35"
+    },
+    {
+      "path": "first/received-course/new-report/visit_status_review.csv",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/first-native/received-course/new-report/visit_status_review.csv",
+      "bytes": 125,
+      "sha256": "9cb3e3e82e30935f57448ed826dbd8dab78e39355e3bebba59c478fa355ee170",
+      "git_blob": "2f954eb61f6a5ed9df00b35756f5f97af5037b1f"
+    },
+    {
+      "path": "first/received-course/new-report/worklist.csv",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/first-native/received-course/new-report/worklist.csv",
+      "bytes": 14972,
+      "sha256": "73a95f16776325610d3d4049db7313407dd904f39ac2e375335a5705b392a9be",
+      "git_blob": "eae26d8268ca14ebd5a5df3985ff3a893d8c9139"
+    },
+    {
+      "path": "first/received-course/outer.json",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/first-native/received-course/outer.json",
+      "bytes": 21370,
+      "sha256": "3a485bfff4903067f52986d439ea8b2ae1344a379c2ed1002b7c2d7307e483b0",
+      "git_blob": "1d14260a57ab33dc2e92ccb7119b6995b2c5134f"
+    },
+    {
+      "path": "first/received-course/outer.stderr",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/first-native/received-course/outer.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "first/received-course/outer.stdout",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/first-native/received-course/outer.stdout",
+      "bytes": 1227,
+      "sha256": "a26db6c5cc8f08ff7c48cadd71feedae1733452148f17da08569ff30f22eba93",
+      "git_blob": "4bdb6b55ab9eef457ed45fa09fd514e3a52ec0ec"
+    },
+    {
+      "path": "first/received-course/receiving.json",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/first-native/received-course/receiving.json",
+      "bytes": 12507,
+      "sha256": "55713ba78edc39838d2e1ccb2302d772922832a0f1590fb0869ac8fd3bcbe5d9",
+      "git_blob": "bcd9446cdf3e5e8246fe062e6e7198524ef9af34"
+    },
+    {
+      "path": "first/received-course/server.stderr",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/first-native/received-course/server.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "first/received-course/server.stdout",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/first-native/received-course/server.stdout",
+      "bytes": 101,
+      "sha256": "8bd6107c68cbb361e1095661836d8fda500efd6de3835b161b1a485d51fb6537",
+      "git_blob": "c099de7fdcdc8274b0658b9bd5dabcf42374657e"
+    },
+    {
+      "path": "first/received-course/uncovered-narrow.png",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/first-native/received-course/uncovered-narrow.png",
+      "bytes": 60998,
+      "sha256": "e7fc7ccbd0a41fd83537e69502bba17d009a74a6f7f960c8fec27e3ee10711b1",
+      "git_blob": "b89ba0b65e193ae12ed0f9f07fe0bfec6ae8ded9"
+    },
+    {
+      "path": "first/received-course/worklist-desktop.png",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/first-native/received-course/worklist-desktop.png",
+      "bytes": 150560,
+      "sha256": "a66068a9b510e6bc86320acad29046fdc8eb8b58caffb5b3e5206c4319d314fb",
+      "git_blob": "4b1a9b728ac0a299e69e2c2616ba4b47622b785f"
+    },
+    {
+      "path": "first/run_course.py",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/first-native/run_course.py",
+      "bytes": 5238,
+      "sha256": "53b09eb38aab7beba10575a78e2d908d393efe6cc4ead95134e89373b8c10535",
+      "git_blob": "9367ccb119788c9be8dbf3645a107ee6302cdf2b"
+    },
+    {
+      "path": "first/native-manifest.json",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/first-native/native-manifest.json",
+      "bytes": 14921,
+      "sha256": "c484c1d3d5f3e4d0066a737795dcd22d77ecd95c35557d27e98373c01c06e79c",
+      "git_blob": "1b615791f2f66c5c01ccf233adbd196715d67a1e"
+    },
+    {
+      "path": "final/PROTOCOL.md",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/final-native/PROTOCOL.md",
+      "bytes": 5176,
+      "sha256": "ed3ee9b18fcfc66309ba9ac9ca0bd2af7ef0c053fdc3bff8a621941a18b77145",
+      "git_blob": "6b9be3d8f1d9cac9ccb5d70d043b7768948c093f"
+    },
+    {
+      "path": "final/actual-drive.zip",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/final-native/actual-drive.zip",
+      "bytes": 77452,
+      "sha256": "ba9941d29489f584e3fcd0b7b379b9a4de57d1fb56bede960983450650d1bd43",
+      "git_blob": "facfbd93a4d7faa331c975021d48bd97986180fd"
+    },
+    {
+      "path": "final/admission.json",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/final-native/admission.json",
+      "bytes": 1437,
+      "sha256": "d026f94b64487e801c3f5834761e040f59dcd895a1b11b065d051e198ffb9777",
+      "git_blob": "43349cae93678a10c48bd320bfc81478f9c3c93f"
+    },
+    {
+      "path": "final/expected.json",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/final-native/expected.json",
+      "bytes": 17034,
+      "sha256": "8fd4c27ac21dc214d6c2dabab274aa18a74fdc8584ae7297cf3e3152640262cd",
+      "git_blob": "a072989cfab2f17e7c6b805a22e084b0c46ef703"
+    },
+    {
+      "path": "final/identity.json",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/final-native/identity.json",
+      "bytes": 204,
+      "sha256": "a5cf6dde74d61a61a888a836cb19ca852950ea7879758c97dda89f60292779b8",
+      "git_blob": "3e24e9ba9234b0118e14332e501952ad5e308ab1"
+    },
+    {
+      "path": "final/receive_ui.js",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/final-native/receive_ui.js",
+      "bytes": 20431,
+      "sha256": "41e9769d74b56f2b9a1e6ffe04f2b9d62f7f158e9ef05c68caea33c799261399",
+      "git_blob": "3d3c477e19731b0ce87c71e7390685c521f27cf0"
+    },
+    {
+      "path": "final/received-course/browser.stderr",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/final-native/received-course/browser.stderr",
+      "bytes": 3106,
+      "sha256": "1bbe315ebd6dbb46089fe184eb4c13b10307dfc42e22707cb4f466add113f9db",
+      "git_blob": "6fdcf5a93088ffb08fea80fe8ac8a94209a934dc"
+    },
+    {
+      "path": "final/received-course/browser.stdout",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/final-native/received-course/browser.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "final/received-course/downloaded-uncovered-visits.csv",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/final-native/received-course/downloaded-uncovered-visits.csv",
+      "bytes": 31101,
+      "sha256": "adef91b6f7086f8f4e192a6267a84ad9e63b437e51b62df115a133497422a8ec",
+      "git_blob": "e750ad287278f3857be3684c8009d0afe7dd2a35"
+    },
+    {
+      "path": "final/received-course/extracted/LICENSE",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/final-native/received-course/extracted/LICENSE",
+      "bytes": 1070,
+      "sha256": "f6a3d0f7d08a7590f907c08d6127545ab44eff0d23b6074714ad3fb935b998bb",
+      "git_blob": "edb188254288b40f2895833e3647b7e0be34c962"
+    },
+    {
+      "path": "final/received-course/extracted/MANIFEST.json",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/final-native/received-course/extracted/MANIFEST.json",
+      "bytes": 4422,
+      "sha256": "86892c5bffe1b3a3ff3d240801d6c6f26aca108cbba54b23dd9231bf27a58d04",
+      "git_blob": "660e45d30ac528951b55ededd083e490fe211306"
+    },
+    {
+      "path": "final/received-course/extracted/SOURCE_MANIFEST.json",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/final-native/received-course/extracted/SOURCE_MANIFEST.json",
+      "bytes": 10456,
+      "sha256": "49c986f5fbc7df111337ed2b8027d1eb878fc5c25f1f34c615ed81f2bbb0a1aa",
+      "git_blob": "3045f338f985c279ba7ef065ea92ed258abf8689"
+    },
+    {
+      "path": "final/received-course/extracted/START_HERE.md",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/final-native/received-course/extracted/START_HERE.md",
+      "bytes": 7225,
+      "sha256": "77fc48e5768dbe14894bd48cf5457823e20c06d0c90bc40b0da225b07d0d1d4b",
+      "git_blob": "29376053ab58aa240c50bd71a275daf74b24afda"
+    },
+    {
+      "path": "final/received-course/extracted/pt_auth/CALENDAR_RECEIPTS.md",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/final-native/received-course/extracted/pt_auth/CALENDAR_RECEIPTS.md",
+      "bytes": 4541,
+      "sha256": "379fa9fbc54694460d1809cde7eb7934c50e0257f27c474f1c918b5787da6485",
+      "git_blob": "a4a55efba02796069bbd974ab2d9de3060da5428"
+    },
+    {
+      "path": "final/received-course/extracted/pt_auth/CSV_HEADERS.md",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/final-native/received-course/extracted/pt_auth/CSV_HEADERS.md",
+      "bytes": 2326,
+      "sha256": "463de2efe8189cd924a95caf670da27fe15a52e4df79409fec8a81f196591287",
+      "git_blob": "43e2605ab6e50694e3f0f0b3ebbabf0a87c6c3fe"
+    },
+    {
+      "path": "final/received-course/extracted/pt_auth/HARDENING.md",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/final-native/received-course/extracted/pt_auth/HARDENING.md",
+      "bytes": 11058,
+      "sha256": "660150926267145f95caf941efe9a5db4e3a0964229fdc330dea23718faea0f9",
+      "git_blob": "49db3a3e425e2ecb6c36b000daf95874dbf88cd9"
+    },
+    {
+      "path": "final/received-course/extracted/pt_auth/README.md",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/final-native/received-course/extracted/pt_auth/README.md",
+      "bytes": 23423,
+      "sha256": "dcdfefc4009aa5a03d49135639519b92f301a6f48468051fba7a6075836739a8",
+      "git_blob": "23fc8292665136a70b8aa8dde7bc08ab1d3b4f21"
+    },
+    {
+      "path": "final/received-course/extracted/pt_auth/ptauth/__init__.py",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/final-native/received-course/extracted/pt_auth/ptauth/__init__.py",
+      "bytes": 311,
+      "sha256": "71e1527f153c607b679485e4954af1b3ec6a843b041562eb07f4d36e08fd231c",
+      "git_blob": "a6f4545ac17e2578317ef694f7bb548489f6c71c"
+    },
+    {
+      "path": "final/received-course/extracted/pt_auth/ptauth/__main__.py",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/final-native/received-course/extracted/pt_auth/ptauth/__main__.py",
+      "bytes": 71,
+      "sha256": "712d5a98258176d09d165788048d34da033af45c04d14387d9e51de108db5669",
+      "git_blob": "07cf8abb5a559054d4487c65a3f9f7c992067cf5"
+    },
+    {
+      "path": "final/received-course/extracted/pt_auth/ptauth/calendar_ui.js",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/final-native/received-course/extracted/pt_auth/ptauth/calendar_ui.js",
+      "bytes": 8448,
+      "sha256": "b91fe76b947f381b2fa0835646fc664bf7eaa4474631ae3c9e5cb3968b9cdf3a",
+      "git_blob": "a6ba45ec85c28f7fd80d7e2fdd32ac62e96daa99"
+    },
+    {
+      "path": "final/received-course/extracted/pt_auth/ptauth/cli.py",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/final-native/received-course/extracted/pt_auth/ptauth/cli.py",
+      "bytes": 5952,
+      "sha256": "995428dbf73b4e34ef7fd12093b4072f5015b10a85ce44e9c40d90cd02fd3cab",
+      "git_blob": "8d6b43649bc6c142c28f71646485a31f6a6bbf55"
+    },
+    {
+      "path": "final/received-course/extracted/pt_auth/ptauth/data.py",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/final-native/received-course/extracted/pt_auth/ptauth/data.py",
+      "bytes": 10725,
+      "sha256": "b16d31711e678e3d25c9cf867098de93645298410985b96248e03ac3133adf19",
+      "git_blob": "886b2d75050f302acb101ab4f5bf8473b7573b8f"
+    },
+    {
+      "path": "final/received-course/extracted/pt_auth/ptauth/engine.py",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/final-native/received-course/extracted/pt_auth/ptauth/engine.py",
+      "bytes": 16057,
+      "sha256": "bfa7049e9b133d654ce947b135c17ac401bd7b1fcd76350bdb10de5b7a1ad1f7",
+      "git_blob": "39c97f35d61ff949b5c2381f0ad60d7af8d74226"
+    },
+    {
+      "path": "final/received-course/extracted/pt_auth/ptauth/report.py",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/final-native/received-course/extracted/pt_auth/ptauth/report.py",
+      "bytes": 10743,
+      "sha256": "20cbc86e153b9af5151fd3e74cb370298de4692c81b3546a214eb2cfa8307df7",
+      "git_blob": "2ce82b1712e5c6fc03374d38996eceddf31782f0"
+    },
+    {
+      "path": "final/received-course/extracted/pt_auth/ptauth/synth.py",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/final-native/received-course/extracted/pt_auth/ptauth/synth.py",
+      "bytes": 8873,
+      "sha256": "b82a34447e43dacbe46ed06e60b693ed216e87f15892ae297c682aa5a3f139fd",
+      "git_blob": "2ff6a2548bf55a812cfa62e397442a0d3f7debbb"
+    },
+    {
+      "path": "final/received-course/extracted/pt_auth/ptauth/ui.html",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/final-native/received-course/extracted/pt_auth/ptauth/ui.html",
+      "bytes": 18655,
+      "sha256": "a59df72e1edf5075e513047eb4000e94a87bf1dbcde8d243547944c283bbd492",
+      "git_blob": "ec2e198ee1873c41981d201c78a63dbccc13afad"
+    },
+    {
+      "path": "final/received-course/extracted/pt_auth/ptauth/uncovered.py",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/final-native/received-course/extracted/pt_auth/ptauth/uncovered.py",
+      "bytes": 4319,
+      "sha256": "21e92509df706e504a8630f3383ea4fe98d03047d2e4b070f3fdd188d995350e",
+      "git_blob": "9ab21781c4116dd0b9b76ac0116868898f3ee7d4"
+    },
+    {
+      "path": "final/received-course/extracted/pt_auth/ptauth/web.py",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/final-native/received-course/extracted/pt_auth/ptauth/web.py",
+      "bytes": 8633,
+      "sha256": "18a5f6e889f2a5d7e0e3704989f041681252df3ee0cb29e3c356aff560fd2967",
+      "git_blob": "7e5d38f4cf8c33f4b9c91bd3c3d929fcfa0f80b3"
+    },
+    {
+      "path": "final/received-course/extracted/pt_auth/ptauth/worklist_calendar.py",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/final-native/received-course/extracted/pt_auth/ptauth/worklist_calendar.py",
+      "bytes": 13750,
+      "sha256": "89751f1de5548ced34a59c296d0edf1eda06a38bdb935be3e7c3c8b2ae5d55c0",
+      "git_blob": "e125f9ed77343fcc3d82e6d6f25a7296b0463aa7"
+    },
+    {
+      "path": "final/received-course/extracted/pt_auth/sample_data/README_SYNTHETIC.txt",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/final-native/received-course/extracted/pt_auth/sample_data/README_SYNTHETIC.txt",
+      "bytes": 262,
+      "sha256": "2a7e8be2b866866b2280df867a71ce18d57946b188ae9c9bb9d4af631b5f859a",
+      "git_blob": "943c3d0e2436abd6c1f3dcb6ef7b7f1aabaff90f"
+    },
+    {
+      "path": "final/received-course/extracted/pt_auth/sample_data/authorizations.csv",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/final-native/received-course/extracted/pt_auth/sample_data/authorizations.csv",
+      "bytes": 2990,
+      "sha256": "306cae3c27895d2b81978d4cf3115e867b8853edb4939ec8f7e733a7f27b0657",
+      "git_blob": "036f7b276e3e09252afb886ad451531f51ada844"
+    },
+    {
+      "path": "final/received-course/extracted/pt_auth/sample_data/expected.json",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/final-native/received-course/extracted/pt_auth/sample_data/expected.json",
+      "bytes": 3482,
+      "sha256": "0652052b6f37ce068cb77d4b8cde0f5a75d9b275be51b05f570c35a60a8a6d02",
+      "git_blob": "21177a89ac5c24c9faf79746550165a3a170d08a"
+    },
+    {
+      "path": "final/received-course/extracted/pt_auth/sample_data/patients.csv",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/final-native/received-course/extracted/pt_auth/sample_data/patients.csv",
+      "bytes": 2333,
+      "sha256": "1dd9bc97889ca4a2e46e19804841d4af29ada284ede22d328370d20fb520e6e5",
+      "git_blob": "e67323b68d1ac9ee4a901dc3ef70a95384ba5000"
+    },
+    {
+      "path": "final/received-course/extracted/pt_auth/sample_data/payers.csv",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/final-native/received-course/extracted/pt_auth/sample_data/payers.csv",
+      "bytes": 904,
+      "sha256": "81f143eed15c9ce613ee7cf372e51d6223a44700c877cc42d283a824d30900ed",
+      "git_blob": "1853837e82048ac11698b4ad5bb6eeb055d56038"
+    },
+    {
+      "path": "final/received-course/extracted/pt_auth/sample_data/schedule.csv",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/final-native/received-course/extracted/pt_auth/sample_data/schedule.csv",
+      "bytes": 71520,
+      "sha256": "a5f9177b2e0fb9b4397a83839961d11c947e74cc2f13d5de29a31f39254e5198",
+      "git_blob": "24a395250f5318004bab4f168c3ca237189ab354"
+    },
+    {
+      "path": "final/received-course/extracted/pt_auth/tests/test_calendar_receipt_output.py",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/final-native/received-course/extracted/pt_auth/tests/test_calendar_receipt_output.py",
+      "bytes": 8759,
+      "sha256": "faefd09f9a03becd100ca50d2ed7ed23a48d4f256fcecb23fab3680134d62c68",
+      "git_blob": "3264d6566e4ce482b47e05b5161a4a35bc74df56"
+    },
+    {
+      "path": "final/received-course/extracted/pt_auth/tests/test_cli_date_admission.py",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/final-native/received-course/extracted/pt_auth/tests/test_cli_date_admission.py",
+      "bytes": 4814,
+      "sha256": "e99ab4925bece8148c5093929d4d13fae158ebc64571e7ac5f046ad4d6114ab4",
+      "git_blob": "faf307640652fb548dcb09a2cea0e226bb1b7689"
+    },
+    {
+      "path": "final/received-course/new-report/audit.jsonl",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/final-native/received-course/new-report/audit.jsonl",
+      "bytes": 281,
+      "sha256": "5d0de017fce6fb488841472ab68a975cfd52f0aefb8407519908640ee05bd576",
+      "git_blob": "798a4abc88fc452141d7f46b00b7b612dc5d91bb"
+    },
+    {
+      "path": "final/received-course/new-report/digest.html",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/final-native/received-course/new-report/digest.html",
+      "bytes": 79198,
+      "sha256": "0d6d4bbe45afb01c65964c164d21fd981d458b96a1a5d6022e14903d1cc122ca",
+      "git_blob": "78dae5546640494818381584d4b285388c856239"
+    },
+    {
+      "path": "final/received-course/new-report/ledger.csv",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/final-native/received-course/new-report/ledger.csv",
+      "bytes": 3746,
+      "sha256": "ee571c8339864dc97d217e7b31a358fc9b06609328c1790076e81c530be93d96",
+      "git_blob": "d49dee32ca8620cd20f7b0c7ef263281dce1d4db"
+    },
+    {
+      "path": "final/received-course/new-report/summary.json",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/final-native/received-course/new-report/summary.json",
+      "bytes": 170131,
+      "sha256": "163759610cea1d34555cce0a9c2f6a383dbe501862e7c0bd6786274514af5978",
+      "git_blob": "51d6fe7f9128bff90f99c119083f84a9c607bfc4"
+    },
+    {
+      "path": "final/received-course/new-report/uncovered_visits.csv",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/final-native/received-course/new-report/uncovered_visits.csv",
+      "bytes": 31101,
+      "sha256": "adef91b6f7086f8f4e192a6267a84ad9e63b437e51b62df115a133497422a8ec",
+      "git_blob": "e750ad287278f3857be3684c8009d0afe7dd2a35"
+    },
+    {
+      "path": "final/received-course/new-report/visit_status_review.csv",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/final-native/received-course/new-report/visit_status_review.csv",
+      "bytes": 125,
+      "sha256": "9cb3e3e82e30935f57448ed826dbd8dab78e39355e3bebba59c478fa355ee170",
+      "git_blob": "2f954eb61f6a5ed9df00b35756f5f97af5037b1f"
+    },
+    {
+      "path": "final/received-course/new-report/worklist.csv",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/final-native/received-course/new-report/worklist.csv",
+      "bytes": 14972,
+      "sha256": "73a95f16776325610d3d4049db7313407dd904f39ac2e375335a5705b392a9be",
+      "git_blob": "eae26d8268ca14ebd5a5df3985ff3a893d8c9139"
+    },
+    {
+      "path": "final/received-course/outer.json",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/final-native/received-course/outer.json",
+      "bytes": 21724,
+      "sha256": "044a96d56cf84760c25c15630b0a29e4de06537a652150eefda18eb2f5d6233c",
+      "git_blob": "4caeaefe38350d6861956fcd870a6be9f2fc80ee"
+    },
+    {
+      "path": "final/received-course/outer.stderr",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/final-native/received-course/outer.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "final/received-course/outer.stdout",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/final-native/received-course/outer.stdout",
+      "bytes": 349,
+      "sha256": "8f21a33c231966a06119ec302fc6de023ae6d653ca025a10a8c3cf53040c5dfa",
+      "git_blob": "df4a1c553065e6432e3523c759e4ade70bad5f96"
+    },
+    {
+      "path": "final/received-course/receiving.json",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/final-native/received-course/receiving.json",
+      "bytes": 13690,
+      "sha256": "d594926b5e1501ebf4df148950678156dc130222a45e07bf40786ac46904b271",
+      "git_blob": "ca19af9ad0a16db698ce493e3638a90d1c27786a"
+    },
+    {
+      "path": "final/received-course/server.stderr",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/final-native/received-course/server.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "final/received-course/server.stdout",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/final-native/received-course/server.stdout",
+      "bytes": 101,
+      "sha256": "a4d5152f67fc85bd527acf8b2fe931be363f6795a3fb9c5730cf29747a4d023d",
+      "git_blob": "01a5a916ae19738716feb8bbeb0607634d7eb756"
+    },
+    {
+      "path": "final/received-course/uncovered-narrow.png",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/final-native/received-course/uncovered-narrow.png",
+      "bytes": 60998,
+      "sha256": "e7fc7ccbd0a41fd83537e69502bba17d009a74a6f7f960c8fec27e3ee10711b1",
+      "git_blob": "b89ba0b65e193ae12ed0f9f07fe0bfec6ae8ded9"
+    },
+    {
+      "path": "final/received-course/worklist-desktop.png",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/final-native/received-course/worklist-desktop.png",
+      "bytes": 150560,
+      "sha256": "a66068a9b510e6bc86320acad29046fdc8eb8b58caffb5b3e5206c4319d314fb",
+      "git_blob": "4b1a9b728ac0a299e69e2c2616ba4b47622b785f"
+    },
+    {
+      "path": "final/run_course.py",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/final-native/run_course.py",
+      "bytes": 5238,
+      "sha256": "53b09eb38aab7beba10575a78e2d908d393efe6cc4ead95134e89373b8c10535",
+      "git_blob": "9367ccb119788c9be8dbf3645a107ee6302cdf2b"
+    },
+    {
+      "path": "final/native-manifest.json",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/final-native/native-manifest.json",
+      "bytes": 14927,
+      "sha256": "6a9f8cd9b45d1cbeba1014ea20b7b18aac3adef28a85a14ebb88d6ff883526cc",
+      "git_blob": "c3ed50d3a4e7513e86a866523cd1162d6160057b"
+    },
+    {
+      "path": "controls/PROTOCOL-original.md",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/PROTOCOL-original.md",
+      "bytes": 4861,
+      "sha256": "e2c1d310646207d52d07d91187ccd21d3d1ecdcd006bdfb853e7ca2347808181",
+      "git_blob": "fe95505a18c1dda88779e337057d97cf392b3be3"
+    },
+    {
+      "path": "controls/run_course_original.py",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/run_course_original.py",
+      "bytes": 4663,
+      "sha256": "9f707e974c6e038e65432fd50e498ed8cdadfeab167674cca7c9a8f472cbcdd2",
+      "git_blob": "660a09de38bfddecb7d62c0eda5d85db913c3c60"
+    },
+    {
+      "path": "controls/cleanup-amendment.json",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/cleanup-amendment.json",
+      "bytes": 3198,
+      "sha256": "abbbbfd006833c2183969097669b607293daf0f4a393b4ef834b8a2d90553129",
+      "git_blob": "7189c7a413cba1dac0324f749de0c747ec26d6c1"
+    },
+    {
+      "path": "controls/freeze.json",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/freeze.json",
+      "bytes": 919,
+      "sha256": "478b977e1b6f4258e6746a54843262ab498773262b88ac061204cf6d55a01040",
+      "git_blob": "852180191fa954a0e474ea209673f4c486ef2a27"
+    },
+    {
+      "path": "controls/staging-observation.json",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/staging-observation.json",
+      "bytes": 671,
+      "sha256": "71805431fde2a62a13ec27d966bc9d2a7f45c27e2d10814f8d27bf3214219758",
+      "git_blob": "eb1452992cd22da15659f0ce83e502eeddf5850e"
+    },
+    {
+      "path": "controls/inline-amendment.json",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/inline-amendment.json",
+      "bytes": 3646,
+      "sha256": "542f6f64ccb6855b6ab32385e4845ffc59dda3c642c4838074fa26791def1898",
+      "git_blob": "0eb9636aedc6081c4948702e2f6db8ba17e40013"
+    },
+    {
+      "path": "controls/check_predicate.cjs",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/check_predicate.cjs",
+      "bytes": 2062,
+      "sha256": "d1bd70ea6c4b500eded07d2d6dee3db994bde9a064be89063608e1c9ee38c957",
+      "git_blob": "ef74d161abe1ae4dca15dbddf900114cd6a2b557"
+    },
+    {
+      "path": "controls/predicate-proof.json",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/predicate-proof.json",
+      "bytes": 1205,
+      "sha256": "68d4238db7535df7aa2a20c345f9437731dd88a8cf2832e99f5fd57c7d0b843c",
+      "git_blob": "6a446262bfb188d832c2309e7b949c607a67de83"
+    },
+    {
+      "path": "controls/first-posthoc-custody.json",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/first-posthoc-custody.json",
+      "bytes": 462,
+      "sha256": "44b3fec8cc0cd260cee276687a448e02c559ac24cee67b08f287a47d8880876a",
+      "git_blob": "1b406fd43318c757dd19a954ae678cbd4e8281c1"
+    },
+    {
+      "path": "controls/first-outer-observation.json",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/first-outer-observation.json",
+      "bytes": 1624,
+      "sha256": "0660ee5c094891fcbb84c4d7cf8411fe3bc3cd7dc6ec2109ac5fd42725dd828c",
+      "git_blob": "e615a876df59837e1510104e72ef2f5a696c2d47"
+    },
+    {
+      "path": "controls/final-outer-observation.json",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/final-outer-observation.json",
+      "bytes": 1446,
+      "sha256": "8794f485079674e16dee894229aa73ea1edfc476f7d7160d3dd9bfc2a851789f",
+      "git_blob": "5e91345cd38ba6ccc948d94db2342c3ac8f4af87"
+    },
+    {
+      "path": "controls/export_native.py",
+      "local": "/workspace/scratch/3776d8cfc208/pt-ui-independent/export_native.py",
+      "bytes": 1890,
+      "sha256": "49e49f54856e3aca3dc967702224209328937a11156046da46d61a8db31463b9",
+      "git_blob": "a665d87eb3f761270ea8dce32341e42c1be11ff7"
+    }
+  ]
+}

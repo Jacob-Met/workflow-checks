@@ -1,0 +1,30 @@
+{
+  "syntax_only": true,
+  "full_remote_bodies_equal": true,
+  "files": [
+    {
+      "path": "PROTOCOL.md",
+      "bytes": 4861,
+      "sha256": "e2c1d310646207d52d07d91187ccd21d3d1ecdcd006bdfb853e7ca2347808181",
+      "git_blob": "fe95505a18c1dda88779e337057d97cf392b3be3"
+    },
+    {
+      "path": "expected.json",
+      "bytes": 17034,
+      "sha256": "8fd4c27ac21dc214d6c2dabab274aa18a74fdc8584ae7297cf3e3152640262cd",
+      "git_blob": "a072989cfab2f17e7c6b805a22e084b0c46ef703"
+    },
+    {
+      "path": "receive_ui.js",
+      "bytes": 20035,
+      "sha256": "7232d69d595dcd06c1de525941e57c7b21c95f370d5017bd368a154ee4828c2d",
+      "git_blob": "3f9906b118ad74f69f46df4e141a664a6f8c1288"
+    },
+    {
+      "path": "run_course.py",
+      "bytes": 4663,
+      "sha256": "9f707e974c6e038e65432fd50e498ed8cdadfeab167674cca7c9a8f472cbcdd2",
+      "git_blob": "660a09de38bfddecb7d62c0eda5d85db913c3c60"
+    }
+  ]
+}

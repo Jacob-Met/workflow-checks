@@ -1,0 +1,29 @@
+{
+  "schema": "pt.ui.final-outer-observation/1",
+  "scope": "Collected RDC terminal metadata separately attributed from native Node/outer JSON. One separately released successor, no summed course pass claim.",
+  "device": "d55b2499-5e82-4805-819a-d0d7ddea1efe",
+  "course": {
+    "rdc_pid": 713563,
+    "exit_code": 0,
+    "runtime_seconds": 1.91,
+    "node_pid": 713630,
+    "node_exit": 0,
+    "node_reaped": true,
+    "outer_timeout": false,
+    "node_elapsed_ns": 1817404288
+  },
+  "export": {
+    "rdc_pid": 714483,
+    "exit_code": 0,
+    "runtime_seconds": 0.12,
+    "files": 53,
+    "bytes": 974277,
+    "native_byte_ns_custody_exact": true,
+    "tar_bytes": 398254,
+    "tar_sha256": "cbaab55b3dc7ca143ec23dc88a60a18007864e949f1ceae2e516559f7ffdfae2"
+  },
+  "receiving": "All21 browser checks true, one exact completeCSV, seven report files and33 source/input byte+native-ns custody exact.",
+  "closure": "Browser.close acknowledged; browser713637 absent and launcher0. Server713643 terminated by SIGTERM, waited/reaped and absent.",
+  "visual": "Both successor PNGs are byte-identical to root-reviewed original captures. Desktop scope is filtered row/five-item checklist; narrow shows left columns inside existing horizontally scrollable region, not all columns/fullpage.",
+  "body_transport": "All53 original native bodies admitted against native manifest bytes/SHA256/Git; native ns retained, normalized local tar mtimes excluded."
+}

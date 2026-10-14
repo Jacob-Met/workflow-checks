@@ -1,0 +1,59 @@
+{
+  "schema": "pt.ui.request-predicate-proof/1",
+  "scope": "Helper-only compilation/evaluation of exact old/new expressions; no browser, server or product execution.",
+  "original_recorded_set_accepted": false,
+  "successor_recorded_set_accepted": true,
+  "checks": [
+    {
+      "name": "ownGET",
+      "expected": true,
+      "observed": true
+    },
+    {
+      "name": "ownSummaryGET",
+      "expected": true,
+      "observed": true
+    },
+    {
+      "name": "exactEmbeddedGET",
+      "expected": true,
+      "observed": true
+    },
+    {
+      "name": "ownPOST",
+      "expected": false,
+      "observed": false
+    },
+    {
+      "name": "externalHTTP",
+      "expected": false,
+      "observed": false
+    },
+    {
+      "name": "externalHTTPS",
+      "expected": false,
+      "observed": false
+    },
+    {
+      "name": "deceptiveOrigin",
+      "expected": false,
+      "observed": false
+    },
+    {
+      "name": "otherEmbeddedImage",
+      "expected": false,
+      "observed": false
+    },
+    {
+      "name": "embeddedPOST",
+      "expected": false,
+      "observed": false
+    },
+    {
+      "name": "fileURL",
+      "expected": false,
+      "observed": false
+    }
+  ],
+  "passed": true
+}

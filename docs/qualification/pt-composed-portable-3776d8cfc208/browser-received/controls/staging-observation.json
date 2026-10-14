@@ -1,0 +1,25 @@
+{
+  "device_id": "d55b2499-5e82-4805-819a-d0d7ddea1efe",
+  "stage": "/home/jacob/pt-ui-3776-dzz4rq7n",
+  "initial_readonly": {
+    "rdc_pid": 688888,
+    "exit_code": 0,
+    "runtime_seconds": 0.08,
+    "home_free": 933130240
+  },
+  "stage_creation": {
+    "rdc_pid": 695314,
+    "exit_code": 0,
+    "runtime_seconds": 0.07,
+    "home_free": 922152960
+  },
+  "admission": {
+    "rdc_pid": 696534,
+    "file_count": 5,
+    "bytes": 124045,
+    "product_executed": false,
+    "exit_code": 0,
+    "runtime_seconds": 0.07
+  },
+  "scope": "Reported remote terminal metadata transcribed; stage admission retains native file hashes and ns. Source/browser course not yet run."
+}

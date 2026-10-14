@@ -1,0 +1,9 @@
+{
+  "schema": "pt.ui.first-posthoc-custody/1",
+  "method": "Compare original report_before with exported native-manifest fields, not local normalized tar mtimes; compare complete raw outer before/after. No browser invocation.",
+  "report_files": 7,
+  "report_custody_exact": true,
+  "outer_input_files": 33,
+  "outer_custody_exact": true,
+  "scope": "This read-only check does not relabel the failed original course or supply its missing JS-event assertions."
+}

@@ -1,0 +1,424 @@
+{
+  "schema": "pt.composed-ui.outer/1",
+  "output": "/home/jacob/pt-ui-3776-dzz4rq7n/successor/received-course",
+  "before": {
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/actual-drive.zip": {
+      "bytes": 77452,
+      "sha256": "ba9941d29489f584e3fcd0b7b379b9a4de57d1fb56bede960983450650d1bd43",
+      "git_blob": "facfbd93a4d7faa331c975021d48bd97986180fd",
+      "mtime_ns": "1791950190890082546"
+    },
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/expected.json": {
+      "bytes": 17034,
+      "sha256": "8fd4c27ac21dc214d6c2dabab274aa18a74fdc8584ae7297cf3e3152640262cd",
+      "git_blob": "a072989cfab2f17e7c6b805a22e084b0c46ef703",
+      "mtime_ns": "1791950190889619336"
+    },
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/PROTOCOL.md": {
+      "bytes": 5176,
+      "sha256": "ed3ee9b18fcfc66309ba9ac9ca0bd2af7ef0c053fdc3bff8a621941a18b77145",
+      "git_blob": "6b9be3d8f1d9cac9ccb5d70d043b7768948c093f",
+      "mtime_ns": "1791950190888673430"
+    },
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/receive_ui.js": {
+      "bytes": 20035,
+      "sha256": "7232d69d595dcd06c1de525941e57c7b21c95f370d5017bd368a154ee4828c2d",
+      "git_blob": "3f9906b118ad74f69f46df4e141a664a6f8c1288",
+      "mtime_ns": "1791950190889739541"
+    },
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/run_course.py": {
+      "bytes": 5238,
+      "sha256": "53b09eb38aab7beba10575a78e2d908d393efe6cc4ead95134e89373b8c10535",
+      "git_blob": "9367ccb119788c9be8dbf3645a107ee6302cdf2b",
+      "mtime_ns": "1791950190889809424"
+    },
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/received-course/extracted/LICENSE": {
+      "bytes": 1070,
+      "sha256": "f6a3d0f7d08a7590f907c08d6127545ab44eff0d23b6074714ad3fb935b998bb",
+      "git_blob": "edb188254288b40f2895833e3647b7e0be34c962",
+      "mtime_ns": "1791950200545439155"
+    },
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/received-course/extracted/MANIFEST.json": {
+      "bytes": 4422,
+      "sha256": "86892c5bffe1b3a3ff3d240801d6c6f26aca108cbba54b23dd9231bf27a58d04",
+      "git_blob": "660e45d30ac528951b55ededd083e490fe211306",
+      "mtime_ns": "1791950200545572848"
+    },
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/received-course/extracted/SOURCE_MANIFEST.json": {
+      "bytes": 10456,
+      "sha256": "49c986f5fbc7df111337ed2b8027d1eb878fc5c25f1f34c615ed81f2bbb0a1aa",
+      "git_blob": "3045f338f985c279ba7ef065ea92ed258abf8689",
+      "mtime_ns": "1791950200545680190"
+    },
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/received-course/extracted/START_HERE.md": {
+      "bytes": 7225,
+      "sha256": "77fc48e5768dbe14894bd48cf5457823e20c06d0c90bc40b0da225b07d0d1d4b",
+      "git_blob": "29376053ab58aa240c50bd71a275daf74b24afda",
+      "mtime_ns": "1791950200545785135"
+    },
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/received-course/extracted/pt_auth/CALENDAR_RECEIPTS.md": {
+      "bytes": 4541,
+      "sha256": "379fa9fbc54694460d1809cde7eb7934c50e0257f27c474f1c918b5787da6485",
+      "git_blob": "a4a55efba02796069bbd974ab2d9de3060da5428",
+      "mtime_ns": "1791950200545893622"
+    },
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/received-course/extracted/pt_auth/CSV_HEADERS.md": {
+      "bytes": 2326,
+      "sha256": "463de2efe8189cd924a95caf670da27fe15a52e4df79409fec8a81f196591287",
+      "git_blob": "43e2605ab6e50694e3f0f0b3ebbabf0a87c6c3fe",
+      "mtime_ns": "1791950200545969463"
+    },
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/received-course/extracted/pt_auth/HARDENING.md": {
+      "bytes": 11058,
+      "sha256": "660150926267145f95caf941efe9a5db4e3a0964229fdc330dea23718faea0f9",
+      "git_blob": "49db3a3e425e2ecb6c36b000daf95874dbf88cd9",
+      "mtime_ns": "1791950200546083707"
+    },
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/received-course/extracted/pt_auth/README.md": {
+      "bytes": 23423,
+      "sha256": "dcdfefc4009aa5a03d49135639519b92f301a6f48468051fba7a6075836739a8",
+      "git_blob": "23fc8292665136a70b8aa8dde7bc08ab1d3b4f21",
+      "mtime_ns": "1791950200546249436"
+    },
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/received-course/extracted/pt_auth/ptauth/__init__.py": {
+      "bytes": 311,
+      "sha256": "71e1527f153c607b679485e4954af1b3ec6a843b041562eb07f4d36e08fd231c",
+      "git_blob": "a6f4545ac17e2578317ef694f7bb548489f6c71c",
+      "mtime_ns": "1791950200546330691"
+    },
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/received-course/extracted/pt_auth/ptauth/__main__.py": {
+      "bytes": 71,
+      "sha256": "712d5a98258176d09d165788048d34da033af45c04d14387d9e51de108db5669",
+      "git_blob": "07cf8abb5a559054d4487c65a3f9f7c992067cf5",
+      "mtime_ns": "1791950200546387944"
+    },
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/received-course/extracted/pt_auth/ptauth/calendar_ui.js": {
+      "bytes": 8448,
+      "sha256": "b91fe76b947f381b2fa0835646fc664bf7eaa4474631ae3c9e5cb3968b9cdf3a",
+      "git_blob": "a6ba45ec85c28f7fd80d7e2fdd32ac62e96daa99",
+      "mtime_ns": "1791950200546482788"
+    },
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/received-course/extracted/pt_auth/ptauth/cli.py": {
+      "bytes": 5952,
+      "sha256": "995428dbf73b4e34ef7fd12093b4072f5015b10a85ce44e9c40d90cd02fd3cab",
+      "git_blob": "8d6b43649bc6c142c28f71646485a31f6a6bbf55",
+      "mtime_ns": "1791950200546574107"
+    },
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/received-course/extracted/pt_auth/ptauth/data.py": {
+      "bytes": 10725,
+      "sha256": "b16d31711e678e3d25c9cf867098de93645298410985b96248e03ac3133adf19",
+      "git_blob": "886b2d75050f302acb101ab4f5bf8473b7573b8f",
+      "mtime_ns": "1791950200546681100"
+    },
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/received-course/extracted/pt_auth/ptauth/engine.py": {
+      "bytes": 16057,
+      "sha256": "bfa7049e9b133d654ce947b135c17ac401bd7b1fcd76350bdb10de5b7a1ad1f7",
+      "git_blob": "39c97f35d61ff949b5c2381f0ad60d7af8d74226",
+      "mtime_ns": "1791950200546799070"
+    },
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/received-course/extracted/pt_auth/ptauth/report.py": {
+      "bytes": 10743,
+      "sha256": "20cbc86e153b9af5151fd3e74cb370298de4692c81b3546a214eb2cfa8307df7",
+      "git_blob": "2ce82b1712e5c6fc03374d38996eceddf31782f0",
+      "mtime_ns": "1791950200546900179"
+    },
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/received-course/extracted/pt_auth/ptauth/synth.py": {
+      "bytes": 8873,
+      "sha256": "b82a34447e43dacbe46ed06e60b693ed216e87f15892ae297c682aa5a3f139fd",
+      "git_blob": "2ff6a2548bf55a812cfa62e397442a0d3f7debbb",
+      "mtime_ns": "1791950200546995710"
+    },
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/received-course/extracted/pt_auth/ptauth/ui.html": {
+      "bytes": 18655,
+      "sha256": "a59df72e1edf5075e513047eb4000e94a87bf1dbcde8d243547944c283bbd492",
+      "git_blob": "ec2e198ee1873c41981d201c78a63dbccc13afad",
+      "mtime_ns": "1791950200547122964"
+    },
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/received-course/extracted/pt_auth/ptauth/uncovered.py": {
+      "bytes": 4319,
+      "sha256": "21e92509df706e504a8630f3383ea4fe98d03047d2e4b070f3fdd188d995350e",
+      "git_blob": "9ab21781c4116dd0b9b76ac0116868898f3ee7d4",
+      "mtime_ns": "1791950200547200648"
+    },
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/received-course/extracted/pt_auth/ptauth/web.py": {
+      "bytes": 8633,
+      "sha256": "18a5f6e889f2a5d7e0e3704989f041681252df3ee0cb29e3c356aff560fd2967",
+      "git_blob": "7e5d38f4cf8c33f4b9c91bd3c3d929fcfa0f80b3",
+      "mtime_ns": "1791950200547288518"
+    },
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/received-course/extracted/pt_auth/ptauth/worklist_calendar.py": {
+      "bytes": 13750,
+      "sha256": "89751f1de5548ced34a59c296d0edf1eda06a38bdb935be3e7c3c8b2ae5d55c0",
+      "git_blob": "e125f9ed77343fcc3d82e6d6f25a7296b0463aa7",
+      "mtime_ns": "1791950200547422202"
+    },
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/received-course/extracted/pt_auth/sample_data/README_SYNTHETIC.txt": {
+      "bytes": 262,
+      "sha256": "2a7e8be2b866866b2280df867a71ce18d57946b188ae9c9bb9d4af631b5f859a",
+      "git_blob": "943c3d0e2436abd6c1f3dcb6ef7b7f1aabaff90f",
+      "mtime_ns": "1791950200547505581"
+    },
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/received-course/extracted/pt_auth/sample_data/authorizations.csv": {
+      "bytes": 2990,
+      "sha256": "306cae3c27895d2b81978d4cf3115e867b8853edb4939ec8f7e733a7f27b0657",
+      "git_blob": "036f7b276e3e09252afb886ad451531f51ada844",
+      "mtime_ns": "1791950200547576410"
+    },
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/received-course/extracted/pt_auth/sample_data/expected.json": {
+      "bytes": 3482,
+      "sha256": "0652052b6f37ce068cb77d4b8cde0f5a75d9b275be51b05f570c35a60a8a6d02",
+      "git_blob": "21177a89ac5c24c9faf79746550165a3a170d08a",
+      "mtime_ns": "1791950200547641143"
+    },
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/received-course/extracted/pt_auth/sample_data/patients.csv": {
+      "bytes": 2333,
+      "sha256": "1dd9bc97889ca4a2e46e19804841d4af29ada284ede22d328370d20fb520e6e5",
+      "git_blob": "e67323b68d1ac9ee4a901dc3ef70a95384ba5000",
+      "mtime_ns": "1791950200547702468"
+    },
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/received-course/extracted/pt_auth/sample_data/payers.csv": {
+      "bytes": 904,
+      "sha256": "81f143eed15c9ce613ee7cf372e51d6223a44700c877cc42d283a824d30900ed",
+      "git_blob": "1853837e82048ac11698b4ad5bb6eeb055d56038",
+      "mtime_ns": "1791950200547763987"
+    },
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/received-course/extracted/pt_auth/sample_data/schedule.csv": {
+      "bytes": 71520,
+      "sha256": "a5f9177b2e0fb9b4397a83839961d11c947e74cc2f13d5de29a31f39254e5198",
+      "git_blob": "24a395250f5318004bab4f168c3ca237189ab354",
+      "mtime_ns": "1791950200548007898"
+    },
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/received-course/extracted/pt_auth/tests/test_calendar_receipt_output.py": {
+      "bytes": 8759,
+      "sha256": "faefd09f9a03becd100ca50d2ed7ed23a48d4f256fcecb23fab3680134d62c68",
+      "git_blob": "3264d6566e4ce482b47e05b5161a4a35bc74df56",
+      "mtime_ns": "1791950200548143673"
+    },
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/received-course/extracted/pt_auth/tests/test_cli_date_admission.py": {
+      "bytes": 4814,
+      "sha256": "e99ab4925bece8148c5093929d4d13fae158ebc64571e7ac5f046ad4d6114ab4",
+      "git_blob": "faf307640652fb548dcb09a2cea0e226bb1b7689",
+      "mtime_ns": "1791950200548226087"
+    }
+  },
+  "argv": [
+    "/usr/bin/node",
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/receive_ui.js",
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/received-course/extracted",
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/received-course",
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/expected.json"
+  ],
+  "timed_out": false,
+  "reaped": true,
+  "child_pid": 706369,
+  "returncode": 1,
+  "failed_exit_group_cleanup": {
+    "process_group": 706369,
+    "signal": "SIGKILL",
+    "attempted": true,
+    "already_absent": true
+  },
+  "elapsed_ns": 1817361729,
+  "after": {
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/actual-drive.zip": {
+      "bytes": 77452,
+      "sha256": "ba9941d29489f584e3fcd0b7b379b9a4de57d1fb56bede960983450650d1bd43",
+      "git_blob": "facfbd93a4d7faa331c975021d48bd97986180fd",
+      "mtime_ns": "1791950190890082546"
+    },
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/expected.json": {
+      "bytes": 17034,
+      "sha256": "8fd4c27ac21dc214d6c2dabab274aa18a74fdc8584ae7297cf3e3152640262cd",
+      "git_blob": "a072989cfab2f17e7c6b805a22e084b0c46ef703",
+      "mtime_ns": "1791950190889619336"
+    },
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/PROTOCOL.md": {
+      "bytes": 5176,
+      "sha256": "ed3ee9b18fcfc66309ba9ac9ca0bd2af7ef0c053fdc3bff8a621941a18b77145",
+      "git_blob": "6b9be3d8f1d9cac9ccb5d70d043b7768948c093f",
+      "mtime_ns": "1791950190888673430"
+    },
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/receive_ui.js": {
+      "bytes": 20035,
+      "sha256": "7232d69d595dcd06c1de525941e57c7b21c95f370d5017bd368a154ee4828c2d",
+      "git_blob": "3f9906b118ad74f69f46df4e141a664a6f8c1288",
+      "mtime_ns": "1791950190889739541"
+    },
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/run_course.py": {
+      "bytes": 5238,
+      "sha256": "53b09eb38aab7beba10575a78e2d908d393efe6cc4ead95134e89373b8c10535",
+      "git_blob": "9367ccb119788c9be8dbf3645a107ee6302cdf2b",
+      "mtime_ns": "1791950190889809424"
+    },
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/received-course/extracted/LICENSE": {
+      "bytes": 1070,
+      "sha256": "f6a3d0f7d08a7590f907c08d6127545ab44eff0d23b6074714ad3fb935b998bb",
+      "git_blob": "edb188254288b40f2895833e3647b7e0be34c962",
+      "mtime_ns": "1791950200545439155"
+    },
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/received-course/extracted/MANIFEST.json": {
+      "bytes": 4422,
+      "sha256": "86892c5bffe1b3a3ff3d240801d6c6f26aca108cbba54b23dd9231bf27a58d04",
+      "git_blob": "660e45d30ac528951b55ededd083e490fe211306",
+      "mtime_ns": "1791950200545572848"
+    },
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/received-course/extracted/SOURCE_MANIFEST.json": {
+      "bytes": 10456,
+      "sha256": "49c986f5fbc7df111337ed2b8027d1eb878fc5c25f1f34c615ed81f2bbb0a1aa",
+      "git_blob": "3045f338f985c279ba7ef065ea92ed258abf8689",
+      "mtime_ns": "1791950200545680190"
+    },
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/received-course/extracted/START_HERE.md": {
+      "bytes": 7225,
+      "sha256": "77fc48e5768dbe14894bd48cf5457823e20c06d0c90bc40b0da225b07d0d1d4b",
+      "git_blob": "29376053ab58aa240c50bd71a275daf74b24afda",
+      "mtime_ns": "1791950200545785135"
+    },
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/received-course/extracted/pt_auth/CALENDAR_RECEIPTS.md": {
+      "bytes": 4541,
+      "sha256": "379fa9fbc54694460d1809cde7eb7934c50e0257f27c474f1c918b5787da6485",
+      "git_blob": "a4a55efba02796069bbd974ab2d9de3060da5428",
+      "mtime_ns": "1791950200545893622"
+    },
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/received-course/extracted/pt_auth/CSV_HEADERS.md": {
+      "bytes": 2326,
+      "sha256": "463de2efe8189cd924a95caf670da27fe15a52e4df79409fec8a81f196591287",
+      "git_blob": "43e2605ab6e50694e3f0f0b3ebbabf0a87c6c3fe",
+      "mtime_ns": "1791950200545969463"
+    },
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/received-course/extracted/pt_auth/HARDENING.md": {
+      "bytes": 11058,
+      "sha256": "660150926267145f95caf941efe9a5db4e3a0964229fdc330dea23718faea0f9",
+      "git_blob": "49db3a3e425e2ecb6c36b000daf95874dbf88cd9",
+      "mtime_ns": "1791950200546083707"
+    },
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/received-course/extracted/pt_auth/README.md": {
+      "bytes": 23423,
+      "sha256": "dcdfefc4009aa5a03d49135639519b92f301a6f48468051fba7a6075836739a8",
+      "git_blob": "23fc8292665136a70b8aa8dde7bc08ab1d3b4f21",
+      "mtime_ns": "1791950200546249436"
+    },
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/received-course/extracted/pt_auth/ptauth/__init__.py": {
+      "bytes": 311,
+      "sha256": "71e1527f153c607b679485e4954af1b3ec6a843b041562eb07f4d36e08fd231c",
+      "git_blob": "a6f4545ac17e2578317ef694f7bb548489f6c71c",
+      "mtime_ns": "1791950200546330691"
+    },
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/received-course/extracted/pt_auth/ptauth/__main__.py": {
+      "bytes": 71,
+      "sha256": "712d5a98258176d09d165788048d34da033af45c04d14387d9e51de108db5669",
+      "git_blob": "07cf8abb5a559054d4487c65a3f9f7c992067cf5",
+      "mtime_ns": "1791950200546387944"
+    },
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/received-course/extracted/pt_auth/ptauth/calendar_ui.js": {
+      "bytes": 8448,
+      "sha256": "b91fe76b947f381b2fa0835646fc664bf7eaa4474631ae3c9e5cb3968b9cdf3a",
+      "git_blob": "a6ba45ec85c28f7fd80d7e2fdd32ac62e96daa99",
+      "mtime_ns": "1791950200546482788"
+    },
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/received-course/extracted/pt_auth/ptauth/cli.py": {
+      "bytes": 5952,
+      "sha256": "995428dbf73b4e34ef7fd12093b4072f5015b10a85ce44e9c40d90cd02fd3cab",
+      "git_blob": "8d6b43649bc6c142c28f71646485a31f6a6bbf55",
+      "mtime_ns": "1791950200546574107"
+    },
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/received-course/extracted/pt_auth/ptauth/data.py": {
+      "bytes": 10725,
+      "sha256": "b16d31711e678e3d25c9cf867098de93645298410985b96248e03ac3133adf19",
+      "git_blob": "886b2d75050f302acb101ab4f5bf8473b7573b8f",
+      "mtime_ns": "1791950200546681100"
+    },
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/received-course/extracted/pt_auth/ptauth/engine.py": {
+      "bytes": 16057,
+      "sha256": "bfa7049e9b133d654ce947b135c17ac401bd7b1fcd76350bdb10de5b7a1ad1f7",
+      "git_blob": "39c97f35d61ff949b5c2381f0ad60d7af8d74226",
+      "mtime_ns": "1791950200546799070"
+    },
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/received-course/extracted/pt_auth/ptauth/report.py": {
+      "bytes": 10743,
+      "sha256": "20cbc86e153b9af5151fd3e74cb370298de4692c81b3546a214eb2cfa8307df7",
+      "git_blob": "2ce82b1712e5c6fc03374d38996eceddf31782f0",
+      "mtime_ns": "1791950200546900179"
+    },
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/received-course/extracted/pt_auth/ptauth/synth.py": {
+      "bytes": 8873,
+      "sha256": "b82a34447e43dacbe46ed06e60b693ed216e87f15892ae297c682aa5a3f139fd",
+      "git_blob": "2ff6a2548bf55a812cfa62e397442a0d3f7debbb",
+      "mtime_ns": "1791950200546995710"
+    },
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/received-course/extracted/pt_auth/ptauth/ui.html": {
+      "bytes": 18655,
+      "sha256": "a59df72e1edf5075e513047eb4000e94a87bf1dbcde8d243547944c283bbd492",
+      "git_blob": "ec2e198ee1873c41981d201c78a63dbccc13afad",
+      "mtime_ns": "1791950200547122964"
+    },
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/received-course/extracted/pt_auth/ptauth/uncovered.py": {
+      "bytes": 4319,
+      "sha256": "21e92509df706e504a8630f3383ea4fe98d03047d2e4b070f3fdd188d995350e",
+      "git_blob": "9ab21781c4116dd0b9b76ac0116868898f3ee7d4",
+      "mtime_ns": "1791950200547200648"
+    },
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/received-course/extracted/pt_auth/ptauth/web.py": {
+      "bytes": 8633,
+      "sha256": "18a5f6e889f2a5d7e0e3704989f041681252df3ee0cb29e3c356aff560fd2967",
+      "git_blob": "7e5d38f4cf8c33f4b9c91bd3c3d929fcfa0f80b3",
+      "mtime_ns": "1791950200547288518"
+    },
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/received-course/extracted/pt_auth/ptauth/worklist_calendar.py": {
+      "bytes": 13750,
+      "sha256": "89751f1de5548ced34a59c296d0edf1eda06a38bdb935be3e7c3c8b2ae5d55c0",
+      "git_blob": "e125f9ed77343fcc3d82e6d6f25a7296b0463aa7",
+      "mtime_ns": "1791950200547422202"
+    },
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/received-course/extracted/pt_auth/sample_data/README_SYNTHETIC.txt": {
+      "bytes": 262,
+      "sha256": "2a7e8be2b866866b2280df867a71ce18d57946b188ae9c9bb9d4af631b5f859a",
+      "git_blob": "943c3d0e2436abd6c1f3dcb6ef7b7f1aabaff90f",
+      "mtime_ns": "1791950200547505581"
+    },
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/received-course/extracted/pt_auth/sample_data/authorizations.csv": {
+      "bytes": 2990,
+      "sha256": "306cae3c27895d2b81978d4cf3115e867b8853edb4939ec8f7e733a7f27b0657",
+      "git_blob": "036f7b276e3e09252afb886ad451531f51ada844",
+      "mtime_ns": "1791950200547576410"
+    },
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/received-course/extracted/pt_auth/sample_data/expected.json": {
+      "bytes": 3482,
+      "sha256": "0652052b6f37ce068cb77d4b8cde0f5a75d9b275be51b05f570c35a60a8a6d02",
+      "git_blob": "21177a89ac5c24c9faf79746550165a3a170d08a",
+      "mtime_ns": "1791950200547641143"
+    },
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/received-course/extracted/pt_auth/sample_data/patients.csv": {
+      "bytes": 2333,
+      "sha256": "1dd9bc97889ca4a2e46e19804841d4af29ada284ede22d328370d20fb520e6e5",
+      "git_blob": "e67323b68d1ac9ee4a901dc3ef70a95384ba5000",
+      "mtime_ns": "1791950200547702468"
+    },
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/received-course/extracted/pt_auth/sample_data/payers.csv": {
+      "bytes": 904,
+      "sha256": "81f143eed15c9ce613ee7cf372e51d6223a44700c877cc42d283a824d30900ed",
+      "git_blob": "1853837e82048ac11698b4ad5bb6eeb055d56038",
+      "mtime_ns": "1791950200547763987"
+    },
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/received-course/extracted/pt_auth/sample_data/schedule.csv": {
+      "bytes": 71520,
+      "sha256": "a5f9177b2e0fb9b4397a83839961d11c947e74cc2f13d5de29a31f39254e5198",
+      "git_blob": "24a395250f5318004bab4f168c3ca237189ab354",
+      "mtime_ns": "1791950200548007898"
+    },
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/received-course/extracted/pt_auth/tests/test_calendar_receipt_output.py": {
+      "bytes": 8759,
+      "sha256": "faefd09f9a03becd100ca50d2ed7ed23a48d4f256fcecb23fab3680134d62c68",
+      "git_blob": "3264d6566e4ce482b47e05b5161a4a35bc74df56",
+      "mtime_ns": "1791950200548143673"
+    },
+    "/home/jacob/pt-ui-3776-dzz4rq7n/successor/received-course/extracted/pt_auth/tests/test_cli_date_admission.py": {
+      "bytes": 4814,
+      "sha256": "e99ab4925bece8148c5093929d4d13fae158ebc64571e7ac5f046ad4d6114ab4",
+      "git_blob": "faf307640652fb548dcb09a2cea0e226bb1b7689",
+      "mtime_ns": "1791950200548226087"
+    }
+  },
+  "sources_unchanged": true,
+  "passed": false
+}

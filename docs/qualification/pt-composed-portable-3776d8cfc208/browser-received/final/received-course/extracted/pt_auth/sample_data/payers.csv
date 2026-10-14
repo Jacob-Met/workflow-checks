@@ -1,0 +1,6 @@
+payer_id,payer_name,requires_auth,reauth_visits_before,reauth_days_before,turnaround_days,annual_visit_limit,counts_evals,checklist
+PAY-COMM1,Commercial Plan A (placeholder),Y,3,10,5,,N,"Current plan of care signed by referring provider|Progress note within last 30 days|Objective measures (ROM, strength, functional score)|Updated goals|Payer portal request form"
+PAY-COMM2,Commercial Plan B (placeholder),Y,2,7,3,30,Y,"Progress note|Functional outcome score (e.g., LEFS/ODI)|Visit history|Portal submission"
+PAY-MA,Medicare Advantage Plan (placeholder),Y,4,14,7,,Y,Plan of care certification|Progress report (every 10th visit)|Medical necessity statement|Functional limitation reporting|Utilization-management vendor form
+PAY-WC,Workers Comp Carrier (placeholder),Y,2,7,10,,Y,Adjuster approval request|Work status report|Progress note|Physician referral / Rx
+PAY-SELF,Self-pay / cash,N,0,0,0,,Y,

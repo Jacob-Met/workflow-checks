@@ -1,0 +1,34 @@
+{
+  "schema": "pt.ui.receiving-cleanup-amendment/1",
+  "before_execution": true,
+  "reason": "Root review found an unsuccessful Node exit could retain its owned browser group when no outer timeout occurred.",
+  "original_controller": {
+    "path": "run_course_original.py",
+    "bytes": 4663,
+    "git_blob": "660a09de38bfddecb7d62c0eda5d85db913c3c60",
+    "sha256": "9f707e974c6e038e65432fd50e498ed8cdadfeab167674cca7c9a8f472cbcdd2"
+  },
+  "successor_controller": {
+    "path": "run_course.py",
+    "bytes": 5238,
+    "git_blob": "9367ccb119788c9be8dbf3645a107ee6302cdf2b",
+    "sha256": "53b09eb38aab7beba10575a78e2d908d393efe6cc4ead95134e89373b8c10535"
+  },
+  "original_protocol": {
+    "path": "PROTOCOL-original.md",
+    "bytes": 4861,
+    "git_blob": "fe95505a18c1dda88779e337057d97cf392b3be3",
+    "sha256": "e2c1d310646207d52d07d91187ccd21d3d1ecdcd006bdfb853e7ca2347808181"
+  },
+  "successor_protocol": {
+    "path": "PROTOCOL.md",
+    "bytes": 5176,
+    "git_blob": "6b9be3d8f1d9cac9ccb5d70d043b7768948c093f",
+    "sha256": "ed3ee9b18fcfc66309ba9ac9ca0bd2af7ef0c053fdc3bff8a621941a18b77145"
+  },
+  "scope": "Only after unsuccessful already-reaped Node exit without timeout: one SIGKILL of its owned process group with actual result recorded. No repeat of timeout kill/wait. Driver, inputs, assertions and all bounds unchanged.",
+  "diffs": {
+    "run_course.py": "--- run_course_original.py\n+++ run_course.py\n@@ -84,6 +84,16 @@\n         except Exception as exc:\n             receipt['error'] = repr(exc)\n         finally:\n+            if proc is not None and receipt['reaped'] and receipt.get('returncode') != 0 and not receipt['timed_out']:\n+                cleanup = dict(process_group=proc.pid, signal='SIGKILL', attempted=True)\n+                try:\n+                    os.killpg(proc.pid, signal.SIGKILL)\n+                    cleanup['sent'] = True\n+                except ProcessLookupError:\n+                    cleanup['already_absent'] = True\n+                except OSError as exc:\n+                    cleanup['error'] = repr(exc)\n+                receipt['failed_exit_group_cleanup'] = cleanup\n             receipt['elapsed_ns'] = time.monotonic_ns()-started\n             try:\n                 receipt['after'] = {str(p): identity(p) for p in watched}\n",
+    "PROTOCOL.md": "--- PROTOCOL-original.md\n+++ PROTOCOL.md\n@@ -67,6 +67,10 @@\n startup 15 seconds, download 15 seconds and owned closure 20 seconds. The outer\n controller bounds its single Node child to 180 seconds and attempts one owned\n process-group kill plus a bounded 10-second wait if needed. This is not a retry.\n+If Node has already exited unsuccessfully without an outer timeout, the controller\n+also makes one recorded kill attempt on that same owned process group, covering\n+browser-startup failure paths. It does not repeat an already attempted timeout\n+kill or wait. The successful workflow does not take this cleanup branch.\n Browser.close acknowledgement, actual browser absence, launcher status and\n server termination/reaping are recorded separately. A failed observation retains\n its partial outputs and exact error; no automatic successor course is permitted.\n"
+  }
+}

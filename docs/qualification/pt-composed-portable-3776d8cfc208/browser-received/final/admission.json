@@ -1,0 +1,37 @@
+[
+  {
+    "path": "/home/jacob/pt-ui-3776-dzz4rq7n/inline-successor/PROTOCOL.md",
+    "bytes": 5176,
+    "sha256": "ed3ee9b18fcfc66309ba9ac9ca0bd2af7ef0c053fdc3bff8a621941a18b77145",
+    "git_blob": "6b9be3d8f1d9cac9ccb5d70d043b7768948c093f",
+    "mtime_ns": "1791950629189165181"
+  },
+  {
+    "path": "/home/jacob/pt-ui-3776-dzz4rq7n/inline-successor/expected.json",
+    "bytes": 17034,
+    "sha256": "8fd4c27ac21dc214d6c2dabab274aa18a74fdc8584ae7297cf3e3152640262cd",
+    "git_blob": "a072989cfab2f17e7c6b805a22e084b0c46ef703",
+    "mtime_ns": "1791950629189288989"
+  },
+  {
+    "path": "/home/jacob/pt-ui-3776-dzz4rq7n/inline-successor/receive_ui.js",
+    "bytes": 20431,
+    "sha256": "41e9769d74b56f2b9a1e6ffe04f2b9d62f7f158e9ef05c68caea33c799261399",
+    "git_blob": "3d3c477e19731b0ce87c71e7390685c521f27cf0",
+    "mtime_ns": "1791950629189403936"
+  },
+  {
+    "path": "/home/jacob/pt-ui-3776-dzz4rq7n/inline-successor/run_course.py",
+    "bytes": 5238,
+    "sha256": "53b09eb38aab7beba10575a78e2d908d393efe6cc4ead95134e89373b8c10535",
+    "git_blob": "9367ccb119788c9be8dbf3645a107ee6302cdf2b",
+    "mtime_ns": "1791950629189479954"
+  },
+  {
+    "path": "/home/jacob/pt-ui-3776-dzz4rq7n/inline-successor/actual-drive.zip",
+    "bytes": 77452,
+    "sha256": "ba9941d29489f584e3fcd0b7b379b9a4de57d1fb56bede960983450650d1bd43",
+    "git_blob": "facfbd93a4d7faa331c975021d48bd97986180fd",
+    "mtime_ns": "1791950629189739665"
+  }
+]

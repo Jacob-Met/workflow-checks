@@ -1,0 +1,17 @@
+"use strict";
+const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict'),path=require('node:path');
+const root=__dirname;
+const raw=JSON.parse(fs.readFileSync(path.join(root,'first-native/received-course/receiving.json'),'utf8'));
+const source=fs.readFileSync(path.join(root,'receive_ui.js'),'utf8');
+const original=fs.readFileSync(path.join(root,'receive_ui_original.js'),'utf8');
+const get=s=>s.match(/receipt.requests.every\((r=>.*?)\)&&networkErrors\.length===0/)[1];
+const origin=raw.server.origin;
+const before=vm.runInNewContext('('+get(original)+')',{origin});
+const after=vm.runInNewContext('('+get(source)+')',{origin});
+const icon=raw.requests.find(r=>r.url.startsWith('data:')).url;
+const cases=[['ownGET',{url:origin+'/',method:'GET'},true],['ownSummaryGET',{url:origin+'/api/summary',method:'GET'},true],['exactEmbeddedGET',{url:icon,method:'GET'},true],['ownPOST',{url:origin+'/api/state',method:'POST'},false],['externalHTTP',{url:'http://example.test/',method:'GET'},false],['externalHTTPS',{url:'https://example.test/',method:'GET'},false],['deceptiveOrigin',{url:origin+'.example.test/',method:'GET'},false],['otherEmbeddedImage',{url:'data:image/svg+xml;base64,PHN2Zy8+',method:'GET'},false],['embeddedPOST',{url:icon,method:'POST'},false],['fileURL',{url:'file:///tmp/other',method:'GET'},false]];
+const results=cases.map(([name,r,expected])=>({name,expected,observed:after(r)}));
+for(const r of results)assert.equal(r.observed,r.expected,r.name);
+assert.equal(raw.requests.every(before),false);assert.equal(raw.requests.every(after),true);
+const result={schema:'pt.ui.request-predicate-proof/1',scope:'Helper-only compilation/evaluation of exact old/new expressions; no browser, server or product execution.',original_recorded_set_accepted:false,successor_recorded_set_accepted:true,checks:results,passed:true};
+fs.writeFileSync(path.join(root,'predicate-proof.json'),JSON.stringify(result,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({passed:true,literal_checks:results.length,recorded_set_checks:2}));
