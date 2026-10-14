@@ -1,0 +1,49 @@
+{
+  "schema": "pt-cli-date-independent-review.v1",
+  "repository": "Jacob-Met/workflow-checks",
+  "issue": 106,
+  "original_cli_sha256": "cd4e5ed987b6ae686de687eabbb69007ab9cda8204ec41ebb25185f864321585",
+  "candidate_cli_sha256": "70602d30cfeab2c794845092bd7a18b8e629411a885cc95f8ed1b544042c30d4",
+  "receiver": {
+    "path": "/dev/shm/hamon-1caa-receive-pt-date.py",
+    "sha256": "ecdee66f700c7e777a8b2f0843003b60357207ce6baa61a3b5e68e9a34bebdbd",
+    "frozen_before_candidate_read": true
+  },
+  "original": {
+    "receipt": "/dev/shm/hamon-1caa-pt-date-independent-original/receipt.json",
+    "sha256": "c17af2c9935c26652a2724e550df22d3d9e1e2d8d9b304a60357a07e0bf5bb4d",
+    "contract_passes": 6,
+    "contract_failures": 5,
+    "blank_run": {
+      "exit": 0,
+      "saved_as_of_before": "2026-10-04",
+      "saved_as_of_after": "2026-09-28"
+    }
+  },
+  "candidate": {
+    "receipt": "/dev/shm/hamon-1caa-pt-date-independent-candidate/receipt.json",
+    "sha256": "acfd92d0881941d04656f1cad12f07b012a5e59c45cd06d662e84f3fca1f8074",
+    "contract_passes": 11,
+    "contract_failures": 0,
+    "source_bytes_and_metadata_unchanged": true
+  },
+  "source_review": {
+    "changed_runtime_files": [
+      "cli.py"
+    ],
+    "unchanged_runtime_files": 11,
+    "changed_cli_lines": 4,
+    "crlf_lines_before": 95,
+    "crlf_lines_after": 95,
+    "read_full_new_test": true,
+    "read_full_readme_diff": true
+  },
+  "additional_comparisons": {
+    "generator_default_files_exact": true,
+    "compact_date_generator_files_exact": true,
+    "selected_omitted_leap_review_summaries_exact_except_generated_at": true
+  },
+  "observation": "Accepted compact date 20280229 still selects 2028-02-29 and creates byte-identical generated files; the generator acknowledgement now prints the canonical date instead of the raw compact spelling.",
+  "qualification": "Independent cloud Linux real-CLI receiving only, fictional three-patient generated input; no author suite rerun, native installed consumer, clinical claim or external network operation.",
+  "verdict": "PASS for the bounded explicit date admission change. Preserve separate dynamic Pages merge hold."
+}

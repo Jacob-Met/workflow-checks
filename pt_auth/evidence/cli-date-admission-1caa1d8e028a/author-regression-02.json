@@ -1,0 +1,69 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "dependencies": [
+    "/root/.cache/uv/archive-v0/i2i2XvoiuqTbbbi6",
+    "/root/.cache/uv/archive-v0/c7q2O3KOFy8VG7vJ",
+    "/root/.cache/uv/archive-v0/Kk0CyMj-vqzAIl8_",
+    "/root/.cache/uv/archive-v0/CIeDh_L1lL-4JNVo"
+  ],
+  "records": [
+    {
+      "name": "original",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-m",
+        "pytest",
+        "-p",
+        "no:cacheprovider",
+        "-q",
+        "/dev/shm/hamon-1caa-pt-date/original-test-projection/tests/test_cli_date_admission.py",
+        "--basetemp",
+        "/dev/shm/hamon-1caa-pt-date/original-test-temp-02"
+      ],
+      "cwd": "/dev/shm/hamon-1caa-pt-date/original-test-projection",
+      "exit_code": 1,
+      "seconds": 1.8846604129939806,
+      "test_sha256": "e99ab4925bece8148c5093929d4d13fae158ebc64571e7ac5f046ad4d6114ab4",
+      "stdout_sha256": "6222c006ea4e4228b0f1cf64096a242d615267fcfd5758aff35c8c44a5e8f908",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "summary": [
+        "tests/test_cli_date_admission.py:46: AssertionError",
+        "=========================== short test summary info ============================",
+        "FAILED tests/test_cli_date_admission.py::test_invalid_explicit_run_date_preserves_previous_worklist[]",
+        "FAILED tests/test_cli_date_admission.py::test_invalid_explicit_run_date_preserves_previous_worklist[ ]",
+        "FAILED tests/test_cli_date_admission.py::test_invalid_explicit_run_date_preserves_previous_worklist[2026-02-30]",
+        "FAILED tests/test_cli_date_admission.py::test_invalid_explicit_run_date_preserves_previous_worklist[not-a-date]",
+        "FAILED tests/test_cli_date_admission.py::test_invalid_explicit_generator_date_preserves_existing_data[]",
+        "FAILED tests/test_cli_date_admission.py::test_invalid_explicit_generator_date_preserves_existing_data[ ]",
+        "FAILED tests/test_cli_date_admission.py::test_invalid_explicit_generator_date_preserves_existing_data[2026-02-30]",
+        "FAILED tests/test_cli_date_admission.py::test_empty_explicit_date_does_not_create_requested_output[generate]",
+        "FAILED tests/test_cli_date_admission.py::test_empty_explicit_date_does_not_create_requested_output[run]",
+        "9 failed, 2 passed in 1.54s"
+      ]
+    },
+    {
+      "name": "candidate",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-m",
+        "pytest",
+        "-p",
+        "no:cacheprovider",
+        "-q",
+        "/dev/shm/hamon-1caa-pt-date/checkout/pt_auth/tests/test_cli_date_admission.py",
+        "--basetemp",
+        "/dev/shm/hamon-1caa-pt-date/candidate-test-temp-02"
+      ],
+      "cwd": "/dev/shm/hamon-1caa-pt-date/checkout/pt_auth",
+      "exit_code": 0,
+      "seconds": 1.6799241810003878,
+      "test_sha256": "e99ab4925bece8148c5093929d4d13fae158ebc64571e7ac5f046ad4d6114ab4",
+      "stdout_sha256": "0088996f65287d02c47b01b3b445140500e0cf78999b39b0f42c0928c345dc92",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "summary": [
+        "...........                                                              [100%]",
+        "11 passed in 1.33s"
+      ]
+    }
+  ]
+}
