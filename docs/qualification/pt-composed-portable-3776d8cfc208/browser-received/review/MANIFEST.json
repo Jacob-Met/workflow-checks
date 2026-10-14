@@ -1,0 +1,40 @@
+{
+  "schema": "hamon.delivery-zip/1",
+  "files": [
+    {
+      "path": "OPEN_REVIEW.html",
+      "bytes": 9075,
+      "sha256": "5850f3ddf2c88cdb9e5d7a0bbe993ed09c7cdb7bfaa67a5917c356d49d8003f9"
+    },
+    {
+      "path": "START_HERE.md",
+      "bytes": 4785,
+      "sha256": "dc8791ce1e3c1b2ebcc58bd01c47d87e08f9f8f968e0395b04b38232493c46ee"
+    },
+    {
+      "path": "receiving-final.json",
+      "bytes": 13690,
+      "sha256": "d594926b5e1501ebf4df148950678156dc130222a45e07bf40786ac46904b271"
+    },
+    {
+      "path": "receiving-first.json",
+      "bytes": 12507,
+      "sha256": "55713ba78edc39838d2e1ccb2302d772922832a0f1590fb0869ac8fd3bcbe5d9"
+    },
+    {
+      "path": "uncovered-narrow.png",
+      "bytes": 60998,
+      "sha256": "e7fc7ccbd0a41fd83537e69502bba17d009a74a6f7f960c8fec27e3ee10711b1"
+    },
+    {
+      "path": "uncovered_visits.csv",
+      "bytes": 31101,
+      "sha256": "adef91b6f7086f8f4e192a6267a84ad9e63b437e51b62df115a133497422a8ec"
+    },
+    {
+      "path": "worklist-desktop.png",
+      "bytes": 150560,
+      "sha256": "a66068a9b510e6bc86320acad29046fdc8eb8b58caffb5b3e5206c4319d314fb"
+    }
+  ]
+}

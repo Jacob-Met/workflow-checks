@@ -1,0 +1,36 @@
+{
+  "schema": "pt.ui.complete-body-readback/1",
+  "repository": "Jacob-Met/workflow-checks",
+  "commit": "a863c4f23d2b24c4a2f78844e8e9ee3425cea09a",
+  "prefix": "docs/qualification/pt-composed-portable-3776d8cfc208/browser-received/",
+  "manifest_blob": "ac6f1be3dcf2ad15eb48f6ce4ceeb18227e38453",
+  "paths": 120,
+  "unique_blobs": 74,
+  "utf8_full_blobs": 71,
+  "binary_full_blobs": 3,
+  "manifest_full_equal": true,
+  "binary": [
+    {
+      "path": "final/actual-drive.zip",
+      "bytes": 77452,
+      "git_blob": "facfbd93a4d7faa331c975021d48bd97986180fd",
+      "sha256": "ba9941d29489f584e3fcd0b7b379b9a4de57d1fb56bede960983450650d1bd43",
+      "full_equal": true
+    },
+    {
+      "path": "final/received-course/worklist-desktop.png",
+      "bytes": 150560,
+      "git_blob": "4b1a9b728ac0a299e69e2c2616ba4b47622b785f",
+      "sha256": "a66068a9b510e6bc86320acad29046fdc8eb8b58caffb5b3e5206c4319d314fb",
+      "full_equal": true
+    },
+    {
+      "path": "final/received-course/uncovered-narrow.png",
+      "bytes": 60998,
+      "git_blob": "b89ba0b65e193ae12ed0f9f07fe0bfec6ae8ded9",
+      "sha256": "e7fc7ccbd0a41fd83537e69502bba17d009a74a6f7f960c8fec27e3ee10711b1",
+      "full_equal": true
+    }
+  ],
+  "scope": "All 120 manifest mappings retained exact. 71 unique UTF8 bodies matched complete blob reads; three binary identities matched complete immutable contents Base64. First/final PNG paths share exact bytes; both raw courses remain separately attributed. No runtime replay."
+}

@@ -1,0 +1,168 @@
+{
+  "schema": "pt.ui.review-packaging/1",
+  "argv": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "-I",
+    "-B",
+    "/workspace/scratch/3776d8cfc208/estate-tooling-adoption/make_delivery_zip.py",
+    "/workspace/scratch/3776d8cfc208/pt-ui-delivery/review",
+    "/workspace/scratch/3776d8cfc208/pt-ui-delivery/selection.json",
+    "/workspace/scratch/3776d8cfc208/pt-ui-delivery/PT-Portable-Browser-Review-69f3c8e0.zip",
+    "--manifest-sha256",
+    "fa92378ea4f71b3994b70851c9c29214f4cdbee3a961e2c79ebd108770519785"
+  ],
+  "returncode": 0,
+  "elapsed_ns": "118553149",
+  "reaped": true,
+  "members": [
+    "MANIFEST.json",
+    "OPEN_REVIEW.html",
+    "START_HERE.md",
+    "receiving-final.json",
+    "receiving-first.json",
+    "uncovered-narrow.png",
+    "uncovered_visits.csv",
+    "worklist-desktop.png"
+  ],
+  "crc_ok": true,
+  "every_selected_body_exact": true,
+  "before": [
+    {
+      "path": "/workspace/scratch/3776d8cfc208/estate-tooling-adoption/make_delivery_zip.py",
+      "bytes": 7700,
+      "sha256": "a49477cc522c7bc56a831f51418b57873c826e18fd2a98a18157a1c1f29599bf",
+      "git_blob": "34e192096abed7216025e8141a9cf3106bb82dfd",
+      "mtime_ns": "1791935460490600503"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-ui-delivery/selection.json",
+      "bytes": 1136,
+      "sha256": "fa92378ea4f71b3994b70851c9c29214f4cdbee3a961e2c79ebd108770519785",
+      "git_blob": "2fa786a4b4c0ec9899d1b2038edd85cb132e194b",
+      "mtime_ns": "1791952087746681073"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-ui-delivery/review/OPEN_REVIEW.html",
+      "bytes": 9075,
+      "sha256": "5850f3ddf2c88cdb9e5d7a0bbe993ed09c7cdb7bfaa67a5917c356d49d8003f9",
+      "git_blob": "c3938f462743e105653fede171e7de8a72444292",
+      "mtime_ns": "1791952087745064168"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-ui-delivery/review/START_HERE.md",
+      "bytes": 4785,
+      "sha256": "dc8791ce1e3c1b2ebcc58bd01c47d87e08f9f8f968e0395b04b38232493c46ee",
+      "git_blob": "571fb30d08b5da343827fe055fdea37302c1ea4f",
+      "mtime_ns": "1791952087744218560"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-ui-delivery/review/receiving-final.json",
+      "bytes": 13690,
+      "sha256": "d594926b5e1501ebf4df148950678156dc130222a45e07bf40786ac46904b271",
+      "git_blob": "ca19af9ad0a16db698ce493e3638a90d1c27786a",
+      "mtime_ns": "1791952087742457469"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-ui-delivery/review/receiving-first.json",
+      "bytes": 12507,
+      "sha256": "55713ba78edc39838d2e1ccb2302d772922832a0f1590fb0869ac8fd3bcbe5d9",
+      "git_blob": "bcd9446cdf3e5e8246fe062e6e7198524ef9af34",
+      "mtime_ns": "1791952087741821418"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-ui-delivery/review/uncovered-narrow.png",
+      "bytes": 60998,
+      "sha256": "e7fc7ccbd0a41fd83537e69502bba17d009a74a6f7f960c8fec27e3ee10711b1",
+      "git_blob": "b89ba0b65e193ae12ed0f9f07fe0bfec6ae8ded9",
+      "mtime_ns": "1791952087738639981"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-ui-delivery/review/uncovered_visits.csv",
+      "bytes": 31101,
+      "sha256": "adef91b6f7086f8f4e192a6267a84ad9e63b437e51b62df115a133497422a8ec",
+      "git_blob": "e750ad287278f3857be3684c8009d0afe7dd2a35",
+      "mtime_ns": "1791952087741273361"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-ui-delivery/review/worklist-desktop.png",
+      "bytes": 150560,
+      "sha256": "a66068a9b510e6bc86320acad29046fdc8eb8b58caffb5b3e5206c4319d314fb",
+      "git_blob": "4b1a9b728ac0a299e69e2c2616ba4b47622b785f",
+      "mtime_ns": "1791952087735812752"
+    }
+  ],
+  "after": [
+    {
+      "path": "/workspace/scratch/3776d8cfc208/estate-tooling-adoption/make_delivery_zip.py",
+      "bytes": 7700,
+      "sha256": "a49477cc522c7bc56a831f51418b57873c826e18fd2a98a18157a1c1f29599bf",
+      "git_blob": "34e192096abed7216025e8141a9cf3106bb82dfd",
+      "mtime_ns": "1791935460490600503"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-ui-delivery/selection.json",
+      "bytes": 1136,
+      "sha256": "fa92378ea4f71b3994b70851c9c29214f4cdbee3a961e2c79ebd108770519785",
+      "git_blob": "2fa786a4b4c0ec9899d1b2038edd85cb132e194b",
+      "mtime_ns": "1791952087746681073"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-ui-delivery/review/OPEN_REVIEW.html",
+      "bytes": 9075,
+      "sha256": "5850f3ddf2c88cdb9e5d7a0bbe993ed09c7cdb7bfaa67a5917c356d49d8003f9",
+      "git_blob": "c3938f462743e105653fede171e7de8a72444292",
+      "mtime_ns": "1791952087745064168"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-ui-delivery/review/START_HERE.md",
+      "bytes": 4785,
+      "sha256": "dc8791ce1e3c1b2ebcc58bd01c47d87e08f9f8f968e0395b04b38232493c46ee",
+      "git_blob": "571fb30d08b5da343827fe055fdea37302c1ea4f",
+      "mtime_ns": "1791952087744218560"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-ui-delivery/review/receiving-final.json",
+      "bytes": 13690,
+      "sha256": "d594926b5e1501ebf4df148950678156dc130222a45e07bf40786ac46904b271",
+      "git_blob": "ca19af9ad0a16db698ce493e3638a90d1c27786a",
+      "mtime_ns": "1791952087742457469"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-ui-delivery/review/receiving-first.json",
+      "bytes": 12507,
+      "sha256": "55713ba78edc39838d2e1ccb2302d772922832a0f1590fb0869ac8fd3bcbe5d9",
+      "git_blob": "bcd9446cdf3e5e8246fe062e6e7198524ef9af34",
+      "mtime_ns": "1791952087741821418"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-ui-delivery/review/uncovered-narrow.png",
+      "bytes": 60998,
+      "sha256": "e7fc7ccbd0a41fd83537e69502bba17d009a74a6f7f960c8fec27e3ee10711b1",
+      "git_blob": "b89ba0b65e193ae12ed0f9f07fe0bfec6ae8ded9",
+      "mtime_ns": "1791952087738639981"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-ui-delivery/review/uncovered_visits.csv",
+      "bytes": 31101,
+      "sha256": "adef91b6f7086f8f4e192a6267a84ad9e63b437e51b62df115a133497422a8ec",
+      "git_blob": "e750ad287278f3857be3684c8009d0afe7dd2a35",
+      "mtime_ns": "1791952087741273361"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-ui-delivery/review/worklist-desktop.png",
+      "bytes": 150560,
+      "sha256": "a66068a9b510e6bc86320acad29046fdc8eb8b58caffb5b3e5206c4319d314fb",
+      "git_blob": "4b1a9b728ac0a299e69e2c2616ba4b47622b785f",
+      "mtime_ns": "1791952087735812752"
+    }
+  ],
+  "inputs_unchanged": true,
+  "archive": {
+    "path": "/workspace/scratch/3776d8cfc208/pt-ui-delivery/PT-Portable-Browser-Review-69f3c8e0.zip",
+    "bytes": 215029,
+    "sha256": "ce91c36b2577a1d83e90730216aa09081fa3c4ba9c2089ecee855263ff7c5223",
+    "git_blob": "8128e03eb534fec539d432613091c6fd32355e95",
+    "mtime_ns": "1791952238346993374"
+  },
+  "scope": "One unchanged selected-file packer, complete ZIP byte/layout inspection; no PT/browser/server execution or new rendered-HTML claim."
+}

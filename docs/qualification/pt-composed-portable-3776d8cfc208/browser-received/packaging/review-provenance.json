@@ -1,0 +1,56 @@
+{
+  "schema": "pt.ui.review-selection/1",
+  "source_commit": "69f3c8e0577b579ee36256da0a075fccb201af8f",
+  "files": [
+    {
+      "path": "worklist-desktop.png",
+      "origin": "/workspace/scratch/3776d8cfc208/pt-ui-independent/final-native/received-course/worklist-desktop.png",
+      "bytes": 150560,
+      "sha256": "a66068a9b510e6bc86320acad29046fdc8eb8b58caffb5b3e5206c4319d314fb",
+      "git_blob": "4b1a9b728ac0a299e69e2c2616ba4b47622b785f"
+    },
+    {
+      "path": "uncovered-narrow.png",
+      "origin": "/workspace/scratch/3776d8cfc208/pt-ui-independent/final-native/received-course/uncovered-narrow.png",
+      "bytes": 60998,
+      "sha256": "e7fc7ccbd0a41fd83537e69502bba17d009a74a6f7f960c8fec27e3ee10711b1",
+      "git_blob": "b89ba0b65e193ae12ed0f9f07fe0bfec6ae8ded9"
+    },
+    {
+      "path": "uncovered_visits.csv",
+      "origin": "/workspace/scratch/3776d8cfc208/pt-ui-independent/final-native/received-course/downloaded-uncovered-visits.csv",
+      "bytes": 31101,
+      "sha256": "adef91b6f7086f8f4e192a6267a84ad9e63b437e51b62df115a133497422a8ec",
+      "git_blob": "e750ad287278f3857be3684c8009d0afe7dd2a35"
+    },
+    {
+      "path": "receiving-first.json",
+      "origin": "/workspace/scratch/3776d8cfc208/pt-ui-independent/first-native/received-course/receiving.json",
+      "bytes": 12507,
+      "sha256": "55713ba78edc39838d2e1ccb2302d772922832a0f1590fb0869ac8fd3bcbe5d9",
+      "git_blob": "bcd9446cdf3e5e8246fe062e6e7198524ef9af34"
+    },
+    {
+      "path": "receiving-final.json",
+      "origin": "/workspace/scratch/3776d8cfc208/pt-ui-independent/final-native/received-course/receiving.json",
+      "bytes": 13690,
+      "sha256": "d594926b5e1501ebf4df148950678156dc130222a45e07bf40786ac46904b271",
+      "git_blob": "ca19af9ad0a16db698ce493e3638a90d1c27786a"
+    },
+    {
+      "path": "START_HERE.md",
+      "origin": "new practical review prose",
+      "bytes": 4785,
+      "sha256": "dc8791ce1e3c1b2ebcc58bd01c47d87e08f9f8f968e0395b04b38232493c46ee",
+      "git_blob": "571fb30d08b5da343827fe055fdea37302c1ea4f"
+    },
+    {
+      "path": "OPEN_REVIEW.html",
+      "origin": "new practical review prose",
+      "bytes": 9075,
+      "sha256": "5850f3ddf2c88cdb9e5d7a0bbe993ed09c7cdb7bfaa67a5917c356d49d8003f9",
+      "git_blob": "c3938f462743e105653fede171e7de8a72444292"
+    }
+  ],
+  "scope": "Exact original evidence selected with new static explanatory prose; no application/browser/server execution."
+}

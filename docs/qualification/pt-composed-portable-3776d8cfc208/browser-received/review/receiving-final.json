@@ -1,0 +1,461 @@
+{
+  "schema": "pt.composed-ui.browser/1",
+  "at": "2026-10-14T04:04:04.001Z",
+  "stage": "/home/jacob/pt-ui-3776-dzz4rq7n/inline-successor/received-course",
+  "source_commit": "69f3c8e0577b579ee36256da0a075fccb201af8f",
+  "checks": [
+    {
+      "name": "startupReportHasOnlySevenExpectedFiles",
+      "passed": true
+    },
+    {
+      "name": "syntheticScopeAndRecordedDateZone",
+      "passed": true
+    },
+    {
+      "name": "sampleCountCardsAnd26WorkItems",
+      "passed": true,
+      "detail": {
+        "warning": "SYNTHETIC DATA — NOT REAL PATIENTS · proof of concept · nothing is sent to any payer",
+        "date": "2026-09-28",
+        "zone": "Clinic time zone: UTC",
+        "cards": [
+          [
+            "11",
+            "P1 act today"
+          ],
+          [
+            "15",
+            "P2 this week"
+          ],
+          [
+            "0",
+            "P3 heads-up"
+          ],
+          [
+            "194",
+            "scheduled visits outside auth"
+          ],
+          [
+            "2",
+            "completed visits w/o auth"
+          ],
+          [
+            "0",
+            "past scheduled visits"
+          ],
+          [
+            "0/26",
+            "items worked"
+          ],
+          [
+            "40",
+            "synthetic patients"
+          ],
+          [
+            "46",
+            "auths tracked"
+          ]
+        ],
+        "rows": 26
+      }
+    },
+    {
+      "name": "nativePrioritySelectionShowsElevenP1",
+      "passed": true
+    },
+    {
+      "name": "literalPatientFilterKeepsOneExactWorkItem",
+      "passed": true,
+      "detail": [
+        "P1",
+        "Test Taylor N.\nSYN-1014 · Clinic North (synthetic)",
+        "Medicare Advantage Plan (placeholder)\nAUTH-70039",
+        "UNCOVERED_VISITREAUTH_BY_VISITS\n8 scheduled visit(s) outside any approved auth, first 2026-10-04 (V1271, V1272, V1273, V1274 ...)\n1 of 7 visits left (payer threshold 4)",
+        "6 / 7\n1 sched. in auth",
+        "2026-11-27\n60 days",
+        "2026-09-30",
+        "2026-09-23",
+        "5 items",
+        "open\nsubmitted\napproved\nn/a"
+      ]
+    },
+    {
+      "name": "enterOpensExactFiveItemChecklist",
+      "passed": true
+    },
+    {
+      "name": "uncoveredTabShowsAll196OriginalVisitIDs",
+      "passed": true
+    },
+    {
+      "name": "scheduledFilterHas194Rows",
+      "passed": true
+    },
+    {
+      "name": "eightSelectedVisitsMatchFrozenOriginalFields",
+      "passed": true,
+      "detail": [
+        [
+          "V1271\ntreatment",
+          "2026-10-04",
+          "scheduled",
+          "Test Taylor N.\nSYN-1014",
+          "Clinic North (synthetic)",
+          "PT-D",
+          "Medicare Advantage Plan (placeholder)\nPAY-MA",
+          "schedule.csv:row272"
+        ],
+        [
+          "V1272\ntreatment",
+          "2026-10-06",
+          "scheduled",
+          "Test Taylor N.\nSYN-1014",
+          "Clinic North (synthetic)",
+          "PT-B",
+          "Medicare Advantage Plan (placeholder)\nPAY-MA",
+          "schedule.csv:row273"
+        ],
+        [
+          "V1273\ntreatment",
+          "2026-10-08",
+          "scheduled",
+          "Test Taylor N.\nSYN-1014",
+          "Clinic North (synthetic)",
+          "PT-D",
+          "Medicare Advantage Plan (placeholder)\nPAY-MA",
+          "schedule.csv:row274"
+        ],
+        [
+          "V1274\nre-eval",
+          "2026-10-10",
+          "scheduled",
+          "Test Taylor N.\nSYN-1014",
+          "Clinic North (synthetic)",
+          "PTA-E",
+          "Medicare Advantage Plan (placeholder)\nPAY-MA",
+          "schedule.csv:row275"
+        ],
+        [
+          "V1275\ntreatment",
+          "2026-10-14",
+          "scheduled",
+          "Test Taylor N.\nSYN-1014",
+          "Clinic North (synthetic)",
+          "PT-B",
+          "Medicare Advantage Plan (placeholder)\nPAY-MA",
+          "schedule.csv:row276"
+        ],
+        [
+          "V1276\ntreatment",
+          "2026-10-17",
+          "scheduled",
+          "Test Taylor N.\nSYN-1014",
+          "Clinic North (synthetic)",
+          "PT-B",
+          "Medicare Advantage Plan (placeholder)\nPAY-MA",
+          "schedule.csv:row277"
+        ],
+        [
+          "V1277\ntreatment",
+          "2026-10-20",
+          "scheduled",
+          "Test Taylor N.\nSYN-1014",
+          "Clinic North (synthetic)",
+          "PT-D",
+          "Medicare Advantage Plan (placeholder)\nPAY-MA",
+          "schedule.csv:row278"
+        ],
+        [
+          "V1278\ntreatment",
+          "2026-10-24",
+          "scheduled",
+          "Test Taylor N.\nSYN-1014",
+          "Clinic North (synthetic)",
+          "PT-D",
+          "Medicare Advantage Plan (placeholder)\nPAY-MA",
+          "schedule.csv:row279"
+        ]
+      ]
+    },
+    {
+      "name": "completeExportLabelStatesFilterIndependence",
+      "passed": true
+    },
+    {
+      "name": "oneDownloadedCompleteCSVExactBytesAndName",
+      "passed": true
+    },
+    {
+      "name": "downloadPreservesEightRowFilter",
+      "passed": true
+    },
+    {
+      "name": "390StimulusFitsAvailablePageWidth",
+      "passed": true,
+      "detail": {
+        "innerWidth": 390,
+        "innerHeight": 844,
+        "clientWidth": 375,
+        "contentWidth": 375,
+        "scrollX": 0,
+        "scrollY": 1084
+      }
+    },
+    {
+      "name": "narrowRetainsEightRowsAndScrollableReviewRegion",
+      "passed": true
+    },
+    {
+      "name": "onlyOwnLoopbackGETRequests",
+      "passed": true,
+      "detail": [
+        {
+          "url": "http://127.0.0.1:33225/",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:33225/calendar_ui.js",
+          "method": "GET"
+        },
+        {
+          "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJXaW5kb3dUZXh0IiBkPSJNMjAgM2gtMVYxaC0ydjJIN1YxSDV2Mkg0Yy0xLjEgMC0yIC45LTIgMnYxNmMwIDEuMS45IDIgMiAyaDE2YzEuMSAwIDItLjkgMi0yVjVjMC0xLjEtLjktMi0yLTJ6bTAgMThINFY4aDE2djEzeiIvPjxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiLz48L3N2Zz4=",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:33225/api/summary",
+          "method": "GET"
+        },
+        {
+          "url": "http://127.0.0.1:33225/favicon.ico",
+          "method": "GET"
+        }
+      ]
+    },
+    {
+      "name": "noUncaughtJavaScriptExceptions",
+      "passed": true
+    },
+    {
+      "name": "exactlyOneExplicitDownload",
+      "passed": true
+    },
+    {
+      "name": "allSevenGeneratedOutputsUnchangedByUI",
+      "passed": true
+    },
+    {
+      "name": "noStaffStateOrBytecodeCacheCreated",
+      "passed": true
+    },
+    {
+      "name": "ownedBrowserCloseAcknowledgedAndAbsent",
+      "passed": true
+    },
+    {
+      "name": "ownedServerTerminatedAndReaped",
+      "passed": true
+    }
+  ],
+  "downloads": [
+    {
+      "guid": "cb311b00-8bc8-4ed8-9754-91ede67398d5",
+      "suggestedFilename": "uncovered_visits.csv",
+      "bytes": 31101,
+      "sha256": "adef91b6f7086f8f4e192a6267a84ad9e63b437e51b62df115a133497422a8ec",
+      "git_blob": "e750ad287278f3857be3684c8009d0afe7dd2a35",
+      "mtime_ns": "1791950645546811775"
+    }
+  ],
+  "screenshots": [
+    {
+      "file": "worklist-desktop.png",
+      "geometry": {
+        "innerWidth": 1280,
+        "innerHeight": 900,
+        "clientWidth": 1265,
+        "contentWidth": 1265,
+        "scrollX": 0,
+        "scrollY": 153
+      },
+      "bytes": 150560,
+      "sha256": "a66068a9b510e6bc86320acad29046fdc8eb8b58caffb5b3e5206c4319d314fb",
+      "git_blob": "4b1a9b728ac0a299e69e2c2616ba4b47622b785f",
+      "mtime_ns": "1791950645382812447"
+    },
+    {
+      "file": "uncovered-narrow.png",
+      "geometry": {
+        "innerWidth": 390,
+        "innerHeight": 844,
+        "clientWidth": 375,
+        "contentWidth": 375,
+        "scrollX": 0,
+        "scrollY": 1084
+      },
+      "bytes": 60998,
+      "sha256": "e7fc7ccbd0a41fd83537e69502bba17d009a74a6f7f960c8fec27e3ee10711b1",
+      "git_blob": "b89ba0b65e193ae12ed0f9f07fe0bfec6ae8ded9",
+      "mtime_ns": "1791950645592811587"
+    }
+  ],
+  "scope": "One actual Drive kit UI. Necessary server-startup report generation, then read-only filtering, checklist and full CSV export. No staff write, calendar/generator/run action, physical input or clinical decision.",
+  "server": {
+    "pid": 713643,
+    "argv": [
+      "/usr/bin/python3",
+      "-B",
+      "-m",
+      "ptauth",
+      "serve",
+      "--data",
+      "sample_data",
+      "--out",
+      "/home/jacob/pt-ui-3776-dzz4rq7n/inline-successor/received-course/new-report",
+      "--clinic-timezone",
+      "UTC",
+      "--port",
+      "33225"
+    ],
+    "origin": "http://127.0.0.1:33225"
+  },
+  "browserVersion": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/153.0.8010.47",
+    "revision": "@73934a44f61e6b3878d1943064c141a5a820f5f7",
+    "userAgent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+    "jsVersion": "15.3.76.12"
+  },
+  "report_before": {
+    "audit.jsonl": {
+      "bytes": 281,
+      "sha256": "5d0de017fce6fb488841472ab68a975cfd52f0aefb8407519908640ee05bd576",
+      "git_blob": "798a4abc88fc452141d7f46b00b7b612dc5d91bb",
+      "mtime_ns": "1791950644095246851"
+    },
+    "digest.html": {
+      "bytes": 79198,
+      "sha256": "0d6d4bbe45afb01c65964c164d21fd981d458b96a1a5d6022e14903d1cc122ca",
+      "git_blob": "78dae5546640494818381584d4b285388c856239",
+      "mtime_ns": "1791950644095146062"
+    },
+    "ledger.csv": {
+      "bytes": 3746,
+      "sha256": "ee571c8339864dc97d217e7b31a358fc9b06609328c1790076e81c530be93d96",
+      "git_blob": "d49dee32ca8620cd20f7b0c7ef263281dce1d4db",
+      "mtime_ns": "1791950644092702834"
+    },
+    "summary.json": {
+      "bytes": 170131,
+      "sha256": "163759610cea1d34555cce0a9c2f6a383dbe501862e7c0bd6786274514af5978",
+      "git_blob": "51d6fe7f9128bff90f99c119083f84a9c607bfc4",
+      "mtime_ns": "1791950644094295113"
+    },
+    "uncovered_visits.csv": {
+      "bytes": 31101,
+      "sha256": "adef91b6f7086f8f4e192a6267a84ad9e63b437e51b62df115a133497422a8ec",
+      "git_blob": "e750ad287278f3857be3684c8009d0afe7dd2a35",
+      "mtime_ns": "1791950644093383278"
+    },
+    "visit_status_review.csv": {
+      "bytes": 125,
+      "sha256": "9cb3e3e82e30935f57448ed826dbd8dab78e39355e3bebba59c478fa355ee170",
+      "git_blob": "2f954eb61f6a5ed9df00b35756f5f97af5037b1f",
+      "mtime_ns": "1791950644092752392"
+    },
+    "worklist.csv": {
+      "bytes": 14972,
+      "sha256": "73a95f16776325610d3d4049db7313407dd904f39ac2e375335a5705b392a9be",
+      "git_blob": "eae26d8268ca14ebd5a5df3985ff3a893d8c9139",
+      "mtime_ns": "1791950644091817733"
+    }
+  },
+  "requests": [
+    {
+      "url": "http://127.0.0.1:33225/",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:33225/calendar_ui.js",
+      "method": "GET"
+    },
+    {
+      "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJXaW5kb3dUZXh0IiBkPSJNMjAgM2gtMVYxaC0ydjJIN1YxSDV2Mkg0Yy0xLjEgMC0yIC45LTIgMnYxNmMwIDEuMS45IDIgMiAyaDE2YzEuMSAwIDItLjkgMi0yVjVjMC0xLjEtLjktMi0yLTJ6bTAgMThINFY4aDE2djEzeiIvPjxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiLz48L3N2Zz4=",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:33225/api/summary",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:33225/favicon.ico",
+      "method": "GET"
+    }
+  ],
+  "javascriptExceptions": [],
+  "report_after": {
+    "audit.jsonl": {
+      "bytes": 281,
+      "sha256": "5d0de017fce6fb488841472ab68a975cfd52f0aefb8407519908640ee05bd576",
+      "git_blob": "798a4abc88fc452141d7f46b00b7b612dc5d91bb",
+      "mtime_ns": "1791950644095246851"
+    },
+    "digest.html": {
+      "bytes": 79198,
+      "sha256": "0d6d4bbe45afb01c65964c164d21fd981d458b96a1a5d6022e14903d1cc122ca",
+      "git_blob": "78dae5546640494818381584d4b285388c856239",
+      "mtime_ns": "1791950644095146062"
+    },
+    "ledger.csv": {
+      "bytes": 3746,
+      "sha256": "ee571c8339864dc97d217e7b31a358fc9b06609328c1790076e81c530be93d96",
+      "git_blob": "d49dee32ca8620cd20f7b0c7ef263281dce1d4db",
+      "mtime_ns": "1791950644092702834"
+    },
+    "summary.json": {
+      "bytes": 170131,
+      "sha256": "163759610cea1d34555cce0a9c2f6a383dbe501862e7c0bd6786274514af5978",
+      "git_blob": "51d6fe7f9128bff90f99c119083f84a9c607bfc4",
+      "mtime_ns": "1791950644094295113"
+    },
+    "uncovered_visits.csv": {
+      "bytes": 31101,
+      "sha256": "adef91b6f7086f8f4e192a6267a84ad9e63b437e51b62df115a133497422a8ec",
+      "git_blob": "e750ad287278f3857be3684c8009d0afe7dd2a35",
+      "mtime_ns": "1791950644093383278"
+    },
+    "visit_status_review.csv": {
+      "bytes": 125,
+      "sha256": "9cb3e3e82e30935f57448ed826dbd8dab78e39355e3bebba59c478fa355ee170",
+      "git_blob": "2f954eb61f6a5ed9df00b35756f5f97af5037b1f",
+      "mtime_ns": "1791950644092752392"
+    },
+    "worklist.csv": {
+      "bytes": 14972,
+      "sha256": "73a95f16776325610d3d4049db7313407dd904f39ac2e375335a5705b392a9be",
+      "git_blob": "eae26d8268ca14ebd5a5df3985ff3a893d8c9139",
+      "mtime_ns": "1791950644091817733"
+    }
+  },
+  "browserClose": {
+    "browserCloseAcknowledged": true,
+    "ownedBrowserPid": 713637,
+    "ownedBrowserNoLongerRunning": true,
+    "launcherExit": {
+      "code": 0,
+      "signal": null
+    }
+  },
+  "serverClose": {
+    "pid": 713643,
+    "waited": true,
+    "exit": {
+      "code": null,
+      "signal": "SIGTERM"
+    },
+    "absent": true
+  },
+  "launcherError": null,
+  "networkErrors": [],
+  "passed": true
+}

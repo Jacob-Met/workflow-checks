@@ -1,0 +1,26 @@
+{
+  "schema": "pt.ui.review-drive-receiving/1",
+  "drive_id": "1Jx9qC8zmWdjIZJqbpdCnaJ3H6Y2hpWZe",
+  "folder_id": "1for5kGniDXsNyYNLNC9wNXclUy7iTIcK",
+  "filename": "PT-Portable-Browser-Review-69f3c8e0.zip",
+  "bytes": 215029,
+  "sha256": "ce91c36b2577a1d83e90730216aa09081fa3c4ba9c2089ecee855263ff7c5223",
+  "git_blob": "8128e03eb534fec539d432613091c6fd32355e95",
+  "original_and_actual_full_bytes_equal": true,
+  "members": [
+    "MANIFEST.json",
+    "OPEN_REVIEW.html",
+    "START_HERE.md",
+    "receiving-final.json",
+    "receiving-first.json",
+    "uncovered-narrow.png",
+    "uncovered_visits.csv",
+    "worklist-desktop.png"
+  ],
+  "all_seven_payloads_exact": true,
+  "crc_ok": true,
+  "upload_count": 1,
+  "actual_full_download_count": 1,
+  "transformation": "none",
+  "scope": "Actual Drive full-byte and complete archive layout receiving; independent review follows. No PT application/server/browser or render execution."
+}
