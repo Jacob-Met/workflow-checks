@@ -1,0 +1,8 @@
+{
+  "schema": "ptauth.calendar.guide-clarification/1",
+  "prior_git_blob": "b9b71b5faf5b1e3b2c3f2593ef71d59d7f95e65e",
+  "current_git_blob": "a4a55efba02796069bbd974ab2d9de3060da5428",
+  "prior_retained_path": "CALENDAR_RECEIPTS.initial.md",
+  "change": "Narrow failed-stderr statement to handler return; distinguish focused stdout subprocess controls from untested interpreter shutdown channels. Source/tests unchanged; no course repeated.",
+  "review": "Source peer accepted the specific narrowing; root authored factual correction."
+}

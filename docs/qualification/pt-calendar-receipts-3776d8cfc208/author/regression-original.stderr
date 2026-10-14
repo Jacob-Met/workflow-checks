@@ -1,0 +1,95 @@
+test_existing_unicode_destination_ascii_refusal_preserves_it (test_calendar_receipt_output.CalendarReceiptTests.test_existing_unicode_destination_ascii_refusal_preserves_it) ... ok
+test_failed_stderr_does_not_obscure_output_failure_status (test_calendar_receipt_output.CalendarReceiptTests.test_failed_stderr_does_not_obscure_output_failure_status) ... ERROR
+test_imported_main_flush_failure_keeps_caller_stdout_and_calendar (test_calendar_receipt_output.CalendarReceiptTests.test_imported_main_flush_failure_keeps_caller_stdout_and_calendar) ... FAIL
+test_imported_main_write_failure_keeps_caller_stdout_and_calendar (test_calendar_receipt_output.CalendarReceiptTests.test_imported_main_write_failure_keeps_caller_stdout_and_calendar) ... ERROR
+test_ordinary_unicode_receipt_and_complete_calendar (test_calendar_receipt_output.CalendarReceiptTests.test_ordinary_unicode_receipt_and_complete_calendar) ... ok
+test_real_ascii_receipts_on_both_entrypoints (test_calendar_receipt_output.CalendarReceiptTests.test_real_ascii_receipts_on_both_entrypoints) ... 
+  test_real_ascii_receipts_on_both_entrypoints (test_calendar_receipt_output.CalendarReceiptTests.test_real_ascii_receipts_on_both_entrypoints) (module='ptauth') ... FAIL
+  test_real_ascii_receipts_on_both_entrypoints (test_calendar_receipt_output.CalendarReceiptTests.test_real_ascii_receipts_on_both_entrypoints) (module='ptauth.cli') ... FAIL
+test_real_closed_stdout_returns_two_without_shutdown_retry (test_calendar_receipt_output.CalendarReceiptTests.test_real_closed_stdout_returns_two_without_shutdown_retry) ... 
+  test_real_closed_stdout_returns_two_without_shutdown_retry (test_calendar_receipt_output.CalendarReceiptTests.test_real_closed_stdout_returns_two_without_shutdown_retry) (module='ptauth') ... FAIL
+  test_real_closed_stdout_returns_two_without_shutdown_retry (test_calendar_receipt_output.CalendarReceiptTests.test_real_closed_stdout_returns_two_without_shutdown_retry) (module='ptauth.cli') ... FAIL
+test_unmatched_selection_refuses_without_output (test_calendar_receipt_output.CalendarReceiptTests.test_unmatched_selection_refuses_without_output) ... ok
+
+======================================================================
+ERROR: test_failed_stderr_does_not_obscure_output_failure_status (test_calendar_receipt_output.CalendarReceiptTests.test_failed_stderr_does_not_obscure_output_failure_status)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/3776d8cfc208/pt-calendar-stdout-author/test_calendar_receipt_output.py", line 178, in test_failed_stderr_does_not_obscure_output_failure_status
+    code = cli.main(self.args(output))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/3776d8cfc208/pt-calendar-stdout-author/original/ptauth/cli.py", line 80, in main
+    print(json.dumps({**calendar_metadata(plan), "output": str(Path(a.output))}, ensure_ascii=False))
+  File "/workspace/scratch/3776d8cfc208/pt-calendar-stdout-author/test_calendar_receipt_output.py", line 23, in write
+    raise OSError('Authored unavailable output')
+OSError: Authored unavailable output
+
+======================================================================
+ERROR: test_imported_main_write_failure_keeps_caller_stdout_and_calendar (test_calendar_receipt_output.CalendarReceiptTests.test_imported_main_write_failure_keeps_caller_stdout_and_calendar)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/3776d8cfc208/pt-calendar-stdout-author/test_calendar_receipt_output.py", line 157, in test_imported_main_write_failure_keeps_caller_stdout_and_calendar
+    code = cli.main(self.args(output))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/3776d8cfc208/pt-calendar-stdout-author/original/ptauth/cli.py", line 80, in main
+    print(json.dumps({**calendar_metadata(plan), "output": str(Path(a.output))}, ensure_ascii=False))
+  File "/workspace/scratch/3776d8cfc208/pt-calendar-stdout-author/test_calendar_receipt_output.py", line 23, in write
+    raise OSError('Authored unavailable output')
+OSError: Authored unavailable output
+
+======================================================================
+FAIL: test_imported_main_flush_failure_keeps_caller_stdout_and_calendar (test_calendar_receipt_output.CalendarReceiptTests.test_imported_main_flush_failure_keeps_caller_stdout_and_calendar)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/3776d8cfc208/pt-calendar-stdout-author/test_calendar_receipt_output.py", line 170, in test_imported_main_flush_failure_keeps_caller_stdout_and_calendar
+    self.assertEqual(code, 2)
+AssertionError: 0 != 2
+
+======================================================================
+FAIL: test_real_ascii_receipts_on_both_entrypoints (test_calendar_receipt_output.CalendarReceiptTests.test_real_ascii_receipts_on_both_entrypoints) (module='ptauth')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/3776d8cfc208/pt-calendar-stdout-author/test_calendar_receipt_output.py", line 117, in test_real_ascii_receipts_on_both_entrypoints
+    self.assertEqual((code, err), (0, b''))
+AssertionError: Tuples differ: (1, b'Traceback (most recent call last):\n[592 chars])\n') != (0, b'')
+
+First differing element 0:
+1
+0
+
+Diff is 707 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_real_ascii_receipts_on_both_entrypoints (test_calendar_receipt_output.CalendarReceiptTests.test_real_ascii_receipts_on_both_entrypoints) (module='ptauth.cli')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/3776d8cfc208/pt-calendar-stdout-author/test_calendar_receipt_output.py", line 117, in test_real_ascii_receipts_on_both_entrypoints
+    self.assertEqual((code, err), (0, b''))
+AssertionError: Tuples differ: (1, b'Traceback (most recent call last):\n[588 chars])\n') != (0, b'')
+
+First differing element 0:
+1
+0
+
+Diff is 703 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_real_closed_stdout_returns_two_without_shutdown_retry (test_calendar_receipt_output.CalendarReceiptTests.test_real_closed_stdout_returns_two_without_shutdown_retry) (module='ptauth')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/3776d8cfc208/pt-calendar-stdout-author/test_calendar_receipt_output.py", line 128, in test_real_closed_stdout_returns_two_without_shutdown_retry
+    self.assertEqual(code, 2)
+AssertionError: 1 != 2
+
+======================================================================
+FAIL: test_real_closed_stdout_returns_two_without_shutdown_retry (test_calendar_receipt_output.CalendarReceiptTests.test_real_closed_stdout_returns_two_without_shutdown_retry) (module='ptauth.cli')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/3776d8cfc208/pt-calendar-stdout-author/test_calendar_receipt_output.py", line 128, in test_real_closed_stdout_returns_two_without_shutdown_retry
+    self.assertEqual(code, 2)
+AssertionError: 1 != 2
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.965s
+
+FAILED (failures=5, errors=2)

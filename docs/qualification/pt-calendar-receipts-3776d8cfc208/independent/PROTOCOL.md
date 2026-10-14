@@ -1,0 +1,12 @@
+# Independent PT calendar receipt receiving
+
+Frozen from root contract66d113e6 before repaired source exposure. The old calendar formatter and original CLI were inspected during gap discovery; no repaired implementation or authored tests are used as this oracle.
+
+Use an independently authored saved synthetic two-row summary and explicit staff state: one dated submitted Unicode item and one undated approved item. No report engine, source CSV, provider or calendar application is invoked. Read exactly the admitted candidate four-module ptauth closure. Five real processes, each Python -B from that package parent, under explicit UTF-8 or restrictive ASCII standard-stream encoding. Each has a 10-second bound, is waited/reaped, and retains stdout/stderr. New owned output root only.
+
+1. Canonical `python -m ptauth calendar` with normal UTF-8 output returns0. Decode its JSON and compare manual selected2/events1/excluded1, Unicode clinic/time/path and report snapshot values. Inspect complete ICS, exact known one event, expected UID/date/escaped Unicode note, CRLF/folding and absence of the excluded row.
+2. Direct `python -m ptauth.cli calendar` with real ASCII stdout/stderr returns0, all stdout bytes ASCII, one JSON+LF, decoded semantic values equal the same manual oracle including a Unicode output path. Complete ICS remains literal UTF-8 and contains the same one event.
+3–4. Both entrypoints receive an actual os.pipe write descriptor after its read descriptor is closed BEFORE Popen. Return exactly2, no interpreter-shutdown exception/traceback, ASCII stderr identifies that the calendar was created but the receipt failed. A complete one-event ICS remains at the requested new path. This is not an output rollback claim.
+5. Existing Unicode-named destination containing authored sentinel bytes: canonical ASCII call returns2, no success stdout, ASCII diagnostic/no traceback, destination bytes and nanosecond mtime unchanged. No second output or temp file remains.
+
+Before/after watch exact four source bodies, receiver/protocol and both own fixture files by bytes/SHA/Git/ns-mtime. No source, input or previous output changes. Five individual CLI outcomes remain distinct from root's original four failed/successful witnesses and author suite. No broad existing-suite or browser repetition. Report any mismatch as a failed independent course and preserve it; do not silently tune controls. Imported-main stream identity remains root's authored/static scope.

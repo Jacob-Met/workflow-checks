@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Workflow Checks//Synthetic PT handoff v1//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:70f5abc6f186f886b654c5a42fb92473a66e5281fc2bb41fd66d3668000c5961@ptauth
+ .workflow-checks.invalid
+DTSTAMP:20261014T012801Z
+DTSTART;VALUE=DATE:20261021
+SUMMARY:[SYNTHETIC] P1 authorization review — DEMO-ONE
+DESCRIPTION:SYNTHETIC DATA ONLY — authored fixture\nAdministrative submit
+ -by review\; no payer submission or staff-state change.\nWork-item key: DE
+ MO-ONE|DEMO-PAYER|DEMO-AUTH\nPatient: DEMO-ONE — Fictional calendar obse
+ rvation\nPayer: DEMO-PAYER — Fictional payer\nAuthorization: DEMO-AUTH\n
+ Clinic: Fictional clinic 雪\nPriority: P1\nRecorded submit-by: 2026-10-21
+ \nAuthorization end: 2026-10-31\nNext visit: unrecorded\nStaff state: open
+ \nStaff note: \nStaff state recorded at: unrecorded\nReport as of: 2026-10
+ -14\nReport generated at (as recorded): 2026-10-14T00:00:00Z\nClinic time 
+ zone (context\; all-day date unchanged): UTC\nReasons:\nAuthored receipt t
+ est\nDetails:\nChecklist:\nSource evidence:\nAuthored fixture\; no source 
+ records
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

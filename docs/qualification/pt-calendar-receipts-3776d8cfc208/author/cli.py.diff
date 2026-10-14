@@ -1,0 +1,47 @@
+--- original/cli.py
++++ candidate/cli.py
+@@ -75,9 +75,15 @@
+             content = render_calendar(plan)
+             write_calendar(Path(a.output), content)
+         except (CalendarInputError, OSError) as e:
+-            print(f"ERROR: {e}", file=sys.stderr)
++            _calendar_error(f"ERROR: {e}")
+             return 2
+-        print(json.dumps({**calendar_metadata(plan), "output": str(Path(a.output))}, ensure_ascii=False))
++        try:
++            print(json.dumps({**calendar_metadata(plan), "output": str(Path(a.output))},
++                             ensure_ascii=True), flush=True)
++        except (OSError, UnicodeError):
++            _calendar_error("ERROR: The calendar was created, but its receipt could not be delivered. "
++                            "Inspect the destination before retrying.")
++            return 2
+         return 0
+     if a.cmd == "serve":
+         from .data import InputError
+@@ -91,5 +97,25 @@
+     return 1
+ 
+ 
++def _calendar_error(message: str) -> None:
++    """Best-effort ASCII diagnostic; the operation retains its status."""
++    try:
++        print(message.encode("ascii", "backslashreplace").decode("ascii"),
++              file=sys.stderr, flush=True)
++    except (OSError, UnicodeError):
++        pass
++
++
++def _entrypoint() -> int:
++    """Direct invocation alone owns failed stdout shutdown handling."""
++    status = main()
++    if status == 2:
++        try:
++            sys.stdout.flush()
++        except (OSError, UnicodeError):
++            sys.stdout = None
++    return status
++
++
+ if __name__ == "__main__":
+-    sys.exit(main())
++    sys.exit(_entrypoint())

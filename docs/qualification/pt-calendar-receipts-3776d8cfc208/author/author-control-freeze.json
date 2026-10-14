@@ -1,0 +1,80 @@
+{
+  "schema": "ptauth.calendar.author-control-freeze/1",
+  "original": {
+    "returncode": 1,
+    "methods": 8,
+    "failures": 5,
+    "errors": 2,
+    "unittest_seconds": 0.965,
+    "outer_exec": "d7b04f",
+    "session": 83078
+  },
+  "candidate": {
+    "returncode": 0,
+    "methods": 8,
+    "failures": 0,
+    "errors": 0,
+    "unittest_seconds": 0.926,
+    "outer_exec": "cd65de",
+    "session": 83917
+  },
+  "note": "Original regression ASCII closed-pipe cases exit1 at UnicodeEncodeError; original separate UTF8 witness exits120. Do not conflate. No repeated course.",
+  "files": [
+    {
+      "path": "regression-original.stdout",
+      "bytes": 0,
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mtime_ns": 1791941753763266749
+    },
+    {
+      "path": "regression-original.stderr",
+      "bytes": 7609,
+      "git_blob": "dee7fd2209e1f15b1f8e9cc1d10d734045ca3064",
+      "sha256": "6068a0db29a22fbc38344079c10711773bae2bb0258ed2deeb269353456f2223",
+      "mtime_ns": 1791941755023206942
+    },
+    {
+      "path": "regression-candidate.stdout",
+      "bytes": 0,
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mtime_ns": 1791941846102881501
+    },
+    {
+      "path": "regression-candidate.stderr",
+      "bytes": 1480,
+      "git_blob": "d1cb9ada22b9ac68ed1bda1bc4bcc44b01a9e37c",
+      "sha256": "d94c476ed1037c0d87cd2bed8ecb81c1908b13a64d8c45cc34c33f12daf315fc",
+      "mtime_ns": 1791941847122833058
+    },
+    {
+      "path": "test_calendar_receipt_output.py",
+      "bytes": 8759,
+      "git_blob": "3264d6566e4ce482b47e05b5161a4a35bc74df56",
+      "sha256": "faefd09f9a03becd100ca50d2ed7ed23a48d4f256fcecb23fab3680134d62c68",
+      "mtime_ns": 1791941753595274723
+    },
+    {
+      "path": "CALENDAR_RECEIPTS.md",
+      "bytes": 4424,
+      "git_blob": "b9b71b5faf5b1e3b2c3f2593ef71d59d7f95e65e",
+      "sha256": "ea9c9d66cb46b519bbc563f5072f36b26a21f4a0018985ffbc120621fe4fa370",
+      "mtime_ns": 1791942327935876514
+    },
+    {
+      "path": "CONTRACT.md",
+      "bytes": 3836,
+      "git_blob": "66d113e6b6666854ed1fb714ee258fc35b00a2c3",
+      "sha256": "c7a6fc996985e8301c4811dd22a20f876dfa03a4688e4b64ceddf607628e2ced",
+      "mtime_ns": 1791941383772834722
+    },
+    {
+      "path": "candidate-freeze.json",
+      "bytes": 997,
+      "git_blob": "a44b3283c41cc1461a20ee1803c2670fe8f364c9",
+      "sha256": "d65114b4ddeed9116994f059d55aaeb953e5afa5d678c752ad077dfdf717d1f1",
+      "mtime_ns": 1791941845679357682
+    }
+  ]
+}
