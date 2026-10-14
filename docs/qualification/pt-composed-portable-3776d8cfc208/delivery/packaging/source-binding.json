@@ -1,0 +1,12 @@
+{
+  "schema": "pt.composition-kit.final-source-binding/1",
+  "source_commit": "69f3c8e0577b579ee36256da0a075fccb201af8f",
+  "source_tree": "3c2a77730ab23915fb5a33ae02b70497812da7c7",
+  "prior_start_git": "ccd66b3ccadc0ac331d5d7920cf3a6fea23bfcb3",
+  "final_start_git": "29376053ab58aa240c50bd71a275daf74b24afda",
+  "placeholder_only_change": true,
+  "all25_source_tree_identities_unchanged": true,
+  "selected_payloads": 27,
+  "archive_members": 28,
+  "publication_status": "reviewed-draft-not-main"
+}

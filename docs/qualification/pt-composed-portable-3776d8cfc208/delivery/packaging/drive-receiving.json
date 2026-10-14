@@ -1,0 +1,12 @@
+{
+  "schema": "pt.composed-portable.drive-receiving/1",
+  "drive_id": "1uuBHZynhfWRfFyLYoAi9GrZvIFbtf8Ti",
+  "parent_id": "1for5kGniDXsNyYNLNC9wNXclUy7iTIcK",
+  "source_commit": "69f3c8e0577b579ee36256da0a075fccb201af8f",
+  "bytes": 77452,
+  "sha256": "ba9941d29489f584e3fcd0b7b379b9a4de57d1fb56bede960983450650d1bd43",
+  "git_blob": "facfbd93a4d7faa331c975021d48bd97986180fd",
+  "full_original_zip_bytes_equal": true,
+  "all28members_exact": true,
+  "scope": "One exact local upload and complete actual Drive download; independent extracted runtime receiving pending."
+}

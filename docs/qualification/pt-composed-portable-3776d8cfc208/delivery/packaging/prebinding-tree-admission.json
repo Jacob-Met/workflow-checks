@@ -1,0 +1,10 @@
+{
+  "schema": "pt.composition-kit.prebinding-tree-admission/1",
+  "tree": "3c2a77730ab23915fb5a33ae02b70497812da7c7",
+  "tree_truncated": false,
+  "source_files": 25,
+  "all_staged_files_match_exact_remote_tree": true,
+  "full_tree_leaves": 1611,
+  "final_source_commit_pending": true,
+  "scope": "Read-only immutable source-tree admission; no build or runtime. Final commit binding follows root publication."
+}

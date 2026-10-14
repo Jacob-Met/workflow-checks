@@ -1,0 +1,183 @@
+{
+  "schema": "pt.composition-kit.source-admission/1",
+  "status": "final-published-source-pin-pending",
+  "files": [
+    {
+      "path": "LICENSE",
+      "bytes": 1070,
+      "git_blob": "edb188254288b40f2895833e3647b7e0be34c962",
+      "sha256": "f6a3d0f7d08a7590f907c08d6127545ab44eff0d23b6074714ad3fb935b998bb",
+      "origin": "reviewed-composed-source-pending-final-pin"
+    },
+    {
+      "path": "pt_auth/CALENDAR_RECEIPTS.md",
+      "bytes": 4541,
+      "git_blob": "a4a55efba02796069bbd974ab2d9de3060da5428",
+      "sha256": "379fa9fbc54694460d1809cde7eb7934c50e0257f27c474f1c918b5787da6485",
+      "origin": "reviewed-composed-source-pending-final-pin"
+    },
+    {
+      "path": "pt_auth/CSV_HEADERS.md",
+      "bytes": 2326,
+      "sha256": "463de2efe8189cd924a95caf670da27fe15a52e4df79409fec8a81f196591287",
+      "git_blob": "43e2605ab6e50694e3f0f0b3ebbabf0a87c6c3fe",
+      "origin": "existing-maintained-source-pending-composition-binding"
+    },
+    {
+      "path": "pt_auth/HARDENING.md",
+      "bytes": 11058,
+      "sha256": "660150926267145f95caf941efe9a5db4e3a0964229fdc330dea23718faea0f9",
+      "git_blob": "49db3a3e425e2ecb6c36b000daf95874dbf88cd9",
+      "origin": "existing-maintained-source-pending-composition-binding"
+    },
+    {
+      "path": "pt_auth/README.md",
+      "bytes": 23423,
+      "git_blob": "23fc8292665136a70b8aa8dde7bc08ab1d3b4f21",
+      "sha256": "dcdfefc4009aa5a03d49135639519b92f301a6f48468051fba7a6075836739a8",
+      "origin": "reviewed-composed-source-pending-final-pin"
+    },
+    {
+      "path": "pt_auth/ptauth/__init__.py",
+      "bytes": 311,
+      "git_blob": "a6f4545ac17e2578317ef694f7bb548489f6c71c",
+      "sha256": "71e1527f153c607b679485e4954af1b3ec6a843b041562eb07f4d36e08fd231c",
+      "origin": "reviewed-composed-source-pending-final-pin"
+    },
+    {
+      "path": "pt_auth/ptauth/__main__.py",
+      "bytes": 71,
+      "git_blob": "07cf8abb5a559054d4487c65a3f9f7c992067cf5",
+      "sha256": "712d5a98258176d09d165788048d34da033af45c04d14387d9e51de108db5669",
+      "origin": "reviewed-composed-source-pending-final-pin"
+    },
+    {
+      "path": "pt_auth/ptauth/calendar_ui.js",
+      "bytes": 8448,
+      "git_blob": "a6ba45ec85c28f7fd80d7e2fdd32ac62e96daa99",
+      "sha256": "b91fe76b947f381b2fa0835646fc664bf7eaa4474631ae3c9e5cb3968b9cdf3a",
+      "origin": "reviewed-composed-source-pending-final-pin"
+    },
+    {
+      "path": "pt_auth/ptauth/cli.py",
+      "bytes": 5952,
+      "git_blob": "8d6b43649bc6c142c28f71646485a31f6a6bbf55",
+      "sha256": "995428dbf73b4e34ef7fd12093b4072f5015b10a85ce44e9c40d90cd02fd3cab",
+      "origin": "reviewed-composed-source-pending-final-pin"
+    },
+    {
+      "path": "pt_auth/ptauth/data.py",
+      "bytes": 10725,
+      "git_blob": "886b2d75050f302acb101ab4f5bf8473b7573b8f",
+      "sha256": "b16d31711e678e3d25c9cf867098de93645298410985b96248e03ac3133adf19",
+      "origin": "reviewed-composed-source-pending-final-pin"
+    },
+    {
+      "path": "pt_auth/ptauth/engine.py",
+      "bytes": 16057,
+      "git_blob": "39c97f35d61ff949b5c2381f0ad60d7af8d74226",
+      "sha256": "bfa7049e9b133d654ce947b135c17ac401bd7b1fcd76350bdb10de5b7a1ad1f7",
+      "origin": "reviewed-composed-source-pending-final-pin"
+    },
+    {
+      "path": "pt_auth/ptauth/report.py",
+      "bytes": 10743,
+      "git_blob": "2ce82b1712e5c6fc03374d38996eceddf31782f0",
+      "sha256": "20cbc86e153b9af5151fd3e74cb370298de4692c81b3546a214eb2cfa8307df7",
+      "origin": "reviewed-composed-source-pending-final-pin"
+    },
+    {
+      "path": "pt_auth/ptauth/synth.py",
+      "bytes": 8873,
+      "git_blob": "2ff6a2548bf55a812cfa62e397442a0d3f7debbb",
+      "sha256": "b82a34447e43dacbe46ed06e60b693ed216e87f15892ae297c682aa5a3f139fd",
+      "origin": "reviewed-composed-source-pending-final-pin"
+    },
+    {
+      "path": "pt_auth/ptauth/ui.html",
+      "bytes": 18655,
+      "git_blob": "ec2e198ee1873c41981d201c78a63dbccc13afad",
+      "sha256": "a59df72e1edf5075e513047eb4000e94a87bf1dbcde8d243547944c283bbd492",
+      "origin": "reviewed-composed-source-pending-final-pin"
+    },
+    {
+      "path": "pt_auth/ptauth/uncovered.py",
+      "bytes": 4319,
+      "git_blob": "9ab21781c4116dd0b9b76ac0116868898f3ee7d4",
+      "sha256": "21e92509df706e504a8630f3383ea4fe98d03047d2e4b070f3fdd188d995350e",
+      "origin": "reviewed-composed-source-pending-final-pin"
+    },
+    {
+      "path": "pt_auth/ptauth/web.py",
+      "bytes": 8633,
+      "git_blob": "7e5d38f4cf8c33f4b9c91bd3c3d929fcfa0f80b3",
+      "sha256": "18a5f6e889f2a5d7e0e3704989f041681252df3ee0cb29e3c356aff560fd2967",
+      "origin": "reviewed-composed-source-pending-final-pin"
+    },
+    {
+      "path": "pt_auth/ptauth/worklist_calendar.py",
+      "bytes": 13750,
+      "git_blob": "e125f9ed77343fcc3d82e6d6f25a7296b0463aa7",
+      "sha256": "89751f1de5548ced34a59c296d0edf1eda06a38bdb935be3e7c3c8b2ae5d55c0",
+      "origin": "reviewed-composed-source-pending-final-pin"
+    },
+    {
+      "path": "pt_auth/sample_data/README_SYNTHETIC.txt",
+      "bytes": 262,
+      "sha256": "2a7e8be2b866866b2280df867a71ce18d57946b188ae9c9bb9d4af631b5f859a",
+      "git_blob": "943c3d0e2436abd6c1f3dcb6ef7b7f1aabaff90f",
+      "origin": "existing-maintained-source-pending-composition-binding"
+    },
+    {
+      "path": "pt_auth/sample_data/authorizations.csv",
+      "bytes": 2990,
+      "sha256": "306cae3c27895d2b81978d4cf3115e867b8853edb4939ec8f7e733a7f27b0657",
+      "git_blob": "036f7b276e3e09252afb886ad451531f51ada844",
+      "origin": "existing-maintained-source-pending-composition-binding"
+    },
+    {
+      "path": "pt_auth/sample_data/expected.json",
+      "bytes": 3482,
+      "sha256": "0652052b6f37ce068cb77d4b8cde0f5a75d9b275be51b05f570c35a60a8a6d02",
+      "git_blob": "21177a89ac5c24c9faf79746550165a3a170d08a",
+      "origin": "existing-maintained-source-pending-composition-binding"
+    },
+    {
+      "path": "pt_auth/sample_data/patients.csv",
+      "bytes": 2333,
+      "sha256": "1dd9bc97889ca4a2e46e19804841d4af29ada284ede22d328370d20fb520e6e5",
+      "git_blob": "e67323b68d1ac9ee4a901dc3ef70a95384ba5000",
+      "origin": "existing-maintained-source-pending-composition-binding"
+    },
+    {
+      "path": "pt_auth/sample_data/payers.csv",
+      "bytes": 904,
+      "sha256": "81f143eed15c9ce613ee7cf372e51d6223a44700c877cc42d283a824d30900ed",
+      "git_blob": "1853837e82048ac11698b4ad5bb6eeb055d56038",
+      "origin": "existing-maintained-source-pending-composition-binding"
+    },
+    {
+      "path": "pt_auth/sample_data/schedule.csv",
+      "bytes": 71520,
+      "sha256": "a5f9177b2e0fb9b4397a83839961d11c947e74cc2f13d5de29a31f39254e5198",
+      "git_blob": "24a395250f5318004bab4f168c3ca237189ab354",
+      "origin": "existing-maintained-source-pending-composition-binding"
+    },
+    {
+      "path": "pt_auth/tests/test_calendar_receipt_output.py",
+      "bytes": 8759,
+      "git_blob": "3264d6566e4ce482b47e05b5161a4a35bc74df56",
+      "sha256": "faefd09f9a03becd100ca50d2ed7ed23a48d4f256fcecb23fab3680134d62c68",
+      "origin": "reviewed-composed-source-pending-final-pin"
+    },
+    {
+      "path": "pt_auth/tests/test_cli_date_admission.py",
+      "bytes": 4814,
+      "git_blob": "faf307640652fb548dcb09a2cea0e226bb1b7689",
+      "sha256": "e99ab4925bece8148c5093929d4d13fae158ebc64571e7ac5f046ad4d6114ab4",
+      "origin": "reviewed-composed-source-pending-final-pin"
+    }
+  ],
+  "all_exact": true,
+  "scope": "File-byte admission and copying only; no product/module/runtime execution."
+}

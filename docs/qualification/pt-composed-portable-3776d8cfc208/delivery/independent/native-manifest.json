@@ -1,0 +1,310 @@
+{
+  "schema": "pt.composed-kit.independent-native-manifest/1",
+  "source_commit": "69f3c8e0577b579ee36256da0a075fccb201af8f",
+  "paths": 43,
+  "bytes": 716364,
+  "unique_bodies": 43,
+  "files": [
+    {
+      "path": "actual-drive.zip",
+      "bytes": 77452,
+      "sha256": "ba9941d29489f584e3fcd0b7b379b9a4de57d1fb56bede960983450650d1bd43",
+      "git_blob": "facfbd93a4d7faa331c975021d48bd97986180fd",
+      "mtime_ns": "1791945901531734417"
+    },
+    {
+      "path": "receive_kit.py",
+      "bytes": 14516,
+      "sha256": "95dc9780e1988a4474a7284ca9839b0a557d225b6ade91363e4aec535e2d966d",
+      "git_blob": "457cc100ddf752c2f28e42c35a7478853001905f",
+      "mtime_ns": "1791945733110014469"
+    },
+    {
+      "path": "PROTOCOL.md",
+      "bytes": 5491,
+      "sha256": "8054f38b83681f01f8e274156e02113b8e45596e1317a448ca64f4163898922a",
+      "git_blob": "e4a0ecb985e05bfe92fbbfa9ee965e2548b83ac3",
+      "mtime_ns": "1791945621047337287"
+    },
+    {
+      "path": "expected.json",
+      "bytes": 14255,
+      "sha256": "34b543fcb32924caa72e46e2cabc00e70e99f534f81add764aede75fd3eb3b54",
+      "git_blob": "6a99d4d3a93981a03270418cd7de71b43e72cd4f",
+      "mtime_ns": "1791945571867981202"
+    },
+    {
+      "path": "outer-exec.json",
+      "bytes": 273,
+      "sha256": "e6270219aff6d16564d8d0da23186df3c8e727aae2d207b56dab9bcd2bc79a9c",
+      "git_blob": "e049bbc4a8cf0de4c163f9d2ee3702459f351872",
+      "mtime_ns": "1791945947775826775"
+    },
+    {
+      "path": "course/command.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mtime_ns": "1791945934176472134"
+    },
+    {
+      "path": "course/command.stdout",
+      "bytes": 1795,
+      "sha256": "79948737d64c01ee3a10067def29987c9f0538fa9dba44b47a483f67e31a001b",
+      "git_blob": "1b6f6703dfa79a81a785f2a8f403084edd600aba",
+      "mtime_ns": "1791945934321039367"
+    },
+    {
+      "path": "course/extracted/LICENSE",
+      "bytes": 1070,
+      "sha256": "f6a3d0f7d08a7590f907c08d6127545ab44eff0d23b6074714ad3fb935b998bb",
+      "git_blob": "edb188254288b40f2895833e3647b7e0be34c962",
+      "mtime_ns": "1791945934155865037"
+    },
+    {
+      "path": "course/extracted/MANIFEST.json",
+      "bytes": 4422,
+      "sha256": "86892c5bffe1b3a3ff3d240801d6c6f26aca108cbba54b23dd9231bf27a58d04",
+      "git_blob": "660e45d30ac528951b55ededd083e490fe211306",
+      "mtime_ns": "1791945934156025993"
+    },
+    {
+      "path": "course/extracted/SOURCE_MANIFEST.json",
+      "bytes": 10456,
+      "sha256": "49c986f5fbc7df111337ed2b8027d1eb878fc5c25f1f34c615ed81f2bbb0a1aa",
+      "git_blob": "3045f338f985c279ba7ef065ea92ed258abf8689",
+      "mtime_ns": "1791945934156473083"
+    },
+    {
+      "path": "course/extracted/START_HERE.md",
+      "bytes": 7225,
+      "sha256": "77fc48e5768dbe14894bd48cf5457823e20c06d0c90bc40b0da225b07d0d1d4b",
+      "git_blob": "29376053ab58aa240c50bd71a275daf74b24afda",
+      "mtime_ns": "1791945934157501479"
+    },
+    {
+      "path": "course/extracted/pt_auth/CALENDAR_RECEIPTS.md",
+      "bytes": 4541,
+      "sha256": "379fa9fbc54694460d1809cde7eb7934c50e0257f27c474f1c918b5787da6485",
+      "git_blob": "a4a55efba02796069bbd974ab2d9de3060da5428",
+      "mtime_ns": "1791945934158168074"
+    },
+    {
+      "path": "course/extracted/pt_auth/CSV_HEADERS.md",
+      "bytes": 2326,
+      "sha256": "463de2efe8189cd924a95caf670da27fe15a52e4df79409fec8a81f196591287",
+      "git_blob": "43e2605ab6e50694e3f0f0b3ebbabf0a87c6c3fe",
+      "mtime_ns": "1791945934158603982"
+    },
+    {
+      "path": "course/extracted/pt_auth/HARDENING.md",
+      "bytes": 11058,
+      "sha256": "660150926267145f95caf941efe9a5db4e3a0964229fdc330dea23718faea0f9",
+      "git_blob": "49db3a3e425e2ecb6c36b000daf95874dbf88cd9",
+      "mtime_ns": "1791945934158867255"
+    },
+    {
+      "path": "course/extracted/pt_auth/README.md",
+      "bytes": 23423,
+      "sha256": "dcdfefc4009aa5a03d49135639519b92f301a6f48468051fba7a6075836739a8",
+      "git_blob": "23fc8292665136a70b8aa8dde7bc08ab1d3b4f21",
+      "mtime_ns": "1791945934159142017"
+    },
+    {
+      "path": "course/extracted/pt_auth/ptauth/__init__.py",
+      "bytes": 311,
+      "sha256": "71e1527f153c607b679485e4954af1b3ec6a843b041562eb07f4d36e08fd231c",
+      "git_blob": "a6f4545ac17e2578317ef694f7bb548489f6c71c",
+      "mtime_ns": "1791945934159613406"
+    },
+    {
+      "path": "course/extracted/pt_auth/ptauth/__main__.py",
+      "bytes": 71,
+      "sha256": "712d5a98258176d09d165788048d34da033af45c04d14387d9e51de108db5669",
+      "git_blob": "07cf8abb5a559054d4487c65a3f9f7c992067cf5",
+      "mtime_ns": "1791945934159917851"
+    },
+    {
+      "path": "course/extracted/pt_auth/ptauth/calendar_ui.js",
+      "bytes": 8448,
+      "sha256": "b91fe76b947f381b2fa0835646fc664bf7eaa4474631ae3c9e5cb3968b9cdf3a",
+      "git_blob": "a6ba45ec85c28f7fd80d7e2fdd32ac62e96daa99",
+      "mtime_ns": "1791945934160222509"
+    },
+    {
+      "path": "course/extracted/pt_auth/ptauth/cli.py",
+      "bytes": 5952,
+      "sha256": "995428dbf73b4e34ef7fd12093b4072f5015b10a85ce44e9c40d90cd02fd3cab",
+      "git_blob": "8d6b43649bc6c142c28f71646485a31f6a6bbf55",
+      "mtime_ns": "1791945934160472893"
+    },
+    {
+      "path": "course/extracted/pt_auth/ptauth/data.py",
+      "bytes": 10725,
+      "sha256": "b16d31711e678e3d25c9cf867098de93645298410985b96248e03ac3133adf19",
+      "git_blob": "886b2d75050f302acb101ab4f5bf8473b7573b8f",
+      "mtime_ns": "1791945934161136751"
+    },
+    {
+      "path": "course/extracted/pt_auth/ptauth/engine.py",
+      "bytes": 16057,
+      "sha256": "bfa7049e9b133d654ce947b135c17ac401bd7b1fcd76350bdb10de5b7a1ad1f7",
+      "git_blob": "39c97f35d61ff949b5c2381f0ad60d7af8d74226",
+      "mtime_ns": "1791945934161723347"
+    },
+    {
+      "path": "course/extracted/pt_auth/ptauth/report.py",
+      "bytes": 10743,
+      "sha256": "20cbc86e153b9af5151fd3e74cb370298de4692c81b3546a214eb2cfa8307df7",
+      "git_blob": "2ce82b1712e5c6fc03374d38996eceddf31782f0",
+      "mtime_ns": "1791945934162252121"
+    },
+    {
+      "path": "course/extracted/pt_auth/ptauth/synth.py",
+      "bytes": 8873,
+      "sha256": "b82a34447e43dacbe46ed06e60b693ed216e87f15892ae297c682aa5a3f139fd",
+      "git_blob": "2ff6a2548bf55a812cfa62e397442a0d3f7debbb",
+      "mtime_ns": "1791945934162635234"
+    },
+    {
+      "path": "course/extracted/pt_auth/ptauth/ui.html",
+      "bytes": 18655,
+      "sha256": "a59df72e1edf5075e513047eb4000e94a87bf1dbcde8d243547944c283bbd492",
+      "git_blob": "ec2e198ee1873c41981d201c78a63dbccc13afad",
+      "mtime_ns": "1791945934162859761"
+    },
+    {
+      "path": "course/extracted/pt_auth/ptauth/uncovered.py",
+      "bytes": 4319,
+      "sha256": "21e92509df706e504a8630f3383ea4fe98d03047d2e4b070f3fdd188d995350e",
+      "git_blob": "9ab21781c4116dd0b9b76ac0116868898f3ee7d4",
+      "mtime_ns": "1791945934163139165"
+    },
+    {
+      "path": "course/extracted/pt_auth/ptauth/web.py",
+      "bytes": 8633,
+      "sha256": "18a5f6e889f2a5d7e0e3704989f041681252df3ee0cb29e3c356aff560fd2967",
+      "git_blob": "7e5d38f4cf8c33f4b9c91bd3c3d929fcfa0f80b3",
+      "mtime_ns": "1791945934163365072"
+    },
+    {
+      "path": "course/extracted/pt_auth/ptauth/worklist_calendar.py",
+      "bytes": 13750,
+      "sha256": "89751f1de5548ced34a59c296d0edf1eda06a38bdb935be3e7c3c8b2ae5d55c0",
+      "git_blob": "e125f9ed77343fcc3d82e6d6f25a7296b0463aa7",
+      "mtime_ns": "1791945934163664930"
+    },
+    {
+      "path": "course/extracted/pt_auth/sample_data/README_SYNTHETIC.txt",
+      "bytes": 262,
+      "sha256": "2a7e8be2b866866b2280df867a71ce18d57946b188ae9c9bb9d4af631b5f859a",
+      "git_blob": "943c3d0e2436abd6c1f3dcb6ef7b7f1aabaff90f",
+      "mtime_ns": "1791945934164472703"
+    },
+    {
+      "path": "course/extracted/pt_auth/sample_data/authorizations.csv",
+      "bytes": 2990,
+      "sha256": "306cae3c27895d2b81978d4cf3115e867b8853edb4939ec8f7e733a7f27b0657",
+      "git_blob": "036f7b276e3e09252afb886ad451531f51ada844",
+      "mtime_ns": "1791945934165391861"
+    },
+    {
+      "path": "course/extracted/pt_auth/sample_data/expected.json",
+      "bytes": 3482,
+      "sha256": "0652052b6f37ce068cb77d4b8cde0f5a75d9b275be51b05f570c35a60a8a6d02",
+      "git_blob": "21177a89ac5c24c9faf79746550165a3a170d08a",
+      "mtime_ns": "1791945934165538855"
+    },
+    {
+      "path": "course/extracted/pt_auth/sample_data/patients.csv",
+      "bytes": 2333,
+      "sha256": "1dd9bc97889ca4a2e46e19804841d4af29ada284ede22d328370d20fb520e6e5",
+      "git_blob": "e67323b68d1ac9ee4a901dc3ef70a95384ba5000",
+      "mtime_ns": "1791945934165825184"
+    },
+    {
+      "path": "course/extracted/pt_auth/sample_data/payers.csv",
+      "bytes": 904,
+      "sha256": "81f143eed15c9ce613ee7cf372e51d6223a44700c877cc42d283a824d30900ed",
+      "git_blob": "1853837e82048ac11698b4ad5bb6eeb055d56038",
+      "mtime_ns": "1791945934166028597"
+    },
+    {
+      "path": "course/extracted/pt_auth/sample_data/schedule.csv",
+      "bytes": 71520,
+      "sha256": "a5f9177b2e0fb9b4397a83839961d11c947e74cc2f13d5de29a31f39254e5198",
+      "git_blob": "24a395250f5318004bab4f168c3ca237189ab354",
+      "mtime_ns": "1791945934167047851"
+    },
+    {
+      "path": "course/extracted/pt_auth/tests/test_calendar_receipt_output.py",
+      "bytes": 8759,
+      "sha256": "faefd09f9a03becd100ca50d2ed7ed23a48d4f256fcecb23fab3680134d62c68",
+      "git_blob": "3264d6566e4ce482b47e05b5161a4a35bc74df56",
+      "mtime_ns": "1791945934168008783"
+    },
+    {
+      "path": "course/extracted/pt_auth/tests/test_cli_date_admission.py",
+      "bytes": 4814,
+      "sha256": "e99ab4925bece8148c5093929d4d13fae158ebc64571e7ac5f046ad4d6114ab4",
+      "git_blob": "faf307640652fb548dcb09a2cea0e226bb1b7689",
+      "mtime_ns": "1791945934169012252"
+    },
+    {
+      "path": "course/new-report/audit.jsonl",
+      "bytes": 281,
+      "sha256": "2275770ca677ceac46663da8e12900222c1cc3b29b408c4acddbceac2b7b8c43",
+      "git_blob": "594c02e30269c630087ee4d7b9d706d2f851af72",
+      "mtime_ns": "1791945934321039367"
+    },
+    {
+      "path": "course/new-report/digest.html",
+      "bytes": 79198,
+      "sha256": "0d6d4bbe45afb01c65964c164d21fd981d458b96a1a5d6022e14903d1cc122ca",
+      "git_blob": "78dae5546640494818381584d4b285388c856239",
+      "mtime_ns": "1791945934320188542"
+    },
+    {
+      "path": "course/new-report/ledger.csv",
+      "bytes": 3746,
+      "sha256": "ee571c8339864dc97d217e7b31a358fc9b06609328c1790076e81c530be93d96",
+      "git_blob": "d49dee32ca8620cd20f7b0c7ef263281dce1d4db",
+      "mtime_ns": "1791945934307470879"
+    },
+    {
+      "path": "course/new-report/summary.json",
+      "bytes": 170131,
+      "sha256": "6e72596921ec22ba2d293073eeee18a8441c6df28ad84bf053178e684c52617c",
+      "git_blob": "0938686a21b1e8a9da0c4690bbde2808f41e277e",
+      "mtime_ns": "1791945934318078364"
+    },
+    {
+      "path": "course/new-report/uncovered_visits.csv",
+      "bytes": 31101,
+      "sha256": "adef91b6f7086f8f4e192a6267a84ad9e63b437e51b62df115a133497422a8ec",
+      "git_blob": "e750ad287278f3857be3684c8009d0afe7dd2a35",
+      "mtime_ns": "1791945934308465874"
+    },
+    {
+      "path": "course/new-report/visit_status_review.csv",
+      "bytes": 125,
+      "sha256": "9cb3e3e82e30935f57448ed826dbd8dab78e39355e3bebba59c478fa355ee170",
+      "git_blob": "2f954eb61f6a5ed9df00b35756f5f97af5037b1f",
+      "mtime_ns": "1791945934307637348"
+    },
+    {
+      "path": "course/new-report/worklist.csv",
+      "bytes": 14972,
+      "sha256": "73a95f16776325610d3d4049db7313407dd904f39ac2e375335a5705b392a9be",
+      "git_blob": "eae26d8268ca14ebd5a5df3985ff3a893d8c9139",
+      "mtime_ns": "1791945934306930297"
+    },
+    {
+      "path": "course/receiving.json",
+      "bytes": 36906,
+      "sha256": "08d596e12e695de89571dcfe235e0a3827f418e6935273bc6c9c7a5758eb3150",
+      "git_blob": "2875c9ba0397d17015d4dcb2ef25e0e25261297e",
+      "mtime_ns": "1791945934367486613"
+    }
+  ]
+}
