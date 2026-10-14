@@ -1,0 +1,29 @@
+{
+  "schema": "pt.review-zip.source-peer/1",
+  "verdict": "ACCEPT",
+  "reviewed": [
+    {
+      "path": "pt-ui-review-independent/receive_review.py",
+      "bytes": 5895,
+      "git_blob": "ec339358d40992b9d1ff0142df9aa03e7dd1e2fc"
+    },
+    {
+      "path": "pt-ui-review-independent/receiving.json",
+      "bytes": 5128,
+      "git_blob": "844db387cda61c5aeb01494d6b1f210a5dd2073d"
+    },
+    {
+      "path": "pt-ui-delivery/OPEN_REVIEW.html",
+      "bytes": 9075,
+      "git_blob": "c3938f462743e105653fede171e7de8a72444292"
+    }
+  ],
+  "inspection_checks": 21,
+  "scope": "Complete source, raw receipt and pinned static HTML read; no inspector, browser, server or product execution by this reviewer. Retrospective byte/layout receiving is separate from the original native browser courses.",
+  "findings": [
+    "Eight exact ZIP members and seven payload manifest identities, accepted notes/captures/CSV pins, both original raw native receipt bodies and 196 frozen visit IDs are checked.",
+    "The exact pinned HTML is script-free with inline CSS, two local PNG image resources and explicit outbound anchors; this is not a claim that the inspector validates arbitrary HTML.",
+    "Five unchanged byte and mtime records are local inspection inputs, including two materialized JSON inputs with local mtime 0; no new remote native-custody claim.",
+    "The original first native receipt remains failed; the successful successor native receipt and this 21-check archive inspection remain distinct."
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "branch": "c027f2c53563266779b11eb96e8c0647e04536ae",
+  "main": "5b7ece2ff6fadf1c3a194e9ca292f660787a2cd9",
+  "actions": 0,
+  "guide_sha": "5bb0089c49908927f4f88009810acd91c3b62001",
+  "guide_full_body_exact": true,
+  "tree_proof": {
+    "schema": "pt.ui.additive-tree-receiving/1",
+    "parent_commit": "f8a76c3a9f1757860deb29b5a34e8747c4ca9fad",
+    "parent_tree": "2d03e3987471303c33796aee19d456a8de645067",
+    "candidate_commit": "c027f2c53563266779b11eb96e8c0647e04536ae",
+    "candidate_tree": "334233e87c22ff61e74dcaca92bd59b9da8fb5ee",
+    "untruncated": true,
+    "parent_leaves": 1741,
+    "all_parent_modes_types_blobs_preserved": true,
+    "additions": 142,
+    "total_leaves": 1883,
+    "all_additions_in_prefix": "docs/qualification/pt-composed-portable-3776d8cfc208/browser-received/",
+    "guide_relative_links": 23,
+    "all_guide_relative_links_resolve": true
+  },
+  "source_ui_changed": false
+}

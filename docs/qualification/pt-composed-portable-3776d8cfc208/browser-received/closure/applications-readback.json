@@ -1,0 +1,15 @@
+{
+  "schema": "pt.ui.applications-adoption/1",
+  "page_id": "3f4aedcd-f4a5-81a5-ab5d-e3d6477356e2",
+  "section": "Workflow Checks — portable PT source",
+  "before_chars": 1778391,
+  "after_chars": 1780724,
+  "exact_expected_text": false,
+  "exact_inverse_preserves_all_prior_content": true,
+  "source_head": "c027f2c53563266779b11eb96e8c0647e04536ae",
+  "review_drive": "1Jx9qC8zmWdjIZJqbpdCnaJ3H6Y2hpWZe",
+  "historical_source_drive_preserved": true,
+  "calendar_history_preserved": true,
+  "actual_added_chars": 2333,
+  "only_blankline_normalization": true
+}
