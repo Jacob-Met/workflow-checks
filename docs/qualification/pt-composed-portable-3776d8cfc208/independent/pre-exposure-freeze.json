@@ -1,0 +1,17 @@
+{
+  "scope": "Protocol and executable frozen before composed source exposure; AST syntax check only, no imports or functional run",
+  "files": [
+    {
+      "path": "pt-composition-independent/PROTOCOL.md",
+      "bytes": 4613,
+      "git_blob": "96bd89e2e5bb8346878ecd045648cf10bbd26137",
+      "sha256": "e3f0be6522ae1b764a09ebe8173eaf430a48672b48128d1a5264a8ba859c56e5"
+    },
+    {
+      "path": "pt-composition-independent/receive_workflow.py",
+      "bytes": 14142,
+      "git_blob": "2ca8d584144fa7db5f2423a78c51517a507b1e18",
+      "sha256": "fdf797b1c6bfa6b44237422a7acea789bf8447ab55952332f2eb7afb5fb7ea08"
+    }
+  ]
+}

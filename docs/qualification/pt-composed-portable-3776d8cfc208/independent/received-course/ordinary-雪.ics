@@ -1,0 +1,81 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Workflow Checks//Synthetic PT handoff v1//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:844576f0b34bfea40842b1a621cb70a4fbd9bdb14c1b06242310c85763004ec5@ptauth
+ .workflow-checks.invalid
+DTSTAMP:20261014T021656Z
+DTSTART;VALUE=DATE:20261012
+SUMMARY:[SYNTHETIC] P1 authorization review — SYN-1002
+DESCRIPTION:SYNTHETIC DATA - NOT REAL PATIENTS. Proof of concept\; payer ru
+ les are placeholders. Nothing is submitted to any payer.\nAdministrative s
+ ubmit-by review\; no payer submission or staff-state change.\nWork-item ke
+ y: SYN-1002|PAY-COMM2|AUTH-70003\nPatient: SYN-1002 — Test Taylor B.\nPa
+ yer: PAY-COMM2 — Commercial Plan B (placeholder)\nAuthorization: AUTH-70
+ 003\nClinic: Clinic West (synthetic)\nPriority: P1\nRecorded submit-by: 20
+ 26-10-12\nAuthorization end: 2026-12-13\nNext visit: 2026-10-15\nStaff sta
+ te: open\nStaff note: \nStaff state recorded at: unrecorded\nReport as of:
+  2026-10-14\nReport generated at (as recorded): 2026-10-13T19:16:56\nClini
+ c time zone (context\; all-day date unchanged): UTC\nReasons:\nUNCOVERED_V
+ ISIT\nREAUTH_BY_VISITS\nDetails:\n8 scheduled visit(s) outside any approve
+ d auth\, first 2026-10-17 (V1040\, V1041\, V1042\, V1043 ...)\n1 of 9 visi
+ ts left (payer threshold 2)\nChecklist:\nProgress note\nFunctional outcome
+  score (e.g.\, LEFS/ODI)\nVisit history\nPortal submission\nSource evidenc
+ e:\nschedule.csv:row41\nschedule.csv:row42\nschedule.csv:row43\nschedule.c
+ sv:row44\nschedule.csv:row45\nschedule.csv:row46\nschedule.csv:row47\nsche
+ dule.csv:row48\nauthorizations.csv:row3
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:86757e78f2fde52e943dc141bde8845f3ee95d1ad09c044f72b36844d4f11be8@ptauth
+ .workflow-checks.invalid
+DTSTAMP:20261014T021656Z
+DTSTART;VALUE=DATE:20261015
+SUMMARY:[SYNTHETIC] P1 authorization review — SYN-1004
+DESCRIPTION:SYNTHETIC DATA - NOT REAL PATIENTS. Proof of concept\; payer ru
+ les are placeholders. Nothing is submitted to any payer.\nAdministrative s
+ ubmit-by review\; no payer submission or staff-state change.\nWork-item ke
+ y: SYN-1004|PAY-COMM2|AUTH-70009\nPatient: SYN-1004 — Test Reese D.\nPay
+ er: PAY-COMM2 — Commercial Plan B (placeholder)\nAuthorization: AUTH-700
+ 09\nClinic: Clinic North (synthetic)\nPriority: P1\nRecorded submit-by: 20
+ 26-10-15\nAuthorization end: 2026-10-18\nNext visit: 2026-10-14\nStaff sta
+ te: open\nStaff note: \nStaff state recorded at: unrecorded\nReport as of:
+  2026-10-14\nReport generated at (as recorded): 2026-10-13T19:16:56\nClini
+ c time zone (context\; all-day date unchanged): UTC\nReasons:\nUNCOVERED_V
+ ISIT\nREAUTH_BY_DATE\nDetails:\n7 scheduled visit(s) outside any approved 
+ auth\, first 2026-10-21 (V1072\, V1073\, V1074\, V1075 ...)\nauth ends 202
+ 6-10-18 (4 days)\; 9 visit(s) still scheduled\nChecklist:\nProgress note\n
+ Functional outcome score (e.g.\, LEFS/ODI)\nVisit history\nPortal submissi
+ on\nSource evidence:\nschedule.csv:row73\nschedule.csv:row74\nschedule.csv
+ :row75\nschedule.csv:row76\nschedule.csv:row77\nschedule.csv:row78\nschedu
+ le.csv:row79\nauthorizations.csv:row5
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:d2c1b6ce75eb20697bc4edf2d1525dfa39c74302dbc32f3d8859dafe2e4faca8@ptauth
+ .workflow-checks.invalid
+DTSTAMP:20261014T021656Z
+DTSTART;VALUE=DATE:20261016
+SUMMARY:[SYNTHETIC] P2 authorization review — SYN-1003
+DESCRIPTION:SYNTHETIC DATA - NOT REAL PATIENTS. Proof of concept\; payer ru
+ les are placeholders. Nothing is submitted to any payer.\nAdministrative s
+ ubmit-by review\; no payer submission or staff-state change.\nWork-item ke
+ y: SYN-1003|PAY-COMM1|AUTH-70006\nPatient: SYN-1003 — Test Blair C.\nPay
+ er: PAY-COMM1 — Commercial Plan A (placeholder)\nAuthorization: AUTH-700
+ 06\nClinic: Clinic North (synthetic)\nPriority: P2\nRecorded submit-by: 20
+ 26-10-16\nAuthorization end: 2026-10-21\nNext visit: 2026-10-14\nStaff sta
+ te: open\nStaff note: \nStaff state recorded at: unrecorded\nReport as of:
+  2026-10-14\nReport generated at (as recorded): 2026-10-13T19:16:56\nClini
+ c time zone (context\; all-day date unchanged): UTC\nReasons:\nUNCOVERED_V
+ ISIT\nREAUTH_BY_DATE\nDetails:\n7 scheduled visit(s) outside any approved 
+ auth\, first 2026-10-23 (V1055\, V1056\, V1057\, V1058 ...)\nauth ends 202
+ 6-10-21 (7 days)\; 10 visit(s) still scheduled\nChecklist:\nCurrent plan o
+ f care signed by referring provider\nProgress note within last 30 days\nOb
+ jective measures (ROM\, strength\, functional score)\nUpdated goals\nPayer
+  portal request form\nSource evidence:\nschedule.csv:row56\nschedule.csv:r
+ ow57\nschedule.csv:row58\nschedule.csv:row59\nschedule.csv:row60\nschedule
+ .csv:row61\nschedule.csv:row62\nauthorizations.csv:row4
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

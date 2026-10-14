@@ -1,0 +1,14 @@
+{
+  "schema": "ptauth.composition.native-controller.peer-review/1",
+  "protocol_git": "7a008247568434649badafca5f50a62696ddbccc",
+  "controller_git": "70e1e1b7df489d531618390890fb17975c36c4a0",
+  "verdict": "ACCEPT",
+  "scope": "Full source-free controller/protocol review only; no controller, pytest, product or native invocation by this reviewer",
+  "findings": [
+    "Exactly 17 supplied file names and pinned manifest content are admitted before the child; fixed host, account, interpreter, isolation, pytest version and origin are checked.",
+    "The only child command selects the unchanged two modules, with cache/plugin settings controlled and output under a new owned directory.",
+    "The 60-second deadline and owned-group kill/10-second reap retain raw streams, errors and final child status without retry.",
+    "Success requires the 19-pass summary, no failure/error/skip/xfail/xpass summary, unchanged 19 source/receiver/protocol records, unchanged manifest and exact source inventory."
+  ],
+  "remaining_gate": "Root exact composed-source and manifest release; execution remains consumer-owned."
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "pt.composition.two-module.outer-observer/1",
+  "scope": "RDC terminal metadata transcribed from collected tool responses; child/result facts stay in raw native receiving.json.",
+  "device": "d55b2499-5e82-4805-819a-d0d7ddea1efe",
+  "history": [
+    {
+      "pid": 610013,
+      "exit": 1,
+      "runtime_seconds": 0.2,
+      "scope": "Pre-stage discretionary1GiB capacity refusal; identity matched; no stage or test."
+    },
+    {
+      "pid": 610333,
+      "exit": 0,
+      "runtime_seconds": 0.11,
+      "scope": "Read-only identity/capacity; home free555270144; /tmp free3498086400."
+    },
+    {
+      "pid": 611064,
+      "exit": 0,
+      "runtime_seconds": 0.11,
+      "scope": "Fresh owned stage after static six-patient short-fixture review; discretionary100MiB admission; no deletion/controller/source change."
+    },
+    {
+      "pid": 611786,
+      "exit": 0,
+      "runtime_seconds": 0.15,
+      "scope": "20 exact files admitted; compile only."
+    },
+    {
+      "pid": 612088,
+      "exit": 0,
+      "runtime_seconds": 1.82,
+      "scope": "Sole frozen two-module controller invocation."
+    },
+    {
+      "pid": 612945,
+      "exit": 0,
+      "runtime_seconds": 0.14,
+      "scope": "Read-only native raw export, no pytest replay."
+    }
+  ],
+  "native_stage": "/home/jacob/pt-composition-native-3776-7mqo0tfm",
+  "raw_export": {
+    "files": 152,
+    "bytes": 859656,
+    "packed_bytes": 213561,
+    "packed_sha256": "40e428eeddcd2cbf594c60a3aab717409c81fe760739d9514286250159cb5830"
+  }
+}

@@ -1,0 +1,7 @@
+patient_id,display_name,clinic,primary_payer
+SYN-1001,Test Taylor A.,Clinic North (synthetic),PAY-COMM2
+SYN-1002,Test Taylor B.,Clinic West (synthetic),PAY-COMM2
+SYN-1003,Test Blair C.,Clinic North (synthetic),PAY-COMM1
+SYN-1004,Test Reese D.,Clinic North (synthetic),PAY-COMM2
+SYN-1005,Test Morgan E.,Clinic North (synthetic),PAY-MA
+SYN-1006,Test Morgan F.,Clinic Lake (synthetic),PAY-MA

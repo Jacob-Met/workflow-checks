@@ -1,0 +1,170 @@
+{
+  "schema": "pt.composition.native-full-body-readback/1",
+  "repository": "Jacob-Met/workflow-checks",
+  "passed": true,
+  "scope": "24 native core paths plus core manifest, full152-body export manifest and outer observer; complete returned UTF8 bodies compared exactly with native export bytes decoded as UTF8. No reserialization or runtime replay.",
+  "files": [
+    {
+      "path": "PROTOCOL.md",
+      "git_blob": "7a008247568434649badafca5f50a62696ddbccc",
+      "bytes": 3713,
+      "ok": true
+    },
+    {
+      "path": "native-source-manifest.json",
+      "git_blob": "e7d2dfd71d9d899ec778e755854073dc152685c8",
+      "bytes": 3809,
+      "ok": true
+    },
+    {
+      "path": "received-course/pytest.stderr",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "bytes": 0,
+      "ok": true
+    },
+    {
+      "path": "received-course/pytest.stdout",
+      "git_blob": "38719ee15619e6a540d0fb5218fc32409c21f1d8",
+      "bytes": 114,
+      "ok": true
+    },
+    {
+      "path": "received-course/receiving.json",
+      "git_blob": "7263f578848564b6864d94d0d6e9d302a3a13c75",
+      "bytes": 15228,
+      "ok": true
+    },
+    {
+      "path": "run_two_modules.py",
+      "git_blob": "70e1e1b7df489d531618390890fb17975c36c4a0",
+      "bytes": 8049,
+      "ok": true
+    },
+    {
+      "path": "source/LICENSE",
+      "git_blob": "edb188254288b40f2895833e3647b7e0be34c962",
+      "bytes": 1070,
+      "ok": true
+    },
+    {
+      "path": "source/pt_auth/CALENDAR_RECEIPTS.md",
+      "git_blob": "a4a55efba02796069bbd974ab2d9de3060da5428",
+      "bytes": 4541,
+      "ok": true
+    },
+    {
+      "path": "source/pt_auth/README.md",
+      "git_blob": "23fc8292665136a70b8aa8dde7bc08ab1d3b4f21",
+      "bytes": 23423,
+      "ok": true
+    },
+    {
+      "path": "source/pt_auth/ptauth/__init__.py",
+      "git_blob": "a6f4545ac17e2578317ef694f7bb548489f6c71c",
+      "bytes": 311,
+      "ok": true
+    },
+    {
+      "path": "source/pt_auth/ptauth/__main__.py",
+      "git_blob": "07cf8abb5a559054d4487c65a3f9f7c992067cf5",
+      "bytes": 71,
+      "ok": true
+    },
+    {
+      "path": "source/pt_auth/ptauth/calendar_ui.js",
+      "git_blob": "a6ba45ec85c28f7fd80d7e2fdd32ac62e96daa99",
+      "bytes": 8448,
+      "ok": true
+    },
+    {
+      "path": "source/pt_auth/ptauth/cli.py",
+      "git_blob": "8d6b43649bc6c142c28f71646485a31f6a6bbf55",
+      "bytes": 5952,
+      "ok": true
+    },
+    {
+      "path": "source/pt_auth/ptauth/data.py",
+      "git_blob": "886b2d75050f302acb101ab4f5bf8473b7573b8f",
+      "bytes": 10725,
+      "ok": true
+    },
+    {
+      "path": "source/pt_auth/ptauth/engine.py",
+      "git_blob": "39c97f35d61ff949b5c2381f0ad60d7af8d74226",
+      "bytes": 16057,
+      "ok": true
+    },
+    {
+      "path": "source/pt_auth/ptauth/report.py",
+      "git_blob": "2ce82b1712e5c6fc03374d38996eceddf31782f0",
+      "bytes": 10743,
+      "ok": true
+    },
+    {
+      "path": "source/pt_auth/ptauth/synth.py",
+      "git_blob": "2ff6a2548bf55a812cfa62e397442a0d3f7debbb",
+      "bytes": 8873,
+      "ok": true
+    },
+    {
+      "path": "source/pt_auth/ptauth/ui.html",
+      "git_blob": "ec2e198ee1873c41981d201c78a63dbccc13afad",
+      "bytes": 18655,
+      "ok": true
+    },
+    {
+      "path": "source/pt_auth/ptauth/uncovered.py",
+      "git_blob": "9ab21781c4116dd0b9b76ac0116868898f3ee7d4",
+      "bytes": 4319,
+      "ok": true
+    },
+    {
+      "path": "source/pt_auth/ptauth/web.py",
+      "git_blob": "7e5d38f4cf8c33f4b9c91bd3c3d929fcfa0f80b3",
+      "bytes": 8633,
+      "ok": true
+    },
+    {
+      "path": "source/pt_auth/ptauth/worklist_calendar.py",
+      "git_blob": "e125f9ed77343fcc3d82e6d6f25a7296b0463aa7",
+      "bytes": 13750,
+      "ok": true
+    },
+    {
+      "path": "source/pt_auth/tests/test_calendar_receipt_output.py",
+      "git_blob": "3264d6566e4ce482b47e05b5161a4a35bc74df56",
+      "bytes": 8759,
+      "ok": true
+    },
+    {
+      "path": "source/pt_auth/tests/test_cli_date_admission.py",
+      "git_blob": "faf307640652fb548dcb09a2cea0e226bb1b7689",
+      "bytes": 4814,
+      "ok": true
+    },
+    {
+      "path": "staging-admission.json",
+      "git_blob": "4c1ad10d9260e1f76b6ac3cd13723eeec996f5e8",
+      "bytes": 4687,
+      "ok": true
+    },
+    {
+      "path": "packet-manifest.json",
+      "git_blob": "ee03b826deb77f1a29caaa4db9d8f668ec6dea64",
+      "bytes": 6775,
+      "ok": true
+    },
+    {
+      "path": "native-export-manifest.json",
+      "git_blob": "856f42f777fcd17d45b27804683f1c7ec43df472",
+      "bytes": 48271,
+      "ok": true
+    },
+    {
+      "path": "outer-observer.json",
+      "git_blob": "9c40b081a8231aa41baa5994e7c983e8b822a128",
+      "bytes": 1523,
+      "ok": true
+    }
+  ]
+}

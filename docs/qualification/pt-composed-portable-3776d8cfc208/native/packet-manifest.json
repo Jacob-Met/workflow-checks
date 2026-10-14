@@ -1,0 +1,177 @@
+{
+  "schema": "pt.composition.native-core/1",
+  "files": [
+    {
+      "path": "PROTOCOL.md",
+      "bytes": 3713,
+      "sha256": "ce1ae6ce372fe6a26d39340dcc48414b5410eebd3b8ede7dd40da370d7569b77",
+      "git_blob": "7a008247568434649badafca5f50a62696ddbccc",
+      "mtime_ns": "1791945197356206045"
+    },
+    {
+      "path": "native-source-manifest.json",
+      "bytes": 3809,
+      "sha256": "2586c69dbb9ed011c795dd858585aff3e81e781d807a8cd0aacdec02826664b9",
+      "git_blob": "e7d2dfd71d9d899ec778e755854073dc152685c8",
+      "mtime_ns": "1791945197354852784"
+    },
+    {
+      "path": "received-course/pytest.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mtime_ns": "1791945222911515695"
+    },
+    {
+      "path": "received-course/pytest.stdout",
+      "bytes": 114,
+      "sha256": "fb2eb6bc0bed1ee35431f46bbf7e03c8e6949de971bbbddb024eabb655ba619c",
+      "git_blob": "38719ee15619e6a540d0fb5218fc32409c21f1d8",
+      "mtime_ns": "1791945224587508889"
+    },
+    {
+      "path": "received-course/receiving.json",
+      "bytes": 15228,
+      "sha256": "4784edecbbe5cfaeab1f0699275a7e319f0f3b023c6cf8068a5a8e900f00bfa2",
+      "git_blob": "7263f578848564b6864d94d0d6e9d302a3a13c75",
+      "mtime_ns": "1791945224634899390"
+    },
+    {
+      "path": "run_two_modules.py",
+      "bytes": 8049,
+      "sha256": "7c3e1e0ca3d1df1c4da5ea29ffad277b7eeeae2420b28e49c44755b360f2d2ab",
+      "git_blob": "70e1e1b7df489d531618390890fb17975c36c4a0",
+      "mtime_ns": "1791945197354926065"
+    },
+    {
+      "path": "source/LICENSE",
+      "bytes": 1070,
+      "sha256": "f6a3d0f7d08a7590f907c08d6127545ab44eff0d23b6074714ad3fb935b998bb",
+      "git_blob": "edb188254288b40f2895833e3647b7e0be34c962",
+      "mtime_ns": "1791945197338094028"
+    },
+    {
+      "path": "source/pt_auth/CALENDAR_RECEIPTS.md",
+      "bytes": 4541,
+      "sha256": "379fa9fbc54694460d1809cde7eb7934c50e0257f27c474f1c918b5787da6485",
+      "git_blob": "a4a55efba02796069bbd974ab2d9de3060da5428",
+      "mtime_ns": "1791945197338192175"
+    },
+    {
+      "path": "source/pt_auth/README.md",
+      "bytes": 23423,
+      "sha256": "dcdfefc4009aa5a03d49135639519b92f301a6f48468051fba7a6075836739a8",
+      "git_blob": "23fc8292665136a70b8aa8dde7bc08ab1d3b4f21",
+      "mtime_ns": "1791945197338318356"
+    },
+    {
+      "path": "source/pt_auth/ptauth/__init__.py",
+      "bytes": 311,
+      "sha256": "71e1527f153c607b679485e4954af1b3ec6a843b041562eb07f4d36e08fd231c",
+      "git_blob": "a6f4545ac17e2578317ef694f7bb548489f6c71c",
+      "mtime_ns": "1791945197338386076"
+    },
+    {
+      "path": "source/pt_auth/ptauth/__main__.py",
+      "bytes": 71,
+      "sha256": "712d5a98258176d09d165788048d34da033af45c04d14387d9e51de108db5669",
+      "git_blob": "07cf8abb5a559054d4487c65a3f9f7c992067cf5",
+      "mtime_ns": "1791945197339086433"
+    },
+    {
+      "path": "source/pt_auth/ptauth/calendar_ui.js",
+      "bytes": 8448,
+      "sha256": "b91fe76b947f381b2fa0835646fc664bf7eaa4474631ae3c9e5cb3968b9cdf3a",
+      "git_blob": "a6ba45ec85c28f7fd80d7e2fdd32ac62e96daa99",
+      "mtime_ns": "1791945197339203820"
+    },
+    {
+      "path": "source/pt_auth/ptauth/cli.py",
+      "bytes": 5952,
+      "sha256": "995428dbf73b4e34ef7fd12093b4072f5015b10a85ce44e9c40d90cd02fd3cab",
+      "git_blob": "8d6b43649bc6c142c28f71646485a31f6a6bbf55",
+      "mtime_ns": "1791945197339270292"
+    },
+    {
+      "path": "source/pt_auth/ptauth/data.py",
+      "bytes": 10725,
+      "sha256": "b16d31711e678e3d25c9cf867098de93645298410985b96248e03ac3133adf19",
+      "git_blob": "886b2d75050f302acb101ab4f5bf8473b7573b8f",
+      "mtime_ns": "1791945197340673457"
+    },
+    {
+      "path": "source/pt_auth/ptauth/engine.py",
+      "bytes": 16057,
+      "sha256": "bfa7049e9b133d654ce947b135c17ac401bd7b1fcd76350bdb10de5b7a1ad1f7",
+      "git_blob": "39c97f35d61ff949b5c2381f0ad60d7af8d74226",
+      "mtime_ns": "1791945197342690112"
+    },
+    {
+      "path": "source/pt_auth/ptauth/report.py",
+      "bytes": 10743,
+      "sha256": "20cbc86e153b9af5151fd3e74cb370298de4692c81b3546a214eb2cfa8307df7",
+      "git_blob": "2ce82b1712e5c6fc03374d38996eceddf31782f0",
+      "mtime_ns": "1791945197345103707"
+    },
+    {
+      "path": "source/pt_auth/ptauth/synth.py",
+      "bytes": 8873,
+      "sha256": "b82a34447e43dacbe46ed06e60b693ed216e87f15892ae297c682aa5a3f139fd",
+      "git_blob": "2ff6a2548bf55a812cfa62e397442a0d3f7debbb",
+      "mtime_ns": "1791945197346589873"
+    },
+    {
+      "path": "source/pt_auth/ptauth/ui.html",
+      "bytes": 18655,
+      "sha256": "a59df72e1edf5075e513047eb4000e94a87bf1dbcde8d243547944c283bbd492",
+      "git_blob": "ec2e198ee1873c41981d201c78a63dbccc13afad",
+      "mtime_ns": "1791945197347821914"
+    },
+    {
+      "path": "source/pt_auth/ptauth/uncovered.py",
+      "bytes": 4319,
+      "sha256": "21e92509df706e504a8630f3383ea4fe98d03047d2e4b070f3fdd188d995350e",
+      "git_blob": "9ab21781c4116dd0b9b76ac0116868898f3ee7d4",
+      "mtime_ns": "1791945197347896073"
+    },
+    {
+      "path": "source/pt_auth/ptauth/web.py",
+      "bytes": 8633,
+      "sha256": "18a5f6e889f2a5d7e0e3704989f041681252df3ee0cb29e3c356aff560fd2967",
+      "git_blob": "7e5d38f4cf8c33f4b9c91bd3c3d929fcfa0f80b3",
+      "mtime_ns": "1791945197348413920"
+    },
+    {
+      "path": "source/pt_auth/ptauth/worklist_calendar.py",
+      "bytes": 13750,
+      "sha256": "89751f1de5548ced34a59c296d0edf1eda06a38bdb935be3e7c3c8b2ae5d55c0",
+      "git_blob": "e125f9ed77343fcc3d82e6d6f25a7296b0463aa7",
+      "mtime_ns": "1791945197349619519"
+    },
+    {
+      "path": "source/pt_auth/tests/test_calendar_receipt_output.py",
+      "bytes": 8759,
+      "sha256": "faefd09f9a03becd100ca50d2ed7ed23a48d4f256fcecb23fab3680134d62c68",
+      "git_blob": "3264d6566e4ce482b47e05b5161a4a35bc74df56",
+      "mtime_ns": "1791945197352747628"
+    },
+    {
+      "path": "source/pt_auth/tests/test_cli_date_admission.py",
+      "bytes": 4814,
+      "sha256": "e99ab4925bece8148c5093929d4d13fae158ebc64571e7ac5f046ad4d6114ab4",
+      "git_blob": "faf307640652fb548dcb09a2cea0e226bb1b7689",
+      "mtime_ns": "1791945197354109315"
+    },
+    {
+      "path": "staging-admission.json",
+      "bytes": 4687,
+      "sha256": "936b554549a14632526f80ce1dfcfdce688b81b782383b83da668af949158bcb",
+      "git_blob": "4c1ad10d9260e1f76b6ac3cd13723eeec996f5e8",
+      "mtime_ns": "1791945197356296974"
+    }
+  ],
+  "count": 24,
+  "bytes": 184744,
+  "retained_full_native_manifest": "native-export-manifest.json",
+  "scope": "Original full152-body export retained locally/native; compact core preserves source, controller, protocol, admission and raw test receipt/streams. No test replay."
+}

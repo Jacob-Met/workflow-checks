@@ -1,0 +1,829 @@
+{
+  "schema": "ptauth.composed-workflow.independent/1",
+  "scope": "One five-child fictional generated-data/report/calendar workflow, no product/helper oracle imports or prior matrix rerun",
+  "source_before": [
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-composition-author/composed-source/pt_auth/ptauth/__init__.py",
+      "bytes": 311,
+      "sha256": "71e1527f153c607b679485e4954af1b3ec6a843b041562eb07f4d36e08fd231c",
+      "git_blob": "a6f4545ac17e2578317ef694f7bb548489f6c71c",
+      "mtime_ns": 1791943760765873671
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-composition-author/composed-source/pt_auth/ptauth/__main__.py",
+      "bytes": 71,
+      "sha256": "712d5a98258176d09d165788048d34da033af45c04d14387d9e51de108db5669",
+      "git_blob": "07cf8abb5a559054d4487c65a3f9f7c992067cf5",
+      "mtime_ns": 1791943760766137408
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-composition-author/composed-source/pt_auth/ptauth/cli.py",
+      "bytes": 5952,
+      "sha256": "995428dbf73b4e34ef7fd12093b4072f5015b10a85ce44e9c40d90cd02fd3cab",
+      "git_blob": "8d6b43649bc6c142c28f71646485a31f6a6bbf55",
+      "mtime_ns": 1791943760766627284
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-composition-author/composed-source/pt_auth/ptauth/data.py",
+      "bytes": 10725,
+      "sha256": "b16d31711e678e3d25c9cf867098de93645298410985b96248e03ac3133adf19",
+      "git_blob": "886b2d75050f302acb101ab4f5bf8473b7573b8f",
+      "mtime_ns": 1791943760767496156
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-composition-author/composed-source/pt_auth/ptauth/engine.py",
+      "bytes": 16057,
+      "sha256": "bfa7049e9b133d654ce947b135c17ac401bd7b1fcd76350bdb10de5b7a1ad1f7",
+      "git_blob": "39c97f35d61ff949b5c2381f0ad60d7af8d74226",
+      "mtime_ns": 1791943760768002000
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-composition-author/composed-source/pt_auth/ptauth/report.py",
+      "bytes": 10743,
+      "sha256": "20cbc86e153b9af5151fd3e74cb370298de4692c81b3546a214eb2cfa8307df7",
+      "git_blob": "2ce82b1712e5c6fc03374d38996eceddf31782f0",
+      "mtime_ns": 1791943760768352459
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-composition-author/composed-source/pt_auth/ptauth/synth.py",
+      "bytes": 8873,
+      "sha256": "b82a34447e43dacbe46ed06e60b693ed216e87f15892ae297c682aa5a3f139fd",
+      "git_blob": "2ff6a2548bf55a812cfa62e397442a0d3f7debbb",
+      "mtime_ns": 1791943760768519009
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-composition-author/composed-source/pt_auth/ptauth/uncovered.py",
+      "bytes": 4319,
+      "sha256": "21e92509df706e504a8630f3383ea4fe98d03047d2e4b070f3fdd188d995350e",
+      "git_blob": "9ab21781c4116dd0b9b76ac0116868898f3ee7d4",
+      "mtime_ns": 1791943760768943683
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-composition-author/composed-source/pt_auth/ptauth/web.py",
+      "bytes": 8633,
+      "sha256": "18a5f6e889f2a5d7e0e3704989f041681252df3ee0cb29e3c356aff560fd2967",
+      "git_blob": "7e5d38f4cf8c33f4b9c91bd3c3d929fcfa0f80b3",
+      "mtime_ns": 1791943760769046004
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-composition-author/composed-source/pt_auth/ptauth/worklist_calendar.py",
+      "bytes": 13750,
+      "sha256": "89751f1de5548ced34a59c296d0edf1eda06a38bdb935be3e7c3c8b2ae5d55c0",
+      "git_blob": "e125f9ed77343fcc3d82e6d6f25a7296b0463aa7",
+      "mtime_ns": 1791943760769405283
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-composition-independent/receive_workflow.py",
+      "bytes": 14142,
+      "sha256": "fdf797b1c6bfa6b44237422a7acea789bf8447ab55952332f2eb7afb5fb7ea08",
+      "git_blob": "2ca8d584144fa7db5f2423a78c51517a507b1e18",
+      "mtime_ns": 1791943925215953025
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-composition-independent/PROTOCOL.md",
+      "bytes": 4613,
+      "sha256": "e3f0be6522ae1b764a09ebe8173eaf430a48672b48128d1a5264a8ba859c56e5",
+      "git_blob": "96bd89e2e5bb8346878ecd045648cf10bbd26137",
+      "mtime_ns": 1791943924076007177
+    }
+  ],
+  "source_after": [
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-composition-author/composed-source/pt_auth/ptauth/__init__.py",
+      "bytes": 311,
+      "sha256": "71e1527f153c607b679485e4954af1b3ec6a843b041562eb07f4d36e08fd231c",
+      "git_blob": "a6f4545ac17e2578317ef694f7bb548489f6c71c",
+      "mtime_ns": 1791943760765873671
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-composition-author/composed-source/pt_auth/ptauth/__main__.py",
+      "bytes": 71,
+      "sha256": "712d5a98258176d09d165788048d34da033af45c04d14387d9e51de108db5669",
+      "git_blob": "07cf8abb5a559054d4487c65a3f9f7c992067cf5",
+      "mtime_ns": 1791943760766137408
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-composition-author/composed-source/pt_auth/ptauth/cli.py",
+      "bytes": 5952,
+      "sha256": "995428dbf73b4e34ef7fd12093b4072f5015b10a85ce44e9c40d90cd02fd3cab",
+      "git_blob": "8d6b43649bc6c142c28f71646485a31f6a6bbf55",
+      "mtime_ns": 1791943760766627284
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-composition-author/composed-source/pt_auth/ptauth/data.py",
+      "bytes": 10725,
+      "sha256": "b16d31711e678e3d25c9cf867098de93645298410985b96248e03ac3133adf19",
+      "git_blob": "886b2d75050f302acb101ab4f5bf8473b7573b8f",
+      "mtime_ns": 1791943760767496156
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-composition-author/composed-source/pt_auth/ptauth/engine.py",
+      "bytes": 16057,
+      "sha256": "bfa7049e9b133d654ce947b135c17ac401bd7b1fcd76350bdb10de5b7a1ad1f7",
+      "git_blob": "39c97f35d61ff949b5c2381f0ad60d7af8d74226",
+      "mtime_ns": 1791943760768002000
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-composition-author/composed-source/pt_auth/ptauth/report.py",
+      "bytes": 10743,
+      "sha256": "20cbc86e153b9af5151fd3e74cb370298de4692c81b3546a214eb2cfa8307df7",
+      "git_blob": "2ce82b1712e5c6fc03374d38996eceddf31782f0",
+      "mtime_ns": 1791943760768352459
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-composition-author/composed-source/pt_auth/ptauth/synth.py",
+      "bytes": 8873,
+      "sha256": "b82a34447e43dacbe46ed06e60b693ed216e87f15892ae297c682aa5a3f139fd",
+      "git_blob": "2ff6a2548bf55a812cfa62e397442a0d3f7debbb",
+      "mtime_ns": 1791943760768519009
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-composition-author/composed-source/pt_auth/ptauth/uncovered.py",
+      "bytes": 4319,
+      "sha256": "21e92509df706e504a8630f3383ea4fe98d03047d2e4b070f3fdd188d995350e",
+      "git_blob": "9ab21781c4116dd0b9b76ac0116868898f3ee7d4",
+      "mtime_ns": 1791943760768943683
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-composition-author/composed-source/pt_auth/ptauth/web.py",
+      "bytes": 8633,
+      "sha256": "18a5f6e889f2a5d7e0e3704989f041681252df3ee0cb29e3c356aff560fd2967",
+      "git_blob": "7e5d38f4cf8c33f4b9c91bd3c3d929fcfa0f80b3",
+      "mtime_ns": 1791943760769046004
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-composition-author/composed-source/pt_auth/ptauth/worklist_calendar.py",
+      "bytes": 13750,
+      "sha256": "89751f1de5548ced34a59c296d0edf1eda06a38bdb935be3e7c3c8b2ae5d55c0",
+      "git_blob": "e125f9ed77343fcc3d82e6d6f25a7296b0463aa7",
+      "mtime_ns": 1791943760769405283
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-composition-independent/receive_workflow.py",
+      "bytes": 14142,
+      "sha256": "fdf797b1c6bfa6b44237422a7acea789bf8447ab55952332f2eb7afb5fb7ea08",
+      "git_blob": "2ca8d584144fa7db5f2423a78c51517a507b1e18",
+      "mtime_ns": 1791943925215953025
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-composition-independent/PROTOCOL.md",
+      "bytes": 4613,
+      "sha256": "e3f0be6522ae1b764a09ebe8173eaf430a48672b48128d1a5264a8ba859c56e5",
+      "git_blob": "96bd89e2e5bb8346878ecd045648cf10bbd26137",
+      "mtime_ns": 1791943924076007177
+    }
+  ],
+  "generated_before": [
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-composition-independent/received-course/generated-data/README_SYNTHETIC.txt",
+      "bytes": 259,
+      "sha256": "cbb1992da130f1d35d5a5038c78ac66917c604839b18ddbcb2968e2daee5e666",
+      "git_blob": "546f33f44c60b1bb6c9ea76b8a3f6f7c088545fc",
+      "mtime_ns": 1791944216322722017,
+      "relative_path": "README_SYNTHETIC.txt"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-composition-independent/received-course/generated-data/authorizations.csv",
+      "bytes": 518,
+      "sha256": "57d07855f06a209b4acbd7531b4cdb72460db592d723e6e523727add93fa123e",
+      "git_blob": "46afc8047262fea08b0ef69e74538b75f4fdec83",
+      "mtime_ns": 1791944216320334611,
+      "relative_path": "authorizations.csv"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-composition-independent/received-course/generated-data/expected.json",
+      "bytes": 806,
+      "sha256": "b2e1a411fe16db7d65e451b9499d784c761402012baa17213b0a2b7f252ea2eb",
+      "git_blob": "252288c2bdf23c86bb0b0997b55759de058d9e4c",
+      "mtime_ns": 1791944216322480220,
+      "relative_path": "expected.json"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-composition-independent/received-course/generated-data/patients.csv",
+      "bytes": 396,
+      "sha256": "89e702844d8da22ed8ed83029d0923eb61d587e503769b14a774209da226ea1c",
+      "git_blob": "3addb235e6324166516f5971410b96e13f2fa2be",
+      "mtime_ns": 1791944216320040836,
+      "relative_path": "patients.csv"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-composition-independent/received-course/generated-data/payers.csv",
+      "bytes": 904,
+      "sha256": "81f143eed15c9ce613ee7cf372e51d6223a44700c877cc42d283a824d30900ed",
+      "git_blob": "1853837e82048ac11698b4ad5bb6eeb055d56038",
+      "mtime_ns": 1791944216322000308,
+      "relative_path": "payers.csv"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-composition-independent/received-course/generated-data/schedule.csv",
+      "bytes": 10486,
+      "sha256": "802d0926f1ba54207a5f0b897adb9699eee96ed225622485b59696a45eb6ddba",
+      "git_blob": "1d6e35b7d728f887e0fbb7a170f493c3ffc4f029",
+      "mtime_ns": 1791944216321595620,
+      "relative_path": "schedule.csv"
+    }
+  ],
+  "generated_after": [
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-composition-independent/received-course/generated-data/README_SYNTHETIC.txt",
+      "bytes": 259,
+      "sha256": "cbb1992da130f1d35d5a5038c78ac66917c604839b18ddbcb2968e2daee5e666",
+      "git_blob": "546f33f44c60b1bb6c9ea76b8a3f6f7c088545fc",
+      "mtime_ns": 1791944216322722017,
+      "relative_path": "README_SYNTHETIC.txt"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-composition-independent/received-course/generated-data/authorizations.csv",
+      "bytes": 518,
+      "sha256": "57d07855f06a209b4acbd7531b4cdb72460db592d723e6e523727add93fa123e",
+      "git_blob": "46afc8047262fea08b0ef69e74538b75f4fdec83",
+      "mtime_ns": 1791944216320334611,
+      "relative_path": "authorizations.csv"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-composition-independent/received-course/generated-data/expected.json",
+      "bytes": 806,
+      "sha256": "b2e1a411fe16db7d65e451b9499d784c761402012baa17213b0a2b7f252ea2eb",
+      "git_blob": "252288c2bdf23c86bb0b0997b55759de058d9e4c",
+      "mtime_ns": 1791944216322480220,
+      "relative_path": "expected.json"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-composition-independent/received-course/generated-data/patients.csv",
+      "bytes": 396,
+      "sha256": "89e702844d8da22ed8ed83029d0923eb61d587e503769b14a774209da226ea1c",
+      "git_blob": "3addb235e6324166516f5971410b96e13f2fa2be",
+      "mtime_ns": 1791944216320040836,
+      "relative_path": "patients.csv"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-composition-independent/received-course/generated-data/payers.csv",
+      "bytes": 904,
+      "sha256": "81f143eed15c9ce613ee7cf372e51d6223a44700c877cc42d283a824d30900ed",
+      "git_blob": "1853837e82048ac11698b4ad5bb6eeb055d56038",
+      "mtime_ns": 1791944216322000308,
+      "relative_path": "payers.csv"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-composition-independent/received-course/generated-data/schedule.csv",
+      "bytes": 10486,
+      "sha256": "802d0926f1ba54207a5f0b897adb9699eee96ed225622485b59696a45eb6ddba",
+      "git_blob": "1d6e35b7d728f887e0fbb7a170f493c3ffc4f029",
+      "mtime_ns": 1791944216321595620,
+      "relative_path": "schedule.csv"
+    }
+  ],
+  "report_before": [
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-composition-independent/received-course/saved-report/audit.jsonl",
+      "bytes": 275,
+      "sha256": "51ebfb14aeb9071aa7fba9a8fb4bffa04f423e9f1271f87128d2fb1d7ba39cd0",
+      "git_blob": "62569a6ee1e14784bf73334fa5ac09dd10a476d6",
+      "mtime_ns": 1791944216450467310,
+      "relative_path": "audit.jsonl"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-composition-independent/received-course/saved-report/digest.html",
+      "bytes": 18597,
+      "sha256": "e8e7a766073d4cd2f27d23882c371a25dac105d183a5600cb08f1852cad6b200",
+      "git_blob": "987305ec97aa2e7403d90e23342082aa068fcf70",
+      "mtime_ns": 1791944216449743262,
+      "relative_path": "digest.html"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-composition-independent/received-course/saved-report/ledger.csv",
+      "bytes": 665,
+      "sha256": "706075886a1827115b95f058ec23131ede80eda5868e79f9fc537f098ea060aa",
+      "git_blob": "6fd7bcd1f834eb5db5c5c6aa62f7a20f933be041",
+      "mtime_ns": 1791944216444704921,
+      "relative_path": "ledger.csv"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-composition-independent/received-course/saved-report/summary.json",
+      "bytes": 35713,
+      "sha256": "94a3633061715ecf640673dfd95d8538aeacd63d24730c4c10cde78e2b1e1319",
+      "git_blob": "1a05a440e562ac104545b06c963191b94de94868",
+      "mtime_ns": 1791944216448545255,
+      "relative_path": "summary.json"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-composition-independent/received-course/saved-report/uncovered_visits.csv",
+      "bytes": 6801,
+      "sha256": "a124ec5ef72e69351227d405594846748ce808523aa73113e7c2a939fa52f5f3",
+      "git_blob": "b9f9990788bcad4e992759c3caabdbc596d91885",
+      "mtime_ns": 1791944216446123388,
+      "relative_path": "uncovered_visits.csv"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-composition-independent/received-course/saved-report/visit_status_review.csv",
+      "bytes": 125,
+      "sha256": "9cb3e3e82e30935f57448ed826dbd8dab78e39355e3bebba59c478fa355ee170",
+      "git_blob": "2f954eb61f6a5ed9df00b35756f5f97af5037b1f",
+      "mtime_ns": 1791944216445188292,
+      "relative_path": "visit_status_review.csv"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-composition-independent/received-course/saved-report/worklist.csv",
+      "bytes": 3181,
+      "sha256": "865077b25de0b0c19c76dd22fa45482caf44f8fe4c9b6899b2829665c0a7a4f7",
+      "git_blob": "ba95f963ad862b04c630eca09af657ec2c850371",
+      "mtime_ns": 1791944216444139205,
+      "relative_path": "worklist.csv"
+    }
+  ],
+  "report_after": [
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-composition-independent/received-course/saved-report/audit.jsonl",
+      "bytes": 275,
+      "sha256": "51ebfb14aeb9071aa7fba9a8fb4bffa04f423e9f1271f87128d2fb1d7ba39cd0",
+      "git_blob": "62569a6ee1e14784bf73334fa5ac09dd10a476d6",
+      "mtime_ns": 1791944216450467310,
+      "relative_path": "audit.jsonl"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-composition-independent/received-course/saved-report/digest.html",
+      "bytes": 18597,
+      "sha256": "e8e7a766073d4cd2f27d23882c371a25dac105d183a5600cb08f1852cad6b200",
+      "git_blob": "987305ec97aa2e7403d90e23342082aa068fcf70",
+      "mtime_ns": 1791944216449743262,
+      "relative_path": "digest.html"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-composition-independent/received-course/saved-report/ledger.csv",
+      "bytes": 665,
+      "sha256": "706075886a1827115b95f058ec23131ede80eda5868e79f9fc537f098ea060aa",
+      "git_blob": "6fd7bcd1f834eb5db5c5c6aa62f7a20f933be041",
+      "mtime_ns": 1791944216444704921,
+      "relative_path": "ledger.csv"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-composition-independent/received-course/saved-report/summary.json",
+      "bytes": 35713,
+      "sha256": "94a3633061715ecf640673dfd95d8538aeacd63d24730c4c10cde78e2b1e1319",
+      "git_blob": "1a05a440e562ac104545b06c963191b94de94868",
+      "mtime_ns": 1791944216448545255,
+      "relative_path": "summary.json"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-composition-independent/received-course/saved-report/uncovered_visits.csv",
+      "bytes": 6801,
+      "sha256": "a124ec5ef72e69351227d405594846748ce808523aa73113e7c2a939fa52f5f3",
+      "git_blob": "b9f9990788bcad4e992759c3caabdbc596d91885",
+      "mtime_ns": 1791944216446123388,
+      "relative_path": "uncovered_visits.csv"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-composition-independent/received-course/saved-report/visit_status_review.csv",
+      "bytes": 125,
+      "sha256": "9cb3e3e82e30935f57448ed826dbd8dab78e39355e3bebba59c478fa355ee170",
+      "git_blob": "2f954eb61f6a5ed9df00b35756f5f97af5037b1f",
+      "mtime_ns": 1791944216445188292,
+      "relative_path": "visit_status_review.csv"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-composition-independent/received-course/saved-report/worklist.csv",
+      "bytes": 3181,
+      "sha256": "865077b25de0b0c19c76dd22fa45482caf44f8fe4c9b6899b2829665c0a7a4f7",
+      "git_blob": "ba95f963ad862b04c630eca09af657ec2c850371",
+      "mtime_ns": 1791944216444139205,
+      "relative_path": "worklist.csv"
+    }
+  ],
+  "expectations": {
+    "source_report": {
+      "path": "/workspace/scratch/3776d8cfc208/pt-composition-independent/received-course/saved-report/summary.json",
+      "bytes": 35713,
+      "sha256": "94a3633061715ecf640673dfd95d8538aeacd63d24730c4c10cde78e2b1e1319",
+      "git_blob": "1a05a440e562ac104545b06c963191b94de94868",
+      "mtime_ns": 1791944216448545255
+    },
+    "selected_keys": [
+      "SYN-1002|PAY-COMM2|AUTH-70003",
+      "SYN-1004|PAY-COMM2|AUTH-70009",
+      "SYN-1005|PAY-MA|AUTH-70012",
+      "SYN-1003|PAY-COMM1|AUTH-70006",
+      "SYN-1006|PAY-MA|AUTH-70016"
+    ],
+    "included_keys": [
+      "SYN-1002|PAY-COMM2|AUTH-70003",
+      "SYN-1004|PAY-COMM2|AUTH-70009",
+      "SYN-1003|PAY-COMM1|AUTH-70006"
+    ],
+    "excluded": [
+      {
+        "key": "SYN-1005|PAY-MA|AUTH-70012",
+        "patient_id": "SYN-1005",
+        "state": "open",
+        "reasons": [
+          "undated"
+        ]
+      },
+      {
+        "key": "SYN-1006|PAY-MA|AUTH-70016",
+        "patient_id": "SYN-1006",
+        "state": "open",
+        "reasons": [
+          "undated"
+        ]
+      }
+    ],
+    "snapshot": "1ad2a1017d2d4361508986e700b9fca52f3b4c8bea6f5cc7a1b6950f127b42d5",
+    "as_of": "2026-10-14",
+    "clinic_timezone": "UTC"
+  },
+  "children": [
+    {
+      "name": "generate",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "-m",
+        "ptauth",
+        "generate",
+        "--out",
+        "/workspace/scratch/3776d8cfc208/pt-composition-independent/received-course/generated-data",
+        "--patients",
+        "6",
+        "--seed",
+        "53",
+        "--as-of",
+        "2026-10-14"
+      ],
+      "pid": 3,
+      "exit": 0,
+      "timed_out": false,
+      "reaped": true,
+      "elapsed_ns": 68673517,
+      "utc_before": "2026-10-14T02:16:56+00:00",
+      "utc_after": "2026-10-14T02:16:56+00:00"
+    },
+    {
+      "name": "run",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "-m",
+        "ptauth",
+        "run",
+        "--data",
+        "/workspace/scratch/3776d8cfc208/pt-composition-independent/received-course/generated-data",
+        "--out",
+        "/workspace/scratch/3776d8cfc208/pt-composition-independent/received-course/saved-report",
+        "--as-of",
+        "2026-10-14",
+        "--clinic-timezone",
+        "UTC"
+      ],
+      "pid": 4,
+      "exit": 0,
+      "timed_out": false,
+      "reaped": true,
+      "elapsed_ns": 141720603,
+      "utc_before": "2026-10-14T02:16:56+00:00",
+      "utc_after": "2026-10-14T02:16:56+00:00"
+    },
+    {
+      "name": "calendar",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "-m",
+        "ptauth",
+        "calendar",
+        "--report",
+        "/workspace/scratch/3776d8cfc208/pt-composition-independent/received-course/saved-report",
+        "--output",
+        "/workspace/scratch/3776d8cfc208/pt-composition-independent/received-course/ordinary-\u96ea.ics"
+      ],
+      "pid": 5,
+      "exit": 0,
+      "timed_out": false,
+      "reaped": true,
+      "elapsed_ns": 119781524,
+      "utc_before": "2026-10-14T02:16:56+00:00",
+      "utc_after": "2026-10-14T02:16:56+00:00"
+    },
+    {
+      "name": "invalid-date",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "-m",
+        "ptauth",
+        "run",
+        "--data",
+        "/workspace/scratch/3776d8cfc208/pt-composition-independent/received-course/generated-data",
+        "--out",
+        "/workspace/scratch/3776d8cfc208/pt-composition-independent/received-course/saved-report",
+        "--as-of",
+        "not-a-date",
+        "--clinic-timezone",
+        "UTC"
+      ],
+      "pid": 6,
+      "exit": 2,
+      "timed_out": false,
+      "reaped": true,
+      "elapsed_ns": 90724420,
+      "utc_before": "2026-10-14T02:16:56+00:00",
+      "utc_after": "2026-10-14T02:16:56+00:00"
+    },
+    {
+      "name": "closed-calendar",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "-m",
+        "ptauth",
+        "calendar",
+        "--report",
+        "/workspace/scratch/3776d8cfc208/pt-composition-independent/received-course/saved-report",
+        "--output",
+        "/workspace/scratch/3776d8cfc208/pt-composition-independent/received-course/closed-receipt-\u96ea.ics"
+      ],
+      "pid": 7,
+      "exit": 2,
+      "timed_out": false,
+      "reaped": true,
+      "elapsed_ns": 128871007,
+      "utc_before": "2026-10-14T02:16:56+00:00",
+      "utc_after": "2026-10-14T02:16:56+00:00"
+    }
+  ],
+  "checks": [
+    {
+      "name": "generate.bounded_reaped",
+      "passed": true
+    },
+    {
+      "name": "generate.exit_and_marker",
+      "passed": true
+    },
+    {
+      "name": "generate.six_literal_ids",
+      "passed": true
+    },
+    {
+      "name": "run.bounded_reaped",
+      "passed": true
+    },
+    {
+      "name": "run.exit",
+      "passed": true
+    },
+    {
+      "name": "run.fixed_context",
+      "passed": true
+    },
+    {
+      "name": "run.report_shape",
+      "passed": true
+    },
+    {
+      "name": "run.CSV_identity_mapping",
+      "passed": true
+    },
+    {
+      "name": "run.no_staff_state_created",
+      "passed": true
+    },
+    {
+      "name": "run.at_least_one_dated_item",
+      "passed": true
+    },
+    {
+      "name": "calendar.bounded_reaped",
+      "passed": true
+    },
+    {
+      "name": "calendar.exit",
+      "passed": true
+    },
+    {
+      "name": "calendar.one_JSON_LF",
+      "passed": true
+    },
+    {
+      "name": "calendar.exact_receipt",
+      "passed": true
+    },
+    {
+      "name": "calendar.complete_envelope",
+      "passed": true
+    },
+    {
+      "name": "calendar.CRLF_and_fold_bounds",
+      "passed": true
+    },
+    {
+      "name": "calendar.event_count_order",
+      "passed": true
+    },
+    {
+      "name": "calendar.event0.fields",
+      "passed": true
+    },
+    {
+      "name": "calendar.event0.identity_date",
+      "passed": true
+    },
+    {
+      "name": "calendar.event0.literal_summary",
+      "passed": true
+    },
+    {
+      "name": "calendar.event0.literal_saved_values",
+      "passed": true
+    },
+    {
+      "name": "calendar.event0.runtime_stamp_syntax",
+      "passed": true
+    },
+    {
+      "name": "calendar.event0.runtime_stamp_interval",
+      "passed": true
+    },
+    {
+      "name": "calendar.event1.fields",
+      "passed": true
+    },
+    {
+      "name": "calendar.event1.identity_date",
+      "passed": true
+    },
+    {
+      "name": "calendar.event1.literal_summary",
+      "passed": true
+    },
+    {
+      "name": "calendar.event1.literal_saved_values",
+      "passed": true
+    },
+    {
+      "name": "calendar.event1.runtime_stamp_syntax",
+      "passed": true
+    },
+    {
+      "name": "calendar.event1.runtime_stamp_interval",
+      "passed": true
+    },
+    {
+      "name": "calendar.event2.fields",
+      "passed": true
+    },
+    {
+      "name": "calendar.event2.identity_date",
+      "passed": true
+    },
+    {
+      "name": "calendar.event2.literal_summary",
+      "passed": true
+    },
+    {
+      "name": "calendar.event2.literal_saved_values",
+      "passed": true
+    },
+    {
+      "name": "calendar.event2.runtime_stamp_syntax",
+      "passed": true
+    },
+    {
+      "name": "calendar.event2.runtime_stamp_interval",
+      "passed": true
+    },
+    {
+      "name": "calendar.report_unchanged",
+      "passed": true
+    },
+    {
+      "name": "invalid-date.bounded_reaped",
+      "passed": true
+    },
+    {
+      "name": "invalid-date.handled_refusal",
+      "passed": true
+    },
+    {
+      "name": "invalid-date.entire_report_preserved",
+      "passed": true
+    },
+    {
+      "name": "closed-calendar.bounded_reaped",
+      "passed": true
+    },
+    {
+      "name": "closed-calendar.handled_receipt_failure",
+      "passed": true
+    },
+    {
+      "name": "closed-calendar.complete_envelope",
+      "passed": true
+    },
+    {
+      "name": "closed-calendar.CRLF_and_fold_bounds",
+      "passed": true
+    },
+    {
+      "name": "closed-calendar.event_count_order",
+      "passed": true
+    },
+    {
+      "name": "closed-calendar.event0.fields",
+      "passed": true
+    },
+    {
+      "name": "closed-calendar.event0.identity_date",
+      "passed": true
+    },
+    {
+      "name": "closed-calendar.event0.literal_summary",
+      "passed": true
+    },
+    {
+      "name": "closed-calendar.event0.literal_saved_values",
+      "passed": true
+    },
+    {
+      "name": "closed-calendar.event0.runtime_stamp_syntax",
+      "passed": true
+    },
+    {
+      "name": "closed-calendar.event0.runtime_stamp_interval",
+      "passed": true
+    },
+    {
+      "name": "closed-calendar.event1.fields",
+      "passed": true
+    },
+    {
+      "name": "closed-calendar.event1.identity_date",
+      "passed": true
+    },
+    {
+      "name": "closed-calendar.event1.literal_summary",
+      "passed": true
+    },
+    {
+      "name": "closed-calendar.event1.literal_saved_values",
+      "passed": true
+    },
+    {
+      "name": "closed-calendar.event1.runtime_stamp_syntax",
+      "passed": true
+    },
+    {
+      "name": "closed-calendar.event1.runtime_stamp_interval",
+      "passed": true
+    },
+    {
+      "name": "closed-calendar.event2.fields",
+      "passed": true
+    },
+    {
+      "name": "closed-calendar.event2.identity_date",
+      "passed": true
+    },
+    {
+      "name": "closed-calendar.event2.literal_summary",
+      "passed": true
+    },
+    {
+      "name": "closed-calendar.event2.literal_saved_values",
+      "passed": true
+    },
+    {
+      "name": "closed-calendar.event2.runtime_stamp_syntax",
+      "passed": true
+    },
+    {
+      "name": "closed-calendar.event2.runtime_stamp_interval",
+      "passed": true
+    },
+    {
+      "name": "closed-calendar.same_event_values",
+      "passed": true
+    },
+    {
+      "name": "no_calendar_staging_files",
+      "passed": true
+    },
+    {
+      "name": "twelve_source_receiver_records_preserved",
+      "passed": true
+    },
+    {
+      "name": "generated_inputs_preserved_after_generation",
+      "passed": true
+    },
+    {
+      "name": "complete_report_preserved_after_single_run",
+      "passed": true
+    },
+    {
+      "name": "ordinary_calendar_preserved",
+      "passed": true
+    }
+  ],
+  "failure": null,
+  "passed": true
+}

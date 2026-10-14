@@ -1,0 +1,14 @@
+{
+  "schema": "ptauth.composed-workflow.outer-observation/1",
+  "scope": "Transcribed exact local executor result, separate from the raw receiver and five child measurements",
+  "command": "python3 -B /workspace/scratch/3776d8cfc208/pt-composition-independent/receive_workflow.py --source-dir /workspace/scratch/3776d8cfc208/pt-composition-author/composed-source/pt_auth --cli-git 8d6b43649bc6c142c28f71646485a31f6a6bbf55 --output-dir /workspace/scratch/3776d8cfc208/pt-composition-independent/received-course",
+  "cwd": "/tmp",
+  "executor_result": {
+    "chunk_id": "c471e1",
+    "wall_time_seconds": 0.6971133,
+    "exit_code": 0,
+    "original_token_count": 38,
+    "output": "{\"passed\": true, \"checks\": 68, \"children\": 5, \"receipt\": \"/workspace/scratch/3776d8cfc208/pt-composition-independent/received-course/receiving.json\"}\n"
+  },
+  "repeated": false
+}

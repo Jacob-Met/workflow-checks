@@ -1,0 +1,34 @@
+{
+  "schema": "ptauth.composition.independent-final-tree-review/1",
+  "verdict": "ACCEPT",
+  "actual_tree": "3c2a77730ab23915fb5a33ae02b70497812da7c7",
+  "calendar_parent": "c95c3eaec22fd5bbafeb210a2ae99a470dc2e84a",
+  "date_parent": "58305dd238db2b660bbfe6e0091f7d8806d9a74d",
+  "all_four_complete_recursive_tree_hashes_reconstructed": true,
+  "tree_counts": [
+    256,
+    259,
+    275,
+    278
+  ],
+  "base_date_calendar_actual_leaf_counts": [
+    1475,
+    1503,
+    1583,
+    1611
+  ],
+  "full_three_way_union_exact": true,
+  "conflicts": [
+    "pt_auth/ptauth/cli.py"
+  ],
+  "resolution_bound_to_reviewed_and_received_cli": "8d6b43649bc6c142c28f71646485a31f6a6bbf55",
+  "modified": [
+    "pt_auth/README.md",
+    "pt_auth/ptauth/cli.py"
+  ],
+  "additions": 28,
+  "preserved_calendar_leaves": 1581,
+  "all_30_plan_entries_exact": true,
+  "all_17_runtime_test_guide_pins_exact": true,
+  "scope": "Read-only independent tree/hash/source pin review; no ref mutation or product/test runtime"
+}

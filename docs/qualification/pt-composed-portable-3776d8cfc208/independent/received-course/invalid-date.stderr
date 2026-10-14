@@ -1,0 +1,3 @@
+usage: ptauth run [-h] [--data DATA] [--out OUT] [--as-of AS_OF]
+                  [--clinic-timezone IANA_ZONE]
+ptauth run: error: argument --as-of: invalid fromisoformat value: 'not-a-date'

@@ -1,0 +1,78 @@
+{
+  "schema": "pt.composition.final-qualification-review/1",
+  "verdict": "ACCEPT",
+  "reviewer": "source_delivery",
+  "qualification": {
+    "git_blob": "82906b7a7c0f660235ca269eedb58ff9b54a3564",
+    "bytes": 7280,
+    "full_body_read": true
+  },
+  "source": {
+    "commit": "69f3c8e0577b579ee36256da0a075fccb201af8f",
+    "tree": "3c2a77730ab23915fb5a33ae02b70497812da7c7",
+    "ordered_parents": [
+      "c95c3eaec22fd5bbafeb210a2ae99a470dc2e84a",
+      "58305dd238db2b660bbfe6e0091f7d8806d9a74d"
+    ],
+    "fresh_remote_commit_read": true,
+    "prior_independent_tree_verdict": "ee3abab1036cec57cfcfcac6319f06f4893d7f24"
+  },
+  "independent_workflow": {
+    "raw_receipt": "e05841cfb0312d2de2f55990327f4c11c9a09bb8",
+    "assertions": 68,
+    "cli_children": 5,
+    "expected_exits": [
+      0,
+      0,
+      0,
+      2,
+      2
+    ],
+    "previous_complete_receiving_retained": true,
+    "no_rerun": true
+  },
+  "native_test_review": {
+    "raw_receipt": "7263f578848564b6864d94d0d6e9d302a3a13c75",
+    "stdout": "38719ee15619e6a540d0fb5218fc32409c21f1d8",
+    "outer_observer": "9c40b081a8231aa41baa5994e7c983e8b822a128",
+    "raw_bodies_read": true,
+    "tests": 19,
+    "subtests": 4,
+    "pytest_reported_seconds": 1.53,
+    "controller_checks": 6,
+    "child_pid": 612155,
+    "child_returncode": 0,
+    "child_reaped": true,
+    "child_timed_out": false,
+    "controller_elapsed_ns": "1720098881",
+    "rdc_pid": 612088,
+    "rdc_runtime_seconds": 1.82,
+    "source_receiver_protocol_records_exact": 19,
+    "separate_manifest_record_exact": true,
+    "staging_refusal_is_separate_from_only_test_invocation": true,
+    "full_native_export_paths": 152,
+    "core_paths": 24,
+    "scope": "Read-only factual comparison with the completed consumer course; no invocation by this reviewer."
+  },
+  "compact_tree_plan": {
+    "git_blob": "5c3c42a1e18553b94f87521dedb73409fdc29dc2",
+    "entries": 30,
+    "unchanged_inventory_recoverable_from_exact_git_trees": true,
+    "historical_author_scripts_not_portable_opening_commands": true
+  },
+  "package_binding": {
+    "prior_start": "ccd66b3ccadc0ac331d5d7920cf3a6fea23bfcb3",
+    "final_start": "29376053ab58aa240c50bd71a275daf74b24afda",
+    "only_placeholder_span_replaced": true,
+    "selected_maintained_files": 25,
+    "source_manifest_rows": 26,
+    "selected_payloads": 27,
+    "archive_members": 28,
+    "scope": "Binding and prose review only; package build/download/extraction/command receiving remains separately owned."
+  },
+  "limits": [
+    "No main merge, installed update or repository settings claim.",
+    "No full-suite, Windows, clinical validity or calendar-client import claim.",
+    "No new product, test, package, native or browser execution during this review."
+  ]
+}

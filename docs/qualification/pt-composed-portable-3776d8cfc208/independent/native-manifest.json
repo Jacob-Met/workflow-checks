@@ -1,0 +1,226 @@
+{
+  "schema": "ptauth.composed-workflow.evidence-manifest/1",
+  "scope": "Exact raw files from one frozen five-child composition course plus its pre-exposure protocol/receiver, source review and separately transcribed executor observation; no source duplication or runtime rerun",
+  "files": [
+    {
+      "path": "received-course/calendar.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mtime_ns": 1791944216599020335
+    },
+    {
+      "path": "received-course/calendar.stdout",
+      "bytes": 561,
+      "sha256": "05e966c08f8886e78cb029856b218699b36646f14cb446a2efc6568d20f350ae",
+      "git_blob": "1eb0c8d99d250bce317519f0e65544a22e93c2ae",
+      "mtime_ns": 1791944216599020335
+    },
+    {
+      "path": "received-course/closed-calendar.stderr",
+      "bytes": 114,
+      "sha256": "3c8dd68c0f1f23aa1e315b727fba7ed4020aba485f474f566e1358fef3eaf7e2",
+      "git_blob": "01e5bf9c53b5b411ada1c1f17f5d57d023d5453f",
+      "mtime_ns": 1791944216832009169
+    },
+    {
+      "path": "received-course/closed-calendar.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mtime_ns": 1791944216826075635
+    },
+    {
+      "path": "received-course/closed-receipt-雪.ics",
+      "bytes": 4823,
+      "sha256": "7ebd0723b8916c62e4c0f4b8f9c60a6f06c4bdca5c7a31e33361f95847dbf0c6",
+      "git_blob": "bfcd36749912704188af602d8770654e40c69b47",
+      "mtime_ns": 1791944216815910285
+    },
+    {
+      "path": "received-course/generate.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mtime_ns": 1791944216332442159
+    },
+    {
+      "path": "received-course/generate.stdout",
+      "bytes": 197,
+      "sha256": "3692507df1bb560615356c8405e23d0061eaed05b482f2bd150eb5b0ee8681b0",
+      "git_blob": "fefb01f5d02aa52f24b494e5fc5d98f47c3dbdc1",
+      "mtime_ns": 1791944216332442159
+    },
+    {
+      "path": "received-course/generated-data/README_SYNTHETIC.txt",
+      "bytes": 259,
+      "sha256": "cbb1992da130f1d35d5a5038c78ac66917c604839b18ddbcb2968e2daee5e666",
+      "git_blob": "546f33f44c60b1bb6c9ea76b8a3f6f7c088545fc",
+      "mtime_ns": 1791944216322722017
+    },
+    {
+      "path": "received-course/generated-data/authorizations.csv",
+      "bytes": 518,
+      "sha256": "57d07855f06a209b4acbd7531b4cdb72460db592d723e6e523727add93fa123e",
+      "git_blob": "46afc8047262fea08b0ef69e74538b75f4fdec83",
+      "mtime_ns": 1791944216320334611
+    },
+    {
+      "path": "received-course/generated-data/expected.json",
+      "bytes": 806,
+      "sha256": "b2e1a411fe16db7d65e451b9499d784c761402012baa17213b0a2b7f252ea2eb",
+      "git_blob": "252288c2bdf23c86bb0b0997b55759de058d9e4c",
+      "mtime_ns": 1791944216322480220
+    },
+    {
+      "path": "received-course/generated-data/patients.csv",
+      "bytes": 396,
+      "sha256": "89e702844d8da22ed8ed83029d0923eb61d587e503769b14a774209da226ea1c",
+      "git_blob": "3addb235e6324166516f5971410b96e13f2fa2be",
+      "mtime_ns": 1791944216320040836
+    },
+    {
+      "path": "received-course/generated-data/payers.csv",
+      "bytes": 904,
+      "sha256": "81f143eed15c9ce613ee7cf372e51d6223a44700c877cc42d283a824d30900ed",
+      "git_blob": "1853837e82048ac11698b4ad5bb6eeb055d56038",
+      "mtime_ns": 1791944216322000308
+    },
+    {
+      "path": "received-course/generated-data/schedule.csv",
+      "bytes": 10486,
+      "sha256": "802d0926f1ba54207a5f0b897adb9699eee96ed225622485b59696a45eb6ddba",
+      "git_blob": "1d6e35b7d728f887e0fbb7a170f493c3ffc4f029",
+      "mtime_ns": 1791944216321595620
+    },
+    {
+      "path": "received-course/invalid-date.stderr",
+      "bytes": 192,
+      "sha256": "b63d3534d636347b381eef13e91c9b705adf0db0d06fb17b67f7a1339dea089d",
+      "git_blob": "4f093241d2d7967385893cb45e55630cb38ecc08",
+      "mtime_ns": 1791944216702304081
+    },
+    {
+      "path": "received-course/invalid-date.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mtime_ns": 1791944216698083051
+    },
+    {
+      "path": "received-course/ordinary-雪.ics",
+      "bytes": 4823,
+      "sha256": "7ebd0723b8916c62e4c0f4b8f9c60a6f06c4bdca5c7a31e33361f95847dbf0c6",
+      "git_blob": "bfcd36749912704188af602d8770654e40c69b47",
+      "mtime_ns": 1791944216582703387
+    },
+    {
+      "path": "received-course/receiving.json",
+      "bytes": 28567,
+      "sha256": "355ec8bf8358a27fcbe44528bf18c835e95c2b9d429c6d7dc78cac011eb0e149",
+      "git_blob": "e05841cfb0312d2de2f55990327f4c11c9a09bb8",
+      "mtime_ns": 1791944216850468138
+    },
+    {
+      "path": "received-course/run.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mtime_ns": 1791944216475889167
+    },
+    {
+      "path": "received-course/run.stdout",
+      "bytes": 1021,
+      "sha256": "253a3941c98b9f2cdacb4e1eabdd079b98b2cc7bd86e1665f47fbc8d5a9c1269",
+      "git_blob": "023aecb79249611349be2bb0f4de892d2d829ed4",
+      "mtime_ns": 1791944216475889167
+    },
+    {
+      "path": "received-course/saved-report/audit.jsonl",
+      "bytes": 275,
+      "sha256": "51ebfb14aeb9071aa7fba9a8fb4bffa04f423e9f1271f87128d2fb1d7ba39cd0",
+      "git_blob": "62569a6ee1e14784bf73334fa5ac09dd10a476d6",
+      "mtime_ns": 1791944216450467310
+    },
+    {
+      "path": "received-course/saved-report/digest.html",
+      "bytes": 18597,
+      "sha256": "e8e7a766073d4cd2f27d23882c371a25dac105d183a5600cb08f1852cad6b200",
+      "git_blob": "987305ec97aa2e7403d90e23342082aa068fcf70",
+      "mtime_ns": 1791944216449743262
+    },
+    {
+      "path": "received-course/saved-report/ledger.csv",
+      "bytes": 665,
+      "sha256": "706075886a1827115b95f058ec23131ede80eda5868e79f9fc537f098ea060aa",
+      "git_blob": "6fd7bcd1f834eb5db5c5c6aa62f7a20f933be041",
+      "mtime_ns": 1791944216444704921
+    },
+    {
+      "path": "received-course/saved-report/summary.json",
+      "bytes": 35713,
+      "sha256": "94a3633061715ecf640673dfd95d8538aeacd63d24730c4c10cde78e2b1e1319",
+      "git_blob": "1a05a440e562ac104545b06c963191b94de94868",
+      "mtime_ns": 1791944216448545255
+    },
+    {
+      "path": "received-course/saved-report/uncovered_visits.csv",
+      "bytes": 6801,
+      "sha256": "a124ec5ef72e69351227d405594846748ce808523aa73113e7c2a939fa52f5f3",
+      "git_blob": "b9f9990788bcad4e992759c3caabdbc596d91885",
+      "mtime_ns": 1791944216446123388
+    },
+    {
+      "path": "received-course/saved-report/visit_status_review.csv",
+      "bytes": 125,
+      "sha256": "9cb3e3e82e30935f57448ed826dbd8dab78e39355e3bebba59c478fa355ee170",
+      "git_blob": "2f954eb61f6a5ed9df00b35756f5f97af5037b1f",
+      "mtime_ns": 1791944216445188292
+    },
+    {
+      "path": "received-course/saved-report/worklist.csv",
+      "bytes": 3181,
+      "sha256": "865077b25de0b0c19c76dd22fa45482caf44f8fe4c9b6899b2829665c0a7a4f7",
+      "git_blob": "ba95f963ad862b04c630eca09af657ec2c850371",
+      "mtime_ns": 1791944216444139205
+    },
+    {
+      "path": "PROTOCOL.md",
+      "bytes": 4613,
+      "sha256": "e3f0be6522ae1b764a09ebe8173eaf430a48672b48128d1a5264a8ba859c56e5",
+      "git_blob": "96bd89e2e5bb8346878ecd045648cf10bbd26137",
+      "mtime_ns": 1791943924076007177
+    },
+    {
+      "path": "receive_workflow.py",
+      "bytes": 14142,
+      "sha256": "fdf797b1c6bfa6b44237422a7acea789bf8447ab55952332f2eb7afb5fb7ea08",
+      "git_blob": "2ca8d584144fa7db5f2423a78c51517a507b1e18",
+      "mtime_ns": 1791943925215953025
+    },
+    {
+      "path": "pre-exposure-freeze.json",
+      "bytes": 629,
+      "sha256": "e10a77d4bad7ee7637563c1c0b8316b282037e042b28c514d43ab57873f03690",
+      "git_blob": "ebc141d69a7492fde463f13db322805395e31de8",
+      "mtime_ns": 1791943926204602179
+    },
+    {
+      "path": "source-review.json",
+      "bytes": 716,
+      "sha256": "629e465d8078479ac747fc7bd26ee9b01627956bee926e4d81730f20874e1a16",
+      "git_blob": "5dc0c82712c75784ba7dc87eb50c5fa7afe1417d",
+      "mtime_ns": 1791944190374476641
+    },
+    {
+      "path": "outer-observation.json",
+      "bytes": 871,
+      "sha256": "b2d8a74b2f52fadca28fe5f1d44db53ad552df2130f8a32a2cb8294a4f6e55ed",
+      "git_blob": "c8e0cecf10c72f7b1225e899596abc41151db68c",
+      "mtime_ns": 1791944233869255261
+    }
+  ],
+  "total_paths": 31,
+  "total_bytes": 139995,
+  "unique_bodies": 26
+}

@@ -1,0 +1,84 @@
+{
+  "roots": {
+    "base": "e21f607e62158b7f02c46a18e6104e7c8c5131b6",
+    "date": "1e5c3ed889faa0b941eb86d71f5e7424d6cbc080",
+    "current": "32f6c3c411788087ab43ea9be34893d9a16a6113"
+  },
+  "leaves": {
+    "base": 1475,
+    "date": 1503,
+    "current": 1547
+  },
+  "files": [
+    {
+      "path": "LICENSE",
+      "git_blob": "edb188254288b40f2895833e3647b7e0be34c962",
+      "bytes": 1070
+    },
+    {
+      "path": "pt_auth/README.md",
+      "git_blob": "2c6440e7f9bdbc9f4d15e60d05b5626921d35cef",
+      "bytes": 23084
+    },
+    {
+      "path": "pt_auth/ptauth/__init__.py",
+      "git_blob": "a6f4545ac17e2578317ef694f7bb548489f6c71c",
+      "bytes": 311
+    },
+    {
+      "path": "pt_auth/ptauth/__main__.py",
+      "git_blob": "07cf8abb5a559054d4487c65a3f9f7c992067cf5",
+      "bytes": 71
+    },
+    {
+      "path": "pt_auth/ptauth/calendar_ui.js",
+      "git_blob": "a6ba45ec85c28f7fd80d7e2fdd32ac62e96daa99",
+      "bytes": 8448
+    },
+    {
+      "path": "pt_auth/ptauth/cli.py",
+      "git_blob": "b1b7a60de7b470ea59de6313bfcde336f1c5dfe1",
+      "bytes": 5958
+    },
+    {
+      "path": "pt_auth/ptauth/data.py",
+      "git_blob": "886b2d75050f302acb101ab4f5bf8473b7573b8f",
+      "bytes": 10725
+    },
+    {
+      "path": "pt_auth/ptauth/engine.py",
+      "git_blob": "39c97f35d61ff949b5c2381f0ad60d7af8d74226",
+      "bytes": 16057
+    },
+    {
+      "path": "pt_auth/ptauth/report.py",
+      "git_blob": "2ce82b1712e5c6fc03374d38996eceddf31782f0",
+      "bytes": 10743
+    },
+    {
+      "path": "pt_auth/ptauth/synth.py",
+      "git_blob": "2ff6a2548bf55a812cfa62e397442a0d3f7debbb",
+      "bytes": 8873
+    },
+    {
+      "path": "pt_auth/ptauth/ui.html",
+      "git_blob": "ec2e198ee1873c41981d201c78a63dbccc13afad",
+      "bytes": 18655
+    },
+    {
+      "path": "pt_auth/ptauth/uncovered.py",
+      "git_blob": "9ab21781c4116dd0b9b76ac0116868898f3ee7d4",
+      "bytes": 4319
+    },
+    {
+      "path": "pt_auth/ptauth/web.py",
+      "git_blob": "7e5d38f4cf8c33f4b9c91bd3c3d929fcfa0f80b3",
+      "bytes": 8633
+    },
+    {
+      "path": "pt_auth/ptauth/worklist_calendar.py",
+      "git_blob": "e125f9ed77343fcc3d82e6d6f25a7296b0463aa7",
+      "bytes": 13750
+    }
+  ]
+}

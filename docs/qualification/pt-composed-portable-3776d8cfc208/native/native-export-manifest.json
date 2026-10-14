@@ -1,0 +1,1072 @@
+{
+  "schema": "pt.composition.native-export/1",
+  "native_stage": "/home/jacob/pt-composition-native-3776-7mqo0tfm",
+  "files": [
+    {
+      "path": "PROTOCOL.md",
+      "bytes": 3713,
+      "sha256": "ce1ae6ce372fe6a26d39340dcc48414b5410eebd3b8ede7dd40da370d7569b77",
+      "git_blob": "7a008247568434649badafca5f50a62696ddbccc",
+      "mtime_ns": "1791945197356206045"
+    },
+    {
+      "path": "native-source-manifest.json",
+      "bytes": 3809,
+      "sha256": "2586c69dbb9ed011c795dd858585aff3e81e781d807a8cd0aacdec02826664b9",
+      "git_blob": "e7d2dfd71d9d899ec778e755854073dc152685c8",
+      "mtime_ns": "1791945197354852784"
+    },
+    {
+      "path": "received-course/pytest-temp/test_empty_explicit_date_does_0/fictional data/README_SYNTHETIC.txt",
+      "bytes": 259,
+      "sha256": "85c0efcf692ccaa7044bb88b3265b2c6cb82f41ed7af35c804885c0aedee9523",
+      "git_blob": "43d4559eeaa1366842a42581380a24c8aaf8c741",
+      "mtime_ns": "1791945223797721697"
+    },
+    {
+      "path": "received-course/pytest-temp/test_empty_explicit_date_does_0/fictional data/authorizations.csv",
+      "bytes": 521,
+      "sha256": "4342a5f24637913cd14ffc3211bc8632f9d839b12e448d1e856ff90d44edfa67",
+      "git_blob": "ec7d0ed71b1b56a3839aa462b9185e02d73a1287",
+      "mtime_ns": "1791945223797430688"
+    },
+    {
+      "path": "received-course/pytest-temp/test_empty_explicit_date_does_0/fictional data/expected.json",
+      "bytes": 754,
+      "sha256": "af96d2d48c46a2596857c86fca625e2613daffc29cf1f4d689a5e8733eda050d",
+      "git_blob": "aff66c3dcb6d16e4d6b2c8d088d965342aadedd1",
+      "mtime_ns": "1791945223797677116"
+    },
+    {
+      "path": "received-course/pytest-temp/test_empty_explicit_date_does_0/fictional data/patients.csv",
+      "bytes": 391,
+      "sha256": "548e3da0310c55f02dc292b012d45d2df47f166e67eb0c7a99abde47d3c17051",
+      "git_blob": "c8d2050cfc8210ad310b6070d04b7fee5294fa81",
+      "mtime_ns": "1791945223797376293"
+    },
+    {
+      "path": "received-course/pytest-temp/test_empty_explicit_date_does_0/fictional data/payers.csv",
+      "bytes": 904,
+      "sha256": "81f143eed15c9ce613ee7cf372e51d6223a44700c877cc42d283a824d30900ed",
+      "git_blob": "1853837e82048ac11698b4ad5bb6eeb055d56038",
+      "mtime_ns": "1791945223797629818"
+    },
+    {
+      "path": "received-course/pytest-temp/test_empty_explicit_date_does_0/fictional data/schedule.csv",
+      "bytes": 10352,
+      "sha256": "3e3438c32aea0adb48130df1633d652eb6cd9b822c496f5c566f3d2bcb2444c6",
+      "git_blob": "e0df536edf9548f108431fe2b58d81f5c9b2614a",
+      "mtime_ns": "1791945223797582977"
+    },
+    {
+      "path": "received-course/pytest-temp/test_empty_explicit_date_does_1/fictional data/README_SYNTHETIC.txt",
+      "bytes": 259,
+      "sha256": "85c0efcf692ccaa7044bb88b3265b2c6cb82f41ed7af35c804885c0aedee9523",
+      "git_blob": "43d4559eeaa1366842a42581380a24c8aaf8c741",
+      "mtime_ns": "1791945223876112911"
+    },
+    {
+      "path": "received-course/pytest-temp/test_empty_explicit_date_does_1/fictional data/authorizations.csv",
+      "bytes": 521,
+      "sha256": "4342a5f24637913cd14ffc3211bc8632f9d839b12e448d1e856ff90d44edfa67",
+      "git_blob": "ec7d0ed71b1b56a3839aa462b9185e02d73a1287",
+      "mtime_ns": "1791945223875851464"
+    },
+    {
+      "path": "received-course/pytest-temp/test_empty_explicit_date_does_1/fictional data/expected.json",
+      "bytes": 754,
+      "sha256": "af96d2d48c46a2596857c86fca625e2613daffc29cf1f4d689a5e8733eda050d",
+      "git_blob": "aff66c3dcb6d16e4d6b2c8d088d965342aadedd1",
+      "mtime_ns": "1791945223876077969"
+    },
+    {
+      "path": "received-course/pytest-temp/test_empty_explicit_date_does_1/fictional data/patients.csv",
+      "bytes": 391,
+      "sha256": "548e3da0310c55f02dc292b012d45d2df47f166e67eb0c7a99abde47d3c17051",
+      "git_blob": "c8d2050cfc8210ad310b6070d04b7fee5294fa81",
+      "mtime_ns": "1791945223875795055"
+    },
+    {
+      "path": "received-course/pytest-temp/test_empty_explicit_date_does_1/fictional data/payers.csv",
+      "bytes": 904,
+      "sha256": "81f143eed15c9ce613ee7cf372e51d6223a44700c877cc42d283a824d30900ed",
+      "git_blob": "1853837e82048ac11698b4ad5bb6eeb055d56038",
+      "mtime_ns": "1791945223876032321"
+    },
+    {
+      "path": "received-course/pytest-temp/test_empty_explicit_date_does_1/fictional data/schedule.csv",
+      "bytes": 10352,
+      "sha256": "3e3438c32aea0adb48130df1633d652eb6cd9b822c496f5c566f3d2bcb2444c6",
+      "git_blob": "e0df536edf9548f108431fe2b58d81f5c9b2614a",
+      "mtime_ns": "1791945223875983506"
+    },
+    {
+      "path": "received-course/pytest-temp/test_generator_default_and_exp0/default data/README_SYNTHETIC.txt",
+      "bytes": 259,
+      "sha256": "85c0efcf692ccaa7044bb88b3265b2c6cb82f41ed7af35c804885c0aedee9523",
+      "git_blob": "43d4559eeaa1366842a42581380a24c8aaf8c741",
+      "mtime_ns": "1791945224090481495"
+    },
+    {
+      "path": "received-course/pytest-temp/test_generator_default_and_exp0/default data/authorizations.csv",
+      "bytes": 521,
+      "sha256": "4342a5f24637913cd14ffc3211bc8632f9d839b12e448d1e856ff90d44edfa67",
+      "git_blob": "ec7d0ed71b1b56a3839aa462b9185e02d73a1287",
+      "mtime_ns": "1791945224090216814"
+    },
+    {
+      "path": "received-course/pytest-temp/test_generator_default_and_exp0/default data/expected.json",
+      "bytes": 754,
+      "sha256": "af96d2d48c46a2596857c86fca625e2613daffc29cf1f4d689a5e8733eda050d",
+      "git_blob": "aff66c3dcb6d16e4d6b2c8d088d965342aadedd1",
+      "mtime_ns": "1791945224090441075"
+    },
+    {
+      "path": "received-course/pytest-temp/test_generator_default_and_exp0/default data/patients.csv",
+      "bytes": 391,
+      "sha256": "548e3da0310c55f02dc292b012d45d2df47f166e67eb0c7a99abde47d3c17051",
+      "git_blob": "c8d2050cfc8210ad310b6070d04b7fee5294fa81",
+      "mtime_ns": "1791945224090158635"
+    },
+    {
+      "path": "received-course/pytest-temp/test_generator_default_and_exp0/default data/payers.csv",
+      "bytes": 904,
+      "sha256": "81f143eed15c9ce613ee7cf372e51d6223a44700c877cc42d283a824d30900ed",
+      "git_blob": "1853837e82048ac11698b4ad5bb6eeb055d56038",
+      "mtime_ns": "1791945224090395812"
+    },
+    {
+      "path": "received-course/pytest-temp/test_generator_default_and_exp0/default data/schedule.csv",
+      "bytes": 10352,
+      "sha256": "3e3438c32aea0adb48130df1633d652eb6cd9b822c496f5c566f3d2bcb2444c6",
+      "git_blob": "e0df536edf9548f108431fe2b58d81f5c9b2614a",
+      "mtime_ns": "1791945224090352672"
+    },
+    {
+      "path": "received-course/pytest-temp/test_generator_default_and_exp0/default report/audit.jsonl",
+      "bytes": 275,
+      "sha256": "87844937309b36b78defe1ed9273e7b5f866ad9724f00d35acf515b86cdcae6b",
+      "git_blob": "32608f44ac4798ae6e086b5508fc36a08bac5e3b",
+      "mtime_ns": "1791945224140224219"
+    },
+    {
+      "path": "received-course/pytest-temp/test_generator_default_and_exp0/default report/digest.html",
+      "bytes": 17685,
+      "sha256": "9c17ed3285b35ea95b362166b212896c54893a3e115a67245d3551065225360a",
+      "git_blob": "1ea204b349dc28e4f526521a8bba52d870e1b711",
+      "mtime_ns": "1791945224140146420"
+    },
+    {
+      "path": "received-course/pytest-temp/test_generator_default_and_exp0/default report/ledger.csv",
+      "bytes": 665,
+      "sha256": "02f24682eda6333d8e47b4c544908c5f435743dee8d5b5f0b99a8455921a5759",
+      "git_blob": "1d43a6e983909b21552d5d792ef0d66a10b8c74b",
+      "mtime_ns": "1791945224139445470"
+    },
+    {
+      "path": "received-course/pytest-temp/test_generator_default_and_exp0/default report/summary.json",
+      "bytes": 33481,
+      "sha256": "10d727f82ac4e8275041ccbab39b133d653bd6dee6bc9ed257a1d574d5ca673d",
+      "git_blob": "1c61ecee5000020e43f98fe0eafa29e121205fbc",
+      "mtime_ns": "1791945224139925719"
+    },
+    {
+      "path": "received-course/pytest-temp/test_generator_default_and_exp0/default report/uncovered_visits.csv",
+      "bytes": 6095,
+      "sha256": "a09c674a61d917c5474fe8555662474cf9ba530bf2570359487ed02f7a21ed38",
+      "git_blob": "b8f9853b9a5a3cd66be05c68080e2ee469d56fac",
+      "mtime_ns": "1791945224139675790"
+    },
+    {
+      "path": "received-course/pytest-temp/test_generator_default_and_exp0/default report/visit_status_review.csv",
+      "bytes": 125,
+      "sha256": "9cb3e3e82e30935f57448ed826dbd8dab78e39355e3bebba59c478fa355ee170",
+      "git_blob": "2f954eb61f6a5ed9df00b35756f5f97af5037b1f",
+      "mtime_ns": "1791945224139506893"
+    },
+    {
+      "path": "received-course/pytest-temp/test_generator_default_and_exp0/default report/worklist.csv",
+      "bytes": 3174,
+      "sha256": "a02d346e5013a732c5ec9e3c78ab10ccfaf5c110cb10f675f00a0f29a9f5b1ec",
+      "git_blob": "bff9ccd468c942b907064d01c1f0c137665b98e8",
+      "mtime_ns": "1791945224139361530"
+    },
+    {
+      "path": "received-course/pytest-temp/test_generator_default_and_exp0/leap-day data/README_SYNTHETIC.txt",
+      "bytes": 259,
+      "sha256": "7d21e5428173e93d90e6602a57013cbac63680e6eac00fe09e961e43a5ca62b2",
+      "git_blob": "a6ca82f9f8695584042b7cac7f6c8551944d65c9",
+      "mtime_ns": "1791945224178743389"
+    },
+    {
+      "path": "received-course/pytest-temp/test_generator_default_and_exp0/leap-day data/authorizations.csv",
+      "bytes": 521,
+      "sha256": "54a74a076f87859739f0812c41c0e38771da691dd21ce93ad00d925d9ee34ddc",
+      "git_blob": "db9f05ff4a3e7de1cc82ae69cd6fed9016d13ac9",
+      "mtime_ns": "1791945224178476677"
+    },
+    {
+      "path": "received-course/pytest-temp/test_generator_default_and_exp0/leap-day data/expected.json",
+      "bytes": 754,
+      "sha256": "4984c59abe5174007c84ac537971746423263b8ab49a6f25fe1161cc64cfdd6c",
+      "git_blob": "27083a4a2ef49855189f47ff422f6a935dccd920",
+      "mtime_ns": "1791945224178707655"
+    },
+    {
+      "path": "received-course/pytest-temp/test_generator_default_and_exp0/leap-day data/patients.csv",
+      "bytes": 391,
+      "sha256": "548e3da0310c55f02dc292b012d45d2df47f166e67eb0c7a99abde47d3c17051",
+      "git_blob": "c8d2050cfc8210ad310b6070d04b7fee5294fa81",
+      "mtime_ns": "1791945224178417267"
+    },
+    {
+      "path": "received-course/pytest-temp/test_generator_default_and_exp0/leap-day data/payers.csv",
+      "bytes": 904,
+      "sha256": "81f143eed15c9ce613ee7cf372e51d6223a44700c877cc42d283a824d30900ed",
+      "git_blob": "1853837e82048ac11698b4ad5bb6eeb055d56038",
+      "mtime_ns": "1791945224178661210"
+    },
+    {
+      "path": "received-course/pytest-temp/test_generator_default_and_exp0/leap-day data/schedule.csv",
+      "bytes": 10352,
+      "sha256": "38da3e1324f0d6e63dd62c78a25794fa254ff0b4cba5054cc0cea03992881edc",
+      "git_blob": "c3fd2be86ac749b0380670458d2a37668ea47290",
+      "mtime_ns": "1791945224178616858"
+    },
+    {
+      "path": "received-course/pytest-temp/test_generator_default_and_exp0/leap-day report/audit.jsonl",
+      "bytes": 275,
+      "sha256": "468492758f7ba60c43ec10565a8949a3516703598814dfe336b578caedb3f279",
+      "git_blob": "24a352d5403fa1f10c4514c484f79a761b1daf66",
+      "mtime_ns": "1791945224228190137"
+    },
+    {
+      "path": "received-course/pytest-temp/test_generator_default_and_exp0/leap-day report/digest.html",
+      "bytes": 17685,
+      "sha256": "e1e776203ee80613c6709473ee0e2747a327fe0eb29bd2b60809a0335095bdb9",
+      "git_blob": "0901cc792d7fb3ebf8dfffea895ee6584a77ff28",
+      "mtime_ns": "1791945224228126624"
+    },
+    {
+      "path": "received-course/pytest-temp/test_generator_default_and_exp0/leap-day report/ledger.csv",
+      "bytes": 665,
+      "sha256": "6887e6066dc6dbea9b7cf147c86a2674ba151136847675eaee0019a70e915323",
+      "git_blob": "81223898860ca5815e0e7eb71142f75dc996b15a",
+      "mtime_ns": "1791945224227456101"
+    },
+    {
+      "path": "received-course/pytest-temp/test_generator_default_and_exp0/leap-day report/summary.json",
+      "bytes": 33481,
+      "sha256": "b0b89706c66057fea8c13bc1c992040b6730aa29329fc7527c86138409ee24ca",
+      "git_blob": "1729d894227ce3584ef387cfa5e44ad7401ebc38",
+      "mtime_ns": "1791945224227889983"
+    },
+    {
+      "path": "received-course/pytest-temp/test_generator_default_and_exp0/leap-day report/uncovered_visits.csv",
+      "bytes": 6095,
+      "sha256": "b3a5f33de87598bbb137d0e01e62ea33fab5ef429764c0f933cf7642ed9e17d6",
+      "git_blob": "9e5e3c0a2d495c6fe1010c67a503d54a46ad9d31",
+      "mtime_ns": "1791945224227658032"
+    },
+    {
+      "path": "received-course/pytest-temp/test_generator_default_and_exp0/leap-day report/visit_status_review.csv",
+      "bytes": 125,
+      "sha256": "9cb3e3e82e30935f57448ed826dbd8dab78e39355e3bebba59c478fa355ee170",
+      "git_blob": "2f954eb61f6a5ed9df00b35756f5f97af5037b1f",
+      "mtime_ns": "1791945224227509128"
+    },
+    {
+      "path": "received-course/pytest-temp/test_generator_default_and_exp0/leap-day report/worklist.csv",
+      "bytes": 3174,
+      "sha256": "8aa65be027ded476048bd243478680e48975265dd5c1fa1f417a2c033396867b",
+      "git_blob": "5676bd5003be9303f43ad3631431a7b4acc70de2",
+      "mtime_ns": "1791945224227371506"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_generato0/fictional data/README_SYNTHETIC.txt",
+      "bytes": 259,
+      "sha256": "85c0efcf692ccaa7044bb88b3265b2c6cb82f41ed7af35c804885c0aedee9523",
+      "git_blob": "43d4559eeaa1366842a42581380a24c8aaf8c741",
+      "mtime_ns": "1791945223580376552"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_generato0/fictional data/authorizations.csv",
+      "bytes": 521,
+      "sha256": "4342a5f24637913cd14ffc3211bc8632f9d839b12e448d1e856ff90d44edfa67",
+      "git_blob": "ec7d0ed71b1b56a3839aa462b9185e02d73a1287",
+      "mtime_ns": "1791945223580108756"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_generato0/fictional data/expected.json",
+      "bytes": 754,
+      "sha256": "af96d2d48c46a2596857c86fca625e2613daffc29cf1f4d689a5e8733eda050d",
+      "git_blob": "aff66c3dcb6d16e4d6b2c8d088d965342aadedd1",
+      "mtime_ns": "1791945223580338812"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_generato0/fictional data/patients.csv",
+      "bytes": 391,
+      "sha256": "548e3da0310c55f02dc292b012d45d2df47f166e67eb0c7a99abde47d3c17051",
+      "git_blob": "c8d2050cfc8210ad310b6070d04b7fee5294fa81",
+      "mtime_ns": "1791945223580054163"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_generato0/fictional data/payers.csv",
+      "bytes": 904,
+      "sha256": "81f143eed15c9ce613ee7cf372e51d6223a44700c877cc42d283a824d30900ed",
+      "git_blob": "1853837e82048ac11698b4ad5bb6eeb055d56038",
+      "mtime_ns": "1791945223580293028"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_generato0/fictional data/schedule.csv",
+      "bytes": 10352,
+      "sha256": "3e3438c32aea0adb48130df1633d652eb6cd9b822c496f5c566f3d2bcb2444c6",
+      "git_blob": "e0df536edf9548f108431fe2b58d81f5c9b2614a",
+      "mtime_ns": "1791945223580246658"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_generato1/fictional data/README_SYNTHETIC.txt",
+      "bytes": 259,
+      "sha256": "85c0efcf692ccaa7044bb88b3265b2c6cb82f41ed7af35c804885c0aedee9523",
+      "git_blob": "43d4559eeaa1366842a42581380a24c8aaf8c741",
+      "mtime_ns": "1791945223651595011"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_generato1/fictional data/authorizations.csv",
+      "bytes": 521,
+      "sha256": "4342a5f24637913cd14ffc3211bc8632f9d839b12e448d1e856ff90d44edfa67",
+      "git_blob": "ec7d0ed71b1b56a3839aa462b9185e02d73a1287",
+      "mtime_ns": "1791945223651291441"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_generato1/fictional data/expected.json",
+      "bytes": 754,
+      "sha256": "af96d2d48c46a2596857c86fca625e2613daffc29cf1f4d689a5e8733eda050d",
+      "git_blob": "aff66c3dcb6d16e4d6b2c8d088d965342aadedd1",
+      "mtime_ns": "1791945223651558813"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_generato1/fictional data/patients.csv",
+      "bytes": 391,
+      "sha256": "548e3da0310c55f02dc292b012d45d2df47f166e67eb0c7a99abde47d3c17051",
+      "git_blob": "c8d2050cfc8210ad310b6070d04b7fee5294fa81",
+      "mtime_ns": "1791945223651235439"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_generato1/fictional data/payers.csv",
+      "bytes": 904,
+      "sha256": "81f143eed15c9ce613ee7cf372e51d6223a44700c877cc42d283a824d30900ed",
+      "git_blob": "1853837e82048ac11698b4ad5bb6eeb055d56038",
+      "mtime_ns": "1791945223651478273"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_generato1/fictional data/schedule.csv",
+      "bytes": 10352,
+      "sha256": "3e3438c32aea0adb48130df1633d652eb6cd9b822c496f5c566f3d2bcb2444c6",
+      "git_blob": "e0df536edf9548f108431fe2b58d81f5c9b2614a",
+      "mtime_ns": "1791945223651427741"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_generato2/fictional data/README_SYNTHETIC.txt",
+      "bytes": 259,
+      "sha256": "85c0efcf692ccaa7044bb88b3265b2c6cb82f41ed7af35c804885c0aedee9523",
+      "git_blob": "43d4559eeaa1366842a42581380a24c8aaf8c741",
+      "mtime_ns": "1791945223724737549"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_generato2/fictional data/authorizations.csv",
+      "bytes": 521,
+      "sha256": "4342a5f24637913cd14ffc3211bc8632f9d839b12e448d1e856ff90d44edfa67",
+      "git_blob": "ec7d0ed71b1b56a3839aa462b9185e02d73a1287",
+      "mtime_ns": "1791945223724459403"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_generato2/fictional data/expected.json",
+      "bytes": 754,
+      "sha256": "af96d2d48c46a2596857c86fca625e2613daffc29cf1f4d689a5e8733eda050d",
+      "git_blob": "aff66c3dcb6d16e4d6b2c8d088d965342aadedd1",
+      "mtime_ns": "1791945223724703385"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_generato2/fictional data/patients.csv",
+      "bytes": 391,
+      "sha256": "548e3da0310c55f02dc292b012d45d2df47f166e67eb0c7a99abde47d3c17051",
+      "git_blob": "c8d2050cfc8210ad310b6070d04b7fee5294fa81",
+      "mtime_ns": "1791945223724408174"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_generato2/fictional data/payers.csv",
+      "bytes": 904,
+      "sha256": "81f143eed15c9ce613ee7cf372e51d6223a44700c877cc42d283a824d30900ed",
+      "git_blob": "1853837e82048ac11698b4ad5bb6eeb055d56038",
+      "mtime_ns": "1791945223724655635"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_generato2/fictional data/schedule.csv",
+      "bytes": 10352,
+      "sha256": "3e3438c32aea0adb48130df1633d652eb6cd9b822c496f5c566f3d2bcb2444c6",
+      "git_blob": "e0df536edf9548f108431fe2b58d81f5c9b2614a",
+      "mtime_ns": "1791945223724611339"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_run_date0/fictional data/README_SYNTHETIC.txt",
+      "bytes": 259,
+      "sha256": "85c0efcf692ccaa7044bb88b3265b2c6cb82f41ed7af35c804885c0aedee9523",
+      "git_blob": "43d4559eeaa1366842a42581380a24c8aaf8c741",
+      "mtime_ns": "1791945223074285140"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_run_date0/fictional data/authorizations.csv",
+      "bytes": 521,
+      "sha256": "4342a5f24637913cd14ffc3211bc8632f9d839b12e448d1e856ff90d44edfa67",
+      "git_blob": "ec7d0ed71b1b56a3839aa462b9185e02d73a1287",
+      "mtime_ns": "1791945223074007263"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_run_date0/fictional data/expected.json",
+      "bytes": 754,
+      "sha256": "af96d2d48c46a2596857c86fca625e2613daffc29cf1f4d689a5e8733eda050d",
+      "git_blob": "aff66c3dcb6d16e4d6b2c8d088d965342aadedd1",
+      "mtime_ns": "1791945223074252602"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_run_date0/fictional data/patients.csv",
+      "bytes": 391,
+      "sha256": "548e3da0310c55f02dc292b012d45d2df47f166e67eb0c7a99abde47d3c17051",
+      "git_blob": "c8d2050cfc8210ad310b6070d04b7fee5294fa81",
+      "mtime_ns": "1791945223073955206"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_run_date0/fictional data/payers.csv",
+      "bytes": 904,
+      "sha256": "81f143eed15c9ce613ee7cf372e51d6223a44700c877cc42d283a824d30900ed",
+      "git_blob": "1853837e82048ac11698b4ad5bb6eeb055d56038",
+      "mtime_ns": "1791945223074209103"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_run_date0/fictional data/schedule.csv",
+      "bytes": 10352,
+      "sha256": "3e3438c32aea0adb48130df1633d652eb6cd9b822c496f5c566f3d2bcb2444c6",
+      "git_blob": "e0df536edf9548f108431fe2b58d81f5c9b2614a",
+      "mtime_ns": "1791945223074144514"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_run_date0/saved report/audit.jsonl",
+      "bytes": 275,
+      "sha256": "838e511b9844eef95a5988f348297154f046ecd5f85d678c4415877fc13c6925",
+      "git_blob": "44aba1a1a961cdcb7f27683da670ac6a26e90168",
+      "mtime_ns": "1791945223127969948"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_run_date0/saved report/digest.html",
+      "bytes": 19392,
+      "sha256": "de1f550f1d3b74d6d55724b9c03a93b19becc1f02b896f30b1425ef8c45d5fb4",
+      "git_blob": "6516469518d30eeab06e4c7a29e6ee4492fd737f",
+      "mtime_ns": "1791945223127906871"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_run_date0/saved report/ledger.csv",
+      "bytes": 664,
+      "sha256": "1e3610d750533052d236e6e1b57d80a889bec1440eb802f7f9fc755847872ccc",
+      "git_blob": "bdfdefdde2b9911da0581a3c8f3c68b20a2e5b8c",
+      "mtime_ns": "1791945223127177819"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_run_date0/saved report/summary.json",
+      "bytes": 35794,
+      "sha256": "e47f6f6ae9053212a9260de4615c434895639601bf0439e386ad3375c98d1d44",
+      "git_blob": "a953abe84503e397e23efd645729b54be8279e7e",
+      "mtime_ns": "1791945223127646082"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_run_date0/saved report/uncovered_visits.csv",
+      "bytes": 5940,
+      "sha256": "9d4b394d2c653bcac534904e684bcff6c8455829bb1d5efe282904653aa1abde",
+      "git_blob": "bc17666a687f17ce7cec5672bbc72d4eaeb6481c",
+      "mtime_ns": "1791945223127381744"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_run_date0/saved report/visit_status_review.csv",
+      "bytes": 1211,
+      "sha256": "a646b1f3a3a3375bff0e5c8488d00dadd7855f6a603b2751f770fc6b04c4db9f",
+      "git_blob": "8354e6e5d4591b2aca1de71f7af1a366f26a94c4",
+      "mtime_ns": "1791945223127241615"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_run_date0/saved report/worklist.csv",
+      "bytes": 3172,
+      "sha256": "c15085028a0a9878f308f78dae447aa98441f66d8f7b62a44a1498c862103dc2",
+      "git_blob": "bff7dafc9f10a73700e487b71767db2e772b9cbd",
+      "mtime_ns": "1791945223127099892"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_run_date1/fictional data/README_SYNTHETIC.txt",
+      "bytes": 259,
+      "sha256": "85c0efcf692ccaa7044bb88b3265b2c6cb82f41ed7af35c804885c0aedee9523",
+      "git_blob": "43d4559eeaa1366842a42581380a24c8aaf8c741",
+      "mtime_ns": "1791945223201476714"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_run_date1/fictional data/authorizations.csv",
+      "bytes": 521,
+      "sha256": "4342a5f24637913cd14ffc3211bc8632f9d839b12e448d1e856ff90d44edfa67",
+      "git_blob": "ec7d0ed71b1b56a3839aa462b9185e02d73a1287",
+      "mtime_ns": "1791945223201205789"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_run_date1/fictional data/expected.json",
+      "bytes": 754,
+      "sha256": "af96d2d48c46a2596857c86fca625e2613daffc29cf1f4d689a5e8733eda050d",
+      "git_blob": "aff66c3dcb6d16e4d6b2c8d088d965342aadedd1",
+      "mtime_ns": "1791945223201437222"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_run_date1/fictional data/patients.csv",
+      "bytes": 391,
+      "sha256": "548e3da0310c55f02dc292b012d45d2df47f166e67eb0c7a99abde47d3c17051",
+      "git_blob": "c8d2050cfc8210ad310b6070d04b7fee5294fa81",
+      "mtime_ns": "1791945223201151741"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_run_date1/fictional data/payers.csv",
+      "bytes": 904,
+      "sha256": "81f143eed15c9ce613ee7cf372e51d6223a44700c877cc42d283a824d30900ed",
+      "git_blob": "1853837e82048ac11698b4ad5bb6eeb055d56038",
+      "mtime_ns": "1791945223201391466"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_run_date1/fictional data/schedule.csv",
+      "bytes": 10352,
+      "sha256": "3e3438c32aea0adb48130df1633d652eb6cd9b822c496f5c566f3d2bcb2444c6",
+      "git_blob": "e0df536edf9548f108431fe2b58d81f5c9b2614a",
+      "mtime_ns": "1791945223201344110"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_run_date1/saved report/audit.jsonl",
+      "bytes": 275,
+      "sha256": "838e511b9844eef95a5988f348297154f046ecd5f85d678c4415877fc13c6925",
+      "git_blob": "44aba1a1a961cdcb7f27683da670ac6a26e90168",
+      "mtime_ns": "1791945223253488881"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_run_date1/saved report/digest.html",
+      "bytes": 19392,
+      "sha256": "de1f550f1d3b74d6d55724b9c03a93b19becc1f02b896f30b1425ef8c45d5fb4",
+      "git_blob": "6516469518d30eeab06e4c7a29e6ee4492fd737f",
+      "mtime_ns": "1791945223253423870"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_run_date1/saved report/ledger.csv",
+      "bytes": 664,
+      "sha256": "1e3610d750533052d236e6e1b57d80a889bec1440eb802f7f9fc755847872ccc",
+      "git_blob": "bdfdefdde2b9911da0581a3c8f3c68b20a2e5b8c",
+      "mtime_ns": "1791945223252796679"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_run_date1/saved report/summary.json",
+      "bytes": 35794,
+      "sha256": "e47f6f6ae9053212a9260de4615c434895639601bf0439e386ad3375c98d1d44",
+      "git_blob": "a953abe84503e397e23efd645729b54be8279e7e",
+      "mtime_ns": "1791945223253216866"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_run_date1/saved report/uncovered_visits.csv",
+      "bytes": 5940,
+      "sha256": "9d4b394d2c653bcac534904e684bcff6c8455829bb1d5efe282904653aa1abde",
+      "git_blob": "bc17666a687f17ce7cec5672bbc72d4eaeb6481c",
+      "mtime_ns": "1791945223252996911"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_run_date1/saved report/visit_status_review.csv",
+      "bytes": 1211,
+      "sha256": "a646b1f3a3a3375bff0e5c8488d00dadd7855f6a603b2751f770fc6b04c4db9f",
+      "git_blob": "8354e6e5d4591b2aca1de71f7af1a366f26a94c4",
+      "mtime_ns": "1791945223252858731"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_run_date1/saved report/worklist.csv",
+      "bytes": 3172,
+      "sha256": "c15085028a0a9878f308f78dae447aa98441f66d8f7b62a44a1498c862103dc2",
+      "git_blob": "bff7dafc9f10a73700e487b71767db2e772b9cbd",
+      "mtime_ns": "1791945223252721040"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_run_date2/fictional data/README_SYNTHETIC.txt",
+      "bytes": 259,
+      "sha256": "85c0efcf692ccaa7044bb88b3265b2c6cb82f41ed7af35c804885c0aedee9523",
+      "git_blob": "43d4559eeaa1366842a42581380a24c8aaf8c741",
+      "mtime_ns": "1791945223326049554"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_run_date2/fictional data/authorizations.csv",
+      "bytes": 521,
+      "sha256": "4342a5f24637913cd14ffc3211bc8632f9d839b12e448d1e856ff90d44edfa67",
+      "git_blob": "ec7d0ed71b1b56a3839aa462b9185e02d73a1287",
+      "mtime_ns": "1791945223325792423"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_run_date2/fictional data/expected.json",
+      "bytes": 754,
+      "sha256": "af96d2d48c46a2596857c86fca625e2613daffc29cf1f4d689a5e8733eda050d",
+      "git_blob": "aff66c3dcb6d16e4d6b2c8d088d965342aadedd1",
+      "mtime_ns": "1791945223326014249"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_run_date2/fictional data/patients.csv",
+      "bytes": 391,
+      "sha256": "548e3da0310c55f02dc292b012d45d2df47f166e67eb0c7a99abde47d3c17051",
+      "git_blob": "c8d2050cfc8210ad310b6070d04b7fee5294fa81",
+      "mtime_ns": "1791945223325736076"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_run_date2/fictional data/payers.csv",
+      "bytes": 904,
+      "sha256": "81f143eed15c9ce613ee7cf372e51d6223a44700c877cc42d283a824d30900ed",
+      "git_blob": "1853837e82048ac11698b4ad5bb6eeb055d56038",
+      "mtime_ns": "1791945223325968250"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_run_date2/fictional data/schedule.csv",
+      "bytes": 10352,
+      "sha256": "3e3438c32aea0adb48130df1633d652eb6cd9b822c496f5c566f3d2bcb2444c6",
+      "git_blob": "e0df536edf9548f108431fe2b58d81f5c9b2614a",
+      "mtime_ns": "1791945223325922989"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_run_date2/saved report/audit.jsonl",
+      "bytes": 275,
+      "sha256": "838e511b9844eef95a5988f348297154f046ecd5f85d678c4415877fc13c6925",
+      "git_blob": "44aba1a1a961cdcb7f27683da670ac6a26e90168",
+      "mtime_ns": "1791945223379050472"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_run_date2/saved report/digest.html",
+      "bytes": 19392,
+      "sha256": "de1f550f1d3b74d6d55724b9c03a93b19becc1f02b896f30b1425ef8c45d5fb4",
+      "git_blob": "6516469518d30eeab06e4c7a29e6ee4492fd737f",
+      "mtime_ns": "1791945223378985973"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_run_date2/saved report/ledger.csv",
+      "bytes": 664,
+      "sha256": "1e3610d750533052d236e6e1b57d80a889bec1440eb802f7f9fc755847872ccc",
+      "git_blob": "bdfdefdde2b9911da0581a3c8f3c68b20a2e5b8c",
+      "mtime_ns": "1791945223378274573"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_run_date2/saved report/summary.json",
+      "bytes": 35794,
+      "sha256": "e47f6f6ae9053212a9260de4615c434895639601bf0439e386ad3375c98d1d44",
+      "git_blob": "a953abe84503e397e23efd645729b54be8279e7e",
+      "mtime_ns": "1791945223378755664"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_run_date2/saved report/uncovered_visits.csv",
+      "bytes": 5940,
+      "sha256": "9d4b394d2c653bcac534904e684bcff6c8455829bb1d5efe282904653aa1abde",
+      "git_blob": "bc17666a687f17ce7cec5672bbc72d4eaeb6481c",
+      "mtime_ns": "1791945223378500719"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_run_date2/saved report/visit_status_review.csv",
+      "bytes": 1211,
+      "sha256": "a646b1f3a3a3375bff0e5c8488d00dadd7855f6a603b2751f770fc6b04c4db9f",
+      "git_blob": "8354e6e5d4591b2aca1de71f7af1a366f26a94c4",
+      "mtime_ns": "1791945223378344036"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_run_date2/saved report/worklist.csv",
+      "bytes": 3172,
+      "sha256": "c15085028a0a9878f308f78dae447aa98441f66d8f7b62a44a1498c862103dc2",
+      "git_blob": "bff7dafc9f10a73700e487b71767db2e772b9cbd",
+      "mtime_ns": "1791945223378184625"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_run_date3/fictional data/README_SYNTHETIC.txt",
+      "bytes": 259,
+      "sha256": "85c0efcf692ccaa7044bb88b3265b2c6cb82f41ed7af35c804885c0aedee9523",
+      "git_blob": "43d4559eeaa1366842a42581380a24c8aaf8c741",
+      "mtime_ns": "1791945223450177908"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_run_date3/fictional data/authorizations.csv",
+      "bytes": 521,
+      "sha256": "4342a5f24637913cd14ffc3211bc8632f9d839b12e448d1e856ff90d44edfa67",
+      "git_blob": "ec7d0ed71b1b56a3839aa462b9185e02d73a1287",
+      "mtime_ns": "1791945223449914764"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_run_date3/fictional data/expected.json",
+      "bytes": 754,
+      "sha256": "af96d2d48c46a2596857c86fca625e2613daffc29cf1f4d689a5e8733eda050d",
+      "git_blob": "aff66c3dcb6d16e4d6b2c8d088d965342aadedd1",
+      "mtime_ns": "1791945223450141253"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_run_date3/fictional data/patients.csv",
+      "bytes": 391,
+      "sha256": "548e3da0310c55f02dc292b012d45d2df47f166e67eb0c7a99abde47d3c17051",
+      "git_blob": "c8d2050cfc8210ad310b6070d04b7fee5294fa81",
+      "mtime_ns": "1791945223449861672"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_run_date3/fictional data/payers.csv",
+      "bytes": 904,
+      "sha256": "81f143eed15c9ce613ee7cf372e51d6223a44700c877cc42d283a824d30900ed",
+      "git_blob": "1853837e82048ac11698b4ad5bb6eeb055d56038",
+      "mtime_ns": "1791945223450095045"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_run_date3/fictional data/schedule.csv",
+      "bytes": 10352,
+      "sha256": "3e3438c32aea0adb48130df1633d652eb6cd9b822c496f5c566f3d2bcb2444c6",
+      "git_blob": "e0df536edf9548f108431fe2b58d81f5c9b2614a",
+      "mtime_ns": "1791945223450045370"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_run_date3/saved report/audit.jsonl",
+      "bytes": 275,
+      "sha256": "838e511b9844eef95a5988f348297154f046ecd5f85d678c4415877fc13c6925",
+      "git_blob": "44aba1a1a961cdcb7f27683da670ac6a26e90168",
+      "mtime_ns": "1791945223503355302"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_run_date3/saved report/digest.html",
+      "bytes": 19392,
+      "sha256": "de1f550f1d3b74d6d55724b9c03a93b19becc1f02b896f30b1425ef8c45d5fb4",
+      "git_blob": "6516469518d30eeab06e4c7a29e6ee4492fd737f",
+      "mtime_ns": "1791945223503259840"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_run_date3/saved report/ledger.csv",
+      "bytes": 664,
+      "sha256": "1e3610d750533052d236e6e1b57d80a889bec1440eb802f7f9fc755847872ccc",
+      "git_blob": "bdfdefdde2b9911da0581a3c8f3c68b20a2e5b8c",
+      "mtime_ns": "1791945223502326857"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_run_date3/saved report/summary.json",
+      "bytes": 35794,
+      "sha256": "e47f6f6ae9053212a9260de4615c434895639601bf0439e386ad3375c98d1d44",
+      "git_blob": "a953abe84503e397e23efd645729b54be8279e7e",
+      "mtime_ns": "1791945223503002447"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_run_date3/saved report/uncovered_visits.csv",
+      "bytes": 5940,
+      "sha256": "9d4b394d2c653bcac534904e684bcff6c8455829bb1d5efe282904653aa1abde",
+      "git_blob": "bc17666a687f17ce7cec5672bbc72d4eaeb6481c",
+      "mtime_ns": "1791945223502705851"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_run_date3/saved report/visit_status_review.csv",
+      "bytes": 1211,
+      "sha256": "a646b1f3a3a3375bff0e5c8488d00dadd7855f6a603b2751f770fc6b04c4db9f",
+      "git_blob": "8354e6e5d4591b2aca1de71f7af1a366f26a94c4",
+      "mtime_ns": "1791945223502456522"
+    },
+    {
+      "path": "received-course/pytest-temp/test_invalid_explicit_run_date3/saved report/worklist.csv",
+      "bytes": 3172,
+      "sha256": "c15085028a0a9878f308f78dae447aa98441f66d8f7b62a44a1498c862103dc2",
+      "git_blob": "bff7dafc9f10a73700e487b71767db2e772b9cbd",
+      "mtime_ns": "1791945223502152643"
+    },
+    {
+      "path": "received-course/pytest-temp/test_omitted_and_explicit_run_0/explicit/audit.jsonl",
+      "bytes": 275,
+      "sha256": "8833ff784c836280639118ea8e4e8107d42ca010b9b3452ecb30135e57185b61",
+      "git_blob": "8b71dbdff96730a16a52a0811ee33bc81a8e7f9e",
+      "mtime_ns": "1791945224051609315"
+    },
+    {
+      "path": "received-course/pytest-temp/test_omitted_and_explicit_run_0/explicit/digest.html",
+      "bytes": 19392,
+      "sha256": "de1f550f1d3b74d6d55724b9c03a93b19becc1f02b896f30b1425ef8c45d5fb4",
+      "git_blob": "6516469518d30eeab06e4c7a29e6ee4492fd737f",
+      "mtime_ns": "1791945224051545067"
+    },
+    {
+      "path": "received-course/pytest-temp/test_omitted_and_explicit_run_0/explicit/ledger.csv",
+      "bytes": 664,
+      "sha256": "1e3610d750533052d236e6e1b57d80a889bec1440eb802f7f9fc755847872ccc",
+      "git_blob": "bdfdefdde2b9911da0581a3c8f3c68b20a2e5b8c",
+      "mtime_ns": "1791945224050852294"
+    },
+    {
+      "path": "received-course/pytest-temp/test_omitted_and_explicit_run_0/explicit/summary.json",
+      "bytes": 35794,
+      "sha256": "0cda5151c443481ee6931e86c597fbf04c184438671ea5d5f8bebcfee94635b2",
+      "git_blob": "d1b0c08f45b2a7ba531ed7ad67b1e43caa30f703",
+      "mtime_ns": "1791945224051314059"
+    },
+    {
+      "path": "received-course/pytest-temp/test_omitted_and_explicit_run_0/explicit/uncovered_visits.csv",
+      "bytes": 5940,
+      "sha256": "9d4b394d2c653bcac534904e684bcff6c8455829bb1d5efe282904653aa1abde",
+      "git_blob": "bc17666a687f17ce7cec5672bbc72d4eaeb6481c",
+      "mtime_ns": "1791945224051073215"
+    },
+    {
+      "path": "received-course/pytest-temp/test_omitted_and_explicit_run_0/explicit/visit_status_review.csv",
+      "bytes": 1211,
+      "sha256": "a646b1f3a3a3375bff0e5c8488d00dadd7855f6a603b2751f770fc6b04c4db9f",
+      "git_blob": "8354e6e5d4591b2aca1de71f7af1a366f26a94c4",
+      "mtime_ns": "1791945224050920212"
+    },
+    {
+      "path": "received-course/pytest-temp/test_omitted_and_explicit_run_0/explicit/worklist.csv",
+      "bytes": 3172,
+      "sha256": "c15085028a0a9878f308f78dae447aa98441f66d8f7b62a44a1498c862103dc2",
+      "git_blob": "bff7dafc9f10a73700e487b71767db2e772b9cbd",
+      "mtime_ns": "1791945224050766604"
+    },
+    {
+      "path": "received-course/pytest-temp/test_omitted_and_explicit_run_0/fictional data/README_SYNTHETIC.txt",
+      "bytes": 259,
+      "sha256": "85c0efcf692ccaa7044bb88b3265b2c6cb82f41ed7af35c804885c0aedee9523",
+      "git_blob": "43d4559eeaa1366842a42581380a24c8aaf8c741",
+      "mtime_ns": "1791945223948182050"
+    },
+    {
+      "path": "received-course/pytest-temp/test_omitted_and_explicit_run_0/fictional data/authorizations.csv",
+      "bytes": 521,
+      "sha256": "4342a5f24637913cd14ffc3211bc8632f9d839b12e448d1e856ff90d44edfa67",
+      "git_blob": "ec7d0ed71b1b56a3839aa462b9185e02d73a1287",
+      "mtime_ns": "1791945223947917434"
+    },
+    {
+      "path": "received-course/pytest-temp/test_omitted_and_explicit_run_0/fictional data/expected.json",
+      "bytes": 754,
+      "sha256": "af96d2d48c46a2596857c86fca625e2613daffc29cf1f4d689a5e8733eda050d",
+      "git_blob": "aff66c3dcb6d16e4d6b2c8d088d965342aadedd1",
+      "mtime_ns": "1791945223948141076"
+    },
+    {
+      "path": "received-course/pytest-temp/test_omitted_and_explicit_run_0/fictional data/patients.csv",
+      "bytes": 391,
+      "sha256": "548e3da0310c55f02dc292b012d45d2df47f166e67eb0c7a99abde47d3c17051",
+      "git_blob": "c8d2050cfc8210ad310b6070d04b7fee5294fa81",
+      "mtime_ns": "1791945223947854902"
+    },
+    {
+      "path": "received-course/pytest-temp/test_omitted_and_explicit_run_0/fictional data/payers.csv",
+      "bytes": 904,
+      "sha256": "81f143eed15c9ce613ee7cf372e51d6223a44700c877cc42d283a824d30900ed",
+      "git_blob": "1853837e82048ac11698b4ad5bb6eeb055d56038",
+      "mtime_ns": "1791945223948095456"
+    },
+    {
+      "path": "received-course/pytest-temp/test_omitted_and_explicit_run_0/fictional data/schedule.csv",
+      "bytes": 10352,
+      "sha256": "3e3438c32aea0adb48130df1633d652eb6cd9b822c496f5c566f3d2bcb2444c6",
+      "git_blob": "e0df536edf9548f108431fe2b58d81f5c9b2614a",
+      "mtime_ns": "1791945223948051544"
+    },
+    {
+      "path": "received-course/pytest-temp/test_omitted_and_explicit_run_0/omitted/audit.jsonl",
+      "bytes": 275,
+      "sha256": "418ff36e4a7ca011340c2b35536bbdf594b65fbc7d06f4c2bbe21165082f4ac9",
+      "git_blob": "2496db59570e1e02b9d24073efde56867927262d",
+      "mtime_ns": "1791945223999034558"
+    },
+    {
+      "path": "received-course/pytest-temp/test_omitted_and_explicit_run_0/omitted/digest.html",
+      "bytes": 17685,
+      "sha256": "9c17ed3285b35ea95b362166b212896c54893a3e115a67245d3551065225360a",
+      "git_blob": "1ea204b349dc28e4f526521a8bba52d870e1b711",
+      "mtime_ns": "1791945223998970958"
+    },
+    {
+      "path": "received-course/pytest-temp/test_omitted_and_explicit_run_0/omitted/ledger.csv",
+      "bytes": 665,
+      "sha256": "02f24682eda6333d8e47b4c544908c5f435743dee8d5b5f0b99a8455921a5759",
+      "git_blob": "1d43a6e983909b21552d5d792ef0d66a10b8c74b",
+      "mtime_ns": "1791945223998328463"
+    },
+    {
+      "path": "received-course/pytest-temp/test_omitted_and_explicit_run_0/omitted/summary.json",
+      "bytes": 33481,
+      "sha256": "96c2fcb64de8719fd3be30f8c9a4ce73c84f81fedd7e46c7b48de544829f4f00",
+      "git_blob": "1bb9c8df253b5fa1f498540b369e646a80f45173",
+      "mtime_ns": "1791945223998759981"
+    },
+    {
+      "path": "received-course/pytest-temp/test_omitted_and_explicit_run_0/omitted/uncovered_visits.csv",
+      "bytes": 6095,
+      "sha256": "a09c674a61d917c5474fe8555662474cf9ba530bf2570359487ed02f7a21ed38",
+      "git_blob": "b8f9853b9a5a3cd66be05c68080e2ee469d56fac",
+      "mtime_ns": "1791945223998525466"
+    },
+    {
+      "path": "received-course/pytest-temp/test_omitted_and_explicit_run_0/omitted/visit_status_review.csv",
+      "bytes": 125,
+      "sha256": "9cb3e3e82e30935f57448ed826dbd8dab78e39355e3bebba59c478fa355ee170",
+      "git_blob": "2f954eb61f6a5ed9df00b35756f5f97af5037b1f",
+      "mtime_ns": "1791945223998372890"
+    },
+    {
+      "path": "received-course/pytest-temp/test_omitted_and_explicit_run_0/omitted/worklist.csv",
+      "bytes": 3174,
+      "sha256": "a02d346e5013a732c5ec9e3c78ab10ccfaf5c110cb10f675f00a0f29a9f5b1ec",
+      "git_blob": "bff9ccd468c942b907064d01c1f0c137665b98e8",
+      "mtime_ns": "1791945223998243198"
+    },
+    {
+      "path": "received-course/pytest.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "mtime_ns": "1791945222911515695"
+    },
+    {
+      "path": "received-course/pytest.stdout",
+      "bytes": 114,
+      "sha256": "fb2eb6bc0bed1ee35431f46bbf7e03c8e6949de971bbbddb024eabb655ba619c",
+      "git_blob": "38719ee15619e6a540d0fb5218fc32409c21f1d8",
+      "mtime_ns": "1791945224587508889"
+    },
+    {
+      "path": "received-course/receiving.json",
+      "bytes": 15228,
+      "sha256": "4784edecbbe5cfaeab1f0699275a7e319f0f3b023c6cf8068a5a8e900f00bfa2",
+      "git_blob": "7263f578848564b6864d94d0d6e9d302a3a13c75",
+      "mtime_ns": "1791945224634899390"
+    },
+    {
+      "path": "run_two_modules.py",
+      "bytes": 8049,
+      "sha256": "7c3e1e0ca3d1df1c4da5ea29ffad277b7eeeae2420b28e49c44755b360f2d2ab",
+      "git_blob": "70e1e1b7df489d531618390890fb17975c36c4a0",
+      "mtime_ns": "1791945197354926065"
+    },
+    {
+      "path": "source/LICENSE",
+      "bytes": 1070,
+      "sha256": "f6a3d0f7d08a7590f907c08d6127545ab44eff0d23b6074714ad3fb935b998bb",
+      "git_blob": "edb188254288b40f2895833e3647b7e0be34c962",
+      "mtime_ns": "1791945197338094028"
+    },
+    {
+      "path": "source/pt_auth/CALENDAR_RECEIPTS.md",
+      "bytes": 4541,
+      "sha256": "379fa9fbc54694460d1809cde7eb7934c50e0257f27c474f1c918b5787da6485",
+      "git_blob": "a4a55efba02796069bbd974ab2d9de3060da5428",
+      "mtime_ns": "1791945197338192175"
+    },
+    {
+      "path": "source/pt_auth/README.md",
+      "bytes": 23423,
+      "sha256": "dcdfefc4009aa5a03d49135639519b92f301a6f48468051fba7a6075836739a8",
+      "git_blob": "23fc8292665136a70b8aa8dde7bc08ab1d3b4f21",
+      "mtime_ns": "1791945197338318356"
+    },
+    {
+      "path": "source/pt_auth/ptauth/__init__.py",
+      "bytes": 311,
+      "sha256": "71e1527f153c607b679485e4954af1b3ec6a843b041562eb07f4d36e08fd231c",
+      "git_blob": "a6f4545ac17e2578317ef694f7bb548489f6c71c",
+      "mtime_ns": "1791945197338386076"
+    },
+    {
+      "path": "source/pt_auth/ptauth/__main__.py",
+      "bytes": 71,
+      "sha256": "712d5a98258176d09d165788048d34da033af45c04d14387d9e51de108db5669",
+      "git_blob": "07cf8abb5a559054d4487c65a3f9f7c992067cf5",
+      "mtime_ns": "1791945197339086433"
+    },
+    {
+      "path": "source/pt_auth/ptauth/calendar_ui.js",
+      "bytes": 8448,
+      "sha256": "b91fe76b947f381b2fa0835646fc664bf7eaa4474631ae3c9e5cb3968b9cdf3a",
+      "git_blob": "a6ba45ec85c28f7fd80d7e2fdd32ac62e96daa99",
+      "mtime_ns": "1791945197339203820"
+    },
+    {
+      "path": "source/pt_auth/ptauth/cli.py",
+      "bytes": 5952,
+      "sha256": "995428dbf73b4e34ef7fd12093b4072f5015b10a85ce44e9c40d90cd02fd3cab",
+      "git_blob": "8d6b43649bc6c142c28f71646485a31f6a6bbf55",
+      "mtime_ns": "1791945197339270292"
+    },
+    {
+      "path": "source/pt_auth/ptauth/data.py",
+      "bytes": 10725,
+      "sha256": "b16d31711e678e3d25c9cf867098de93645298410985b96248e03ac3133adf19",
+      "git_blob": "886b2d75050f302acb101ab4f5bf8473b7573b8f",
+      "mtime_ns": "1791945197340673457"
+    },
+    {
+      "path": "source/pt_auth/ptauth/engine.py",
+      "bytes": 16057,
+      "sha256": "bfa7049e9b133d654ce947b135c17ac401bd7b1fcd76350bdb10de5b7a1ad1f7",
+      "git_blob": "39c97f35d61ff949b5c2381f0ad60d7af8d74226",
+      "mtime_ns": "1791945197342690112"
+    },
+    {
+      "path": "source/pt_auth/ptauth/report.py",
+      "bytes": 10743,
+      "sha256": "20cbc86e153b9af5151fd3e74cb370298de4692c81b3546a214eb2cfa8307df7",
+      "git_blob": "2ce82b1712e5c6fc03374d38996eceddf31782f0",
+      "mtime_ns": "1791945197345103707"
+    },
+    {
+      "path": "source/pt_auth/ptauth/synth.py",
+      "bytes": 8873,
+      "sha256": "b82a34447e43dacbe46ed06e60b693ed216e87f15892ae297c682aa5a3f139fd",
+      "git_blob": "2ff6a2548bf55a812cfa62e397442a0d3f7debbb",
+      "mtime_ns": "1791945197346589873"
+    },
+    {
+      "path": "source/pt_auth/ptauth/ui.html",
+      "bytes": 18655,
+      "sha256": "a59df72e1edf5075e513047eb4000e94a87bf1dbcde8d243547944c283bbd492",
+      "git_blob": "ec2e198ee1873c41981d201c78a63dbccc13afad",
+      "mtime_ns": "1791945197347821914"
+    },
+    {
+      "path": "source/pt_auth/ptauth/uncovered.py",
+      "bytes": 4319,
+      "sha256": "21e92509df706e504a8630f3383ea4fe98d03047d2e4b070f3fdd188d995350e",
+      "git_blob": "9ab21781c4116dd0b9b76ac0116868898f3ee7d4",
+      "mtime_ns": "1791945197347896073"
+    },
+    {
+      "path": "source/pt_auth/ptauth/web.py",
+      "bytes": 8633,
+      "sha256": "18a5f6e889f2a5d7e0e3704989f041681252df3ee0cb29e3c356aff560fd2967",
+      "git_blob": "7e5d38f4cf8c33f4b9c91bd3c3d929fcfa0f80b3",
+      "mtime_ns": "1791945197348413920"
+    },
+    {
+      "path": "source/pt_auth/ptauth/worklist_calendar.py",
+      "bytes": 13750,
+      "sha256": "89751f1de5548ced34a59c296d0edf1eda06a38bdb935be3e7c3c8b2ae5d55c0",
+      "git_blob": "e125f9ed77343fcc3d82e6d6f25a7296b0463aa7",
+      "mtime_ns": "1791945197349619519"
+    },
+    {
+      "path": "source/pt_auth/tests/test_calendar_receipt_output.py",
+      "bytes": 8759,
+      "sha256": "faefd09f9a03becd100ca50d2ed7ed23a48d4f256fcecb23fab3680134d62c68",
+      "git_blob": "3264d6566e4ce482b47e05b5161a4a35bc74df56",
+      "mtime_ns": "1791945197352747628"
+    },
+    {
+      "path": "source/pt_auth/tests/test_cli_date_admission.py",
+      "bytes": 4814,
+      "sha256": "e99ab4925bece8148c5093929d4d13fae158ebc64571e7ac5f046ad4d6114ab4",
+      "git_blob": "faf307640652fb548dcb09a2cea0e226bb1b7689",
+      "mtime_ns": "1791945197354109315"
+    },
+    {
+      "path": "staging-admission.json",
+      "bytes": 4687,
+      "sha256": "936b554549a14632526f80ce1dfcfdce688b81b782383b83da668af949158bcb",
+      "git_blob": "4c1ad10d9260e1f76b6ac3cd13723eeec996f5e8",
+      "mtime_ns": "1791945197356296974"
+    }
+  ],
+  "count": 152,
+  "bytes": 859656
+}

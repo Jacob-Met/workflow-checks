@@ -1,0 +1,15 @@
+{
+  "schema": "ptauth.composition.independent-source-review/1",
+  "scope": "Read-only source and mechanical composition review before independent functional course; no product import or CLI execution",
+  "base_cli": "559c0a76effa2204041e9318e9869a6c7389f50d",
+  "date_cli": "7250a3d64b6bf30932c36280f1c2f829974ef7bc",
+  "calendar_cli": "b1b7a60de7b470ea59de6313bfcde336f1c5dfe1",
+  "composed_cli": "8d6b43649bc6c142c28f71646485a31f6a6bbf55",
+  "four_date_lines_exact": true,
+  "two_calendar_regions_exact": true,
+  "both_orders_and_reversals_exact": true,
+  "all_17_materialized_identities_and_mtimes_match_root_manifest": true,
+  "CRLF_exact": true,
+  "final_full_cli_and_entry_read": true,
+  "verdict": "ACCEPT"
+}

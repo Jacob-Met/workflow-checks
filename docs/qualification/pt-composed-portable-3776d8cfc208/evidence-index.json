@@ -1,0 +1,452 @@
+{
+  "schema": "ptauth.composition.qualification-index/1",
+  "source_commit": "69f3c8e0577b579ee36256da0a075fccb201af8f",
+  "source_tree": "3c2a77730ab23915fb5a33ae02b70497812da7c7",
+  "files": [
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/README.md",
+      "bytes": 7280,
+      "sha256": "276d54ca2fad92c81c7ce89b88d0b279a21ff381b7815087dfbd9482927c5566",
+      "git_blob": "82906b7a7c0f660235ca269eedb58ff9b54a3564"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/author/CONTRACT.md",
+      "bytes": 2335,
+      "sha256": "4f9d5dd9392c7cb32209adf21379997ab37bdd2ac848c01e1ebc62da2c1920c4",
+      "git_blob": "9d80de48c8ecb3f9dd33912c7f8724e1e7315bd3"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/author/compose.py",
+      "bytes": 4478,
+      "sha256": "321f77e795e9d90d03c863cdb754e6dffda1b9af315a5e1531276672bbc9b0d4",
+      "git_blob": "597badeef22ef2625ee5731d6db3d37239eb81be"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/author/composition-proof.json",
+      "bytes": 4986,
+      "sha256": "b4362f7eaa19d95ee7158f7f440341b56a846c74f042d74dd747c949a9259996",
+      "git_blob": "621c2a904692008bed8a0d96a93e5fe3b9b2f923"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/author/composed-vs-calendar.diff",
+      "bytes": 2054,
+      "sha256": "6cae9996a17ee292d6623b0746923f5ef0bf603f1c1591ca8305fd869db00ee8",
+      "git_blob": "19f40e54e2e7fc341e901c8bad94c8bc64867e58"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/author/admission.json",
+      "bytes": 2192,
+      "sha256": "18fdd62b19f01c3a273ce24639e3e24522e0506f3c9e9152188e3ed934f3ef0a",
+      "git_blob": "7e391255148da1bbd964a0b332a23163f36d70a3"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/author/compose_final_tree.py",
+      "bytes": 3724,
+      "sha256": "9038a10fc507568e0c8708f1bc50228a0816d4aba09cbac235f8994db60298df",
+      "git_blob": "7e7d6a47706c5536e1c49e78af2262224b64cbde"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/author/final-tree-plan.summary.json",
+      "bytes": 9835,
+      "sha256": "4c4f79a16e29bc5c7d0da657e9da219910e18a570bd06af9f0e9d00a2486d8fa",
+      "git_blob": "5c3c42a1e18553b94f87521dedb73409fdc29dc2"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/author/source-tree-receiving.json",
+      "bytes": 3079,
+      "sha256": "95eb126b6e0e727ebc5ebb6948f697f741f78c6090e7cb836d0c0a6b63d8f36e",
+      "git_blob": "a696dac9553a33a240c48d4404b650a852c2a759"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/author/native-source-manifest.json",
+      "bytes": 3809,
+      "sha256": "2586c69dbb9ed011c795dd858585aff3e81e781d807a8cd0aacdec02826664b9",
+      "git_blob": "e7d2dfd71d9d899ec778e755854073dc152685c8"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/author/source-commit-readback.json",
+      "bytes": 8896,
+      "sha256": "1831a1417431aea656ce5c6348fd436be64ebb75a65003b8ff044e26697c3ebc",
+      "git_blob": "e19dbe2664109f2a21da2083093aa620aea1ee87"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/independent/received-course/calendar.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/independent/received-course/calendar.stdout",
+      "bytes": 561,
+      "sha256": "05e966c08f8886e78cb029856b218699b36646f14cb446a2efc6568d20f350ae",
+      "git_blob": "1eb0c8d99d250bce317519f0e65544a22e93c2ae"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/independent/received-course/closed-calendar.stderr",
+      "bytes": 114,
+      "sha256": "3c8dd68c0f1f23aa1e315b727fba7ed4020aba485f474f566e1358fef3eaf7e2",
+      "git_blob": "01e5bf9c53b5b411ada1c1f17f5d57d023d5453f"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/independent/received-course/closed-calendar.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/independent/received-course/closed-receipt-\u96ea.ics",
+      "bytes": 4823,
+      "sha256": "7ebd0723b8916c62e4c0f4b8f9c60a6f06c4bdca5c7a31e33361f95847dbf0c6",
+      "git_blob": "bfcd36749912704188af602d8770654e40c69b47"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/independent/received-course/generate.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/independent/received-course/generate.stdout",
+      "bytes": 197,
+      "sha256": "3692507df1bb560615356c8405e23d0061eaed05b482f2bd150eb5b0ee8681b0",
+      "git_blob": "fefb01f5d02aa52f24b494e5fc5d98f47c3dbdc1"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/independent/received-course/generated-data/README_SYNTHETIC.txt",
+      "bytes": 259,
+      "sha256": "cbb1992da130f1d35d5a5038c78ac66917c604839b18ddbcb2968e2daee5e666",
+      "git_blob": "546f33f44c60b1bb6c9ea76b8a3f6f7c088545fc"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/independent/received-course/generated-data/authorizations.csv",
+      "bytes": 518,
+      "sha256": "57d07855f06a209b4acbd7531b4cdb72460db592d723e6e523727add93fa123e",
+      "git_blob": "46afc8047262fea08b0ef69e74538b75f4fdec83"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/independent/received-course/generated-data/expected.json",
+      "bytes": 806,
+      "sha256": "b2e1a411fe16db7d65e451b9499d784c761402012baa17213b0a2b7f252ea2eb",
+      "git_blob": "252288c2bdf23c86bb0b0997b55759de058d9e4c"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/independent/received-course/generated-data/patients.csv",
+      "bytes": 396,
+      "sha256": "89e702844d8da22ed8ed83029d0923eb61d587e503769b14a774209da226ea1c",
+      "git_blob": "3addb235e6324166516f5971410b96e13f2fa2be"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/independent/received-course/generated-data/payers.csv",
+      "bytes": 904,
+      "sha256": "81f143eed15c9ce613ee7cf372e51d6223a44700c877cc42d283a824d30900ed",
+      "git_blob": "1853837e82048ac11698b4ad5bb6eeb055d56038"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/independent/received-course/generated-data/schedule.csv",
+      "bytes": 10486,
+      "sha256": "802d0926f1ba54207a5f0b897adb9699eee96ed225622485b59696a45eb6ddba",
+      "git_blob": "1d6e35b7d728f887e0fbb7a170f493c3ffc4f029"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/independent/received-course/invalid-date.stderr",
+      "bytes": 192,
+      "sha256": "b63d3534d636347b381eef13e91c9b705adf0db0d06fb17b67f7a1339dea089d",
+      "git_blob": "4f093241d2d7967385893cb45e55630cb38ecc08"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/independent/received-course/invalid-date.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/independent/received-course/ordinary-\u96ea.ics",
+      "bytes": 4823,
+      "sha256": "7ebd0723b8916c62e4c0f4b8f9c60a6f06c4bdca5c7a31e33361f95847dbf0c6",
+      "git_blob": "bfcd36749912704188af602d8770654e40c69b47"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/independent/received-course/receiving.json",
+      "bytes": 28567,
+      "sha256": "355ec8bf8358a27fcbe44528bf18c835e95c2b9d429c6d7dc78cac011eb0e149",
+      "git_blob": "e05841cfb0312d2de2f55990327f4c11c9a09bb8"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/independent/received-course/run.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/independent/received-course/run.stdout",
+      "bytes": 1021,
+      "sha256": "253a3941c98b9f2cdacb4e1eabdd079b98b2cc7bd86e1665f47fbc8d5a9c1269",
+      "git_blob": "023aecb79249611349be2bb0f4de892d2d829ed4"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/independent/received-course/saved-report/audit.jsonl",
+      "bytes": 275,
+      "sha256": "51ebfb14aeb9071aa7fba9a8fb4bffa04f423e9f1271f87128d2fb1d7ba39cd0",
+      "git_blob": "62569a6ee1e14784bf73334fa5ac09dd10a476d6"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/independent/received-course/saved-report/digest.html",
+      "bytes": 18597,
+      "sha256": "e8e7a766073d4cd2f27d23882c371a25dac105d183a5600cb08f1852cad6b200",
+      "git_blob": "987305ec97aa2e7403d90e23342082aa068fcf70"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/independent/received-course/saved-report/ledger.csv",
+      "bytes": 665,
+      "sha256": "706075886a1827115b95f058ec23131ede80eda5868e79f9fc537f098ea060aa",
+      "git_blob": "6fd7bcd1f834eb5db5c5c6aa62f7a20f933be041"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/independent/received-course/saved-report/summary.json",
+      "bytes": 35713,
+      "sha256": "94a3633061715ecf640673dfd95d8538aeacd63d24730c4c10cde78e2b1e1319",
+      "git_blob": "1a05a440e562ac104545b06c963191b94de94868"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/independent/received-course/saved-report/uncovered_visits.csv",
+      "bytes": 6801,
+      "sha256": "a124ec5ef72e69351227d405594846748ce808523aa73113e7c2a939fa52f5f3",
+      "git_blob": "b9f9990788bcad4e992759c3caabdbc596d91885"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/independent/received-course/saved-report/visit_status_review.csv",
+      "bytes": 125,
+      "sha256": "9cb3e3e82e30935f57448ed826dbd8dab78e39355e3bebba59c478fa355ee170",
+      "git_blob": "2f954eb61f6a5ed9df00b35756f5f97af5037b1f"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/independent/received-course/saved-report/worklist.csv",
+      "bytes": 3181,
+      "sha256": "865077b25de0b0c19c76dd22fa45482caf44f8fe4c9b6899b2829665c0a7a4f7",
+      "git_blob": "ba95f963ad862b04c630eca09af657ec2c850371"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/independent/PROTOCOL.md",
+      "bytes": 4613,
+      "sha256": "e3f0be6522ae1b764a09ebe8173eaf430a48672b48128d1a5264a8ba859c56e5",
+      "git_blob": "96bd89e2e5bb8346878ecd045648cf10bbd26137"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/independent/receive_workflow.py",
+      "bytes": 14142,
+      "sha256": "fdf797b1c6bfa6b44237422a7acea789bf8447ab55952332f2eb7afb5fb7ea08",
+      "git_blob": "2ca8d584144fa7db5f2423a78c51517a507b1e18"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/independent/pre-exposure-freeze.json",
+      "bytes": 629,
+      "sha256": "e10a77d4bad7ee7637563c1c0b8316b282037e042b28c514d43ab57873f03690",
+      "git_blob": "ebc141d69a7492fde463f13db322805395e31de8"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/independent/source-review.json",
+      "bytes": 716,
+      "sha256": "629e465d8078479ac747fc7bd26ee9b01627956bee926e4d81730f20874e1a16",
+      "git_blob": "5dc0c82712c75784ba7dc87eb50c5fa7afe1417d"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/independent/outer-observation.json",
+      "bytes": 871,
+      "sha256": "b2d8a74b2f52fadca28fe5f1d44db53ad552df2130f8a32a2cb8294a4f6e55ed",
+      "git_blob": "c8e0cecf10c72f7b1225e899596abc41151db68c"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/independent/native-manifest.json",
+      "bytes": 8748,
+      "sha256": "ab11071ca143e478db9602f08ee7e359f2d265949fb557d9b942a20c4fd13884",
+      "git_blob": "6314c3a440f8a6d1937cf897726fedd6e4c2e293"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/independent/final-tree-review.json",
+      "bytes": 995,
+      "sha256": "7aa8080443a7a5a28ceb0bc9355ec8119881c4f04c4edb82e35138b6b3ab1817",
+      "git_blob": "ee3abab1036cec57cfcfcac6319f06f4893d7f24"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/independent/native-controller-review.json",
+      "bytes": 1114,
+      "sha256": "a7db1f114e10ad884ba77c4966db9d902ea0d43886456dac42affbc0be345c15",
+      "git_blob": "2280966b6a2e9796ef8ff426ce68f582e5c7efba"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/independent/qualification-review.json",
+      "bytes": 2752,
+      "sha256": "9fbd930f047cdf2f418e1438513cbeb24256c81e667494b4fcf332f2a8f36d32",
+      "git_blob": "aa67c6e381a3f1f137d7c668ccbf0a648158b502"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/native/PROTOCOL.md",
+      "bytes": 3713,
+      "sha256": "ce1ae6ce372fe6a26d39340dcc48414b5410eebd3b8ede7dd40da370d7569b77",
+      "git_blob": "7a008247568434649badafca5f50a62696ddbccc"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/native/native-source-manifest.json",
+      "bytes": 3809,
+      "sha256": "2586c69dbb9ed011c795dd858585aff3e81e781d807a8cd0aacdec02826664b9",
+      "git_blob": "e7d2dfd71d9d899ec778e755854073dc152685c8"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/native/received-course/pytest.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/native/received-course/pytest.stdout",
+      "bytes": 114,
+      "sha256": "fb2eb6bc0bed1ee35431f46bbf7e03c8e6949de971bbbddb024eabb655ba619c",
+      "git_blob": "38719ee15619e6a540d0fb5218fc32409c21f1d8"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/native/received-course/receiving.json",
+      "bytes": 15228,
+      "sha256": "4784edecbbe5cfaeab1f0699275a7e319f0f3b023c6cf8068a5a8e900f00bfa2",
+      "git_blob": "7263f578848564b6864d94d0d6e9d302a3a13c75"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/native/run_two_modules.py",
+      "bytes": 8049,
+      "sha256": "7c3e1e0ca3d1df1c4da5ea29ffad277b7eeeae2420b28e49c44755b360f2d2ab",
+      "git_blob": "70e1e1b7df489d531618390890fb17975c36c4a0"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/native/source/LICENSE",
+      "bytes": 1070,
+      "sha256": "f6a3d0f7d08a7590f907c08d6127545ab44eff0d23b6074714ad3fb935b998bb",
+      "git_blob": "edb188254288b40f2895833e3647b7e0be34c962"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/native/source/pt_auth/CALENDAR_RECEIPTS.md",
+      "bytes": 4541,
+      "sha256": "379fa9fbc54694460d1809cde7eb7934c50e0257f27c474f1c918b5787da6485",
+      "git_blob": "a4a55efba02796069bbd974ab2d9de3060da5428"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/native/source/pt_auth/README.md",
+      "bytes": 23423,
+      "sha256": "dcdfefc4009aa5a03d49135639519b92f301a6f48468051fba7a6075836739a8",
+      "git_blob": "23fc8292665136a70b8aa8dde7bc08ab1d3b4f21"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/native/source/pt_auth/ptauth/__init__.py",
+      "bytes": 311,
+      "sha256": "71e1527f153c607b679485e4954af1b3ec6a843b041562eb07f4d36e08fd231c",
+      "git_blob": "a6f4545ac17e2578317ef694f7bb548489f6c71c"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/native/source/pt_auth/ptauth/__main__.py",
+      "bytes": 71,
+      "sha256": "712d5a98258176d09d165788048d34da033af45c04d14387d9e51de108db5669",
+      "git_blob": "07cf8abb5a559054d4487c65a3f9f7c992067cf5"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/native/source/pt_auth/ptauth/calendar_ui.js",
+      "bytes": 8448,
+      "sha256": "b91fe76b947f381b2fa0835646fc664bf7eaa4474631ae3c9e5cb3968b9cdf3a",
+      "git_blob": "a6ba45ec85c28f7fd80d7e2fdd32ac62e96daa99"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/native/source/pt_auth/ptauth/cli.py",
+      "bytes": 5952,
+      "sha256": "995428dbf73b4e34ef7fd12093b4072f5015b10a85ce44e9c40d90cd02fd3cab",
+      "git_blob": "8d6b43649bc6c142c28f71646485a31f6a6bbf55"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/native/source/pt_auth/ptauth/data.py",
+      "bytes": 10725,
+      "sha256": "b16d31711e678e3d25c9cf867098de93645298410985b96248e03ac3133adf19",
+      "git_blob": "886b2d75050f302acb101ab4f5bf8473b7573b8f"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/native/source/pt_auth/ptauth/engine.py",
+      "bytes": 16057,
+      "sha256": "bfa7049e9b133d654ce947b135c17ac401bd7b1fcd76350bdb10de5b7a1ad1f7",
+      "git_blob": "39c97f35d61ff949b5c2381f0ad60d7af8d74226"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/native/source/pt_auth/ptauth/report.py",
+      "bytes": 10743,
+      "sha256": "20cbc86e153b9af5151fd3e74cb370298de4692c81b3546a214eb2cfa8307df7",
+      "git_blob": "2ce82b1712e5c6fc03374d38996eceddf31782f0"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/native/source/pt_auth/ptauth/synth.py",
+      "bytes": 8873,
+      "sha256": "b82a34447e43dacbe46ed06e60b693ed216e87f15892ae297c682aa5a3f139fd",
+      "git_blob": "2ff6a2548bf55a812cfa62e397442a0d3f7debbb"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/native/source/pt_auth/ptauth/ui.html",
+      "bytes": 18655,
+      "sha256": "a59df72e1edf5075e513047eb4000e94a87bf1dbcde8d243547944c283bbd492",
+      "git_blob": "ec2e198ee1873c41981d201c78a63dbccc13afad"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/native/source/pt_auth/ptauth/uncovered.py",
+      "bytes": 4319,
+      "sha256": "21e92509df706e504a8630f3383ea4fe98d03047d2e4b070f3fdd188d995350e",
+      "git_blob": "9ab21781c4116dd0b9b76ac0116868898f3ee7d4"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/native/source/pt_auth/ptauth/web.py",
+      "bytes": 8633,
+      "sha256": "18a5f6e889f2a5d7e0e3704989f041681252df3ee0cb29e3c356aff560fd2967",
+      "git_blob": "7e5d38f4cf8c33f4b9c91bd3c3d929fcfa0f80b3"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/native/source/pt_auth/ptauth/worklist_calendar.py",
+      "bytes": 13750,
+      "sha256": "89751f1de5548ced34a59c296d0edf1eda06a38bdb935be3e7c3c8b2ae5d55c0",
+      "git_blob": "e125f9ed77343fcc3d82e6d6f25a7296b0463aa7"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/native/source/pt_auth/tests/test_calendar_receipt_output.py",
+      "bytes": 8759,
+      "sha256": "faefd09f9a03becd100ca50d2ed7ed23a48d4f256fcecb23fab3680134d62c68",
+      "git_blob": "3264d6566e4ce482b47e05b5161a4a35bc74df56"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/native/source/pt_auth/tests/test_cli_date_admission.py",
+      "bytes": 4814,
+      "sha256": "e99ab4925bece8148c5093929d4d13fae158ebc64571e7ac5f046ad4d6114ab4",
+      "git_blob": "faf307640652fb548dcb09a2cea0e226bb1b7689"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/native/staging-admission.json",
+      "bytes": 4687,
+      "sha256": "936b554549a14632526f80ce1dfcfdce688b81b782383b83da668af949158bcb",
+      "git_blob": "4c1ad10d9260e1f76b6ac3cd13723eeec996f5e8"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/native/packet-manifest.json",
+      "bytes": 6775,
+      "sha256": "927e6172912bf6d330173cc21294845d2f73bccfc39ed1e17cd12bfd0c303d4f",
+      "git_blob": "ee03b826deb77f1a29caaa4db9d8f668ec6dea64"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/native/native-export-manifest.json",
+      "bytes": 48271,
+      "sha256": "e07555afddae62be72e929f5a49b9cf51b964b534759da9a30bfea4f00bac299",
+      "git_blob": "856f42f777fcd17d45b27804683f1c7ec43df472"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/native/outer-observer.json",
+      "bytes": 1523,
+      "sha256": "6a9c407f75a39c59fd4dae080a74f15fc3b8dc12abcdbb19115b8f37455e39bc",
+      "git_blob": "9c40b081a8231aa41baa5994e7c983e8b822a128"
+    },
+    {
+      "path": "docs/qualification/pt-composed-portable-3776d8cfc208/native/full-body-readback.json",
+      "bytes": 4698,
+      "sha256": "c798e33c48071ac90f373a19f711a574ab2d1657dd5ced34b61e3d20854e2863",
+      "git_blob": "4747e0993530f343f3b27ad6ae666b5549d1088a"
+    }
+  ],
+  "scope": "Selected raw composition, five-child workflow and native two-module evidence. Complete Git inventories recoverable by exact tree IDs; full native temporary fixtures are represented by their retained export manifest. No runtime replay."
+}

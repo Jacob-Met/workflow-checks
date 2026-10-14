@@ -1,0 +1,53 @@
+{
+  "commit": {
+    "sha": "69f3c8e0577b579ee36256da0a075fccb201af8f",
+    "node_id": "C_kwDOU7AEu9oAKDY5ZjNjOGUwNTc3YjU3OWVlMzYyNTZkYTBhMDc1ZmNjYjIwMWFmOGY",
+    "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/commits/69f3c8e0577b579ee36256da0a075fccb201af8f",
+    "html_url": "https://github.com/Jacob-Met/workflow-checks/commit/69f3c8e0577b579ee36256da0a075fccb201af8f",
+    "author": {
+      "name": "Jacob Metoyer",
+      "email": "150724801+Jacob-Met@users.noreply.github.com",
+      "date": "2026-10-14T02:34:38Z"
+    },
+    "committer": {
+      "name": "Jacob Metoyer",
+      "email": "150724801+Jacob-Met@users.noreply.github.com",
+      "date": "2026-10-14T02:34:38Z"
+    },
+    "tree": {
+      "sha": "3c2a77730ab23915fb5a33ae02b70497812da7c7",
+      "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/trees/3c2a77730ab23915fb5a33ae02b70497812da7c7"
+    },
+    "message": "Compose PT date admission and calendar receipts for portable use [skip ci] [skip actions]\n\nResolve the sole CLI overlap with the reviewed exact four date lines and two calendar regions. Preserve both reviewed histories and completed calendar delivery evidence. Independent workflow: 68 assertions across five CLI children; unchanged focused native tests: 19 passed. Opt-in source for issue #116; no main or deployment change.\n\n\nskip-checks: true",
+    "parents": [
+      {
+        "sha": "c95c3eaec22fd5bbafeb210a2ae99a470dc2e84a",
+        "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/commits/c95c3eaec22fd5bbafeb210a2ae99a470dc2e84a",
+        "html_url": "https://github.com/Jacob-Met/workflow-checks/commit/c95c3eaec22fd5bbafeb210a2ae99a470dc2e84a"
+      },
+      {
+        "sha": "58305dd238db2b660bbfe6e0091f7d8806d9a74d",
+        "url": "https://api.github.com/repos/Jacob-Met/workflow-checks/git/commits/58305dd238db2b660bbfe6e0091f7d8806d9a74d",
+        "html_url": "https://github.com/Jacob-Met/workflow-checks/commit/58305dd238db2b660bbfe6e0091f7d8806d9a74d"
+      }
+    ],
+    "verification": {
+      "verified": false,
+      "reason": "unsigned",
+      "signature": null,
+      "payload": null,
+      "verified_at": null
+    }
+  },
+  "cli": {
+    "content": "\"\"\"CLI: python -m ptauth <generate|run|calendar|serve> ...\"\"\"\r\nfrom __future__ import annotations\r\n\r\nimport argparse\r\nimport sys\r\nfrom datetime import date\r\nfrom pathlib import Path\r\n\r\n\r\ndef main(argv=None) -> int:\r\n    ap = argparse.ArgumentParser(prog=\"ptauth\", description=\"PT authorization tracker (PoC, synthetic data)\")\r\n    sub = ap.add_subparsers(dest=\"cmd\", required=True)\r\n    g = sub.add_parser(\"generate\", help=\"write SYNTHETIC sample data\")\r\n    g.add_argument(\"--out\", default=\"sample_data\")\r\n    g.add_argument(\"--patients\", type=int, default=40)\r\n    g.add_argument(\"--seed\", type=int, default=21)\r\n    g.add_argument(\"--as-of\", type=date.fromisoformat, default=date(2026, 9, 28))\r\n    r = sub.add_parser(\"run\", help=\"build ledger + daily worklist\")\r\n    r.add_argument(\"--data\", default=\"sample_data\")\r\n    r.add_argument(\"--out\", default=\"out\")\r\n    r.add_argument(\"--as-of\", type=date.fromisoformat, default=None, help=\"YYYY-MM-DD (default: sample's as_of, else today)\")\r\n    cal = sub.add_parser(\"calendar\", help=\"export dated open/submitted items from a saved report\")\r\n    cal.add_argument(\"--report\", default=\"out\", help=\"existing report directory; never runs the engine\")\r\n    cal.add_argument(\"--output\", required=True, help=\"new .ics file (existing paths are refused)\")\r\n    cal.add_argument(\"--priority\", choices=(\"P1\", \"P2\", \"P3\"))\r\n    cal.add_argument(\"--clinic\", help=\"exact recorded clinic name\")\r\n    cal.add_argument(\"--key\", action=\"append\", help=\"exact work-item key; repeat to select several\")\r\n    s = sub.add_parser(\"serve\", help=\"local UI on 127.0.0.1\")\r\n    s.add_argument(\"--data\", default=\"sample_data\")\r\n    s.add_argument(\"--out\", default=\"out\")\r\n    s.add_argument(\"--port\", type=int, default=8766)\r\n    for command in (r, s):\r\n        command.add_argument(\"--clinic-timezone\", default=None, metavar=\"IANA_ZONE\",\r\n                             help=\"clinic zone for offset-bearing timestamps (default: system local)\")\r\n    a = ap.parse_args(argv)\r\n\r\n    if a.cmd == \"generate\":\r\n        from .synth import generate\r\n        exp = generate(Path(a.out), a.patients, a.seed, a.as_of)\r\n        print(f\"SYNTHETIC data written to {a.out} ({a.patients} fake patients, as_of {a.as_of}); \"\r\n              f\"seeded: {len(exp['uncovered_scheduled'])} uncovered visits, {len(exp['reauth_due'])} re-auths due\")\r\n        return 0\r\n    if a.cmd == \"run\":\r\n        from .data import InputError\r\n        from .report import run\r\n        try:\r\n            s = run(Path(a.data), Path(a.out), a.as_of,\r\n                    clinic_timezone=a.clinic_timezone)\r\n        except (InputError, FileNotFoundError) as e:\r\n            print(f\"ERROR: {e}\\nCheck the input settings and files and run again; no outputs were written.\", file=sys.stderr)\r\n            return 2\r\n        c = s[\"counts\"]\r\n        print(f\"[SYNTHETIC] as_of {s['as_of']}: {c['patients']} patients, {c['visits']} visits, {c['auths']} auths\")\r\n        print(f\"clinic time zone: {s['clinic_timezone']}\")\r\n        print(f\"worklist: {c['worklist']} items (P1 {c['p1']}, P2 {c['p2']}, P3 {c['p3']}); \"\r\n              f\"{c['uncovered_scheduled']} scheduled visits uncovered; {c['unauthorized_done']} completed w/o auth\")\r\n        for x in s[\"worklist\"][:12]:\r\n            print(f\"  {x['priority']} {x['patient_id']} {x['payer_id']:<9} {x['auth_no'] or '-':<11} \"\r\n                  f\"{','.join(x['reasons']):<34} submit_by={x['submit_by'] or '-'}\")\r\n        if len(s[\"worklist\"]) > 12:\r\n            print(f\"  ... {len(s['worklist']) - 12} more in {a.out}/worklist.csv\")\r\n        print(f\"{c['past_scheduled']} past scheduled visits need status review: \"\r\n              f\"{Path(a.out) / 'visit_status_review.csv'}\")\r\n        print(f\"{c['uncovered_scheduled'] + c['unauthorized_done']} uncovered visits to inspect: \"\r\n              f\"{Path(a.out) / 'uncovered_visits.csv'}\")\r\n        print(f\"digest: {Path(a.out) / 'digest.html'}\")\r\n        return 0\r\n    if a.cmd == \"calendar\":\r\n        import json\r\n        from .worklist_calendar import (CalendarInputError, calendar_metadata, load_report,\r\n                                        prepare_calendar, render_calendar, write_calendar)\r\n        try:\r\n            plan = prepare_calendar(load_report(Path(a.report)), a.key,\r\n                                    priority=a.priority, clinic=a.clinic)\r\n            content = render_calendar(plan)\r\n            write_calendar(Path(a.output), content)\r\n        except (CalendarInputError, OSError) as e:\r\n            _calendar_error(f\"ERROR: {e}\")\r\n            return 2\r\n        try:\r\n            print(json.dumps({**calendar_metadata(plan), \"output\": str(Path(a.output))},\r\n                             ensure_ascii=True), flush=True)\r\n        except (OSError, UnicodeError):\r\n            _calendar_error(\"ERROR: The calendar was created, but its receipt could not be delivered. \"\r\n                            \"Inspect the destination before retrying.\")\r\n            return 2\r\n        return 0\r\n    if a.cmd == \"serve\":\r\n        from .data import InputError\r\n        from .web import serve\r\n        try:\r\n            serve(Path(a.data), Path(a.out), a.port, clinic_timezone=a.clinic_timezone)\r\n        except InputError as e:\r\n            print(f\"ERROR: {e}\", file=sys.stderr)\r\n            return 2\r\n        return 0\r\n    return 1\r\n\r\n\r\ndef _calendar_error(message: str) -> None:\r\n    \"\"\"Best-effort ASCII diagnostic; the operation retains its status.\"\"\"\r\n    try:\r\n        print(message.encode(\"ascii\", \"backslashreplace\").decode(\"ascii\"),\r\n              file=sys.stderr, flush=True)\r\n    except (OSError, UnicodeError):\r\n        pass\r\n\r\n\r\ndef _entrypoint() -> int:\r\n    \"\"\"Direct invocation alone owns failed stdout shutdown handling.\"\"\"\r\n    status = main()\r\n    if status == 2:\r\n        try:\r\n            sys.stdout.flush()\r\n        except (OSError, UnicodeError):\r\n            sys.stdout = None\r\n    return status\r\n\r\n\r\nif __name__ == \"__main__\":\r\n    sys.exit(_entrypoint())\r\n",
+    "encoding": "utf-8",
+    "sha": "8d6b43649bc6c142c28f71646485a31f6a6bbf55",
+    "display_url": "https://github.com/Jacob-Met/workflow-checks/blob/69f3c8e0577b579ee36256da0a075fccb201af8f/pt_auth/ptauth/cli.py",
+    "display_title": "cli.py"
+  },
+  "runs": {
+    "total_count": 0,
+    "workflow_runs": []
+  }
+}
