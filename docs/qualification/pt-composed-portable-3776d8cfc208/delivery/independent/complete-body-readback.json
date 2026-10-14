@@ -1,0 +1,24 @@
+{
+  "schema": "pt.composed-kit.complete-body-readback/1",
+  "repository": "Jacob-Met/workflow-checks",
+  "immutable_tree_commit": "979c2a3c9a4f7614a9fa2180bff351bcd621a615",
+  "passed": true,
+  "native_paths": 43,
+  "native_bytes": 716364,
+  "native_unique_bodies": 43,
+  "manifest_blob": "a5007e6d823d57ba5b91cefaab3284d6aeb64800",
+  "text_route": {
+    "native_bodies": 42,
+    "manifest_bodies": 1,
+    "comparison": "Complete remote UTF8 content compared with original decoded bytes; CRLF retained, no JSON reserialization."
+  },
+  "binary_route": {
+    "path": "docs/qualification/pt-composed-portable-3776d8cfc208/delivery/independent/actual-drive.zip",
+    "encoding": "base64",
+    "bytes": 77452,
+    "sha256": "ba9941d29489f584e3fcd0b7b379b9a4de57d1fb56bede960983450650d1bd43",
+    "git_blob": "facfbd93a4d7faa331c975021d48bd97986180fd",
+    "complete_decoded_byte_equality": true
+  },
+  "scope": "Transport equality after the sole completed85-check extracted course; no package build or application rerun."
+}
