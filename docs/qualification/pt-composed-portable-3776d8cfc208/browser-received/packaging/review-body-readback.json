@@ -1,0 +1,63 @@
+{
+  "schema": "pt.ui.review-packet-body-readback/1",
+  "commit": "dede2cb99f065f492b7879296d0609d378122a32",
+  "scope": "Complete new text bodies via Git blob UTF-8 and new review ZIP via immutable contents/Base64; reused native bodies already covered by 4682b450.",
+  "texts": [
+    {
+      "path": "packaging/assemble_review.py",
+      "git_blob": "e89b34949ffe52aa5f4fa1c0f611a4b4dd8edd64",
+      "full_body_equal": true
+    },
+    {
+      "path": "packaging/drive-receiving.json",
+      "git_blob": "dd12f626f37f33a18921cfcb2eb7025de14610f2",
+      "full_body_equal": true
+    },
+    {
+      "path": "packaging/packaging-receipt.json",
+      "git_blob": "7144f9538b04db3a2bc349909ceea48a25f38779",
+      "full_body_equal": true
+    },
+    {
+      "path": "packaging/packer.stdout",
+      "git_blob": "3629a9e55a9e9c50586c79c8f6cc37eb1c37e9f1",
+      "full_body_equal": true
+    },
+    {
+      "path": "packaging/prepare_review.py",
+      "git_blob": "c4abe134d69e25f43c487587c101866d209d6912",
+      "full_body_equal": true
+    },
+    {
+      "path": "packaging/review-provenance.json",
+      "git_blob": "99f6f5c81b4d8b5d0962c78061caeb399d9cffb3",
+      "full_body_equal": true
+    },
+    {
+      "path": "review/MANIFEST.json",
+      "git_blob": "2fa786a4b4c0ec9899d1b2038edd85cb132e194b",
+      "full_body_equal": true
+    },
+    {
+      "path": "review/OPEN_REVIEW.html",
+      "git_blob": "c3938f462743e105653fede171e7de8a72444292",
+      "full_body_equal": true
+    },
+    {
+      "path": "review/START_HERE.md",
+      "git_blob": "571fb30d08b5da343827fe055fdea37302c1ea4f",
+      "full_body_equal": true
+    }
+  ],
+  "guide": {
+    "git_blob": "b0d87c9c21d55f3a8c5efea3448cbfa2e8862e5b",
+    "full_body_equal": true
+  },
+  "zip": {
+    "git_blob": "8128e03eb534fec539d432613091c6fd32355e95",
+    "bytes": 215029,
+    "full_body_equal": true,
+    "route": "immutable contents/Base64"
+  },
+  "no_runtime_repeated": true
+}
