@@ -38,8 +38,10 @@ There are two materially different situations:
 A receipt can be partly written before a stream fails. An apparent JSON value
 without a successful process status does not establish complete delivery.
 Diagnostics use ASCII escapes and are best effort: if stderr also fails, it
-cannot carry an explanation. The command keeps status `2` for handled receipt
-write/flush failures even when that diagnostic cannot be delivered.
+cannot carry an explanation. The calendar handler returns status `2` for handled
+receipt write/flush failures even when its diagnostic attempt fails. The focused
+subprocess controls cover stdout failures; they do not establish every
+interpreter shutdown channel.
 
 Both `python -m ptauth` and `python -m ptauth.cli` use a direct-entry wrapper.
 When a returned error status meets a failing stdout flush, the wrapper disables
