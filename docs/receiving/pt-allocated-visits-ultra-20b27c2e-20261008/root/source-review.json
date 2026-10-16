@@ -1,0 +1,36 @@
+{
+  "helper": "Complete source read; detached frozen dataclass rows use actual ledger membership and full auth/visit provenance.",
+  "report": "Five strictly additive spans; deleting them restores the original complete CRLF file.",
+  "ui": "Six bounded hunks: allocation-scoped CSS; auth ledger container with allocation controls; same original ledger table retargeted to its wrapper; new renderer invocation; additive CSV link; separate allocation renderer and listeners. Existing worklist, calendar, uncovered and staff-review code unchanged.",
+  "mobile_css": "Exactly132 ASCII bytes, whose removal restores original frozen candidate UI SHA0ed0.",
+  "python_syntax": "both parse; not execution",
+  "ui_syntax": {
+    "runtime": "v24.19.0",
+    "baseline": {
+      "sha256": "a59df72e1edf5075e513047eb4000e94a87bf1dbcde8d243547944c283bbd492",
+      "bytes": 18655,
+      "external": [
+        {
+          "attributes": " src=\"/calendar_ui.js\"",
+          "body": ""
+        }
+      ],
+      "inline_count": 1
+    },
+    "candidate": {
+      "sha256": "4281cb85515441e9bce852a1f842e5e55ee240228319fc9cfc566e77112bb5ef",
+      "bytes": 25487,
+      "external": [
+        {
+          "attributes": " src=\"/calendar_ui.js\"",
+          "body": ""
+        }
+      ],
+      "inline_count": 1
+    },
+    "syntax": "pass",
+    "executed": false,
+    "exit_code": 0
+  },
+  "browser_execution": "pending"
+}

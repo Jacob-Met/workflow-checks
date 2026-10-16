@@ -1,0 +1,31 @@
+{
+  "parent": "8fe2c9270f487729af9e88f40894e1c4530f2c20",
+  "base_tree": "ff97dbcf5ea9efe19e98d885c4694322a6fe627f",
+  "base_leaves": 1285,
+  "source_files": 3,
+  "pending_source_files": 4,
+  "replaced_existing": [
+    {
+      "path": "pt_auth/ptauth/report.py",
+      "sha": "2ce82b1712e5c6fc03374d38996eceddf31782f0",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "pt_auth/ptauth/ui.html",
+      "sha": "ec2e198ee1873c41981d201c78a63dbccc13afad",
+      "mode": "100644",
+      "type": "blob"
+    }
+  ],
+  "unowned_primary_leaves": 1283,
+  "owned_paths": 36,
+  "total_leaves": 1319,
+  "all_current_pt_leaves_match_qualified_primary": 118,
+  "not_claimed": [
+    "raw native packet present",
+    "final browser qualification",
+    "merge",
+    "deployment"
+  ]
+}

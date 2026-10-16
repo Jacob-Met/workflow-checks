@@ -1,0 +1,37 @@
+{
+  "source_sha256": "4281cb85515441e9bce852a1f842e5e55ee240228319fc9cfc566e77112bb5ef",
+  "runtime": "Node24.19.0",
+  "error": "Expected one inline script",
+  "phase": "Receiver asserted one inline block before any vm.Script compilation",
+  "actual_baseline_blocks": [
+    {
+      "index": 7312,
+      "chars": 0,
+      "start": "",
+      "end": ""
+    },
+    {
+      "index": 7353,
+      "chars": 11258,
+      "start": "\r\nconst $ = s => document.querySelector(s);\r\nconst esc = s => String(s ?? \"\").replace(/[&<",
+      "end": "nerate\", {seed: +$(\"#seed\").value || 21})));\r\nload(api(\"/api/summary\")).catch(() => {});\r\n"
+    }
+  ],
+  "actual_candidate_blocks": [
+    {
+      "index": 8808,
+      "chars": 0,
+      "start": "",
+      "end": ""
+    },
+    {
+      "index": 8849,
+      "chars": 16589,
+      "start": "\r\nconst $ = s => document.querySelector(s);\r\nconst esc = s => String(s ?? \"\").replace(/[&<",
+      "end": "nerate\", {seed: +$(\"#seed\").value || 21})));\r\nload(api(\"/api/summary\")).catch(() => {});\r\n"
+    }
+  ],
+  "source_changed": false,
+  "qualification": false,
+  "raw_output": "The tool reported exit1 and Error: Expected one inline script; display was truncated. This is a receiver assumption failure, not a syntax observation."
+}
