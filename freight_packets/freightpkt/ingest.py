@@ -90,6 +90,18 @@ def _check_csv_headers(
         seen[key] = (name, column)
 
 
+def _check_csv_row(reader: csv.DictReader, row: dict, path: Path) -> None:
+    """Do not silently discard values that have no declared CSV column."""
+    columns = [str(column) for column, value in enumerate(
+        row.get(None, []), start=len(reader.fieldnames or []) + 1
+    ) if value != ""]
+    if columns:
+        raise ValueError(
+            f"{path.name}: CSV row ending at line {reader.line_num} has "
+            f"nonempty values beyond the header in columns {', '.join(columns)}"
+        )
+
+
 def _resolve_headers(fieldnames: list[str]) -> dict[str, str]:
     lower = {f.strip().lower(): f for f in fieldnames}
     out = {}
@@ -130,6 +142,7 @@ def load_telematics(path: Path) -> list[StopEvent]:
             _check_csv_headers(reader, path, normalize=True)
             h = _resolve_headers(reader.fieldnames or [])
             for i, r in enumerate(reader, start=2):
+                _check_csv_row(reader, r, path)
                 events.append(StopEvent(
                     asset=r[h["asset"]].strip(),
                     driver=r.get(h.get("driver", ""), "").strip() if "driver" in h else "",
@@ -152,6 +165,7 @@ def load_loads(path: Path) -> list[Load]:
         reader = csv.DictReader(fh)
         _check_csv_headers(reader, path)
         for i, r in enumerate(reader, start=2):
+            _check_csv_row(reader, r, path)
             lid = r["load_id"].strip()
             source = f"{path.name}:row{i}"
             if lid in seen:
@@ -211,6 +225,7 @@ def load_tracking_stops(path: Path) -> list[StopEvent]:
         if missing:
             raise ValueError(f"tracking export missing columns: {sorted(missing)}")
         for i, r in enumerate(reader, start=2):
+            _check_csv_row(reader, r, path)
             load = r[h["load"]].strip()
             stop = r[h["stop"]].strip()
             src = f"{path.name}:row{i}"
@@ -244,6 +259,7 @@ def load_invoices(path: Path) -> list[Invoice]:
         reader = csv.DictReader(fh)
         _check_csv_headers(reader, path)
         for i, r in enumerate(reader, start=2):
+            _check_csv_row(reader, r, path)
             key = (r["invoice_no"].strip(), r["load_id"].strip())
             carrier = r["carrier"].strip()
             invoice_date = r["invoice_date"].strip()

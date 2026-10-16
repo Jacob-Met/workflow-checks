@@ -125,6 +125,14 @@ Unreviewed, cleared, stale, unbound and current decisions keep the meanings of t
 existing per-load covers. The batch is a local draft snapshot, with no combined
 payment total or new approval. Nothing is sent, invoiced or paid.
 
+### CSV rows with undeclared values
+
+Loads, carrier invoices, geofence telematics and tracking-stop CSVs reject
+nonempty values beyond their header before changing reports or audit files.
+The error names the file, physical record-ending line and surplus columns.
+Empty extra delimiters and declared extra columns remain supported. See
+[CSV row admission](CSV_ROW_ADMISSION.md) for correction and test commands.
+
 ## Verification
 
 The freight test suite includes real local HTTP checks for unchanged and changed evidence, stale clients, missing packets, legacy decisions, history, concurrent reviews and failed writes. An optional browser check runs with an installed Playwright and Chromium: `node tests/review_browser_smoke.cjs` from `freight_packets`. Set `BROWSER_BIN` for an existing Chromium executable and `PYTHON` if the interpreter is not named `python3`. It uses a disposable synthetic fixture and local server, and retains its screenshots and receipt under the process temporary directory.
