@@ -1,0 +1,143 @@
+{
+  "schema": "hamon.freight-original-native-recovery-manifest.v1",
+  "origin": "Original native files read after host availability returned; no packager, installer, model, browser or authored-test rerun",
+  "source_root": "/dev/shm/hamon-freight-source-cd1df0f1ee24",
+  "source_stage": "11e159f914617517e2322bdeb89de5e27007dcc5",
+  "published_input_comparison": "6da2c7c2867e6eeb9d11a097a14d977a2b010b70",
+  "native_delivery_python": "3.14.4",
+  "native_author_node": "v22.22.1",
+  "read_only_recovery_processes": [
+    {
+      "pid": 1998338,
+      "exit_code": 0,
+      "purpose": "Read ZIP and seven original delivery files",
+      "seconds": 0.48
+    },
+    {
+      "pid": 2077688,
+      "exit_code": 0,
+      "purpose": "Read original authored-test receipt/raw streams and original runners",
+      "seconds": 1.54
+    }
+  ],
+  "derived_transport": {
+    "path": "native-delivery-recovery-v1.json",
+    "bytes": 56149,
+    "sha256": "f905dfa398159d601af81d95a129f9204622c8b002a792aa529ab14cf7a53a21",
+    "git_blob": "9a42aa4d2ea0df078e2a9c62a3ed5788f00f689c",
+    "meaning": "Derived base64 transport read back on native host; original file bodies are published separately below."
+  },
+  "files": [
+    {
+      "published_path": "demos/freight-whatif/dist/freight-whatif.zip",
+      "original_name": "freight-whatif.zip",
+      "bytes": 29559,
+      "sha256": "51a97be506fc3900e05b487939171fca8e63d701ccd4cfa070b9e55096f737d6",
+      "git_blob": "66c8f3cfac37164349f75bcd33fc6b57db83c58e"
+    },
+    {
+      "published_path": "demos/freight-whatif/evidence/bundle-receipt.json",
+      "original_name": "package-receipt.json",
+      "bytes": 690,
+      "sha256": "eef49c97d5ba86c9a60f26f393e458e57e5ede01e597e08c9349b1833c31e460",
+      "git_blob": "9e59a702e3902838badd27cd2b26069dbb9b863f"
+    },
+    {
+      "published_path": "docs/receiving/freight-record-resume-cd1df0f1ee24/native-delivery/package-receipt.json",
+      "original_name": "package-receipt.json",
+      "bytes": 690,
+      "sha256": "eef49c97d5ba86c9a60f26f393e458e57e5ede01e597e08c9349b1833c31e460",
+      "git_blob": "9e59a702e3902838badd27cd2b26069dbb9b863f"
+    },
+    {
+      "published_path": "docs/receiving/freight-record-resume-cd1df0f1ee24/native-delivery/receipt.json",
+      "original_name": "receipt.json",
+      "bytes": 6757,
+      "sha256": "0daa91bc2f3adc3dd0a30ab6bf3b427c56df8e08ac07bd28b8ef6dc466987287",
+      "git_blob": "06de596ec0b64b9343a1c1607dd1c55e8e3de7fe"
+    },
+    {
+      "published_path": "docs/receiving/freight-record-resume-cd1df0f1ee24/native-delivery/packager.stdout.txt",
+      "original_name": "packager.stdout.txt",
+      "bytes": 624,
+      "sha256": "7255b0a2b45d8a2e13ded7af98244614f7dac7a3b2fefce0fdb90e03873432a8",
+      "git_blob": "baf8b33551f23bb8a7a53c1d0932cc56f9b5956e"
+    },
+    {
+      "published_path": "docs/receiving/freight-record-resume-cd1df0f1ee24/native-delivery/packager.stderr.txt",
+      "original_name": "packager.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "published_path": "docs/receiving/freight-record-resume-cd1df0f1ee24/native-delivery/installer-receipt.json",
+      "original_name": "installer-receipt.json",
+      "bytes": 1494,
+      "sha256": "a6386e8d79acae8af27d2adcbf9d712fb15e8c8d782bb923882018c30f6f677b",
+      "git_blob": "75f077eeacea8cfb46e9dabc5442a6190e0cc587"
+    },
+    {
+      "published_path": "docs/receiving/freight-record-resume-cd1df0f1ee24/native-delivery/installer.stdout.txt",
+      "original_name": "installer.stdout.txt",
+      "bytes": 1414,
+      "sha256": "b6f110c206c9a17d90ed65ab4275dbca19401277fe154fb49e15bd3a06642915",
+      "git_blob": "78a2e4bf8dbe02f7e45af9579db986b758549621"
+    },
+    {
+      "published_path": "docs/receiving/freight-record-resume-cd1df0f1ee24/native-delivery/installer.stderr.txt",
+      "original_name": "installer.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "published_path": "docs/receiving/freight-record-resume-cd1df0f1ee24/author/receipt.json",
+      "original_name": "evidence/module-v1/receipt.json",
+      "bytes": 1200,
+      "sha256": "00438146a3305b1f5c4fef9211ce40a7cff4477d58ff9dd446a4fe7a1512a0de",
+      "git_blob": "a643f3219cc0d783630e23c3721117903a90bbdf"
+    },
+    {
+      "published_path": "docs/receiving/freight-record-resume-cd1df0f1ee24/author/stdout.txt",
+      "original_name": "evidence/module-v1/stdout.txt",
+      "bytes": 2216,
+      "sha256": "bbe674c2993c9555fc32ffe58175192451da8be945631fe9b9e9fcc71f02ab8c",
+      "git_blob": "1f5226456c266f36c68dbe4b43c62f06df0d379c"
+    },
+    {
+      "published_path": "docs/receiving/freight-record-resume-cd1df0f1ee24/author/stderr.txt",
+      "original_name": "evidence/module-v1/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "published_path": "docs/receiving/freight-record-resume-cd1df0f1ee24/author/runner.py",
+      "original_name": "run-module-v1.py",
+      "bytes": 1300,
+      "sha256": "24ffcead6cb8f1911f560409d29ecca2033a6a69946812401978165ac692b704",
+      "git_blob": "ba11a9f07508613dcbb906897579a77aa225a529"
+    },
+    {
+      "published_path": "docs/receiving/freight-record-resume-cd1df0f1ee24/native-delivery/runner.py",
+      "original_name": "run-delivery-v1.py",
+      "bytes": 2132,
+      "sha256": "5b8278cc23bd5f693ff13e07f5b228183ee55ee7cbbf5b99ca62e6ea9744ffe1",
+      "git_blob": "91349f47dae5122ab95d4389aa1e6830d980b65e"
+    },
+    {
+      "published_path": "docs/receiving/freight-record-resume-cd1df0f1ee24/independent-admission/admission-candidate-v1.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    }
+  ],
+  "unused_hosted_fallback": {
+    "executed": false,
+    "published_workflow": false,
+    "producer_git_blob": "ea2e7718bffcad106f6c568ec18954986bde5473",
+    "workflow_git_blob": "4238acc526d792587dbb337946e8a499ee84392e",
+    "meaning": "Reviewed unexecuted source checkpoints only; not the origin of this recovered archive."
+  }
+}

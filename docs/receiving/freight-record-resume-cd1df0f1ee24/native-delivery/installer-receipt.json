@@ -1,0 +1,27 @@
+{
+  "schema": "freight-whatif.install-receipt.v1",
+  "python": "3.14.4",
+  "passed": 6,
+  "failed": 0,
+  "checks": [
+    "new installation and every file read back exact",
+    "existing target refused without changing bytes",
+    "edited install refused by rollback; edit and sibling retained",
+    "unexpected file refused by rollback and retained",
+    "verified rollback removes only the installation",
+    "final reinstallation retained with exact source and sibling readback"
+  ],
+  "source_sha256": {
+    "app.mjs": "52e047f7c691f15085cfcefd5d01755e9d00382f6e7a5c46b8daa043871190d2",
+    "data.mjs": "c5b8819e50961180208fa8dd4951f6a559b28cc4467c52dd2a68abeeb1b25d81",
+    "index.html": "fb22bce7a5154df3b90df0a1cd0d7b4881500f46259472727040ee17c3493f8f",
+    "model.mjs": "88e3d460da6f421e937cf54b21207da95734db3de3d5932235b1ec001be52590",
+    "scenario-record.mjs": "435d882090273e1315b156b4bca402314553bd80ad35a5592353e1fbddf2c8eb",
+    "styles.css": "c000a502c3167bd9b6f2e6d786eae861e2f61800ade2da5bde863f906df500ae"
+  },
+  "installed_site": "/dev/shm/hamon-freight-source-cd1df0f1ee24/evidence/delivery-v1/install-work/installed-site",
+  "installer_sha256": "dbc8ee1a675c6fdd4d579eb64c44714e3a598fa272700bc96566c4287b7e5a86",
+  "test_sha256": "de4020dee5dbd845d62d187ebfa55f301f1fc664d33de11d83e7e324d5b513b5",
+  "sibling_control_sha256": "3e0089b05d14c717d52ba6efab9fb538cb5d1c08ba1dbb6dd183bf08645e5130",
+  "disposition": "Final static installation retained; no server activated."
+}

@@ -1,0 +1,704 @@
+{
+  "format": "estate-receiving-freeze/1",
+  "frozen_at": "2026-10-08T20:06:36.747Z",
+  "repository": "Jacob-Met/workflow-checks",
+  "issue": 60,
+  "preImplementation": true,
+  "counts": {
+    "accepted": 28,
+    "refused": 103,
+    "total": 131
+  },
+  "members": [
+    {
+      "path": "baseline-source-manifest.json",
+      "bytes": 918,
+      "sha256": "1158ba62bbb4b4805cb07a5a10724e2d1f65d8b664227baad28b7e8174992c07"
+    },
+    {
+      "path": "baseline-source/app.mjs",
+      "bytes": 16038,
+      "sha256": "1555885a0f319407a0dd412599a5b6022ea048eadbad7a0259f3734a6d2e642f"
+    },
+    {
+      "path": "baseline-source/data.mjs",
+      "bytes": 4103,
+      "sha256": "c5b8819e50961180208fa8dd4951f6a559b28cc4467c52dd2a68abeeb1b25d81"
+    },
+    {
+      "path": "baseline-source/model.mjs",
+      "bytes": 8946,
+      "sha256": "88e3d460da6f421e937cf54b21207da95734db3de3d5932235b1ec001be52590"
+    },
+    {
+      "path": "contract-v1.json",
+      "bytes": 9181,
+      "sha256": "3713b8fb96f560689bdcba78985917bc3bf988fc884209622016fd6bac5f09d2"
+    },
+    {
+      "path": "fixture-index-v1.json",
+      "bytes": 179760,
+      "sha256": "9695e82b5749e80f9531ad1916bcddfb5a40d83f37ffe874abe3506f40f421e8"
+    },
+    {
+      "path": "fixtures-v1/accept-bom-crlf.json",
+      "bytes": 5528,
+      "sha256": "a6743d428489ed145c008e67c93be7eeac02d7d1488a239ea72e19fb43e39232"
+    },
+    {
+      "path": "fixtures-v1/accept-exact-byte-limit.json",
+      "bytes": 1048576,
+      "sha256": "f2181b77cbd7e20b1ec9753224a03854b1250867032dc9cb9f9e5b28c0d71ac9"
+    },
+    {
+      "path": "fixtures-v1/accept-fuel-30000.json",
+      "bytes": 5801,
+      "sha256": "b2c121d44cb3b9764f1b5ed147a1cb2e6cda4f977979af67727ae2cd6d42c997"
+    },
+    {
+      "path": "fixtures-v1/accept-future-observation.json",
+      "bytes": 5357,
+      "sha256": "e1a07966cdada4b0e95a42f0ecbe759305aabaf460bf4289b572b0b6be703cf3"
+    },
+    {
+      "path": "fixtures-v1/accept-incomplete-ratecon.json",
+      "bytes": 5434,
+      "sha256": "fca94e64c8f9e10d10bbef3067a7bde9cc1a12bde6b66ac30903bcd0d4c542c4"
+    },
+    {
+      "path": "fixtures-v1/accept-leap-day.json",
+      "bytes": 5357,
+      "sha256": "5d13d9fa3c057f5cc81d860dec9ca12b16a69c6ff50a14ee525fc5ad239b5d3a"
+    },
+    {
+      "path": "fixtures-v1/accept-literal-filename.json",
+      "bytes": 5357,
+      "sha256": "35c94d096e70aeacbd5f0cfa640d62a605e7073c1d68963889eea59a44744e33"
+    },
+    {
+      "path": "fixtures-v1/accept-maximum-invoice.json",
+      "bytes": 7641,
+      "sha256": "966e00ca7d0f1c4ae14aa96a8339e52b759c445bc8ab2a32a46a03d8506a3cb5"
+    },
+    {
+      "path": "fixtures-v1/accept-maximum-terms.json",
+      "bytes": 5345,
+      "sha256": "e3bf39065ba89a5179d59e844b0b48c4f5636273c01d14327aa6f822f6fef39d"
+    },
+    {
+      "path": "fixtures-v1/accept-missing-pod.json",
+      "bytes": 5785,
+      "sha256": "da0940e939cf7a3ce1237a85e382ca2431c8650eec6afd9bdfe40b333f7c8bc3"
+    },
+    {
+      "path": "fixtures-v1/accept-negative-comparison.json",
+      "bytes": 5406,
+      "sha256": "5c21c3628d8b583d3712053e5214eb83080cdb5a3f9446d609e026a05b52ea06"
+    },
+    {
+      "path": "fixtures-v1/accept-negative-zero.json",
+      "bytes": 3983,
+      "sha256": "619f60aa339d9f294a5067d4c689e9c699b981f239cbe98ed1194981e93ad67b"
+    },
+    {
+      "path": "fixtures-v1/accept-no-tracking.json",
+      "bytes": 5239,
+      "sha256": "10e4bcb813e227c7768b06c53e2a78ed161eb72580958d0174e9925910236b74"
+    },
+    {
+      "path": "fixtures-v1/accept-null-cap.json",
+      "bytes": 5356,
+      "sha256": "eb3d565f2c690d932bf6fb9168cd8e26284f61aed00f7bbfab0c40bfffe00f6a"
+    },
+    {
+      "path": "fixtures-v1/accept-old-observation.json",
+      "bytes": 5357,
+      "sha256": "b654d88ac0328e5a1298319a31651f7036305964d90a72a9224e902aa37dbb4d"
+    },
+    {
+      "path": "fixtures-v1/accept-outside-arrival-window.json",
+      "bytes": 5267,
+      "sha256": "ac6c78915be75c3c4a81bcafaeae5291006ce5852424ef316272c98009296c7b"
+    },
+    {
+      "path": "fixtures-v1/accept-overlong-tracking.json",
+      "bytes": 5303,
+      "sha256": "eb6e73d0ae935757bc5976c3c5aafa037b7dfb8e53e18a01e977593838ed6122"
+    },
+    {
+      "path": "fixtures-v1/accept-preset-late-arrival.json",
+      "bytes": 5321,
+      "sha256": "416ab49ccc9355e20d5af5d7beacdad7d0acd555c405773174d1c72fb34ed120"
+    },
+    {
+      "path": "fixtures-v1/accept-preset-long-dwell.json",
+      "bytes": 5357,
+      "sha256": "35c94d096e70aeacbd5f0cfa640d62a605e7073c1d68963889eea59a44744e33"
+    },
+    {
+      "path": "fixtures-v1/accept-preset-missing-exit.json",
+      "bytes": 5214,
+      "sha256": "15c7c1bf2726631512b648a756167591a0636da1e3bb75b43db06af55bb9fc34"
+    },
+    {
+      "path": "fixtures-v1/accept-preset-within-free.json",
+      "bytes": 4274,
+      "sha256": "7ccac1c4fffe4a9b180b19d23f18782328befb8a1b658b7222998e9f775132a9"
+    },
+    {
+      "path": "fixtures-v1/accept-reordered-keys.json",
+      "bytes": 3982,
+      "sha256": "a6282cc5f3268cf68350ea78dae6c2e7efbb37a3b559d1f3bfd1e4eecc2088c4"
+    },
+    {
+      "path": "fixtures-v1/accept-reversed-tracking.json",
+      "bytes": 5303,
+      "sha256": "0287f3787a376bbbbd46068db72c502ed9dd243974a9a60a0b28a8686cca8212"
+    },
+    {
+      "path": "fixtures-v1/accept-year-1900.json",
+      "bytes": 5357,
+      "sha256": "fceda8e1340397fb61a9a249cf2fb86d7b8f22f4b0ed91742120417f35a8e6bf"
+    },
+    {
+      "path": "fixtures-v1/accept-year-2100.json",
+      "bytes": 5357,
+      "sha256": "f2fe2fb241c41040a970b85d1becbb9a3c7c348993d9a5dbcde53e513fe54037"
+    },
+    {
+      "path": "fixtures-v1/accept-zero-cap.json",
+      "bytes": 5378,
+      "sha256": "d8cc915af29de03ff381056832138ad9f24520bff643d8cd81e0c311e5c609b1"
+    },
+    {
+      "path": "fixtures-v1/accept-zero-header.json",
+      "bytes": 5751,
+      "sha256": "1940ab141987505004317b6af8788eedb20475c2505bbcf2aa6c9b65d65323b5"
+    },
+    {
+      "path": "fixtures-v1/accept-zero-terms.json",
+      "bytes": 5327,
+      "sha256": "c84ce04052a471ecc7a982ef01902d4d20680aa808e97aea81a21b4ba849b6e5"
+    },
+    {
+      "path": "fixtures-v1/reject-appointment-null.json",
+      "bytes": 5343,
+      "sha256": "ffce6f62665396e9ef5b808f349091350518c528cbedbdbd6e27bfbb0d7a378d"
+    },
+    {
+      "path": "fixtures-v1/reject-baseline-amount.json",
+      "bytes": 5357,
+      "sha256": "71213063c68f2b81442e7e6775ceb8d2a6ea7cc8eb9cbf74f3356745739d31e8"
+    },
+    {
+      "path": "fixtures-v1/reject-boolean-null.json",
+      "bytes": 5357,
+      "sha256": "629a25b76969b9bf11a1bc055ce0433bc76b559b3aa9243038311c2c84e39a79"
+    },
+    {
+      "path": "fixtures-v1/reject-boolean-number.json",
+      "bytes": 5354,
+      "sha256": "d968767e1533499a58546c9ba316dec4583345fd9a27f4158ac86d428b01216a"
+    },
+    {
+      "path": "fixtures-v1/reject-cap-negative.json",
+      "bytes": 5354,
+      "sha256": "614118d7c1c7ab38fb9f417ef3619ad925ff48c4213ba29b6910313124fcce6a"
+    },
+    {
+      "path": "fixtures-v1/reject-coherent-noncanonical-baseline.json",
+      "bytes": 5802,
+      "sha256": "16e8e06efa5d8d33769a31867e4d57ef41925578f5f1b776a66079c19775196c"
+    },
+    {
+      "path": "fixtures-v1/reject-comparison-delta.json",
+      "bytes": 5357,
+      "sha256": "985b123c6eadee66b2066d2fafbce1d98c57d88c275b8335e88ba04c91f84aa0"
+    },
+    {
+      "path": "fixtures-v1/reject-comparison-flag.json",
+      "bytes": 5379,
+      "sha256": "68bcf8014e0d8b43210cffa54dfed33dd9ea15249abae9ed31bd868787a1c50a"
+    },
+    {
+      "path": "fixtures-v1/reject-contract-identity.json",
+      "bytes": 5357,
+      "sha256": "3441660d13b7551d95955e5de9db4da2ed2b3c11d44fcc67e95a42f86f9be3bf"
+    },
+    {
+      "path": "fixtures-v1/reject-current-amount.json",
+      "bytes": 5357,
+      "sha256": "9db4c6489666975b01c4e0a8ce3a77fe5962a1ac8d8a8bd607b74615e1098d5f"
+    },
+    {
+      "path": "fixtures-v1/reject-current-evidence.json",
+      "bytes": 5381,
+      "sha256": "ddbe85c1fc53a059a473de5de248fac12e9aa995116833d3e465cc020cc4493d"
+    },
+    {
+      "path": "fixtures-v1/reject-current-flags.json",
+      "bytes": 4923,
+      "sha256": "4eec0b89c83cdf9c323ac011b481a806924f828b6aa88997ac2c16550035a5ff"
+    },
+    {
+      "path": "fixtures-v1/reject-current-status.json",
+      "bytes": 5356,
+      "sha256": "80f0a2e5c20ccf1a5c1b95dd4059f7070e046a6f7be0fb21e8b4bdbe5aa0f434"
+    },
+    {
+      "path": "fixtures-v1/reject-current-total.json",
+      "bytes": 5357,
+      "sha256": "0125f6302712bc1fe380cd5c49c00257b52a216fddf44c6eed9a9857eb702422"
+    },
+    {
+      "path": "fixtures-v1/reject-date-high.json",
+      "bytes": 5357,
+      "sha256": "8155b868076b7e001bcba16b3150def03d3b2a2552108896de36112dc173f9fb"
+    },
+    {
+      "path": "fixtures-v1/reject-date-invalid.json",
+      "bytes": 5357,
+      "sha256": "54dac15045a62d0c86d017ab6fdde3af4bbd1618691592877bea8af547164264"
+    },
+    {
+      "path": "fixtures-v1/reject-date-low.json",
+      "bytes": 5357,
+      "sha256": "8c0cf4422e7b8193b7081c6a1d50aa63dadf1e8c98354ffb79030681fb1f8cf1"
+    },
+    {
+      "path": "fixtures-v1/reject-date-seconds.json",
+      "bytes": 5360,
+      "sha256": "c026fd0fefc75c71c0a1e4510d894b1bff07305f66c4fc048a628f0750b970c2"
+    },
+    {
+      "path": "fixtures-v1/reject-date-zone.json",
+      "bytes": 5358,
+      "sha256": "a4b3bef4d1a05e5477c30047b8de6d1ac56ddb93971cb72c3fb5111309256496"
+    },
+    {
+      "path": "fixtures-v1/reject-double-bom.json",
+      "bytes": 3988,
+      "sha256": "f212198b2db72e81dd9ee29804504bb644e890e3597281e0aa03ae1c1c2a4710"
+    },
+    {
+      "path": "fixtures-v1/reject-empty.json",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "fixtures-v1/reject-free-negative.json",
+      "bytes": 5356,
+      "sha256": "c6a294da3be0449b38eee6d9a1f4c53db385d69996f9383c5294c403f948ade1"
+    },
+    {
+      "path": "fixtures-v1/reject-free-over.json",
+      "bytes": 5358,
+      "sha256": "8dde56ca55ecbfc07b92ab1f2c784820429a9886696f4ac9029c2d7843d27f81"
+    },
+    {
+      "path": "fixtures-v1/reject-grace-over.json",
+      "bytes": 5359,
+      "sha256": "a055be579e83e76fcf7ff79ddd9d93f89bca8d24cba9f46b4c7c442f8a6c71a0"
+    },
+    {
+      "path": "fixtures-v1/reject-header-fraction.json",
+      "bytes": 5356,
+      "sha256": "8ecd12c86f94de6ec2b7585a9ca68232ece2dea74e7be70ebe0b256b87d1823e"
+    },
+    {
+      "path": "fixtures-v1/reject-increment-over.json",
+      "bytes": 5359,
+      "sha256": "160d8653efe35eb8d78f6796ed1d82bf3104fb6a6750df5a5cc65cf34eda3d6f"
+    },
+    {
+      "path": "fixtures-v1/reject-increment-zero.json",
+      "bytes": 5356,
+      "sha256": "28237d12f0f24d8234955dddefd5c63e53b27d04dfe300a2f3b1429b2b7f3aa7"
+    },
+    {
+      "path": "fixtures-v1/reject-integer-string.json",
+      "bytes": 5359,
+      "sha256": "ccc352a2761df164325cf0bf8ea9b9e48b307d146725e7b57767f8d93ec98388"
+    },
+    {
+      "path": "fixtures-v1/reject-leading-garbage.json",
+      "bytes": 3997,
+      "sha256": "8e31076ef264452c95abc0b967f494a3fc04062111cf57cc61c0be94071da43b"
+    },
+    {
+      "path": "fixtures-v1/reject-missing-field-appointment.json",
+      "bytes": 5316,
+      "sha256": "4962c7aef748a599b889071c6465a02b92e8ef0e33f5f0c3a7671939fd8aa339"
+    },
+    {
+      "path": "fixtures-v1/reject-missing-field-arrival.json",
+      "bytes": 5320,
+      "sha256": "019d9b5914874a3cef2518861cd7f5e96a4e1294c81c3df4f99467f15175c202"
+    },
+    {
+      "path": "fixtures-v1/reject-missing-field-departure.json",
+      "bytes": 5318,
+      "sha256": "5e9c2b70a5a055e845e36f800e8366b9252ca1b2fe087a81fd42a913fe519de5"
+    },
+    {
+      "path": "fixtures-v1/reject-missing-field-detention_cap_cents.json",
+      "bytes": 5321,
+      "sha256": "40e5bd0573f0aae469a0ec2f955410fce93dc1f622da1c79a42719bcb8cc5460"
+    },
+    {
+      "path": "fixtures-v1/reject-missing-field-detention_cents.json",
+      "bytes": 5325,
+      "sha256": "1711be557c347ab1edbc175db00d378056a98107c0de9c10073f85db8919e531"
+    },
+    {
+      "path": "fixtures-v1/reject-missing-field-detention_rate_cents.json",
+      "bytes": 5321,
+      "sha256": "cad75636fa10a5491544ad5f958674a9e57adf61abaeae9606166e35f533f01d"
+    },
+    {
+      "path": "fixtures-v1/reject-missing-field-free_minutes.json",
+      "bytes": 5330,
+      "sha256": "519248c336192b419e1e7b5b043a4476a86edb8d5ded0644051e748e3cbab03c"
+    },
+    {
+      "path": "fixtures-v1/reject-missing-field-fuel_cents.json",
+      "bytes": 5330,
+      "sha256": "8be04943cef4b777ef4ffaf9520ccb0b1b00f8dd46f5e570f7d18b1d269b9a0a"
+    },
+    {
+      "path": "fixtures-v1/reject-missing-field-increment_minutes.json",
+      "bytes": 5326,
+      "sha256": "bf9a480781772904870f6f56ea49fc5e9bd383019dd13e15aac3356574285ce3"
+    },
+    {
+      "path": "fixtures-v1/reject-missing-field-invoice_total_cents.json",
+      "bytes": 5322,
+      "sha256": "028ca55518f833ecfe424111edddf3e3885bfcd874f4eed02521f519ab233f1d"
+    },
+    {
+      "path": "fixtures-v1/reject-missing-field-late_grace_minutes.json",
+      "bytes": 5325,
+      "sha256": "b116bea3c80a35d20477c04718308068bb1bd6c1420c484f0f08ebd30528f4f2"
+    },
+    {
+      "path": "fixtures-v1/reject-missing-field-linehaul_cents.json",
+      "bytes": 5325,
+      "sha256": "e37b64dc4dc3e1c5dea65cc8b384317417824efb9827ae8c0783f497bab40cd0"
+    },
+    {
+      "path": "fixtures-v1/reject-missing-field-lumper_cents.json",
+      "bytes": 5328,
+      "sha256": "41bc969bd40a524405fc1117ef3f1615f2c3376941a9c1653616623c8cd40189"
+    },
+    {
+      "path": "fixtures-v1/reject-missing-field-pod_received.json",
+      "bytes": 5329,
+      "sha256": "449cbf85649e4cac8cb05410312effaa7f1c0f832ee18ebc422921338c027090"
+    },
+    {
+      "path": "fixtures-v1/reject-missing-field-ratecon_complete.json",
+      "bytes": 5325,
+      "sha256": "169fabcf1adcede1113c3c607e2f932d8bc1e08ad8adbdfe7bbe0119a4ee15aa"
+    },
+    {
+      "path": "fixtures-v1/reject-missing-field-tonu_cents.json",
+      "bytes": 5334,
+      "sha256": "8e75e692a25350730a1580b10e3a33a0a3f07afac0e75c66562844249d8bf4e2"
+    },
+    {
+      "path": "fixtures-v1/reject-missing-root-baseline.json",
+      "bytes": 3442,
+      "sha256": "d9034060f636a3bf39057a3630c4c6f323172d895f50ea55e7669ff51092a301"
+    },
+    {
+      "path": "fixtures-v1/reject-missing-root-comparison.json",
+      "bytes": 5109,
+      "sha256": "e90ab4698b3f904eedbfea1f1edd75d730b67949b32ba8b27727b373a95297c3"
+    },
+    {
+      "path": "fixtures-v1/reject-missing-root-contract.json",
+      "bytes": 4982,
+      "sha256": "d5363868620095ebef550305c9cf6d48b175390b3faf678f7eb3a0638023f6de"
+    },
+    {
+      "path": "fixtures-v1/reject-missing-root-current.json",
+      "bytes": 3443,
+      "sha256": "63876ba9f3ce03ebe8131832ab141a6c979a32fc4b8909dbbb95a45a0f8155c0"
+    },
+    {
+      "path": "fixtures-v1/reject-missing-root-exported_at.json",
+      "bytes": 5312,
+      "sha256": "303f1ca17874f7b43c52623894eb2eff75281affe1137ce8e6a1625c65aaa4b1"
+    },
+    {
+      "path": "fixtures-v1/reject-missing-root-loaded_preset.json",
+      "bytes": 5281,
+      "sha256": "dd011afff8568821dfef1cebffb944c6dd13f36a1e5428177c568e693f2aaee1"
+    },
+    {
+      "path": "fixtures-v1/reject-missing-root-provenance.json",
+      "bytes": 4646,
+      "sha256": "63b7875c0a9556f3e2babaf732152bca61aedbf995bf0b5b1c598fde169bf2e4"
+    },
+    {
+      "path": "fixtures-v1/reject-missing-root-schema.json",
+      "bytes": 5308,
+      "sha256": "c55e783449e153d82f631a9365fa2aec429686f50aa29dc062c2dea942504682"
+    },
+    {
+      "path": "fixtures-v1/reject-missing-root-synthetic.json",
+      "bytes": 5336,
+      "sha256": "a8d2f0ce6386bd8817a479fab807929395fe277f379a4c93e475141592066a98"
+    },
+    {
+      "path": "fixtures-v1/reject-money-fraction.json",
+      "bytes": 5355,
+      "sha256": "6b452dc2a642b04bd988b4f57746e0b23295f8067cd899bf97d4fd5a2724e3e2"
+    },
+    {
+      "path": "fixtures-v1/reject-money-negative.json",
+      "bytes": 5354,
+      "sha256": "d64064b9e5e4d0e6474d367a43b878d6d8a62cee8d4f437a100f7389228c8ba9"
+    },
+    {
+      "path": "fixtures-v1/reject-money-over.json",
+      "bytes": 5361,
+      "sha256": "73f34847c8f77487eef24439f99f48579e91f4f6944e7a94a16dbc0952723c57"
+    },
+    {
+      "path": "fixtures-v1/reject-money-string.json",
+      "bytes": 5359,
+      "sha256": "746b3ce022244d65b43d9bb8777e84fc5eb9c96fdb5f40bce10770e79792fe57"
+    },
+    {
+      "path": "fixtures-v1/reject-non-leap-day.json",
+      "bytes": 5357,
+      "sha256": "009dc9fefb686069c8a1bb1532a01f3196580cc6025f0915d6cd76de2554d15d"
+    },
+    {
+      "path": "fixtures-v1/reject-nonfinite-derived.json",
+      "bytes": 3984,
+      "sha256": "5a990a4dce38bd5eda66a28e9471203dcacaabd0b42dfba2ac281d0603429f60"
+    },
+    {
+      "path": "fixtures-v1/reject-nonfinite-input.json",
+      "bytes": 3984,
+      "sha256": "310095819c140a154d10d5c358b30bfdc22cf4fb58f64b8ca205e33376718e45"
+    },
+    {
+      "path": "fixtures-v1/reject-old-result-new-input.json",
+      "bytes": 5357,
+      "sha256": "01ef3e30db17d671311aabb5ae44d9fcce2b54b83d19dac05b7fd2c74a7a2919"
+    },
+    {
+      "path": "fixtures-v1/reject-over-byte-limit.json",
+      "bytes": 1048577,
+      "sha256": "427222469875ba0b3fffa9062866ea48902f59f74466496ab80d8234d20b4387"
+    },
+    {
+      "path": "fixtures-v1/reject-preset-id.json",
+      "bytes": 5353,
+      "sha256": "2daef62dcca57b6cf383d2687a3f861101fdcbe9a7941d7281d76b7db22a6d58"
+    },
+    {
+      "path": "fixtures-v1/reject-preset-title.json",
+      "bytes": 5364,
+      "sha256": "56ab761c0417dcf1b8527f7c381d1cfcdfdc4a07a39473358d156369323da87d"
+    },
+    {
+      "path": "fixtures-v1/reject-rate-over.json",
+      "bytes": 5359,
+      "sha256": "78ba0b032fcf49ffe0bcf906c9a2713e9135e2fc5ebbfedf79bfb483339eef9d"
+    },
+    {
+      "path": "fixtures-v1/reject-root-array.json",
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "fixtures-v1/reject-root-boolean.json",
+      "bytes": 5,
+      "sha256": "a17fcf0a2f50e2d495e4f90ce263410edc183add6c62699a2facbccf60410f74"
+    },
+    {
+      "path": "fixtures-v1/reject-root-null.json",
+      "bytes": 5,
+      "sha256": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed"
+    },
+    {
+      "path": "fixtures-v1/reject-root-number.json",
+      "bytes": 3,
+      "sha256": "084c799cd551dd1d8d5c5f9a5d593b2e931f5e36122ee5c793c1d08a19839cc0"
+    },
+    {
+      "path": "fixtures-v1/reject-root-string.json",
+      "bytes": 9,
+      "sha256": "53d2ba397f4952247b60fcdc8abaf86b0b04ad9dc50028022bcd77226cbc20ec"
+    },
+    {
+      "path": "fixtures-v1/reject-source-commit.json",
+      "bytes": 5357,
+      "sha256": "b09341bfa49574eb03712bc8a9aa8c780adcbfb0fb0cde80c7d9c6cb2e5ba09b"
+    },
+    {
+      "path": "fixtures-v1/reject-source-hash.json",
+      "bytes": 5357,
+      "sha256": "f821ae3dfa986ec95d278b32d067280a382b9b8a522da75d14a04fe3473bf3f6"
+    },
+    {
+      "path": "fixtures-v1/reject-source-oracle.json",
+      "bytes": 5288,
+      "sha256": "fd0a0a85d7ab60d5f0d7c85fa719e2c5454e9a5376fc532c2f4f01a58b009298"
+    },
+    {
+      "path": "fixtures-v1/reject-synthetic-false.json",
+      "bytes": 5358,
+      "sha256": "9d9aed2e7e663a9f14fe72dc0dd74739f47d6e264f55d46196875cb7fe559cd2"
+    },
+    {
+      "path": "fixtures-v1/reject-synthetic-string.json",
+      "bytes": 5359,
+      "sha256": "954dd4ab659e02e25bb27ac22ddb0182bd446d37fd55af0099018a33983ff860"
+    },
+    {
+      "path": "fixtures-v1/reject-time-invalid.json",
+      "bytes": 5343,
+      "sha256": "1221424cda4fd48b00babed69cfd8d8ab1ad8b81876219a9ea5f4638110e08d8"
+    },
+    {
+      "path": "fixtures-v1/reject-time-noncanonical.json",
+      "bytes": 5353,
+      "sha256": "38fa884caa7ba8d57a2027515f0bcb3982c7a075b68440d54ff828227961a870"
+    },
+    {
+      "path": "fixtures-v1/reject-time-normalized-date.json",
+      "bytes": 5357,
+      "sha256": "5fc062ebd728908e9a7e577bdd064974515d7a6828499133e4c39326a204944c"
+    },
+    {
+      "path": "fixtures-v1/reject-time-null.json",
+      "bytes": 5335,
+      "sha256": "692c7df345bfb3d725434c9ebc7d7ad8c0e9156693d62e2454a1d8671c215968"
+    },
+    {
+      "path": "fixtures-v1/reject-time-number.json",
+      "bytes": 5332,
+      "sha256": "e92c11b09f784ec0b73db3c016f973cb908c7e977fc3a092c4861500dcf9ccb6"
+    },
+    {
+      "path": "fixtures-v1/reject-time-offset.json",
+      "bytes": 5362,
+      "sha256": "b924f6335e6903592a28168b2547ebe273a3af9a199d57023c88b2c53d3fd6b2"
+    },
+    {
+      "path": "fixtures-v1/reject-title-markup.json",
+      "bytes": 5375,
+      "sha256": "657d191d865f35cec8f5dea2a362e54821dbc02247d2b578f71e03ba6078c576"
+    },
+    {
+      "path": "fixtures-v1/reject-tracking-empty.json",
+      "bytes": 5341,
+      "sha256": "a09d574deacbb4970c9cb1979add1f155d0a93f91a7b5b9047aea6005851eba8"
+    },
+    {
+      "path": "fixtures-v1/reject-truncated-json.json",
+      "bytes": 3981,
+      "sha256": "d246625f08874f18640341a02ea9edb47b483f0064bbe083bb14661111d5d91d"
+    },
+    {
+      "path": "fixtures-v1/reject-two-json-values.json",
+      "bytes": 7964,
+      "sha256": "b35d96ca99e3f5721024bb634f3e56d58c61d2d9b42abcbc21a97658ebe39a18"
+    },
+    {
+      "path": "fixtures-v1/reject-unknown-baseline-result.json",
+      "bytes": 5391,
+      "sha256": "10ac182918b0e1e098f3dd29b84f01cf2e5992967596e2990b3813a65cce3625"
+    },
+    {
+      "path": "fixtures-v1/reject-unknown-baseline-scenario.json",
+      "bytes": 5391,
+      "sha256": "267d019ce5c612299f6fbab1fc38de415ee54917b777465c999cec607a31e8fa"
+    },
+    {
+      "path": "fixtures-v1/reject-unknown-baseline.json",
+      "bytes": 5389,
+      "sha256": "3c42c6d89f18b06e499ceab29cf614d2b4cba8d4b1557ab09d1fcf9aad66f7ac"
+    },
+    {
+      "path": "fixtures-v1/reject-unknown-comparison.json",
+      "bytes": 5389,
+      "sha256": "c63dd114c317aacf3a3e42d06dd572f2929b021bb809fea56bf403af69254d8c"
+    },
+    {
+      "path": "fixtures-v1/reject-unknown-contract.json",
+      "bytes": 5389,
+      "sha256": "a1e6c758aab162a7ae0f5391af2590cff52013d6b176b8fd4f2ff27e4965b541"
+    },
+    {
+      "path": "fixtures-v1/reject-unknown-current-result.json",
+      "bytes": 5391,
+      "sha256": "d2d8df7ac0a0e3517bfa11cedbcf9c4b395a6ad8f1f2dcec490d5720d030b5c0"
+    },
+    {
+      "path": "fixtures-v1/reject-unknown-current-scenario.json",
+      "bytes": 5391,
+      "sha256": "b11e6a04c73bf59571a3540435475f2fc723043fbe77aeec8bc5cbfc4ba9d2ca"
+    },
+    {
+      "path": "fixtures-v1/reject-unknown-current.json",
+      "bytes": 5389,
+      "sha256": "82f0faf1363ceec9768d5755f56da9a89d17e8e26758873dab899f30a83d1112"
+    },
+    {
+      "path": "fixtures-v1/reject-unknown-flag.json",
+      "bytes": 5395,
+      "sha256": "31ec1971dba860c6e514fba4843b4bae72d5bd8cbd20c617de20a45ce636578d"
+    },
+    {
+      "path": "fixtures-v1/reject-unknown-preset.json",
+      "bytes": 5389,
+      "sha256": "38406a8e0931d56d15b56ca630f0bcc0e395a3acbeba6a5792b19721469f724e"
+    },
+    {
+      "path": "fixtures-v1/reject-unknown-provenance.json",
+      "bytes": 5389,
+      "sha256": "d9fecb69b3e55d5afe5ec4a2a4a8e953971d518b3029e2850dd0d29abe149be0"
+    },
+    {
+      "path": "fixtures-v1/reject-unknown-root.json",
+      "bytes": 5387,
+      "sha256": "dd5466a204ae2dd3b6f55dd1db9a2c54f0e7db2d660b2861d5ed41be8639f52a"
+    },
+    {
+      "path": "fixtures-v1/reject-unknown-source-sha.json",
+      "bytes": 5391,
+      "sha256": "f1f376b8437a1ae0b3a79f39e5609d050fedb42653a46199e5f7a44a3079acb6"
+    },
+    {
+      "path": "fixtures-v1/reject-unknown-stop.json",
+      "bytes": 5393,
+      "sha256": "87b41518e3ec377585c57566be85b2d45909f18fa2a0d396257ef3b9a15a3a22"
+    },
+    {
+      "path": "fixtures-v1/reject-unknown-totals.json",
+      "bytes": 5393,
+      "sha256": "b8876f686e1e86570149fc79db05f520655b0233841203599b2bb0f5fce79c7e"
+    },
+    {
+      "path": "fixtures-v1/reject-utf8-byte-over.json",
+      "bytes": 1048577,
+      "sha256": "9b07a57bc6cc52d292ae7083e1dd7b106ebede0d0b3ee76228744ef212068c24"
+    },
+    {
+      "path": "fixtures-v1/reject-version.json",
+      "bytes": 5357,
+      "sha256": "16afaec1e52ea9a0fc601c30c3e848172fc1555f9000bb01a1a5c4239bd32521"
+    },
+    {
+      "path": "generate-fixtures-v1.mjs",
+      "bytes": 12437,
+      "sha256": "6c69e98d74a3bbe186fa099ca3271dfb2f379d3a0bbfa8a6b7974769ced0fdc2"
+    }
+  ]
+}

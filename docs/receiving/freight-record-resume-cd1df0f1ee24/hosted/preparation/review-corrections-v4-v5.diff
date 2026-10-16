@@ -1,0 +1,114 @@
+--- unexecuted-b671-v4-wrapper
++++ reviewed-v5-wrapper
+@@ -66,9 +66,23 @@
+         "start_ticks": int(a[19]), "profile": profile,
+         "registered_before_exec_unix": time.time(),
+         "chrome": os.environ["FREIGHT_CHROME"]}
+-p.write_text(json.dumps(data, indent=2) + "\n")
++tmp = p.with_name(p.name + ".pending-" + str(pid))
++with tmp.open("x") as stream:
++    stream.write(json.dumps(data, indent=2) + "\n")
++# Link publishes complete bytes atomically and refuses an existing registration.
++os.link(tmp, p)
++tmp.unlink()
+ os.execv(data["chrome"], [data["chrome"], *sys.argv[1:]])
+ '''
++
++def emit_cleanup_event(emit_event, signals, kind, **fields):
++    """Diagnostic I/O must never prevent verification or cleanup of owned processes."""
++    try:
++        emit_event(kind, **fields)
++    except OSError as error:
++        signals.append({"target": "diagnostics", "event": kind,
++                        "diagnostic_error": repr(error), "unix": time.time()})
++
+ 
+ class OwnedBrowserSession:
+     """Track only the fresh Chrome session registered by this run's launcher."""
+@@ -89,7 +103,7 @@
+             assert registered["pgid"] == registered["pid"] == registered["sid"]
+             assert registered["profile"] == self.profile_path
+             self.identity = registered
+-            self.emit_event("browser-shim-registration", identity=self.identity)
++            emit_cleanup_event(self.emit_event, self.signals, "browser-shim-registration", identity=self.identity)
+         if self.identity is None:
+             return []
+         pgid = self.identity["pgid"]
+@@ -103,9 +117,9 @@
+             assert all(r["uid"] == os.getuid() and r["sid"] == pgid for r in rows)
+             if leader:
+                 assert leader["start_ticks"] == self.identity["start_ticks"]
+-                # The registration is written before exec. Same PID/start binds that
+-                # Python shim; once Chrome execs, also require the exact profile argument.
+-                if leader["comm"] not in ("python3", "python"):
++                # The launcher already has this argument before exec. Zombies
++                # retain their identity but expose no live command line.
++                if leader["state"] != "Z":
+                     assert "--user-data-dir=" + self.profile_path in leader["args"]
+             for row in rows:
+                 if row["pid"] in self.seen_members:
+@@ -130,13 +144,13 @@
+             try:
+                 os.killpg(pgid, sig)
+                 record["delivered"] = True
+-                self.emit_event("signal", target="browser-session", pgid=pgid, signal=sig.name)
++                emit_cleanup_event(self.emit_event, self.signals, "signal", target="browser-session", pgid=pgid, signal=sig.name)
+             except ProcessLookupError:
+                 # A checked group may exit between observation and killpg.
+                 # A live/mismatched group is never treated as this benign race.
+                 assert not self.observe(), "ESRCH with a nonempty original browser group"
+                 record["already_empty"] = True
+-                self.emit_event("signal-already-exited", target="browser-session", pgid=pgid)
++                emit_cleanup_event(self.emit_event, self.signals, "signal-already-exited", target="browser-session", pgid=pgid)
+                 break
+             deadline = time.monotonic() + wait_seconds
+             while time.monotonic() < deadline:
+@@ -166,11 +180,11 @@
+         try:
+             os.killpg(process.pid, sig)
+             record["delivered"] = True
+-            emit_event("signal", target="node-session", pgid=process.pid, signal=sig.name)
++            emit_cleanup_event(emit_event, signals, "signal", target="node-session", pgid=process.pid, signal=sig.name)
+         except ProcessLookupError:
+             assert not group(process.pid), "ESRCH with a nonempty original Node group"
+             record["already_empty"] = True
+-            emit_event("signal-already-exited", target="node-session", pgid=process.pid)
++            emit_cleanup_event(emit_event, signals, "signal-already-exited", target="node-session", pgid=process.pid)
+         try:
+             process.wait(timeout=seconds)
+         except subprocess.TimeoutExpired:
+@@ -208,8 +222,11 @@
+ 
+     def event(kind, **fields):
+         row = {"unix": time.time(), "kind": kind, **fields}
+-        with journal.open("a") as f:
+-            f.write(json.dumps(row) + "\n")
++        try:
++            with journal.open("a") as f:
++                f.write(json.dumps(row) + "\n")
++        except OSError as error:
++            report["errors"].append("Diagnostic journal " + kind + ": " + repr(error))
+ 
+     browser_session = OwnedBrowserSession(run / "profile", identity_path, event, report["signals"])
+ 
+@@ -307,13 +324,19 @@
+         event("supervisor-error", error=report["errors"][-1])
+     finally:
+         # Persist before any close operation. Cleanup must not delay the only receipt.
+-        write_json(out / "supervisor-receipt.pre-cleanup.json", report)
++        try:
++            write_json(out / "supervisor-receipt.pre-cleanup.json", report)
++        except OSError as error:
++            report["errors"].append("Pre-cleanup receipt: " + repr(error))
+         for cleanup in [lambda: stop_owned_node(child, node_identity, event, report["signals"]), browser_session.stop]:
+             try:
+                 cleanup()
+             except BaseException:
+                 cleanup_ok = False
+                 report["errors"].append(traceback.format_exc())
++        for diagnostic in report["signals"]:
++            if "diagnostic_error" in diagnostic:
++                report["errors"].append("Cleanup diagnostic: " + diagnostic["diagnostic_error"])
+         report["cleanup_complete"] = cleanup_ok
+         report["browser_group_after_cleanup"] = [public_row(r) for r in browser_session.after_cleanup]
+         report["exit_code"] = child.poll() if child else None

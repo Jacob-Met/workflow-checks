@@ -1,0 +1,32 @@
+{
+  "status": "compile-only; source-review/mocks pending; no browser/product/npm/hosted execution",
+  "native_readback_exact": true,
+  "receiver_v4_unchanged": true,
+  "behavior_groups": 17,
+  "files": [
+    {
+      "path": "receive_browser_hosted-reviewed-v5.py",
+      "bytes": 20222,
+      "sha256": "b9735d6efbfcbe62ca9d26d945be2798f91ed1addd08a34f948862fa9d291649",
+      "git": "4089e2451438a7917ea95472704c97c295fb816f"
+    },
+    {
+      "path": "review-corrections-v4-v5.diff",
+      "bytes": 5941,
+      "sha256": "5caceca285f03e18b02967599e33f536f89d4ea639f2bd71cefcd2241a377896",
+      "git": "ee843845bcde614fa5704a9fabb2844f9174336b"
+    },
+    {
+      "path": "proposal-v2.json",
+      "bytes": 7326,
+      "sha256": "e6180ff21f141489976a5ca6a9c118240bdfb78e65a1982264ba7617aab2f20a",
+      "git": "b4976090894f5307c8c785d1efacf4aa326c70b4"
+    },
+    {
+      "path": "freight-pr67-browser-qualification.yml",
+      "bytes": 1983,
+      "sha256": "3d319789b34927df84d35130bee9d0d2b34ed816e9e7bcbf7cd0e29d646c6cee",
+      "git": "8ee5c9227d9377228ae1319759d85c1cd238d146"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "format": "freight-hosted-lead-source-receiving/1",
+  "receivedAt": "2026-10-08 22:39:43 UTC",
+  "wrapper": "4089e2451438a7917ea95472704c97c295fb816f",
+  "workflow": "8ee5c9227d9377228ae1319759d85c1cd238d146",
+  "proposal": "b4976090894f5307c8c785d1efacf4aa326c70b4",
+  "rootFullSourceRead": true,
+  "exactBodyPinsMatched": true,
+  "independentSourceReviewAccepted": true,
+  "independentLifecycleMockControls": 7,
+  "mockPass": 7,
+  "mockRuntime": "Python3.14.4",
+  "scope": "One hosted run only; no product/receiver/oracle changes",
+  "authorizationDelegatedTo": "estate_source",
+  "noBrowserResultYet": true,
+  "files": [
+    {
+      "path": "demos/freight-whatif/tools/receive_browser_hosted.py",
+      "bytes": 20222,
+      "sha256": "b9735d6efbfcbe62ca9d26d945be2798f91ed1addd08a34f948862fa9d291649",
+      "git": "4089e2451438a7917ea95472704c97c295fb816f"
+    },
+    {
+      "path": ".github/workflows/freight-pr67-browser-qualification.yml",
+      "bytes": 1983,
+      "sha256": "3d319789b34927df84d35130bee9d0d2b34ed816e9e7bcbf7cd0e29d646c6cee",
+      "git": "8ee5c9227d9377228ae1319759d85c1cd238d146"
+    },
+    {
+      "path": "proposal-v2.json",
+      "bytes": 7326,
+      "sha256": "e6180ff21f141489976a5ca6a9c118240bdfb78e65a1982264ba7617aab2f20a",
+      "git": "b4976090894f5307c8c785d1efacf4aa326c70b4"
+    }
+  ],
+  "receiver": {
+    "git": "1e08bd4be25e149d568f1869c610b20f03fc6ac9",
+    "sha256": "d44e2d17eeb3e583d11e856fbda1bb988d9ec8f871bf40e3f33f2b5425d333d8",
+    "groups": 17,
+    "unchanged": true
+  },
+  "rootSourceFindings": [
+    "All live registered browser leaders require exact own profile; PID/start/UID/session anchors checked before signals.",
+    "Shim registration atomically links complete bytes without overwrite; browser ownership does not depend on Puppeteer returning launch handle.",
+    "Raw streams and pre-cleanup receipt retained; diagnostic OSError cannot prevent own-process cleanup.",
+    "Bounded own Node/browser TERM then KILL, ESRCH requires empty re-observation; no profile deletion or unrelated process-name matching.",
+    "Checks exact native packet and receiver, remaps runtime paths only; original runtime and fixture hashes retained before/after.",
+    "PR67-only workflow, read-only permissions, no persisted checkout credentials, existing Chrome default sandbox, temporary scripts-disabled exact Puppeteer version, no automatic retries."
+  ],
+  "nativeMockReceipt": {
+    "bytes": 17098,
+    "sha256": "14111b5887321c7850ef4a7557d3ff008916537b69d424ce5dd08d8fa560f921",
+    "git": "7b7939b9a44915ec31760ffadf2a63f525e5213f",
+    "independentCoordinatorReceived": true,
+    "rootEvidenceBoundary": "Root received coordinator's exact full-receipt verification; root did not rerun mock controls."
+  },
+  "transportBoundary": "RDC text transport omitted terminal newline; adding exactly one newline to each recovered body reproduced its prior byte count, SHA256 and Git blob. Source publication must use these exact known bodies.",
+  "decision": "Publish source-reviewed draft update and execute one hosted qualification; preserve actual result separately from failed native timeout. No ready/merge/browser acceptance until actual result independently received."
+}

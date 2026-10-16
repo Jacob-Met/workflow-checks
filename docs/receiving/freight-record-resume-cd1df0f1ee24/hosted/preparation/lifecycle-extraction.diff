@@ -1,0 +1,244 @@
+--- unexecuted-f489-wrapper
++++ reviewed-v4-wrapper
+@@ -69,6 +69,114 @@
+ p.write_text(json.dumps(data, indent=2) + "\n")
+ os.execv(data["chrome"], [data["chrome"], *sys.argv[1:]])
+ '''
++
++class OwnedBrowserSession:
++    """Track only the fresh Chrome session registered by this run's launcher."""
++    def __init__(self, profile_path, identity_path, emit_event, signals):
++        self.profile_path = str(profile_path)
++        self.identity_path = pathlib.Path(identity_path)
++        self.emit_event = emit_event
++        self.signals = signals
++        self.identity = None
++        self.seen_members = {}
++        self.after_cleanup = []
++
++    def observe(self):
++        if self.identity_path.exists() and self.identity is None:
++            registered = json.loads(self.identity_path.read_text())
++            assert all(type(registered[k]) is int and registered[k] > 0
++                       for k in ("pid", "pgid", "sid", "start_ticks"))
++            assert registered["pgid"] == registered["pid"] == registered["sid"]
++            assert registered["profile"] == self.profile_path
++            self.identity = registered
++            self.emit_event("browser-shim-registration", identity=self.identity)
++        if self.identity is None:
++            return []
++        pgid = self.identity["pgid"]
++        rows = group(pgid)
++        leader = next((r for r in rows if r["pid"] == pgid), None)
++        anchor = leader and leader["start_ticks"] == self.identity["start_ticks"]
++        if not anchor:
++            anchor = any(self.seen_members.get(r["pid"]) == r["start_ticks"] for r in rows)
++        if rows:
++            assert anchor, "Browser group lacks an original identity anchor"
++            assert all(r["uid"] == os.getuid() and r["sid"] == pgid for r in rows)
++            if leader:
++                assert leader["start_ticks"] == self.identity["start_ticks"]
++                # The registration is written before exec. Same PID/start binds that
++                # Python shim; once Chrome execs, also require the exact profile argument.
++                if leader["comm"] not in ("python3", "python"):
++                    assert "--user-data-dir=" + self.profile_path in leader["args"]
++            for row in rows:
++                if row["pid"] in self.seen_members:
++                    assert self.seen_members[row["pid"]] == row["start_ticks"], "PID reused"
++                self.seen_members[row["pid"]] = row["start_ticks"]
++        return rows
++
++    def stop(self):
++        rows = self.observe()
++        if not rows:
++            self.after_cleanup = []
++            return
++        assert self.identity is not None
++        pgid = self.identity["pgid"]
++        for sig, wait_seconds in [(signal.SIGTERM, 5), (signal.SIGKILL, 2)]:
++            rows = self.observe()
++            if not any(r["state"] != "Z" for r in rows):
++                break
++            record = {"target": "browser-session", "signal": sig.name, "pgid": pgid,
++                      "members": [public_row(r) for r in rows], "delivered": False}
++            self.signals.append(record)
++            try:
++                os.killpg(pgid, sig)
++                record["delivered"] = True
++                self.emit_event("signal", target="browser-session", pgid=pgid, signal=sig.name)
++            except ProcessLookupError:
++                # A checked group may exit between observation and killpg.
++                # A live/mismatched group is never treated as this benign race.
++                assert not self.observe(), "ESRCH with a nonempty original browser group"
++                record["already_empty"] = True
++                self.emit_event("signal-already-exited", target="browser-session", pgid=pgid)
++                break
++            deadline = time.monotonic() + wait_seconds
++            while time.monotonic() < deadline:
++                if not any(r["state"] != "Z" for r in self.observe()):
++                    break
++                time.sleep(.1)
++        self.after_cleanup = self.observe()
++        assert not any(r["state"] != "Z" for r in self.after_cleanup), "Owned browser still running"
++
++
++def stop_owned_node(process, identity, emit_event, signals):
++    if process is None or process.poll() is not None:
++        return
++    current = proc(process.pid)
++    assert current and identity and current["start_ticks"] == identity["start_ticks"]
++    assert current["pgid"] == current["sid"] == process.pid
++    for sig, seconds in [(signal.SIGTERM, 3), (signal.SIGKILL, 2)]:
++        if process.poll() is not None:
++            break
++        current = proc(process.pid)
++        assert current and current["start_ticks"] == identity["start_ticks"]
++        rows = group(process.pid)
++        assert all(r["uid"] == os.getuid() and r["sid"] == process.pid for r in rows)
++        record = {"target": "node-session", "signal": sig.name, "pgid": process.pid,
++                  "members": [public_row(r) for r in rows], "delivered": False}
++        signals.append(record)
++        try:
++            os.killpg(process.pid, sig)
++            record["delivered"] = True
++            emit_event("signal", target="node-session", pgid=process.pid, signal=sig.name)
++        except ProcessLookupError:
++            assert not group(process.pid), "ESRCH with a nonempty original Node group"
++            record["already_empty"] = True
++            emit_event("signal-already-exited", target="node-session", pgid=process.pid)
++        try:
++            process.wait(timeout=seconds)
++        except subprocess.TimeoutExpired:
++            pass
++    assert process.poll() is not None, "Owned Node still running"
++
+ 
+ def main():
+     ap = argparse.ArgumentParser()
+@@ -95,8 +203,6 @@
+     journal = out / "lifecycle.ndjson"
+     child = None
+     node_identity = None
+-    browser_identity = None
+-    seen_browser = {}
+     pin_rows = []
+     cleanup_ok = True
+ 
+@@ -105,82 +211,7 @@
+         with journal.open("a") as f:
+             f.write(json.dumps(row) + "\n")
+ 
+-    def observe_browser():
+-        nonlocal browser_identity
+-        if identity_path.exists() and browser_identity is None:
+-            browser_identity = json.loads(identity_path.read_text())
+-            assert browser_identity["pgid"] == browser_identity["pid"] == browser_identity["sid"]
+-            assert browser_identity["profile"] == str(run / "profile")
+-            event("browser-shim-registration", identity=browser_identity)
+-        if browser_identity:
+-            pgid = browser_identity["pgid"]
+-            rows = group(pgid)
+-            leader = next((r for r in rows if r["pid"] == pgid), None)
+-            anchor = leader and leader["start_ticks"] == browser_identity["start_ticks"]
+-            if not anchor:
+-                anchor = any(seen_browser.get(r["pid"]) == r["start_ticks"] for r in rows)
+-            if rows:
+-                assert anchor, "Browser group lacks an original identity anchor"
+-                assert all(r["uid"] == os.getuid() and r["sid"] == pgid for r in rows)
+-                if leader:
+-                    assert leader["start_ticks"] == browser_identity["start_ticks"]
+-                    # The shim records before exec. Its exact same PID/start is the authority
+-                    # until Chrome exec; afterwards require its exact owned profile argument.
+-                    if leader["comm"] not in ("python3", "python"):
+-                        assert "--user-data-dir=" + str(run / "profile") in leader["args"]
+-                for row in rows:
+-                    if row["pid"] in seen_browser:
+-                        assert seen_browser[row["pid"]] == row["start_ticks"], "PID reused"
+-                    seen_browser[row["pid"]] = row["start_ticks"]
+-            return rows
+-        return []
+-
+-    def stop_browser():
+-        rows = observe_browser()
+-        if not rows:
+-            return
+-        assert browser_identity is not None
+-        pgid = browser_identity["pgid"]
+-        for sig, wait_seconds in [(signal.SIGTERM, 5), (signal.SIGKILL, 2)]:
+-            rows = observe_browser()
+-            live = [r for r in rows if r["state"] != "Z"]
+-            if not live:
+-                break
+-            report["signals"].append({"target": "browser-session", "signal": sig.name,
+-                                      "pgid": pgid, "members": [public_row(r) for r in rows]})
+-            event("signal", target="browser-session", pgid=pgid, signal=sig.name)
+-            os.killpg(pgid, sig)
+-            deadline = time.monotonic() + wait_seconds
+-            while time.monotonic() < deadline:
+-                if not any(r["state"] != "Z" for r in observe_browser()):
+-                    break
+-                time.sleep(.1)
+-        final = observe_browser()
+-        report["browser_group_after_cleanup"] = [public_row(r) for r in final]
+-        assert not any(r["state"] != "Z" for r in final), "Owned browser still running"
+-
+-    def stop_node():
+-        if child is None or child.poll() is not None:
+-            return
+-        current = proc(child.pid)
+-        assert current and node_identity and current["start_ticks"] == node_identity["start_ticks"]
+-        assert current["pgid"] == current["sid"] == child.pid
+-        for sig, seconds in [(signal.SIGTERM, 3), (signal.SIGKILL, 2)]:
+-            if child.poll() is not None:
+-                break
+-            current = proc(child.pid)
+-            assert current and current["start_ticks"] == node_identity["start_ticks"]
+-            rows = group(child.pid)
+-            assert all(r["uid"] == os.getuid() and r["sid"] == child.pid for r in rows)
+-            report["signals"].append({"target": "node-session", "signal": sig.name,
+-                                      "pgid": child.pid, "members": [public_row(r) for r in rows]})
+-            event("signal", target="node-session", pgid=child.pid, signal=sig.name)
+-            os.killpg(child.pid, sig)
+-            try:
+-                child.wait(timeout=seconds)
+-            except subprocess.TimeoutExpired:
+-                pass
+-        assert child.poll() is not None, "Owned Node still running"
++    browser_session = OwnedBrowserSession(run / "profile", identity_path, event, report["signals"])
+ 
+     def requested_stop(signum, _frame):
+         raise RuntimeError("Supervisor received signal " + str(signum))
+@@ -253,7 +284,7 @@
+             deadline = time.monotonic() + 255
+             previous = None
+             while child.poll() is None:
+-                rows = observe_browser()
++                rows = browser_session.observe()
+                 observation = {
+                     "input_directory_present": (run / "inputs").is_dir(),
+                     "devtools_active_port_present": (run / "profile/DevToolsActivePort").is_file(),
+@@ -277,13 +308,14 @@
+     finally:
+         # Persist before any close operation. Cleanup must not delay the only receipt.
+         write_json(out / "supervisor-receipt.pre-cleanup.json", report)
+-        for cleanup in [stop_node, stop_browser]:
++        for cleanup in [lambda: stop_owned_node(child, node_identity, event, report["signals"]), browser_session.stop]:
+             try:
+                 cleanup()
+             except BaseException:
+                 cleanup_ok = False
+                 report["errors"].append(traceback.format_exc())
+         report["cleanup_complete"] = cleanup_ok
++        report["browser_group_after_cleanup"] = [public_row(r) for r in browser_session.after_cleanup]
+         report["exit_code"] = child.poll() if child else None
+         try:
+             report["source_unchanged"] = bool(pin_rows) and all(file_meta(pathlib.Path(r["path"])) == {"bytes":r["bytes"],"sha256":r["sha256"]} for r in pin_rows)
+@@ -303,7 +335,7 @@
+             report["final_event_gate"] = all(not observed.get(k) for k in ["pageErrors","externalRequests","consoleErrors","storageWrites"])
+             report["final_download_gate"] = len([e for e in events if e.get("kind") == "begin"]) == len(observed.get("downloads", []))
+             report["pass"] = (report["exit_code"] == 0 and observed.get("pass") is True and len(observed.get("groups", [])) == 17
+-                              and report["source_unchanged"] and cleanup_ok and browser_identity is not None and not report["errors"]
++                              and report["source_unchanged"] and cleanup_ok and browser_session.identity is not None and not report["errors"]
+                               and not report.get("supervisor_timed_out") and report["final_event_gate"] and report["final_download_gate"])
+         report["ended"] = time.time()
+         write_json(out / "supervisor-receipt.json", report)

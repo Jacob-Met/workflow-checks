@@ -1,0 +1,64 @@
+TAP version 13
+# Subtest: all four existing exported presets reopen without altering the model results
+ok 1 - all four existing exported presets reopen without altering the model results
+  ---
+  duration_ms: 158.359801
+  type: 'test'
+  ...
+# Subtest: authored invoice inputs survive a coherent current record and retain its original baseline
+ok 2 - authored invoice inputs survive a coherent current record and retain its original baseline
+  ---
+  duration_ms: 18.446783
+  type: 'test'
+  ...
+# Subtest: business exceptions remain valid saved scenarios rather than new admission rules
+ok 3 - business exceptions remain valid saved scenarios rather than new admission rules
+  ---
+  duration_ms: 38.878744
+  type: 'test'
+  ...
+# Subtest: format, source, preset and canonical baseline are required as one envelope
+ok 4 - format, source, preset and canonical baseline are required as one envelope
+  ---
+  duration_ms: 40.086274
+  type: 'test'
+  ...
+# Subtest: all sixteen fields use the unchanged input validator and derived claims must match freshly
+ok 5 - all sixteen fields use the unchanged input validator and derived claims must match freshly
+  ---
+  duration_ms: 76.757367
+  type: 'test'
+  ...
+# Subtest: object order and JSON whitespace are irrelevant while array order remains meaningful
+ok 6 - object order and JSON whitespace are irrelevant while array order remains meaningful
+  ---
+  duration_ms: 22.760132
+  type: 'test'
+  ...
+# Subtest: timestamps are exact canonical four-digit UTC metadata without an age policy
+ok 7 - timestamps are exact canonical four-digit UTC metadata without an age policy
+  ---
+  duration_ms: 14.270408
+  type: 'test'
+  ...
+# Subtest: UTF-8 file budget and recursively nonfinite values refuse before record use
+ok 8 - UTF-8 file budget and recursively nonfinite values refuse before record use
+  ---
+  duration_ms: 26.382588
+  type: 'test'
+  ...
+# Subtest: admitted snapshots detach and freeze every stored context and calculated result
+ok 9 - admitted snapshots detach and freeze every stored context and calculated result
+  ---
+  duration_ms: 10.463694
+  type: 'test'
+  ...
+1..9
+# tests 9
+# suites 0
+# pass 9
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 929.787963

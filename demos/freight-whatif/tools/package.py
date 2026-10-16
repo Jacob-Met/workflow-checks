@@ -7,7 +7,7 @@ from pathlib import Path
 import zipfile
 
 DEMO = Path(__file__).resolve().parents[1]
-SITE_FILES = ("app.mjs", "data.mjs", "index.html", "model.mjs", "styles.css")
+SITE_FILES = ("app.mjs", "data.mjs", "index.html", "model.mjs", "scenario-record.mjs", "styles.css")
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument("--output", type=Path, required=True, help="New ZIP path")
 parser.add_argument("--receipt", type=Path, required=True, help="New JSON receipt path")
@@ -54,7 +54,7 @@ One brokered stop, one same-row arrival/departure pair, one known rate con,
 one invoice. Civil minute times, USD integer cents. Not a live carrier tool,
 payment approval or settlement engine. Duplicate invoices, missing rate
 confirmations, multi-stop matching, fines and settlement are outside scope.
-Edits remain in page memory and reset on refresh.
+Edits remain in page memory and reset on refresh. Use Download record to save\nthem. Open saved record checks that existing v1 JSON and previews all sixteen\ninputs before explicit replacement. Cancel keeps the current draft. Records\nare limited to 1 MiB UTF-8 and must match this demo's pinned rules and preset;\nsaved calculations are checked against fresh results, not trusted as authority.
 
 SOURCE AND VERIFICATION
 https://github.com/Jacob-Met/workflow-checks/issues/17

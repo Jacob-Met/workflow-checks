@@ -1,0 +1,105 @@
+{
+  "schema": "hamon.freight-draft-composition-plan.v1",
+  "repository": "Jacob-Met/workflow-checks",
+  "claim": 60,
+  "parent": "66030b1f930906d0b42fa46fc0a74c06678ec964",
+  "parent_tree": "e38916e0e104a38bda1e225c64ea2a6b1aafc015",
+  "parent_tree_truncated": false,
+  "parent_leaf_count": 1454,
+  "overlay_paths": [
+    ".github/workflows/freight-whatif.yml",
+    "demos/freight-whatif/README.md",
+    "demos/freight-whatif/site/app.mjs",
+    "demos/freight-whatif/site/index.html",
+    "demos/freight-whatif/site/scenario-record.mjs",
+    "demos/freight-whatif/site/styles.css",
+    "demos/freight-whatif/tests/scenario-record.test.mjs",
+    "demos/freight-whatif/tools/install.py",
+    "demos/freight-whatif/tools/package.py",
+    "docs/demos/freight-whatif/app.mjs",
+    "docs/demos/freight-whatif/index.html",
+    "docs/demos/freight-whatif/scenario-record.mjs",
+    "docs/demos/freight-whatif/styles.css",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/README.md",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/browser-receiver-v4.mjs",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/composition-plan.json",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/readme-historical-clarification.json",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/source-manifest.json",
+    "docs/receiving/freight-record-resume-cd1df0f1ee24/source-transport-v1.json"
+  ],
+  "modified_existing_count": 10,
+  "added_count": 9,
+  "expected_candidate_leaf_count": 1463,
+  "expected_untouched_parent_leaf_count": 1444,
+  "existing_before_images": [
+    {
+      "path": "demos/freight-whatif/site/app.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "git_blob": "6fe0b0409c2d652dbdc6cecda2fe97b4f63e23be"
+    },
+    {
+      "path": "demos/freight-whatif/site/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "git_blob": "e6e8d6d757c2d51a666b267946d2544f2564a80a"
+    },
+    {
+      "path": "demos/freight-whatif/site/styles.css",
+      "mode": "100644",
+      "type": "blob",
+      "git_blob": "1200d3b98a958a080f0899b91d8975494328401e"
+    },
+    {
+      "path": "demos/freight-whatif/tools/install.py",
+      "mode": "100644",
+      "type": "blob",
+      "git_blob": "0ac5d0f5f3fd6bb5a5b3cfb162213b511f74d7dc"
+    },
+    {
+      "path": "demos/freight-whatif/tools/package.py",
+      "mode": "100644",
+      "type": "blob",
+      "git_blob": "88c1e0466e15e96971e5721d1f7e995a7dcefffc"
+    },
+    {
+      "path": "demos/freight-whatif/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "git_blob": "b04e8197cc08836229aa4e279219cb677337b286"
+    },
+    {
+      "path": ".github/workflows/freight-whatif.yml",
+      "mode": "100644",
+      "type": "blob",
+      "git_blob": "0c2981495c8167ea35cc87ac2ba41536f36ba18e"
+    },
+    {
+      "path": "docs/demos/freight-whatif/app.mjs",
+      "mode": "100644",
+      "type": "blob",
+      "git_blob": "6fe0b0409c2d652dbdc6cecda2fe97b4f63e23be"
+    },
+    {
+      "path": "docs/demos/freight-whatif/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "git_blob": "e6e8d6d757c2d51a666b267946d2544f2564a80a"
+    },
+    {
+      "path": "docs/demos/freight-whatif/styles.css",
+      "mode": "100644",
+      "type": "blob",
+      "git_blob": "1200d3b98a958a080f0899b91d8975494328401e"
+    }
+  ],
+  "proof_requirement": "After tree creation, read the complete nontruncated candidate tree. Every overlay path must match its exact supplied Git blob/mode, every parent leaf outside overlay must match mode/type/blob, no additional paths or missing leaves. Commit parent must be exactly the pinned parent. Report actual tree/head and verification in draft PR handoff.",
+  "retained_dist": {
+    "path": "demos/freight-whatif/dist/freight-whatif.zip",
+    "mode": "100644",
+    "git_blob": "2a7e2b8f4b4abe5063c65befb7f74b0d6533387b",
+    "bytes": 24333,
+    "reason": "Replacement bytes not recovered; delivery explicitly incomplete."
+  },
+  "scope": "No native process/test re-execution, browser acceptance, ready-for-review transition or merge is asserted."
+}
