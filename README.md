@@ -73,6 +73,19 @@ pip install pytest
 
 On Windows PowerShell, `.\demo.ps1 freight|pt|utility|test` does the same. `python scripts/build_pages.py` runs the tests and rebuilds the sample outputs site in `docs/`.
 
+The site rebuild prepares all three reports and the index before replacing the
+previous generated pages. Test, generator and index failures keep the previous
+site intact. A failed replacement restores the earlier generated entries; if
+restoration itself fails, the error names the retained stage and `previous/`
+backup to recover manually. Other `docs/` content stays in place. Run one builder
+at a time per checkout: this recovers ordinary failures, but does not provide an
+atomic multi-directory switch across a process kill or power loss. The builder's
+focused receiving tests use only the standard library:
+
+```sh
+python -m unittest discover -s scripts -p test_build_pages.py -v
+```
+
 ## How it is built
 
 - **Synthetic data only.** Seeded generators write an independent answer key (`expected.json`) that the tests check against.
