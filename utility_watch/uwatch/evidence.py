@@ -16,9 +16,14 @@ from . import engine, review
 SCHEMA = "uwatch-evidence-v1"
 
 
-def _identity(info: os.stat_result) -> tuple:
+def _identity(info: os.stat_result, *, across_apis: bool = False) -> tuple:
+    # Windows path stat can report creation time as ctime while descriptor stat
+    # reports change time. Compare their explicit birthtime when available;
+    # comparisons within either API must still retain the full change timestamp.
+    timestamp = (getattr(info, "st_birthtime_ns", info.st_ctime_ns)
+                 if across_apis else info.st_ctime_ns)
     return (info.st_dev, info.st_ino, info.st_mode, info.st_size,
-            info.st_mtime_ns, info.st_ctime_ns)
+            info.st_mtime_ns, timestamp)
 
 
 def _directory(path: Path) -> tuple:
@@ -48,11 +53,14 @@ def _read_regular(path: Path, *, optional: bool = False) -> _Input | None:
     fd = os.open(path, flags)
     with os.fdopen(fd, "rb") as source:
         opened = os.fstat(source.fileno())
-        if not stat.S_ISREG(opened.st_mode) or _identity(opened) != _identity(before):
+        if (not stat.S_ISREG(opened.st_mode)
+                or _identity(opened, across_apis=True) != _identity(before, across_apis=True)):
             raise ValueError(f"input changed while opening: {path.name}")
         raw = source.read()
         after = os.fstat(source.fileno())
-    if _identity(after) != _identity(before) or _identity(path.lstat()) != _identity(after):
+    last = path.lstat()
+    if (_identity(after) != _identity(opened) or _identity(last) != _identity(before)
+            or _identity(last, across_apis=True) != _identity(after, across_apis=True)):
         raise ValueError(f"input changed while reading: {path.name}")
     return _Input(raw, _identity(after))
 
