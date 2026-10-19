@@ -26,3 +26,5 @@ jobs:
       - name: utility_watch
         working-directory: utility_watch
         run: python -m pytest -q
+      - name: sample-site recovery
+        run: python scripts/test_build_pages.py -v
