@@ -1,0 +1,39 @@
+{
+  "source_repository": "Jacob-Met/workflow-checks",
+  "current_main_pt_input_pin": "d2b583ae9350b30aec1453e93797dc231888417d",
+  "current_main_tree": "e21f607e62158b7f02c46a18e6104e7c8c5131b6",
+  "local_checkout_parent": "ec92e0b071d8cef9c314cece9bff6dbbe9a3382d",
+  "publication_method": "changed blobs on current remote main tree; local checkout ancestry will not be pushed",
+  "files": [
+    {
+      "path": "pt_auth/ptauth/cli.py",
+      "bytes": 5065,
+      "sha256": "70602d30cfeab2c794845092bd7a18b8e629411a885cc95f8ed1b544042c30d4",
+      "git_blob_sha": "7250a3d64b6bf30932c36280f1c2f829974ef7bc",
+      "crlf": 95,
+      "lf": 95
+    },
+    {
+      "path": "pt_auth/tests/test_cli_date_admission.py",
+      "bytes": 4814,
+      "sha256": "e99ab4925bece8148c5093929d4d13fae158ebc64571e7ac5f046ad4d6114ab4",
+      "git_blob_sha": "faf307640652fb548dcb09a2cea0e226bb1b7689",
+      "crlf": 0,
+      "lf": 150
+    },
+    {
+      "path": "pt_auth/README.md",
+      "bytes": 23423,
+      "sha256": "dcdfefc4009aa5a03d49135639519b92f301a6f48468051fba7a6075836739a8",
+      "git_blob_sha": "23fc8292665136a70b8aa8dde7bc08ab1d3b4f21",
+      "crlf": 298,
+      "lf": 298
+    }
+  ],
+  "author_regression": {
+    "original": "9 failed, 2 passed",
+    "candidate": "11 passed"
+  },
+  "full_maintained_pt_suite": "146 passed, 1 skipped",
+  "scope": "explicit generate/run CLI date admission only"
+}

@@ -50,6 +50,11 @@ python -m ptauth serve --data sample_data --out out         # http://127.0.0.1:8
 python -m pytest -q
 ```
 
+An explicit `--as-of` value for `generate` or `run` must be a valid calendar date.
+Blank or invalid values exit with status 2 before reading inputs or writing outputs,
+so an empty date from a wrapper cannot replace a saved worklist using another date.
+Omit `run --as-of` entirely to retain the existing sample-date or today default.
+
 ### Choose the clinic's calendar time zone
 
 Use an IANA name when importing timestamps with an offset, especially when
