@@ -1,0 +1,1 @@
+{"pass":4,"fail":0,"fatal":null,"report":"/dev/shm/hamon-b890f0b1bfcd-pt-receiving/receiving-v2/browser/report.json","sha256":"3e416c62a0e4d56ca70896693983a10a7a2bfc6caf7b1e0c47753f5af1bc6cd9"}

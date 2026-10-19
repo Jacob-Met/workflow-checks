@@ -1,0 +1,587 @@
+[
+  {
+    "id": "P1-EARLY",
+    "auth": [
+      "P1",
+      "PAY1",
+      "AUTH-REPEAT (2026-10-01..2026-10-15)",
+      "2026-10-01",
+      "2026-10-15",
+      "authorizations.csv:row2"
+    ],
+    "cells": [
+      {
+        "primary": "P1-EARLY",
+        "detail": "treatment"
+      },
+      {
+        "primary": "2026-10-03",
+        "detail": null
+      },
+      {
+        "primary": "Used",
+        "detail": "Recorded completed"
+      },
+      {
+        "primary": "Fictional Alex <b>literal</b>",
+        "detail": "P1"
+      },
+      {
+        "primary": "Clinic A.*B",
+        "detail": "Therapist A"
+      },
+      {
+        "primary": "Fictional Plan <script>window.__allocatedInjected=1</script> & \"one\"",
+        "detail": "PAY1"
+      },
+      {
+        "primary": "AUTH-REPEAT (2026-10-01..2026-10-15)",
+        "detail": "2026-10-01 to 2026-10-15; 5 authorized; patient P1; payer PAY1"
+      },
+      {
+        "primary": "Visit: schedule.csv:row3",
+        "detail": "Authorization: authorizations.csv:row2"
+      }
+    ]
+  },
+  {
+    "id": "DUP-1",
+    "auth": [
+      "P1",
+      "PAY1",
+      "AUTH-REPEAT (2026-10-01..2026-10-15)",
+      "2026-10-01",
+      "2026-10-15",
+      "authorizations.csv:row2"
+    ],
+    "cells": [
+      {
+        "primary": "DUP-1",
+        "detail": "treatment"
+      },
+      {
+        "primary": "2026-10-05",
+        "detail": null
+      },
+      {
+        "primary": "Used",
+        "detail": "Recorded completed"
+      },
+      {
+        "primary": "Fictional Alex <b>literal</b>",
+        "detail": "P1"
+      },
+      {
+        "primary": "Clinic A.*B",
+        "detail": "Therapist A"
+      },
+      {
+        "primary": "Fictional Plan <script>window.__allocatedInjected=1</script> & \"one\"",
+        "detail": "PAY1"
+      },
+      {
+        "primary": "AUTH-REPEAT (2026-10-01..2026-10-15)",
+        "detail": "2026-10-01 to 2026-10-15; 5 authorized; patient P1; payer PAY1"
+      },
+      {
+        "primary": "Visit: schedule.csv:row18",
+        "detail": "Authorization: authorizations.csv:row2"
+      }
+    ]
+  },
+  {
+    "id": "P1-NEXT",
+    "auth": [
+      "P1",
+      "PAY1",
+      "AUTH-REPEAT (2026-10-01..2026-10-15)",
+      "2026-10-01",
+      "2026-10-15",
+      "authorizations.csv:row2"
+    ],
+    "cells": [
+      {
+        "primary": "P1-NEXT",
+        "detail": "treatment"
+      },
+      {
+        "primary": "2026-10-10",
+        "detail": null
+      },
+      {
+        "primary": "Reserved",
+        "detail": "Recorded scheduled"
+      },
+      {
+        "primary": "Fictional Alex <b>literal</b>",
+        "detail": "P1"
+      },
+      {
+        "primary": "Clinic Z",
+        "detail": "Therapist A"
+      },
+      {
+        "primary": "Fictional Plan <script>window.__allocatedInjected=1</script> & \"one\"",
+        "detail": "PAY1"
+      },
+      {
+        "primary": "AUTH-REPEAT (2026-10-01..2026-10-15)",
+        "detail": "2026-10-01 to 2026-10-15; 5 authorized; patient P1; payer PAY1"
+      },
+      {
+        "primary": "Visit: schedule.csv:row4",
+        "detail": "Authorization: authorizations.csv:row2"
+      }
+    ]
+  },
+  {
+    "id": "P1-EXTRA",
+    "auth": [
+      "P1",
+      "PAY1",
+      "AUTH-REPEAT (2026-10-01..2026-10-15)",
+      "2026-10-01",
+      "2026-10-15",
+      "authorizations.csv:row2"
+    ],
+    "cells": [
+      {
+        "primary": "P1-EXTRA",
+        "detail": "treatment"
+      },
+      {
+        "primary": "2026-10-11",
+        "detail": null
+      },
+      {
+        "primary": "Reserved",
+        "detail": "Recorded scheduled"
+      },
+      {
+        "primary": "Fictional Alex <b>literal</b>",
+        "detail": "P1"
+      },
+      {
+        "primary": "Clinic A.*B",
+        "detail": "Therapist A"
+      },
+      {
+        "primary": "Fictional Plan <script>window.__allocatedInjected=1</script> & \"one\"",
+        "detail": "PAY1"
+      },
+      {
+        "primary": "AUTH-REPEAT (2026-10-01..2026-10-15)",
+        "detail": "2026-10-01 to 2026-10-15; 5 authorized; patient P1; payer PAY1"
+      },
+      {
+        "primary": "Visit: schedule.csv:row20",
+        "detail": "Authorization: authorizations.csv:row2"
+      }
+    ]
+  },
+  {
+    "id": "P1-LATE-DONE",
+    "auth": [
+      "P1",
+      "PAY1",
+      "AUTH-REPEAT (2026-10-16..2026-10-31)",
+      "2026-10-16",
+      "2026-10-31",
+      "authorizations.csv:row3"
+    ],
+    "cells": [
+      {
+        "primary": "P1-LATE-DONE",
+        "detail": "treatment"
+      },
+      {
+        "primary": "2026-10-21",
+        "detail": null
+      },
+      {
+        "primary": "Used",
+        "detail": "Recorded completed"
+      },
+      {
+        "primary": "Fictional Alex <b>literal</b>",
+        "detail": "P1"
+      },
+      {
+        "primary": "Clinic Z",
+        "detail": "Therapist A"
+      },
+      {
+        "primary": "Fictional Plan <script>window.__allocatedInjected=1</script> & \"one\"",
+        "detail": "PAY1"
+      },
+      {
+        "primary": "AUTH-REPEAT (2026-10-16..2026-10-31)",
+        "detail": "2026-10-16 to 2026-10-31; 5 authorized; patient P1; payer PAY1"
+      },
+      {
+        "primary": "Visit: schedule.csv:row6",
+        "detail": "Authorization: authorizations.csv:row3"
+      }
+    ]
+  },
+  {
+    "id": "P1-LATE",
+    "auth": [
+      "P1",
+      "PAY1",
+      "AUTH-REPEAT (2026-10-16..2026-10-31)",
+      "2026-10-16",
+      "2026-10-31",
+      "authorizations.csv:row3"
+    ],
+    "cells": [
+      {
+        "primary": "P1-LATE",
+        "detail": "treatment"
+      },
+      {
+        "primary": "2026-10-20",
+        "detail": null
+      },
+      {
+        "primary": "Reserved",
+        "detail": "Recorded scheduled"
+      },
+      {
+        "primary": "Fictional Alex <b>literal</b>",
+        "detail": "P1"
+      },
+      {
+        "primary": "Clinic A.*B",
+        "detail": "Therapist A"
+      },
+      {
+        "primary": "Fictional Plan <script>window.__allocatedInjected=1</script> & \"one\"",
+        "detail": "PAY1"
+      },
+      {
+        "primary": "AUTH-REPEAT (2026-10-16..2026-10-31)",
+        "detail": "2026-10-16 to 2026-10-31; 5 authorized; patient P1; payer PAY1"
+      },
+      {
+        "primary": "Visit: schedule.csv:row5",
+        "detail": "Authorization: authorizations.csv:row3"
+      }
+    ]
+  },
+  {
+    "id": "P2-DONE",
+    "auth": [
+      "P2",
+      "PAY1",
+      "AUTH-AMEND",
+      "2026-10-01",
+      "2026-10-31",
+      "authorizations.csv:row5"
+    ],
+    "cells": [
+      {
+        "primary": "P2-DONE",
+        "detail": "treatment"
+      },
+      {
+        "primary": "2026-10-04",
+        "detail": null
+      },
+      {
+        "primary": "Used",
+        "detail": "Recorded completed"
+      },
+      {
+        "primary": "Fictional Cross Token",
+        "detail": "P2"
+      },
+      {
+        "primary": "Visit South",
+        "detail": "Therapist B"
+      },
+      {
+        "primary": "Fictional Plan <script>window.__allocatedInjected=1</script> & \"one\"",
+        "detail": "PAY1"
+      },
+      {
+        "primary": "AUTH-AMEND",
+        "detail": "2026-10-01 to 2026-10-31; 4 authorized; patient P2; payer PAY1"
+      },
+      {
+        "primary": "Visit: schedule.csv:row7",
+        "detail": "Authorization: authorizations.csv:row5"
+      }
+    ]
+  },
+  {
+    "id": "P2-NEXT",
+    "auth": [
+      "P2",
+      "PAY1",
+      "AUTH-AMEND",
+      "2026-10-01",
+      "2026-10-31",
+      "authorizations.csv:row5"
+    ],
+    "cells": [
+      {
+        "primary": "P2-NEXT",
+        "detail": "treatment"
+      },
+      {
+        "primary": "2026-10-12",
+        "detail": null
+      },
+      {
+        "primary": "Reserved",
+        "detail": "Recorded scheduled"
+      },
+      {
+        "primary": "Fictional Cross Token",
+        "detail": "P2"
+      },
+      {
+        "primary": "Visit North",
+        "detail": "Therapist B"
+      },
+      {
+        "primary": "Fictional Plan <script>window.__allocatedInjected=1</script> & \"one\"",
+        "detail": "PAY1"
+      },
+      {
+        "primary": "AUTH-AMEND",
+        "detail": "2026-10-01 to 2026-10-31; 4 authorized; patient P2; payer PAY1"
+      },
+      {
+        "primary": "Visit: schedule.csv:row8",
+        "detail": "Authorization: authorizations.csv:row5"
+      }
+    ]
+  },
+  {
+    "id": "P2-TWIN",
+    "auth": [
+      "P2",
+      "PAY1",
+      "AUTH-AMEND",
+      "2026-10-01",
+      "2026-10-31",
+      "authorizations.csv:row5"
+    ],
+    "cells": [
+      {
+        "primary": "P2-TWIN",
+        "detail": "treatment"
+      },
+      {
+        "primary": "2026-10-12",
+        "detail": null
+      },
+      {
+        "primary": "Reserved",
+        "detail": "Recorded scheduled"
+      },
+      {
+        "primary": "Fictional Cross Token",
+        "detail": "P2"
+      },
+      {
+        "primary": "Visit North",
+        "detail": "Therapist B"
+      },
+      {
+        "primary": "Fictional Plan <script>window.__allocatedInjected=1</script> & \"one\"",
+        "detail": "PAY1"
+      },
+      {
+        "primary": "AUTH-AMEND",
+        "detail": "2026-10-01 to 2026-10-31; 4 authorized; patient P2; payer PAY1"
+      },
+      {
+        "primary": "Visit: schedule.csv:row9",
+        "detail": "Authorization: authorizations.csv:row5"
+      }
+    ]
+  },
+  {
+    "id": "<img src=x onerror=\"window.__allocatedInjected=1\">-FICTION",
+    "auth": [
+      "P3",
+      "PAY2",
+      "AUTH-MARKUP",
+      "2026-10-01",
+      "2026-10-31",
+      "authorizations.csv:row6"
+    ],
+    "cells": [
+      {
+        "primary": "<img src=x onerror=\"window.__allocatedInjected=1\">-FICTION",
+        "detail": "treatment"
+      },
+      {
+        "primary": "2026-10-06",
+        "detail": null
+      },
+      {
+        "primary": "Used",
+        "detail": "Recorded completed"
+      },
+      {
+        "primary": "Fictional Zoë & \"Kim\"",
+        "detail": "P3"
+      },
+      {
+        "primary": "Clinic HTML",
+        "detail": "Therapist \"C\", café"
+      },
+      {
+        "primary": "Fictional Plan Café",
+        "detail": "PAY2"
+      },
+      {
+        "primary": "AUTH-MARKUP",
+        "detail": "2026-10-01 to 2026-10-31; 3 authorized; patient P3; payer PAY2"
+      },
+      {
+        "primary": "Visit: schedule.csv:row11",
+        "detail": "Authorization: authorizations.csv:row6"
+      }
+    ]
+  },
+  {
+    "id": "P3-NEXT",
+    "auth": [
+      "P3",
+      "PAY2",
+      "AUTH-MARKUP",
+      "2026-10-01",
+      "2026-10-31",
+      "authorizations.csv:row6"
+    ],
+    "cells": [
+      {
+        "primary": "P3-NEXT",
+        "detail": "treatment"
+      },
+      {
+        "primary": "2026-10-12",
+        "detail": null
+      },
+      {
+        "primary": "Reserved",
+        "detail": "Recorded scheduled"
+      },
+      {
+        "primary": "Fictional Zoë & \"Kim\"",
+        "detail": "P3"
+      },
+      {
+        "primary": "Clinic HTML",
+        "detail": "Therapist C"
+      },
+      {
+        "primary": "Fictional Plan Café",
+        "detail": "PAY2"
+      },
+      {
+        "primary": "AUTH-MARKUP",
+        "detail": "2026-10-01 to 2026-10-31; 3 authorized; patient P3; payer PAY2"
+      },
+      {
+        "primary": "Visit: schedule.csv:row12",
+        "detail": "Authorization: authorizations.csv:row6"
+      }
+    ]
+  },
+  {
+    "id": "P6-LONG-RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR",
+    "auth": [
+      "P6",
+      "PAY1",
+      "AUTH-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "2026-10-01",
+      "2026-10-31",
+      "authorizations.csv:row9"
+    ],
+    "cells": [
+      {
+        "primary": "P6-LONG-RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR",
+        "detail": "treatment"
+      },
+      {
+        "primary": "2026-10-07",
+        "detail": null
+      },
+      {
+        "primary": "Used",
+        "detail": "Recorded completed"
+      },
+      {
+        "primary": "Fictional Long",
+        "detail": "P6"
+      },
+      {
+        "primary": "Clinic-ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ",
+        "detail": "Therapist Long"
+      },
+      {
+        "primary": "Fictional Plan <script>window.__allocatedInjected=1</script> & \"one\"",
+        "detail": "PAY1"
+      },
+      {
+        "primary": "AUTH-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "detail": "2026-10-01 to 2026-10-31; 3 authorized; patient P6; payer PAY1"
+      },
+      {
+        "primary": "Visit: schedule.csv:row16",
+        "detail": "Authorization: authorizations.csv:row9"
+      }
+    ]
+  },
+  {
+    "id": "P6-NEXT",
+    "auth": [
+      "P6",
+      "PAY1",
+      "AUTH-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "2026-10-01",
+      "2026-10-31",
+      "authorizations.csv:row9"
+    ],
+    "cells": [
+      {
+        "primary": "P6-NEXT",
+        "detail": "treatment"
+      },
+      {
+        "primary": "2026-10-18",
+        "detail": null
+      },
+      {
+        "primary": "Reserved",
+        "detail": "Recorded scheduled"
+      },
+      {
+        "primary": "Fictional Long",
+        "detail": "P6"
+      },
+      {
+        "primary": "Clinic-ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ",
+        "detail": "Therapist Long"
+      },
+      {
+        "primary": "Fictional Plan <script>window.__allocatedInjected=1</script> & \"one\"",
+        "detail": "PAY1"
+      },
+      {
+        "primary": "AUTH-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "detail": "2026-10-01 to 2026-10-31; 3 authorized; patient P6; payer PAY1"
+      },
+      {
+        "primary": "Visit: schedule.csv:row17",
+        "detail": "Authorization: authorizations.csv:row9"
+      }
+    ]
+  }
+]

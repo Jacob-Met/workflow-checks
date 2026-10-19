@@ -1,0 +1,108 @@
+{
+  "source_rechecked_at": 1791490640.4373999,
+  "checkouts": {
+    "source": {
+      "commit": "055c863a9484adb1f6f39f54bf6cce90825bf0ad",
+      "tree": "1987ba3b41d4780dcbed19dc8ba9ee1c46dee529",
+      "all_leaves_rehashed": 1319,
+      "all_leaf_bytes": 23936569,
+      "mismatches": [],
+      "status_porcelain": "",
+      "selected_blobs": [
+        {
+          "path": "pt_auth/ptauth/allocated.py",
+          "git_blob": "cd8a391067639f5f647818ed03a122089b4bad74",
+          "sha256": "343cecb2e6dcca2accff77cd7b75db57a47b61043ca4e07478824af66a918a1a",
+          "bytes": 6038
+        },
+        {
+          "path": "pt_auth/ptauth/cli.py",
+          "git_blob": "559c0a76effa2204041e9318e9869a6c7389f50d",
+          "sha256": "cd4e5ed987b6ae686de687eabbb69007ab9cda8204ec41ebb25185f864321585",
+          "bytes": 5071
+        },
+        {
+          "path": "pt_auth/ptauth/data.py",
+          "git_blob": "19a2a1b79eff6d2753507eebf3bf78011ddaaa87",
+          "sha256": "eeab8ab5b2b72524148969de0d13b27126cc64c4ec79b68a147b51b25a3741e2",
+          "bytes": 10283
+        },
+        {
+          "path": "pt_auth/ptauth/engine.py",
+          "git_blob": "39c97f35d61ff949b5c2381f0ad60d7af8d74226",
+          "sha256": "bfa7049e9b133d654ce947b135c17ac401bd7b1fcd76350bdb10de5b7a1ad1f7",
+          "bytes": 16057
+        },
+        {
+          "path": "pt_auth/ptauth/report.py",
+          "git_blob": "ef95e177ee35e32447743ab6867e739be5cbe9ba",
+          "sha256": "18f0faf298e96e28ac1f2d9d05bb8620bac1005beb1127a10e9816d52c225fcb",
+          "bytes": 11376
+        },
+        {
+          "path": "pt_auth/ptauth/ui.html",
+          "git_blob": "af7dadb2755bb587494644d85c26d3ae51abcbe3",
+          "sha256": "4281cb85515441e9bce852a1f842e5e55ee240228319fc9cfc566e77112bb5ef",
+          "bytes": 25487
+        },
+        {
+          "path": "pt_auth/ptauth/web.py",
+          "git_blob": "7e5d38f4cf8c33f4b9c91bd3c3d929fcfa0f80b3",
+          "sha256": "18a5f6e889f2a5d7e0e3704989f041681252df3ee0cb29e3c356aff560fd2967",
+          "bytes": 8633
+        }
+      ]
+    },
+    "baseline": {
+      "commit": "8fe2c9270f487729af9e88f40894e1c4530f2c20",
+      "tree": "ff97dbcf5ea9efe19e98d885c4694322a6fe627f",
+      "all_leaves_rehashed": 1285,
+      "all_leaf_bytes": 23046275,
+      "mismatches": [],
+      "status_porcelain": "",
+      "selected_blobs": [
+        {
+          "path": "pt_auth/ptauth/cli.py",
+          "git_blob": "559c0a76effa2204041e9318e9869a6c7389f50d",
+          "sha256": "cd4e5ed987b6ae686de687eabbb69007ab9cda8204ec41ebb25185f864321585",
+          "bytes": 5071
+        },
+        {
+          "path": "pt_auth/ptauth/data.py",
+          "git_blob": "19a2a1b79eff6d2753507eebf3bf78011ddaaa87",
+          "sha256": "eeab8ab5b2b72524148969de0d13b27126cc64c4ec79b68a147b51b25a3741e2",
+          "bytes": 10283
+        },
+        {
+          "path": "pt_auth/ptauth/engine.py",
+          "git_blob": "39c97f35d61ff949b5c2381f0ad60d7af8d74226",
+          "sha256": "bfa7049e9b133d654ce947b135c17ac401bd7b1fcd76350bdb10de5b7a1ad1f7",
+          "bytes": 16057
+        },
+        {
+          "path": "pt_auth/ptauth/report.py",
+          "git_blob": "2ce82b1712e5c6fc03374d38996eceddf31782f0",
+          "sha256": "20cbc86e153b9af5151fd3e74cb370298de4692c81b3546a214eb2cfa8307df7",
+          "bytes": 10743
+        },
+        {
+          "path": "pt_auth/ptauth/ui.html",
+          "git_blob": "ec2e198ee1873c41981d201c78a63dbccc13afad",
+          "sha256": "a59df72e1edf5075e513047eb4000e94a87bf1dbcde8d243547944c283bbd492",
+          "bytes": 18655
+        },
+        {
+          "path": "pt_auth/ptauth/web.py",
+          "git_blob": "7e5d38f4cf8c33f4b9c91bd3c3d929fcfa0f80b3",
+          "sha256": "18a5f6e889f2a5d7e0e3704989f041681252df3ee0cb29e3c356aff560fd2967",
+          "bytes": 8633
+        }
+      ]
+    }
+  },
+  "runtime": {
+    "python": "3.14.4 (main, Aug 20 2026, 10:41:58) [GCC 15.2.0]",
+    "node": "v22.22.1",
+    "playwright": "1.64.0"
+  }
+}

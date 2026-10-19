@@ -1,0 +1,28 @@
+{
+  "runtime": "v24.19.0",
+  "baseline": {
+    "sha256": "a59df72e1edf5075e513047eb4000e94a87bf1dbcde8d243547944c283bbd492",
+    "bytes": 18655,
+    "external": [
+      {
+        "attributes": " src=\"/calendar_ui.js\"",
+        "body": ""
+      }
+    ],
+    "inline_count": 1
+  },
+  "candidate": {
+    "sha256": "4281cb85515441e9bce852a1f842e5e55ee240228319fc9cfc566e77112bb5ef",
+    "bytes": 25487,
+    "external": [
+      {
+        "attributes": " src=\"/calendar_ui.js\"",
+        "body": ""
+      }
+    ],
+    "inline_count": 1
+  },
+  "syntax": "pass",
+  "executed": false,
+  "exit_code": 0
+}

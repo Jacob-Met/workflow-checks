@@ -1,0 +1,1 @@
+{"status": "frozen", "path": "/dev/shm/hamon-b890f0b1bfcd-pt-receiving/fixture-freeze/expected-da5f0b3dcfcc3b2d80bcbf84a3edaa17e917ef4a6e4864f80506332bee9ca53b.json", "sha256": "da5f0b3dcfcc3b2d80bcbf84a3edaa17e917ef4a6e4864f80506332bee9ca53b", "records": 13, "raw_visits": 19, "source_module_pins_exact": true}

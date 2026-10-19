@@ -1,0 +1,66 @@
+{
+  "schema": "hamon.independent_browser_receiver.v1",
+  "receiver": "chatgpt:b890f0b1bfcd:integration",
+  "repository": "Jacob-Met/workflow-checks",
+  "offered_issue": "https://github.com/Jacob-Met/workflow-checks/issues/43",
+  "offered_pr": "https://github.com/Jacob-Met/workflow-checks/pull/56",
+  "source_pin": "055c863a9484adb1f6f39f54bf6cce90825bf0ad",
+  "source_tree": "1987ba3b41d4780dcbed19dc8ba9ee1c46dee529",
+  "original_owner": "ultra-20b27c2e-20261008",
+  "authored_before_candidate_implementation_read": true,
+  "basis": [
+    "Public issue43 user outcome and source fence",
+    "Current PR56 published behavior, exact source pins, remaining browser/print gates",
+    "Current PR56 and issue43 comments",
+    "610 central HAMON issue140 comments",
+    "Native 625 conscience decisions through seq4853 plus five fresh decisions through seq4858; 324 external JSON records scanned with zero unreadable/invalid"
+  ],
+  "native_overlap_limit": "hamon-goals overlap reports complete native goal coverage and incomplete/truncated external projection. The separate full top-level JSON scan and Conscience scan supplement it; no live lease is inferred.",
+  "scope": "Independently authored actual browser and print receiving of the existing PT allocated-visit report using fictional native CSV inputs. No existing product source changes without a concrete failure and owner/root coordination.",
+  "cases": [
+    {
+      "id": "native-record-identity",
+      "expect": "The real CLI and unchanged native allocation engine produce the authoritative ledger for independently authored CSVs. Each completed/scheduled allocated visit is represented with exact visit ID/date, patient/payer/visit clinic, authorization occurrence and available visit/authorization source-row references, retaining multiplicity and ordering."
+    },
+    {
+      "id": "distinct-authorization-occurrences",
+      "expect": "Fixtures include repeated authorization identifiers in different periods and visit-clinic versus authorization/patient-clinic contrasts. Exact authorization-period filtering and visit-clinic filtering must not coalesce or substitute those identities."
+    },
+    {
+      "id": "filters",
+      "expect": "Use actual browser controls to apply allocation, exact authorization occurrence, clinic and literal case-insensitive per-field search, separately and together. Clearing filters restores all records. Regex-looking text is literal; cross-field concatenation is not a match."
+    },
+    {
+      "id": "complete-csv",
+      "expect": "Download from actual browser while a restrictive filter is active. Completed file must contain the complete ordered allocation report, not just visible rows, and match the native producer's allocated_visits.csv bytes where the public producer/download contract promises identity."
+    },
+    {
+      "id": "complete-print",
+      "expect": "The printable digest retains all exact report records independently of current filters. Capture an actual Chromium PDF and inspect extracted text and page geometry for clipping, missing rows, malformed literal fields and unusable long-cell layout."
+    },
+    {
+      "id": "keyboard-access",
+      "expect": "Keyboard focus can reach and operate the allocation filters and export controls. On narrow viewports, native keyboard access or an accessible scroll region must permit reading all columns; focused controls and resulting values remain visible."
+    },
+    {
+      "id": "responsive-layout",
+      "expect": "Check 1280px and 390px widths, including long unbroken IDs and literal punctuation/Unicode in allowed input cells. Controls remain readable and operable; intentional table scrolling must not make columns inaccessible or blow out the document."
+    },
+    {
+      "id": "legacy-empty",
+      "expect": "A saved summary lacking the allocation projection clearly says detail is unavailable. A valid completed empty projection clearly represents no allocated visits. Neither state invents records or presents a false successful empty report for unavailable detail."
+    },
+    {
+      "id": "literal-text-and-requests",
+      "expect": "Allowed fixture strings containing markup, quotes, commas and Unicode are displayed/downloaded literally. No script side effect, browser page exception or non-loopback request is admitted."
+    },
+    {
+      "id": "read-only-preservation",
+      "expect": "Inspecting, filtering, downloading and printing leave source CSVs, original saved report files and staff decision state unchanged. No real patient, payer, calendar, provider, browser profile or production service is used."
+    }
+  ],
+  "fixture_freeze": "Exact independently authored input/expected-record fixtures will be frozen after reading the unchanged baseline input schema/engine and before examining candidate projection/template code. Candidate-specific selectors may adapt only the mechanism; expectation changes require an explicit retained revision.",
+  "environment": "Existing native ThinkPad Python/Node and Playwright with /snap/bin/chromium, chromiumSandbox:true. Use fresh bounded owned /tmp source/profile/output paths, measure available capacity before hydration and launch, and reuse installed tools without dependencies or downloads.",
+  "provenance": "This is a new independently measured packet. It does not reconstruct, replace or reattribute the unavailable original Mac author/reviewer results or four missing author test/docs payloads.",
+  "integration": "Original owner retains PR56, issue43, source recovery, existing source and final integration. Handoff only a separate exact-source evidence contribution and any independently reproduced failure; no owner-branch mutation or merge."
+}

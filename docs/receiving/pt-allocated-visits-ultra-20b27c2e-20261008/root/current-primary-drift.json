@@ -1,0 +1,10 @@
+{
+  "from": "c1f6fa79518bac5ca9836e6f931766368804ba7a",
+  "to": "8fe2c9270f487729af9e88f40894e1c4530f2c20",
+  "changed": [],
+  "missing": [],
+  "pt_leaves": 118,
+  "from_tree": "4cc43c06b3cc06ecc6cdcc9f2bbb0f16557cbba7",
+  "to_tree": "ff97dbcf5ea9efe19e98d885c4694322a6fe627f",
+  "new_primary_subject": "Merge PR #49: retain portable, distinct Freight packet filenames\n\nPreserve logical load IDs and settlement calculations while retaining distinct packet files for Windows case pairs and device names. Qualified on native Windows with exact input/consumer bytes; independently reviewed. Final Python 3.10/3.12 and what-if gates pass, with original raw custody recovered additively."
+}

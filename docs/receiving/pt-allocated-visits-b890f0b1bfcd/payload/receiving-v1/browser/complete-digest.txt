@@ -1,0 +1,223 @@
+  SYNTHETIC DATA - NOT REAL PATIENTS. Proof of concept; payer rules are placeholders. Nothing is submitted to any payer.
+
+
+
+Daily authorization worklist — 2026-10-08
+Clinic time zone: UTC. Dates and times without an offset keep their written calendar date.
+
+1 act-today (P1) · 1 this week (P2) · 0 heads-up (P3) · 2 scheduled visits outside an approved auth · 0 completed visits without auth
+
+ Pri    Patient           Clinic     Payer / auth                                         Reason               Used / Auth        Next    Submit   Detail
+                                                                                                               auth'd end         visit   by
+
+ P1     Fictional         Home       Fictional Plan                                PENDING_FOLLOWUP            -/-      -         2026-   -        visit 2026-
+        Pending           Pending    <script>window.__allocatedInjected=1</script>                                                10-09            10-09
+        P5                           & "one"                                                                                                       relies on
+                                     AUTH-PENDING                                                                                                  PENDING
+                                                                                                                                                   auth
+                                                                                                                                                   AUTH-
+                                                                                                                                                   PENDING;
+                                                                                                                                                   follow up
+                                                                                                                                                   with
+                                                                                                                                                   payer
+
+ P2     Fictional Alex    Home       Fictional Plan                                UNCOVERED_VISIT             1/5      2026-     2026-   -        1
+        <b>literal</b>    HQ         <script>window.__allocatedInjected=1</script>                                      10-31     10-10            scheduled
+        P1                           & "one"                                                                            23 d                       visit(s)
+                                     AUTH-REPEAT (2026-10-16..2026-10-31)                                                                          outside
+                                                                                                                                                   any
+                                                                                                                                                   approved
+                                                                                                                                                   auth, first
+                                                                                                                                                   2026-11-
+                                                                                                                                                   03 (P1-
+                                                                                                                                                   OUTSIDE)
+
+
+
+Re-auth packet checklists (pre-filled from payer rules table)
+
+ Fictional Alex <b>literal</b> · Fictional Plan <script>window.__allocatedInjected=1</script> & "one" · AUTH-REPEAT (2026-10-16..2026-10-31)
+       ☐ Demo only
+
+
+Uncovered visits — scheduled and completed appointments
+These appointments have no covering approved authorization in this report: scheduled visits on or after the as-of date, and visits recorded as
+completed. Check the referenced source rows and authorization worklist. Past appointments still marked scheduled remain in Visit status review.
+This view does not change attendance, authorization rules or staff work states.
+
+2 appointments; complete review, ordered by date.
+
+ Visit /      Date       Recorded    Patient            Visit         Therapist   Payer                                              Source row
+ type                    status                         clinic
+
+ NO-          2026-      scheduled   Fictional          Clinic        Therapist   Fictional Plan                                     schedule.csv:row15
+ AUTH         10-09                  Pending            Unknown       D           <script>window.__allocatedInjected=1</script>
+ treatment                           P5                                           & "one"
+                                                                                  PAY1
+
+ P1-          2026-      scheduled   Fictional Alex     Clinic Z      Therapist   Fictional Plan                                     schedule.csv:row19
+ OUTSIDE      11-03                  <b>literal</b>                   A           <script>window.__allocatedInjected=1</script>
+ treatment                           P1                                           & "one"
+                                                                                  PAY1
+
+
+
+Allocated visits
+These are the visits the existing ledger assigned to approved authorization periods. Used means recorded completed; reserved means recorded
+scheduled, including past dates still marked scheduled. Review both source rows against the input exports. This assignment is not confirmation
+from a payer.
+
+Complete review: 13 allocated visit(s). As of 2026-10-08; clinic time zone: UTC.
+Visit / type   Date         Allocation /   Patient           Visit clinic /   Payer              Authorization       Source rows
+                            recorded                         therapist                           period
+                            status
+
+P1-EARLY       2026-10-03   Used           Fictional Alex    Clinic A.*B      Fictional Plan     AUTH-REPEAT         Visit:
+treatment                   Recorded       <b>literal</b>    Therapist A      <script>window     (2026-10-           schedule.csv:ro
+                            completed      P1                                 .__allocatedInje   01..2026-10-15)     w3
+                                                                              cted=1</script>    2026-10-01 to       Authorization:
+                                                                              & "one"            2026-10-15; 5       authorizations.c
+                                                                              PAY1               authorized          sv:row2
+                                                                                                 Patient P1; payer
+                                                                                                 PAY1
+
+DUP-1          2026-10-05   Used           Fictional Alex    Clinic A.*B      Fictional Plan     AUTH-REPEAT         Visit:
+treatment                   Recorded       <b>literal</b>    Therapist A      <script>window     (2026-10-           schedule.csv:ro
+                            completed      P1                                 .__allocatedInje   01..2026-10-15)     w18
+                                                                              cted=1</script>    2026-10-01 to       Authorization:
+                                                                              & "one"            2026-10-15; 5       authorizations.c
+                                                                              PAY1               authorized          sv:row2
+                                                                                                 Patient P1; payer
+                                                                                                 PAY1
+
+P1-NEXT        2026-10-10   Reserved       Fictional Alex    Clinic Z         Fictional Plan     AUTH-REPEAT         Visit:
+treatment                   Recorded       <b>literal</b>    Therapist A      <script>window     (2026-10-           schedule.csv:ro
+                            scheduled      P1                                 .__allocatedInje   01..2026-10-15)     w4
+                                                                              cted=1</script>    2026-10-01 to       Authorization:
+                                                                              & "one"            2026-10-15; 5       authorizations.c
+                                                                              PAY1               authorized          sv:row2
+                                                                                                 Patient P1; payer
+                                                                                                 PAY1
+
+P1-EXTRA       2026-10-11   Reserved       Fictional Alex    Clinic A.*B      Fictional Plan     AUTH-REPEAT         Visit:
+treatment                   Recorded       <b>literal</b>    Therapist A      <script>window     (2026-10-           schedule.csv:ro
+                            scheduled      P1                                 .__allocatedInje   01..2026-10-15)     w20
+                                                                              cted=1</script>    2026-10-01 to       Authorization:
+                                                                              & "one"            2026-10-15; 5       authorizations.c
+                                                                              PAY1               authorized          sv:row2
+                                                                                                 Patient P1; payer
+                                                                                                 PAY1
+
+P1-LATE-DONE   2026-10-21   Used           Fictional Alex    Clinic Z         Fictional Plan     AUTH-REPEAT         Visit:
+treatment                   Recorded       <b>literal</b>    Therapist A      <script>window     (2026-10-           schedule.csv:ro
+                            completed      P1                                 .__allocatedInje   16..2026-10-31)     w6
+                                                                              cted=1</script>    2026-10-16 to       Authorization:
+                                                                              & "one"            2026-10-31; 5       authorizations.c
+                                                                              PAY1               authorized          sv:row3
+                                                                                                 Patient P1; payer
+                                                                                                 PAY1
+
+P1-LATE        2026-10-20   Reserved       Fictional Alex    Clinic A.*B      Fictional Plan     AUTH-REPEAT         Visit:
+treatment                   Recorded       <b>literal</b>    Therapist A      <script>window     (2026-10-           schedule.csv:ro
+                            scheduled      P1                                 .__allocatedInje   16..2026-10-31)     w5
+                                                                              cted=1</script>    2026-10-16 to       Authorization:
+                                                                              & "one"            2026-10-31; 5       authorizations.c
+                                                                              PAY1               authorized          sv:row3
+                                                                                                 Patient P1; payer
+                                                                                                 PAY1
+
+P2-DONE        2026-10-04   Used           Fictional Cross   Visit South      Fictional Plan     AUTH-AMEND          Visit:
+treatment                   Recorded       Token             Therapist B      <script>window     2026-10-01 to       schedule.csv:ro
+                            completed      P2                                 .__allocatedInje   2026-10-31; 4       w7
+                                                                              cted=1</script>    authorized          Authorization:
+                                                                              & "one"            Patient P2; payer   authorizations.c
+                                                                              PAY1               PAY1                sv:row5
+
+P2-NEXT        2026-10-12   Reserved       Fictional Cross   Visit North      Fictional Plan     AUTH-AMEND          Visit:
+treatment                   Recorded       Token             Therapist B      <script>window     2026-10-01 to       schedule.csv:ro
+                            scheduled      P2                                 .__allocatedInje   2026-10-31; 4       w8
+                                                                              cted=1</script>    authorized          Authorization:
+                                                                              & "one"            Patient P2; payer   authorizations.c
+                                                                              PAY1               PAY1                sv:row5
+
+P2-TWIN        2026-10-12   Reserved       Fictional Cross   Visit North      Fictional Plan     AUTH-AMEND          Visit:
+treatment                   Recorded       Token             Therapist B      <script>window     2026-10-01 to       schedule.csv:ro
+                            scheduled      P2                                 .__allocatedInje   2026-10-31; 4       w9
+                                                                              cted=1</script>    authorized          Authorization:
+                                                                              & "one"            Patient P2; payer   authorizations.c
+                                                                              PAY1               PAY1                sv:row5
+ Visit / type       Date             Allocation /       Patient           Visit clinic /        Payer              Authorization       Source rows
+                                     recorded                             therapist                                period
+                                     status
+
+ <img src=x         2026-10-06       Used               Fictional Zoë &   Clinic HTML           Fictional Plan     AUTH-MARKUP         Visit:
+ onerror="windo                      Recorded           "Kim"             Therapist "C", café   Café               2026-10-01 to       schedule.csv:ro
+ w.__allocatedInj                    completed          P3                                      PAY2               2026-10-31; 3       w11
+ ected=1">-                                                                                                        authorized          Authorization:
+ FICTION                                                                                                           Patient P3; payer   authorizations.c
+ treatment                                                                                                         PAY2                sv:row6
+
+ P3-NEXT            2026-10-12       Reserved           Fictional Zoë &   Clinic HTML           Fictional Plan     AUTH-MARKUP         Visit:
+ treatment                           Recorded           "Kim"             Therapist C           Café               2026-10-01 to       schedule.csv:ro
+                                     scheduled          P3                                      PAY2               2026-10-31; 3       w12
+                                                                                                                   authorized          Authorization:
+                                                                                                                   Patient P3; payer   authorizations.c
+                                                                                                                   PAY2                sv:row6
+
+ P6-LONG-           2026-10-07       Used               Fictional Long    Clinic-               Fictional Plan     AUTH-               Visit:
+ RRRRRRRRRRRR                        Recorded           P6                ZZZZZZZZZZZZZ         <script>window     XXXXXXXXXXXX        schedule.csv:ro
+ RRRRRRRRRRRR                        completed                            ZZZZZZZZZZZZZ         .__allocatedInje   XXXXXXXXXXXX        w16
+ RRRRRRRRRRRR                                                             ZZZZZZZZZZZZZ         cted=1</script>    XXXXXXXXXXXX        Authorization:
+ RRRRRRRRRRRR                                                             ZZZZZZZZZZZZZ         & "one"            XXXXXXXXXXXX        authorizations.c
+ RRRRRRRRRRRR                                                             ZZZZZZZZZZZZZ         PAY1               XXXXXXXXXXXX        sv:row9
+ RRRRRRRRRRRR                                                             ZZZZZZZZZZZZZ                            XXXXXXXXXXXX
+ RRRRRRRRRRRR                                                             ZZZZZZZZZZZZZ                            XXXXXXXXXXXX
+ RRRRRRRRRRRR                                                             ZZZZZZZZZZZZZ                            XXXXXXXXXXXX
+ RRRRRRRRRRRR                                                             ZZZZZZZZZZZZZ                            XXXXXXXXXXXX
+ RRRRRRRRRRRR                                                             ZZZZZZZZZZZZZ                            XXXXXXXXXXXX
+ RRRRRRRRRRRR                                                             ZZZZZZZZZZZZZ                            XXXXXXXXXXXX
+ RRRRRRRRRRRR                                                             ZZZZZZZZZZZZZ                            XXXXXXXXXXXX
+ RRRRRRRRRRRR                                                             ZZZZ                                     XXXXXXXXXXXX
+ RRRRRRRRRRRR                                                             Therapist Long                           XXXXXXXXXXXX
+ RRRRRRRRRRRR                                                                                                      XXXXXXXXXXXX
+ RRRRRRRRRRRR                                                                                                      XXXXXXXXXXXX
+ RRRRRRRRRRRR                                                                                                      XX
+ RRRRRRRRRRRR                                                                                                      2026-10-01 to
+ RRRRRRRRRRRR                                                                                                      2026-10-31; 3
+ RRRRRRRRRRRR                                                                                                      authorized
+ RRRRRRRRRRRR                                                                                                      Patient P6; payer
+ RR                                                                                                                PAY1
+ treatment
+
+ P6-NEXT            2026-10-18       Reserved           Fictional Long    Clinic-               Fictional Plan     AUTH-               Visit:
+ treatment                           Recorded           P6                ZZZZZZZZZZZZZ         <script>window     XXXXXXXXXXXX        schedule.csv:ro
+                                     scheduled                            ZZZZZZZZZZZZZ         .__allocatedInje   XXXXXXXXXXXX        w17
+                                                                          ZZZZZZZZZZZZZ         cted=1</script>    XXXXXXXXXXXX        Authorization:
+                                                                          ZZZZZZZZZZZZZ         & "one"            XXXXXXXXXXXX        authorizations.c
+                                                                          ZZZZZZZZZZZZZ         PAY1               XXXXXXXXXXXX        sv:row9
+                                                                          ZZZZZZZZZZZZZ                            XXXXXXXXXXXX
+                                                                          ZZZZZZZZZZZZZ                            XXXXXXXXXXXX
+                                                                          ZZZZZZZZZZZZZ                            XXXXXXXXXXXX
+                                                                          ZZZZZZZZZZZZZ                            XXXXXXXXXXXX
+                                                                          ZZZZZZZZZZZZZ                            XXXXXXXXXXXX
+                                                                          ZZZZZZZZZZZZZ                            XXXXXXXXXXXX
+                                                                          ZZZZZZZZZZZZZ                            XXXXXXXXXXXX
+                                                                          ZZZZ                                     XXXXXXXXXXXX
+                                                                          Therapist Long                           XXXXXXXXXXXX
+                                                                                                                   XXXXXXXXXXXX
+                                                                                                                   XXXXXXXXXXXX
+                                                                                                                   XX
+                                                                                                                   2026-10-01 to
+                                                                                                                   2026-10-31; 3
+                                                                                                                   authorized
+                                                                                                                   Patient P6; payer
+                                                                                                                   PAY1
+
+
+
+Visit status review — past appointments still marked scheduled
+Review these past dates in the source schedule, correct their status there, then run again. Any authorization visit shown below stays reserved
+until the corrected export is loaded.
+
+No past appointments remain marked scheduled.
+

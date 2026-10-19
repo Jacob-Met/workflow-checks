@@ -18,6 +18,7 @@ from html import escape
 from pathlib import Path
 
 from . import data
+from .allocated import ALLOCATION_NOTE, AllocatedVisit, build_allocation_review, render_allocation_section
 from .engine import VisitStatusItem, build_visit_status_review, build_worklist
 from .uncovered import UNCOVERED_NOTE, UncoveredVisit, build_uncovered_review, render_uncovered_section
 
@@ -56,6 +57,8 @@ def run(data_dir: Path, out_dir: Path, as_of: date | None = None, run_by: str = 
     items, ledgers, uncovered = build_worklist(visits, auths, payers, patients, as_of)
     status_review = [asdict(row) for row in build_visit_status_review(visits, ledgers, payers, patients, as_of)]
     uncovered_review = [asdict(row) for row in build_uncovered_review(uncovered, payers, patients, as_of)]
+    allocation_review = [asdict(row) for row in
+                         build_allocation_review(ledgers, payers, patients, as_of, timezone_label)]
     out_dir.mkdir(parents=True, exist_ok=True)
 
     ledger_rows = []
@@ -99,6 +102,11 @@ def run(data_dir: Path, out_dir: Path, as_of: date | None = None, run_by: str = 
         w.writeheader()
         w.writerows(uncovered_review)
 
+    with (out_dir / "allocated_visits.csv").open("w", newline="", encoding="utf-8") as fh:
+        w = csv.DictWriter(fh, fieldnames=[f.name for f in fields(AllocatedVisit)])
+        w.writeheader()
+        w.writerows(allocation_review)
+
     counts = {"patients": len(patients), "visits": len(visits), "auths": len(auths),
               "worklist": len(items), "p1": sum(i.priority == "P1" for i in items),
               "p2": sum(i.priority == "P2" for i in items), "p3": sum(i.priority == "P3" for i in items),
@@ -109,6 +117,7 @@ def run(data_dir: Path, out_dir: Path, as_of: date | None = None, run_by: str = 
                "clinic_timezone": timezone_label,
                "counts": counts, "worklist": wl, "ledger": ledger_rows,
                "visit_status_review": status_review, "visit_status_review_note": VISIT_STATUS_NOTE,
+               "allocation_review": allocation_review, "allocation_review_note": ALLOCATION_NOTE,
                "uncovered_review": uncovered_review, "uncovered_review_note": UNCOVERED_NOTE,
                "uncovered": [{"visit_id": v.visit_id, "patient_id": v.patient_id, "date": v.visit_date,
                               "status": v.status, "payer_id": v.payer_id} for v in uncovered]}
@@ -161,6 +170,7 @@ Dates and times without an offset keep their written calendar date.</p>
 <th>Auth end</th><th>Next visit</th><th>Submit by</th><th>Detail</th></tr>{rows}</table>
 <h2>Re-auth packet checklists (pre-filled from payer rules table)</h2>{checklists or '<p>None.</p>'}
 {render_uncovered_section(s)}
+{render_allocation_section(s)}
 <h2>Visit status review &mdash; past appointments still marked scheduled</h2>
 <p>{e(VISIT_STATUS_NOTE)}</p>{status_table}
 </body></html>"""

@@ -1,0 +1,1 @@
+auth_no,auth_patient_id,auth_payer_id,auth_start,auth_end,auth_visits_authorized,auth_evidence,allocation,visit_id,visit_date,status,visit_type,patient_id,patient_name,clinic,therapist,payer_id,payer_name,visit_evidence,as_of,clinic_timezone

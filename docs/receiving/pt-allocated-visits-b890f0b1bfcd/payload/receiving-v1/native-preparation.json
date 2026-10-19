@@ -1,0 +1,187 @@
+{
+  "started_at": 1791488995.5159638,
+  "source_head": "055c863a9484adb1f6f39f54bf6cce90825bf0ad",
+  "commands": [
+    {
+      "args": [
+        "git",
+        "worktree",
+        "add",
+        "--detach",
+        "/dev/shm/hamon-b890f0b1bfcd-pt-receiving/baseline",
+        "8fe2c9270f487729af9e88f40894e1c4530f2c20"
+      ],
+      "cwd": "/dev/shm/hamon-b890f0b1bfcd-pt-receiving/source",
+      "returncode": 0,
+      "stdout": "HEAD is now at 8fe2c92 Merge PR #49: retain portable, distinct Freight packet filenames\n",
+      "stderr": "Preparing worktree (detached HEAD 8fe2c92)\n"
+    },
+    {
+      "args": [
+        "/usr/bin/python3",
+        "-m",
+        "ptauth",
+        "run",
+        "--data",
+        "/dev/shm/hamon-b890f0b1bfcd-pt-receiving/fixture-freeze/inputs",
+        "--out",
+        "/dev/shm/hamon-b890f0b1bfcd-pt-receiving/receiving-v1/normal-out",
+        "--as-of",
+        "2026-10-08",
+        "--clinic-timezone",
+        "UTC"
+      ],
+      "cwd": "/dev/shm/hamon-b890f0b1bfcd-pt-receiving/source",
+      "returncode": 0,
+      "stdout": "[SYNTHETIC] as_of 2026-10-08: 6 patients, 19 visits, 8 auths\nclinic time zone: UTC\nworklist: 2 items (P1 1, P2 1, P3 0); 2 scheduled visits uncovered; 0 completed w/o auth\n  P1 P5 PAY1      AUTH-PENDING PENDING_FOLLOWUP                   submit_by=-\n  P2 P1 PAY1      AUTH-REPEAT (2026-10-16..2026-10-31) UNCOVERED_VISIT                    submit_by=-\n0 past scheduled visits need status review: /dev/shm/hamon-b890f0b1bfcd-pt-receiving/receiving-v1/normal-out/visit_status_review.csv\n2 uncovered visits to inspect: /dev/shm/hamon-b890f0b1bfcd-pt-receiving/receiving-v1/normal-out/uncovered_visits.csv\ndigest: /dev/shm/hamon-b890f0b1bfcd-pt-receiving/receiving-v1/normal-out/digest.html\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "/usr/bin/python3",
+        "-m",
+        "ptauth",
+        "run",
+        "--data",
+        "/dev/shm/hamon-b890f0b1bfcd-pt-receiving/fixture-freeze/inputs",
+        "--out",
+        "/dev/shm/hamon-b890f0b1bfcd-pt-receiving/receiving-v1/legacy-out",
+        "--as-of",
+        "2026-10-08",
+        "--clinic-timezone",
+        "UTC"
+      ],
+      "cwd": "/dev/shm/hamon-b890f0b1bfcd-pt-receiving/baseline",
+      "returncode": 0,
+      "stdout": "[SYNTHETIC] as_of 2026-10-08: 6 patients, 19 visits, 8 auths\nclinic time zone: UTC\nworklist: 2 items (P1 1, P2 1, P3 0); 2 scheduled visits uncovered; 0 completed w/o auth\n  P1 P5 PAY1      AUTH-PENDING PENDING_FOLLOWUP                   submit_by=-\n  P2 P1 PAY1      AUTH-REPEAT (2026-10-16..2026-10-31) UNCOVERED_VISIT                    submit_by=-\n0 past scheduled visits need status review: /dev/shm/hamon-b890f0b1bfcd-pt-receiving/receiving-v1/legacy-out/visit_status_review.csv\n2 uncovered visits to inspect: /dev/shm/hamon-b890f0b1bfcd-pt-receiving/receiving-v1/legacy-out/uncovered_visits.csv\ndigest: /dev/shm/hamon-b890f0b1bfcd-pt-receiving/receiving-v1/legacy-out/digest.html\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "/usr/bin/python3",
+        "-m",
+        "ptauth",
+        "run",
+        "--data",
+        "/dev/shm/hamon-b890f0b1bfcd-pt-receiving/receiving-v1/empty-inputs",
+        "--out",
+        "/dev/shm/hamon-b890f0b1bfcd-pt-receiving/receiving-v1/empty-out",
+        "--as-of",
+        "2026-10-08",
+        "--clinic-timezone",
+        "UTC"
+      ],
+      "cwd": "/dev/shm/hamon-b890f0b1bfcd-pt-receiving/source",
+      "returncode": 0,
+      "stdout": "[SYNTHETIC] as_of 2026-10-08: 6 patients, 0 visits, 8 auths\nclinic time zone: UTC\nworklist: 0 items (P1 0, P2 0, P3 0); 0 scheduled visits uncovered; 0 completed w/o auth\n0 past scheduled visits need status review: /dev/shm/hamon-b890f0b1bfcd-pt-receiving/receiving-v1/empty-out/visit_status_review.csv\n0 uncovered visits to inspect: /dev/shm/hamon-b890f0b1bfcd-pt-receiving/receiving-v1/empty-out/uncovered_visits.csv\ndigest: /dev/shm/hamon-b890f0b1bfcd-pt-receiving/receiving-v1/empty-out/digest.html\n",
+      "stderr": ""
+    }
+  ],
+  "status": "pass",
+  "three_actual_cli_processes": true,
+  "manual_records_matched": 13,
+  "manual_fact_fields_matched": 143,
+  "legacy_detail_unavailable": true,
+  "valid_empty_projection": true,
+  "original_fixture_inputs_unchanged": true,
+  "allocated_facts": [
+    {
+      "visit_id": "P1-EARLY",
+      "auth_no": "AUTH-REPEAT (2026-10-01..2026-10-15)",
+      "allocation": "used",
+      "visit_evidence": "schedule.csv:row3",
+      "auth_evidence": "authorizations.csv:row2"
+    },
+    {
+      "visit_id": "DUP-1",
+      "auth_no": "AUTH-REPEAT (2026-10-01..2026-10-15)",
+      "allocation": "used",
+      "visit_evidence": "schedule.csv:row18",
+      "auth_evidence": "authorizations.csv:row2"
+    },
+    {
+      "visit_id": "P1-NEXT",
+      "auth_no": "AUTH-REPEAT (2026-10-01..2026-10-15)",
+      "allocation": "scheduled",
+      "visit_evidence": "schedule.csv:row4",
+      "auth_evidence": "authorizations.csv:row2"
+    },
+    {
+      "visit_id": "P1-EXTRA",
+      "auth_no": "AUTH-REPEAT (2026-10-01..2026-10-15)",
+      "allocation": "scheduled",
+      "visit_evidence": "schedule.csv:row20",
+      "auth_evidence": "authorizations.csv:row2"
+    },
+    {
+      "visit_id": "P1-LATE-DONE",
+      "auth_no": "AUTH-REPEAT (2026-10-16..2026-10-31)",
+      "allocation": "used",
+      "visit_evidence": "schedule.csv:row6",
+      "auth_evidence": "authorizations.csv:row3"
+    },
+    {
+      "visit_id": "P1-LATE",
+      "auth_no": "AUTH-REPEAT (2026-10-16..2026-10-31)",
+      "allocation": "scheduled",
+      "visit_evidence": "schedule.csv:row5",
+      "auth_evidence": "authorizations.csv:row3"
+    },
+    {
+      "visit_id": "P2-DONE",
+      "auth_no": "AUTH-AMEND",
+      "allocation": "used",
+      "visit_evidence": "schedule.csv:row7",
+      "auth_evidence": "authorizations.csv:row5"
+    },
+    {
+      "visit_id": "P2-NEXT",
+      "auth_no": "AUTH-AMEND",
+      "allocation": "scheduled",
+      "visit_evidence": "schedule.csv:row8",
+      "auth_evidence": "authorizations.csv:row5"
+    },
+    {
+      "visit_id": "P2-TWIN",
+      "auth_no": "AUTH-AMEND",
+      "allocation": "scheduled",
+      "visit_evidence": "schedule.csv:row9",
+      "auth_evidence": "authorizations.csv:row5"
+    },
+    {
+      "visit_id": "<img src=x onerror=\"window.__allocatedInjected=1\">-FICTION",
+      "auth_no": "AUTH-MARKUP",
+      "allocation": "used",
+      "visit_evidence": "schedule.csv:row11",
+      "auth_evidence": "authorizations.csv:row6"
+    },
+    {
+      "visit_id": "P3-NEXT",
+      "auth_no": "AUTH-MARKUP",
+      "allocation": "scheduled",
+      "visit_evidence": "schedule.csv:row12",
+      "auth_evidence": "authorizations.csv:row6"
+    },
+    {
+      "visit_id": "P6-LONG-RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR",
+      "auth_no": "AUTH-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "allocation": "used",
+      "visit_evidence": "schedule.csv:row16",
+      "auth_evidence": "authorizations.csv:row9"
+    },
+    {
+      "visit_id": "P6-NEXT",
+      "auth_no": "AUTH-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "allocation": "scheduled",
+      "visit_evidence": "schedule.csv:row17",
+      "auth_evidence": "authorizations.csv:row9"
+    }
+  ],
+  "outputs": {
+    "normal": "/dev/shm/hamon-b890f0b1bfcd-pt-receiving/receiving-v1/normal-out",
+    "legacy": "/dev/shm/hamon-b890f0b1bfcd-pt-receiving/receiving-v1/legacy-out",
+    "empty": "/dev/shm/hamon-b890f0b1bfcd-pt-receiving/receiving-v1/empty-out"
+  },
+  "watched_files": 58,
+  "completed_at": 1791489000.2649245
+}
