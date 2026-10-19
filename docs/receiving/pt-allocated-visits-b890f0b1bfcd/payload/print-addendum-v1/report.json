@@ -1,0 +1,138 @@
+{
+  "source_pin": "055c863a9484adb1f6f39f54bf6cce90825bf0ad",
+  "pdf_sha256": "0dd860d2e5b04511fa8771932536e9c48ee22c6982b73320e33e9c5f5a0384d3",
+  "original_layout_scan_all_thirteen": false,
+  "reason_for_addendum": "The preserved -layout scan interleaves neighboring columns between wrapped words. Raw PDF reading order and word geometry test the same exact literal identifiers without changing the generated PDF.",
+  "processes": [
+    {
+      "command": [
+        "pdftotext",
+        "-raw",
+        "/dev/shm/hamon-b890f0b1bfcd-pt-receiving/receiving-v1/browser/complete-digest.pdf",
+        "/dev/shm/hamon-b890f0b1bfcd-pt-receiving/print-addendum-v1/complete-digest-raw.txt"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "pdftotext",
+        "-bbox",
+        "/dev/shm/hamon-b890f0b1bfcd-pt-receiving/receiving-v1/browser/complete-digest.pdf",
+        "/dev/shm/hamon-b890f0b1bfcd-pt-receiving/print-addendum-v1/complete-digest-bbox.html"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "pdftoppm",
+        "-f",
+        "2",
+        "-l",
+        "3",
+        "-scale-to",
+        "1400",
+        "-png",
+        "/dev/shm/hamon-b890f0b1bfcd-pt-receiving/receiving-v1/browser/complete-digest.pdf",
+        "/dev/shm/hamon-b890f0b1bfcd-pt-receiving/print-addendum-v1/complete-digest-page"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "records": [
+    {
+      "visit_id": "P1-EARLY",
+      "present_in_raw_reading_order": true
+    },
+    {
+      "visit_id": "DUP-1",
+      "present_in_raw_reading_order": true
+    },
+    {
+      "visit_id": "P1-NEXT",
+      "present_in_raw_reading_order": true
+    },
+    {
+      "visit_id": "P1-EXTRA",
+      "present_in_raw_reading_order": true
+    },
+    {
+      "visit_id": "P1-LATE-DONE",
+      "present_in_raw_reading_order": true
+    },
+    {
+      "visit_id": "P1-LATE",
+      "present_in_raw_reading_order": true
+    },
+    {
+      "visit_id": "P2-DONE",
+      "present_in_raw_reading_order": true
+    },
+    {
+      "visit_id": "P2-NEXT",
+      "present_in_raw_reading_order": true
+    },
+    {
+      "visit_id": "P2-TWIN",
+      "present_in_raw_reading_order": true
+    },
+    {
+      "visit_id": "<img src=x onerror=\"window.__allocatedInjected=1\">-FICTION",
+      "present_in_raw_reading_order": true
+    },
+    {
+      "visit_id": "P3-NEXT",
+      "present_in_raw_reading_order": true
+    },
+    {
+      "visit_id": "P6-LONG-RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR",
+      "present_in_raw_reading_order": true
+    },
+    {
+      "visit_id": "P6-NEXT",
+      "present_in_raw_reading_order": true
+    }
+  ],
+  "all_thirteen_exact_ids_present": true,
+  "pdf_geometry": [
+    {
+      "page": 1,
+      "width_pt": 595.91998,
+      "height_pt": 842.88,
+      "words": 352,
+      "outside_page": [],
+      "leftmost_pt": 45.120966,
+      "rightmost_pt": 558.520736,
+      "smallest_word_height_pt": 8.386348999999996
+    },
+    {
+      "page": 2,
+      "width_pt": 595.91998,
+      "height_pt": 842.88,
+      "words": 372,
+      "outside_page": [],
+      "leftmost_pt": 49.100804,
+      "rightmost_pt": 546.547693,
+      "smallest_word_height_pt": 8.386348999999996
+    },
+    {
+      "page": 3,
+      "width_pt": 595.91998,
+      "height_pt": 842.88,
+      "words": 291,
+      "outside_page": [],
+      "leftmost_pt": 45.120966,
+      "rightmost_pt": 546.547693,
+      "smallest_word_height_pt": 8.386348999999996
+    }
+  ],
+  "all_words_inside_page": true,
+  "pdf_unchanged": true,
+  "created_at": 1791490092.2961502,
+  "status": "pass"
+}
