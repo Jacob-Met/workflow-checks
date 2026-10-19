@@ -1,0 +1,19 @@
+{
+  "schema": "ptauth.calendar.independent-outer-observation/1",
+  "attribution": "Observer transcription of the exact exec_command terminal result, separate from child-produced receiving.json",
+  "source_cli": "b1b7a60de7b470ea59de6313bfcde336f1c5dfe1",
+  "source_entry": "07cf8abb5a559054d4487c65a3f9f7c992067cf5",
+  "receiver": "bccc907cc1476c35bccd24d4cfb5bcf595f55d82",
+  "protocol": "82176f1e5647da26c986a6c91e407dd8cd5f515d",
+  "original_receiver": "3a22a750397790e8757ae4e591fc80aaa96efd6b",
+  "pre_execution_amendment": "edb1b76fe775f70719b5008f553659c6be8253bf",
+  "outer_command": "python3 -B /workspace/scratch/3776d8cfc208/pt-calendar-stdout-independent/receive_cli.py --source-dir /workspace/scratch/3776d8cfc208/pt-calendar-stdout-author/candidate --output-dir /workspace/scratch/3776d8cfc208/pt-calendar-stdout-independent/received-course --cli-git b1b7a60de7b470ea59de6313bfcde336f1c5dfe1 --main-git 07cf8abb5a559054d4487c65a3f9f7c992067cf5",
+  "outer_cwd": "/tmp",
+  "terminal": {
+    "chunk_id": "0dbbce",
+    "wall_time_seconds": 0.587481662,
+    "exit_code": 0,
+    "output": "{\"passed\": true, \"checks\": 57, \"children\": 5, \"receipt\": \"/workspace/scratch/3776d8cfc208/pt-calendar-stdout-independent/received-course/receiving.json\"}\n"
+  },
+  "scope": "One frozen five-child CLI course, no author-suite repetition, browser, engine, or old-source replay. Raw child durations/PIDs are in receiving.json; outer interval is not their sum."
+}

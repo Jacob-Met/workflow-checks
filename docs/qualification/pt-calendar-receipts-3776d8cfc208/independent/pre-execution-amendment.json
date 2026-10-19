@@ -1,0 +1,16 @@
+{
+  "schema": "ptauth.calendar.receiver-refinement/1",
+  "scope": "Pre-exposure, pre-execution harness only",
+  "original_receiver": "3a22a750397790e8757ae4e591fc80aaa96efd6b",
+  "successor_receiver": "bccc907cc1476c35bccd24d4cfb5bcf595f55d82",
+  "protocol": "82176f1e5647da26c986a6c91e407dd8cd5f515d",
+  "changes": [
+    "Pin independently read original initializer a6f4545ac17e2578317ef694f7bb548489f6c71c instead of an unpinned watched initializer",
+    "Set subprocess stdin to DEVNULL",
+    "Remove inherited PYTHONUNBUFFERED only from child environment so the actual buffered shutdown path is exercised"
+  ],
+  "exact_three_substitution_reconstruction": true,
+  "product_exposed": false,
+  "product_invocations": 0,
+  "assertions_unchanged": true
+}

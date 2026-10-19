@@ -1,0 +1,498 @@
+{
+  "schema": "pt.calendar-kit.independent-receiving/1",
+  "source_commit": "1bd30de4cecff7ee7564dccadf53561f3e21c284",
+  "protocol_blob": "2dd96e8350f4582296056a5d7c3513ceb0e72579",
+  "runtime": {
+    "executable": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "version": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+    "host": "db2843e9e4fa"
+  },
+  "archive": {
+    "path": "/workspace/scratch/3776d8cfc208/pt-calendar-receipts-delivery/delivery-received/actual-drive.zip",
+    "bytes": 13763,
+    "sha256": "ff2e5208a60173a79f0b348452741b996d1293d69d8e0630709c8aedf2a95661",
+    "git_blob": "88b16fed1400cd08c65ec5f35fb3f1aa237178a5",
+    "mtime_ns": "1791943811084441820"
+  },
+  "output": "/workspace/scratch/3776d8cfc208/pt-calendar-kit-independent/received-kit-course",
+  "checks": [
+    {
+      "name": "exact_eight_unique_members",
+      "passed": true
+    },
+    {
+      "name": "bounded_regular_members",
+      "passed": true
+    },
+    {
+      "name": "root_manifest_schema",
+      "passed": true
+    },
+    {
+      "name": "root_manifest_inventory",
+      "passed": true
+    },
+    {
+      "name": "root_manifest_payload_bytes",
+      "passed": true
+    },
+    {
+      "name": "source_manifest_schema_and_draft",
+      "passed": true
+    },
+    {
+      "name": "source_manifest_inventory",
+      "passed": true
+    },
+    {
+      "name": "source_payload_CALENDAR_RECEIPTS.md",
+      "passed": true
+    },
+    {
+      "name": "independent_lineage_CALENDAR_RECEIPTS.md",
+      "passed": true
+    },
+    {
+      "name": "source_payload_START_HERE.md",
+      "passed": true
+    },
+    {
+      "name": "delivery_note_identity",
+      "passed": true
+    },
+    {
+      "name": "source_payload_ptauth/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "independent_lineage_ptauth/__init__.py",
+      "passed": true
+    },
+    {
+      "name": "source_payload_ptauth/__main__.py",
+      "passed": true
+    },
+    {
+      "name": "independent_lineage_ptauth/__main__.py",
+      "passed": true
+    },
+    {
+      "name": "source_payload_ptauth/cli.py",
+      "passed": true
+    },
+    {
+      "name": "independent_lineage_ptauth/cli.py",
+      "passed": true
+    },
+    {
+      "name": "source_payload_ptauth/worklist_calendar.py",
+      "passed": true
+    },
+    {
+      "name": "independent_lineage_ptauth/worklist_calendar.py",
+      "passed": true
+    },
+    {
+      "name": "one_child_normal_success",
+      "passed": true
+    },
+    {
+      "name": "empty_stderr",
+      "passed": true
+    },
+    {
+      "name": "one_ascii_json_receipt_with_lf",
+      "passed": true
+    },
+    {
+      "name": "receipt_exact_except_intentional_output_path",
+      "passed": true
+    },
+    {
+      "name": "literal_counts_dates_and_exclusion",
+      "passed": true
+    },
+    {
+      "name": "one_valid_utc_export_stamp",
+      "passed": true
+    },
+    {
+      "name": "export_stamp_in_invocation_interval",
+      "passed": true
+    },
+    {
+      "name": "all_other_calendar_wire_bytes_exact",
+      "passed": true
+    },
+    {
+      "name": "literal_single_event_date_and_transparency",
+      "passed": true
+    },
+    {
+      "name": "utf8_crlf_and_octet_folding",
+      "passed": true
+    },
+    {
+      "name": "extracted_members_unchanged_inventory",
+      "passed": true
+    },
+    {
+      "name": "report_directory_only_two_original_files",
+      "passed": true
+    },
+    {
+      "name": "one_application_output_only",
+      "passed": true
+    },
+    {
+      "name": "all_watched_bytes_and_native_ns_exact",
+      "passed": true
+    }
+  ],
+  "original_before": [
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-calendar-receipts-delivery/delivery-received/actual-drive.zip",
+      "bytes": 13763,
+      "sha256": "ff2e5208a60173a79f0b348452741b996d1293d69d8e0630709c8aedf2a95661",
+      "git_blob": "88b16fed1400cd08c65ec5f35fb3f1aa237178a5",
+      "mtime_ns": "1791943811084441820"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-calendar-kit-independent/receive_kit.py",
+      "bytes": 13189,
+      "sha256": "a561bff75f22e309ea173c68f49dc878e2de0670378868589647e162a0c1a6d3",
+      "git_blob": "808f97813b45b1ab809c216aed6f8c51fcdbadef",
+      "mtime_ns": "1791943436135177940"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-calendar-kit-independent/PROTOCOL.md",
+      "bytes": 5978,
+      "sha256": "90e94bf3183fffee57b33c7ee8f4f80796c23073461c83823926717db1bdaf68",
+      "git_blob": "2dd96e8350f4582296056a5d7c3513ceb0e72579",
+      "mtime_ns": "1791943243688332752"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-calendar-kit-independent/oracle/summary.json",
+      "bytes": 1443,
+      "sha256": "da1ce4dbe8f52e82d0f1dae94a151d82a5b3a202a7ea7d494bc7527991a9d96c",
+      "git_blob": "a78876985055972f122725366a19ba8c9735ee1d",
+      "mtime_ns": "1791943244226303003"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-calendar-kit-independent/oracle/work_state.json",
+      "bytes": 213,
+      "sha256": "d596f2a8bae347f5d8c59273d3b47a1edb354f2f256d3f909c14c7e95c889efe",
+      "git_blob": "091cf6cf96601fd5988e2f78dc119844a97343d0",
+      "mtime_ns": "1791943244226936450"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-calendar-kit-independent/oracle/prior-calendar.ics",
+      "bytes": 1223,
+      "sha256": "2823830a636d0f511d05b94cbef5a6eb6f6e4093e43bff486ea86760cf389c1d",
+      "git_blob": "e6c6dd73e470ab29d8f6baa9c8d032e4f41fae8e",
+      "mtime_ns": "1791943244227349355"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-calendar-kit-independent/oracle/prior-receipt.json",
+      "bytes": 497,
+      "sha256": "4954635cae7c2cce8b0044106905570431f0f6d81dfbfb3eb2b35cf9a6923785",
+      "git_blob": "ae5ca5f2557d7505045ac71c23ddb85f33b9f9ee",
+      "mtime_ns": "1791943244228415704"
+    }
+  ],
+  "scope": "One ordinary extracted calendar command from fictional saved input. No installer, engine generation, web server, five-process matrix or external calendar invocation.",
+  "before": [
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-calendar-receipts-delivery/delivery-received/actual-drive.zip",
+      "bytes": 13763,
+      "sha256": "ff2e5208a60173a79f0b348452741b996d1293d69d8e0630709c8aedf2a95661",
+      "git_blob": "88b16fed1400cd08c65ec5f35fb3f1aa237178a5",
+      "mtime_ns": "1791943811084441820"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-calendar-kit-independent/receive_kit.py",
+      "bytes": 13189,
+      "sha256": "a561bff75f22e309ea173c68f49dc878e2de0670378868589647e162a0c1a6d3",
+      "git_blob": "808f97813b45b1ab809c216aed6f8c51fcdbadef",
+      "mtime_ns": "1791943436135177940"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-calendar-kit-independent/PROTOCOL.md",
+      "bytes": 5978,
+      "sha256": "90e94bf3183fffee57b33c7ee8f4f80796c23073461c83823926717db1bdaf68",
+      "git_blob": "2dd96e8350f4582296056a5d7c3513ceb0e72579",
+      "mtime_ns": "1791943243688332752"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-calendar-kit-independent/oracle/summary.json",
+      "bytes": 1443,
+      "sha256": "da1ce4dbe8f52e82d0f1dae94a151d82a5b3a202a7ea7d494bc7527991a9d96c",
+      "git_blob": "a78876985055972f122725366a19ba8c9735ee1d",
+      "mtime_ns": "1791943244226303003"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-calendar-kit-independent/oracle/work_state.json",
+      "bytes": 213,
+      "sha256": "d596f2a8bae347f5d8c59273d3b47a1edb354f2f256d3f909c14c7e95c889efe",
+      "git_blob": "091cf6cf96601fd5988e2f78dc119844a97343d0",
+      "mtime_ns": "1791943244226936450"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-calendar-kit-independent/oracle/prior-calendar.ics",
+      "bytes": 1223,
+      "sha256": "2823830a636d0f511d05b94cbef5a6eb6f6e4093e43bff486ea86760cf389c1d",
+      "git_blob": "e6c6dd73e470ab29d8f6baa9c8d032e4f41fae8e",
+      "mtime_ns": "1791943244227349355"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-calendar-kit-independent/oracle/prior-receipt.json",
+      "bytes": 497,
+      "sha256": "4954635cae7c2cce8b0044106905570431f0f6d81dfbfb3eb2b35cf9a6923785",
+      "git_blob": "ae5ca5f2557d7505045ac71c23ddb85f33b9f9ee",
+      "mtime_ns": "1791943244228415704"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-calendar-kit-independent/received-kit-course/extracted/MANIFEST.json",
+      "bytes": 1184,
+      "sha256": "cc0d8f895f3b85e7684ccc140f936925697b950b4f20936950b2369122275ce1",
+      "git_blob": "bfbbef45c5b9616a4d3987eb1c750fdb2f34d634",
+      "mtime_ns": "1791943869111485180"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-calendar-kit-independent/received-kit-course/extracted/pt_auth/CALENDAR_RECEIPTS.md",
+      "bytes": 4541,
+      "sha256": "379fa9fbc54694460d1809cde7eb7934c50e0257f27c474f1c918b5787da6485",
+      "git_blob": "a4a55efba02796069bbd974ab2d9de3060da5428",
+      "mtime_ns": "1791943869112016039"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-calendar-kit-independent/received-kit-course/extracted/pt_auth/SOURCE_MANIFEST.json",
+      "bytes": 2473,
+      "sha256": "f8c3615e0e38be52b1d5f663c5fde5ed8b1a9298d9b067a6b7402801855b2bb5",
+      "git_blob": "dfeb947f6c6a1fa161419f2c4823ff365e77b56a",
+      "mtime_ns": "1791943869113175680"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-calendar-kit-independent/received-kit-course/extracted/pt_auth/START_HERE.md",
+      "bytes": 4866,
+      "sha256": "ba604c3d114c001f4e983da5ed7a9944c24c66b095dbbd187ebbd35816fba980",
+      "git_blob": "71f15746f57ea9e7e9b930f8d855a7ede69dfe4c",
+      "mtime_ns": "1791943869113568424"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-calendar-kit-independent/received-kit-course/extracted/pt_auth/ptauth/__init__.py",
+      "bytes": 311,
+      "sha256": "71e1527f153c607b679485e4954af1b3ec6a843b041562eb07f4d36e08fd231c",
+      "git_blob": "a6f4545ac17e2578317ef694f7bb548489f6c71c",
+      "mtime_ns": "1791943869116289809"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-calendar-kit-independent/received-kit-course/extracted/pt_auth/ptauth/__main__.py",
+      "bytes": 71,
+      "sha256": "712d5a98258176d09d165788048d34da033af45c04d14387d9e51de108db5669",
+      "git_blob": "07cf8abb5a559054d4487c65a3f9f7c992067cf5",
+      "mtime_ns": "1791943869116660087"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-calendar-kit-independent/received-kit-course/extracted/pt_auth/ptauth/cli.py",
+      "bytes": 5958,
+      "sha256": "c8eba88ff13df857bc6f28395cb8b65419e3d666c496d31952df644bf006a703",
+      "git_blob": "b1b7a60de7b470ea59de6313bfcde336f1c5dfe1",
+      "mtime_ns": "1791943869117126527"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-calendar-kit-independent/received-kit-course/extracted/pt_auth/ptauth/worklist_calendar.py",
+      "bytes": 13750,
+      "sha256": "89751f1de5548ced34a59c296d0edf1eda06a38bdb935be3e7c3c8b2ae5d55c0",
+      "git_blob": "e125f9ed77343fcc3d82e6d6f25a7296b0463aa7",
+      "mtime_ns": "1791943869117748104"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-calendar-kit-independent/received-kit-course/saved-report/summary.json",
+      "bytes": 1443,
+      "sha256": "da1ce4dbe8f52e82d0f1dae94a151d82a5b3a202a7ea7d494bc7527991a9d96c",
+      "git_blob": "a78876985055972f122725366a19ba8c9735ee1d",
+      "mtime_ns": "1791943869118769778"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-calendar-kit-independent/received-kit-course/saved-report/work_state.json",
+      "bytes": 213,
+      "sha256": "d596f2a8bae347f5d8c59273d3b47a1edb354f2f256d3f909c14c7e95c889efe",
+      "git_blob": "091cf6cf96601fd5988e2f78dc119844a97343d0",
+      "mtime_ns": "1791943869120192363"
+    }
+  ],
+  "child": {
+    "argv": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "-B",
+      "-m",
+      "ptauth",
+      "calendar",
+      "--report",
+      "/workspace/scratch/3776d8cfc208/pt-calendar-kit-independent/received-kit-course/saved-report",
+      "--output",
+      "/workspace/scratch/3776d8cfc208/pt-calendar-kit-independent/received-kit-course/calendar-雪.ics"
+    ],
+    "cwd": "/workspace/scratch/3776d8cfc208/pt-calendar-kit-independent/received-kit-course/extracted/pt_auth",
+    "pid": 4,
+    "returncode": 0,
+    "timed_out": false,
+    "reaped": true,
+    "start_utc_ns": "1791943869121109418",
+    "end_utc_ns": "1791943869288446473"
+  },
+  "calendar": {
+    "path": "/workspace/scratch/3776d8cfc208/pt-calendar-kit-independent/received-kit-course/calendar-雪.ics",
+    "bytes": 1223,
+    "sha256": "29643509d3b36e1e54e0eed12709cf34dbc8fce13725dde8ae5fd46a7ecceec6",
+    "git_blob": "67d058c0cdfd1c6136762cfb3fdf55befc760db1",
+    "mtime_ns": "1791943869244374037",
+    "dtstamp": "20261014T021109Z"
+  },
+  "receipt_document": {
+    "format": "ptauth-submit-by-v1",
+    "snapshot": "7267b18939113f65ab61aea9970138c78f57ebadf00961d9a1322a1aed55b3a1",
+    "as_of": "2026-10-14",
+    "clinic_timezone": "Europe/Paris",
+    "selected": 2,
+    "events": 1,
+    "excluded": [
+      {
+        "key": "SYN-010|PAYER-雪|AUTH-8",
+        "patient_id": "SYN-010",
+        "state": "approved",
+        "reasons": [
+          "undated",
+          "completed_state"
+        ]
+      }
+    ],
+    "undated": 1,
+    "completed_state": 1,
+    "output": "/workspace/scratch/3776d8cfc208/pt-calendar-kit-independent/received-kit-course/calendar-雪.ics"
+  },
+  "after": [
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-calendar-receipts-delivery/delivery-received/actual-drive.zip",
+      "bytes": 13763,
+      "sha256": "ff2e5208a60173a79f0b348452741b996d1293d69d8e0630709c8aedf2a95661",
+      "git_blob": "88b16fed1400cd08c65ec5f35fb3f1aa237178a5",
+      "mtime_ns": "1791943811084441820"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-calendar-kit-independent/receive_kit.py",
+      "bytes": 13189,
+      "sha256": "a561bff75f22e309ea173c68f49dc878e2de0670378868589647e162a0c1a6d3",
+      "git_blob": "808f97813b45b1ab809c216aed6f8c51fcdbadef",
+      "mtime_ns": "1791943436135177940"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-calendar-kit-independent/PROTOCOL.md",
+      "bytes": 5978,
+      "sha256": "90e94bf3183fffee57b33c7ee8f4f80796c23073461c83823926717db1bdaf68",
+      "git_blob": "2dd96e8350f4582296056a5d7c3513ceb0e72579",
+      "mtime_ns": "1791943243688332752"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-calendar-kit-independent/oracle/summary.json",
+      "bytes": 1443,
+      "sha256": "da1ce4dbe8f52e82d0f1dae94a151d82a5b3a202a7ea7d494bc7527991a9d96c",
+      "git_blob": "a78876985055972f122725366a19ba8c9735ee1d",
+      "mtime_ns": "1791943244226303003"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-calendar-kit-independent/oracle/work_state.json",
+      "bytes": 213,
+      "sha256": "d596f2a8bae347f5d8c59273d3b47a1edb354f2f256d3f909c14c7e95c889efe",
+      "git_blob": "091cf6cf96601fd5988e2f78dc119844a97343d0",
+      "mtime_ns": "1791943244226936450"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-calendar-kit-independent/oracle/prior-calendar.ics",
+      "bytes": 1223,
+      "sha256": "2823830a636d0f511d05b94cbef5a6eb6f6e4093e43bff486ea86760cf389c1d",
+      "git_blob": "e6c6dd73e470ab29d8f6baa9c8d032e4f41fae8e",
+      "mtime_ns": "1791943244227349355"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-calendar-kit-independent/oracle/prior-receipt.json",
+      "bytes": 497,
+      "sha256": "4954635cae7c2cce8b0044106905570431f0f6d81dfbfb3eb2b35cf9a6923785",
+      "git_blob": "ae5ca5f2557d7505045ac71c23ddb85f33b9f9ee",
+      "mtime_ns": "1791943244228415704"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-calendar-kit-independent/received-kit-course/extracted/MANIFEST.json",
+      "bytes": 1184,
+      "sha256": "cc0d8f895f3b85e7684ccc140f936925697b950b4f20936950b2369122275ce1",
+      "git_blob": "bfbbef45c5b9616a4d3987eb1c750fdb2f34d634",
+      "mtime_ns": "1791943869111485180"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-calendar-kit-independent/received-kit-course/extracted/pt_auth/CALENDAR_RECEIPTS.md",
+      "bytes": 4541,
+      "sha256": "379fa9fbc54694460d1809cde7eb7934c50e0257f27c474f1c918b5787da6485",
+      "git_blob": "a4a55efba02796069bbd974ab2d9de3060da5428",
+      "mtime_ns": "1791943869112016039"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-calendar-kit-independent/received-kit-course/extracted/pt_auth/SOURCE_MANIFEST.json",
+      "bytes": 2473,
+      "sha256": "f8c3615e0e38be52b1d5f663c5fde5ed8b1a9298d9b067a6b7402801855b2bb5",
+      "git_blob": "dfeb947f6c6a1fa161419f2c4823ff365e77b56a",
+      "mtime_ns": "1791943869113175680"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-calendar-kit-independent/received-kit-course/extracted/pt_auth/START_HERE.md",
+      "bytes": 4866,
+      "sha256": "ba604c3d114c001f4e983da5ed7a9944c24c66b095dbbd187ebbd35816fba980",
+      "git_blob": "71f15746f57ea9e7e9b930f8d855a7ede69dfe4c",
+      "mtime_ns": "1791943869113568424"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-calendar-kit-independent/received-kit-course/extracted/pt_auth/ptauth/__init__.py",
+      "bytes": 311,
+      "sha256": "71e1527f153c607b679485e4954af1b3ec6a843b041562eb07f4d36e08fd231c",
+      "git_blob": "a6f4545ac17e2578317ef694f7bb548489f6c71c",
+      "mtime_ns": "1791943869116289809"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-calendar-kit-independent/received-kit-course/extracted/pt_auth/ptauth/__main__.py",
+      "bytes": 71,
+      "sha256": "712d5a98258176d09d165788048d34da033af45c04d14387d9e51de108db5669",
+      "git_blob": "07cf8abb5a559054d4487c65a3f9f7c992067cf5",
+      "mtime_ns": "1791943869116660087"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-calendar-kit-independent/received-kit-course/extracted/pt_auth/ptauth/cli.py",
+      "bytes": 5958,
+      "sha256": "c8eba88ff13df857bc6f28395cb8b65419e3d666c496d31952df644bf006a703",
+      "git_blob": "b1b7a60de7b470ea59de6313bfcde336f1c5dfe1",
+      "mtime_ns": "1791943869117126527"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-calendar-kit-independent/received-kit-course/extracted/pt_auth/ptauth/worklist_calendar.py",
+      "bytes": 13750,
+      "sha256": "89751f1de5548ced34a59c296d0edf1eda06a38bdb935be3e7c3c8b2ae5d55c0",
+      "git_blob": "e125f9ed77343fcc3d82e6d6f25a7296b0463aa7",
+      "mtime_ns": "1791943869117748104"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-calendar-kit-independent/received-kit-course/saved-report/summary.json",
+      "bytes": 1443,
+      "sha256": "da1ce4dbe8f52e82d0f1dae94a151d82a5b3a202a7ea7d494bc7527991a9d96c",
+      "git_blob": "a78876985055972f122725366a19ba8c9735ee1d",
+      "mtime_ns": "1791943869118769778"
+    },
+    {
+      "path": "/workspace/scratch/3776d8cfc208/pt-calendar-kit-independent/received-kit-course/saved-report/work_state.json",
+      "bytes": 213,
+      "sha256": "d596f2a8bae347f5d8c59273d3b47a1edb354f2f256d3f909c14c7e95c889efe",
+      "git_blob": "091cf6cf96601fd5988e2f78dc119844a97343d0",
+      "mtime_ns": "1791943869120192363"
+    }
+  ],
+  "passed": true
+}

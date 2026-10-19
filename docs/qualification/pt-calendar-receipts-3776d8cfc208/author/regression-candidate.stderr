@@ -1,0 +1,13 @@
+test_existing_unicode_destination_ascii_refusal_preserves_it (test_calendar_receipt_output.CalendarReceiptTests.test_existing_unicode_destination_ascii_refusal_preserves_it) ... ok
+test_failed_stderr_does_not_obscure_output_failure_status (test_calendar_receipt_output.CalendarReceiptTests.test_failed_stderr_does_not_obscure_output_failure_status) ... ok
+test_imported_main_flush_failure_keeps_caller_stdout_and_calendar (test_calendar_receipt_output.CalendarReceiptTests.test_imported_main_flush_failure_keeps_caller_stdout_and_calendar) ... ok
+test_imported_main_write_failure_keeps_caller_stdout_and_calendar (test_calendar_receipt_output.CalendarReceiptTests.test_imported_main_write_failure_keeps_caller_stdout_and_calendar) ... ok
+test_ordinary_unicode_receipt_and_complete_calendar (test_calendar_receipt_output.CalendarReceiptTests.test_ordinary_unicode_receipt_and_complete_calendar) ... ok
+test_real_ascii_receipts_on_both_entrypoints (test_calendar_receipt_output.CalendarReceiptTests.test_real_ascii_receipts_on_both_entrypoints) ... ok
+test_real_closed_stdout_returns_two_without_shutdown_retry (test_calendar_receipt_output.CalendarReceiptTests.test_real_closed_stdout_returns_two_without_shutdown_retry) ... ok
+test_unmatched_selection_refuses_without_output (test_calendar_receipt_output.CalendarReceiptTests.test_unmatched_selection_refuses_without_output) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.926s
+
+OK
