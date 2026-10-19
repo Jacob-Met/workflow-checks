@@ -1,0 +1,143 @@
+{
+  "format": "hamon-freight-independent-lifecycle-packet/1",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 3078,
+      "sha256": "0535a75f7560536d109a13c507d6fe1fec0180d968058f6543b2f8b93e306aba",
+      "git_blob": "7f7bfe5108953d16cbc9174e432191415528a7e4"
+    },
+    {
+      "path": "contract-addendum-v1.json",
+      "bytes": 851,
+      "sha256": "a6fc5315661fa4e1764db3d083d966984c6290a678ad28814eb6c33a5227c4ef",
+      "git_blob": "e5aefe32114d58aab48c9d0387b0881ac83a0a02"
+    },
+    {
+      "path": "contract-v1.json",
+      "bytes": 3681,
+      "sha256": "55e7ba213b8916f13f637c97190739a52a2f674c22ece43552742c1ae6dcfc89",
+      "git_blob": "a5345ffd3d28a2a399d976dabaf3fadbe692b352"
+    },
+    {
+      "path": "execution-v1/process.json",
+      "bytes": 596,
+      "sha256": "291a8de852628457868fc54cda1b31cd9b0134ff32d809edc475fa1338db40a6",
+      "git_blob": "959d8ec6a47f3659cd95934977a3662f3513270e"
+    },
+    {
+      "path": "execution-v1/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "execution-v1/stdout.txt",
+      "bytes": 1113,
+      "sha256": "70d94156b0c70add487d097d5e4628961512a6367e9f23331226ad8083f0c08b",
+      "git_blob": "d2b6d433991cdc29e407a90f472db00804a8cbb4"
+    },
+    {
+      "path": "mock_process.py",
+      "bytes": 1039,
+      "sha256": "4090ceda3cc9c080e1f34b8fb0d3a79eff82a464ee81dd8917d1c5d722ca3e80",
+      "git_blob": "cb2af910323fa15b5162c306ac696e6eac78822a"
+    },
+    {
+      "path": "post-run-custody.json",
+      "bytes": 1296,
+      "sha256": "3f0d8db83ccb73cc5ba9d8d3763a63e1f9fe456b066279107c8b5e2c26be0e32",
+      "git_blob": "09c1040564cbdefffad71d16b952bf49df38949c"
+    },
+    {
+      "path": "pre-execution-manifest.json",
+      "bytes": 1161,
+      "sha256": "e92ebe4655e75f33b76de4a5d1fc32411aed698cb8063548b9250d95c190e9cc",
+      "git_blob": "6893efee703ac6341dbedc2813924be85675c198"
+    },
+    {
+      "path": "receive_browser_hosted-reviewed-v5.py",
+      "bytes": 20222,
+      "sha256": "b9735d6efbfcbe62ca9d26d945be2798f91ed1addd08a34f948862fa9d291649",
+      "git_blob": "4089e2451438a7917ea95472704c97c295fb816f"
+    },
+    {
+      "path": "receive_lifecycle_v1.py",
+      "bytes": 11436,
+      "sha256": "e4983538802c3ca8481049d4cbb15adf3af29b2b490b6292cb0c3115d4985982",
+      "git_blob": "1b8e22ba91966e023d3864f1169ab825cbef0138"
+    },
+    {
+      "path": "run-frozen-v1.py",
+      "bytes": 1382,
+      "sha256": "b0f724dbc7472ce280dd8c1582000c2acaf60b9e74612cbd12b7ea917dd78f5d",
+      "git_blob": "760762653550fdb4c34814f968bcf2ab685619bf"
+    },
+    {
+      "path": "run-v1/diagnostic_sink_failure_keeps_cleanup/identity.json",
+      "bytes": 205,
+      "sha256": "134afa9037134d5b74b69d72899b9965855e66f3805f1b843b24edf1420ded86",
+      "git_blob": "20b3d280e245898aff05d3e108eeb90127cda88f"
+    },
+    {
+      "path": "run-v1/disappearance_between_check_and_signal/identity.json",
+      "bytes": 206,
+      "sha256": "9b97d78711c15c7847589520e7aa90196cf958948d2f009fecc8da6dead6b233",
+      "git_blob": "c71bb4268d225852ecf37013bc1e9d892c10c136"
+    },
+    {
+      "path": "run-v1/identity_or_ownership_mismatch_refused/declared-profile.json",
+      "bytes": 205,
+      "sha256": "718ce5470da92263ec194b6d5646c018745dce9d2ff6deb8273d16e33fed59fb",
+      "git_blob": "632e3c9a266542eebf19d9dade3e1b897e6d7bde"
+    },
+    {
+      "path": "run-v1/identity_or_ownership_mismatch_refused/live-profile.json",
+      "bytes": 205,
+      "sha256": "718ce5470da92263ec194b6d5646c018745dce9d2ff6deb8273d16e33fed59fb",
+      "git_blob": "632e3c9a266542eebf19d9dade3e1b897e6d7bde"
+    },
+    {
+      "path": "run-v1/identity_or_ownership_mismatch_refused/start.json",
+      "bytes": 206,
+      "sha256": "f038d51440af71a1c8b661830598b009bb03a9c55f49cb08b6c90eaa6c19d5ee",
+      "git_blob": "52ea868d5cf6a1a916f62549ccd5c136a2f20067"
+    },
+    {
+      "path": "run-v1/receipt.json",
+      "bytes": 17098,
+      "sha256": "14111b5887321c7850ef4a7557d3ff008916537b69d424ce5dd08d8fa560f921",
+      "git_blob": "7b7939b9a44915ec31760ffadf2a63f525e5213f"
+    },
+    {
+      "path": "run-v1/receipt.partial.json",
+      "bytes": 17024,
+      "sha256": "ab0df826a07a57896b579e25f9bfeef40f51e3d33c15efd689947bb07fb96dfa",
+      "git_blob": "be224b5e0751f3ee1114ff001193de928a26c801"
+    },
+    {
+      "path": "run-v1/registered_group_after_node_exit/identity.json",
+      "bytes": 204,
+      "sha256": "c066c4c0551daa2c7e915beb7b120023ee34ed1fb7c3562c0cb2f8c9180895c2",
+      "git_blob": "d9a207d91c30217d0f068ed14e313fa065035ccf"
+    },
+    {
+      "path": "run-v1/term_ignoring_owned_group/identity.json",
+      "bytes": 193,
+      "sha256": "54236d27a328711997e25602b33ab12d4ce91bb4e725e8862af14800061c2968",
+      "git_blob": "55a49873859fa8e79d5df282e6c38b3f02fb5ed2"
+    },
+    {
+      "path": "run-v1/unrelated_sentinel_survives/identity.json",
+      "bytes": 195,
+      "sha256": "d1d17dce70945c91b4981cb3c9b7f2e67920292a043f9399f2bae86c36937aaa",
+      "git_blob": "9230d238cc21f0ec7b575da4efe54a52df8da00b"
+    },
+    {
+      "path": "run-v1/verified_already_exited_group/identity.json",
+      "bytes": 197,
+      "sha256": "42542fa052038e73b7f61a3d449e43e57dbe416ba219b7a7762cbb8789bd7e40",
+      "git_blob": "57b7caf71657421e109f9995504baaaf28c32a05"
+    }
+  ]
+}

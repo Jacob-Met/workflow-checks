@@ -1,0 +1,24 @@
+{
+  "started_at": "2026-10-08T20:47:45.182Z",
+  "finished_at": "2026-10-08T20:47:46.193Z",
+  "status": 0,
+  "signal": null,
+  "error": null,
+  "stdout": "{\"receipt\":\"/dev/shm/hamon-freight-receiving-cd1df0f1ee24/admission-candidate-v1-receipt.json\",\"sha256\":\"a358526c3cdf0917b6fd2e45dc589d356564199a02d2b622ee2750732e921a8f\",\"total\":131,\"passed\":131,\"failed\":0}\n",
+  "stderr": "",
+  "sourcePinsAfter": [
+    {
+      "path": "scenario-record.mjs",
+      "unchanged": true
+    },
+    {
+      "path": "model.mjs",
+      "unchanged": true
+    },
+    {
+      "path": "data.mjs",
+      "unchanged": true
+    }
+  ],
+  "receiptExists": true
+}

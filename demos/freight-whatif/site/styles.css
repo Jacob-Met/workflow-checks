@@ -38,3 +38,28 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 */
+
+/* Saved-record review stays separate from the editable scenario. */
+.record-import{margin:0 0 30px;padding:22px 24px;border:1px solid var(--line);border-radius:12px;background:var(--paper)}
+.record-import-heading{display:flex;align-items:center;justify-content:space-between;gap:18px}
+.record-import-heading h2{margin:0 0 6px;font-size:1.1rem}
+.record-import-heading p,.record-status{margin:0;color:var(--muted);font-size:.86rem;line-height:1.6}
+.record-controls{display:flex;align-items:center;flex-wrap:wrap;gap:12px;flex-shrink:0}
+.record-status:not(:empty){margin-top:16px}
+.record-status.record-error{color:#8c2e26}
+.record-preview{margin-top:20px;padding-top:20px;border-top:1px solid var(--line)}
+.record-import [hidden]{display:none!important}
+.record-preview h3{margin:0 0 12px;font-size:1.1rem}
+.record-preview h4{margin:22px 0 10px;font-size:.9rem}
+.record-warning{line-height:1.6;font-size:.9rem}
+.record-identity,.record-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 24px;margin:14px 0 20px}
+.record-identity>div,.record-field-row{min-width:0;padding:10px 0;border-bottom:1px solid var(--line)}
+.record-identity dt,.record-fields dt{font-size:.76rem;color:var(--muted);margin:0 0 5px}
+.record-identity dd,.record-fields dd{font-size:.88rem;line-height:1.5;margin:0;overflow-wrap:anywhere;font-variant-numeric:tabular-nums}
+.record-preview #record-calculated{font-size:.9rem;line-height:1.6}
+.record-preview .button{margin-top:8px}
+@media(max-width:700px){.record-import-heading{align-items:flex-start;flex-direction:column}.record-controls{width:100%}}
+@media(max-width:480px){.record-import{padding:18px 16px}.record-identity,.record-fields{grid-template-columns:minmax(0,1fr);gap:6px}.record-controls .button,.record-preview>.button{width:100%;justify-content:center}}
+
+.record-controls button,.record-preview>.button{min-height:44px}
+#record-preview-heading:focus{outline:2px solid var(--teal);outline-offset:5px}

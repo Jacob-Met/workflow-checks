@@ -50,6 +50,8 @@ jobs:
         run: python demos/freight-whatif/tools/build_fixtures.py --check
       - name: Check model parity and input boundaries
         run: node demos/freight-whatif/tests/model.test.mjs
+      - name: Check saved-record admission
+        run: node --test demos/freight-whatif/tests/scenario-record.test.mjs
       - name: Exercise isolated installation and rollback
         run: |
           freight_receiving_root="$(mktemp -d "${RUNNER_TEMP:?}/freight-whatif.XXXXXXXX")"

@@ -27,6 +27,32 @@
     <div class="case-label"><h2 id="case-heading">Start with a case</h2><p>Each case sets a fresh baseline.</p></div>
     <div id="presets" class="presets" role="group" aria-label="Synthetic starting cases"></div>
   </section>
+
+  <section class="record-import" id="record-import" aria-labelledby="record-heading">
+    <div class="record-import-heading"><div><h2 id="record-heading">Resume a saved scenario</h2>
+      <p>Open a record downloaded from this demo. Review it before replacing your current inputs.</p></div>
+      <div class="record-controls"><button class="button secondary" id="open-record" type="button">Open saved record</button>
+      <button class="text-button" id="cancel-record" type="button" hidden>Cancel</button></div>
+    </div>
+    <input id="record-file" type="file" accept=".json,application/json" hidden>
+    <p id="record-status" class="record-status" role="status" aria-live="polite" aria-atomic="true"></p>
+    <div id="record-preview" class="record-preview" hidden>
+      <h3 id="record-preview-heading" tabindex="-1">Review the replacement</h3>
+      <p class="record-warning">Replace current scenario discards the current draft and changes its starting case.
+        Cancel keeps everything as it is. These are synthetic demo inputs, not payment approval.</p>
+      <dl class="record-identity"><div><dt>Saved file</dt><dd id="record-filename"></dd></div>
+        <div><dt>Starting case</dt><dd id="record-preset"></dd></div>
+        <div><dt>Exported at (UTC)</dt><dd id="record-exported"></dd></div>
+        <div><dt>Matched rule source commit</dt><dd id="record-source"></dd></div></dl>
+      <h4>All sixteen replacement inputs</h4>
+      <dl id="record-fields" class="record-fields"></dl>
+      <p id="record-calculated"></p>
+      <p class="field-note">Saved results were checked against fresh calculations with the current pinned rules.
+        A matching source identity is not a signature or proof of a live source.</p>
+      <button class="button" id="replace-record" type="button" disabled>Replace current scenario</button>
+    </div>
+  </section>
+
   <noscript><p class="notice">This interactive demo needs JavaScript. All data is synthetic; calculations run in your browser.</p></noscript>
 
   <div class="workbench">
@@ -68,7 +94,7 @@
           <label class="check-field"><input type="checkbox" id="pod_received" name="pod_received"><span>Proof of delivery is on file</span></label>
         </fieldset>
       </form>
-      <p class="local-note">Changes stay in this page. Refresh restores the starting case.</p>
+      <p class="local-note">Changes stay in this page. Download a record to keep them; Open saved record can resume it after refresh.</p>
     </aside>
 
     <section class="results-panel" aria-labelledby="results-heading">

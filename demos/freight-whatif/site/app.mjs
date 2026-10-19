@@ -1,4 +1,5 @@
 import { data } from "./data.mjs";
+import { MAX_RECORD_BYTES, parseScenarioRecord } from "./scenario-record.mjs";
 import { CONTRACT, FIELDS, evaluate, validateScenario, parseMoney, money, signedMoney, parseCivil, civilAt, compareResults } from "./model.mjs";
 const $ = id => document.getElementById(id);
 const form = $("scenario-form");
@@ -19,6 +20,7 @@ const findingLabels = {
   MISSING_POD: "Proof of delivery is missing",
 };
 let preset, baseline, currentScenario, currentResult, inputErrors = [];
+let draftRevision = 0, importSerial = 0, recordIntent = null, recordPreview = null;
 function element(tag, text, className) {
   const el = document.createElement(tag);
   if (text !== undefined) el.textContent = text;
@@ -32,14 +34,18 @@ function formatTime(value) {
   const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
   return { time: time.slice(0, 5), date: Number(day) + " " + months[Number(month) - 1] + " " + year };
 }
-function loadPreset(id) {
-  preset = data.presets.find(p => p.id === id);
-  baseline = { scenario: structuredClone(preset.scenario), result: evaluate(preset.scenario) };
+function writeScenario(scenario) {
   for (const f of FIELDS) {
-    const control = $(f), value = preset.scenario[f];
+    const control = $(f), value = scenario[f];
     if (control.type === "checkbox") control.checked = value;
     else control.value = value === null ? "" : moneyFields.has(f) ? (value / 100).toFixed(2) : String(value);
   }
+}
+function loadPreset(id) {
+  invalidateRecordDraft();
+  preset = data.presets.find(p => p.id === id);
+  baseline = { scenario: structuredClone(preset.scenario), result: evaluate(preset.scenario) };
+  writeScenario(preset.scenario);
   for (const button of $("presets").children) button.setAttribute("aria-pressed", String(button.dataset.preset === id));
   render();
 }
@@ -221,6 +227,170 @@ function render() {
     + (stop.status === "exception" ? "No automatic claim. " : money(stop.amount_cents) + " supported detention. ")
     + r.flags.length + " invoice finding" + (r.flags.length === 1 ? "." : "s.");
 }
+
+// Saved-record review is separate from the live form until explicit replacement.
+const recordFile = $("record-file"), recordPanel = $("record-preview");
+const recordStatus = $("record-status"), recordCancel = $("cancel-record");
+const recordFieldLabels = {
+  appointment: "Appointment", arrival: "Arrival", departure: "Departure",
+  free_minutes: "Free time", increment_minutes: "Billing increment",
+  late_grace_minutes: "Late-arrival grace", detention_rate_cents: "Detention hourly rate",
+  detention_cap_cents: "Stop cap", linehaul_cents: "Linehaul", fuel_cents: "Fuel surcharge",
+  detention_cents: "Invoiced detention", lumper_cents: "Lumper",
+  tonu_cents: "Truck ordered, not used", invoice_total_cents: "Invoice header total",
+  pod_received: "Proof of delivery on file", ratecon_complete: "Rate confirmation complete",
+};
+function rawDraft() {
+  return JSON.stringify({
+    preset: preset.id, baseline: baseline.scenario,
+    fields: FIELDS.map(field => $(field).type === "checkbox" ? $(field).checked : $(field).value),
+  });
+}
+function recordMessage(message, error = false) {
+  recordStatus.textContent = message;
+  recordStatus.classList.toggle("record-error", error);
+}
+function discardRecord(message = "", error = false) {
+  importSerial++;
+  recordIntent = null; recordPreview = null;
+  recordPanel.hidden = true;
+  $("record-fields").replaceChildren();
+  $("replace-record").disabled = true;
+  recordCancel.hidden = true;
+  recordFile.value = "";
+  recordMessage(message, error);
+}
+function invalidateRecordDraft() {
+  draftRevision++;
+  if (recordIntent || recordPreview) {
+    discardRecord("The scenario changed. Open the record again to review its replacement.");
+  }
+}
+function ownsIntent(intent) {
+  return recordIntent === intent && intent.serial === importSerial;
+}
+function freshIntent(intent) {
+  return ownsIntent(intent) && intent.revision === draftRevision && intent.draft === rawDraft();
+}
+function staleRecord() {
+  discardRecord("The scenario changed while opening or reviewing this record. Nothing was replaced; open it again.", true);
+}
+function previewValue(field, value) {
+  if (value === null) {
+    return field === "detention_cap_cents" ? "No cap (blank field)"
+      : field === "invoice_total_cents" ? "Automatic sum (blank field)" : "Missing (blank field)";
+  }
+  if (typeof value === "boolean") return value ? "Yes" : "No";
+  if (moneyFields.has(field)) return money(value);
+  if (integerFields.has(field)) return String(value) + " min";
+  return value.replace("T", " ");
+}
+function showRecordPreview(record, intent, filename) {
+  recordPreview = { record, intent };
+  $("record-filename").textContent = filename;
+  $("record-preset").textContent = record.loaded_preset.title;
+  $("record-exported").textContent = record.exported_at;
+  $("record-source").textContent = record.provenance.baseline_commit;
+  const rows = FIELDS.map(field => {
+    const row = element("div", undefined, "record-field-row");
+    const value = record.current.scenario[field];
+    const cell = element("dd", previewValue(field, value));
+    cell.dataset.recordField = field;
+    cell.dataset.recordValue = JSON.stringify(value);
+    row.append(element("dt", recordFieldLabels[field]), cell);
+    return row;
+  });
+  $("record-fields").replaceChildren(...rows);
+  const result = record.current.result;
+  $("record-calculated").textContent = result.stop.status === "exception"
+    ? "Fresh calculation: evidence needs review; no automatic detention claim. "
+      + result.flags.length + " invoice findings."
+    : "Fresh calculation: " + money(result.stop.amount_cents) + " supported detention; "
+      + result.flags.length + " invoice findings.";
+  recordPanel.hidden = false;
+  $("replace-record").disabled = false;
+  recordCancel.hidden = false;
+  recordMessage("Record checked. Review all sixteen inputs; the current scenario has not changed.");
+  $("record-preview-heading").focus();
+}
+$("open-record").addEventListener("click", () => {
+  discardRecord();
+  recordIntent = { serial: importSerial, revision: draftRevision, draft: rawDraft() };
+  recordCancel.hidden = false;
+  recordMessage("Choose a saved record. Cancel leaves the current scenario unchanged.");
+  recordFile.click();
+});
+recordFile.addEventListener("cancel", () => {
+  if (recordIntent) discardRecord("Opening cancelled. The current scenario is unchanged.");
+});
+recordFile.addEventListener("change", async () => {
+  const opening = recordIntent;
+  if (!opening) {
+    recordMessage("Use Open saved record to begin a new review.", true);
+    return;
+  }
+  if (!freshIntent(opening)) { staleRecord(); return; }
+  const selected = [...recordFile.files];
+  if (!selected.length) { discardRecord("Opening cancelled. The current scenario is unchanged."); return; }
+  if (selected.length !== 1) { discardRecord("Choose one saved record at a time.", true); return; }
+  // Each selection supersedes every earlier read, even when the form is unchanged.
+  const intent = { ...opening, serial: ++importSerial };
+  recordIntent = intent; recordPreview = null;
+  recordPanel.hidden = true; $("replace-record").disabled = true;
+  recordCancel.hidden = false;
+  const file = selected[0];
+  if (file.size > MAX_RECORD_BYTES) {
+    discardRecord("Saved record exceeds the 1 MiB UTF-8 limit. Nothing was replaced.", true);
+    return;
+  }
+  recordMessage("Reading the saved record; the current scenario is unchanged.");
+  try {
+    const source = await file.text();
+    if (!ownsIntent(intent)) return;
+    if (!freshIntent(intent)) { staleRecord(); return; }
+    const record = parseScenarioRecord(source);
+    if (!freshIntent(intent)) { staleRecord(); return; }
+    showRecordPreview(record, intent, file.name);
+  } catch (error) {
+    if (!ownsIntent(intent)) return;
+    if (!freshIntent(intent)) { staleRecord(); return; }
+    discardRecord((error instanceof Error ? error.message : "The saved record could not be read.")
+      + " Nothing was replaced.", true);
+  }
+});
+recordCancel.addEventListener("click", () => {
+  discardRecord("Opening cancelled. The current scenario is unchanged.");
+  $("open-record").focus();
+});
+$("record-import").addEventListener("keydown", event => {
+  if (event.key === "Escape" && (recordIntent || recordPreview)) {
+    event.preventDefault();
+    discardRecord("Opening cancelled. The current scenario is unchanged.");
+    $("open-record").focus();
+  }
+});
+$("replace-record").addEventListener("click", () => {
+  if (!recordPreview) return;
+  const { record, intent } = recordPreview;
+  if (!freshIntent(intent)) { staleRecord(); return; }
+  const replacementPreset = data.presets.find(item => item.id === record.loaded_preset.id);
+  const replacementBaseline = {
+    scenario: structuredClone(replacementPreset.scenario),
+    result: evaluate(replacementPreset.scenario),
+  };
+  // All admission and freshness checks precede this synchronous, complete commit.
+  preset = replacementPreset; baseline = replacementBaseline;
+  writeScenario(record.current.scenario);
+  for (const button of $("presets").children) {
+    button.setAttribute("aria-pressed", String(button.dataset.preset === preset.id));
+  }
+  draftRevision++;
+  discardRecord("Saved inputs replaced the scenario. Results were recalculated; Reset case restores "
+    + preset.title + ".");
+  render();
+  $("results-heading").focus();
+});
+
 for (const p of data.presets) {
   const button = element("button", undefined, "preset");
   button.type = "button"; button.dataset.preset = p.id; button.title = p.description;
@@ -229,7 +399,9 @@ for (const p of data.presets) {
   $("presets").append(button);
 }
 form.addEventListener("submit", event => event.preventDefault());
-form.addEventListener("input", render);
+function onScenarioEdit() { invalidateRecordDraft(); render(); }
+form.addEventListener("input", onScenarioEdit);
+form.addEventListener("change", onScenarioEdit);
 $("reset").addEventListener("click", () => loadPreset(preset.id));
 $("focus-error").addEventListener("click", () => {
   const control = $(inputErrors[0]?.field);

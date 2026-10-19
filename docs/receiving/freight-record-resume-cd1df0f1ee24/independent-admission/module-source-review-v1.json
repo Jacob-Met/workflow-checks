@@ -1,0 +1,52 @@
+{
+  "format": "estate-freight-module-source-review/1",
+  "owner": "estate-cd1df0f1ee24/estate_coordination",
+  "source": {
+    "path": "candidate-v1/scenario-record.mjs",
+    "bytes": 5698,
+    "sha256": "435d882090273e1315b156b4bca402314553bd80ad35a5592353e1fbddf2c8eb",
+    "gitBlob": "89da6193283695d5bbe192131b9372882f3bd4f5"
+  },
+  "basis": {
+    "contract": "3713b8fb96f560689bdcba78985917bc3bf988fc884209622016fd6bac5f09d2",
+    "receiver": "51e79f1f56d145b874e3d54657f157baab23c5fd305fd3e234b33c193598f4f6",
+    "adapter": "2a8423a07f3330133c30368b4e72887823ba9e7956ceff0220b9be57152ca816",
+    "rawReceipt": "a358526c3cdf0917b6fd2e45dc589d356564199a02d2b622ee2750732e921a8f"
+  },
+  "conclusion": "Accept pure admission module against frozen contract; no material source-review correction found. Browser/UI intent and source integration remain separate pending gates.",
+  "observations": [
+    {
+      "lines": "13-54",
+      "finding": "Exact root/nested keysets and type-aware iterative equality preserve object-order freedom, array order and JSON negative-zero equivalence. Recursive finite admission occurs before equality; it is iterative, so deeply nested rejected input does not flow into recursive canonical freeze."
+    },
+    {
+      "lines": "73-89",
+      "finding": "String-only API enforces inclusive UTF8 budget before JSON parsing, removes exactly one leading BOM, and requires canonical four-digit UTC ISO observation text without clock or age policy."
+    },
+    {
+      "lines": "90-105",
+      "finding": "Pinned provenance, synthetic contract, canonical preset baseline and existing FIELDS/validateScenario govern admission. No additional business exception refusal was introduced."
+    },
+    {
+      "lines": "103-117",
+      "finding": "Fresh evaluations and comparison are checked against every saved derived field. Returned state uses new canonical/cloned structures and is deeply frozen; no supplied stored result object becomes calculation authority."
+    }
+  ],
+  "execution": {
+    "node": "22.22.1",
+    "cases": 131,
+    "acceptedFixtures": 28,
+    "refusedFixtures": 103,
+    "passed": 131,
+    "failed": 0,
+    "status": 0,
+    "stderr": "",
+    "fixtureOrReceiverChanged": false,
+    "authoredTestsInspected": false
+  },
+  "limits": [
+    "Does not qualify new UI, native picker, asynchronous intent, install/package route or deployed Pages.",
+    "Coherent fixture outputs come from unchanged model; mathematical parity remains existing project's custody.",
+    "This source module has no I/O or page mutation; whole-page behavior awaits independent browser receiving."
+  ]
+}

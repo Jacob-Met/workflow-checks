@@ -1,0 +1,35 @@
+{
+  "status": "syntax only; never executed; no install",
+  "files": [
+    {
+      "path": "receive_browser_hosted-v1.py",
+      "bytes": 17026,
+      "sha256": "48a582549d1e3cbd9b459c27298c3d9a5e62f0d881ac792d4304e857ee73eb4d",
+      "git": "e0784d85ec8eaf2cb3c321281a4439c116a1b279"
+    },
+    {
+      "path": "receive_browser_hosted-v2.py",
+      "bytes": 17389,
+      "sha256": "99098a36dc6cd8b3351e4905a65a323bd41f2769b6a0babafdc58adda5810c90",
+      "git": "e5b1789656918688c00f47a340ea4d8293c5fd3c"
+    },
+    {
+      "path": "receive_browser_hosted.py",
+      "bytes": 17552,
+      "sha256": "f489ded61d845db1f4374ee9e6f863f5b115e14b8211f586c3d8be5fb250b4ce",
+      "git": "37f94378a0667884f93375eb94d65f603448aaee"
+    },
+    {
+      "path": "freight-pr67-browser-qualification.yml",
+      "bytes": 1983,
+      "sha256": "3d319789b34927df84d35130bee9d0d2b34ed816e9e7bcbf7cd0e29d646c6cee",
+      "git": "8ee5c9227d9377228ae1319759d85c1cd238d146"
+    },
+    {
+      "path": "proposal.json",
+      "bytes": 6071,
+      "sha256": "98e6db63964e781dfeaa52b3e10411d0d553ceb8d2a6eb0a8e50556f6de823b9",
+      "git": "6b09903b4c39dc1eccc3eeefea4f661f4a714839"
+    }
+  ]
+}

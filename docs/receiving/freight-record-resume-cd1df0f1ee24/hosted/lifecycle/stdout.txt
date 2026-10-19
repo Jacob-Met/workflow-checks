@@ -1,0 +1,8 @@
+{"id": "registered_group_after_node_exit", "pass": true, "seconds": 2.464710121974349, "error": null, "cleanup_error": null}
+{"id": "unrelated_sentinel_survives", "pass": true, "seconds": 0.8445244949543849, "error": null, "cleanup_error": null}
+{"id": "identity_or_ownership_mismatch_refused", "pass": true, "seconds": 0.3439026419073343, "error": null, "cleanup_error": null}
+{"id": "verified_already_exited_group", "pass": true, "seconds": 0.33639388298615813, "error": null, "cleanup_error": null}
+{"id": "disappearance_between_check_and_signal", "pass": true, "seconds": 0.6508348230272532, "error": null, "cleanup_error": null}
+{"id": "term_ignoring_owned_group", "pass": true, "seconds": 5.847396692959592, "error": null, "cleanup_error": null}
+{"id": "diagnostic_sink_failure_keeps_cleanup", "pass": true, "seconds": 0.5062906310195103, "error": null, "cleanup_error": null}
+{"pass": true, "passed": 7, "failed": 0, "source_unchanged": true, "receipt": {"bytes": 17098, "sha256": "14111b5887321c7850ef4a7557d3ff008916537b69d424ce5dd08d8fa560f921", "git_blob": "7b7939b9a44915ec31760ffadf2a63f525e5213f"}}

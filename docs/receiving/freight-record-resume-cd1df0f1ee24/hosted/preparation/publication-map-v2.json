@@ -1,0 +1,128 @@
+{
+  "format": "freight-hosted-publication-map/1",
+  "activity": "Custody rehash only; no execution or source modification",
+  "repository": "Jacob-Met/workflow-checks",
+  "files": [
+    {
+      "repository_path": "demos/freight-whatif/tools/receive_browser_hosted.py",
+      "native_path": "/dev/shm/hamon-freight-receiving-cd1df0f1ee24/browser-native/hosted-proposal-v1/receive_browser_hosted-reviewed-v5.py",
+      "bytes": 20222,
+      "sha256": "b9735d6efbfcbe62ca9d26d945be2798f91ed1addd08a34f948862fa9d291649",
+      "git": "4089e2451438a7917ea95472704c97c295fb816f"
+    },
+    {
+      "repository_path": "demos/freight-whatif/tests/scenario-record-browser.mjs",
+      "native_path": "/dev/shm/hamon-freight-receiving-cd1df0f1ee24/browser-native/browser-receiver-v4.mjs",
+      "bytes": 29352,
+      "sha256": "d44e2d17eeb3e583d11e856fbda1bb988d9ec8f871bf40e3f33f2b5425d333d8",
+      "git": "1e08bd4be25e149d568f1869c610b20f03fc6ac9"
+    },
+    {
+      "repository_path": ".github/workflows/freight-pr67-browser-qualification.yml",
+      "native_path": "/dev/shm/hamon-freight-receiving-cd1df0f1ee24/browser-native/hosted-proposal-v1/freight-pr67-browser-qualification.yml",
+      "bytes": 1983,
+      "sha256": "3d319789b34927df84d35130bee9d0d2b34ed816e9e7bcbf7cd0e29d646c6cee",
+      "git": "8ee5c9227d9377228ae1319759d85c1cd238d146"
+    },
+    {
+      "repository_path": "docs/receiving/freight-record-resume-cd1df0f1ee24/hosted/preparation/receive_browser_hosted-v1.py",
+      "native_path": "/dev/shm/hamon-freight-receiving-cd1df0f1ee24/browser-native/hosted-proposal-v1/receive_browser_hosted-v1.py",
+      "bytes": 17026,
+      "sha256": "48a582549d1e3cbd9b459c27298c3d9a5e62f0d881ac792d4304e857ee73eb4d",
+      "git": "e0784d85ec8eaf2cb3c321281a4439c116a1b279"
+    },
+    {
+      "repository_path": "docs/receiving/freight-record-resume-cd1df0f1ee24/hosted/preparation/receive_browser_hosted-v2.py",
+      "native_path": "/dev/shm/hamon-freight-receiving-cd1df0f1ee24/browser-native/hosted-proposal-v1/receive_browser_hosted-v2.py",
+      "bytes": 17389,
+      "sha256": "99098a36dc6cd8b3351e4905a65a323bd41f2769b6a0babafdc58adda5810c90",
+      "git": "e5b1789656918688c00f47a340ea4d8293c5fd3c"
+    },
+    {
+      "repository_path": "docs/receiving/freight-record-resume-cd1df0f1ee24/hosted/preparation/receive_browser_hosted.py",
+      "native_path": "/dev/shm/hamon-freight-receiving-cd1df0f1ee24/browser-native/hosted-proposal-v1/receive_browser_hosted.py",
+      "bytes": 17552,
+      "sha256": "f489ded61d845db1f4374ee9e6f863f5b115e14b8211f586c3d8be5fb250b4ce",
+      "git": "37f94378a0667884f93375eb94d65f603448aaee"
+    },
+    {
+      "repository_path": "docs/receiving/freight-record-resume-cd1df0f1ee24/hosted/preparation/receive_browser_hosted-reviewed-v4.py",
+      "native_path": "/dev/shm/hamon-freight-receiving-cd1df0f1ee24/browser-native/hosted-proposal-v1/receive_browser_hosted-reviewed-v4.py",
+      "bytes": 19089,
+      "sha256": "b671cd1a88f6edc9c09fda53c6ccbe2cba6a252c65fa59df73706ad7d03bc2b7",
+      "git": "f48093131fdc3cc9c9838ad9a5451ecd442b3891"
+    },
+    {
+      "repository_path": "docs/receiving/freight-record-resume-cd1df0f1ee24/hosted/preparation/proposal.json",
+      "native_path": "/dev/shm/hamon-freight-receiving-cd1df0f1ee24/browser-native/hosted-proposal-v1/proposal.json",
+      "bytes": 6071,
+      "sha256": "98e6db63964e781dfeaa52b3e10411d0d553ceb8d2a6eb0a8e50556f6de823b9",
+      "git": "6b09903b4c39dc1eccc3eeefea4f661f4a714839"
+    },
+    {
+      "repository_path": "docs/receiving/freight-record-resume-cd1df0f1ee24/hosted/preparation/proposal-v2.json",
+      "native_path": "/dev/shm/hamon-freight-receiving-cd1df0f1ee24/browser-native/hosted-proposal-v1/proposal-v2.json",
+      "bytes": 7326,
+      "sha256": "e6180ff21f141489976a5ca6a9c118240bdfb78e65a1982264ba7617aab2f20a",
+      "git": "b4976090894f5307c8c785d1efacf4aa326c70b4"
+    },
+    {
+      "repository_path": "docs/receiving/freight-record-resume-cd1df0f1ee24/hosted/preparation/manifest.json",
+      "native_path": "/dev/shm/hamon-freight-receiving-cd1df0f1ee24/browser-native/hosted-proposal-v1/manifest.json",
+      "bytes": 1170,
+      "sha256": "29f7bc0bfff19014b965b6d6a2702d92697b543cc0f780270e4c5ab27bc51045",
+      "git": "cd69a96f95e81f76425aaa0ac3a94a8cffd824d3"
+    },
+    {
+      "repository_path": "docs/receiving/freight-record-resume-cd1df0f1ee24/hosted/preparation/lifecycle-extraction.diff",
+      "native_path": "/dev/shm/hamon-freight-receiving-cd1df0f1ee24/browser-native/hosted-proposal-v1/lifecycle-extraction.diff",
+      "bytes": 12685,
+      "sha256": "d4e9b6a793e389eabe6154eb7db8bbea3fdb89b6051bb3d97ae1c8dcbe489ab6",
+      "git": "547dc779d8e574f77ff9581831e7af83cf61195d"
+    },
+    {
+      "repository_path": "docs/receiving/freight-record-resume-cd1df0f1ee24/hosted/preparation/lifecycle-extraction-receipt.json",
+      "native_path": "/dev/shm/hamon-freight-receiving-cd1df0f1ee24/browser-native/hosted-proposal-v1/lifecycle-extraction-receipt.json",
+      "bytes": 1001,
+      "sha256": "e1702953b14470a5e51b3294b9607f7b519a046bba87034d83af5dde6a9aab3d",
+      "git": "23f27c0524d311e8b80c32dc8c37116f429bf4ab"
+    },
+    {
+      "repository_path": "docs/receiving/freight-record-resume-cd1df0f1ee24/hosted/preparation/review-corrections-v4-v5.diff",
+      "native_path": "/dev/shm/hamon-freight-receiving-cd1df0f1ee24/browser-native/hosted-proposal-v1/review-corrections-v4-v5.diff",
+      "bytes": 5941,
+      "sha256": "5caceca285f03e18b02967599e33f536f89d4ea639f2bd71cefcd2241a377896",
+      "git": "ee843845bcde614fa5704a9fabb2844f9174336b"
+    },
+    {
+      "repository_path": "docs/receiving/freight-record-resume-cd1df0f1ee24/hosted/preparation/final-proposal-manifest-v2.json",
+      "native_path": "/dev/shm/hamon-freight-receiving-cd1df0f1ee24/browser-native/hosted-proposal-v1/final-proposal-manifest-v2.json",
+      "bytes": 1098,
+      "sha256": "b00754e2316a238dd0f488567ce86fa1631607bb132e205391b83a2a9d6a399e",
+      "git": "01c905a75bbd87ebf44e9569f2fa7aaa9fb032ad"
+    },
+    {
+      "repository_path": "docs/receiving/freight-record-resume-cd1df0f1ee24/hosted/source-review/review-v4.json",
+      "native_path": "/dev/shm/hamon-freight-lifecycle-source-review-cd1df0f1ee24/review-v4.json",
+      "bytes": 1904,
+      "sha256": "9699bebabca9a66b23e53f3ec1728087c44fdbbc21df2c6339b2c94d716c04ef",
+      "git": "8c6009d0213528671a27a42bb97e46e81cf4df65"
+    },
+    {
+      "repository_path": "docs/receiving/freight-record-resume-cd1df0f1ee24/hosted/source-review/review-v5.json",
+      "native_path": "/dev/shm/hamon-freight-lifecycle-source-review-cd1df0f1ee24/review-v5.json",
+      "bytes": 2060,
+      "sha256": "96e0afe45de59d26f9d81a51be4c912d64515c0714552cb820312f701f7ee47c",
+      "git": "1cba5cdb0bf05c0ecedf2a1c1c5d09dd46ab32f0"
+    }
+  ],
+  "boundaries": [
+    "Keep existing browser-native failed-attempt packet unchanged.",
+    "Preparation statuses are historical snapshots; source v5 and workflow were subsequently accepted, and seven independent lifecycle mock controls passed.",
+    "The lifecycle mock archive includes all24 frozen contract/harness/raw/evidence members; no need duplicate individual archived bodies beyond selected readables.",
+    "Receiver v4 is unchanged; helper/workflow are the accepted proposal. Actual hosted browser result is pending.",
+    "Final production wrapper uses the same reviewed lifecycle helpers tested by mocks.",
+    "The source publisher owns refs; this map is not a publication receipt.",
+    "Map-v2 follows root's hosted/ namespace. Source publisher separately incorporates its complete lifecycle packet/readables under hosted/lifecycle/ and root lead-source-review.json, so those are not duplicated here."
+  ]
+}

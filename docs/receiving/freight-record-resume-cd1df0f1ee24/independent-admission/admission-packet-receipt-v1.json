@@ -1,0 +1,12 @@
+{
+  "archive": "/dev/shm/hamon-freight-receiving-cd1df0f1ee24/admission-packet-v1.tar.gz",
+  "bytes": 86837,
+  "sha256": "256f3f69564e38210227507cfca863f63849df18276b88bb54bc68178c85336b",
+  "members": 15,
+  "errors": [],
+  "manifest": {
+    "bytes": 2564,
+    "sha256": "c13015456b8853f08dbf7b896a5ea2b6512410631512c907c2401defbb468aeb"
+  },
+  "scope": "Pure admission and production-module source review only; UI/browser pending."
+}
